@@ -782,7 +782,7 @@ pprIfaceDecl ss (IfaceFamily { ifName = tycon
     pp_rhs IfaceBuiltInSynFamTyCon
       = ppShowIface ss (text "built-in")
     pp_rhs IfaceBuiltInConstFamTyCon
-      = ppShowIface ss (text "built-in (contraint)")
+      = ppShowIface ss (text "built-in (constraint)")
 
     pp_branches (IfaceClosedSynFamilyTyCon (Just (ax, brs)))
       = hang (text "where")
