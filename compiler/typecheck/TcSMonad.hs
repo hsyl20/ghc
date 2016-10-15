@@ -3112,7 +3112,7 @@ matchFamTcM tycon args
        -- try pure matches first
        ; let match_fam_result'
               = reduceTyFamApp_maybe fam_envs Nominal tycon args
-         
+
        -- try matching Constraint fulfilment
        ; match_fam_result <- case match_fam_result' of
             Nothing | isBuiltInConstFamTyCon tycon ->

@@ -2157,7 +2157,7 @@ tcFulfilConstraint arg = do
                   Just wts -> isEmptyWC wts
   traceTc "tcFulfilConstraint" $
     vcat [ text "Constraint:" <+> ppr arg
-         , text "Fulfilled?"     <+> ppr b
+         , text "Fulfilled?"  <+> ppr b
          , text "Residual:"   <+> ppr v
          ]
   return (Just (constrAxiom b arg))
