@@ -2134,7 +2134,8 @@ checkValidTyCon tc
                       text "only in a .hs-boot file" }
                ; DataFamilyTyCon {}           -> return ()
                ; OpenSynFamilyTyCon           -> return ()
-               ; BuiltInSynFamTyCon _         -> return () }
+               ; BuiltInSynFamTyCon _         -> return ()
+               ; BuiltInConstFamTyCon         -> return () }
 
              | otherwise -> do
                { -- Check the context on the data decl

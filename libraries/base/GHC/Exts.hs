@@ -1,6 +1,7 @@
 {-# LANGUAGE Unsafe #-}
 {-# LANGUAGE MagicHash, UnboxedTuples, TypeFamilies, DeriveDataTypeable,
-             MultiParamTypeClasses, FlexibleInstances, NoImplicitPrelude #-}
+             MultiParamTypeClasses, FlexibleInstances, NoImplicitPrelude,
+             DataKinds #-}
 
 -----------------------------------------------------------------------------
 -- |
@@ -76,6 +77,8 @@ module GHC.Exts
 
         -- * The Constraint kind
         Constraint,
+        Fulfil,
+
 
         -- * The Any type
         Any,
@@ -207,3 +210,11 @@ instance IsList CallStack where
   type (Item CallStack) = (String, SrcLoc)
   fromList = fromCallSiteList
   toList   = getCallStack
+
+
+
+-- | Indicate if a constraint is fulfilled
+--
+-- @since 4.10.0.0
+type family Fulfil (c :: Constraint) :: Bool where
+

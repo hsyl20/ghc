@@ -76,6 +76,7 @@ module TysWiredIn (
         -- ** Constraint tuples
         cTupleTyConName, cTupleTyConNames, isCTupleTyConName,
         cTupleDataConName, cTupleDataConNames,
+        typeConstFulfilTyCon,
 
         -- * Any
         anyTyCon, anyTy, anyTypeOfKind,
@@ -224,6 +225,7 @@ wiredInTyCons = [ -- Units are not treated like other tuples, because then
                 , vecCountTyCon
                 , vecElemTyCon
                 , constraintKindTyCon
+                , typeConstFulfilTyCon
                 , liftedTypeKindTyCon
                 , starKindTyCon
                 , unicodeStarKindTyCon
@@ -569,6 +571,22 @@ typeSymbolKind = mkTyConTy typeSymbolKindCon
 constraintKindTyCon :: TyCon
 constraintKindTyCon = pcTyCon False constraintKindTyConName
                               Nothing [] []
+
+-- | Type family Fulfil (c :: Constraint) :: Bool
+typeConstFulfilTyCon :: TyCon
+typeConstFulfilTyCon =
+  mkFamilyTyCon name
+    (mkTemplateAnonTyConBinders [ constraintKind ])
+    boolTy
+    Nothing
+    BuiltInConstFamTyCon
+    Nothing
+    NotInjective
+
+  where
+  name = mkWiredInTyConName UserSyntax gHC_EXTS (fsLit "Fulfil")
+                typeConstFulfilTyFamNameKey typeConstFulfilTyCon
+
 
 liftedTypeKind, constraintKind, unboxedTupleKind :: Kind
 liftedTypeKind   = tYPE ptrRepLiftedTy

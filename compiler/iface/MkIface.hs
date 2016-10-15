@@ -1526,6 +1526,7 @@ tyConToIfaceDecl env tycon
     to_if_fam_flav AbstractClosedSynFamilyTyCon = IfaceAbstractClosedSynFamilyTyCon
     to_if_fam_flav (DataFamilyTyCon {})         = IfaceDataFamilyTyCon
     to_if_fam_flav (BuiltInSynFamTyCon {})      = IfaceBuiltInSynFamTyCon
+    to_if_fam_flav (BuiltInConstFamTyCon {})    = IfaceBuiltInConstFamTyCon
 
 
 

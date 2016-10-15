@@ -60,6 +60,7 @@ module TyCon(
         isOpenTypeFamilyTyCon, isClosedSynFamilyTyConWithAxiom_maybe,
         familyTyConInjectivityInfo,
         isBuiltInSynFamTyCon_maybe,
+        isBuiltInConstFamTyCon,
         isUnliftedTyCon,
         isGadtSyntaxTyCon, isInjectiveTyCon, isGenerativeTyCon, isGenInjAlgRhs,
         isTyConAssoc, tyConAssoc_maybe,
@@ -922,6 +923,9 @@ data FamTyConFlav
 
    -- | Built-in type family used by the TypeNats solver
    | BuiltInSynFamTyCon BuiltInSynFamily
+
+   -- | Built-in type family for Constraint kind
+   | BuiltInConstFamTyCon
 
 {- Note [Closed type families]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1816,6 +1820,11 @@ isBuiltInSynFamTyCon_maybe :: TyCon -> Maybe BuiltInSynFamily
 isBuiltInSynFamTyCon_maybe
   (FamilyTyCon {famTcFlav = BuiltInSynFamTyCon ops }) = Just ops
 isBuiltInSynFamTyCon_maybe _                          = Nothing
+
+isBuiltInConstFamTyCon :: TyCon -> Bool
+isBuiltInConstFamTyCon tc = case famTcFlav tc of
+   BuiltInConstFamTyCon -> True
+   _                    -> False
 
 isDataFamFlav :: FamTyConFlav -> Bool
 isDataFamFlav (DataFamilyTyCon {}) = True   -- Data family

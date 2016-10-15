@@ -129,6 +129,10 @@ import DynFlags
 import Type
 import Coercion
 import Unify
+import TysWiredIn
+import CoAxiom
+import Pair
+import FastString
 
 import TcEvidence
 import Class
@@ -3104,12 +3108,44 @@ checkReductionDepth loc ty
 matchFam :: TyCon -> [Type] -> TcS (Maybe (Coercion, TcType))
 matchFam tycon args = wrapTcS $ matchFamTcM tycon args
 
+constrAxiom :: Bool -> Type -> (Coercion,Type)
+constrAxiom b arg = (co,bool b)
+   where
+      co = mkAxiomRuleCo (constrAxiomRule (bool b)) [mkReflCo Nominal arg]
+
+constrAxiomRule :: Type -> CoAxiomRule
+constrAxiomRule b = ax
+   where
+      ax = CoAxiomRule
+          { coaxrName      = fsLit "FulFilConstraint"
+          , coaxrAsmpRoles = [Nominal]
+          , coaxrRole      = Nominal
+          , coaxrProves    = \cs ->
+              do [Pair s _] <- return cs
+                 return $ Pair (mkTyConApp typeConstFulfilTyCon [s]) b
+          }
+
+-- TODO: factorize (copied from TcTypeNats)
+bool :: Bool -> Type
+bool b = if b then mkTyConApp promotedTrueDataCon []
+              else mkTyConApp promotedFalseDataCon []
+
 matchFamTcM :: TyCon -> [Type] -> TcM (Maybe (Coercion, TcType))
--- Given (F tys) return (ty, co), where co :: F tys ~ ty
+-- Given (F tys) return (co, ty), where co :: F tys ~ ty
 matchFamTcM tycon args
   = do { fam_envs@(_,lcl) <- FamInst.tcGetFamInstEnvs
-       ; let match_fam_result
+       -- try pure matches first
+       ; let match_fam_result'
               = reduceTyFamApp_maybe fam_envs Nominal tycon args
+         
+       -- try matching Constraint fulfilment
+       ; match_fam_result <- case match_fam_result' of
+            Nothing | isBuiltInConstFamTyCon tycon -> do
+              let b     = True
+                  [arg] = args
+              -- FIXME: false if Constraint isn't fulfilled
+              return (Just (constrAxiom b arg))
+            _       -> return match_fam_result'
        ; TcM.traceTc "matchFamTcM" $
          vcat [ text "Matching:" <+> ppr (mkTyConApp tycon args)
               , ppr_res match_fam_result

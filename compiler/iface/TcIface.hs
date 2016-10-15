@@ -579,6 +579,9 @@ tc_iface_decl parent _ (IfaceFamily {ifName = tc_name,
      tc_fam_flav _ IfaceBuiltInSynFamTyCon
          = pprPanic "tc_iface_decl"
                     (text "IfaceBuiltInSynFamTyCon in interface file")
+     tc_fam_flav _ IfaceBuiltInConstFamTyCon
+         = pprPanic "tc_iface_decl"
+                    (text "IfaceBuiltInConstFamTyCon in interface file")
 
 tc_iface_decl _parent ignore_prags
             (IfaceClass {ifCtxt = rdr_ctxt, ifName = tc_name,

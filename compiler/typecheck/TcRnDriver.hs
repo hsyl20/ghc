@@ -971,6 +971,7 @@ checkBootTyCon is_boot tc1 tc2
         eqFamFlav (ClosedSynFamilyTyCon ax1) (ClosedSynFamilyTyCon ax2)
             = eqClosedFamilyAx ax1 ax2
         eqFamFlav (BuiltInSynFamTyCon {}) (BuiltInSynFamTyCon {}) = tc1 == tc2
+        eqFamFlav BuiltInConstFamTyCon BuiltInConstFamTyCon = True
         eqFamFlav _ _ = False
         injInfo1 = familyTyConInjectivityInfo tc1
         injInfo2 = familyTyConInjectivityInfo tc2

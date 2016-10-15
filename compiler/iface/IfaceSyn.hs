@@ -185,6 +185,7 @@ data IfaceFamTyConFlav
     -- or 'Nothing' for an empty closed family without an axiom
   | IfaceAbstractClosedSynFamilyTyCon
   | IfaceBuiltInSynFamTyCon -- for pretty printing purposes only
+  | IfaceBuiltInConstFamTyCon
 
 data IfaceClassOp
   = IfaceClassOp IfaceTopBndr
@@ -780,6 +781,8 @@ pprIfaceDecl ss (IfaceFamily { ifName = tycon
       = empty  -- see pp_branches
     pp_rhs IfaceBuiltInSynFamTyCon
       = ppShowIface ss (text "built-in")
+    pp_rhs IfaceBuiltInConstFamTyCon
+      = ppShowIface ss (text "built-in (contraint)")
 
     pp_branches (IfaceClosedSynFamilyTyCon (Just (ax, brs)))
       = hang (text "where")
@@ -1242,6 +1245,7 @@ freeNamesIfFamFlav (IfaceClosedSynFamilyTyCon (Just (ax, br)))
 freeNamesIfFamFlav (IfaceClosedSynFamilyTyCon Nothing) = emptyNameSet
 freeNamesIfFamFlav IfaceAbstractClosedSynFamilyTyCon   = emptyNameSet
 freeNamesIfFamFlav IfaceBuiltInSynFamTyCon             = emptyNameSet
+freeNamesIfFamFlav IfaceBuiltInConstFamTyCon           = emptyNameSet
 
 freeNamesIfContext :: IfaceContext -> NameSet
 freeNamesIfContext = fnList freeNamesIfType
@@ -1615,6 +1619,8 @@ instance Binary IfaceFamTyConFlav where
     put_ bh IfaceAbstractClosedSynFamilyTyCon = putByte bh 3
     put_ _ IfaceBuiltInSynFamTyCon
         = pprPanic "Cannot serialize IfaceBuiltInSynFamTyCon, used for pretty-printing only" Outputable.empty
+    put_ _ IfaceBuiltInConstFamTyCon
+        = pprPanic "Cannot serialize IfaceBuiltInConstFamTyCon, used for pretty-printing only" Outputable.empty
 
     get bh = do { h <- getByte bh
                 ; case h of
