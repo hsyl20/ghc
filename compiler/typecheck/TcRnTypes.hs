@@ -2863,6 +2863,7 @@ data CtOrigin
                                -- the name and the right-hand side
   | RecordUpdOrigin
   | ViewPatOrigin
+  | OptConstraintsOrigin
 
   | ScOrigin TypeSize   -- Typechecking superclasses of an instance declaration
                         -- If the instance head is C ty1 .. tyn
@@ -3125,6 +3126,7 @@ pprCtO RecordUpdOrigin       = text "a record update"
 pprCtO ExprSigOrigin         = text "an expression type signature"
 pprCtO PatSigOrigin          = text "a pattern type signature"
 pprCtO PatOrigin             = text "a pattern"
+pprCtO OptConstraintsOrigin  = text "an optional constraint"
 pprCtO ViewPatOrigin         = text "a view pattern"
 pprCtO IfOrigin              = text "an if expression"
 pprCtO (LiteralOrigin lit)   = hsep [text "the literal", quotes (ppr lit)]

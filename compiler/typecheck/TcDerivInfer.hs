@@ -8,7 +8,7 @@ Functions for inferring (and simplifying) the context for derived instances.
 
 {-# LANGUAGE CPP #-}
 
-module TcDerivInfer (inferConstraints, simplifyInstanceContexts) where
+module TcDerivInfer (inferConstraints, simplifyInstanceContexts, tcFulfilConstraint) where
 
 #include "HsVersions.h"
 

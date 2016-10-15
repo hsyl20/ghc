@@ -8,6 +8,7 @@ module TcSimplify(
        simplifyTop, simplifyInteractive, solveEqualities,
        simplifyWantedsTcM,
        tcCheckSatisfiability,
+       tcFulfilConstraint,
 
        -- For Rules we need these
        solveWanteds, runTcSDeriveds
@@ -40,6 +41,11 @@ import Type
 import TysWiredIn    ( ptrRepLiftedTy )
 import Unify         ( tcMatchTyKi )
 import Util
+import Coercion
+import CoAxiom
+import Pair
+import FastString
+import TysWiredIn
 import Var
 import VarSet
 import UniqFM
@@ -2110,3 +2116,50 @@ dealing with the (Num a) context arising from f's definition;
 we try to unify a with Int (to default it), but find that it's
 already been unified with the rigid variable from g's type sig.
 -}
+
+
+------------------------------------------------
+-- Simplify constraint c in applications of:
+--    Fulfil (c :: Constraint) :: Bool
+
+
+constrAxiom :: Bool -> Type -> (Coercion,Type)
+constrAxiom b arg = (co,bool b)
+   where
+      co = mkAxiomRuleCo (constrAxiomRule (bool b)) [mkReflCo Nominal arg]
+
+constrAxiomRule :: Type -> CoAxiomRule
+constrAxiomRule b = ax
+   where
+      ax = CoAxiomRule
+          { coaxrName      = fsLit "FulFilConstraint"
+          , coaxrAsmpRoles = [Nominal]
+          , coaxrRole      = Nominal
+          , coaxrProves    = \cs ->
+              do [Pair s _] <- return cs
+                 return $ Pair (mkTyConApp typeConstFulfilTyCon [s]) b
+          }
+
+-- TODO: factorize (copied from TcTypeNats)
+bool :: Bool -> Type
+bool b = if b then mkTyConApp promotedTrueDataCon []
+              else mkTyConApp promotedFalseDataCon []
+
+
+tcFulfilConstraint :: PredType -> TcM (Maybe (Coercion,TcType))
+tcFulfilConstraint arg = do
+  (_,v) <- tryTc $ do
+      wanted <- newWanteds OptConstraintsOrigin [arg]
+      residual_wanted <- simplifyWantedsTcM wanted
+      return residual_wanted
+  let b     = case v of
+                  Nothing  -> False
+                  Just wts -> isEmptyWC wts
+  traceTc "tcFulfilConstraint" $
+    vcat [ text "Constraint:" <+> ppr arg
+         , text "Fulfilled?"     <+> ppr b
+         , text "Residual:"   <+> ppr v
+         ]
+  return (Just (constrAxiom b arg))
+  -- TODO: in case of failure, replace constraints with residual to avoid
+  -- recomputing them later.
