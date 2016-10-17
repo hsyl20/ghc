@@ -9,6 +9,7 @@ module TcSimplify(
        simplifyWantedsTcM,
        tcCheckSatisfiability,
        tcFulfilConstraint,
+       tcFulfilUnwantedConstraint,
 
        -- For Rules we need these
        solveWanteds, runTcSDeriveds
@@ -2168,3 +2169,26 @@ tcFulfilConstraint arg = do
   return (Just (constrAxiom b arg))
   -- TODO: in case of failure, replace constraints with residual to avoid
   -- recomputing them later.
+
+-- | Propagation of an unwanted constraint
+tcFulfilUnwantedConstraint :: PredType -> TcM ()
+tcFulfilUnwantedConstraint arg = do
+  (_,v) <- tryTc $ do
+      wanted <- newWanteds OptConstraintsOrigin [arg]
+      residual_wanted <- simplifyWantedsTcM wanted
+      return residual_wanted
+  traceTc "tcFulfilUnwantedConstraint" $
+    vcat [ text "Constraint:" <+> ppr arg
+         , text "Residual:"   <+> ppr v
+         ]
+  case v of
+      -- the constraint is now proved to be unsoluble
+      Nothing  -> return ()
+      Just wts
+         -- the constraint is now proved to be soluble!
+         | isEmptyWC wts -> do
+            -- FIXME: use correct error message
+            panic "Unwanted constraint"
+         -- the constraint is still unsure, we propagate
+         -- FIXME: return wts as a Type instead of arg
+         | otherwise     -> addUnwantedConstraint arg

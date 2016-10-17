@@ -274,6 +274,13 @@ tcRnModuleTcRnM hsc_env hsc_src
                 -- add extra source files to tcg_dependent_files
         addDependentFiles src_files ;
 
+        -- Propagation of unwanted constraints
+        (eps,hpt) <- getEpsAndHpt ;
+        forM_ (eps_unwanted eps) tcFulfilUnwantedConstraint ;
+        forM_ [t | (_,m) <- udfmToList hpt
+                 , t <- md_unwanted (hm_details m)
+              ] tcFulfilUnwantedConstraint ;
+
                 -- Dump output and return
         tcDump tcg_env ;
         return tcg_env

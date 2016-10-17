@@ -2485,6 +2485,9 @@ data ExternalPackageState
                                                -- from all the external-package modules
         eps_ann_env      :: !PackageAnnEnv,    -- ^ The total 'AnnEnv' accumulated
                                                -- from all the external-package modules
+        -- FIXME: don't use a list. Store source module for error messages.
+        eps_unwanted     :: ![Type],           -- ^ The total 'unwanted constraints' accumulated
+                                               -- from all the external-package modules
 
         eps_mod_fam_inst_env :: !(ModuleEnv FamInstEnv), -- ^ The family instances accumulated from external
                                                          -- packages, keyed off the module that declared them

@@ -13,7 +13,7 @@ module TcIface (
         importDecl, checkWiredInTyCon, tcHiBootIface, typecheckIface,
         typecheckIfacesForMerging,
         typecheckIfaceForInstantiate,
-        tcIfaceDecl, tcIfaceInst, tcIfaceFamInst, tcIfaceRules,
+        tcIfaceDecl, tcIfaceInst, tcIfaceFamInst, tcIfaceRules, tcIfaceType,
         tcIfaceVectInfo, tcIfaceAnnotations,
         tcIfaceExpr,    -- Desired by HERMIT (Trac #7683)
         tcIfaceGlobal

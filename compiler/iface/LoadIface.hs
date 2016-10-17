@@ -33,7 +33,7 @@ module LoadIface (
 #include "HsVersions.h"
 
 import {-# SOURCE #-}   TcIface( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
-                                 tcIfaceFamInst, tcIfaceVectInfo, tcIfaceAnnotations )
+                                 tcIfaceFamInst, tcIfaceVectInfo, tcIfaceAnnotations, tcIfaceType )
 
 import DynFlags
 import IfaceSyn
@@ -459,6 +459,7 @@ loadInterface doc_str mod from
         ; new_eps_insts     <- mapM tcIfaceInst (mi_insts iface)
         ; new_eps_fam_insts <- mapM tcIfaceFamInst (mi_fam_insts iface)
         ; new_eps_rules     <- tcIfaceRules ignore_prags (mi_rules iface)
+        ; new_eps_unwanted  <- mapM tcIfaceType (mi_unwanted iface)
         ; new_eps_anns      <- tcIfaceAnnotations (mi_anns iface)
         ; new_eps_vect_info <- tcIfaceVectInfo mod (mkNameEnv new_eps_decls) (mi_vect_info iface)
 
@@ -467,6 +468,7 @@ loadInterface doc_str mod from
                                 mi_insts     = panic "No mi_insts in PIT",
                                 mi_fam_insts = panic "No mi_fam_insts in PIT",
                                 mi_rules     = panic "No mi_rules in PIT",
+                                mi_unwanted  = panic "No mi_unwanted in PIT",
                                 mi_anns      = panic "No mi_anns in PIT"
                               }
                }
@@ -479,6 +481,7 @@ loadInterface doc_str mod from
                   eps_PTE          = addDeclsToPTE   (eps_PTE eps) new_eps_decls,
                   eps_rule_base    = extendRuleBaseList (eps_rule_base eps)
                                                         new_eps_rules,
+                  eps_unwanted     = new_eps_unwanted ++ eps_unwanted eps,
                   eps_inst_env     = extendInstEnvList (eps_inst_env eps)
                                                        new_eps_insts,
                   eps_fam_inst_env = extendFamInstEnvList (eps_fam_inst_env eps)
@@ -895,6 +898,7 @@ initExternalPackageState
       eps_PTE          = emptyTypeEnv,
       eps_inst_env     = emptyInstEnv,
       eps_fam_inst_env = emptyFamInstEnv,
+      eps_unwanted     = [],
       eps_rule_base    = mkRuleBase builtinRules,
         -- Initialise the EPS rule pool with the built-in rules
       eps_mod_fam_inst_env
