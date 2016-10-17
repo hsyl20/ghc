@@ -52,6 +52,7 @@ module TcRnMonad(
   getFixityEnv, extendFixityEnv, getRecFieldEnv,
   getDeclaredDefaultTys,
   addDependentFiles,
+  addUnwantedConstraint,
 
   -- * Error management
   getSrcSpanM, setSrcSpan, addLocM,
@@ -788,6 +789,15 @@ addDependentFiles fs = do
   ref <- fmap tcg_dependent_files getGblEnv
   dep_files <- readTcRef ref
   writeTcRef ref (fs ++ dep_files)
+
+addUnwantedConstraint :: Type -> TcRn ()
+addUnwantedConstraint t = do
+   ref <- fmap tcg_unwanted getGblEnv
+   uwc <- readTcRef ref
+   -- FIXME: avoid including several times the same unwanted constraint
+   -- when (t `notElem` uwc) $
+   --    writeTcRef ref (t:uwc)
+   updTcRef ref (t:)
 
 {-
 ************************************************************************

@@ -2152,9 +2152,14 @@ tcFulfilConstraint arg = do
       wanted <- newWanteds OptConstraintsOrigin [arg]
       residual_wanted <- simplifyWantedsTcM wanted
       return residual_wanted
-  let b     = case v of
-                  Nothing  -> False
-                  Just wts -> isEmptyWC wts
+  b <- case v of
+      Nothing  -> return False
+      Just wts
+         | isEmptyWC wts -> return True
+         | otherwise     -> do
+            -- FIXME: return wts as a Type instead of arg
+            addUnwantedConstraint arg
+            return False
   traceTc "tcFulfilConstraint" $
     vcat [ text "Constraint:" <+> ppr arg
          , text "Fulfilled?"  <+> ppr b

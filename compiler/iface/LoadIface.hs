@@ -1001,6 +1001,7 @@ pprModIface iface
         , vcat (map ppr (mi_insts iface))
         , vcat (map ppr (mi_fam_insts iface))
         , vcat (map ppr (mi_rules iface))
+        , text "unwanted constraints:" <+> fsep (map ppr (mi_unwanted iface))
         , pprVectInfo (mi_vect_info iface)
         , ppr (mi_warns iface)
         , pprTrustInfo (mi_trust iface)
