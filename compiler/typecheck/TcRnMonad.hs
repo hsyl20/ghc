@@ -151,6 +151,7 @@ import TcType
 import InstEnv
 import FamInstEnv
 import PrelNames
+import Data.List (find)
 
 import Id
 import VarSet
@@ -794,10 +795,9 @@ addUnwantedConstraint :: Type -> TcRn ()
 addUnwantedConstraint t = do
    ref <- fmap tcg_unwanted getGblEnv
    uwc <- readTcRef ref
-   -- FIXME: avoid including several times the same unwanted constraint
-   -- when (t `notElem` uwc) $
-   --    writeTcRef ref (t:uwc)
-   updTcRef ref (t:)
+   -- avoid including several times the same unwanted constraint
+   when (isNothing (find (`eqType` t) uwc)) $
+      writeTcRef ref (t:uwc)
 
 {-
 ************************************************************************
