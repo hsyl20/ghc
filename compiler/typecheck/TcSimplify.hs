@@ -42,6 +42,7 @@ import Type
 import TysWiredIn    ( ptrRepLiftedTy )
 import Unify         ( tcMatchTyKi )
 import Util
+import Module
 import Coercion
 import CoAxiom
 import Pair
@@ -2171,8 +2172,8 @@ tcFulfilConstraint arg = do
   -- recomputing them later.
 
 -- | Propagation of an unwanted constraint
-tcFulfilUnwantedConstraint :: PredType -> TcM ()
-tcFulfilUnwantedConstraint arg = do
+tcFulfilUnwantedConstraint :: Maybe ModuleName -> PredType -> TcM ()
+tcFulfilUnwantedConstraint m arg = do
   (_,v) <- tryTc $ do
       wanted <- newWanteds OptConstraintsOrigin [arg]
       residual_wanted <- simplifyWantedsTcM wanted
@@ -2187,8 +2188,12 @@ tcFulfilUnwantedConstraint arg = do
       Just wts
          -- the constraint is now proved to be soluble!
          | isEmptyWC wts -> do
-            -- FIXME: use correct error message
-            addErr $ text "An imported module has already assumed that the following constraint cannot be fulfilled, but it can:" <+> ppr arg
+            let mErr = case m of
+                        Nothing -> text "An imported module"
+                        Just n  -> text "Imported module" <+> pprModuleName n
+            addErr $ mErr 
+               <+> text "has already assumed that the following constraint cannot be fulfilled, but now it can:" 
+               <+> ppr arg
          -- the constraint is still unsure, we propagate
          -- FIXME: return wts as a Type instead of arg
          | otherwise     -> addUnwantedConstraint arg
