@@ -2188,7 +2188,7 @@ tcFulfilUnwantedConstraint arg = do
          -- the constraint is now proved to be soluble!
          | isEmptyWC wts -> do
             -- FIXME: use correct error message
-            panic "Unwanted constraint"
+            addErr $ text "An imported module has already assumed that the following constraint cannot be fulfilled, but it can:" <+> ppr arg
          -- the constraint is still unsure, we propagate
          -- FIXME: return wts as a Type instead of arg
          | otherwise     -> addUnwantedConstraint arg
