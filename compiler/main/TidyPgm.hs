@@ -37,7 +37,7 @@ import MkId             ( mkDictSelRhs )
 import IdInfo
 import InstEnv
 import FamInstEnv
-import Type             ( tidyTopType )
+import Type             ( tidyTopType, tidyTypes )
 import Demand           ( appIsBottom, isTopSig, isBottomingSig )
 import BasicTypes
 import Name hiding (varName)
@@ -160,6 +160,7 @@ mkBootModDetailsTc hsc_env
                              , md_insts     = insts'
                              , md_fam_insts = fam_insts
                              , md_rules     = []
+                             , md_unwanted  = []
                              , md_anns      = []
                              , md_exports   = exports
                              , md_vect_info = noVectInfo
@@ -316,6 +317,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
                               , mg_binds     = binds
                               , mg_patsyns   = patsyns
                               , mg_rules     = imp_rules
+                              , mg_unwanted  = unwanted
                               , mg_vect_info = vect_info
                               , mg_anns      = anns
                               , mg_deps      = deps
@@ -362,6 +364,8 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
                 -- You might worry that the tidy_env contains IdInfo-rich stuff
                 -- and indeed it does, but if omit_prags is on, ext_rules is
                 -- empty
+
+              ; tidy_unwanted = tidyTypes tidy_env unwanted
 
               ; tidy_vect_info = tidyVectInfo tidy_env vect_info
 
@@ -421,6 +425,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
 
                    ModDetails { md_types     = tidy_type_env,
                                 md_rules     = tidy_rules,
+                                md_unwanted  = tidy_unwanted,
                                 md_insts     = tidy_cls_insts,
                                 md_vect_info = tidy_vect_info,
                                 md_fam_insts = fam_insts,

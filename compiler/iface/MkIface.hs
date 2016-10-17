@@ -206,6 +206,7 @@ mkIface_ hsc_env maybe_old_fingerprint
          ModDetails{  md_insts     = insts,
                       md_fam_insts = fam_insts,
                       md_rules     = rules,
+                      md_unwanted  = unwanted,
                       md_anns      = anns,
                       md_vect_info = vect_info,
                       md_types     = type_env,
@@ -239,6 +240,7 @@ mkIface_ hsc_env maybe_old_fingerprint
           -- See Note [Deterministic UniqFM] in UniqDFM for more details.
         warns       = src_warns
         iface_rules = map coreRuleToIfaceRule rules
+        iface_unwanted = map toIfaceType unwanted
         iface_insts = map instanceToIfaceInst $ fixSafeInstances safe_mode insts
         iface_fam_insts = map famInstToIfaceFamInst fam_insts
         iface_vect_info = flattenVectInfo vect_info
@@ -262,6 +264,9 @@ mkIface_ hsc_env maybe_old_fingerprint
               mi_insts       = sortBy cmp_inst     iface_insts,
               mi_fam_insts   = sortBy cmp_fam_inst iface_fam_insts,
               mi_rules       = sortBy cmp_rule     iface_rules,
+
+              -- TODO: sort
+              mi_unwanted    =                     iface_unwanted,
 
               mi_vect_info   = iface_vect_info,
 

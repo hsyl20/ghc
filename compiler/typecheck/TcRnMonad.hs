@@ -218,6 +218,7 @@ initTc hsc_env hsc_src keep_rn_syntax mod loc do_this
                            Nothing             -> newIORef emptyNameEnv } ;
 
         dependent_files_var <- newIORef [] ;
+        unwanted_var        <- newIORef [] ;
         static_wc_var       <- newIORef emptyWC ;
 #ifdef GHCI
         th_topdecls_var      <- newIORef [] ;
@@ -302,6 +303,7 @@ initTc hsc_env hsc_src keep_rn_syntax mod loc do_this
                 tcg_dependent_files = dependent_files_var,
                 tcg_tc_plugins     = [],
                 tcg_top_loc        = loc,
+                tcg_unwanted       = unwanted_var,
                 tcg_static_wc      = static_wc_var
              } ;
              lcl_env = TcLclEnv {

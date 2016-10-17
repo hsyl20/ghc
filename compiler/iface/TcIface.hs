@@ -167,6 +167,7 @@ typecheckIface iface
         ; insts     <- mapM tcIfaceInst (mi_insts iface)
         ; fam_insts <- mapM tcIfaceFamInst (mi_fam_insts iface)
         ; rules     <- tcIfaceRules ignore_prags (mi_rules iface)
+        ; unwanted  <- mapM tcIfaceType (mi_unwanted iface)
         ; anns      <- tcIfaceAnnotations (mi_anns iface)
 
                 -- Vectorisation information
@@ -185,6 +186,7 @@ typecheckIface iface
                               , md_insts     = insts
                               , md_fam_insts = fam_insts
                               , md_rules     = rules
+                              , md_unwanted  = unwanted
                               , md_anns      = anns
                               , md_vect_info = vect_info
                               , md_exports   = exports
@@ -289,6 +291,7 @@ typecheckIfacesForMerging mod ifaces tc_env_var =
         insts     <- mapM (tcIfaceInstWithDFunTypeEnv type_env) (mi_insts iface)
         fam_insts <- mapM tcIfaceFamInst (mi_fam_insts iface)
         rules     <- tcIfaceRules ignore_prags (mi_rules iface)
+        unwanted  <- mapM tcIfaceType (mi_unwanted iface)
         anns      <- tcIfaceAnnotations (mi_anns iface)
         vect_info <- tcIfaceVectInfo (mi_semantic_module iface) type_env (mi_vect_info iface)
         exports   <- ifaceExportNames (mi_exports iface)
@@ -296,6 +299,7 @@ typecheckIfacesForMerging mod ifaces tc_env_var =
                             , md_insts     = insts
                             , md_fam_insts = fam_insts
                             , md_rules     = rules
+                            , md_unwanted  = unwanted
                             , md_anns      = anns
                             , md_vect_info = vect_info
                             , md_exports   = exports
@@ -324,6 +328,7 @@ typecheckIfaceForInstantiate nsubst iface =
     insts     <- mapM (tcIfaceInstWithDFunTypeEnv type_env) (mi_insts iface)
     fam_insts <- mapM tcIfaceFamInst (mi_fam_insts iface)
     rules     <- tcIfaceRules ignore_prags (mi_rules iface)
+    unwanted  <- mapM tcIfaceType (mi_unwanted iface)
     anns      <- tcIfaceAnnotations (mi_anns iface)
     vect_info <- tcIfaceVectInfo (mi_semantic_module iface) type_env (mi_vect_info iface)
     exports   <- ifaceExportNames (mi_exports iface)
@@ -331,6 +336,7 @@ typecheckIfaceForInstantiate nsubst iface =
                         , md_insts     = insts
                         , md_fam_insts = fam_insts
                         , md_rules     = rules
+                        , md_unwanted  = unwanted
                         , md_anns      = anns
                         , md_vect_info = vect_info
                         , md_exports   = exports

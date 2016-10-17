@@ -15,7 +15,7 @@ module IfaceSyn (
         IfaceIdInfo(..), IfaceIdDetails(..), IfaceUnfolding(..),
         IfaceInfoItem(..), IfaceRule(..), IfaceAnnotation(..), IfaceAnnTarget,
         IfaceClsInst(..), IfaceFamInst(..), IfaceTickish(..),
-        IfaceBang(..),
+        IfaceBang(..), IfaceConstraint (..),
         IfaceSrcBang(..), SrcUnpackedness(..), SrcStrictness(..),
         IfaceAxBranch(..),
         IfaceTyConParent(..),
@@ -286,6 +286,11 @@ data IfaceRule
         ifRuleRhs    :: IfaceExpr,
         ifRuleAuto   :: Bool,
         ifRuleOrph   :: IsOrphan   -- Just like IfaceClsInst
+    }
+
+data IfaceConstraint
+  = IfaceConstraint {
+        ifConstraint :: IfaceExpr   -- ^ Constraint
     }
 
 data IfaceAnnotation

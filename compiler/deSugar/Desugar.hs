@@ -291,6 +291,7 @@ deSugar hsc_env
                             tcg_ev_binds     = ev_binds,
                             tcg_fords        = fords,
                             tcg_rules        = rules,
+                            tcg_unwanted     = unwanted,
                             tcg_vects        = vects,
                             tcg_patsyns      = patsyns,
                             tcg_tcs          = tcs,
@@ -365,6 +366,7 @@ deSugar hsc_env
 
         ; used_th <- readIORef tc_splice_used
         ; dep_files <- readIORef dependent_files
+        ; unwanted' <- readIORef unwanted
         ; safe_mode <- finalSafeMode dflags tcg_env
         ; usages <- mkUsageInfo hsc_env mod (imp_mods imports) used_names dep_files merged
         -- id_mod /= mod when we are processing an hsig, but hsigs
@@ -390,6 +392,7 @@ deSugar hsc_env
                 mg_fam_inst_env = fam_inst_env,
                 mg_patsyns      = patsyns,
                 mg_rules        = ds_rules_for_imps,
+                mg_unwanted     = unwanted',
                 mg_binds        = ds_binds,
                 mg_foreign      = ds_fords,
                 mg_hpc_info     = ds_hpc_info,

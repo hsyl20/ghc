@@ -901,6 +901,7 @@ data ModIface
         mi_insts       :: [IfaceClsInst],     -- ^ Sorted class instance
         mi_fam_insts   :: [IfaceFamInst],  -- ^ Sorted family instances
         mi_rules       :: [IfaceRule],     -- ^ Sorted rules
+        mi_unwanted    :: [IfaceType],  -- ^ Unwanted constraints
         mi_orphan_hash :: !Fingerprint,    -- ^ Hash for orphan rules, class and family
                                            -- instances, and vectorise pragmas combined
 
@@ -1003,6 +1004,7 @@ instance Binary ModIface where
                  mi_insts     = insts,
                  mi_fam_insts = fam_insts,
                  mi_rules     = rules,
+                 mi_unwanted  = unwanted,
                  mi_orphan_hash = orphan_hash,
                  mi_vect_info = vect_info,
                  mi_hpc       = hpc_info,
@@ -1028,6 +1030,7 @@ instance Binary ModIface where
         put_ bh insts
         put_ bh fam_insts
         lazyPut bh rules
+        put_ bh unwanted
         put_ bh orphan_hash
         put_ bh vect_info
         put_ bh hpc_info
@@ -1055,6 +1058,7 @@ instance Binary ModIface where
         insts       <- {-# SCC "bin_insts" #-} get bh
         fam_insts   <- {-# SCC "bin_fam_insts" #-} get bh
         rules       <- {-# SCC "bin_rules" #-} lazyGet bh
+        unwanted    <- {-# SCC "bin_unwanted" #-} get bh
         orphan_hash <- get bh
         vect_info   <- get bh
         hpc_info    <- get bh
@@ -1082,6 +1086,7 @@ instance Binary ModIface where
                  mi_insts       = insts,
                  mi_fam_insts   = fam_insts,
                  mi_rules       = rules,
+                 mi_unwanted    = unwanted,
                  mi_orphan_hash = orphan_hash,
                  mi_vect_info   = vect_info,
                  mi_hpc         = hpc_info,
@@ -1117,6 +1122,7 @@ emptyModIface mod
                mi_insts       = [],
                mi_fam_insts   = [],
                mi_rules       = [],
+               mi_unwanted    = [],
                mi_decls       = [],
                mi_globals     = Nothing,
                mi_orphan_hash = fingerprint0,
@@ -1156,6 +1162,7 @@ data ModDetails
         md_insts     :: ![ClsInst],     -- ^ 'DFunId's for the instances in this module
         md_fam_insts :: ![FamInst],
         md_rules     :: ![CoreRule],    -- ^ Domain may include 'Id's from other modules
+        md_unwanted  :: ![Type],        -- ^ Unwanted constraints
         md_anns      :: ![Annotation],  -- ^ Annotations present in this module: currently
                                         -- they only annotate things also declared in this module
         md_vect_info :: !VectInfo       -- ^ Module vectorisation information
@@ -1169,6 +1176,7 @@ emptyModDetails
                  md_insts     = [],
                  md_rules     = [],
                  md_fam_insts = [],
+                 md_unwanted  = [],
                  md_anns      = [],
                  md_vect_info = noVectInfo }
 
@@ -1213,6 +1221,7 @@ data ModGuts
         mg_patsyns   :: ![PatSyn],       -- ^ Pattern synonyms declared in this module
         mg_rules     :: ![CoreRule],     -- ^ Before the core pipeline starts, contains
                                          -- See Note [Overall plumbing for rules] in Rules.hs
+        mg_unwanted  :: ![Type],         -- ^ Unwanted constraints
         mg_binds     :: !CoreProgram,    -- ^ Bindings for this module
         mg_foreign   :: !ForeignStubs,   -- ^ Foreign exports declared in this module
         mg_warns     :: !Warnings,       -- ^ Warnings declared in the module
