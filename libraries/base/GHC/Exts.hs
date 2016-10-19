@@ -77,7 +77,7 @@ module GHC.Exts
 
         -- * The Constraint kind
         Constraint,
-        Fulfil,
+        Fulfilled,
 
 
         -- * The Any type
@@ -216,5 +216,5 @@ instance IsList CallStack where
 -- | Indicate if a constraint is fulfilled
 --
 -- @since 4.10.0.0
-type family Fulfil (c :: Constraint) :: Bool where
+type family Fulfilled (c :: Constraint) :: Bool where
 

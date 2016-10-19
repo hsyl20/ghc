@@ -584,7 +584,7 @@ typeConstFulfilTyCon =
     NotInjective
 
   where
-  name = mkWiredInTyConName UserSyntax gHC_EXTS (fsLit "Fulfil")
+  name = mkWiredInTyConName UserSyntax gHC_EXTS (fsLit "Fulfilled")
                 typeConstFulfilTyFamNameKey typeConstFulfilTyCon
 
 
