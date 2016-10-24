@@ -9,7 +9,8 @@ module TcSimplify(
        simplifyWantedsTcM,
        tcCheckSatisfiability,
        tcFulfilConstraint,
-       tcFulfilUnwantedConstraint,
+       tcPropagateUnwantedConstraint,
+       tcCheckOwnUnwantedConstraint,
 
        -- For Rules we need these
        solveWanteds, runTcSDeriveds
@@ -2148,52 +2149,87 @@ bool b = if b then mkTyConApp promotedTrueDataCon []
               else mkTyConApp promotedFalseDataCon []
 
 
-tcFulfilConstraint :: PredType -> TcM (Maybe (Coercion,TcType))
-tcFulfilConstraint arg = do
+data Fulfil
+   = FFInsoluble
+   | FFResidual WantedConstraints
+   | FFFulfilled
+
+instance Outputable Fulfil where
+  ppr FFInsoluble      = text "Insoluble"
+  ppr FFFulfilled      = text "Fulfilled"
+  ppr (FFResidual wts) = text "Residual:" <+> ppr wts
+
+-- | Try to fulfil the given constraint in the current type-checking context
+tcFulfil :: PredType -> TcM Fulfil
+tcFulfil arg = do
   (_,v) <- tryTc $ do
       wanted <- newWanteds OptConstraintsOrigin [arg]
       residual_wanted <- simplifyWantedsTcM wanted
       return residual_wanted
-  b <- case v of
-      Nothing  -> return False
-      Just wts
-         | isEmptyWC wts -> return True
-         | otherwise     -> do
-            -- FIXME: return wts as a Type instead of arg
-            addUnwantedConstraint arg
-            return False
+  return $ case v of
+    Nothing  -> FFInsoluble
+    Just wts 
+       | isEmptyWC wts -> FFFulfilled
+       | otherwise     -> FFResidual wts
+
+tcFulfilConstraint :: PredType -> TcM (Maybe (Coercion,TcType))
+tcFulfilConstraint arg = do
+  ff <- tcFulfil arg
+  case ff of
+                              -- FIXME: return wts as a Type instead of arg
+    FFResidual _ {- wts -} -> addUnwantedConstraint arg
+    _                      -> return ()
   traceTc "tcFulfilConstraint" $
     vcat [ text "Constraint:" <+> ppr arg
-         , text "Fulfilled?"  <+> ppr b
-         , text "Residual:"   <+> ppr v
+         , text "Fulfilled?"  <+> ppr ff
          ]
+  let b = case ff of
+            FFFulfilled -> True
+            _           -> False
   return (Just (constrAxiom b arg))
   -- TODO: in case of failure, replace constraints with residual to avoid
   -- recomputing them later.
 
 -- | Propagation of an unwanted constraint
-tcFulfilUnwantedConstraint :: Maybe ModuleName -> PredType -> TcM ()
-tcFulfilUnwantedConstraint m arg = do
-  (_,v) <- tryTc $ do
-      wanted <- newWanteds OptConstraintsOrigin [arg]
-      residual_wanted <- simplifyWantedsTcM wanted
-      return residual_wanted
-  traceTc "tcFulfilUnwantedConstraint" $
+tcPropagateUnwantedConstraint :: Maybe ModuleName -> PredType -> TcM ()
+tcPropagateUnwantedConstraint m arg = do
+  ff <- tcFulfil arg
+  traceTc "tcPropagateUnwantedConstraint" $
     vcat [ text "Constraint:" <+> ppr arg
-         , text "Residual:"   <+> ppr v
+         , text "Fulfilled?"  <+> ppr ff
          ]
-  case v of
-      -- the constraint is now proved to be unsoluble
-      Nothing  -> return ()
-      Just wts
-         -- the constraint is now proved to be soluble!
-         | isEmptyWC wts -> do
-            let mErr = case m of
-                        Nothing -> text "An imported module"
-                        Just n  -> text "Imported module" <+> pprModuleName n
-            addErr $ mErr 
-               <+> text "has already assumed that the following constraint cannot be fulfilled, but now it can:" 
-               <+> ppr arg
-         -- the constraint is still unsure, we propagate
-         -- FIXME: return wts as a Type instead of arg
-         | otherwise     -> addUnwantedConstraint arg
+  case ff of
+      -- the constraint is now proved to be insoluble, we don't propagate
+      FFInsoluble -> return ()
+
+      -- the constraint is still unsure, we propagate
+      FFResidual _ {- wts -} -> addUnwantedConstraint arg -- FIXME: return wts as a Type instead of arg
+
+      -- the constraint is now proved to be soluble! We don't allow this.
+      FFFulfilled -> addErr $ mErr 
+        <+> text "has already assumed that the following constraint cannot be fulfilled, but now it can:" 
+        <+> ppr arg
+        where
+          mErr = case m of
+                   Nothing -> text "An imported module"
+                   Just n  -> text "Imported module" <+> pprModuleName n
+
+-- | Checking of the module's own unwanted constraints
+tcCheckOwnUnwantedConstraint :: PredType -> TcM ()
+tcCheckOwnUnwantedConstraint arg = do
+  ff <- tcFulfil arg
+  traceTc "tcCheckOwnUnwantedConstraint" $
+    vcat [ text "Constraint:" <+> ppr arg
+         , text "Fulfilled?"  <+> ppr ff
+         ]
+  case ff of
+      -- the constraint is now proved to be insoluble
+      -- TODO: remove it from the exported unwanted constraints
+      FFInsoluble  -> return ()
+
+      FFResidual _ -> return () -- normal propagation
+
+      -- the constraint is now proved to be soluble! We don't allow this
+      FFFulfilled -> addErr $
+        text "Incoherence found: GHC has already assumed that the following constraint cannot be fulfilled, but now it can:" 
+        <+> ppr arg

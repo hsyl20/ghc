@@ -53,6 +53,7 @@ module TcRnMonad(
   getDeclaredDefaultTys,
   addDependentFiles,
   addUnwantedConstraint,
+  getUnwantedConstraints,
 
   -- * Error management
   getSrcSpanM, setSrcSpan, addLocM,
@@ -798,6 +799,11 @@ addUnwantedConstraint t = do
    -- avoid including several times the same unwanted constraint
    when (isNothing (find (`eqType` t) uwc)) $
       writeTcRef ref (t:uwc)
+
+getUnwantedConstraints :: TcRn [PredType]
+getUnwantedConstraints = do
+   ref <- fmap tcg_unwanted getGblEnv
+   readTcRef ref
 
 {-
 ************************************************************************

@@ -276,12 +276,18 @@ tcRnModuleTcRnM hsc_env hsc_src
 
         -- Propagation of unwanted constraints
         (eps,hpt) <- getEpsAndHpt ;
-        forM_ (eps_unwanted eps) (tcFulfilUnwantedConstraint Nothing) ;
+        forM_ (eps_unwanted eps) (tcPropagateUnwantedConstraint Nothing) ;
         forM_ (udfmToList hpt) $ \(_,m) -> do {
             let { n = moduleName (mi_module (hm_iface m)) } ;
             forM_ (md_unwanted (hm_details m))
-               (tcFulfilUnwantedConstraint (Just n)) ;
+               (tcPropagateUnwantedConstraint (Just n)) ;
         };
+
+        -- Check that we somehow haven't contradicted ourselves with our
+        -- unwanted constraints
+        uwcs <- getUnwantedConstraints ;
+        forM_ uwcs tcCheckOwnUnwantedConstraint ;
+
 
                 -- Dump output and return
         tcDump tcg_env ;
