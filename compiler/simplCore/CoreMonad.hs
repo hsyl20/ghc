@@ -5,6 +5,7 @@
 -}
 
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE MonadComprehensions #-}
 
 module CoreMonad (
     -- * Configuration of the core-to-core passes
@@ -141,27 +142,27 @@ data CoreToDo           -- These are diff core-to-core passes,
   | CorePrep
 
 instance Outputable CoreToDo where
-  ppr (CoreDoSimplify _ _)     = text "Simplifier"
-  ppr (CoreDoPluginPass s _)   = text "Core plugin: " <+> text s
-  ppr CoreDoFloatInwards       = text "Float inwards"
-  ppr (CoreDoFloatOutwards f)  = text "Float out" <> parens (ppr f)
-  ppr CoreLiberateCase         = text "Liberate case"
-  ppr CoreDoStaticArgs         = text "Static argument"
-  ppr CoreDoCallArity          = text "Called arity analysis"
-  ppr CoreDoStrictness         = text "Demand analysis"
-  ppr CoreDoWorkerWrapper      = text "Worker Wrapper binds"
-  ppr CoreDoSpecialising       = text "Specialise"
-  ppr CoreDoSpecConstr         = text "SpecConstr"
-  ppr CoreCSE                  = text "Common sub-expression"
-  ppr CoreDoVectorisation      = text "Vectorisation"
-  ppr CoreDesugar              = text "Desugar (before optimization)"
-  ppr CoreDesugarOpt           = text "Desugar (after optimization)"
-  ppr CoreTidy                 = text "Tidy Core"
-  ppr CorePrep                 = text "CorePrep"
-  ppr CoreDoPrintCore          = text "Print core"
-  ppr (CoreDoRuleCheck {})     = text "Rule check"
-  ppr CoreDoNothing            = text "CoreDoNothing"
-  ppr (CoreDoPasses passes)    = text "CoreDoPasses" <+> ppr passes
+  ppr (CoreDoSimplify _ _)     = text "Core - Simplifier"
+  ppr (CoreDoPluginPass s _)   = text "Core - Plugin (" <+> text s <+> text ")"
+  ppr CoreDoFloatInwards       = text "Core - Float inwards"
+  ppr (CoreDoFloatOutwards _)  = text "Core - Float outwards"
+  ppr CoreLiberateCase         = text "Core - Liberate case"
+  ppr CoreDoStaticArgs         = text "Core - Static argument"
+  ppr CoreDoCallArity          = text "Core - Called arity analysis"
+  ppr CoreDoStrictness         = text "Core - Demand analysis"
+  ppr CoreDoWorkerWrapper      = text "Core - Worker Wrapper binds"
+  ppr CoreDoSpecialising       = text "Core - Specialise"
+  ppr CoreDoSpecConstr         = text "Core - SpecConstr"
+  ppr CoreCSE                  = text "Core - Common sub-expression"
+  ppr CoreDoVectorisation      = text "Core - Vectorisation"
+  ppr CoreDesugar              = text "Core - Desugar (before optimization)"
+  ppr CoreDesugarOpt           = text "Core - Desugar (after optimization)"
+  ppr CoreTidy                 = text "Core - Tidy"
+  ppr CorePrep                 = text "Core - Prep"
+  ppr CoreDoPrintCore          = text "Core - Print"
+  ppr (CoreDoRuleCheck {})     = text "Core - Rule check"
+  ppr CoreDoNothing            = text "Core - DoNothing"
+  ppr (CoreDoPasses passes)    = text "Core - DoPasses" <+> ppr passes
 
 pprPassDetails :: CoreToDo -> SDoc
 pprPassDetails (CoreDoSimplify n md) = vcat [ text "Max iterations =" <+> int n
@@ -362,10 +363,13 @@ pprTickCounts counts
 
 pprTickGroup :: [(Tick, Int)] -> SDoc
 pprTickGroup group@((tick1,_):_)
-  = hang (int (sum [n | (_,n) <- group]) <+> text (tickString tick1))
-       2 (vcat [ int n <+> pprTickCts tick
-                                    -- flip as we want largest first
-               | (tick,n) <- sortBy (flip (comparing snd)) group])
+  = vcat $ (text (tickString tick1) <> char ':' <+> int (sum $ fmap snd group))
+         : [ text "  " <> int n <+> t
+                             -- flip as we want largest first
+           | (tick,n) <- sortBy (flip (comparing snd)) group
+           , isJust (pprTickCts tick)
+           , let Just t = pprTickCts tick
+           ]
 pprTickGroup [] = panic "pprTickGroup"
 
 data Tick
@@ -393,7 +397,8 @@ data Tick
   | SimplifierDone              -- Ticked at each iteration of the simplifier
 
 instance Outputable Tick where
-  ppr tick = text (tickString tick) <+> pprTickCts tick
+  ppr tick = text (tickString tick) 
+             <+> fromMaybe Outputable.empty (pprTickCts tick)
 
 instance Eq Tick where
   a == b = case a `cmpTick` b of
@@ -441,23 +446,23 @@ tickString (FillInCaseDefault _)        = "FillInCaseDefault"
 tickString BottomFound                  = "BottomFound"
 tickString SimplifierDone               = "SimplifierDone"
 
-pprTickCts :: Tick -> SDoc
-pprTickCts (PreInlineUnconditionally v) = ppr v
-pprTickCts (PostInlineUnconditionally v)= ppr v
-pprTickCts (UnfoldingDone v)            = ppr v
-pprTickCts (RuleFired v)                = ppr v
-pprTickCts LetFloatFromLet              = Outputable.empty
-pprTickCts (EtaExpansion v)             = ppr v
-pprTickCts (EtaReduction v)             = ppr v
-pprTickCts (BetaReduction v)            = ppr v
-pprTickCts (CaseOfCase v)               = ppr v
-pprTickCts (KnownBranch v)              = ppr v
-pprTickCts (CaseMerge v)                = ppr v
-pprTickCts (AltMerge v)                 = ppr v
-pprTickCts (CaseElim v)                 = ppr v
-pprTickCts (CaseIdentity v)             = ppr v
-pprTickCts (FillInCaseDefault v)        = ppr v
-pprTickCts _                            = Outputable.empty
+pprTickCts :: Tick -> Maybe SDoc
+pprTickCts (PreInlineUnconditionally v) = Just $ ppr v
+pprTickCts (PostInlineUnconditionally v)= Just $ ppr v
+pprTickCts (UnfoldingDone v)            = Just $ ppr v
+pprTickCts (RuleFired v)                = Just $ ppr v
+pprTickCts LetFloatFromLet              = Nothing
+pprTickCts (EtaExpansion v)             = Just $ ppr v
+pprTickCts (EtaReduction v)             = Just $ ppr v
+pprTickCts (BetaReduction v)            = Just $ ppr v
+pprTickCts (CaseOfCase v)               = Just $ ppr v
+pprTickCts (KnownBranch v)              = Just $ ppr v
+pprTickCts (CaseMerge v)                = Just $ ppr v
+pprTickCts (AltMerge v)                 = Just $ ppr v
+pprTickCts (CaseElim v)                 = Just $ ppr v
+pprTickCts (CaseIdentity v)             = Just $ ppr v
+pprTickCts (FillInCaseDefault v)        = Just $ ppr v
+pprTickCts _                            = Nothing
 
 cmpTick :: Tick -> Tick -> Ordering
 cmpTick a b = case (tickToTag a `compare` tickToTag b) of

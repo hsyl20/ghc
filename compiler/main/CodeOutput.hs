@@ -65,7 +65,8 @@ codeOutput dflags this_mod filenm location foreign_stubs pkg_deps cmm_stream
                     else cmm_stream
 
               do_lint cmm = withTiming (pure dflags)
-                                       (text "CmmLint"<+>brackets (ppr this_mod))
+                                       (text "CmmLint")
+                                       (ppr this_mod)
                                        (const ()) $ do
                 { case cmmLint dflags cmm of
                         Just err -> do { log_action dflags
@@ -86,7 +87,8 @@ codeOutput dflags this_mod filenm location foreign_stubs pkg_deps cmm_stream
              HscAsm         -> outputAsm dflags this_mod location filenm
                                          linted_cmm_stream;
              HscC           -> outputC dflags filenm linted_cmm_stream pkg_deps;
-             HscLlvm        -> outputLlvm dflags filenm linted_cmm_stream;
+             HscLlvm        -> outputLlvm dflags this_mod filenm
+                                          linted_cmm_stream;
              HscInterpreted -> panic "codeOutput: HscInterpreted";
              HscNothing     -> panic "codeOutput: HscNothing"
           }
@@ -171,13 +173,14 @@ outputAsm dflags this_mod location filenm cmm_stream
 ************************************************************************
 -}
 
-outputLlvm :: DynFlags -> FilePath -> Stream IO RawCmmGroup () -> IO ()
-outputLlvm dflags filenm cmm_stream
+outputLlvm :: DynFlags -> Module -> FilePath ->
+              Stream IO RawCmmGroup () -> IO ()
+outputLlvm dflags this_mod filenm cmm_stream
   = do ncg_uniqs <- mkSplitUniqSupply 'n'
 
        {-# SCC "llvm_output" #-} doOutput filenm $
            \f -> {-# SCC "llvm_CodeGen" #-}
-                 llvmCodeGen dflags f ncg_uniqs cmm_stream
+                 llvmCodeGen dflags this_mod f ncg_uniqs cmm_stream
 
 {-
 ************************************************************************
@@ -211,7 +214,7 @@ outputForeignStubs dflags mod location stubs
         createDirectoryIfMissing True (takeDirectory stub_h)
 
         dumpIfSet_dyn dflags Opt_D_dump_foreign
-                      "Foreign export header file" stub_h_output_d
+                      "C - Foreign export header file" stub_h_output_d
 
         -- we need the #includes from the rts package for the stub files
         let rts_includes =
@@ -228,7 +231,7 @@ outputForeignStubs dflags mod location stubs
                 ("#include \"HsFFI.h\"\n" ++ cplusplus_hdr) cplusplus_ftr
 
         dumpIfSet_dyn dflags Opt_D_dump_foreign
-                      "Foreign export stubs" stub_c_output_d
+                      "C - Foreign export stubs" stub_c_output_d
 
         stub_c_file_exists
            <- outputForeignStubs_help stub_c stub_c_output_w

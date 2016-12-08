@@ -212,9 +212,9 @@ instance Outputable instr
          =  ppr instr
                 $$ (nest 8
                         $ vcat
-                        [ pprRegs (text "# born:    ") (liveBorn live)
-                        , pprRegs (text "# r_dying: ") (liveDieRead live)
-                        , pprRegs (text "# w_dying: ") (liveDieWrite live) ]
+                        [ pprRegs (text "; born:    ") (liveBorn live)
+                        , pprRegs (text "; r_dying: ") (liveDieRead live)
+                        , pprRegs (text "; w_dying: ") (liveDieWrite live) ]
                     $+$ space)
 
          where  pprRegs :: SDoc -> RegSet -> SDoc

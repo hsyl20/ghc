@@ -147,7 +147,8 @@ tcRnModule hsc_env hsc_src save_rn_syntax
    parsedModule@HsParsedModule {hpm_module=L loc this_module}
  | RealSrcSpan real_loc <- loc
  = withTiming (pure dflags)
-              (text "Renamer/typechecker"<+>brackets (ppr this_mod))
+              (text "Renamer/typechecker")
+              (ppr this_mod)
               (const ()) $
    initTc hsc_env hsc_src save_rn_syntax this_mod real_loc $
           withTcPlugins hsc_env $
@@ -2392,7 +2393,7 @@ loadUnqualIfaces hsc_env ictxt
 
 rnDump :: SDoc -> TcRn ()
 -- Dump, with a banner, if -ddump-rn
-rnDump doc = do { traceOptTcRn Opt_D_dump_rn (mkDumpDoc "Renamer" doc) }
+rnDump doc = traceOptTcRn Opt_D_dump_rn (mkDumpDoc "Haskell - Renamer" doc)
 
 tcDump :: TcGblEnv -> TcRn ()
 tcDump env

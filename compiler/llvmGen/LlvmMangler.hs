@@ -14,7 +14,7 @@ module LlvmMangler ( llvmFixupAsm ) where
 import DynFlags ( DynFlags, targetPlatform )
 import Platform ( platformArch, Arch(..) )
 import ErrUtils ( withTiming )
-import Outputable ( text )
+import Outputable ( text, empty )
 
 import Control.Exception
 import qualified Data.ByteString.Char8 as B
@@ -23,7 +23,7 @@ import System.IO
 -- | Read in assembly file and process
 llvmFixupAsm :: DynFlags -> FilePath -> FilePath -> IO ()
 llvmFixupAsm dflags f1 f2 = {-# SCC "llvm_mangler" #-}
-    withTiming (pure dflags) (text "LLVM Mangler") id $
+    withTiming (pure dflags) (text "LLVM Mangler") empty id $
     withBinaryFile f1 ReadMode $ \r -> withBinaryFile f2 WriteMode $ \w -> do
         go r w
         hClose r

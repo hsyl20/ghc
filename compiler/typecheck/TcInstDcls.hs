@@ -1551,7 +1551,8 @@ mkDefMethBind clas inst_tys sel_id dm_name
               bind = noLoc $ mkTopFunBind Generated fn $
                              [mkSimpleMatch (FunRhs fn Prefix) [] rhs]
 
-        ; liftIO (dumpIfSet_dyn dflags Opt_D_dump_deriv "Filling in method body"
+        ; liftIO (dumpIfSet_dyn dflags Opt_D_dump_deriv
+                   "Haskell - Filling in method body"
                    (vcat [ppr clas <+> ppr inst_tys,
                           nest 2 (ppr sel_id <+> equals <+> ppr rhs)]))
 

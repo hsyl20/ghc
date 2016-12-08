@@ -88,7 +88,7 @@ core2core hsc_env guts@(ModGuts { mg_module  = mod
                               ; runCorePasses all_passes guts }
 
        ; Err.dumpIfSet_dyn dflags Opt_D_dump_simpl_stats
-             "Grand total simplifier statistics"
+             "Statistics - Simplifier grand total"
              (pprSimplCount stats)
 
        ; return guts2 }
@@ -406,10 +406,11 @@ runCorePasses passes guts
     do_pass guts (CoreDoPasses ps) = runCorePasses ps guts
     do_pass guts pass
        = withTiming getDynFlags
-                    (ppr pass <+> brackets (ppr mod))
+                    (ppr pass)
+                    (ppr mod)
                     (const ()) $ do
             { guts' <- lintAnnots (ppr pass) (doCorePass pass) guts
-            ; endPass pass (mg_binds guts') (mg_rules guts')
+            ; endPass mod pass (mg_binds guts') (mg_rules guts')
             ; return guts' }
 
     mod = mg_module guts
@@ -477,7 +478,8 @@ printCore dflags binds
 ruleCheckPass :: CompilerPhase -> String -> ModGuts -> CoreM ModGuts
 ruleCheckPass current_phase pat guts =
     withTiming getDynFlags
-               (text "RuleCheck"<+>brackets (ppr $ mg_module guts))
+               (text "RuleCheck")
+               (ppr $ mg_module guts)
                (const ()) $ do
     { rb <- getRuleBase
     ; dflags <- getDynFlags
@@ -554,7 +556,7 @@ simplifyExpr :: DynFlags -- includes spec of what core-to-core passes to do
 --
 -- Also used by Template Haskell
 simplifyExpr dflags expr
-  = withTiming (pure dflags) (text "Simplify [expr]") (const ()) $
+  = withTiming (pure dflags) (text "Simplify") (text "expr") (const ()) $
     do  {
         ; us <-  mkSplitUniqSupply 's'
 
@@ -565,9 +567,9 @@ simplifyExpr dflags expr
                                (simplExprGently (simplEnvForGHCi dflags) expr)
 
         ; Err.dumpIfSet dflags (dopt Opt_D_dump_simpl_stats dflags)
-                  "Simplifier statistics" (pprSimplCount counts)
+                  "Simplifier - statistics" (pprSimplCount counts)
 
-        ; Err.dumpIfSet_dyn dflags Opt_D_dump_simpl "Simplified expression"
+        ; Err.dumpIfSet_dyn dflags Opt_D_dump_simpl "Core - Simplified expression"
                         (pprCoreExpr expr')
 
         ; return expr'
@@ -630,7 +632,7 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
 
         ; Err.dumpIfSet dflags (dopt Opt_D_verbose_core2core dflags &&
                                 dopt Opt_D_dump_simpl_stats  dflags)
-                  "Simplifier statistics for following pass"
+                  "Statistics - Simplifier for following pass"
                   (vcat [text termination_msg <+> text "after" <+> ppr it_count
                                               <+> text "iterations",
                          blankLine,
@@ -699,7 +701,7 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
                      occurAnalysePgm this_mod active_rule rules
                                      maybeVects maybeVectVars binds
                } ;
-           Err.dumpIfSet_dyn dflags Opt_D_dump_occur_anal "Occurrence analysis"
+           Err.dumpIfSet_dyn dflags Opt_D_dump_occur_anal "Core - Occurrence analysis"
                      (pprCoreBindings tagged_binds);
 
                 -- Get any new rules, and extend the rule base
@@ -746,7 +748,7 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
 
                 -- Dump the result of this iteration
            dump_end_iteration dflags print_unqual iteration_no counts1 binds2 rules1 ;
-           lintPassResult hsc_env pass binds2 ;
+           lintPassResult this_mod hsc_env pass binds2 ;
 
                 -- Loop
            do_iteration us2 (iteration_no + 1) (counts1:counts_so_far) binds2 rules1
@@ -773,9 +775,9 @@ dump_end_iteration dflags print_unqual iteration_no counts binds rules
             -- Show details if Opt_D_dump_simpl_iterations is on
 
     hdr = text "Simplifier iteration=" <> int iteration_no
-    pp_counts = vcat [ text "---- Simplifier counts for" <+> hdr
+    pp_counts = vcat [ text "---- Simplifier counts"
                      , pprSimplCount counts
-                     , text "---- End of simplifier counts for" <+> hdr ]
+                     , text "---- End of simplifier counts"]
 
 {-
 ************************************************************************

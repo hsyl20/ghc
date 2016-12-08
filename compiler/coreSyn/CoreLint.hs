@@ -59,6 +59,7 @@ import OptCoercion ( checkAxInstCo )
 import UniqSupply
 import CoreArity ( typeArity )
 import Demand ( splitStrictSig, isBotRes )
+import Module
 
 import HscTypes
 import DynFlags
@@ -175,23 +176,23 @@ different types, called bad coercions. Following coercions are forbidden:
 ************************************************************************
 
 These functions are not CoreM monad stuff, but they probably ought to
-be, and it makes a conveneint place.  place for them.  They print out
+be, and it makes a convenient place for them. They print out
 stuff before and after core passes, and do Core Lint when necessary.
 -}
 
-endPass :: CoreToDo -> CoreProgram -> [CoreRule] -> CoreM ()
-endPass pass binds rules
+endPass :: Module -> CoreToDo -> CoreProgram -> [CoreRule] -> CoreM ()
+endPass this_mod pass binds rules
   = do { hsc_env <- getHscEnv
        ; print_unqual <- getPrintUnqualified
-       ; liftIO $ endPassIO hsc_env print_unqual pass binds rules }
+       ; liftIO $ endPassIO this_mod hsc_env print_unqual pass binds rules }
 
-endPassIO :: HscEnv -> PrintUnqualified
+endPassIO :: Module -> HscEnv -> PrintUnqualified
           -> CoreToDo -> CoreProgram -> [CoreRule] -> IO ()
 -- Used by the IO-is CorePrep too
-endPassIO hsc_env print_unqual pass binds rules
+endPassIO this_mod hsc_env print_unqual pass binds rules
   = do { dumpPassResult dflags print_unqual mb_flag
                         (ppr pass) (pprPassDetails pass) binds rules
-       ; lintPassResult hsc_env pass binds }
+       ; lintPassResult this_mod hsc_env pass binds }
   where
     dflags  = hsc_dflags hsc_env
     mb_flag = case coreDumpFlag pass of
@@ -201,7 +202,7 @@ endPassIO hsc_env print_unqual pass binds rules
 
 dumpIfSet :: DynFlags -> Bool -> CoreToDo -> SDoc -> SDoc -> IO ()
 dumpIfSet dflags dump_me pass extra_info doc
-  = Err.dumpIfSet dflags dump_me (showSDoc dflags (ppr pass <+> extra_info)) doc
+  = Err.dumpIfSet dflags dump_me (showSDoc dflags (ppr pass <+> brackets extra_info)) doc
 
 dumpPassResult :: DynFlags
                -> PrintUnqualified
@@ -265,13 +266,14 @@ coreDumpFlag (CoreDoPasses {})        = Nothing
 ************************************************************************
 -}
 
-lintPassResult :: HscEnv -> CoreToDo -> CoreProgram -> IO ()
-lintPassResult hsc_env pass binds
+lintPassResult :: Module -> HscEnv -> CoreToDo -> CoreProgram -> IO ()
+lintPassResult this_mod hsc_env pass binds
   | not (gopt Opt_DoCoreLinting dflags)
   = return ()
   | otherwise
   = do { let (warns, errs) = lintCoreBindings dflags pass (interactiveInScope hsc_env) binds
        ; Err.showPass dflags ("Core Linted result of " ++ showPpr dflags pass)
+                             (ppr this_mod)
        ; displayLintResults dflags pass warns errs binds  }
   where
     dflags = hsc_dflags hsc_env
@@ -2101,18 +2103,19 @@ dupExtVars vars
 -- noting all differences between the results.
 lintAnnots :: SDoc -> (ModGuts -> CoreM ModGuts) -> ModGuts -> CoreM ModGuts
 lintAnnots pname pass guts = do
+  let this_mod = ppr (mg_module guts)
   -- Run the pass as we normally would
   dflags <- getDynFlags
   when (gopt Opt_DoAnnotationLinting dflags) $
-    liftIO $ Err.showPass dflags "Annotation linting - first run"
+    liftIO $ Err.showPass dflags "Annotation linting - first run" this_mod
   nguts <- pass guts
   -- If appropriate re-run it without debug annotations to make sure
   -- that they made no difference.
   when (gopt Opt_DoAnnotationLinting dflags) $ do
-    liftIO $ Err.showPass dflags "Annotation linting - second run"
+    liftIO $ Err.showPass dflags "Annotation linting - second run" this_mod
     nguts' <- withoutAnnots pass guts
     -- Finally compare the resulting bindings
-    liftIO $ Err.showPass dflags "Annotation linting - comparison"
+    liftIO $ Err.showPass dflags "Annotation linting - comparison" this_mod
     let binds = flattenBinds $ mg_binds nguts
         binds' = flattenBinds $ mg_binds nguts'
         (diffs,_) = diffBinds True (mkRnEnv2 emptyInScopeSet) binds binds'

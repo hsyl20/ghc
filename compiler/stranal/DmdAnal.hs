@@ -48,8 +48,7 @@ dmdAnalProgram :: DynFlags -> FamInstEnvs -> CoreProgram -> IO CoreProgram
 dmdAnalProgram dflags fam_envs binds
   = do {
         let { binds_plus_dmds = do_prog binds } ;
-        dumpIfSet_dyn dflags Opt_D_dump_str_signatures
-                      "Strictness signatures" $
+        dumpIfSet_dyn dflags Opt_D_dump_str_signatures "Strictness signatures" $
             dumpStrSig binds_plus_dmds ;
         return binds_plus_dmds
     }

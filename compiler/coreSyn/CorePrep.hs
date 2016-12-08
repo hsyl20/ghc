@@ -170,7 +170,8 @@ corePrepPgm :: HscEnv -> Module -> ModLocation -> CoreProgram -> [TyCon]
             -> IO CoreProgram
 corePrepPgm hsc_env this_mod mod_loc binds data_tycons =
     withTiming (pure dflags)
-               (text "CorePrep"<+>brackets (ppr this_mod))
+               (text "CorePrep")
+               (ppr this_mod)
                (const ()) $ do
     us <- mkSplitUniqSupply 's'
     initialCorePrepEnv <- mkInitialCorePrepEnv dflags hsc_env
@@ -184,18 +185,18 @@ corePrepPgm hsc_env this_mod mod_loc binds data_tycons =
                       floats2 <- corePrepTopBinds initialCorePrepEnv implicit_binds
                       return (deFloatTop (floats1 `appendFloats` floats2))
 
-    endPassIO hsc_env alwaysQualify CorePrep binds_out []
+    endPassIO this_mod hsc_env alwaysQualify CorePrep binds_out []
     return binds_out
   where
     dflags = hsc_dflags hsc_env
 
 corePrepExpr :: DynFlags -> HscEnv -> CoreExpr -> IO CoreExpr
 corePrepExpr dflags hsc_env expr =
-    withTiming (pure dflags) (text "CorePrep [expr]") (const ()) $ do
+    withTiming (pure dflags) (text "CorePrep") (text "expr") (const ()) $ do
     us <- mkSplitUniqSupply 's'
     initialCorePrepEnv <- mkInitialCorePrepEnv dflags hsc_env
     let new_expr = initUs_ us (cpeBodyNF initialCorePrepEnv expr)
-    dumpIfSet_dyn dflags Opt_D_dump_prep "CorePrep" (ppr new_expr)
+    dumpIfSet_dyn dflags Opt_D_dump_prep "Core - Prep" (ppr new_expr)
     return new_expr
 
 corePrepTopBinds :: CorePrepEnv -> [CoreBind] -> UniqSM Floats

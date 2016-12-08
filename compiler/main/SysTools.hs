@@ -1014,7 +1014,7 @@ copy dflags purpose from to = copyWithHeader dflags purpose Nothing from to
 copyWithHeader :: DynFlags -> String -> Maybe String -> FilePath -> FilePath
                -> IO ()
 copyWithHeader dflags purpose maybe_header from to = do
-  showPass dflags purpose
+  showPass dflags purpose empty
 
   hout <- openBinaryFile to   WriteMode
   hin  <- openBinaryFile from ReadMode
@@ -1424,7 +1424,7 @@ traceCmd :: DynFlags -> String -> String -> IO a -> IO a
 -- trace the command (at two levels of verbosity)
 traceCmd dflags phase_name cmd_line action
  = do   { let verb = verbosity dflags
-        ; showPass dflags phase_name
+        ; showPass dflags phase_name empty
         ; debugTraceMsg dflags 3 (text cmd_line)
         ; case flushErr dflags of
               FlushErr io -> io

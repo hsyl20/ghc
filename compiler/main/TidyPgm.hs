@@ -146,7 +146,8 @@ mkBootModDetailsTc hsc_env
   = -- This timing isn't terribly useful since the result isn't forced, but
     -- the message is useful to locating oneself in the compilation process.
     Err.withTiming (pure dflags)
-                   (text "CoreTidy"<+>brackets (ppr this_mod))
+                   (text "CoreTidy")
+                   (ppr this_mod)
                    (const ()) $
     do  { let { insts'     = map (tidyClsInstDFun globaliseAndTidyId) insts
               ; pat_syns'  = map (tidyPatSynIds   globaliseAndTidyId) pat_syns
@@ -325,7 +326,8 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
                               })
 
   = Err.withTiming (pure dflags)
-                   (text "CoreTidy"<+>brackets (ppr mod))
+                   (text "CoreTidy")
+                   (ppr mod)
                    (const ()) $
     do  { let { omit_prags = gopt Opt_OmitInterfacePragmas dflags
               ; expose_all = gopt Opt_ExposeAllUnfoldings  dflags
@@ -391,7 +393,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
               ; alg_tycons = filter isAlgTyCon (typeEnvTyCons type_env)
               }
 
-        ; endPassIO hsc_env print_unqual CoreTidy all_tidy_binds tidy_rules
+        ; endPassIO mod hsc_env print_unqual CoreTidy all_tidy_binds tidy_rules
 
           -- If the endPass didn't print the rules, but ddump-rules is
           -- on, print now

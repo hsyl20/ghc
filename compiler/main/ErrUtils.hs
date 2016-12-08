@@ -474,16 +474,17 @@ compilationProgressMsg dflags msg
   = ifVerbose dflags 1 $
     logOutput dflags defaultUserStyle (text msg)
 
-showPass :: DynFlags -> String -> IO ()
-showPass dflags what
+showPass :: DynFlags -> String -> SDoc -> IO ()
+showPass dflags what this_mod
   = ifVerbose dflags 2 $
-    logInfo dflags defaultUserStyle (text "***" <+> text what <> colon)
+    logInfo dflags defaultUserStyle
+      (text "***" <+> text what <+> brackets this_mod <> colon)
 
 -- | Time a compilation phase.
 --
 -- When timings are enabled (e.g. with the @-v2@ flag), the allocations
 -- and CPU time used by the phase will be reported to stderr. Consider
--- a typical usage: @withTiming getDynFlags (text "simplify") force pass@.
+-- a typical usage: @withTiming getDynFlags (text "simplify") force mod pass@.
 -- When timings are enabled the following costs are included in the
 -- produced accounting,
 --
@@ -504,14 +505,16 @@ withTiming :: MonadIO m
            => m DynFlags  -- ^ A means of getting a 'DynFlags' (often
                           -- 'getDynFlags' will work here)
            -> SDoc        -- ^ The name of the phase
+           -> SDoc        -- ^ The name of the module
            -> (a -> ())   -- ^ A function to force the result
                           -- (often either @const ()@ or 'rnf')
            -> m a         -- ^ The body of the phase to be timed
            -> m a
-withTiming getDFlags what force_result action
+withTiming getDFlags what' this_mod force_result action
   = do dflags <- getDFlags
        if verbosity dflags >= 2
-          then do liftIO $ logInfo dflags defaultUserStyle
+          then do let what = what' <+> brackets this_mod
+                  liftIO $ logInfo dflags defaultUserStyle
                          $ text "***" <+> what <> colon
                   alloc0 <- liftIO getAllocationCounter
                   start <- liftIO getCPUTime

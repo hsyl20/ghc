@@ -708,7 +708,7 @@ traceTcRn flag doc
     -- Add current location if opt_PprStyle_Debug
     prettyDoc :: SDoc -> TcRn SDoc
     prettyDoc doc = if opt_PprStyle_Debug
-       then do { loc  <- getSrcSpanM; return $ mkLocMessage SevOutput loc doc }
+       then do { loc  <- getSrcSpanM; return $ mkLocMessage SevDump loc doc }
        else return doc -- The full location is usually way too much
 
 
