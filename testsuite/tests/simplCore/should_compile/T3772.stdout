@@ -1,6 +1,6 @@
 
-==================== Tidy Core ====================
-Result size of Tidy Core = {terms: 36, types: 14, coercions: 0}
+==================== Core - Tidy ====================
+Result size of Core - Tidy = {terms: 36, types: 14, coercions: 0}
 
 Rec {
 -- RHS size: {terms: 10, types: 2, coercions: 0}

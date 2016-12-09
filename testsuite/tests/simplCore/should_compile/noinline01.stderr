@@ -1,5 +1,5 @@
 
-==================== Pre unarise: ====================
+==================== STG - Pre unarise ====================
 Noinline01.f [InlPrag=INLINE (sat-args=1)]
   :: forall p. p -> GHC.Types.Bool
 [GblId, Arity=1, Caf=NoCafRefs, Str=<L,A>, Unf=OtherCon []] =
@@ -24,7 +24,7 @@ Noinline01.$trModule :: GHC.Types.Module
 
 
 
-==================== STG syntax: ====================
+==================== STG - Syntax ====================
 Noinline01.f [InlPrag=INLINE (sat-args=1)]
   :: forall p. p -> GHC.Types.Bool
 [GblId, Arity=1, Caf=NoCafRefs, Str=<L,A>, Unf=OtherCon []] =

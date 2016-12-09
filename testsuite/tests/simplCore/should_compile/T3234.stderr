@@ -1,18 +1,22 @@
 
-==================== FloatOut stats: ====================
-1 Lets floated to top level; 0 Lets floated elsewhere; from 1 Lambda groups
+==================== Statistics - FloatOut ====================
+Lets floated to top level: 1
+Lets floated elsewhere:    0
+From lambda groups:        1
 
 
 
-==================== FloatOut stats: ====================
-0 Lets floated to top level; 0 Lets floated elsewhere; from 0 Lambda groups
+==================== Statistics - FloatOut ====================
+Lets floated to top level: 0
+Lets floated elsewhere:    0
+From lambda groups:        0
 
 
 
-==================== Grand total simplifier statistics ====================
+==================== Statistics - Simplifier grand total ====================
 Total ticks:     51
 
-14 PreInlineUnconditionally
+PreInlineUnconditionally: 14
   1 n
   1 g
   1 a
@@ -27,20 +31,21 @@ Total ticks:     51
   1 a
   1 lvl
   1 lvl
-4 PostInlineUnconditionally
+PostInlineUnconditionally: 4
   1 c
   1 n
   1 c
   1 c
-1 UnfoldingDone 1 GHC.Base.build
-5 RuleFired
+UnfoldingDone: 1
+  1 GHC.Base.build
+RuleFired: 5
   1 ++
   1 augment/build
   1 fold/build
   1 unpack
   1 unpack-list
-2 LetFloatFromLet 2
-25 BetaReduction
+LetFloatFromLet: 2
+BetaReduction: 25
   1 a
   1 c
   1 n
@@ -66,6 +71,6 @@ Total ticks:     51
   1 c
   1 n
   1 a
-11 SimplifierDone 11
+SimplifierDone: 11
 
 

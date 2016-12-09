@@ -1,5 +1,5 @@
 
-==================== Derived instances ====================
+==================== Haskell - Derived instances ====================
 Derived class instances:
   instance GHC.Generics.Generic (GenDerivOutput.List a) where
     GHC.Generics.from x
@@ -225,7 +225,7 @@ Derived type family instances:
 
 
 
-==================== Filling in method body ====================
+==================== Haskell - Filling in method body ====================
 GHC.Base.Functor [GenDerivOutput.List]
   GHC.Base.<$ = GHC.Base.$dm<$ @GenDerivOutput.List
 

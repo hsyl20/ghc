@@ -1,5 +1,5 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
  a header
 module HeaderTest where
 <document comment>

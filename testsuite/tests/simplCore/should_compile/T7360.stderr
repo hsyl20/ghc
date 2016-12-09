@@ -1,6 +1,6 @@
 
-==================== Tidy Core ====================
-Result size of Tidy Core = {terms: 82, types: 42, coercions: 0}
+==================== Core - Tidy ====================
+Result size of Core - Tidy = {terms: 82, types: 42, coercions: 0}
 
 -- RHS size: {terms: 6, types: 3, coercions: 0}
 T7360.$WFoo3 [InlPrag=INLINE] :: Int -> Foo

@@ -1,12 +1,12 @@
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 BottomFromInnerLambda.$trModule: m
 BottomFromInnerLambda.expensive: <S(S),1*U(U)>m
 BottomFromInnerLambda.f: <S(S),1*U(U)>
 
 
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 BottomFromInnerLambda.$trModule: m
 BottomFromInnerLambda.expensive: <S(S),1*U(U)>m
 BottomFromInnerLambda.f: <S(S),1*U(U)>

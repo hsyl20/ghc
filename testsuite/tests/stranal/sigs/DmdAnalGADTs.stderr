@@ -1,5 +1,5 @@
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 DmdAnalGADTs.$tc'A: m
 DmdAnalGADTs.$tc'B: m
 DmdAnalGADTs.$tcD: m
@@ -13,7 +13,7 @@ DmdAnalGADTs.hasStrSig: <S,1*U(U)>m
 
 
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 DmdAnalGADTs.$tc'A: m
 DmdAnalGADTs.$tc'B: m
 DmdAnalGADTs.$tcD: m

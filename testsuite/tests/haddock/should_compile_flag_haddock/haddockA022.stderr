@@ -1,9 +1,9 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
 main = print (test :: Int)
      where
-	 test = 0
-	 test2 = 1
-	 test3 = 2
+        test = 0
+        test2 = 1
+        test3 = 2
 
 

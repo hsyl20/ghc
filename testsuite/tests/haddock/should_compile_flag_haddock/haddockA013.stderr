@@ -1,5 +1,5 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
 module ShouldCompile where
 <document comment>
 main = undefined

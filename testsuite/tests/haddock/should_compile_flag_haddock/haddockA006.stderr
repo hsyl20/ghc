@@ -1,5 +1,5 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
 <document comment>
 main = return ()
 

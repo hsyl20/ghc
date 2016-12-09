@@ -1,11 +1,11 @@
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 StrAnalExample.$trModule: m
 StrAnalExample.foo: <S,1*U>
 
 
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 StrAnalExample.$trModule: m
 StrAnalExample.foo: <S,1*U>
 

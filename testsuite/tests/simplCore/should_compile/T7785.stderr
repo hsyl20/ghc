@@ -1,5 +1,5 @@
 
-==================== Tidy Core rules ====================
+==================== Core - Tidy rules ====================
 "SPEC shared @ []"
     forall (irred :: Domain [] Int) ($dMyFunctor :: MyFunctor []).
       shared @ [] $dMyFunctor irred

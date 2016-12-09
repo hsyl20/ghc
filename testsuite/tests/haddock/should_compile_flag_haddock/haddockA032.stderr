@@ -1,5 +1,5 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
 module ShouldCompile where
 data R a
   = R {field1 :: a,
