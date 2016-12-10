@@ -277,10 +277,12 @@ lintPassResult this_mod hsc_env pass binds
   | not (gopt Opt_DoCoreLinting dflags)
   = return ()
   | otherwise
-  = do { let (warns, errs) = lintCoreBindings dflags pass (interactiveInScope hsc_env) binds
-       ; Err.showPass dflags ("Core Linted result of " ++ showPpr dflags pass)
-                             (ppr this_mod)
-       ; displayLintResults dflags pass warns errs binds  }
+  = withPhase (return dflags) (text "Core Lint") (ppr this_mod) (const ()) $ do
+      let (warns, errs) = lintCoreBindings dflags pass
+                                           (interactiveInScope hsc_env) binds
+      Err.logInfo dflags defaultUserStyle $
+         text "Core Linted result of" <+> ppr pass <+> brackets (ppr this_mod)
+      displayLintResults dflags pass warns errs binds
   where
     dflags = hsc_dflags hsc_env
 
@@ -2109,27 +2111,26 @@ dupExtVars vars
 -- noting all differences between the results.
 lintAnnots :: SDoc -> (ModGuts -> CoreM ModGuts) -> ModGuts -> CoreM ModGuts
 lintAnnots pname pass guts = do
-  let this_mod = ppr (mg_module guts)
+  let this_mod = mg_module guts
   -- Run the pass as we normally would
   dflags <- getDynFlags
-  when (gopt Opt_DoAnnotationLinting dflags) $
-    liftIO $ Err.showPass dflags "Annotation linting - first run" this_mod
   nguts <- pass guts
+  let wp s = withPhase (return dflags) (text ("Annotation linting"++s))
+               (ppr this_mod) (const ())
   -- If appropriate re-run it without debug annotations to make sure
   -- that they made no difference.
-  when (gopt Opt_DoAnnotationLinting dflags) $ do
-    liftIO $ Err.showPass dflags "Annotation linting - second run" this_mod
-    nguts' <- withoutAnnots pass guts
+  when (gopt Opt_DoAnnotationLinting dflags) $ wp "" $ do
+    nguts' <- wp " - second run" $ withoutAnnots pass guts
     -- Finally compare the resulting bindings
-    liftIO $ Err.showPass dflags "Annotation linting - comparison" this_mod
-    let binds = flattenBinds $ mg_binds nguts
-        binds' = flattenBinds $ mg_binds nguts'
-        (diffs,_) = diffBinds True (mkRnEnv2 emptyInScopeSet) binds binds'
-    when (not (null diffs)) $ CoreMonad.putMsg $ vcat
-      [ lint_banner "warning" pname
-      , text "Core changes with annotations:"
-      , withPprStyle defaultDumpStyle $ nest 2 $ vcat diffs
-      ]
+    wp " - comparison" $ do
+       let binds = flattenBinds $ mg_binds nguts
+           binds' = flattenBinds $ mg_binds nguts'
+           (diffs,_) = diffBinds True (mkRnEnv2 emptyInScopeSet) binds binds'
+       when (not (null diffs)) $ CoreMonad.putMsg $ vcat
+         [ lint_banner "warning" pname
+         , text "Core changes with annotations:"
+         , withPprStyle defaultDumpStyle $ nest 2 $ vcat diffs
+         ]
   -- Return actual new guts
   return nguts
 

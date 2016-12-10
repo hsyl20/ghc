@@ -1014,15 +1014,14 @@ copy dflags purpose from to = copyWithHeader dflags purpose Nothing from to
 copyWithHeader :: DynFlags -> String -> Maybe String -> FilePath -> FilePath
                -> IO ()
 copyWithHeader dflags purpose maybe_header from to = do
-  showPass dflags purpose empty
-
-  hout <- openBinaryFile to   WriteMode
-  hin  <- openBinaryFile from ReadMode
-  ls <- hGetContents hin -- inefficient, but it'll do for now. ToDo: speed up
-  maybe (return ()) (header hout) maybe_header
-  hPutStr hout ls
-  hClose hout
-  hClose hin
+  withPhase (return dflags) (text "Copy file") (text purpose) (const ()) $ do
+    hout <- openBinaryFile to   WriteMode
+    hin  <- openBinaryFile from ReadMode
+    ls <- hGetContents hin -- inefficient, but it'll do for now. ToDo: speed up
+    maybe (return ()) (header hout) maybe_header
+    hPutStr hout ls
+    hClose hout
+    hClose hin
  where
   -- write the header string in UTF-8.  The header is something like
   --   {-# LINE "foo.hs" #-}
@@ -1422,16 +1421,14 @@ data BuildMessage
 
 traceCmd :: DynFlags -> String -> String -> IO a -> IO a
 -- trace the command (at two levels of verbosity)
-traceCmd dflags phase_name cmd_line action
- = do   { let verb = verbosity dflags
-        ; showPass dflags phase_name empty
-        ; debugTraceMsg dflags 3 (text cmd_line)
-        ; case flushErr dflags of
-              FlushErr io -> io
+traceCmd dflags phase_name cmd_line action = do
+   withPhase (return dflags) (text phase_name) empty (const ()) $ do
+      debugTraceMsg dflags 3 (text cmd_line)
+      case flushErr dflags of
+          FlushErr io -> io
 
-           -- And run it!
-        ; action `catchIO` handle_exn verb
-        }
+       -- And run it!
+      action `catchIO` handle_exn (verbosity dflags)
   where
     handle_exn _verb exn = do { debugTraceMsg dflags 2 (char '\n')
                               ; debugTraceMsg dflags 2 (text "Failed:" <+> text cmd_line <+> text (show exn))

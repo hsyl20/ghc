@@ -1439,9 +1439,11 @@ upsweep_mod hsc_env mHscMessage old_hpt (stable_obj, stable_bco) summary mod_ind
                 compile_it Nothing SourceUnmodified
 
          _otherwise -> do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
-                           (text "compiling mod:" <+> ppr this_mod_name)
-                compile_it Nothing SourceModified
+                withPhase (return dflags) 
+                   (text "Compiling module")
+                   (ppr this_mod_name)
+                   (const ()) $
+                      compile_it Nothing SourceModified
 
 -- Note [Recompilation checking when typechecking only]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

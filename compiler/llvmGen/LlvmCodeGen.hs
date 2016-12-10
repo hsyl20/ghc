@@ -43,12 +43,8 @@ llvmCodeGen :: DynFlags -> Module -> Handle -> UniqSupply
                -> Stream.Stream IO RawCmmGroup ()
                -> IO ()
 llvmCodeGen dflags this_mod h us cmm_stream
-  = withPhase (pure dflags) (text "LLVM CodeGen")
-              (ppr this_mod) (const ()) $ do
+  = withPhase (pure dflags) (text "LLVM CodeGen") (ppr this_mod) (const ()) $ do
        bufh <- newBufHandle h
-
-       -- Pass header
-       showPass dflags "LLVM CodeGen" (ppr this_mod)
 
        -- get llvm version, cache for later use
        ver <- (fromMaybe supportedLlvmVersion) `fmap` figureLlvmVersion dflags

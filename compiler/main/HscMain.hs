@@ -1290,9 +1290,7 @@ hscGenHardCode hsc_env cgguts mod_summary output_filename = do
 
         -- The back-end is streamed: each top-level function goes
         -- from Stg all the way to asm before dealing with the next
-        -- top-level function, so showPass isn't very useful here.
-        -- Hence we have one showPass for the whole backend, the
-        -- next showPass after this will be "Assembler".
+        -- top-level function.
         withPhase (pure dflags)
                   (text "CodeGen")
                   (ppr this_mod)

@@ -46,7 +46,7 @@ module ErrUtils (
         errorMsg, warningMsg,
         fatalErrorMsg, fatalErrorMsg', fatalErrorMsg'',
         compilationProgressMsg,
-        showPass, withPhase,
+        withPhase,
         debugTraceMsg,
         ghcExit,
         prettyPrintGhcErrors,
@@ -474,17 +474,6 @@ compilationProgressMsg dflags msg
   = ifVerbose dflags 1 $
     logOutput dflags defaultUserStyle (text msg)
 
-showPass :: DynFlags -> String -> SDoc -> IO ()
-showPass dflags what this_mod
-  = enterPhase dflags (text what <+> brackets this_mod)
-
--- | Enter a phase. Phases can be nested
-enterPhase :: MonadIO m => DynFlags -> SDoc -> m ()
-enterPhase dflags p = do
-   liftIO $ ifVerbose dflags 2 $
-      logInfo dflags defaultUserStyle
-        (text "***" <+> p <> colon)
-
 -- | Time a compilation phase.
 --
 -- When timings are enabled (e.g. with the @-v2@ flag), the allocations
@@ -520,7 +509,8 @@ withPhase getDFlags what' this_mod force_result action = do
    if verbosity dflags >= 2
       then do
          let what = what' <+> brackets this_mod
-         enterPhase dflags what
+         liftIO $ ifVerbose dflags 2 $
+            logInfo dflags defaultUserStyle (text "***" <+> what <> colon)
          alloc0 <- liftIO getAllocationCounter
          start <- liftIO getCPUTime
          !r <- action

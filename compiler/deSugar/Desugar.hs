@@ -441,27 +441,27 @@ and Rec the rest.
 
 deSugarExpr :: HscEnv -> LHsExpr Id -> IO (Messages, Maybe CoreExpr)
 
-deSugarExpr hsc_env tc_expr
-  = do { let dflags       = hsc_dflags hsc_env
-             icntxt       = hsc_IC hsc_env
-             rdr_env      = ic_rn_gbl_env icntxt
-             type_env     = mkTypeEnvWithImplicits (ic_tythings icntxt)
-             fam_insts    = snd (ic_instances icntxt)
-             fam_inst_env = extendFamInstEnvList emptyFamInstEnv fam_insts
-             -- This stuff is a half baked version of TcRnDriver.setInteractiveContext
+deSugarExpr hsc_env tc_expr = do
+  let dflags       = hsc_dflags hsc_env
+      icntxt       = hsc_IC hsc_env
+      rdr_env      = ic_rn_gbl_env icntxt
+      type_env     = mkTypeEnvWithImplicits (ic_tythings icntxt)
+      fam_insts    = snd (ic_instances icntxt)
+      fam_inst_env = extendFamInstEnvList emptyFamInstEnv fam_insts
+      -- This stuff is a half baked version of TcRnDriver.setInteractiveContext
 
-       ; showPass dflags "Desugar" (text "expr")
+  withPhase (return dflags) (text "Desugar") (text "expr") (const ()) $ do
+     -- Do desugaring
+     (msgs, mb_core_expr) <- initDs hsc_env (icInteractiveModule icntxt) rdr_env
+                                    type_env fam_inst_env $
+                             dsLExpr tc_expr
 
-         -- Do desugaring
-       ; (msgs, mb_core_expr) <- initDs hsc_env (icInteractiveModule icntxt) rdr_env
-                                        type_env fam_inst_env $
-                                 dsLExpr tc_expr
+     case mb_core_expr of
+        Nothing   -> return ()
+        Just expr -> dumpIfSet_dyn dflags Opt_D_dump_ds "Desugared"
+                                   (pprCoreExpr expr)
 
-       ; case mb_core_expr of
-            Nothing   -> return ()
-            Just expr -> dumpIfSet_dyn dflags Opt_D_dump_ds "Desugared" (pprCoreExpr expr)
-
-       ; return (msgs, mb_core_expr) }
+     return (msgs, mb_core_expr)
 
 {-
 ************************************************************************

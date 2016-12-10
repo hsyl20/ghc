@@ -388,7 +388,6 @@ link' dflags batch_attempt_linking hpt
 
         compilationProgressMsg dflags ("Linking " ++ exe_file ++ " ...")
 
-        -- Don't showPass in Batch mode; doLink will do that for us.
         let link = case ghcLink dflags of
                 LinkBinary    -> linkBinary
                 LinkStaticLib -> linkStaticLibCheck
