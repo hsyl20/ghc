@@ -300,7 +300,7 @@ deSugar hsc_env
 
   = do { let dflags = hsc_dflags hsc_env
              print_unqual = mkPrintUnqualified dflags rdr_env
-        ; withTiming (pure dflags)
+        ; withPhase (pure dflags)
                      (text "Desugar")
                      (ppr mod)
                      (const ()) $

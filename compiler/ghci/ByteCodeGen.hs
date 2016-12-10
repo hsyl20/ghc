@@ -78,10 +78,10 @@ byteCodeGen :: HscEnv
             -> Maybe ModBreaks
             -> IO CompiledByteCode
 byteCodeGen hsc_env this_mod binds tycs mb_modBreaks
-   = withTiming (pure dflags)
-                (text "ByteCodeGen")
-                (ppr this_mod)
-                (const ()) $ do
+   = withPhase (pure dflags)
+               (text "ByteCodeGen")
+               (ppr this_mod)
+               (const ()) $ do
         let flatBinds = [ (bndr, simpleFreeVars rhs)
                         | (bndr, rhs) <- flattenBinds binds]
 
@@ -123,10 +123,10 @@ coreExprToBCOs :: HscEnv
                -> CoreExpr
                -> IO UnlinkedBCO
 coreExprToBCOs hsc_env this_mod expr
- = withTiming (pure dflags)
-              (text "ByteCodeGen")
-              (ppr this_mod)
-              (const ()) $ do
+ = withPhase (pure dflags)
+             (text "ByteCodeGen")
+             (ppr this_mod)
+             (const ()) $ do
       -- create a totally bogus name for the top-level BCO; this
       -- should be harmless, since it's never used for anything
       let invented_name  = mkSystemVarName (mkPseudoUniqueE 0) (fsLit "ExprTopLevel")

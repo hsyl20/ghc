@@ -146,10 +146,10 @@ tcRnModule :: HscEnv
 tcRnModule hsc_env hsc_src save_rn_syntax
    parsedModule@HsParsedModule {hpm_module=L loc this_module}
  | RealSrcSpan real_loc <- loc
- = withTiming (pure dflags)
-              (text "Renamer/typechecker")
-              (ppr this_mod)
-              (const ()) $
+ = withPhase (pure dflags)
+             (text "Renamer/typechecker")
+             (ppr this_mod)
+             (const ()) $
    initTc hsc_env hsc_src save_rn_syntax this_mod real_loc $
           withTcPlugins hsc_env $
           tcRnModuleTcRnM hsc_env hsc_src parsedModule pair
