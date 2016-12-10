@@ -697,12 +697,16 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
                    = case sm_phase mode of
                        InitialPhase -> (mg_vect_decls guts, vectVars)
                        _            -> ([], vectVars)
-               ; tagged_binds = {-# SCC "OccAnal" #-}
+              };
+
+           tagged_binds <- withPhase (return dflags) (text "Occurrence analysis")
+               (ppr this_mod) (const ()) $ do {
+                  let { tbinds = {-# SCC "OccAnal" #-}
                      occurAnalysePgm this_mod active_rule rules
-                                     maybeVects maybeVectVars binds
-               } ;
-           Err.dumpIfSet_dyn dflags Opt_D_dump_occur_anal "Core - Occurrence analysis"
-                     (pprCoreBindings tagged_binds);
+                               maybeVects maybeVectVars binds };
+                  Err.dumpIfSet_dyn dflags Opt_D_dump_occur_anal "Core - Occurrence analysis"
+                            (pprCoreBindings tbinds);
+                  return tbinds };
 
                 -- Get any new rules, and extend the rule base
                 -- See Note [Overall plumbing for rules] in Rules.hs

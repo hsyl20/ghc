@@ -1753,7 +1753,7 @@ dumpIfaceStats :: HscEnv -> IO ()
 dumpIfaceStats hsc_env = do
     eps <- readIORef (hsc_EPS hsc_env)
     dumpIfSet dflags (dump_if_trace || dump_rn_stats)
-              "Interface statistics"
+              "Statistics - Interface"
               (ifaceStats eps)
   where
     dflags = hsc_dflags hsc_env
