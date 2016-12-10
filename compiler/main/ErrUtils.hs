@@ -394,7 +394,7 @@ dumpSDoc dflags print_unqual flag hdr doc
             -- write the dump to stdout
             Nothing -> do
               let (doc', severity)
-                    | null hdr  = (doc, SevOutput)
+                    | null hdr  = (doc, SevDump)
                     | otherwise = (mkDumpDoc hdr doc, SevDump)
               log_action dflags dflags NoReason severity noSrcSpan dump_style doc'
 

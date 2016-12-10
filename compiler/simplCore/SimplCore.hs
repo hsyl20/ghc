@@ -775,9 +775,7 @@ dump_end_iteration dflags print_unqual iteration_no counts binds rules
             -- Show details if Opt_D_dump_simpl_iterations is on
 
     hdr = text "Simplifier iteration=" <> int iteration_no
-    pp_counts = vcat [ text "---- Simplifier counts"
-                     , pprSimplCount counts
-                     , text "---- End of simplifier counts"]
+    pp_counts = Just (pprSimplCount counts)
 
 {-
 ************************************************************************

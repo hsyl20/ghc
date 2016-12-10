@@ -2404,7 +2404,7 @@ tcDump env
              (printForUserTcRn short_dump) ;
 
         -- Dump bindings if -ddump-tc
-        traceOptTcRn Opt_D_dump_tc (mkDumpDoc "Typechecker" full_dump)
+        traceOptTcRn Opt_D_dump_tc (mkDumpDoc "Haskell - Typechecker" full_dump)
    }
   where
     short_dump = pprTcGblEnv env

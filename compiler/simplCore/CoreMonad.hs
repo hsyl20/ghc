@@ -12,7 +12,7 @@ module CoreMonad (
     CoreToDo(..), runWhen, runMaybe,
     SimplifierMode(..),
     FloatOutSwitches(..),
-    pprPassDetails,
+    pprPassStats,
 
     -- * Plugins
     PluginPass, bindsOnlyPass,
@@ -142,32 +142,33 @@ data CoreToDo           -- These are diff core-to-core passes,
   | CorePrep
 
 instance Outputable CoreToDo where
-  ppr (CoreDoSimplify _ _)     = text "Core - Simplifier"
-  ppr (CoreDoPluginPass s _)   = text "Core - Plugin (" <+> text s <+> text ")"
-  ppr CoreDoFloatInwards       = text "Core - Float inwards"
-  ppr (CoreDoFloatOutwards _)  = text "Core - Float outwards"
-  ppr CoreLiberateCase         = text "Core - Liberate case"
-  ppr CoreDoStaticArgs         = text "Core - Static argument"
-  ppr CoreDoCallArity          = text "Core - Called arity analysis"
-  ppr CoreDoStrictness         = text "Core - Demand analysis"
-  ppr CoreDoWorkerWrapper      = text "Core - Worker Wrapper binds"
-  ppr CoreDoSpecialising       = text "Core - Specialise"
-  ppr CoreDoSpecConstr         = text "Core - SpecConstr"
-  ppr CoreCSE                  = text "Core - Common sub-expression"
-  ppr CoreDoVectorisation      = text "Core - Vectorisation"
-  ppr CoreDesugar              = text "Core - Desugar (before optimization)"
-  ppr CoreDesugarOpt           = text "Core - Desugar (after optimization)"
-  ppr CoreTidy                 = text "Core - Tidy"
-  ppr CorePrep                 = text "Core - Prep"
-  ppr CoreDoPrintCore          = text "Core - Print"
-  ppr (CoreDoRuleCheck {})     = text "Core - Rule check"
-  ppr CoreDoNothing            = text "Core - DoNothing"
-  ppr (CoreDoPasses passes)    = text "Core - DoPasses" <+> ppr passes
+  ppr (CoreDoSimplify _ _)     = text "Simplifier"
+  ppr (CoreDoPluginPass s _)   = text "Plugin (" <+> text s <+> text ")"
+  ppr CoreDoFloatInwards       = text "Float inwards"
+  ppr (CoreDoFloatOutwards _)  = text "Float outwards"
+  ppr CoreLiberateCase         = text "Liberate case"
+  ppr CoreDoStaticArgs         = text "Static argument"
+  ppr CoreDoCallArity          = text "Called arity analysis"
+  ppr CoreDoStrictness         = text "Demand analysis"
+  ppr CoreDoWorkerWrapper      = text "Worker Wrapper binds"
+  ppr CoreDoSpecialising       = text "Specialise"
+  ppr CoreDoSpecConstr         = text "SpecConstr"
+  ppr CoreCSE                  = text "Common sub-expression"
+  ppr CoreDoVectorisation      = text "Vectorisation"
+  ppr CoreDesugar              = text "Desugar (before optimization)"
+  ppr CoreDesugarOpt           = text "Desugar (after optimization)"
+  ppr CoreTidy                 = text "Tidy"
+  ppr CorePrep                 = text "Prep"
+  ppr CoreDoPrintCore          = text "Print"
+  ppr (CoreDoRuleCheck {})     = text "Rule check"
+  ppr CoreDoNothing            = text "DoNothing"
+  ppr (CoreDoPasses passes)    = text "DoPasses" <+> ppr passes
 
-pprPassDetails :: CoreToDo -> SDoc
-pprPassDetails (CoreDoSimplify n md) = vcat [ text "Max iterations =" <+> int n
-                                            , ppr md ]
-pprPassDetails _ = Outputable.empty
+pprPassStats :: CoreToDo -> Maybe SDoc
+pprPassStats (CoreDoSimplify n md) =
+   Just $ vcat [ text "Max iterations:" <+> int n , ppr md ]
+
+pprPassStats _ = Nothing
 
 data SimplifierMode             -- See comments in SimplMonad
   = SimplMode

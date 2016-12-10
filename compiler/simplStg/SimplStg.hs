@@ -32,10 +32,10 @@ stg2stg :: DynFlags                  -- includes spec of what stg-to-stg passes 
               , CollectedCCs)        -- cost centre information (declared and used)
 
 stg2stg dflags module_name binds
-  = do  { showPass dflags "STG - Stg2Stg" (ppr module_name)
+  = do  { showPass dflags "Stg2Stg" (ppr module_name)
         ; us <- mkSplitUniqSupply 'g'
 
-        ; (binds', us', ccs) <- end_pass us "STG - Stg2Stg" ([],[],[]) binds
+        ; (binds', us', ccs) <- end_pass us "Stg2Stg" ([],[],[]) binds
 
                 -- Do the main business!
         ; let (us0, us1) = splitUniqSupply us'

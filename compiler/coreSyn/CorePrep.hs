@@ -170,7 +170,7 @@ corePrepPgm :: HscEnv -> Module -> ModLocation -> CoreProgram -> [TyCon]
             -> IO CoreProgram
 corePrepPgm hsc_env this_mod mod_loc binds data_tycons =
     withTiming (pure dflags)
-               (text "CorePrep")
+               (ppr CorePrep)
                (ppr this_mod)
                (const ()) $ do
     us <- mkSplitUniqSupply 's'
@@ -192,7 +192,7 @@ corePrepPgm hsc_env this_mod mod_loc binds data_tycons =
 
 corePrepExpr :: DynFlags -> HscEnv -> CoreExpr -> IO CoreExpr
 corePrepExpr dflags hsc_env expr =
-    withTiming (pure dflags) (text "CorePrep") (text "expr") (const ()) $ do
+    withTiming (pure dflags) (ppr CorePrep) (text "expr") (const ()) $ do
     us <- mkSplitUniqSupply 's'
     initialCorePrepEnv <- mkInitialCorePrepEnv dflags hsc_env
     let new_expr = initUs_ us (cpeBodyNF initialCorePrepEnv expr)

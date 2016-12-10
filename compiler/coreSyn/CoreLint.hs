@@ -191,7 +191,7 @@ endPassIO :: Module -> HscEnv -> PrintUnqualified
 -- Used by the IO-is CorePrep too
 endPassIO this_mod hsc_env print_unqual pass binds rules
   = do { dumpPassResult dflags print_unqual mb_flag
-                        (ppr pass) (pprPassDetails pass) binds rules
+                        (ppr pass) (pprPassStats pass) binds rules
        ; lintPassResult this_mod hsc_env pass binds }
   where
     dflags  = hsc_dflags hsc_env
@@ -209,24 +209,30 @@ dumpPassResult :: DynFlags
                -> Maybe DumpFlag        -- Just df => show details in a file whose
                                         --            name is specified by df
                -> SDoc                  -- Header
-               -> SDoc                  -- Extra info to appear after header
+               -> Maybe SDoc            -- Statistics
                -> CoreProgram -> [CoreRule]
                -> IO ()
-dumpPassResult dflags unqual mb_flag hdr extra_info binds rules
-  = do { forM_ mb_flag $ \flag ->
-           Err.dumpSDoc dflags unqual flag (showSDoc dflags hdr) dump_doc
+dumpPassResult dflags unqual mb_flag hdr mstats binds rules
+  = do { forM_ mb_flag $ \flag -> do
+           Err.dumpSDoc dflags unqual flag
+               ("Core - " ++ (showSDoc dflags hdr)) dump_doc
+
+           forM_ mstats $ \stats ->
+              Err.dumpSDoc dflags unqual flag
+                  ("Statistics - " ++ (showSDoc dflags hdr)) stats
 
          -- Report result size
          -- This has the side effect of forcing the intermediate to be evaluated
          -- if it's not already forced by a -ddump flag.
-       ; Err.debugTraceMsg dflags 2 size_doc
+       ; when (verbosity dflags >= 2) -- TODO: replace explicit verbosity check
+            $ logInfo dflags defaultUserStyle size_doc
        }
 
   where
-    size_doc = sep [text "Result size of" <+> hdr, nest 2 (equals <+> ppr (coreBindsStats binds))]
+    size_doc = text "Core size after" <+> hdr <+> equals
+               <+> ppr (coreBindsStats binds)
 
-    dump_doc  = vcat [ nest 2 extra_info
-                     , size_doc
+    dump_doc  = vcat [ text "-- Global size:" <+> ppr (coreBindsStats binds)
                      , blankLine
                      , pprCoreBindingsWithSize binds
                      , ppUnless (null rules) pp_rules ]
