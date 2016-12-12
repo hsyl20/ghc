@@ -351,7 +351,7 @@ finishNativeGen dflags modLoc bufh@(BufHandle _ _ h) us ngs
                 $ makeImportsDoc dflags (concat (ngs_imports ngs))
         return us'
   where
-    dump_stats = dumpSDoc dflags alwaysQualify Opt_D_dump_asm_stats "CodeGen - Stats"
+    dump_stats = dumpSDoc dflags alwaysQualify Opt_D_dump_asm_stats "Statistics - CodeGen"
 
 cmmNativeGenStream :: (Outputable statics, Outputable instr, Instruction instr)
               => DynFlags

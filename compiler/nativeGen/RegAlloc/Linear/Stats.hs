@@ -64,6 +64,8 @@ pprStats code statss
                                 emptyUFM
                         $ map ra_spillInstrs statss
 
+        spillTotalsLbs  = ["allocs", "clobbers", "loads", "joinRR"
+                          , "joinRM", "reg_reg_moves_remaining" ]
         spillTotals     = foldl' (zipWith (+))
                                 [0, 0, 0, 0, 0]
                         $ nonDetEltsUFM spills
@@ -75,12 +77,14 @@ pprStats code statss
         pprSpill (reg, spills)
                 = parens $ (hcat $ punctuate (text ", ")  (doubleQuotes (ppr reg) : map ppr spills))
 
-   in   (  text "-- spills-added-total"
-        $$ text "--    (allocs, clobbers, loads, joinRR, joinRM, reg_reg_moves_remaining)"
-        $$ (parens $ (hcat $ punctuate (text ", ") (map ppr spillTotals ++ [ppr moves])))
+
+   in   (  text "spills-added-total:"
+        $$ vcat (fmap (\(lbl,val) -> text "  " <> text lbl
+                                     <> text ":" <+> ppr val)
+                (spillTotalsLbs `zip` (spillTotals ++ [moves])))
         $$ text ""
-        $$ text "-- spills-added"
-        $$ text "--    (reg_name, allocs, clobbers, loads, joinRR, joinRM)"
+        $$ text "spills-added:"
+        $$ text "  (reg_name, allocs, clobbers, loads, joinRR, joinRM)"
         $$ (pprUFMWithKeys spills (vcat . map pprSpill))
         $$ text "")
 
