@@ -539,7 +539,7 @@ bindLocalsAtBreakpoint hsc_env apStack_fhv (Just BreakInfo{..}) = do
    mb_hValues <-
       mapM (getBreakpointVar hsc_env apStack_fhv . fromIntegral) offsets
    when (any isNothing mb_hValues) $
-      debugTraceMsg (hsc_dflags hsc_env) 1 $
+      logTrace (hsc_dflags hsc_env) 1 $
           text "Warning: _result has been evaluated, some bindings have been lost"
 
    us <- mkSplitUniqSupply 'I'   -- Dodgy; will give the same uniques every time

@@ -56,10 +56,9 @@ import Packages( isDllName )
 import HscTypes
 import Maybes
 import UniqSupply
-import ErrUtils (Severity(..))
+import ErrUtils (logDump)
 import Outputable
 import UniqDFM
-import SrcLoc
 import qualified ErrUtils as Err
 
 import Control.Monad
@@ -405,7 +404,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
           -- Print one-line size info
         ; let cs = coreBindsStats tidy_binds
         ; when (dopt Opt_D_dump_core_stats dflags)
-               (log_action dflags dflags NoReason SevDump noSrcSpan defaultDumpStyle
+               (logDump dflags
                           (text "Tidy size (terms,types,coercions)"
                            <+> ppr (moduleName mod) <> colon
                            <+> int (cs_tm cs)

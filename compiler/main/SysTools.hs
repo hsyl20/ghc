@@ -632,7 +632,7 @@ figureLlvmVersion dflags = do
              return $ Just v
             )
             (\err -> do
-                debugTraceMsg dflags 2
+                logTrace dflags 2
                     (text "Error (figuring out LLVM version):" <+>
                      text (show err))
                 errorMsg dflags $ vcat
@@ -842,7 +842,7 @@ getLinkerInfo' dflags = do
                  parseLinkerInfo (lines stdo) (lines stde) exitc
             )
             (\err -> do
-                debugTraceMsg dflags 2
+                logTrace dflags 2
                     (text "Error (figuring out linker information):" <+>
                      text (show err))
                 errorMsg dflags $ hang (text "Warning:") 9 $
@@ -896,7 +896,7 @@ getCompilerInfo' dflags = do
                 parseCompilerInfo (lines stdo) (lines stde) exitc
             )
             (\err -> do
-                debugTraceMsg dflags 2
+                logTrace dflags 2
                     (text "Error (figuring out C compiler information):" <+>
                      text (show err))
                 errorMsg dflags $ hang (text "Warning:") 9 $
@@ -1139,7 +1139,7 @@ getTempDir dflags = do
         -- directory we created.  Otherwise return the directory we created.
         case their_dir of
             Nothing  -> do
-                debugTraceMsg dflags 2 $
+                logTrace dflags 2 $
                     text "Created temporary directory:" <+> text our_dir
                 return our_dir
             Just dir -> do
@@ -1199,7 +1199,7 @@ removeWith dflags remover f = remover f `catchIO`
              else text "Warning: exception raised when deleting"
                                             <+> text f <> colon
                $$ text (show e)
-   in debugTraceMsg dflags 2 msg
+   in logTrace dflags 2 msg
   )
 
 -----------------------------------------------------------------------------
@@ -1423,15 +1423,15 @@ traceCmd :: DynFlags -> String -> String -> IO a -> IO a
 -- trace the command (at two levels of verbosity)
 traceCmd dflags phase_name cmd_line action = do
    withPhase (return dflags) (text phase_name) empty (const ()) $ do
-      debugTraceMsg dflags 3 (text cmd_line)
+      logTrace dflags 3 (text cmd_line)
       case flushErr dflags of
           FlushErr io -> io
 
        -- And run it!
       action `catchIO` handle_exn (verbosity dflags)
   where
-    handle_exn _verb exn = do { debugTraceMsg dflags 2 (char '\n')
-                              ; debugTraceMsg dflags 2 (text "Failed:" <+> text cmd_line <+> text (show exn))
+    handle_exn _verb exn = do { logTrace dflags 2 (char '\n')
+                              ; logTrace dflags 2 (text "Failed:" <+> text cmd_line <+> text (show exn))
                               ; throwGhcExceptionIO (ProgramError (show exn))}
 
 {-

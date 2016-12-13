@@ -50,7 +50,7 @@ llvmCodeGen dflags this_mod h us cmm_stream
        ver <- (fromMaybe supportedLlvmVersion) `fmap` figureLlvmVersion dflags
 
        -- warn if unsupported
-       debugTraceMsg dflags 2
+       logTrace dflags 2
             (text "Using LLVM version:" <+> text (show ver))
        let doWarn = wopt Opt_WarnUnsupportedLlvmVersion dflags
        when (ver /= supportedLlvmVersion && doWarn) $

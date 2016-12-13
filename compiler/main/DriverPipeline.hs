@@ -129,7 +129,7 @@ compileOne' m_tc_result mHscMessage
             source_modified0
  = do
 
-   debugTraceMsg dflags1 2 (text "compile: input file" <+> text input_fnpp)
+   logTrace dflags1 2 (text "compile: input file" <+> text input_fnpp)
 
    (status, hmi0) <- hscIncrementalCompile
                         always_do_basic_recompilation_check
@@ -366,11 +366,11 @@ link' dflags batch_attempt_linking hpt
             -- the linkables to link
             linkables = map (expectJust "link".hm_linkable) home_mod_infos
 
-        debugTraceMsg dflags 3 (text "link: linkables are ..." $$ vcat (map ppr linkables))
+        logTrace dflags 3 (text "link: linkables are ..." $$ vcat (map ppr linkables))
 
         -- check for the -no-link flag
         if isNoLink (ghcLink dflags)
-          then do debugTraceMsg dflags 3 (text "link(batch): linking omitted (-c flag given).")
+          then do logTrace dflags 3 (text "link(batch): linking omitted (-c flag given).")
                   return Succeeded
           else do
 
@@ -382,7 +382,7 @@ link' dflags batch_attempt_linking hpt
         linking_needed <- linkingNeeded dflags staticLink linkables pkg_deps
 
         if not (gopt Opt_ForceRecomp dflags) && not linking_needed
-           then do debugTraceMsg dflags 2 (text exe_file <+> text "is up to date, linking not required.")
+           then do logTrace dflags 2 (text exe_file <+> text "is up to date, linking not required.")
                    return Succeeded
            else do
 
@@ -395,13 +395,13 @@ link' dflags batch_attempt_linking hpt
                 other         -> panicBadLink other
         link dflags obj_files pkg_deps
 
-        debugTraceMsg dflags 3 (text "link: done")
+        logTrace dflags 3 (text "link: done")
 
         -- linkBinary only returns if it succeeds
         return Succeeded
 
    | otherwise
-   = do debugTraceMsg dflags 3 (text "link(batch): upsweep (partially) failed OR" $$
+   = do logTrace dflags 3 (text "link(batch): upsweep (partially) failed OR" $$
                                 text "   Main.main not exported; not linking.")
         return Succeeded
 
@@ -454,11 +454,11 @@ checkLinkInfo dflags pkg_deps exe_file
  | otherwise
  = do
    link_info <- getLinkInfo dflags pkg_deps
-   debugTraceMsg dflags 3 $ text ("Link info: " ++ link_info)
+   logTrace dflags 3 $ text ("Link info: " ++ link_info)
    m_exe_link_info <- readElfNoteAsString dflags exe_file
                           ghcLinkInfoSectionName ghcLinkInfoNoteName
    let sameLinkInfo = (Just link_info == m_exe_link_info)
-   debugTraceMsg dflags 3 $ case m_exe_link_info of
+   logTrace dflags 3 $ case m_exe_link_info of
      Nothing -> text "Exe link info: Not found"
      Just s
        | sameLinkInfo -> text ("Exe link info is the same")
@@ -614,7 +614,7 @@ runPipeline stop_phase hsc_env0 (input_fn, mb_phase)
                                       ++ input_fn))
              HscOut {} -> return ()
 
-         debugTraceMsg dflags 4 (text "Running the pipeline")
+         logTrace dflags 4 (text "Running the pipeline")
          r <- runPipeline' start_phase hsc_env env input_fn
                            maybe_loc maybe_stub_o
 
@@ -625,7 +625,7 @@ runPipeline stop_phase hsc_env0 (input_fn, mb_phase)
          -- NB: Currently disabled on Windows (ref #7134, #8228, and #5987)
          when (not $ platformOS (targetPlatform dflags) == OSMinGW32) $ do
            when isHaskellishFile $ whenCannotGenerateDynamicToo dflags $ do
-               debugTraceMsg dflags 4
+               logTrace dflags 4
                    (text "Running the pipeline again for -dynamic-too")
                let dflags' = dynamicTooMkDynamicDynFlags dflags
                hsc_env' <- newHscEnv dflags'
@@ -692,7 +692,7 @@ pipeLoop phase input_fn = do
            " but I wanted to stop at phase " ++ show stopPhase)
 
    _
-     -> do liftIO $ debugTraceMsg dflags 4
+     -> do liftIO $ logTrace dflags 4
                                   (text "Running phase" <+> ppr phase)
            (next_phase, output_fn) <- runHookedPhase phase input_fn dflags
            r <- pipeLoop next_phase output_fn
@@ -1295,7 +1295,7 @@ runPhase (RealPhase (As with_cpp)) input_fn dflags
                           , SysTools.FileOption "" outputFilename
                           ])
 
-        liftIO $ debugTraceMsg dflags 4 (text "Running the assembler")
+        liftIO $ logTrace dflags 4 (text "Running the assembler")
         runAssembler input_fn output_fn
         return (RealPhase next_phase, output_fn)
 

@@ -42,12 +42,11 @@ module ErrUtils (
 
         -- * Issuing messages during compilation
         putMsg, printInfoForUser, printOutputForUser,
-        logInfo, logOutput,
+        logInfo, logOutput, logTrace, logDump,
         errorMsg, warningMsg,
         fatalErrorMsg, fatalErrorMsg', fatalErrorMsg'',
         compilationProgressMsg,
         withPhase,
-        debugTraceMsg,
         ghcExit,
         prettyPrintGhcErrors,
     ) where
@@ -148,6 +147,11 @@ data Severity
   | SevDump
     -- ^ Log messages intended for compiler developers
     -- No file/line/column stuff
+
+  | SevTrace
+    -- ^ Log messages intended for compiler developers
+    -- No file/line/column stuff
+    -- No specific format
 
   | SevInfo
     -- ^ Log messages intended for end users.
@@ -530,10 +534,6 @@ withPhase getDFlags what' this_mod force_result action = do
          pure r
        else action
 
-debugTraceMsg :: DynFlags -> Int -> MsgDoc -> IO ()
-debugTraceMsg dflags val msg = ifVerbose dflags val $
-                               logInfo dflags defaultDumpStyle msg
-
 putMsg :: DynFlags -> MsgDoc -> IO ()
 putMsg dflags msg = logInfo dflags defaultUserStyle msg
 
@@ -544,6 +544,15 @@ printInfoForUser dflags print_unqual msg
 printOutputForUser :: DynFlags -> PrintUnqualified -> MsgDoc -> IO ()
 printOutputForUser dflags print_unqual msg
   = logOutput dflags (mkUserStyle print_unqual AllTheWay) msg
+
+logTrace :: DynFlags -> Int -> MsgDoc -> IO ()
+logTrace dflags val msg
+  = ifVerbose dflags val $
+  log_action dflags dflags NoReason SevTrace noSrcSpan defaultDumpStyle msg
+
+logDump :: DynFlags -> MsgDoc -> IO ()
+logDump dflags msg
+  = log_action dflags dflags NoReason SevDump noSrcSpan defaultDumpStyle msg
 
 logInfo :: DynFlags -> PprStyle -> MsgDoc -> IO ()
 logInfo dflags sty msg

@@ -461,7 +461,7 @@ startIServ dflags = do
         | otherwise = ""
       prog = pgm_i dflags ++ flavour
       opts = getOpts dflags opt_i
-  debugTraceMsg dflags 3 $ text "Starting " <> text prog
+  logTrace dflags 3 $ text "Starting " <> text prog
   let createProc = lookupHook createIservProcessHook
                               (\cp -> do { (_,_,_,ph) <- createProcess cp
                                          ; return ph })

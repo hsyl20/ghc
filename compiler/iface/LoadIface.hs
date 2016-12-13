@@ -62,7 +62,6 @@ import Maybes
 import ErrUtils
 import Finder
 import UniqFM
-import SrcLoc
 import Outputable
 import BinIface
 import Panic
@@ -968,7 +967,7 @@ showIface hsc_env filename = do
    iface <- initTcRnIf 's' hsc_env () () $
        readBinIface IgnoreHiWay TraceBinIFaceReading filename
    let dflags = hsc_dflags hsc_env
-   log_action dflags dflags NoReason SevDump noSrcSpan defaultDumpStyle (pprModIface iface)
+   logDump dflags (pprModIface iface)
 
 -- Show a ModIface but don't display details; suitable for ModIfaces stored in
 -- the EPT.

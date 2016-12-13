@@ -45,7 +45,6 @@ import DmdAnal          ( dmdAnalProgram )
 import CallArity        ( callArityAnalProgram )
 import WorkWrap         ( wwTopBinds )
 import Vectorise        ( vectorise )
-import SrcLoc
 import Util
 import Module
 
@@ -484,8 +483,7 @@ ruleCheckPass current_phase pat guts =
     { rb <- getRuleBase
     ; dflags <- getDynFlags
     ; vis_orphs <- getVisibleOrphanMods
-    ; liftIO $ log_action dflags dflags NoReason Err.SevDump noSrcSpan
-                   defaultDumpStyle
+    ; liftIO $ Err.logDump dflags
                    (ruleCheckProgram current_phase pat
                       (RuleEnv rb vis_orphs) (mg_binds guts))
     ; return guts }

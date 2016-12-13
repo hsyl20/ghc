@@ -247,7 +247,7 @@ withExtendedLinkEnv new_env action
 showLinkerState :: DynFlags -> IO ()
 showLinkerState dflags
   = do pls <- readIORef v_PersistentLinkerState >>= readMVar
-       log_action dflags dflags NoReason SevDump noSrcSpan defaultDumpStyle
+       logDump dflags
                  (vcat [text "----- Linker state -----",
                         text "Pkgs:" <+> ppr (pkgs_loaded pls),
                         text "Objs:" <+> ppr (objs_loaded pls),
@@ -1028,9 +1028,9 @@ unload hsc_env linkables
                  return (pls1, pls1)
 
         let dflags = hsc_dflags hsc_env
-        debugTraceMsg dflags 3 $
+        logTrace dflags 3 $
           text "unload: retaining objs" <+> ppr (objs_loaded new_pls)
-        debugTraceMsg dflags 3 $
+        logTrace dflags 3 $
           text "unload: retaining bcos" <+> ppr (bcos_loaded new_pls)
         return ()
 

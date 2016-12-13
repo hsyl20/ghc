@@ -76,7 +76,7 @@ import Maybes
 
 import System.Environment ( getEnv )
 import FastString
-import ErrUtils         ( debugTraceMsg, MsgDoc, printInfoForUser )
+import ErrUtils         ( logTrace, MsgDoc, printInfoForUser )
 import Exception
 
 import System.Directory
@@ -549,7 +549,7 @@ readPackageConfig dflags conf_file = do
   where
     readDirStylePackageConfig conf_dir = do
       let filename = conf_dir </> "package.cache"
-      debugTraceMsg dflags 2 (text "Using binary package database:" <+> text filename)
+      logTrace dflags 2 (text "Using binary package database:" <+> text filename)
       readPackageDbForGhc filename
 
     -- Single-file style package dbs have been deprecated for some time, but
@@ -567,7 +567,7 @@ readPackageConfig dflags conf_file = do
           let conf_dir = conf_file <.> "d"
           direxists <- doesDirectoryExist conf_dir
           if direxists
-             then do debugTraceMsg dflags 2 (text "Ignoring old file-style db and trying:" <+> text conf_dir)
+             then do logTrace dflags 2 (text "Ignoring old file-style db and trying:" <+> text conf_dir)
                      liftM Just (readDirStylePackageConfig conf_dir)
              else return (Just []) -- ghc-pkg will create it when it's updated
         else return Nothing
@@ -940,7 +940,7 @@ findWiredInPackages dflags pkgs vis_map = do
             many -> pick (head (sortByVersion many))
           where
                 notfound = do
-                          debugTraceMsg dflags 2 $
+                          logTrace dflags 2 $
                             text "wired-in package "
                                  <> text wired_pkg
                                  <> text " not found."
@@ -948,7 +948,7 @@ findWiredInPackages dflags pkgs vis_map = do
                 pick :: PackageConfig
                      -> IO (Maybe PackageConfig)
                 pick pkg = do
-                        debugTraceMsg dflags 2 $
+                        logTrace dflags 2 $
                             text "wired-in package "
                                  <> text wired_pkg
                                  <> text " mapped to "
@@ -1051,7 +1051,7 @@ reportUnusable :: DynFlags -> UnusablePackages -> IO ()
 reportUnusable dflags pkgs = mapM_ report (Map.toList pkgs)
   where
     report (ipid, (_, reason)) =
-       debugTraceMsg dflags 2 $
+       logTrace dflags 2 $
          pprReason
            (text "package" <+> ppr ipid <+> text "is") reason
 
@@ -1171,14 +1171,14 @@ mkPackageState dflags dbs preload0 = do
 
   let other_flags = reverse (packageFlags dflags)
       ignore_flags = reverse (ignorePackageFlags dflags)
-  debugTraceMsg dflags 2 $
+  logTrace dflags 2 $
       text "package flags" <+> ppr other_flags
 
   let merge (pkg_map, prev_unusable) (db_path, db) = do
-            debugTraceMsg dflags 2 $
+            logTrace dflags 2 $
                 text "loading package database" <+> text db_path
             forM_ (Set.toList shadow_set) $ \pkg ->
-                debugTraceMsg dflags 2 $
+                logTrace dflags 2 $
                     text "package" <+> ppr pkg <+>
                     text "shadows a previously defined package"
             reportUnusable dflags unusable

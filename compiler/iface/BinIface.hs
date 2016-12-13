@@ -212,7 +212,7 @@ writeBinIface dflags hi_path mod_iface = do
     symtab_next <- readFastMutInt symtab_next
     symtab_map  <- readIORef symtab_map
     putSymbolTable bh symtab_next symtab_map
-    debugTraceMsg dflags 3 (text "writeBinIface:" <+> int symtab_next
+    logTrace dflags 3 (text "writeBinIface:" <+> int symtab_next
                                 <+> text "Names")
 
     -- NB. write the dictionary after the symbol table, because
@@ -227,7 +227,7 @@ writeBinIface dflags hi_path mod_iface = do
     dict_next <- readFastMutInt dict_next_ref
     dict_map  <- readIORef dict_map_ref
     putDictionary bh dict_next dict_map
-    debugTraceMsg dflags 3 (text "writeBinIface:" <+> int dict_next
+    logTrace dflags 3 (text "writeBinIface:" <+> int dict_next
                                 <+> text "dict entries")
 
     -- And send the result to the file

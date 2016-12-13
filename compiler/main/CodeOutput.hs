@@ -30,7 +30,6 @@ import qualified Stream
 import ErrUtils
 import Outputable
 import Module
-import SrcLoc
 
 import Control.Exception
 import System.Directory
@@ -69,13 +68,7 @@ codeOutput dflags this_mod filenm location foreign_stubs pkg_deps cmm_stream
                                       (ppr this_mod)
                                       (const ()) $ do
                 { case cmmLint dflags cmm of
-                        Just err -> do { log_action dflags
-                                                   dflags
-                                                   NoReason
-                                                   SevDump
-                                                   noSrcSpan
-                                                   defaultDumpStyle
-                                                   err
+                        Just err -> do { logDump dflags err
                                        ; ghcExit dflags 1
                                        }
                         Nothing  -> return ()
@@ -155,7 +148,7 @@ outputAsm dflags this_mod location filenm cmm_stream
  | cGhcWithNativeCodeGen == "YES"
   = do ncg_uniqs <- mkSplitUniqSupply 'n'
 
-       debugTraceMsg dflags 4 (text "Outputing asm to" <+> text filenm)
+       logTrace dflags 4 (text "Outputing asm to" <+> text filenm)
 
        _ <- {-# SCC "OutputAsm" #-} doOutput filenm $
            \h -> {-# SCC "NativeCodeGen" #-}

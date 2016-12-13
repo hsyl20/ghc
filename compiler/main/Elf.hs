@@ -140,7 +140,7 @@ data ElfHeader = ElfHeader
 -- | Read the ELF header
 readElfHeader :: DynFlags -> ByteString -> IO (Maybe ElfHeader)
 readElfHeader dflags bs = runGetOrThrow getHeader bs `catchIO` \_ -> do
-    debugTraceMsg dflags 3 $
+    logTrace dflags 3 $
       text ("Unable to read ELF header")
     return Nothing
   where
@@ -197,7 +197,7 @@ readElfSectionTable :: DynFlags
                     -> IO (Maybe SectionTable)
 
 readElfSectionTable dflags hdr bs = action `catchIO` \_ -> do
-    debugTraceMsg dflags 3 $
+    logTrace dflags 3 $
       text ("Unable to read ELF section table")
     return Nothing
   where
@@ -250,7 +250,7 @@ readElfSectionByIndex :: DynFlags
                       -> IO (Maybe Section)
 
 readElfSectionByIndex dflags hdr secTable i bs = action `catchIO` \_ -> do
-    debugTraceMsg dflags 3 $
+    logTrace dflags 3 $
       text ("Unable to read ELF section")
     return Nothing
   where
@@ -319,7 +319,7 @@ readElfSectionByName :: DynFlags
                      -> IO (Maybe LBS.ByteString)
 
 readElfSectionByName dflags bs name = action `catchIO` \_ -> do
-    debugTraceMsg dflags 3 $
+    logTrace dflags 3 $
       text ("Unable to read ELF section \"" ++ name ++ "\"")
     return Nothing
   where
@@ -343,7 +343,7 @@ readElfNoteBS :: DynFlags
               -> IO (Maybe LBS.ByteString)
 
 readElfNoteBS dflags bs sectionName noteId = action `catchIO`  \_ -> do
-    debugTraceMsg dflags 3 $
+    logTrace dflags 3 $
          text ("Unable to read ELF note \"" ++ noteId ++
                "\" in section \"" ++ sectionName ++ "\"")
     return Nothing
@@ -392,7 +392,7 @@ readElfNoteAsString :: DynFlags
                     -> IO (Maybe String)
 
 readElfNoteAsString dflags path sectionName noteId = action `catchIO`  \_ -> do
-    debugTraceMsg dflags 3 $
+    logTrace dflags 3 $
          text ("Unable to read ELF note \"" ++ noteId ++
                "\" in section \"" ++ sectionName ++ "\"")
     return Nothing

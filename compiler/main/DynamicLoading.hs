@@ -197,10 +197,10 @@ getHValueSafely hsc_env val_name expected_type = do
 --    if it /does/ segfault
 lessUnsafeCoerce :: DynFlags -> String -> a -> IO b
 lessUnsafeCoerce dflags context what = do
-    debugTraceMsg dflags 3 $ (text "Coercing a value in") <+> (text context) <>
+    logTrace dflags 3 $ (text "Coercing a value in") <+> (text context) <>
                              (text "...")
     output <- evaluate (unsafeCoerce# what)
-    debugTraceMsg dflags 3 (text "Successfully evaluated coercion")
+    logTrace dflags 3 (text "Successfully evaluated coercion")
     return output
 
 

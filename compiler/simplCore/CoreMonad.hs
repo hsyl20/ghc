@@ -47,7 +47,7 @@ module CoreMonad (
     -- ** Screen output
     putMsg, putMsgS, errorMsg, errorMsgS, warnMsg,
     fatalErrorMsg, fatalErrorMsgS,
-    debugTraceMsg, debugTraceMsgS,
+    logTrace, logTraceS,
     dumpIfSet_dyn,
 
 #ifdef GHCI
@@ -748,6 +748,7 @@ msg sev doc
                      SevError   -> err_sty
                      SevWarning -> err_sty
                      SevDump    -> dump_sty
+                     SevTrace   -> dump_sty
                      _          -> user_sty
              err_sty  = mkErrStyle dflags unqual
              user_sty = mkUserStyle unqual AllTheWay
@@ -783,12 +784,12 @@ fatalErrorMsg :: SDoc -> CoreM ()
 fatalErrorMsg = msg SevFatal
 
 -- | Output a string debugging message at verbosity level of @-v@ or higher
-debugTraceMsgS :: String -> CoreM ()
-debugTraceMsgS = debugTraceMsg . text
+logTraceS :: String -> CoreM ()
+logTraceS = logTrace . text
 
 -- | Outputs a debugging message at verbosity level of @-v@ or higher
-debugTraceMsg :: SDoc -> CoreM ()
-debugTraceMsg = msg SevDump
+logTrace :: SDoc -> CoreM ()
+logTrace = msg SevDump
 
 -- | Show some labelled 'SDoc' if a particular flag is set or at a verbosity level of @-v -ddump-most@ or higher
 dumpIfSet_dyn :: DumpFlag -> String -> SDoc -> CoreM ()
