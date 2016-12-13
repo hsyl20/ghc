@@ -323,7 +323,7 @@ dumpIfSet dflags flag hdr doc
                             NoReason
                             SevDump
                             noSrcSpan
-                            defaultDumpStyle
+                            (defaultDumpStyle dflags)
                             (mkDumpDoc hdr doc)
 
 -- | a wrapper around 'dumpSDoc'.
@@ -366,7 +366,7 @@ mkDumpDoc hdr doc
 dumpSDoc :: DynFlags -> PrintUnqualified -> DumpFlag -> String -> SDoc -> IO ()
 dumpSDoc dflags print_unqual flag hdr doc
  = do let mFile = chooseDumpFile dflags flag
-          dump_style = mkDumpStyle print_unqual
+          dump_style = mkDumpStyle dflags print_unqual
       case mFile of
             Just fileName
                  -> do
@@ -548,11 +548,13 @@ printOutputForUser dflags print_unqual msg
 logTrace :: DynFlags -> Int -> MsgDoc -> IO ()
 logTrace dflags val msg
   = ifVerbose dflags val $
-  log_action dflags dflags NoReason SevTrace noSrcSpan defaultDumpStyle msg
+  log_action dflags dflags NoReason SevTrace noSrcSpan
+    (defaultDumpStyle dflags) msg
 
 logDump :: DynFlags -> MsgDoc -> IO ()
 logDump dflags msg
-  = log_action dflags dflags NoReason SevDump noSrcSpan defaultDumpStyle msg
+  = log_action dflags dflags NoReason SevDump noSrcSpan
+      (defaultDumpStyle dflags) msg
 
 logInfo :: DynFlags -> PprStyle -> MsgDoc -> IO ()
 logInfo dflags sty msg

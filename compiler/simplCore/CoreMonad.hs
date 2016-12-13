@@ -752,7 +752,7 @@ msg sev doc
                      _          -> user_sty
              err_sty  = mkErrStyle dflags unqual
              user_sty = mkUserStyle unqual AllTheWay
-             dump_sty = mkDumpStyle unqual
+             dump_sty = mkDumpStyle dflags unqual
        ; liftIO $
          (log_action dflags) dflags NoReason sev loc sty doc }
 

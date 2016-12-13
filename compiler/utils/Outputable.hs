@@ -236,17 +236,19 @@ neverQualify  = QueryQualify neverQualifyNames
                              neverQualifyModules
                              neverQualifyPackages
 
-defaultUserStyle, defaultDumpStyle :: PprStyle
-
+defaultUserStyle :: PprStyle
 defaultUserStyle = mkUserStyle neverQualify AllTheWay
+
+defaultDumpStyle :: DynFlags -> PprStyle
  -- Print without qualifiers to reduce verbosity, unless -dppr-debug
+defaultDumpStyle dflags
+   |  hasPprDebug dflags = PprDebug
+   |  otherwise          = PprDump neverQualify
 
-defaultDumpStyle |  opt_PprStyle_Debug = PprDebug
-                 |  otherwise          = PprDump neverQualify
-
-mkDumpStyle :: PrintUnqualified -> PprStyle
-mkDumpStyle print_unqual | opt_PprStyle_Debug = PprDebug
-                         | otherwise          = PprDump print_unqual
+mkDumpStyle :: DynFlags -> PrintUnqualified -> PprStyle
+mkDumpStyle dflags print_unqual
+   | hasPprDebug dflags = PprDebug
+   | otherwise          = PprDump print_unqual
 
 defaultErrStyle :: DynFlags -> PprStyle
 -- Default style for error messages, when we don't know PrintUnqualified
@@ -466,7 +468,7 @@ showSDocForUser dflags unqual doc
  = renderWithStyle dflags doc (mkUserStyle unqual AllTheWay)
 
 showSDocDump :: DynFlags -> SDoc -> String
-showSDocDump dflags d = renderWithStyle dflags d defaultDumpStyle
+showSDocDump dflags d = renderWithStyle dflags d (defaultDumpStyle dflags)
 
 showSDocDebug :: DynFlags -> SDoc -> String
 showSDocDebug dflags d = renderWithStyle dflags d PprDebug
@@ -490,7 +492,8 @@ showSDocDumpOneLine :: DynFlags -> SDoc -> String
 showSDocDumpOneLine dflags d
  = let s = Pretty.style{ Pretty.mode = OneLineMode,
                          Pretty.lineLength = irrelevantNCols } in
-   Pretty.renderStyle s $ runSDoc d (initSDocContext dflags defaultDumpStyle)
+   Pretty.renderStyle s $
+      runSDoc d (initSDocContext dflags (defaultDumpStyle dflags))
 
 irrelevantNCols :: Int
 -- Used for OneLineMode and LeftMode when number of cols isn't used

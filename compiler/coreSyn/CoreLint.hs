@@ -2128,7 +2128,7 @@ lintAnnots pname pass guts = do
        when (not (null diffs)) $ CoreMonad.putMsg $ vcat
          [ lint_banner "warning" pname
          , text "Core changes with annotations:"
-         , withPprStyle defaultDumpStyle $ nest 2 $ vcat diffs
+         , withPprStyle (defaultDumpStyle dflags) $ nest 2 $ vcat diffs
          ]
   -- Return actual new guts
   return nguts
