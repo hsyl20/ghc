@@ -29,6 +29,7 @@ module DynFlags (
         ProfAuto(..),
         glasgowExtsFlags,
         warningGroups, warningHierarchies,
+        sopt,
         dopt, dopt_set, dopt_unset,
         gopt, gopt_set, gopt_unset, setGeneralFlag', unSetGeneralFlag',
         wopt, wopt_set, wopt_unset,
@@ -167,6 +168,7 @@ module DynFlags (
 # endif
 #endif
 
+import StaticFlags
 import Platform
 import PlatformConstants
 import Module
@@ -320,6 +322,14 @@ import Foreign.Safe
 
 -- -----------------------------------------------------------------------------
 -- DynFlags
+
+data StaticFlag
+   = Opt_D_ppr_debug
+   | Opt_D_no_debug_output
+   | Opt_D_no_state_hack
+   | Opt_D_no_opt_coercion
+   deriving (Enum,Eq,Show)
+
 
 data DumpFlag
 -- See Note [Updating flag description in the User's Guide]
@@ -838,6 +848,7 @@ data DynFlags = DynFlags {
   generalFlags          :: IntSet,
   warningFlags          :: IntSet,
   fatalWarningFlags     :: IntSet,
+  statFlags             :: IntSet,
   -- Don't change this without updating extensionFlags:
   language              :: Maybe Language,
   -- | Safe Haskell mode
@@ -1484,6 +1495,12 @@ initDynFlags dflags = do
                              return (str == str'))
                          `catchIOError` \_ -> return False
  canUseColor <- stderrSupportsAnsiColors
+ let staticFlgs = IntSet.fromList $ fmap fromEnum $ fmap fst $ filter snd $
+      [ (Opt_D_ppr_debug      , opt_PprStyle_Debug)
+      , (Opt_D_no_debug_output, opt_NoDebugOutput)
+      , (Opt_D_no_state_hack  , opt_NoStateHack)
+      , (Opt_D_no_opt_coercion, opt_NoOptCoercion)
+      ]
  return dflags{
         canGenerateDynamicToo = refCanGenerateDynamicToo,
         nextTempSuffix = refNextTempSuffix,
@@ -1495,7 +1512,8 @@ initDynFlags dflags = do
         useUnicode    = canUseUnicode,
         canUseColor   = canUseColor,
         rtldInfo      = refRtldInfo,
-        rtccInfo      = refRtccInfo
+        rtccInfo      = refRtccInfo,
+        statFlags     = staticFlgs
         }
 
 -- | Check if ANSI escape sequences can be used to control color in stderr.
@@ -1687,6 +1705,7 @@ defaultDynFlags mySettings =
         dumpFlags = IntSet.empty,
         generalFlags = IntSet.fromList (map fromEnum (defaultFlags mySettings)),
         warningFlags = IntSet.fromList (map fromEnum standardWarnings),
+        statFlags    = IntSet.empty,
         fatalWarningFlags = IntSet.empty,
         ghciScripts = [],
         language = Nothing,
@@ -1906,6 +1925,10 @@ languageExtensions (Just Haskell2010)
        LangExt.PatternGuards,
        LangExt.DoAndIfThenElse,
        LangExt.RelaxedPolyRec]
+
+-- | Test whether a 'StaticFlag' is set
+sopt :: StaticFlag -> DynFlags -> Bool
+sopt f dflags = (fromEnum f `IntSet.member` statFlags dflags)
 
 -- | Test whether a 'DumpFlag' is set
 dopt :: DumpFlag -> DynFlags -> Bool
