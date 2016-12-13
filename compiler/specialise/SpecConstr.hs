@@ -43,8 +43,7 @@ import VarEnv
 import VarSet
 import Name
 import BasicTypes
-import DynFlags         ( DynFlags(..) )
-import StaticFlags      ( opt_PprStyle_Debug )
+import DynFlags         ( DynFlags(..), hasPprDebug, unsafeGlobalDynFlags )
 import Maybes           ( orElse, catMaybes, isJust, isNothing )
 import Demand
 import GHC.Serialized   ( deserializeWithData )
@@ -1544,11 +1543,14 @@ specialise env bind_calls (RI { ri_fn = fn, ri_lam_bndrs = arg_bndrs
               spec_count' = n_pats + spec_count
         ; case sc_count env of
             Just max | not (sc_force env) && spec_count' > max
-                -> if (debugIsOn || opt_PprStyle_Debug)  -- Suppress this scary message for
-                   then pprTrace "SpecConstr" msg $      -- ordinary users!  Trac #5125
+                -- Suppress this scary message for
+                -- ordinary users!  Trac #5125
+                -> if (debugIsOn || dbg)
+                   then pprTrace "SpecConstr" msg $
                         return (nullUsage, spec_info)
                    else return (nullUsage, spec_info)
                 where
+                   dbg = hasPprDebug unsafeGlobalDynFlags
                    msg = vcat [ sep [ text "Function" <+> quotes (ppr fn)
                                     , nest 2 (text "has" <+>
                                               speakNOf spec_count' (text "call pattern") <> comma <+>

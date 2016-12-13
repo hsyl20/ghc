@@ -59,7 +59,6 @@ import GHC.Arr          ( Array(..) )
 import GHC.Exts
 import GHC.IO ( IO(..) )
 
-import StaticFlags( opt_PprStyle_Debug )
 import Control.Monad
 import Data.Maybe
 import Data.Array.Base
@@ -354,7 +353,7 @@ ppr_termM y p Term{dc=Right dc, subTerms=tt}
   where
     sub_terms_to_show   -- Don't show the dictionary arguments to
                         -- constructors unless -dppr-debug is on
-      | opt_PprStyle_Debug = tt
+      | hasPprDebug unsafeGlobalDynFlags = tt
       | otherwise = dropList (dataConTheta dc) tt
 
 ppr_termM y p t@NewtypeWrap{} = pprNewtypeWrap y p t

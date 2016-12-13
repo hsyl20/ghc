@@ -81,7 +81,7 @@ import Unique
 import Util
 import Maybes
 import Outputable
-import StaticFlags
+import DynFlags
 
 {-
 ************************************************************************
@@ -181,7 +181,7 @@ uniqAway' (InScope set n) var
           | debugIsOn && (k > 1000)
           = pprPanic "uniqAway loop:" (ppr k <+> text "tries" <+> ppr var <+> int n)
           | uniq `elemVarSetByKey` set = try (k + 1)
-          | debugIsOn && opt_PprStyle_Debug && (k > 3)
+          | debugIsOn && hasPprDebug unsafeGlobalDynFlags && (k > 3)
           = pprTrace "uniqAway:" (ppr k <+> text "tries" <+> ppr var <+> int n)
             setVarUnique var uniq
           | otherwise = setVarUnique var uniq

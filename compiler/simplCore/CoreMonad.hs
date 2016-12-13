@@ -64,7 +64,6 @@ import CoreSyn
 import HscTypes
 import Module
 import DynFlags
-import StaticFlags
 import BasicTypes       ( CompilerPhase(..) )
 import Annotations
 
@@ -257,8 +256,8 @@ bindsOnlyPass pass guts
 ************************************************************************
 -}
 
-verboseSimplStats :: Bool
-verboseSimplStats = opt_PprStyle_Debug          -- For now, anyway
+getVerboseSimplStats :: (Bool -> SDoc) -> SDoc
+getVerboseSimplStats = getPprDebug          -- For now, anyway
 
 zeroSimplCount     :: DynFlags -> SimplCount
 isZeroSimplCount   :: SimplCount -> Bool
@@ -346,7 +345,8 @@ pprSimplCount (SimplCount { ticks = tks, details = dts, log1 = l1, log2 = l2 })
   = vcat [text "Total ticks:    " <+> int tks,
           blankLine,
           pprTickCounts dts,
-          if verboseSimplStats then
+          getVerboseSimplStats $ \dbg -> if dbg
+          then
                 vcat [blankLine,
                       text "Log (most recent first)",
                       nest 4 (vcat (map ppr l1) $$ vcat (map ppr l2))]
