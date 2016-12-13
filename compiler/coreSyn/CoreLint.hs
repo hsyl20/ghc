@@ -48,7 +48,6 @@ import TyCon
 import CoAxiom
 import BasicTypes
 import ErrUtils as Err
-import StaticFlags
 import ListSetOps
 import PrelNames
 import Outputable
@@ -299,7 +298,7 @@ displayLintResults dflags pass warns errs binds
        ; Err.ghcExit dflags 1 }
 
   | not (isEmptyBag warns)
-  , not opt_NoDebugOutput
+  , not (hasNoDebugOutput dflags)
   , showLintWarnings pass
   = Err.logDump dflags
         (lint_banner "warnings" (ppr pass) $$ Err.pprMessageBag warns)
@@ -1761,9 +1760,10 @@ addMsg env msgs msg
    locs = le_loc env
    (loc, cxt1) = dumpLoc (head locs)
    cxts        = [snd (dumpLoc loc) | loc <- locs]
-   context     | opt_PprStyle_Debug = vcat (reverse cxts) $$ cxt1 $$
-                                      text "Substitution:" <+> ppr (le_subst env)
-               | otherwise          = cxt1
+   context     = getPprDebug $ \dbg -> if dbg
+                  then vcat (reverse cxts) $$ cxt1 $$
+                         text "Substitution:" <+> ppr (le_subst env)
+                  else cxt1
 
    mk_msg msg = mkLocMessage SevWarning (mkSrcSpan loc loc) (context $$ msg)
 

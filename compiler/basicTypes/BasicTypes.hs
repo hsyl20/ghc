@@ -106,7 +106,6 @@ module BasicTypes(
 import FastString
 import Outputable
 import SrcLoc ( Located,unLoc )
-import StaticFlags( opt_PprStyle_Debug )
 import Data.Data hiding (Fixity)
 import Data.Function (on)
 
@@ -721,8 +720,9 @@ tupleParens :: TupleSort -> SDoc -> SDoc
 tupleParens BoxedTuple      p = parens p
 tupleParens UnboxedTuple    p = text "(#" <+> p <+> ptext (sLit "#)")
 tupleParens ConstraintTuple p   -- In debug-style write (% Eq a, Ord b %)
-  | opt_PprStyle_Debug        = text "(%" <+> p <+> ptext (sLit "%)")
-  | otherwise                 = parens p
+  = getPprDebug $ \dbg -> if dbg
+      then text "(%" <+> p <+> ptext (sLit "%)")
+      else parens p
 
 {-
 ************************************************************************

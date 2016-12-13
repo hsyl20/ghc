@@ -700,13 +700,13 @@ traceTcRn :: SDoc -> TcRn ()
 -- for --dump-to-file, not to decide whether or not to output
 -- That part is done by the caller
 traceTcRn doc
-  = do { real_doc <- prettyDoc doc
-       ; dflags   <- getDynFlags
+  = do { dflags   <- getDynFlags
+       ; real_doc <- prettyDoc dflags doc
        ; liftIO $ logTrace dflags 2 real_doc  }
   where
     -- Add current location if opt_PprStyle_Debug
-    prettyDoc :: SDoc -> TcRn SDoc
-    prettyDoc doc = if opt_PprStyle_Debug
+    prettyDoc :: DynFlags -> SDoc -> TcRn SDoc
+    prettyDoc dflags doc = if hasPprDebug dflags
        then do { loc  <- getSrcSpanM; return $ mkLocMessage SevTrace loc doc }
        else return doc -- The full location is usually way too much
 
