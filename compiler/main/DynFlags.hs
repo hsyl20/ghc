@@ -324,8 +324,7 @@ import Foreign.Safe
 -- DynFlags
 
 data StaticFlag
-   = Opt_D_no_debug_output
-   | Opt_D_no_state_hack
+   = Opt_D_no_state_hack
    | Opt_D_no_opt_coercion
    deriving (Enum,Eq,Show)
 
@@ -412,7 +411,7 @@ data DumpFlag
    | Opt_D_verbose_core2core
    | Opt_D_dump_debug
    | Opt_D_ppr_debug
-
+   | Opt_D_no_debug_output
    deriving (Eq, Show, Enum)
 
 -- | Enumerates the simple on-or-off dynamic flags
@@ -1496,8 +1495,7 @@ initDynFlags dflags = do
                          `catchIOError` \_ -> return False
  canUseColor <- stderrSupportsAnsiColors
  let staticFlgs = IntSet.fromList $ fmap fromEnum $ fmap fst $ filter snd $
-      [ (Opt_D_no_debug_output, opt_NoDebugOutput)
-      , (Opt_D_no_state_hack  , opt_NoStateHack)
+      [ (Opt_D_no_state_hack  , opt_NoStateHack)
       , (Opt_D_no_opt_coercion, opt_NoOptCoercion)
       ]
  return dflags{
@@ -1933,7 +1931,7 @@ hasPprDebug :: DynFlags -> Bool
 hasPprDebug = dopt Opt_D_ppr_debug
 
 hasNoDebugOutput :: DynFlags -> Bool
-hasNoDebugOutput = sopt Opt_D_no_debug_output
+hasNoDebugOutput = dopt Opt_D_no_debug_output
 
 -- | Test whether a 'DumpFlag' is set
 dopt :: DumpFlag -> DynFlags -> Bool
@@ -3003,8 +3001,12 @@ dynamic_flags_deps = [
         (NoArg (setGeneralFlag Opt_D_faststring_stats))
   , make_ord_flag defGhcFlag "dno-llvm-mangler"
         (NoArg (setGeneralFlag Opt_NoLlvmMangler)) -- hidden flag
-  , make_ord_flag defGhcFlag "ddump-debug"        (setDumpFlag Opt_D_dump_debug)
-  , make_ord_flag defGhcFlag "dppr-debug"         (setDumpFlag Opt_D_ppr_debug)
+  , make_ord_flag defGhcFlag "ddump-debug"
+        (setDumpFlag Opt_D_dump_debug)
+  , make_ord_flag defGhcFlag "dppr-debug"
+        (setDumpFlag Opt_D_ppr_debug)
+  , make_ord_flag defGhcFlag "dno-debug-output"
+        (setDumpFlag Opt_D_no_debug_output)
 
         ------ Machine dependent (-m<blah>) stuff ---------------------------
 

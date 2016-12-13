@@ -21,9 +21,6 @@ module StaticFlags (
         initStaticOpts,
         discardStaticFlags,
 
-        -- Output style options
-        opt_NoDebugOutput,
-
         -- optimisation opts
         opt_NoStateHack,
         opt_NoOptCoercion,
@@ -204,9 +201,6 @@ lookUp sw = sw `elem` packed_static_opts
 -- debugging options
 
 -- see Note [Updating flag description in the User's Guide] in DynFlags
-
-opt_NoDebugOutput  :: Bool
-opt_NoDebugOutput  = lookUp  (fsLit "-dno-debug-output")
 
 opt_NoStateHack    :: Bool
 opt_NoStateHack    = lookUp  (fsLit "-fno-state-hack")

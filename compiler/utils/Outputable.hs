@@ -85,14 +85,13 @@ module Outputable (
         pprDebugAndThen,
     ) where
 
-import {-# SOURCE #-}   DynFlags( DynFlags, hasPprDebug,
+import {-# SOURCE #-}   DynFlags( DynFlags, hasPprDebug, hasNoDebugOutput,
                                   targetPlatform, pprUserLength, pprCols,
                                   useUnicode, useUnicodeSyntax,
                                   useColor, canUseColor, overrideWith,
                                   unsafeGlobalDynFlags )
 import {-# SOURCE #-}   Module( UnitId, Module, ModuleName, moduleName )
 import {-# SOURCE #-}   OccName( OccName )
-import {-# SOURCE #-}   StaticFlags( opt_NoDebugOutput )
 
 import FastString
 import qualified Pretty
@@ -1158,8 +1157,9 @@ pprPgmError = pgmErrorDoc
 pprTrace :: String -> SDoc -> a -> a
 -- ^ If debug output is on, show some 'SDoc' on the screen
 pprTrace str doc x
-   | opt_NoDebugOutput = x
-   | otherwise         = pprDebugAndThen unsafeGlobalDynFlags trace (text str) doc x
+   | hasNoDebugOutput unsafeGlobalDynFlags = x
+   | otherwise                             =
+      pprDebugAndThen unsafeGlobalDynFlags trace (text str) doc x
 
 -- | @pprTraceIt desc x@ is equivalent to @pprTrace desc (ppr x) x@
 pprTraceIt :: Outputable a => String -> a -> a
@@ -1175,7 +1175,8 @@ warnPprTrace :: Bool -> String -> Int -> SDoc -> a -> a
 -- ^ Just warn about an assertion failure, recording the given file and line number.
 -- Should typically be accessed with the WARN macros
 warnPprTrace _     _     _     _    x | not debugIsOn     = x
-warnPprTrace _     _file _line _msg x | opt_NoDebugOutput = x
+warnPprTrace _     _file _line _msg x
+   | hasNoDebugOutput unsafeGlobalDynFlags = x
 warnPprTrace False _file _line _msg x = x
 warnPprTrace True   file  line  msg x
   = pprDebugAndThen unsafeGlobalDynFlags trace heading msg x
