@@ -247,7 +247,8 @@ withExtendedLinkEnv new_env action
 showLinkerState :: DynFlags -> IO ()
 showLinkerState dflags
   = do pls <- readIORef v_PersistentLinkerState >>= readMVar
-       log_action dflags dflags NoReason SevDump noSrcSpan defaultDumpStyle
+       log_action dflags dflags NoReason SevDump noSrcSpan
+          (defaultDumpStyle dflags)
                  (vcat [text "----- Linker state -----",
                         text "Pkgs:" <+> ppr (pkgs_loaded pls),
                         text "Objs:" <+> ppr (objs_loaded pls),
@@ -386,7 +387,8 @@ classifyLdInput dflags f
   | isObjectFilename platform f = return (Just (Object f))
   | isDynLibFilename platform f = return (Just (DLLPath f))
   | otherwise          = do
-        log_action dflags dflags NoReason SevInfo noSrcSpan defaultUserStyle
+        log_action dflags dflags NoReason SevInfo noSrcSpan
+            (defaultUserStyle dflags)
             (text ("Warning: ignoring unrecognised input `" ++ f ++ "'"))
         return Nothing
     where platform = targetPlatform dflags
@@ -1437,7 +1439,7 @@ maybePutStr dflags s
                  NoReason
                  SevInteractive
                  noSrcSpan
-                 defaultUserStyle
+                 (defaultUserStyle dflags)
                  (text s)
 
 maybePutStrLn :: DynFlags -> String -> IO ()

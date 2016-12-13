@@ -38,7 +38,6 @@ import BasicTypes
 import ConLike
 import SrcLoc
 import Util
-import StaticFlags( opt_PprStyle_Debug )
 import Outputable
 import FastString
 import Type
@@ -2420,12 +2419,14 @@ pprStmtContext (PatGuard ctxt) = text "pattern guard for" $$ pprMatchContext ctx
 --     in a transformed branch of
 --          transformed branch of
 --          transformed branch of monad comprehension
-pprStmtContext (ParStmtCtxt c)
- | opt_PprStyle_Debug = sep [text "parallel branch of", pprAStmtContext c]
- | otherwise          = pprStmtContext c
-pprStmtContext (TransStmtCtxt c)
- | opt_PprStyle_Debug = sep [text "transformed branch of", pprAStmtContext c]
- | otherwise          = pprStmtContext c
+pprStmtContext (ParStmtCtxt c) =
+  getPprDebug $ \dbg -> if dbg
+    then sep [text "parallel branch of", pprAStmtContext c]
+    else pprStmtContext c
+pprStmtContext (TransStmtCtxt c) =
+  getPprDebug $ \dbg -> if dbg
+    then sep [text "transformed branch of", pprAStmtContext c]
+    else pprStmtContext c
 
 
 -- Used to generate the string for a *runtime* error message

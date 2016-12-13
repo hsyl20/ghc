@@ -73,7 +73,6 @@ import Lexeme
 import FastString
 import Pair
 import Bag
-import StaticFlags( opt_PprStyle_Debug )
 
 import Data.List  ( partition, intersperse )
 
@@ -2100,8 +2099,8 @@ mkAuxBinderName parent occ_fun
   where
     stable_parent_occ = mkOccName (occNameSpace parent_occ) stable_string
     stable_string
-      | opt_PprStyle_Debug = parent_stable
-      | otherwise = parent_stable_hash
+      | hasPprDebug unsafeGlobalDynFlags = parent_stable
+      | otherwise                        = parent_stable_hash
     parent_stable = nameStableString parent
     parent_stable_hash =
       let Fingerprint high low = fingerprintString parent_stable

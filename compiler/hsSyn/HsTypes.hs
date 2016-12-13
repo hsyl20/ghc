@@ -84,7 +84,6 @@ import Type
 import HsDoc
 import BasicTypes
 import SrcLoc
-import StaticFlags
 import Outputable
 import FastString
 import Maybes( isJust )
@@ -1193,11 +1192,11 @@ pprHsForAllExtra extra qtvs cxt
     show_extra = isJust extra
 
 pprHsForAllTvs :: (OutputableBndrId name) => [LHsTyVarBndr name] -> SDoc
-pprHsForAllTvs qtvs
-  | show_forall = forAllLit <+> interppSP qtvs <> dot
-  | otherwise   = empty
-  where
-    show_forall = opt_PprStyle_Debug || not (null qtvs)
+pprHsForAllTvs qtvs = getPprDebug $ \dbg ->
+  -- show forall?
+  if dbg || not (null qtvs)
+    then forAllLit <+> interppSP qtvs <> dot
+    else empty
 
 pprHsContext :: (OutputableBndrId name) => HsContext name -> SDoc
 pprHsContext = maybe empty (<+> darrow) . pprHsContextMaybe

@@ -129,8 +129,9 @@ checkHsigIface tcg_env gr
                          -- info for the *specific* name we matched.
                          -> getLoc e
                        _ -> nameSrcSpan name
+            dflags <- getDynFlags
             addErrAt loc
-                (badReexportedBootThing False name name')
+                (badReexportedBootThing dflags False name name')
       -- This should actually never happen, but whatever...
       | otherwise =
         addErrAt (nameSrcSpan name)

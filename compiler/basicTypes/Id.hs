@@ -108,6 +108,7 @@ module Id (
 
 #include "HsVersions.h"
 
+import DynFlags
 import CoreSyn ( CoreRule, Unfolding( NoUnfolding ) )
 
 import IdInfo
@@ -135,7 +136,6 @@ import Unique
 import UniqSupply
 import FastString
 import Util
-import StaticFlags
 
 -- infixl so you can say (id `set` a `set` b)
 infixl  1 `setIdUnfolding`,
@@ -714,7 +714,7 @@ typeOneShot ty
 
 isStateHackType :: Type -> Bool
 isStateHackType ty
-  | opt_NoStateHack
+  | hasNoStateHack unsafeGlobalDynFlags
   = False
   | otherwise
   = case tyConAppTyCon_maybe ty of

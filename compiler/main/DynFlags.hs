@@ -29,6 +29,7 @@ module DynFlags (
         ProfAuto(..),
         glasgowExtsFlags,
         warningGroups, warningHierarchies,
+        hasPprDebug, hasNoDebugOutput, hasNoStateHack, hasNoOptCoercion,
         dopt, dopt_set, dopt_unset,
         gopt, gopt_set, gopt_unset, setGeneralFlag', unSetGeneralFlag',
         wopt, wopt_set, wopt_unset,
@@ -402,7 +403,8 @@ data DumpFlag
    | Opt_D_dump_view_pattern_commoning
    | Opt_D_verbose_core2core
    | Opt_D_dump_debug
-
+   | Opt_D_ppr_debug
+   | Opt_D_no_debug_output
    deriving (Eq, Show, Enum)
 
 -- | Enumerates the simple on-or-off dynamic flags
@@ -579,6 +581,9 @@ data GeneralFlag
    -- safe haskell flags
    | Opt_DistrustAllPackages
    | Opt_PackageTrust
+
+   | Opt_G_NoStateHack
+   | Opt_G_NoOptCoercion
    deriving (Eq, Show, Enum)
 
 -- | Used when outputting warnings: if a reason is given, it is
@@ -1908,6 +1913,19 @@ languageExtensions (Just Haskell2010)
        LangExt.DoAndIfThenElse,
        LangExt.RelaxedPolyRec]
 
+hasPprDebug :: DynFlags -> Bool
+hasPprDebug = dopt Opt_D_ppr_debug
+
+hasNoDebugOutput :: DynFlags -> Bool
+hasNoDebugOutput = dopt Opt_D_no_debug_output
+
+hasNoStateHack :: DynFlags -> Bool
+hasNoStateHack = gopt Opt_G_NoStateHack
+
+hasNoOptCoercion :: DynFlags -> Bool
+hasNoOptCoercion = gopt Opt_G_NoOptCoercion
+
+
 -- | Test whether a 'DumpFlag' is set
 dopt :: DumpFlag -> DynFlags -> Bool
 dopt f dflags = (fromEnum f `IntSet.member` dumpFlags dflags)
@@ -2735,6 +2753,10 @@ dynamic_flags_deps = [
         (NoArg (unSetGeneralFlag Opt_AutoLinkPackages))
   , make_ord_flag defGhcFlag "no-hs-main"
         (NoArg (setGeneralFlag Opt_NoHsMain))
+  , make_ord_flag defGhcFlag "fno-state-hack"
+        (NoArg (setGeneralFlag Opt_G_NoStateHack))
+  , make_ord_flag defGhcFlag "fno-opt-coercion"
+        (NoArg (setGeneralFlag Opt_G_NoOptCoercion))
   , make_ord_flag defGhcFlag "with-rtsopts"
         (HasArg setRtsOpts)
   , make_ord_flag defGhcFlag "rtsopts"
@@ -2976,7 +2998,12 @@ dynamic_flags_deps = [
         (NoArg (setGeneralFlag Opt_D_faststring_stats))
   , make_ord_flag defGhcFlag "dno-llvm-mangler"
         (NoArg (setGeneralFlag Opt_NoLlvmMangler)) -- hidden flag
-  , make_ord_flag defGhcFlag "ddump-debug"        (setDumpFlag Opt_D_dump_debug)
+  , make_ord_flag defGhcFlag "ddump-debug"
+        (setDumpFlag Opt_D_dump_debug)
+  , make_ord_flag defGhcFlag "dppr-debug"
+        (setDumpFlag Opt_D_ppr_debug)
+  , make_ord_flag defGhcFlag "dno-debug-output"
+        (setDumpFlag Opt_D_no_debug_output)
 
         ------ Machine dependent (-m<blah>) stuff ---------------------------
 
