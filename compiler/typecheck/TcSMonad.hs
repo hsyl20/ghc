@@ -2312,7 +2312,7 @@ csTraceTcM mk_doc
        ; when (  dopt Opt_D_dump_cs_trace dflags
                   || dopt Opt_D_dump_tc_trace dflags )
               ( do { msg <- mk_doc
-                   ; TcM.traceTcRn Opt_D_dump_cs_trace msg }) }
+                   ; TcM.traceTcRn msg }) }
 
 runTcS :: TcS a                -- What to run
        -> TcM (a, EvBindMap)
