@@ -1555,8 +1555,10 @@ specialise env bind_calls (RI { ri_fn = fn, ri_lam_bndrs = arg_bndrs
                                               text "but the limit is" <+> int max) ]
                               , text "Use -fspec-constr-count=n to set the bound"
                               , extra ]
-                   extra | not opt_PprStyle_Debug = text "Use -dppr-debug to see specialisations"
-                         | otherwise = text "Specialisations:" <+> ppr (pats ++ [p | OS p _ _ _ <- specs])
+                   extra = getPprDebug $ \dbg -> if dbg
+                              then text "Specialisations:"
+                                   <+> ppr (pats ++ [p | OS p _ _ _ <- specs])
+                              else text "Use -dppr-debug to see specialisations"
 
             _normal_case -> do {
 

@@ -161,7 +161,6 @@ import Bag
 import Outputable
 import UniqSupply
 import DynFlags
-import StaticFlags
 import FastString
 import Panic
 import Util

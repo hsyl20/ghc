@@ -53,7 +53,6 @@ import NameEnv
 import UniqFM
 import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
-import StaticFlags      ( opt_PprStyle_Debug )
 import DynFlags         ( DynFlags )
 import Outputable
 import FastString
@@ -418,15 +417,16 @@ findBest _      (rule,ans)   [] = (rule,ans)
 findBest target (rule1,ans1) ((rule2,ans2):prs)
   | rule1 `isMoreSpecific` rule2 = findBest target (rule1,ans1) prs
   | rule2 `isMoreSpecific` rule1 = findBest target (rule2,ans2) prs
-  | debugIsOn = let pp_rule rule
-                        | opt_PprStyle_Debug = ppr rule
-                        | otherwise          = doubleQuotes (ftext (ru_name rule))
+  | debugIsOn = let pp_rule rule = getPprDebug $ \dbg -> if dbg
+                        then ppr rule
+                        else doubleQuotes (ftext (ru_name rule))
                 in pprTrace "Rules.findBest: rule overlap (Rule 1 wins)"
-                         (vcat [if opt_PprStyle_Debug then
-                                   text "Expression to match:" <+> ppr fn <+> sep (map ppr args)
-                                else empty,
-                                text "Rule 1:" <+> pp_rule rule1,
-                                text "Rule 2:" <+> pp_rule rule2]) $
+                         (vcat [ getPprDebug $ \dbg -> if dbg
+                                   then text "Expression to match:" <+> ppr fn 
+                                        <+> sep (map ppr args)
+                                   else empty
+                               , text "Rule 1:" <+> pp_rule rule1
+                               , text "Rule 2:" <+> pp_rule rule2]) $
                 findBest target (rule1,ans1) prs
   | otherwise = findBest target (rule1,ans1) prs
   where
