@@ -324,8 +324,7 @@ import Foreign.Safe
 -- DynFlags
 
 data StaticFlag
-   = Opt_D_ppr_debug
-   | Opt_D_no_debug_output
+   = Opt_D_no_debug_output
    | Opt_D_no_state_hack
    | Opt_D_no_opt_coercion
    deriving (Enum,Eq,Show)
@@ -412,6 +411,7 @@ data DumpFlag
    | Opt_D_dump_view_pattern_commoning
    | Opt_D_verbose_core2core
    | Opt_D_dump_debug
+   | Opt_D_ppr_debug
 
    deriving (Eq, Show, Enum)
 
@@ -1496,8 +1496,7 @@ initDynFlags dflags = do
                          `catchIOError` \_ -> return False
  canUseColor <- stderrSupportsAnsiColors
  let staticFlgs = IntSet.fromList $ fmap fromEnum $ fmap fst $ filter snd $
-      [ (Opt_D_ppr_debug      , opt_PprStyle_Debug)
-      , (Opt_D_no_debug_output, opt_NoDebugOutput)
+      [ (Opt_D_no_debug_output, opt_NoDebugOutput)
       , (Opt_D_no_state_hack  , opt_NoStateHack)
       , (Opt_D_no_opt_coercion, opt_NoOptCoercion)
       ]
@@ -1931,7 +1930,7 @@ sopt :: StaticFlag -> DynFlags -> Bool
 sopt f dflags = (fromEnum f `IntSet.member` statFlags dflags)
 
 hasPprDebug :: DynFlags -> Bool
-hasPprDebug = sopt Opt_D_ppr_debug
+hasPprDebug = dopt Opt_D_ppr_debug
 
 hasNoDebugOutput :: DynFlags -> Bool
 hasNoDebugOutput = sopt Opt_D_no_debug_output
@@ -3005,6 +3004,7 @@ dynamic_flags_deps = [
   , make_ord_flag defGhcFlag "dno-llvm-mangler"
         (NoArg (setGeneralFlag Opt_NoLlvmMangler)) -- hidden flag
   , make_ord_flag defGhcFlag "ddump-debug"        (setDumpFlag Opt_D_dump_debug)
+  , make_ord_flag defGhcFlag "dppr-debug"         (setDumpFlag Opt_D_ppr_debug)
 
         ------ Machine dependent (-m<blah>) stuff ---------------------------
 

@@ -22,7 +22,6 @@ module StaticFlags (
         discardStaticFlags,
 
         -- Output style options
-        opt_PprStyle_Debug,
         opt_NoDebugOutput,
 
         -- optimisation opts
@@ -138,8 +137,7 @@ staticFlags = unsafePerformIO $ do
 flagsStatic :: [Flag IO]
 flagsStatic = [
   ------ Debugging ----------------------------------------------------
-    defFlag "dppr-debug"       (PassFlag addOptEwM)
-  , defFlag "dno-debug-output" (PassFlag addOptEwM)
+    defFlag "dno-debug-output" (PassFlag addOptEwM)
   -- rest of the debugging flags are dynamic
 
   ------ Compiler flags -----------------------------------------------
@@ -174,7 +172,6 @@ discardStaticFlags :: [String] -> [String]
 discardStaticFlags = filter (\x -> x `notElem` flags)
   where flags = [ "-fno-state-hack"
                 , "-fno-opt-coercion"
-                , "-dppr-debug"
                 , "-dno-debug-output"
                 ]
 
@@ -207,9 +204,6 @@ lookUp sw = sw `elem` packed_static_opts
 -- debugging options
 
 -- see Note [Updating flag description in the User's Guide] in DynFlags
-
-opt_PprStyle_Debug :: Bool
-opt_PprStyle_Debug = lookUp  (fsLit "-dppr-debug")
 
 opt_NoDebugOutput  :: Bool
 opt_NoDebugOutput  = lookUp  (fsLit "-dno-debug-output")
