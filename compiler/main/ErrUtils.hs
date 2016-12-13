@@ -146,7 +146,7 @@ data Severity
   | SevInteractive
 
   | SevDump
-    -- ^ Log messagse intended for compiler developers
+    -- ^ Log messages intended for compiler developers
     -- No file/line/column stuff
 
   | SevInfo
@@ -158,7 +158,7 @@ data Severity
     -- ^ SevWarning and SevError are used for warnings and errors
     --   o The message has a file/line/column heading,
     --     plus "warning:" or "error:",
-    --     added by mkLocMessags
+    --     added by mkLocMessage
     --   o Output is intended for end users
 
 
