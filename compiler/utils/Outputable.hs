@@ -92,7 +92,7 @@ import {-# SOURCE #-}   DynFlags( DynFlags, hasPprDebug,
                                   unsafeGlobalDynFlags )
 import {-# SOURCE #-}   Module( UnitId, Module, ModuleName, moduleName )
 import {-# SOURCE #-}   OccName( OccName )
-import {-# SOURCE #-}   StaticFlags( opt_PprStyle_Debug, opt_NoDebugOutput )
+import {-# SOURCE #-}   StaticFlags( opt_NoDebugOutput )
 
 import FastString
 import qualified Pretty
@@ -236,8 +236,8 @@ neverQualify  = QueryQualify neverQualifyNames
                              neverQualifyModules
                              neverQualifyPackages
 
-defaultUserStyle :: PprStyle
-defaultUserStyle = mkUserStyle neverQualify AllTheWay
+defaultUserStyle :: DynFlags -> PprStyle
+defaultUserStyle dflags = mkUserStyle dflags neverQualify AllTheWay
 
 defaultDumpStyle :: DynFlags -> PprStyle
  -- Print without qualifiers to reduce verbosity, unless -dppr-debug
@@ -259,14 +259,15 @@ defaultErrStyle dflags = mkErrStyle dflags neverQualify
 
 -- | Style for printing error messages
 mkErrStyle :: DynFlags -> PrintUnqualified -> PprStyle
-mkErrStyle dflags qual = mkUserStyle qual (PartWay (pprUserLength dflags))
+mkErrStyle dflags qual =
+   mkUserStyle dflags qual (PartWay (pprUserLength dflags))
 
-cmdlineParserStyle :: PprStyle
-cmdlineParserStyle = mkUserStyle alwaysQualify AllTheWay
+cmdlineParserStyle :: DynFlags -> PprStyle
+cmdlineParserStyle dflags = mkUserStyle dflags alwaysQualify AllTheWay
 
-mkUserStyle :: PrintUnqualified -> Depth -> PprStyle
-mkUserStyle unqual depth
-   | opt_PprStyle_Debug = PprDebug
+mkUserStyle :: DynFlags -> PrintUnqualified -> Depth -> PprStyle
+mkUserStyle dflags unqual depth
+   | hasPprDebug dflags = PprDebug
    | otherwise          = PprUser unqual depth Uncoloured
 
 setStyleColoured :: Bool -> PprStyle -> PprStyle
@@ -419,13 +420,15 @@ ifPprDebug d = SDoc $ \ctx ->
 printForUser :: DynFlags -> Handle -> PrintUnqualified -> SDoc -> IO ()
 printForUser dflags handle unqual doc
   = Pretty.printDoc PageMode (pprCols dflags) handle
-      (runSDoc doc (initSDocContext dflags (mkUserStyle unqual AllTheWay)))
+      (runSDoc doc (initSDocContext dflags
+         (mkUserStyle dflags unqual AllTheWay)))
 
 printForUserPartWay :: DynFlags -> Handle -> Int -> PrintUnqualified -> SDoc
                     -> IO ()
 printForUserPartWay dflags handle d unqual doc
   = Pretty.printDoc PageMode (pprCols dflags) handle
-      (runSDoc doc (initSDocContext dflags (mkUserStyle unqual (PartWay d))))
+      (runSDoc doc (initSDocContext dflags
+         (mkUserStyle dflags unqual (PartWay d))))
 
 -- printForC, printForAsm do what they sound like
 printForC :: DynFlags -> Handle -> SDoc -> IO ()
@@ -448,7 +451,7 @@ mkCodeStyle = PprCode
 -- However, Doc *is* an instance of Show
 -- showSDoc just blasts it out as a string
 showSDoc :: DynFlags -> SDoc -> String
-showSDoc dflags sdoc = renderWithStyle dflags sdoc defaultUserStyle
+showSDoc dflags sdoc = renderWithStyle dflags sdoc (defaultUserStyle dflags)
 
 -- showSDocUnsafe is unsafe, because `unsafeGlobalDynFlags` might not be
 -- initialised yet.
@@ -465,7 +468,7 @@ showSDocUnqual dflags sdoc = showSDoc dflags sdoc
 showSDocForUser :: DynFlags -> PrintUnqualified -> SDoc -> String
 -- Allows caller to specify the PrintUnqualified to use
 showSDocForUser dflags unqual doc
- = renderWithStyle dflags doc (mkUserStyle unqual AllTheWay)
+ = renderWithStyle dflags doc (mkUserStyle dflags unqual AllTheWay)
 
 showSDocDump :: DynFlags -> SDoc -> String
 showSDocDump dflags d = renderWithStyle dflags d (defaultDumpStyle dflags)
@@ -486,7 +489,8 @@ showSDocOneLine :: DynFlags -> SDoc -> String
 showSDocOneLine dflags d
  = let s = Pretty.style{ Pretty.mode = OneLineMode,
                          Pretty.lineLength = pprCols dflags } in
-   Pretty.renderStyle s $ runSDoc d (initSDocContext dflags defaultUserStyle)
+   Pretty.renderStyle s $
+      runSDoc d (initSDocContext dflags (defaultUserStyle dflags))
 
 showSDocDumpOneLine :: DynFlags -> SDoc -> String
 showSDocDumpOneLine dflags d

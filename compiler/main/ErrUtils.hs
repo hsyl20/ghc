@@ -476,7 +476,7 @@ fatalErrorMsg'' fm msg = fm msg
 compilationProgressMsg :: DynFlags -> String -> IO ()
 compilationProgressMsg dflags msg
   = ifVerbose dflags 1 $
-    logOutput dflags defaultUserStyle (text msg)
+    logOutput dflags (defaultUserStyle dflags) (text msg)
 
 -- | Time a compilation phase.
 --
@@ -514,7 +514,8 @@ withPhase getDFlags what' this_mod force_result action = do
       then do
          let what = what' <+> brackets this_mod
          liftIO $ ifVerbose dflags 2 $
-            logInfo dflags defaultUserStyle (text "***" <+> what <> colon)
+            logInfo dflags (defaultUserStyle dflags)
+               (text "***" <+> what <> colon)
          alloc0 <- liftIO getAllocationCounter
          start <- liftIO getCPUTime
          !r <- action
@@ -523,7 +524,7 @@ withPhase getDFlags what' this_mod force_result action = do
          alloc1 <- liftIO getAllocationCounter
          -- recall that allocation counter counts down
          let alloc = alloc0 - alloc1
-         liftIO $ logInfo dflags defaultUserStyle
+         liftIO $ logInfo dflags (defaultUserStyle dflags)
              (text "!!!" <+> what <> colon <+> text "finished in"
               <+> doublePrec 2 (realToFrac (end - start) * 1e-9)
               <+> text "milliseconds"
@@ -535,15 +536,15 @@ withPhase getDFlags what' this_mod force_result action = do
        else action
 
 putMsg :: DynFlags -> MsgDoc -> IO ()
-putMsg dflags msg = logInfo dflags defaultUserStyle msg
+putMsg dflags msg = logInfo dflags (defaultUserStyle dflags) msg
 
 printInfoForUser :: DynFlags -> PrintUnqualified -> MsgDoc -> IO ()
 printInfoForUser dflags print_unqual msg
-  = logInfo dflags (mkUserStyle print_unqual AllTheWay) msg
+  = logInfo dflags (mkUserStyle dflags print_unqual AllTheWay) msg
 
 printOutputForUser :: DynFlags -> PrintUnqualified -> MsgDoc -> IO ()
 printOutputForUser dflags print_unqual msg
-  = logOutput dflags (mkUserStyle print_unqual AllTheWay) msg
+  = logOutput dflags (mkUserStyle dflags print_unqual AllTheWay) msg
 
 logTrace :: DynFlags -> Int -> MsgDoc -> IO ()
 logTrace dflags val msg

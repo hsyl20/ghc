@@ -224,7 +224,7 @@ dumpPassResult dflags unqual mb_flag hdr mstats binds rules
          -- This has the side effect of forcing the intermediate to be evaluated
          -- if it's not already forced by a -ddump flag.
        ; when (verbosity dflags >= 2) -- TODO: replace explicit verbosity check
-            $ logInfo dflags defaultUserStyle size_doc
+            $ logInfo dflags (defaultUserStyle dflags) size_doc
        }
 
   where
@@ -279,7 +279,7 @@ lintPassResult this_mod hsc_env pass binds
   = withPhase (return dflags) (text "Core Lint") (ppr this_mod) (const ()) $ do
       let (warns, errs) = lintCoreBindings dflags pass
                                            (interactiveInScope hsc_env) binds
-      Err.logInfo dflags defaultUserStyle $
+      Err.logInfo dflags (defaultUserStyle dflags) $
          text "Core Linted result of" <+> ppr pass <+> brackets (ppr this_mod)
       displayLintResults dflags pass warns errs binds
   where

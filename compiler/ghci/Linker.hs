@@ -386,7 +386,8 @@ classifyLdInput dflags f
   | isObjectFilename platform f = return (Just (Object f))
   | isDynLibFilename platform f = return (Just (DLLPath f))
   | otherwise          = do
-        log_action dflags dflags NoReason SevInfo noSrcSpan defaultUserStyle
+        log_action dflags dflags NoReason SevInfo noSrcSpan
+            (defaultUserStyle dflags)
             (text ("Warning: ignoring unrecognised input `" ++ f ++ "'"))
         return Nothing
     where platform = targetPlatform dflags
@@ -1437,7 +1438,7 @@ maybePutStr dflags s
                  NoReason
                  SevInteractive
                  noSrcSpan
-                 defaultUserStyle
+                 (defaultUserStyle dflags)
                  (text s)
 
 maybePutStrLn :: DynFlags -> String -> IO ()

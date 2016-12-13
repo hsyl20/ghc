@@ -864,6 +864,7 @@ readIface :: InstalledModule -> FilePath
 readIface wanted_mod file_path
   = do  { res <- tryMostM $
                  readBinIface CheckHiWay QuietBinIFaceReading file_path
+        ; dflags <- getDynFlags
         ; case res of
             Right iface
                 -- Same deal
@@ -872,7 +873,7 @@ readIface wanted_mod file_path
                 | otherwise     -> return (Failed err)
                 where
                   actual_mod = mi_module iface
-                  err = hiModuleNameMismatchWarn wanted_mod actual_mod
+                  err = hiModuleNameMismatchWarn dflags wanted_mod actual_mod
 
             Left exn    -> return (Failed (text (showException exn)))
     }
@@ -1121,11 +1122,11 @@ badIfaceFile file err
   = vcat [text "Bad interface file:" <+> text file,
           nest 4 err]
 
-hiModuleNameMismatchWarn :: InstalledModule -> Module -> MsgDoc
-hiModuleNameMismatchWarn requested_mod read_mod =
+hiModuleNameMismatchWarn :: DynFlags -> InstalledModule -> Module -> MsgDoc
+hiModuleNameMismatchWarn dflags requested_mod read_mod =
   -- ToDo: This will fail to have enough qualification when the package IDs
   -- are the same
-  withPprStyle (mkUserStyle alwaysQualify AllTheWay) $
+  withPprStyle (mkUserStyle dflags alwaysQualify AllTheWay) $
     -- we want the Modules below to be qualified with package names,
     -- so reset the PrintUnqualified setting.
     hsep [ text "Something is amiss; requested module "
