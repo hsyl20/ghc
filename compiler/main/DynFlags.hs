@@ -29,7 +29,7 @@ module DynFlags (
         ProfAuto(..),
         glasgowExtsFlags,
         warningGroups, warningHierarchies,
-        sopt,
+        sopt, hasPprDebug,
         dopt, dopt_set, dopt_unset,
         gopt, gopt_set, gopt_unset, setGeneralFlag', unSetGeneralFlag',
         wopt, wopt_set, wopt_unset,
@@ -1929,6 +1929,9 @@ languageExtensions (Just Haskell2010)
 -- | Test whether a 'StaticFlag' is set
 sopt :: StaticFlag -> DynFlags -> Bool
 sopt f dflags = (fromEnum f `IntSet.member` statFlags dflags)
+
+hasPprDebug :: DynFlags -> Bool
+hasPprDebug = sopt Opt_D_ppr_debug
 
 -- | Test whether a 'DumpFlag' is set
 dopt :: DumpFlag -> DynFlags -> Bool

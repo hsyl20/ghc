@@ -16,7 +16,7 @@ module Outputable (
 
         -- * Pretty printing combinators
         SDoc, runSDoc, initSDocContext,
-        docToSDoc,
+        docToSDoc, getPprDebug,
         interppSP, interpp'SP,
         pprQuotedList, pprWithCommas, quotedListWithOr, quotedListWithNor,
         pprWithBars,
@@ -85,7 +85,7 @@ module Outputable (
         pprDebugAndThen,
     ) where
 
-import {-# SOURCE #-}   DynFlags( DynFlags,
+import {-# SOURCE #-}   DynFlags( DynFlags, hasPprDebug,
                                   targetPlatform, pprUserLength, pprCols,
                                   useUnicode, useUnicodeSyntax,
                                   useColor, canUseColor, overrideWith,
@@ -322,6 +322,11 @@ withPprStyle sty d = SDoc $ \ctxt -> runSDoc d ctxt{sdocStyle=sty}
 
 withPprStyleDoc :: DynFlags -> PprStyle -> SDoc -> Doc
 withPprStyleDoc dflags sty d = runSDoc d (initSDocContext dflags sty)
+
+getPprDebug :: (Bool -> SDoc) -> SDoc
+getPprDebug f = SDoc $ \ctx ->
+   case f (hasPprDebug (sdocDynFlags ctx)) of
+      SDoc g -> g ctx
 
 pprDeeper :: SDoc -> SDoc
 pprDeeper d = SDoc $ \ctx -> case ctx of

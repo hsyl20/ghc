@@ -15,3 +15,4 @@ useUnicodeSyntax     :: DynFlags -> Bool
 useColor             :: DynFlags -> OverridingBool
 canUseColor          :: DynFlags -> Bool
 overrideWith         :: Bool -> OverridingBool -> Bool
+hasPprDebug          :: DynFlags -> Bool
