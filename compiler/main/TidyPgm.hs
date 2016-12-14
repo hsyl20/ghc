@@ -56,10 +56,9 @@ import Packages( isDllName )
 import HscTypes
 import Maybes
 import UniqSupply
-import ErrUtils (Severity(..))
+import ErrUtils (logDump)
 import Outputable
 import UniqDFM
-import SrcLoc
 import qualified ErrUtils as Err
 
 import Control.Monad
@@ -145,9 +144,10 @@ mkBootModDetailsTc hsc_env
                 }
   = -- This timing isn't terribly useful since the result isn't forced, but
     -- the message is useful to locating oneself in the compilation process.
-    Err.withTiming (pure dflags)
-                   (text "CoreTidy"<+>brackets (ppr this_mod))
-                   (const ()) $
+    Err.withPhase (pure dflags)
+                  (ppr CoreTidy)
+                  (ppr this_mod)
+                  (const ()) $
     do  { let { insts'     = map (tidyClsInstDFun globaliseAndTidyId) insts
               ; pat_syns'  = map (tidyPatSynIds   globaliseAndTidyId) pat_syns
               ; type_env1  = mkBootTypeEnv (availsToNameSet exports)
@@ -324,9 +324,10 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
                               , mg_modBreaks = modBreaks
                               })
 
-  = Err.withTiming (pure dflags)
-                   (text "CoreTidy"<+>brackets (ppr mod))
-                   (const ()) $
+  = Err.withPhase (pure dflags)
+                  (ppr CoreTidy)
+                  (ppr mod)
+                  (const ()) $
     do  { let { omit_prags = gopt Opt_OmitInterfacePragmas dflags
               ; expose_all = gopt Opt_ExposeAllUnfoldings  dflags
               ; print_unqual = mkPrintUnqualified dflags rdr_env
@@ -391,7 +392,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
               ; alg_tycons = filter isAlgTyCon (typeEnvTyCons type_env)
               }
 
-        ; endPassIO hsc_env print_unqual CoreTidy all_tidy_binds tidy_rules
+        ; endPassIO mod hsc_env print_unqual CoreTidy all_tidy_binds tidy_rules
 
           -- If the endPass didn't print the rules, but ddump-rules is
           -- on, print now
@@ -403,8 +404,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
           -- Print one-line size info
         ; let cs = coreBindsStats tidy_binds
         ; when (dopt Opt_D_dump_core_stats dflags)
-               (log_action dflags dflags NoReason SevDump noSrcSpan
-                          (defaultDumpStyle dflags)
+               (logDump dflags
                           (text "Tidy size (terms,types,coercions)"
                            <+> ppr (moduleName mod) <> colon
                            <+> int (cs_tm cs)

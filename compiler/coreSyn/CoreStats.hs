@@ -26,9 +26,9 @@ data CoreStats = CS { cs_tm :: Int    -- Terms
 
 instance Outputable CoreStats where
  ppr (CS { cs_tm = i1, cs_ty = i2, cs_co = i3 })
-   = braces (sep [text "terms:"     <+> intWithCommas i1 <> comma,
-                  text "types:"     <+> intWithCommas i2 <> comma,
-                  text "coercions:" <+> intWithCommas i3])
+   = braces (hsep [text "terms:"     <+> intWithCommas i1 <> comma,
+                   text "types:"     <+> intWithCommas i2 <> comma,
+                   text "coercions:" <+> intWithCommas i3])
 
 plusCS :: CoreStats -> CoreStats -> CoreStats
 plusCS (CS { cs_tm = p1, cs_ty = q1, cs_co = r1 })

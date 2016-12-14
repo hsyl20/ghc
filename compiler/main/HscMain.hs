@@ -313,9 +313,10 @@ hscParse' :: ModSummary -> Hsc HsParsedModule
 hscParse' mod_summary
  | Just r <- ms_parsed_mod mod_summary = return r
  | otherwise = {-# SCC "Parser" #-}
-    withTiming getDynFlags
-               (text "Parser"<+>brackets (ppr $ ms_mod mod_summary))
-               (const ()) $ do
+    withPhase getDynFlags
+              (text "Parser")
+              (ppr $ ms_mod mod_summary)
+              (const ()) $ do
     dflags <- getDynFlags
     let src_filename  = ms_hspp_file mod_summary
         maybe_src_buf = ms_hspp_buf  mod_summary
@@ -339,9 +340,9 @@ hscParse' mod_summary
 
         POk pst rdr_module -> do
             logWarningsReportErrors (getMessages pst dflags)
-            liftIO $ dumpIfSet_dyn dflags Opt_D_dump_parsed "Parser" $
+            liftIO $ dumpIfSet_dyn dflags Opt_D_dump_parsed "Haskell - Parsed" $
                                    ppr rdr_module
-            liftIO $ dumpIfSet_dyn dflags Opt_D_source_stats "Source Statistics" $
+            liftIO $ dumpIfSet_dyn dflags Opt_D_source_stats "Statistics - Source" $
                                    ppSourceStats False rdr_module
 
             -- To get the list of extra source files, we take the list
@@ -1289,12 +1290,11 @@ hscGenHardCode hsc_env cgguts mod_summary output_filename = do
 
         -- The back-end is streamed: each top-level function goes
         -- from Stg all the way to asm before dealing with the next
-        -- top-level function, so showPass isn't very useful here.
-        -- Hence we have one showPass for the whole backend, the
-        -- next showPass after this will be "Assembler".
-        withTiming (pure dflags)
-                   (text "CodeGen"<+>brackets (ppr this_mod))
-                   (const ()) $ do
+        -- top-level function.
+        withPhase (pure dflags)
+                  (text "CodeGen")
+                  (ppr this_mod)
+                  (const ()) $ do
             cmms <- {-# SCC "StgCmm" #-}
                             doCodeGen hsc_env this_mod data_tycons
                                 cost_centre_info
@@ -1304,7 +1304,7 @@ hscGenHardCode hsc_env cgguts mod_summary output_filename = do
             rawcmms0 <- {-# SCC "cmmToRawCmm" #-}
                       cmmToRawCmm dflags cmms
 
-            let dump a = do dumpIfSet_dyn dflags Opt_D_dump_cmm_raw "Raw Cmm"
+            let dump a = do dumpIfSet_dyn dflags Opt_D_dump_cmm_raw "Cmm - Raw"
                               (ppr a)
                             return a
                 rawcmms1 = Stream.mapM dump rawcmms0
@@ -1360,7 +1360,7 @@ hscCompileCmmFile hsc_env filename output_filename = runHsc hsc_env $ do
     liftIO $ do
         us <- mkSplitUniqSupply 'S'
         let initTopSRT = initUs_ us emptySRT
-        dumpIfSet_dyn dflags Opt_D_dump_cmm_verbose "Parsed Cmm" (ppr cmm)
+        dumpIfSet_dyn dflags Opt_D_dump_cmm_verbose "Cmm - Parsed" (ppr cmm)
         (_, cmmgroup) <- cmmPipeline hsc_env initTopSRT cmm
         rawCmms <- cmmToRawCmm dflags (Stream.yield cmmgroup)
         _ <- codeOutput dflags no_mod output_filename no_loc NoStubs [] rawCmms
@@ -1396,7 +1396,7 @@ doCodeGen hsc_env this_mod data_tycons
         -- to proc-point splitting).
 
     let dump1 a = do dumpIfSet_dyn dflags Opt_D_dump_cmm_from_stg
-                       "Cmm produced by codegen" (ppr a)
+                       "Cmm - Produced by codegen" (ppr a)
                      return a
 
         ppr_stream1 = Stream.mapM dump1 cmm_stream
@@ -1430,7 +1430,7 @@ doCodeGen hsc_env this_mod data_tycons
 
     let
         dump2 a = do dumpIfSet_dyn dflags Opt_D_dump_cmm
-                        "Output Cmm" (ppr a)
+                        "Cmm - Output" (ppr a)
                      return a
 
         ppr_stream2 = Stream.mapM dump2 pipeline_stream
@@ -1685,9 +1685,10 @@ hscParseThing = hscParseThingWithLocation "<interactive>" 1
 hscParseThingWithLocation :: (Outputable thing) => String -> Int
                           -> Lexer.P thing -> String -> Hsc thing
 hscParseThingWithLocation source linenumber parser str
-  = withTiming getDynFlags
-               (text "Parser [source]")
-               (const ()) $ {-# SCC "Parser" #-} do
+  = withPhase getDynFlags
+              (text "Parser")
+              (text "source")
+              (const ()) $ {-# SCC "Parser" #-} do
     dflags <- getDynFlags
 
     let buf = stringToStringBuffer str
@@ -1752,7 +1753,7 @@ dumpIfaceStats :: HscEnv -> IO ()
 dumpIfaceStats hsc_env = do
     eps <- readIORef (hsc_EPS hsc_env)
     dumpIfSet dflags (dump_if_trace || dump_rn_stats)
-              "Interface statistics"
+              "Statistics - Interface"
               (ifaceStats eps)
   where
     dflags = hsc_dflags hsc_env

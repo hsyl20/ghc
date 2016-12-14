@@ -331,7 +331,7 @@ finishNativeGen dflags modLoc bufh@(BufHandle _ _ h) us ngs
 
           let platform = targetPlatform dflags
           dumpIfSet_dyn dflags
-                  Opt_D_dump_asm_conflicts "Register conflict graph"
+                  Opt_D_dump_asm_conflicts "Asm - Register conflict graph"
                   $ Color.dotGraph
                           (targetRegDotColor platform)
                           (Color.trivColorable platform
@@ -351,7 +351,7 @@ finishNativeGen dflags modLoc bufh@(BufHandle _ _ h) us ngs
                 $ makeImportsDoc dflags (concat (ngs_imports ngs))
         return us'
   where
-    dump_stats = dumpSDoc dflags alwaysQualify Opt_D_dump_asm_stats "NCG stats"
+    dump_stats = dumpSDoc dflags alwaysQualify Opt_D_dump_asm_stats "Statistics - CodeGen"
 
 cmmNativeGenStream :: (Outputable statics, Outputable instr, Instruction instr)
               => DynFlags
@@ -486,7 +486,7 @@ emitNativeCode dflags h sdoc = do
 
         -- dump native code
         dumpIfSet_dyn dflags
-                Opt_D_dump_asm "Asm code"
+                Opt_D_dump_asm "Asm - Code"
                 sdoc
 
 -- | Complete native code generation phase for a single top-level chunk of Cmm.
@@ -524,7 +524,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                 cmmToCmm dflags this_mod fixed_cmm
 
         dumpIfSet_dyn dflags
-                Opt_D_dump_opt_cmm "Optimised Cmm"
+                Opt_D_dump_opt_cmm "Cmm - Optimised"
                 (pprCmmGroup [opt_cmm])
 
         -- generate native code from cmm
@@ -535,7 +535,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                                         fileIds dbgMap opt_cmm
 
         dumpIfSet_dyn dflags
-                Opt_D_dump_asm_native "Native code"
+                Opt_D_dump_asm_native "Asm - Native code"
                 (vcat $ map (pprNatCmmDecl ncgImpl) native)
 
         -- tag instructions with register liveness information
@@ -546,7 +546,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                         $ map natCmmTopToLive native
 
         dumpIfSet_dyn dflags
-                Opt_D_dump_asm_liveness "Liveness annotations added"
+                Opt_D_dump_asm_liveness "Asm - Liveness annotations added"
                 (vcat $ map ppr withLiveness)
 
         -- allocate registers
@@ -573,11 +573,11 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
 
                 -- dump out what happened during register allocation
                 dumpIfSet_dyn dflags
-                        Opt_D_dump_asm_regalloc "Registers allocated"
+                        Opt_D_dump_asm_regalloc "Asm - Registers allocated"
                         (vcat $ map (pprNatCmmDecl ncgImpl) alloced)
 
                 dumpIfSet_dyn dflags
-                        Opt_D_dump_asm_regalloc_stages "Build/spill stages"
+                        Opt_D_dump_asm_regalloc_stages "Codegen - Build/spill stages"
                         (vcat   $ map (\(stage, stats)
                                         -> text "# --------------------------"
                                         $$ text "#  cmm " <> int count <> text " Stage " <> int stage
@@ -613,7 +613,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                           $ mapM reg_alloc withLiveness
 
                 dumpIfSet_dyn dflags
-                        Opt_D_dump_asm_regalloc "Registers allocated"
+                        Opt_D_dump_asm_regalloc "Asm - Registers allocated"
                         (vcat $ map (pprNatCmmDecl ncgImpl) alloced)
 
                 let mPprStats =
@@ -657,7 +657,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                 ncgExpandTop ncgImpl sequenced
 
         dumpIfSet_dyn dflags
-                Opt_D_dump_asm_expanded "Synthetic instructions expanded"
+                Opt_D_dump_asm_expanded "Asm - Synthetic instructions expanded"
                 (vcat $ map (pprNatCmmDecl ncgImpl) expanded)
 
         return  ( usAlloc

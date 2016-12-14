@@ -1,5 +1,5 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
 module ShouldCompile where
 test ::
   [a]  doc1

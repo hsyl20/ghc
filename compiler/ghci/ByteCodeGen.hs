@@ -78,9 +78,10 @@ byteCodeGen :: HscEnv
             -> Maybe ModBreaks
             -> IO CompiledByteCode
 byteCodeGen hsc_env this_mod binds tycs mb_modBreaks
-   = withTiming (pure dflags)
-                (text "ByteCodeGen"<+>brackets (ppr this_mod))
-                (const ()) $ do
+   = withPhase (pure dflags)
+               (text "ByteCodeGen")
+               (ppr this_mod)
+               (const ()) $ do
         let flatBinds = [ (bndr, simpleFreeVars rhs)
                         | (bndr, rhs) <- flattenBinds binds]
 
@@ -93,7 +94,8 @@ byteCodeGen hsc_env this_mod binds tycs mb_modBreaks
              (panic "ByteCodeGen.byteCodeGen: missing final emitBc?")
 
         dumpIfSet_dyn dflags Opt_D_dump_BCOs
-           "Proto-BCOs" (vcat (intersperse (char ' ') (map ppr proto_bcos)))
+           "ByteCodeGen - Proto-BCOs" (vcat (intersperse (char ' ')
+                                            (map ppr proto_bcos)))
 
         cbc <- assembleBCOs hsc_env proto_bcos tycs
           (case modBreaks of
@@ -121,9 +123,10 @@ coreExprToBCOs :: HscEnv
                -> CoreExpr
                -> IO UnlinkedBCO
 coreExprToBCOs hsc_env this_mod expr
- = withTiming (pure dflags)
-              (text "ByteCodeGen"<+>brackets (ppr this_mod))
-              (const ()) $ do
+ = withPhase (pure dflags)
+             (text "ByteCodeGen")
+             (ppr this_mod)
+             (const ()) $ do
       -- create a totally bogus name for the top-level BCO; this
       -- should be harmless, since it's never used for anything
       let invented_name  = mkSystemVarName (mkPseudoUniqueE 0) (fsLit "ExprTopLevel")
@@ -139,7 +142,8 @@ coreExprToBCOs hsc_env this_mod expr
       when (notNull mallocd)
            (panic "ByteCodeGen.coreExprToBCOs: missing final emitBc?")
 
-      dumpIfSet_dyn dflags Opt_D_dump_BCOs "Proto-BCOs" (ppr proto_bco)
+      dumpIfSet_dyn dflags Opt_D_dump_BCOs "ByteCodeGen - Proto-BCOs"
+                    (ppr proto_bco)
 
       assembleOneBCO hsc_env proto_bco
   where dflags = hsc_dflags hsc_env

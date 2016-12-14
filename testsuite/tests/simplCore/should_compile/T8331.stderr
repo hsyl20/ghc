@@ -1,5 +1,5 @@
 
-==================== Tidy Core rules ====================
+==================== Core - Tidy rules ====================
 "SPEC useAbstractMonad"
     forall (@ s)
            ($dMonadAbstractIOST :: MonadAbstractIOST (ReaderT Int (ST s))).

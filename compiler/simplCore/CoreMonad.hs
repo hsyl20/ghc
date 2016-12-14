@@ -5,13 +5,14 @@
 -}
 
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE MonadComprehensions #-}
 
 module CoreMonad (
     -- * Configuration of the core-to-core passes
     CoreToDo(..), runWhen, runMaybe,
     SimplifierMode(..),
     FloatOutSwitches(..),
-    pprPassDetails,
+    pprPassStats,
 
     -- * Plugins
     PluginPass, bindsOnlyPass,
@@ -46,7 +47,7 @@ module CoreMonad (
     -- ** Screen output
     putMsg, putMsgS, errorMsg, errorMsgS, warnMsg,
     fatalErrorMsg, fatalErrorMsgS,
-    debugTraceMsg, debugTraceMsgS,
+    logTrace, logTraceS,
     dumpIfSet_dyn,
 
 #ifdef GHCI
@@ -141,9 +142,9 @@ data CoreToDo           -- These are diff core-to-core passes,
 
 instance Outputable CoreToDo where
   ppr (CoreDoSimplify _ _)     = text "Simplifier"
-  ppr (CoreDoPluginPass s _)   = text "Core plugin: " <+> text s
+  ppr (CoreDoPluginPass s _)   = text "Plugin (" <+> text s <+> text ")"
   ppr CoreDoFloatInwards       = text "Float inwards"
-  ppr (CoreDoFloatOutwards f)  = text "Float out" <> parens (ppr f)
+  ppr (CoreDoFloatOutwards _)  = text "Float outwards"
   ppr CoreLiberateCase         = text "Liberate case"
   ppr CoreDoStaticArgs         = text "Static argument"
   ppr CoreDoCallArity          = text "Called arity analysis"
@@ -155,17 +156,18 @@ instance Outputable CoreToDo where
   ppr CoreDoVectorisation      = text "Vectorisation"
   ppr CoreDesugar              = text "Desugar (before optimization)"
   ppr CoreDesugarOpt           = text "Desugar (after optimization)"
-  ppr CoreTidy                 = text "Tidy Core"
-  ppr CorePrep                 = text "CorePrep"
-  ppr CoreDoPrintCore          = text "Print core"
+  ppr CoreTidy                 = text "Tidy"
+  ppr CorePrep                 = text "Prep"
+  ppr CoreDoPrintCore          = text "Print"
   ppr (CoreDoRuleCheck {})     = text "Rule check"
-  ppr CoreDoNothing            = text "CoreDoNothing"
-  ppr (CoreDoPasses passes)    = text "CoreDoPasses" <+> ppr passes
+  ppr CoreDoNothing            = text "DoNothing"
+  ppr (CoreDoPasses passes)    = text "DoPasses" <+> ppr passes
 
-pprPassDetails :: CoreToDo -> SDoc
-pprPassDetails (CoreDoSimplify n md) = vcat [ text "Max iterations =" <+> int n
-                                            , ppr md ]
-pprPassDetails _ = Outputable.empty
+pprPassStats :: CoreToDo -> Maybe SDoc
+pprPassStats (CoreDoSimplify n md) =
+   Just $ vcat [ text "Max iterations:" <+> int n , ppr md ]
+
+pprPassStats _ = Nothing
 
 data SimplifierMode             -- See comments in SimplMonad
   = SimplMode
@@ -362,10 +364,13 @@ pprTickCounts counts
 
 pprTickGroup :: [(Tick, Int)] -> SDoc
 pprTickGroup group@((tick1,_):_)
-  = hang (int (sum [n | (_,n) <- group]) <+> text (tickString tick1))
-       2 (vcat [ int n <+> pprTickCts tick
-                                    -- flip as we want largest first
-               | (tick,n) <- sortBy (flip (comparing snd)) group])
+  = vcat $ (text (tickString tick1) <> char ':' <+> int (sum $ fmap snd group))
+         : [ text "  " <> int n <+> t
+                             -- flip as we want largest first
+           | (tick,n) <- sortBy (flip (comparing snd)) group
+           , isJust (pprTickCts tick)
+           , let Just t = pprTickCts tick
+           ]
 pprTickGroup [] = panic "pprTickGroup"
 
 data Tick
@@ -393,7 +398,8 @@ data Tick
   | SimplifierDone              -- Ticked at each iteration of the simplifier
 
 instance Outputable Tick where
-  ppr tick = text (tickString tick) <+> pprTickCts tick
+  ppr tick = text (tickString tick) 
+             <+> fromMaybe Outputable.empty (pprTickCts tick)
 
 instance Eq Tick where
   a == b = case a `cmpTick` b of
@@ -441,23 +447,23 @@ tickString (FillInCaseDefault _)        = "FillInCaseDefault"
 tickString BottomFound                  = "BottomFound"
 tickString SimplifierDone               = "SimplifierDone"
 
-pprTickCts :: Tick -> SDoc
-pprTickCts (PreInlineUnconditionally v) = ppr v
-pprTickCts (PostInlineUnconditionally v)= ppr v
-pprTickCts (UnfoldingDone v)            = ppr v
-pprTickCts (RuleFired v)                = ppr v
-pprTickCts LetFloatFromLet              = Outputable.empty
-pprTickCts (EtaExpansion v)             = ppr v
-pprTickCts (EtaReduction v)             = ppr v
-pprTickCts (BetaReduction v)            = ppr v
-pprTickCts (CaseOfCase v)               = ppr v
-pprTickCts (KnownBranch v)              = ppr v
-pprTickCts (CaseMerge v)                = ppr v
-pprTickCts (AltMerge v)                 = ppr v
-pprTickCts (CaseElim v)                 = ppr v
-pprTickCts (CaseIdentity v)             = ppr v
-pprTickCts (FillInCaseDefault v)        = ppr v
-pprTickCts _                            = Outputable.empty
+pprTickCts :: Tick -> Maybe SDoc
+pprTickCts (PreInlineUnconditionally v) = Just $ ppr v
+pprTickCts (PostInlineUnconditionally v)= Just $ ppr v
+pprTickCts (UnfoldingDone v)            = Just $ ppr v
+pprTickCts (RuleFired v)                = Just $ ppr v
+pprTickCts LetFloatFromLet              = Nothing
+pprTickCts (EtaExpansion v)             = Just $ ppr v
+pprTickCts (EtaReduction v)             = Just $ ppr v
+pprTickCts (BetaReduction v)            = Just $ ppr v
+pprTickCts (CaseOfCase v)               = Just $ ppr v
+pprTickCts (KnownBranch v)              = Just $ ppr v
+pprTickCts (CaseMerge v)                = Just $ ppr v
+pprTickCts (AltMerge v)                 = Just $ ppr v
+pprTickCts (CaseElim v)                 = Just $ ppr v
+pprTickCts (CaseIdentity v)             = Just $ ppr v
+pprTickCts (FillInCaseDefault v)        = Just $ ppr v
+pprTickCts _                            = Nothing
 
 cmpTick :: Tick -> Tick -> Ordering
 cmpTick a b = case (tickToTag a `compare` tickToTag b) of
@@ -742,6 +748,7 @@ msg sev doc
                      SevError   -> err_sty
                      SevWarning -> err_sty
                      SevDump    -> dump_sty
+                     SevTrace   -> dump_sty
                      _          -> user_sty
              err_sty  = mkErrStyle dflags unqual
              user_sty = mkUserStyle dflags unqual AllTheWay
@@ -777,12 +784,12 @@ fatalErrorMsg :: SDoc -> CoreM ()
 fatalErrorMsg = msg SevFatal
 
 -- | Output a string debugging message at verbosity level of @-v@ or higher
-debugTraceMsgS :: String -> CoreM ()
-debugTraceMsgS = debugTraceMsg . text
+logTraceS :: String -> CoreM ()
+logTraceS = logTrace . text
 
 -- | Outputs a debugging message at verbosity level of @-v@ or higher
-debugTraceMsg :: SDoc -> CoreM ()
-debugTraceMsg = msg SevDump
+logTrace :: SDoc -> CoreM ()
+logTrace = msg SevDump
 
 -- | Show some labelled 'SDoc' if a particular flag is set or at a verbosity level of @-v -ddump-most@ or higher
 dumpIfSet_dyn :: DumpFlag -> String -> SDoc -> CoreM ()

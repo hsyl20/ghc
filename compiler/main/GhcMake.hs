@@ -126,8 +126,8 @@ depanal excluded_mods allow_dup_roots = do
          targets = hsc_targets hsc_env
          old_graph = hsc_mod_graph hsc_env
 
-  withTiming (pure dflags) (text "Chasing dependencies") (const ()) $ do
-    liftIO $ debugTraceMsg dflags 2 (hcat [
+  withPhase (pure dflags) (text "Chasing dependencies") empty (const ()) $ do
+    liftIO $ logTrace dflags 2 (hcat [
               text "Chasing modules from: ",
               hcat (punctuate comma (map pprTarget targets))])
 
@@ -236,7 +236,7 @@ load' how_much mHscMessage mod_graph = do
     -- write the pruned HPT to allow the old HPT to be GC'd.
     setSession $ discardIC $ hsc_env { hsc_HPT = pruned_hpt }
 
-    liftIO $ debugTraceMsg dflags 2 (text "Stable obj:" <+> ppr stable_obj $$
+    liftIO $ logTrace dflags 2 (text "Stable obj:" <+> ppr stable_obj $$
                             text "Stable BCO:" <+> ppr stable_bco)
 
     -- Unload any modules which are going to be re-linked this time around.
@@ -305,7 +305,7 @@ load' how_much mHscMessage mod_graph = do
                               (flattenSCCs mg2_with_srcimps)
                               hsc_env
 
-    liftIO $ debugTraceMsg dflags 2 (hang (text "Ready for upsweep")
+    liftIO $ logTrace dflags 2 (hang (text "Ready for upsweep")
                                2 (ppr mg))
 
     n_jobs <- case parMakeCount dflags of
@@ -331,7 +331,7 @@ load' how_much mHscMessage mod_graph = do
 
      then
        -- Easy; just relink it all.
-       do liftIO $ debugTraceMsg dflags 2 (text "Upsweep completely successful.")
+       do liftIO $ logTrace dflags 2 (text "Upsweep completely successful.")
 
           -- Clean up after ourselves
           hsc_env1 <- getSession
@@ -369,7 +369,7 @@ load' how_much mHscMessage mod_graph = do
        -- Tricky.  We need to back out the effects of compiling any
        -- half-done cycles, both so as to clean up the top level envs
        -- and to avoid telling the interactive linker to link them.
-       do liftIO $ debugTraceMsg dflags 2 (text "Upsweep partially successful.")
+       do liftIO $ logTrace dflags 2 (text "Upsweep partially successful.")
 
           let modsDone_names
                  = map ms_mod modsDone
@@ -1369,14 +1369,14 @@ upsweep_mod hsc_env mHscMessage old_hpt (stable_obj, stable_bco) summary mod_ind
                 -- byte code, we can always use an existing object file
                 -- if it is *stable* (see checkStability).
           | is_stable_obj, Just hmi <- old_hmi -> do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                liftIO $ logTrace (hsc_dflags hsc_env) 5
                            (text "skipping stable obj mod:" <+> ppr this_mod_name)
                 return hmi
                 -- object is stable, and we have an entry in the
                 -- old HPT: nothing to do
 
           | is_stable_obj, isNothing old_hmi -> do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                liftIO $ logTrace (hsc_dflags hsc_env) 5
                            (text "compiling stable on-disk mod:" <+> ppr this_mod_name)
                 linkable <- liftIO $ findObjectLinkable this_mod obj_fn
                               (expectJust "upsweep1" mb_obj_date)
@@ -1388,7 +1388,7 @@ upsweep_mod hsc_env mHscMessage old_hpt (stable_obj, stable_bco) summary mod_ind
             (target /= HscNothing) `implies` not is_fake_linkable ->
                 ASSERT(isJust old_hmi) -- must be in the old_hpt
                 let Just hmi = old_hmi in do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                liftIO $ logTrace (hsc_dflags hsc_env) 5
                            (text "skipping stable BCO mod:" <+> ppr this_mod_name)
                 return hmi
                 -- BCO is stable: nothing to do
@@ -1399,7 +1399,7 @@ upsweep_mod hsc_env mHscMessage old_hpt (stable_obj, stable_bco) summary mod_ind
             not (isObjectLinkable l),
             (target /= HscNothing) `implies` not is_fake_linkable,
             linkableTime l >= ms_hs_date summary -> do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                liftIO $ logTrace (hsc_dflags hsc_env) 5
                            (text "compiling non-stable BCO mod:" <+> ppr this_mod_name)
                 compile_it (Just l) SourceUnmodified
                 -- we have an old BCO that is up to date with respect
@@ -1421,11 +1421,11 @@ upsweep_mod hsc_env mHscMessage old_hpt (stable_obj, stable_bco) summary mod_ind
                   Just hmi
                     | Just l <- hm_linkable hmi,
                       isObjectLinkable l && linkableTime l == obj_date -> do
-                          liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                          liftIO $ logTrace (hsc_dflags hsc_env) 5
                                      (text "compiling mod with new on-disk obj:" <+> ppr this_mod_name)
                           compile_it (Just l) SourceUnmodified
                   _otherwise -> do
-                          liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                          liftIO $ logTrace (hsc_dflags hsc_env) 5
                                      (text "compiling mod with new on-disk obj2:" <+> ppr this_mod_name)
                           linkable <- liftIO $ findObjectLinkable this_mod obj_fn obj_date
                           compile_it_discard_iface (Just linkable) SourceUnmodified
@@ -1434,14 +1434,16 @@ upsweep_mod hsc_env mHscMessage old_hpt (stable_obj, stable_bco) summary mod_ind
           | writeInterfaceOnlyMode dflags,
             Just if_date <- mb_if_date,
             if_date >= hs_date -> do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
+                liftIO $ logTrace (hsc_dflags hsc_env) 5
                            (text "skipping tc'd mod:" <+> ppr this_mod_name)
                 compile_it Nothing SourceUnmodified
 
          _otherwise -> do
-                liftIO $ debugTraceMsg (hsc_dflags hsc_env) 5
-                           (text "compiling mod:" <+> ppr this_mod_name)
-                compile_it Nothing SourceModified
+                withPhase (return dflags) 
+                   (text "Compiling module")
+                   (ppr this_mod_name)
+                   (const ()) $
+                      compile_it Nothing SourceModified
 
 -- Note [Recompilation checking when typechecking only]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1514,7 +1516,7 @@ getModLoop ms graph
 
 typecheckLoop :: DynFlags -> HscEnv -> [ModuleName] -> IO HscEnv
 typecheckLoop dflags hsc_env mods = do
-  debugTraceMsg dflags 2 $
+  logTrace dflags 2 $
      text "Re-typechecking loop: " <> ppr mods
   new_hpt <-
     fixIO $ \new_hpt -> do

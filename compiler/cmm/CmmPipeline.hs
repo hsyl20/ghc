@@ -42,7 +42,7 @@ cmmPipeline hsc_env topSRT prog =
      tops <- {-# SCC "tops" #-} mapM (cpsTop hsc_env) prog
 
      (topSRT, cmms) <- {-# SCC "doSRTs" #-} doSRTs dflags topSRT tops
-     dumpWith dflags Opt_D_dump_cmm_cps "Post CPS Cmm" (ppr cmms)
+     dumpWith dflags Opt_D_dump_cmm_cps "Cmm - Post CPS" (ppr cmms)
 
      return (topSRT, cmms)
 
@@ -59,7 +59,7 @@ cpsTop hsc_env proc =
        --
        CmmProc h l v g <- {-# SCC "cmmCfgOpts(1)" #-}
             return $ cmmCfgOptsProc splitting_proc_points proc
-       dump Opt_D_dump_cmm_cfg "Post control-flow optimisations" g
+       dump Opt_D_dump_cmm_cfg "Cmm - Post control-flow optimisations" g
 
        let !TopInfo {stack_info=StackInfo { arg_space = entry_off
                                           , do_layout = do_layout }} = h
@@ -67,14 +67,14 @@ cpsTop hsc_env proc =
        ----------- Eliminate common blocks -------------------------------------
        g <- {-# SCC "elimCommonBlocks" #-}
             condPass Opt_CmmElimCommonBlocks elimCommonBlocks g
-                          Opt_D_dump_cmm_cbe "Post common block elimination"
+                  Opt_D_dump_cmm_cbe "Cmm - Post common block elimination"
 
        -- Any work storing block Labels must be performed _after_
        -- elimCommonBlocks
 
        g <- {-# SCC "createSwitchPlans" #-}
             runUniqSM $ cmmImplementSwitchPlans dflags g
-       dump Opt_D_dump_cmm_switch "Post switch plan" g
+       dump Opt_D_dump_cmm_switch "Cmm - Post switch plan" g
 
        ----------- Proc points -------------------------------------------------
        let call_pps = {-# SCC "callProcPoints" #-} callProcPoints g
@@ -83,7 +83,7 @@ cpsTop hsc_env proc =
              then do
                pp <- {-# SCC "minimalProcPointSet" #-} runUniqSM $
                   minimalProcPointSet (targetPlatform dflags) call_pps g
-               dumpWith dflags Opt_D_dump_cmm_proc "Proc points"
+               dumpWith dflags Opt_D_dump_cmm_proc "Cmm - Proc points"
                      (ppr l $$ ppr pp $$ ppr g)
                return pp
              else
@@ -95,28 +95,28 @@ cpsTop hsc_env proc =
             if do_layout
                then runUniqSM $ cmmLayoutStack dflags proc_points entry_off g
                else return (g, mapEmpty)
-       dump Opt_D_dump_cmm_sp "Layout Stack" g
+       dump Opt_D_dump_cmm_sp "Cmm - Layout Stack" g
 
        ----------- Sink and inline assignments  --------------------------------
        g <- {-# SCC "sink" #-} -- See Note [Sinking after stack layout]
             condPass Opt_CmmSink (cmmSink dflags) g
-                     Opt_D_dump_cmm_sink "Sink assignments"
+                     Opt_D_dump_cmm_sink "Cmm - Sink assignments"
 
        ------------- CAF analysis ----------------------------------------------
        let cafEnv = {-# SCC "cafAnal" #-} cafAnal g
-       dumpWith dflags Opt_D_dump_cmm_caf "CAFEnv" (ppr cafEnv)
+       dumpWith dflags Opt_D_dump_cmm_caf "Cmm - CAFEnv" (ppr cafEnv)
 
        g <- if splitting_proc_points
             then do
                ------------- Split into separate procedures -----------------------
                let pp_map = {-# SCC "procPointAnalysis" #-}
                             procPointAnalysis proc_points g
-               dumpWith dflags Opt_D_dump_cmm_procmap "procpoint map" $
+               dumpWith dflags Opt_D_dump_cmm_procmap "Cmm - Proc-point map" $
                     ppr pp_map
                g <- {-# SCC "splitAtProcPoints" #-} runUniqSM $
                     splitAtProcPoints dflags l call_pps proc_points pp_map
                                       (CmmProc h l v g)
-               dumps Opt_D_dump_cmm_split "Post splitting" g
+               dumps Opt_D_dump_cmm_split "Cmm - Post splitting" g
                return g
              else do
                -- attach info tables to return points
@@ -125,7 +125,8 @@ cpsTop hsc_env proc =
        ------------- Populate info tables with stack info -----------------
        g <- {-# SCC "setInfoTableStackMap" #-}
             return $ map (setInfoTableStackMap dflags stackmaps) g
-       dumps Opt_D_dump_cmm_info "after setInfoTableStackMap" g
+       dumps Opt_D_dump_cmm_info
+         "Cmm - After populate info tables with stack info" g
 
        ----------- Control-flow optimisations -----------------------------
        g <- {-# SCC "cmmCfgOpts(2)" #-}
@@ -134,7 +135,7 @@ cpsTop hsc_env proc =
                      else g
        g <- return (map removeUnreachableBlocksProc g)
             -- See Note [unreachable blocks]
-       dumps Opt_D_dump_cmm_cfg "Post control-flow optimisations" g
+       dumps Opt_D_dump_cmm_cfg "Cmm - Post control-flow optimisations" g
 
        return (cafEnv, g)
 

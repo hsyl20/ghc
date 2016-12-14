@@ -321,7 +321,7 @@ getLlvmPlatform = getDynFlag targetPlatform
 dumpIfSetLlvm :: DumpFlag -> String -> Outp.SDoc -> LlvmM ()
 dumpIfSetLlvm flag hdr doc = do
   dflags <- getDynFlags
-  liftIO $ dumpIfSet_dyn dflags flag hdr doc
+  liftIO $ dumpIfSet_dyn dflags flag ("LLVM - "++hdr) doc
 
 -- | Prints the given contents to the output handle
 renderLlvm :: Outp.SDoc -> LlvmM ()
@@ -334,7 +334,7 @@ renderLlvm sdoc = do
     liftIO $ Prt.bufLeftRender out doc
 
     -- Dump, if requested
-    dumpIfSetLlvm Opt_D_dump_llvm "LLVM Code" sdoc
+    dumpIfSetLlvm Opt_D_dump_llvm "Code" sdoc
     return ()
 
 -- | Marks a variable as "used"

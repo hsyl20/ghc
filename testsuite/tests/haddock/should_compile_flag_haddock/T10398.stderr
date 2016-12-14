@@ -1,5 +1,5 @@
 
-==================== Parser ====================
+==================== Haskell - Parsed ====================
 module Foo (
         <IEDocNamed: chunk1>, <IEDocNamed: chunk2>, foo,
         <IEDocNamed: chunk3>, bar

@@ -1,5 +1,5 @@
 
-==================== Tidy Core rules ====================
+==================== Core - Tidy rules ====================
 "SPEC f"
     forall (@ b) ($dOrd :: Ord [Int]). f @ [Int] @ b $dOrd = f_$sf @ b
 

@@ -8,6 +8,7 @@ data Severity
   | SevFatal
   | SevInteractive
   | SevDump
+  | SevTrace
   | SevInfo
   | SevWarning
   | SevError

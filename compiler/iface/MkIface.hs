@@ -1085,11 +1085,10 @@ checkOldIface
 
 checkOldIface hsc_env mod_summary source_modified maybe_iface
   = do  let dflags = hsc_dflags hsc_env
-        showPass dflags $
-            "Checking old interface for " ++
-              (showPpr dflags $ ms_mod mod_summary)
-        initIfaceCheck (text "checkOldIface") hsc_env $
-            check_old_iface hsc_env mod_summary source_modified maybe_iface
+        withPhase (return dflags) (text "Checking old module interface")
+                 (ppr (ms_mod mod_summary)) (const ()) $
+           initIfaceCheck (text "checkOldIface") hsc_env $
+               check_old_iface hsc_env mod_summary source_modified maybe_iface
 
 check_old_iface
   :: HscEnv

@@ -1,5 +1,5 @@
 
-==================== Derived instances ====================
+==================== Haskell - Derived instances ====================
 Derived class instances:
   instance GHC.Generics.Generic (T10604_deriving.Empty a) where
     GHC.Generics.from x
@@ -542,7 +542,7 @@ Derived type family instances:
 
 
 
-==================== Filling in method body ====================
+==================== Haskell - Filling in method body ====================
 GHC.Base.Functor [T10604_deriving.Proxy *]
   GHC.Base.<$ = GHC.Base.$dm<$ @T10604_deriving.Proxy *
 

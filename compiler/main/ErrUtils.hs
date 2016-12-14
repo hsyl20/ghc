@@ -42,12 +42,11 @@ module ErrUtils (
 
         -- * Issuing messages during compilation
         putMsg, printInfoForUser, printOutputForUser,
-        logInfo, logOutput,
+        logInfo, logOutput, logTrace, logDump,
         errorMsg, warningMsg,
         fatalErrorMsg, fatalErrorMsg', fatalErrorMsg'',
         compilationProgressMsg,
-        showPass, withTiming,
-        debugTraceMsg,
+        withPhase,
         ghcExit,
         prettyPrintGhcErrors,
     ) where
@@ -146,8 +145,13 @@ data Severity
   | SevInteractive
 
   | SevDump
-    -- ^ Log messagse intended for compiler developers
+    -- ^ Log messages intended for compiler developers
     -- No file/line/column stuff
+
+  | SevTrace
+    -- ^ Log messages intended for compiler developers
+    -- No file/line/column stuff
+    -- No specific format
 
   | SevInfo
     -- ^ Log messages intended for end users.
@@ -158,7 +162,7 @@ data Severity
     -- ^ SevWarning and SevError are used for warnings and errors
     --   o The message has a file/line/column heading,
     --     plus "warning:" or "error:",
-    --     added by mkLocMessags
+    --     added by mkLocMessage
     --   o Output is intended for end users
 
 
@@ -394,7 +398,7 @@ dumpSDoc dflags print_unqual flag hdr doc
             -- write the dump to stdout
             Nothing -> do
               let (doc', severity)
-                    | null hdr  = (doc, SevOutput)
+                    | null hdr  = (doc, SevDump)
                     | otherwise = (mkDumpDoc hdr doc, SevDump)
               log_action dflags dflags NoReason severity noSrcSpan dump_style doc'
 
@@ -474,16 +478,11 @@ compilationProgressMsg dflags msg
   = ifVerbose dflags 1 $
     logOutput dflags (defaultUserStyle dflags) (text msg)
 
-showPass :: DynFlags -> String -> IO ()
-showPass dflags what
-  = ifVerbose dflags 2 $
-    logInfo dflags (defaultUserStyle dflags) (text "***" <+> text what <> colon)
-
 -- | Time a compilation phase.
 --
 -- When timings are enabled (e.g. with the @-v2@ flag), the allocations
 -- and CPU time used by the phase will be reported to stderr. Consider
--- a typical usage: @withTiming getDynFlags (text "simplify") force pass@.
+-- a typical usage: @withPhase getDynFlags (text "simplify") force mod pass@.
 -- When timings are enabled the following costs are included in the
 -- produced accounting,
 --
@@ -493,48 +492,49 @@ showPass dflags what
 -- The choice of the @force@ function depends upon the amount of forcing
 -- desired; the goal here is to ensure that the cost of evaluating the result
 -- is, to the greatest extent possible, included in the accounting provided by
--- 'withTiming'. Often the pass already sufficiently forces its result during
+-- 'withPhase'. Often the pass already sufficiently forces its result during
 -- construction; in this case @const ()@ is a reasonable choice.
 -- In other cases, it is necessary to evaluate the result to normal form, in
 -- which case something like @Control.DeepSeq.rnf@ is appropriate.
 --
 -- To avoid adversely affecting compiler performance when timings are not
 -- requested, the result is only forced when timings are enabled.
-withTiming :: MonadIO m
-           => m DynFlags  -- ^ A means of getting a 'DynFlags' (often
-                          -- 'getDynFlags' will work here)
-           -> SDoc        -- ^ The name of the phase
-           -> (a -> ())   -- ^ A function to force the result
-                          -- (often either @const ()@ or 'rnf')
-           -> m a         -- ^ The body of the phase to be timed
-           -> m a
-withTiming getDFlags what force_result action
-  = do dflags <- getDFlags
-       if verbosity dflags >= 2
-          then do liftIO $ logInfo dflags (defaultUserStyle dflags)
-                         $ text "***" <+> what <> colon
-                  alloc0 <- liftIO getAllocationCounter
-                  start <- liftIO getCPUTime
-                  !r <- action
-                  () <- pure $ force_result r
-                  end <- liftIO getCPUTime
-                  alloc1 <- liftIO getAllocationCounter
-                  -- recall that allocation counter counts down
-                  let alloc = alloc0 - alloc1
-                  liftIO $ logInfo dflags (defaultUserStyle dflags)
-                      (text "!!!" <+> what <> colon <+> text "finished in"
-                       <+> doublePrec 2 (realToFrac (end - start) * 1e-9)
-                       <+> text "milliseconds"
-                       <> comma
-                       <+> text "allocated"
-                       <+> doublePrec 3 (realToFrac alloc / 1024 / 1024)
-                       <+> text "megabytes")
-                  pure r
-           else action
+withPhase :: MonadIO m
+   => m DynFlags  -- ^ A means of getting a 'DynFlags' (often
+                  -- 'getDynFlags' will work here)
+   -> SDoc        -- ^ The name of the phase
+   -> SDoc        -- ^ The name of the module
+   -> (a -> ())   -- ^ A function to force the result
+                  -- (often either @const ()@ or 'rnf')
+   -> m a         -- ^ The body of the phase to be timed
+   -> m a
+withPhase getDFlags what' this_mod force_result action = do
+   dflags <- getDFlags
+   if verbosity dflags >= 2
+      then do
+         let what = what' <+> brackets this_mod
+         liftIO $ ifVerbose dflags 2 $
+            logInfo dflags (defaultUserStyle dflags)
+               (text "***" <+> what <> colon)
+         alloc0 <- liftIO getAllocationCounter
+         start <- liftIO getCPUTime
+         !r <- action
+         () <- pure $ force_result r
+         end <- liftIO getCPUTime
+         alloc1 <- liftIO getAllocationCounter
+         -- recall that allocation counter counts down
+         let alloc = alloc0 - alloc1
+         liftIO $ logInfo dflags (defaultUserStyle dflags)
+             (text "!!!" <+> what <> colon <+> text "finished in"
+              <+> doublePrec 2 (realToFrac (end - start) * 1e-9)
+              <+> text "milliseconds"
+              <> comma
+              <+> text "allocated"
+              <+> doublePrec 3 (realToFrac alloc / 1024 / 1024)
+              <+> text "megabytes")
+         pure r
+       else action
 
-debugTraceMsg :: DynFlags -> Int -> MsgDoc -> IO ()
-debugTraceMsg dflags val msg = ifVerbose dflags val $
-                               logInfo dflags (defaultDumpStyle dflags) msg
 putMsg :: DynFlags -> MsgDoc -> IO ()
 putMsg dflags msg = logInfo dflags (defaultUserStyle dflags) msg
 
@@ -545,6 +545,17 @@ printInfoForUser dflags print_unqual msg
 printOutputForUser :: DynFlags -> PrintUnqualified -> MsgDoc -> IO ()
 printOutputForUser dflags print_unqual msg
   = logOutput dflags (mkUserStyle dflags print_unqual AllTheWay) msg
+
+logTrace :: DynFlags -> Int -> MsgDoc -> IO ()
+logTrace dflags val msg
+  = ifVerbose dflags val $
+  log_action dflags dflags NoReason SevTrace noSrcSpan
+    (defaultDumpStyle dflags) msg
+
+logDump :: DynFlags -> MsgDoc -> IO ()
+logDump dflags msg
+  = log_action dflags dflags NoReason SevDump noSrcSpan
+      (defaultDumpStyle dflags) msg
 
 logInfo :: DynFlags -> PprStyle -> MsgDoc -> IO ()
 logInfo dflags sty msg

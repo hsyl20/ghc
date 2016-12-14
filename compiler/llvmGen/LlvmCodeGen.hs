@@ -21,6 +21,7 @@ import Cmm
 import CmmUtils
 import Hoopl
 import PprCmm
+import Module
 
 import BufWrite
 import DynFlags
@@ -38,21 +39,18 @@ import System.IO
 -- -----------------------------------------------------------------------------
 -- | Top-level of the LLVM Code generator
 --
-llvmCodeGen :: DynFlags -> Handle -> UniqSupply
+llvmCodeGen :: DynFlags -> Module -> Handle -> UniqSupply
                -> Stream.Stream IO RawCmmGroup ()
                -> IO ()
-llvmCodeGen dflags h us cmm_stream
-  = withTiming (pure dflags) (text "LLVM CodeGen") (const ()) $ do
+llvmCodeGen dflags this_mod h us cmm_stream
+  = withPhase (pure dflags) (text "LLVM CodeGen") (ppr this_mod) (const ()) $ do
        bufh <- newBufHandle h
-
-       -- Pass header
-       showPass dflags "LLVM CodeGen"
 
        -- get llvm version, cache for later use
        ver <- (fromMaybe supportedLlvmVersion) `fmap` figureLlvmVersion dflags
 
        -- warn if unsupported
-       debugTraceMsg dflags 2
+       logTrace dflags 2
             (text "Using LLVM version:" <+> text (show ver))
        let doWarn = wopt Opt_WarnUnsupportedLlvmVersion dflags
        when (ver /= supportedLlvmVersion && doWarn) $

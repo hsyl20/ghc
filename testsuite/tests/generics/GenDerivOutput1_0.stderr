@@ -1,5 +1,5 @@
 
-==================== Derived instances ====================
+==================== Haskell - Derived instances ====================
 Derived class instances:
   instance GHC.Generics.Generic1 GenDerivOutput1_0.List where
     GHC.Generics.from1 x

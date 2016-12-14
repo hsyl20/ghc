@@ -1,5 +1,5 @@
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 T8569.$tc'Rdata: m
 T8569.$tc'Rint: m
 T8569.$tcRep: m
@@ -8,7 +8,7 @@ T8569.addUp: <S,1*U><L,U>
 
 
 
-==================== Strictness signatures ====================
+==================== Core - Strictness signatures ====================
 T8569.$tc'Rdata: m
 T8569.$tc'Rint: m
 T8569.$tcRep: m

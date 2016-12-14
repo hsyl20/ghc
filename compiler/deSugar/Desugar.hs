@@ -300,8 +300,9 @@ deSugar hsc_env
 
   = do { let dflags = hsc_dflags hsc_env
              print_unqual = mkPrintUnqualified dflags rdr_env
-        ; withTiming (pure dflags)
-                     (text "Desugar"<+>brackets (ppr mod))
+        ; withPhase (pure dflags)
+                     (text "Desugar")
+                     (ppr mod)
                      (const ()) $
      do { -- Desugar the program
         ; let export_set =
@@ -351,14 +352,15 @@ deSugar hsc_env
 
 #ifdef DEBUG
           -- Debug only as pre-simple-optimisation program may be really big
-        ; endPassIO hsc_env print_unqual CoreDesugar final_pgm rules_for_imps
+        ; endPassIO id_mod hsc_env print_unqual CoreDesugar 
+                    final_pgm rules_for_imps
 #endif
         ; (ds_binds, ds_rules_for_imps, ds_vects)
             <- simpleOptPgm dflags mod final_pgm rules_for_imps vects0
                          -- The simpleOptPgm gets rid of type
                          -- bindings plus any stupid dead code
 
-        ; endPassIO hsc_env print_unqual CoreDesugarOpt ds_binds ds_rules_for_imps
+        ; endPassIO id_mod hsc_env print_unqual CoreDesugarOpt ds_binds ds_rules_for_imps
 
         ; let used_names = mkUsedNames tcg_env
         ; deps <- mkDependencies tcg_env
@@ -439,27 +441,27 @@ and Rec the rest.
 
 deSugarExpr :: HscEnv -> LHsExpr Id -> IO (Messages, Maybe CoreExpr)
 
-deSugarExpr hsc_env tc_expr
-  = do { let dflags       = hsc_dflags hsc_env
-             icntxt       = hsc_IC hsc_env
-             rdr_env      = ic_rn_gbl_env icntxt
-             type_env     = mkTypeEnvWithImplicits (ic_tythings icntxt)
-             fam_insts    = snd (ic_instances icntxt)
-             fam_inst_env = extendFamInstEnvList emptyFamInstEnv fam_insts
-             -- This stuff is a half baked version of TcRnDriver.setInteractiveContext
+deSugarExpr hsc_env tc_expr = do
+  let dflags       = hsc_dflags hsc_env
+      icntxt       = hsc_IC hsc_env
+      rdr_env      = ic_rn_gbl_env icntxt
+      type_env     = mkTypeEnvWithImplicits (ic_tythings icntxt)
+      fam_insts    = snd (ic_instances icntxt)
+      fam_inst_env = extendFamInstEnvList emptyFamInstEnv fam_insts
+      -- This stuff is a half baked version of TcRnDriver.setInteractiveContext
 
-       ; showPass dflags "Desugar"
+  withPhase (return dflags) (text "Desugar") (text "expr") (const ()) $ do
+     -- Do desugaring
+     (msgs, mb_core_expr) <- initDs hsc_env (icInteractiveModule icntxt) rdr_env
+                                    type_env fam_inst_env $
+                             dsLExpr tc_expr
 
-         -- Do desugaring
-       ; (msgs, mb_core_expr) <- initDs hsc_env (icInteractiveModule icntxt) rdr_env
-                                        type_env fam_inst_env $
-                                 dsLExpr tc_expr
+     case mb_core_expr of
+        Nothing   -> return ()
+        Just expr -> dumpIfSet_dyn dflags Opt_D_dump_ds "Desugared"
+                                   (pprCoreExpr expr)
 
-       ; case mb_core_expr of
-            Nothing   -> return ()
-            Just expr -> dumpIfSet_dyn dflags Opt_D_dump_ds "Desugared" (pprCoreExpr expr)
-
-       ; return (msgs, mb_core_expr) }
+     return (msgs, mb_core_expr)
 
 {-
 ************************************************************************

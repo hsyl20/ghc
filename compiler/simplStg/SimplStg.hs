@@ -21,7 +21,6 @@ import UnariseStg       ( unarise )
 import DynFlags
 import Module           ( Module )
 import ErrUtils
-import SrcLoc
 import UniqSupply       ( mkSplitUniqSupply, splitUniqSupply )
 import Outputable
 import Control.Monad
@@ -32,31 +31,26 @@ stg2stg :: DynFlags                  -- includes spec of what stg-to-stg passes 
         -> IO ( [StgBinding]         -- output program...
               , CollectedCCs)        -- cost centre information (declared and used)
 
-stg2stg dflags module_name binds
-  = do  { showPass dflags "Stg2Stg"
-        ; us <- mkSplitUniqSupply 'g'
+stg2stg dflags module_name binds = do
+    withPhase (return dflags) (text "Stg2Stg") (ppr module_name) (const ()) $ do
+      us <- mkSplitUniqSupply 'g'
 
-        ; when (dopt Opt_D_verbose_stg2stg dflags)
-               (log_action dflags dflags NoReason SevDump noSrcSpan
-                  (defaultDumpStyle dflags) (text "VERBOSE STG-TO-STG:"))
+      (binds', us', ccs) <- end_pass us "Stg2Stg" ([],[],[]) binds
 
-        ; (binds', us', ccs) <- end_pass us "Stg2Stg" ([],[],[]) binds
+            -- Do the main business!
+      let (us0, us1) = splitUniqSupply us'
+      (processed_binds, _, cost_centres)
+            <- foldM do_stg_pass (binds', us0, ccs) (getStgToDo dflags)
 
-                -- Do the main business!
-        ; let (us0, us1) = splitUniqSupply us'
-        ; (processed_binds, _, cost_centres)
-                <- foldM do_stg_pass (binds', us0, ccs) (getStgToDo dflags)
+      dumpIfSet_dyn dflags Opt_D_dump_stg "STG - Pre unarise"
+                    (pprStgBindings processed_binds)
 
-        ; dumpIfSet_dyn dflags Opt_D_dump_stg "Pre unarise:"
-                        (pprStgBindings processed_binds)
+      let un_binds = unarise us1 processed_binds
 
-        ; let un_binds = unarise us1 processed_binds
+      dumpIfSet_dyn dflags Opt_D_dump_stg "STG - Syntax"
+                    (pprStgBindings un_binds)
 
-        ; dumpIfSet_dyn dflags Opt_D_dump_stg "STG syntax:"
-                        (pprStgBindings un_binds)
-
-        ; return (un_binds, cost_centres)
-   }
+      return (un_binds, cost_centres)
 
   where
     stg_linter = if gopt Opt_DoStgLinting dflags

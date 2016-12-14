@@ -893,7 +893,7 @@ simpleOptPgm :: DynFlags -> Module
              -> CoreProgram -> [CoreRule] -> [CoreVect]
              -> IO (CoreProgram, [CoreRule], [CoreVect])
 simpleOptPgm dflags this_mod binds rules vects
-  = do { dumpIfSet_dyn dflags Opt_D_dump_occur_anal "Occurrence analysis"
+  = do { dumpIfSet_dyn dflags Opt_D_dump_occur_anal "Core - Occurrence analysis"
                        (pprCoreBindings occ_anald_binds $$ pprRules rules );
 
        ; return (reverse binds', substRulesForImportedIds subst' rules, substVects subst' vects) }

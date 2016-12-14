@@ -53,19 +53,17 @@ initV :: HscEnv
       -> VM a
       -> IO (Maybe (VectInfo, a))
 initV hsc_env guts info thing_inside
-  = do { dumpIfVtTrace "Incoming VectInfo" (ppr info)
+  = do { dumpIfVtTrace "Vectorise - Incoming VectInfo" (ppr info)
 
        ; let type_env = typeEnvFromEntities ids (mg_tcs guts) (mg_fam_insts guts)
        ; (_, Just res) <- initDs hsc_env (mg_module guts)
                                          (mg_rdr_env guts) type_env
                                          (mg_fam_inst_env guts) go
 
-       ; case res of
-           Nothing
-             -> dumpIfVtTrace "Vectorisation FAILED!" empty
-           Just (info', _)
-             -> dumpIfVtTrace "Outgoing VectInfo" (ppr info')
-
+       ; dumpIfVtTrace "Vectorise - Outgoing VectInfo" $
+           case res of
+             Nothing        -> text "Vectorisation FAILED!"
+             Just (info',_) -> ppr info'
        ; return res
        }
   where

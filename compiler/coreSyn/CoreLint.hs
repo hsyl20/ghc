@@ -58,6 +58,7 @@ import OptCoercion ( checkAxInstCo )
 import UniqSupply
 import CoreArity ( typeArity )
 import Demand ( splitStrictSig, isBotRes )
+import Module
 
 import HscTypes
 import DynFlags
@@ -174,23 +175,23 @@ different types, called bad coercions. Following coercions are forbidden:
 ************************************************************************
 
 These functions are not CoreM monad stuff, but they probably ought to
-be, and it makes a conveneint place.  place for them.  They print out
+be, and it makes a convenient place for them. They print out
 stuff before and after core passes, and do Core Lint when necessary.
 -}
 
-endPass :: CoreToDo -> CoreProgram -> [CoreRule] -> CoreM ()
-endPass pass binds rules
+endPass :: Module -> CoreToDo -> CoreProgram -> [CoreRule] -> CoreM ()
+endPass this_mod pass binds rules
   = do { hsc_env <- getHscEnv
        ; print_unqual <- getPrintUnqualified
-       ; liftIO $ endPassIO hsc_env print_unqual pass binds rules }
+       ; liftIO $ endPassIO this_mod hsc_env print_unqual pass binds rules }
 
-endPassIO :: HscEnv -> PrintUnqualified
+endPassIO :: Module -> HscEnv -> PrintUnqualified
           -> CoreToDo -> CoreProgram -> [CoreRule] -> IO ()
 -- Used by the IO-is CorePrep too
-endPassIO hsc_env print_unqual pass binds rules
+endPassIO this_mod hsc_env print_unqual pass binds rules
   = do { dumpPassResult dflags print_unqual mb_flag
-                        (ppr pass) (pprPassDetails pass) binds rules
-       ; lintPassResult hsc_env pass binds }
+                        (ppr pass) (pprPassStats pass) binds rules
+       ; lintPassResult this_mod hsc_env pass binds }
   where
     dflags  = hsc_dflags hsc_env
     mb_flag = case coreDumpFlag pass of
@@ -200,31 +201,37 @@ endPassIO hsc_env print_unqual pass binds rules
 
 dumpIfSet :: DynFlags -> Bool -> CoreToDo -> SDoc -> SDoc -> IO ()
 dumpIfSet dflags dump_me pass extra_info doc
-  = Err.dumpIfSet dflags dump_me (showSDoc dflags (ppr pass <+> extra_info)) doc
+  = Err.dumpIfSet dflags dump_me (showSDoc dflags (ppr pass <+> brackets extra_info)) doc
 
 dumpPassResult :: DynFlags
                -> PrintUnqualified
                -> Maybe DumpFlag        -- Just df => show details in a file whose
                                         --            name is specified by df
                -> SDoc                  -- Header
-               -> SDoc                  -- Extra info to appear after header
+               -> Maybe SDoc            -- Statistics
                -> CoreProgram -> [CoreRule]
                -> IO ()
-dumpPassResult dflags unqual mb_flag hdr extra_info binds rules
-  = do { forM_ mb_flag $ \flag ->
-           Err.dumpSDoc dflags unqual flag (showSDoc dflags hdr) dump_doc
+dumpPassResult dflags unqual mb_flag hdr mstats binds rules
+  = do { forM_ mb_flag $ \flag -> do
+           Err.dumpSDoc dflags unqual flag
+               ("Core - " ++ (showSDoc dflags hdr)) dump_doc
+
+           forM_ mstats $ \stats ->
+              Err.dumpSDoc dflags unqual flag
+                  ("Statistics - " ++ (showSDoc dflags hdr)) stats
 
          -- Report result size
          -- This has the side effect of forcing the intermediate to be evaluated
          -- if it's not already forced by a -ddump flag.
-       ; Err.debugTraceMsg dflags 2 size_doc
+       ; when (verbosity dflags >= 2) -- TODO: replace explicit verbosity check
+            $ logInfo dflags (defaultUserStyle dflags) size_doc
        }
 
   where
-    size_doc = sep [text "Result size of" <+> hdr, nest 2 (equals <+> ppr (coreBindsStats binds))]
+    size_doc = text "Core size after" <+> hdr <+> equals
+               <+> ppr (coreBindsStats binds)
 
-    dump_doc  = vcat [ nest 2 extra_info
-                     , size_doc
+    dump_doc  = vcat [ text "-- Global size:" <+> ppr (coreBindsStats binds)
                      , blankLine
                      , pprCoreBindingsWithSize binds
                      , ppUnless (null rules) pp_rules ]
@@ -264,14 +271,17 @@ coreDumpFlag (CoreDoPasses {})        = Nothing
 ************************************************************************
 -}
 
-lintPassResult :: HscEnv -> CoreToDo -> CoreProgram -> IO ()
-lintPassResult hsc_env pass binds
+lintPassResult :: Module -> HscEnv -> CoreToDo -> CoreProgram -> IO ()
+lintPassResult this_mod hsc_env pass binds
   | not (gopt Opt_DoCoreLinting dflags)
   = return ()
   | otherwise
-  = do { let (warns, errs) = lintCoreBindings dflags pass (interactiveInScope hsc_env) binds
-       ; Err.showPass dflags ("Core Linted result of " ++ showPpr dflags pass)
-       ; displayLintResults dflags pass warns errs binds  }
+  = withPhase (return dflags) (text "Core Lint") (ppr this_mod) (const ()) $ do
+      let (warns, errs) = lintCoreBindings dflags pass
+                                           (interactiveInScope hsc_env) binds
+      Err.logInfo dflags (defaultUserStyle dflags) $
+         text "Core Linted result of" <+> ppr pass <+> brackets (ppr this_mod)
+      displayLintResults dflags pass warns errs binds
   where
     dflags = hsc_dflags hsc_env
 
@@ -280,8 +290,7 @@ displayLintResults :: DynFlags -> CoreToDo
                    -> IO ()
 displayLintResults dflags pass warns errs binds
   | not (isEmptyBag errs)
-  = do { log_action dflags dflags NoReason Err.SevDump noSrcSpan
-           (defaultDumpStyle dflags)
+  = do { Err.logDump dflags
            (vcat [ lint_banner "errors" (ppr pass), Err.pprMessageBag errs
                  , text "*** Offending Program ***"
                  , pprCoreBindings binds
@@ -291,8 +300,7 @@ displayLintResults dflags pass warns errs binds
   | not (isEmptyBag warns)
   , not (hasNoDebugOutput dflags)
   , showLintWarnings pass
-  = log_action dflags dflags NoReason Err.SevDump noSrcSpan
-        (defaultDumpStyle dflags)
+  = Err.logDump dflags
         (lint_banner "warnings" (ppr pass) $$ Err.pprMessageBag warns)
 
   | otherwise = return ()
@@ -322,8 +330,7 @@ lintInteractiveExpr what hsc_env expr
     dflags = hsc_dflags hsc_env
 
     display_lint_err err
-      = do { log_action dflags dflags NoReason Err.SevDump
-               noSrcSpan (defaultDumpStyle dflags)
+      = do { logDump dflags
                (vcat [ lint_banner "errors" (text what)
                      , err
                      , text "*** Offending Program ***"
@@ -2103,26 +2110,26 @@ dupExtVars vars
 -- noting all differences between the results.
 lintAnnots :: SDoc -> (ModGuts -> CoreM ModGuts) -> ModGuts -> CoreM ModGuts
 lintAnnots pname pass guts = do
+  let this_mod = mg_module guts
   -- Run the pass as we normally would
   dflags <- getDynFlags
-  when (gopt Opt_DoAnnotationLinting dflags) $
-    liftIO $ Err.showPass dflags "Annotation linting - first run"
   nguts <- pass guts
+  let wp s = withPhase (return dflags) (text ("Annotation linting"++s))
+               (ppr this_mod) (const ())
   -- If appropriate re-run it without debug annotations to make sure
   -- that they made no difference.
-  when (gopt Opt_DoAnnotationLinting dflags) $ do
-    liftIO $ Err.showPass dflags "Annotation linting - second run"
-    nguts' <- withoutAnnots pass guts
+  when (gopt Opt_DoAnnotationLinting dflags) $ wp "" $ do
+    nguts' <- wp " - second run" $ withoutAnnots pass guts
     -- Finally compare the resulting bindings
-    liftIO $ Err.showPass dflags "Annotation linting - comparison"
-    let binds = flattenBinds $ mg_binds nguts
-        binds' = flattenBinds $ mg_binds nguts'
-        (diffs,_) = diffBinds True (mkRnEnv2 emptyInScopeSet) binds binds'
-    when (not (null diffs)) $ CoreMonad.putMsg $ vcat
-      [ lint_banner "warning" pname
-      , text "Core changes with annotations:"
-      , withPprStyle (defaultDumpStyle dflags) $ nest 2 $ vcat diffs
-      ]
+    wp " - comparison" $ do
+       let binds = flattenBinds $ mg_binds nguts
+           binds' = flattenBinds $ mg_binds nguts'
+           (diffs,_) = diffBinds True (mkRnEnv2 emptyInScopeSet) binds binds'
+       when (not (null diffs)) $ CoreMonad.putMsg $ vcat
+         [ lint_banner "warning" pname
+         , text "Core changes with annotations:"
+         , withPprStyle (defaultDumpStyle dflags) $ nest 2 $ vcat diffs
+         ]
   -- Return actual new guts
   return nguts
 

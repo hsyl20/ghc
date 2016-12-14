@@ -123,15 +123,15 @@ floatOutwards float_sws dflags us pgm
               (fss, binds_s')    = unzip (map floatTopBind annotated_w_levels)
             } ;
 
-        dumpIfSet_dyn dflags Opt_D_verbose_core2core "Levels added:"
+        dumpIfSet_dyn dflags Opt_D_verbose_core2core "Core - Levels added:"
                   (vcat (map ppr annotated_w_levels));
 
         let { (tlets, ntlets, lams) = get_stats (sum_stats fss) };
 
-        dumpIfSet_dyn dflags Opt_D_dump_simpl_stats "FloatOut stats:"
-                (hcat [ int tlets,  text " Lets floated to top level; ",
-                        int ntlets, text " Lets floated elsewhere; from ",
-                        int lams,   text " Lambda groups"]);
+        dumpIfSet_dyn dflags Opt_D_dump_simpl_stats "Statistics - FloatOut"
+                (vcat [ text "Lets floated to top level:" <+> int tlets
+                      , text "Lets floated elsewhere:   " <+> int ntlets
+                      , text "From lambda groups:       " <+> int lams]);
 
         return (bagToList (unionManyBags binds_s'))
     }

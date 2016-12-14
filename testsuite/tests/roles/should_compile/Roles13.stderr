@@ -1,6 +1,6 @@
 
-==================== Tidy Core ====================
-Result size of Tidy Core = {terms: 51, types: 20, coercions: 5}
+==================== Core - Tidy ====================
+Result size of Core - Tidy = {terms: 51, types: 20, coercions: 5}
 
 -- RHS size: {terms: 2, types: 2, coercions: 0}
 convert1 :: Wrap Age -> Wrap Age

@@ -688,26 +688,25 @@ traceOptTcRn :: DumpFlag -> SDoc -> TcRn ()
 traceOptTcRn flag doc
   = do { dflags <- getDynFlags
        ; when (dopt flag dflags)
-              (traceTcRn flag doc)
+              (traceTcRn doc)
        }
 
 
-traceTcRn :: DumpFlag -> SDoc -> TcRn ()
+traceTcRn :: SDoc -> TcRn ()
 -- ^ Unconditionally dump some trace output
 --
 -- The DumpFlag is used only to set the output filename
 -- for --dump-to-file, not to decide whether or not to output
 -- That part is done by the caller
-traceTcRn flag doc
+traceTcRn doc
   = do { dflags   <- getDynFlags
        ; real_doc <- prettyDoc dflags doc
-       ; printer  <- getPrintUnqualified dflags
-       ; liftIO $ dumpSDoc dflags printer flag "" real_doc  }
+       ; liftIO $ logTrace dflags 2 real_doc  }
   where
     -- Add current location if -dppr-debug
     prettyDoc :: DynFlags -> SDoc -> TcRn SDoc
     prettyDoc dflags doc = if hasPprDebug dflags
-       then do { loc  <- getSrcSpanM; return $ mkLocMessage SevOutput loc doc }
+       then do { loc  <- getSrcSpanM; return $ mkLocMessage SevTrace loc doc }
        else return doc -- The full location is usually way too much
 
 
