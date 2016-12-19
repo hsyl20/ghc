@@ -76,11 +76,7 @@ readBinIface_ dflags checkHiWay traceBinIFaceReading hi_path ncu = do
     let printer :: SDoc -> IO ()
         printer = case traceBinIFaceReading of
                       TraceBinIFaceReading -> \sd ->
-                          log_action dflags
-                                     dflags
-                                     NoReason
-                                     SevOutput
-                                     noSrcSpan
+                          logOutput dflags
                                      (defaultDumpStyle dflags)
                                      sd
                       QuietBinIFaceReading -> \_ -> return ()

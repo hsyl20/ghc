@@ -386,7 +386,7 @@ classifyLdInput dflags f
   | isObjectFilename platform f = return (Just (Object f))
   | isDynLibFilename platform f = return (Just (DLLPath f))
   | otherwise          = do
-        log_action dflags dflags NoReason SevInfo noSrcSpan
+        logInfo dflags
             (defaultUserStyle dflags)
             (text ("Warning: ignoring unrecognised input `" ++ f ++ "'"))
         return Nothing
