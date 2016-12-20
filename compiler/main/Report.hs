@@ -1,5 +1,6 @@
 module Report
    ( Report (..)
+   , defaultReport
    -- ** Core
    , CoreReport (..)
    , endCorePass
@@ -25,12 +26,13 @@ data Report
 
 -- | Report on a Core program
 data CoreReport = CoreReport
-   { coreReportModule  :: Module           -- ^ Module
-   , coreReportPass    :: CoreToDo         -- ^ Pass
-   , coreReportProgram :: CoreProgram      -- ^ Core program (TODO:input/output)
-   , coreReportStats   :: CoreStats        -- ^ Core statistics
-   , coreReportCounts  :: Maybe SimplCount -- ^ Pass statistics
-   , coreReportRules   :: [CoreRule]       -- ^ Rules
+   { coreReportModule           :: Module           -- ^ Module
+   , coreReportPass             :: CoreToDo         -- ^ Pass
+   , coreReportProgram          :: CoreProgram      -- ^ Core program (TODO:input/output)
+   , coreReportStats            :: CoreStats        -- ^ Core statistics
+   , coreReportCounts           :: Maybe SimplCount -- ^ Pass statistics
+   , coreReportRules            :: [CoreRule]       -- ^ Rules
+   , coreReportPrintUnqualified :: PrintUnqualified
    -- TODO: transformation details (with src spans)
    }
 
@@ -39,15 +41,20 @@ endCorePass :: Module -> HscEnv -> PrintUnqualified
 endCorePass this_mod hsc_env unqual pass mcounts binds rules = do
   -- build and publish a report
   let report = ReportCore $ CoreReport
-         { coreReportModule  = this_mod
-         , coreReportPass    = pass
-         , coreReportProgram = binds
-         , coreReportStats   = coreBindsStats binds
-         , coreReportCounts  = mcounts
-         , coreReportRules   = rules
+         { coreReportModule           = this_mod
+         , coreReportPass             = pass
+         , coreReportProgram          = binds
+         , coreReportStats            = coreBindsStats binds
+         , coreReportCounts           = mcounts
+         , coreReportRules            = rules
+         , coreReportPrintUnqualified = unqual
          }
-  publishReport dflags report
+      dflags = hsc_dflags hsc_env
+  publishReport dflags dflags report
 
+
+defaultReport :: DynFlags -> Report -> IO ()
+defaultReport dflags (ReportCore cr) = do
   -- default dump behavior
   forM_ mb_flag $ \flag -> do
     Err.dumpSDoc dflags unqual flag
@@ -63,6 +70,11 @@ endCorePass this_mod hsc_env unqual pass mcounts binds rules = do
     when (verbosity dflags >= 2) -- TODO: replace explicit verbosity check
       $ logInfo dflags (defaultUserStyle dflags) size_doc
   where
+    unqual   = coreReportPrintUnqualified cr
+    pass     = coreReportPass cr
+    mcounts  = coreReportCounts cr
+    binds    = coreReportProgram cr
+    rules    = coreReportRules cr
     hdr      = ppr pass
     size_doc = text "Core size after" <+> hdr <+> equals
                <+> ppr (coreBindsStats binds)
@@ -74,7 +86,6 @@ endCorePass this_mod hsc_env unqual pass mcounts binds rules = do
     pp_rules = vcat [ blankLine
                     , text "------ Local rules for imported ids --------"
                     , pprRules rules ]
-    dflags  = hsc_dflags hsc_env
     mb_flag = case coreDumpFlag pass of
                 Just flag | dopt flag dflags                    -> Just flag
                           | dopt Opt_D_verbose_core2core dflags -> Just flag

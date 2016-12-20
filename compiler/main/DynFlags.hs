@@ -191,7 +191,7 @@ import Outputable
 import Foreign.C        ( CInt(..) )
 import System.IO.Unsafe ( unsafeDupablePerformIO )
 import {-# SOURCE #-} ErrUtils ( Severity(..), MsgDoc, mkLocMessageAnn )
-import {-# SOURCE #-} Report (Report)
+import {-# SOURCE #-} Report (Report, defaultReport)
 
 import System.IO.Unsafe ( unsafePerformIO )
 import Data.IORef
@@ -885,7 +885,7 @@ data DynFlags = DynFlags {
 
   -- | MsgDoc output action: use "ErrUtils" instead of this if you can
   log_action            :: LogAction,
-  publishReport         :: Report -> IO (),
+  publishReport         :: DynFlags -> Report -> IO (),
   flushOut              :: FlushOut,
   flushErr              :: FlushErr,
 
@@ -1731,7 +1731,7 @@ defaultDynFlags mySettings =
         ghciHistSize = 50, -- keep a log of length 50 by default
 
         log_action = defaultLogAction,
-        publishReport = const (return ()),
+        publishReport = defaultReport,
         flushOut = defaultFlushOut,
         flushErr = defaultFlushErr,
         pprUserLength = 5,
