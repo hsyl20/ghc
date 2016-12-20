@@ -46,7 +46,7 @@ endCorePass this_mod hsc_env unqual pass mcounts binds rules = do
          , coreReportCounts  = mcounts
          , coreReportRules   = rules
          }
- -- publishReport dflags report
+  publishReport dflags report
 
   -- default dump behavior
   forM_ mb_flag $ \flag -> do
