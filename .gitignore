@@ -8,6 +8,7 @@ Thumbs.db
 *#
 #*#
 *.bak
+*.swp
 *.BAK
 *.orig
 *.prof
