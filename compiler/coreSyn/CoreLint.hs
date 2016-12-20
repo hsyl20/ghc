@@ -14,9 +14,7 @@ module CoreLint (
     lintAnnots,
 
     -- ** Debug output
-    endPass, endPassIO,
-    dumpPassResult,
-    CoreLint.dumpIfSet,
+    endPass, endPassIO
  ) where
 
 #include "HsVersions.h"
@@ -24,7 +22,6 @@ module CoreLint (
 import CoreSyn
 import CoreFVs
 import CoreUtils
-import CoreStats   ( coreBindsStats )
 import CoreMonad
 import Bag
 import Literal
@@ -59,6 +56,7 @@ import UniqSupply
 import CoreArity ( typeArity )
 import Demand ( splitStrictSig, isBotRes )
 import Module
+import Report
 
 import HscTypes
 import DynFlags
@@ -167,101 +165,7 @@ different types, called bad coercions. Following coercions are forbidden:
   (e) If types are unboxed tuples then tuple (# A_1,..,A_n #) can be
       coerced to (# B_1,..,B_m #) if n=m and for each pair A_i, B_i rules
       (a-e) holds.
-
-************************************************************************
-*                                                                      *
-                 Beginning and ending passes
-*                                                                      *
-************************************************************************
-
-These functions are not CoreM monad stuff, but they probably ought to
-be, and it makes a convenient place for them. They print out
-stuff before and after core passes, and do Core Lint when necessary.
 -}
-
-endPass :: Module -> CoreToDo -> CoreProgram -> [CoreRule] -> CoreM ()
-endPass this_mod pass binds rules
-  = do { hsc_env <- getHscEnv
-       ; print_unqual <- getPrintUnqualified
-       ; liftIO $ endPassIO this_mod hsc_env print_unqual pass binds rules }
-
-endPassIO :: Module -> HscEnv -> PrintUnqualified
-          -> CoreToDo -> CoreProgram -> [CoreRule] -> IO ()
--- Used by the IO-is CorePrep too
-endPassIO this_mod hsc_env print_unqual pass binds rules
-  = do { dumpPassResult dflags print_unqual mb_flag
-                        (ppr pass) (pprPassStats pass) binds rules
-       ; lintPassResult this_mod hsc_env pass binds }
-  where
-    dflags  = hsc_dflags hsc_env
-    mb_flag = case coreDumpFlag pass of
-                Just flag | dopt flag dflags                    -> Just flag
-                          | dopt Opt_D_verbose_core2core dflags -> Just flag
-                _ -> Nothing
-
-dumpIfSet :: DynFlags -> Bool -> CoreToDo -> SDoc -> SDoc -> IO ()
-dumpIfSet dflags dump_me pass extra_info doc
-  = Err.dumpIfSet dflags dump_me (showSDoc dflags (ppr pass <+> brackets extra_info)) doc
-
-dumpPassResult :: DynFlags
-               -> PrintUnqualified
-               -> Maybe DumpFlag        -- Just df => show details in a file whose
-                                        --            name is specified by df
-               -> SDoc                  -- Header
-               -> Maybe SDoc            -- Statistics
-               -> CoreProgram -> [CoreRule]
-               -> IO ()
-dumpPassResult dflags unqual mb_flag hdr mstats binds rules
-  = do { forM_ mb_flag $ \flag -> do
-           Err.dumpSDoc dflags unqual flag
-               ("Core - " ++ (showSDoc dflags hdr)) dump_doc
-
-           forM_ mstats $ \stats ->
-              Err.dumpSDoc dflags unqual flag
-                  ("Statistics - " ++ (showSDoc dflags hdr)) stats
-
-         -- Report result size
-         -- This has the side effect of forcing the intermediate to be evaluated
-         -- if it's not already forced by a -ddump flag.
-       ; when (verbosity dflags >= 2) -- TODO: replace explicit verbosity check
-            $ logInfo dflags (defaultUserStyle dflags) size_doc
-       }
-
-  where
-    size_doc = text "Core size after" <+> hdr <+> equals
-               <+> ppr (coreBindsStats binds)
-
-    dump_doc  = vcat [ text "-- Global size:" <+> ppr (coreBindsStats binds)
-                     , blankLine
-                     , pprCoreBindingsWithSize binds
-                     , ppUnless (null rules) pp_rules ]
-    pp_rules = vcat [ blankLine
-                    , text "------ Local rules for imported ids --------"
-                    , pprRules rules ]
-
-coreDumpFlag :: CoreToDo -> Maybe DumpFlag
-coreDumpFlag (CoreDoSimplify {})      = Just Opt_D_verbose_core2core
-coreDumpFlag (CoreDoPluginPass {})    = Just Opt_D_verbose_core2core
-coreDumpFlag CoreDoFloatInwards       = Just Opt_D_verbose_core2core
-coreDumpFlag (CoreDoFloatOutwards {}) = Just Opt_D_verbose_core2core
-coreDumpFlag CoreLiberateCase         = Just Opt_D_verbose_core2core
-coreDumpFlag CoreDoStaticArgs         = Just Opt_D_verbose_core2core
-coreDumpFlag CoreDoCallArity          = Just Opt_D_dump_call_arity
-coreDumpFlag CoreDoStrictness         = Just Opt_D_dump_stranal
-coreDumpFlag CoreDoWorkerWrapper      = Just Opt_D_dump_worker_wrapper
-coreDumpFlag CoreDoSpecialising       = Just Opt_D_dump_spec
-coreDumpFlag CoreDoSpecConstr         = Just Opt_D_dump_spec
-coreDumpFlag CoreCSE                  = Just Opt_D_dump_cse
-coreDumpFlag CoreDoVectorisation      = Just Opt_D_dump_vect
-coreDumpFlag CoreDesugar              = Just Opt_D_dump_ds
-coreDumpFlag CoreDesugarOpt           = Just Opt_D_dump_ds
-coreDumpFlag CoreTidy                 = Just Opt_D_dump_simpl
-coreDumpFlag CorePrep                 = Just Opt_D_dump_prep
-
-coreDumpFlag CoreDoPrintCore          = Nothing
-coreDumpFlag (CoreDoRuleCheck {})     = Nothing
-coreDumpFlag CoreDoNothing            = Nothing
-coreDumpFlag (CoreDoPasses {})        = Nothing
 
 {-
 ************************************************************************
@@ -284,6 +188,20 @@ lintPassResult this_mod hsc_env pass binds
       displayLintResults dflags pass warns errs binds
   where
     dflags = hsc_dflags hsc_env
+
+endPass :: Module -> CoreToDo -> CoreProgram -> [CoreRule] -> CoreM ()
+endPass this_mod pass binds rules
+  = do { hsc_env <- getHscEnv
+       ; print_unqual <- getPrintUnqualified
+       ; liftIO $ endPassIO this_mod hsc_env print_unqual pass binds rules }
+
+endPassIO :: Module -> HscEnv -> PrintUnqualified
+             -> CoreToDo -> CoreProgram -> [CoreRule] -> IO ()
+endPassIO this_mod hsc_env print_unqual pass binds rules = do
+  -- dump pass info if necessary
+  endCorePassIO this_mod hsc_env print_unqual pass binds rules
+  -- perform a lint pass if necessary
+  lintPassResult this_mod hsc_env pass binds
 
 displayLintResults :: DynFlags -> CoreToDo
                    -> Bag Err.MsgDoc -> Bag Err.MsgDoc -> CoreProgram

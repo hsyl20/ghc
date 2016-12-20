@@ -12,7 +12,6 @@ module CoreMonad (
     CoreToDo(..), runWhen, runMaybe,
     SimplifierMode(..),
     FloatOutSwitches(..),
-    pprPassStats,
 
     -- * Plugins
     PluginPass, bindsOnlyPass,
@@ -162,12 +161,6 @@ instance Outputable CoreToDo where
   ppr (CoreDoRuleCheck {})     = text "Rule check"
   ppr CoreDoNothing            = text "DoNothing"
   ppr (CoreDoPasses passes)    = text "DoPasses" <+> ppr passes
-
-pprPassStats :: CoreToDo -> Maybe SDoc
-pprPassStats (CoreDoSimplify n md) =
-   Just $ vcat [ text "Max iterations:" <+> int n , ppr md ]
-
-pprPassStats _ = Nothing
 
 data SimplifierMode             -- See comments in SimplMonad
   = SimplMode

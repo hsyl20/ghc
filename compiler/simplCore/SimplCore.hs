@@ -21,8 +21,8 @@ import OccurAnal        ( occurAnalysePgm, occurAnalyseExpr )
 import IdInfo
 import CoreStats        ( coreBindsSize, coreBindsStats, exprSize )
 import CoreUtils        ( mkTicks, stripTicksTop )
-import CoreLint         ( endPass, lintPassResult, dumpPassResult,
-                          lintAnnots )
+import CoreLint         ( endPass, lintPassResult, lintAnnots )
+import Report           ( endSimplifierIteration )
 import Simplify         ( simplTopBinds, simplExpr, simplRules )
 import SimplUtils       ( simplEnvForGHCi, activeRule )
 import SimplEnv
@@ -749,7 +749,8 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
            let { binds2 = {-# SCC "ZapInd" #-} shortOutIndirections binds1 } ;
 
                 -- Dump the result of this iteration
-           dump_end_iteration dflags print_unqual iteration_no counts1 binds2 rules1 ;
+           endSimplifierIteration this_mod hsc_env print_unqual pass
+             counts1 binds2 rules1 ;
            lintPassResult this_mod hsc_env pass binds2 ;
 
                 -- Loop
@@ -765,19 +766,6 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
                          (zeroSimplCount dflags)
 
 simplifyPgmIO _ _ _ _ _ = panic "simplifyPgmIO"
-
--------------------
-dump_end_iteration :: DynFlags -> PrintUnqualified -> Int
-                   -> SimplCount -> CoreProgram -> [CoreRule] -> IO ()
-dump_end_iteration dflags print_unqual iteration_no counts binds rules
-  = dumpPassResult dflags print_unqual mb_flag hdr pp_counts binds rules
-  where
-    mb_flag | dopt Opt_D_dump_simpl_iterations dflags = Just Opt_D_dump_simpl_iterations
-            | otherwise                               = Nothing
-            -- Show details if Opt_D_dump_simpl_iterations is on
-
-    hdr = text "Simplifier iteration=" <> int iteration_no
-    pp_counts = Just (pprSimplCount counts)
 
 {-
 ************************************************************************
