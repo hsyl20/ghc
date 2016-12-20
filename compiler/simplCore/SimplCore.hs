@@ -22,7 +22,7 @@ import IdInfo
 import CoreStats        ( coreBindsSize, coreBindsStats, exprSize )
 import CoreUtils        ( mkTicks, stripTicksTop )
 import CoreLint         ( endPass, lintPassResult, lintAnnots )
-import Report           ( endSimplifierIteration )
+import Report           ( endCorePass )
 import Simplify         ( simplTopBinds, simplExpr, simplRules )
 import SimplUtils       ( simplEnvForGHCi, activeRule )
 import SimplEnv
@@ -749,8 +749,8 @@ simplifyPgmIO pass@(CoreDoSimplify max_iterations mode)
            let { binds2 = {-# SCC "ZapInd" #-} shortOutIndirections binds1 } ;
 
                 -- Dump the result of this iteration
-           endSimplifierIteration this_mod hsc_env print_unqual pass
-             counts1 binds2 rules1 ;
+           endCorePass this_mod hsc_env print_unqual pass
+             (Just counts1) binds2 rules1 ;
            lintPassResult this_mod hsc_env pass binds2 ;
 
                 -- Loop

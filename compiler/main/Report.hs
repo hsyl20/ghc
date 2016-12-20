@@ -1,14 +1,13 @@
 module Report
-   ( IR (..)
+   ( Report (..)
    -- ** Core
-   , reportCore
-   , endCorePassIO
-   , endSimplifierIteration
+   , CoreReport (..)
+   , endCorePass
    )
 where
 
-import CoreSyn as Core
-import PprCore as Core
+import CoreSyn   as Core
+import PprCore   as Core
 import CoreMonad as Core
 import CoreStats as Core
 
@@ -20,41 +19,43 @@ import Module
 
 import Control.Monad
 
-data IR
-   = IRCore Core.CoreProgram
+data Report
+   = ReportCore CoreReport
 
 
-reportCore :: DynFlags -> Module -> Core.CoreProgram -> IO ()
-reportCore dflags modl core = reportIR dflags modl (IRCore core)
+-- | Report on a Core program
+data CoreReport = CoreReport
+   { coreReportModule  :: Module           -- ^ Module
+   , coreReportPass    :: CoreToDo         -- ^ Pass
+   , coreReportProgram :: CoreProgram      -- ^ Core program (TODO:input/output)
+   , coreReportStats   :: CoreStats        -- ^ Core statistics
+   , coreReportCounts  :: Maybe SimplCount -- ^ Pass statistics
+   , coreReportRules   :: [CoreRule]       -- ^ Rules
+   -- TODO: transformation details (with src spans)
+   }
 
-reportIR :: DynFlags -> Module -> IR -> IO ()
-reportIR dflags _modl ir = case ir of
-   IRCore core -> logDump dflags (pprCoreBindingsWithSize core)
+endCorePass :: Module -> HscEnv -> PrintUnqualified
+          -> CoreToDo -> Maybe SimplCount -> CoreProgram -> [CoreRule] -> IO ()
+endCorePass this_mod hsc_env unqual pass mcounts binds rules = do
+  -- build and publish a report
+  let report = ReportCore $ CoreReport
+         { coreReportModule  = this_mod
+         , coreReportPass    = pass
+         , coreReportProgram = binds
+         , coreReportStats   = coreBindsStats binds
+         , coreReportCounts  = mcounts
+         , coreReportRules   = rules
+         }
+ -- publishReport dflags report
 
-
-endSimplifierIteration :: Module -> HscEnv -> PrintUnqualified -> CoreToDo
-                   -> SimplCount -> CoreProgram -> [CoreRule] -> IO ()
-endSimplifierIteration this_mod hsc_env unqual pass counts binds rules
-  = endCorePassIO' this_mod hsc_env unqual pass pp_counts binds rules
-  where
-    pp_counts = Just (pprSimplCount counts)
-
-endCorePassIO :: Module -> HscEnv -> PrintUnqualified
-          -> CoreToDo -> CoreProgram -> [CoreRule] -> IO ()
-endCorePassIO this_mod hsc_env unqual pass binds rules = do
-   endCorePassIO' this_mod hsc_env unqual pass (pprPassStats pass) binds rules
-
-
-endCorePassIO' :: Module -> HscEnv -> PrintUnqualified
-          -> CoreToDo -> Maybe SDoc -> CoreProgram -> [CoreRule] -> IO ()
-endCorePassIO' _this_mod hsc_env unqual pass mstats binds rules = do
+  -- default dump behavior
   forM_ mb_flag $ \flag -> do
     Err.dumpSDoc dflags unqual flag
         ("Core - " ++ (showSDoc dflags hdr)) dump_doc
 
-    forM_ mstats $ \stats ->
+    forM_ mcounts $ \counts ->
       Err.dumpSDoc dflags unqual flag
-        ("Statistics - " ++ (showSDoc dflags hdr)) stats
+        ("Statistics - " ++ (showSDoc dflags hdr)) (pprSimplCount counts)
 
     -- Report result size
     -- This has the side effect of forcing the intermediate to be evaluated
@@ -78,12 +79,6 @@ endCorePassIO' _this_mod hsc_env unqual pass mstats binds rules = do
                 Just flag | dopt flag dflags                    -> Just flag
                           | dopt Opt_D_verbose_core2core dflags -> Just flag
                 _ -> Nothing
-
-pprPassStats :: CoreToDo -> Maybe SDoc
-pprPassStats (CoreDoSimplify n md) =
-   Just $ vcat [ text "Max iterations:" <+> int n , ppr md ]
-
-pprPassStats _ = Nothing
 
 coreDumpFlag :: CoreToDo -> Maybe DumpFlag
 coreDumpFlag (CoreDoSimplify {})      = Just Opt_D_dump_simpl_iterations

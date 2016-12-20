@@ -199,7 +199,7 @@ endPassIO :: Module -> HscEnv -> PrintUnqualified
              -> CoreToDo -> CoreProgram -> [CoreRule] -> IO ()
 endPassIO this_mod hsc_env print_unqual pass binds rules = do
   -- dump pass info if necessary
-  endCorePassIO this_mod hsc_env print_unqual pass binds rules
+  endCorePass this_mod hsc_env print_unqual pass Nothing binds rules
   -- perform a lint pass if necessary
   lintPassResult this_mod hsc_env pass binds
 
