@@ -135,7 +135,7 @@ that e.g. literalType can return the right Type for them.
 
 They only get converted into real Core,
     mkInteger [c1, c2, .., cn]
-during the CorePrep phase, although TidyPgm looks ahead at what the
+during the CorePrep phase, although GHC.Interface.Tidy looks ahead at what the
 core will be, so that it can see whether it involves CAFs.
 
 When we initally build an Integer literal, notably when

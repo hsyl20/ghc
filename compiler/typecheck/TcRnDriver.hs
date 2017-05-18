@@ -52,7 +52,7 @@ import RnExpr
 import RnUtils ( HsDocContext(..) )
 import RnFixity ( lookupFixityRn )
 import MkId
-import TidyPgm    ( globaliseAndTidyId )
+import GHC.Interface.Tidy    ( globaliseAndTidyId )
 import TysWiredIn ( unitTy, mkListTy )
 #if defined(GHCI)
 import DynamicLoading ( loadPlugins )

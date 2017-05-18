@@ -3361,7 +3361,7 @@ simplLetUnfolding env top_lvl cont_mb id new_rhs unf
        ; return (mkUnfolding dflags InlineRhs is_top_lvl is_bottoming new_rhs) }
             -- We make an  unfolding *even for loop-breakers*.
             -- Reason: (a) It might be useful to know that they are WHNF
-            --         (b) In TidyPgm we currently assume that, if we want to
+            --         (b) In GHC.Interface.Tidy we currently assume that, if we want to
             --             expose the unfolding then indeed we *have* an unfolding
             --             to expose.  (We could instead use the RHS, but currently
             --             we don't.)  The simple thing is always to have one.

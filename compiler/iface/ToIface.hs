@@ -425,7 +425,7 @@ toIfUnfolding lb (CoreUnfolding { uf_tmpl = rhs
         InlineCompulsory -> IfCompulsory if_rhs
         InlineRhs        -> IfCoreUnfold False if_rhs
         -- Yes, even if guidance is UnfNever, expose the unfolding
-        -- If we didn't want to expose the unfolding, TidyPgm would
+        -- If we didn't want to expose the unfolding, GHC.Interface.Tidy would
         -- have stuck in NoUnfolding.  For supercompilation we want
         -- to see that unfolding!
   where

@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP, ViewPatterns #-}
 
-module TidyPgm (
+module GHC.Interface.Tidy (
        mkBootModDetailsTc, tidyProgram, globaliseAndTidyId
    ) where
 
@@ -89,7 +89,7 @@ of TyThings.
 
 ************************************************************************
 *                                                                      *
-                Plan A: simpleTidyPgm
+                Plan A: simpleGHC.Interface.Tidy
 *                                                                      *
 ************************************************************************
 
@@ -583,7 +583,7 @@ It's much safer just to inject them right at the end, after tidying.
 
 Oh: two other reasons for injecting them late:
 
-  - If implicit Ids are already in the bindings when we start TidyPgm,
+  - If implicit Ids are already in the bindings when we start GHC.Interface.Tidy,
     we'd have to be careful not to treat them as external Ids (in
     the sense of chooseExternalIds); else the Ids mentioned in *their*
     RHSs will be treated as external and you get an interface file
@@ -1329,7 +1329,7 @@ CAF list to keep track of non-collectable CAFs.
 Note [Disgusting computation of CafRefs]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We compute hasCafRefs here, because IdInfo is supposed to be finalised
-after TidyPgm.  But CorePrep does some transformations that affect CAF-hood.
+after GHC.Interface.Tidy.  But CorePrep does some transformations that affect CAF-hood.
 So we have to *predict* the result here, which is revolting.
 
 In particular CorePrep expands Integer literals.  So in the prediction code

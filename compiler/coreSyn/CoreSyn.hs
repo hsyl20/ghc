@@ -1189,7 +1189,7 @@ data CoreRule
         ru_auto :: Bool,   -- ^ @True@  <=> this rule is auto-generated
                            --               (notably by Specialise or SpecConstr)
                            --   @False@ <=> generated at the user's behest
-                           -- See Note [Trimming auto-rules] in TidyPgm
+                           -- See Note [Trimming auto-rules] in GHC.Interface.Tidy
                            -- for the sole purpose of this field.
 
         ru_origin :: !Module,   -- ^ 'Module' the rule was defined in, used

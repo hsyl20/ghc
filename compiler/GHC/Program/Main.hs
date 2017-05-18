@@ -116,7 +116,7 @@ import PrelInfo
 import MkIface
 import Desugar
 import SimplCore
-import TidyPgm
+import GHC.Interface.Tidy
 import CorePrep
 import CoreToStg        ( coreToStg )
 import qualified StgCmm ( codeGen )
@@ -131,7 +131,7 @@ import CmmParse         ( parseCmmFile )
 import CmmBuildInfoTables
 import CmmPipeline
 import CmmInfo
-import CodeOutput
+import GHC.CodeGen.CodeOutput
 import InstEnv
 import FamInstEnv
 import Fingerprint      ( Fingerprint )
@@ -1594,7 +1594,7 @@ hscDeclsWithLocation hsc_env0 str source linenumber =
                        , isExternalName (idName id)
                        , not (isDFunId id || isImplicitId id) ]
             -- We only need to keep around the external bindings
-            -- (as decided by TidyPgm), since those are the only ones
+            -- (as decided by GHC.Interface.Tidy), since those are the only ones
             -- that might later be looked up by name.  But we can exclude
             --    - DFunIds, which are in 'cls_insts' (see Note [ic_tythings] in GHC.Types
             --    - Implicit Ids, which are implicit in tcs

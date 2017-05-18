@@ -331,7 +331,7 @@ Library
         FlagChecker
         GHC.Types.Annotations
         GHC.Program.CmdLineParser
-        CodeOutput
+        GHC.CodeGen.CodeOutput
         Config
         GHC.Config.Constants
         GHC.Program.MakeDepend
@@ -361,7 +361,7 @@ Library
         SysTools
         SysTools.Terminal
         Elf
-        TidyPgm
+        GHC.Interface.Tidy
         Ctype
         HaddockUtils
         Lexer

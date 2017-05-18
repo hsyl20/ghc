@@ -4,7 +4,7 @@
 
 
 This module contains "tidying" code for *nested* expressions, bindings, rules.
-The code for *top-level* bindings is in TidyPgm.
+The code for *top-level* bindings is in GHC.Interface.Tidy.
 -}
 
 {-# LANGUAGE CPP #-}

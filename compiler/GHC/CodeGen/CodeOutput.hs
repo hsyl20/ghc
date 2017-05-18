@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module CodeOutput( codeOutput, outputForeignStubs ) where
+module GHC.CodeGen.CodeOutput( codeOutput, outputForeignStubs ) where
 
 #include "HsVersions.h"
 

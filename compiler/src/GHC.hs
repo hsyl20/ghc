@@ -310,7 +310,7 @@ import InstEnv
 import FamInstEnv ( FamInst )
 import SrcLoc
 import CoreSyn
-import TidyPgm
+import GHC.Interface.Tidy
 import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
 import GHC.Finder
 import GHC.Types

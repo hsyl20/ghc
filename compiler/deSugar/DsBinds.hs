@@ -370,7 +370,7 @@ dsHsBind _ (PatSynBind{}) = panic "dsHsBind: PatSynBind"
 --
 -- Other decisions about whether to inline are made in
 -- `calcUnfoldingGuidance` but the decision about whether to then expose
--- the unfolding in the interface file is made in `TidyPgm.addExternal`
+-- the unfolding in the interface file is made in `GHC.Interface.Tidy.addExternal`
 -- using this information.
 ------------------------
 makeCorePair :: DynFlags -> Id -> Bool -> Arity -> CoreExpr -> (Id, CoreExpr)

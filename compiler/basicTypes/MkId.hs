@@ -521,7 +521,7 @@ mkDataConRep dflags fam_envs wrap_name mb_bangs data_con
                          `setInlinePragInfo`    wrap_prag
                          `setUnfoldingInfo`     wrap_unf
                          `setStrictnessInfo`    wrap_sig
-                             -- We need to get the CAF info right here because TidyPgm
+                             -- We need to get the CAF info right here because GHC.Interface.Tidy
                              -- does not tidy the IdInfo of implicit bindings (like the wrapper)
                              -- so it not make sure that the CAF info is sane
                          `setNeverLevPoly`      wrap_ty
