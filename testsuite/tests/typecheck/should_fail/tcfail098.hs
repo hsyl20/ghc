@@ -6,7 +6,8 @@ module ShouldFail where
 -- is ambiguous, but we have UndecidableInstances on, so
 -- it could conceivably be ok (we'd need OverlappingInstances
 -- too in this case).  So we allow it.
--- See Note [The ambiguity check for type signatures] in TcMType
+-- See Note [The ambiguity check for type signatures] in
+-- GHC.Haskell.TypeCheck.MutableType
 
 class Bar a
 instance Bar a => Bar Bool

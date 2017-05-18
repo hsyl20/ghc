@@ -1,7 +1,8 @@
 {-# OPTIONS_GHC -XDeriveDataTypeable #-}
 
 -- Trac #1935
--- See Note [Superclasses of derived instance] in TcDeriv
+-- See Note [Superclasses of derived instance] in
+-- GHC.Haskell.TypeCheck.Deriving
 
 {-# OPTIONS -fno-warn-redundant-constraints #-}
 
@@ -19,6 +20,3 @@ module Foo where
  data S a = S
  instance Eq (S a)
  instance Ord (S a)
-
-
- 

@@ -1,17 +1,17 @@
 module Main where
 
 import System.IO
-import DynFlags
+import GHC.Config.Flags
 import GHC
-import Exception
-import Module
-import FastString
-import MonadUtils
-import Outputable
-import Bag (filterBag,isEmptyBag)
+import GHC.Utils.Exception
+import GHC.Types.Module
+import GHC.Data.FastString
+import GHC.Utils.Monad
+import GHC.Utils.Outputable
+import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )
-import PrelNames
+import GHC.Builtin.Names
 
 main :: IO()
 main

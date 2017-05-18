@@ -1,27 +1,27 @@
 {-# LANGUAGE TupleSections #-}
-import CoreSyn
-import CoreUtils
-import Id
-import Type
-import MkCore
-import CallArity (callArityRHS)
-import MkId
-import SysTools
-import DynFlags
-import ErrUtils
-import Outputable
-import TysWiredIn
-import Literal
+import GHC.Core.Syntax
+import GHC.Core.Utils
+import GHC.Types.Id
+import GHC.Types.Type
+import GHC.Core.Syntax.Make
+import GHC.Core.CallArity (callArityRHS)
+import GHC.Types.Id.Make
+import GHC.Utils.SysTools
+import GHC.Config.Flags
+import GHC.Utils.Error
+import GHC.Utils.Outputable
+import GHC.Builtin.Types
+import GHC.Types.Literal
 import GHC
 import Control.Monad
 import Control.Monad.IO.Class
 import System.Environment( getArgs )
-import VarSet
-import PprCore
-import Unique
-import UniqSet
-import CoreLint
-import FastString
+import GHC.Types.Var.Set
+import GHC.Core.Printer
+import GHC.Types.Unique
+import GHC.Data.UniqueSet
+import GHC.Core.Lint
+import GHC.Data.FastString
 
 -- Build IDs. use mkTemplateLocal, more predictable than proper uniques
 go, go2, x, d, n, y, z, scrutf, scruta :: Id

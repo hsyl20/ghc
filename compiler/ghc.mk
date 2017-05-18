@@ -14,7 +14,7 @@
 # Create compiler configuration
 #
 # The 'echo' commands simply spit the values of various make variables
-# into Config.hs, whence they can be compiled and used by GHC itself
+# into GHC/Config/Build.hs, whence they can be compiled and used by GHC itself
 
 # This is just to avoid generating a warning when generating deps
 # involving RtsFlags.h
@@ -22,7 +22,7 @@ compiler_stage1_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 compiler_stage2_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 compiler_stage3_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 
-compiler_stage1_C_FILES_NODEPS = compiler/parser/cutils.c
+compiler_stage1_C_FILES_NODEPS = compiler/cbits/cutils.c
 
 # This package doesn't pass the Cabal checks because include-dirs
 # points outside the source directory. This isn't a real problem, so
@@ -30,26 +30,26 @@ compiler_stage1_C_FILES_NODEPS = compiler/parser/cutils.c
 compiler_NO_CHECK = YES
 
 ifneq "$(BINDIST)" "YES"
-compiler/stage1/package-data.mk : compiler/stage1/build/Config.hs
-compiler/stage2/package-data.mk : compiler/stage2/build/Config.hs
-compiler/stage3/package-data.mk : compiler/stage3/build/Config.hs
+compiler/stage1/package-data.mk : compiler/stage1/build/GHC/Config/Build.hs
+compiler/stage2/package-data.mk : compiler/stage2/build/GHC/Config/Build.hs
+compiler/stage3/package-data.mk : compiler/stage3/build/GHC/Config/Build.hs
 
-compiler/stage1/build/PlatformConstants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
-compiler/stage2/build/PlatformConstants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
-compiler/stage3/build/PlatformConstants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
-compiler/stage1/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
-compiler/stage2/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
-compiler/stage3/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
-compiler/stage1/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
-compiler/stage2/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
-compiler/stage3/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
+compiler/stage1/build/GHC/Config/HostPlatform.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
+compiler/stage2/build/GHC/Config/HostPlatform.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
+compiler/stage3/build/GHC/Config/HostPlatform.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
+compiler/stage1/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
+compiler/stage2/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
+compiler/stage3/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
+compiler/stage1/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
+compiler/stage2/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
+compiler/stage3/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
 endif
 
-compiler/stage%/build/Config.hs : mk/config.mk mk/project.mk | $$(dir $$@)/.
+compiler/stage%/build/GHC/Config/Build.hs : mk/config.mk mk/project.mk | $$(dir $$@)/.
 	$(call removeFiles,$@)
 	@echo 'Creating $@ ... '
 	@echo '{-# LANGUAGE CPP #-}'                                        >> $@
-	@echo 'module Config where'                                         >> $@
+	@echo 'module GHC.Config.Build where'                               >> $@
 	@echo                                                               >> $@
 	@echo '#include "ghc_boot_platform.h"'                              >> $@
 	@echo                                                               >> $@
@@ -235,8 +235,8 @@ compiler/stage3/$(PLATFORM_H) : compiler/stage2/$(PLATFORM_H)
 	"$(CP)" $< $@
 
 # ----------------------------------------------------------------------------
-#		Generate supporting stuff for prelude/PrimOp.hs
-#		from prelude/primops.txt
+#		Generate supporting stuff for GHC.Builtin.Primitive.Operations
+#		from GHC/Builtin/Primitive/primops.txt
 
 PRIMOP_BITS_NAMES = primop-data-decl.hs-incl        \
                     primop-tag.hs-incl              \
@@ -268,7 +268,7 @@ compiler_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 
 define preprocessCompilerFiles
 # $0 = stage
-compiler/stage$1/build/primops.txt: compiler/prelude/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
+compiler/stage$1/build/primops.txt: compiler/GHC/Builtin/Primitive/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
 	$$(HS_CPP) -P $$(compiler_CPP_OPTS) -Icompiler/stage$1 -x c $$< | grep -v '^#pragma GCC' > $$@
 
 compiler/stage$1/build/primop-data-decl.hs-incl: compiler/stage$1/build/primops.txt $$$$(genprimopcode_INPLACE)
@@ -376,9 +376,9 @@ endif
 # register allocator running out of stack slots when compiling this
 # module with -fPIC -dynamic.
 # See #8182 for all the details
-compiler/stage1/build/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
-compiler/stage2/build/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
-compiler/stage3/build/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
+compiler/stage1/build/GHC/IR/Haskell/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
+compiler/stage2/build/GHC/IR/Haskell/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
+compiler/stage3/build/GHC/IR/Haskell/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
 
 ifeq "$(GhcProfiled)" "YES"
 # If we're profiling GHC then we want SCCs.  However, adding -auto-all
@@ -387,9 +387,9 @@ ifeq "$(GhcProfiled)" "YES"
 # parts of the compiler of interest, and then add further cost centres
 # as necessary.  Turn on -fprof-auto for individual modules like this:
 
-# compiler/main/DriverPipeline_HC_OPTS += -fprof-auto
-compiler/main/GhcMake_HC_OPTS        += -fprof-auto
-compiler/main/GHC_HC_OPTS            += -fprof-auto
+# compiler/GHC/Program/Driver/Pipeline_HC_OPTS += -fprof-auto
+compiler/GHC/Program/Make_HC_OPTS        	+= -fprof-auto
+compiler/GHC_HC_OPTS            		+= -fprof-auto
 
 # or alternatively add {-# OPTIONS_GHC -fprof-auto #-} to the top of
 # modules you're interested in.
@@ -431,141 +431,141 @@ compiler_stage3_SplitSections = NO
 # There are too many symbols in the ghc package for a Windows DLL
 # (due to a limitation of bfd ld, see Trac #5987). We therefore need to split
 # some of the modules off into a separate DLL. This clump are the modules
-# reachable from DynFlags:
-compiler_stage2_dll0_START_MODULE = DynFlags
+# reachable from GHC.Config.Flags:
+compiler_stage2_dll0_START_MODULE = GHC.Config.Flags
 compiler_stage2_dll0_MODULES = \
-	Annotations \
-	ApiAnnotation \
-	Avail \
-	Bag \
-	BasicTypes \
-	Binary \
-	BinFingerprint \
-	BooleanFormula \
-	BufWrite \
-	ByteCodeTypes \
-	Class \
-	CmdLineParser \
-	CmmType \
-	CoAxiom \
-	ConLike \
-	Coercion \
-	Config \
-	Constants \
-	CoreArity \
-	CoreFVs \
-	CoreSubst \
-	CoreOpt \
-	CoreSyn \
-	CoreTidy \
-	CoreUnfold \
-	CoreUtils \
-	CoreSeq \
-	CoreStats \
-	CostCentre \
-	DataCon \
-	Demand \
-	Digraph \
-	DriverPhases \
-	DynFlags \
-	Encoding \
-	EnumSet \
-	ErrUtils \
-	Exception \
-	FamInstEnv \
-	FastFunctions \
-	FastMutInt \
-	FastString \
-	FastStringEnv \
-	FieldLabel \
-	FileCleanup \
-	Fingerprint \
-	FiniteMap \
-	ForeignCall \
-	FV \
-	Hooks \
-	HsBinds \
-	HsDecls \
-	HsDoc \
-	HsExpr \
-	HsImpExp \
-	HsLit \
-	PlaceHolder \
-	HsExtension \
-	PmExpr \
-	HsPat \
-	HsSyn \
-	HsTypes \
-	HsUtils \
-	HscTypes \
-	IOEnv \
-	NameCache \
-	Id \
-	IdInfo \
-	IfaceSyn \
-	IfaceType \
-	InteractiveEvalTypes \
-	Json \
-	ToIface \
-	InstEnv \
-	Kind \
-	KnownUniques \
-	Lexeme \
-	ListSetOps \
-	Literal \
-	Maybes \
-	MkCore \
-	MkId \
-	Module \
-	MonadUtils \
-	Name \
-	NameEnv \
-	NameSet \
-	OccName \
-	OccurAnal \
-	OptCoercion \
-	OrdList \
-	Outputable \
-	PackageConfig \
-	Packages \
-	Pair \
-	Panic \
-	PatSyn \
-	PipelineMonad \
-	Platform \
-	PlatformConstants \
-	PprColour \
-	PprCore \
-	PrelNames \
-	PrelRules \
-	Pretty \
-	PrimOp \
-	RepType \
-	RdrName \
-	Rules \
-	SrcLoc \
-	StringBuffer \
-	SysTools.Terminal \
-	TcEvidence \
-	TcRnTypes \
-	TcType \
-	TrieMap \
-	TyCon \
-	Type \
-	TyCoRep \
-	TysPrim \
-	TysWiredIn \
-	Unify \
-	UniqDFM \
-	UniqDSet \
-	UniqFM \
-	UniqSet \
-	UniqSupply \
-	Unique \
-	Util \
-	Var \
-	VarEnv \
-	VarSet
+	GHC.Types.Annotation \
+	GHC.Haskell.Syntax.Annotation \
+	GHC.Types.Available \
+	GHC.Data.Bag \
+	GHC.Types.BasicTypes \
+	GHC.Utils.Binary \
+	GHC.Utils.Binary.Fingerprint \
+	GHC.Data.BoolFormula \
+	GHC.Utils.Handle.BufferedWrite \
+	GHC.ByteCode.Types \
+	GHC.Types.Class \
+	GHC.Driver.CmdLineParser \
+	GHC.Cmm.Syntax.Type \
+	GHC.Types.Coercion.Axiom \
+	GHC.Types.ConLike \
+	GHC.Types.Coercion \
+	GHC.Config.Build \
+	GHC.Config.Constants \
+	GHC.Core.Arity \
+	GHC.Core.FreeVars \
+	GHC.Core.Substitution \
+	GHC.Core.SimpleOpt\
+	GHC.Core.Syntax \
+	GHC.Core.Tidy \
+	GHC.Core.Inliner \
+	GHC.Core.Utils \
+	GHC.Core.Syntax.Force \
+	GHC.Core.Stats \
+	GHC.Types.CostCentre \
+	GHC.Types.DataCon \
+	GHC.Types.Demand \
+	GHC.Data.Graph.Directed \
+	GHC.Driver.Phases \
+	GHC.Config.Flags \
+	GHC.Data.Char.Encoding \
+	GHC.Data.EnumSet \
+	GHC.Utils.Error \
+	GHC.Utils.Exception \
+	GHC.Types.FamilyInstance \
+	GHC.Utils.IO.Unsafe \
+	GHC.Data.FastMutableInt \
+	GHC.Data.FastString \
+	GHC.Data.FastString.Environment \
+	GHC.Types.FieldLabel \
+	GHC.Utils.FileCleanup \
+	GHC.Utils.Fingerprint \
+	GHC.Data.FiniteMap \
+	GHC.Types.ForeignCall \
+	GHC.Types.Var.Free \
+	GHC.Config.Hooks \
+	GHC.Haskell.Syntax.Binding \
+	GHC.Haskell.Syntax.Declaration \
+	GHC.Haskell.Syntax.Documentation \
+	GHC.Haskell.Syntax.Expression \
+	GHC.Haskell.Syntax.ImportExport \
+	GHC.Haskell.Syntax.Literal \
+	GHC.Haskell.Syntax.PlaceHolder \
+	GHC.Haskell.Syntax.Extension \
+	GHC.Compiler.HaskellToCore.Match.Expression \
+	GHC.Haskell.Syntax.Pattern \
+	GHC.Haskell.Syntax\
+	GHC.Haskell.Syntax.Type \
+	GHC.Haskell.Utils \
+	GHC.Types.Base \
+	GHC.Utils.Monad.IOEnv \
+	GHC.Types.Name.Cache \
+	GHC.Types.Id \
+	GHC.Types.Id.Info \
+	GHC.Interface.Syntax \
+	GHC.Interface.Types \
+	GHC.Interactive.Types \
+	GHC.Utils.Json \
+	GHC.Compiler.CoreToInterface \
+	GHC.Types.Instance \
+	GHC.Types.Kind \
+	GHC.Builtin.Uniques \
+	GHC.Utils.Lexeme \
+	GHC.Data.List.SetOps \
+	GHC.Types.Literal \
+	GHC.Data.Maybe \
+	GHC.Core.Syntax.Make \
+	GHC.Types.Id.Make \
+	GHC.Types.Module \
+	GHC.Utils.Monad \
+	GHC.Types.Name \
+	GHC.Types.Name.Environment \
+	GHC.Types.Name.Set \
+	GHC.Types.OccName \
+	GHC.Core.Occurence \
+	GHC.Types.Coercion.Optimise \
+	GHC.Data.OrdList \
+	GHC.Utils.Outputable \
+	GHC.Packages.PackageConfig \
+	GHC.Packages \
+	GHC.Data.Pair \
+	GHC.Utils.Panic \
+	GHC.Types.PatternSynonym \
+	GHC.Driver.Pipeline.Monad \
+	GHC.Utils.Platform \
+	GHC.Config.HostPlatform \
+	GHC.Utils.PrettyPrint.Colour \
+	GHC.Core.Printer \
+	GHC.Builtin.Names \
+	GHC.Core.ConstantFold \
+	GHC.Utils.PrettyPrint \
+	GHC.Builtin.Primitive.Operations \
+	GHC.Types.RepType \
+	GHC.Types.RdrName \
+	GHC.Core.Rules \
+	GHC.Types.SrcLoc \
+	GHC.Data.StringBuffer \
+	GHC.Utils.SysTools.Terminal \
+	GHC.Haskell.TypeCheck.Evidence \
+	GHC.Haskell.TypeCheck.Types \
+	GHC.Haskell.TypeCheck.Type \
+	GHC.Data.TrieMap \
+	GHC.Types.TyCon \
+	GHC.Types.Type \
+	GHC.Types.TypeAndCoercion \
+	GHC.Builtin.Primitive.Types \
+	GHC.Builtin.Types \
+	GHC.Types.Type.Unify \
+	GHC.Data.UniqueDFM \
+	GHC.Data.UniqueDSet \
+	GHC.Data.UniqueFM \
+	GHC.Data.UniqueSet \
+	GHC.Data.UniqueSupply \
+	GHC.Types.Unique \
+	GHC.Utils \
+	GHC.Types.Var \
+	GHC.Types.Var.Environment \
+	GHC.Types.Var.Set
 
 ifeq "$(GhcWithInterpreter)" "YES"
 # These files are reacheable from DynFlags
@@ -659,10 +659,10 @@ $(foreach way,$(compiler_stage3_WAYS),\
 
 # GHC itself doesn't know about the above dependencies, so we have to
 # switch off the recompilation checker for that module:
-compiler/prelude/PrimOp_HC_OPTS  += -fforce-recomp
+compiler/GHC/Builtin/Primitive/Operations_HC_OPTS  += -fforce-recomp
 
 ifeq "$(DYNAMIC_GHC_PROGRAMS)" "YES"
-compiler/utils/Util_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS
+compiler/GHC/Utils_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS
 endif
 
 endif

@@ -1,6 +1,6 @@
 module Main (main) where
 
-import DynFlags
+import GHC.Config.Flags
 import Control.Monad (forM_)
 import Types hiding (flag)
 import Table

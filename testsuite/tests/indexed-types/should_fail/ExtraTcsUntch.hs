@@ -27,10 +27,11 @@ f x =
     in (g1 '3', g2 undefined)
 
 
-{- This example comes from Note [Extra TcS Untouchables] in TcSimplify. It demonstrates
-   why when floating equalities out of an implication constraint we must record the free
-   variables of the equalities as untouchables. With GHC 7.4.1 this program gives a Core
-   Lint error because of an existential escaping.
+{- This example comes from Note [Extra TcS Untouchables] in
+   GHC.Haskell.TypeCheck.Constraint.Simplify. It demonstrates
+   why when floating equalities out of an implication constraint we must record
+   the free variables of the equalities as untouchables. With GHC 7.4.1 this
+   program gives a Core Lint error because of an existential escaping.
 
     assuming x:beta
 

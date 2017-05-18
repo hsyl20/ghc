@@ -1,6 +1,6 @@
 {-# OPTIONS -fno-warn-redundant-constraints #-}
 
--- !!! This is the example given in TcDeriv
+-- !!! This is the example given in GHC.Haskell.TypeCheck.Deriving
 --
 module ShouldSucceed where
 

@@ -1,6 +1,6 @@
--- We import Pretty from package ghc
+-- We import GHC.Utils.PrettyPrint from package ghc
 module T7995 where
-import Pretty
+import GHC.Utils.PrettyPrint
 
 
 foo = text "test"

@@ -1,11 +1,11 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 import Data.List
-import SrcLoc
+import GHC.Types.SrcLoc
 import GHC hiding (moduleName)
-import HsDumpAst
-import DynFlags
-import Outputable hiding (space)
+import GHC.Haskell.Printer.Dump
+import GHC.Config.Flags
+import GHC.Utils.Outputable hiding (space)
 import System.Environment( getArgs )
 import System.Exit
 import System.FilePath

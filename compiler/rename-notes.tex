@@ -1,0 +1,18 @@
+\documentstyle{report}
+\input{lit-style}
+
+\begin{document}
+\centerline{{\Large{rename}}}
+\tableofcontents
+
+\input{Rename}    % {Renaming and dependency analysis passes}
+\input{GHC.IR.Haskell.Renamer.Main}  % {Main pass of renamer}
+\input{RnMonad}   % {The monad used by the renamer}
+\input{GHC.IR.Haskell.Renamer.Environment}     % {Environment manipulation for the renamer monad}
+\input{RnHsSyn}   % {Specialisations of the @GHC.IR.Haskell@ syntax for the renamer}
+\input{GHC.IR.Haskell.Renamer.ImportExport}   % {Extracting imported and top-level names in scope}
+\input{GHC.IR.Haskell.Renamer.Expression}    % {Renaming of expressions}
+\input{GHC.IR.Haskell.Renamer.Binding}   % {Renaming and dependency analysis of bindings}
+\input{RnIfaces}  % {Cacheing and Renaming of Interfaces}
+
+\end{document}

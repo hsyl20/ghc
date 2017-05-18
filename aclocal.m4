@@ -905,7 +905,7 @@ else
 fi;
 changequote([, ])dnl
 ])
-if test ! -f compiler/parser/Parser.hs || test ! -f compiler/cmm/CmmParse.hs
+if test ! -f compiler/GHC/IR/Haskell/Parser.hs || test ! -f compiler/GHC/IR/Cmm/Parser.hs
 then
     FP_COMPARE_VERSIONS([$fptools_cv_happy_version],[-lt],[1.19.4],
       [AC_MSG_ERROR([Happy version 1.19.4 or later is required to compile GHC.])])[]
@@ -935,7 +935,7 @@ changequote([, ])dnl
 ])
 FP_COMPARE_VERSIONS([$fptools_cv_alex_version],[-ge],[3.0],
   [Alex3=YES],[Alex3=NO])
-if test ! -f compiler/cmm/CmmLex.hs || test ! -f compiler/parser/Lexer.hs
+if test ! -f compiler/GHC/IR/Cmm/Lexer.hs || test ! -f compiler/GHC/IR/Haskell/Lexer.hs
 then
     FP_COMPARE_VERSIONS([$fptools_cv_alex_version],[-lt],[3.1.0],
       [AC_MSG_ERROR([Alex version 3.1.0 or later is required to compile GHC.])])[]

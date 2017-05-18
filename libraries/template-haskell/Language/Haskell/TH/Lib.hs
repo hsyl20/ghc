@@ -152,7 +152,7 @@ type TySynEqnQ           = Q TySynEqn
 type PatSynDirQ          = Q PatSynDir
 type PatSynArgsQ         = Q PatSynArgs
 
--- must be defined here for DsMeta to find it
+-- must be defined here for GHC.Compiler.HaskellToCore.Splice to find it
 type Role                = TH.Role
 type InjectivityAnn      = TH.InjectivityAnn
 
@@ -609,8 +609,9 @@ closedTypeFamilyD tc tvs result injectivity eqns =
 --   1. remove deprecated functions
 --   2. remove CPP language extension from top of this module
 --   3. remove the FamFlavour data type from Syntax module
---   4. make sure that all references to FamFlavour are gone from DsMeta,
---      Convert, TcSplice (follows from 3)
+--   4. make sure that all references to FamFlavour are gone from
+--   GHC.Compiler.HaskellToCore.Splice, GHC.Compiler.TemplateToHaskell,
+--   GHC.Haskell.TypeCheck.Splice (follows from 3)
 #if __GLASGOW_HASKELL__ >= 804
 #error Remove deprecated familyNoKindD, familyKindD, closedTypeFamilyNoKindD and closedTypeFamilyKindD
 #endif

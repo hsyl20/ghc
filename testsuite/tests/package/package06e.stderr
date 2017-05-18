@@ -1,10 +1,10 @@
 
 package06e.hs:2:1: error:
-    Could not find module ‘HsTypes’
+    Could not find module ‘GHC.Haskell.Syntax.Type’
     It is a member of the hidden package ‘ghc-8.1’.
     Use -v to see a list of the files searched for.
 
 package06e.hs:3:1: error:
-    Could not find module ‘UniqFM’
+    Could not find module ‘GHC.Data.UniqueFM’
     It is a member of the hidden package ‘ghc-8.1’.
     Use -v to see a list of the files searched for.

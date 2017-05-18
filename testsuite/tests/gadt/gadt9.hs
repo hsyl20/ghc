@@ -1,7 +1,7 @@
 {-# LANGUAGE GADTs #-}
 
 -- This one requires careful handling in
--- TcUnify.unifyTyConApp, to preserve rigidity.
+-- GHC.Haskell.TypeCheck.Unify.unifyTyConApp, to preserve rigidity.
 
 module ShouldCompile where
 
