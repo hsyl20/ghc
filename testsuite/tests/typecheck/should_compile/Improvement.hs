@@ -8,7 +8,7 @@
 -- overkill.
 --
 -- See Note Note [No reduction for Derived class constraints]
--- in TcInteract
+-- in GHC.Haskell.TypeCheck.Constraint.Interact
 
 module Foo where
 

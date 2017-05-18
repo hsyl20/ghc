@@ -4,13 +4,13 @@ package08e.hs:2:1: error:
     Use -v to see a list of the files searched for.
 
 package08e.hs:3:1: error:
-    Could not find module ‘HsTypes’
+    Could not find module ‘GHC.Haskell.Syntax.Type’
     Use -v to see a list of the files searched for.
 
 package08e.hs:4:1: error:
-    Could not find module ‘HsUtils’
+    Could not find module ‘GHC.Haskell.Utils’
     Use -v to see a list of the files searched for.
 
 package08e.hs:5:1: error:
-    Could not find module ‘UniqFM’
+    Could not find module ‘GHC.Data.UniqueFM’
     Use -v to see a list of the files searched for.

@@ -7,10 +7,10 @@ import Data.Data
 import Data.List
 import System.IO
 import GHC
-import DynFlags
-import MonadUtils
-import Outputable
-import Bag (filterBag,isEmptyBag)
+import GHC.Config.Flags
+import GHC.Utils.Monad
+import GHC.Utils.Outputable
+import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )
 import qualified Data.Map as Map

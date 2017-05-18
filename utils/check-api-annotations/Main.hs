@@ -3,9 +3,9 @@
 import Data.Data
 import Data.List
 import GHC
-import DynFlags
-import Outputable
-import ApiAnnotation
+import GHC.Config.Flags
+import GHC.Utils.Outputable
+import GHC.Haskell.Syntax.Annotation
 import System.Environment( getArgs )
 import System.Exit
 import qualified Data.Map as Map

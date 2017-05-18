@@ -13,7 +13,7 @@
  *
  * Entry convention: the entry convention for a primop is the
  * NativeNodeCall convention, and the return convention is
- * NativeReturn.  (see compiler/cmm/CmmCallConv.hs)
+ * NativeReturn.  (see GHC.IR.Cmm.CallConvention)
  *
  * This file is written in a subset of C--, extended with various
  * features specific to GHC.  It is compiled by GHC directly.  For the
@@ -1983,9 +1983,9 @@ stg_mkApUpd0zh ( P_ bco )
 {
     W_ ap;
 
-    // This function is *only* used to wrap zero-arity BCOs in an
-    // updatable wrapper (see ByteCodeLink.hs).  An AP thunk is always
-    // saturated and always points directly to a FUN or BCO.
+    // This function is *only* used to wrap zero-arity BCOs in an updatable
+    // wrapper (see GHC.IR.ByteCode.Linker).  An AP thunk is always saturated
+    // and always points directly to a FUN or BCO.
     ASSERT(%INFO_TYPE(%GET_STD_INFO(bco)) == HALF_W_(BCO) &&
            StgBCO_arity(bco) == HALF_W_(0));
 

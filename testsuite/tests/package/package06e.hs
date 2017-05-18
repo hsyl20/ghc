@@ -1,3 +1,3 @@
 module Package06e where
-import HsTypes
-import UniqFM
+import GHC.Haskell.Syntax.Type
+import GHC.Data.UniqueFM

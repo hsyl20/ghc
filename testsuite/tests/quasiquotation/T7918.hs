@@ -2,11 +2,11 @@
 module Main (main) where
 
 import GHC
-import DynFlags
-import Outputable
-import MonadUtils
-import NameSet
-import Var
+import GHC.Config.Flags
+import GHC.Utils.Outputable
+import GHC.Utils.Monad
+import GHC.Types.Name.Set
+import GHC.Types.Var
 
 import Data.Data
 

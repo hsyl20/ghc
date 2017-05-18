@@ -1,10 +1,9 @@
-
-import CmmExpr
+import GHC.Cmm.Syntax.Expression
 #if !(defined(MACHREGS_i386) || defined(MACHREGS_x86_64) \
     || defined(MACHREGS_sparc) || defined(MACHREGS_powerpc))
-import Panic
+import GHC.Utils.Panic
 #endif
-import Reg
+import GHC.Compiler.CmmToAsm.Register
 
 #include "ghcautoconf.h"
 #include "stg/MachRegs.h"
@@ -99,7 +98,8 @@ import Reg
 # define zmm14 70
 # define zmm15 71
 
--- Note: these are only needed for ARM/ARM64 because globalRegMaybe is now used in CmmSink.hs.
+-- Note: these are only needed for ARM/ARM64 because globalRegMaybe is now used
+-- in GHC.Cmm.Sinker.
 -- Since it's only used to check 'isJust', the actual values don't matter, thus
 -- I'm not sure if these are the correct numberings.
 -- Normally, the register names are just stringified as part of the REG() macro

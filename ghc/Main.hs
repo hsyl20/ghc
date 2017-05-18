@@ -17,52 +17,52 @@ import GHC              ( -- DynFlags(..), HscTarget(..),
                           -- GhcMode(..), GhcLink(..),
                           Ghc, GhcMonad(..),
                           LoadHowMuch(..) )
-import CmdLineParser
+import GHC.Driver.CmdLineParser
 
 -- Implementations of the various modes (--show-iface, mkdependHS. etc.)
-import LoadIface        ( showIface )
-import HscMain          ( newHscEnv )
-import DriverPipeline   ( oneShot, compileFile )
-import DriverMkDepend   ( doMkDependHS )
-import DriverBkp   ( doBackpack )
+import GHC.Interface.Load      ( showIface )
+import GHC.Driver.Main             ( newHscEnv )
+import GHC.Driver.Pipeline  ( oneShot, compileFile )
+import GHC.Driver.MakeDepend       ( doMkDependHS )
+import GHC.Driver.BackPack.Main    ( doBackpack )
 #if defined(GHCI)
 import GHCi.UI          ( interactiveUI, ghciWelcomeMsg, defaultGhciSettings )
 #endif
 
 -- Frontend plugins
 #if defined(GHCI)
-import DynamicLoading   ( loadFrontendPlugin )
-import Plugins
+import GHC.Interactive.DynamicLoading   ( loadFrontendPlugin )
+import GHC.Plugin.Types
 #else
-import DynamicLoading   ( pluginError )
+import GHC.Interactive.DynamicLoading   ( pluginError )
 #endif
-import Module           ( ModuleName )
+import GHC.Types.Module                ( ModuleName )
 
 
 -- Various other random stuff that we need
-import Config
-import Constants
-import HscTypes
-import Packages         ( pprPackages, pprPackagesSimple )
-import DriverPhases
-import BasicTypes       ( failed )
-import DynFlags hiding (WarnReason(..))
-import ErrUtils
-import FastString
-import Outputable
-import SrcLoc
-import Util
-import Panic
-import UniqSupply
-import MonadUtils       ( liftIO )
+import GHC.Config.Build
+import GHC.Config.Constants
+import GHC.Types.Base
+import GHC.Packages                ( pprPackages, pprPackagesSimple )
+import GHC.Driver.Phases
+import GHC.Types.BasicTypes       ( failed )
+import GHC.Config.Flags hiding (WarnReason(..))
+import GHC.Utils.Error
+import GHC.Data.FastString
+import GHC.Utils.Outputable
+import GHC.Types.SrcLoc
+import GHC.Utils
+import GHC.Utils.Panic
+import GHC.Data.UniqueSupply
+import GHC.Utils.Monad             ( liftIO )
 
 -- Imports for --abi-hash
-import LoadIface           ( loadUserInterface )
-import Module              ( mkModuleName )
-import Finder              ( findImportedModule, cannotFindModule )
-import TcRnMonad           ( initIfaceCheck )
-import Binary              ( openBinMem, put_ )
-import BinFingerprint      ( fingerprintBinMem )
+import GHC.Interface.Load     ( loadUserInterface )
+import GHC.Types.Module           ( mkModuleName )
+import GHC.Driver.Finder           ( findImportedModule, cannotFindModule )
+import GHC.Haskell.TypeCheck  ( initIfaceCheck )
+import GHC.Utils.Binary            ( openBinMem, put_ )
+import GHC.Utils.Binary.Fingerprint( fingerprintBinMem )
 
 -- Standard Haskell libraries
 import System.IO

@@ -1,6 +1,6 @@
 module T7702Plugin ( plugin )  where
 
-import GhcPlugins
+import GHC.Plugin
 
 -- A plugin that does nothing but tickle CoreM's writer.
 plugin :: Plugin

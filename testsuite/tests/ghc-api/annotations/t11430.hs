@@ -11,14 +11,14 @@ import Data.Data hiding (Fixity)
 import Data.List
 import System.IO
 import GHC
-import BasicTypes
-import DynFlags
-import FastString
-import ForeignCall
-import MonadUtils
-import Outputable
-import HsDecls
-import Bag (filterBag,isEmptyBag)
+import GHC.Types.BasicTypes
+import GHC.Config.Flags
+import GHC.Data.FastString
+import GHC.Types.ForeignCall
+import GHC.Utils.Monad
+import GHC.Utils.Outputable
+import GHC.Haskell.Syntax.Declaration
+import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )
 import qualified Data.Map as Map
