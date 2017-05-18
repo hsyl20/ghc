@@ -1,10 +1,10 @@
 module LinkerUnload (init) where
 
 import GHC
-import DynFlags
-import Linker
+import GHC.Config.Flags
+import GHC.Interactive.Linker as Linker
 import System.Environment
-import MonadUtils ( MonadIO(..) )
+import GHC.Util.Monad ( MonadIO(..) )
 
 foreign export ccall loadPackages :: IO ()
 

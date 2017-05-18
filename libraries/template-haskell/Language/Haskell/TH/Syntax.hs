@@ -535,7 +535,8 @@ instance Quasi Q where
 
 
 ----------------------------------------------------
--- The following operations are used solely in DsMeta when desugaring brackets
+-- The following operations are used solely in
+-- GHC.HaskellToCore.Splice when desugaring brackets.
 -- They are not necessary for the user, who can use ordinary return and (>>=) etc
 
 returnQ :: a -> Q a
@@ -650,7 +651,8 @@ instance Lift a => Lift [a] where
   lift xs = do { xs' <- mapM lift xs; return (ListE xs') }
 
 liftString :: String -> Q Exp
--- Used in TcExpr to short-circuit the lifting for strings
+-- Used in GHC.Haskell.TypeCheck.Expression to short-circuit the lifting
+-- for strings
 liftString s = return (LitE (StringL s))
 
 instance Lift () where
@@ -1226,7 +1228,7 @@ mk_unboxed_tup_name :: Int -> NameSpace -> Name
 mk_unboxed_tup_name n space
   = Name (mkOccName tup_occ) (NameG space (mkPkgName "ghc-prim") tup_mod)
   where
-    tup_occ | n == 1    = "Unit#" -- See Note [One-tuples] in TysWiredIn
+    tup_occ | n == 1    = "Unit#" -- See Note [One-tuples] in GHC.Builtin.Types
             | otherwise = "(#" ++ replicate n_commas ',' ++ "#)"
     n_commas = n - 1
     tup_mod  = mkModName "GHC.Tuple"
@@ -1255,7 +1257,7 @@ unboxedSumDataName alt arity
     prefix     = "unboxedSumDataName: "
     debug_info = " (alt: " ++ show alt ++ ", arity: " ++ show arity ++ ")"
 
-    -- Synced with the definition of mkSumDataConOcc in TysWiredIn
+    -- Synced with the definition of mkSumDataConOcc in GHC.Builtin.Types
     sum_occ = '(' : '#' : bars nbars_before ++ '_' : bars nbars_after ++ "#)"
     bars i = replicate i '|'
     nbars_before = alt - 1
@@ -1271,7 +1273,7 @@ unboxedSumTypeName arity
          (NameG TcClsName (mkPkgName "ghc-prim") (mkModName "GHC.Prim"))
 
   where
-    -- Synced with the definition of mkSumTyConOcc in TysWiredIn
+    -- Synced with the definition of mkSumTyConOcc in GHC.Builtin.Types
     sum_occ = '(' : '#' : replicate (arity - 1) '|' ++ "#)"
 
 -----------------------------------------------------
@@ -2032,7 +2034,7 @@ type constructor at the head.  So,
   (t1,t2)           TupleT 2 `AppT` t1 `AppT` t2
   '(t1,t2)          PromotedTupleT 2 `AppT` t1 `AppT` t2
 
-But if the original HsSyn used prefix application, we won't use
+But if the original GHC.Haskell used prefix application, we won't use
 these special TH constructors.  For example
   [] t              ConT "[]" `AppT` t
   (->) t            ConT "->" `AppT` t

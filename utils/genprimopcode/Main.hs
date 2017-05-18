@@ -267,7 +267,7 @@ gen_hs_source (Info defaults entries) =
                      -- with Declaration for $fEqMaybe:
                      --       attempting to use module ‘GHC.Classes’
                      --       (libraries/ghc-prim/./GHC/Classes.hs) which is not loaded
-                     -- coming from LoadIface.homeModError
+                     -- coming from GHC.Interface.Load.homeModError
                      -- I'm not sure precisely why; but I *am* sure that we don't need
                      -- any type-class defaulting; and it's clearly wrong to need
                      -- the base package when haddocking ghc-prim
@@ -361,7 +361,8 @@ needs.  Our main plan is to say
         foo :: <type>
         foo = foo
 We have to silence GHC's complaints about unboxed-top-level declarations
-with an ad-hoc fix in TcBinds: see Note [Compiling GHC.Prim] in TcBinds.
+with an ad-hoc fix in GHC.Haskell.TypeCheck.Bind: see Note [Compiling
+GHC.Prim] in GHC.Haskell.TypeCheck.Bind.
 
 That works for all the primitive functions except tagToEnum#.
 If we generate the binding
@@ -805,7 +806,8 @@ ppType (TyApp (TyCon "ThreadId#")   []) = "threadIdPrimTy"
 ppType (TyApp (TyCon "ForeignObj#") []) = "foreignObjPrimTy"
 ppType (TyApp (TyCon "BCO#")        []) = "bcoPrimTy"
 ppType (TyApp (TyCon "Compact#")    []) = "compactPrimTy"
-ppType (TyApp (TyCon "()")          []) = "unitTy"      -- unitTy is TysWiredIn's name for ()
+ppType (TyApp (TyCon "()")          []) = "unitTy"
+                                 -- unitTy is GHC.Builtin.Types's name for ()
 
 ppType (TyVar "a")                      = "alphaTy"
 ppType (TyVar "b")                      = "betaTy"

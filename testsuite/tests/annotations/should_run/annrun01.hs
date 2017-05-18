@@ -3,11 +3,11 @@
 module Main where
 
 import GHC
-import MonadUtils  ( liftIO )
-import DynFlags    ( defaultFatalMessager, defaultFlushOut )
-import Annotations ( AnnTarget(..), CoreAnnTarget )
-import GHC.Serialized  ( deserializeWithData )
-import Panic
+import GHC.Util.Monad     ( liftIO )
+import GHC.Config.Flags    ( defaultFatalMessager, defaultFlushOut )
+import GHC.CoreTypes.Annotation ( AnnTarget(..), CoreAnnTarget )
+import GHC.Serialized      ( deserializeWithData )
+import GHC.Util.Panic
 
 import Config
 import Annrun01_Help

@@ -15,33 +15,33 @@ module GHCi.UI.Info
     , getModInfo
     ) where
 
-import           Control.Exception
-import           Control.Monad
-import           Control.Monad.Trans.Class
-import           Control.Monad.Trans.Except
-import           Control.Monad.Trans.Maybe
-import           Data.Data
-import           Data.Function
-import           Data.List
-import           Data.Map.Strict   (Map)
+import Control.Exception
+import Control.Monad
+import Control.Monad.Trans.Class
+import Control.Monad.Trans.Except
+import Control.Monad.Trans.Maybe
+import Data.Data
+import Data.Function
+import Data.List
+import Data.Map.Strict   (Map)
 import qualified Data.Map.Strict   as M
-import           Data.Maybe
-import           Data.Time
-import           Prelude           hiding (mod,(<>))
-import           System.Directory
+import Data.Maybe
+import Data.Time
+import Prelude           hiding (mod,(<>))
+import System.Directory
 
-import qualified CoreUtils
-import           Desugar
-import           DynFlags (HasDynFlags(..))
-import           FastString
-import           GHC
-import           GhcMonad
-import           Name
-import           NameSet
-import           Outputable
-import           SrcLoc
-import           TcHsSyn
-import           Var
+import qualified GHC.Core.Utils
+import GHC.HaskellToCore
+import GHC.Config.Flags (HasDynFlags(..))
+import GHC.Data.FastString
+import GHC
+import GHC.Monad
+import GHC.CoreTypes.Name
+import GHC.CoreTypes.Name.Set
+import GHC.Util.Outputable
+import GHC.CoreTypes.SrcLoc
+import GHC.Haskell.TypeCheck.Syntax
+import GHC.CoreTypes.Var
 
 -- | Info about a module. This information is generated every time a
 -- module is loaded.
@@ -318,7 +318,8 @@ processAllTypeCheckedModule tcm = do
     getTypeLHsExpr e = do
         hs_env  <- getSession
         (_,mbe) <- liftIO $ deSugarExpr hs_env e
-        return $ fmap (\expr -> (mid, getLoc e, CoreUtils.exprType expr)) mbe
+        return $ fmap (\expr ->
+          (mid, getLoc e, GHC.Core.Utils.exprType expr)) mbe
       where
         mid :: Maybe Id
         mid | HsVar (L _ i) <- unwrapVar (unLoc e) = Just i

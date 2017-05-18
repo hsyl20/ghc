@@ -1,8 +1,8 @@
 module Main where
 
 import GHC
-import GhcMonad
-import Outputable
+import GHC.Monad
+import GHC.Util.Outputable
 import System.IO
 import System.Environment( getArgs )
 

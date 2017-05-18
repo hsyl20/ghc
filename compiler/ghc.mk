@@ -14,7 +14,7 @@
 # Create compiler configuration
 #
 # The 'echo' commands simply spit the values of various make variables
-# into Config.hs, whence they can be compiled and used by GHC itself
+# into GHC/Config/Build.hs, whence they can be compiled and used by GHC itself
 
 # This is just to avoid generating a warning when generating deps
 # involving RtsFlags.h
@@ -22,7 +22,7 @@ compiler_stage1_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 compiler_stage2_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 compiler_stage3_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 
-compiler_stage1_C_FILES_NODEPS = compiler/parser/cutils.c
+compiler_stage1_C_FILES_NODEPS = compiler/cbits/cutils.c
 
 # This package doesn't pass the Cabal checks because include-dirs
 # points outside the source directory. This isn't a real problem, so
@@ -30,26 +30,26 @@ compiler_stage1_C_FILES_NODEPS = compiler/parser/cutils.c
 compiler_NO_CHECK = YES
 
 ifneq "$(BINDIST)" "YES"
-compiler/stage1/package-data.mk : compiler/stage1/build/Config.hs
-compiler/stage2/package-data.mk : compiler/stage2/build/Config.hs
-compiler/stage3/package-data.mk : compiler/stage3/build/Config.hs
+compiler/stage1/package-data.mk : compiler/stage1/build/GHC/Config/Build.hs
+compiler/stage2/package-data.mk : compiler/stage2/build/GHC/Config/Build.hs
+compiler/stage3/package-data.mk : compiler/stage3/build/GHC/Config/Build.hs
 
-compiler/stage1/build/PlatformConstants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
-compiler/stage2/build/PlatformConstants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
-compiler/stage3/build/PlatformConstants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
-compiler/stage1/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
-compiler/stage2/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
-compiler/stage3/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
-compiler/stage1/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
-compiler/stage2/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
-compiler/stage3/build/DynFlags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
+compiler/stage1/build/GHC/Config/HostPlatform.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
+compiler/stage2/build/GHC/Config/HostPlatform.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
+compiler/stage3/build/GHC/Config/HostPlatform.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
+compiler/stage1/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
+compiler/stage2/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
+compiler/stage3/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_EXPORTS)
+compiler/stage1/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
+compiler/stage2/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
+compiler/stage3/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
 endif
 
-compiler/stage%/build/Config.hs : mk/config.mk mk/project.mk | $$(dir $$@)/.
+compiler/stage%/build/GHC/Config/Build.hs : mk/config.mk mk/project.mk | $$(dir $$@)/.
 	$(call removeFiles,$@)
 	@echo 'Creating $@ ... '
 	@echo '{-# LANGUAGE CPP #-}'                                        >> $@
-	@echo 'module Config where'                                         >> $@
+	@echo 'module GHC.Config.Build where'                               >> $@
 	@echo                                                               >> $@
 	@echo 'import GhcPrelude'                                           >> $@
 	@echo                                                               >> $@
@@ -237,8 +237,8 @@ compiler/stage3/$(PLATFORM_H) : compiler/stage2/$(PLATFORM_H)
 	"$(CP)" $< $@
 
 # ----------------------------------------------------------------------------
-#		Generate supporting stuff for prelude/PrimOp.hs
-#		from prelude/primops.txt
+#		Generate supporting stuff for GHC.Builtin.Primitive.Operations
+#		from GHC/Builtin/Primitive/primops.txt
 
 PRIMOP_BITS_NAMES = primop-data-decl.hs-incl        \
                     primop-tag.hs-incl              \
@@ -270,7 +270,7 @@ compiler_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 
 define preprocessCompilerFiles
 # $0 = stage
-compiler/stage$1/build/primops.txt: compiler/prelude/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
+compiler/stage$1/build/primops.txt: compiler/GHC/Builtin/Primitive/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
 	$$(HS_CPP) -P $$(compiler_CPP_OPTS) -Icompiler/stage$1 -x c $$< | grep -v '^#pragma GCC' > $$@
 
 compiler/stage$1/build/primop-data-decl.hs-incl: compiler/stage$1/build/primops.txt $$$$(genprimopcode_INPLACE)
@@ -378,9 +378,9 @@ endif
 # register allocator running out of stack slots when compiling this
 # module with -fPIC -dynamic.
 # See #8182 for all the details
-compiler/stage1/build/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
-compiler/stage2/build/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
-compiler/stage3/build/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
+compiler/stage1/build/GHC/IR/Haskell/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
+compiler/stage2/build/GHC/IR/Haskell/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
+compiler/stage3/build/GHC/IR/Haskell/Parser_HC_OPTS += -O0 -fno-ignore-interface-pragmas -fcmm-sink
 
 ifeq "$(GhcProfiled)" "YES"
 # If we're profiling GHC then we want SCCs.  However, adding -auto-all
@@ -389,9 +389,9 @@ ifeq "$(GhcProfiled)" "YES"
 # parts of the compiler of interest, and then add further cost centres
 # as necessary.  Turn on -fprof-auto for individual modules like this:
 
-# compiler/main/DriverPipeline_HC_OPTS += -fprof-auto
-compiler/main/GhcMake_HC_OPTS        += -fprof-auto
-compiler/main/GHC_HC_OPTS            += -fprof-auto
+# compiler/GHC/Program/Driver/Pipeline_HC_OPTS += -fprof-auto
+compiler/GHC/Program/Make_HC_OPTS        	+= -fprof-auto
+compiler/GHC_HC_OPTS            		+= -fprof-auto
 
 # or alternatively add {-# OPTIONS_GHC -fprof-auto #-} to the top of
 # modules you're interested in.
@@ -513,10 +513,10 @@ $(foreach way,$(compiler_stage3_WAYS),\
 
 # GHC itself doesn't know about the above dependencies, so we have to
 # switch off the recompilation checker for that module:
-compiler/prelude/PrimOp_HC_OPTS  += -fforce-recomp
+compiler/GHC/Builtin/Primitive/Operations_HC_OPTS  += -fforce-recomp
 
 ifeq "$(DYNAMIC_GHC_PROGRAMS)" "YES"
-compiler/utils/Util_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS
+compiler/GHC.Util_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS
 endif
 
 endif

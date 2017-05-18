@@ -17,7 +17,7 @@
 module GHC.Tuple where
 
 import GHC.CString ()  -- Make sure we do it first, so that the
-                       -- implicit Typeable stuff can see GHC.Types.TyCon
+                       -- implicit Typeable stuff can see GHC.CoreTypes.TyCon
                        -- and unpackCString# etc
 
 default () -- Double and Integer aren't available yet
@@ -28,7 +28,7 @@ data () = ()
 
 -- The desugarer uses 1-tuples,
 -- but "()" is already used up for 0-tuples
--- See Note [One-tuples] in TysWiredIn
+-- See Note [One-tuples] in GHC.Builtin.Types
 data Unit a = Unit a
 
 data (a,b) = (a,b)

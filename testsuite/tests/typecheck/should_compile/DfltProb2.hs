@@ -1,7 +1,8 @@
 
 module DfltProb2 where
 
-{- NB: This program fails in GHC 7.4.1 but should be accepted with our new defaulting plan -} 
+{- NB: This program fails in GHC 7.4.1 but should be accepted with our new
+ - defaulting plan -}
 
 f :: Int -> Bool
 f x = const True (\y -> let w :: a -> a
@@ -18,6 +19,7 @@ f x = const True (\y -> let w :: a -> a
      (ii) /then/ we try to default (and succeed)
      (iii) then try to resolve again
  
-   See Note [Top-level Defaulting Plan] in TcSimplify -}
+   See Note [Top-level Defaulting Plan] in
+   GHC.Haskell.TypeCheck.Simplify -}
 
 

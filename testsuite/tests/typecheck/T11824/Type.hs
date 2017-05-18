@@ -1,7 +1,7 @@
 module Type where
 
 import Unbound.Generics.LocallyNameless (Alpha (..),Name)
-import TyCon
+import GHC.CoreTypes.TyCon
 
 data TType = VarTy
 

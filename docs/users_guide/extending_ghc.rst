@@ -130,7 +130,7 @@ when invoked:
 
     import GHC
     import GHC.Paths ( libdir )
-    import DynFlags ( defaultLogAction )
+    import GHC.Config.Flags ( defaultLogAction )
      
     main = 
         defaultErrorHandler defaultLogAction $ do
@@ -299,13 +299,13 @@ Writing compiler plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Plugins are modules that export at least a single identifier,
-``plugin``, of type ``GhcPlugins.Plugin``. All plugins should
-``import GhcPlugins`` as it defines the interface to the compilation
+``plugin``, of type ``GHC.Plugin.Plugin``. All plugins should
+``import GHC.Plugin`` as it defines the interface to the compilation
 pipeline.
 
 A ``Plugin`` effectively holds a function which installs a compilation
 pass into the compiler pipeline. By default there is the empty plugin
-which does nothing, ``GhcPlugins.defaultPlugin``, which you should
+which does nothing, ``GHC.Plugin.defaultPlugin``, which you should
 override with record syntax to specify your installation function. Since
 the exact fields of the ``Plugin`` type are open to change, this is the
 best way to ensure your plugins will continue to work in the future with
@@ -325,7 +325,7 @@ just returns the original compilation pipeline, unmodified, and says
 ::
 
     module DoNothing.Plugin (plugin) where
-    import GhcPlugins
+    import GHC.Plugin
 
     plugin :: Plugin
     plugin = defaultPlugin {
@@ -405,7 +405,7 @@ in a module it compiles:
 ::
 
     module SayNames.Plugin (plugin) where
-    import GhcPlugins
+    import GHC.Plugin
 
     plugin :: Plugin
     plugin = defaultPlugin {
@@ -450,7 +450,7 @@ will print out the name of any top-level non-recursive binding with the
 
     {-# LANGUAGE DeriveDataTypeable #-}
     module SayAnnNames.Plugin (plugin, SomeAnn(..)) where
-    import GhcPlugins
+    import GHC.Plugin
     import Control.Monad (unless)
     import Data.Data
 
@@ -615,7 +615,7 @@ we just invoke GHC with the :ghc-flag:`--frontend ⟨module⟩` flag as follows:
 Frontend plugins, like compiler plugins, are exported by registered plugins.
 However, unlike compiler modules, frontend plugins are modules that export
 at least a single identifier ``frontendPlugin`` of type
-``GhcPlugins.FrontendPlugin``.
+``GHC.Plugin.FrontendPlugin``.
 
 ``FrontendPlugin`` exports a field ``frontend``, which is a function
 ``[String] -> [(String, Maybe Phase)] -> Ghc ()``.  The first argument
@@ -631,7 +631,7 @@ were passed to it, and then exits.
 ::
 
     module DoNothing.FrontendPlugin (frontendPlugin) where
-    import GhcPlugins
+    import GHC.Plugin
 
     frontendPlugin :: FrontendPlugin
     frontendPlugin = defaultFrontendPlugin {

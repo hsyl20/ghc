@@ -14,7 +14,7 @@ module Body
         , setStartVelOfBody
         , advanceBody)
 where
-import Util
+import GHC.Util
 
 
 -- Types ----------------------------------------------------------------------

@@ -8,12 +8,12 @@ import Data.Data
 import Data.List
 import System.IO
 import GHC
-import BasicTypes
-import DynFlags
-import MonadUtils
-import Outputable
-import ApiAnnotation
-import Bag (filterBag,isEmptyBag)
+import GHC.CoreTypes.BasicTypes
+import GHC.Config.Flags
+import GHC.Util.Monad
+import GHC.Util.Outputable
+import GHC.Haskell.Syntax.Annotation
+import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )
 import qualified Data.Map as Map

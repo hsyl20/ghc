@@ -1,10 +1,10 @@
 {-# LANGUAGE ParallelListComp, BangPatterns #-}
 
-import Config
+import GHC.Config.Build
 import Dump
 import World
 import Body
-import Util
+import GHC.Util
 import Solver
 import Generate
 import Control.Monad

@@ -1,5 +1,5 @@
 module Package08e where
 import MyHsTypes
-import HsTypes
-import HsUtils
-import UniqFM
+import GHC.Haskell.Syntax.Type
+import GHC.Haskell.Utils
+import GHC.Data.UniqueFM

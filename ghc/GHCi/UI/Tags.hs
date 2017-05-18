@@ -13,23 +13,23 @@ module GHCi.UI.Tags (
   createETagsFileCmd
 ) where
 
-import Exception
+import GHC.Util.Exception
 import GHC
 import GHCi.UI.Monad
-import Outputable
+import GHC.Util.Outputable
 
 -- ToDo: figure out whether we need these, and put something appropriate
 -- into the GHC API instead
-import Name (nameOccName)
-import OccName (pprOccName)
-import ConLike
-import MonadUtils
+import GHC.CoreTypes.Name (nameOccName)
+import GHC.CoreTypes.OccName (pprOccName)
+import GHC.CoreTypes.ConLike
+import GHC.Util.Monad
 
 import Data.Function
 import Data.Maybe
 import Data.Ord
-import DriverPhases
-import Panic
+import GHC.Driver.Phases
+import GHC.Util.Panic
 import Data.List
 import Control.Monad
 import System.Directory

@@ -3,15 +3,15 @@
 
 module T11195 where
 
-import TyCoRep
-import Coercion
-import Type hiding( substTyVarBndr, substTy, extendTCvSubst )
-import TcType       ( exactTyCoVarsOfType )
-import CoAxiom
-import VarSet
-import VarEnv
-import Pair
-import InstEnv
+import GHC.CoreTypes.Type.Internal
+import GHC.CoreTypes.Coercion
+import GHC.CoreTypes.Type hiding( substTyVarBndr, substTy, extendTCvSubst )
+import GHC.Haskell.TypeCheck.Util.CoreType       ( exactTyCoVarsOfType )
+import GHC.CoreTypes.Coercion.Axiom
+import GHC.CoreTypes.Var.Set
+import GHC.CoreTypes.Var.Environment
+import GHC.Data.Pair
+import GHC.CoreTypes.Instance
 
 type NormalCo    = Coercion
 type NormalNonIdCo = NormalCo  -- Extra invariant: not the identity

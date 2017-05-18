@@ -1,27 +1,27 @@
 {-# LANGUAGE BangPatterns #-}
 module Main where
 
-import ByteCodeLink
-import CoreMonad
+import GHC.ByteCode.Linker
+import GHC.Core.Monad
 import Data.Array
-import DataCon
-import DebuggerUtils
+import GHC.CoreTypes.DataCon
+import GHC.Interactive.Debugger.Utils
 import GHC
-import HscTypes
-import Linker
-import RtClosureInspect
-import TcEnv
-import Type
-import TcRnMonad
-import TcType
+import GHC.Types
+import GHC.Interactive.Linker
+import GHC.Interactive.ClosureInspect
+import GHC.Haskell.TypeCheck.Environment
+import GHC.CoreTypes.Type
+import GHC.Haskell.TypeCheck.Monad
+import GHC.Haskell.TypeCheck.Util.CoreType
 import Control.Applicative
-import Name (getOccString)
+import GHC.CoreTypes.Name (getOccString)
 import Unsafe.Coerce
 import Control.Monad
 import Data.Maybe
-import Bag
-import Outputable
-import GhcMonad
+import GHC.Data.Bag
+import GHC.Util.Outputable
+import GHC.Monad
 import X
 
 import System.Environment
