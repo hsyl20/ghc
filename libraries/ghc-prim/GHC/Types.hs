@@ -90,10 +90,10 @@ data Symbol
 -- to @x@.
 --
 type family Any :: k where { }
--- See Note [Any types] in TysWiredIn. Also, for a bit of history on Any see
--- #10886. Note that this must be a *closed* type family: we need to ensure
--- that this can't reduce to a `data` type for the results discussed in
--- Note [Any types].
+-- See Note [Any types] in GHC.Builtin.Types. Also, for a bit of history on Any
+-- see #10886. Note that this must be a *closed* type family: we need to ensure
+-- that this can't reduce to a `data` type for the results discussed in Note
+-- [Any types].
 
 {- *********************************************************************
 *                                                                      *
@@ -179,7 +179,7 @@ type role IO representational
 because this role is significant in the normalisation of FFI
 types. Specifically, if this role were to become nominal (which would
 be very strange, indeed!), changes elsewhere in GHC would be
-necessary. See [FFI type roles] in TcForeign.  -}
+necessary. See [FFI type roles] in GHC.IR.Haskell.TypeChecker.Foreign.  -}
 
 
 {- *********************************************************************
@@ -202,8 +202,8 @@ for them, e.g. to compile the constructor's info table.
 Furthermore the type of MkCoercible cannot be written in Haskell
 (no syntax for ~#R).
 
-So we define them as regular data types in GHC.Types, and do magic in TysWiredIn,
-inside GHC, to change the kind and type.
+So we define them as regular data types in GHC.Types, and do magic in
+GHC.Builtin.Types, inside GHC, to change the kind and type.
 -}
 
 
@@ -215,7 +215,7 @@ inside GHC, to change the kind and type.
 -- homogeneous equality @~@, this is printed as @~@ unless
 -- @-fprint-equality-relations@ is set.
 class a ~~ b
-  -- See also Note [The equality types story] in TysPrim
+  -- See also Note [The equality types story] in GHC.Builtin.Primitive.Types
 
 -- | @Coercible@ is a two-parameter class that has instances for types @a@ and @b@ if
 --      the compiler can infer that they have the same representation. This class
@@ -265,7 +265,7 @@ class a ~~ b
 --
 --      @since 4.7.0.0
 class Coercible a b
-  -- See also Note [The equality types story] in TysPrim
+  -- See also Note [The equality types story] in GHC.Builtin.Primitive.Types
 
 {- *********************************************************************
 *                                                                      *
@@ -383,7 +383,7 @@ data RuntimeRep = VecRep VecCount VecElem   -- ^ a SIMD vector type
                 | FloatRep        -- ^ a 32-bit floating point number
                 | DoubleRep       -- ^ a 64-bit floating point number
 
--- See also Note [Wiring in RuntimeRep] in TysWiredIn
+-- See also Note [Wiring in RuntimeRep] in GHC.Builtin.Types
 
 -- | Length of a SIMD vector type
 data VecCount = Vec2
@@ -450,7 +450,8 @@ type KindBndr = Int
 #endif
 
 -- | The representation produced by GHC for conjuring up the kind of a
--- 'TypeRep'.  See Note [Representing TyCon kinds: KindRep] in TcTypeable.
+-- 'TypeRep'.  See Note [Representing TyCon kinds: KindRep] in
+-- GHC.IR.Haskell.Deriver.Typeable.
 data KindRep = KindRepTyConApp TyCon [KindRep]
              | KindRepVar !KindBndr
              | KindRepApp KindRep KindRep

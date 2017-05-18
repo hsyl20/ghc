@@ -34,20 +34,20 @@ module GHCi.UI.Monad (
 
 import GHCi.UI.Info (ModInfo)
 import qualified GHC
-import GhcMonad         hiding (liftIO)
-import Outputable       hiding (printForUser, printForUserPartWay)
-import qualified Outputable
-import DynFlags
-import FastString
-import HscTypes
-import SrcLoc
-import Module
-import GHCi
+import GHC.Monad        hiding (liftIO)
+import GHC.Utils.Outputable       hiding (printForUser, printForUserPartWay)
+import qualified GHC.Utils.Outputable as Outputable
+import GHC.Config.Flags
+import GHC.Data.FastString
+import GHC.Entity.Types
+import GHC.Entity.SrcLoc
+import GHC.Entity.Module
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
-import HsSyn (ImportDecl, GhcPs)
-import Util
+import GHC.IR.Haskell.Syntax (ImportDecl,GhcPs)
+import GHC.Utils
 
-import Exception
+import GHC.Utils.Exception
 import Numeric
 import Data.Array
 import Data.IORef

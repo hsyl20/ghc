@@ -1,7 +1,7 @@
 module T11525_Plugin(plugin) where
 
-import TcRnMonad ( TcPlugin(..), TcPluginResult(..) )
-import Plugins ( defaultPlugin, Plugin(..), CommandLineOption )
+import GHC.IR.Haskell.TypeChecker ( TcPlugin(..), TcPluginResult(..) )
+import GHC.Plugin.Types ( defaultPlugin, Plugin(..), CommandLineOption )
 
 plugin :: Plugin
 plugin = defaultPlugin { tcPlugin = Just . thePlugin }

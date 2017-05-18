@@ -143,7 +143,7 @@ default ()              -- Double isn't available yet
 {-
 Note [Depend on GHC.Integer]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Integer type is special because TidyPgm uses
+The Integer type is special because GHC.Inteface.Tidy uses
 GHC.Integer.Type.mkInteger to construct Integer literal values
 Currently it reads the interface file whether or not the current
 module *has* any Integer literals, so it's important that
@@ -261,7 +261,7 @@ mechanism to define mconcat and the Applicative and Monad instances for lists.
 We mark them INLINE because the inliner is not generally too keen to inline
 build forms such as the ones these desugar to without our insistence.  Defining
 these using list comprehensions instead of foldr has an additional potential
-benefit, as described in compiler/deSugar/DsListComp.hs: if optimizations
+benefit, as described in GHC.Compiler.HaskellToCore.ListComp: if optimizations
 needed to make foldr/build forms efficient are turned off, we'll get reasonably
 efficient translations anyway.
 -}
@@ -1055,7 +1055,7 @@ eqString (c1:cs1) (c2:cs2) = c1 == c2 && cs1 `eqString` cs2
 eqString _        _        = False
 
 {-# RULES "eqString" (==) = eqString #-}
--- eqString also has a BuiltInRule in PrelRules.hs:
+-- eqString also has a BuiltInRule in GHC.IR.Core.Transformer.ConstantFolder.hs:
 --      eqString (unpackCString# (Lit s1)) (unpackCString# (Lit s2)) = s1==s2
 
 
@@ -1315,7 +1315,7 @@ a `iShiftRL#` b | isTrue# (b >=# WORD_SIZE_IN_BITS#) = 0#
 "unpack-list"  [1]  forall a   . unpackFoldrCString# a (:) [] = unpackCString# a
 "unpack-append"     forall a n . unpackFoldrCString# a (:) n  = unpackAppendCString# a n
 
--- There's a built-in rule (in PrelRules.hs) for
+-- There's a built-in rule (in GHC.IR.Core.Transformer.ConstantFolder.hs) for
 --      unpackFoldr "foo" c (unpackFoldr "baz" c n)  =  unpackFoldr "foobaz" c n
 
   #-}

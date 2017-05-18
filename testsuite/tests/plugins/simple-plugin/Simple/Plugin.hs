@@ -2,9 +2,9 @@
 
 module Simple.Plugin(plugin) where
 
-import UniqFM
-import GhcPlugins
-import qualified ErrUtils
+import GHC.Entity.Unique.FiniteMap
+import GHC.Plugin
+import qualified GHC.Utils.Error
 
 -- For annotation tests
 import Simple.DataStructures

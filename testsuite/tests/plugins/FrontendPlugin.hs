@@ -1,11 +1,11 @@
 module FrontendPlugin where
 
-import GhcPlugins
+import GHC.Plugin
 import qualified GHC
 import GHC              ( Ghc, LoadHowMuch(..) )
 
-import DriverPipeline hiding ( hsc_env )
-import DriverPhases
+import GHC.Program.Driver.Pipeline hiding ( hsc_env )
+import GHC.Program.Driver.Phases
 import System.Exit
 import Control.Monad
 import Data.List

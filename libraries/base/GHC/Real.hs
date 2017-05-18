@@ -327,14 +327,13 @@ instance  Real Integer  where
 -- Note [Integer division constant folding]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 --
--- Constant folding of quot, rem, div, mod, divMod and quotRem for
--- Integer arguments depends crucially on inlining. Constant folding
--- rules defined in compiler/prelude/PrelRules.hs trigger for
--- quotInteger, remInteger and so on. So if calls to quot, rem and so on
--- were not inlined the rules would not fire. The rules would also not
--- fire if calls to quotInteger and so on were inlined, but this does not
--- happen because they are all marked with NOINLINE pragma - see documentation
--- of integer-gmp or integer-simple.
+-- Constant folding of quot, rem, div, mod, divMod and quotRem for Integer
+-- arguments depends crucially on inlining. Constant folding rules defined in
+-- GHC.IR.Core.Transformer.ConstantFolder trigger for quotInteger, remInteger
+-- and so on. So if calls to quot, rem and so on were not inlined the rules
+-- would not fire. The rules would also not fire if calls to quotInteger and so
+-- on were inlined, but this does not happen because they are all marked with
+-- NOINLINE pragma - see documentation of integer-gmp or integer-simple.
 
 -- | @since 2.0.1
 instance  Integral Integer where

@@ -1,7 +1,7 @@
 hide_all = '-hide-all-packages -XNoImplicitPrelude '
 incr_containers = '-package "containers (Data.Map as Map, Data.Set)" '
 inc_containers = '-package containers '
-incr_ghc = '-package "ghc (HsTypes as MyHsTypes, HsUtils)" '
+incr_ghc = '-package "ghc (GHC.IR.Haskell.Type as MyHsTypes, GHC.IR.Haskell.Utils)" '
 inc_ghc = '-package ghc '
 hide_ghc = '-hide-package ghc '
 
@@ -16,4 +16,4 @@ test('package06e', normalise_version('ghc'), compile_fail, [incr_ghc])
 test('package07e', normalise_version('ghc'), compile_fail, [incr_ghc + inc_ghc + hide_ghc])
 test('package08e', normalise_version('ghc'), compile_fail, [incr_ghc + hide_ghc])
 test('package09e', normal, compile_fail, ['-package "containers (Data.Map as M, Data.Set as M)"'])
-test('package10',  normal, compile,      ['-hide-all-packages -package "ghc (UniqFM as Prelude)" '])
+test('package10',  normal, compile,      ['-hide-all-packages -package "ghc (GHC.Entity.Unique.FiniteMap as Prelude)" '])

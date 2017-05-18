@@ -1,9 +1,10 @@
 {-# LANGUAGE MultiParamTypeClasses, FunctionalDependencies,
              TypeSynonymInstances, FlexibleInstances #-}
 
--- This bizarre program failed because TcSimplify built a loop of
--- dictionaries, due to an obscure bug in the way in which superclasses
--- were added
+-- This bizarre program failed because
+-- GHC.IR.Haskell.TypeChecker.Constraint.Simplifier built a loop of
+-- dictionaries, due to an obscure bug in the way in which superclasses were
+-- added
 
 module Main where
 

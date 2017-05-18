@@ -4,7 +4,8 @@
 module ShouldCompile where
 
 -- This made the compiler (4.04 proto) loop (stack overflow)
--- The bug was in TcUnify.uUnboundVar and is documented there.
+-- The bug was in GHC.IR.Haskell.TypeChecker.Unify.uUnboundVar and is documented
+-- there.
 
 type A a = ()
 

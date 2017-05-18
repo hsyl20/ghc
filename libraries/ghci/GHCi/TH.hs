@@ -19,7 +19,8 @@ Here is an overview of how TH works with -fexternal-interpreter.
 Initialisation
 ~~~~~~~~~~~~~~
 
-GHC sends a StartTH message to the server (see TcSplice.getTHState):
+GHC sends a StartTH message to the server (see
+GHC.IR.Haskell.TypeChecker.Splice.getTHState):
 
    StartTH :: Message (RemoteRef (IORef QState))
 
@@ -79,7 +80,8 @@ For each splice
 After typechecking
 ~~~~~~~~~~~~~~~~~~
 
-GHC sends a FinishTH message to the server (see TcSplice.finishTH).
+GHC sends a FinishTH message to the server (see
+GHC.IR.Haskell.TypeChecker.Splice.finishTH).
 The server runs any finalizers that were added by addModuleFinalizer.
 
 
@@ -88,7 +90,7 @@ Other Notes on TH / Remote GHCi
   * Note [Remote GHCi] in compiler/ghci/GHCi.hs
   * Note [External GHCi pointers] in compiler/ghci/GHCi.hs
   * Note [TH recover with -fexternal-interpreter] in
-    compiler/typecheck/TcSplice.hs
+    compiler/typecheck/GHC.IR.Haskell.TypeChecker.Splice.hs
 -}
 
 import GHCi.Message
@@ -164,7 +166,8 @@ instance TH.Quasi GHCiQ where
   qNewName str = ghcCmd (NewName str)
   qReport isError msg = ghcCmd (Report isError msg)
 
-  -- See Note [TH recover with -fexternal-interpreter] in TcSplice
+  -- See Note [TH recover with -fexternal-interpreter] in
+  -- GHC.IR.Haskell.TypeChecker.Splice
   qRecover (GHCiQ h) (GHCiQ a) = GHCiQ $ \s -> (do
     remoteTHCall (qsPipe s) StartRecover
     (r, s') <- a s

@@ -590,9 +590,9 @@ mkTyCon# pkg modl name n_kinds kind_rep
                                      (unpackCString# modl)
                                      (unpackCString# name)
 
--- it is extremely important that this fingerprint computation
--- remains in sync with that in TcTypeable to ensure that type
--- equality is correct.
+-- it is extremely important that this fingerprint computation remains in sync
+-- with that in GHC.IR.Haskell.Deriver.Typeable to ensure that type equality is
+-- correct.
 
 -- | Exquisitely unsafe.
 mkTyCon :: String       -- ^ package name
@@ -611,7 +611,8 @@ mkTyCon pkg modl name (I# n_kinds) kind_rep
     fingerprint :: Fingerprint
     fingerprint = mkTyConFingerprint pkg modl name
 
--- This must match the computation done in TcTypeable.mkTyConRepTyConRHS.
+-- This must match the computation done in
+-- GHC.IR.Haskell.Deriver.Typeable.mkTyConRepTyConRHS.
 mkTyConFingerprint :: String -- ^ package name
                    -> String -- ^ module name
                    -> String -- ^ tycon name
