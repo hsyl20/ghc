@@ -19,8 +19,8 @@ import RtClosureInspect
 
 import GHCi
 import GHCi.RemoteTypes
-import GhcMonad
-import HscTypes
+import GHC.Monad
+import GHC.Types
 import Id
 import IfaceSyn ( showToHeader )
 import IfaceEnv( newInteractiveBinder )

@@ -36,7 +36,7 @@ import MkCore( rEC_SEL_ERROR_ID )
 import HsSyn
 import Class
 import Type
-import HscTypes
+import GHC.Types
 import TyCon
 import ConLike
 import DataCon

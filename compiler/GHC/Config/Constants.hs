@@ -4,7 +4,7 @@
 \section[Constants]{Info about this compilation}
 -}
 
-module Constants (module Constants) where
+module GHC.Config.Constants (module GHC.Config.Constants) where
 
 import Config
 

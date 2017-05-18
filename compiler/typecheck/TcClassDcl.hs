@@ -29,7 +29,7 @@ import TcMType
 import Type     ( getClassPredTys_maybe, piResultTys )
 import TcType
 import TcRnMonad
-import DriverPhases (HscSource(..))
+import GHC.Program.Driver.Phases (HscSource(..))
 import BuildTyCl( TcMethInfo )
 import Class
 import Coercion ( pprCoAxiom )

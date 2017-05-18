@@ -142,7 +142,7 @@ import Maybes
 import Outputable
 import FastStringEnv
 import FieldLabel
-import Constants
+import GHC.Config.Constants
 import Util
 import Unique( tyConRepNameUnique, dataConRepNameUnique )
 import UniqSet

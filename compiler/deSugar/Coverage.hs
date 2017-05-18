@@ -34,7 +34,7 @@ import Id
 import VarSet
 import Data.List
 import FastString
-import HscTypes
+import GHC.Types
 import TyCon
 import UniqSupply
 import BasicTypes

@@ -54,7 +54,7 @@ module SysTools (
 
 #include "HsVersions.h"
 
-import DriverPhases
+import GHC.Program.Driver.Phases
 import Module
 import Packages
 import Config
@@ -1166,7 +1166,7 @@ getTempDir dflags = do
 -- This is ok, as the temporary directory used contains the pid (see getTempDir).
 
 addFilesToClean :: DynFlags -> [FilePath] -> IO ()
--- May include wildcards [used by DriverPipeline.run_phase SplitMangle]
+-- May include wildcards [used by GHC.Program.Driver.Pipeline.run_phase SplitMangle]
 addFilesToClean dflags new_files
     = atomicModifyIORef' (filesToClean dflags) $ \files -> (new_files++files, ())
 

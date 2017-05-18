@@ -34,7 +34,7 @@ import Util
 import Outputable
 import FastString
 import DataCon
-import HscTypes (CompleteMatch(..))
+import GHC.Types (CompleteMatch(..))
 
 import DsMonad
 import TcSimplify    (tcCheckSatisfiability)

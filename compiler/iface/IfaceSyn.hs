@@ -54,7 +54,7 @@ import Name
 import CostCentre
 import Literal
 import ForeignCall
-import Annotations( AnnPayload, AnnTarget )
+import GHC.Types.Annotations( AnnPayload, AnnTarget )
 import BasicTypes
 import Outputable
 import Module
@@ -384,10 +384,10 @@ ifaceDeclImplicitBndrs :: IfaceDecl -> [OccName]
 --  *Excludes* the 'main' name, but *includes* the implicitly-bound names
 -- Deeply revolting, because it has to predict what gets bound,
 -- especially the question of whether there's a wrapper for a datacon
--- See Note [Implicit TyThings] in HscTypes
+-- See Note [Implicit TyThings] in GHC.Types
 
 -- N.B. the set of names returned here *must* match the set of
--- TyThings returned by HscTypes.implicitTyThings, in the sense that
+-- TyThings returned by GHC.Types.implicitTyThings, in the sense that
 -- TyThing.getOccName should define a bijection between the two lists.
 -- This invariant is used in LoadIface.loadDecl (see note [Tricky iface loop])
 -- The order of the list does not matter.

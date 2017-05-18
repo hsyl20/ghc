@@ -1,13 +1,13 @@
 {-
 (c) The University of Glasgow, 2006
 
-\section[HscTypes]{Types for the per-module compiler}
+\section[GHC.Types]{Types for the per-module compiler}
 -}
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
 -- | Types for the per-module compiler
-module HscTypes (
+module GHC.Types (
         -- * compilation state
         HscEnv(..), hscEPS,
         FinderCache, FindResult(..), InstalledFindResult(..),
@@ -30,7 +30,7 @@ module HscTypes (
         SourceModified(..),
 
         -- * Information about the module being compiled
-        -- (re-exported from DriverPhases)
+        -- (re-exported from GHC.Program.Driver.Phases)
         HscSource(..), isHsBootOrSig, hscSourceString,
 
 
@@ -167,7 +167,7 @@ import IdInfo           ( IdDetails(..), RecSelParent(..))
 import Type
 
 import ApiAnnotation    ( ApiAnns )
-import Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
+import GHC.Types.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
 import Class
 import TyCon
 import CoAxiom
@@ -179,7 +179,7 @@ import PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule
 import TysWiredIn
 import Packages hiding  ( Version(..) )
 import DynFlags
-import DriverPhases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
+import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
 import BasicTypes
 import IfaceSyn
 import Maybes
@@ -262,7 +262,7 @@ runInteractiveHsc hsc_env
 -- -----------------------------------------------------------------------------
 -- Source Errors
 
--- When the compiler (HscMain) discovers errors, it throws an
+-- When the compiler (GHC.Program.Main) discovers errors, it throws an
 -- exception in the IO monad.
 
 mkSrcErr :: ErrorMessages -> SourceError
@@ -597,7 +597,7 @@ data HomeModInfo
         -- After a complete compilation ('GHC.load'), all 'hm_linkable' fields
         -- in the 'HomePackageTable' will be @Just@.
         --
-        -- When re-linking a module ('HscMain.HscNoRecomp'), we construct the
+        -- When re-linking a module ('GHC.Program.Main.HscNoRecomp'), we construct the
         -- 'HomeModInfo' by building a new 'ModDetails' from the old
         -- 'ModIface' (only).
     }

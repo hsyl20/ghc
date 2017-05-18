@@ -515,7 +515,7 @@ chooseDumpFile dflags flag
                  --      by the --ddump-file-prefix flag.
                | Just prefix <- dumpPrefixForce dflags
                   = Just prefix
-                 -- dump file location chosen by DriverPipeline.runPipeline
+                 -- dump file location chosen by GHC.Program.Driver.Pipeline.runPipeline
                | Just prefix <- dumpPrefix dflags
                   = Just prefix
                  -- we haven't got a place to put a dump file.

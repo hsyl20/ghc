@@ -15,12 +15,12 @@ import LlvmCodeGen ( llvmCodeGen )
 
 import UniqSupply       ( mkSplitUniqSupply )
 
-import Finder           ( mkStubPaths )
+import GHC.Finder           ( mkStubPaths )
 import PprC             ( writeCs )
 import CmmLint          ( cmmLint )
 import Packages
 import Cmm              ( RawCmmGroup )
-import HscTypes
+import GHC.Types
 import DynFlags
 import Config
 import SysTools

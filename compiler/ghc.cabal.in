@@ -138,6 +138,8 @@ Library
         cbits/genSym.c
 
     hs-source-dirs:
+        ./
+        src
         backpack
         basicTypes
         cmm
@@ -148,7 +150,6 @@ Library
         hsSyn
         iface
         llvmGen
-        main
         nativeGen
         parser
         prelude
@@ -178,7 +179,7 @@ Library
         Debug
         Exception
         FieldLabel
-        GhcMonad
+        GHC.Monad
         Hooks
         Id
         IdInfo
@@ -328,26 +329,26 @@ Library
         MkIface
         TcIface
         FlagChecker
-        Annotations
-        CmdLineParser
+        GHC.Types.Annotations
+        GHC.Program.CmdLineParser
         CodeOutput
         Config
-        Constants
-        DriverMkDepend
-        DriverPhases
-        PipelineMonad
-        DriverPipeline
+        GHC.Config.Constants
+        GHC.Program.MakeDepend
+        GHC.Program.Driver.Phases
+        GHC.Program.Driver.Pipeline.Monad
+        GHC.Program.Driver.Pipeline
         DynFlags
         ErrUtils
-        Finder
+        GHC.Finder
         GHC
-        GhcMake
+        GHC.Program.Make
         GhcPlugins
         DynamicLoading
         HeaderInfo
-        HscMain
-        HscStats
-        HscTypes
+        GHC.Program.Main
+        GHC.Syntax.Stats
+        GHC.Types
         InteractiveEval
         InteractiveEvalTypes
         PackageConfig

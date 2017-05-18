@@ -28,7 +28,7 @@ import MonadUtils
 import Data.Function
 import Data.Maybe
 import Data.Ord
-import DriverPhases
+import GHC.Program.Driver.Phases
 import Panic
 import Data.List
 import Control.Monad

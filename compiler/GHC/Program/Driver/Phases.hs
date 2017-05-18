@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 
 -----------------------------------------------------------------------------
---  $Id: DriverPhases.hs,v 1.38 2005/05/17 11:01:59 simonmar Exp $
+--  $Id: GHC.Program.Driver.Phases.hs,v 1.38 2005/05/17 11:01:59 simonmar Exp $
 --
 -- GHC Driver
 --
@@ -9,7 +9,7 @@
 --
 -----------------------------------------------------------------------------
 
-module DriverPhases (
+module GHC.Program.Driver.Phases (
    HscSource(..), isHsBootOrSig, hscSourceString,
    Phase(..),
    happensBefore, eqPhase, anyHsc, isStopLn,
@@ -185,7 +185,7 @@ eqPhase _           _          = False
 
 We want to know which phases will occur before which others. This is used for
 sanity checking, to ensure that the pipeline will stop at some point (see
-DriverPipeline.runPipeline).
+GHC.Program.Driver.Pipeline.runPipeline).
 
 A < B iff A occurs before B in a normal compilation pipeline.
 

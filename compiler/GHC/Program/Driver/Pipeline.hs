@@ -10,7 +10,7 @@
 --
 -----------------------------------------------------------------------------
 
-module DriverPipeline (
+module GHC.Program.Driver.Pipeline (
         -- Run a series of compilation steps in a pipeline, for a
         -- collection of source files.
    oneShot, compileFile,
@@ -35,15 +35,15 @@ module DriverPipeline (
 
 #include "HsVersions.h"
 
-import PipelineMonad
+import GHC.Program.Driver.Pipeline.Monad
 import Packages
 import HeaderInfo
-import DriverPhases
+import GHC.Program.Driver.Phases
 import SysTools
 import Elf
-import HscMain
-import Finder
-import HscTypes hiding ( Hsc )
+import GHC.Program.Main
+import GHC.Finder
+import GHC.Types hiding ( Hsc )
 import Outputable
 import Module
 import ErrUtils

@@ -22,7 +22,7 @@ module TcTyClsDecls (
 #include "HsVersions.h"
 
 import HsSyn
-import HscTypes
+import GHC.Types
 import BuildTyCl
 import TcRnMonad
 import TcEnv

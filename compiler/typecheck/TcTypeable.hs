@@ -16,7 +16,7 @@ import TyCoRep( Type(..), TyLit(..) )
 import TcEnv
 import TcEvidence ( mkWpTyApps )
 import TcRnMonad
-import HscTypes ( lookupId )
+import GHC.Types ( lookupId )
 import PrelNames
 import TysPrim ( primTyCons )
 import TysWiredIn ( tupleTyCon, sumTyCon, runtimeRepTyCon
@@ -35,7 +35,7 @@ import DynFlags
 import Bag
 import Var ( TyVarBndr(..) )
 import TrieMap
-import Constants
+import GHC.Config.Constants
 import Fingerprint(Fingerprint(..), fingerprintString, fingerprintFingerprints)
 import Outputable
 import FastString ( FastString, mkFastString, fsLit )

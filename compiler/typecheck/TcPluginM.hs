@@ -59,7 +59,7 @@ import qualified TcEnv     as TcM
 import qualified TcMType   as TcM
 import qualified FamInst   as TcM
 import qualified IfaceEnv
-import qualified Finder
+import qualified GHC.Finder
 
 import FamInstEnv ( FamInstEnv )
 import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
@@ -77,7 +77,7 @@ import Name
 import TyCon
 import DataCon
 import Class
-import HscTypes
+import GHC.Types
 import Outputable
 import Type
 import Id
@@ -98,7 +98,7 @@ tcPluginTrace a b = unsafeTcPluginTcM (traceTc a b)
 findImportedModule :: ModuleName -> Maybe FastString -> TcPluginM FindResult
 findImportedModule mod_name mb_pkg = do
     hsc_env <- getTopEnv
-    tcPluginIO $ Finder.findImportedModule hsc_env mod_name mb_pkg
+    tcPluginIO $ GHC.Finder.findImportedModule hsc_env mod_name mb_pkg
 
 lookupOrig :: Module -> OccName -> TcPluginM Name
 lookupOrig mod = unsafeTcPluginTcM . IfaceEnv.lookupOrig mod

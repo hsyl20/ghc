@@ -33,7 +33,7 @@ import TcRnMonad
 
 import ForeignCall      ( CCallTarget(..) )
 import Module
-import HscTypes         ( Warnings(..), plusWarns )
+import GHC.Types         ( Warnings(..), plusWarns )
 import Class            ( FunDep )
 import PrelNames        ( applicativeClassName, pureAName, thenAName
                         , monadClassName, returnMName, thenMName
@@ -52,7 +52,7 @@ import FastString
 import SrcLoc
 import DynFlags
 import Util             ( debugIsOn, lengthExceeds, partitionWith )
-import HscTypes         ( HscEnv, hsc_dflags )
+import GHC.Types         ( HscEnv, hsc_dflags )
 import ListSetOps       ( findDupsEq, removeDups, equivClasses )
 import Digraph          ( SCC, flattenSCC, flattenSCCs, Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq )

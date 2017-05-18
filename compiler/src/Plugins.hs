@@ -6,8 +6,8 @@ module Plugins (
 
 import CoreMonad ( CoreToDo, CoreM )
 import TcRnTypes ( TcPlugin )
-import GhcMonad
-import DriverPhases
+import GHC.Monad
+import GHC.Program.Driver.Phases
 
 
 -- | Command line options gathered from the -PModule.Name:stuff syntax

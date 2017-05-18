@@ -49,7 +49,7 @@ import LoadIface        ( loadInterfaceForName, loadSrcInterface_maybe )
 import IfaceEnv
 import HsSyn
 import RdrName
-import HscTypes
+import GHC.Types
 import TcEnv
 import TcRnMonad
 import RdrHsSyn         ( setRdrNameSpace )

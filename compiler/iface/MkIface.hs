@@ -66,7 +66,7 @@ import FlagChecker
 
 import DsUsage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import Id
-import Annotations
+import GHC.Types.Annotations
 import CoreSyn
 import Class
 import TyCon
@@ -79,8 +79,8 @@ import InstEnv
 import FamInstEnv
 import TcRnMonad
 import HsSyn
-import HscTypes
-import Finder
+import GHC.Types
+import GHC.Finder
 import DynFlags
 import VarEnv
 import VarSet

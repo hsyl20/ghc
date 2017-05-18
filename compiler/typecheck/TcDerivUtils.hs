@@ -27,7 +27,7 @@ import Class
 import DataCon
 import DynFlags
 import ErrUtils
-import HscTypes (lookupFixity, mi_fix)
+import GHC.Types (lookupFixity, mi_fix)
 import HsSyn
 import Inst
 import InstEnv

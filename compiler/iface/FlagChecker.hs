@@ -9,7 +9,7 @@ module FlagChecker (
 import Binary
 import BinIface ()
 import DynFlags
-import HscTypes
+import GHC.Types
 import Module
 import Name
 import Fingerprint

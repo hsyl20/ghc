@@ -30,7 +30,7 @@ import CLabel
 import StgSyn
 import DynFlags
 
-import HscTypes
+import GHC.Types
 import CostCentre
 import Id
 import IdInfo

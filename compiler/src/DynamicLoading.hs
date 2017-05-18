@@ -28,7 +28,7 @@ module DynamicLoading (
 import Linker           ( linkModule, getHValue )
 import GHCi             ( wormhole )
 import SrcLoc           ( noSrcSpan )
-import Finder           ( findPluginModule, cannotFindModule )
+import GHC.Finder           ( findPluginModule, cannotFindModule )
 import TcRnMonad        ( initTcInteractive, initIfaceTcRn )
 import LoadIface        ( loadPluginInterface )
 import RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
@@ -40,7 +40,7 @@ import DynFlags
 import Plugins          ( Plugin, FrontendPlugin, CommandLineOption )
 import PrelNames        ( pluginTyConName, frontendPluginTyConName )
 
-import HscTypes
+import GHC.Types
 import GHCi.RemoteTypes ( HValue )
 import Type             ( Type, eqType, mkTyConTy, pprTyThingCategory )
 import TyCon            ( TyCon )

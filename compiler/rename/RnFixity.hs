@@ -12,7 +12,7 @@ module RnFixity ( MiniFixityEnv,
 import LoadIface
 import HsSyn
 import RdrName
-import HscTypes
+import GHC.Types
 import TcRnMonad
 import Name
 import NameEnv

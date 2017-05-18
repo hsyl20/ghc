@@ -19,7 +19,7 @@ module HeaderInfo ( getImports
 #include "HsVersions.h"
 
 import RdrName
-import HscTypes
+import GHC.Types
 import Parser           ( parseHeader )
 import Lexer
 import FastString

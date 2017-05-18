@@ -13,7 +13,7 @@ module NameShape(
 #include "HsVersions.h"
 
 import Outputable
-import HscTypes
+import GHC.Types
 import Module
 import UniqFM
 import Avail

@@ -91,7 +91,7 @@ import Name
 import NameSet
 import NameEnv
 import VarEnv
-import HscTypes
+import GHC.Types
 import DynFlags
 import SrcLoc
 import BasicTypes hiding( SuccessFlag(..) )

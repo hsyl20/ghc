@@ -34,12 +34,12 @@ module GHCi.UI.Monad (
 
 import GHCi.UI.Info (ModInfo)
 import qualified GHC
-import GhcMonad         hiding (liftIO)
+import GHC.Monad        hiding (liftIO)
 import Outputable       hiding (printForUser, printForUserPartWay)
 import qualified Outputable
 import DynFlags
 import FastString
-import HscTypes
+import GHC.Types
 import SrcLoc
 import Module
 import GHCi

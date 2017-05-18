@@ -61,7 +61,7 @@ import UniqSupply
 import CoreArity ( typeArity )
 import Demand ( splitStrictSig, isBotRes )
 
-import HscTypes
+import GHC.Types
 import DynFlags
 import Control.Monad
 #if __GLASGOW_HASKELL__ > 710
@@ -363,7 +363,7 @@ lintInteractiveExpr what hsc_env expr
 interactiveInScope :: HscEnv -> [Var]
 -- In GHCi we may lint expressions, or bindings arising from 'deriving'
 -- clauses, that mention variables bound in the interactive context.
--- These are Local things (see Note [Interactively-bound Ids in GHCi] in HscTypes).
+-- These are Local things (see Note [Interactively-bound Ids in GHCi] in GHC.Types).
 -- So we have to tell Lint about them, lest it reports them as out of scope.
 --
 -- We do this by find local-named things that may appear free in interactive

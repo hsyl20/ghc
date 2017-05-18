@@ -24,7 +24,7 @@ import Name
 import MkId
 import Id
 import ForeignCall
-import HscTypes
+import GHC.Types
 import CoreUtils
 import CoreSyn
 import PprCore

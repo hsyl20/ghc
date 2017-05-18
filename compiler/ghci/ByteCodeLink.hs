@@ -27,7 +27,7 @@ import SizedSeq
 
 import GHCi
 import ByteCodeTypes
-import HscTypes
+import GHC.Types
 import DynFlags
 import Name
 import NameEnv

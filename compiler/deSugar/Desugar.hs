@@ -17,7 +17,7 @@ module Desugar (
 
 import DsUsage
 import DynFlags
-import HscTypes
+import GHC.Types
 import HsSyn
 import TcRnTypes
 import TcRnMonad  ( finalSafeMode, fixSafeInstances )

@@ -39,12 +39,12 @@ import {-# SOURCE #-}   TcIface( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
 import DynFlags
 import IfaceSyn
 import IfaceEnv
-import HscTypes
+import GHC.Types
 
 import BasicTypes hiding (SuccessFlag(..))
 import TcRnMonad
 
-import Constants
+import GHC.Config.Constants
 import PrelNames
 import PrelInfo
 import PrimOp   ( allThePrimOps, primOpFixity, primOpOcc )
@@ -52,7 +52,7 @@ import MkId     ( seqId )
 import TysPrim  ( funTyConName )
 import Rules
 import TyCon
-import Annotations
+import GHC.Types.Annotations
 import InstEnv
 import FamInstEnv
 import Name
@@ -61,7 +61,7 @@ import Avail
 import Module
 import Maybes
 import ErrUtils
-import Finder
+import GHC.Finder
 import UniqFM
 import SrcLoc
 import Outputable
@@ -769,7 +769,7 @@ Note [Home module load error]
 If the sought-for interface is in the current package (as determined
 by -package-name flag) then it jolly well should already be in the HPT
 because we process home-package modules in dependency order.  (Except
-in one-shot mode; see notes with hsc_HPT decl in HscTypes).
+in one-shot mode; see notes with hsc_HPT decl in GHC.Types).
 
 It is possible (though hard) to get this error through user behaviour.
   * Suppose package P (modules P1, P2) depends on package Q (modules Q1,

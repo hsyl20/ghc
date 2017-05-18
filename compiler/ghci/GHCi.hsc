@@ -54,7 +54,7 @@ import GHCi.RemoteTypes
 import GHCi.ResolvedBCO
 import GHCi.BreakArray (BreakArray)
 import Fingerprint
-import HscTypes
+import GHC.Types
 import UniqFM
 import Panic
 import DynFlags

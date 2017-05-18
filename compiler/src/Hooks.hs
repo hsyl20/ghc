@@ -27,8 +27,8 @@ module Hooks ( Hooks
 
 import DynFlags
 import Name
-import PipelineMonad
-import HscTypes
+import GHC.Program.Driver.Pipeline.Monad
+import GHC.Types
 import HsDecls
 import HsBinds
 import HsExpr

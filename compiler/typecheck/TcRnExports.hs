@@ -23,7 +23,7 @@ import NameSet
 import Avail
 import TyCon
 import SrcLoc
-import HscTypes
+import GHC.Types
 import Outputable
 import ConLike
 import DataCon

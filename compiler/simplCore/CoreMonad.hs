@@ -56,11 +56,11 @@ module CoreMonad (
 import Name( Name )
 import TcRnMonad        ( initTcForLookup )
 import CoreSyn
-import HscTypes
+import GHC.Types
 import Module
 import DynFlags
 import BasicTypes       ( CompilerPhase(..) )
-import Annotations
+import GHC.Types.Annotations
 
 import IOEnv hiding     ( liftIO, failM, failWithM )
 import qualified IOEnv  ( liftIO )

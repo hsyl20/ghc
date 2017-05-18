@@ -45,10 +45,10 @@ import InteractiveEvalTypes
 import GHCi
 import GHCi.Message
 import GHCi.RemoteTypes
-import GhcMonad
-import HscMain
+import GHC.Monad
+import GHC.Program.Main
 import HsSyn
-import HscTypes
+import GHC.Types
 import InstEnv
 import IfaceEnv   ( newInteractiveBinder )
 import FamInstEnv ( FamInst )

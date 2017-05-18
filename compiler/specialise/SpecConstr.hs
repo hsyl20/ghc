@@ -26,7 +26,7 @@ import CoreUnfold       ( couldBeSmallEnoughToInline )
 import CoreFVs          ( exprsFreeVarsList )
 import CoreMonad
 import Literal          ( litIsLifted )
-import HscTypes         ( ModGuts(..) )
+import GHC.Types         ( ModGuts(..) )
 import WwLib            ( isWorkerSmallEnough, mkWorkerArgs )
 import DataCon
 import Coercion         hiding( substCo )

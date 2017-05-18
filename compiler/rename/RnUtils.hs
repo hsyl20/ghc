@@ -28,7 +28,7 @@ where
 
 import HsSyn
 import RdrName
-import HscTypes
+import GHC.Types
 import TcEnv
 import TcRnMonad
 import Name
@@ -44,7 +44,7 @@ import DynFlags
 import FastString
 import Control.Monad
 import Data.List
-import Constants        ( mAX_TUPLE_SIZE )
+import GHC.Config.Constants        ( mAX_TUPLE_SIZE )
 import qualified GHC.LanguageExtensions as LangExt
 
 {-

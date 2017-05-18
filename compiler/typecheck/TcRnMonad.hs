@@ -45,7 +45,7 @@ module TcRnMonad(
   debugTc,
 
   -- * Typechecker global environment
-  getIsGHCi, getGHCiMonad, getInteractivePrintName,
+  getIsGHCi, getGhcMonad, getInteractivePrintName,
   tcIsHsBootOrSig, tcSelfBootInfo, getGlobalRdrEnv,
   getRdrEnvs, getImports,
   getFixityEnv, extendFixityEnv, getRecFieldEnv,
@@ -139,7 +139,7 @@ import IOEnv            -- Re-export all
 import TcEvidence
 
 import HsSyn hiding (LIE)
-import HscTypes
+import GHC.Types
 import Module
 import RdrName
 import Name
@@ -164,7 +164,7 @@ import DynFlags
 import FastString
 import Panic
 import Util
-import Annotations
+import GHC.Types.Annotations
 import BasicTypes( TopLevelFlag )
 import Maybes
 
@@ -764,8 +764,8 @@ getIsGHCi :: TcRn Bool
 getIsGHCi = do { mod <- getModule
                ; return (isInteractiveModule mod) }
 
-getGHCiMonad :: TcRn Name
-getGHCiMonad = do { hsc <- getTopEnv; return (ic_monad $ hsc_IC hsc) }
+getGhcMonad :: TcRn Name
+getGhcMonad = do { hsc <- getTopEnv; return (ic_monad $ hsc_IC hsc) }
 
 getInteractivePrintName :: TcRn Name
 getInteractivePrintName = do { hsc <- getTopEnv; return (ic_int_print $ hsc_IC hsc) }

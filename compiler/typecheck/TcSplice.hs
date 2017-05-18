@@ -31,7 +31,7 @@ module TcSplice(
 #include "HsVersions.h"
 
 import HsSyn
-import Annotations
+import GHC.Types.Annotations
 import Name
 import TcRnMonad
 import TcType
@@ -48,12 +48,12 @@ import Control.Monad
 import GHCi.Message
 import GHCi.RemoteTypes
 import GHCi
-import HscMain
+import GHC.Program.Main
         -- These imports are the reason that TcSplice
         -- is very high up the module hierarchy
 import RnSplice( traceSplice, SpliceInfo(..) )
 import RdrName
-import HscTypes
+import GHC.Types
 import Convert
 import RnExpr
 import RnEnv
@@ -730,7 +730,7 @@ runMeta' show_code ppr_hs run_and_convert expr
         ; src_span <- getSrcSpanM
         ; traceTc "About to run (desugared)" (ppr ds_expr)
         ; either_hval <- tryM $ liftIO $
-                         HscMain.hscCompileCoreExpr hsc_env src_span ds_expr
+                         GHC.Program.Main.hscCompileCoreExpr hsc_env src_span ds_expr
         ; case either_hval of {
             Left exn   -> fail_with_exn "compile and link" exn ;
             Right hval -> do

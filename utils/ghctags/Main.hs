@@ -4,10 +4,9 @@ module Main where
 import Prelude hiding ( mod, id, mapM )
 import GHC
 --import Packages
-import HscTypes         ( isBootSummary )
 import Digraph          ( flattenSCCs )
-import DriverPhases     ( isHaskellSrcFilename )
-import HscTypes         ( msHsFilePath )
+import GHC.Program.Driver.Phases ( isHaskellSrcFilename )
+import GHC.Types        ( msHsFilePath, isBootSummary )
 import Name             ( getOccString )
 --import ErrUtils         ( printBagOfErrors )
 import Panic            ( panic )

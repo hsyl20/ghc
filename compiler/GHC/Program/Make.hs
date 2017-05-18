@@ -12,7 +12,7 @@
 -- by --make and GHCi.
 --
 -- -----------------------------------------------------------------------------
-module GhcMake(
+module GHC.Program.Make(
         depanal,
         load, load', LoadHowMuch(..),
 
@@ -34,18 +34,18 @@ module GhcMake(
 
 import qualified Linker         ( unload )
 
-import DriverPhases
-import DriverPipeline
+import GHC.Program.Driver.Phases
+import GHC.Program.Driver.Pipeline
 import DynFlags
 import ErrUtils
-import Finder
-import GhcMonad
+import GHC.Finder
+import GHC.Monad
 import HeaderInfo
-import HscTypes
+import GHC.Types
 import Module
 import TcIface          ( typecheckIface )
 import TcRnMonad        ( initIfaceCheck )
-import HscMain
+import GHC.Program.Main
 
 import Bag              ( listToBag )
 import BasicTypes
@@ -526,7 +526,7 @@ guessOutputFile = modifySession $ \env ->
 #if defined(mingw32_HOST_OS)
           -- we must add the .exe extension unconditionally here, otherwise
           -- when name has an extension of its own, the .exe extension will
-          -- not be added by DriverPipeline.exeFileName.  See #2248
+          -- not be added by GHC.Program.Driver.Pipeline.exeFileName.  See #2248
           name' <- fmap (<.> "exe") name
 #else
           name' <- name
@@ -657,7 +657,7 @@ unload hsc_env stable_linkables -- Unload everthing *except* 'stable_linkables'
 
     - Note that even if an object is stable, we may end up recompiling
       if the interface is out of date because an *external* interface
-      has changed.  The current code in GhcMake handles this case
+      has changed.  The current code in GHC.Program.Make handles this case
       fairly poorly, so be careful.
 -}
 checkStability

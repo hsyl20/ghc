@@ -6,7 +6,7 @@
 
 {-# LANGUAGE FlexibleContexts #-}
 
-module HscStats ( ppSourceStats ) where
+module GHC.Syntax.Stats ( ppSourceStats ) where
 
 import Bag
 import HsSyn

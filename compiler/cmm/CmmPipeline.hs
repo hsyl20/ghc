@@ -21,7 +21,7 @@ import Hoopl
 import UniqSupply
 import DynFlags
 import ErrUtils
-import HscTypes
+import GHC.Types
 import Control.Monad
 import Outputable
 import Platform

@@ -29,7 +29,7 @@ import Vectorise.Env
 import CoreSyn
 import TcRnMonad
 import DsMonad
-import HscTypes hiding ( MonadThings(..) )
+import GHC.Types hiding ( MonadThings(..) )
 import DynFlags
 import InstEnv
 import Class

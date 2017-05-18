@@ -54,7 +54,7 @@ import TyCon
 import Class
 import Module
 import Packages( isDllName )
-import HscTypes
+import GHC.Types
 import Maybes
 import UniqSupply
 import ErrUtils (Severity(..))

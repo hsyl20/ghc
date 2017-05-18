@@ -10,7 +10,7 @@
 --
 -------------------------------------------------------------------------------
 
-module CmdLineParser
+module GHC.Program.CmdLineParser
     (
       processArgs, OptKind(..), GhcFlagMode(..),
       CmdLineP(..), getCmdLineState, putCmdLineState,

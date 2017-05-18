@@ -14,7 +14,7 @@ module FamInst (
         makeInjectivityErrors, injTyVarsOfType, injTyVarsOfTypes
     ) where
 
-import HscTypes
+import GHC.Types
 import FamInstEnv
 import InstEnv( roughMatchTcs )
 import Coercion
@@ -216,7 +216,7 @@ two modules are consistent--because we checked that when we compiled M.
 
 For every other pair of family instance modules we import (directly or
 indirectly), we check that they are consistent now. (So that we can be
-certain that the modules in our `HscTypes.dep_finsts' are consistent.)
+certain that the modules in our `GHC.Types.dep_finsts' are consistent.)
 
 There is some fancy footwork regarding hs-boot module loops, see
 Note [Don't check hs-boot type family instances too early]

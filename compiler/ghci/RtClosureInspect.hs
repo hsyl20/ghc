@@ -30,7 +30,7 @@ import DebuggerUtils
 import GHCi.RemoteTypes ( HValue )
 import qualified GHCi.InfoTable as InfoTable
 import GHCi.InfoTable (StgInfoTable, peekItbl)
-import HscTypes
+import GHC.Types
 
 import DataCon
 import Type

@@ -166,10 +166,10 @@ import PackageConfig
 import {-# SOURCE #-} Hooks
 import {-# SOURCE #-} PrelNames ( mAIN )
 import {-# SOURCE #-} Packages (PackageState, emptyPackageState)
-import DriverPhases     ( Phase(..), phaseInputExt )
+import GHC.Program.Driver.Phases     ( Phase(..), phaseInputExt )
 import Config
-import CmdLineParser
-import Constants
+import GHC.Program.CmdLineParser
+import GHC.Config.Constants
 import Panic
 import qualified PprColour as Col
 import Util
@@ -771,11 +771,11 @@ data DynFlags = DynFlags {
   outputHi              :: Maybe String,
   dynLibLoader          :: DynLibLoader,
 
-  -- | This is set by 'DriverPipeline.runPipeline' based on where
+  -- | This is set by 'GHC.Program.Driver.Pipeline.runPipeline' based on where
   --    its output is going.
   dumpPrefix            :: Maybe FilePath,
 
-  -- | Override the 'dumpPrefix' set by 'DriverPipeline.runPipeline'.
+  -- | Override the 'dumpPrefix' set by 'GHC.Program.Driver.Pipeline.runPipeline'.
   --    Set by @-ddump-file-prefix@
   dumpPrefixForce       :: Maybe FilePath,
 
@@ -2496,7 +2496,7 @@ safeFlagCheck cmdl dflags =
                     "-fpackage-trust ignored;" ++
                     " must be specified with a Safe Haskell flag"]
 
-    -- Have we inferred Unsafe? See Note [HscMain . Safe Haskell Inference]
+    -- Have we inferred Unsafe? See Note [GHC.Program.Main . Safe Haskell Inference]
     safeFlags = all (\(_,_,t,_) -> not $ t dflags) unsafeFlagsForInfer
 
 

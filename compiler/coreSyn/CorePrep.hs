@@ -16,7 +16,7 @@ module CorePrep (
 
 import OccurAnal
 
-import HscTypes
+import GHC.Types
 import PrelNames
 import MkId             ( realWorldPrimId )
 import CoreUtils

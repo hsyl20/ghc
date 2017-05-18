@@ -73,7 +73,7 @@ import VarEnv
 import TysWiredIn
 import BasicTypes
 import SrcLoc
-import Constants ( mAX_CTUPLE_SIZE )
+import GHC.Config.Constants ( mAX_CTUPLE_SIZE )
 import ErrUtils( MsgDoc )
 import Unique
 import Util

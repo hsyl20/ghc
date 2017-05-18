@@ -12,10 +12,10 @@ module GhcPlugins(
         module RdrName, module OccName, module Name, module Var, module Id, module IdInfo,
         module CoreMonad, module CoreSyn, module Literal, module DataCon,
         module CoreUtils, module MkCore, module CoreFVs, module CoreSubst,
-        module Rules, module Annotations,
+        module Rules, module GHC.Types.Annotations,
         module DynFlags, module Packages,
         module Module, module Type, module TyCon, module Coercion,
-        module TysWiredIn, module HscTypes, module BasicTypes,
+        module TysWiredIn, module GHC.Types, module BasicTypes,
         module VarSet, module VarEnv, module NameSet, module NameEnv,
         module UniqSet, module UniqFM, module FiniteMap,
         module Util, module GHC.Serialized, module SrcLoc, module Outputable,
@@ -46,7 +46,7 @@ import CoreSubst hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
 
 -- Core "extras"
 import Rules
-import Annotations
+import GHC.Types.Annotations
 
 -- Pipeline-related stuff
 import DynFlags
@@ -60,7 +60,7 @@ import Coercion hiding {- conflict with CoreSubst -}
                 ( substCo )
 import TyCon
 import TysWiredIn
-import HscTypes
+import GHC.Types
 import BasicTypes hiding ( Version {- conflicts with Packages.Version -} )
 
 -- Collections and maps

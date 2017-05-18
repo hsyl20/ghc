@@ -16,7 +16,7 @@ import DynFlags
 import Control.Monad ( when )
 
 import HsSyn
-import Annotations
+import GHC.Types.Annotations
 import Name
 import TcRnMonad
 import SrcLoc

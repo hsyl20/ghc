@@ -243,7 +243,7 @@ import ErrUtils
 import StringBuffer
 import FastString
 import Panic
-import Constants
+import GHC.Config.Constants
 import Outputable
 import BasicTypes
 import Bag              ( emptyBag, unitBag )

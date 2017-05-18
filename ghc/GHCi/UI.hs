@@ -43,14 +43,14 @@ import GHCi.RemoteTypes
 import GHCi.BreakArray
 import DynFlags
 import ErrUtils
-import GhcMonad ( modifySession )
+import GHC.Monad ( modifySession )
 import qualified GHC
 import GHC ( LoadHowMuch(..), Target(..),  TargetId(..), InteractiveImport(..),
              TyThing(..), Phase, BreakIndex, Resume, SingleStep, Ghc,
              getModuleGraph, handleSourceError )
 import HsImpExp
 import HsSyn
-import HscTypes ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
+import GHC.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
                   setInteractivePrintName, hsc_dflags, msObjFilePath )
 import Module
 import Name
@@ -1568,7 +1568,7 @@ cmdCmd str = handleSourceError GHC.printException $ do
 -- @ghciStepIO :: Ty String -> IO String@.
 getGhciStepIO :: GHCi (LHsExpr RdrName)
 getGhciStepIO = do
-  ghciTyConName <- GHC.getGHCiMonad
+  ghciTyConName <- GHC.getGhcMonad
   let stringTy = nlHsTyVar stringTy_RDR
       ghciM = nlHsTyVar (getRdrName ghciTyConName) `nlHsAppTy` stringTy
       ioM = nlHsTyVar (getRdrName ioTyConName) `nlHsAppTy` stringTy

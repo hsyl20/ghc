@@ -41,7 +41,7 @@ import NameEnv
 import NameSet
 import Avail
 import SrcLoc
-import HscTypes
+import GHC.Types
 import Outputable
 import Type
 import FastString
@@ -53,7 +53,7 @@ import IfaceSyn
 import PrelNames
 import qualified Data.Map as Map
 
-import Finder
+import GHC.Finder
 import UniqDSet
 import NameShape
 import TcErrors
@@ -265,7 +265,7 @@ findExtraSigImports' hsc_env HsigFile modname =
 
 findExtraSigImports' _ _ _ = return emptyUniqDSet
 
--- | 'findExtraSigImports', but in a convenient form for "GhcMake" and
+-- | 'findExtraSigImports', but in a convenient form for "GHC.Program.Make" and
 -- "TcRnDriver".
 findExtraSigImports :: HscEnv -> HscSource -> ModuleName
                     -> IO [(Maybe FastString, Located ModuleName)]
@@ -275,7 +275,7 @@ findExtraSigImports hsc_env hsc_src modname = do
            | mod_name <- uniqDSetToList extra_requirements ]
 
 -- A version of 'implicitRequirements'' which is more friendly
--- for "GhcMake" and "TcRnDriver".
+-- for "GHC.Program.Make" and "TcRnDriver".
 implicitRequirements :: HscEnv
                      -> [(Maybe FastString, Located ModuleName)]
                      -> IO [(Maybe FastString, Located ModuleName)]

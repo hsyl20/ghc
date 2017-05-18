@@ -423,8 +423,8 @@ How is this implemented? It's complicated! So we'll step through it all:
  6) `TcRnMonad.recordUnsafeInfer` -- Save the unsafe result and reason in an
       IORef called `tcg_safeInfer`.
 
- 7) `HscMain.tcRnModule'` -- Reads `tcg_safeInfer` after type-checking, calling
-    `HscMain.markUnsafeInfer` (passing the reason along) when safe-inferrence
+ 7) `GHC.Program.Main.tcRnModule'` -- Reads `tcg_safeInfer` after type-checking, calling
+    `GHC.Program.Main.markUnsafeInfer` (passing the reason along) when safe-inferrence
     failed.
 
 Note [No defaulting in the ambiguity check]

@@ -53,7 +53,7 @@ import Type
 import Coercion
 import ConLike
 import DataCon
-import HscTypes
+import GHC.Types
 import Name
 import NameEnv
 import Var

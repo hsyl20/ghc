@@ -16,7 +16,7 @@ import CLabel
 import Module
 import CmmUtils
 import StgCmmUtils
-import HscTypes
+import GHC.Types
 import DynFlags
 
 import Control.Monad

@@ -61,10 +61,10 @@ import HsSyn
 import TcIface
 import TcMType ( checkForLevPolyX, formatLevPolyErr )
 import LoadIface
-import Finder
+import GHC.Finder
 import PrelNames
 import RdrName
-import HscTypes
+import GHC.Types
 import Bag
 import DataCon
 import ConLike

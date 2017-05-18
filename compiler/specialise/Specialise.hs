@@ -30,7 +30,7 @@ import Name
 import MkId             ( voidArgId, voidPrimId )
 import Maybes           ( catMaybes, isJust )
 import BasicTypes
-import HscTypes
+import GHC.Types
 import Bag
 import DynFlags
 import Util

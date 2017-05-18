@@ -119,7 +119,7 @@ import FastString
 import Util
 import Bag
 import Outputable
-import Constants
+import GHC.Config.Constants
 
 import Data.Either
 import Data.Function

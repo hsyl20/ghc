@@ -57,7 +57,7 @@ import Var      ( EvVar, setTyVarUnique )
 import CoreSyn
 import CoreUtils        ( exprType, needsCaseBinding, bindNonRec )
 import Literal
-import HscTypes
+import GHC.Types
 
 import TysWiredIn
 import PrelNames

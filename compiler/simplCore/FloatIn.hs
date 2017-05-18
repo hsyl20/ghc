@@ -21,7 +21,7 @@ module FloatIn ( floatInwards ) where
 
 import CoreSyn
 import MkCore
-import HscTypes         ( ModGuts(..) )
+import GHC.Types         ( ModGuts(..) )
 import CoreUtils
 import CoreFVs
 import CoreMonad        ( CoreM )

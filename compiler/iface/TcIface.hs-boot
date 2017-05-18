@@ -7,9 +7,9 @@ import TcRnTypes   ( IfL )
 import InstEnv     ( ClsInst )
 import FamInstEnv  ( FamInst )
 import CoreSyn     ( CoreRule )
-import HscTypes    ( TypeEnv, VectInfo, IfaceVectInfo, CompleteMatch )
+import GHC.Types    ( TypeEnv, VectInfo, IfaceVectInfo, CompleteMatch )
 import Module      ( Module )
-import Annotations ( Annotation )
+import GHC.Types.Annotations ( Annotation )
 
 tcIfaceDecl         :: Bool -> IfaceDecl -> IfL TyThing
 tcIfaceRules        :: Bool -> [IfaceRule] -> IfL [CoreRule]

@@ -45,7 +45,7 @@ import ErrUtils         ( ErrMsg, errDoc, pprLocErrMsg )
 import BasicTypes
 import ConLike          ( ConLike(..), conLikeWrapId_maybe )
 import Util
-import HscTypes (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
+import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
 import NameEnv (lookupNameEnv)
 import FastString
 import Outputable

@@ -16,7 +16,7 @@ import Vectorise.Exp
 import Vectorise.Env
 import Vectorise.Monad
 
-import HscTypes hiding      ( MonadThings(..) )
+import GHC.Types hiding      ( MonadThings(..) )
 import CoreUnfold           ( mkInlineUnfoldingWithArity )
 import PprCore
 import CoreSyn

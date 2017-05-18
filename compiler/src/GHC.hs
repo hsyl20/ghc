@@ -16,7 +16,7 @@ module GHC (
         withSignalHandlers,
         withCleanupSession,
 
-        -- * GHC Monad
+        -- * GhcMonad
         Ghc, GhcT, GhcMonad(..), HscEnv,
         runGhc, runGhcT, initGhcMonad,
         gcatch, gbracket, gfinally,
@@ -100,7 +100,7 @@ module GHC (
         -- ** Get/set the current context
         parseImportDecl,
         setContext, getContext,
-        setGHCiMonad, getGHCiMonad,
+        setGhcMonad, getGhcMonad,
 
         -- ** Inspecting the current context
         getBindings, getInsts, getPrintUnqual,
@@ -274,7 +274,7 @@ module GHC (
 {-
  ToDo:
 
-  * inline bits of HscMain here to simplify layering: hscTcExpr, hscStmt.
+  * inline bits of GHC.Program.Main here to simplify layering: hscTcExpr, hscStmt.
 -}
 
 #include "HsVersions.h"
@@ -287,10 +287,10 @@ import GHCi
 import GHCi.RemoteTypes
 
 import PprTyThing       ( pprFamInst )
-import HscMain
-import GhcMake
-import DriverPipeline   ( compileOne' )
-import GhcMonad
+import GHC.Program.Main
+import GHC.Program.Make
+import GHC.Program.Driver.Pipeline   ( compileOne' )
+import GHC.Monad
 import TcRnMonad        ( finalSafeMode, fixSafeInstances )
 import TcRnTypes
 import Packages
@@ -311,12 +311,12 @@ import FamInstEnv ( FamInst )
 import SrcLoc
 import CoreSyn
 import TidyPgm
-import DriverPhases     ( Phase(..), isHaskellSrcFilename )
-import Finder
-import HscTypes
+import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
+import GHC.Finder
+import GHC.Types
 import DynFlags
 import SysTools
-import Annotations
+import GHC.Types.Annotations
 import Module
 import Panic
 import Platform
@@ -1293,7 +1293,7 @@ getModuleSourceAndFlags mod = do
 -- | Return module source as token stream, including comments.
 --
 -- The module must be in the module graph and its source must be available.
--- Throws a 'HscTypes.SourceError' on parse error.
+-- Throws a 'GHC.Types.SourceError' on parse error.
 getTokenStream :: GhcMonad m => Module -> m [Located Token]
 getTokenStream mod = do
   (sourceFile, source, flags) <- getModuleSourceAndFlags mod
@@ -1442,16 +1442,16 @@ moduleTrustReqs m = withSession $ \hsc_env ->
 -- Checks that a type (in string form) is an instance of the
 -- @GHC.GHCi.GHCiSandboxIO@ type class. Sets it to be the GHCi monad if it is,
 -- throws an error otherwise.
-setGHCiMonad :: GhcMonad m => String -> m ()
-setGHCiMonad name = withSession $ \hsc_env -> do
+setGhcMonad :: GhcMonad m => String -> m ()
+setGhcMonad name = withSession $ \hsc_env -> do
     ty <- liftIO $ hscIsGHCiMonad hsc_env name
     modifySession $ \s ->
         let ic = (hsc_IC s) { ic_monad = ty }
         in s { hsc_IC = ic }
 
 -- | Get the monad GHCi lifts user statements into.
-getGHCiMonad :: GhcMonad m => m Name
-getGHCiMonad = fmap (ic_monad . hsc_IC) getSession
+getGhcMonad :: GhcMonad m => m Name
+getGhcMonad = fmap (ic_monad . hsc_IC) getSession
 
 getHistorySpan :: GhcMonad m => History -> m SrcSpan
 getHistorySpan h = withSession $ \hsc_env ->

@@ -34,7 +34,7 @@ import TcType
 
 import CmmExpr
 import CmmUtils
-import HscTypes
+import GHC.Types
 import ForeignCall
 import TysWiredIn
 import TysPrim

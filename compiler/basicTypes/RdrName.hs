@@ -1007,7 +1007,7 @@ There are two reasons for shadowing:
   - Ids bought into scope on the command line (eg let x = True) have
     External Names, like Ghci4.x.  We want a new binding for 'x' (say)
     to override the existing binding for 'x'.
-    See Note [Interactively-bound Ids in GHCi] in HscTypes
+    See Note [Interactively-bound Ids in GHCi] in GHC.Types
 
   - Data types also have Extenal Names, like Ghci4.T; but we still want
     'T' to mean the newly-declared 'T', not an old one.

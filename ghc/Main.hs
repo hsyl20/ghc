@@ -17,13 +17,13 @@ import GHC              ( -- DynFlags(..), HscTarget(..),
                           -- GhcMode(..), GhcLink(..),
                           Ghc, GhcMonad(..),
                           LoadHowMuch(..) )
-import CmdLineParser
+import GHC.Program.CmdLineParser
 
 -- Implementations of the various modes (--show-iface, mkdependHS. etc.)
 import LoadIface        ( showIface )
-import HscMain          ( newHscEnv )
-import DriverPipeline   ( oneShot, compileFile )
-import DriverMkDepend   ( doMkDependHS )
+import GHC.Program.Main          ( newHscEnv )
+import GHC.Program.Driver.Pipeline   ( oneShot, compileFile )
+import GHC.Program.MakeDepend   ( doMkDependHS )
 import DriverBkp   ( doBackpack )
 #if defined(GHCI)
 import GHCi.UI          ( interactiveUI, ghciWelcomeMsg, defaultGhciSettings )
@@ -41,10 +41,10 @@ import Module           ( ModuleName )
 
 -- Various other random stuff that we need
 import Config
-import Constants
-import HscTypes
+import GHC.Config.Constants
+import GHC.Types
 import Packages         ( pprPackages, pprPackagesSimple )
-import DriverPhases
+import GHC.Program.Driver.Phases
 import BasicTypes       ( failed )
 import DynFlags
 import ErrUtils
@@ -59,7 +59,7 @@ import MonadUtils       ( liftIO )
 -- Imports for --abi-hash
 import LoadIface           ( loadUserInterface )
 import Module              ( mkModuleName )
-import Finder              ( findImportedModule, cannotFindModule )
+import GHC.Finder              ( findImportedModule, cannotFindModule )
 import TcRnMonad           ( initIfaceCheck )
 import Binary              ( openBinMem, put_ )
 import BinFingerprint      ( fingerprintBinMem )

@@ -23,7 +23,7 @@ import CostCentre (mkUserCC)
 import DynFlags
 import FastString
 import HsSyn
-import HscTypes( isHsBootOrSig )
+import GHC.Types( isHsBootOrSig )
 import TcSigs
 import TcRnMonad
 import TcEnv

@@ -8,7 +8,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module GhcMonad (
+module GHC.Monad (
         -- * 'Ghc' monad stuff
         GhcMonad(..),
         Ghc(..),
@@ -24,7 +24,7 @@ module GhcMonad (
   ) where
 
 import MonadUtils
-import HscTypes
+import GHC.Types
 import DynFlags
 import Exception
 import ErrUtils
@@ -45,7 +45,7 @@ import Data.IORef
 --
 --   - maintains a current session.
 --
--- If you do not use 'Ghc' or 'GhcT', make sure to call 'GHC.initGhcMonad'
+-- If you do not use 'Ghc' or 'GhcT', make sure to call 'GhcMonad.initGhcMonad'
 -- before any call to the GHC API functions can occur.
 --
 class (Functor m, MonadIO m, ExceptionMonad m, HasDynFlags m) => GhcMonad m where

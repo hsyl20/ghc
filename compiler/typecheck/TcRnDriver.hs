@@ -108,7 +108,7 @@ import NameSet
 import Avail
 import TyCon
 import SrcLoc
-import HscTypes
+import GHC.Types
 import ListSetOps
 import Outputable
 import ConLike
@@ -117,7 +117,7 @@ import Type
 import Class
 import BasicTypes hiding( SuccessFlag(..) )
 import CoAxiom
-import Annotations
+import GHC.Types.Annotations
 import Data.List ( sortBy, sort )
 import Data.Ord
 import FastString
@@ -1889,7 +1889,7 @@ tcRnStmt hsc_env rdr_stmt
     traceTc "tcs 1" empty ;
     this_mod <- getModule ;
     global_ids <- mapM (externaliseAndTidyId this_mod) zonked_ids ;
-        -- Note [Interactively-bound Ids in GHCi] in HscTypes
+        -- Note [Interactively-bound Ids in GHCi] in GHC.Types
 
 {- ---------------------------------------------
    At one stage I removed any shadowed bindings from the type_env;
@@ -1960,7 +1960,7 @@ runPlans (p:ps) = tryTcDiscardingErrs (runPlans ps) p
 --
 -- By 'lift' and 'environment we mean that the code is changed to
 -- execute properly in an IO monad. See Note [Interactively-bound Ids
--- in GHCi] in HscTypes for more details. We do this lifting by trying
+-- in GHCi] in GHC.Types for more details. We do this lifting by trying
 -- different ways ('plans') of lifting the code into the IO monad and
 -- type checking each plan until one succeeds.
 tcUserStmt :: GhciLStmt RdrName -> TcM (PlanResult, FixityEnv)
@@ -2121,7 +2121,7 @@ tcGhciStmts stmts
 -- | Generate a typed ghciStepIO expression (ghciStep :: Ty a -> IO a)
 getGhciStepIO :: TcM (LHsExpr Name)
 getGhciStepIO = do
-    ghciTy <- getGHCiMonad
+    ghciTy <- getGhcMonad
     a_tv <- newName (mkTyVarOccFS (fsLit "a"))
     let ghciM   = nlHsAppTy (nlHsTyVar ghciTy) (nlHsTyVar a_tv)
         ioM     = nlHsAppTy (nlHsTyVar ioTyConName) (nlHsTyVar a_tv)

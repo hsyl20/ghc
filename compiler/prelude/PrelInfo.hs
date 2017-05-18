@@ -61,7 +61,7 @@ import NameEnv
 import MkId
 import TysPrim
 import TysWiredIn
-import HscTypes
+import GHC.Types
 import Class
 import TyCon
 import UniqFM

@@ -35,7 +35,7 @@ import           Desugar
 import           DynFlags (HasDynFlags(..))
 import           FastString
 import           GHC
-import           GhcMonad
+import           GHC.Monad
 import           Name
 import           NameSet
 import           Outputable

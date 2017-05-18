@@ -12,7 +12,7 @@ module SimplCore ( core2core, simplifyExpr ) where
 
 import DynFlags
 import CoreSyn
-import HscTypes
+import GHC.Types
 import CSE              ( cseProgram )
 import Rules            ( mkRuleBase, unionRuleBase,
                           extendRuleBaseList, ruleCheckProgram, addRuleInfo, )

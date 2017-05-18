@@ -23,7 +23,7 @@ module BinIface (
 import TcRnMonad
 import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
 import IfaceEnv
-import HscTypes
+import GHC.Types
 import Module
 import Name
 import DynFlags
@@ -39,7 +39,7 @@ import Outputable
 import NameCache
 import Platform
 import FastString
-import Constants
+import GHC.Config.Constants
 import Util
 
 import Data.Bits

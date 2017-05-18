@@ -17,7 +17,7 @@ module RnModIface(
 
 import SrcLoc
 import Outputable
-import HscTypes
+import GHC.Types
 import Module
 import UniqFM
 import Avail

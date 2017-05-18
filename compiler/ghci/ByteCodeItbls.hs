@@ -12,7 +12,7 @@ module ByteCodeItbls ( mkITbls ) where
 import ByteCodeTypes
 import GHCi
 import DynFlags
-import HscTypes
+import GHC.Types
 import Name             ( Name, getName )
 import NameEnv
 import DataCon          ( DataCon, dataConRepArgTys, dataConIdentity )

@@ -387,9 +387,9 @@ ifeq "$(GhcProfiled)" "YES"
 # parts of the compiler of interest, and then add further cost centres
 # as necessary.  Turn on -fprof-auto for individual modules like this:
 
-# compiler/main/DriverPipeline_HC_OPTS += -fprof-auto
-compiler/main/GhcMake_HC_OPTS        += -fprof-auto
-compiler/main/GHC_HC_OPTS            += -fprof-auto
+# compiler/GHC/Program/Driver/Pipeline_HC_OPTS += -fprof-auto
+compiler/GHC/Program/Make_HC_OPTS        += -fprof-auto
+compiler/GHC_HC_OPTS            += -fprof-auto
 
 # or alternatively add {-# OPTIONS_GHC -fprof-auto #-} to the top of
 # modules you're interested in.
@@ -434,7 +434,7 @@ compiler_stage3_SplitSections = NO
 # reachable from DynFlags:
 compiler_stage2_dll0_START_MODULE = DynFlags
 compiler_stage2_dll0_MODULES = \
-	Annotations \
+	GHC.Types.Annotations \
 	ApiAnnotation \
 	Avail \
 	Bag \
@@ -445,13 +445,13 @@ compiler_stage2_dll0_MODULES = \
 	BufWrite \
 	ByteCodeTypes \
 	Class \
-	CmdLineParser \
+	GHC.Program.CmdLineParser \
 	CmmType \
 	CoAxiom \
 	ConLike \
 	Coercion \
 	Config \
-	Constants \
+	GHC.Config.Constants \
 	CoreArity \
 	CoreFVs \
 	CoreSubst \
@@ -466,7 +466,7 @@ compiler_stage2_dll0_MODULES = \
 	DataCon \
 	Demand \
 	Digraph \
-	DriverPhases \
+	GHC.Program.Driver.Phases \
 	DynFlags \
 	Encoding \
 	EnumSet \
@@ -495,7 +495,7 @@ compiler_stage2_dll0_MODULES = \
 	HsSyn \
 	HsTypes \
 	HsUtils \
-	HscTypes \
+	GHC.Types \
 	IOEnv \
 	NameCache \
 	Id \
@@ -529,7 +529,7 @@ compiler_stage2_dll0_MODULES = \
 	Pair \
 	Panic \
 	PatSyn \
-	PipelineMonad \
+	GHC.Program.Driver.Pipeline.Monad \
 	Platform \
 	PlatformConstants \
 	PprColour \

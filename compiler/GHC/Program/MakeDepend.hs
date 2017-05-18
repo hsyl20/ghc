@@ -8,22 +8,22 @@
 --
 -----------------------------------------------------------------------------
 
-module DriverMkDepend (
+module GHC.Program.MakeDepend (
         doMkDependHS
   ) where
 
 #include "HsVersions.h"
 
 import qualified GHC
-import GhcMonad
+import GHC.Monad
 import DynFlags
 import Util
-import HscTypes
+import GHC.Types
 import SysTools         ( newTempName )
 import qualified SysTools
 import Module
 import Digraph          ( SCC(..) )
-import Finder
+import GHC.Finder
 import Outputable
 import Panic
 import SrcLoc

@@ -188,7 +188,7 @@ type QueryQualifyModule = Module -> Bool
 -- the component id to disambiguate it.
 type QueryQualifyPackage = UnitId -> Bool
 
--- See Note [Printing original names] in HscTypes
+-- See Note [Printing original names] in GHC.Types
 data QualifyName   -- Given P:M.T
   = NameUnqual           -- It's in scope unqualified as "T"
                          -- OR nothing called "T" is in scope

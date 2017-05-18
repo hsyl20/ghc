@@ -10,7 +10,7 @@ More notes (Aug 11)
 
 Things we did
   * Remove CmmCvt.graphToZgraph (Conversion from old to new Cmm reps)
-  * Remove HscMain.optionallyConvertAndOrCPS (converted old Cmm to
+  * Remove GHC.Program.Main.optionallyConvertAndOrCPS (converted old Cmm to
     new, ran pipeline, and converted back)
   * Remove CmmDecl. Put its types in Cmm.  Import Cmm into OldCmm
     so it can get those types.

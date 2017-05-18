@@ -52,7 +52,7 @@ import Outputable
 import FastString
 import BasicTypes
 import Binary
-import Constants
+import GHC.Config.Constants
 import DynFlags
 import Platform
 import UniqFM

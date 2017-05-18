@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module Finder (
+module GHC.Finder (
     flushFinderCaches,
     FindResult(..),
     findImportedModule,
@@ -34,7 +34,7 @@ module Finder (
 #include "HsVersions.h"
 
 import Module
-import HscTypes
+import GHC.Types
 import Packages
 import FastString
 import Util

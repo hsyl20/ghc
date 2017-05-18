@@ -49,7 +49,7 @@ import TcMType
 import Type
 import TyCoRep     ( TyBinder(..) )
 import TcType
-import HscTypes
+import GHC.Types
 import Class( Class )
 import MkId( mkDictFunId )
 import Id

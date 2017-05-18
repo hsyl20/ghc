@@ -39,7 +39,7 @@ import Control.Applicative ((<$))
 import HsSyn
 
 -- compiler/main
-import HscTypes         ( IsBootInterface, WarningTxt(..) )
+import GHC.Types         ( IsBootInterface, WarningTxt(..) )
 import DynFlags
 import BkpSyn
 import PackageConfig

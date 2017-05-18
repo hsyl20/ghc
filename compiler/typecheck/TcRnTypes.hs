@@ -140,7 +140,7 @@ module TcRnTypes(
 
 import HsSyn
 import CoreSyn
-import HscTypes
+import GHC.Types
 import TcEvidence
 import Type
 import Class    ( Class )
@@ -152,7 +152,7 @@ import PatSyn   ( PatSyn, pprPatSynType )
 import Id       ( idType, idName )
 import FieldLabel ( FieldLabel )
 import TcType
-import Annotations
+import GHC.Types.Annotations
 import InstEnv
 import FamInstEnv
 import PmExpr
@@ -428,7 +428,7 @@ data DsMetaVal
 -- typechecking a program, but for an hs-boot merge you'll
 -- just get a ModIface, since no actual typechecking occurred.
 --
--- This data type really should be in HscTypes, but it needs
+-- This data type really should be in GHC.Types, but it needs
 -- to have a TcGblEnv which is only defined here.
 data FrontendResult
         = FrontendTypecheck TcGblEnv
@@ -498,7 +498,7 @@ data TcGblEnv
 
         tcg_fix_env   :: FixityEnv,     -- ^ Just for things in this module
         tcg_field_env :: RecFieldEnv,   -- ^ Just for things in this module
-                                        -- See Note [The interactive package] in HscTypes
+                                        -- See Note [The interactive package] in GHC.Types
 
         tcg_type_env :: TypeEnv,
           -- ^ Global type env for the module we are compiling now.  All
@@ -509,7 +509,7 @@ data TcGblEnv
           --  move to the global envt during zonking)
           --
           -- NB: for what "things in this module" means, see
-          -- Note [The interactive package] in HscTypes
+          -- Note [The interactive package] in GHC.Types
 
         tcg_type_env_var :: TcRef TypeEnv,
                 -- Used only to initialise the interface-file
@@ -561,7 +561,7 @@ data TcGblEnv
           --      (tcRnExports)
           --    - imp_mods is used to compute usage info (mkIfaceTc, deSugar)
           --    - imp_trust_own_pkg is used for Safe Haskell in interfaces
-          --      (mkIfaceTc, as well as in HscMain)
+          --      (mkIfaceTc, as well as in GHC.Program.Main)
           --    - To create the Dependencies field in interface (mkDependencies)
 
         tcg_dus       :: DefUses,   -- ^ What is defined in this module and what is used.
@@ -654,7 +654,7 @@ data TcGblEnv
 
         -- Things defined in this module, or (in GHCi)
         -- in the declarations for a single GHCi command.
-        -- For the latter, see Note [The interactive package] in HscTypes
+        -- For the latter, see Note [The interactive package] in GHC.Types
         tcg_tr_module :: Maybe Id,           -- Id for $trModule :: GHC.Types.Module
                                              -- for which every module has a top-level defn
                                              -- except in GHCi in which case we have Nothing
@@ -1233,7 +1233,7 @@ data ImportAvails
           --      = ModuleEnv [ImportedModsVal],
           -- ^ Domain is all directly-imported modules
           --
-          -- See the documentation on ImportedModsVal in HscTypes for the
+          -- See the documentation on ImportedModsVal in GHC.Types for the
           -- meaning of the fields.
           --
           -- We need a full ModuleEnv rather than a ModuleNameEnv here,

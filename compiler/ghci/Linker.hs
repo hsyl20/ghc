@@ -28,9 +28,9 @@ import ByteCodeAsm
 import ByteCodeTypes
 import TcRnMonad
 import Packages
-import DriverPhases
-import Finder
-import HscTypes
+import GHC.Program.Driver.Phases
+import GHC.Finder
+import GHC.Types
 import Name
 import NameEnv
 import Module

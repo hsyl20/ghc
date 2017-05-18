@@ -21,7 +21,7 @@ import ByteCodeTypes
 import GHCi.RemoteTypes
 import GHCi
 
-import HscTypes
+import GHC.Types
 import Name
 import NameSet
 import Literal

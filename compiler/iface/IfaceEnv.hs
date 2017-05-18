@@ -23,7 +23,7 @@ module IfaceEnv (
 #include "HsVersions.h"
 
 import TcRnMonad
-import HscTypes
+import GHC.Types
 import Type
 import Var
 import Name
