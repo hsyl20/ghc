@@ -35,48 +35,50 @@ import qualified GHCi.UI.Monad as GhciMonad ( args, runStmt, runDecls )
 import GHCi.UI.Monad hiding ( args, runStmt, runDecls )
 import GHCi.UI.Tags
 import GHCi.UI.Info
-import Debugger
+import GHC.Interactive.Debugger
 
 -- The GHC interface
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 import GHCi.BreakArray
-import DynFlags
-import ErrUtils hiding (traceCmd)
-import GhcMonad ( modifySession )
+import GHC.Config.Flags
+import GHC.Utils.Error hiding (traceCmd)
+import GHC.Monad ( modifySession )
 import qualified GHC
 import GHC ( LoadHowMuch(..), Target(..),  TargetId(..), InteractiveImport(..),
              TyThing(..), Phase, BreakIndex, Resume, SingleStep, Ghc,
              getModuleGraph, handleSourceError )
-import HsImpExp
-import HsSyn
-import HscTypes ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
-                  setInteractivePrintName, hsc_dflags, msObjFilePath )
-import Module
-import Name
-import Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
-                  listVisibleModuleNames, pprFlag )
-import IfaceSyn ( showToHeader )
-import PprTyThing
-import PrelNames
-import RdrName ( getGRE_NameQualifier_maybes, getRdrName )
-import SrcLoc
-import qualified Lexer
+import GHC.IR.Haskell.Syntax.ImportExport
+import GHC.IR.Haskell.Syntax
+import GHC.Entity.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode,
+                          hsc_IC, setInteractivePrintName, hsc_dflags,
+                          msObjFilePath )
+import GHC.Entity.Module
+import GHC.Entity.Name
+import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
+                      listVisibleModuleNames, pprFlag )
+import GHC.IR.Interface.Syntax ( showToHeader )
+import GHC.Utils.PrettyPrint.TyThing
+import GHC.Builtin.Names
+import GHC.Entity.RdrName ( getRdrName )
+import qualified GHC.Entity.RdrName as RdrName
+import GHC.Entity.SrcLoc
+import qualified GHC.IR.Haskell.Lexer as Lexer
 
-import StringBuffer
-import Outputable hiding ( printForUser, printForUserPartWay )
+import GHC.Data.StringBuffer
+import GHC.Utils.Outputable hiding ( printForUser, printForUserPartWay )
 
 -- Other random utilities
-import BasicTypes hiding ( isTopLevel )
-import Config
-import Digraph
-import Encoding
-import FastString
-import Linker
-import Maybes ( orElse, expectJust )
-import NameSet
-import Panic hiding ( showException )
-import Util
+import GHC.Entity.BasicTypes hiding ( isTopLevel )
+import GHC.Config.Build
+import GHC.Data.Graph.Directed
+import GHC.Data.Char.Encoding
+import GHC.Data.FastString
+import GHC.Interactive.Linker
+import GHC.Data.Maybe ( orElse, expectJust )
+import GHC.Entity.Name.Set
+import GHC.Utils.Panic hiding ( showException )
+import GHC.Utils
 import qualified GHC.LanguageExtensions as LangExt
 
 -- Haskell Libraries
@@ -103,7 +105,8 @@ import Data.Time.LocalTime ( getZonedTime )
 import Data.Time.Format ( formatTime, defaultTimeLocale )
 import Data.Version ( showVersion )
 
-import Exception hiding (catch)
+import GHC.Utils.Exception hiding (catch)
+import qualified GHC.Utils.Exception as Exception
 import Foreign hiding (void)
 import GHC.Stack hiding (SrcLoc(..))
 
@@ -1839,7 +1842,8 @@ exceptT :: Applicative m => Either e a -> ExceptT e m a
 exceptT = ExceptT . pure
 
 -----------------------------------------------------------------------------
--- | @:type@ command. See also Note [TcRnExprMode] in TcRnDriver.
+-- | @:type@ command. See also Note [TcRnExprMode] in
+-- GHC.IR.Haskell.TypeChecker.Module
 
 typeOfExpr :: String -> InputT GHCi ()
 typeOfExpr str = handleSourceError GHC.printException $ do
@@ -2503,7 +2507,8 @@ showDynFlags show_all dflags = do
          nest 2 (vcat (map (setting "-f" "-fno-" gopt) others))
   putStrLn $ showSDoc dflags $
      text "warning settings:" $$
-         nest 2 (vcat (map (setting "-W" "-Wno-" wopt) DynFlags.wWarningFlags))
+         nest 2 (vcat (map (setting "-W" "-Wno-" wopt)
+                           GHC.Config.Flags.wWarningFlags))
   where
         setting prefix noPrefix test flag
           | quiet     = empty
@@ -2517,7 +2522,7 @@ showDynFlags show_all dflags = do
         default_dflags = defaultDynFlags (settings dflags)
 
         (ghciFlags,others)  = partition (\f -> flagSpecFlag f `elem` flgs)
-                                        DynFlags.fFlags
+                                        GHC.Config.Flags.fFlags
         flgs = [ Opt_PrintExplicitForalls
                , Opt_PrintExplicitKinds
                , Opt_PrintUnicodeSyntax
@@ -2912,7 +2917,7 @@ showLanguages' show_all dflags =
            Just Haskell2010 -> text "Haskell2010"
      , (if show_all then text "all active language options:"
                     else text "with the following modifiers:") $$
-          nest 2 (vcat (map (setting xopt) DynFlags.xFlags))
+          nest 2 (vcat (map (setting xopt) GHC.Config.Flags.xFlags))
      ]
   where
    setting test flag

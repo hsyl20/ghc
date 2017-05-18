@@ -1,6 +1,7 @@
 {-# OPTIONS_GHC -O2 #-}
 
--- Ths one fooled the rule-matching in SpecConstr, and gave a CoreLint error
+-- Ths one fooled the rule-matching in SpecConstr, and gave a
+-- GHC.IR.Core.Analyser.Lint error
 
 module Foo where
 

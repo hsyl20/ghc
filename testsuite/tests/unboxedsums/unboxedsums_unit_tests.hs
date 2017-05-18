@@ -1,14 +1,14 @@
 module Main where
 
-import BasicTypes
+import GHC.Entity.BasicTypes
 import GHC
-import GhcMonad
-import Outputable
-import RepType
-import TysPrim
-import TysWiredIn
-import UniqSet
-import Unique
+import GHC.Monad
+import GHC.Utils.Outputable
+import GHC.Entity.RepType
+import GHC.Builtin.Primitive.Types
+import GHC.Builtin.Types
+import GHC.Entity.Unique.Set
+import GHC.Entity.Unique
 
 import qualified Control.Exception as E
 import Control.Monad

@@ -4,13 +4,13 @@ package07e.hs:2:1: error:
     Use -v to see a list of the files searched for.
 
 package07e.hs:3:1: error:
-    Could not find module ‘HsTypes’
+    Could not find module ‘GHC.IR.Haskell.Syntax.Type’
     Use -v to see a list of the files searched for.
 
 package07e.hs:4:1: error:
-    Could not find module ‘HsUtils’
+    Could not find module ‘GHC.IR.Haskell.Utils’
     Use -v to see a list of the files searched for.
 
 package07e.hs:5:1: error:
-    Could not find module ‘UniqFM’
+    Could not find module ‘GHC.Entity.Unique.FiniteMap’
     Use -v to see a list of the files searched for.

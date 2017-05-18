@@ -20,29 +20,29 @@ module Main where
 -- Also note: "on x86" means "as if we were compiling for x86"--this test
 -- doesn't actually have to run on any particular architecture.
 
-import qualified RegAlloc.Graph.Stats as Color
-import qualified RegAlloc.Linear.Base as Linear
-import qualified X86.Instr
-import HscMain
-import CgUtils
-import AsmCodeGen
-import CmmBuildInfoTables
-import CmmPipeline
-import CmmParse
-import CmmInfo
-import Cmm
-import Module
-import Debug
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Stats as Color
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Base as Linear
+import qualified GHC.Compiler.CmmToAsm.X86.Instr as X86.Instr
+import GHC.Program.Main
+import GHC.IR.Stg.Utils
+import GHC.Compiler.CmmToAsm
+import GHC.IR.Cmm.Transformer.InfoTableBuilder
+import GHC.IR.Cmm.Pipeline
+import GHC.IR.Cmm.Parser
+import GHC.RTS.InfoTable
+import GHC.IR.Cmm.Syntax
+import GHC.Entity.Module
+import GHC.IR.Cmm.Syntax.DebugBlock
 import GHC
-import GhcMonad
-import UniqFM
-import UniqSupply
-import DynFlags
-import ErrUtils
-import Outputable
-import BasicTypes
+import GHC.Monad
+import GHC.Entity.Unique.FiniteMap
+import GHC.Entity.Unique.Supply
+import GHC.Config.Flags
+import GHC.Utils.Error
+import GHC.Utils.Outputable
+import GHC.Entity.BasicTypes
 
-import Stream (collect, yield)
+import qualified GHC.Data.Stream as Stream
 
 import Data.Typeable
 import Data.Maybe
@@ -131,7 +131,7 @@ compileCmmForRegAllocStats dflags' cmmFile ncgImplF us = do
     where
           --the register allocator's intermediate data
           --structures are usually discarded
-          --(in AsmCodeGen.cmmNativeGen) for performance
+          --(in GHC.Compiler.CmmToAsm.cmmNativeGen) for performance
           --reasons.  To prevent this we need to tell
           --cmmNativeGen we want them printed out even
           --though we ignore stderr in the test configuration.

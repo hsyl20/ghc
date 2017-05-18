@@ -4,21 +4,21 @@ module Main where
 
 import Prelude hiding ( mod, id, mapM )
 import GHC
---import Packages
-import HscTypes         ( isBootSummary )
-import Digraph          ( flattenSCCs )
-import DriverPhases     ( isHaskellSrcFilename )
-import HscTypes         ( msHsFilePath )
-import Name             ( getOccString )
---import ErrUtils         ( printBagOfErrors )
-import Panic            ( panic )
-import CmdLineParser    (warnMsg)
-import DynFlags         ( defaultFatalMessager, defaultFlushOut )
-import Bag
-import Exception
-import FastString
-import MonadUtils       ( liftIO )
-import SrcLoc
+--import GHC.Packages
+import GHC.Entity.Types          ( isBootSummary )
+import GHC.Data.Graph.Directed   ( flattenSCCs )
+import GHC.Program.Driver.Phases ( isHaskellSrcFilename )
+import GHC.Entity.Types          ( msHsFilePath )
+import GHC.Entity.Name           ( getOccString )
+--import GHC.Utils.Error         ( printBagOfErrors )
+import GHC.Utils.Panic           ( panic )
+import GHC.Program.CmdLineParser ( warnMsg )
+import GHC.Config.Flags          ( defaultFatalMessager, defaultFlushOut )
+import GHC.Data.Bag
+import GHC.Utils.Exception
+import GHC.Data.FastString
+import GHC.Utils.Monad           ( liftIO )
+import GHC.Entity.SrcLoc
 
 import Distribution.Simple.GHC ( componentGhcOptions )
 import Distribution.Simple.Configure ( getPersistBuildConfig )
@@ -39,7 +39,7 @@ import Data.Traversable (mapM)
 import Data.Map ( Map )
 import qualified Data.Map as M
 
---import UniqFM
+--GHC.Entity.Unique.FiniteMap
 --import Debug.Trace
 
 -- search for definitions of things
