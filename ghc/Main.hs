@@ -31,10 +31,10 @@ import GHCi.UI          ( interactiveUI, ghciWelcomeMsg, defaultGhciSettings )
 
 -- Frontend plugins
 #if defined(GHCI)
-import DynamicLoading   ( loadFrontendPlugin )
+import GHC.Interactive.DynamicLoading   ( loadFrontendPlugin )
 import Plugins
 #else
-import DynamicLoading   ( pluginError )
+import GHC.Interactive.DynamicLoading   ( pluginError )
 #endif
 import Module           ( ModuleName )
 

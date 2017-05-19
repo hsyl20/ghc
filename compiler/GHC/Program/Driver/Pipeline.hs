@@ -40,7 +40,7 @@ import Packages
 import HeaderInfo
 import GHC.Program.Driver.Phases
 import SysTools
-import Elf
+import GHC.Utils.Elf
 import GHC.Program.Main
 import GHC.Finder
 import GHC.Types hiding ( Hsc )

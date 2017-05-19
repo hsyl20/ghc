@@ -344,7 +344,7 @@ Library
         GHC
         GHC.Program.Make
         GhcPlugins
-        DynamicLoading
+        GHC.Interactive.DynamicLoading
         HeaderInfo
         GHC.Program.Main
         GHC.Syntax.Stats
@@ -360,7 +360,7 @@ Library
         StaticPtrTable
         SysTools
         SysTools.Terminal
-        Elf
+        GHC.Utils.Elf
         GHC.Interface.Tidy
         Ctype
         HaddockUtils

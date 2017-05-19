@@ -57,10 +57,10 @@ import Control.Monad
 import qualified GHC.LanguageExtensions as LangExt
 
 #if defined(GHCI)
-import DynamicLoading   ( loadPlugins )
+import GHC.Interactive.DynamicLoading   ( loadPlugins )
 import Plugins          ( installCoreToDos )
 #else
-import DynamicLoading   ( pluginError )
+import GHC.Interactive.DynamicLoading   ( pluginError )
 #endif
 
 {-

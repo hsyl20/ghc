@@ -55,7 +55,7 @@ import MkId
 import GHC.Interface.Tidy    ( globaliseAndTidyId )
 import TysWiredIn ( unitTy, mkListTy )
 #if defined(GHCI)
-import DynamicLoading ( loadPlugins )
+import GHC.Interactive.DynamicLoading ( loadPlugins )
 import Plugins ( tcPlugin )
 #endif
 

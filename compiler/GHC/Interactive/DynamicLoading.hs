@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP, MagicHash #-}
 
 -- | Dynamically lookup up values from modules and loading them.
-module DynamicLoading (
+module GHC.Interactive.DynamicLoading (
 #if defined(GHCI)
         -- * Loading plugins
         loadPlugins,
