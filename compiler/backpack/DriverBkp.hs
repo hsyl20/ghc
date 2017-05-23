@@ -40,7 +40,7 @@ import UniqFM
 import UniqDFM
 import Outputable
 import Maybes
-import HeaderInfo
+import GHC.Syntax.Parsers.HeaderInfo
 import MkIface
 import GHC.Program.Make
 import UniqDSet

@@ -5,7 +5,7 @@ import GHC
 
 import Control.Monad.IO.Class (liftIO)
 import System.Environment
-import HeaderInfo
+import GHC.Syntax.Parsers.HeaderInfo
 import Outputable
 import StringBuffer
 

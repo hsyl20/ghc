@@ -10,11 +10,15 @@
 --
 -----------------------------------------------------------------------------
 
-module HeaderInfo ( getImports
-                  , mkPrelImports -- used by the renamer too
-                  , getOptionsFromFile, getOptions
-                  , optionsErrorMsgs,
-                    checkProcessArgsResult ) where
+module GHC.Syntax.Parsers.HeaderInfo
+   ( getImports
+   , mkPrelImports -- used by the renamer too
+   , getOptionsFromFile
+   , getOptions
+   , optionsErrorMsgs
+   , checkProcessArgsResult
+   )
+where
 
 #include "HsVersions.h"
 

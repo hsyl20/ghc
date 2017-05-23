@@ -80,7 +80,7 @@ import InstEnv
 import FamInstEnv
 import TcAnnotations
 import TcBinds
-import HeaderInfo       ( mkPrelImports )
+import GHC.Syntax.Parsers.HeaderInfo       ( mkPrelImports )
 import TcDefaults
 import TcEnv
 import TcRules

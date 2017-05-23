@@ -40,7 +40,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Finder
 import GHC.Monad
-import HeaderInfo
+import GHC.Syntax.Parsers.HeaderInfo
 import GHC.Types
 import Module
 import TcIface          ( typecheckIface )

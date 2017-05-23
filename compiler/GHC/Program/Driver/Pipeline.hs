@@ -37,7 +37,7 @@ module GHC.Program.Driver.Pipeline (
 
 import GHC.Program.Driver.Pipeline.Monad
 import Packages
-import HeaderInfo
+import GHC.Syntax.Parsers.HeaderInfo
 import GHC.Program.Driver.Phases
 import SysTools
 import GHC.Utils.Elf

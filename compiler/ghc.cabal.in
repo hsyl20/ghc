@@ -345,7 +345,7 @@ Library
         GHC.Program.Make
         GHC.Plugins
         GHC.Interactive.DynamicLoading
-        HeaderInfo
+        GHC.Syntax.Parsers.HeaderInfo
         GHC.Program.Main
         GHC.Syntax.Stats
         GHC.Types
