@@ -3,11 +3,11 @@
 -- | This module is not used by GHC itself.  Rather, it exports all of
 -- the functions and types you are likely to need when writing a
 -- plugin for GHC. So authors of plugins can probably get away simply
--- with saying "import GhcPlugins".
+-- with saying "import GHC.Plugins".
 --
 -- Particularly interesting modules for plugin writers include
 -- "CoreSyn" and "CoreMonad".
-module GhcPlugins(
+module GHC.Plugins(
         module Plugins,
         module RdrName, module OccName, module Name, module Var, module Id, module IdInfo,
         module CoreMonad, module CoreSyn, module Literal, module DataCon,

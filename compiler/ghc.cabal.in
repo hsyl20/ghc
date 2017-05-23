@@ -343,7 +343,7 @@ Library
         GHC.Finder
         GHC
         GHC.Program.Make
-        GhcPlugins
+        GHC.Plugins
         GHC.Interactive.DynamicLoading
         HeaderInfo
         GHC.Program.Main

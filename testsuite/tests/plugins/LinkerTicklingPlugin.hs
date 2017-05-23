@@ -1,6 +1,6 @@
 module LinkerTicklingPlugin where
 
-import GhcPlugins
+import GHC.Plugins
 import GHC.Config.Flags
 
 plugin :: Plugin

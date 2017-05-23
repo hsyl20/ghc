@@ -3,7 +3,7 @@
 module Simple.Plugin(plugin) where
 
 import UniqFM
-import GhcPlugins
+import GHC.Plugins
 import qualified GHC.Utils.Error
 
 -- For annotation tests
