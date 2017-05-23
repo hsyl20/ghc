@@ -72,7 +72,7 @@ import CLabel
 
 import UniqFM
 import UniqSupply
-import DynFlags
+import GHC.Config.Flags
 import Util
 import Unique
 

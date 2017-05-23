@@ -32,7 +32,7 @@ import Maybes           ( catMaybes, isJust )
 import BasicTypes
 import GHC.Types
 import Bag
-import DynFlags
+import GHC.Config.Flags
 import Util
 import Outputable
 import FastString

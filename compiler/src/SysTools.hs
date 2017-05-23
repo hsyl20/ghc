@@ -63,7 +63,7 @@ import ErrUtils
 import Panic
 import Platform
 import Util
-import DynFlags
+import GHC.Config.Flags
 import Exception
 
 import LlvmCodeGen.Base (llvmVersionStr, supportedLlvmVersion)

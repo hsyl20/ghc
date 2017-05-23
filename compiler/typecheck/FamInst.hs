@@ -25,7 +25,7 @@ import SrcLoc
 import TyCon
 import TcType
 import CoAxiom
-import DynFlags
+import GHC.Config.Flags
 import Module
 import Outputable
 import Util

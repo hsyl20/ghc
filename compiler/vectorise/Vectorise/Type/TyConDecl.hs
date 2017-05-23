@@ -12,7 +12,7 @@ import Class
 import Type
 import TyCon
 import DataCon
-import DynFlags
+import GHC.Config.Flags
 import BasicTypes( DefMethSpec(..) )
 import SrcLoc( SrcSpan, noSrcSpan )
 import Var

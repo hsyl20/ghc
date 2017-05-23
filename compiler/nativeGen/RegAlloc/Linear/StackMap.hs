@@ -20,7 +20,7 @@ module RegAlloc.Linear.StackMap (
 
 where
 
-import DynFlags
+import GHC.Config.Flags
 import UniqFM
 import Unique
 

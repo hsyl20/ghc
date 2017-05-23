@@ -47,7 +47,7 @@ import GHC.Types hiding ( Hsc )
 import Outputable
 import Module
 import ErrUtils
-import DynFlags
+import GHC.Config.Flags
 import Config
 import Panic
 import Util

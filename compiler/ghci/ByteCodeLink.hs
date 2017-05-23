@@ -28,7 +28,7 @@ import SizedSeq
 import GHCi
 import ByteCodeTypes
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 import Name
 import NameEnv
 import PrimOp

@@ -59,7 +59,7 @@ import Outputable
 import Type
 import SrcLoc
 import Bag -- collect ev vars from pats
-import DynFlags( gopt, GeneralFlag(..) )
+import GHC.Config.Flags( gopt, GeneralFlag(..) )
 import Maybes
 -- libraries:
 import Data.Data hiding (TyCon,Fixity)

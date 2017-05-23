@@ -23,7 +23,7 @@ import CoreSyn
 import CoreMonad            ( CoreM, getHscEnv )
 import Type
 import Id
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Util                 ( zipLazy )
 import MonadUtils

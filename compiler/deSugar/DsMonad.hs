@@ -78,7 +78,7 @@ import Type
 import UniqSupply
 import Name
 import NameEnv
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import FastString
 import Maybes

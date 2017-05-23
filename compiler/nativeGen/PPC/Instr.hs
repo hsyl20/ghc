@@ -34,7 +34,7 @@ import Reg
 import CodeGen.Platform
 import BlockId
 import Hoopl
-import DynFlags
+import GHC.Config.Flags
 import Cmm
 import CmmInfo
 import FastString

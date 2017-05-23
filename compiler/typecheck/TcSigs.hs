@@ -37,7 +37,7 @@ import TcEnv( tcLookupId )
 import TcEvidence( HsWrapper, (<.>) )
 import Type( mkTyVarBinders )
 
-import DynFlags
+import GHC.Config.Flags
 import Var      ( TyVar, tyVarName, tyVarKind )
 import Id       ( Id, idName, idType, idInlinePragma, setInlinePragma, mkLocalId )
 import PrelNames( mkUnboundName )

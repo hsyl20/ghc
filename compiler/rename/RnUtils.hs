@@ -40,7 +40,7 @@ import Outputable
 import Util
 import BasicTypes       ( TopLevelFlag(..) )
 import ListSetOps       ( removeDups )
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Control.Monad
 import Data.List

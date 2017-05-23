@@ -34,7 +34,7 @@ import PprBase
 
 import Hoopl
 import BasicTypes       (Alignment)
-import DynFlags
+import GHC.Config.Flags
 import Cmm              hiding (topInfoTable)
 import CLabel
 import Unique           ( pprUniqueAlways, Uniquable(..) )

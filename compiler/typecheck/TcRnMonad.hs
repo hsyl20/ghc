@@ -160,7 +160,7 @@ import NameSet
 import Bag
 import Outputable
 import UniqSupply
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Panic
 import Util

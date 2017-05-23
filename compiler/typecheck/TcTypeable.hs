@@ -31,7 +31,7 @@ import Name ( Name, getOccName )
 import OccName
 import Module
 import HsSyn
-import DynFlags
+import GHC.Config.Flags
 import Bag
 import Var ( TyVarBndr(..) )
 import TrieMap

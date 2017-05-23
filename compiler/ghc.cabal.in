@@ -338,7 +338,7 @@ Library
         GHC.Program.Driver.Phases
         GHC.Program.Driver.Pipeline.Monad
         GHC.Program.Driver.Pipeline
-        DynFlags
+        GHC.Config.Flags
         ErrUtils
         GHC.Finder
         GHC

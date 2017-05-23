@@ -107,7 +107,7 @@ module OccName (
 
 import Util
 import Unique
-import DynFlags
+import GHC.Config.Flags
 import UniqFM
 import UniqSet
 import FastString

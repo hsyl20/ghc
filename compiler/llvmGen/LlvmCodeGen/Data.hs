@@ -15,7 +15,7 @@ import LlvmCodeGen.Base
 import BlockId
 import CLabel
 import Cmm
-import DynFlags
+import GHC.Config.Flags
 import Platform
 
 import FastString

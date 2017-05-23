@@ -47,7 +47,7 @@ import UniqSupply
 import Maybes
 import OrdList
 import ErrUtils
-import DynFlags
+import GHC.Config.Flags
 import Util
 import Pair
 import Outputable

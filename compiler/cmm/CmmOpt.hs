@@ -25,7 +25,7 @@ module CmmOpt (
 
 import CmmUtils
 import Cmm
-import DynFlags
+import GHC.Config.Flags
 import Util
 
 import Outputable

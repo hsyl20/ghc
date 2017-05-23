@@ -34,7 +34,7 @@ import Outputable
 import PprTyThing
 import ErrUtils
 import MonadUtils
-import DynFlags
+import GHC.Config.Flags
 import Exception
 
 import Control.Monad

@@ -59,7 +59,7 @@ import GHC.Interactive.DynamicLoading ( loadPlugins )
 import Plugins ( tcPlugin )
 #endif
 
-import DynFlags
+import GHC.Config.Flags
 import HsSyn
 import IfaceSyn ( ShowSub(..), showToHeader )
 import IfaceType( ShowForAllFlag(..) )

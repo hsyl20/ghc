@@ -66,7 +66,7 @@ import UniqSupply
 import Outputable
 import Maybes
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import Util
 import FastString
 import BasicTypes hiding ( SuccessFlag(..) )

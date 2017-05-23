@@ -58,7 +58,7 @@ import TcRnMonad        ( initTcForLookup )
 import CoreSyn
 import GHC.Types
 import Module
-import DynFlags
+import GHC.Config.Flags
 import BasicTypes       ( CompilerPhase(..) )
 import GHC.Types.Annotations
 

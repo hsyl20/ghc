@@ -12,7 +12,7 @@ where
 import Reg
 import RegClass
 
-import DynFlags
+import GHC.Config.Flags
 import Panic
 import Platform
 

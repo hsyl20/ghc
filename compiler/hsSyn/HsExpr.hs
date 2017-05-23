@@ -30,7 +30,7 @@ import HsBinds
 import TcEvidence
 import CoreSyn
 import Var
-import DynFlags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )
+import GHC.Config.Flags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )
 import Name
 import NameSet
 import RdrName  ( GlobalRdrEnv )

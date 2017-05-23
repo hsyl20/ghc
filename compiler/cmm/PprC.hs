@@ -37,7 +37,7 @@ import CmmSwitch
 
 -- Utils
 import CPrim
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 import Platform

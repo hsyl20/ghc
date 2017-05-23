@@ -12,7 +12,7 @@ module CmmSwitch (
   ) where
 
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import Compiler.Hoopl (Label)
 
 import Data.Maybe

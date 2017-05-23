@@ -11,7 +11,7 @@ module ByteCodeItbls ( mkITbls ) where
 
 import ByteCodeTypes
 import GHCi
-import DynFlags
+import GHC.Config.Flags
 import GHC.Types
 import Name             ( Name, getName )
 import NameEnv

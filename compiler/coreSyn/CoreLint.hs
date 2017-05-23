@@ -62,7 +62,7 @@ import CoreArity ( typeArity )
 import Demand ( splitStrictSig, isBotRes )
 
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 import Control.Monad
 #if __GLASGOW_HASKELL__ > 710
 import qualified Control.Monad.Fail as MonadFail

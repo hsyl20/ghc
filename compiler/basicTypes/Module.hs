@@ -169,7 +169,7 @@ import qualified Data.Set as Set
 import qualified FiniteMap as Map
 import System.FilePath
 
-import {-# SOURCE #-} DynFlags (DynFlags)
+import {-# SOURCE #-} GHC.Config.Flags (DynFlags)
 import {-# SOURCE #-} Packages (componentIdString, improveUnitId, PackageConfigMap, getPackageConfigMap, displayInstalledUnitId)
 
 -- Note [The identifier lexicon]

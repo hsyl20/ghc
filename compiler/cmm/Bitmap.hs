@@ -19,7 +19,7 @@ module Bitmap (
 #include "../includes/MachDeps.h"
 
 import SMRep
-import DynFlags
+import GHC.Config.Flags
 import Util
 
 import Data.Foldable (foldl')

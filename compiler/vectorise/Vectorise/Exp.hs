@@ -42,7 +42,7 @@ import Literal
 import TysPrim
 import Outputable
 import FastString
-import DynFlags
+import GHC.Config.Flags
 import Util
 
 import Control.Monad

@@ -16,7 +16,7 @@ import Bag
 import BasicTypes
 import Class
 import DataCon
--- import DynFlags
+-- import GHC.Config.Flags
 import ErrUtils
 import Inst
 import Outputable

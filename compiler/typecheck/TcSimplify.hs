@@ -19,7 +19,7 @@ module TcSimplify(
 
 import Bag
 import Class         ( Class, classKey, classTyCon )
-import DynFlags      ( WarningFlag ( Opt_WarnMonomorphism )
+import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , WarnReason ( Reason )
                      , DynFlags( solverIterations ) )
 import Inst

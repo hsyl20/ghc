@@ -13,7 +13,7 @@ module GHC.Interface.Tidy (
 #include "HsVersions.h"
 
 import TcRnTypes
-import DynFlags
+import GHC.Config.Flags
 import CoreSyn
 import CoreUnfold
 import CoreFVs

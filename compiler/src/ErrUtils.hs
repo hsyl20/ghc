@@ -62,7 +62,7 @@ import Outputable
 import Panic
 import qualified PprColour as Col
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import FastString (unpackFS)
 import StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
 import Json

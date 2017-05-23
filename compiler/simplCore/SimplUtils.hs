@@ -37,7 +37,7 @@ module SimplUtils (
 
 import SimplEnv
 import CoreMonad        ( SimplifierMode(..), Tick(..) )
-import DynFlags
+import GHC.Config.Flags
 import CoreSyn
 import qualified CoreSubst
 import PprCore

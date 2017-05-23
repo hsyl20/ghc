@@ -11,7 +11,7 @@ module GHC.Program.Driver.Pipeline.Monad (
 
 import MonadUtils
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import GHC.Program.Driver.Phases
 import GHC.Types
 import Module

@@ -34,7 +34,7 @@ import BasicTypes
 
 -- a bit vexing
 import {-# SOURCE #-} LoadIface
-import DynFlags
+import GHC.Config.Flags
 
 import qualified Data.Traversable as T
 

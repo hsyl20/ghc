@@ -50,7 +50,7 @@ import CostCentre  ( CostCentreStack )
 import Data.ByteString ( ByteString )
 import Data.List   ( intersperse )
 import DataCon
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import ForeignCall ( ForeignCall )
 import Id

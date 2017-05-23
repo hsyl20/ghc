@@ -44,7 +44,7 @@ import CLabel
 import Cmm
 import CmmUtils
 import CmmSwitch
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 import PprCmmDecl

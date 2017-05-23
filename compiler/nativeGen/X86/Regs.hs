@@ -54,7 +54,7 @@ import RegClass
 
 import Cmm
 import CLabel           ( CLabel )
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 

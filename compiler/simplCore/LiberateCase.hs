@@ -9,7 +9,7 @@ module LiberateCase ( liberateCase ) where
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import CoreSyn
 import CoreUnfold       ( couldBeSmallEnoughToInline )
 import Id

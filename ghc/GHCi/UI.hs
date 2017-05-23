@@ -41,7 +41,7 @@ import Debugger
 import GHCi
 import GHCi.RemoteTypes
 import GHCi.BreakArray
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import GHC.Monad ( modifySession )
 import qualified GHC
@@ -2503,7 +2503,7 @@ showDynFlags show_all dflags = do
          nest 2 (vcat (map (setting "-f" "-fno-" gopt) others))
   putStrLn $ showSDoc dflags $
      text "warning settings:" $$
-         nest 2 (vcat (map (setting "-W" "-Wno-" wopt) DynFlags.wWarningFlags))
+         nest 2 (vcat (map (setting "-W" "-Wno-" wopt) GHC.Config.Flags.wWarningFlags))
   where
         setting prefix noPrefix test flag
           | quiet     = empty
@@ -2517,7 +2517,7 @@ showDynFlags show_all dflags = do
         default_dflags = defaultDynFlags (settings dflags)
 
         (ghciFlags,others)  = partition (\f -> flagSpecFlag f `elem` flgs)
-                                        DynFlags.fFlags
+                                        GHC.Config.Flags.fFlags
         flgs = [ Opt_PrintExplicitForalls
                , Opt_PrintExplicitKinds
                , Opt_PrintUnicodeSyntax
@@ -2912,7 +2912,7 @@ showLanguages' show_all dflags =
            Just Haskell2010 -> text "Haskell2010"
      , (if show_all then text "all active language options:"
                     else text "with the following modifiers:") $$
-          nest 2 (vcat (map (setting xopt) DynFlags.xFlags))
+          nest 2 (vcat (map (setting xopt) GHC.Config.Flags.xFlags))
      ]
   where
    setting test flag

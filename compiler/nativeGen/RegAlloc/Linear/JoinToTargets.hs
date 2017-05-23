@@ -19,7 +19,7 @@ import Reg
 import BlockId
 import Hoopl
 import Digraph
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Unique
 import UniqFM

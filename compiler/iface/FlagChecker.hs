@@ -8,7 +8,7 @@ module FlagChecker (
 
 import Binary
 import BinIface ()
-import DynFlags
+import GHC.Config.Flags
 import GHC.Types
 import Module
 import Name

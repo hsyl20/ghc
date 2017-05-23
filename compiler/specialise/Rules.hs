@@ -54,7 +54,7 @@ import NameEnv
 import UniqFM
 import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
-import DynFlags         ( DynFlags )
+import GHC.Config.Flags         ( DynFlags )
 import Outputable
 import FastString
 import Maybes

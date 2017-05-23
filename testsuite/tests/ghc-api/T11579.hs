@@ -1,5 +1,5 @@
 import System.Environment
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import GHC
 import StringBuffer

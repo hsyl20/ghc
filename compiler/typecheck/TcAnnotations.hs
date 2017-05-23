@@ -12,7 +12,7 @@ module TcAnnotations ( tcAnnotations, annCtxt ) where
 
 import {-# SOURCE #-} TcSplice ( runAnnotation )
 import Module
-import DynFlags
+import GHC.Config.Flags
 import Control.Monad ( when )
 
 import HsSyn

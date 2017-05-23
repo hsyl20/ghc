@@ -14,7 +14,7 @@ import SMRep
 import Cmm (Convention(..))
 import PprCmm ()
 
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import Outputable
 

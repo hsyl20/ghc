@@ -40,7 +40,7 @@ import HsSyn
 
 -- compiler/main
 import GHC.Types         ( IsBootInterface, WarningTxt(..) )
-import DynFlags
+import GHC.Config.Flags
 import BkpSyn
 import PackageConfig
 

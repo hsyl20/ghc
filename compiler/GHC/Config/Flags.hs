@@ -17,7 +17,7 @@
 {-# OPTIONS_GHC -fno-cse #-}
 -- -fno-cse is needed for GLOBAL_VAR's to behave properly
 
-module DynFlags (
+module GHC.Config.Flags (
         -- * Dynamic flags and associated configuration types
         DumpFlag(..),
         GeneralFlag(..),

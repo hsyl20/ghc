@@ -131,7 +131,7 @@ import qualified TcEnv as TcM
 import PrelNames( heqTyConKey, eqTyConKey )
 import Kind
 import TcType
-import DynFlags
+import GHC.Config.Flags
 import Type
 import Coercion
 import Unify

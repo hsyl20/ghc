@@ -49,7 +49,7 @@ import Util
 import BasicTypes
 import Outputable
 import FastString
-import DynFlags
+import GHC.Config.Flags
 
 import Control.Monad
 

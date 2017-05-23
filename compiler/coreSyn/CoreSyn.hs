@@ -112,7 +112,7 @@ import DataCon
 import Module
 import TyCon
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Util
 import UniqSet

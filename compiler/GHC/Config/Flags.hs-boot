@@ -1,5 +1,5 @@
 
-module DynFlags where
+module GHC.Config.Flags where
 
 import Platform
 

@@ -66,7 +66,7 @@ import OrdList
 import Outputable
 import Unique
 import FastString
-import DynFlags
+import GHC.Config.Flags
 import Util
 import UniqSupply       ( getUniqueM )
 

@@ -33,7 +33,7 @@ import DsMonad
 import TcRnMonad
 import ErrUtils
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 
 import Control.Monad
 

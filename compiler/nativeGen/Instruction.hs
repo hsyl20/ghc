@@ -18,7 +18,7 @@ import Reg
 
 import BlockId
 import Hoopl
-import DynFlags
+import GHC.Config.Flags
 import Cmm hiding (topInfoTable)
 import Platform
 

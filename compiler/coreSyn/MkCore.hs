@@ -77,7 +77,7 @@ import FastString
 import UniqSupply
 import BasicTypes
 import Util
-import DynFlags
+import GHC.Config.Flags
 import Data.List
 
 import Data.Char        ( ord )

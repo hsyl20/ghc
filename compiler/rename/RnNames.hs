@@ -20,7 +20,7 @@ module RnNames (
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import HsSyn
 import TcEnv
 import RnEnv

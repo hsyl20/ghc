@@ -13,7 +13,7 @@ module TcDeriv ( tcDeriving, DerivInfo(..), mkDerivInfos ) where
 #include "HsVersions.h"
 
 import HsSyn
-import DynFlags
+import GHC.Config.Flags
 
 import TcRnMonad
 import FamInst

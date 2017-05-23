@@ -11,7 +11,7 @@ import Hoopl
 import CodeGen.Platform
 import Platform (isARM, platformArch)
 
-import DynFlags
+import GHC.Config.Flags
 import UniqFM
 import PprCmm ()
 

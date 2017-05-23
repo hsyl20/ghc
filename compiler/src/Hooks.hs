@@ -25,7 +25,7 @@ module Hooks ( Hooks
              , createIservProcessHook
              ) where
 
-import DynFlags
+import GHC.Config.Flags
 import Name
 import GHC.Program.Driver.Pipeline.Monad
 import GHC.Types

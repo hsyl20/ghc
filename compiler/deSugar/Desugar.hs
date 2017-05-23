@@ -16,7 +16,7 @@ module Desugar (
 #include "HsVersions.h"
 
 import DsUsage
-import DynFlags
+import GHC.Config.Flags
 import GHC.Types
 import HsSyn
 import TcRnTypes

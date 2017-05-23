@@ -32,7 +32,7 @@ where
 
 import CmmType
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 
 -----------------------------------------------------------------------------
 --              MachOp

@@ -44,7 +44,7 @@ import Cmm hiding (RegSet, emptyRegSet)
 import PprCmm()
 
 import Digraph
-import DynFlags
+import GHC.Config.Flags
 import MonadUtils
 import Outputable
 import Platform

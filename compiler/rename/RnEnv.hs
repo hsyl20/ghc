@@ -69,7 +69,7 @@ import SrcLoc
 import Outputable
 import Util
 import Maybes
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Control.Monad
 import ListSetOps       ( minusList )

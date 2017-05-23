@@ -18,7 +18,7 @@ import Control.Monad
 import qualified Control.Monad.Fail as MonadFail
 #endif
 
-import DynFlags
+import GHC.Config.Flags
 import Lexer
 
 newtype PD a = PD { unPD :: DynFlags -> PState -> ParseResult a }

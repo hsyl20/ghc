@@ -30,7 +30,7 @@ import CoreSyn
 import TcRnMonad
 import DsMonad
 import GHC.Types hiding ( MonadThings(..) )
-import DynFlags
+import GHC.Config.Flags
 import InstEnv
 import Class
 import TyCon

@@ -116,7 +116,7 @@ module Id (
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import CoreSyn ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
 
 import IdInfo

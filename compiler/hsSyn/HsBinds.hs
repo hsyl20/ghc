@@ -37,7 +37,7 @@ import Var
 import Bag
 import FastString
 import BooleanFormula (LBooleanFormula)
-import DynFlags
+import GHC.Config.Flags
 
 import Data.Data hiding ( Fixity )
 import Data.List hiding ( foldr )

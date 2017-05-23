@@ -28,7 +28,7 @@ import CmmUtils
 import CLabel
 
 import StgSyn
-import DynFlags
+import GHC.Config.Flags
 
 import GHC.Types
 import CostCentre

@@ -27,7 +27,7 @@ import DataCon
 import TyCon
 import Type
 import Coercion
-import DynFlags
+import GHC.Config.Flags
 import BasicTypes
 import Maybes
 import Util

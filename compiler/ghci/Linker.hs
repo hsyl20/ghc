@@ -35,7 +35,7 @@ import Name
 import NameEnv
 import Module
 import ListSetOps
-import DynFlags
+import GHC.Config.Flags
 import BasicTypes
 import Outputable
 import Panic

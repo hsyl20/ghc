@@ -64,7 +64,7 @@ import Digraph
 import Util
 import Unique
 import UniqSupply (MonadUnique(..))
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 import RepType

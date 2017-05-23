@@ -62,7 +62,7 @@ module Demand (
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Var ( Var )
 import VarEnv

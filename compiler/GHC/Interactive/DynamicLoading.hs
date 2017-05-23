@@ -36,7 +36,7 @@ import RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
                         , gre_name, mkRdrQual )
 import OccName          ( OccName, mkVarOcc )
 import RnNames          ( gresFromAvails )
-import DynFlags
+import GHC.Config.Flags
 import Plugins          ( Plugin, FrontendPlugin, CommandLineOption )
 import PrelNames        ( pluginTyConName, frontendPluginTyConName )
 

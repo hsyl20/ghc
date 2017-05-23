@@ -41,7 +41,7 @@ import SrcLoc
 import Data.Ratio
 import Outputable
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import Util
 import FastString
 import qualified GHC.LanguageExtensions as LangExt

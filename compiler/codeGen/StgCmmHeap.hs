@@ -45,7 +45,7 @@ import CostCentre
 import IdInfo( CafInfo(..), mayHaveCafRefs )
 import Id ( Id )
 import Module
-import DynFlags
+import GHC.Config.Flags
 import FastString( mkFastString, fsLit )
 import Panic( sorry )
 

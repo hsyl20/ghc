@@ -24,7 +24,7 @@ import FamInstEnv ( FamInstEnvs )
 import FamInst ( tcTopNormaliseNewTypeTF_maybe )
 import Var
 import Outputable
-import DynFlags( DynFlags )
+import GHC.Config.Flags( DynFlags )
 import NameSet
 import RdrName
 

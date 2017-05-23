@@ -44,7 +44,7 @@ import qualified Stream
 import Hoopl
 
 import Maybes
-import DynFlags
+import GHC.Config.Flags
 import Panic
 import UniqSupply
 import MonadUtils

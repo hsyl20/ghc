@@ -1,6 +1,6 @@
 module TcRnDriver where
 
-import DynFlags (DynFlags)
+import GHC.Config.Flags (DynFlags)
 import Type (TyThing)
 import TcRnTypes (TcM)
 import Outputable (SDoc)

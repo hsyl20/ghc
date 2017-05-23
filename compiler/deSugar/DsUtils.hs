@@ -71,7 +71,7 @@ import Name( isInternalName )
 import Outputable
 import SrcLoc
 import Util
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import qualified GHC.LanguageExtensions as LangExt
 

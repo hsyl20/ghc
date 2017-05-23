@@ -10,7 +10,7 @@ import Data.List
 import System.IO
 import GHC
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import MonadUtils
 import Outputable
 import Bag (filterBag,isEmptyBag)

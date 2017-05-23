@@ -45,7 +45,7 @@ import Name
 import Fingerprint
 import Encoding
 
-import DynFlags
+import GHC.Config.Flags
 import PrelInfo
 import FamInst
 import FamInstEnv

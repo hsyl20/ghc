@@ -205,7 +205,7 @@ import RepType
 import TyCon
 
 -- others:
-import DynFlags
+import GHC.Config.Flags
 import CoreFVs
 import Name -- hiding (varName)
             -- We use this to make dictionaries for type literals.

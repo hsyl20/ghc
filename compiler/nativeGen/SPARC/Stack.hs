@@ -12,7 +12,7 @@ import SPARC.Regs
 import SPARC.Base
 import SPARC.Imm
 
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 
 -- | Get an AddrMode relative to the address in sp.

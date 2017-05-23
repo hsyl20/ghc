@@ -3,7 +3,7 @@
 import Data.Data
 import Data.List
 import GHC
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import ApiAnnotation
 import System.Environment( getArgs )

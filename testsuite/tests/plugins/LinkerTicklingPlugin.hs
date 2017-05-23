@@ -1,7 +1,7 @@
 module LinkerTicklingPlugin where
 
 import GhcPlugins
-import DynFlags
+import GHC.Config.Flags
 
 plugin :: Plugin
 plugin = defaultPlugin {

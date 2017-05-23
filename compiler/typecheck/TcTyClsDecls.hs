@@ -62,7 +62,7 @@ import Unify
 import Util
 import SrcLoc
 import ListSetOps
-import DynFlags
+import GHC.Config.Flags
 import Unique
 import BasicTypes
 import qualified GHC.LanguageExtensions as LangExt

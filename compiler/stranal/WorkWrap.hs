@@ -17,7 +17,7 @@ import IdInfo
 import Type
 import UniqSupply
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import Demand
 import WwLib
 import Util

@@ -22,7 +22,7 @@ import MkCore
 import DsMonad          -- the monadery used in the desugarer
 import DsUtils
 
-import DynFlags
+import GHC.Config.Flags
 import CoreUtils
 import Id
 import Type

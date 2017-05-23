@@ -52,7 +52,7 @@ import Hoopl
 import OrdList
 import Outputable
 import Unique
-import DynFlags
+import GHC.Config.Flags
 
 import Control.Monad    ( mapAndUnzipM, when )
 import Data.Bits

@@ -52,7 +52,7 @@ import Unique
 import BasicTypes
 import Outputable
 import Bag
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import ForeignCall
 import Util

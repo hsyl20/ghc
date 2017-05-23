@@ -58,7 +58,7 @@ import Name
 import NameEnv
 import Var
 import VarEnv
-import DynFlags
+import GHC.Config.Flags
 import Literal
 import BasicTypes
 import Maybes

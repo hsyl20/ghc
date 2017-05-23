@@ -51,7 +51,7 @@ import VarSet
 import UniqSet
 import Var         ( TyVarBndr(..), mkTyVar )
 import ErrUtils
-import DynFlags
+import GHC.Config.Flags
 import Util
 import ListSetOps
 import SrcLoc

@@ -39,7 +39,7 @@ import Type
 import TyCon
 import DataCon
 import MkId
-import DynFlags
+import GHC.Config.Flags
 import FastString
 
 #include "HsVersions.h"

@@ -40,7 +40,7 @@ module GHC.Program.Driver.Phases (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} DynFlags
+import {-# SOURCE #-} GHC.Config.Flags
 import Outputable
 import Platform
 import System.FilePath

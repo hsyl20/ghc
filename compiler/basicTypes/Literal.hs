@@ -53,7 +53,7 @@ import FastString
 import BasicTypes
 import Binary
 import GHC.Config.Constants
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import UniqFM
 import Util

@@ -39,7 +39,7 @@ import Outputable
 import MonadUtils
 import FastString
 import Util
-import DynFlags
+import GHC.Config.Flags
 import ForeignCall
 import Demand           ( isUsedOnce )
 import PrimOp           ( PrimCall(..) )

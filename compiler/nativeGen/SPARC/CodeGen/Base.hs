@@ -21,7 +21,7 @@ import Format
 import Reg
 
 import CodeGen.Platform
-import DynFlags
+import GHC.Config.Flags
 import Cmm
 import PprCmmExpr ()
 import Platform

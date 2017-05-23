@@ -20,7 +20,7 @@ import CmmUtils
 import CmmSwitch
 import Hoopl
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import ForeignCall
 import Outputable hiding (panic, pprPanic)

@@ -43,7 +43,7 @@ where
 import PprCmmExpr
 import Cmm
 
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import FastString
 

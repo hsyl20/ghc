@@ -27,7 +27,7 @@ import Type             ( Type, mkLamTypes )
 import FamInstEnv       ( FamInstEnv )
 import CoreSyn          ( RuleEnv(..) )
 import UniqSupply
-import DynFlags
+import GHC.Config.Flags
 import CoreMonad
 import Outputable
 import FastString

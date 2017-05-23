@@ -17,7 +17,7 @@ import GHCi
 import GHCi.FFI
 import GHCi.RemoteTypes
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 import Name

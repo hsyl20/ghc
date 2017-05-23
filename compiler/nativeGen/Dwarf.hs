@@ -7,7 +7,7 @@ import CmmExpr         ( GlobalReg(..) )
 import Config          ( cProjectName, cProjectVersion )
 import CoreSyn         ( Tickish(..) )
 import Debug
-import DynFlags
+import GHC.Config.Flags
 import Module
 import Outputable
 import Platform

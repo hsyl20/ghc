@@ -39,7 +39,7 @@ import CLabel
 
 import qualified Module
 import CostCentre
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Module
 import Outputable

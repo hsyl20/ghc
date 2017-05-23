@@ -22,7 +22,7 @@ import Id               ( Id )
 import TyCon            ( PrimRep(..), primElemRepSizeB )
 import BasicTypes       ( RepArity )
 import GHC.Config.Constants        ( wORD64_SIZE )
-import DynFlags
+import GHC.Config.Flags
 
 import Outputable
 import FastString

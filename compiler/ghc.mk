@@ -431,8 +431,8 @@ compiler_stage3_SplitSections = NO
 # There are too many symbols in the ghc package for a Windows DLL
 # (due to a limitation of bfd ld, see Trac #5987). We therefore need to split
 # some of the modules off into a separate DLL. This clump are the modules
-# reachable from DynFlags:
-compiler_stage2_dll0_START_MODULE = DynFlags
+# reachable from GHC.Config.Flags:
+compiler_stage2_dll0_START_MODULE = GHC.Config.Flags
 compiler_stage2_dll0_MODULES = \
 	GHC.Types.Annotations \
 	ApiAnnotation \
@@ -467,7 +467,7 @@ compiler_stage2_dll0_MODULES = \
 	Demand \
 	Digraph \
 	GHC.Program.Driver.Phases \
-	DynFlags \
+	GHC.Config.Flags \
 	Encoding \
 	EnumSet \
 	ErrUtils \

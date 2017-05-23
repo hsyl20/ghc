@@ -40,7 +40,7 @@ import TysPrim
 import CLabel
 import SMRep
 import ForeignCall
-import DynFlags
+import GHC.Config.Flags
 import Maybes
 import Outputable
 import UniqSupply

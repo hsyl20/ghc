@@ -31,7 +31,7 @@ where
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 

@@ -60,7 +60,7 @@ import TysWiredIn
 import TysPrim( intPrimTy )
 import PrimOp( tagToEnumKey )
 import PrelNames
-import DynFlags
+import GHC.Config.Flags
 import SrcLoc
 import Util
 import VarEnv  ( emptyTidyEnv )

@@ -25,7 +25,7 @@ module GHC.Monad (
 
 import MonadUtils
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 import Exception
 import ErrUtils
 

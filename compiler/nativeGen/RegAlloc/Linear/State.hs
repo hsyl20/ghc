@@ -38,7 +38,7 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 
-import DynFlags
+import GHC.Config.Flags
 import Unique
 import UniqSupply
 

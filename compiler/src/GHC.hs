@@ -314,7 +314,7 @@ import GHC.Interface.Tidy
 import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
 import GHC.Finder
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 import SysTools
 import GHC.Types.Annotations
 import Module

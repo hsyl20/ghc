@@ -21,7 +21,7 @@ import FastString
 import Outputable
 import Unique
 
-import DynFlags (targetPlatform)
+import GHC.Config.Flags (targetPlatform)
 
 -- ----------------------------------------------------------------------------
 -- * Top level

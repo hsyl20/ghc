@@ -14,7 +14,7 @@ module Match ( match, matchEquations, matchWrapper, matchSimply, matchSinglePat 
 
 import {-#SOURCE#-} DsExpr (dsLExpr, dsSyntaxExpr)
 
-import DynFlags
+import GHC.Config.Flags
 import HsSyn
 import TcHsSyn
 import TcEvidence

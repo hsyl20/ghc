@@ -138,7 +138,7 @@ import Fingerprint      ( Fingerprint )
 import Hooks
 import TcEnv
 
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import Platform ( platformOS, osSubsectionsViaSymbols )
 

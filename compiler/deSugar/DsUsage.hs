@@ -7,7 +7,7 @@ module DsUsage (
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import GHC.Types
 import TcRnTypes
 import Name

@@ -19,7 +19,7 @@ import CmmSink
 import Hoopl
 
 import UniqSupply
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import GHC.Types
 import Control.Monad

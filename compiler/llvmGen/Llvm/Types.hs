@@ -12,7 +12,7 @@ import Data.Char
 import Data.Int
 import Numeric
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 import Unique

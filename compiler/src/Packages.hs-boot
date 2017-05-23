@@ -1,5 +1,5 @@
 module Packages where
-import {-# SOURCE #-} DynFlags(DynFlags)
+import {-# SOURCE #-} GHC.Config.Flags (DynFlags)
 import {-# SOURCE #-} Module(ComponentId, UnitId, InstalledUnitId)
 data PackageState
 data PackageConfigMap

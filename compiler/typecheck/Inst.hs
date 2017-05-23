@@ -60,7 +60,7 @@ import TyCon
 import VarEnv
 import PrelNames
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import Util
 import Outputable
 import qualified GHC.LanguageExtensions as LangExt

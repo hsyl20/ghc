@@ -13,7 +13,7 @@ module DmdAnal ( dmdAnalProgram ) where
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import WwLib            ( findTypeShape, deepSplitProductType_maybe )
 import Demand   -- All of it
 import CoreSyn

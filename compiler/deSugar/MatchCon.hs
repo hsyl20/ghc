@@ -26,7 +26,7 @@ import Id
 import NameEnv
 import FieldLabel ( flSelector )
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Control.Monad(liftM)
 import Data.List (groupBy)

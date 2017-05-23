@@ -132,7 +132,7 @@ import Binary
 import Var
 import Class
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import ForeignCall
 import Name
 import NameEnv

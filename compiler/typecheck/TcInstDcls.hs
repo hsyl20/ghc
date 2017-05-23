@@ -51,7 +51,7 @@ import PrelNames  ( typeableClassName, genericClassNames
                   , knownNatClassName, knownSymbolClassName )
 import Bag
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import FastString
 import Id

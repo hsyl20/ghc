@@ -10,7 +10,7 @@ where
 
 import Prelude hiding (last, unzip, succ, zip)
 
-import DynFlags
+import GHC.Config.Flags
 import BlockId
 import CLabel
 import Cmm

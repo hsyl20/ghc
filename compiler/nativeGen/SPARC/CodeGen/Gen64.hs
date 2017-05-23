@@ -22,7 +22,7 @@ import Reg
 
 import Cmm
 
-import DynFlags
+import GHC.Config.Flags
 import OrdList
 import Outputable
 

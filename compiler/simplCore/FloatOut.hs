@@ -17,7 +17,7 @@ import MkCore
 import CoreArity        ( etaExpand )
 import CoreMonad        ( FloatOutSwitches(..) )
 
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils         ( dumpIfSet_dyn )
 import Id               ( Id, idArity, idType, isBottomingId,
                           isJoinId, isJoinId_maybe )

@@ -18,7 +18,7 @@ module SPARC.Base (
 
 where
 
-import DynFlags
+import GHC.Config.Flags
 import Panic
 
 import Data.Int

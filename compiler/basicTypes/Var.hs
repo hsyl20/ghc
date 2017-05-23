@@ -91,7 +91,7 @@ import Unique ( Uniquable, Unique, getKey, getUnique
               , mkUniqueGrimily, nonDetCmpUnique )
 import Util
 import Binary
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 
 import Data.Data

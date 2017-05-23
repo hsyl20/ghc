@@ -73,7 +73,7 @@ import Module
 
 import Outputable
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 
 

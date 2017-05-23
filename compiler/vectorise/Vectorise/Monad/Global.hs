@@ -40,7 +40,7 @@ import CoreSyn
 import Type
 import TyCon
 import DataCon
-import DynFlags
+import GHC.Config.Flags
 import NameEnv
 import NameSet
 import Name

@@ -33,7 +33,7 @@ import Id
 import TcType
 
 import SrcLoc( SrcSpan, noSrcSpan )
-import DynFlags
+import GHC.Config.Flags
 import TcRnMonad
 import UniqSupply
 import Util

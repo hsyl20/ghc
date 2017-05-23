@@ -37,7 +37,7 @@ import qualified GHC
 import GHC.Monad        hiding (liftIO)
 import Outputable       hiding (printForUser, printForUserPartWay)
 import qualified Outputable
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import GHC.Types
 import SrcLoc

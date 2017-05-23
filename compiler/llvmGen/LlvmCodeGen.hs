@@ -23,7 +23,7 @@ import Hoopl
 import PprCmm
 
 import BufWrite
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import FastString
 import Outputable

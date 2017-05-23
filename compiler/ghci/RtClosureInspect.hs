@@ -52,7 +52,7 @@ import BasicTypes       ( Boxity(..) )
 import TysPrim
 import PrelNames
 import TysWiredIn
-import DynFlags
+import GHC.Config.Flags
 import Outputable as Ppr
 import GHC.Arr          ( Array(..) )
 import GHC.Exts

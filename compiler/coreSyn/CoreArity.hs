@@ -31,7 +31,7 @@ import TyCon    ( initRecTc, checkRecTc )
 import Coercion
 import BasicTypes
 import Unique
-import DynFlags ( DynFlags, GeneralFlag(..), gopt )
+import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )
 import Outputable
 import FastString
 import Pair

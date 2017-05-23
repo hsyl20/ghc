@@ -20,7 +20,7 @@ module Check (
 import TmOracle
 
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import HsSyn
 import TcHsSyn
 import Id

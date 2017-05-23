@@ -161,7 +161,7 @@ import FV
 import BasicTypes ( LeftOrRight(..), TyPrec(..), maybeParen, pickLR )
 import PrelNames
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Pair
 import UniqSupply

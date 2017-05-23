@@ -57,7 +57,7 @@ import Var
 import VarSet
 import VarEnv
 import ErrUtils
-import DynFlags
+import GHC.Config.Flags
 import BasicTypes
 import Name   ( Name )
 import Bag

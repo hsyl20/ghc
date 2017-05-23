@@ -84,7 +84,7 @@ import TyCon
 import RepType
 import BasicTypes
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import Util
 
 import Data.Coerce (coerce)

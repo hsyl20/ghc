@@ -18,7 +18,7 @@ where
 
 import CLabel
 import Cmm
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 import Platform

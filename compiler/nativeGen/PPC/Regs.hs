@@ -59,7 +59,7 @@ import CLabel           ( CLabel )
 import Unique
 
 import CodeGen.Platform
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 

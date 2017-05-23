@@ -32,7 +32,7 @@ import           System.Directory
 
 import qualified CoreUtils
 import           Desugar
-import           DynFlags (HasDynFlags(..))
+import           GHC.Config.Flags (HasDynFlags(..))
 import           FastString
 import           GHC
 import           GHC.Monad

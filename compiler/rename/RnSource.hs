@@ -50,7 +50,7 @@ import Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import FastString
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import Util             ( debugIsOn, lengthExceeds, partitionWith )
 import GHC.Types         ( HscEnv, hsc_dflags )
 import ListSetOps       ( findDupsEq, removeDups, equivClasses )

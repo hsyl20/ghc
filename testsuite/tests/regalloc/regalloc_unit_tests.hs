@@ -37,7 +37,7 @@ import GHC
 import GhcMonad
 import UniqFM
 import UniqSupply
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import Outputable
 import BasicTypes

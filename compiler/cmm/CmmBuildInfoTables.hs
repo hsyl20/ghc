@@ -16,7 +16,7 @@ import Cmm
 import CmmUtils
 import CmmInfo
 import Data.List
-import DynFlags
+import GHC.Config.Flags
 import Maybes
 import Outputable
 import SMRep

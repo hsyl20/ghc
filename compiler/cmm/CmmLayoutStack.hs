@@ -24,7 +24,7 @@ import Maybes
 import UniqFM
 import Util
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable hiding ( isEmpty )
 import qualified Data.Set as Set

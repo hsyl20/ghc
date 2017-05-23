@@ -38,7 +38,7 @@ import CoreSyn
 import CoreUtils
 import MkCore
 
-import DynFlags
+import GHC.Config.Flags
 import CostCentre
 import Id
 import MkId

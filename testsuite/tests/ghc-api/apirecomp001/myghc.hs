@@ -10,7 +10,7 @@
 module Main where
 
 import GHC
-import DynFlags
+import GHC.Config.Flags
 import MonadUtils ( MonadIO(..) )
 import BasicTypes ( failed )
 import Bag        ( bagToList )

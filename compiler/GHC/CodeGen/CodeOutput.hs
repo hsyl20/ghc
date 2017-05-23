@@ -21,7 +21,7 @@ import CmmLint          ( cmmLint )
 import Packages
 import Cmm              ( RawCmmGroup )
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 import Config
 import SysTools
 import Stream           (Stream)

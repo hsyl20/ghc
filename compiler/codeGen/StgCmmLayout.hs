@@ -46,7 +46,7 @@ import StgSyn
 import Id
 import TyCon             ( PrimRep(..) )
 import BasicTypes        ( RepArity )
-import DynFlags
+import GHC.Config.Flags
 import Module
 
 import Util

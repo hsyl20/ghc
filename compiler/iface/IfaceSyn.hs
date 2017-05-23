@@ -67,7 +67,7 @@ import TyCon ( Role (..), Injectivity(..) )
 import Util( filterOut, filterByList )
 import DataCon (SrcStrictness(..), SrcUnpackedness(..))
 import Lexeme (isLexSym)
-import DynFlags
+import GHC.Config.Flags
 
 import Control.Monad
 import System.IO.Unsafe
@@ -1538,7 +1538,7 @@ not happen.   Here's the one that bit me:
      data DynFlags = DF ... PackageState ...
 
    module Packages where
-     import DynFlags
+     import GHC.Config.Flags
      data PackageState = PS ...
      lookupModule (df :: DynFlags)
         = case df of

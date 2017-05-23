@@ -17,7 +17,7 @@ import RegClass
 import Reg
 
 import Bag
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 import UniqFM

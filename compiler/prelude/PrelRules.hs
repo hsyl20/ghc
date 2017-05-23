@@ -48,7 +48,7 @@ import Name        ( Name, nameOccName )
 import Outputable
 import FastString
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import Util
 import Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))

@@ -39,7 +39,7 @@ import Packages
 import FastString
 import Util
 import PrelNames        ( gHC_PRIM )
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Maybes           ( expectJust )
 

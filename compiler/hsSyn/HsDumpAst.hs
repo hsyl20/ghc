@@ -29,7 +29,7 @@ import HsSyn
 import OccName hiding (occName)
 import Var
 import Module
-import DynFlags
+import GHC.Config.Flags
 import Outputable hiding (space)
 
 import qualified Data.ByteString as B

@@ -35,7 +35,7 @@ import SMRep
 import CostCentre
 import Module
 import DataCon
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Id
 import RepType (countConRepArgs)

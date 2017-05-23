@@ -10,7 +10,7 @@ module ProfInit (profilingInitCode) where
 
 import CLabel
 import CostCentre
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import FastString
 import Module

@@ -17,7 +17,7 @@ import Cmm
 import Hoopl
 import CmmUtils
 import CLabel
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 
 -- -----------------------------------------------------------------------------

@@ -87,7 +87,7 @@ import Unique
 import Util
 import Maybes
 import Binary
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable
 

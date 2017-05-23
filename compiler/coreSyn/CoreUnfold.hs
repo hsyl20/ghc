@@ -42,7 +42,7 @@ module CoreUnfold (
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import CoreSyn
 import PprCore          ()      -- Instances
 import OccurAnal        ( occurAnalyseExpr )

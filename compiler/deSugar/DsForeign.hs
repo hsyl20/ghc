@@ -43,7 +43,7 @@ import BasicTypes
 import SrcLoc
 import Outputable
 import FastString
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import Config
 import OrdList

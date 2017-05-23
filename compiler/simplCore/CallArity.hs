@@ -9,7 +9,7 @@ module CallArity
 
 import VarSet
 import VarEnv
-import DynFlags ( DynFlags )
+import GHC.Config.Flags ( DynFlags )
 
 import BasicTypes
 import CoreSyn

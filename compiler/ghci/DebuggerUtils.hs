@@ -6,7 +6,7 @@ module DebuggerUtils (
 
 import GHCi.InfoTable
 import CmmInfo ( stdInfoTableSizeB )
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import TcRnTypes
 import TcRnMonad

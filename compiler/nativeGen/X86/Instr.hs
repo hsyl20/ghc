@@ -35,7 +35,7 @@ import Platform
 
 import BasicTypes       (Alignment)
 import CLabel
-import DynFlags
+import GHC.Config.Flags
 import UniqSet
 import Unique
 import UniqSupply

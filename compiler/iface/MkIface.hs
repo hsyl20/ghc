@@ -81,7 +81,7 @@ import TcRnMonad
 import HsSyn
 import GHC.Types
 import GHC.Finder
-import DynFlags
+import GHC.Config.Flags
 import VarEnv
 import VarSet
 import Var

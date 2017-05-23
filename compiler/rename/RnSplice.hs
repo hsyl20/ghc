@@ -35,7 +35,7 @@ import {-# SOURCE #-} RnExpr   ( rnLExpr )
 import TcEnv            ( checkWellStaged )
 import THNames          ( liftName )
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import ErrUtils         ( dumpIfSet_dyn_printer )
 import TcEnv            ( tcMetaTy )

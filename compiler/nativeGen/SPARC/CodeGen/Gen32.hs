@@ -24,7 +24,7 @@ import Reg
 import Cmm
 
 import Control.Monad (liftM)
-import DynFlags
+import GHC.Config.Flags
 import OrdList
 import Outputable
 

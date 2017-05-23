@@ -38,7 +38,7 @@ import RnFixity
 import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds
                         , checkDupAndShadowedNames, bindLocalNamesFV )
-import DynFlags
+import GHC.Config.Flags
 import Module
 import Name
 import NameEnv

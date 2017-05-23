@@ -29,7 +29,7 @@ import TyCon
 import FastString
 import StgCmmLayout     ( ArgRep(..) )
 import SMRep
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 import Util

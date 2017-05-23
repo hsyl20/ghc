@@ -8,7 +8,7 @@ import Data.Data
 import Data.List
 import System.IO
 import GHC
-import DynFlags
+import GHC.Config.Flags
 import MonadUtils
 import Outputable
 import Bag (filterBag,isEmptyBag)

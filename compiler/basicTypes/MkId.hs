@@ -69,7 +69,7 @@ import PrelNames
 import BasicTypes       hiding ( SuccessFlag(..) )
 import Util
 import Pair
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import FastString
 import ListSetOps

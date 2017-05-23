@@ -12,7 +12,7 @@ module CmmLive
     )
 where
 
-import DynFlags
+import GHC.Config.Flags
 import BlockId
 import Cmm
 import PprCmmExpr ()

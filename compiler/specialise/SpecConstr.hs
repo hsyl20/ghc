@@ -41,7 +41,7 @@ import VarEnv
 import VarSet
 import Name
 import BasicTypes
-import DynFlags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen )
+import GHC.Config.Flags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen )
                         , gopt, hasPprDebug )
 import Maybes           ( orElse, catMaybes, isJust, isNothing )
 import Demand

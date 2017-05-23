@@ -51,7 +51,7 @@ module IfaceType (
 
 import {-# SOURCE #-} TysWiredIn ( liftedRepDataConTyCon )
 
-import DynFlags
+import GHC.Config.Flags
 import TyCon hiding ( pprPromotionQuote )
 import CoAxiom
 import Var

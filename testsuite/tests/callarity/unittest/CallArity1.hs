@@ -7,7 +7,7 @@ import MkCore
 import CallArity (callArityRHS)
 import MkId
 import SysTools
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import Outputable
 import TysWiredIn

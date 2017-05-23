@@ -30,7 +30,7 @@ import Var
 import Type
 import VarSet
 import Util
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 -- import Data.List        ( mapAccumL )
 import BasicTypes       ( RecFlag(..), isRec )

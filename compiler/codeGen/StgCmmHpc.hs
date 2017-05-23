@@ -17,7 +17,7 @@ import Module
 import CmmUtils
 import StgCmmUtils
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 
 import Control.Monad
 

@@ -57,7 +57,7 @@ import Fingerprint
 import GHC.Types
 import UniqFM
 import Panic
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import Outputable
 import Exception

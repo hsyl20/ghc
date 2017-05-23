@@ -50,7 +50,7 @@ import NameEnv (lookupNameEnv)
 import FastString
 import Outputable
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import ListSetOps       ( equivClasses )
 import Maybes
 import qualified GHC.LanguageExtensions as LangExt

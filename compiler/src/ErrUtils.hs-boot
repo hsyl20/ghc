@@ -3,7 +3,7 @@ module ErrUtils where
 import Outputable (SDoc, PrintUnqualified )
 import SrcLoc (SrcSpan)
 import Json
-import {-# SOURCE #-} DynFlags ( DynFlags, DumpFlag )
+import {-# SOURCE #-} GHC.Config.Flags ( DynFlags, DumpFlag )
 
 data Severity
   = SevOutput

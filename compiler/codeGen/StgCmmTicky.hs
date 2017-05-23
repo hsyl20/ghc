@@ -125,7 +125,7 @@ import BasicTypes
 import FastString
 import Outputable
 
-import DynFlags
+import GHC.Config.Flags
 
 -- Turgid imports for showTypeCategory
 import PrelNames

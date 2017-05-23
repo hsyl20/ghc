@@ -21,7 +21,7 @@ import RegAlloc.Linear.StackMap
 import RegAlloc.Liveness
 import Reg
 
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Unique
 import UniqFM

@@ -66,7 +66,7 @@ import RdrName
 import VarEnv
 import ByteCodeTypes
 import Linker
-import DynFlags
+import GHC.Config.Flags
 import Unique
 import UniqSupply
 import MonadUtils

@@ -126,7 +126,7 @@ import Config
 import CostCentre
 import Outputable
 import FastString
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import UniqSet
 import Util

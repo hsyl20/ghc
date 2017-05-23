@@ -26,7 +26,7 @@ import IfaceEnv
 import GHC.Types
 import Module
 import Name
-import DynFlags
+import GHC.Config.Flags
 import UniqFM
 import UniqSupply
 import Panic

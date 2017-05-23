@@ -13,7 +13,7 @@ module GhcPlugins(
         module CoreMonad, module CoreSyn, module Literal, module DataCon,
         module CoreUtils, module MkCore, module CoreFVs, module CoreSubst,
         module Rules, module GHC.Types.Annotations,
-        module DynFlags, module Packages,
+        module GHC.Config.Flags, module Packages,
         module Module, module Type, module TyCon, module Coercion,
         module TysWiredIn, module GHC.Types, module BasicTypes,
         module VarSet, module VarEnv, module NameSet, module NameEnv,
@@ -49,7 +49,7 @@ import Rules
 import GHC.Types.Annotations
 
 -- Pipeline-related stuff
-import DynFlags
+import GHC.Config.Flags
 import Packages
 
 -- Important GHC types

@@ -5,7 +5,7 @@ import Packages
 import GhcMonad
 import Outputable
 import System.Environment
-import DynFlags
+import GHC.Config.Flags
 import Module
 
 main =

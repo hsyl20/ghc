@@ -15,7 +15,7 @@ module GHC.Utils.Elf (
   ) where
 
 import Exception
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import ErrUtils
 import Maybes     (MaybeT(..),runMaybeT)

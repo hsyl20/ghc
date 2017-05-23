@@ -33,7 +33,7 @@ import GHC.Program.Driver.Phases (HscSource(..))
 import BuildTyCl( TcMethInfo )
 import Class
 import Coercion ( pprCoAxiom )
-import DynFlags
+import GHC.Config.Flags
 import FamInst
 import FamInstEnv
 import Id

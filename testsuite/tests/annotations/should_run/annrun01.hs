@@ -4,7 +4,7 @@ module Main where
 
 import GHC
 import MonadUtils  ( liftIO )
-import DynFlags    ( defaultFatalMessager, defaultFlushOut )
+import GHC.Config.Flags    ( defaultFatalMessager, defaultFlushOut )
 import Annotations ( AnnTarget(..), CoreAnnTarget )
 import GHC.Serialized  ( deserializeWithData )
 import Panic

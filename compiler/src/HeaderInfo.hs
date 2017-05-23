@@ -28,7 +28,7 @@ import Module
 import PrelNames
 import StringBuffer
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import Util
 import Outputable

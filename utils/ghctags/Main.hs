@@ -10,7 +10,7 @@ import GHC.Types        ( msHsFilePath, isBootSummary )
 import Name             ( getOccString )
 --import ErrUtils         ( printBagOfErrors )
 import Panic            ( panic )
-import DynFlags         ( defaultFatalMessager, defaultFlushOut )
+import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
 import Bag
 import Exception
 import FastString

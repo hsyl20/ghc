@@ -36,7 +36,7 @@ import {-# SOURCE #-}   TcIface( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
                                  tcIfaceFamInst, tcIfaceVectInfo,
                                  tcIfaceAnnotations, tcIfaceCompleteSigs )
 
-import DynFlags
+import GHC.Config.Flags
 import IfaceSyn
 import IfaceEnv
 import GHC.Types

@@ -20,7 +20,7 @@ import TyCon
 import CoAxiom
 import Var
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Control.Monad
 

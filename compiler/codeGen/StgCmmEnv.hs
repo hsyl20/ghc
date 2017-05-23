@@ -34,7 +34,7 @@ import CLabel
 import BlockId
 import CmmExpr
 import CmmUtils
-import DynFlags
+import GHC.Config.Flags
 import Id
 import MkGraph
 import Name

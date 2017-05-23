@@ -34,7 +34,7 @@ module RnTypes (
 
 import {-# SOURCE #-} RnSplice( rnSpliceType )
 
-import DynFlags
+import GHC.Config.Flags
 import HsSyn
 import RnHsDoc          ( rnLHsDoc, rnMbLHsDoc )
 import RnEnv

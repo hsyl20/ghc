@@ -173,7 +173,7 @@ import UniqFM
 import UniqSupply
 import BasicTypes
 import Bag
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import ListSetOps
 import FastString

@@ -32,7 +32,7 @@ import BlockId
 import CLabel
 import CmmMachOp
 import CmmType
-import DynFlags
+import GHC.Config.Flags
 import Outputable (panic)
 import Unique
 

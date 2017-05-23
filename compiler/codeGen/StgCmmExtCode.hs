@@ -44,7 +44,7 @@ import CLabel
 import MkGraph
 
 import BlockId
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Module
 import UniqFM

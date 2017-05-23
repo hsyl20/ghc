@@ -14,7 +14,7 @@ module LlvmCodeGen.Regs (
 import Llvm
 
 import CmmExpr
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Outputable ( panic )
 import Unique

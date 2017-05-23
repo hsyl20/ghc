@@ -26,7 +26,7 @@ import MkId
 import FamInst
 import TysPrim( intPrimTy )
 
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import MonadUtils
 import Control.Monad

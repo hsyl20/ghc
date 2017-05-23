@@ -12,7 +12,7 @@ module OptCoercion ( optCoercion, checkAxInstCo ) where
 
 #include "HsVersions.h"
 
-import DynFlags
+import GHC.Config.Flags
 import TyCoRep
 import Coercion
 import Type hiding( substTyVarBndr, substTy )

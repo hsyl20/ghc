@@ -132,7 +132,7 @@ import CLabel
 import CoreSyn
 import CoreUtils (collectMakeStaticArgs)
 import DataCon
-import DynFlags
+import GHC.Config.Flags
 import GHC.Types
 import Id
 import MkCore (mkStringExprFSWith)

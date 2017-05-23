@@ -78,7 +78,7 @@ import TyCon
 import Unique
 import Outputable
 import TysPrim
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Maybes
 import ListSetOps       ( minusList )

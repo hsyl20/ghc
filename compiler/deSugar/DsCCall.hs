@@ -39,7 +39,7 @@ import TysWiredIn
 import BasicTypes
 import Literal
 import PrelNames
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Util
 

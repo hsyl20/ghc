@@ -84,7 +84,8 @@ module Outputable (
         pprDebugAndThen, callStackDoc
     ) where
 
-import {-# SOURCE #-}   DynFlags( DynFlags, hasPprDebug, hasNoDebugOutput,
+import {-# SOURCE #-}   GHC.Config.Flags
+                                  ( DynFlags, hasPprDebug, hasNoDebugOutput,
                                   targetPlatform, pprUserLength, pprCols,
                                   useUnicode, useUnicodeSyntax,
                                   shouldUseColor, unsafeGlobalDynFlags )

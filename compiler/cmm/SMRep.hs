@@ -51,7 +51,7 @@ module SMRep (
 #include "../includes/MachDeps.h"
 
 import BasicTypes( ConTagZ )
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 import FastString

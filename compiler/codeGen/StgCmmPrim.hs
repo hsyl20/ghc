@@ -26,7 +26,7 @@ import StgCmmTicky
 import StgCmmHeap
 import StgCmmProf ( costCentreFrom, curCCS )
 
-import DynFlags
+import GHC.Config.Flags
 import Platform
 import BasicTypes
 import BlockId

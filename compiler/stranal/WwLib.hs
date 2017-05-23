@@ -38,7 +38,7 @@ import Unique
 import Maybes
 import Util
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import ListSetOps
 

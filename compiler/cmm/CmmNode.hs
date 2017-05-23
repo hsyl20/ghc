@@ -25,7 +25,7 @@ module CmmNode (
 import CodeGen.Platform
 import CmmExpr
 import CmmSwitch
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import ForeignCall
 import Outputable

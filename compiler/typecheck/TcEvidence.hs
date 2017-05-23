@@ -48,7 +48,7 @@ import Type
 import TyCon
 import Class( Class )
 import PrelNames
-import DynFlags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
+import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
 import VarEnv
 import VarSet
 import Name

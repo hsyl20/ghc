@@ -1,6 +1,6 @@
 module Main where
 
-import DynFlags
+import GHC.Config.Flags
 
 import Control.Monad
 import Data.List

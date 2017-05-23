@@ -63,7 +63,7 @@ where
 
 import GHC.PackageDb
 import PackageConfig
-import DynFlags
+import GHC.Config.Flags
 import Name             ( Name, nameModule_maybe )
 import UniqFM
 import UniqDFM

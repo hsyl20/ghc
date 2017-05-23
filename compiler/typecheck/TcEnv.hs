@@ -92,7 +92,7 @@ import NameSet
 import NameEnv
 import VarEnv
 import GHC.Types
-import DynFlags
+import GHC.Config.Flags
 import SrcLoc
 import BasicTypes hiding( SuccessFlag(..) )
 import Module

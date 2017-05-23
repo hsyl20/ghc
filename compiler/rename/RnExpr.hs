@@ -35,7 +35,7 @@ import RnUnbound        ( reportUnboundName )
 import RnSplice         ( rnBracket, rnSpliceExpr, checkThLocalName )
 import RnTypes
 import RnPat
-import DynFlags
+import GHC.Config.Flags
 import PrelNames
 
 import BasicTypes

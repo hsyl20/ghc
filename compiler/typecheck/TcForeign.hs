@@ -52,7 +52,7 @@ import DataCon
 import TyCon
 import TcType
 import PrelNames
-import DynFlags
+import GHC.Config.Flags
 import Outputable
 import Platform
 import SrcLoc

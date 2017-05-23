@@ -238,7 +238,7 @@ import Literal
 import Unique
 import UniqFM
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import StringBuffer
 import FastString

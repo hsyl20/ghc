@@ -58,7 +58,7 @@ import Maybes
 import OrdList
 import Bag
 import BasicTypes
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import Util
 import MonadUtils

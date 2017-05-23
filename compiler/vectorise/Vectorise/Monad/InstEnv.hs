@@ -11,7 +11,7 @@ import Vectorise.Monad.Global
 import Vectorise.Monad.Base
 import Vectorise.Env
 
-import DynFlags
+import GHC.Config.Flags
 import FamInstEnv
 import InstEnv
 import Class

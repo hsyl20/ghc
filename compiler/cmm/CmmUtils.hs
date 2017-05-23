@@ -72,7 +72,7 @@ import Cmm
 import BlockId
 import CLabel
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import Util
 import CodeGen.Platform
 

@@ -26,7 +26,7 @@ import Packages
 import Parser
 import Lexer
 import GHC.Monad
-import DynFlags
+import GHC.Config.Flags
 import TcRnMonad
 import TcRnDriver
 import Module

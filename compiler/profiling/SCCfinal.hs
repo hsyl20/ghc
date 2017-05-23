@@ -30,7 +30,7 @@ import Module
 import UniqSupply       ( UniqSupply )
 import ListSetOps       ( removeDups )
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import CoreSyn          ( Tickish(..) )
 import FastString
 import SrcLoc

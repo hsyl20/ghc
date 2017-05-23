@@ -102,7 +102,7 @@ import Data.Maybe
 import FastString
 import BasicTypes hiding( SuccessFlag(..) )
 import Maybes( MaybeErr(..) )
-import DynFlags
+import GHC.Config.Flags
 import Panic
 import Lexeme
 import qualified EnumSet

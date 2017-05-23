@@ -109,7 +109,7 @@ import Util             ( readRational )
 
 -- compiler/main
 import ErrUtils
-import DynFlags
+import GHC.Config.Flags
 
 -- compiler/basicTypes
 import SrcLoc
@@ -2258,9 +2258,9 @@ pragState dynflags buf loc = (mkPState dynflags buf loc) {
 mkParserFlags :: DynFlags -> ParserFlags
 mkParserFlags flags =
     ParserFlags {
-      pWarningFlags = DynFlags.warningFlags flags
-    , pExtensionFlags = DynFlags.extensionFlags flags
-    , pThisPackage = DynFlags.thisPackage flags
+      pWarningFlags = GHC.Config.Flags.warningFlags flags
+    , pExtensionFlags = GHC.Config.Flags.extensionFlags flags
+    , pThisPackage = GHC.Config.Flags.thisPackage flags
     , pExtsBitmap = bitmap
     }
   where

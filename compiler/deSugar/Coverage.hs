@@ -20,7 +20,7 @@ import Type
 import HsSyn
 import Module
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 import ConLike
 import Control.Monad
 import SrcLoc

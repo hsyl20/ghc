@@ -31,7 +31,7 @@ module IOEnv (
         atomicUpdMutVar, atomicUpdMutVar'
   ) where
 
-import DynFlags
+import GHC.Config.Flags
 import Exception
 import Module
 import Panic

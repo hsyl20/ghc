@@ -38,7 +38,7 @@ import TcEvidence
 import Outputable
 import Util
 import SrcLoc
-import DynFlags
+import GHC.Config.Flags
 import PrelNames (monadFailClassName)
 import qualified GHC.LanguageExtensions as LangExt
 

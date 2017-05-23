@@ -63,7 +63,7 @@ module StgCmmMonad (
 
 import Cmm
 import StgCmmClosure
-import DynFlags
+import GHC.Config.Flags
 import Hoopl
 import Maybes
 import MkGraph

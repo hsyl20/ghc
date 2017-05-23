@@ -19,7 +19,7 @@ import StgStats         ( showStgStats )
 import UnariseStg       ( unarise )
 import StgCse           ( stgCse )
 
-import DynFlags
+import GHC.Config.Flags
 import Module           ( Module )
 import ErrUtils
 import SrcLoc

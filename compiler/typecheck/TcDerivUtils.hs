@@ -25,7 +25,7 @@ import Bag
 import BasicTypes
 import Class
 import DataCon
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import GHC.Types (lookupFixity, mi_fix)
 import HsSyn

@@ -46,7 +46,7 @@ import GHC.Types
 import Packages         ( pprPackages, pprPackagesSimple )
 import GHC.Program.Driver.Phases
 import BasicTypes       ( failed )
-import DynFlags
+import GHC.Config.Flags
 import ErrUtils
 import FastString
 import Outputable

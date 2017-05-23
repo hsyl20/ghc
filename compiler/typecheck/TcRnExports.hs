@@ -34,7 +34,7 @@ import Util (capitalise)
 
 
 import Control.Monad
-import DynFlags
+import GHC.Config.Flags
 import RnHsDoc          ( rnHsDoc )
 import RdrHsSyn        ( setRdrNameSpace )
 import Data.Either      ( partitionEithers )

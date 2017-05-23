@@ -19,7 +19,7 @@ module TcBackpack (
 import BasicTypes (defaultFixity)
 import Packages
 import TcRnExports
-import DynFlags
+import GHC.Config.Flags
 import HsSyn
 import RdrName
 import TcRnMonad

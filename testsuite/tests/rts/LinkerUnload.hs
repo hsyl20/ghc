@@ -1,7 +1,7 @@
 module LinkerUnload (init) where
 
 import GHC
-import DynFlags
+import GHC.Config.Flags
 import Linker
 import System.Environment
 import MonadUtils ( MonadIO(..) )

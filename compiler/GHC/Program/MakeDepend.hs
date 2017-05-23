@@ -16,7 +16,7 @@ module GHC.Program.MakeDepend (
 
 import qualified GHC
 import GHC.Monad
-import DynFlags
+import GHC.Config.Flags
 import Util
 import GHC.Types
 import SysTools         ( newTempName )

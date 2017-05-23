@@ -122,7 +122,7 @@ import Hoopl
 import Cmm hiding (RegSet)
 
 import Digraph
-import DynFlags
+import GHC.Config.Flags
 import Unique
 import UniqSet
 import UniqFM

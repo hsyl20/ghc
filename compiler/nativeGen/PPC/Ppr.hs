@@ -28,7 +28,7 @@ import Unique                ( pprUniqueAlways, Uniquable(..) )
 import Platform
 import FastString
 import Outputable
-import DynFlags
+import GHC.Config.Flags
 
 import Data.Word
 import Data.Int

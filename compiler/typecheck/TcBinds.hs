@@ -20,7 +20,7 @@ import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
                                , tcPatSynBuilderBind )
 import CoreSyn (Tickish (..))
 import CostCentre (mkUserCC)
-import DynFlags
+import GHC.Config.Flags
 import FastString
 import HsSyn
 import GHC.Types( isHsBootOrSig )
