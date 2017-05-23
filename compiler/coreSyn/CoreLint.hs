@@ -39,7 +39,7 @@ import Name
 import Id
 import IdInfo
 import PprCore
-import ErrUtils
+import GHC.Utils.Error
 import Coercion
 import SrcLoc
 import Kind
@@ -49,7 +49,7 @@ import TyCoRep       -- checks validity of types/coercions
 import TyCon
 import CoAxiom
 import BasicTypes
-import ErrUtils as Err
+import GHC.Utils.Error as Err
 import ListSetOps
 import PrelNames
 import Outputable

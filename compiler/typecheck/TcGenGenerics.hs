@@ -34,7 +34,7 @@ import PrelNames
 import TcEnv
 import TcRnMonad
 import GHC.Types
-import ErrUtils( Validity(..), andValid )
+import GHC.Utils.Error( Validity(..), andValid )
 import SrcLoc
 import Bag
 import VarEnv

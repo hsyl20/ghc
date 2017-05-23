@@ -83,7 +83,7 @@ import BufWrite
 import Outputable
 import FastString
 import UniqSet
-import ErrUtils
+import GHC.Utils.Error
 import Module
 import Stream (Stream)
 import qualified Stream

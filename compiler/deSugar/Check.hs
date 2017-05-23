@@ -40,7 +40,7 @@ import DsMonad
 import TcSimplify    (tcCheckSatisfiability)
 import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
 import Bag
-import ErrUtils
+import GHC.Utils.Error
 import Var           (EvVar)
 import Type
 import UniqSupply

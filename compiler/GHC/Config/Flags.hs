@@ -182,7 +182,7 @@ import FastString
 import Outputable
 import Foreign.C        ( CInt(..) )
 import System.IO.Unsafe ( unsafeDupablePerformIO )
-import {-# SOURCE #-} ErrUtils ( Severity(..), MsgDoc, mkLocMessageAnn
+import {-# SOURCE #-} GHC.Utils.Error ( Severity(..), MsgDoc, mkLocMessageAnn
                                , getCaretDiagnostic, dumpSDoc )
 import Json
 import SysTools.Terminal ( stderrSupportsAnsiColors )
@@ -895,7 +895,7 @@ data DynFlags = DynFlags {
 
   ghciHistSize          :: Int,
 
-  -- | MsgDoc output action: use "ErrUtils" instead of this if you can
+  -- | MsgDoc output action: use "GHC.Utils.Error" instead of this if you can
   initLogAction         :: IO (Maybe LogOutput),
   log_action            :: LogAction,
   log_finaliser         :: LogFinaliser,

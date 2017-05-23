@@ -108,7 +108,7 @@ import UniqFM
 import Util             ( readRational )
 
 -- compiler/main
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Config.Flags
 
 -- compiler/basicTypes

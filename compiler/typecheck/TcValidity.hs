@@ -50,7 +50,7 @@ import VarEnv
 import VarSet
 import UniqSet
 import Var         ( TyVarBndr(..), mkTyVar )
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Config.Flags
 import Util
 import ListSetOps

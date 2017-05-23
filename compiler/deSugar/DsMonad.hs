@@ -79,7 +79,7 @@ import UniqSupply
 import Name
 import NameEnv
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import FastString
 import Maybes
 import Var (EvVar)

@@ -153,7 +153,7 @@ import PrelNames
 import Id
 import VarSet
 import VarEnv
-import ErrUtils
+import GHC.Utils.Error
 import SrcLoc
 import NameEnv
 import NameSet

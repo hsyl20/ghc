@@ -13,7 +13,7 @@ module LlvmMangler ( llvmFixupAsm ) where
 
 import GHC.Config.Flags ( DynFlags, targetPlatform )
 import Platform ( platformArch, Arch(..) )
-import ErrUtils ( withTiming )
+import GHC.Utils.Error ( withTiming )
 import Outputable ( text )
 
 import Control.Exception

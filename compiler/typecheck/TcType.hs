@@ -221,7 +221,7 @@ import Bag
 import Maybes
 import Outputable
 import FastString
-import ErrUtils( Validity(..), MsgDoc, isValid )
+import GHC.Utils.Error( Validity(..), MsgDoc, isValid )
 import FV
 import qualified GHC.LanguageExtensions as LangExt
 

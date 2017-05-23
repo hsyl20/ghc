@@ -17,7 +17,7 @@ module GHC.Utils.Elf (
 import Exception
 import GHC.Config.Flags
 import Platform
-import ErrUtils
+import GHC.Utils.Error
 import Maybes     (MaybeT(..),runMaybeT)
 import Util       (charToC)
 import Outputable (text,hcat,SDoc)

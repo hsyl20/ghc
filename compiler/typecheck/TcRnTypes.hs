@@ -168,7 +168,7 @@ import VarEnv
 import Module
 import SrcLoc
 import VarSet
-import ErrUtils
+import GHC.Utils.Error
 import UniqFM
 import UniqSupply
 import BasicTypes

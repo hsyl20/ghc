@@ -43,7 +43,7 @@ import TysWiredIn
 import PrelNames
 import BasicTypes
 import Module       ( Module )
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Config.Flags
 import Outputable
 import Pair

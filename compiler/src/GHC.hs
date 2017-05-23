@@ -321,7 +321,7 @@ import Module
 import Panic
 import Platform
 import Bag              ( listToBag, unitBag )
-import ErrUtils
+import GHC.Utils.Error
 import MonadUtils
 import Util
 import StringBuffer

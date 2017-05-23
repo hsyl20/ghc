@@ -33,7 +33,7 @@ import TcType
 import TcSimplify
 import LoadIface
 import RnNames
-import ErrUtils
+import GHC.Utils.Error
 import Id
 import Module
 import Name

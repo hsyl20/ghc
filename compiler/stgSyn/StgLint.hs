@@ -19,7 +19,7 @@ import PrimOp           ( primOpType )
 import Literal          ( literalType )
 import Maybes
 import Name             ( getSrcLoc )
-import ErrUtils         ( MsgDoc, Severity(..), mkLocMessage )
+import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
 import Type
 import RepType
 import TyCon

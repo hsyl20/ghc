@@ -52,7 +52,7 @@ import Unique
 import BufWrite   ( BufHandle )
 import UniqSet
 import UniqSupply
-import ErrUtils
+import GHC.Utils.Error
 import qualified Stream
 
 import Control.Monad (ap)

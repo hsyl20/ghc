@@ -27,7 +27,7 @@ import SysTools
 import Stream           (Stream)
 import qualified Stream
 
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import Module
 import SrcLoc

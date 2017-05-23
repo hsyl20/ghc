@@ -33,7 +33,7 @@ import Module
 import GHC.Types
 import StringBuffer
 import FastString
-import ErrUtils
+import GHC.Utils.Error
 import SrcLoc
 import GHC.Program.Main
 import UniqFM

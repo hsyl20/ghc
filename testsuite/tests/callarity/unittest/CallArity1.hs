@@ -8,7 +8,7 @@ import CallArity (callArityRHS)
 import MkId
 import SysTools
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import TysWiredIn
 import Literal

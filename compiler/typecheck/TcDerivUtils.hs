@@ -26,7 +26,7 @@ import BasicTypes
 import Class
 import DataCon
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Types (lookupFixity, mi_fix)
 import HsSyn
 import Inst

@@ -74,7 +74,7 @@ import Module
 import PrelNames  ( toDynName, pretendNameIsInScope )
 import Panic
 import Maybes
-import ErrUtils
+import GHC.Utils.Error
 import SrcLoc
 import RtClosureInspect
 import Outputable

@@ -339,7 +339,7 @@ Library
         GHC.Program.Driver.Pipeline.Monad
         GHC.Program.Driver.Pipeline
         GHC.Config.Flags
-        ErrUtils
+        GHC.Utils.Error
         GHC.Finder
         GHC
         GHC.Program.Make

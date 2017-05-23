@@ -60,7 +60,7 @@ import NameEnv
 import Avail
 import Module
 import Maybes
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Finder
 import UniqFM
 import SrcLoc

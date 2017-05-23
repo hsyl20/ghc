@@ -56,7 +56,7 @@ import TysPrim( tYPE )
 import Var
 import VarSet
 import VarEnv
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Config.Flags
 import BasicTypes
 import Name   ( Name )

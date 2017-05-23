@@ -1,4 +1,4 @@
-module ErrUtils where
+module GHC.Utils.Error where
 
 import Outputable (SDoc, PrintUnqualified )
 import SrcLoc (SrcSpan)

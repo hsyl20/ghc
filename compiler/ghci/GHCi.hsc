@@ -58,7 +58,7 @@ import GHC.Types
 import UniqFM
 import Panic
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import Exception
 import BasicTypes

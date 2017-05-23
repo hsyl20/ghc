@@ -24,7 +24,7 @@ import GHC.Config.Flags
 import ConLike
 import Control.Monad
 import SrcLoc
-import ErrUtils
+import GHC.Utils.Error
 import NameSet hiding (FreeVars)
 import Name
 import Bag

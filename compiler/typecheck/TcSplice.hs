@@ -93,7 +93,7 @@ import IdInfo
 import DsExpr
 import DsMonad
 import GHC.Serialized
-import ErrUtils
+import GHC.Utils.Error
 import Util
 import Unique
 import VarSet           ( isEmptyVarSet, filterVarSet, mkVarSet, elemVarSet )

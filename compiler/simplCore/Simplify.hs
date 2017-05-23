@@ -50,7 +50,7 @@ import Outputable
 import FastString
 import Pair
 import Util
-import ErrUtils
+import GHC.Utils.Error
 import Module          ( moduleName, pprModuleName )
 
 {-

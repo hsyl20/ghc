@@ -40,7 +40,7 @@ import Unify( tcUnifyTy )
 import BasicTypes ( DerivStrategy(..) )
 import Class
 import Type
-import ErrUtils
+import GHC.Utils.Error
 import DataCon
 import Maybes
 import RdrName

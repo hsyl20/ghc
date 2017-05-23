@@ -13,7 +13,7 @@ import TcType
 import RnNames
 import RnEnv
 import RnUnbound ( reportUnboundName )
-import ErrUtils
+import GHC.Utils.Error
 import Id
 import IdInfo
 import Module

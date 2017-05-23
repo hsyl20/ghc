@@ -24,7 +24,7 @@ import Avail
 import IfaceSyn
 import FieldLabel
 import Var
-import ErrUtils
+import GHC.Utils.Error
 
 import Name
 import TcRnMonad

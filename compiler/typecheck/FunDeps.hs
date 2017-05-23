@@ -31,7 +31,7 @@ import InstEnv
 import VarSet
 import VarEnv
 import Outputable
-import ErrUtils( Validity(..), allValid )
+import GHC.Utils.Error( Validity(..), allValid )
 import SrcLoc
 import Util
 

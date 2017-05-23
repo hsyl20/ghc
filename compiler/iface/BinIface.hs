@@ -32,7 +32,7 @@ import UniqSupply
 import Panic
 import Binary
 import SrcLoc
-import ErrUtils
+import GHC.Utils.Error
 import FastMutInt
 import Unique
 import Outputable

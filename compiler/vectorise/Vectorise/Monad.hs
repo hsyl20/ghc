@@ -40,7 +40,7 @@ import VarEnv
 import Var
 import Id
 import Name
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import Module
 

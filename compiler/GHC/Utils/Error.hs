@@ -8,7 +8,7 @@
 {-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE RecordWildCards #-}
 
-module ErrUtils (
+module GHC.Utils.Error (
         -- * Basic types
         Validity(..), andValid, allValid, isValid, getInvalids,
         Severity(..),

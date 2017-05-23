@@ -239,7 +239,7 @@ import Unique
 import UniqFM
 import SrcLoc
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import StringBuffer
 import FastString
 import Panic

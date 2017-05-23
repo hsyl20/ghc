@@ -68,8 +68,8 @@ import TcEnv            ( lookupGlobal )
 import Var
 import Outputable
 import FastString
-import qualified ErrUtils as Err
-import ErrUtils( Severity(..) )
+import qualified GHC.Utils.Error as Err
+import GHC.Utils.Error( Severity(..) )
 import Maybes
 import UniqSupply
 import UniqFM       ( UniqFM, mapUFM, filterUFM )

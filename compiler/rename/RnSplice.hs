@@ -37,7 +37,7 @@ import THNames          ( liftName )
 
 import GHC.Config.Flags
 import FastString
-import ErrUtils         ( dumpIfSet_dyn_printer )
+import GHC.Utils.Error         ( dumpIfSet_dyn_printer )
 import TcEnv            ( tcMetaTy )
 import Hooks
 import Var              ( Id )

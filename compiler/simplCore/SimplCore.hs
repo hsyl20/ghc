@@ -28,12 +28,12 @@ import SimplUtils       ( simplEnvForGHCi, activeRule )
 import SimplEnv
 import SimplMonad
 import CoreMonad
-import qualified ErrUtils as Err
+import qualified GHC.Utils.Error as Err
 import FloatIn          ( floatInwards )
 import FloatOut         ( floatOutwards )
 import FamInstEnv
 import Id
-import ErrUtils         ( withTiming )
+import GHC.Utils.Error         ( withTiming )
 import BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )
 import VarSet
 import VarEnv

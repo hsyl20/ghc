@@ -21,7 +21,7 @@ import StgCse           ( stgCse )
 
 import GHC.Config.Flags
 import Module           ( Module )
-import ErrUtils
+import GHC.Utils.Error
 import SrcLoc
 import UniqSupply       ( mkSplitUniqSupply, splitUniqSupply )
 import Outputable

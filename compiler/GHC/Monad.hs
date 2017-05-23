@@ -27,7 +27,7 @@ import MonadUtils
 import GHC.Types
 import GHC.Config.Flags
 import Exception
-import ErrUtils
+import GHC.Utils.Error
 
 import Control.Monad
 import Data.IORef

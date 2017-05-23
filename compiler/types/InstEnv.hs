@@ -39,7 +39,7 @@ import Name
 import NameSet
 import Unify
 import Outputable
-import ErrUtils
+import GHC.Utils.Error
 import BasicTypes
 import UniqDFM
 import Util

@@ -63,7 +63,7 @@ import ConLike
 import DataCon
 import TyCon
 import PrelNames        ( rOOT_MAIN )
-import ErrUtils         ( MsgDoc, ErrMsg )
+import GHC.Utils.Error         ( MsgDoc, ErrMsg )
 import BasicTypes       ( pprWarningTxtForMsg, TopLevelFlag(..))
 import SrcLoc
 import Outputable

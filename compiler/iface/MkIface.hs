@@ -92,7 +92,7 @@ import NameEnv
 import NameSet
 import Module
 import BinIface
-import ErrUtils
+import GHC.Utils.Error
 import Digraph
 import SrcLoc
 import Outputable

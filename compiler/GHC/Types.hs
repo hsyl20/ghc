@@ -193,7 +193,7 @@ import Fingerprint
 import MonadUtils
 import Bag
 import Binary
-import ErrUtils
+import GHC.Utils.Error
 import NameCache
 import Platform
 import Util

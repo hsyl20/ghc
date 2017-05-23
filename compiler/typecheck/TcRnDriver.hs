@@ -97,7 +97,7 @@ import LoadIface
 import RnNames
 import RnEnv
 import RnSource
-import ErrUtils
+import GHC.Utils.Error
 import Id
 import VarEnv
 import Module

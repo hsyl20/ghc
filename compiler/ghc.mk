@@ -470,7 +470,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Config.Flags \
 	Encoding \
 	EnumSet \
-	ErrUtils \
+	GHC.Utils.Error \
 	Exception \
 	FamInstEnv \
 	FastFunctions \

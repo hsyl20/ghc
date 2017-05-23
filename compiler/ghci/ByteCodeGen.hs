@@ -39,7 +39,7 @@ import TyCon
 import Util
 import VarSet
 import TysPrim
-import ErrUtils
+import GHC.Utils.Error
 import Unique
 import FastString
 import Panic

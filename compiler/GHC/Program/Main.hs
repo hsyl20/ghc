@@ -139,7 +139,7 @@ import Hooks
 import TcEnv
 
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import Platform ( platformOS, osSubsectionsViaSymbols )
 
 import Outputable

@@ -38,7 +38,7 @@ import GhcMonad
 import UniqFM
 import UniqSupply
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import BasicTypes
 

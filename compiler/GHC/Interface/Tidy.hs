@@ -57,11 +57,11 @@ import Packages( isDllName )
 import GHC.Types
 import Maybes
 import UniqSupply
-import ErrUtils (Severity(..))
+import GHC.Utils.Error (Severity(..))
 import Outputable
 import UniqDFM
 import SrcLoc
-import qualified ErrUtils as Err
+import qualified GHC.Utils.Error as Err
 
 import Control.Monad
 import Data.Function

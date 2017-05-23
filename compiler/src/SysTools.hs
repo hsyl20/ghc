@@ -59,7 +59,7 @@ import Module
 import Packages
 import Config
 import Outputable
-import ErrUtils
+import GHC.Utils.Error
 import Panic
 import Platform
 import Util

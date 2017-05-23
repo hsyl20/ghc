@@ -32,7 +32,7 @@ import Type
 import GHC
 import Outputable
 import PprTyThing
-import ErrUtils
+import GHC.Utils.Error
 import MonadUtils
 import GHC.Config.Flags
 import Exception

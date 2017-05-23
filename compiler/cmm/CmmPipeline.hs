@@ -20,7 +20,7 @@ import Hoopl
 
 import UniqSupply
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Types
 import Control.Monad
 import Outputable

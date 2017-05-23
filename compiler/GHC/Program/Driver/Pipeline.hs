@@ -46,7 +46,7 @@ import GHC.Finder
 import GHC.Types hiding ( Hsc )
 import Outputable
 import Module
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Config.Flags
 import Config
 import Panic

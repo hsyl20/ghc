@@ -49,7 +49,7 @@ import ConLike
 import FieldLabel
 import Bag
 import Util
-import ErrUtils
+import GHC.Utils.Error
 import Control.Monad ( zipWithM )
 import Data.List( partition )
 

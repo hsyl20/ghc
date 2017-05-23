@@ -32,7 +32,7 @@ import CoreMonad
 import Outputable
 import FastString
 import MonadUtils
-import ErrUtils
+import GHC.Utils.Error
 import BasicTypes          ( IntWithInf, treatZeroAsInf, mkIntWithInf )
 import Control.Monad       ( when, liftM, ap )
 

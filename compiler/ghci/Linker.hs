@@ -40,7 +40,7 @@ import BasicTypes
 import Outputable
 import Panic
 import Util
-import ErrUtils
+import GHC.Utils.Error
 import SrcLoc
 import qualified Maybes
 import UniqDSet

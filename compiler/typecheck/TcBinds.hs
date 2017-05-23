@@ -51,7 +51,7 @@ import NameEnv
 import SrcLoc
 import Bag
 import ListSetOps
-import ErrUtils
+import GHC.Utils.Error
 import Digraph
 import Maybes
 import Util

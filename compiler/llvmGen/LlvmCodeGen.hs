@@ -24,7 +24,7 @@ import PprCmm
 
 import BufWrite
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import FastString
 import Outputable
 import UniqSupply

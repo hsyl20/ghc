@@ -46,7 +46,7 @@ import UniqSet
 import Data.List
 import Util
 import ListSetOps       ( removeDups )
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import SrcLoc
 import FastString

@@ -8,7 +8,7 @@ import Digraph          ( flattenSCCs )
 import GHC.Program.Driver.Phases ( isHaskellSrcFilename )
 import GHC.Types        ( msHsFilePath, isBootSummary )
 import Name             ( getOccString )
---import ErrUtils         ( printBagOfErrors )
+--import GHC.Utils.Error         ( printBagOfErrors )
 import Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
 import Bag

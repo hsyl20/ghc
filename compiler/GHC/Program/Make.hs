@@ -37,7 +37,7 @@ import qualified Linker         ( unload )
 import GHC.Program.Driver.Phases
 import GHC.Program.Driver.Pipeline
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Finder
 import GHC.Monad
 import HeaderInfo

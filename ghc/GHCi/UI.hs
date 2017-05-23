@@ -42,7 +42,7 @@ import GHCi
 import GHCi.RemoteTypes
 import GHCi.BreakArray
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Monad ( modifySession )
 import qualified GHC
 import GHC ( LoadHowMuch(..), Target(..),  TargetId(..), InteractiveImport(..),

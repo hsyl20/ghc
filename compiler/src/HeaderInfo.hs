@@ -29,7 +29,7 @@ import PrelNames
 import StringBuffer
 import SrcLoc
 import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import Util
 import Outputable
 import Pretty           ()
@@ -335,6 +335,6 @@ optionsErrorMsgs dflags unhandled_flags flags_lines _filename
   where unhandled_flags_lines = [ L l f | f <- unhandled_flags,
                                           L l f' <- flags_lines, f == f' ]
         mkMsg (L flagSpan flag) =
-            ErrUtils.mkPlainErrMsg dflags flagSpan $
+            GHC.Utils.Error.mkPlainErrMsg dflags flagSpan $
                     text "unknown flag in  {-# OPTIONS_GHC #-} pragma:" <+> text flag
 

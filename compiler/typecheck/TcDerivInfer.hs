@@ -17,7 +17,7 @@ import BasicTypes
 import Class
 import DataCon
 -- import GHC.Config.Flags
-import ErrUtils
+import GHC.Utils.Error
 import Inst
 import Outputable
 import PrelNames

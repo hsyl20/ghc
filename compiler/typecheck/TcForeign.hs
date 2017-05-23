@@ -44,7 +44,7 @@ import FamInstEnv
 import Coercion
 import Type
 import ForeignCall
-import ErrUtils
+import GHC.Utils.Error
 import Id
 import Name
 import RdrName

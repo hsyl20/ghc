@@ -31,7 +31,7 @@ import Vectorise.Env
 
 import DsMonad
 import TcRnMonad
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import GHC.Config.Flags
 

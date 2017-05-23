@@ -46,7 +46,7 @@ import Var
 import VarSet
 import UniqSet
 import BasicTypes    ( IntWithInf, intGtLimit )
-import ErrUtils      ( emptyMessages )
+import GHC.Utils.Error      ( emptyMessages )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

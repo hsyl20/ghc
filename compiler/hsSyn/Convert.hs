@@ -28,7 +28,7 @@ import TysPrim (eqPrimTyCon)
 import BasicTypes as Hs
 import ForeignCall
 import Unique
-import ErrUtils
+import GHC.Utils.Error
 import Bag
 import Lexeme
 import Util

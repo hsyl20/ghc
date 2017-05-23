@@ -46,7 +46,7 @@ import Module
 import UniqSupply
 import Maybes
 import OrdList
-import ErrUtils
+import GHC.Utils.Error
 import GHC.Config.Flags
 import Util
 import Pair

@@ -76,7 +76,7 @@ import Maybes
 
 import System.Environment ( getEnv )
 import FastString
-import ErrUtils         ( debugTraceMsg, MsgDoc, printInfoForUser )
+import GHC.Utils.Error         ( debugTraceMsg, MsgDoc, printInfoForUser )
 import Exception
 
 import System.Directory

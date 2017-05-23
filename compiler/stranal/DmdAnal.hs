@@ -33,7 +33,7 @@ import Util
 import Maybes           ( isJust )
 import TysWiredIn
 import TysPrim          ( realWorldStatePrimTy )
-import ErrUtils         ( dumpIfSet_dyn )
+import GHC.Utils.Error         ( dumpIfSet_dyn )
 import Name             ( getName, stableNameCmp )
 import Data.Function    ( on )
 import UniqSet

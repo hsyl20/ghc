@@ -49,7 +49,7 @@ import Id               ( idType )
 import Module           ( Module, ModuleName )
 import Panic
 import FastString
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import Exception
 import Hooks

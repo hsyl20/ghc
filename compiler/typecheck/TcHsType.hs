@@ -74,7 +74,7 @@ import TysWiredIn
 import BasicTypes
 import SrcLoc
 import GHC.Config.Constants ( mAX_CTUPLE_SIZE )
-import ErrUtils( MsgDoc )
+import GHC.Utils.Error( MsgDoc )
 import Unique
 import Util
 import UniqSupply

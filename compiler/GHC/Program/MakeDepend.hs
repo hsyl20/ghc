@@ -31,7 +31,7 @@ import Data.List
 import FastString
 
 import Exception
-import ErrUtils
+import GHC.Utils.Error
 
 import System.Directory
 import System.FilePath

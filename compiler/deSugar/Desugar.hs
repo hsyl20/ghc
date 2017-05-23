@@ -52,7 +52,7 @@ import CoreMonad        ( CoreToDo(..) )
 import CoreLint         ( endPassIO )
 import VarSet
 import FastString
-import ErrUtils
+import GHC.Utils.Error
 import Outputable
 import SrcLoc
 import Coverage
