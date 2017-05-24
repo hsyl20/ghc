@@ -1,4 +1,5 @@
-module Packages where
+module GHC.Packages where
+
 import {-# SOURCE #-} GHC.Config.Flags (DynFlags)
 import {-# SOURCE #-} Module(ComponentId, UnitId, InstalledUnitId)
 data PackageState

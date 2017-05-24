@@ -22,7 +22,7 @@ module DriverBkp (doBackpack) where
 import BkpSyn
 
 import GHC hiding (Failed, Succeeded)
-import Packages
+import GHC.Packages
 import Parser
 import Lexer
 import GHC.Monad

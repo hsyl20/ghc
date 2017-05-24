@@ -105,7 +105,7 @@ import Binary
 import Fingerprint
 import Exception
 import UniqSet
-import Packages
+import GHC.Packages
 
 import Control.Monad
 import Data.Function

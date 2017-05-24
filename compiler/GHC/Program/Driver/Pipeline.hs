@@ -36,7 +36,7 @@ module GHC.Program.Driver.Pipeline (
 #include "HsVersions.h"
 
 import GHC.Program.Driver.Pipeline.Monad
-import Packages
+import GHC.Packages
 import GHC.Syntax.Parsers.HeaderInfo
 import GHC.Program.Driver.Phases
 import SysTools

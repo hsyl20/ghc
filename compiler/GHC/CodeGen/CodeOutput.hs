@@ -18,7 +18,7 @@ import UniqSupply       ( mkSplitUniqSupply )
 import GHC.Finder           ( mkStubPaths )
 import PprC             ( writeCs )
 import CmmLint          ( cmmLint )
-import Packages
+import GHC.Packages
 import Cmm              ( RawCmmGroup )
 import GHC.Types
 import GHC.Config.Flags

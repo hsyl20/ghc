@@ -170,7 +170,9 @@ import qualified FiniteMap as Map
 import System.FilePath
 
 import {-# SOURCE #-} GHC.Config.Flags (DynFlags)
-import {-# SOURCE #-} Packages (componentIdString, improveUnitId, PackageConfigMap, getPackageConfigMap, displayInstalledUnitId)
+import {-# SOURCE #-} GHC.Packages
+   ( componentIdString, improveUnitId, PackageConfigMap
+   , getPackageConfigMap, displayInstalledUnitId)
 
 -- Note [The identifier lexicon]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

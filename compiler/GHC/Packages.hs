@@ -3,8 +3,8 @@
 {-# LANGUAGE CPP, ScopedTypeVariables, BangPatterns, FlexibleContexts #-}
 
 -- | Package manipulation
-module Packages (
-        module PackageConfig,
+module GHC.Packages (
+        module GHC.Packages.PackageConfig,
 
         -- * Reading the package config, and processing cmdline args
         PackageState(preloadPackages, explicitPackages, requirementContext),

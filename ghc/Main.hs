@@ -43,7 +43,7 @@ import Module           ( ModuleName )
 import Config
 import GHC.Config.Constants
 import GHC.Types
-import Packages         ( pprPackages, pprPackagesSimple )
+import GHC.Packages         ( pprPackages, pprPackagesSimple )
 import GHC.Program.Driver.Phases
 import BasicTypes       ( failed )
 import GHC.Config.Flags

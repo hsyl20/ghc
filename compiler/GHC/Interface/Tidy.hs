@@ -53,7 +53,7 @@ import DataCon
 import TyCon
 import Class
 import Module
-import Packages( isDllName )
+import GHC.Packages( isDllName )
 import GHC.Types
 import Maybes
 import UniqSupply

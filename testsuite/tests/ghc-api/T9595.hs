@@ -1,7 +1,7 @@
 module Main where
 
 import GHC
-import Packages
+import GHC.Packages
 import GhcMonad
 import Outputable
 import System.Environment

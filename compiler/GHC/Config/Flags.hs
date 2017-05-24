@@ -165,7 +165,7 @@ import Module
 import GHC.Packages.PackageConfig
 import {-# SOURCE #-} GHC.Config.Hooks
 import {-# SOURCE #-} PrelNames ( mAIN )
-import {-# SOURCE #-} Packages (PackageState, emptyPackageState)
+import {-# SOURCE #-} GHC.Packages (PackageState, emptyPackageState)
 import GHC.Program.Driver.Phases     ( Phase(..), phaseInputExt )
 import Config
 import GHC.Program.CmdLineParser

@@ -293,7 +293,7 @@ import GHC.Program.Driver.Pipeline   ( compileOne' )
 import GHC.Monad
 import TcRnMonad        ( finalSafeMode, fixSafeInstances )
 import TcRnTypes
-import Packages
+import GHC.Packages
 import NameSet
 import RdrName
 import HsSyn

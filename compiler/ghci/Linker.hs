@@ -27,7 +27,7 @@ import ByteCodeLink
 import ByteCodeAsm
 import ByteCodeTypes
 import TcRnMonad
-import Packages
+import GHC.Packages
 import GHC.Program.Driver.Phases
 import GHC.Finder
 import GHC.Types

@@ -177,7 +177,7 @@ import PatSyn
 import PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule
                         , eqTyConName )
 import TysWiredIn
-import Packages hiding  ( Version(..) )
+import GHC.Packages hiding  ( Version(..) )
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
 import BasicTypes

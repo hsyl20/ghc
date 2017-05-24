@@ -17,7 +17,7 @@ module TcBackpack (
 ) where
 
 import BasicTypes (defaultFixity)
-import Packages
+import GHC.Packages
 import TcRnExports
 import GHC.Config.Flags
 import HsSyn

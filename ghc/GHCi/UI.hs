@@ -54,7 +54,7 @@ import GHC.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
                   setInteractivePrintName, hsc_dflags, msObjFilePath )
 import Module
 import Name
-import Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
+import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
                   listVisibleModuleNames, pprFlag )
 import IfaceSyn ( showToHeader )
 import PprTyThing

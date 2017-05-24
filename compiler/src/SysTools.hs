@@ -56,7 +56,7 @@ module SysTools (
 
 import GHC.Program.Driver.Phases
 import Module
-import Packages
+import GHC.Packages
 import Config
 import Outputable
 import GHC.Utils.Error

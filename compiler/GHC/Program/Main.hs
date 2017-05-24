@@ -98,7 +98,7 @@ import ConLike
 import Control.Concurrent
 
 import Module
-import Packages
+import GHC.Packages
 import RdrName
 import HsSyn
 import HsDumpAst

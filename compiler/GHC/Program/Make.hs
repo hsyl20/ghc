@@ -63,7 +63,7 @@ import SysTools
 import UniqFM
 import UniqDSet
 import TcBackpack
-import Packages
+import GHC.Packages
 import UniqSet
 import Util
 import qualified GHC.LanguageExtensions as LangExt

@@ -35,7 +35,7 @@ module GHC.Finder (
 
 import Module
 import GHC.Types
-import Packages
+import GHC.Packages
 import FastString
 import Util
 import PrelNames        ( gHC_PRIM )

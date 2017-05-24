@@ -50,7 +50,7 @@ import GHC.Types.Annotations
 
 -- Pipeline-related stuff
 import GHC.Config.Flags
-import Packages
+import GHC.Packages
 
 -- Important GHC types
 import Module

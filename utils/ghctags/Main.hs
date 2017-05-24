@@ -3,7 +3,7 @@ module Main where
 
 import Prelude hiding ( mod, id, mapM )
 import GHC
---import Packages
+--import GHC.Packages
 import Digraph          ( flattenSCCs )
 import GHC.Program.Driver.Phases ( isHaskellSrcFilename )
 import GHC.Types        ( msHsFilePath, isBootSummary )

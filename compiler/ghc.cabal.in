@@ -351,8 +351,8 @@ Library
         GHC.Types
         GHC.Interactive.Eval
         GHC.Interactive.Types
-        PackageConfig
-        Packages
+        GHC.Packages.PackageConfig
+        GHC.Packages
         PlatformConstants
         Plugins
         TcPluginM
