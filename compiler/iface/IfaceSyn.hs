@@ -627,7 +627,7 @@ Note [Printing IfaceDecl binders]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The binders in an IfaceDecl are just OccNames, so we don't know what module they
 come from.  But when we pretty-print a TyThing by converting to an IfaceDecl
-(see PprTyThing), the TyThing may come from some other module so we really need
+(see GHC.Utils.PrettyPrint.TyThing), the TyThing may come from some other module so we really need
 the module qualifier.  We solve this by passing in a pretty-printer for the
 binders.
 
@@ -689,7 +689,7 @@ pprClassRoles ss clas binders roles =
 
 pprIfaceDecl :: ShowSub -> IfaceDecl -> SDoc
 -- NB: pprIfaceDecl is also used for pretty-printing TyThings in GHCi
---     See Note [Pretty-printing TyThings] in PprTyThing
+--     See Note [Pretty-printing TyThings] in GHC.Utils.PrettyPrint.TyThing
 pprIfaceDecl ss (IfaceData { ifName = tycon, ifCType = ctype,
                              ifCtxt = context,
                              ifRoles = roles, ifCons = condecls,

@@ -7,7 +7,7 @@
 -----------------------------------------------------------------------------
 
 {-# LANGUAGE CPP #-}
-module PprTyThing (
+module GHC.Utils.PrettyPrint.TyThing (
         pprTyThing,
         pprTyThingInContext,
         pprTyThingLoc,

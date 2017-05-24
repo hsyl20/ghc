@@ -286,7 +286,7 @@ import TcRnDriver       ( runTcInteractive )
 import GHCi
 import GHCi.RemoteTypes
 
-import PprTyThing       ( pprFamInst )
+import GHC.Utils.PrettyPrint.TyThing       ( pprFamInst )
 import GHC.Program.Main
 import GHC.Program.Make
 import GHC.Program.Driver.Pipeline   ( compileOne' )

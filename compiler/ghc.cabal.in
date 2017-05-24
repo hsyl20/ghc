@@ -356,7 +356,7 @@ Library
         GHC.Config.Platform.Constants
         GHC.Plugins.Types
         TcPluginM
-        PprTyThing
+        GHC.Utils.PrettyPrint.TyThing
         StaticPtrTable
         SysTools
         SysTools.Terminal

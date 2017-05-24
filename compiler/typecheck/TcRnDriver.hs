@@ -71,7 +71,7 @@ import TcRnMonad
 import TcRnExports
 import TcEvidence
 import qualified BooleanFormula as BF
-import PprTyThing( pprTyThingInContext )
+import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
 import MkIface( tyThingToIfaceDecl )
 import Coercion( pprCoAxiom )
 import CoreFVs( orphNamesOfFamInst )

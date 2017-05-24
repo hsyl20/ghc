@@ -251,7 +251,7 @@ pprFamInstHdr fi@(FamInst {fi_flavor = flavor})
                      -- Without -dppr-debug, eta-expand
                      -- See Trac #8674
                      -- (This is probably over the top now that we use this
-                     --  only for internal debug printing; PprTyThing.pprFamInst
+                     --  only for internal debug printing; GHC.Utils.PrettyPrint.TyThing.pprFamInst
                      --  is used for user-level printing.)
             | otherwise
             = vanilla_pp_head

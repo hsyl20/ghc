@@ -57,7 +57,7 @@ import Name
 import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
                   listVisibleModuleNames, pprFlag )
 import IfaceSyn ( showToHeader )
-import PprTyThing
+import GHC.Utils.PrettyPrint.TyThing
 import PrelNames
 import RdrName ( RdrName, getGRE_NameQualifier_maybes, getRdrName )
 import SrcLoc

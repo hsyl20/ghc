@@ -31,7 +31,7 @@ import UniqSet
 import Type
 import GHC
 import Outputable
-import PprTyThing
+import GHC.Utils.PrettyPrint.TyThing
 import GHC.Utils.Error
 import MonadUtils
 import GHC.Config.Flags
