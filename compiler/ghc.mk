@@ -524,14 +524,14 @@ compiler_stage2_dll0_MODULES = \
 	OptCoercion \
 	OrdList \
 	Outputable \
-	PackageConfig \
-	Packages \
+	GHC.Packages.PackageConfig \
+	GHC.Packages \
 	Pair \
 	Panic \
 	PatSyn \
 	GHC.Program.Driver.Pipeline.Monad \
 	Platform \
-	PlatformConstants \
+	GHC.Config.Platform.Constants \
 	PprColour \
 	PprCore \
 	PrelNames \

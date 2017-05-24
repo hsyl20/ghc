@@ -1223,10 +1223,10 @@ linkPackage hsc_env pkg
    = do
         let dflags    = hsc_dflags hsc_env
             platform  = targetPlatform dflags
-            dirs | interpreterDynamic dflags = Packages.libraryDynDirs pkg
-                 | otherwise                 = Packages.libraryDirs pkg
+            dirs | interpreterDynamic dflags = GHC.Packages.libraryDynDirs pkg
+                 | otherwise                 = GHC.Packages.libraryDirs pkg
 
-        let hs_libs   =  Packages.hsLibraries pkg
+        let hs_libs   =  GHC.Packages.hsLibraries pkg
             -- The FFI GHCi import lib isn't needed as
             -- compiler/ghci/Linker.hs + rts/Linker.c link the
             -- interpreted references to FFI to the compiled FFI.
@@ -1242,10 +1242,10 @@ linkPackage hsc_env pkg
         -- package file provides an "extra-ghci-libraries" field then we use
         -- that instead of the "extra-libraries" field.
             extra_libs =
-                      (if null (Packages.extraGHCiLibraries pkg)
-                            then Packages.extraLibraries pkg
-                            else Packages.extraGHCiLibraries pkg)
-                      ++ [ lib | '-':'l':lib <- Packages.ldOptions pkg ]
+                      (if null (GHC.Packages.extraGHCiLibraries pkg)
+                            then GHC.Packages.extraLibraries pkg
+                            else GHC.Packages.extraGHCiLibraries pkg)
+                      ++ [ lib | '-':'l':lib <- GHC.Packages.ldOptions pkg ]
 
         hs_classifieds    <- mapM (locateLib hsc_env True  dirs) hs_libs'
         extra_classifieds <- mapM (locateLib hsc_env False dirs) extra_libs
@@ -1309,8 +1309,8 @@ loadFrameworks :: HscEnv -> Platform -> PackageConfig -> IO ()
 loadFrameworks hsc_env platform pkg
     = when (platformUsesFrameworks platform) $ mapM_ load frameworks
   where
-    fw_dirs    = Packages.frameworkDirs pkg
-    frameworks = Packages.frameworks pkg
+    fw_dirs    = GHC.Packages.frameworkDirs pkg
+    frameworks = GHC.Packages.frameworks pkg
 
     load fw = do  r <- loadFramework hsc_env fw_dirs fw
                   case r of

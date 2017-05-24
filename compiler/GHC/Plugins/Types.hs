@@ -1,4 +1,4 @@
-module Plugins (
+module GHC.Plugins.Types (
     FrontendPlugin(..), defaultFrontendPlugin,
     Plugin(..), CommandLineOption,
     defaultPlugin

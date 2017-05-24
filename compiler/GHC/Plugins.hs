@@ -8,12 +8,12 @@
 -- Particularly interesting modules for plugin writers include
 -- "CoreSyn" and "CoreMonad".
 module GHC.Plugins(
-        module Plugins,
+        module GHC.Plugins.Types,
         module RdrName, module OccName, module Name, module Var, module Id, module IdInfo,
         module CoreMonad, module CoreSyn, module Literal, module DataCon,
         module CoreUtils, module MkCore, module CoreFVs, module CoreSubst,
         module Rules, module GHC.Types.Annotations,
-        module GHC.Config.Flags, module Packages,
+        module GHC.Config.Flags, module GHC.Packages,
         module Module, module Type, module TyCon, module Coercion,
         module TysWiredIn, module GHC.Types, module BasicTypes,
         module VarSet, module VarEnv, module NameSet, module NameEnv,
@@ -23,7 +23,7 @@ module GHC.Plugins(
     ) where
 
 -- Plugin stuff itself
-import Plugins
+import GHC.Plugins.Types
 
 -- Variable naming
 import RdrName

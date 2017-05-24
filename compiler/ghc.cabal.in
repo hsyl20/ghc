@@ -354,7 +354,7 @@ Library
         GHC.Packages.PackageConfig
         GHC.Packages
         GHC.Config.Platform.Constants
-        Plugins
+        GHC.Plugins.Types
         TcPluginM
         PprTyThing
         StaticPtrTable
