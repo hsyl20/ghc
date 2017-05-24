@@ -77,7 +77,7 @@ import NameEnv
 import PrelNames
 import TysWiredIn
 import OccName
-import Hooks
+import GHC.Config.Hooks
 import Var
 import Module
 import LoadIface

@@ -64,7 +64,7 @@ import Exception
 import BasicTypes
 import FastString
 import Util
-import Hooks
+import GHC.Config.Hooks
 
 import Control.Concurrent
 import Control.Monad

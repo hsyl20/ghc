@@ -49,7 +49,7 @@ import Config
 import OrdList
 import Pair
 import Util
-import Hooks
+import GHC.Config.Hooks
 
 import Data.Maybe
 import Data.List

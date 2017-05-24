@@ -57,7 +57,7 @@ import Outputable
 import Platform
 import SrcLoc
 import Bag
-import Hooks
+import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

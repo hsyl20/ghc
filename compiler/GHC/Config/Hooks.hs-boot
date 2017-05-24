@@ -1,4 +1,4 @@
-module Hooks where
+module GHC.Config.Hooks where
 
 data Hooks
 

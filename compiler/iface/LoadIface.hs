@@ -70,7 +70,7 @@ import Panic
 import Util
 import FastString
 import Fingerprint
-import Hooks
+import GHC.Config.Hooks
 import FieldLabel
 import RnModIface
 import UniqDSet

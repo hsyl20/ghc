@@ -482,7 +482,7 @@ compiler_stage2_dll0_MODULES = \
 	FiniteMap \
 	ForeignCall \
 	FV \
-	Hooks \
+	GHC.Config.Hooks \
 	HsBinds \
 	HsDecls \
 	HsDoc \

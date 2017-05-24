@@ -2,28 +2,30 @@
 
 -- NB: this module is SOURCE-imported by DynFlags, and should primarily
 --     refer to *types*, rather than *code*
--- If you import too muchhere , then the revolting compiler_stage2_dll0_MODULES
+-- If you import too much here, then the revolting compiler_stage2_dll0_MODULES
 -- stuff in compiler/ghc.mk makes DynFlags link to too much stuff
 
 {-# LANGUAGE CPP #-}
-module Hooks ( Hooks
-             , emptyHooks
-             , lookupHook
-             , getHooked
-               -- the hooks:
-             , dsForeignsHook
-             , tcForeignImportsHook
-             , tcForeignExportsHook
-             , hscFrontendHook
-             , hscCompileCoreExprHook
-             , ghcPrimIfaceHook
-             , runPhaseHook
-             , runMetaHook
-             , linkHook
-             , runRnSpliceHook
-             , getValueSafelyHook
-             , createIservProcessHook
-             ) where
+module GHC.Config.Hooks
+   ( Hooks
+   , emptyHooks
+   , lookupHook
+   , getHooked
+     -- the hooks:
+   , dsForeignsHook
+   , tcForeignImportsHook
+   , tcForeignExportsHook
+   , hscFrontendHook
+   , hscCompileCoreExprHook
+   , ghcPrimIfaceHook
+   , runPhaseHook
+   , runMetaHook
+   , linkHook
+   , runRnSpliceHook
+   , getValueSafelyHook
+   , createIservProcessHook
+   )
+where
 
 import GHC.Config.Flags
 import Name

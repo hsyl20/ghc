@@ -135,7 +135,7 @@ import GHC.CodeGen.CodeOutput
 import InstEnv
 import FamInstEnv
 import Fingerprint      ( Fingerprint )
-import Hooks
+import GHC.Config.Hooks
 import TcEnv
 
 import GHC.Config.Flags

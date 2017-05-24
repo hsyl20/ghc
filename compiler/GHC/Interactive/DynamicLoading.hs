@@ -52,7 +52,7 @@ import FastString
 import GHC.Utils.Error
 import Outputable
 import Exception
-import Hooks
+import GHC.Config.Hooks
 
 import Data.Maybe        ( mapMaybe )
 import GHC.Exts          ( unsafeCoerce# )

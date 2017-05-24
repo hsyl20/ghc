@@ -163,7 +163,7 @@ import Platform
 import PlatformConstants
 import Module
 import PackageConfig
-import {-# SOURCE #-} Hooks
+import {-# SOURCE #-} GHC.Config.Hooks
 import {-# SOURCE #-} PrelNames ( mAIN )
 import {-# SOURCE #-} Packages (PackageState, emptyPackageState)
 import GHC.Program.Driver.Phases     ( Phase(..), phaseInputExt )

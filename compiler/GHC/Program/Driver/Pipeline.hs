@@ -59,7 +59,7 @@ import LlvmCodeGen      ( llvmFixupAsm )
 import MonadUtils
 import Platform
 import TcRnTypes
-import Hooks
+import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt
 
 import Exception

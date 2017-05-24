@@ -180,7 +180,7 @@ Library
         Exception
         FieldLabel
         GHC.Monad
-        Hooks
+        GHC.Config.Hooks
         Id
         IdInfo
         Lexeme
