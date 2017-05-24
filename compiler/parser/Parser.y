@@ -42,7 +42,7 @@ import HsSyn
 import GHC.Types         ( IsBootInterface, WarningTxt(..) )
 import GHC.Config.Flags
 import BkpSyn
-import PackageConfig
+import GHC.Packages.PackageConfig
 
 -- compiler/utils
 import OrdList

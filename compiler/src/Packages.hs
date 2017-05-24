@@ -62,7 +62,7 @@ where
 #include "HsVersions.h"
 
 import GHC.PackageDb
-import PackageConfig
+import GHC.Packages.PackageConfig
 import GHC.Config.Flags
 import Name             ( Name, nameModule_maybe )
 import UniqFM

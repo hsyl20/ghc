@@ -6,7 +6,7 @@
 --
 -- (c) The University of Glasgow, 2004
 --
-module PackageConfig (
+module GHC.Packages.PackageConfig (
         -- $package_naming
 
         -- * UnitId

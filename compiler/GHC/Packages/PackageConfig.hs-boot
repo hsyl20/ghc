@@ -1,4 +1,5 @@
-module PackageConfig where
+module GHC.Packages.PackageConfig where
+
 import FastString
 import {-# SOURCE #-} Module
 import GHC.PackageDb

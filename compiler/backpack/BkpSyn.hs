@@ -22,7 +22,7 @@ import RdrName
 import SrcLoc
 import Outputable
 import Module
-import PackageConfig
+import GHC.Packages.PackageConfig
 
 {-
 ************************************************************************
