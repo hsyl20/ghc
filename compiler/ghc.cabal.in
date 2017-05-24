@@ -353,7 +353,7 @@ Library
         GHC.Interactive.Types
         GHC.Packages.PackageConfig
         GHC.Packages
-        PlatformConstants
+        GHC.Config.Platform.Constants
         Plugins
         TcPluginM
         PprTyThing

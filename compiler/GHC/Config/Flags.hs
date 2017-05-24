@@ -160,7 +160,7 @@ module GHC.Config.Flags (
 #include "HsVersions.h"
 
 import Platform
-import PlatformConstants
+import GHC.Config.Platform.Constants
 import Module
 import GHC.Packages.PackageConfig
 import {-# SOURCE #-} GHC.Config.Hooks

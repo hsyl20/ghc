@@ -8,7 +8,7 @@
 --
 -------------------------------------------------------------------------------
 
-module PlatformConstants (PlatformConstants(..)) where
+module GHC.Config.Platform.Constants (PlatformConstants(..)) where
 
 -- Produced by deriveConstants
 #include "GHCConstantsHaskellType.hs"
