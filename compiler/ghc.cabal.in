@@ -289,9 +289,9 @@ Library
         PprCore
         PmExpr
         TmOracle
-        Check
-        Coverage
-        Desugar
+        GHC.Desugar.Match.Check
+        GHC.Desugar.Coverage
+        GHC.Desugar.Main
         DsArrows
         DsBinds
         DsCCall
@@ -302,9 +302,9 @@ Library
         DsMonad
         DsUsage
         DsUtils
-        Match
-        MatchCon
-        MatchLit
+        GHC.Desugar.Match
+        GHC.Desugar.Match.Constructor
+        GHC.Desugar.Match.Literal
         HsBinds
         HsDecls
         HsDoc

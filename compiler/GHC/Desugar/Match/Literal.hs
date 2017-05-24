@@ -8,7 +8,7 @@ Pattern-matching literal patterns
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module MatchLit ( dsLit, dsOverLit, dsOverLit', hsLitKey
+module GHC.Desugar.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
                 , tidyLitPat, tidyNPat
                 , matchLiterals, matchNPlusKPats, matchNPats
                 , warnAboutIdentities, warnAboutOverflowedLiterals
@@ -17,7 +17,7 @@ module MatchLit ( dsLit, dsOverLit, dsOverLit', hsLitKey
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} Match  ( match )
+import {-# SOURCE #-} GHC.Desugar.Match  ( match )
 import {-# SOURCE #-} DsExpr ( dsExpr, dsSyntaxExpr )
 
 import DsMonad

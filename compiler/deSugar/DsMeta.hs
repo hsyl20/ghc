@@ -21,7 +21,7 @@ module DsMeta( dsBracket ) where
 
 import {-# SOURCE #-}   DsExpr ( dsExpr )
 
-import MatchLit
+import GHC.Desugar.Match.Literal
 import DsMonad
 
 import qualified Language.Haskell.TH as TH

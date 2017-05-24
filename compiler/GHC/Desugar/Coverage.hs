@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP, NondecreasingIndentation, RecordWildCards #-}
 
-module Coverage (addTicksToBinds, hpcInitCode) where
+module GHC.Desugar.Coverage (addTicksToBinds, hpcInitCode) where
 
 import qualified GHCi
 import GHCi.RemoteTypes

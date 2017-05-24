@@ -19,7 +19,7 @@ module DsBinds ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
 #include "HsVersions.h"
 
 import {-# SOURCE #-}   DsExpr( dsLExpr )
-import {-# SOURCE #-}   Match( matchWrapper )
+import {-# SOURCE #-}   GHC.Desugar.Match( matchWrapper )
 
 import DsMonad
 import DsGRHSs

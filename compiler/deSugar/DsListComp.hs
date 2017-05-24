@@ -27,7 +27,7 @@ import CoreUtils
 import Id
 import Type
 import TysWiredIn
-import Match
+import GHC.Desugar.Match
 import PrelNames
 import SrcLoc
 import Outputable

@@ -1,4 +1,4 @@
-module Match where
+module GHC.Desugar.Match where
 import Var      ( Id )
 import TcType   ( Type )
 import DsMonad  ( DsM, EquationInfo, MatchResult )

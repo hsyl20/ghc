@@ -8,7 +8,14 @@ The @match@ function
 
 {-# LANGUAGE CPP #-}
 
-module Match ( match, matchEquations, matchWrapper, matchSimply, matchSinglePat ) where
+module GHC.Desugar.Match
+   ( match
+   , matchEquations
+   , matchWrapper
+   , matchSimply
+   , matchSinglePat
+   )
+where
 
 #include "HsVersions.h"
 
@@ -19,7 +26,7 @@ import HsSyn
 import TcHsSyn
 import TcEvidence
 import TcRnMonad
-import Check
+import GHC.Desugar.Match.Check
 import CoreSyn
 import Literal
 import CoreUtils
@@ -32,8 +39,8 @@ import Id
 import ConLike
 import DataCon
 import PatSyn
-import MatchCon
-import MatchLit
+import GHC.Desugar.Match.Constructor
+import GHC.Desugar.Match.Literal
 import Type
 import Coercion ( eqCoercion )
 import TcType ( toTcTypeBag )

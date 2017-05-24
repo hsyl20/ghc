@@ -1463,7 +1463,7 @@ integralFractionalLit neg i = FL { fl_text = SourceText (show i),
                                    fl_value = fromInteger i }
 
 -- Comparison operations are needed when grouping literals
--- for compiling pattern-matching (module MatchLit)
+-- for compiling pattern-matching (module GHC.Desugar.Match.Literal)
 
 instance Eq IntegralLit where
   (==) = (==) `on` il_value

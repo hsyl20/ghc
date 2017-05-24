@@ -7,7 +7,7 @@ Pattern Matching Coverage Checking.
 {-# LANGUAGE CPP, GADTs, DataKinds, KindSignatures #-}
 {-# LANGUAGE TupleSections #-}
 
-module Check (
+module GHC.Desugar.Match.Check (
         -- Checking and printing
         checkSingle, checkMatches, isAnyPmCheckEnabled,
 
@@ -663,7 +663,7 @@ translatePat fam_insts pat = case pat of
   SplicePat {} -> panic "Check.translatePat: SplicePat"
   SigPatIn  {} -> panic "Check.translatePat: SigPatIn"
 
--- | Translate an overloaded literal (see `tidyNPat' in deSugar/MatchLit.hs)
+-- | Translate an overloaded literal (see `tidyNPat' in deSugar/GHC.Desugar.Match.Literal.hs)
 translateNPat :: FamInstEnvs
               -> HsOverLit Id -> Maybe (SyntaxExpr Id) -> Type -> DsM PatVec
 translateNPat fam_insts (OverLit val False _ ty) mb_neg outer_ty

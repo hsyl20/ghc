@@ -40,7 +40,7 @@ module DsUtils (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} Match  ( matchSimply )
+import {-# SOURCE #-} GHC.Desugar.Match  ( matchSimply )
 import {-# SOURCE #-} DsExpr ( dsLExpr )
 
 import HsSyn

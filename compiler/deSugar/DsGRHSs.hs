@@ -13,7 +13,7 @@ module DsGRHSs ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) where
 #include "HsVersions.h"
 
 import {-# SOURCE #-} DsExpr  ( dsLExpr, dsLocalBinds )
-import {-# SOURCE #-} Match   ( matchSinglePat )
+import {-# SOURCE #-} GHC.Desugar.Match   ( matchSinglePat )
 
 import HsSyn
 import MkCore

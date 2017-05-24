@@ -31,7 +31,7 @@ import           Prelude           hiding (mod)
 import           System.Directory
 
 import qualified CoreUtils
-import           Desugar
+import           GHC.Desugar.Main
 import           GHC.Config.Flags (HasDynFlags(..))
 import           FastString
 import           GHC

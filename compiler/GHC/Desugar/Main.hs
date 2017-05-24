@@ -8,7 +8,7 @@ The Desugarer: turning HsSyn into Core.
 
 {-# LANGUAGE CPP #-}
 
-module Desugar (
+module GHC.Desugar.Main (
     -- * Desugaring operations
     deSugar, deSugarExpr
     ) where
@@ -55,7 +55,7 @@ import FastString
 import GHC.Utils.Error
 import Outputable
 import SrcLoc
-import Coverage
+import GHC.Desugar.Coverage
 import Util
 import MonadUtils
 import OrdList

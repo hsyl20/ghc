@@ -12,7 +12,7 @@ module DsArrows ( dsProcExpr ) where
 
 #include "HsVersions.h"
 
-import Match
+import GHC.Desugar.Match
 import DsUtils
 import DsMonad
 

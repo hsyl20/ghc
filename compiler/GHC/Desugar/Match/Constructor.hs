@@ -8,11 +8,15 @@ Pattern-matching constructors
 
 {-# LANGUAGE CPP #-}
 
-module MatchCon ( matchConFamily, matchPatSyn ) where
+module GHC.Desugar.Match.Constructor
+   ( matchConFamily
+   , matchPatSyn
+   )
+where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} Match     ( match )
+import {-# SOURCE #-} GHC.Desugar.Match     ( match )
 
 import HsSyn
 import DsBinds

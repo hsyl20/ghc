@@ -114,7 +114,7 @@ import NameCache        ( initNameCache )
 import LoadIface        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
-import Desugar
+import GHC.Desugar.Main
 import SimplCore
 import GHC.Interface.Tidy
 import CorePrep

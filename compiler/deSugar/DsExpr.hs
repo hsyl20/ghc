@@ -13,8 +13,8 @@ module DsExpr ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
 
 #include "HsVersions.h"
 
-import Match
-import MatchLit
+import GHC.Desugar.Match
+import GHC.Desugar.Match.Literal
 import DsBinds
 import DsGRHSs
 import DsListComp
