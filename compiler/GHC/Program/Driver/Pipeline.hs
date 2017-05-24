@@ -39,7 +39,7 @@ import GHC.Program.Driver.Pipeline.Monad
 import GHC.Packages
 import GHC.Syntax.Parsers.HeaderInfo
 import GHC.Program.Driver.Phases
-import SysTools
+import GHC.Utils.SysTools as SysTools
 import GHC.Utils.Elf
 import GHC.Program.Main
 import GHC.Finder

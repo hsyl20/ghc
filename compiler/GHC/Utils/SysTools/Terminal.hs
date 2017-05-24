@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-module SysTools.Terminal (stderrSupportsAnsiColors) where
+module GHC.Utils.SysTools.Terminal (stderrSupportsAnsiColors) where
 #if defined MIN_VERSION_terminfo
 import Control.Exception (catch)
 import Data.Maybe (fromMaybe)

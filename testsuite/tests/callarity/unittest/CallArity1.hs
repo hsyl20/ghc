@@ -6,7 +6,7 @@ import Type
 import MkCore
 import CallArity (callArityRHS)
 import MkId
-import SysTools
+import GHC.Utils.SysTools
 import GHC.Config.Flags
 import GHC.Utils.Error
 import Outputable

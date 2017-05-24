@@ -23,7 +23,7 @@ import Cmm              ( RawCmmGroup )
 import GHC.Types
 import GHC.Config.Flags
 import Config
-import SysTools
+import GHC.Utils.SysTools
 import Stream           (Stream)
 import qualified Stream
 

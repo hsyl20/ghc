@@ -543,7 +543,7 @@ compiler_stage2_dll0_MODULES = \
 	Rules \
 	SrcLoc \
 	StringBuffer \
-	SysTools.Terminal \
+	GHC.Utils.SysTools.Terminal \
 	TcEvidence \
 	TcRnTypes \
 	TcType \

@@ -139,7 +139,6 @@ Library
 
     hs-source-dirs:
         ./
-        src
         backpack
         basicTypes
         cmm
@@ -358,8 +357,8 @@ Library
         TcPluginM
         GHC.Utils.PrettyPrint.TyThing
         GHC.CodeGen.StaticPtrTable
-        SysTools
-        SysTools.Terminal
+        GHC.Utils.SysTools
+        GHC.Utils.SysTools.Terminal
         GHC.Utils.Elf
         GHC.Interface.Tidy
         Ctype

@@ -315,7 +315,7 @@ import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
 import GHC.Finder
 import GHC.Types
 import GHC.Config.Flags
-import SysTools
+import GHC.Utils.SysTools
 import GHC.Types.Annotations
 import Module
 import Panic

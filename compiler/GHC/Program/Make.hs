@@ -59,7 +59,7 @@ import Outputable
 import Panic
 import SrcLoc
 import StringBuffer
-import SysTools
+import GHC.Utils.SysTools
 import UniqFM
 import UniqDSet
 import TcBackpack

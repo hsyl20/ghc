@@ -46,7 +46,7 @@ import qualified Maybes
 import UniqDSet
 import FastString
 import Platform
-import SysTools
+import GHC.Utils.SysTools
 
 -- Standard libraries
 import Control.Monad

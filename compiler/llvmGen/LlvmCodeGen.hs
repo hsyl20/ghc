@@ -28,7 +28,7 @@ import GHC.Utils.Error
 import FastString
 import Outputable
 import UniqSupply
-import SysTools ( figureLlvmVersion )
+import GHC.Utils.SysTools ( figureLlvmVersion )
 import qualified Stream
 
 import Control.Monad ( when )

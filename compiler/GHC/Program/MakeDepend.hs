@@ -19,8 +19,8 @@ import GHC.Monad
 import GHC.Config.Flags
 import Util
 import GHC.Types
-import SysTools         ( newTempName )
-import qualified SysTools
+import GHC.Utils.SysTools         ( newTempName )
+import qualified GHC.Utils.SysTools
 import Module
 import Digraph          ( SCC(..) )
 import GHC.Finder
@@ -326,11 +326,11 @@ endMkDependHS dflags
 
         -- Create a backup of the original makefile
   when (isJust makefile_hdl)
-       (SysTools.copy dflags ("Backing up " ++ makefile)
+       (GHC.Utils.SysTools.copy dflags ("Backing up " ++ makefile)
           makefile (makefile++".bak"))
 
         -- Copy the new makefile in place
-  SysTools.copy dflags "Installing new makefile" tmp_file makefile
+  GHC.Utils.SysTools.copy dflags "Installing new makefile" tmp_file makefile
 
 
 -----------------------------------------------------------------

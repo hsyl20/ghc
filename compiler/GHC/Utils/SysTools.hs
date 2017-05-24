@@ -10,7 +10,7 @@
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module SysTools (
+module GHC.Utils.SysTools (
         -- Initialisation
         initSysTools,
 

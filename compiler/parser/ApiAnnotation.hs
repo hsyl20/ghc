@@ -183,7 +183,7 @@ getAndRemoveAnnotationComments (anns,canns) span =
 -- The annotations, together with original source comments are made
 -- available in the @'pm_annotations'@ field of @'GHC.ParsedModule'@.
 -- Comments are only retained if @'Opt_KeepRawTokenStream'@ is set in
--- @'DynFlags.DynFlags'@ before parsing.
+-- @'GHC.Config.Flags.DynFlags'@ before parsing.
 --
 -- The wiki page describing this feature is
 -- https://ghc.haskell.org/trac/ghc/wiki/ApiAnnotations

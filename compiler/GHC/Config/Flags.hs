@@ -185,7 +185,7 @@ import System.IO.Unsafe ( unsafeDupablePerformIO )
 import {-# SOURCE #-} GHC.Utils.Error ( Severity(..), MsgDoc, mkLocMessageAnn
                                , getCaretDiagnostic, dumpSDoc )
 import Json
-import SysTools.Terminal ( stderrSupportsAnsiColors )
+import GHC.Utils.SysTools.Terminal ( stderrSupportsAnsiColors )
 
 import System.IO.Unsafe ( unsafePerformIO )
 import Data.IORef
