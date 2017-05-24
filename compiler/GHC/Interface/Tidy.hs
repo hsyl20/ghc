@@ -29,7 +29,7 @@ import Rules
 import PatSyn
 import ConLike
 import CoreArity        ( exprArity, exprBotStrictness_maybe )
-import StaticPtrTable
+import GHC.CodeGen.StaticPtrTable
 import VarEnv
 import VarSet
 import Var
@@ -378,7 +378,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
 
               ; tidy_type_env = tidyTypeEnv omit_prags type_env2
               }
-          -- See Note [Grand plan for static forms] in StaticPtrTable.
+          -- See Note [Grand plan for static forms] in GHC.CodeGen.StaticPtrTable.
         ; (spt_entries, tidy_binds') <-
              sptCreateStaticBinds hsc_env mod tidy_binds
         ; let { spt_init_code = sptModuleInitCode mod spt_entries

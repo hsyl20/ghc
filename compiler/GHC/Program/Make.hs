@@ -1292,7 +1292,7 @@ upsweep mHscMessage old_hpt stable_mods cleanup sccs = do
 
                         -- Add any necessary entries to the static pointer
                         -- table. See Note [Grand plan for static forms] in
-                        -- StaticPtrTable.
+                        -- GHC.CodeGen.StaticPtrTable.
                 when (hscTarget (hsc_dflags hsc_env4) == HscInterpreted) $
                     liftIO $ hscAddSptEntries hsc_env4
                                  [ spt

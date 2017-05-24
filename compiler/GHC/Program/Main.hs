@@ -1609,7 +1609,7 @@ hscDeclsWithLocation hsc_env0 str source linenumber =
     return (new_tythings, new_ictxt)
 
 -- | Load the given static-pointer table entries into the interpreter.
--- See Note [Grand plan for static forms] in StaticPtrTable.
+-- See Note [Grand plan for static forms] in GHC.CodeGen.StaticPtrTable.
 hscAddSptEntries :: HscEnv -> [SptEntry] -> IO ()
 hscAddSptEntries hsc_env entries = do
     let add_spt_entry :: SptEntry -> IO ()

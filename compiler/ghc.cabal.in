@@ -357,7 +357,7 @@ Library
         GHC.Plugins.Types
         TcPluginM
         GHC.Utils.PrettyPrint.TyThing
-        StaticPtrTable
+        GHC.CodeGen.StaticPtrTable
         SysTools
         SysTools.Terminal
         GHC.Utils.Elf

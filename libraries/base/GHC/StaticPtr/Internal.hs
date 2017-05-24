@@ -19,7 +19,7 @@ module GHC.StaticPtr.Internal (makeStatic) where
 import GHC.StaticPtr(StaticPtr)
 
 -- 'makeStatic' should never be called by the user.
--- See Note [Grand plan for static forms] in StaticPtrTable.
+-- See Note [Grand plan for static forms] in GHC.CodeGen.StaticPtrTable.
 
 makeStatic :: (Int, Int) -> a -> StaticPtr a
 makeStatic (line, col) _ =
