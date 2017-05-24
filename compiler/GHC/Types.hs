@@ -143,7 +143,7 @@ module GHC.Types (
 #include "HsVersions.h"
 
 import ByteCodeTypes
-import InteractiveEvalTypes ( Resume )
+import GHC.Interactive.Types ( Resume )
 import GHCi.Message         ( Pipe )
 import GHCi.RemoteTypes
 import GHC.ForeignSrcLang
@@ -1512,7 +1512,7 @@ data InteractiveContext
 
          ic_rn_gbl_env :: GlobalRdrEnv,
              -- ^ The cached 'GlobalRdrEnv', built by
-             -- 'InteractiveEval.setContext' and updated regularly
+             -- 'GHC.Interactive.Eval.setContext' and updated regularly
              -- It contains everything in scope at the command line,
              -- including everything in ic_tythings
 

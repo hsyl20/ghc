@@ -349,8 +349,8 @@ Library
         GHC.Program.Main
         GHC.Syntax.Stats
         GHC.Types
-        InteractiveEval
-        InteractiveEvalTypes
+        GHC.Interactive.Eval
+        GHC.Interactive.Types
         PackageConfig
         Packages
         PlatformConstants

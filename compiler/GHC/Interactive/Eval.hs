@@ -9,7 +9,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module InteractiveEval (
+module GHC.Interactive.Eval (
         Resume(..), History(..),
         execStmt, ExecOptions(..), execOptions, ExecResult(..), resumeExec,
         runDecls, runDeclsWithLocation,
@@ -40,7 +40,7 @@ module InteractiveEval (
 
 #include "HsVersions.h"
 
-import InteractiveEvalTypes
+import GHC.Interactive.Types
 
 import GHCi
 import GHCi.Message

@@ -502,7 +502,7 @@ compiler_stage2_dll0_MODULES = \
 	IdInfo \
 	IfaceSyn \
 	IfaceType \
-	InteractiveEvalTypes \
+	GHC.Interactive.Types \
 	Json \
 	ToIface \
 	InstEnv \
