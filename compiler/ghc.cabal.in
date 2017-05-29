@@ -300,7 +300,7 @@ Library
         GHC.Desugar.GuardedRHS
         DsListComp
         GHC.Desugar.Monad
-        DsUsage
+        GHC.Desugar.Usage
         DsUtils
         GHC.Desugar.Match
         GHC.Desugar.Match.Constructor

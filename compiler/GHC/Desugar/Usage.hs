@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module DsUsage (
+module GHC.Desugar.Usage (
     -- * Dependency/fingerprinting code (used by MkIface)
     mkUsageInfo, mkUsedNames, mkDependencies
     ) where

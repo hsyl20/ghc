@@ -64,7 +64,7 @@ import LoadIface
 import ToIface
 import FlagChecker
 
-import DsUsage ( mkUsageInfo, mkUsedNames, mkDependencies )
+import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import Id
 import GHC.Types.Annotations
 import CoreSyn

@@ -15,7 +15,7 @@ module GHC.Desugar.Main (
 
 #include "HsVersions.h"
 
-import DsUsage
+import GHC.Desugar.Usage
 import GHC.Config.Flags
 import GHC.Types
 import HsSyn
