@@ -8,7 +8,7 @@ Desugaring arrow commands
 
 {-# LANGUAGE CPP #-}
 
-module DsArrows ( dsProcExpr ) where
+module GHC.Desugar.Arrows ( dsProcExpr ) where
 
 #include "HsVersions.h"
 

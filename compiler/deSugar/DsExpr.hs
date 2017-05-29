@@ -19,7 +19,7 @@ import DsBinds
 import DsGRHSs
 import DsListComp
 import DsUtils
-import DsArrows
+import GHC.Desugar.Arrows
 import DsMonad
 import Name
 import NameEnv

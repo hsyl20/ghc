@@ -292,7 +292,7 @@ Library
         GHC.Desugar.Match.Check
         GHC.Desugar.Coverage
         GHC.Desugar.Main
-        DsArrows
+        GHC.Desugar.Arrows
         DsBinds
         DsCCall
         DsExpr

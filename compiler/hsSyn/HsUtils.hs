@@ -972,7 +972,7 @@ collect_lpat (L _ pat) bndrs
     go (CoPat _ pat _)            = go pat
 
 {-
-Note [Dictionary binders in ConPatOut] See also same Note in DsArrows
+Note [Dictionary binders in ConPatOut] See also same Note in GHC.Desugar.Arrows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Do *not* gather (a) dictionary and (b) dictionary bindings as binders
 of a ConPatOut pattern.  For most calls it doesn't matter, because
@@ -982,7 +982,7 @@ collectPatBinders.  In a lazy pattern, for example f ~(C x y) = ...,
 we want to generate bindings for x,y but not for dictionaries bound by
 C.  (The type checker ensures they would not be used.)
 
-Desugaring of arrow case expressions needs these bindings (see DsArrows
+Desugaring of arrow case expressions needs these bindings (see GHC.Desugar.Arrows
 and arrowcase1), but SPJ (Jan 2007) says it's safer for it to use its
 own pat-binder-collector:
 
