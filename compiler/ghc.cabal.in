@@ -301,7 +301,7 @@ Library
         DsListComp
         GHC.Desugar.Monad
         GHC.Desugar.Usage
-        DsUtils
+        GHC.Desugar.Utils
         GHC.Desugar.Match
         GHC.Desugar.Match.Constructor
         GHC.Desugar.Match.Literal

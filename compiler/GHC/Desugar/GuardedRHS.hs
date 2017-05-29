@@ -21,7 +21,7 @@ import CoreSyn
 import Var
 
 import GHC.Desugar.Monad
-import DsUtils
+import GHC.Desugar.Utils
 import TysWiredIn
 import PrelNames
 import Type   ( Type )

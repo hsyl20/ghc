@@ -23,7 +23,7 @@ import {-# SOURCE #-}   GHC.Desugar.Match( matchWrapper )
 
 import GHC.Desugar.Monad
 import GHC.Desugar.GuardedRHS
-import DsUtils
+import GHC.Desugar.Utils
 
 import HsSyn            -- lots of things
 import CoreSyn          -- lots of things

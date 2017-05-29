@@ -13,7 +13,7 @@ module GHC.Desugar.Arrows ( dsProcExpr ) where
 #include "HsVersions.h"
 
 import GHC.Desugar.Match
-import DsUtils
+import GHC.Desugar.Utils
 import GHC.Desugar.Monad
 
 import HsSyn    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )

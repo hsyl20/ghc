@@ -18,7 +18,7 @@ import GHC.Desugar.Match.Literal
 import GHC.Desugar.Binds
 import GHC.Desugar.GuardedRHS
 import DsListComp
-import DsUtils
+import GHC.Desugar.Utils
 import GHC.Desugar.Arrows
 import GHC.Desugar.Monad
 import Name

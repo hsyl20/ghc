@@ -34,7 +34,7 @@ import MkCore
 import GHC.Desugar.Monad
 import GHC.Desugar.Binds
 import GHC.Desugar.GuardedRHS
-import DsUtils
+import GHC.Desugar.Utils
 import Id
 import ConLike
 import DataCon

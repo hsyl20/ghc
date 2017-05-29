@@ -23,7 +23,7 @@ import GHC.Desugar.Binds
 import ConLike
 import TcType
 import GHC.Desugar.Monad
-import DsUtils
+import GHC.Desugar.Utils
 import MkCore   ( mkCoreLets )
 import Util
 import Id

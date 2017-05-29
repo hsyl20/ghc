@@ -21,7 +21,7 @@ import {-# SOURCE #-} GHC.Desugar.Match  ( match )
 import {-# SOURCE #-} DsExpr ( dsExpr, dsSyntaxExpr )
 
 import GHC.Desugar.Monad
-import DsUtils
+import GHC.Desugar.Utils
 
 import HsSyn
 

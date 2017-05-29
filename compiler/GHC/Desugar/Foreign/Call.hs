@@ -26,7 +26,7 @@ import MkCore
 import MkId
 import ForeignCall
 import DataCon
-import DsUtils
+import GHC.Desugar.Utils
 
 import TcType
 import Type

@@ -1329,7 +1329,7 @@ a) In source Haskell its second arg can have an unboxed type
 b) Its fixity is set in LoadIface.ghcPrimIface
 
 c) It has quite a bit of desugaring magic.
-   See DsUtils.hs Note [Desugaring seq (1)] and (2) and (3)
+   See GHC.Desugar.Utils.hs Note [Desugaring seq (1)] and (2) and (3)
 
 d) There is some special rule handing: Note [User-defined RULES for seq]
 

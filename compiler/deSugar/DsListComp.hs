@@ -20,7 +20,7 @@ import CoreSyn
 import MkCore
 
 import GHC.Desugar.Monad          -- the monadery used in the desugarer
-import DsUtils
+import GHC.Desugar.Utils
 
 import GHC.Config.Flags
 import CoreUtils

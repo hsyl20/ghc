@@ -977,7 +977,7 @@ Note [Dictionary binders in ConPatOut] See also same Note in GHC.Desugar.Arrows
 Do *not* gather (a) dictionary and (b) dictionary bindings as binders
 of a ConPatOut pattern.  For most calls it doesn't matter, because
 it's pre-typechecker and there are no ConPatOuts.  But it does matter
-more in the desugarer; for example, DsUtils.mkSelectorBinds uses
+more in the desugarer; for example, GHC.Desugar.Utils.mkSelectorBinds uses
 collectPatBinders.  In a lazy pattern, for example f ~(C x y) = ...,
 we want to generate bindings for x,y but not for dictionaries bound by
 C.  (The type checker ensures they would not be used.)
@@ -996,7 +996,7 @@ f ~(C (n+1) m) = (n,m)
 Here, the pattern (C (n+1)) binds a hidden dictionary (d::Num a),
 and *also* uses that dictionary to match the (n+1) pattern.  Yet, the
 variables bound by the lazy pattern are n,m, *not* the dictionary d.
-So in mkSelectorBinds in DsUtils, we want just m,n as the variables bound.
+So in mkSelectorBinds in GHC.Desugar.Utils, we want just m,n as the variables bound.
 -}
 
 hsGroupBinders :: HsGroup Name -> [Name]
