@@ -35,7 +35,7 @@ import PprCore
 import DsMonad
 import DsExpr
 import GHC.Desugar.Binds
-import DsForeign
+import GHC.Desugar.Foreign.Declaration
 import PrelNames   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )
 import Unique      ( hasKey )

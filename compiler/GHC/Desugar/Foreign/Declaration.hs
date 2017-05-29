@@ -8,7 +8,7 @@ Desugaring foreign declarations (see also GHC.Desugar.Foreign.Call).
 
 {-# LANGUAGE CPP #-}
 
-module DsForeign ( dsForeigns ) where
+module GHC.Desugar.Foreign.Declaration ( dsForeigns ) where
 
 #include "HsVersions.h"
 import TcRnMonad        -- temp
@@ -727,7 +727,7 @@ typeTyCon ty
   | Just (tc, _) <- tcSplitTyConApp_maybe (unwrapType ty)
   = tc
   | otherwise
-  = pprPanic "DsForeign.typeTyCon" (ppr ty)
+  = pprPanic "GHC.Desugar.Foreign.Declaration.typeTyCon" (ppr ty)
 
 insertRetAddr :: DynFlags -> CCallConv
               -> [(SDoc, SDoc, Type, CmmType)]
@@ -781,7 +781,7 @@ getPrimTyOf ty
         ASSERT(dataConSourceArity data_con == 1)
         ASSERT2(isUnliftedType prim_ty, ppr prim_ty)
         prim_ty
-     _other -> pprPanic "DsForeign.getPrimTyOf" (ppr ty)
+     _other -> pprPanic "GHC.Desugar.Foreign.Declaration.getPrimTyOf" (ppr ty)
   where
         rep_ty = unwrapType ty
 

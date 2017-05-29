@@ -296,7 +296,7 @@ Library
         GHC.Desugar.Binds
         GHC.Desugar.Foreign.Call
         DsExpr
-        DsForeign
+        GHC.Desugar.Foreign.Declaration
         DsGRHSs
         DsListComp
         DsMonad
