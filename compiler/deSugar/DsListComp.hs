@@ -19,7 +19,7 @@ import TcHsSyn
 import CoreSyn
 import MkCore
 
-import DsMonad          -- the monadery used in the desugarer
+import GHC.Desugar.Monad          -- the monadery used in the desugarer
 import DsUtils
 
 import GHC.Config.Flags

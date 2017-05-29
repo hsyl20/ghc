@@ -9,7 +9,7 @@ import Vectorise.Builtins.Base
 
 import BasicTypes
 import TysPrim
-import DsMonad
+import GHC.Desugar.Monad
 import TysWiredIn
 import DataCon
 import TyCon

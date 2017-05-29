@@ -2,7 +2,7 @@
 --
 -- > ghc-stage2: panic! (the 'impossible' happened)
 -- >   (GHC version 7.7.20130109 for x86_64-unknown-linux):
--- >      DsMonad: uninitialised ds_parr_bi
+-- >      GHC.Desugar.Monad: uninitialised ds_parr_bi
 --
 -- (I.enumFromToP is a workaround)
 

@@ -22,7 +22,7 @@ import HsSyn
 import GHC.Desugar.Binds
 import ConLike
 import TcType
-import DsMonad
+import GHC.Desugar.Monad
 import DsUtils
 import MkCore   ( mkCoreLets )
 import Util

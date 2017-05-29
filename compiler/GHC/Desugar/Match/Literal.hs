@@ -20,7 +20,7 @@ module GHC.Desugar.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
 import {-# SOURCE #-} GHC.Desugar.Match  ( match )
 import {-# SOURCE #-} DsExpr ( dsExpr, dsSyntaxExpr )
 
-import DsMonad
+import GHC.Desugar.Monad
 import DsUtils
 
 import HsSyn

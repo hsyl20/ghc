@@ -42,7 +42,7 @@ import TcPatSyn( tcPatSynBuilderOcc, nonBidirectionalErr )
 import TcPat
 import TcMType
 import TcType
-import DsMonad
+import GHC.Desugar.Monad
 import Id
 import IdInfo
 import ConLike

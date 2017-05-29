@@ -28,7 +28,7 @@ import Vectorise.Env
 
 import CoreSyn
 import TcRnMonad
-import DsMonad
+import GHC.Desugar.Monad
 import GHC.Types hiding ( MonadThings(..) )
 import GHC.Config.Flags
 import InstEnv

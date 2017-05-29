@@ -20,7 +20,7 @@ import DsGRHSs
 import DsListComp
 import DsUtils
 import GHC.Desugar.Arrows
-import DsMonad
+import GHC.Desugar.Monad
 import Name
 import NameEnv
 import FamInstEnv( topNormaliseType )
@@ -242,7 +242,7 @@ dsLExpr (L loc e)
 -- | Variant of 'dsLExpr' that ensures that the result is not levity
 -- polymorphic. This should be used when the resulting expression will
 -- be an argument to some other function.
--- See Note [Levity polymorphism checking] in DsMonad
+-- See Note [Levity polymorphism checking] in GHC.Desugar.Monad
 -- See Note [Levity polymorphism invariants] in CoreSyn
 dsLExprNoLP :: LHsExpr Id -> DsM CoreExpr
 dsLExprNoLP (L loc e)

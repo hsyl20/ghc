@@ -20,7 +20,7 @@ import MkCore
 import CoreSyn
 import Var
 
-import DsMonad
+import GHC.Desugar.Monad
 import DsUtils
 import TysWiredIn
 import PrelNames

@@ -31,7 +31,7 @@ import CoreSyn
 import Literal
 import CoreUtils
 import MkCore
-import DsMonad
+import GHC.Desugar.Monad
 import GHC.Desugar.Binds
 import DsGRHSs
 import DsUtils
@@ -100,7 +100,7 @@ is an embryonic @CoreExpr@ with a ``hole'' at the end for the
 final ``else expression''.
 \end{itemize}
 
-There is a data type, @EquationInfo@, defined in module @DsMonad@.
+There is a data type, @EquationInfo@, defined in module @GHC.Desugar.Monad@.
 
 An experiment with re-ordering this information about equations (in
 particular, having the patterns available in column-major order)

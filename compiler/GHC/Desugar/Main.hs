@@ -32,7 +32,7 @@ import CoreSyn
 import CoreFVs     ( exprsSomeFreeVarsList )
 import CoreOpt     ( simpleOptPgm, simpleOptExpr )
 import PprCore
-import DsMonad
+import GHC.Desugar.Monad
 import DsExpr
 import GHC.Desugar.Binds
 import GHC.Desugar.Foreign.Declaration

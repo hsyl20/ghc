@@ -20,7 +20,7 @@ module GHC.Desugar.Foreign.Call
 
 import CoreSyn
 
-import DsMonad
+import GHC.Desugar.Monad
 import CoreUtils
 import MkCore
 import MkId

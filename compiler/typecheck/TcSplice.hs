@@ -91,7 +91,7 @@ import TcEvidence( TcEvBinds(..) )
 import Id
 import IdInfo
 import DsExpr
-import DsMonad
+import GHC.Desugar.Monad
 import GHC.Serialized
 import GHC.Utils.Error
 import Util

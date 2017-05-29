@@ -16,7 +16,7 @@ where
 
 import Vectorise.Monad.Base
 
-import DsMonad
+import GHC.Desugar.Monad
 import TcType
 import Type
 import Var

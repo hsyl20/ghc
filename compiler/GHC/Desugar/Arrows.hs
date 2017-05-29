@@ -14,7 +14,7 @@ module GHC.Desugar.Arrows ( dsProcExpr ) where
 
 import GHC.Desugar.Match
 import DsUtils
-import DsMonad
+import GHC.Desugar.Monad
 
 import HsSyn    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
 import TcHsSyn

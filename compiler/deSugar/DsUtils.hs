@@ -47,7 +47,7 @@ import HsSyn
 import TcHsSyn
 import TcType( tcSplitTyConApp )
 import CoreSyn
-import DsMonad
+import GHC.Desugar.Monad
 
 import CoreUtils
 import MkCore

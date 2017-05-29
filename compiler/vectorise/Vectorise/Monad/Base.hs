@@ -29,7 +29,7 @@ module Vectorise.Monad.Base (
 import Vectorise.Builtins
 import Vectorise.Env
 
-import DsMonad
+import GHC.Desugar.Monad
 import TcRnMonad
 import GHC.Utils.Error
 import Outputable

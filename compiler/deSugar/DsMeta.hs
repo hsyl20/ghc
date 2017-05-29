@@ -22,7 +22,7 @@ module DsMeta( dsBracket ) where
 import {-# SOURCE #-}   DsExpr ( dsExpr )
 
 import GHC.Desugar.Match.Literal
-import DsMonad
+import GHC.Desugar.Monad
 
 import qualified Language.Haskell.TH as TH
 

@@ -1,7 +1,7 @@
 module DsExpr where
 import HsSyn    ( HsExpr, LHsExpr, LHsLocalBinds, SyntaxExpr )
 import Var      ( Id )
-import DsMonad  ( DsM )
+import GHC.Desugar.Monad  ( DsM )
 import CoreSyn  ( CoreExpr )
 
 dsExpr  :: HsExpr  Id -> DsM CoreExpr

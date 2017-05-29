@@ -36,7 +36,7 @@ import FastString
 import DataCon
 import GHC.Types (CompleteMatch(..))
 
-import DsMonad
+import GHC.Desugar.Monad
 import TcSimplify    (tcCheckSatisfiability)
 import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
 import Bag

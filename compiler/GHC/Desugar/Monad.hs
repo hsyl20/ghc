@@ -3,13 +3,13 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-@DsMonad@: monadery used in desugaring
+@GHC.Desugar.Monad@: monadery used in desugaring
 -}
 
 {-# LANGUAGE FlexibleInstances, FlexibleContexts #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}  -- instance MonadThings is necessarily an orphan
 
-module DsMonad (
+module GHC.Desugar.Monad (
         DsM, mapM, mapAndUnzipM,
         initDs, initDsTc, initTcDsForSolver, initDsWithModGuts, fixDs,
         foldlM, foldrM, whenGOptM, unsetGOptM, unsetWOptM, xoptM,
@@ -263,7 +263,7 @@ mkDsEnvs dflags mod rdr_env type_env fam_inst_env msg_var pmvar
                            , ds_unqual  = mkPrintUnqualified dflags rdr_env
                            , ds_msgs    = msg_var
                            , ds_dph_env = emptyGlobalRdrEnv
-                           , ds_parr_bi = panic "DsMonad: uninitialised ds_parr_bi"
+                           , ds_parr_bi = panic "GHC.Desugar.Monad: uninitialised ds_parr_bi"
                            , ds_complete_matches = completeMatchMap
                            }
         lcl_env = DsLclEnv { dsl_meta    = emptyNameEnv
@@ -302,7 +302,7 @@ At one point, I (Richard) thought we could check in the zonker, but it's hard
 to know where precisely are the abstracted variables and the arguments. So
 we check in the desugarer, the only place where we can see the Core code and
 still report respectable syntax to the user. This covers the vast majority
-of cases; see calls to DsMonad.dsNoLevPoly and friends.
+of cases; see calls to GHC.Desugar.Monad.dsNoLevPoly and friends.
 
 Levity polymorphism is also prohibited in the types of binders, and the
 desugarer checks for this in GHC-generated Ids. (The zonker handles
@@ -498,7 +498,7 @@ dsLoadModule doc mod
        ; setEnvs (ds_if_env env) $ do
        { iface <- loadInterface doc mod ImportBySystem
        ; case iface of
-           Failed err      -> pprPanic "DsMonad.dsLoadModule: failed to load" (err $$ doc)
+           Failed err      -> pprPanic "GHC.Desugar.Monad.dsLoadModule: failed to load" (err $$ doc)
            Succeeded iface -> return $ mkGlobalRdrEnv . gresFromAvails prov . mi_exports $ iface
        } }
   where

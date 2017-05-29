@@ -264,7 +264,7 @@ hsExprToPmExpr (ExplicitPArr _elem_ty elems)
 
 
 -- we want this but we would have to make everything monadic :/
--- ./compiler/deSugar/DsMonad.hs:397:dsLookupDataCon :: Name -> DsM DataCon
+-- ./compiler/deSugar/GHC.Desugar.Monad.hs:397:dsLookupDataCon :: Name -> DsM DataCon
 --
 -- hsExprToPmExpr (RecordCon   c _ binds) = do
 --   con  <- dsLookupDataCon (unLoc c)

@@ -4,7 +4,7 @@
 
 -- This one provoked a bogus renamer error in 4.08.1:
 --      panic: tcLookupGlobalValue: <THIS>.PrelIOBase.returnIO{-0B,s-}
--- (the error was actually in DsMonad.dsLookupGlobalValue!)
+-- (the error was actually in GHC.Desugar.Monad.dsLookupGlobalValue!)
 
 module Main where
 

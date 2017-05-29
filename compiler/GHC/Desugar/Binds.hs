@@ -21,7 +21,7 @@ module GHC.Desugar.Binds ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
 import {-# SOURCE #-}   DsExpr( dsLExpr )
 import {-# SOURCE #-}   GHC.Desugar.Match( matchWrapper )
 
-import DsMonad
+import GHC.Desugar.Monad
 import DsGRHSs
 import DsUtils
 

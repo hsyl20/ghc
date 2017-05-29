@@ -16,7 +16,7 @@ import TcRnMonad        -- temp
 import CoreSyn
 
 import GHC.Desugar.Foreign.Call
-import DsMonad
+import GHC.Desugar.Monad
 
 import HsSyn
 import DataCon
