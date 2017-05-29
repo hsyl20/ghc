@@ -16,7 +16,7 @@ module DsExpr ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
 import GHC.Desugar.Match
 import GHC.Desugar.Match.Literal
 import GHC.Desugar.Binds
-import DsGRHSs
+import GHC.Desugar.GuardedRHS
 import DsListComp
 import DsUtils
 import GHC.Desugar.Arrows

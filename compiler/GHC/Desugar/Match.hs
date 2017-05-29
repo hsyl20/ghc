@@ -33,7 +33,7 @@ import CoreUtils
 import MkCore
 import GHC.Desugar.Monad
 import GHC.Desugar.Binds
-import DsGRHSs
+import GHC.Desugar.GuardedRHS
 import DsUtils
 import Id
 import ConLike

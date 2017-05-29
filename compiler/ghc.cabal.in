@@ -297,7 +297,7 @@ Library
         GHC.Desugar.Foreign.Call
         DsExpr
         GHC.Desugar.Foreign.Declaration
-        DsGRHSs
+        GHC.Desugar.GuardedRHS
         DsListComp
         GHC.Desugar.Monad
         DsUsage

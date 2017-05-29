@@ -44,7 +44,7 @@ import GHC.Utils.Error
 import Var           (EvVar)
 import Type
 import UniqSupply
-import DsGRHSs       (isTrueLHsExpr)
+import GHC.Desugar.GuardedRHS       (isTrueLHsExpr)
 
 import Data.List     (find)
 import Data.Maybe    (isJust, fromMaybe)

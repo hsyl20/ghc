@@ -22,7 +22,7 @@ import {-# SOURCE #-}   DsExpr( dsLExpr )
 import {-# SOURCE #-}   GHC.Desugar.Match( matchWrapper )
 
 import GHC.Desugar.Monad
-import DsGRHSs
+import GHC.Desugar.GuardedRHS
 import DsUtils
 
 import HsSyn            -- lots of things
