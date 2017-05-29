@@ -24,7 +24,7 @@ import GHC.Desugar.Monad
 import Name
 import NameEnv
 import FamInstEnv( topNormaliseType )
-import DsMeta
+import GHC.Desugar.Splices
 import HsSyn
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes

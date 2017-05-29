@@ -15,7 +15,7 @@
 -- a Royal Pain (triggers other recompilation).
 -----------------------------------------------------------------------------
 
-module DsMeta( dsBracket ) where
+module GHC.Desugar.Splices ( dsBracket ) where
 
 #include "HsVersions.h"
 
@@ -29,7 +29,7 @@ import qualified Language.Haskell.TH as TH
 import HsSyn
 import Class
 import PrelNames
--- To avoid clashes with DsMeta.varName we must make a local alias for
+-- To avoid clashes with GHC.Desugar.Splices.varName we must make a local alias for
 -- OccName.varName we do this by removing varName from the import of
 -- OccName above, making a qualified instance of OccName and using
 -- OccNameAlias.varName where varName ws previously used in this file.
@@ -1766,7 +1766,8 @@ globalVar name
       mk_varg | OccName.isDataOcc name_occ = mkNameG_dName
               | OccName.isVarOcc  name_occ = mkNameG_vName
               | OccName.isTcOcc   name_occ = mkNameG_tcName
-              | otherwise                  = pprPanic "DsMeta.globalVar" (ppr name)
+              | otherwise                  =
+		  pprPanic "GHC.Desugar.Splices.globalVar" (ppr name)
 
 lookupType :: Name      -- Name of type constructor (e.g. TH.ExpQ)
            -> DsM Type  -- The type

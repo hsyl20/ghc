@@ -533,7 +533,8 @@ instance Quasi Q where
 
 
 ----------------------------------------------------
--- The following operations are used solely in DsMeta when desugaring brackets
+-- The following operations are used solely in GHC.Desugar.Splices when
+-- desugaring brackets
 -- They are not necessary for the user, who can use ordinary return and (>>=) etc
 
 returnQ :: a -> Q a

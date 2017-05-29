@@ -299,7 +299,7 @@ The life cycle of a un-typed bracket:
 
 
 In both cases, desugaring happens like this:
-  * HsTcBracketOut is desugared by DsMeta.dsBracket.  It
+  * HsTcBracketOut is desugared by GHC.Desugar.Splices.dsBracket.  It
 
       a) Extends the ds_meta environment with the PendingSplices
          attached to the bracket
@@ -314,10 +314,10 @@ In both cases, desugaring happens like this:
     ${n}(e).  The name is initialised to an (Unqual "splice") when the
     splice is created; the renamer gives it a unique.
 
-  * When DsMeta (used to desugar the body of the bracket) comes across
+  * When GHC.Desugar.Splices (used to desugar the body of the bracket) comes across
     a splice, it looks up the splice's Name, n, in the ds_meta envt,
     to find an (HsExpr Id) that should be substituted for the splice;
-    it just desugars it to get a CoreExpr (DsMeta.repSplice).
+    it just desugars it to get a CoreExpr (GHC.Desugar.Splices.repSplice).
 
 Example:
     Source:       f = [| Just $(g 3) |]

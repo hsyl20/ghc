@@ -466,7 +466,7 @@ Library
         TcSplice
         Class
         Coercion
-        DsMeta
+        GHC.Desugar.Splices
         THNames
         FamInstEnv
         FunDeps

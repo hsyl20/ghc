@@ -22,7 +22,7 @@ import FastString
 
 templateHaskellNames :: [Name]
 -- The names that are implicitly mentioned by ``bracket''
--- Should stay in sync with the import list of DsMeta
+-- Should stay in sync with the import list of GHC.Desugar.Splices
 
 templateHaskellNames = [
     returnQName, bindQName, sequenceQName, newNameName, liftName,

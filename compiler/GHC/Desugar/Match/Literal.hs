@@ -55,7 +55,7 @@ import Data.Proxy
 ************************************************************************
 *                                                                      *
                 Desugaring literals
-        [used to be in DsExpr, but DsMeta needs it,
+        [used to be in DsExpr, but GHC.Desugar.Splices needs it,
          and it's nice to avoid a loop]
 *                                                                      *
 ************************************************************************
