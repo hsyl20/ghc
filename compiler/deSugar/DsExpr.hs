@@ -17,7 +17,7 @@ import GHC.Desugar.Match
 import GHC.Desugar.Match.Literal
 import GHC.Desugar.Binds
 import GHC.Desugar.GuardedRHS
-import DsListComp
+import GHC.Desugar.ListComp
 import GHC.Desugar.Utils
 import GHC.Desugar.Arrows
 import GHC.Desugar.Monad
@@ -894,7 +894,7 @@ dsArithSeq expr (FromThenTo from thn to)
 
 {-
 Desugar 'do' and 'mdo' expressions (NOT list comprehensions, they're
-handled in DsListComp).  Basically does the translation given in the
+handled in GHC.Desugar.ListComp).  Basically does the translation given in the
 Haskell 98 report:
 -}
 

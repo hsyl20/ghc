@@ -298,7 +298,7 @@ Library
         DsExpr
         GHC.Desugar.Foreign.Declaration
         GHC.Desugar.GuardedRHS
-        DsListComp
+        GHC.Desugar.ListComp
         GHC.Desugar.Monad
         GHC.Desugar.Usage
         GHC.Desugar.Utils
