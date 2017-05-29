@@ -293,8 +293,8 @@ Library
         GHC.Desugar.Coverage
         GHC.Desugar.Main
         GHC.Desugar.Arrows
-        DsBinds
-        DsCCall
+        GHC.Desugar.Binds
+        GHC.Desugar.Foreign.Call
         DsExpr
         DsForeign
         DsGRHSs

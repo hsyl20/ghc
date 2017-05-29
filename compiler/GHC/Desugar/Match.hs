@@ -32,7 +32,7 @@ import Literal
 import CoreUtils
 import MkCore
 import DsMonad
-import DsBinds
+import GHC.Desugar.Binds
 import DsGRHSs
 import DsUtils
 import Id

@@ -34,7 +34,7 @@ import CoreSyn
 import CoreFVs
 import CoreUtils
 import MkCore
-import DsBinds (dsHsWrapper)
+import GHC.Desugar.Binds (dsHsWrapper)
 
 import Name
 import Var

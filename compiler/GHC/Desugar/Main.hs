@@ -34,7 +34,7 @@ import CoreOpt     ( simpleOptPgm, simpleOptExpr )
 import PprCore
 import DsMonad
 import DsExpr
-import DsBinds
+import GHC.Desugar.Binds
 import DsForeign
 import PrelNames   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )

@@ -3,7 +3,7 @@
 (c) The AQUA Project, Glasgow University, 1998
 
 
-Desugaring foreign declarations (see also DsCCall).
+Desugaring foreign declarations (see also GHC.Desugar.Foreign.Call).
 -}
 
 {-# LANGUAGE CPP #-}
@@ -15,7 +15,7 @@ import TcRnMonad        -- temp
 
 import CoreSyn
 
-import DsCCall
+import GHC.Desugar.Foreign.Call
 import DsMonad
 
 import HsSyn
@@ -66,7 +66,7 @@ is the same as
   f :: prim_args -> IO prim_res
   f a1 ... an = _ccall_ nm cc a1 ... an
 \end{verbatim}
-so we reuse the desugaring code in @DsCCall@ to deal with these.
+so we reuse the desugaring code in @GHC.Desugar.Foreign.Call@ to deal with these.
 -}
 
 type Binding = (Id, CoreExpr)   -- No rec/nonrec structure;

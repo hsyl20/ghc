@@ -745,7 +745,7 @@ Important Details:
 
 - An EvCallStack term desugars to a CoreExpr of type `IP "some str" CallStack`.
   The desugarer will need to unwrap the IP newtype before pushing a new
-  call-site onto a given stack (See DsBinds.dsEvCallStack)
+  call-site onto a given stack (See GHC.Desugar.Binds.dsEvCallStack)
 
 - When we emit a new wanted CallStack from rule (2) we set its origin to
   `IPOccOrigin ip_name` instead of the original `OccurrenceOf func`

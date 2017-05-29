@@ -15,7 +15,7 @@ module DsExpr ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
 
 import GHC.Desugar.Match
 import GHC.Desugar.Match.Literal
-import DsBinds
+import GHC.Desugar.Binds
 import DsGRHSs
 import DsListComp
 import DsUtils
@@ -106,7 +106,7 @@ ds_val_bind (NonRecursive, hsbinds) body
         --       below.  Then pattern-match would fail.  Urk.)
   , isUnliftedHsBind bind
   = putSrcSpanDs loc $
-     -- see Note [Strict binds checks] in DsBinds
+     -- see Note [Strict binds checks] in GHC.Desugar.Binds
     if is_polymorphic bind
     then errDsCoreExpr (poly_bind_err bind)
             -- data Ptr a = Ptr Addr#
@@ -144,7 +144,7 @@ ds_val_bind (NonRecursive, hsbinds) body
         text "Probable fix: add a type signature"
 
 ds_val_bind (is_rec, binds) _body
-  | anyBag (isUnliftedHsBind . unLoc) binds  -- see Note [Strict binds checks] in DsBinds
+  | anyBag (isUnliftedHsBind . unLoc) binds  -- see Note [Strict binds checks] in GHC.Desugar.Binds
   = ASSERT( isRec is_rec )
     errDsCoreExpr $
     hang (text "Recursive bindings for unlifted types aren't allowed:")

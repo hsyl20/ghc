@@ -839,7 +839,7 @@ is a lifted function type, with no trouble at all.
 -- | Should we treat this as an unlifted bind? This will be true for any
 -- bind that binds an unlifted variable, but we must be careful around
 -- AbsBinds. See Note [Unlifted id check in isUnliftedHsBind]. For usage
--- information, see Note [Strict binds check] is DsBinds.
+-- information, see Note [Strict binds check] is GHC.Desugar.Binds.
 isUnliftedHsBind :: HsBind Id -> Bool  -- works only over typechecked binds
 isUnliftedHsBind (AbsBindsSig { abs_sig_export = id })
   = isUnliftedType (idType id)

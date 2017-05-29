@@ -7,7 +7,7 @@ Desugaring foreign calls
 -}
 
 {-# LANGUAGE CPP #-}
-module DsCCall
+module GHC.Desugar.Foreign.Call
         ( dsCCall
         , mkFCall
         , unboxArg
