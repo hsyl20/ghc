@@ -19,7 +19,7 @@ module GHC.Desugar.Splices ( dsBracket ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   DsExpr ( dsExpr )
+import {-# SOURCE #-}   GHC.Desugar.Expression ( dsExpr )
 
 import GHC.Desugar.Match.Literal
 import GHC.Desugar.Monad

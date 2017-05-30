@@ -3,7 +3,7 @@
 -- This one killed GHC 6.4.1, because the pattern match on the
 -- unboxed tuple generates a failure case, which defeated the
 -- rather fragile code in the desugarer
--- See DsExpr.lhs, the HsCase case
+-- See GHC.Desugar.Expression.lhs, the HsCase case
 
 module Main where
 

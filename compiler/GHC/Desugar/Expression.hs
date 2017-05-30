@@ -8,7 +8,7 @@ Desugaring exporessions.
 
 {-# LANGUAGE CPP, MultiWayIf #-}
 
-module DsExpr ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
+module GHC.Desugar.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
               , dsValBinds, dsLit, dsSyntaxExpr ) where
 
 #include "HsVersions.h"
@@ -223,7 +223,7 @@ dsUnliftedBind bind body = pprPanic "dsLet: unlifted" (ppr bind $$ ppr body)
 {-
 ************************************************************************
 *                                                                      *
-\subsection[DsExpr-vars-and-cons]{Variables, constructors, literals}
+\subsection[GHC.Desugar.Expression-vars-and-cons]{Variables, constructors, literals}
 *                                                                      *
 ************************************************************************
 -}
@@ -487,7 +487,7 @@ ds_expr _ (PArrSeq expr (FromThenTo from thn to))
   = mkApps <$> dsExpr expr <*> mapM dsLExprNoLP [from, thn, to]
 
 ds_expr _ (PArrSeq _ _)
-  = panic "DsExpr.dsExpr: Infinite parallel array!"
+  = panic "GHC.Desugar.Expression.dsExpr: Infinite parallel array!"
     -- the parser shouldn't have generated it and the renamer and typechecker
     -- shouldn't have let it through
 

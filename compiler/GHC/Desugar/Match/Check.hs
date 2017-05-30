@@ -897,7 +897,7 @@ The case with literals is a bit different. a literal @l@ should be translated
 to @x (True <- x == from l)@. Since we want to have better warnings for
 overloaded literals as it is a very common feature, we treat them differently.
 They are mainly covered in Note [Undecidable Equality on Overloaded Literals]
-in PmExpr.
+in GHC.Desugar.Match.Expr.
 
 4. N+K Patterns & Pattern Synonyms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

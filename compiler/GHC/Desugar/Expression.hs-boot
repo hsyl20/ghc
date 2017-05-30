@@ -1,4 +1,4 @@
-module DsExpr where
+module GHC.Desugar.Expression where
 import HsSyn    ( HsExpr, LHsExpr, LHsLocalBinds, SyntaxExpr )
 import Var      ( Id )
 import GHC.Desugar.Monad  ( DsM )

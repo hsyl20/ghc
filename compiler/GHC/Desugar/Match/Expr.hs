@@ -6,7 +6,7 @@ Haskell expressions (as used by the pattern matching checker) and utilities.
 
 {-# LANGUAGE CPP #-}
 
-module PmExpr (
+module GHC.Desugar.Match.Expr (
         PmExpr(..), PmLit(..), SimpleEq, ComplexEq, toComplex, eqPmLit,
         truePmExpr, falsePmExpr, isTruePmExpr, isFalsePmExpr, isNotPmExprOther,
         lhsExprToPmExpr, hsExprToPmExpr, substComplexEq, filterComplex,

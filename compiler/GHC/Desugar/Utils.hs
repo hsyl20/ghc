@@ -41,7 +41,7 @@ module GHC.Desugar.Utils (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Desugar.Match  ( matchSimply )
-import {-# SOURCE #-} DsExpr ( dsLExpr )
+import {-# SOURCE #-} GHC.Desugar.Expression ( dsLExpr )
 
 import HsSyn
 import TcHsSyn

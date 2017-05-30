@@ -69,7 +69,7 @@ import Bag
 import DataCon
 import ConLike
 import TyCon
-import PmExpr
+import GHC.Desugar.Match.Expr
 import Id
 import Module
 import Outputable

@@ -12,7 +12,7 @@ module GHC.Desugar.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) wher
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} DsExpr  ( dsLExpr, dsLocalBinds )
+import {-# SOURCE #-} GHC.Desugar.Expression  ( dsLExpr, dsLocalBinds )
 import {-# SOURCE #-} GHC.Desugar.Match   ( matchSinglePat )
 
 import HsSyn

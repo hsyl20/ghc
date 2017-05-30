@@ -19,7 +19,7 @@ where
 
 #include "HsVersions.h"
 
-import {-#SOURCE#-} DsExpr (dsLExpr, dsSyntaxExpr)
+import {-#SOURCE#-} GHC.Desugar.Expression (dsLExpr, dsSyntaxExpr)
 
 import GHC.Config.Flags
 import HsSyn
@@ -719,7 +719,7 @@ matchWrapper :: HsMatchContext Name         -- For shadowing warning messages
 \begin{itemize}
 \item @do@ patterns, but if the @do@ can fail
       it creates another equation if the match can fail
-      (see @DsExpr.doDo@ function)
+      (see @GHC.Desugar.Expression.doDo@ function)
 \item @let@ patterns, are treated by @matchSimply@
    List Comprension Patterns, are treated by @matchSimply@ also
 \end{itemize}

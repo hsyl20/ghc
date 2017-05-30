@@ -690,7 +690,7 @@ data HsExpr id
   ---------------------------------------
   -- Finally, HsWrap appears only in typechecker output
   -- The contained Expr is *NOT* itself an HsWrap.
-  -- See Note [Detecting forced eta expansion] in DsExpr. This invariant
+  -- See Note [Detecting forced eta expansion] in GHC.Desugar.Expression. This invariant
   -- is maintained by HsUtils.mkHsWrap.
 
   |  HsWrap     HsWrapper    -- TRANSLATION
@@ -2342,7 +2342,7 @@ data HsMatchContext id
   | ProcExpr                    -- ^Patterns of a proc
   | PatBindRhs                  -- ^A pattern binding  eg [y] <- e = e
 
-  | RecUpd                      -- ^Record update [used only in DsExpr to
+  | RecUpd                      -- ^Record update [used only in GHC.Desugar.Expression to
                                 --    tell matchWrapper what sort of
                                 --    runtime error message to generate]
 

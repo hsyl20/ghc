@@ -18,7 +18,7 @@ module GHC.Desugar.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Desugar.Match  ( match )
-import {-# SOURCE #-} DsExpr ( dsExpr, dsSyntaxExpr )
+import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsSyntaxExpr )
 
 import GHC.Desugar.Monad
 import GHC.Desugar.Utils
@@ -55,7 +55,7 @@ import Data.Proxy
 ************************************************************************
 *                                                                      *
                 Desugaring literals
-        [used to be in DsExpr, but GHC.Desugar.Splices needs it,
+        [used to be in GHC.Desugar.Expression, but GHC.Desugar.Splices needs it,
          and it's nice to avoid a loop]
 *                                                                      *
 ************************************************************************

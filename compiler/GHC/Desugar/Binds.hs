@@ -18,7 +18,7 @@ module GHC.Desugar.Binds ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   DsExpr( dsLExpr )
+import {-# SOURCE #-}   GHC.Desugar.Expression( dsLExpr )
 import {-# SOURCE #-}   GHC.Desugar.Match( matchWrapper )
 
 import GHC.Desugar.Monad
@@ -564,7 +564,7 @@ if there is no variable in the pattern desugaring looks like
   in x `seq` body
 
 In order to force the Ids in the binding group they are passed around
-in the dsHsBind family of functions, and later seq'ed in DsExpr.ds_val_bind.
+in the dsHsBind family of functions, and later seq'ed in GHC.Desugar.Expression.ds_val_bind.
 
 Consider a recursive group like this
 
@@ -631,11 +631,11 @@ The restrictions are:
   2. Unlifted binds must also be banged. (There is no trouble to compile an unbanged
      unlifted bind, but an unbanged bind looks lazy, and we don't want users to be
      surprised by the strictness of an unlifted bind.) Checked in first clause
-     of DsExpr.ds_val_bind.
+     of GHC.Desugar.Expression.ds_val_bind.
 
   3. Unlifted binds may not have polymorphism (#6078). (That is, no quantified type
      variables or constraints.) Checked in first clause
-     of DsExpr.ds_val_bind.
+     of GHC.Desugar.Expression.ds_val_bind.
 
   4. Unlifted binds may not be recursive. Checked in second clause of ds_val_bind.
 

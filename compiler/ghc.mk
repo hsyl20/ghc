@@ -490,7 +490,7 @@ compiler_stage2_dll0_MODULES = \
 	HsImpExp \
 	HsLit \
 	PlaceHolder \
-	PmExpr \
+	GHC.Desugar.Match.Expr \
 	HsPat \
 	HsSyn \
 	HsTypes \

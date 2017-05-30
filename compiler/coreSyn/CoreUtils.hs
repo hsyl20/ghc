@@ -2169,7 +2169,7 @@ rhsIsStatic :: Platform
             -> CoreExpr -> Bool
 -- It's called (i) in GHC.Interface.Tidy.hasCafRefs to decide if the rhs is, or
 -- refers to, CAFs; (ii) in CoreToStg to decide whether to put an
--- update flag on it and (iii) in DsExpr to decide how to expand
+-- update flag on it and (iii) in GHC.Desugar.Expression to decide how to expand
 -- list literals
 --
 -- The basic idea is that rhsIsStatic returns True only if the RHS is

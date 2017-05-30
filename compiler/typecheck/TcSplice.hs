@@ -90,7 +90,7 @@ import DataCon
 import TcEvidence( TcEvBinds(..) )
 import Id
 import IdInfo
-import DsExpr
+import GHC.Desugar.Expression
 import GHC.Desugar.Monad
 import GHC.Serialized
 import GHC.Utils.Error

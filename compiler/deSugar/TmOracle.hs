@@ -8,7 +8,7 @@ The term equality oracle. The main export of the module is function `tmOracle'.
 
 module TmOracle (
 
-        -- re-exported from PmExpr
+        -- re-exported from GHC.Desugar.Match.Expr
         PmExpr(..), PmLit(..), SimpleEq, ComplexEq, PmVarEnv, falsePmExpr,
         eqPmLit, filterComplex, isNotPmExprOther, runPmPprM, lhsExprToPmExpr,
         hsExprToPmExpr, pprPmExprWithParens,
@@ -22,7 +22,7 @@ module TmOracle (
 
 #include "HsVersions.h"
 
-import PmExpr
+import GHC.Desugar.Match.Expr
 
 import Id
 import Name
