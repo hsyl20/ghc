@@ -104,6 +104,7 @@ import Data.Time.Format ( formatTime, defaultTimeLocale )
 import Data.Version ( showVersion )
 
 import GHC.Utils.Exception hiding (catch)
+import qualified GHC.Utils.Exception as Exception
 import Foreign hiding (void)
 import GHC.Stack hiding (SrcLoc(..))
 
