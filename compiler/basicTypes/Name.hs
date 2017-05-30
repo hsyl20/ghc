@@ -83,7 +83,7 @@ import {-# SOURCE #-} PrelNames( starKindTyConKey, unicodeStarKindTyConKey )
 import OccName
 import Module
 import SrcLoc
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Utils.Binary

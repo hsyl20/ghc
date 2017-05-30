@@ -48,7 +48,7 @@ import Cmm              hiding ( succ )
 import GHC.Utils.Outputable as Outp
 import GHC.Platform
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 import GHC.Utils.Handle.BufferedWrite   ( BufHandle )
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.Supply

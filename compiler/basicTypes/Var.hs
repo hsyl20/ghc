@@ -87,7 +87,7 @@ import {-# SOURCE #-}   IdInfo( IdDetails, IdInfo, coVarDetails, isCoVarDetails,
                                 vanillaIdInfo, pprIdDetails )
 
 import Name hiding (varName)
-import Unique ( Uniquable, Unique, getKey, getUnique
+import GHC.Data.Unique ( Uniquable, Unique, getKey, getUnique
               , mkUniqueGrimily, nonDetCmpUnique )
 import GHC.Utils
 import GHC.Utils.Binary

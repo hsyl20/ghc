@@ -65,7 +65,7 @@ import PrimOp      ( PrimOp, PrimCall )
 import TyCon       ( PrimRep(..), TyCon )
 import Type        ( Type )
 import RepType     ( typePrimRep1 )
-import Unique      ( Unique )
+import GHC.Data.Unique      ( Unique )
 import GHC.Utils
 
 {-

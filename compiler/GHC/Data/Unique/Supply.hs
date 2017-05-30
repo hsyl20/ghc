@@ -29,7 +29,7 @@ module GHC.Data.Unique.Supply (
         initUniqSupply
   ) where
 
-import Unique
+import GHC.Data.Unique
 
 import GHC.IO
 

@@ -21,7 +21,7 @@ import Hoopl
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 

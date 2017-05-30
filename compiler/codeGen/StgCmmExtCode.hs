@@ -48,7 +48,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import Module
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 
 import Control.Monad (liftM, ap)

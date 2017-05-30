@@ -143,7 +143,7 @@ import ForeignCall
 import GHC.Data.Maybe
 import SrcLoc
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import GHC.Data.FastString
 import GHC.Utils

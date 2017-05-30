@@ -5,7 +5,7 @@ module RegClass
 where
 
 import GHC.Utils.Outputable as Outputable
-import Unique
+import GHC.Data.Unique
 
 
 -- | The class of a register.

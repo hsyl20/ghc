@@ -46,7 +46,7 @@ module VarSet (
 #include "HsVersions.h"
 
 import Var      ( Var, TyVar, CoVar, TyCoVar, Id )
-import Unique
+import GHC.Data.Unique
 import Name     ( Name )
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.DeterSet

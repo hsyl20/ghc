@@ -53,7 +53,7 @@ import Name
 import GHC.Utils.Outputable
 import BasicTypes ( isGenerated, il_value, fl_value )
 import GHC.Data.FastString
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.DeterFiniteMap
 
 import Control.Monad( when, unless )

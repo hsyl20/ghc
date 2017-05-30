@@ -123,7 +123,7 @@ import Cmm hiding (RegSet)
 
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply

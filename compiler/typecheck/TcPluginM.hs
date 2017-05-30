@@ -83,7 +83,7 @@ import Type
 import Id
 import InstEnv
 import GHC.Data.FastString
-import Unique
+import GHC.Data.Unique
 
 
 -- | Perform some IO, typically to interact with an external tool.

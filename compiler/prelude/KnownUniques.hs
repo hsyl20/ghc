@@ -32,7 +32,7 @@ import DataCon
 import Id
 import BasicTypes
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import Name
 import GHC.Utils
 

@@ -37,7 +37,7 @@ import Hoopl
 import Cmm
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 import GHC.Utils.Monad.State
 import GHC.Utils.Outputable
 import GHC.Platform

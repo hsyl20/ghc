@@ -67,7 +67,7 @@ import VarEnv
 import ByteCodeTypes
 import Linker
 import GHC.Config.Flags
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import GHC.Utils.Monad
 import Module

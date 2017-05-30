@@ -131,7 +131,7 @@ module PrelNames (
 import Module
 import OccName
 import RdrName
-import Unique
+import GHC.Data.Unique
 import Name
 import SrcLoc
 import GHC.Data.FastString

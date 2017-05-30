@@ -23,7 +23,7 @@ import Name
 import GHC.Utils.Outputable
 import GHC.Serialized
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 
 import Control.Monad
 import Data.Maybe

@@ -16,7 +16,7 @@ import BlockId
 import Cmm
 
 import GHC.Utils.Panic
-import Unique
+import GHC.Data.Unique
 
 
 

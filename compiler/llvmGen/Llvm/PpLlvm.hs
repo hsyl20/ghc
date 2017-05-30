@@ -31,7 +31,7 @@ import Llvm.Types
 
 import Data.List ( intersperse )
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.FastString ( sLit )
 
 --------------------------------------------------------------------------------

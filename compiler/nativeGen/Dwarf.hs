@@ -11,7 +11,7 @@ import GHC.Config.Flags
 import Module
 import GHC.Utils.Outputable
 import GHC.Platform
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 
 import Dwarf.Constants

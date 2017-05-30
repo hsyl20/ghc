@@ -51,7 +51,7 @@ import VarSet
 import Coercion ( ltRole )
 import BasicTypes
 import SrcLoc
-import Unique ( mkBuiltinUnique )
+import GHC.Data.Unique ( mkBuiltinUnique )
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.Maybe

@@ -37,7 +37,7 @@ import BasicTypes       (Alignment)
 import CLabel
 import GHC.Config.Flags
 import GHC.Data.Unique.Set
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import Debug (UnwindTable)
 

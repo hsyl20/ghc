@@ -59,7 +59,7 @@ module GHC.Data.Unique.DeterFiniteMap (
         alwaysUnsafeUfmToUdfm,
     ) where
 
-import Unique           ( Uniquable(..), Unique, getKey )
+import GHC.Data.Unique           ( Uniquable(..), Unique, getKey )
 import GHC.Utils.Outputable
 
 import qualified Data.IntMap as M

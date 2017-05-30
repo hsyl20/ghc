@@ -58,7 +58,7 @@ import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BasicTypes
 import Module
-import Unique      ( mkAlphaTyVarUnique )
+import GHC.Data.Unique      ( mkAlphaTyVarUnique )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

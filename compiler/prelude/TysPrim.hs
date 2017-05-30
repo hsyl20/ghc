@@ -98,7 +98,7 @@ import Var              ( TyVar, TyVarBndr(TvBndr), mkTyVar )
 import Name
 import TyCon
 import SrcLoc
-import Unique
+import GHC.Data.Unique
 import PrelNames
 import GHC.Data.FastString
 import GHC.Utils.Outputable

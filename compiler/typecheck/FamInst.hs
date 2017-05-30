@@ -41,7 +41,7 @@ import GHC.Utils.Panic
 import VarSet
 import GHC.Data.Bag( Bag, unionBags, unitBag )
 import Control.Monad
-import Unique
+import GHC.Data.Unique
 import NameEnv
 import Data.Set (Set)
 import qualified Data.Set as Set

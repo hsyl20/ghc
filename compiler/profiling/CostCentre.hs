@@ -24,7 +24,7 @@ import GHC.Utils.Binary
 import Var
 import Name
 import Module
-import Unique
+import GHC.Data.Unique
 import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Data.FastString

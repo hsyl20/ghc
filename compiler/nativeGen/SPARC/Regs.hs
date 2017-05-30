@@ -37,7 +37,7 @@ import Reg
 import RegClass
 import Format
 
-import Unique
+import GHC.Data.Unique
 import GHC.Utils.Outputable
 
 {-

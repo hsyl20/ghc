@@ -23,7 +23,7 @@ module RegAlloc.Graph.ArchBase (
 ) where
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 
 
 -- Some basic register classes.

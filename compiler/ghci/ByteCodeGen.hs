@@ -40,7 +40,7 @@ import GHC.Utils
 import VarSet
 import TysPrim
 import GHC.Utils.Error
-import Unique
+import GHC.Data.Unique
 import GHC.Data.FastString
 import GHC.Utils.Panic
 import StgCmmLayout     ( ArgRep(..), toArgRep, argRepSizeW )

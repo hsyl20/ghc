@@ -63,7 +63,7 @@ import GHC.Utils
 import SrcLoc
 import GHC.Data.List.SetOps
 import GHC.Config.Flags
-import Unique
+import GHC.Data.Unique
 import BasicTypes
 import qualified GHC.LanguageExtensions as LangExt
 

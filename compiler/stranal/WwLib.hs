@@ -34,7 +34,7 @@ import BasicTypes       ( Boxity(..) )
 import Literal          ( absentLiteralOf )
 import TyCon
 import GHC.Data.Unique.Supply
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Utils.Outputable

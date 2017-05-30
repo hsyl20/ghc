@@ -63,7 +63,7 @@ import Id
 import IdInfo
 import Demand
 import CoreSyn
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import PrelNames
 import BasicTypes       hiding ( SuccessFlag(..) )

@@ -120,7 +120,7 @@ import BasicTypes
 import GHC.Packages
 import Module
 import Name
-import Unique
+import GHC.Data.Unique
 import PrimOp
 import Config
 import CostCentre

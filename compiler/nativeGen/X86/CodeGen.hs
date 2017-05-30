@@ -64,7 +64,7 @@ import SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 import ForeignCall      ( CCallConv(..) )
 import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.FastString
 import GHC.Config.Flags
 import GHC.Utils

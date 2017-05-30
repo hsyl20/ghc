@@ -11,7 +11,7 @@ import Module( Module, mkModuleNameFS, mkModule, thUnitId )
 import Name( Name )
 import OccName( tcName, clsName, dataName, varName )
 import RdrName( RdrName, nameRdrName )
-import Unique
+import GHC.Data.Unique
 import GHC.Data.FastString
 
 -- To add a name, do three things

@@ -34,7 +34,7 @@ import CmmMachOp
 import CmmType
 import GHC.Config.Flags
 import GHC.Utils.Outputable (panic)
-import Unique
+import GHC.Data.Unique
 
 import Data.Set (Set)
 import Data.List

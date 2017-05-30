@@ -37,7 +37,7 @@ import BasicTypes       (Alignment)
 import GHC.Config.Flags
 import Cmm              hiding (topInfoTable)
 import CLabel
-import Unique           ( pprUniqueAlways, Uniquable(..) )
+import GHC.Data.Unique           ( pprUniqueAlways, Uniquable(..) )
 import GHC.Platform
 import GHC.Data.FastString
 import GHC.Utils.Outputable

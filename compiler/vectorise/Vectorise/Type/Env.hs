@@ -37,7 +37,7 @@ import NameEnv
 import NameSet
 import GHC.Data.Unique.FiniteMap
 import OccName
-import Unique
+import GHC.Data.Unique
 
 import GHC.Utils
 import GHC.Utils.Outputable as Outputable

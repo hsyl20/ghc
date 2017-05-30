@@ -56,7 +56,7 @@ import Format
 
 import Cmm
 import CLabel           ( CLabel )
-import Unique
+import GHC.Data.Unique
 
 import CodeGen.Platform
 import GHC.Config.Flags

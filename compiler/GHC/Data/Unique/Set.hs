@@ -48,7 +48,7 @@ module GHC.Data.Unique.Set (
     ) where
 
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 import Data.Coerce
 import GHC.Utils.Outputable
 import Data.Foldable (foldl')

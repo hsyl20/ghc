@@ -71,7 +71,7 @@ module GHC.Data.Unique.FiniteMap (
         pprUniqFM, pprUFM, pprUFMWithKeys, pluralUFM
     ) where
 
-import Unique           ( Uniquable(..), Unique, getKey )
+import GHC.Data.Unique           ( Uniquable(..), Unique, getKey )
 import GHC.Utils.Outputable
 
 import Data.List (foldl')

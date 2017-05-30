@@ -205,7 +205,7 @@ Library
         NameCache
         SrcLoc
         GHC.Data.Unique.Supply
-        Unique
+       GHC.Data.Unique
         Var
         VarEnv
         VarSet

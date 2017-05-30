@@ -59,7 +59,7 @@ import BasicTypes
 import GHC.Utils.Outputable as Outputable
 import PrelNames( ipClassName )
 import TcValidity (checkValidType)
-import Unique (getUnique)
+import GHC.Data.Unique (getUnique)
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt

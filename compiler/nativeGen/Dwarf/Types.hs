@@ -29,7 +29,7 @@ import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform
-import Unique
+import GHC.Data.Unique
 import Reg
 import SrcLoc
 

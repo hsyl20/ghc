@@ -117,7 +117,7 @@ import Name hiding ( varName )
 import GHC.Utils
 import BasicTypes
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Pair
 import SrcLoc
 import PrelNames

@@ -19,7 +19,7 @@ import GHC.Platform
 
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 
 import GHC.Config.Flags (targetPlatform)
 

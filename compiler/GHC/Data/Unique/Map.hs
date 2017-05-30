@@ -47,7 +47,7 @@ module GHC.Data.Unique.Map (
 
 import GHC.Data.Unique.FiniteMap
 
-import Unique
+import GHC.Data.Unique
 import GHC.Utils.Outputable
 
 #if __GLASGOW_HASKELL__ > 710

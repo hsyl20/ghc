@@ -38,7 +38,7 @@ import GHC.Desugar.Binds
 import GHC.Desugar.Foreign.Declaration
 import PrelNames   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )
-import Unique      ( hasKey )
+import GHC.Data.Unique      ( hasKey )
 import Coercion    ( mkCoVarCo )
 import TysWiredIn  ( coercibleDataCon )
 import DataCon     ( dataConWrapId )

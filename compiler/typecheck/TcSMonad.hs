@@ -153,7 +153,7 @@ import GHC.Data.Unique.Supply
 import GHC.Utils
 import TcRnTypes
 
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Maybe

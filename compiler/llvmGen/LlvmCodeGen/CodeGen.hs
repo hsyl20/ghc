@@ -28,7 +28,7 @@ import qualified GHC.Utils.Outputable as Outputable
 import GHC.Platform
 import GHC.Data.Tree.OrdList
 import GHC.Data.Unique.Supply
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 
 import Control.Monad.Trans.Class

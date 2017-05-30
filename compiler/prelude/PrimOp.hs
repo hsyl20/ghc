@@ -41,7 +41,7 @@ import RepType          ( typePrimRep1, tyConPrimRep1 )
 import BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
                           SourceText(..) )
 import ForeignCall      ( CLabelString )
-import Unique           ( Unique, mkPrimOpIdUnique )
+import GHC.Data.Unique           ( Unique, mkPrimOpIdUnique )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Module           ( UnitId )

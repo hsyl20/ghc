@@ -48,7 +48,7 @@ import CoreSyn
 import MkCore
 import CoreUtils
 import SrcLoc
-import Unique
+import GHC.Data.Unique
 import BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.Bag

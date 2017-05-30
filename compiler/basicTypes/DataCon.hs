@@ -80,7 +80,7 @@ import GHC.Data.FastString
 import Module
 import GHC.Utils.Binary
 import GHC.Data.Unique.Set
-import Unique( mkAlphaTyVarUnique )
+import GHC.Data.Unique( mkAlphaTyVarUnique )
 
 import qualified Data.Data as Data
 import Data.Char

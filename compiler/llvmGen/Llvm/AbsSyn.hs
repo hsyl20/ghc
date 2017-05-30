@@ -7,7 +7,7 @@ module Llvm.AbsSyn where
 import Llvm.MetaData
 import Llvm.Types
 
-import Unique
+import GHC.Data.Unique
 
 -- | Block labels
 type LlvmBlockId = Unique

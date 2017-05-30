@@ -63,7 +63,7 @@ import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Data.Unique.FiniteMap
 import VarSet
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Set
 import GHC.Utils.Outputable
 

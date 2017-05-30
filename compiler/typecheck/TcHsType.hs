@@ -75,7 +75,7 @@ import BasicTypes
 import SrcLoc
 import GHC.Config.Constants ( mAX_CTUPLE_SIZE )
 import GHC.Utils.Error( MsgDoc )
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable

@@ -46,7 +46,7 @@ module PrelInfo (
 #include "HsVersions.h"
 
 import KnownUniques
-import Unique           ( isValidKnownKeyUnique )
+import GHC.Data.Unique           ( isValidKnownKeyUnique )
 
 import ConLike          ( ConLike(..) )
 import THNames          ( templateHaskellNames )

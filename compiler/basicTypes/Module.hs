@@ -136,7 +136,7 @@ module Module
 
 import Config
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.DeterSet

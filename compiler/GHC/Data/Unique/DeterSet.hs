@@ -34,7 +34,7 @@ module GHC.Data.Unique.DeterSet (
 
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set
-import Unique
+import GHC.Data.Unique
 
 type UniqDSet a = UniqDFM a
 

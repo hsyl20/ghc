@@ -54,7 +54,7 @@ import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import TrieMap
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 import Var
 import GHC.Data.Pair

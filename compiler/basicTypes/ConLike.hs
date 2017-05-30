@@ -29,7 +29,7 @@ module ConLike (
 import DataCon
 import PatSyn
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 import Name
 import BasicTypes

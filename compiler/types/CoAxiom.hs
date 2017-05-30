@@ -34,7 +34,7 @@ import {-# SOURCE #-} TyCon ( TyCon )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Name
-import Unique
+import GHC.Data.Unique
 import Var
 import GHC.Utils
 import GHC.Utils.Binary

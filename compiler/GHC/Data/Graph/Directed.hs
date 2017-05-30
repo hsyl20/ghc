@@ -60,7 +60,7 @@ import qualified Data.Set as Set
 import qualified Data.Graph as G
 import Data.Graph hiding (Graph, Edge, transposeG, reachable)
 import Data.Tree
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 
 {-

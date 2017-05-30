@@ -22,7 +22,7 @@ where
 
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 
 
 -- | Identifier for a stack slot.

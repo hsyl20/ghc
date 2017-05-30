@@ -20,7 +20,7 @@ import PprCore
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Name
-import Unique
+import GHC.Data.Unique
 import Id
 import CoreSyn
 import Literal

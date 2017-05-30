@@ -37,7 +37,7 @@ import Compiler.Hoopl
 import Data.Maybe
 import Data.List (tails,sortBy)
 import Prelude hiding (succ)
-import Unique (nonDetCmpUnique)
+import GHC.Data.Unique (nonDetCmpUnique)
 import GHC.Utils
 
 

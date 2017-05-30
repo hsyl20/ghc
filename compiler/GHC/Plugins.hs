@@ -109,5 +109,5 @@ import GHC.Serialized
 import SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.Unique.Supply
-import Unique           ( Unique, Uniquable(..) )
+import GHC.Data.Unique           ( Unique, Uniquable(..) )
 import GHC.Data.FastString

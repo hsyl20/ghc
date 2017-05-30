@@ -43,7 +43,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 
 -- The rest

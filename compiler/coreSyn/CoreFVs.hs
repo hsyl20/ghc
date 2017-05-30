@@ -65,7 +65,7 @@ import Id
 import IdInfo
 import NameSet
 import GHC.Data.Unique.Set
-import Unique (Uniquable (..))
+import GHC.Data.Unique (Uniquable (..))
 import Name
 import VarSet
 import Var

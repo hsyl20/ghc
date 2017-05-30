@@ -17,7 +17,7 @@ import CmmExpr
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable ( panic )
-import Unique
+import GHC.Data.Unique
 
 -- | Get the LlvmVar function variable storing the real register
 lmGlobalRegVar :: DynFlags -> GlobalReg -> LlvmVar

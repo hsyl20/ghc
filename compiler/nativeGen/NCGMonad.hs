@@ -48,7 +48,7 @@ import Debug
 import GHC.Data.FastString       ( FastString )
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
-import Unique           ( Unique )
+import GHC.Data.Unique           ( Unique )
 import GHC.Config.Flags
 import Module
 

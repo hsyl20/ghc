@@ -95,7 +95,7 @@ import GHC.Desugar.Monad
 import GHC.Serialized
 import GHC.Utils.Error
 import GHC.Utils
-import Unique
+import GHC.Data.Unique
 import VarSet           ( isEmptyVarSet, filterVarSet, mkVarSet, elemVarSet )
 import Data.List        ( find )
 import Data.Maybe

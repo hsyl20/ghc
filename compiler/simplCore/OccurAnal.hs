@@ -38,7 +38,7 @@ import Demand           ( argOneShots, argsOneShots )
 import GHC.Data.Graph.Directed          ( SCC(..), Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq
                         , stronglyConnCompFromEdgedVerticesUniqR )
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Utils

@@ -39,7 +39,7 @@ import Type
 import TyCoRep
 import Var
 import GHC.Data.Unique.DeterFiniteMap
-import Unique( Unique )
+import GHC.Data.Unique( Unique )
 import GHC.Data.FastString(FastString)
 
 import qualified Data.Map    as Map

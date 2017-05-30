@@ -8,7 +8,7 @@ import RepType
 import TysPrim
 import TysWiredIn
 import GHC.Data.Unique.Set
-import Unique
+import GHC.Data.Unique
 
 import qualified Control.Exception as E
 import Control.Monad

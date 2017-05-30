@@ -154,7 +154,7 @@ import BasicTypes       ( Arity, Boxity(..), TupleSort(..), ConTagZ,
                           SourceText(..) )
 import ForeignCall
 import SrcLoc           ( noSrcSpan )
-import Unique
+import GHC.Data.Unique
 import Data.Array
 import GHC.Data.FastString
 import GHC.Utils.Outputable

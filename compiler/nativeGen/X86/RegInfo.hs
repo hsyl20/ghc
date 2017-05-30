@@ -14,7 +14,7 @@ import Reg
 
 import GHC.Utils.Outputable
 import GHC.Platform
-import Unique
+import GHC.Data.Unique
 
 import GHC.Data.Unique.FiniteMap
 import X86.Regs

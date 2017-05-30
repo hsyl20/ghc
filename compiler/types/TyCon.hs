@@ -144,7 +144,7 @@ import GHC.Data.FastString.Environment
 import FieldLabel
 import GHC.Config.Constants
 import GHC.Utils
-import Unique( tyConRepNameUnique, dataConRepNameUnique )
+import GHC.Data.Unique( tyConRepNameUnique, dataConRepNameUnique )
 import GHC.Data.Unique.Set
 import Module
 

@@ -18,7 +18,7 @@ import Control.Monad.IO.Class
 import System.Environment( getArgs )
 import VarSet
 import PprCore
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Set
 import CoreLint
 import GHC.Data.FastString

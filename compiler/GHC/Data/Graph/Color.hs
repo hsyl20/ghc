@@ -16,7 +16,7 @@ import GHC.Data.Graph.Base
 import GHC.Data.Graph.Operations
 import GHC.Data.Graph.PrettyPrint
 
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Utils.Outputable

@@ -1,6 +1,6 @@
 module KnownUniques where
 
-import Unique
+import GHC.Data.Unique
 import Name
 import BasicTypes
 

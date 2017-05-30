@@ -12,7 +12,7 @@ import CLabel
 import IdInfo
 import Name
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 
 import Compiler.Hoopl as Hoopl hiding (Unique)

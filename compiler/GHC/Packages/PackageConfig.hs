@@ -36,7 +36,7 @@ import Data.Version
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import Module
-import Unique
+import GHC.Data.Unique
 
 -- -----------------------------------------------------------------------------
 -- Our PackageConfig type is the InstalledPackageInfo from ghc-boot,

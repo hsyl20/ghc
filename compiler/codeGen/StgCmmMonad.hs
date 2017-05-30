@@ -75,7 +75,7 @@ import Id
 import VarEnv
 import GHC.Data.Tree.OrdList
 import BasicTypes( ConTagZ )
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import GHC.Data.FastString
 import GHC.Utils.Outputable

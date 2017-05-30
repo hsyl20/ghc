@@ -23,7 +23,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import qualified TrieMap as TM
-import Unique
+import GHC.Data.Unique
 import Control.Arrow (first, second)
 
 -- -----------------------------------------------------------------------------

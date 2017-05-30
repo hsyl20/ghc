@@ -29,7 +29,7 @@ import {-# SOURCE #-} TyCoRep   ( Type, PredType, pprType )
 import Var
 import Name
 import BasicTypes
-import Unique
+import GHC.Data.Unique
 import GHC.Utils
 import SrcLoc
 import PrelNames    ( eqTyConKey, coercibleTyConKey, typeableClassKey,

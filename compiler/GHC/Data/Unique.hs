@@ -19,7 +19,7 @@ Haskell).
 
 {-# LANGUAGE CPP, BangPatterns, MagicHash #-}
 
-module Unique (
+module GHC.Data.Unique (
         -- * Main data types
         Unique, Uniquable(..),
         uNIQUE_BITS,

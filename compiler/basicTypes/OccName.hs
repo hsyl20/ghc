@@ -106,7 +106,7 @@ module OccName (
     ) where
 
 import GHC.Utils
-import Unique
+import GHC.Data.Unique
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set

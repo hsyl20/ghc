@@ -34,7 +34,7 @@ import GHC.Utils.Binary as Binary
 import SrcLoc
 import GHC.Utils.Error
 import GHC.Data.FastMutableInt
-import Unique
+import GHC.Data.Unique
 import GHC.Utils.Outputable
 import NameCache
 import GHC.Platform

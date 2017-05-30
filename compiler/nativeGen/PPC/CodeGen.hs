@@ -51,7 +51,7 @@ import Hoopl
 -- The rest:
 import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 import GHC.Config.Flags
 
 import Control.Monad    ( mapAndUnzipM, when )

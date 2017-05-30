@@ -15,7 +15,7 @@ import Numeric
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Unique
+import GHC.Data.Unique
 
 -- from NCG
 import PprBase

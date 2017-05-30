@@ -74,7 +74,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import GHC.Utils
-import Unique
+import GHC.Data.Unique
 
 import BasicTypes       ( Alignment )
 import GHC.Data.Graph.Directed

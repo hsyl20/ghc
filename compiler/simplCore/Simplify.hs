@@ -44,7 +44,7 @@ import BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
                           RecFlag(..) )
 import GHC.Utils.Monad       ( foldlM, mapAccumLM, liftIO )
 import GHC.Data.Maybe           ( isJust, fromJust, orElse, catMaybes )
---import Unique           ( hasKey ) -- temporalily commented out. See #8326
+--import GHC.Data.Unique           ( hasKey ) -- temporalily commented out. See #8326
 import Control.Monad
 import GHC.Utils.Outputable
 import GHC.Data.FastString

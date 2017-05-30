@@ -41,7 +41,7 @@ import PprCmm()
 import CLabel
 import Hoopl
 
-import Unique           ( Uniquable(..), pprUniqueAlways )
+import GHC.Data.Unique           ( Uniquable(..), pprUniqueAlways )
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.FastString

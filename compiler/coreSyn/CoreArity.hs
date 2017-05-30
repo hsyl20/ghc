@@ -30,7 +30,7 @@ import Type
 import TyCon    ( initRecTc, checkRecTc )
 import Coercion
 import BasicTypes
-import Unique
+import GHC.Data.Unique
 import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )
 import GHC.Utils.Outputable
 import GHC.Data.FastString

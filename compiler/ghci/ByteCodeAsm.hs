@@ -33,7 +33,7 @@ import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Utils
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.DeterSet
 
 -- From iserv

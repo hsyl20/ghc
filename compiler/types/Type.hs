@@ -234,7 +234,7 @@ import GHC.Data.FastString
 import GHC.Data.Pair
 import GHC.Data.List.SetOps
 import GHC.Data.Graph.Directed
-import Unique ( nonDetCmpUnique )
+import GHC.Data.Unique ( nonDetCmpUnique )
 import SrcLoc  ( SrcSpan )
 import OccName ( OccName )
 import Name    ( mkInternalName )

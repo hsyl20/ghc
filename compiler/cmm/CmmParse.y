@@ -235,7 +235,7 @@ import ForeignCall
 import Module
 import GHC.Platform
 import Literal
-import Unique
+import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import SrcLoc
 import GHC.Config.Flags

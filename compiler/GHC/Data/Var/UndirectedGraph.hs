@@ -33,7 +33,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Outputable
 import Data.List
 import GHC.Data.Bag
-import Unique
+import GHC.Data.Unique
 
 import qualified Data.IntSet as S
 
