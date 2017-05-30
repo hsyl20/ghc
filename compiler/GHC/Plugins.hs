@@ -38,7 +38,7 @@ module GHC.Plugins
    , module VarEnv
    , module NameSet
    , module NameEnv
-   , module UniqSet
+   , module GHC.Utils.Data.Unique.Set
    , module GHC.Utils.Data.Unique.FiniteMap
    , module GHC.Utils.Data.FiniteMap
    , module Util
