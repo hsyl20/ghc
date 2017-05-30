@@ -216,7 +216,7 @@ import TyCoRep
 import Var
 import VarEnv
 import VarSet
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 
 import Class
 import TyCon

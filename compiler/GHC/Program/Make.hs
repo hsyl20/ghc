@@ -61,10 +61,10 @@ import SrcLoc
 import StringBuffer
 import GHC.Utils.SysTools
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqDSet
+import GHC.Utils.Data.Unique.DeterSet
 import TcBackpack
 import GHC.Packages
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Util
 import qualified GHC.LanguageExtensions as LangExt
 import NameEnv

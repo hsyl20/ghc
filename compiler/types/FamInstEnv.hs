@@ -50,7 +50,7 @@ import VarSet
 import VarEnv
 import Name
 import PrelNames ( eqPrimTyConKey )
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import Outputable
 import Maybes
 import TrieMap

@@ -79,7 +79,7 @@ import BasicTypes
 import FastString
 import Module
 import Binary
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Unique( mkAlphaTyVarUnique )
 
 import qualified Data.Data as Data

@@ -27,7 +27,7 @@ import IfaceEnv( newInteractiveBinder )
 import Name
 import Var hiding ( varName )
 import VarSet
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Type
 import GHC
 import Outputable

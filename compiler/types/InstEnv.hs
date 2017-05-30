@@ -41,7 +41,7 @@ import Unify
 import Outputable
 import GHC.Utils.Error
 import BasicTypes
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import Util
 import Id
 import Data.Data        ( Data )

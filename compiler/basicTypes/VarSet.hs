@@ -48,10 +48,10 @@ module VarSet (
 import Var      ( Var, TyVar, CoVar, TyCoVar, Id )
 import Unique
 import Name     ( Name )
-import UniqSet
-import UniqDSet
+import GHC.Utils.Data.Unique.Set
+import GHC.Utils.Data.Unique.DeterSet
 import GHC.Utils.Data.Unique.FiniteMap( disjointUFM, pluralUFM, pprUFM )
-import UniqDFM( disjointUDFM, udfmToUfm, anyUDFM, allUDFM )
+import GHC.Utils.Data.Unique.DeterFiniteMap( disjointUDFM, udfmToUfm, anyUDFM, allUDFM )
 import Outputable (SDoc)
 
 -- | A non-deterministic Variable Set

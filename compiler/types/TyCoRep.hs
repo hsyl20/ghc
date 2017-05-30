@@ -167,7 +167,7 @@ import GHC.Utils.Data.Pair
 import UniqSupply
 import Util
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 
 -- libraries
 import qualified Data.Data as Data hiding ( TyCon )

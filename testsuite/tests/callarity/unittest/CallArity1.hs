@@ -19,7 +19,7 @@ import System.Environment( getArgs )
 import VarSet
 import PprCore
 import Unique
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import CoreLint
 import FastString
 

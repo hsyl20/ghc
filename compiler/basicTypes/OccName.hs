@@ -109,7 +109,7 @@ import Util
 import Unique
 import GHC.Config.Flags
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import FastString
 import FastStringEnv
 import Outputable

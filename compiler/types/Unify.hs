@@ -39,7 +39,7 @@ import Util
 import GHC.Utils.Data.Pair
 import Outputable
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 
 import Control.Monad
 #if __GLASGOW_HASKELL__ > 710

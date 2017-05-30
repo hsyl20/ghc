@@ -36,7 +36,7 @@ import TysPrim          ( realWorldStatePrimTy )
 import GHC.Utils.Error         ( dumpIfSet_dyn )
 import Name             ( getName, stableNameCmp )
 import Data.Function    ( on )
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 
 {-
 ************************************************************************

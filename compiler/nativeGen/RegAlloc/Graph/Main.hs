@@ -21,7 +21,7 @@ import GHC.Config.Flags
 import Outputable
 import Platform
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import UniqSupply
 import Util (seqList)
 

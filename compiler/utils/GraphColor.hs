@@ -18,7 +18,7 @@ import GraphPpr
 
 import Unique
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Outputable
 
 import Data.Maybe

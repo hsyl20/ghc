@@ -10,7 +10,7 @@
 -- makes them a much better drop in replacement for 'Data.Map.Map'.
 --
 -- Key preservation is right-biased.
-module UniqMap (
+module GHC.Utils.Data.Unique.Map (
     UniqMap,
     emptyUniqMap,
     isNullUniqMap,

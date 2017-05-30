@@ -97,7 +97,7 @@ import VarSet
 import VarEnv
 import NameSet
 import NameEnv
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import GHC.Utils.Data.Unique.FiniteMap
 -- Conflicts with UniqFM:
 --import LazyUniqFM

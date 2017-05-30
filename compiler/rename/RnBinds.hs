@@ -52,7 +52,7 @@ import GHC.Utils.Data.Bag
 import Util
 import Outputable
 import FastString
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Maybes           ( orElse )
 import qualified GHC.LanguageExtensions as LangExt
 

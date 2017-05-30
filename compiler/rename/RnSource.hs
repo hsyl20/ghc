@@ -56,7 +56,7 @@ import GHC.Types         ( HscEnv, hsc_dflags )
 import ListSetOps       ( findDupsEq, removeDups, equivClasses )
 import Digraph          ( SCC, flattenSCC, flattenSCCs, Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq )
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

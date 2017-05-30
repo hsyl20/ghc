@@ -92,7 +92,7 @@ import UniqSupply
 import Util
 import Outputable
 import FastString
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import FV
 import Data.Maybe
 import MonadUtils       ( mapAccumLM )

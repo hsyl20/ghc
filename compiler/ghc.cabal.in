@@ -502,18 +502,18 @@ Library
         MonadUtils
         OrdList
         Outputable
-        Pair
+        GHC.Utils.Data.Pair
         Panic
         PprColour
         Pretty
         State
         Stream
         StringBuffer
-        UniqDFM
-        UniqDSet
+        GHC.Utils.Data.Unique.DeterFiniteMap
+        GHC.Utils.Data.Unique.DeterSet
         GHC.Utils.Data.Unique.FiniteMap
-        UniqMap
-        UniqSet
+        GHC.Utils.Data.Unique.Map
+        GHC.Utils.Data.Unique.Set
         Util
         Vectorise.Builtins.Base
         Vectorise.Builtins.Initialise

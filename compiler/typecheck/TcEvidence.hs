@@ -62,7 +62,7 @@ import Outputable
 import FastString
 import SrcLoc
 import Data.IORef( IORef )
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 
 {-
 Note [TcCoercions]

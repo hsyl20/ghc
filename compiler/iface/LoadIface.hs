@@ -73,7 +73,7 @@ import Fingerprint
 import GHC.Config.Hooks
 import FieldLabel
 import GHC.Interface.Renaming
-import UniqDSet
+import GHC.Utils.Data.Unique.DeterSet
 
 import Control.Monad
 import Control.Exception

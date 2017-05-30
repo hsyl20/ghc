@@ -64,7 +64,7 @@ import CoreSyn
 import Id
 import IdInfo
 import NameSet
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Unique (Uniquable (..))
 import Name
 import VarSet

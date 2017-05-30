@@ -37,13 +37,13 @@ import GHC.Utils.Error
 import SrcLoc
 import GHC.Program.Main
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import Outputable
 import Maybes
 import GHC.Syntax.Parsers.HeaderInfo
 import MkIface
 import GHC.Program.Make
-import UniqDSet
+import GHC.Utils.Data.Unique.DeterSet
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Finder

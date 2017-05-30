@@ -50,8 +50,8 @@ import SrcLoc
 import ListSetOps( assocMaybe )
 import Data.List
 import Util
-import UniqDFM
-import UniqSet
+import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Utils.Data.Unique.Set
 
 data DsCmdEnv = DsCmdEnv {
         arr_id, compose_id, first_id, app_id, choice_id, loop_id :: CoreExpr

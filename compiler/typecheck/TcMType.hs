@@ -116,7 +116,7 @@ import FastString
 import SrcLoc
 import GHC.Utils.Data.Bag
 import GHC.Utils.Data.Pair
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

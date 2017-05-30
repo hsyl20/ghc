@@ -128,7 +128,7 @@ import Outputable
 import FastString
 import GHC.Config.Flags
 import Platform
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Util
 import PprCore ( {- instances -} )
 

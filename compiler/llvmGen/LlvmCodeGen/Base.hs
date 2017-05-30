@@ -50,7 +50,7 @@ import Platform
 import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 import BufWrite   ( BufHandle )
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import UniqSupply
 import GHC.Utils.Error
 import qualified Stream

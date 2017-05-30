@@ -11,7 +11,7 @@ import Cmm
 import GHC.Utils.Data.Bag
 import Digraph
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import UniqSupply
 
 import Data.List

@@ -28,7 +28,7 @@ module FastStringEnv (
     ) where
 
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import Maybes
 import FastString
 

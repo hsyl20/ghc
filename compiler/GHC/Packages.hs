@@ -66,8 +66,8 @@ import GHC.Packages.PackageConfig
 import GHC.Config.Flags
 import Name             ( Name, nameModule_maybe )
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqDFM
-import UniqSet
+import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Utils.Data.Unique.Set
 import Module
 import Util
 import Panic

@@ -155,7 +155,7 @@ import TcRnTypes
 
 import Unique
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import Maybes
 
 import TrieMap
@@ -169,7 +169,7 @@ import Data.List ( foldl', partition )
 
 #if defined(DEBUG)
 import Digraph
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 #endif
 
 {-

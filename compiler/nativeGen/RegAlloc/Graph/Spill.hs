@@ -18,7 +18,7 @@ import MonadUtils
 import State
 import Unique
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import UniqSupply
 import Outputable
 import Platform

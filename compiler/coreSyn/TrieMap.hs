@@ -38,7 +38,7 @@ import Name
 import Type
 import TyCoRep
 import Var
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import Unique( Unique )
 import FastString(FastString)
 

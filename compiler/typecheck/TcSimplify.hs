@@ -44,7 +44,7 @@ import Unify         ( tcMatchTyKi )
 import Util
 import Var
 import VarSet
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import BasicTypes    ( IntWithInf, intGtLimit )
 import GHC.Utils.Error      ( emptyMessages )
 import qualified GHC.LanguageExtensions as LangExt

@@ -554,10 +554,10 @@ compiler_stage2_dll0_MODULES = \
 	TysPrim \
 	TysWiredIn \
 	Unify \
-	UniqDFM \
-	UniqDSet \
+	GHC.Utils.Data.Unique.DeterFiniteMap \
+	GHC.Utils.Data.Unique.DeterSet \
 	GHC.Utils.Data.Unique.FiniteMap \
-	UniqSet \
+	GHC.Utils.Data.Unique.Set \
 	UniqSupply \
 	Unique \
 	Util \

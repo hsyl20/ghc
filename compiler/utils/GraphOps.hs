@@ -22,7 +22,7 @@ import GraphBase
 
 import Outputable
 import Unique
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import GHC.Utils.Data.Unique.FiniteMap
 
 import Data.List        hiding (union)

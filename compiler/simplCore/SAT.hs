@@ -64,7 +64,7 @@ import Util
 import GHC.Utils.Data.Unique.FiniteMap
 import VarSet
 import Unique
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Outputable
 
 import Data.List

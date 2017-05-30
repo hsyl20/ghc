@@ -115,7 +115,7 @@ import BasicTypes
 import GHC.Config.Flags
 import Outputable
 import Util
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import SrcLoc     ( RealSrcSpan, containsSpan )
 import Binary
 

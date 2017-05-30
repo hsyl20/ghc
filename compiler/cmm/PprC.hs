@@ -41,7 +41,7 @@ import GHC.Config.Flags
 import FastString
 import Outputable
 import Platform
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 import Util

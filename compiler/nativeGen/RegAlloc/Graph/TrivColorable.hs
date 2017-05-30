@@ -13,7 +13,7 @@ import Reg
 
 import GraphBase
 
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Platform
 import Panic
 

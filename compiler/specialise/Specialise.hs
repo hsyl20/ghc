@@ -37,7 +37,7 @@ import Util
 import Outputable
 import FastString
 import State
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import TrieMap
 
 import Control.Monad

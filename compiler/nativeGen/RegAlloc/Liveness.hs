@@ -48,7 +48,7 @@ import GHC.Config.Flags
 import MonadUtils
 import Outputable
 import Platform
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Utils.Data.Bag

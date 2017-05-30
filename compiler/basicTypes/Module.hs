@@ -138,8 +138,8 @@ import Config
 import Outputable
 import Unique
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqDFM
-import UniqDSet
+import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Utils.Data.Unique.DeterSet
 import FastString
 import Binary
 import Util

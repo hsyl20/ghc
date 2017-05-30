@@ -42,7 +42,7 @@ import BasicTypes
 import Name
 import NameSet
 import RdrName
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import Data.List
 import Util
 import ListSetOps       ( removeDups )

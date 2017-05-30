@@ -124,7 +124,7 @@ import Cmm hiding (RegSet)
 import Digraph
 import GHC.Config.Flags
 import Unique
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import Outputable

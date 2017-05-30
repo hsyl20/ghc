@@ -186,7 +186,7 @@ import Maybes
 import Outputable
 import SrcLoc
 import Unique
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import FastString
 import StringBuffer     ( StringBuffer )
 import Fingerprint
@@ -197,7 +197,7 @@ import GHC.Utils.Error
 import NameCache
 import Platform
 import Util
-import UniqDSet
+import GHC.Utils.Data.Unique.DeterSet
 import GHC.Serialized   ( Serialized )
 
 import Foreign

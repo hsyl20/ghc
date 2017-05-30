@@ -59,7 +59,7 @@ import Maybes
 import UniqSupply
 import GHC.Utils.Error (Severity(..))
 import Outputable
-import UniqDFM
+import GHC.Utils.Data.Unique.DeterFiniteMap
 import SrcLoc
 import qualified GHC.Utils.Error as Err
 

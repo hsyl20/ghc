@@ -19,7 +19,7 @@ is not deterministic.
 {-# LANGUAGE FlexibleContexts #-}
 {-# OPTIONS_GHC -Wall #-}
 
-module UniqDFM (
+module GHC.Utils.Data.Unique.DeterFiniteMap (
         -- * Unique-keyed deterministic mappings
         UniqDFM,       -- abstract type
 

@@ -61,7 +61,7 @@ import PrelNames( ipClassName )
 import TcValidity (checkValidType)
 import Unique (getUnique)
 import GHC.Utils.Data.Unique.FiniteMap
-import UniqSet
+import GHC.Utils.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 import ConLike
 
