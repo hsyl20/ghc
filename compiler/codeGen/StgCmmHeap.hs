@@ -47,7 +47,7 @@ import Id ( Id )
 import Module
 import GHC.Config.Flags
 import GHC.Data.FastString( mkFastString, fsLit )
-import Panic( sorry )
+import GHC.Utils.Panic( sorry )
 
 import Prelude hiding ((<*>))
 

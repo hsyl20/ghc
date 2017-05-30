@@ -527,7 +527,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Packages.PackageConfig \
 	GHC.Packages \
 	GHC.Data.Pair \
-	Panic \
+	GHC.Utils.Panic \
 	PatSyn \
 	GHC.Program.Driver.Pipeline.Monad \
 	Platform \

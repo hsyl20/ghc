@@ -59,7 +59,7 @@ module GHC.Utils.Error (
 import GHC.Data.Bag
 import GHC.Utils.Exception
 import GHC.Utils.Outputable as Outputable
-import Panic
+import GHC.Utils.Panic
 import qualified PprColour as Col
 import SrcLoc
 import GHC.Config.Flags

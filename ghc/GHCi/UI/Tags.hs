@@ -29,7 +29,7 @@ import Data.Function
 import Data.Maybe
 import Data.Ord
 import GHC.Program.Driver.Phases
-import Panic
+import GHC.Utils.Panic
 import Data.List
 import Control.Monad
 import System.Directory

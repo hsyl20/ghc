@@ -19,7 +19,7 @@ import GHC.Data.Bag
 import DataCon
 import GHC.Data.FastString
 import HsSyn
-import Panic
+import GHC.Utils.Panic
 import PrelNames
 import RdrName
 import SrcLoc

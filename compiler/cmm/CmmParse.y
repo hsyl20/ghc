@@ -242,7 +242,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.StringBuffer
 import GHC.Data.FastString
-import Panic
+import GHC.Utils.Panic
 import GHC.Config.Constants
 import GHC.Utils.Outputable
 import BasicTypes

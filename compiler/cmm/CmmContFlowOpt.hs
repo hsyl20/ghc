@@ -14,7 +14,7 @@ import Cmm
 import CmmUtils
 import CmmSwitch (mapSwitchTargets)
 import GHC.Data.Maybe
-import Panic
+import GHC.Utils.Panic
 
 import Control.Monad
 import Prelude hiding (succ, unzip, zip)

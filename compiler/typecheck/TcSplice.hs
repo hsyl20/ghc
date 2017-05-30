@@ -103,7 +103,7 @@ import GHC.Data.FastString
 import BasicTypes hiding( SuccessFlag(..) )
 import GHC.Data.Maybe( MaybeErr(..) )
 import GHC.Config.Flags
-import Panic
+import GHC.Utils.Panic
 import Lexeme
 import qualified GHC.Data.EnumSet as EnumSet
 

@@ -503,7 +503,7 @@ Library
         GHC.Data.Tree.OrdList
         GHC.Utils.Outputable
         GHC.Data.Pair
-        Panic
+        GHC.Utils.Panic
         PprColour
         Pretty
         GHC.Utils.Monad.State

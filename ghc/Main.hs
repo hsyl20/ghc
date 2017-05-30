@@ -52,7 +52,7 @@ import GHC.Data.FastString
 import GHC.Utils.Outputable
 import SrcLoc
 import Util
-import Panic
+import GHC.Utils.Panic
 import UniqSupply
 import GHC.Utils.Monad       ( liftIO )
 

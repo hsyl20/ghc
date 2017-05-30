@@ -9,7 +9,7 @@ import GHC.Program.Driver.Phases ( isHaskellSrcFilename )
 import GHC.Types        ( msHsFilePath, isBootSummary )
 import Name             ( getOccString )
 --import GHC.Utils.Error         ( printBagOfErrors )
-import Panic            ( panic )
+import GHC.Utils.Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
 import GHC.Data.Bag
 import GHC.Utils.Exception

@@ -7,7 +7,7 @@ import GHC.Utils.Monad  ( liftIO )
 import GHC.Config.Flags    ( defaultFatalMessager, defaultFlushOut )
 import Annotations ( AnnTarget(..), CoreAnnTarget )
 import GHC.Serialized  ( deserializeWithData )
-import Panic
+import GHC.Utils.Panic
 
 import Config
 import Annrun01_Help

@@ -99,7 +99,7 @@ import Util
 import Platform
 import qualified PprColour as Col
 import Pretty           ( Doc, Mode(..) )
-import Panic
+import GHC.Utils.Panic
 import GHC.Serialized
 import GHC.LanguageExtensions (Extension)
 

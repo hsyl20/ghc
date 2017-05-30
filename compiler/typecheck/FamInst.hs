@@ -37,7 +37,7 @@ import TyCoRep
 import TcMType
 import Name
 import GHC.Data.Pair
-import Panic
+import GHC.Utils.Panic
 import VarSet
 import GHC.Data.Bag( Bag, unionBags, unitBag )
 import Control.Monad

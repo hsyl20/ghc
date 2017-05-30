@@ -138,7 +138,7 @@ module Util (
 #include "HsVersions.h"
 
 import GHC.Utils.Exception
-import Panic
+import GHC.Utils.Panic
 
 import Data.Data
 import Data.IORef       ( IORef, newIORef, atomicModifyIORef' )

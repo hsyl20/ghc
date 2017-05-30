@@ -56,7 +56,7 @@ import GHCi.BreakArray (BreakArray)
 import GHC.Utils.Fingerprint
 import GHC.Types
 import GHC.Data.Unique.FiniteMap
-import Panic
+import GHC.Utils.Panic
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Utils.Outputable

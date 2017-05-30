@@ -51,7 +51,7 @@ import Util
 
 import qualified GHC.LanguageExtensions as LangExt
 
-import Panic
+import GHC.Utils.Panic
 import Data.List
 import System.Exit
 import Control.Monad

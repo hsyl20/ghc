@@ -34,7 +34,7 @@ module GHC.Utils.Monad.IOEnv (
 import GHC.Config.Flags
 import GHC.Utils.Exception
 import Module
-import Panic
+import GHC.Utils.Panic
 
 import Data.IORef       ( IORef, newIORef, readIORef, writeIORef, modifyIORef,
                           atomicModifyIORef, atomicModifyIORef' )

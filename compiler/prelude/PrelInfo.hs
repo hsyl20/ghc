@@ -66,7 +66,7 @@ import Class
 import TyCon
 import GHC.Data.Unique.FiniteMap
 import Util
-import Panic
+import GHC.Utils.Panic
 import {-# SOURCE #-} TcTypeNats ( typeNatTyCons )
 
 import Control.Applicative ((<|>))

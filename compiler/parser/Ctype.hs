@@ -19,7 +19,7 @@ module Ctype
 import Data.Int         ( Int32 )
 import Data.Bits        ( Bits((.&.)) )
 import Data.Char        ( ord, chr )
-import Panic
+import GHC.Utils.Panic
 
 -- Bit masks
 

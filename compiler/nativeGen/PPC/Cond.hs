@@ -8,7 +8,7 @@ module PPC.Cond (
 
 where
 
-import Panic
+import GHC.Utils.Panic
 
 data Cond
         = ALWAYS

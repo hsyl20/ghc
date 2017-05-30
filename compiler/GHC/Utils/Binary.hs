@@ -61,7 +61,7 @@ module GHC.Utils.Binary
 
 import {-# SOURCE #-} Name (Name)
 import GHC.Data.FastString
-import Panic
+import GHC.Utils.Panic
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.FastMutableInt
 import GHC.Utils.Fingerprint

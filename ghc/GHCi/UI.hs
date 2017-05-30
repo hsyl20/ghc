@@ -75,7 +75,7 @@ import GHC.Data.FastString
 import Linker
 import GHC.Data.Maybe ( orElse, expectJust )
 import NameSet
-import Panic hiding ( showException )
+import GHC.Utils.Panic hiding ( showException )
 import Util
 import qualified GHC.LanguageExtensions as LangExt
 

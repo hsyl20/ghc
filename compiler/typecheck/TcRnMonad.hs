@@ -162,7 +162,7 @@ import GHC.Utils.Outputable as Outputable
 import UniqSupply
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Panic
+import GHC.Utils.Panic
 import Util
 import GHC.Types.Annotations
 import BasicTypes( TopLevelFlag )

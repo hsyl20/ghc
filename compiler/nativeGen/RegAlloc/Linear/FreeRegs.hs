@@ -13,7 +13,7 @@ import Reg
 import RegClass
 
 import GHC.Config.Flags
-import Panic
+import GHC.Utils.Panic
 import Platform
 
 -- -----------------------------------------------------------------------------

@@ -24,7 +24,7 @@ module GHC.Program.CmdLineParser
 
 import Util
 import GHC.Utils.Outputable
-import Panic
+import GHC.Utils.Panic
 import GHC.Data.Bag
 import SrcLoc
 

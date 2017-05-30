@@ -28,7 +28,7 @@ import Name
 import SrcLoc
 import PatSyn
 import NameSet
-import Panic
+import GHC.Utils.Panic
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Var

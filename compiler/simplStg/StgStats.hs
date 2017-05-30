@@ -30,7 +30,7 @@ module StgStats ( showStgStats ) where
 import StgSyn
 
 import Id (Id)
-import Panic
+import GHC.Utils.Panic
 
 import Data.Map (Map)
 import qualified Data.Map as Map

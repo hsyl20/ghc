@@ -15,7 +15,7 @@ import CLabel
 import BlockId
 import Cmm
 
-import Panic
+import GHC.Utils.Panic
 import Unique
 
 

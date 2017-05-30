@@ -70,7 +70,7 @@ import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set
 import Module
 import Util
-import Panic
+import GHC.Utils.Panic
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
 

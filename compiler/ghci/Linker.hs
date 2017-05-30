@@ -38,7 +38,7 @@ import GHC.Data.List.SetOps
 import GHC.Config.Flags
 import BasicTypes
 import GHC.Utils.Outputable
-import Panic
+import GHC.Utils.Panic
 import Util
 import GHC.Utils.Error
 import SrcLoc

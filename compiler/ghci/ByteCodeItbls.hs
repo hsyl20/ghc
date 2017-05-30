@@ -21,7 +21,7 @@ import RepType
 import StgCmmLayout     ( mkVirtConstrSizes )
 import StgCmmClosure    ( tagForCon, NonVoid (..) )
 import Util
-import Panic
+import GHC.Utils.Panic
 
 {-
   Manufacturing of info tables for DataCons

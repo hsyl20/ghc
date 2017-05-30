@@ -49,7 +49,7 @@ import Module
 import GHC.Utils.Error
 import GHC.Config.Flags
 import Config
-import Panic
+import GHC.Utils.Panic
 import Util
 import GHC.Data.StringBuffer     ( hGetStringBuffer )
 import BasicTypes       ( SuccessFlag(..) )

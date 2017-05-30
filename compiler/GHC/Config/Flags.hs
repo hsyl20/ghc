@@ -170,7 +170,7 @@ import GHC.Program.Driver.Phases     ( Phase(..), phaseInputExt )
 import Config
 import GHC.Program.CmdLineParser
 import GHC.Config.Constants
-import Panic
+import GHC.Utils.Panic
 import qualified PprColour as Col
 import Util
 import GHC.Data.Maybe

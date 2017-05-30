@@ -66,7 +66,7 @@ import GHC.Data.Unique.FiniteMap
 import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BinIface
-import Panic
+import GHC.Utils.Panic
 import Util
 import GHC.Data.FastString
 import GHC.Utils.Fingerprint

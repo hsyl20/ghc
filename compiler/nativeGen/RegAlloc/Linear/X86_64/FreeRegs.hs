@@ -6,7 +6,7 @@ where
 import X86.Regs
 import RegClass
 import Reg
-import Panic
+import GHC.Utils.Panic
 import Platform
 
 import Data.Foldable (foldl')

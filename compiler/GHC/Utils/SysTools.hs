@@ -60,7 +60,7 @@ import GHC.Packages
 import Config
 import GHC.Utils.Outputable
 import GHC.Utils.Error
-import Panic
+import GHC.Utils.Panic
 import Platform
 import Util
 import GHC.Config.Flags

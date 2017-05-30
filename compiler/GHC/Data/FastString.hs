@@ -99,7 +99,7 @@ module GHC.Data.FastString
 
 import GHC.Data.Char.Encoding
 import GHC.Utils.IO.Unsafe
-import Panic
+import GHC.Utils.Panic
 import Util
 
 import Control.DeepSeq

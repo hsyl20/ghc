@@ -19,7 +19,7 @@ module SPARC.Base (
 where
 
 import GHC.Config.Flags
-import Panic
+import GHC.Utils.Panic
 
 import Data.Int
 

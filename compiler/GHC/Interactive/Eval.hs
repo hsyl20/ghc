@@ -72,7 +72,7 @@ import UniqSupply
 import GHC.Utils.Monad
 import Module
 import PrelNames  ( toDynName, pretendNameIsInScope )
-import Panic
+import GHC.Utils.Panic
 import GHC.Data.Maybe
 import GHC.Utils.Error
 import SrcLoc

@@ -13,7 +13,7 @@ module BinFingerprint
 import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import Name
-import Panic
+import GHC.Utils.Panic
 import Util
 
 fingerprintBinMem :: BinHandle -> IO Fingerprint

@@ -45,7 +45,7 @@ import Hoopl
 
 import GHC.Data.Maybe
 import GHC.Config.Flags
-import Panic
+import GHC.Utils.Panic
 import UniqSupply
 import GHC.Utils.Monad
 import Util

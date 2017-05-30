@@ -34,7 +34,7 @@ import NameEnv
 import PrimOp
 import Module
 import GHC.Data.FastString
-import Panic
+import GHC.Utils.Panic
 import GHC.Utils.Outputable
 import Util
 

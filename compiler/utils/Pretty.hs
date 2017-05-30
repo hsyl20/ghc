@@ -113,7 +113,7 @@ module Pretty (
 
 import GHC.Utils.Handle.BufferedWrite
 import GHC.Data.FastString
-import Panic
+import GHC.Utils.Panic
 import System.IO
 import Prelude hiding (error)
 

@@ -42,7 +42,7 @@ import TysPrim
 import GHC.Utils.Error
 import Unique
 import GHC.Data.FastString
-import Panic
+import GHC.Utils.Panic
 import StgCmmLayout     ( ArgRep(..), toArgRep, argRepSizeW )
 import SMRep
 import Bitmap
