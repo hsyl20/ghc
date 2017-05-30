@@ -33,8 +33,8 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Var
 import GHC.Data.Var.Environment( emptyTidyEnv, mkInScopeSet )
-import Id
-import IdInfo( RecSelParent(..), setLevityInfoWithType )
+import GHC.Data.Id
+import GHC.Data.Id.Info( RecSelParent(..), setLevityInfoWithType )
 import TcBinds
 import BasicTypes
 import TcSimplify

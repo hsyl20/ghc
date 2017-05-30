@@ -11,7 +11,7 @@ module RnFixity ( MiniFixityEnv,
 
 import LoadIface
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import TcRnMonad
 import GHC.Data.Name

@@ -22,10 +22,10 @@ import TcHsSyn
 import TcSigs( TcPragEnv, lookupPragEnv, addInlinePrags )
 import TcRnMonad
 import Inst
-import Id
+import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Name
-import RdrName
+import GHC.Data.RdrName
 import TcEnv
 import TcMType
 import TcValidity( arityErr )

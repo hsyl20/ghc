@@ -120,7 +120,7 @@ import SMRep
 
 import Module
 import GHC.Data.Name
-import Id
+import GHC.Data.Id
 import BasicTypes
 import GHC.Data.FastString
 import GHC.Utils.Outputable

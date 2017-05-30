@@ -20,7 +20,7 @@ import MkCore            ( mkWildCase, mkCoreLet )
 import TyCon
 import CoAxiom
 import Type
-import OccName
+import GHC.Data.OccName
 import Coercion
 import MkId
 import FamInst

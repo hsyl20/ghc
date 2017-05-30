@@ -14,12 +14,12 @@ module Convert( convertToHsExpr, convertToPat, convertToHsDecls,
 
 import HsSyn as Hs
 import qualified Class
-import RdrName
+import GHC.Data.RdrName
 import qualified Name
 import Module
 import RdrHsSyn
 import qualified OccName
-import OccName
+import GHC.Data.OccName
 import SrcLoc
 import Type
 import qualified Coercion ( Role(..) )

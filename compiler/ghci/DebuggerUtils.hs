@@ -12,7 +12,7 @@ import TcRnTypes
 import TcRnMonad
 import IfaceEnv
 import Module
-import OccName
+import GHC.Data.OccName
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Utils

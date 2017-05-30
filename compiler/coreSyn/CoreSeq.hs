@@ -11,14 +11,14 @@ module CoreSeq (
     ) where
 
 import CoreSyn
-import IdInfo
+import GHC.Data.Id.Info
 import Demand( seqDemand, seqStrictSig )
 import BasicTypes( seqOccInfo )
 import GHC.Data.Var.Set( seqDVarSet )
 import GHC.Data.Var( varType, tyVarKind )
 import Type( seqType, isTyVar )
 import Coercion( seqCo )
-import Id( Id, idInfo )
+import GHC.Data.Id( Id, idInfo )
 
 -- | Evaluate all the fields of the 'IdInfo' that are generally demanded by the
 -- compiler

@@ -24,7 +24,7 @@ module GHC.Desugar.Match.TermEqOracle (
 
 import GHC.Desugar.Match.Expr
 
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import Type
 import HsLit

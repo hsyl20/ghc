@@ -55,12 +55,12 @@ where
 import GHC.Plugins.Types
 
 -- Variable naming
-import RdrName
-import OccName  hiding  ( varName {- conflicts with Var.varName -} )
+import GHC.Data.RdrName
+import GHC.Data.OccName  hiding  ( varName {- conflicts with Var.varName -} )
 import GHC.Data.Name     hiding  ( varName {- reexport from OccName, conflicts with Var.varName -} )
 import GHC.Data.Var
-import Id       hiding  ( lazySetIdInfo, setIdExported, setIdNotExported {- all three conflict with Var -} )
-import IdInfo
+import GHC.Data.Id       hiding  ( lazySetIdInfo, setIdExported, setIdNotExported {- all three conflict with Var -} )
+import GHC.Data.Id.Info
 
 -- Core
 import CoreMonad

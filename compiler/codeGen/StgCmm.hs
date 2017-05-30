@@ -32,8 +32,8 @@ import GHC.Config.Flags
 
 import GHC.Types
 import CostCentre
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import RepType
 import DataCon
 import GHC.Data.Name

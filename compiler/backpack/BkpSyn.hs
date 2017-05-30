@@ -18,7 +18,7 @@ module BkpSyn (
     ) where
 
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import SrcLoc
 import GHC.Utils.Outputable
 import Module

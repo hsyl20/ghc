@@ -17,7 +17,7 @@ import GHC.Utils.Outputable
 import Coercion
 import GHC.Data.Var
 import Type (Type, typeSize, seqType)
-import Id (idType, isJoinId)
+import GHC.Data.Id (idType, isJoinId)
 import CoreSeq (megaSeqIdInfo)
 
 import Data.List (foldl')

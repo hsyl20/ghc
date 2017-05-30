@@ -21,7 +21,7 @@ import Vectorise.Type.Type
 import CoreSyn
 import Type
 import GHC.Data.Var.Environment
-import Id
+import GHC.Data.Id
 import GHC.Data.FastString
 import Control.Applicative
 import Prelude -- avoid redundant import warning due to AMP

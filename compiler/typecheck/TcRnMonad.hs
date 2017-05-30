@@ -141,7 +141,7 @@ import TcEvidence
 import HsSyn hiding (LIE)
 import GHC.Types
 import Module
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Name
 import Type
 
@@ -150,7 +150,7 @@ import InstEnv
 import FamInstEnv
 import PrelNames
 
-import Id
+import GHC.Data.Id
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Error

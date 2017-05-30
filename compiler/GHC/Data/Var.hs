@@ -81,10 +81,11 @@ module GHC.Data.Var (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   TyCoRep( Type, Kind, pprKind )
-import {-# SOURCE #-}   TcType( TcTyVarDetails, pprTcTyVarDetails, vanillaSkolemTv )
-import {-# SOURCE #-}   IdInfo( IdDetails, IdInfo, coVarDetails, isCoVarDetails,
-                                vanillaIdInfo, pprIdDetails )
+import {-# SOURCE #-} TyCoRep( Type, Kind, pprKind )
+import {-# SOURCE #-} TcType( TcTyVarDetails, pprTcTyVarDetails, vanillaSkolemTv )
+import {-# SOURCE #-} GHC.Data.Id.Info ( IdDetails, IdInfo, coVarDetails,
+                                         isCoVarDetails, vanillaIdInfo,
+                                         pprIdDetails )
 
 import GHC.Data.Name hiding (varName)
 import GHC.Data.Unique ( Uniquable, Unique, getKey, getUnique

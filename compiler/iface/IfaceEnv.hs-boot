@@ -1,7 +1,7 @@
 module IfaceEnv where
 
 import Module
-import OccName
+import GHC.Data.OccName
 import TcRnMonad
 import GHC.Data.Name
 import SrcLoc

@@ -30,7 +30,7 @@ import GHC.Data.Name
 import GHC.Data.Bag
 import CostCentre
 import CoreSyn
-import Id
+import GHC.Data.Id
 import GHC.Data.Var.Set
 import Data.List
 import GHC.Data.FastString

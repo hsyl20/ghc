@@ -2,7 +2,7 @@ module RnSplice where
 
 import HsSyn
 import TcRnMonad
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import Kind

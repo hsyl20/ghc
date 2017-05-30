@@ -39,8 +39,8 @@ module TcHsSyn (
 #include "HsVersions.h"
 
 import HsSyn
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import TcRnMonad
 import PrelNames
 import TcType

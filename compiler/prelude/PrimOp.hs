@@ -34,7 +34,7 @@ import TysWiredIn
 
 import CmmType
 import Demand
-import OccName          ( OccName, pprOccName, mkVarOccFS )
+import GHC.Data.OccName          ( OccName, pprOccName, mkVarOccFS )
 import TyCon            ( TyCon, isPrimTyCon, PrimRep(..) )
 import Type
 import RepType          ( typePrimRep1, tyConPrimRep1 )

@@ -21,7 +21,7 @@ import GHC.Utils.Outputable
 -- ToDo: figure out whether we need these, and put something appropriate
 -- into the GHC API instead
 import GHC.Data.Name (nameOccName)
-import OccName (pprOccName)
+import GHC.Data.OccName (pprOccName)
 import ConLike
 import GHC.Utils.Monad
 

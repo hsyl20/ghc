@@ -75,15 +75,15 @@ import CoreFVs          -- all of it
 import CoreSubst
 import MkCore           ( sortQuantVars )
 
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import Literal          ( litIsTrivial )
 import Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
 import GHC.Data.Name             ( getOccName, mkSystemVarName )
-import OccName          ( occNameString )
+import GHC.Data.OccName          ( occNameString )
 import Type             ( Type, mkLamTypes, splitTyConApp_maybe )
 import BasicTypes       ( Arity, RecFlag(..), isRec )
 import DataCon          ( dataConOrigResTy )

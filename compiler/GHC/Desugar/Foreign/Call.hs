@@ -30,7 +30,7 @@ import GHC.Desugar.Utils
 
 import TcType
 import Type
-import Id   ( Id )
+import GHC.Data.Id   ( Id )
 import Coercion
 import PrimOp
 import TysPrim

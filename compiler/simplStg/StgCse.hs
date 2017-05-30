@@ -71,7 +71,7 @@ and nothing stops us from transforming that to
 module StgCse (stgCse) where
 
 import DataCon
-import Id
+import GHC.Data.Id
 import StgSyn
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment

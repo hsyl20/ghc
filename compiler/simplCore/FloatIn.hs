@@ -25,7 +25,7 @@ import GHC.Types         ( ModGuts(..) )
 import CoreUtils
 import CoreFVs
 import CoreMonad        ( CoreM )
-import Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )
+import GHC.Data.Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )
 import GHC.Data.Var
 import Type
 import GHC.Data.Var.Set

@@ -38,7 +38,7 @@ import GHC.Desugar.Binds (dsHsWrapper)
 
 import GHC.Data.Name
 import GHC.Data.Var
-import Id
+import GHC.Data.Id
 import ConLike
 import TysWiredIn
 import BasicTypes

@@ -56,7 +56,7 @@ import CoreSyn
 import CoreUtils
 import Type
 import Coercion
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Var.Environment
 import GHC.Data.Unique.Supply

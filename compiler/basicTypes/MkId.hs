@@ -59,8 +59,8 @@ import GHC.Data.Name
 import PrimOp
 import ForeignCall
 import DataCon
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import Demand
 import CoreSyn
 import GHC.Data.Unique

@@ -43,7 +43,7 @@ import GHC.Utils.Error
 import BasicTypes
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils
-import Id
+import GHC.Data.Id
 import Data.Data        ( Data )
 import Data.Maybe       ( isJust, isNothing )
 

@@ -19,7 +19,7 @@ import CoreMonad        ( FloatOutSwitches(..) )
 
 import GHC.Config.Flags
 import GHC.Utils.Error         ( dumpIfSet_dyn )
-import Id               ( Id, idArity, idType, isBottomingId,
+import GHC.Data.Id               ( Id, idArity, idType, isBottomingId,
                           isJoinId, isJoinId_maybe )
 import BasicTypes       ( TopLevelFlag(..), isTopLevel )
 import SetLevels

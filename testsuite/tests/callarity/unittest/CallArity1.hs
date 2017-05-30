@@ -1,7 +1,7 @@
 {-# LANGUAGE TupleSections #-}
 import CoreSyn
 import CoreUtils
-import Id
+import GHC.Data.Id
 import Type
 import MkCore
 import CallArity (callArityRHS)

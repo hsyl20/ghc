@@ -101,7 +101,7 @@ import HsLit
 import PlaceHolder
 
 import TcEvidence
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Var
 import TyCoRep
 import Type   ( filterOutInvisibleTypes )
@@ -109,7 +109,7 @@ import TysWiredIn ( unitTy )
 import TcType
 import DataCon
 import ConLike
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment

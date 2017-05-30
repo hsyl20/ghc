@@ -44,7 +44,7 @@ import TcType
 import Type
 import Coercion
 import TysWiredIn ( typeNatKind, typeSymbolKind )
-import Id
+import GHC.Data.Id
 import MkId(proxyHashId)
 import Class
 import GHC.Data.Name

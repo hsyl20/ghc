@@ -36,7 +36,7 @@ import Module (getModule)
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import PrelNames
-import RdrName
+import GHC.Data.RdrName
 import SrcLoc
 import TcGenDeriv
 import TcGenFunctor

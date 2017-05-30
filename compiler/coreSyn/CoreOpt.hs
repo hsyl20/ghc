@@ -29,7 +29,7 @@ import CoreFVs
 import PprCore  ( pprCoreBindings, pprRules )
 import OccurAnal( occurAnalyseExpr, occurAnalysePgm )
 import Literal  ( Literal(MachStr) )
-import Id
+import GHC.Data.Id
 import GHC.Data.Var      ( varType )
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

@@ -40,8 +40,8 @@ import CmmUtils
 import CLabel
 import StgSyn
 import CostCentre
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Data.Name
 import Module
 import GHC.Data.List.SetOps

@@ -43,9 +43,9 @@ import DataCon
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set hiding (unitFV)
-import RdrName ( mkVarUnqual )
-import Id
-import IdInfo
+import GHC.Data.RdrName ( mkVarUnqual )
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import Coercion ( ltRole )

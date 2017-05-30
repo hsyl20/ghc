@@ -29,7 +29,7 @@ import {-# SOURCE #-} MkId ( mkPrimOpId, magicDictId )
 
 import CoreSyn
 import MkCore
-import Id
+import GHC.Data.Id
 import Literal
 import CoreOpt     ( exprIsLiteral_maybe )
 import PrimOp      ( PrimOp(..), tagToEnumKey )
@@ -41,7 +41,7 @@ import DataCon     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
 import CoreUtils   ( cheapEqExpr, exprIsHNF )
 import CoreUnfold  ( exprIsConApp_maybe )
 import Type
-import OccName     ( occNameFS )
+import GHC.Data.OccName     ( occNameFS )
 import PrelNames
 import GHC.Data.Maybe      ( orElse )
 import GHC.Data.Name        ( Name, nameOccName )

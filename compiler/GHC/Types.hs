@@ -150,7 +150,7 @@ import GHC.ForeignSrcLang
 
 import GHC.Data.Unique.FiniteMap
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import Avail
 import Module
 import InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
@@ -162,8 +162,8 @@ import GHC.Data.Name.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
-import Id
-import IdInfo           ( IdDetails(..), RecSelParent(..))
+import GHC.Data.Id
+import GHC.Data.Id.Info           ( IdDetails(..), RecSelParent(..))
 import Type
 
 import ApiAnnotation    ( ApiAnns )

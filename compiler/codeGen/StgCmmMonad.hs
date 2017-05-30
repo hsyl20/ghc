@@ -71,7 +71,7 @@ import BlockId
 import CLabel
 import SMRep
 import Module
-import Id
+import GHC.Data.Id
 import GHC.Data.Var.Environment
 import GHC.Data.Tree.OrdList
 import BasicTypes( ConTagZ )

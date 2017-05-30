@@ -25,7 +25,7 @@ import GHC.Desugar.Utils
 
 import HsSyn
 
-import Id
+import GHC.Data.Id
 import CoreSyn
 import MkCore
 import TyCon

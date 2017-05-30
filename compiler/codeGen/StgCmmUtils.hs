@@ -54,7 +54,7 @@ import CmmUtils
 import CmmSwitch
 
 import ForeignCall
-import IdInfo
+import GHC.Data.Id.Info
 import Type
 import TyCon
 import SMRep

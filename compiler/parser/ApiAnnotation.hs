@@ -13,7 +13,7 @@ module ApiAnnotation (
   LRdrName -- Exists for haddocks only
   ) where
 
-import RdrName
+import GHC.Data.RdrName
 import GHC.Utils.Outputable
 import SrcLoc
 import qualified Data.Map as Map

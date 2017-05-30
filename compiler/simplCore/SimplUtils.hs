@@ -46,8 +46,8 @@ import CoreUtils
 import CoreArity
 import CoreUnfold
 import GHC.Data.Name
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Data.Var
 import Demand
 import SimplMonad

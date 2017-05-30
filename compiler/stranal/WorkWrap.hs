@@ -12,8 +12,8 @@ import CoreUnfold       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding
 import CoreUtils        ( exprType, exprIsHNF )
 import CoreFVs          ( exprFreeVars )
 import GHC.Data.Var
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import Type
 import GHC.Data.Unique.Supply
 import BasicTypes

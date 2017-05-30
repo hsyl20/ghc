@@ -22,7 +22,7 @@ import TcUnify
 import TcRnMonad
 import TcEnv
 import TcEvidence
-import Id( mkLocalId )
+import GHC.Data.Id( mkLocalId )
 import Inst
 import GHC.Data.Name
 import TysWiredIn

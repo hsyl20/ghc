@@ -14,7 +14,7 @@ module RnUnbound ( mkUnboundName
                  , unboundNameX
                  , perhapsForallMsg ) where
 
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import TcRnMonad
 import GHC.Data.Name

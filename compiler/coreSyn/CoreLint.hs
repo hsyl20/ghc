@@ -36,8 +36,8 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Name
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import PprCore
 import GHC.Utils.Error
 import Coercion

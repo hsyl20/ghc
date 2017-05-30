@@ -25,7 +25,7 @@ import CoreSubst
 import Demand
 import GHC.Data.Var
 import GHC.Data.Var.Environment
-import Id
+import GHC.Data.Id
 import Type
 import TyCon    ( initRecTc, checkRecTc )
 import Coercion

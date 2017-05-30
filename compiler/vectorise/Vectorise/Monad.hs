@@ -38,7 +38,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Var
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Utils.Error
 import GHC.Utils.Outputable

@@ -21,7 +21,7 @@ import GHCi
 import GHCi.RemoteTypes
 import GHC.Monad
 import GHC.Types
-import Id
+import GHC.Data.Id
 import IfaceSyn ( showToHeader )
 import IfaceEnv( newInteractiveBinder )
 import GHC.Data.Name

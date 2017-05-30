@@ -45,7 +45,7 @@ import RnUtils          ( HsDocContext(..), withHsDocContext, mapFvRn
 import RnFixity         ( lookupFieldFixityRn, lookupFixityRn
                         , lookupTyFixityRn )
 import TcRnMonad
-import RdrName
+import GHC.Data.RdrName
 import PrelNames
 import TysPrim          ( funTyConName )
 import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )

@@ -69,7 +69,7 @@ module FieldLabel ( FieldLabelString
                   , mkFieldLabelOccs
                   ) where
 
-import OccName
+import GHC.Data.OccName
 import GHC.Data.Name
 
 import GHC.Data.FastString

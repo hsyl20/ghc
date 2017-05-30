@@ -36,7 +36,7 @@ import GHC.Data.Name.Set
 import Avail
 import FieldLabel
 import GHC.Types
-import RdrName
+import GHC.Data.RdrName
 import RdrHsSyn        ( setRdrNameSpace )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
@@ -45,7 +45,7 @@ import BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )
 import GHC.Utils
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
-import Id
+import GHC.Data.Id
 import Type
 import PatSyn
 import qualified GHC.LanguageExtensions as LangExt

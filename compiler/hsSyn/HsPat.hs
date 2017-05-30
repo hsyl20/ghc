@@ -51,7 +51,7 @@ import BasicTypes
 import PprCore          ( {- instance OutputableBndr TyVar -} )
 import TysWiredIn
 import GHC.Data.Var
-import RdrName ( RdrName )
+import GHC.Data.RdrName ( RdrName )
 import ConLike
 import DataCon
 import TyCon

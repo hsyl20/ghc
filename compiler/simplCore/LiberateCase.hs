@@ -12,7 +12,7 @@ module LiberateCase ( liberateCase ) where
 import GHC.Config.Flags
 import CoreSyn
 import CoreUnfold       ( couldBeSmallEnoughToInline )
-import Id
+import GHC.Data.Id
 import GHC.Data.Var.Environment
 import GHC.Utils             ( notNull )
 

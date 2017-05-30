@@ -23,7 +23,7 @@ import BasicTypes
 import GHC.Config.Flags
 import HsSyn
 import TcHsSyn
-import Id
+import GHC.Data.Id
 import ConLike
 import GHC.Data.Name
 import FamInstEnv

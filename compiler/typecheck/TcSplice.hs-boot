@@ -9,7 +9,7 @@ import TcType   ( ExpRhoType )
 import GHC.Types.Annotations ( Annotation, CoreAnnTarget )
 
 import HsSyn      ( LHsType, LPat, LHsDecl, ThModFinalizers )
-import RdrName    ( RdrName )
+import GHC.Data.RdrName    ( RdrName )
 import TcRnTypes  ( SpliceType )
 import qualified Language.Haskell.TH as TH
 

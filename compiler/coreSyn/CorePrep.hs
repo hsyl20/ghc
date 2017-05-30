@@ -36,8 +36,8 @@ import Demand
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import TysWiredIn
 import DataCon
 import PrimOp

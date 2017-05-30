@@ -46,8 +46,8 @@ module ToIface
 
 import IfaceSyn
 import DataCon
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import CoreSyn
 import TyCon hiding ( pprPromotionQuote )
 import CoAxiom

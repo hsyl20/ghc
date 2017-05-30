@@ -36,7 +36,7 @@ import PrelNames
 import qualified OccName( isDataOcc, isVarOcc, isTcOcc )
 
 import Module
-import Id
+import GHC.Data.Id
 import GHC.Data.Name hiding( isVarOcc, isTcOcc, varName, tcName )
 import THNames
 import GHC.Data.Name.Environment

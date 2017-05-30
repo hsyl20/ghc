@@ -72,7 +72,7 @@ import TyCon            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import DataCon          ( DataCon, dataConTyCon )
 import ConLike          ( ConLike(..) )
 import CoAxiom          ( Role, fsFromRole )
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Name
 import BasicTypes
 import TcEvidence       ( idHsWrapper )

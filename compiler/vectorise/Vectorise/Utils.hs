@@ -32,7 +32,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 import CoreSyn
 import CoreUtils
-import Id
+import GHC.Data.Id
 import Type
 import Control.Monad
 

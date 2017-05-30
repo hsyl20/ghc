@@ -76,10 +76,10 @@ import TcType
 import LoadIface
 import PrelNames
 import TysWiredIn
-import Id
+import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Set
-import RdrName
+import GHC.Data.RdrName
 import InstEnv
 import DataCon ( DataCon )
 import PatSyn  ( PatSyn )

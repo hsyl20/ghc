@@ -129,8 +129,8 @@ module PrelNames (
 #include "HsVersions.h"
 
 import Module
-import OccName
-import RdrName
+import GHC.Data.OccName
+import GHC.Data.RdrName
 import GHC.Data.Unique
 import GHC.Data.Name
 import SrcLoc

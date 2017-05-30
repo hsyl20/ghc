@@ -53,8 +53,8 @@ import DataCon
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall ( ForeignCall )
-import Id
-import IdInfo      ( mayHaveCafRefs )
+import GHC.Data.Id
+import GHC.Data.Id.Info      ( mayHaveCafRefs )
 import Literal     ( Literal, literalType )
 import Module      ( Module )
 import GHC.Utils.Outputable

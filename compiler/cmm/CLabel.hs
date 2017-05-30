@@ -115,7 +115,7 @@ module CLabel (
 
 #include "HsVersions.h"
 
-import IdInfo
+import GHC.Data.Id.Info
 import BasicTypes
 import GHC.Packages
 import Module

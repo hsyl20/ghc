@@ -21,7 +21,7 @@ import GHC.Data.FastString
 import HsSyn
 import GHC.Utils.Panic
 import PrelNames
-import RdrName
+import GHC.Data.RdrName
 import SrcLoc
 import GHC.Utils.Monad.State
 import TcGenDeriv

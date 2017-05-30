@@ -149,7 +149,7 @@ import Coercion ( Coercion, mkHoleCo )
 import ConLike  ( ConLike(..) )
 import DataCon  ( DataCon, dataConUserType, dataConOrigArgTys )
 import PatSyn   ( PatSyn, pprPatSynType )
-import Id       ( idType, idName )
+import GHC.Data.Id       ( idType, idName )
 import FieldLabel ( FieldLabel )
 import TcType
 import GHC.Types.Annotations
@@ -157,7 +157,7 @@ import InstEnv
 import FamInstEnv
 import GHC.Desugar.Match.Expr
 import GHC.Utils.Monad.IOEnv
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

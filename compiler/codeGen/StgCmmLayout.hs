@@ -43,7 +43,7 @@ import CmmUtils
 import CmmInfo
 import CLabel
 import StgSyn
-import Id
+import GHC.Data.Id
 import TyCon             ( PrimRep(..) )
 import BasicTypes        ( RepArity )
 import GHC.Config.Flags

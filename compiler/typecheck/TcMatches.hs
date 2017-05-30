@@ -31,7 +31,7 @@ import TcBinds
 import TcUnify
 import GHC.Data.Name
 import TysWiredIn
-import Id
+import GHC.Data.Id
 import TyCon
 import TysPrim
 import TcEvidence

@@ -35,7 +35,7 @@ import GHC.Desugar.Monad
 import GHC.Desugar.Binds
 import GHC.Desugar.GuardedRHS
 import GHC.Desugar.Utils
-import Id
+import GHC.Data.Id
 import ConLike
 import DataCon
 import PatSyn

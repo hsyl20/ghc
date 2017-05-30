@@ -69,8 +69,8 @@ import GHC.Data.Name
 import Literal
 import DataCon
 import PrimOp
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import Type
 import TyCoRep( TyBinder(..) )
 import Coercion

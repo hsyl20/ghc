@@ -5,7 +5,7 @@ module TcRnExports (tcRnExports, exports_from_avail) where
 
 import HsSyn
 import PrelNames
-import RdrName
+import GHC.Data.RdrName
 import TcRnMonad
 import TcEnv
 import TcMType
@@ -14,8 +14,8 @@ import RnNames
 import RnEnv
 import RnUnbound ( reportUnboundName )
 import GHC.Utils.Error
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment

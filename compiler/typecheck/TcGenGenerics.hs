@@ -26,7 +26,7 @@ import Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )
 import IfaceEnv         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )
-import RdrName
+import GHC.Data.RdrName
 import BasicTypes
 import TysPrim
 import TysWiredIn

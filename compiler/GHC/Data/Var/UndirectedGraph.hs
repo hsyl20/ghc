@@ -27,7 +27,7 @@ module GHC.Data.Var.UndirectedGraph
     , delNode
     ) where
 
-import Id
+import GHC.Data.Id
 import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Outputable

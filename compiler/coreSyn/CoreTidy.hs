@@ -17,8 +17,8 @@ module CoreTidy (
 import CoreSyn
 import CoreSeq ( seqUnfolding )
 import CoreArity
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import Demand ( zapUsageEnvSig )
 import Type( tidyType, tidyTyCoVarBndr )
 import Coercion( tidyCo )

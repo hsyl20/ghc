@@ -137,7 +137,7 @@ import {-# SOURCE #-} KnownUniques
 
 -- others:
 import CoAxiom
-import Id
+import GHC.Data.Id
 import GHC.Config.Constants        ( mAX_TUPLE_SIZE, mAX_CTUPLE_SIZE, mAX_SUM_SIZE )
 import Module           ( Module )
 import Type
@@ -146,7 +146,7 @@ import DataCon
 import {-# SOURCE #-} ConLike
 import TyCon
 import Class            ( Class, mkClass )
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Environment          ( NameEnv, mkNameEnv, lookupNameEnv )
 import GHC.Data.Name.Set          ( NameSet, mkNameSet, elemNameSet )

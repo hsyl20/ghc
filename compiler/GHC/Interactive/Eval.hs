@@ -58,11 +58,11 @@ import Type             hiding( typeKind )
 import RepType
 import TcType           hiding( typeKind )
 import GHC.Data.Var
-import Id
+import GHC.Data.Id
 import GHC.Data.Name             hiding ( varName )
 import GHC.Data.Name.Set
 import Avail
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Var.Environment
 import ByteCodeTypes
 import Linker

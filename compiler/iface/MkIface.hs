@@ -65,7 +65,7 @@ import ToIface
 import FlagChecker
 
 import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
-import Id
+import GHC.Data.Id
 import GHC.Types.Annotations
 import CoreSyn
 import Class
@@ -87,7 +87,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var
 import GHC.Data.Name
 import Avail
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import Module

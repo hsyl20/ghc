@@ -59,7 +59,7 @@ import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
 import IfaceSyn ( showToHeader )
 import GHC.Utils.PrettyPrint.TyThing
 import PrelNames
-import RdrName ( RdrName, getGRE_NameQualifier_maybes, getRdrName )
+import GHC.Data.RdrName ( RdrName, getGRE_NameQualifier_maybes, getRdrName )
 import SrcLoc
 import qualified Lexer
 

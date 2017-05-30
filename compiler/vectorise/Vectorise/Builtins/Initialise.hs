@@ -18,7 +18,7 @@ import CoreSyn
 import Type
 import GHC.Data.Name.Environment
 import GHC.Data.Name
-import Id
+import GHC.Data.Id
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 

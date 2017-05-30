@@ -37,7 +37,7 @@ import Module
 import DataCon
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Id
+import GHC.Data.Id
 import RepType (countConRepArgs)
 import Literal
 import PrelInfo

@@ -22,7 +22,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Name
 import MkId
-import Id
+import GHC.Data.Id
 import ForeignCall
 import GHC.Types
 import CoreUtils

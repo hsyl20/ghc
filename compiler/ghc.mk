@@ -499,7 +499,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Utils.Monad.IOEnv \
 	GHC.Data.Name.Cache \
 	Id \
-	IdInfo \
+	GHC.Data.Id.Info \
 	IfaceSyn \
 	IfaceType \
 	GHC.Interactive.Types \
@@ -519,7 +519,7 @@ compiler_stage2_dll0_MODULES = \
 	Name \
 	GHC.Data.Name.Environment \
 	GHC.Data.Name.Set \
-	OccName \
+	GHC.Data.OccName \
 	OccurAnal \
 	OptCoercion \
 	GHC.Data.Tree.OrdList \
@@ -539,7 +539,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Utils.PrettyPrint \
 	PrimOp \
 	RepType \
-	RdrName \
+	GHC.Data.RdrName \
 	Rules \
 	SrcLoc \
 	GHC.Data.StringBuffer \

@@ -48,7 +48,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Tree.OrdList
-import Id
+import GHC.Data.Id
 import MkCore                   ( mkWildValBinder )
 import TysWiredIn
 import qualified Type

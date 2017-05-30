@@ -22,13 +22,13 @@ import TysPrim ( primTyCons )
 import TysWiredIn ( tupleTyCon, sumTyCon, runtimeRepTyCon
                   , vecCountTyCon, vecElemTyCon
                   , nilDataCon, consDataCon )
-import Id
+import GHC.Data.Id
 import Type
 import Kind ( isTYPEApp )
 import TyCon
 import DataCon
 import GHC.Data.Name ( Name, getOccName )
-import OccName
+import GHC.Data.OccName
 import Module
 import HsSyn
 import GHC.Config.Flags

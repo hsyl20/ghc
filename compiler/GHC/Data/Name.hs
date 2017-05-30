@@ -80,7 +80,7 @@ module GHC.Data.Name (
 import {-# SOURCE #-} TyCoRep( TyThing )
 import {-# SOURCE #-} PrelNames( starKindTyConKey, unicodeStarKindTyConKey )
 
-import OccName
+import GHC.Data.OccName
 import Module
 import SrcLoc
 import GHC.Data.Unique

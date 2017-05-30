@@ -16,10 +16,10 @@ module GHC.Interactive.Types (
 
 import GHCi.RemoteTypes
 import GHCi.Message (EvalExpr, ResumeContext)
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import Module
-import RdrName
+import GHC.Data.RdrName
 import Type
 import SrcLoc
 import GHC.Utils.Exception

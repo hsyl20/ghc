@@ -24,7 +24,7 @@ module SCCfinal ( stgMassageForProfiling ) where
 import StgSyn
 
 import CostCentre       -- lots of things
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import Module
 import GHC.Data.Unique.Supply       ( UniqSupply )

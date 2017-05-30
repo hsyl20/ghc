@@ -51,10 +51,10 @@ import Coercion hiding ( substCo, substCoVarBndr )
 import PrelNames
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
-import Id
+import GHC.Data.Id
 import GHC.Data.Name     ( Name )
 import GHC.Data.Var
-import IdInfo
+import GHC.Data.Id.Info
 import GHC.Data.Unique.Supply
 import GHC.Data.Maybe
 import GHC.Utils

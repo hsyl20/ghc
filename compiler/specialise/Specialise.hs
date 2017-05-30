@@ -9,7 +9,7 @@ module Specialise ( specProgram, specUnfolding ) where
 
 #include "HsVersions.h"
 
-import Id
+import GHC.Data.Id
 import TcType hiding( substTy )
 import Type   hiding( substTy, extendTvSubstList )
 import Module( Module, HasModule(..) )

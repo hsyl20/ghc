@@ -42,8 +42,8 @@ import BlockId
 import Cmm
 import CmmUtils
 import CostCentre
-import IdInfo( CafInfo(..), mayHaveCafRefs )
-import Id ( Id )
+import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )
+import GHC.Data.Id ( Id )
 import Module
 import GHC.Config.Flags
 import GHC.Data.FastString( mkFastString, fsLit )

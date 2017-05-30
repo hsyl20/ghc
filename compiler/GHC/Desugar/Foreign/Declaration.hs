@@ -21,7 +21,7 @@ import GHC.Desugar.Monad
 import HsSyn
 import DataCon
 import CoreUnfold
-import Id
+import GHC.Data.Id
 import Literal
 import Module
 import GHC.Data.Name

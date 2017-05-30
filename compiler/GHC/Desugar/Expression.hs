@@ -40,7 +40,7 @@ import MkCore
 
 import GHC.Config.Flags
 import CostCentre
-import Id
+import GHC.Data.Id
 import MkId
 import Module
 import ConLike

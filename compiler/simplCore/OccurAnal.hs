@@ -23,8 +23,8 @@ import CoreSyn
 import CoreFVs
 import CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
                           stripTicksTopE, mkTicks )
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Data.Name( localiseName )
 import BasicTypes
 import Module( Module )

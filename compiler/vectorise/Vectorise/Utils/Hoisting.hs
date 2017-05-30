@@ -20,7 +20,7 @@ import CoreSyn
 import CoreUtils
 import CoreUnfold
 import Type
-import Id
+import GHC.Data.Id
 import BasicTypes  (Arity)
 import GHC.Data.FastString
 import Control.Monad

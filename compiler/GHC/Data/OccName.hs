@@ -23,7 +23,7 @@
 --
 -- * 'Var.Var': see "Var#name_types"
 
-module OccName (
+module GHC.Data.OccName (
         -- * The 'NameSpace' type
         NameSpace, -- Abstract
 

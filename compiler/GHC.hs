@@ -295,11 +295,11 @@ import TcRnMonad        ( finalSafeMode, fixSafeInstances )
 import TcRnTypes
 import GHC.Packages
 import GHC.Data.Name.Set
-import RdrName
+import GHC.Data.RdrName
 import HsSyn
 import Type     hiding( typeKind )
 import TcType           hiding( typeKind )
-import Id
+import GHC.Data.Id
 import TysPrim          ( alphaTyVars )
 import TyCon
 import Class

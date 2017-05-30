@@ -15,8 +15,8 @@ module WwLib ( mkWwBodies, mkWWstr, mkWorkerArgs
 
 import CoreSyn
 import CoreUtils        ( exprType, mkCast )
-import Id
-import IdInfo           ( JoinArity, vanillaIdInfo )
+import GHC.Data.Id
+import GHC.Data.Id.Info           ( JoinArity, vanillaIdInfo )
 import DataCon
 import Demand
 import MkCore           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup

@@ -236,7 +236,7 @@ import GHC.Data.List.SetOps
 import GHC.Data.Graph.Directed
 import GHC.Data.Unique ( nonDetCmpUnique )
 import SrcLoc  ( SrcSpan )
-import OccName ( OccName )
+import GHC.Data.OccName ( OccName )
 import GHC.Data.Name    ( mkInternalName )
 
 import GHC.Data.Maybe           ( orElse )

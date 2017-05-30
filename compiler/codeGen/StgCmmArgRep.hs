@@ -18,7 +18,7 @@ module StgCmmArgRep (
 import StgCmmClosure    ( idPrimRep )
 
 import SMRep            ( WordOff )
-import Id               ( Id )
+import GHC.Data.Id               ( Id )
 import TyCon            ( PrimRep(..), primElemRepSizeB )
 import BasicTypes       ( RepArity )
 import GHC.Config.Constants        ( wORD64_SIZE )

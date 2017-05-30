@@ -18,10 +18,10 @@ import SimplUtils
 import OccurAnal        ( occurAnalyseExpr )
 import FamInstEnv       ( FamInstEnv )
 import Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
-import Id
+import GHC.Data.Id
 import MkId             ( seqId )
 import MkCore           ( mkImpossibleExpr, castBottomExpr )
-import IdInfo
+import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
 import Coercion hiding  ( substCo, substCoVar )
 import OptCoercion      ( optCoercion )

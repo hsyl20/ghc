@@ -33,9 +33,9 @@ import GHC.CodeGen.StaticPtrTable
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
-import Id
+import GHC.Data.Id
 import MkId             ( mkDictSelRhs )
-import IdInfo
+import GHC.Data.Id.Info
 import InstEnv
 import FamInstEnv
 import Type             ( tidyTopType )

@@ -22,11 +22,11 @@ import BasicTypes
 import GHC.Data.FastString
 import GHC.Data.Name.Set
 import GHC.Data.Name
-import RdrName
+import GHC.Data.RdrName
 import DataCon
 import SrcLoc
 import HsSyn
-import OccName hiding (occName)
+import GHC.Data.OccName hiding (occName)
 import GHC.Data.Var
 import Module
 import GHC.Config.Flags

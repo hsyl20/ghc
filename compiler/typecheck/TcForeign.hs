@@ -45,9 +45,9 @@ import Coercion
 import Type
 import ForeignCall
 import GHC.Utils.Error
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
-import RdrName
+import GHC.Data.RdrName
 import DataCon
 import TyCon
 import TcType

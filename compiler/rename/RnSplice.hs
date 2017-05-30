@@ -13,7 +13,7 @@ module RnSplice (
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import TcRnMonad
 import Kind
 

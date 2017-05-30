@@ -11,7 +11,7 @@ module GHC.Syntax.Stats ( ppSourceStats ) where
 import GHC.Data.Bag
 import HsSyn
 import GHC.Utils.Outputable
-import RdrName
+import GHC.Data.RdrName
 import SrcLoc
 import GHC.Utils
 

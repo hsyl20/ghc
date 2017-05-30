@@ -29,7 +29,7 @@ import MkId
 import Class
 import TyCon
 import Type
-import Id
+import GHC.Data.Id
 import TcType
 
 import SrcLoc( SrcSpan, noSrcSpan )

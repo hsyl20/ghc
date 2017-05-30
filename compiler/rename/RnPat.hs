@@ -56,7 +56,7 @@ import ConLike
 import Type                ( TyThing(..) )
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import RdrName
+import GHC.Data.RdrName
 import BasicTypes
 import GHC.Utils
 import GHC.Data.List.SetOps          ( removeDups )

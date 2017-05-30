@@ -64,7 +64,7 @@ import HsSyn
 import IfaceSyn ( ShowSub(..), showToHeader )
 import IfaceType( ShowForAllFlag(..) )
 import PrelNames
-import RdrName
+import GHC.Data.RdrName
 import TcHsSyn
 import TcExpr
 import TcRnMonad
@@ -98,7 +98,7 @@ import RnNames
 import RnEnv
 import RnSource
 import GHC.Utils.Error
-import Id
+import GHC.Data.Id
 import GHC.Data.Var.Environment
 import Module
 import GHC.Data.Unique.FiniteMap

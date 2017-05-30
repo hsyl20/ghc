@@ -42,9 +42,9 @@ import CoreUtils
 import CoreUnfold
 import CoreLint
 import MkCore
-import Id
+import GHC.Data.Id
 import MkId
-import IdInfo
+import GHC.Data.Id.Info
 import Class
 import TyCon
 import ConLike

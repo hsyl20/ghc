@@ -49,12 +49,12 @@ import OccurAnal        ( occurAnalyseExpr )
 import CoreOpt
 import CoreArity       ( manifestArity )
 import CoreUtils
-import Id
+import GHC.Data.Id
 import Demand          ( isBottomingSig )
 import DataCon
 import Literal
 import PrimOp
-import IdInfo
+import GHC.Data.Id.Info
 import BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
 import Type
 import PrelNames

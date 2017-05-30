@@ -31,12 +31,12 @@ import TyCon
 import CoAxiom
 import Type
 import FamInstEnv
-import Id
+import GHC.Data.Id
 import MkId
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Unique.FiniteMap
-import OccName
+import GHC.Data.OccName
 import GHC.Data.Unique
 
 import GHC.Utils

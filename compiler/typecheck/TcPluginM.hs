@@ -80,7 +80,7 @@ import Class
 import GHC.Types
 import GHC.Utils.Outputable
 import Type
-import Id
+import GHC.Data.Id
 import InstEnv
 import GHC.Data.FastString
 import GHC.Data.Unique

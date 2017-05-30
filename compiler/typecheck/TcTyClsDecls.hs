@@ -48,7 +48,7 @@ import Class
 import CoAxiom
 import TyCon
 import DataCon
-import Id
+import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

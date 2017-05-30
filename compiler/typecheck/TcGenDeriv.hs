@@ -38,7 +38,7 @@ module TcGenDeriv (
 
 import TcRnMonad
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import BasicTypes
 import DataCon
 import GHC.Data.Name

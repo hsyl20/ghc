@@ -59,7 +59,7 @@ import TcHsSyn( zonkSigType )
 import Inst   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
 import Type
 import Kind
-import RdrName( lookupLocalRdrOcc )
+import GHC.Data.RdrName( lookupLocalRdrOcc )
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import TyCon

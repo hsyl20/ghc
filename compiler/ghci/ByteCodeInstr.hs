@@ -21,7 +21,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Name
 import GHC.Data.Unique
-import Id
+import GHC.Data.Id
 import CoreSyn
 import Literal
 import DataCon

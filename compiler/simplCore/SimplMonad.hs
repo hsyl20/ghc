@@ -21,8 +21,8 @@ module SimplMonad (
 
 import GHC.Data.Var              ( Var, isTyVar, mkLocalVar )
 import GHC.Data.Name             ( mkSystemVarName )
-import Id               ( Id, mkSysLocalOrCoVar )
-import IdInfo           ( IdDetails(..), vanillaIdInfo, setArityInfo )
+import GHC.Data.Id               ( Id, mkSysLocalOrCoVar )
+import GHC.Data.Id.Info           ( IdDetails(..), vanillaIdInfo, setArityInfo )
 import Type             ( Type, mkLamTypes )
 import FamInstEnv       ( FamInstEnv )
 import CoreSyn          ( RuleEnv(..) )

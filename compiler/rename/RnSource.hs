@@ -17,7 +17,7 @@ import {-# SOURCE #-} RnSplice ( rnSpliceDecl, rnTopSpliceDecls )
 
 import HsSyn
 import FieldLabel
-import RdrName
+import GHC.Data.RdrName
 import RnTypes
 import RnBinds
 import RnEnv

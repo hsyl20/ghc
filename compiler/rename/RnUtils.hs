@@ -27,7 +27,7 @@ where
 
 
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import TcEnv
 import TcRnMonad

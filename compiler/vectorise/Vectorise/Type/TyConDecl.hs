@@ -7,7 +7,7 @@ import Vectorise.Type.Type
 import Vectorise.Monad
 import Vectorise.Env( GlobalEnv( global_fam_inst_env ) )
 import BuildTyCl( TcMethInfo, buildClass, buildDataCon, newTyConRepName )
-import OccName
+import GHC.Data.OccName
 import Class
 import Type
 import TyCon

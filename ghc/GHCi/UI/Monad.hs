@@ -45,7 +45,7 @@ import Module
 import GHCi
 import GHCi.RemoteTypes
 import HsSyn (ImportDecl)
-import RdrName (RdrName)
+import GHC.Data.RdrName (RdrName)
 
 import GHC.Utils.Exception
 import Numeric

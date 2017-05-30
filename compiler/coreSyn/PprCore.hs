@@ -20,8 +20,8 @@ import CoreStats (exprStats)
 import Literal( pprLiteral )
 import GHC.Data.Name( pprInfixName, pprPrefixName )
 import GHC.Data.Var
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import Demand
 import DataCon
 import TyCon

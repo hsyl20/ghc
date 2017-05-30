@@ -22,7 +22,7 @@ where
 
 #include "HsVersions.h"
 
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import Parser           ( parseHeader )
 import Lexer

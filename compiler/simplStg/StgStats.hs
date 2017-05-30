@@ -29,7 +29,7 @@ module StgStats ( showStgStats ) where
 
 import StgSyn
 
-import Id (Id)
+import GHC.Data.Id (Id)
 import GHC.Utils.Panic
 
 import Data.Map (Map)

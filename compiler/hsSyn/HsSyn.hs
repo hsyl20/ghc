@@ -44,7 +44,7 @@ import HsTypes
 import BasicTypes       ( Fixity, WarningTxt )
 import HsUtils
 import HsDoc
-import OccName          ( HasOccName(..) )
+import GHC.Data.OccName          ( HasOccName(..) )
 
 -- others:
 import GHC.Utils.Outputable

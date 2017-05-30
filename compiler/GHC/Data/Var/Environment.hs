@@ -73,7 +73,7 @@ module GHC.Data.Var.Environment (
         emptyTidyEnv
     ) where
 
-import OccName
+import GHC.Data.OccName
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Unique.Set

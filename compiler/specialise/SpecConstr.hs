@@ -33,7 +33,7 @@ import Coercion         hiding( substCo )
 import Rules
 import Type             hiding ( substTy )
 import TyCon            ( tyConName )
-import Id
+import GHC.Data.Id
 import PprCore          ( pprParendExpr )
 import MkCore           ( mkImpossibleExpr )
 import GHC.Data.Var

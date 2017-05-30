@@ -23,7 +23,7 @@ import GHC.Data.Var.Environment
 import BasicTypes
 import Data.List
 import DataCon
-import Id
+import GHC.Data.Id
 import CoreUtils        ( exprIsHNF, exprType, exprIsTrivial )
 import TyCon
 import Type

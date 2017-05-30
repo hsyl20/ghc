@@ -48,7 +48,7 @@ module RnEnv (
 import LoadIface        ( loadInterfaceForName, loadSrcInterface_maybe )
 import IfaceEnv
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import TcEnv
 import TcRnMonad

@@ -35,7 +35,7 @@ import BlockId
 import CmmExpr
 import CmmUtils
 import GHC.Config.Flags
-import Id
+import GHC.Data.Id
 import MkGraph
 import GHC.Data.Name
 import GHC.Utils.Outputable

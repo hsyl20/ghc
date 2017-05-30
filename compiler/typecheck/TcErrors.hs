@@ -31,11 +31,11 @@ import TcEvidence
 import HsExpr  ( UnboundVar(..) )
 import HsBinds ( PatSynBind(..) )
 import GHC.Data.Name
-import RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
+import GHC.Data.RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
                , mkRdrUnqual, isLocalGRE, greSrcSpan, pprNameProvenance
                , GlobalRdrElt (..), globalRdrEnvElts )
 import PrelNames ( typeableClassName, hasKey, liftedRepDataConKey )
-import Id
+import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

@@ -13,7 +13,7 @@ module CSE (cseProgram, cseOneExpr) where
 import CoreSubst
 import GHC.Data.Var              ( Var )
 import GHC.Data.Var.Environment           ( elemInScopeSet )
-import Id               ( Id, idType, idInlineActivation, isDeadBinder
+import GHC.Data.Id               ( Id, idType, idInlineActivation, isDeadBinder
                         , zapIdOccInfo, zapIdUsageInfo, idInlinePragma
                         , isJoinId )
 import CoreUtils        ( mkAltExpr, eqExpr

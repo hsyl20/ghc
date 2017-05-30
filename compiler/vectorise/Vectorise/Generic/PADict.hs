@@ -17,7 +17,7 @@ import Module
 import TyCon
 import CoAxiom
 import Type
-import Id
+import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Name
 import GHC.Data.FastString

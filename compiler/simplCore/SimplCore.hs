@@ -18,7 +18,7 @@ import Rules            ( mkRuleBase, unionRuleBase,
                           extendRuleBaseList, ruleCheckProgram, addRuleInfo, )
 import PprCore          ( pprCoreBindings, pprCoreExpr )
 import OccurAnal        ( occurAnalysePgm, occurAnalyseExpr )
-import IdInfo
+import GHC.Data.Id.Info
 import CoreStats        ( coreBindsSize, coreBindsStats, exprSize )
 import CoreUtils        ( mkTicks, stripTicksTop )
 import CoreLint         ( endPass, lintPassResult, dumpPassResult,
@@ -32,7 +32,7 @@ import qualified GHC.Utils.Error as Err
 import FloatIn          ( floatInwards )
 import FloatOut         ( floatOutwards )
 import FamInstEnv
-import Id
+import GHC.Data.Id
 import GHC.Utils.Error         ( withTiming )
 import BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )
 import GHC.Data.Var.Set

@@ -61,8 +61,8 @@ module CoreFVs (
 #include "HsVersions.h"
 
 import CoreSyn
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Data.Name.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique (Uniquable (..))

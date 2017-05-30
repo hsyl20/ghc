@@ -21,7 +21,7 @@ import GHC.Packages
 import TcRnExports
 import GHC.Config.Flags
 import HsSyn
-import RdrName
+import GHC.Data.RdrName
 import TcRnMonad
 import TcTyDecls
 import InstEnv
@@ -34,7 +34,7 @@ import TcSimplify
 import LoadIface
 import RnNames
 import GHC.Utils.Error
-import Id
+import GHC.Data.Id
 import Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment

@@ -12,7 +12,7 @@ module HsImpExp where
 
 import Module           ( ModuleName )
 import HsDoc            ( HsDocString )
-import OccName          ( HasOccName(..), isTcOcc, isSymOcc )
+import GHC.Data.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
 import BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )
 import FieldLabel       ( FieldLbl(..) )
 

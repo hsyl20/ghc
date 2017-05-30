@@ -9,7 +9,7 @@ module BlockId
   ) where
 
 import CLabel
-import IdInfo
+import GHC.Data.Id.Info
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Data.Unique

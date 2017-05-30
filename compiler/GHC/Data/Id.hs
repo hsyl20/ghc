@@ -24,7 +24,7 @@
 --
 -- * 'Var.Var': see "Var#name_types"
 
-module Id (
+module GHC.Data.Id (
         -- * The main types
         Var, Id, isId,
 
@@ -119,7 +119,7 @@ module Id (
 import GHC.Config.Flags
 import CoreSyn ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
 
-import IdInfo
+import GHC.Data.Id.Info
 import BasicTypes
 
 -- Imported and re-exported

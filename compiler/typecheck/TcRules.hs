@@ -21,7 +21,7 @@ import TcEnv
 import TcUnify( buildImplicationFor )
 import TcEvidence( mkTcCoVarCo )
 import Type
-import Id
+import GHC.Data.Id
 import GHC.Data.Var( EvVar )
 import GHC.Data.Name
 import BasicTypes       ( RuleName )

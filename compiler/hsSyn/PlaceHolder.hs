@@ -10,7 +10,7 @@ import Type       ( Type )
 import GHC.Utils.Outputable
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import RdrName
+import GHC.Data.RdrName
 import GHC.Data.Var
 import Coercion
 import ConLike (ConLike)

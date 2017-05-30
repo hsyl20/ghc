@@ -36,7 +36,7 @@ import CmmInfo
 import CoreSyn
 import DataCon
 import ForeignCall
-import Id
+import GHC.Data.Id
 import PrimOp
 import TyCon
 import Type             ( isUnliftedType )

@@ -52,7 +52,7 @@ import GHC.Program.Main
         -- These imports are the reason that TcSplice
         -- is very high up the module hierarchy
 import RnSplice( traceSplice, SpliceInfo(..) )
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import Convert
 import RnExpr
@@ -76,7 +76,7 @@ import Inst
 import GHC.Data.Name.Environment
 import PrelNames
 import TysWiredIn
-import OccName
+import GHC.Data.OccName
 import GHC.Config.Hooks
 import GHC.Data.Var
 import Module
@@ -88,8 +88,8 @@ import PatSyn
 import ConLike
 import DataCon
 import TcEvidence( TcEvBinds(..) )
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import GHC.Desugar.Expression
 import GHC.Desugar.Monad
 import GHC.Serialized

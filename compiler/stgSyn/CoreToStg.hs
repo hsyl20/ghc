@@ -24,14 +24,14 @@ import Type
 import RepType
 import TyCon
 import MkId             ( coercionTokenId )
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import DataCon
 import CostCentre       ( noCCS )
 import GHC.Data.Var.Environment
 import Module
 import GHC.Data.Name             ( isExternalName, nameOccName )
-import OccName          ( occNameFS )
+import GHC.Data.OccName          ( occNameFS )
 import BasicTypes       ( Arity )
 import TysWiredIn       ( unboxedUnitDataCon )
 import Literal

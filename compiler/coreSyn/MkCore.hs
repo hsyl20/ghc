@@ -51,7 +51,7 @@ module MkCore (
 
 #include "HsVersions.h"
 
-import Id
+import GHC.Data.Id
 import GHC.Data.Var      ( EvVar, setTyVarUnique )
 
 import CoreSyn
@@ -68,7 +68,7 @@ import Type
 import Coercion         ( isCoVar )
 import TysPrim
 import DataCon          ( DataCon, dataConWorkId )
-import IdInfo           ( vanillaIdInfo, setStrictnessInfo,
+import GHC.Data.Id.Info           ( vanillaIdInfo, setStrictnessInfo,
                           setArityInfo )
 import Demand
 import GHC.Data.Name      hiding ( varName )

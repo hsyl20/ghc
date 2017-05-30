@@ -36,7 +36,7 @@ import Coercion ( pprCoAxiom )
 import GHC.Config.Flags
 import FamInst
 import FamInstEnv
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

@@ -14,7 +14,7 @@ module ByteCodeTypes
   ) where
 
 import GHC.Data.FastString
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Utils.Outputable

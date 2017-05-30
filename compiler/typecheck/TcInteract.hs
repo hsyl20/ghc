@@ -26,7 +26,7 @@ import TcMType (newMetaTyVars)
 import GHC.Data.Var
 import TcType
 import GHC.Data.Name
-import RdrName ( lookupGRE_FieldLabel )
+import GHC.Data.RdrName ( lookupGRE_FieldLabel )
 import PrelNames ( knownNatClassName, knownSymbolClassName,
                    typeableClassName, coercibleTyConKey,
                    hasFieldClassName,
@@ -34,7 +34,7 @@ import PrelNames ( knownNatClassName, knownSymbolClassName,
 import TysWiredIn ( typeNatKind, typeSymbolKind, heqDataCon,
                     coercibleDataCon, constraintKindTyCon )
 import TysPrim    ( eqPrimTyCon, eqReprPrimTyCon )
-import Id( idType, isNaughtyRecordSelector )
+import GHC.Data.Id( idType, isNaughtyRecordSelector )
 import CoAxiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import Class
 import TyCon

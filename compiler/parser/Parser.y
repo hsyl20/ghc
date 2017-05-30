@@ -52,8 +52,8 @@ import GHC.Data.Maybe           ( orElse )
 import GHC.Utils.Outputable
 
 -- compiler/basicTypes
-import RdrName
-import OccName          ( varName, dataName, tcClsName, tvName, startsWithUnderscore )
+import GHC.Data.RdrName
+import GHC.Data.OccName          ( varName, dataName, tcClsName, tvName, startsWithUnderscore )
 import DataCon          ( DataCon, dataConName )
 import SrcLoc
 import Module

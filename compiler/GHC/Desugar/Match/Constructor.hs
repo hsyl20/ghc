@@ -26,7 +26,7 @@ import GHC.Desugar.Monad
 import GHC.Desugar.Utils
 import MkCore   ( mkCoreLets )
 import GHC.Utils
-import Id
+import GHC.Data.Id
 import GHC.Data.Name.Environment
 import FieldLabel ( flSelector )
 import SrcLoc

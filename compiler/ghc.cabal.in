@@ -179,8 +179,8 @@ Library
         FieldLabel
         GHC.Monad
         GHC.Config.Hooks
-        Id
-        IdInfo
+        GHC.Data.Id
+        GHC.Data.Id.Info
         Lexeme
         Literal
         Llvm
@@ -200,8 +200,8 @@ Library
        GHC.Data.Name
         GHC.Data.Name.Environment
         GHC.Data.Name.Set
-        OccName
-        RdrName
+        GHC.Data.OccName
+        GHC.Data.RdrName
         GHC.Data.Name.Cache
         SrcLoc
         GHC.Data.Unique.Supply

@@ -11,7 +11,7 @@ Haskell. [WDP 94/11])
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module IdInfo (
+module GHC.Data.Id.Info (
         -- * The IdDetails type
         IdDetails(..), pprIdDetails, coVarDetails, isCoVarDetails,
         JoinArity, isJoinIdDetails_maybe,

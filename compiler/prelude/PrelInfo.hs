@@ -55,7 +55,7 @@ import PrelRules
 import Avail
 import PrimOp
 import DataCon
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import MkId

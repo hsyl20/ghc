@@ -26,7 +26,7 @@ import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Config.Flags( DynFlags )
 import GHC.Data.Name.Set
-import RdrName
+import GHC.Data.RdrName
 
 import GHC.Data.Pair
 import GHC.Utils

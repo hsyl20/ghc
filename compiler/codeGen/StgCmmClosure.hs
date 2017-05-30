@@ -73,8 +73,8 @@ import PprCmmExpr()
 
 import BlockId
 import CLabel
-import Id
-import IdInfo
+import GHC.Data.Id
+import GHC.Data.Id.Info
 import DataCon
 import GHC.Data.Name
 import Type

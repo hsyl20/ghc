@@ -29,7 +29,7 @@ import GHC.Config.Flags
 import Module
 import GHC.Utils.Outputable
 import GHC.Utils
-import RdrName
+import GHC.Data.RdrName
 import DataCon ( dataConName )
 import GHC.Data.Maybe
 import Type

@@ -31,10 +31,10 @@ import SrcLoc           ( noSrcSpan )
 import GHC.Finder           ( findPluginModule, cannotFindModule )
 import TcRnMonad        ( initTcInteractive, initIfaceTcRn )
 import LoadIface        ( loadPluginInterface )
-import RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
+import GHC.Data.RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
                         , ImpItemSpec(..), mkGlobalRdrEnv, lookupGRE_RdrName
                         , gre_name, mkRdrQual )
-import OccName          ( OccName, mkVarOcc )
+import GHC.Data.OccName          ( OccName, mkVarOcc )
 import RnNames          ( gresFromAvails )
 import GHC.Config.Flags
 import GHC.Plugins.Types          ( Plugin, FrontendPlugin, CommandLineOption )
@@ -45,7 +45,7 @@ import GHCi.RemoteTypes ( HValue )
 import Type             ( Type, eqType, mkTyConTy, pprTyThingCategory )
 import TyCon            ( TyCon )
 import GHC.Data.Name             ( Name, nameModule_maybe )
-import Id               ( idType )
+import GHC.Data.Id               ( idType )
 import Module           ( Module, ModuleName )
 import GHC.Utils.Panic
 import GHC.Data.FastString

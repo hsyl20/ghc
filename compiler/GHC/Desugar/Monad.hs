@@ -63,14 +63,14 @@ import TcMType ( checkForLevPolyX, formatLevPolyErr )
 import LoadIface
 import GHC.Finder
 import PrelNames
-import RdrName
+import GHC.Data.RdrName
 import GHC.Types
 import GHC.Data.Bag
 import DataCon
 import ConLike
 import TyCon
 import GHC.Desugar.Match.Expr
-import Id
+import GHC.Data.Id
 import Module
 import GHC.Utils.Outputable
 import SrcLoc

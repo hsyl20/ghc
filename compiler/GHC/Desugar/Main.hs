@@ -22,7 +22,7 @@ import HsSyn
 import TcRnTypes
 import TcRnMonad  ( finalSafeMode, fixSafeInstances )
 import TcRnDriver ( runTcInteractive )
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import Type
 import InstEnv

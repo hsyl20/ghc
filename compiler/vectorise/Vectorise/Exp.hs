@@ -36,7 +36,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Name.Set
-import Id
+import GHC.Data.Id
 import BasicTypes( isStrongLoopBreaker )
 import Literal
 import TysPrim

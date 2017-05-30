@@ -83,7 +83,7 @@ module GHC.Program.Main
     ) where
 
 import Data.Data hiding (Fixity, TyCon)
-import Id
+import GHC.Data.Id
 import GHCi             ( addSptEntry )
 import GHCi.RemoteTypes ( ForeignHValue )
 import ByteCodeGen      ( byteCodeGen, coreExprToBCOs )
@@ -99,7 +99,7 @@ import Control.Concurrent
 
 import Module
 import GHC.Packages
-import RdrName
+import GHC.Data.RdrName
 import HsSyn
 import HsDumpAst
 import CoreSyn

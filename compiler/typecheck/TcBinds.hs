@@ -40,7 +40,7 @@ import TcType
 import Type( mkStrLitTy, tidyOpenType, mkTyVarBinder, splitTyConApp_maybe)
 import TysPrim
 import TysWiredIn( cTupleTyConName )
-import Id
+import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment( TidyEnv )

@@ -200,7 +200,7 @@ import BasicTypes
 import CoreSyn
 import DataCon
 import GHC.Data.FastString (FastString, mkFastString)
-import Id
+import GHC.Data.Id
 import Literal (Literal (..))
 import MkCore (aBSENT_ERROR_ID)
 import MkId (voidPrimId, voidArgId)

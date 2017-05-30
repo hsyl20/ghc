@@ -134,7 +134,7 @@ import CoreUtils (collectMakeStaticArgs)
 import DataCon
 import GHC.Config.Flags
 import GHC.Types
-import Id
+import GHC.Data.Id
 import MkCore (mkStringExprFSWith)
 import Module
 import GHC.Data.Name

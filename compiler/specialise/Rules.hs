@@ -43,8 +43,8 @@ import TcType           ( tcSplitTyConApp_maybe )
 import TysWiredIn       ( anyTypeOfKind )
 import Coercion
 import CoreTidy         ( tidyRules )
-import Id
-import IdInfo           ( RuleInfo( RuleInfo ) )
+import GHC.Data.Id
+import GHC.Data.Id.Info           ( RuleInfo( RuleInfo ) )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

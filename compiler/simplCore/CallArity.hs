@@ -13,7 +13,7 @@ import GHC.Config.Flags ( DynFlags )
 
 import BasicTypes
 import CoreSyn
-import Id
+import GHC.Data.Id
 import CoreArity ( typeArity )
 import CoreUtils ( exprIsCheap, exprIsTrivial )
 import GHC.Data.Var.UndirectedGraph

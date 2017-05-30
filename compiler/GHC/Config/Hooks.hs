@@ -35,10 +35,10 @@ import HsDecls
 import HsBinds
 import HsExpr
 import GHC.Data.Tree.OrdList
-import Id
+import GHC.Data.Id
 import TcRnTypes
 import GHC.Data.Bag
-import RdrName
+import GHC.Data.RdrName
 import CoreSyn
 import GHCi.RemoteTypes
 import SrcLoc

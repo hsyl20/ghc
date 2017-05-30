@@ -102,7 +102,7 @@ import GHC.Data.Var
 -- others:
 import TcRnMonad        -- TcType, amongst others
 import TcEvidence
-import Id
+import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Var.Set
 import TysWiredIn
