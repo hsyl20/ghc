@@ -58,7 +58,7 @@ import UniqDSet
 import NameShape
 import TcErrors
 import TcUnify
-import RnModIface
+import GHC.Interface.Renaming
 import Util
 
 import Control.Monad
@@ -466,7 +466,7 @@ inheritedSigPvpWarning =
 --    *consistently*, so that 'typecheckIfacesForMerging' can wire them
 --    up as needed.
 --
---    The details are in Note [rnIfaceNeverExported] in 'RnModIface'.
+--    The details are in Note [rnIfaceNeverExported] in 'GHC.Interface.Renaming'.
 --
 -- The root cause for all of these complications is the fact that these
 -- logically "implicit" entities are defined indirectly in an interface
@@ -855,7 +855,7 @@ mergeSignatures
     -- when we have a ClsInst, we can pull up the correct DFun to check if
     -- the types match.
     --
-    -- See also Note [rnIfaceNeverExported] in RnModIface
+    -- See also Note [rnIfaceNeverExported] in GHC.Interface.Renaming
     dfun_insts <- forM (tcg_insts tcg_env) $ \inst -> do
         n <- newDFunName (is_cls inst) (is_tys inst) (nameSrcSpan (is_dfun_name inst))
         let dfun = setVarName (is_dfun inst) n

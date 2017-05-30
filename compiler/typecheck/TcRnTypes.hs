@@ -201,7 +201,7 @@ import qualified Language.Haskell.TH as TH
 
 -- | A 'NameShape' is a substitution on 'Name's that can be used
 -- to refine the identities of a hole while we are renaming interfaces
--- (see 'RnModIface').  Specifically, a 'NameShape' for
+-- (see 'GHC.Interface.Renaming').  Specifically, a 'NameShape' for
 -- 'ns_module_name' @A@, defines a mapping from @{A.T}@
 -- (for some 'OccName' @T@) to some arbitrary other 'Name'.
 --

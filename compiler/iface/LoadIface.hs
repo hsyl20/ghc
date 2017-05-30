@@ -72,7 +72,7 @@ import FastString
 import Fingerprint
 import GHC.Config.Hooks
 import FieldLabel
-import RnModIface
+import GHC.Interface.Renaming
 import UniqDSet
 
 import Control.Monad

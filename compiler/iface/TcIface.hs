@@ -359,7 +359,7 @@ typecheckIfacesForMerging mod ifaces tc_env_var =
     ignore_prags <- goptM Opt_IgnoreInterfacePragmas
     -- Build the initial environment
     -- NB: Don't include dfuns here, because we don't want to
-    -- serialize them out.  See Note [rnIfaceNeverExported] in RnModIface
+    -- serialize them out.  See Note [rnIfaceNeverExported] in GHC.Interface.Renaming
     -- NB: But coercions are OK, because they will have the right OccName.
     let mk_decl_env decls
             = mkOccEnv [ (getOccName decl, decl)
