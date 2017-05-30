@@ -36,7 +36,7 @@ import Coercion hiding ( getCvSubstEnv )
 import TyCon
 import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
 import Util
-import Pair
+import GHC.Utils.Data.Pair
 import Outputable
 import UniqFM
 import UniqSet

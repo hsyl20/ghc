@@ -59,7 +59,7 @@ import VarEnv
 
 import Control.Monad
 import Maybes( isJust )
-import Pair (Pair(..))
+import GHC.Utils.Data.Pair (Pair(..))
 import Unique( hasKey )
 import GHC.Config.Flags
 import Util

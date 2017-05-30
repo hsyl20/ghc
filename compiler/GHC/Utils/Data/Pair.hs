@@ -5,7 +5,15 @@ Traversable instances.
 
 {-# LANGUAGE CPP #-}
 
-module Pair ( Pair(..), unPair, toPair, swap, pLiftFst, pLiftSnd ) where
+module GHC.Utils.Data.Pair
+   ( Pair(..)
+   , unPair
+   , toPair
+   , swap
+   , pLiftFst
+   , pLiftSnd
+   )
+where
 
 #include "HsVersions.h"
 

@@ -47,7 +47,7 @@ import Maybes           ( orElse, catMaybes, isJust, isNothing )
 import Demand
 import GHC.Serialized   ( deserializeWithData )
 import Util
-import Pair
+import GHC.Utils.Data.Pair
 import UniqSupply
 import Outputable
 import FastString

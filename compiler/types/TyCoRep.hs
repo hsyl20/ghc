@@ -163,7 +163,7 @@ import PrelNames
 import Outputable
 import GHC.Config.Flags
 import FastString
-import Pair
+import GHC.Utils.Data.Pair
 import UniqSupply
 import Util
 import UniqFM

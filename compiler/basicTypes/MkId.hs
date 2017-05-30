@@ -68,7 +68,7 @@ import UniqSupply
 import PrelNames
 import BasicTypes       hiding ( SuccessFlag(..) )
 import Util
-import Pair
+import GHC.Utils.Data.Pair
 import GHC.Config.Flags
 import Outputable
 import FastString

@@ -69,7 +69,7 @@ import qualified Control.Monad.Fail as MonadFail
 #endif
 import MonadUtils
 import Data.Maybe
-import Pair
+import GHC.Utils.Data.Pair
 import qualified GHC.LanguageExtensions as LangExt
 
 {-

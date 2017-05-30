@@ -231,7 +231,7 @@ import {-# SOURCE #-} Coercion
 import Util
 import Outputable
 import FastString
-import Pair
+import GHC.Utils.Data.Pair
 import ListSetOps
 import Digraph
 import Unique ( nonDetCmpUnique )

@@ -115,7 +115,7 @@ import Outputable
 import FastString
 import SrcLoc
 import GHC.Utils.Data.Bag
-import Pair
+import GHC.Utils.Data.Pair
 import UniqSet
 import qualified GHC.LanguageExtensions as LangExt
 

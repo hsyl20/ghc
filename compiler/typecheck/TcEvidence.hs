@@ -52,7 +52,7 @@ import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
 import VarEnv
 import VarSet
 import Name
-import Pair
+import GHC.Utils.Data.Pair
 
 import Util
 import GHC.Utils.Data.Bag

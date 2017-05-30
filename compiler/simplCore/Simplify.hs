@@ -48,7 +48,7 @@ import Maybes           ( isJust, fromJust, orElse, catMaybes )
 import Control.Monad
 import Outputable
 import FastString
-import Pair
+import GHC.Utils.Data.Pair
 import Util
 import GHC.Utils.Error
 import Module          ( moduleName, pprModuleName )

@@ -62,7 +62,7 @@ import BasicTypes
 import Name   ( Name )
 import GHC.Utils.Data.Bag
 import Util
-import Pair( pFst )
+import GHC.Utils.Data.Pair( pFst )
 import qualified GHC.LanguageExtensions as LangExt
 import Outputable
 import FastString

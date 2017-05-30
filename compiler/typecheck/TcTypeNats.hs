@@ -16,7 +16,7 @@ module TcTypeNats
   ) where
 
 import Type
-import Pair
+import GHC.Utils.Data.Pair
 import TcType     ( TcType, tcEqType )
 import TyCon      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                   , Injectivity(..) )

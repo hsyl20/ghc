@@ -118,7 +118,7 @@ import Util
 import BasicTypes
 import Outputable
 import Unique
-import Pair
+import GHC.Utils.Data.Pair
 import SrcLoc
 import PrelNames
 import TysPrim          ( eqPhantPrimTyCon )

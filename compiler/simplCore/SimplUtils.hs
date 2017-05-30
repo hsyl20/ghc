@@ -59,7 +59,7 @@ import BasicTypes
 import Util
 import MonadUtils
 import Outputable
-import Pair
+import GHC.Utils.Data.Pair
 import PrelRules
 import FastString       ( fsLit )
 

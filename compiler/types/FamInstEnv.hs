@@ -57,7 +57,7 @@ import TrieMap
 import Unique
 import Util
 import Var
-import Pair
+import GHC.Utils.Data.Pair
 import SrcLoc
 import FastString
 import MonadUtils

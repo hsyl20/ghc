@@ -25,7 +25,7 @@ import BasicTypes( SwapFlag(..) )
 
 import Util
 import GHC.Utils.Data.Bag
-import Pair
+import GHC.Utils.Data.Pair
 import Control.Monad
 import MonadUtils ( zipWithAndUnzipM )
 import GHC.Exts ( inline )
