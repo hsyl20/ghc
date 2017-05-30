@@ -441,7 +441,7 @@ compiler_stage2_dll0_MODULES = \
 	BasicTypes \
 	Binary \
 	BinFingerprint \
-	BooleanFormula \
+	GHC.Data.Bool.Formula \
 	BufWrite \
 	ByteCodeTypes \
 	Class \

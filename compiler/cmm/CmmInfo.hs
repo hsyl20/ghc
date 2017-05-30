@@ -39,7 +39,7 @@ import CmmUtils
 import CLabel
 import SMRep
 import Bitmap
-import Stream (Stream)
+import GHC.Data.Stream (Stream)
 import qualified Stream
 import Hoopl
 

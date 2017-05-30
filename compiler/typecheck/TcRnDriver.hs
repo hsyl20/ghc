@@ -70,7 +70,7 @@ import TcExpr
 import TcRnMonad
 import TcRnExports
 import TcEvidence
-import qualified BooleanFormula as BF
+import qualified GHC.Data.Bool.Formula as BF
 import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
 import MkIface( tyThingToIfaceDecl )
 import Coercion( pprCoAxiom )

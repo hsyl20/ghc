@@ -43,7 +43,7 @@ import BasicTypes
 import DataCon
 import Name
 import Fingerprint
-import Encoding
+import GHC.Data.Char.Encoding
 
 import GHC.Config.Flags
 import PrelInfo

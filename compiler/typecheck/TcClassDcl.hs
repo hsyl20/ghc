@@ -49,7 +49,7 @@ import GHC.Data.Maybe
 import BasicTypes
 import GHC.Data.Bag
 import GHC.Data.FastString
-import BooleanFormula
+import GHC.Data.Bool.Formula
 import Util
 
 import Control.Monad

@@ -151,7 +151,7 @@ import UniqSupply
 import GHC.Data.Bag
 import Exception
 import qualified Stream
-import Stream (Stream)
+import GHC.Data.Stream (Stream)
 
 import Util
 

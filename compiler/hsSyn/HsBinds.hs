@@ -36,7 +36,7 @@ import SrcLoc
 import Var
 import GHC.Data.Bag
 import GHC.Data.FastString
-import BooleanFormula (LBooleanFormula)
+import GHC.Data.Bool.Formula (LBooleanFormula)
 import GHC.Config.Flags
 
 import Data.Data hiding ( Fixity )

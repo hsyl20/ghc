@@ -159,7 +159,7 @@ import Data.Array
 import GHC.Data.FastString
 import Outputable
 import Util
-import BooleanFormula   ( mkAnd )
+import GHC.Data.Bool.Formula   ( mkAnd )
 
 import qualified Data.ByteString.Char8 as BS
 #if !MIN_VERSION_bytestring(0,10,8)

@@ -97,7 +97,7 @@ module GHC.Data.FastString
 
 #include "HsVersions.h"
 
-import Encoding
+import GHC.Data.Char.Encoding
 import FastFunctions
 import Panic
 import Util

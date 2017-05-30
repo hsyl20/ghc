@@ -42,7 +42,7 @@ import GHC.Utils.Error
 import Outputable
 import BasicTypes
 
-import Stream (collect, yield)
+import GHC.Data.Stream (collect, yield)
 
 import Data.Typeable
 import Data.Maybe

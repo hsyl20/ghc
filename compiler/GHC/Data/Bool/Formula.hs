@@ -7,7 +7,7 @@
 --
 -- This module is used to represent minimal complete definitions for classes.
 --
-module BooleanFormula (
+module GHC.Data.Bool.Formula (
         BooleanFormula(..), LBooleanFormula,
         mkFalse, mkTrue, mkAnd, mkOr, mkVar,
         isFalse, isTrue,

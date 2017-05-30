@@ -40,7 +40,7 @@ import Name
 import TyCon
 import Module
 import Outputable
-import Stream
+import GHC.Data.Stream
 import BasicTypes
 
 import OrdList

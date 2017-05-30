@@ -479,10 +479,10 @@ Library
         Unify
         GHC.Data.Bag
         Binary
-        BooleanFormula
+        GHC.Data.Bool.Formula
         BufWrite
         GHC.Data.Graph.Directed
-        Encoding
+        GHC.Data.Char.Encoding
         FastFunctions
         FastMutInt
         GHC.Data.FastString
@@ -507,7 +507,7 @@ Library
         PprColour
         Pretty
         State
-        Stream
+        GHC.Data.Stream
         GHC.Data.StringBuffer
         GHC.Data.Unique.DeterFiniteMap
         GHC.Data.Unique.DeterSet

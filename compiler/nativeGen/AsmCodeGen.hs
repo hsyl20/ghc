@@ -85,7 +85,7 @@ import GHC.Data.FastString
 import GHC.Data.Unique.Set
 import GHC.Utils.Error
 import Module
-import Stream (Stream)
+import GHC.Data.Stream (Stream)
 import qualified Stream
 
 -- DEBUGGING ONLY

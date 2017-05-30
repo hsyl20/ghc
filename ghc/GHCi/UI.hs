@@ -70,7 +70,7 @@ import Outputable hiding ( printForUser, printForUserPartWay )
 import BasicTypes hiding ( isTopLevel )
 import Config
 import GHC.Data.Graph.Directed
-import Encoding
+import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import Linker
 import GHC.Data.Maybe ( orElse, expectJust )

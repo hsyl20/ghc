@@ -97,7 +97,7 @@ import SrcLoc
 import BasicTypes hiding( SuccessFlag(..) )
 import Module
 import Outputable
-import Encoding
+import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import ListSetOps
 import Util

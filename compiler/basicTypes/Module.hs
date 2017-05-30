@@ -153,7 +153,7 @@ import qualified Data.ByteString.Char8 as BS.Char8
 import System.IO.Unsafe
 import Foreign.Ptr (castPtr)
 import GHC.Fingerprint
-import Encoding
+import GHC.Data.Char.Encoding
 
 import qualified Text.ParserCombinators.ReadP as Parse
 import Text.ParserCombinators.ReadP (ReadP, (<++))

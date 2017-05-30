@@ -72,7 +72,7 @@ import GHC.Data.FastString
 import BasicTypes hiding ( SuccessFlag(..) )
 import ListSetOps
 import GHC.Fingerprint
-import qualified BooleanFormula as BF
+import qualified GHC.Data.Bool.Formula as BF
 
 import Data.List
 import Control.Monad

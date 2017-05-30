@@ -5,7 +5,7 @@
 -- Monadic streams
 --
 -- -----------------------------------------------------------------------------
-module Stream (
+module GHC.Data.Stream (
     Stream(..), yield, liftIO,
     collect, fromList,
     Stream.map, Stream.mapM, Stream.mapAccumL

@@ -61,7 +61,7 @@ import NameSet
 import Outputable
 import SrcLoc
 import Util
-import BooleanFormula ( isUnsatisfied, pprBooleanFormulaNice )
+import GHC.Data.Bool.Formula ( isUnsatisfied, pprBooleanFormulaNice )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad
