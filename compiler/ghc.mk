@@ -542,7 +542,7 @@ compiler_stage2_dll0_MODULES = \
 	RdrName \
 	Rules \
 	SrcLoc \
-	StringBuffer \
+	GHC.Data.StringBuffer \
 	GHC.Utils.SysTools.Terminal \
 	TcEvidence \
 	TcRnTypes \

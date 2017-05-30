@@ -188,7 +188,7 @@ import SrcLoc
 import Unique
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.FastString
-import StringBuffer     ( StringBuffer )
+import GHC.Data.StringBuffer     ( StringBuffer )
 import Fingerprint
 import MonadUtils
 import GHC.Data.Bag

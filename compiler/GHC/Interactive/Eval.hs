@@ -88,7 +88,7 @@ import Data.Dynamic
 import Data.Either
 import qualified Data.IntMap as IntMap
 import Data.List (find,intercalate)
-import StringBuffer (stringToStringBuffer)
+import GHC.Data.StringBuffer (stringToStringBuffer)
 import Control.Monad
 import GHC.Exts
 import Data.Array

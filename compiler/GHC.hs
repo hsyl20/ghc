@@ -324,7 +324,7 @@ import GHC.Data.Bag              ( listToBag, unitBag )
 import GHC.Utils.Error
 import MonadUtils
 import Util
-import StringBuffer
+import GHC.Data.StringBuffer
 import Outputable
 import BasicTypes
 import Maybes           ( expectJust )

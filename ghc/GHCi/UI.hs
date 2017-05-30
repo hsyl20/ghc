@@ -63,7 +63,7 @@ import RdrName ( RdrName, getGRE_NameQualifier_maybes, getRdrName )
 import SrcLoc
 import qualified Lexer
 
-import StringBuffer
+import GHC.Data.StringBuffer
 import Outputable hiding ( printForUser, printForUserPartWay )
 
 -- Other random utilities

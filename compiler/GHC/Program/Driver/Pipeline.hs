@@ -51,7 +51,7 @@ import GHC.Config.Flags
 import Config
 import Panic
 import Util
-import StringBuffer     ( hGetStringBuffer )
+import GHC.Data.StringBuffer     ( hGetStringBuffer )
 import BasicTypes       ( SuccessFlag(..) )
 import Maybes           ( expectJust )
 import SrcLoc

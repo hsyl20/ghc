@@ -103,7 +103,7 @@ import RdrName
 import HsSyn
 import HsDumpAst
 import CoreSyn
-import StringBuffer
+import GHC.Data.StringBuffer
 import Parser
 import Lexer
 import SrcLoc

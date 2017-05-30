@@ -30,7 +30,7 @@ import GHC.Data.FastString
 import HsSyn
 import Module
 import PrelNames
-import StringBuffer
+import GHC.Data.StringBuffer
 import SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error

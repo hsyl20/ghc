@@ -64,7 +64,7 @@ import qualified PprColour as Col
 import SrcLoc
 import GHC.Config.Flags
 import GHC.Data.FastString (unpackFS)
-import StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
+import GHC.Data.StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
 import Json
 
 import System.Directory

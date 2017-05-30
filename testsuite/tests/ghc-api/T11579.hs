@@ -2,7 +2,7 @@ import System.Environment
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC
-import StringBuffer
+import GHC.Data.StringBuffer
 import Lexer
 import SrcLoc
 

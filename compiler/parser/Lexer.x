@@ -102,7 +102,7 @@ import qualified Data.Map as Map
 -- compiler/utils
 import GHC.Data.Bag
 import Outputable
-import StringBuffer
+import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import GHC.Data.Unique.FiniteMap
 import Util             ( readRational )

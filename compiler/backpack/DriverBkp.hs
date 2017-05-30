@@ -31,7 +31,7 @@ import TcRnMonad
 import TcRnDriver
 import Module
 import GHC.Types
-import StringBuffer
+import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import GHC.Utils.Error
 import SrcLoc

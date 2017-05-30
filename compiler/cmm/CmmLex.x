@@ -28,7 +28,7 @@ import Lexer
 import CmmMonad
 import SrcLoc
 import GHC.Data.Unique.FiniteMap
-import StringBuffer
+import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import Ctype
 import Util

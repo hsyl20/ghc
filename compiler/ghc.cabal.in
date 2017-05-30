@@ -508,7 +508,7 @@ Library
         Pretty
         State
         Stream
-        StringBuffer
+        GHC.Data.StringBuffer
         GHC.Data.Unique.DeterFiniteMap
         GHC.Data.Unique.DeterSet
         GHC.Data.Unique.FiniteMap
