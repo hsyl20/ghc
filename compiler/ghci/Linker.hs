@@ -34,7 +34,7 @@ import GHC.Types
 import Name
 import NameEnv
 import Module
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Config.Flags
 import BasicTypes
 import GHC.Utils.Outputable

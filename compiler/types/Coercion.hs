@@ -122,7 +122,7 @@ import GHC.Data.Pair
 import SrcLoc
 import PrelNames
 import TysPrim          ( eqPhantPrimTyCon )
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap
 

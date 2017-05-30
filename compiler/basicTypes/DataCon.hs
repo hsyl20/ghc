@@ -73,7 +73,7 @@ import Name
 import PrelNames
 import Var
 import GHC.Utils.Outputable
-import ListSetOps
+import GHC.Data.List.SetOps
 import Util
 import BasicTypes
 import GHC.Data.FastString

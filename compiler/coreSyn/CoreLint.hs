@@ -50,7 +50,7 @@ import TyCon
 import CoAxiom
 import BasicTypes
 import GHC.Utils.Error as Err
-import ListSetOps
+import GHC.Data.List.SetOps
 import PrelNames
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString

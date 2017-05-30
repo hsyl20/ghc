@@ -24,7 +24,7 @@ import VarEnv
 import GHC.Utils.Outputable
 import FamInstEnv ( flattenTys )
 import GHC.Data.Pair
-import ListSetOps ( getNth )
+import GHC.Data.List.SetOps ( getNth )
 import Util
 import Unify
 import InstEnv

@@ -59,7 +59,7 @@ import NameSet
 import RdrName
 import BasicTypes
 import Util
-import ListSetOps          ( removeDups )
+import GHC.Data.List.SetOps          ( removeDups )
 import GHC.Utils.Outputable
 import SrcLoc
 import Literal             ( inCharRange )

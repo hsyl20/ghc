@@ -39,7 +39,7 @@ import SrcLoc
 import GHC.Utils.Outputable
 import Util
 import BasicTypes       ( TopLevelFlag(..) )
-import ListSetOps       ( removeDups )
+import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Control.Monad

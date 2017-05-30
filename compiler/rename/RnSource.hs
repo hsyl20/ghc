@@ -53,7 +53,7 @@ import SrcLoc
 import GHC.Config.Flags
 import Util             ( debugIsOn, lengthExceeds, partitionWith )
 import GHC.Types         ( HscEnv, hsc_dflags )
-import ListSetOps       ( findDupsEq, removeDups, equivClasses )
+import GHC.Data.List.SetOps       ( findDupsEq, removeDups, equivClasses )
 import GHC.Data.Graph.Directed          ( SCC, flattenSCC, flattenSCCs, Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq )
 import GHC.Data.Unique.Set

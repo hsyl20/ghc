@@ -23,7 +23,7 @@ import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , WarnReason ( Reason )
                      , DynFlags( solverIterations ) )
 import Inst
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import Name
 import GHC.Utils.Outputable

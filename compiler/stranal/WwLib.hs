@@ -40,7 +40,7 @@ import Util
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ListSetOps
+import GHC.Data.List.SetOps
 
 {-
 ************************************************************************

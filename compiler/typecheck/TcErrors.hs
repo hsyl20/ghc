@@ -51,7 +51,7 @@ import GHC.Data.FastString
 import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Config.Flags
-import ListSetOps       ( equivClasses )
+import GHC.Data.List.SetOps       ( equivClasses )
 import GHC.Data.Maybe
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Data.Var.Free ( fvVarList, unionFV )

@@ -99,7 +99,7 @@ import Module
 import GHC.Utils.Outputable
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
-import ListSetOps
+import GHC.Data.List.SetOps
 import Util
 import GHC.Data.Maybe( MaybeErr(..) )
 import qualified GHC.LanguageExtensions as LangExt

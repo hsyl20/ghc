@@ -32,7 +32,7 @@ import PrelNames
 import SrcLoc
 import GHC.Utils.Outputable
 import TcType
-import ListSetOps( getNth )
+import GHC.Data.List.SetOps( getNth )
 import Util
 
 {-

@@ -72,7 +72,7 @@ import GHC.Data.Maybe
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Control.Monad
-import ListSetOps       ( minusList )
+import GHC.Data.List.SetOps       ( minusList )
 import qualified GHC.LanguageExtensions as LangExt
 import RnUnbound
 import RnUtils

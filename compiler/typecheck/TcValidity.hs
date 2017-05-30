@@ -53,7 +53,7 @@ import Var         ( TyVarBndr(..), mkTyVar )
 import GHC.Utils.Error
 import GHC.Config.Flags
 import Util
-import ListSetOps
+import GHC.Data.List.SetOps
 import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BasicTypes

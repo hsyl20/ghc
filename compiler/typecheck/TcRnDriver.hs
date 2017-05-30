@@ -109,7 +109,7 @@ import Avail
 import TyCon
 import SrcLoc
 import GHC.Types
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
 import ConLike
 import DataCon

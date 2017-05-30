@@ -31,7 +31,7 @@ import NameSet
 
 import FieldLabel
 import GHC.Utils.Binary
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
 import Util
 

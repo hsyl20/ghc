@@ -48,7 +48,7 @@ import Util
 import GHC.Utils.Outputable as Outputable
 import qualified GHC.LanguageExtensions as LangExt
 import Control.Arrow  ( second )
-import ListSetOps ( getNth )
+import GHC.Data.List.SetOps ( getNth )
 
 {-
 ************************************************************************

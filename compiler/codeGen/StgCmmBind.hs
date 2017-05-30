@@ -44,7 +44,7 @@ import Id
 import IdInfo
 import Name
 import Module
-import ListSetOps
+import GHC.Data.List.SetOps
 import Util
 import BasicTypes
 import GHC.Utils.Outputable

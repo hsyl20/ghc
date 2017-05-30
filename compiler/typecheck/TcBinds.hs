@@ -50,7 +50,7 @@ import NameSet
 import NameEnv
 import SrcLoc
 import GHC.Data.Bag
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Utils.Error
 import GHC.Data.Graph.Directed
 import GHC.Data.Maybe

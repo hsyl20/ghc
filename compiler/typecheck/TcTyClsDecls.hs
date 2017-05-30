@@ -61,7 +61,7 @@ import GHC.Data.Maybe
 import Unify
 import Util
 import SrcLoc
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Config.Flags
 import Unique
 import BasicTypes

@@ -509,7 +509,7 @@ compiler_stage2_dll0_MODULES = \
 	Kind \
 	KnownUniques \
 	Lexeme \
-	ListSetOps \
+	GHC.Data.List.SetOps \
 	Literal \
 	GHC.Data.Maybe \
 	MkCore \

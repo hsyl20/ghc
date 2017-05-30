@@ -50,7 +50,7 @@ import Util
 import VarSet
 
 import qualified GHC.LanguageExtensions as LangExt
-import ListSetOps (assocMaybe)
+import GHC.Data.List.SetOps (assocMaybe)
 
 data DerivSpec theta = DS { ds_loc       :: SrcSpan
                           , ds_name      :: Name         -- DFun name

@@ -70,7 +70,7 @@ import GHC.Config.Flags
 import Util
 import GHC.Data.FastString
 import BasicTypes hiding ( SuccessFlag(..) )
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Fingerprint
 import qualified GHC.Data.Bool.Formula as BF
 

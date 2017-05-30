@@ -28,7 +28,7 @@ import Id
 import Name
 import Module
 import UniqSupply       ( UniqSupply )
-import ListSetOps       ( removeDups )
+import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import CoreSyn          ( Tickish(..) )

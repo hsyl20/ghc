@@ -64,7 +64,7 @@ import GHC.Config.Flags
 import SrcLoc
 import Util
 import VarEnv  ( emptyTidyEnv )
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString

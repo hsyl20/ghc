@@ -496,7 +496,7 @@ Library
         GHC.Data.Graph.PrettyPrint
         GHC.Utils.Monad.IOEnv
         GHC.Utils.Json
-        ListSetOps
+        GHC.Data.List.SetOps
         ListT
         GHC.Data.Maybe
         GHC.Utils.Monad

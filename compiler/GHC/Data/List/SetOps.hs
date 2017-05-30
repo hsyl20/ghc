@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module ListSetOps (
+module GHC.Data.List.SetOps (
         unionLists, minusList,
 
         -- Association lists

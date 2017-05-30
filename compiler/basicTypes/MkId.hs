@@ -72,7 +72,7 @@ import GHC.Data.Pair
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import ListSetOps
+import GHC.Data.List.SetOps
 import qualified GHC.LanguageExtensions as LangExt
 
 import Data.Maybe       ( maybeToList )

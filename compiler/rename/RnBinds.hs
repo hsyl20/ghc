@@ -45,7 +45,7 @@ import NameEnv
 import NameSet
 import RdrName          ( RdrName, rdrNameOcc )
 import SrcLoc
-import ListSetOps       ( findDupsEq )
+import GHC.Data.List.SetOps       ( findDupsEq )
 import BasicTypes       ( RecFlag(..), LexicalFixity(..) )
 import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Data.Bag

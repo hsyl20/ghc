@@ -232,7 +232,7 @@ import Util
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair
-import ListSetOps
+import GHC.Data.List.SetOps
 import GHC.Data.Graph.Directed
 import Unique ( nonDetCmpUnique )
 import SrcLoc  ( SrcSpan )

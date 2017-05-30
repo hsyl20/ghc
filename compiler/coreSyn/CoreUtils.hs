@@ -81,7 +81,7 @@ import TysPrim
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Maybe
-import ListSetOps       ( minusList )
+import GHC.Data.List.SetOps       ( minusList )
 import BasicTypes       ( Arity )
 import Platform
 import Util

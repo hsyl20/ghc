@@ -47,7 +47,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Bag
 import VarSet
 import SrcLoc
-import ListSetOps( assocMaybe )
+import GHC.Data.List.SetOps( assocMaybe )
 import Data.List
 import Util
 import GHC.Data.Unique.DeterFiniteMap
