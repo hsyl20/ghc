@@ -62,7 +62,7 @@ import GHC.Config.Flags
 import BasicTypes       ( CompilerPhase(..) )
 import GHC.Types.Annotations
 
-import IOEnv hiding     ( liftIO, failM, failWithM )
+import GHC.Utils.Monad.IOEnv hiding     ( liftIO, failM, failWithM )
 import qualified IOEnv  ( liftIO )
 import TcEnv            ( lookupGlobal )
 import Var

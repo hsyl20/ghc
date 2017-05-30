@@ -496,7 +496,7 @@ compiler_stage2_dll0_MODULES = \
 	HsTypes \
 	HsUtils \
 	GHC.Types \
-	IOEnv \
+	GHC.Utils.Monad.IOEnv \
 	NameCache \
 	Id \
 	IdInfo \

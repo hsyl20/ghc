@@ -494,7 +494,7 @@ Library
         GHC.Data.Graph.Color
         GHC.Data.Graph.Operations
         GHC.Data.Graph.PrettyPrint
-        IOEnv
+        GHC.Utils.Monad.IOEnv
         GHC.Utils.Json
         ListSetOps
         ListT

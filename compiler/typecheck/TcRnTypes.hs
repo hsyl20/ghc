@@ -156,7 +156,7 @@ import GHC.Types.Annotations
 import InstEnv
 import FamInstEnv
 import GHC.Desugar.Match.Expr
-import IOEnv
+import GHC.Utils.Monad.IOEnv
 import RdrName
 import Name
 import NameEnv

@@ -51,7 +51,7 @@ import Data.Maybe    (isJust, fromMaybe)
 import Control.Monad (forM, when, forM_)
 import Coercion
 import TcEvidence
-import IOEnv
+import GHC.Utils.Monad.IOEnv
 
 import ListT (ListT(..), fold, select)
 

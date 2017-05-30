@@ -135,7 +135,7 @@ module TcRnMonad(
 #include "HsVersions.h"
 
 import TcRnTypes        -- Re-export all
-import IOEnv            -- Re-export all
+import GHC.Utils.Monad.IOEnv            -- Re-export all
 import TcEvidence
 
 import HsSyn hiding (LIE)

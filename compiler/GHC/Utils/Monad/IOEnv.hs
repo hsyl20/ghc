@@ -10,7 +10,7 @@
 -- for updating state.
 --
 
-module IOEnv (
+module GHC.Utils.Monad.IOEnv (
         IOEnv, -- Instance of Monad
 
         -- Monad utilities
