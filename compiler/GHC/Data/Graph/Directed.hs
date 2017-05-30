@@ -2,7 +2,7 @@
 
 {-# LANGUAGE CPP, ScopedTypeVariables, ViewPatterns #-}
 
-module Digraph(
+module GHC.Data.Graph.Directed(
         Graph, graphFromEdgedVerticesOrd, graphFromEdgedVerticesUniq,
 
         SCC(..), Node(..), flattenSCC, flattenSCCs,
@@ -16,7 +16,7 @@ module Digraph(
 
         findCycle,
 
-        -- For backwards compatibility with the simpler version of Digraph
+        -- For backwards compatibility with the simpler version of GHC.Data.Graph.Directed
         stronglyConnCompFromEdgedVerticesOrd,
         stronglyConnCompFromEdgedVerticesOrdR,
         stronglyConnCompFromEdgedVerticesUniq,
@@ -77,7 +77,7 @@ Note [Nodes, keys, vertices]
  * Each 'node' has a unique (client) 'key', but the latter
         is in Ord and has fast comparison
 
- * Digraph then maps each 'key' to a Vertex (Int) which is
+ * GHC.Data.Graph.Directed then maps each 'key' to a Vertex (Int) which is
         arranged densely in 0.n
 -}
 
@@ -280,7 +280,7 @@ We use the order of nodes to normalize the order of edges.
 
 stronglyConnCompG :: Graph node -> [SCC node]
 stronglyConnCompG graph = decodeSccs graph forest
-  where forest = {-# SCC "Digraph.scc" #-} scc (gr_int_graph graph)
+  where forest = {-# SCC "GHC.Data.Graph.Directed.scc" #-} scc (gr_int_graph graph)
 
 decodeSccs :: Graph node -> Forest Vertex -> [SCC node]
 decodeSccs Graph { gr_int_graph = graph, gr_vertex_to_node = vertex_fn } forest
@@ -345,7 +345,7 @@ stronglyConnCompFromEdgedVerticesUniqR =
 
 topologicalSortG :: Graph node -> [node]
 topologicalSortG graph = map (gr_vertex_to_node graph) result
-  where result = {-# SCC "Digraph.topSort" #-} topSort (gr_int_graph graph)
+  where result = {-# SCC "GHC.Data.Graph.Directed.topSort" #-} topSort (gr_int_graph graph)
 
 dfsTopSortG :: Graph node -> [[node]]
 dfsTopSortG graph =
@@ -356,11 +356,11 @@ dfsTopSortG graph =
 reachableG :: Graph node -> node -> [node]
 reachableG graph from = map (gr_vertex_to_node graph) result
   where from_vertex = expectJust "reachableG" (gr_node_to_vertex graph from)
-        result = {-# SCC "Digraph.reachable" #-} reachable (gr_int_graph graph) [from_vertex]
+        result = {-# SCC "GHC.Data.Graph.Directed.reachable" #-} reachable (gr_int_graph graph) [from_vertex]
 
 reachablesG :: Graph node -> [node] -> [node]
 reachablesG graph froms = map (gr_vertex_to_node graph) result
-  where result = {-# SCC "Digraph.reachable" #-}
+  where result = {-# SCC "GHC.Data.Graph.Directed.reachable" #-}
                  reachable (gr_int_graph graph) vs
         vs = [ v | Just v <- map (gr_node_to_vertex graph) froms ]
 

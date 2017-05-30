@@ -35,7 +35,7 @@ import VarSet
 import VarEnv
 import Var
 import Demand           ( argOneShots, argsOneShots )
-import Digraph          ( SCC(..), Node(..)
+import GHC.Data.Graph.Directed          ( SCC(..), Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq
                         , stronglyConnCompFromEdgedVerticesUniqR )
 import Unique
@@ -1168,7 +1168,7 @@ type ImpRuleEdges = IdEnv IdSet     -- Mapping from FVs of imported RULE LHSs to
 noImpRuleEdges :: ImpRuleEdges
 noImpRuleEdges = emptyVarEnv
 
-type LetrecNode = Node Unique Details  -- Node comes from Digraph
+type LetrecNode = Node Unique Details  -- Node comes from GHC.Data.Graph.Directed
                                        -- The Unique key is gotten from the Id
 data Details
   = ND { nd_bndr :: Id          -- Binder
@@ -1227,7 +1227,7 @@ makeNode env imp_rule_edges bndr_set (bndr, rhs)
   = DigraphNode details (varUnique bndr) (nonDetKeysUniqSet node_fvs)
     -- It's OK to use nonDetKeysUniqSet here as stronglyConnCompFromEdgedVerticesR
     -- is still deterministic with edges in nondeterministic order as
-    -- explained in Note [Deterministic SCC] in Digraph.
+    -- explained in Note [Deterministic SCC] in GHC.Data.Graph.Directed.
   where
     details = ND { nd_bndr            = bndr
                  , nd_rhs             = rhs'
@@ -1306,7 +1306,7 @@ mkLoopBreakerNodes lvl bndr_set body_uds details_s
               -- It's OK to use nonDetKeysUniqSet here as
               -- stronglyConnCompFromEdgedVerticesR is still deterministic with edges
               -- in nondeterministic order as explained in
-              -- Note [Deterministic SCC] in Digraph.
+              -- Note [Deterministic SCC] in GHC.Data.Graph.Directed.
       where
         nd'     = nd { nd_bndr = bndr', nd_score = score }
         score   = nodeScore bndr bndr' rhs lb_deps

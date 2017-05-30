@@ -43,7 +43,7 @@ import Hoopl
 import Cmm hiding (RegSet, emptyRegSet)
 import PprCmm()
 
-import Digraph
+import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import MonadUtils
 import Outputable
@@ -703,10 +703,10 @@ sccBlocks blocks entries = map (fmap node_payload) sccs
         getOutEdges instrs = concat $ map jumpDestsOfInstr instrs
 
         -- This is truly ugly, but I don't see a good alternative.
-        -- Digraph just has the wrong API.  We want to identify nodes
-        -- by their keys (BlockId), but Digraph requires the whole
+        -- GHC.Data.Graph.Directed just has the wrong API.  We want to identify nodes
+        -- by their keys (BlockId), but GHC.Data.Graph.Directed requires the whole
         -- node: (NatBasicBlock, BlockId, [BlockId]).  This takes
-        -- advantage of the fact that Digraph only looks at the key,
+        -- advantage of the fact that GHC.Data.Graph.Directed only looks at the key,
         -- even though it asks for the whole triple.
         roots = [DigraphNode (panic "sccBlocks") b (panic "sccBlocks")
                 | b <- entries ]

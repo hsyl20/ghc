@@ -121,7 +121,7 @@ import BlockId
 import Hoopl
 import Cmm hiding (RegSet)
 
-import Digraph
+import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import Unique
 import GHC.Data.Unique.Set

@@ -49,7 +49,7 @@ import GHC.Program.Main
 
 import GHC.Data.Bag              ( listToBag )
 import BasicTypes
-import Digraph
+import GHC.Data.Graph.Directed
 import Exception        ( tryIO, gbracket, gfinally )
 import FastString
 import Maybes           ( expectJust )

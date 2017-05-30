@@ -69,7 +69,7 @@ import Outputable hiding ( printForUser, printForUserPartWay )
 -- Other random utilities
 import BasicTypes hiding ( isTopLevel )
 import Config
-import Digraph
+import GHC.Data.Graph.Directed
 import Encoding
 import FastString
 import Linker

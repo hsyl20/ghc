@@ -60,7 +60,7 @@ import TyCon
 import SMRep
 import Module
 import Literal
-import Digraph
+import GHC.Data.Graph.Directed
 import Util
 import Unique
 import UniqSupply (MonadUnique(..))

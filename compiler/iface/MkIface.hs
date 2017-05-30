@@ -93,7 +93,7 @@ import NameSet
 import Module
 import BinIface
 import GHC.Utils.Error
-import Digraph
+import GHC.Data.Graph.Directed
 import SrcLoc
 import Outputable
 import BasicTypes       hiding ( SuccessFlag(..) )
@@ -463,7 +463,7 @@ addFingerprints hsc_env mb_old_fingerprint iface0 new_decls
                    -- used to construct the edges and
                    -- stronglyConnCompFromEdgedVertices is deterministic
                    -- even with non-deterministic order of edges as
-                   -- explained in Note [Deterministic SCC] in Digraph.
+                   -- explained in Note [Deterministic SCC] in GHC.Data.Graph.Directed.
           where getParent :: OccName -> OccName
                 getParent occ = lookupOccEnv parent_map occ `orElse` occ
 

@@ -52,7 +52,7 @@ import SrcLoc
 import GHC.Data.Bag
 import ListSetOps
 import GHC.Utils.Error
-import Digraph
+import GHC.Data.Graph.Directed
 import Maybes
 import Util
 import BasicTypes
@@ -558,7 +558,7 @@ mkEdges sig_fn binds
     ]
     -- It's OK to use nonDetEltsUFM here as stronglyConnCompFromEdgedVertices
     -- is still deterministic even if the edges are in nondeterministic order
-    -- as explained in Note [Deterministic SCC] in Digraph.
+    -- as explained in Note [Deterministic SCC] in GHC.Data.Graph.Directed.
   where
     no_sig :: Name -> Bool
     no_sig n = noCompleteSig (sig_fn n)

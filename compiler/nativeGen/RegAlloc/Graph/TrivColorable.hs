@@ -11,7 +11,7 @@ where
 import RegClass
 import Reg
 
-import GraphBase
+import GHC.Data.Graph.Base
 
 import GHC.Data.Unique.Set
 import Platform

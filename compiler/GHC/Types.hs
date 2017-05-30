@@ -2597,7 +2597,7 @@ soExt platform
 -- module.
 --
 -- The graph is not necessarily stored in topologically-sorted order.  Use
--- 'GHC.topSortModuleGraph' and 'Digraph.flattenSCC' to achieve this.
+-- 'GHC.topSortModuleGraph' and 'GHC.Data.Graph.Directed.flattenSCC' to achieve this.
 type ModuleGraph = [ModSummary]
 
 emptyMG :: ModuleGraph

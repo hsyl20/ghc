@@ -18,13 +18,13 @@ import Instruction
 import RegClass
 import Reg
 
-import GraphBase
+import GHC.Data.Graph.Base
 
 import Hoopl (mapLookup)
 import Cmm
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import Digraph          (flattenSCCs)
+import GHC.Data.Graph.Directed          (flattenSCCs)
 import Outputable
 import Platform
 import State

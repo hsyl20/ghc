@@ -8,7 +8,7 @@ where
 #include "HsVersions.h"
 
 import Hoopl
-import Digraph
+import GHC.Data.Graph.Directed
 import Bitmap
 import CLabel
 import PprCmmDecl ()

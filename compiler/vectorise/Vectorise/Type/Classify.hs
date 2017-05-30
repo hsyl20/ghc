@@ -26,7 +26,7 @@ import TyCon
 import TyCoRep
 import qualified Type
 import PrelNames
-import Digraph
+import GHC.Data.Graph.Directed
 
 -- |From a list of type constructors, extract those that can be vectorised, returning them in two
 -- sets, where the first result list /must be/ vectorised and the second result list /need not be/
@@ -104,7 +104,7 @@ tyConGroups tcs = map mk_grp (stronglyConnCompFromEdgedVerticesUniq edges)
             -- It's OK to use nonDetEltsUniqSet here as
             -- stronglyConnCompFromEdgedVertices is still deterministic even
             -- if the edges are in nondeterministic order as explained in
-            -- Note [Deterministic SCC] in Digraph.
+            -- Note [Deterministic SCC] in GHC.Data.Graph.Directed.
 
     mk_grp (AcyclicSCC (tc, ds)) = ([tc], ds)
     mk_grp (CyclicSCC els)       = (tcs, unionManyUniqSets dss)

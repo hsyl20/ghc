@@ -1,13 +1,13 @@
 
 -- | Pretty printing of graphs.
 
-module GraphPpr (
+module GHC.Data.Graph.PrettyPrint (
         dumpGraph,
         dotGraph
 )
 where
 
-import GraphBase
+import GHC.Data.Graph.Base
 
 import Outputable
 import Unique

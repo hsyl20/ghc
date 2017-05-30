@@ -56,7 +56,7 @@ import GHC.Data.Pair
 
 import Util
 import GHC.Data.Bag
-import Digraph
+import GHC.Data.Graph.Directed
 import qualified Data.Data as Data
 import Outputable
 import FastString
@@ -812,7 +812,7 @@ sccEvBinds bs = stronglyConnCompFromEdgedVerticesUniq edges
                                 coVarsOfType (varType var)))
       -- It's OK to use nonDetEltsUniqSet here as stronglyConnCompFromEdgedVertices
       -- is still deterministic even if the edges are in nondeterministic order
-      -- as explained in Note [Deterministic SCC] in Digraph.
+      -- as explained in Note [Deterministic SCC] in GHC.Data.Graph.Directed.
 
 evVarsOfCallStack :: EvCallStack -> VarSet
 evVarsOfCallStack cs = case cs of

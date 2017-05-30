@@ -47,7 +47,7 @@ import RdrName          ( RdrName, rdrNameOcc )
 import SrcLoc
 import ListSetOps       ( findDupsEq )
 import BasicTypes       ( RecFlag(..), LexicalFixity(..) )
-import Digraph          ( SCC(..) )
+import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Data.Bag
 import Util
 import Outputable

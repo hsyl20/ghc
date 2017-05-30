@@ -35,7 +35,7 @@ import CoreUtils
 import CoreArity ( etaExpand )
 import CoreUnfold
 import CoreFVs
-import Digraph
+import GHC.Data.Graph.Directed
 
 import PrelNames
 import TyCon

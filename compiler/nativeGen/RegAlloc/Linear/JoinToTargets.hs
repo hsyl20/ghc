@@ -18,7 +18,7 @@ import Reg
 
 import BlockId
 import Hoopl
-import Digraph
+import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import Outputable
 import Unique

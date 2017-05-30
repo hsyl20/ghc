@@ -481,7 +481,7 @@ Library
         Binary
         BooleanFormula
         BufWrite
-        Digraph
+        GHC.Data.Graph.Directed
         Encoding
         FastFunctions
         FastMutInt
@@ -490,10 +490,10 @@ Library
         Fingerprint
         GHC.Data.FiniteMap
         FV
-        GraphBase
-        GraphColor
-        GraphOps
-        GraphPpr
+        GHC.Data.Graph.Base
+        GHC.Data.Graph.Color
+        GHC.Data.Graph.Operations
+        GHC.Data.Graph.PrettyPrint
         IOEnv
         Json
         ListSetOps

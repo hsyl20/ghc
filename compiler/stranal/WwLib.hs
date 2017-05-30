@@ -322,7 +322,7 @@ f x y = join j (z, w) = \(u, v) -> ...
         in jump j (x, y)
 
 Typically this happens with functions that are seen as computing functions,
-rather than being curried. (The real-life example was GraphOps.addConflicts.)
+rather than being curried. (The real-life example was GHC.Data.Graph.Operations.addConflicts.)
 
 When we create the wrapper, it *must* be in "eta-contracted" form so that the
 jump has the right number of arguments:

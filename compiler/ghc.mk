@@ -465,7 +465,7 @@ compiler_stage2_dll0_MODULES = \
 	CostCentre \
 	DataCon \
 	Demand \
-	Digraph \
+	GHC.Data.Graph.Directed \
 	GHC.Program.Driver.Phases \
 	GHC.Config.Flags \
 	Encoding \

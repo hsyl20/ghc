@@ -46,7 +46,7 @@ import qualified PPC.Ppr
 import RegAlloc.Liveness
 import qualified RegAlloc.Linear.Main           as Linear
 
-import qualified GraphColor                     as Color
+import qualified GHC.Data.Graph.Color                     as Color
 import qualified RegAlloc.Graph.Main            as Color
 import qualified RegAlloc.Graph.Stats           as Color
 import qualified RegAlloc.Graph.TrivColorable   as Color
@@ -77,7 +77,7 @@ import Util
 import Unique
 
 import BasicTypes       ( Alignment )
-import Digraph
+import GHC.Data.Graph.Directed
 import qualified Pretty
 import BufWrite
 import Outputable

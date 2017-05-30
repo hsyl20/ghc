@@ -233,7 +233,7 @@ import Outputable
 import FastString
 import GHC.Data.Pair
 import ListSetOps
-import Digraph
+import GHC.Data.Graph.Directed
 import Unique ( nonDetCmpUnique )
 import SrcLoc  ( SrcSpan )
 import OccName ( OccName )

@@ -9,7 +9,7 @@ import Reg
 
 import Cmm
 import GHC.Data.Bag
-import Digraph
+import GHC.Data.Graph.Directed
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import UniqSupply

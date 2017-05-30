@@ -22,7 +22,7 @@ import GHC.Types
 import GHC.Utils.SysTools         ( newTempName )
 import qualified GHC.Utils.SysTools
 import Module
-import Digraph          ( SCC(..) )
+import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Finder
 import Outputable
 import Panic

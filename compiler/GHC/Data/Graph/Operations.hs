@@ -1,7 +1,7 @@
 -- | Basic operations on graphs.
 --
 
-module GraphOps (
+module GHC.Data.Graph.Operations (
         addNode,        delNode,        getNode,       lookupNode,     modNode,
         size,
         union,
@@ -18,7 +18,7 @@ module GraphOps (
 )
 where
 
-import GraphBase
+import GHC.Data.Graph.Base
 
 import Outputable
 import Unique
@@ -385,10 +385,10 @@ coalesceNodes_merge aggressive triv graph kMin kMax nMin nMax
 
         -- sanity checks
         | nodeClass nMin /= nodeClass nMax
-        = error "GraphOps.coalesceNodes: can't coalesce nodes of different classes."
+        = error "GHC.Data.Graph.Operations.coalesceNodes: can't coalesce nodes of different classes."
 
         | not (isNothing (nodeColor nMin) && isNothing (nodeColor nMax))
-        = error "GraphOps.coalesceNodes: can't coalesce colored nodes."
+        = error "GHC.Data.Graph.Operations.coalesceNodes: can't coalesce colored nodes."
 
         ---
         | otherwise
@@ -469,7 +469,7 @@ freezeNode k
         freezeEdge k node
          = if elementOfUniqSet k (nodeCoalesce node)
                 then node { nodeCoalesce = delOneFromUniqSet (nodeCoalesce node) k }
-                else node       -- panic "GraphOps.freezeNode: edge to freeze wasn't in the coalesce set"
+                else node       -- panic "GHC.Data.Graph.Operations.freezeNode: edge to freeze wasn't in the coalesce set"
                                 -- If the edge isn't actually in the coelesce set then just ignore it.
 
         fm2     = nonDetFoldUniqSet (adjustUFM_C (freezeEdge k)) fm1
@@ -566,7 +566,7 @@ validateGraph doc isColored graph
         , nodes         <- mkUniqSet $ map nodeId $ nonDetEltsUFM $ graphMap graph
         , badEdges      <- minusUniqSet edges nodes
         , not $ isEmptyUniqSet badEdges
-        = pprPanic "GraphOps.validateGraph"
+        = pprPanic "GHC.Data.Graph.Operations.validateGraph"
                 (  text "Graph has edges that point to non-existent nodes"
                 $$ text "  bad edges: " <> pprUFM (getUniqSet badEdges) (vcat . map ppr)
                 $$ doc )
@@ -576,7 +576,7 @@ validateGraph doc isColored graph
                         $ nonDetEltsUFM $ graphMap graph
                            -- See Note [Unique Determinism and code generation]
         , not $ null badNodes
-        = pprPanic "GraphOps.validateGraph"
+        = pprPanic "GHC.Data.Graph.Operations.validateGraph"
                 (  text "Node has same color as one of it's conflicts"
                 $$ text "  bad nodes: " <> hcat (map (ppr . nodeId) badNodes)
                 $$ doc)
@@ -587,7 +587,7 @@ validateGraph doc isColored graph
         , badNodes      <- filter (\n -> isNothing $ nodeColor n)
                         $  nonDetEltsUFM $ graphMap graph
         , not $ null badNodes
-        = pprPanic "GraphOps.validateGraph"
+        = pprPanic "GHC.Data.Graph.Operations.validateGraph"
                 (  text "Supposably colored graph has uncolored nodes."
                 $$ text "  uncolored nodes: " <> hcat (map (ppr . nodeId) badNodes)
                 $$ doc )

@@ -168,7 +168,7 @@ import Data.IORef
 import Data.List ( foldl', partition )
 
 #if defined(DEBUG)
-import Digraph
+import GHC.Data.Graph.Directed
 import GHC.Data.Unique.Set
 #endif
 
@@ -2429,7 +2429,7 @@ checkForCyclicBinds ev_binds_map
             -- It's OK to use nonDetEltsUFM here as
             -- stronglyConnCompFromEdgedVertices is still deterministic even
             -- if the edges are in nondeterministic order as explained in
-            -- Note [Deterministic SCC] in Digraph.
+            -- Note [Deterministic SCC] in GHC.Data.Graph.Directed.
 #endif
 
 setEvBindsTcS :: EvBindsVar -> TcS a -> TcS a

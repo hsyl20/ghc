@@ -3,18 +3,18 @@
 --      the node keys, nodes and colors.
 --
 
-module GraphColor (
-        module GraphBase,
-        module GraphOps,
-        module GraphPpr,
+module GHC.Data.Graph.Color (
+        module GHC.Data.Graph.Base,
+        module GHC.Data.Graph.Operations,
+        module GHC.Data.Graph.PrettyPrint,
         colorGraph
 )
 
 where
 
-import GraphBase
-import GraphOps
-import GraphPpr
+import GHC.Data.Graph.Base
+import GHC.Data.Graph.Operations
+import GHC.Data.Graph.PrettyPrint
 
 import Unique
 import GHC.Data.Unique.FiniteMap
