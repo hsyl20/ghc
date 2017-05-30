@@ -17,7 +17,7 @@ module GHC.Desugar.Match.Check (
 
 #include "HsVersions.h"
 
-import TmOracle
+import GHC.Desugar.Match.TermEqOracle
 
 import BasicTypes
 import GHC.Config.Flags
@@ -1798,14 +1798,15 @@ with each other):
      we get twice as many constraints. Also note that half of them are just the
      substitution [x |-> False].
 
-2. The term oracle (`tmOracle` in deSugar/TmOracle) uses equalities of the form
-   (x ~ e) as substitutions [x |-> e]. More specifically, function
-   `extendSubstAndSolve` applies such substitutions in the residual constraints
-   and partitions them in the affected and non-affected ones, which are the new
-   worklist. Essentially, this gives quadradic behaviour on the number of the
-   residual constraints. (This would not be the case if the term oracle used
-   mutable variables but, since we use it to handle disjunctions on value set
-   abstractions (`Union` case), we chose a pure, incremental interface).
+2. The term oracle (`tmOracle` in GHC.Desugar.Match.TermEqOracle) uses
+   equalities of the form (x ~ e) as substitutions [x |-> e].
+   More specifically, function `extendSubstAndSolve` applies such substitutions
+   in the residual constraints and partitions them in the affected and
+   non-affected ones, which are the new worklist. Essentially, this gives
+   quadradic behaviour on the number of the residual constraints. (This would
+   not be the case if the term oracle used mutable variables but, since we use
+   it to handle disjunctions on value set abstractions (`Union` case), we chose
+   a pure, incremental interface).
 
 Now the problem becomes apparent (e.g. for clause 300):
   * Set U300 contains 300 substituting constraints [y_i |-> False] and 300

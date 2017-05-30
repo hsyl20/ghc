@@ -6,7 +6,7 @@ The term equality oracle. The main export of the module is function `tmOracle'.
 
 {-# LANGUAGE CPP, MultiWayIf #-}
 
-module TmOracle (
+module GHC.Desugar.Match.TermEqOracle (
 
         -- re-exported from GHC.Desugar.Match.Expr
         PmExpr(..), PmLit(..), SimpleEq, ComplexEq, PmVarEnv, falsePmExpr,

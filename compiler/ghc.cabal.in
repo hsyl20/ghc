@@ -288,7 +288,7 @@ Library
         MkCore
         PprCore
         GHC.Desugar.Match.Expr
-        TmOracle
+        GHC.Desugar.Match.TermEqOracle
         GHC.Desugar.Match.Check
         GHC.Desugar.Coverage
         GHC.Desugar.Main
