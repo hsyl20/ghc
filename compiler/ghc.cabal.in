@@ -478,7 +478,7 @@ Library
         TyCoRep
         Unify
         GHC.Data.Bag
-        Binary
+        GHC.Utils.Binary
         GHC.Data.Bool.Formula
         GHC.Utils.Handle.BufferedWrite
         GHC.Data.Graph.Directed

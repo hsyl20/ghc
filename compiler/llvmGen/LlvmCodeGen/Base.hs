@@ -53,7 +53,7 @@ import GHC.Utils.Handle.BufferedWrite   ( BufHandle )
 import GHC.Data.Unique.Set
 import UniqSupply
 import GHC.Utils.Error
-import qualified Stream
+import qualified GHC.Data.Stream as Stream
 
 import Control.Monad (ap)
 

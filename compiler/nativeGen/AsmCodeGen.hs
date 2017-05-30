@@ -86,7 +86,7 @@ import GHC.Data.Unique.Set
 import GHC.Utils.Error
 import Module
 import GHC.Data.Stream (Stream)
-import qualified Stream
+import qualified GHC.Data.Stream as Stream
 
 -- DEBUGGING ONLY
 --import OrdList

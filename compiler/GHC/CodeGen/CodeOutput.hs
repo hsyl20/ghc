@@ -25,7 +25,7 @@ import GHC.Config.Flags
 import Config
 import GHC.Utils.SysTools
 import GHC.Data.Stream           (Stream)
-import qualified Stream
+import qualified GHC.Data.Stream as Stream
 
 import GHC.Utils.Error
 import Outputable

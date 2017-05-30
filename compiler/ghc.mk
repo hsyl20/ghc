@@ -439,7 +439,7 @@ compiler_stage2_dll0_MODULES = \
 	Avail \
 	GHC.Data.Bag \
 	BasicTypes \
-	Binary \
+	GHC.Utils.Binary \
 	BinFingerprint \
 	GHC.Data.Bool.Formula \
 	GHC.Utils.Handle.BufferedWrite \
@@ -468,7 +468,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Graph.Directed \
 	GHC.Program.Driver.Phases \
 	GHC.Config.Flags \
-	Encoding \
+	GHC.Data.Char.Encoding \
 	GHC.Data.EnumSet \
 	GHC.Utils.Error \
 	Exception \

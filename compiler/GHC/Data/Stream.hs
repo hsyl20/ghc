@@ -8,7 +8,7 @@
 module GHC.Data.Stream (
     Stream(..), yield, liftIO,
     collect, fromList,
-    Stream.map, Stream.mapM, Stream.mapAccumL
+    GHC.Data.Stream.map, GHC.Data.Stream.mapM, GHC.Data.Stream.mapAccumL
   ) where
 
 import Control.Monad
@@ -79,7 +79,7 @@ map f str = Stream $ do
    r <- runStream str
    case r of
      Left x -> return (Left x)
-     Right (a, str') -> return (Right (f a, Stream.map f str'))
+     Right (a, str') -> return (Right (f a, GHC.Data.Stream.map f str'))
 
 -- | Apply a monadic operation to each element of a 'Stream', lazily
 mapM :: Monad m => (a -> m b) -> Stream m a x -> Stream m b x
@@ -89,7 +89,7 @@ mapM f str = Stream $ do
      Left x -> return (Left x)
      Right (a, str') -> do
         b <- f a
-        return (Right (b, Stream.mapM f str'))
+        return (Right (b, GHC.Data.Stream.mapM f str'))
 
 -- | analog of the list-based 'mapAccumL' on Streams.  This is a simple
 -- way to map over a Stream while carrying some state around.

@@ -29,7 +29,7 @@ import GHC.Data.FastString
 import Outputable
 import UniqSupply
 import GHC.Utils.SysTools ( figureLlvmVersion )
-import qualified Stream
+import qualified GHC.Data.Stream as Stream
 
 import Control.Monad ( when )
 import Data.Maybe ( fromMaybe, catMaybes )

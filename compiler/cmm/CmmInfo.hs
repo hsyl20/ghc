@@ -40,7 +40,7 @@ import CLabel
 import SMRep
 import Bitmap
 import GHC.Data.Stream (Stream)
-import qualified Stream
+import qualified GHC.Data.Stream as Stream
 import Hoopl
 
 import GHC.Data.Maybe

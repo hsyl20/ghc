@@ -42,7 +42,7 @@ import Panic
 import Util
 import GHC.Utils.Error
 import SrcLoc
-import qualified GHC.Data.Maybe
+import qualified GHC.Data.Maybe as Maybe
 import GHC.Data.Unique.DeterSet
 import GHC.Data.FastString
 import Platform

@@ -30,7 +30,7 @@ import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import Panic
-import GHC.Utils.Binary
+import GHC.Utils.Binary as Binary
 import SrcLoc
 import GHC.Utils.Error
 import FastMutInt
