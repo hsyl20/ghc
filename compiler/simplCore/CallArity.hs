@@ -16,7 +16,7 @@ import CoreSyn
 import Id
 import CoreArity ( typeArity )
 import CoreUtils ( exprIsCheap, exprIsTrivial )
-import UnVarGraph
+import GHC.Data.Var.UndirectedGraph
 import Demand
 
 import Control.Arrow ( first, second )

@@ -210,7 +210,7 @@ Library
         Var
         VarEnv
         VarSet
-        UnVarGraph
+        GHC.Data.Var.UndirectedGraph
         BlockId
         CLabel
         Cmm
