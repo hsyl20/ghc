@@ -66,7 +66,7 @@ import Data.Map (Map)
 import Data.IntMap (IntMap)
 import qualified Data.Map as Map
 import qualified Data.IntMap as IntMap
-import qualified FiniteMap as Map
+import qualified GHC.Utils.Data.FiniteMap as Map
 import Data.Ord
 #if MIN_VERSION_base(4,9,0)
 import GHC.Stack.CCS

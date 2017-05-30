@@ -479,7 +479,7 @@ compiler_stage2_dll0_MODULES = \
 	FastStringEnv \
 	FieldLabel \
 	Fingerprint \
-	FiniteMap \
+	GHC.Utils.Data.FiniteMap \
 	ForeignCall \
 	FV \
 	GHC.Config.Hooks \

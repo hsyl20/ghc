@@ -17,7 +17,7 @@ module GHC.Plugins(
         module Module, module Type, module TyCon, module Coercion,
         module TysWiredIn, module GHC.Types, module BasicTypes,
         module VarSet, module VarEnv, module NameSet, module NameEnv,
-        module UniqSet, module UniqFM, module FiniteMap,
+        module UniqSet, module UniqFM, module GHC.Utils.Data.FiniteMap,
         module Util, module GHC.Serialized, module SrcLoc, module Outputable,
         module UniqSupply, module Unique, module FastString
     ) where
@@ -72,7 +72,7 @@ import UniqSet
 import UniqFM
 -- Conflicts with UniqFM:
 --import LazyUniqFM
-import FiniteMap
+import GHC.Utils.Data.FiniteMap
 
 -- Common utilities
 import Util

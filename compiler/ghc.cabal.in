@@ -488,7 +488,7 @@ Library
         FastString
         FastStringEnv
         Fingerprint
-        FiniteMap
+        GHC.Utils.Data.FiniteMap
         FV
         GraphBase
         GraphColor

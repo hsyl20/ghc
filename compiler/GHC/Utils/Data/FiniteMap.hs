@@ -1,6 +1,6 @@
 -- Some extra functions to extend Data.Map
 
-module FiniteMap (
+module GHC.Utils.Data.FiniteMap (
         insertList,
         insertListWith,
         deleteList,
