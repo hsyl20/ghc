@@ -32,9 +32,9 @@ import DataCon
 import TysWiredIn
 import TysPrim
 import TcType ( isFloatingTy )
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name
 import Id
 import IdInfo

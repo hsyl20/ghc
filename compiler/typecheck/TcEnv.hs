@@ -77,8 +77,8 @@ import LoadIface
 import PrelNames
 import TysWiredIn
 import Id
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import RdrName
 import InstEnv
 import DataCon ( DataCon )
@@ -90,7 +90,7 @@ import Class
 import Name
 import NameSet
 import NameEnv
-import VarEnv
+import GHC.Data.Var.Environment
 import GHC.Types
 import GHC.Config.Flags
 import SrcLoc

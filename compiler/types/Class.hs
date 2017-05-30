@@ -26,7 +26,7 @@ module Class (
 
 import {-# SOURCE #-} TyCon     ( TyCon )
 import {-# SOURCE #-} TyCoRep   ( Type, PredType, pprType )
-import Var
+import GHC.Data.Var
 import Name
 import BasicTypes
 import GHC.Data.Unique

@@ -162,12 +162,12 @@ import Name
 import NameEnv
 import NameSet
 import Avail
-import Var
+import GHC.Data.Var
 import GHC.Data.Var.Free as FV
-import VarEnv
+import GHC.Data.Var.Environment
 import Module
 import SrcLoc
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Utils.Error
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply

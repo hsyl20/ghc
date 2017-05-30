@@ -15,7 +15,7 @@ import DataCon
 import GHC.Config.Flags
 import BasicTypes( DefMethSpec(..) )
 import SrcLoc( SrcSpan, noSrcSpan )
-import Var
+import GHC.Data.Var
 import Name
 import GHC.Utils.Outputable
 import GHC.Utils

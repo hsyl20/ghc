@@ -20,7 +20,7 @@ module FunDeps (
 #include "HsVersions.h"
 
 import Name
-import Var
+import GHC.Data.Var
 import Class
 import Type
 import TcType( transSuperClasses )
@@ -28,8 +28,8 @@ import CoAxiom( TypeEqn )
 import Unify
 import FamInst( injTyVarsOfTypes )
 import InstEnv
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import GHC.Utils.Error( Validity(..), allValid )
 import SrcLoc

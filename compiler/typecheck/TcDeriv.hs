@@ -48,9 +48,9 @@ import Name
 import NameSet
 import TyCon
 import TcType
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import PrelNames
 import SrcLoc
 import GHC.Utils

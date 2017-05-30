@@ -33,8 +33,8 @@ import TcType -- InstEnv is really part of the type checker,
 import CoreSyn ( IsOrphan(..), isOrphan, chooseOrphanAnchor )
 import Module
 import Class
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import Name
 import NameSet
 import Unify

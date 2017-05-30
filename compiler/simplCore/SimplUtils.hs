@@ -48,13 +48,13 @@ import CoreUnfold
 import Name
 import Id
 import IdInfo
-import Var
+import GHC.Data.Var
 import Demand
 import SimplMonad
 import Type     hiding( substTy )
 import Coercion hiding( substCo )
 import DataCon          ( dataConWorkId, isNullaryRepDataCon )
-import VarSet
+import GHC.Data.Var.Set
 import BasicTypes
 import GHC.Utils
 import GHC.Utils.Monad

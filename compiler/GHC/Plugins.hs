@@ -58,7 +58,7 @@ import GHC.Plugins.Types
 import RdrName
 import OccName  hiding  ( varName {- conflicts with Var.varName -} )
 import Name     hiding  ( varName {- reexport from OccName, conflicts with Var.varName -} )
-import Var
+import GHC.Data.Var
 import Id       hiding  ( lazySetIdInfo, setIdExported, setIdNotExported {- all three conflict with Var -} )
 import IdInfo
 
@@ -93,8 +93,8 @@ import GHC.Types
 import BasicTypes hiding ( Version {- conflicts with Packages.Version -} )
 
 -- Collections and maps
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import NameSet
 import NameEnv
 import GHC.Data.Unique.Set

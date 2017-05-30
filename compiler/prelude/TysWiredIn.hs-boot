@@ -1,6 +1,6 @@
 module TysWiredIn where
 
-import Var( TyVar, ArgFlag )
+import GHC.Data.Var( TyVar, ArgFlag )
 import {-# SOURCE #-} TyCon      ( TyCon )
 import {-# SOURCE #-} TyCoRep    (Type, Kind)
 

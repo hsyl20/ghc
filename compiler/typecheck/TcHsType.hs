@@ -60,8 +60,8 @@ import Inst   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
 import Type
 import Kind
 import RdrName( lookupLocalRdrOcc )
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import TyCon
 import ConLike
 import DataCon
@@ -69,7 +69,7 @@ import Class
 import Name
 import NameEnv
 import NameSet
-import VarEnv
+import GHC.Data.Var.Environment
 import TysWiredIn
 import BasicTypes
 import SrcLoc

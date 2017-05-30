@@ -54,7 +54,7 @@ import {-# SOURCE #-} TysWiredIn ( liftedRepDataConTyCon )
 import GHC.Config.Flags
 import TyCon hiding ( pprPromotionQuote )
 import CoAxiom
-import Var
+import GHC.Data.Var
 import PrelNames
 import Name
 import BasicTypes

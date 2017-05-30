@@ -41,9 +41,9 @@ import Type( mkStrLitTy, tidyOpenType, mkTyVarBinder, splitTyConApp_maybe)
 import TysPrim
 import TysWiredIn( cTupleTyConName )
 import Id
-import Var
-import VarSet
-import VarEnv( TidyEnv )
+import GHC.Data.Var
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment( TidyEnv )
 import Module
 import Name
 import NameSet

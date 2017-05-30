@@ -40,7 +40,7 @@ import GHC.Data.FastString
 import GHC.Utils.Error         ( dumpIfSet_dyn_printer )
 import TcEnv            ( tcMetaTy )
 import GHC.Config.Hooks
-import Var              ( Id )
+import GHC.Data.Var              ( Id )
 import THNames          ( quoteExpName, quotePatName, quoteDecName, quoteTypeName
                         , decsQTyConName, expQTyConName, patQTyConName, typeQTyConName, )
 

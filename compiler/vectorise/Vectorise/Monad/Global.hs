@@ -44,9 +44,9 @@ import GHC.Config.Flags
 import NameEnv
 import NameSet
 import Name
-import VarEnv
-import VarSet
-import Var as Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
+import GHC.Data.Var as Var
 import GHC.Utils.Outputable
 
 

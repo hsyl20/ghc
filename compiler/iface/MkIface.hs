@@ -82,9 +82,9 @@ import HsSyn
 import GHC.Types
 import GHC.Finder
 import GHC.Config.Flags
-import VarEnv
-import VarSet
-import Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
+import GHC.Data.Var
 import Name
 import Avail
 import RdrName

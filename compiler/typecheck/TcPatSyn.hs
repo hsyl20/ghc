@@ -31,8 +31,8 @@ import NameSet
 import GHC.Utils.Panic
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Var
-import VarEnv( emptyTidyEnv, mkInScopeSet )
+import GHC.Data.Var
+import GHC.Data.Var.Environment( emptyTidyEnv, mkInScopeSet )
 import Id
 import IdInfo( RecSelParent(..), setLevityInfoWithType )
 import TcBinds
@@ -42,7 +42,7 @@ import TcUnify
 import TcType
 import TcEvidence
 import BuildTyCl
-import VarSet
+import GHC.Data.Var.Set
 import MkId
 import TcTyDecls
 import ConLike

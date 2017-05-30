@@ -26,7 +26,7 @@ import Id( mkLocalId )
 import Inst
 import Name
 import TysWiredIn
-import VarSet
+import GHC.Data.Var.Set
 import TysPrim
 import BasicTypes( Arity )
 import SrcLoc

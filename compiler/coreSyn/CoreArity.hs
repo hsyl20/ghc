@@ -23,8 +23,8 @@ import CoreFVs
 import CoreUtils
 import CoreSubst
 import Demand
-import Var
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Environment
 import Id
 import Type
 import TyCon    ( initRecTc, checkRecTc )

@@ -49,11 +49,11 @@ import Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstLis
 import Coercion hiding ( substCo, substCoVarBndr )
 
 import PrelNames
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import Id
 import Name     ( Name )
-import Var
+import GHC.Data.Var
 import IdInfo
 import GHC.Data.Unique.Supply
 import GHC.Data.Maybe

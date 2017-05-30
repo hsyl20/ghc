@@ -41,7 +41,7 @@ import TcSimplify    (tcCheckSatisfiability)
 import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
 import GHC.Data.Bag
 import GHC.Utils.Error
-import Var           (EvVar)
+import GHC.Data.Var           (EvVar)
 import Type
 import GHC.Data.Unique.Supply
 import GHC.Desugar.GuardedRHS       (isTrueLHsExpr)

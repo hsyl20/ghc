@@ -37,8 +37,8 @@ import GHC.Types
 import GHC.Utils.Error( Validity(..), andValid )
 import SrcLoc
 import GHC.Data.Bag
-import VarEnv
-import VarSet (elemVarSet)
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set (elemVarSet)
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils

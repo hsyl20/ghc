@@ -52,9 +52,9 @@ import DataCon
 import PrelNames
 import TysWiredIn
 import Literal
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name
 import NameEnv
 import NameSet

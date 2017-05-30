@@ -11,7 +11,7 @@ import GHC.Utils.Outputable
 import Name
 import NameSet
 import RdrName
-import Var
+import GHC.Data.Var
 import Coercion
 import ConLike (ConLike)
 import FieldLabel

@@ -19,8 +19,8 @@ import Type hiding( substTyVarBndr, substTy )
 import TcType       ( exactTyCoVarsOfType )
 import TyCon
 import CoAxiom
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import FamInstEnv ( flattenTys )
 import GHC.Data.Pair

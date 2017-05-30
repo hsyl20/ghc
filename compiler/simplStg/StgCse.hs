@@ -74,7 +74,7 @@ import DataCon
 import Id
 import StgSyn
 import GHC.Utils.Outputable
-import VarEnv
+import GHC.Data.Var.Environment
 import CoreSyn (AltCon(..))
 import Data.List (mapAccumL)
 import Data.Maybe (fromMaybe)

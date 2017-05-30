@@ -23,7 +23,7 @@ import TcSigs( TcPragEnv, lookupPragEnv, addInlinePrags )
 import TcRnMonad
 import Inst
 import Id
-import Var
+import GHC.Data.Var
 import Name
 import RdrName
 import TcEnv
@@ -43,7 +43,7 @@ import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Config.Flags
 import SrcLoc
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Utils
 import GHC.Utils.Outputable as Outputable
 import qualified GHC.LanguageExtensions as LangExt

@@ -48,7 +48,7 @@ import GHC.Data.FastString
 import RnFixity ( lookupFixityRn )
 import GHC.Data.Maybe
 import TcEnv
-import Var
+import GHC.Data.Var
 import IfaceSyn
 import PrelNames
 import qualified Data.Map as Map

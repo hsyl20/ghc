@@ -45,9 +45,9 @@ import Coercion
 import CoreTidy         ( tidyRules )
 import Id
 import IdInfo           ( RuleInfo( RuleInfo ) )
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name             ( Name, NamedThing(..), nameIsLocalOrFrom )
 import NameSet
 import NameEnv

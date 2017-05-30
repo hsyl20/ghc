@@ -13,7 +13,7 @@ import GHC.Config.Flags
 import CoreSyn
 import CoreUnfold       ( couldBeSmallEnoughToInline )
 import Id
-import VarEnv
+import GHC.Data.Var.Environment
 import GHC.Utils             ( notNull )
 
 {-

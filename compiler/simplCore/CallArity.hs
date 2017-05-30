@@ -7,8 +7,8 @@ module CallArity
     , callArityRHS -- for testing
     ) where
 
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import GHC.Config.Flags ( DynFlags )
 
 import BasicTypes

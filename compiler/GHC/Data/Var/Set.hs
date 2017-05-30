@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module VarSet (
+module GHC.Data.Var.Set (
         -- * Var, Id and TyVar set types
         VarSet, IdSet, TyVarSet, CoVarSet, TyCoVarSet,
 
@@ -45,7 +45,7 @@ module VarSet (
 
 #include "HsVersions.h"
 
-import Var      ( Var, TyVar, CoVar, TyCoVar, Id )
+import GHC.Data.Var      ( Var, TyVar, CoVar, TyCoVar, Id )
 import GHC.Data.Unique
 import Name     ( Name )
 import GHC.Data.Unique.Set

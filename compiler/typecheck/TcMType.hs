@@ -97,17 +97,17 @@ import Type
 import Kind
 import Coercion
 import Class
-import Var
+import GHC.Data.Var
 
 -- others:
 import TcRnMonad        -- TcType, amongst others
 import TcEvidence
 import Id
 import Name
-import VarSet
+import GHC.Data.Var.Set
 import TysWiredIn
 import TysPrim
-import VarEnv
+import GHC.Data.Var.Environment
 import NameEnv
 import PrelNames
 import GHC.Utils

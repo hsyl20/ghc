@@ -55,7 +55,7 @@ import RdrName
 import TyCon
 import Type
 import TcEvidence
-import VarSet
+import GHC.Data.Var.Set
 import TysWiredIn
 import TysPrim( intPrimTy )
 import PrimOp( tagToEnumKey )
@@ -63,7 +63,7 @@ import PrelNames
 import GHC.Config.Flags
 import SrcLoc
 import GHC.Utils
-import VarEnv  ( emptyTidyEnv )
+import GHC.Data.Var.Environment  ( emptyTidyEnv )
 import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.Utils.Outputable as Outputable

@@ -39,7 +39,7 @@ module TcEvidence (
   ) where
 #include "HsVersions.h"
 
-import Var
+import GHC.Data.Var
 import CoAxiom
 import Coercion
 import PprCore ()   -- Instance OutputableBndr TyVar
@@ -49,8 +49,8 @@ import TyCon
 import Class( Class )
 import PrelNames
 import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
-import VarEnv
-import VarSet
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name
 import GHC.Data.Pair
 

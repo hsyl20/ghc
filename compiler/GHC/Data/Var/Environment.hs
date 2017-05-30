@@ -3,7 +3,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 -}
 
-module VarEnv (
+module GHC.Data.Var.Environment (
         -- * Var, Id and TyVar environments (maps)
         VarEnv, IdEnv, TyVarEnv, CoVarEnv, TyCoVarEnv,
 
@@ -74,8 +74,8 @@ module VarEnv (
     ) where
 
 import OccName
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap

@@ -17,8 +17,8 @@ import TcEvidence
 import TyCon
 import TyCoRep   -- performs delicate algorithm on types
 import Coercion
-import Var
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import TcSMonad as TcS
 import BasicTypes( SwapFlag(..) )

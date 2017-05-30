@@ -151,8 +151,8 @@ import FamInstEnv
 import PrelNames
 
 import Id
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import GHC.Utils.Error
 import SrcLoc
 import NameEnv

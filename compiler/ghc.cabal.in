@@ -207,8 +207,8 @@ Library
         GHC.Data.Unique.Supply
        GHC.Data.Unique
         Var
-        VarEnv
-        VarSet
+        GHC.Data.Var.Environment
+        GHC.Data.Var.Set
         GHC.Data.Var.UndirectedGraph
         BlockId
         CLabel

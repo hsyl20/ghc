@@ -44,7 +44,7 @@ import Type
 import TysPrim
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
-import VarEnv
+import GHC.Data.Var.Environment
 
 -------------------------------------
 --        Manipulating CgIdInfo

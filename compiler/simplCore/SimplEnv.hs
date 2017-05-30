@@ -44,9 +44,9 @@ import SimplMonad
 import CoreMonad                ( SimplifierMode(..) )
 import CoreSyn
 import CoreUtils
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import GHC.Data.Tree.OrdList
 import Id
 import MkCore                   ( mkWildValBinder )

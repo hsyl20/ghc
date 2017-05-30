@@ -196,9 +196,9 @@ module TcType (
 import Kind
 import TyCoRep
 import Class
-import Var
+import GHC.Data.Var
 import ForeignCall
-import VarSet
+import GHC.Data.Var.Set
 import Coercion
 import Type
 import RepType
@@ -211,7 +211,7 @@ import Name -- hiding (varName)
             -- We use this to make dictionaries for type literals.
             -- Perhaps there's a better way to do this?
 import NameSet
-import VarEnv
+import GHC.Data.Var.Environment
 import PrelNames
 import TysWiredIn( coercibleClass, unitTyCon, unitTyConKey
                  , listTyCon, constraintKind )

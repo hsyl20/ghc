@@ -41,7 +41,7 @@ import NameSet
 import GHC.Utils.Outputable
 import SrcLoc
 import TcHsSyn
-import Var
+import GHC.Data.Var
 
 -- | Info about a module. This information is generated every time a
 -- module is loaded.

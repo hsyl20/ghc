@@ -30,9 +30,9 @@ import PatSyn
 import ConLike
 import CoreArity        ( exprArity, exprBotStrictness_maybe )
 import GHC.CodeGen.StaticPtrTable
-import VarEnv
-import VarSet
-import Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
+import GHC.Data.Var
 import Id
 import MkId             ( mkDictSelRhs )
 import IdInfo

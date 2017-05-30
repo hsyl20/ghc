@@ -11,7 +11,7 @@ import CoreSyn
 import CoreUnfold       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding )
 import CoreUtils        ( exprType, exprIsHNF )
 import CoreFVs          ( exprFreeVars )
-import Var
+import GHC.Data.Var
 import Id
 import IdInfo
 import Type

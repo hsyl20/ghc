@@ -35,9 +35,9 @@ import InstEnv
 import Class
 import TyCon
 import NameSet
-import VarSet
-import VarEnv
-import Var
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
+import GHC.Data.Var
 import Id
 import Name
 import GHC.Utils.Error

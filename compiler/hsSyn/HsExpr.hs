@@ -29,7 +29,7 @@ import HsBinds
 -- others:
 import TcEvidence
 import CoreSyn
-import Var
+import GHC.Data.Var
 import GHC.Config.Flags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )
 import Name
 import NameSet

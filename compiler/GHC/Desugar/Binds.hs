@@ -48,9 +48,9 @@ import Id
 import MkId(proxyHashId)
 import Class
 import Name
-import VarSet
+import GHC.Data.Var.Set
 import Rules
-import VarEnv
+import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import Module
 import SrcLoc

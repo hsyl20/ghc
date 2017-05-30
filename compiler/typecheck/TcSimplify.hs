@@ -42,8 +42,8 @@ import Type
 import TysWiredIn    ( liftedRepTy )
 import Unify         ( tcMatchTyKi )
 import GHC.Utils
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
 import BasicTypes    ( IntWithInf, intGtLimit )
 import GHC.Utils.Error      ( emptyMessages )

@@ -37,14 +37,14 @@ import Literal
 import Name
 import Type
 import TyCoRep
-import Var
+import GHC.Data.Var
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique( Unique )
 import GHC.Data.FastString(FastString)
 
 import qualified Data.Map    as Map
 import qualified Data.IntMap as IntMap
-import VarEnv
+import GHC.Data.Var.Environment
 import NameEnv
 import GHC.Utils.Outputable
 import Control.Monad( (>=>) )

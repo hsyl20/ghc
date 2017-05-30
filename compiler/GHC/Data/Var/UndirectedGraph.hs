@@ -28,7 +28,7 @@ module GHC.Data.Var.UndirectedGraph
     ) where
 
 import Id
-import VarEnv
+import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Outputable
 import Data.List

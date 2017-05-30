@@ -46,8 +46,8 @@ import TyCon
 import DataCon (DataCon)
 import Coercion
 import CoAxiom
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import Name
 import PrelNames ( eqPrimTyConKey )
 import GHC.Data.Unique.DeterFiniteMap
@@ -56,7 +56,7 @@ import GHC.Data.Maybe
 import TrieMap
 import GHC.Data.Unique
 import GHC.Utils
-import Var
+import GHC.Data.Var
 import GHC.Data.Pair
 import SrcLoc
 import GHC.Data.FastString

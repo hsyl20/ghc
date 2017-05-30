@@ -11,8 +11,8 @@ module CSE (cseProgram, cseOneExpr) where
 #include "HsVersions.h"
 
 import CoreSubst
-import Var              ( Var )
-import VarEnv           ( elemInScopeSet )
+import GHC.Data.Var              ( Var )
+import GHC.Data.Var.Environment           ( elemInScopeSet )
 import Id               ( Id, idType, idInlineActivation, isDeadBinder
                         , zapIdOccInfo, zapIdUsageInfo, idInlinePragma
                         , isJoinId )

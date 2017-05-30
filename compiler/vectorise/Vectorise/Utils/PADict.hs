@@ -18,7 +18,7 @@ import Type
 import TyCoRep
 import TyCon
 import CoAxiom
-import Var
+import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString

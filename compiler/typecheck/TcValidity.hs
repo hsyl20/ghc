@@ -46,10 +46,10 @@ import FamInstEnv  ( isDominatedBy, injectiveBranches,
                      InjectivityCheckResult(..) )
 import FamInst     ( makeInjectivityErrors )
 import Name
-import VarEnv
-import VarSet
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
-import Var         ( TyVarBndr(..), mkTyVar )
+import GHC.Data.Var         ( TyVarBndr(..), mkTyVar )
 import GHC.Utils.Error
 import GHC.Config.Flags
 import GHC.Utils

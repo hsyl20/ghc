@@ -40,8 +40,8 @@ import Id
 import Name
 import NameEnv
 import NameSet
-import Var
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import SrcLoc
 import TyCon

@@ -102,7 +102,7 @@ import PlaceHolder
 
 import TcEvidence
 import RdrName
-import Var
+import GHC.Data.Var
 import TyCoRep
 import Type   ( filterOutInvisibleTypes )
 import TysWiredIn ( unitTy )

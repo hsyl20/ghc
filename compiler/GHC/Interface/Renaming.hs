@@ -23,7 +23,7 @@ import GHC.Data.Unique.FiniteMap
 import Avail
 import IfaceSyn
 import FieldLabel
-import Var
+import GHC.Data.Var
 import GHC.Utils.Error
 
 import Name

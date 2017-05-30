@@ -99,7 +99,7 @@ import RnEnv
 import RnSource
 import GHC.Utils.Error
 import Id
-import VarEnv
+import GHC.Data.Var.Environment
 import Module
 import GHC.Data.Unique.FiniteMap
 import Name

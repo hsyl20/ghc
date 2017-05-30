@@ -100,8 +100,8 @@ module CoreSyn (
 #include "HsVersions.h"
 
 import CostCentre
-import VarEnv( InScopeSet )
-import Var
+import GHC.Data.Var.Environment( InScopeSet )
+import GHC.Data.Var
 import Type
 import Coercion
 import Name

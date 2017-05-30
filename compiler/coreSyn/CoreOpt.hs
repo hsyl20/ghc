@@ -30,9 +30,9 @@ import PprCore  ( pprCoreBindings, pprRules )
 import OccurAnal( occurAnalyseExpr, occurAnalysePgm )
 import Literal  ( Literal(MachStr) )
 import Id
-import Var      ( varType )
-import VarSet
-import VarEnv
+import GHC.Data.Var      ( varType )
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import DataCon
 import OptCoercion ( optCoercion )
 import Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList

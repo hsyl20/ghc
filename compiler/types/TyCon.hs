@@ -129,7 +129,7 @@ import {-# SOURCE #-} DataCon    ( DataCon, dataConExTyVars, dataConFieldLabels
                                  , dataConTyCon )
 
 import GHC.Utils.Binary
-import Var
+import GHC.Data.Var
 import Class
 import BasicTypes
 import GHC.Config.Flags

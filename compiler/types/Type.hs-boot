@@ -2,7 +2,7 @@
 
 module Type where
 import TyCon
-import Var ( TyVar )
+import GHC.Data.Var ( TyVar )
 import {-# SOURCE #-} TyCoRep( Type, Coercion, Kind )
 import GHC.Utils
 

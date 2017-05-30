@@ -123,12 +123,12 @@ import IdInfo
 import BasicTypes
 
 -- Imported and re-exported
-import Var( Id, CoVar, DictId, JoinId,
+import GHC.Data.Var( Id, CoVar, DictId, JoinId,
             InId,  InVar,
             OutId, OutVar,
             idInfo, idDetails, setIdDetails, globaliseId, varType,
             isId, isLocalId, isGlobalId, isExportedId )
-import qualified Var
+import qualified GHC.Data.Var as Var
 
 import Type
 import RepType

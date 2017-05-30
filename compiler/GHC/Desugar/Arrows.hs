@@ -37,7 +37,7 @@ import MkCore
 import GHC.Desugar.Binds (dsHsWrapper)
 
 import Name
-import Var
+import GHC.Data.Var
 import Id
 import ConLike
 import TysWiredIn
@@ -45,7 +45,7 @@ import BasicTypes
 import PrelNames
 import GHC.Utils.Outputable
 import GHC.Data.Bag
-import VarSet
+import GHC.Data.Var.Set
 import SrcLoc
 import GHC.Data.List.SetOps( assocMaybe )
 import Data.List

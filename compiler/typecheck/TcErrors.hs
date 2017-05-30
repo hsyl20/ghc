@@ -36,9 +36,9 @@ import RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
                , GlobalRdrElt (..), globalRdrEnvElts )
 import PrelNames ( typeableClassName, hasKey, liftedRepDataConKey )
 import Id
-import Var
-import VarSet
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import NameSet
 import GHC.Data.Bag
 import GHC.Utils.Error         ( ErrMsg, errDoc, pprLocErrMsg )

@@ -1,5 +1,5 @@
 module GHC.Desugar.Match where
-import Var      ( Id )
+import GHC.Data.Var      ( Id )
 import TcType   ( Type )
 import GHC.Desugar.Monad  ( DsM, EquationInfo, MatchResult )
 import CoreSyn  ( CoreExpr )

@@ -27,7 +27,7 @@ import DataCon
 import SrcLoc
 import HsSyn
 import OccName hiding (occName)
-import Var
+import GHC.Data.Var
 import Module
 import GHC.Config.Flags
 import GHC.Utils.Outputable hiding (space)

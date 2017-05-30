@@ -148,9 +148,9 @@ import {-# SOURCE #-} ToIface( toIfaceTypeX, toIfaceTyLit, toIfaceForAllBndr
 
 -- friends:
 import IfaceType
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name hiding ( varName )
 import TyCon
 import Class

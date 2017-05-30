@@ -213,7 +213,7 @@ import TysPrim (intPrimTy)
 import TysWiredIn
 import GHC.Data.Unique.Supply
 import GHC.Utils
-import VarEnv
+import GHC.Data.Var.Environment
 
 import Data.Bifunctor (second)
 import Data.Maybe (mapMaybe)

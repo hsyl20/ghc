@@ -8,8 +8,8 @@ import Coercion
 import Type hiding( substTyVarBndr, substTy, extendTCvSubst )
 import TcType       ( exactTyCoVarsOfType )
 import CoAxiom
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import GHC.Data.Pair
 import InstEnv
 

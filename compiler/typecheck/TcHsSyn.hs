@@ -56,8 +56,8 @@ import DataCon
 import GHC.Types
 import Name
 import NameEnv
-import Var
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Environment
 import GHC.Config.Flags
 import Literal
 import BasicTypes

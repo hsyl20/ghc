@@ -18,8 +18,8 @@ import Vectorise.Env
 
 import CoreSyn
 import Name
-import VarEnv
-import Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var
 import GHC.Data.FastString
 
 -- Local Environment ----------------------------------------------------------

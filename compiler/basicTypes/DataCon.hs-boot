@@ -1,5 +1,5 @@
 module DataCon where
-import Var( TyVar, TyVarBinder )
+import GHC.Data.Var( TyVar, TyVarBinder )
 import Name( Name, NamedThing )
 import {-# SOURCE #-} TyCon( TyCon )
 import FieldLabel ( FieldLabel )

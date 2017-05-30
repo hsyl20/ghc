@@ -30,8 +30,8 @@ import TyCon
 import TyCoRep
 import Type
 import GHC.Utils
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import MkId (coerceId)
 import TysWiredIn (true_RDR, false_RDR)
 

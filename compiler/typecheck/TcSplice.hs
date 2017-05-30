@@ -78,7 +78,7 @@ import PrelNames
 import TysWiredIn
 import OccName
 import GHC.Config.Hooks
-import Var
+import GHC.Data.Var
 import Module
 import LoadIface
 import Class
@@ -96,7 +96,7 @@ import GHC.Serialized
 import GHC.Utils.Error
 import GHC.Utils
 import GHC.Data.Unique
-import VarSet           ( isEmptyVarSet, filterVarSet, mkVarSet, elemVarSet )
+import GHC.Data.Var.Set           ( isEmptyVarSet, filterVarSet, mkVarSet, elemVarSet )
 import Data.List        ( find )
 import Data.Maybe
 import GHC.Data.FastString

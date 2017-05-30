@@ -26,9 +26,9 @@ import CoreUtils
 import CoreFVs
 import CoreMonad        ( CoreM )
 import Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )
-import Var
+import GHC.Data.Var
 import Type
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Utils
 import GHC.Config.Flags
 import GHC.Utils.Outputable

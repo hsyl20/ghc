@@ -54,10 +54,10 @@ import Class( Class )
 import MkId( mkDictFunId )
 import Id
 import Name
-import Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )
+import GHC.Data.Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )
 import DataCon
 import TyCon
-import VarEnv
+import GHC.Data.Var.Environment
 import PrelNames
 import SrcLoc
 import GHC.Config.Flags

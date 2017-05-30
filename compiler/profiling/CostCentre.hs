@@ -21,7 +21,7 @@ module CostCentre (
     ) where
 
 import GHC.Utils.Binary
-import Var
+import GHC.Data.Var
 import Name
 import Module
 import GHC.Data.Unique

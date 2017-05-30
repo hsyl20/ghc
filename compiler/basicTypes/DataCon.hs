@@ -71,7 +71,7 @@ import FieldLabel
 import Class
 import Name
 import PrelNames
-import Var
+import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Data.List.SetOps
 import GHC.Utils

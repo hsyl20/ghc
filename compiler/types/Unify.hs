@@ -26,9 +26,9 @@ module Unify (
 
 #include "HsVersions.h"
 
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Kind
 import Name( Name )
 import Type hiding ( getTvSubstEnv )

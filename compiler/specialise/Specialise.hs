@@ -17,8 +17,8 @@ import Coercion( Coercion )
 import CoreMonad
 import qualified CoreSubst
 import CoreUnfold
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import CoreSyn
 import Rules
 import CoreOpt          ( collectBindersPushingCo )

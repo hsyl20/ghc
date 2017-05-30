@@ -30,7 +30,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils
 import BasicTypes
-import Var
+import GHC.Data.Var
 import FieldLabel
 
 import qualified Data.Data as Data

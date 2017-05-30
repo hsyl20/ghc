@@ -92,7 +92,7 @@ import CoreTidy         ( tidyExpr )
 import Type             ( Type )
 import {- Kind parts of -} Type         ( Kind )
 import CoreLint         ( lintInteractiveExpr )
-import VarEnv           ( emptyTidyEnv )
+import GHC.Data.Var.Environment           ( emptyTidyEnv )
 import GHC.Utils.Panic
 import ConLike
 import Control.Concurrent

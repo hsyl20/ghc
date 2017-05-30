@@ -70,7 +70,7 @@ import TcEnv      ( TcTyThing )
 import TcEvidence ( TcCoercion, CoercionHole
                   , EvTerm, EvBind, mkGivenEvBind )
 import TcRnTypes  ( CtEvidence(..) )
-import Var        ( EvVar )
+import GHC.Data.Var        ( EvVar )
 
 import Module
 import Name

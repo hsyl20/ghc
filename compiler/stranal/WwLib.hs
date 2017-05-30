@@ -24,8 +24,8 @@ import MkCore           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
 import MkId             ( voidArgId, voidPrimId )
 import TysPrim          ( voidPrimTy )
 import TysWiredIn       ( tupleDataCon )
-import VarEnv           ( mkInScopeSet )
-import VarSet           ( VarSet )
+import GHC.Data.Var.Environment           ( mkInScopeSet )
+import GHC.Data.Var.Set           ( VarSet )
 import Type
 import RepType          ( isVoidTy )
 import Coercion

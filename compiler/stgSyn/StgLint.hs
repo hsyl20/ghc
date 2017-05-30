@@ -12,7 +12,7 @@ import StgSyn
 
 import GHC.Data.Bag              ( Bag, emptyBag, isEmptyBag, snocBag, bagToList )
 import Id               ( Id, idType, isLocalId )
-import VarSet
+import GHC.Data.Var.Set
 import DataCon
 import CoreSyn          ( AltCon(..) )
 import PrimOp           ( primOpType )

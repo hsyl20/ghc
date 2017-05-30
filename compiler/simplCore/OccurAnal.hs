@@ -31,9 +31,9 @@ import Module( Module )
 import Coercion
 import Type
 
-import VarSet
-import VarEnv
-import Var
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
+import GHC.Data.Var
 import Demand           ( argOneShots, argsOneShots )
 import GHC.Data.Graph.Directed          ( SCC(..), Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq

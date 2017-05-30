@@ -35,8 +35,8 @@ import FamInstEnv
 import Id
 import GHC.Utils.Error         ( withTiming )
 import BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import LiberateCase     ( liberateCase )
 import SAT              ( doStaticArgs )
 import Specialise       ( specProgram)

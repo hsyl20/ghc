@@ -29,7 +29,7 @@ import Type ( tidyOpenType )
 import FamInstEnv( FamInst(..), FamFlavor(..) )
 import Type( Type, pprTypeApp, pprSigmaType )
 import Name
-import VarEnv( emptyTidyEnv )
+import GHC.Data.Var.Environment( emptyTidyEnv )
 import GHC.Utils.Outputable
 
 -- -----------------------------------------------------------------------------

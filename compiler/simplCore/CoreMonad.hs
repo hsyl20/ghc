@@ -65,7 +65,7 @@ import GHC.Types.Annotations
 import GHC.Utils.Monad.IOEnv hiding     ( liftIO, failM, failWithM )
 import qualified GHC.Utils.Monad.IOEnv as IOEnv
 import TcEnv            ( lookupGlobal )
-import Var
+import GHC.Data.Var
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import qualified GHC.Utils.Error as Err

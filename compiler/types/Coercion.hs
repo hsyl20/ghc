@@ -111,8 +111,8 @@ import TyCoRep
 import Type
 import TyCon
 import CoAxiom
-import Var
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Environment
 import Name hiding ( varName )
 import GHC.Utils
 import BasicTypes

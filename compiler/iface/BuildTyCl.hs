@@ -21,8 +21,8 @@ import TysWiredIn( isCTupleTyConName )
 import TysPrim ( voidPrimTy )
 import DataCon
 import PatSyn
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 import BasicTypes
 import Name
 import MkId

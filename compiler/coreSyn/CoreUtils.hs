@@ -61,10 +61,10 @@ import CoreSyn
 import PrelNames ( makeStaticName )
 import PprCore
 import CoreFVs( exprFreeVars )
-import Var
+import GHC.Data.Var
 import SrcLoc
-import VarEnv
-import VarSet
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name
 import Literal
 import DataCon

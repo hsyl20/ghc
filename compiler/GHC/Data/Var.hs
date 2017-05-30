@@ -32,7 +32,7 @@
 -- Local 'Id's and 'Var's are those bound within an expression
 --    (e.g. by a lambda) or at the top level of the module being compiled.
 
-module Var (
+module GHC.Data.Var (
         -- * The main data type and synonyms
         Var, CoVar, Id, NcId, DictId, DFunId, EvVar, EqVar, EvId, IpId, JoinId,
         TyVar, TypeVar, KindVar, TKVar, TyCoVar,

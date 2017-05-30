@@ -22,7 +22,7 @@ where
 
 import CoreSyn
 import Type           ( Type )
-import Var
+import GHC.Data.Var
 
 -- |Contains the vectorised and lifted versions of some thing.
 --

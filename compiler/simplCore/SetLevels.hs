@@ -77,9 +77,9 @@ import MkCore           ( sortQuantVars )
 
 import Id
 import IdInfo
-import Var
-import VarSet
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import Literal          ( litIsTrivial )
 import Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
 import Name             ( getOccName, mkSystemVarName )

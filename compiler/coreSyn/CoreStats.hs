@@ -15,7 +15,7 @@ import BasicTypes
 import CoreSyn
 import GHC.Utils.Outputable
 import Coercion
-import Var
+import GHC.Data.Var
 import Type (Type, typeSize, seqType)
 import Id (idType, isJoinId)
 import CoreSeq (megaSeqIdInfo)

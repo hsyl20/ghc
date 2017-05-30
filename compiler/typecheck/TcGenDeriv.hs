@@ -64,10 +64,10 @@ import TysPrim
 import TysWiredIn
 import Type
 import Class
-import VarSet
-import VarEnv
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import GHC.Utils
-import Var
+import GHC.Data.Var
 import GHC.Utils.Outputable
 import Lexeme
 import GHC.Data.FastString

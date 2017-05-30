@@ -57,13 +57,13 @@ import TyCon
 import Type             hiding( typeKind )
 import RepType
 import TcType           hiding( typeKind )
-import Var
+import GHC.Data.Var
 import Id
 import Name             hiding ( varName )
 import NameSet
 import Avail
 import RdrName
-import VarEnv
+import GHC.Data.Var.Environment
 import ByteCodeTypes
 import Linker
 import GHC.Config.Flags

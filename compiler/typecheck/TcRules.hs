@@ -22,7 +22,7 @@ import TcUnify( buildImplicationFor )
 import TcEvidence( mkTcCoVarCo )
 import Type
 import Id
-import Var( EvVar )
+import GHC.Data.Var( EvVar )
 import Name
 import BasicTypes       ( RuleName )
 import SrcLoc

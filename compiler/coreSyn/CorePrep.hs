@@ -33,9 +33,9 @@ import Coercion
 import TcEnv
 import TyCon
 import Demand
-import Var
-import VarSet
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Set
+import GHC.Data.Var.Environment
 import Id
 import IdInfo
 import TysWiredIn

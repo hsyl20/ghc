@@ -49,7 +49,7 @@ import TysWiredIn
 import PrelNames
 import BasicTypes
 import GHC.Data.Maybe
-import VarEnv
+import GHC.Data.Var.Environment
 import SrcLoc
 import GHC.Utils
 import GHC.Data.Bag

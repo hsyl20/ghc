@@ -38,7 +38,7 @@ import TcMType
 import Name
 import GHC.Data.Pair
 import GHC.Utils.Panic
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Data.Bag( Bag, unionBags, unitBag )
 import Control.Monad
 import GHC.Data.Unique

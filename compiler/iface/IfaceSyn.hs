@@ -62,7 +62,7 @@ import SrcLoc
 import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import GHC.Data.Bool.Formula ( BooleanFormula, pprBooleanFormula, isTrue )
-import Var( TyVarBndr(..) )
+import GHC.Data.Var( TyVarBndr(..) )
 import TyCon ( Role (..), Injectivity(..) )
 import GHC.Utils( filterOut, filterByList )
 import DataCon (SrcStrictness(..), SrcUnpackedness(..))

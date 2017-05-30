@@ -25,7 +25,7 @@ import Id
 import CoreSyn
 import Literal
 import DataCon
-import VarSet
+import GHC.Data.Var.Set
 import PrimOp
 import SMRep
 

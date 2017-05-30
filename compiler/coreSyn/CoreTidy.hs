@@ -22,8 +22,8 @@ import IdInfo
 import Demand ( zapUsageEnvSig )
 import Type( tidyType, tidyTyCoVarBndr )
 import Coercion( tidyCo )
-import Var
-import VarEnv
+import GHC.Data.Var
+import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap
 import Name hiding (tidyNameOcc)
 import SrcLoc

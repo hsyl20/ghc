@@ -18,7 +18,7 @@ import TyCon
 import CoAxiom
 import Type
 import Id
-import Var
+import GHC.Data.Var
 import Name
 import GHC.Data.FastString
 

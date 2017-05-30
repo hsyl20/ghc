@@ -25,8 +25,8 @@ import Id
 import IfaceSyn ( showToHeader )
 import IfaceEnv( newInteractiveBinder )
 import Name
-import Var hiding ( varName )
-import VarSet
+import GHC.Data.Var hiding ( varName )
+import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
 import Type
 import GHC

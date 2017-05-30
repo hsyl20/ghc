@@ -19,7 +19,7 @@ import CoreSyn
 import CoreStats (exprStats)
 import Literal( pprLiteral )
 import Name( pprInfixName, pprPrefixName )
-import Var
+import GHC.Data.Var
 import Id
 import IdInfo
 import Demand

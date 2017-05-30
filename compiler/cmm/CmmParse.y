@@ -247,7 +247,7 @@ import GHC.Config.Constants
 import GHC.Utils.Outputable
 import BasicTypes
 import GHC.Data.Bag              ( emptyBag, unitBag )
-import Var
+import GHC.Data.Var
 
 import Control.Monad
 import Data.Array

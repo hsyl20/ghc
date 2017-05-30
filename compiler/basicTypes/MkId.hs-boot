@@ -1,6 +1,6 @@
 module MkId where
 import Name( Name )
-import Var( Id )
+import GHC.Data.Var( Id )
 import Class( Class )
 import {-# SOURCE #-} DataCon( DataCon )
 import {-# SOURCE #-} PrimOp( PrimOp )

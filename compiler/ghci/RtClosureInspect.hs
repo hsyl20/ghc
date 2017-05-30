@@ -36,7 +36,7 @@ import DataCon
 import Type
 import RepType
 import qualified Unify as U
-import Var
+import GHC.Data.Var
 import TcRnMonad
 import TcType
 import TcMType
@@ -47,7 +47,7 @@ import TcEnv
 import TyCon
 import Name
 import GHC.Utils
-import VarSet
+import GHC.Data.Var.Set
 import BasicTypes       ( Boxity(..) )
 import TysPrim
 import PrelNames

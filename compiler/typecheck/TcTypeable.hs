@@ -33,7 +33,7 @@ import Module
 import HsSyn
 import GHC.Config.Flags
 import GHC.Data.Bag
-import Var ( TyVarBndr(..) )
+import GHC.Data.Var ( TyVarBndr(..) )
 import TrieMap
 import GHC.Config.Constants
 import GHC.Utils.Fingerprint(Fingerprint(..), fingerprintString, fingerprintFingerprints)

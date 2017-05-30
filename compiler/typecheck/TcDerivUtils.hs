@@ -47,7 +47,7 @@ import THNames (liftClassKey)
 import TyCon
 import Type
 import GHC.Utils
-import VarSet
+import GHC.Data.Var.Set
 
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Data.List.SetOps (assocMaybe)

@@ -28,7 +28,7 @@ import Id
 import IdInfo
 import DataCon
 import CostCentre       ( noCCS )
-import VarEnv
+import GHC.Data.Var.Environment
 import Module
 import Name             ( isExternalName, nameOccName )
 import OccName          ( occNameFS )

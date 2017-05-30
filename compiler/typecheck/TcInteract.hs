@@ -15,7 +15,7 @@ import HsTypes ( HsIPName(..) )
 import TcCanonical
 import TcFlatten
 import TcUnify( canSolveByUnification )
-import VarSet
+import GHC.Data.Var.Set
 import Type
 import Kind( isConstraintKind )
 import InstEnv( DFunInstType, lookupInstEnv, instanceDFunId )
@@ -23,7 +23,7 @@ import CoAxiom( sfInteractTop, sfInteractInert )
 
 import TcMType (newMetaTyVars)
 
-import Var
+import GHC.Data.Var
 import TcType
 import Name
 import RdrName ( lookupGRE_FieldLabel )
@@ -55,7 +55,7 @@ import GHC.Utils.Monad ( concatMapM )
 
 import Data.List( partition, foldl', deleteFirstsBy )
 import SrcLoc
-import VarEnv
+import GHC.Data.Var.Environment
 
 import Control.Monad
 import GHC.Data.Maybe( isJust )

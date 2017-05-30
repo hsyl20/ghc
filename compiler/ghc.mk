@@ -562,8 +562,8 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Unique \
 	GHC.Utils \
 	Var \
-	VarEnv \
-	VarSet
+	GHC.Data.Var.Environment \
+	GHC.Data.Var.Set
 
 ifeq "$(GhcWithInterpreter)" "YES"
 # These files are reacheable from DynFlags

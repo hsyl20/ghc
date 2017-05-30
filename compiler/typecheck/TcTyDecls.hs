@@ -46,8 +46,8 @@ import NameSet hiding (unitFV)
 import RdrName ( mkVarUnqual )
 import Id
 import IdInfo
-import VarEnv
-import VarSet
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Coercion ( ltRole )
 import BasicTypes
 import SrcLoc

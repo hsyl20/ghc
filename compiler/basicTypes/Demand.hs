@@ -64,8 +64,8 @@ module Demand (
 
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Var ( Var )
-import VarEnv
+import GHC.Data.Var ( Var )
+import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
 import BasicTypes

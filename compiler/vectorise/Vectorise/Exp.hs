@@ -32,9 +32,9 @@ import TyCon
 import TcType
 import Type
 import TyCoRep
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import NameSet
 import Id
 import BasicTypes( isStrongLoopBreaker )

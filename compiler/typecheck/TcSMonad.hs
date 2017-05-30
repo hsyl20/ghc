@@ -144,9 +144,9 @@ import TcErrors   ( solverDepthErrorTcS )
 import Name
 import RdrName ( GlobalRdrEnv, GlobalRdrElt )
 import qualified RnEnv as TcM
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import GHC.Utils.Outputable
 import GHC.Data.Bag as Bag
 import GHC.Data.Unique.Supply

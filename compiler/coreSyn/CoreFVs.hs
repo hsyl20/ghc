@@ -67,8 +67,8 @@ import NameSet
 import GHC.Data.Unique.Set
 import GHC.Data.Unique (Uniquable (..))
 import Name
-import VarSet
-import Var
+import GHC.Data.Var.Set
+import GHC.Data.Var
 import Type
 import TyCoRep
 import TyCon

@@ -26,8 +26,8 @@ module GHC.Data.Var.Free (
         mapUnionFV,
     ) where
 
-import Var
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Set
 
 -- | Predicate on possible free variables: returns @True@ iff the variable is
 -- interesting

@@ -22,7 +22,7 @@ import TyCoRep   -- cleverly decomposes types, good for completeness checking
 import Coercion
 import FamInstEnv ( FamInstEnvs )
 import FamInst ( tcTopNormaliseNewTypeTF_maybe )
-import Var
+import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Config.Flags( DynFlags )
 import NameSet

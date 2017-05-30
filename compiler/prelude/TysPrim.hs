@@ -94,7 +94,7 @@ import {-# SOURCE #-} TysWiredIn
   , doubleElemRepDataConTy
   , mkPromotedListTy )
 
-import Var              ( TyVar, TyVarBndr(TvBndr), mkTyVar )
+import GHC.Data.Var              ( TyVar, TyVarBndr(TvBndr), mkTyVar )
 import Name
 import TyCon
 import SrcLoc

@@ -19,7 +19,7 @@ import Demand   -- All of it
 import CoreSyn
 import CoreSeq          ( seqBinds )
 import GHC.Utils.Outputable
-import VarEnv
+import GHC.Data.Var.Environment
 import BasicTypes
 import Data.List
 import DataCon

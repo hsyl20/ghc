@@ -50,7 +50,7 @@ import Rules
 import BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
 import CoreMonad        ( CoreToDo(..) )
 import CoreLint         ( endPassIO )
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Data.FastString
 import GHC.Utils.Error
 import GHC.Utils.Outputable

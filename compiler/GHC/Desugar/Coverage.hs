@@ -31,7 +31,7 @@ import GHC.Data.Bag
 import CostCentre
 import CoreSyn
 import Id
-import VarSet
+import GHC.Data.Var.Set
 import Data.List
 import GHC.Data.FastString
 import GHC.Types

@@ -51,18 +51,18 @@ essential to make this work well!
 {-# LANGUAGE CPP #-}
 module SAT ( doStaticArgs ) where
 
-import Var
+import GHC.Data.Var
 import CoreSyn
 import CoreUtils
 import Type
 import Coercion
 import Id
 import Name
-import VarEnv
+import GHC.Data.Var.Environment
 import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Data.Unique.FiniteMap
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Data.Unique
 import GHC.Data.Unique.Set
 import GHC.Utils.Outputable

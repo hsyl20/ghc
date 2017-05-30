@@ -1,7 +1,7 @@
 -- Exists to allow TyCoRep to import pretty-printers
 module IfaceType where
 
-import Var (TyVarBndr, ArgFlag)
+import GHC.Data.Var (TyVarBndr, ArgFlag)
 import TyCon (TyConBndrVis)
 import BasicTypes (TyPrec)
 import GHC.Utils.Outputable (Outputable, SDoc)

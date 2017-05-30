@@ -37,7 +37,7 @@ import Kind            ( isLiftedTypeKind )
 import DataCon
 import TyCon
 import GHC.Utils
-import VarSet
+import GHC.Data.Var.Set
 import TysPrim
 import GHC.Utils.Error
 import GHC.Data.Unique
@@ -48,7 +48,7 @@ import SMRep
 import Bitmap
 import GHC.Data.Tree.OrdList
 import GHC.Data.Maybe
-import VarEnv
+import GHC.Data.Var.Environment
 
 import Data.List
 import Foreign

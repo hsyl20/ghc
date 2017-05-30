@@ -33,7 +33,7 @@ import NameSet
 import BasicTypes
 import GHC.Utils.Outputable
 import SrcLoc
-import Var
+import GHC.Data.Var
 import GHC.Data.Bag
 import GHC.Data.FastString
 import GHC.Data.Bool.Formula (LBooleanFormula)

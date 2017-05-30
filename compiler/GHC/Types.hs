@@ -159,9 +159,9 @@ import CoreSyn          ( CoreProgram, RuleBase, CoreRule, CoreVect )
 import Name
 import NameEnv
 import NameSet
-import VarEnv
-import VarSet
-import Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
+import GHC.Data.Var
 import Id
 import IdInfo           ( IdDetails(..), RecSelParent(..))
 import Type

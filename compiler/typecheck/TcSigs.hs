@@ -38,7 +38,7 @@ import TcEvidence( HsWrapper, (<.>) )
 import Type( mkTyVarBinders )
 
 import GHC.Config.Flags
-import Var      ( TyVar, tyVarName, tyVarKind )
+import GHC.Data.Var      ( TyVar, tyVarName, tyVarKind )
 import Id       ( Id, idName, idType, idInlinePragma, setInlinePragma, mkLocalId )
 import PrelNames( mkUnboundName )
 import BasicTypes
@@ -46,7 +46,7 @@ import GHC.Data.Bag( foldrBag )
 import Module( getModule )
 import Name
 import NameEnv
-import VarSet
+import GHC.Data.Var.Set
 import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Utils( singleton )

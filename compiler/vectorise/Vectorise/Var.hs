@@ -20,7 +20,7 @@ import Vectorise.Vect
 import Vectorise.Type.Type
 import CoreSyn
 import Type
-import VarEnv
+import GHC.Data.Var.Environment
 import Id
 import GHC.Data.FastString
 import Control.Applicative

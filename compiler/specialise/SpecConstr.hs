@@ -36,9 +36,9 @@ import TyCon            ( tyConName )
 import Id
 import PprCore          ( pprParendExpr )
 import MkCore           ( mkImpossibleExpr )
-import Var
-import VarEnv
-import VarSet
+import GHC.Data.Var
+import GHC.Data.Var.Environment
+import GHC.Data.Var.Set
 import Name
 import BasicTypes
 import GHC.Config.Flags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen )
