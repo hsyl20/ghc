@@ -96,7 +96,7 @@ import Util
 import ApiAnnotation
 import Data.List
 import qualified GHC.LanguageExtensions as LangExt
-import MonadUtils
+import GHC.Utils.Monad
 
 import Control.Monad
 import Text.ParserCombinators.ReadP as ReadP

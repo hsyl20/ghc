@@ -54,7 +54,7 @@ import SrcLoc
 import Util
 import Panic
 import UniqSupply
-import MonadUtils       ( liftIO )
+import GHC.Utils.Monad       ( liftIO )
 
 -- Imports for --abi-hash
 import LoadIface           ( loadUserInterface )

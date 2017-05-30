@@ -8,7 +8,7 @@ import Data.List
 import System.IO
 import GHC
 import GHC.Config.Flags
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)

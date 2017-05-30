@@ -15,7 +15,7 @@ import BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import HsDecls
 import GHC.Data.Bag (filterBag,isEmptyBag)

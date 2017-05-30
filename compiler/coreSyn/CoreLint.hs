@@ -67,7 +67,7 @@ import Control.Monad
 #if __GLASGOW_HASKELL__ > 710
 import qualified Control.Monad.Fail as MonadFail
 #endif
-import MonadUtils
+import GHC.Utils.Monad
 import Data.Maybe
 import GHC.Data.Pair
 import qualified GHC.LanguageExtensions as LangExt

@@ -95,7 +95,7 @@ import GHC.Data.FastString
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Var.Free
 import Data.Maybe
-import MonadUtils       ( mapAccumLM )
+import GHC.Utils.Monad       ( mapAccumLM )
 
 {-
 ************************************************************************

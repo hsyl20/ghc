@@ -28,7 +28,7 @@ module GHC.Data.Bag (
 import GHC.Utils.Outputable
 import Util
 
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad
 import Data.Data
 import Data.Maybe( mapMaybe )

@@ -14,7 +14,7 @@ module IOEnv (
         IOEnv, -- Instance of Monad
 
         -- Monad utilities
-        module MonadUtils,
+        module GHC.Utils.Monad,
 
         -- Errors
         failM, failWithM,
@@ -44,7 +44,7 @@ import Control.Monad
 #if __GLASGOW_HASKELL__ > 710
 import qualified Control.Monad.Fail as MonadFail
 #endif
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Applicative (Alternative(..))
 
 ----------------------------------------------------------------------

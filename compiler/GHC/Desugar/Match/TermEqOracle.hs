@@ -29,7 +29,7 @@ import Name
 import Type
 import HsLit
 import TcHsSyn
-import MonadUtils
+import GHC.Utils.Monad
 import Util
 
 import NameEnv

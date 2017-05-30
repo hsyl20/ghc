@@ -23,7 +23,7 @@ import WwLib
 import Util
 import GHC.Utils.Outputable
 import FamInstEnv
-import MonadUtils
+import GHC.Utils.Monad
 
 #include "HsVersions.h"
 

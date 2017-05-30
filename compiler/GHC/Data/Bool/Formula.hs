@@ -19,7 +19,7 @@ module GHC.Data.Bool.Formula (
 import Data.List ( nub, intersperse )
 import Data.Data
 
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Utils.Binary
 import SrcLoc

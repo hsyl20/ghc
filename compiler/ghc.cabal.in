@@ -499,7 +499,7 @@ Library
         ListSetOps
         ListT
         GHC.Data.Maybe
-        MonadUtils
+        GHC.Utils.Monad
         OrdList
         GHC.Utils.Outputable
         GHC.Data.Pair

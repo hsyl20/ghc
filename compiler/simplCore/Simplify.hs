@@ -42,7 +42,7 @@ import Rules            ( mkRuleInfo, lookupRule, getRules )
 --import TysPrim          ( intPrimTy ) -- temporalily commented out. See #8326
 import BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
                           RecFlag(..) )
-import MonadUtils       ( foldlM, mapAccumLM, liftIO )
+import GHC.Utils.Monad       ( foldlM, mapAccumLM, liftIO )
 import GHC.Data.Maybe           ( isJust, fromJust, orElse, catMaybes )
 --import Unique           ( hasKey ) -- temporalily commented out. See #8326
 import Control.Monad

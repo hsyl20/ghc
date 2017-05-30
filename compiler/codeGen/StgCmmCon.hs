@@ -44,7 +44,7 @@ import PrelInfo
 import GHC.Utils.Outputable
 import Platform
 import Util
-import MonadUtils (mapMaybeM)
+import GHC.Utils.Monad (mapMaybeM)
 
 import Control.Monad
 import Data.Char

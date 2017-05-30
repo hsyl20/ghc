@@ -34,7 +34,7 @@ import Lexeme
 import Util
 import GHC.Data.FastString
 import GHC.Utils.Outputable as Outputable
-import MonadUtils ( foldrM )
+import GHC.Utils.Monad ( foldrM )
 
 import qualified Data.ByteString as BS
 import Control.Monad( unless, liftM, ap, (<=<) )

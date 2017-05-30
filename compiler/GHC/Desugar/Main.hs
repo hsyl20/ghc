@@ -57,7 +57,7 @@ import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Desugar.Coverage
 import Util
-import MonadUtils
+import GHC.Utils.Monad
 import OrdList
 
 import Data.List

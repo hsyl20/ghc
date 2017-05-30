@@ -190,7 +190,7 @@ import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.FastString
 import GHC.Data.StringBuffer     ( StringBuffer )
 import Fingerprint
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Data.Bag
 import GHC.Utils.Binary
 import GHC.Utils.Error

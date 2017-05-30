@@ -322,7 +322,7 @@ import Panic
 import Platform
 import GHC.Data.Bag              ( listToBag, unitBag )
 import GHC.Utils.Error
-import MonadUtils
+import GHC.Utils.Monad
 import Util
 import GHC.Data.StringBuffer
 import GHC.Utils.Outputable

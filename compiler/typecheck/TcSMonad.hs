@@ -163,7 +163,7 @@ import Control.Monad
 #if __GLASGOW_HASKELL__ > 710
 import qualified Control.Monad.Fail as MonadFail
 #endif
-import MonadUtils
+import GHC.Utils.Monad
 import Data.IORef
 import Data.List ( foldl', partition )
 

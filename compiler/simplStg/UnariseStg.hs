@@ -204,7 +204,7 @@ import Id
 import Literal (Literal (..))
 import MkCore (aBSENT_ERROR_ID)
 import MkId (voidPrimId, voidArgId)
-import MonadUtils (mapAccumLM)
+import GHC.Utils.Monad (mapAccumLM)
 import GHC.Utils.Outputable
 import RepType
 import StgSyn

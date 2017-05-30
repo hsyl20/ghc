@@ -3,7 +3,7 @@
 module Main where
 
 import GHC
-import MonadUtils  ( liftIO )
+import GHC.Utils.Monad  ( liftIO )
 import GHC.Config.Flags    ( defaultFatalMessager, defaultFlushOut )
 import Annotations ( AnnTarget(..), CoreAnnTarget )
 import GHC.Serialized  ( deserializeWithData )

@@ -27,7 +27,7 @@ import Util
 import GHC.Data.Bag
 import GHC.Data.Pair
 import Control.Monad
-import MonadUtils ( zipWithAndUnzipM )
+import GHC.Utils.Monad ( zipWithAndUnzipM )
 import GHC.Exts ( inline )
 
 import Control.Arrow ( first )

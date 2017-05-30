@@ -24,7 +24,7 @@ import FamInstEnv
 import TcMType
 import Name
 import Util
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad
 
 

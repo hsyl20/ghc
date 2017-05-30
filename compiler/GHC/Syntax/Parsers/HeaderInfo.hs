@@ -39,7 +39,7 @@ import GHC.Utils.Outputable as Outputable
 import Pretty           ()
 import GHC.Data.Maybe
 import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Exception as Exception
 import BasicTypes
 import qualified GHC.LanguageExtensions as LangExt

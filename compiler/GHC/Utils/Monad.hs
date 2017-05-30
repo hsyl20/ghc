@@ -3,7 +3,7 @@
 -- | Utilities related to Monad and Applicative classes
 --   Mostly for backwards compatibility.
 
-module MonadUtils
+module GHC.Utils.Monad
         ( Applicative(..)
         , (<$>)
 

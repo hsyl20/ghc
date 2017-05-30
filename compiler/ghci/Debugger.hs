@@ -33,7 +33,7 @@ import GHC
 import GHC.Utils.Outputable
 import GHC.Utils.PrettyPrint.TyThing
 import GHC.Utils.Error
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Config.Flags
 import GHC.Utils.Exception
 

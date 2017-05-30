@@ -43,7 +43,7 @@ import Util
 import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
-import MonadUtils
+import GHC.Utils.Monad
 
 import Control.Monad
 import Data.Maybe

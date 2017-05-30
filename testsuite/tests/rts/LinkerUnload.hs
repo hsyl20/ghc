@@ -4,7 +4,7 @@ import GHC
 import GHC.Config.Flags
 import Linker
 import System.Environment
-import MonadUtils ( MonadIO(..) )
+import GHC.Utils.Monad ( MonadIO(..) )
 
 foreign export ccall loadPackages :: IO ()
 

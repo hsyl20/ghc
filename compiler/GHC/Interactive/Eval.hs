@@ -69,7 +69,7 @@ import Linker
 import GHC.Config.Flags
 import Unique
 import UniqSupply
-import MonadUtils
+import GHC.Utils.Monad
 import Module
 import PrelNames  ( toDynName, pretendNameIsInScope )
 import Panic

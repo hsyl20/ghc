@@ -57,7 +57,7 @@ import GHC.Data.FastString
 import ForeignCall
 import Util
 import GHC.Data.Maybe
-import MonadUtils
+import GHC.Utils.Monad
 
 import Data.ByteString ( unpack )
 import Control.Monad

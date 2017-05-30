@@ -31,7 +31,7 @@ import GHC.Config.Flags
 import CoreMonad
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Error
 import BasicTypes          ( IntWithInf, treatZeroAsInf, mkIntWithInf )
 import Control.Monad       ( when, liftM, ap )

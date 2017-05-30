@@ -14,7 +14,7 @@ import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
 import GHC.Data.Bag
 import GHC.Utils.Exception
 import GHC.Data.FastString
-import MonadUtils       ( liftIO )
+import GHC.Utils.Monad       ( liftIO )
 import SrcLoc
 
 import Distribution.Simple.GHC ( componentGhcOptions )

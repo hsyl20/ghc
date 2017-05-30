@@ -43,7 +43,7 @@ module GHC.Data.Graph.Directed(
 import Util        ( minWith, count )
 import GHC.Utils.Outputable
 import GHC.Data.Maybe      ( expectJust )
-import MonadUtils  ( allM )
+import GHC.Utils.Monad  ( allM )
 
 -- Extensions
 import Control.Monad    ( filterM, liftM, liftM2 )

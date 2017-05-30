@@ -4,7 +4,7 @@ module Main (main) where
 import GHC
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import MonadUtils
+import GHC.Utils.Monad
 import NameSet
 import Var
 

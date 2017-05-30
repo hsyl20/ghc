@@ -47,7 +47,7 @@ import GHC.Data.Maybe
 import GHC.Config.Flags
 import Panic
 import UniqSupply
-import MonadUtils
+import GHC.Utils.Monad
 import Util
 import GHC.Utils.Outputable
 

@@ -174,7 +174,7 @@ import Panic
 import qualified PprColour as Col
 import Util
 import GHC.Data.Maybe
-import MonadUtils
+import GHC.Utils.Monad
 import qualified Pretty
 import SrcLoc
 import BasicTypes       ( IntWithInf, treatZeroAsInf )

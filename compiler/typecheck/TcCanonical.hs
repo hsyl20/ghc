@@ -31,7 +31,7 @@ import RdrName
 import GHC.Data.Pair
 import Util
 import GHC.Data.Bag
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad
 import Data.Maybe ( isJust )
 import Data.List  ( zip4, foldl' )

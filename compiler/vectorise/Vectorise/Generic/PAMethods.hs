@@ -28,7 +28,7 @@ import TysPrim( intPrimTy )
 
 import GHC.Config.Flags
 import GHC.Data.FastString
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad
 import GHC.Utils.Outputable
 

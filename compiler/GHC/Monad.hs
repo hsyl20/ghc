@@ -23,7 +23,7 @@ module GHC.Monad (
         WarnErrLogger, defaultWarnErrLogger
   ) where
 
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Types
 import GHC.Config.Flags
 import GHC.Utils.Exception

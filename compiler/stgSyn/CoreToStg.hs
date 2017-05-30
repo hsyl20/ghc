@@ -36,7 +36,7 @@ import BasicTypes       ( Arity )
 import TysWiredIn       ( unboxedUnitDataCon )
 import Literal
 import GHC.Utils.Outputable
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Data.FastString
 import Util
 import GHC.Config.Flags

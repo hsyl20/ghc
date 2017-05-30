@@ -57,7 +57,7 @@ import Config
 import Name             ( NamedThing(..), nameSrcSpan )
 import SrcLoc           ( SrcSpan(..), realSrcLocSpan, mkRealSrcLoc )
 import Data.Bits
-import MonadUtils       ( mapAccumLM )
+import GHC.Utils.Monad       ( mapAccumLM )
 import Data.List        ( mapAccumL )
 import Control.Monad
 

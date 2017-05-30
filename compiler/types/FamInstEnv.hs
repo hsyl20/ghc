@@ -60,7 +60,7 @@ import Var
 import GHC.Data.Pair
 import SrcLoc
 import GHC.Data.FastString
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad
 import Data.List( mapAccumL, find )
 

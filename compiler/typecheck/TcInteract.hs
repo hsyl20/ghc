@@ -51,7 +51,7 @@ import GHC.Utils.Outputable
 import TcRnTypes
 import TcSMonad
 import GHC.Data.Bag
-import MonadUtils ( concatMapM )
+import GHC.Utils.Monad ( concatMapM )
 
 import Data.List( partition, foldl', deleteFirstsBy )
 import SrcLoc

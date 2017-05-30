@@ -38,7 +38,7 @@ import GHC.Types
 import TyCon
 import UniqSupply
 import BasicTypes
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Data.Maybe
 import CLabel
 import Util

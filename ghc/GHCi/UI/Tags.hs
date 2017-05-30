@@ -23,7 +23,7 @@ import GHC.Utils.Outputable
 import Name (nameOccName)
 import OccName (pprOccName)
 import ConLike
-import MonadUtils
+import GHC.Utils.Monad
 
 import Data.Function
 import Data.Maybe

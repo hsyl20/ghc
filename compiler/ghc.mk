@@ -515,7 +515,7 @@ compiler_stage2_dll0_MODULES = \
 	MkCore \
 	MkId \
 	Module \
-	MonadUtils \
+	GHC.Utils.Monad \
 	Name \
 	NameEnv \
 	NameSet \

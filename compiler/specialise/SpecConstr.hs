@@ -52,7 +52,7 @@ import UniqSupply
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.FiniteMap
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad    ( zipWithM )
 import Data.List
 import PrelNames        ( specTyConName )

@@ -14,7 +14,7 @@ import Cmm hiding (RegSet)
 import BlockId
 import Hoopl
 
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Monad.State
 import Unique
 import GHC.Data.Unique.FiniteMap

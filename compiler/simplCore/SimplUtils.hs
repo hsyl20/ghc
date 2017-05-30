@@ -57,7 +57,7 @@ import DataCon          ( dataConWorkId, isNullaryRepDataCon )
 import VarSet
 import BasicTypes
 import Util
-import MonadUtils
+import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Data.Pair
 import PrelRules

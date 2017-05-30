@@ -54,7 +54,7 @@ import GHC.Utils.Exception        ( tryIO, gbracket, gfinally )
 import GHC.Data.FastString
 import GHC.Data.Maybe           ( expectJust )
 import Name
-import MonadUtils       ( allM, MonadIO )
+import GHC.Utils.Monad       ( allM, MonadIO )
 import GHC.Utils.Outputable
 import Panic
 import SrcLoc

@@ -11,7 +11,7 @@ module Main where
 
 import GHC
 import GHC.Config.Flags
-import MonadUtils ( MonadIO(..) )
+import GHC.Utils.Monad ( MonadIO(..) )
 import BasicTypes ( failed )
 import GHC.Data.Bag        ( bagToList )
 import System.Environment

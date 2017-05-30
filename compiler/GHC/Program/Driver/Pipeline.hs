@@ -56,7 +56,7 @@ import BasicTypes       ( SuccessFlag(..) )
 import GHC.Data.Maybe           ( expectJust )
 import SrcLoc
 import LlvmCodeGen      ( llvmFixupAsm )
-import MonadUtils
+import GHC.Utils.Monad
 import Platform
 import TcRnTypes
 import GHC.Config.Hooks

@@ -33,7 +33,7 @@ import Unique
 
 import GHC.IO
 
-import MonadUtils
+import GHC.Utils.Monad
 import Control.Monad
 import Data.Bits
 import Data.Char
