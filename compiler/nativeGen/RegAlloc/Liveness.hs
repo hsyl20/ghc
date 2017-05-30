@@ -46,7 +46,7 @@ import PprCmm()
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import MonadUtils
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap

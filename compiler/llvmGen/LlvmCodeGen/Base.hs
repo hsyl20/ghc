@@ -45,7 +45,7 @@ import CodeGen.Platform ( activeStgRegs )
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Cmm              hiding ( succ )
-import Outputable as Outp
+import GHC.Utils.Outputable as Outp
 import Platform
 import GHC.Data.Unique.FiniteMap
 import Unique

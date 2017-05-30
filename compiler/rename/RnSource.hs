@@ -45,7 +45,7 @@ import Name
 import NameSet
 import NameEnv
 import Avail
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import GHC.Data.FastString

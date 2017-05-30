@@ -30,7 +30,7 @@ import FamInstEnv( FamInst(..), FamFlavor(..) )
 import Type( Type, pprTypeApp, pprSigmaType )
 import Name
 import VarEnv( emptyTidyEnv )
-import Outputable
+import GHC.Utils.Outputable
 
 -- -----------------------------------------------------------------------------
 -- Pretty-printing entities that we get from the GHC API

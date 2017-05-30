@@ -16,7 +16,7 @@ module GHC.Interface.Renaming(
 #include "HsVersions.h"
 
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Types
 import Module
 import GHC.Data.Unique.FiniteMap

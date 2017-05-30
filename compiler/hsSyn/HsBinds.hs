@@ -31,7 +31,7 @@ import Type
 import Name
 import NameSet
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Var
 import GHC.Data.Bag

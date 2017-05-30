@@ -17,7 +17,7 @@ import GHCi.RemoteTypes
 import GHCi.FFI (C_ffi_cif)
 import StgCmmLayout     ( ArgRep(..) )
 import PprCore
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Name
 import Unique

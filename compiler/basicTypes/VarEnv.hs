@@ -82,7 +82,7 @@ import GHC.Data.Unique.DeterFiniteMap
 import Unique
 import Util
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable
 
 {-
 ************************************************************************

@@ -57,7 +57,7 @@ import FieldLabel
 import Util
 import BasicTypes       ( compareFixity, funTyFixity, negateFixity,
                           Fixity(..), FixityDirection(..), LexicalFixity(..) )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import qualified GHC.LanguageExtensions as LangExt

@@ -23,7 +23,7 @@ module ListSetOps (
 
 #include "HsVersions.h"
 
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import Data.List

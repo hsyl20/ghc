@@ -20,7 +20,7 @@ import Data.List ( nub, intersperse )
 import Data.Data
 
 import MonadUtils
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Binary
 import SrcLoc
 import Unique

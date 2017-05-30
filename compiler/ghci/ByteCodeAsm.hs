@@ -30,7 +30,7 @@ import GHC.Data.FastString
 import StgCmmLayout     ( ArgRep(..) )
 import SMRep
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import Util
 import Unique

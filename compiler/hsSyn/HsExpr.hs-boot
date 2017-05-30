@@ -8,7 +8,7 @@
 module HsExpr where
 
 import SrcLoc     ( Located )
-import Outputable ( SDoc, Outputable )
+import GHC.Utils.Outputable ( SDoc, Outputable )
 import {-# SOURCE #-} HsPat  ( LPat )
 import BasicTypes ( SpliceExplicitFlag(..))
 import PlaceHolder ( DataId, OutputableBndrId )

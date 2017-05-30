@@ -51,7 +51,7 @@ import Name
 import VarSet
 import Rules
 import VarEnv
-import Outputable
+import GHC.Utils.Outputable
 import Module
 import SrcLoc
 import GHC.Data.Maybe

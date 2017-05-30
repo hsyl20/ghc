@@ -34,7 +34,7 @@ import InstEnv
 import LoadIface (loadInterfaceForName)
 import Module (getModule)
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import PrelNames
 import RdrName
 import SrcLoc

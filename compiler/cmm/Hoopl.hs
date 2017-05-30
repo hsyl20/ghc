@@ -20,7 +20,7 @@ import Compiler.Hoopl hiding
   )
 
 import Hoopl.Dataflow
-import Outputable
+import GHC.Utils.Outputable
 
 instance Outputable LabelSet where
   ppr = ppr . setElems

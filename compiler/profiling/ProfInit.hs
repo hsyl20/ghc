@@ -11,7 +11,7 @@ module ProfInit (profilingInitCode) where
 import CLabel
 import CostCentre
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Module
 

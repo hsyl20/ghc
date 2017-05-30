@@ -31,7 +31,7 @@ import NameEnv
 import FieldLabel ( flSelector )
 import SrcLoc
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Control.Monad(liftM)
 import Data.List (groupBy)
 

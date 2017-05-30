@@ -96,7 +96,7 @@ import GHC.Config.Flags
 import SrcLoc
 import BasicTypes hiding( SuccessFlag(..) )
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import ListSetOps

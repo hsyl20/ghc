@@ -47,7 +47,7 @@ import HsDoc
 import OccName          ( HasOccName(..) )
 
 -- others:
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Module           ( ModuleName )
 

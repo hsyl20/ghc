@@ -8,7 +8,7 @@ import {-# SOURCE #-} TyCon
 import BasicTypes ( LeftOrRight )
 import CoAxiom
 import Var
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Pair
 import Util
 

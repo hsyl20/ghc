@@ -41,7 +41,7 @@ module GHC.Data.Graph.Directed(
 
 
 import Util        ( minWith, count )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Maybe      ( expectJust )
 import MonadUtils  ( allM )
 

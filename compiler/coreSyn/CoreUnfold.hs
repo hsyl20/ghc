@@ -61,7 +61,7 @@ import PrelNames
 import TysPrim          ( realWorldStatePrimTy )
 import GHC.Data.Bag
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import ForeignCall
 
 import qualified Data.ByteString as BS

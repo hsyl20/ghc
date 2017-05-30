@@ -42,7 +42,7 @@ import NameEnv
 import NameSet
 import Var
 import VarEnv
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import TyCon
 import GHC.Data.Maybe

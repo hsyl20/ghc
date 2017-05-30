@@ -1,4 +1,4 @@
-module Outputable where
+module GHC.Utils.Outputable where
 
 data SDoc
 

@@ -27,7 +27,7 @@ module Panic (
 ) where
 #include "HsVersions.h"
 
-import {-# SOURCE #-} Outputable (SDoc, showSDocUnsafe)
+import {-# SOURCE #-} GHC.Utils.Outputable (SDoc, showSDocUnsafe)
 
 import Config
 import GHC.Utils.Exception as Exception

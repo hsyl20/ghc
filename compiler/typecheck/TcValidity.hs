@@ -55,7 +55,7 @@ import GHC.Config.Flags
 import Util
 import ListSetOps
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import BasicTypes
 import Module
 import Unique      ( mkAlphaTyVarUnique )

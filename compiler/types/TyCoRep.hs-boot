@@ -1,6 +1,6 @@
 module TyCoRep where
 
-import Outputable ( SDoc )
+import GHC.Utils.Outputable ( SDoc )
 import Data.Data  ( Data )
 
 data Type

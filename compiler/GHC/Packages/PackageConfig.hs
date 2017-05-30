@@ -34,7 +34,7 @@ import GHC.PackageDb
 import Data.Version
 
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Module
 import Unique
 

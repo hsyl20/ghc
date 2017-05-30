@@ -10,7 +10,7 @@
 -- The interface to this module is very similar to the standard Hughes-PJ pretty printing
 -- module, except that it exports a number of additional functions that are rarely used,
 -- and works over the 'SDoc' type.
-module Outputable (
+module GHC.Utils.Outputable (
         -- * Type classes
         Outputable(..), OutputableBndr(..),
 

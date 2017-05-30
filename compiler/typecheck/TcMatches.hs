@@ -35,7 +35,7 @@ import Id
 import TyCon
 import TysPrim
 import TcEvidence
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import SrcLoc
 import GHC.Config.Flags

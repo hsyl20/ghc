@@ -37,7 +37,7 @@ import Module
 import ListSetOps
 import GHC.Config.Flags
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable
 import Panic
 import Util
 import GHC.Utils.Error

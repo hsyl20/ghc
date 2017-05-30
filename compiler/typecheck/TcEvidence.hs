@@ -58,7 +58,7 @@ import Util
 import GHC.Data.Bag
 import GHC.Data.Graph.Directed
 import qualified Data.Data as Data
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import SrcLoc
 import Data.IORef( IORef )

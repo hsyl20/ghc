@@ -11,7 +11,7 @@ module CmmSwitch (
      createSwitchPlan,
   ) where
 
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 import Compiler.Hoopl (Label)
 

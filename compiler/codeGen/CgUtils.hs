@@ -18,7 +18,7 @@ import Hoopl
 import CmmUtils
 import CLabel
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 
 -- -----------------------------------------------------------------------------
 -- Information about global registers

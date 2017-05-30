@@ -64,7 +64,7 @@ import SrcLoc
 import qualified Lexer
 
 import GHC.Data.StringBuffer
-import Outputable hiding ( printForUser, printForUserPartWay )
+import GHC.Utils.Outputable hiding ( printForUser, printForUserPartWay )
 
 -- Other random utilities
 import BasicTypes hiding ( isTopLevel )

@@ -118,7 +118,7 @@ import SrcLoc
 import GHC.Data.FastString
 import Util
 import GHC.Data.Bag
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Constants
 
 import Data.Either

@@ -30,7 +30,7 @@ import FamInst( injTyVarsOfTypes )
 import InstEnv
 import VarSet
 import VarEnv
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Error( Validity(..), allValid )
 import SrcLoc
 import Util

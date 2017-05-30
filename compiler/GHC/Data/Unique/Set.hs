@@ -50,7 +50,7 @@ module GHC.Data.Unique.Set (
 import GHC.Data.Unique.FiniteMap
 import Unique
 import Data.Coerce
-import Outputable
+import GHC.Utils.Outputable
 import Data.Foldable (foldl')
 import Data.Data
 #if __GLASGOW_HASKELL__ >= 801

@@ -32,7 +32,7 @@ import Vectorise.Env
 import GHC.Desugar.Monad
 import TcRnMonad
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 
 import Control.Monad

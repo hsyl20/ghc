@@ -142,7 +142,7 @@ import {-# SOURCE #-} PrimOp (PrimOp)
 import ForeignCall
 import GHC.Data.Maybe
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import UniqSupply
 import GHC.Data.FastString

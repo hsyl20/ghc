@@ -41,7 +41,7 @@ import Var
 import Id
 import Name
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import Module
 
 import Control.Monad (join)

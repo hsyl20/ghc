@@ -54,7 +54,7 @@ import VarSet
 import PrelNames
 import SrcLoc
 import Util
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag
 import GHC.Data.Pair

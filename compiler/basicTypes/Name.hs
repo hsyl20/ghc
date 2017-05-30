@@ -89,7 +89,7 @@ import GHC.Data.Maybe
 import GHC.Utils.Binary
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import Control.DeepSeq
 import Data.Data

@@ -58,7 +58,7 @@ import GHC.Program.Driver.Phases
 import Module
 import GHC.Packages
 import Config
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Error
 import Panic
 import Platform

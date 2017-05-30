@@ -44,7 +44,7 @@ import GHC.Utils.Elf
 import GHC.Program.Main
 import GHC.Finder
 import GHC.Types hiding ( Hsc )
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import Module
 import GHC.Utils.Error
 import GHC.Config.Flags

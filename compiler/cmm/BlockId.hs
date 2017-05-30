@@ -11,7 +11,7 @@ module BlockId
 import CLabel
 import IdInfo
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import UniqSupply
 

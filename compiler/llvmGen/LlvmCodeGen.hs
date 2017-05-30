@@ -26,7 +26,7 @@ import GHC.Utils.Handle.BufferedWrite
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import UniqSupply
 import GHC.Utils.SysTools ( figureLlvmVersion )
 import qualified GHC.Data.Stream as Stream

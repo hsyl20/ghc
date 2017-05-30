@@ -40,7 +40,7 @@ import TyCon
 import DataCon
 import NameEnv
 import Name
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Array
 

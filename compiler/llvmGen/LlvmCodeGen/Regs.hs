@@ -16,7 +16,7 @@ import Llvm
 import CmmExpr
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Outputable ( panic )
+import GHC.Utils.Outputable ( panic )
 import Unique
 
 -- | Get the LlvmVar function variable storing the real register

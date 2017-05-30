@@ -23,7 +23,7 @@ import Coercion
 import FamInstEnv ( FamInstEnvs )
 import FamInst ( tcTopNormaliseNewTypeTF_maybe )
 import Var
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags( DynFlags )
 import NameSet
 import RdrName

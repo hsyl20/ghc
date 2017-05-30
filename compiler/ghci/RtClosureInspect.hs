@@ -53,7 +53,7 @@ import TysPrim
 import PrelNames
 import TysWiredIn
 import GHC.Config.Flags
-import Outputable as Ppr
+import GHC.Utils.Outputable as Ppr
 import GHC.Arr          ( Array(..) )
 import GHC.Exts
 import GHC.IO ( IO(..) )

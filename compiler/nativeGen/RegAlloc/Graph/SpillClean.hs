@@ -39,7 +39,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import Unique
 import State
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 import Data.List

@@ -19,7 +19,7 @@ import Data.Maybe (mapMaybe)
 import qualified Data.List as List
 import Data.Word
 import qualified Data.Map as M
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import qualified TrieMap as TM

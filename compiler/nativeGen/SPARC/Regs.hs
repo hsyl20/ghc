@@ -38,7 +38,7 @@ import RegClass
 import Format
 
 import Unique
-import Outputable
+import GHC.Utils.Outputable
 
 {-
         The SPARC has 64 registers of interest; 32 integer registers and 32

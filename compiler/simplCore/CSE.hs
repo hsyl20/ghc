@@ -21,7 +21,7 @@ import CoreUtils        ( mkAltExpr, eqExpr
                         , stripTicksE, stripTicksT, mkTicks )
 import Type             ( tyConAppArgs )
 import CoreSyn
-import Outputable
+import GHC.Utils.Outputable
 import BasicTypes       ( TopLevelFlag(..), isTopLevel
                         , isAlwaysActive, isAnyInlinePragma )
 import TrieMap

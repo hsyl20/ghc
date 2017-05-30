@@ -7,7 +7,7 @@
 module PlaceHolder where
 
 import Type       ( Type )
-import Outputable
+import GHC.Utils.Outputable
 import Name
 import NameSet
 import RdrName

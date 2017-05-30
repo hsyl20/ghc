@@ -31,7 +31,7 @@ where
 #include "HsVersions.h"
 
 import CmmType
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 
 -----------------------------------------------------------------------------

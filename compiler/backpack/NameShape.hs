@@ -12,7 +12,7 @@ module NameShape(
 
 #include "HsVersions.h"
 
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Types
 import Module
 import GHC.Data.Unique.FiniteMap

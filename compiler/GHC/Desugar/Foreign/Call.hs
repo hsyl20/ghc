@@ -40,7 +40,7 @@ import BasicTypes
 import Literal
 import PrelNames
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import Data.Maybe

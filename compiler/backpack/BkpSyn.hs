@@ -20,7 +20,7 @@ module BkpSyn (
 import HsSyn
 import RdrName
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import Module
 import GHC.Packages.PackageConfig
 

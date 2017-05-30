@@ -2,7 +2,7 @@ module TcUnify where
 import TcType     ( TcTauType )
 import TcRnTypes  ( TcM )
 import TcEvidence ( TcCoercion )
-import Outputable ( Outputable )
+import GHC.Utils.Outputable ( Outputable )
 import HsExpr     ( HsExpr )
 import Name       ( Name )
 

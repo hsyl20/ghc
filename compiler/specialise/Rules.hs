@@ -55,7 +55,7 @@ import GHC.Data.Unique.FiniteMap
 import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Data.Bag

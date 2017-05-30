@@ -37,7 +37,7 @@ import TyCon
 import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
 import Util
 import GHC.Data.Pair
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 

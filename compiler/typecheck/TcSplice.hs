@@ -36,7 +36,7 @@ import Name
 import TcRnMonad
 import TcType
 
-import Outputable
+import GHC.Utils.Outputable
 import TcExpr
 import SrcLoc
 import THNames

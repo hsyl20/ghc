@@ -31,7 +31,7 @@ import Type
 import VarSet
 import Util
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 -- import Data.List        ( mapAccumL )
 import BasicTypes       ( RecFlag(..), isRec )
 

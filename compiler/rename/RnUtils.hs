@@ -36,7 +36,7 @@ import NameSet
 import NameEnv
 import DataCon
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import BasicTypes       ( TopLevelFlag(..) )
 import ListSetOps       ( removeDups )

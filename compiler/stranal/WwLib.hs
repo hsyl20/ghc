@@ -37,7 +37,7 @@ import UniqSupply
 import Unique
 import GHC.Data.Maybe
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ListSetOps

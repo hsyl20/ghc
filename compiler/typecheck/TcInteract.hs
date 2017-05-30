@@ -46,7 +46,7 @@ import FamInstEnv
 import Unify ( tcUnifyTyWithTFs )
 
 import TcEvidence
-import Outputable
+import GHC.Utils.Outputable
 
 import TcRnTypes
 import TcSMonad

@@ -50,7 +50,7 @@ import Hoopl
 
 -- The rest:
 import OrdList
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import GHC.Config.Flags
 

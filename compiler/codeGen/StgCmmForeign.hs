@@ -42,7 +42,7 @@ import SMRep
 import ForeignCall
 import GHC.Config.Flags
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable
 import UniqSupply
 import BasicTypes
 

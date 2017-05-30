@@ -12,7 +12,7 @@ import GHC
 import BasicTypes
 import GHC.Config.Flags
 import MonadUtils
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )

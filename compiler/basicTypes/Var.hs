@@ -92,7 +92,7 @@ import Unique ( Uniquable, Unique, getKey, getUnique
 import Util
 import GHC.Utils.Binary
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Data
 

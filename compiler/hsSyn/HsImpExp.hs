@@ -16,7 +16,7 @@ import OccName          ( HasOccName(..), isTcOcc, isSymOcc )
 import BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )
 import FieldLabel       ( FieldLbl(..) )
 
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import SrcLoc
 

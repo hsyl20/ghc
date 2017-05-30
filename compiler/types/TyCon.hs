@@ -139,7 +139,7 @@ import NameEnv
 import CoAxiom
 import PrelNames
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString.Environment
 import FieldLabel
 import GHC.Config.Constants

@@ -59,7 +59,7 @@ import GHC.Data.Unique.FiniteMap
 import Panic
 import GHC.Config.Flags
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Exception
 import BasicTypes
 import GHC.Data.FastString

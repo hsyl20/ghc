@@ -20,7 +20,7 @@ import Platform
 import GHC.Utils.Error
 import GHC.Data.Maybe     (MaybeT(..),runMaybeT)
 import Util       (charToC)
-import Outputable (text,hcat,SDoc)
+import GHC.Utils.Outputable (text,hcat,SDoc)
 
 import Control.Monad (when)
 import Data.Binary.Get

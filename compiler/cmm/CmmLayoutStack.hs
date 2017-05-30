@@ -26,7 +26,7 @@ import Util
 
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Outputable hiding ( isEmpty )
+import GHC.Utils.Outputable hiding ( isEmpty )
 import qualified Data.Set as Set
 import Control.Monad.Fix
 import Data.Array as Array

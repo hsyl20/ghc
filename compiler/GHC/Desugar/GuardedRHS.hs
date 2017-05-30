@@ -29,7 +29,7 @@ import Module
 import Name
 import Util
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 
 {-
 @dsGuarded@ is used for both @case@ expressions and pattern bindings.

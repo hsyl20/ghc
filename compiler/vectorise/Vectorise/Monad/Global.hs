@@ -47,7 +47,7 @@ import Name
 import VarEnv
 import VarSet
 import Var as Var
-import Outputable
+import GHC.Utils.Outputable
 
 
 -- Global Environment ---------------------------------------------------------

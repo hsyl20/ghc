@@ -72,7 +72,7 @@ import TyCon
 import GHC.Desugar.Match.Expr
 import Id
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Type
 import UniqSupply

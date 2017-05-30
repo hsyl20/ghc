@@ -25,7 +25,7 @@ module GHC.Data.Bag (
         anyBagM, filterBagM
     ) where
 
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import MonadUtils

@@ -22,7 +22,7 @@ import NameSet
 import DataCon
 import ConLike
 import TysWiredIn
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import SrcLoc
 

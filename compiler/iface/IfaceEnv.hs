@@ -36,7 +36,7 @@ import NameCache
 import UniqSupply
 import SrcLoc
 
-import Outputable
+import GHC.Utils.Outputable
 import Data.List     ( partition )
 
 {-

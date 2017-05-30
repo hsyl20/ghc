@@ -50,7 +50,7 @@ import CoreUtils
 import SrcLoc
 import Unique
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bag
 import GHC.Config.Flags
 import GHC.Data.FastString

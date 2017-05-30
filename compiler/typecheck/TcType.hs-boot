@@ -1,5 +1,5 @@
 module TcType where
-import Outputable( SDoc )
+import GHC.Utils.Outputable( SDoc )
 
 data MetaDetails
 

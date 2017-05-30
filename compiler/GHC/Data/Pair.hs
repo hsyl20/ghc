@@ -17,7 +17,7 @@ where
 
 #include "HsVersions.h"
 
-import Outputable
+import GHC.Utils.Outputable
 
 data Pair a = Pair { pFst :: a, pSnd :: a }
 -- Note that Pair is a *unary* type constructor

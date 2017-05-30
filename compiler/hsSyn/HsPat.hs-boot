@@ -9,7 +9,7 @@ module HsPat where
 import SrcLoc( Located )
 
 import Data.Data hiding (Fixity)
-import Outputable
+import GHC.Utils.Outputable
 import PlaceHolder      ( DataId, OutputableBndrId )
 
 type role Pat nominal

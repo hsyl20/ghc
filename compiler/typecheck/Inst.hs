@@ -62,7 +62,7 @@ import PrelNames
 import SrcLoc
 import GHC.Config.Flags
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad( unless )

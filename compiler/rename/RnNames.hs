@@ -38,7 +38,7 @@ import FieldLabel
 import GHC.Types
 import RdrName
 import RdrHsSyn        ( setRdrNameSpace )
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
 import SrcLoc
 import BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )

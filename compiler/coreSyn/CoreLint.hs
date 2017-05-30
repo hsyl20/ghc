@@ -52,7 +52,7 @@ import BasicTypes
 import GHC.Utils.Error as Err
 import ListSetOps
 import PrelNames
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import Util
 import InstEnv     ( instanceDFunId )

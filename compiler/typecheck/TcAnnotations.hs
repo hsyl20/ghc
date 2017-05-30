@@ -20,7 +20,7 @@ import GHC.Types.Annotations
 import Name
 import TcRnMonad
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 
 -- Some platforms don't support the external interpreter, and
 -- compilation on those platforms shouldn't fail just due to

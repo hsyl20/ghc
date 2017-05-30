@@ -30,7 +30,7 @@ module GHC.Data.Var.UndirectedGraph
 import Id
 import VarEnv
 import GHC.Data.Unique.FiniteMap
-import Outputable
+import GHC.Utils.Outputable
 import Data.List
 import GHC.Data.Bag
 import Unique

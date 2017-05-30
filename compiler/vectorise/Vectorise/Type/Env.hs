@@ -40,7 +40,7 @@ import OccName
 import Unique
 
 import Util
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
 import MonadUtils

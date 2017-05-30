@@ -60,7 +60,7 @@ module GHC.Data.Unique.DeterFiniteMap (
     ) where
 
 import Unique           ( Uniquable(..), Unique, getKey )
-import Outputable
+import GHC.Utils.Outputable
 
 import qualified Data.IntMap as M
 import Data.Data

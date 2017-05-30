@@ -101,7 +101,7 @@ import SrcLoc
 import Unique
 import PrelNames
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import TyCoRep   -- Doesn't need special access, but this is easier to avoid
                  -- import loops which show up if you import Type instead
 

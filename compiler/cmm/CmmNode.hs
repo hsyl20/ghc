@@ -28,7 +28,7 @@ import CmmSwitch
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
-import Outputable
+import GHC.Utils.Outputable
 import SMRep
 import CoreSyn (Tickish)
 import qualified Unique as U

@@ -89,7 +89,7 @@ import SrcLoc
 import Unique           ( hasKey )
 import OrdList          ( OrdList, fromOL )
 import GHC.Data.Bag              ( emptyBag, consBag )
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import Util

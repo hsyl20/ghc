@@ -30,7 +30,7 @@ import VarSet
 import TysPrim
 import BasicTypes( Arity )
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import Control.Monad

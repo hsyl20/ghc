@@ -38,7 +38,7 @@ import GHC.Config.Flags
 import Id
 import MkGraph
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import StgSyn
 import Type
 import TysPrim

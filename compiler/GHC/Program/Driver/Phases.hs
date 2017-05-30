@@ -41,7 +41,7 @@ module GHC.Program.Driver.Phases (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import System.FilePath
 import GHC.Utils.Binary

@@ -32,7 +32,7 @@ import NameSet
 import FieldLabel
 import GHC.Utils.Binary
 import ListSetOps
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import Data.List ( find )

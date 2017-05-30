@@ -55,7 +55,7 @@ import RdrName ( RdrName )
 import ConLike
 import DataCon
 import TyCon
-import Outputable
+import GHC.Utils.Outputable
 import Type
 import SrcLoc
 import GHC.Data.Bag -- collect ev vars from pats

@@ -38,7 +38,7 @@ import BasicTypes
 import ConLike
 import SrcLoc
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Type
 

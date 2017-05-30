@@ -30,7 +30,7 @@ import TysWiredIn
 import GHC.Desugar.Match
 import PrelNames
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import TcType
 import ListSetOps( getNth )
 import Util

@@ -60,7 +60,7 @@ import RdrName
 import BasicTypes
 import Util
 import ListSetOps          ( removeDups )
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Literal             ( inCharRange )
 import TysWiredIn          ( nilDataCon )

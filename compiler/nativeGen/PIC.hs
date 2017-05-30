@@ -71,7 +71,7 @@ import CLabel           ( mkForeignLabel )
 import BasicTypes
 import Module
 
-import Outputable
+import GHC.Utils.Outputable
 
 import GHC.Config.Flags
 import GHC.Data.FastString

@@ -59,7 +59,7 @@ import Name
 import BasicTypes
 import Type
 import PatSyn
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Util
 import Var

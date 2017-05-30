@@ -44,7 +44,7 @@ import PprCmmExpr
 import Cmm
 
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 
 import Data.List

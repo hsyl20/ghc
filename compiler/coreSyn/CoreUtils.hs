@@ -76,7 +76,7 @@ import TyCoRep( TyBinder(..) )
 import Coercion
 import TyCon
 import Unique
-import Outputable
+import GHC.Utils.Outputable
 import TysPrim
 import GHC.Config.Flags
 import GHC.Data.FastString

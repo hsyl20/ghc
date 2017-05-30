@@ -20,7 +20,7 @@ import NameEnv
 import Name
 import Id
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import Control.Monad
 import Data.Array

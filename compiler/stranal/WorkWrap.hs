@@ -21,7 +21,7 @@ import GHC.Config.Flags
 import Demand
 import WwLib
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import FamInstEnv
 import MonadUtils
 

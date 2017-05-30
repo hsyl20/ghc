@@ -22,7 +22,7 @@ import CmmSwitch
 import Data.List (sortBy)
 import GHC.Data.Maybe
 import Control.Monad
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import UniqSupply
 import Hoopl

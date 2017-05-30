@@ -20,7 +20,7 @@ import CLabel
 import Cmm
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 import qualified Data.Array.Unsafe as U ( castSTUArray )

@@ -13,7 +13,7 @@ module CPrim
 
 import CmmType
 import CmmMachOp
-import Outputable
+import GHC.Utils.Outputable
 
 popCntLabel :: Width -> String
 popCntLabel w = "hs_popcnt" ++ pprWidth w

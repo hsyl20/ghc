@@ -19,7 +19,7 @@ import Format
 import Cmm
 
 import OrdList
-import Outputable
+import GHC.Utils.Outputable
 
 
 getCondCode :: CmmExpr -> NatM CondCode

@@ -38,7 +38,7 @@ import VarSet
 import Name
 import NameSet
 import Unify
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Error
 import BasicTypes
 import GHC.Data.Unique.DeterFiniteMap

@@ -24,7 +24,7 @@ import Cmm
 
 import GHC.Config.Flags
 import OrdList
-import Outputable
+import GHC.Utils.Outputable
 
 -- | Code to assign a 64 bit value to memory.
 assignMem_I64Code

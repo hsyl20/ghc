@@ -35,7 +35,7 @@ import SrcLoc
 import GHC.Utils.Error
 import FastMutInt
 import Unique
-import Outputable
+import GHC.Utils.Outputable
 import NameCache
 import Platform
 import GHC.Data.FastString

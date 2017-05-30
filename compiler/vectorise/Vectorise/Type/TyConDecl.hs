@@ -17,7 +17,7 @@ import BasicTypes( DefMethSpec(..) )
 import SrcLoc( SrcSpan, noSrcSpan )
 import Var
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import Control.Monad
 

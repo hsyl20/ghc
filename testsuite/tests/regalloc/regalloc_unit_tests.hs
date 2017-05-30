@@ -39,7 +39,7 @@ import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Config.Flags
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import BasicTypes
 
 import GHC.Data.Stream (collect, yield)

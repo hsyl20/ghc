@@ -23,7 +23,7 @@ module GHC.Program.CmdLineParser
 #include "HsVersions.h"
 
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import Panic
 import GHC.Data.Bag
 import SrcLoc

@@ -45,7 +45,7 @@ import CostCentre       ( CostCentreStack, currentCCS )
 import GHC.Data.Maybe
 import Util
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import Control.Monad (unless,void)
 import Control.Arrow (first)

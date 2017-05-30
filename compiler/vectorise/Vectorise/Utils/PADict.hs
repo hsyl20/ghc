@@ -19,7 +19,7 @@ import TyCoRep
 import TyCon
 import CoAxiom
 import Var
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Control.Monad

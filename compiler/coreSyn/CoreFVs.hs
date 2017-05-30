@@ -78,7 +78,7 @@ import TysPrim( funTyConName )
 import GHC.Data.Maybe( orElse )
 import Util
 import BasicTypes( Activation )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Var.Free as FV
 
 {-

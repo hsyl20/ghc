@@ -52,7 +52,7 @@ module SMRep (
 
 import BasicTypes( ConTagZ )
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import GHC.Data.FastString
 

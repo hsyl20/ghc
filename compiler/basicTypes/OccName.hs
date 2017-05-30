@@ -112,7 +112,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
-import Outputable
+import GHC.Utils.Outputable
 import Lexeme
 import GHC.Utils.Binary
 import Control.DeepSeq

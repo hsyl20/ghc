@@ -19,7 +19,7 @@ import GHC.Config.Flags
 import Platform
 
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 -- ----------------------------------------------------------------------------
 -- * Constants

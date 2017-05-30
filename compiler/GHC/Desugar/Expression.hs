@@ -53,7 +53,7 @@ import VarEnv
 import SrcLoc
 import Util
 import GHC.Data.Bag
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import PatSyn
 
 import Control.Monad

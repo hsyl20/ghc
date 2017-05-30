@@ -5,7 +5,7 @@ import Id        ( Id )
 import HsSyn     ( PatSynBind, LHsBinds )
 import TcRnTypes ( TcM, TcPatSynInfo )
 import TcRnMonad ( TcGblEnv)
-import Outputable ( Outputable )
+import GHC.Utils.Outputable ( Outputable )
 
 tcInferPatSynDecl :: PatSynBind Name Name
                   -> TcM (LHsBinds Id, TcGblEnv)

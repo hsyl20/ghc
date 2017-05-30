@@ -10,7 +10,7 @@ where
 import Cmm
 import CLabel
 
-import Outputable
+import GHC.Utils.Outputable
 
 -- | An immediate value.
 --      Not all of these are directly representable by the machine.

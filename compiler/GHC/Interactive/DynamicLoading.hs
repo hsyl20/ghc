@@ -50,7 +50,7 @@ import Module           ( Module, ModuleName )
 import Panic
 import GHC.Data.FastString
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Exception
 import GHC.Config.Hooks
 

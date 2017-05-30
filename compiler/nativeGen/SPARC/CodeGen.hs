@@ -55,7 +55,7 @@ import BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
 import OrdList
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import Unique
 

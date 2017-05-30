@@ -142,7 +142,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import Platform ( platformOS, osSubsectionsViaSymbols )
 
-import Outputable
+import GHC.Utils.Outputable
 import NameEnv
 import GHC.Syntax.Stats         ( ppSourceStats )
 import GHC.Types

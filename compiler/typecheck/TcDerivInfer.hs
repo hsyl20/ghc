@@ -19,7 +19,7 @@ import DataCon
 -- import GHC.Config.Flags
 import GHC.Utils.Error
 import Inst
-import Outputable
+import GHC.Utils.Outputable
 import PrelNames
 import TcDerivUtils
 import TcEnv

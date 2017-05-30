@@ -73,7 +73,7 @@ module StgCse (stgCse) where
 import DataCon
 import Id
 import StgSyn
-import Outputable
+import GHC.Utils.Outputable
 import VarEnv
 import CoreSyn (AltCon(..))
 import Data.List (mapAccumL)

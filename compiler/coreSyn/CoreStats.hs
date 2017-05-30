@@ -13,7 +13,7 @@ module CoreStats (
 
 import BasicTypes
 import CoreSyn
-import Outputable
+import GHC.Utils.Outputable
 import Coercion
 import Var
 import Type (Type, typeSize, seqType)

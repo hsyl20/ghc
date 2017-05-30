@@ -40,7 +40,7 @@ import Id
 import BasicTypes( isStrongLoopBreaker )
 import Literal
 import TysPrim
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
 import Util

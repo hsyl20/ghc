@@ -52,7 +52,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Unique.DeterSet
 import GHC.Data.Unique.FiniteMap( disjointUFM, pluralUFM, pprUFM )
 import GHC.Data.Unique.DeterFiniteMap( disjointUDFM, udfmToUfm, anyUDFM, allUDFM )
-import Outputable (SDoc)
+import GHC.Utils.Outputable (SDoc)
 
 -- | A non-deterministic Variable Set
 --

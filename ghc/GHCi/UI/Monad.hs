@@ -35,7 +35,7 @@ module GHCi.UI.Monad (
 import GHCi.UI.Info (ModInfo)
 import qualified GHC
 import GHC.Monad        hiding (liftIO)
-import Outputable       hiding (printForUser, printForUserPartWay)
+import GHC.Utils.Outputable       hiding (printForUser, printForUserPartWay)
 import qualified Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString

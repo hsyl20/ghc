@@ -16,7 +16,7 @@ import Format
 import Cmm
 
 
-import Outputable
+import GHC.Utils.Outputable
 import OrdList
 
 -- | Expand out synthetic instructions in this top level thing

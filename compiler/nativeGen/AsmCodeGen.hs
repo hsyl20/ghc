@@ -80,7 +80,7 @@ import BasicTypes       ( Alignment )
 import GHC.Data.Graph.Directed
 import qualified Pretty
 import GHC.Utils.Handle.BufferedWrite
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.Set
 import GHC.Utils.Error

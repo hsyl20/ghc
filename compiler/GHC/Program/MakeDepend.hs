@@ -24,7 +24,7 @@ import qualified GHC.Utils.SysTools
 import Module
 import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Finder
-import Outputable
+import GHC.Utils.Outputable
 import Panic
 import SrcLoc
 import Data.List

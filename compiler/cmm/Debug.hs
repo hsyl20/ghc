@@ -29,7 +29,7 @@ import CmmUtils
 import CoreSyn
 import GHC.Data.FastString      ( nilFS, mkFastString )
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import PprCore         ()
 import PprCmmExpr      ( pprExpr )
 import SrcLoc

@@ -42,7 +42,7 @@ import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import Data.List
 import Control.Arrow    ( second )
 

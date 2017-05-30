@@ -18,7 +18,7 @@ import WwLib            ( findTypeShape, deepSplitProductType_maybe )
 import Demand   -- All of it
 import CoreSyn
 import CoreSeq          ( seqBinds )
-import Outputable
+import GHC.Utils.Outputable
 import VarEnv
 import BasicTypes
 import Data.List

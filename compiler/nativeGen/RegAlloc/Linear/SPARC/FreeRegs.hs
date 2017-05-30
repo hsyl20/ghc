@@ -8,7 +8,7 @@ import RegClass
 import Reg
 
 import CodeGen.Platform
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 import Data.Word

@@ -32,7 +32,7 @@ import CmmNode
 import SMRep
 import CmmExpr
 import Compiler.Hoopl
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Word        ( Word8 )
 

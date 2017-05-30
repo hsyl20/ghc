@@ -35,7 +35,7 @@ import OccName          ( occNameFS )
 import BasicTypes       ( Arity )
 import TysWiredIn       ( unboxedUnitDataCon )
 import Literal
-import Outputable
+import GHC.Utils.Outputable
 import MonadUtils
 import GHC.Data.FastString
 import Util

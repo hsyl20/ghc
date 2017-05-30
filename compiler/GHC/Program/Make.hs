@@ -55,7 +55,7 @@ import GHC.Data.FastString
 import GHC.Data.Maybe           ( expectJust )
 import Name
 import MonadUtils       ( allM, MonadIO )
-import Outputable
+import GHC.Utils.Outputable
 import Panic
 import SrcLoc
 import GHC.Data.StringBuffer

@@ -72,7 +72,7 @@ import Class
 import Name
 import PrelNames
 import Var
-import Outputable
+import GHC.Utils.Outputable
 import ListSetOps
 import Util
 import BasicTypes

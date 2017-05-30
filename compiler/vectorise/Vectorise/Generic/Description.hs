@@ -25,7 +25,7 @@ import DataCon
 import TyCon
 import Type
 import Control.Monad
-import Outputable
+import GHC.Utils.Outputable
 
 
 -- | Describes the generic representation of a data type.

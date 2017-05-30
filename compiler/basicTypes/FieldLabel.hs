@@ -74,7 +74,7 @@ import Name
 
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.Binary
 
 import Data.Data

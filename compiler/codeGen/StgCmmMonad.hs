@@ -78,7 +78,7 @@ import BasicTypes( ConTagZ )
 import Unique
 import UniqSupply
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import Control.Monad
 import Data.List

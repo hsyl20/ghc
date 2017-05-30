@@ -147,7 +147,7 @@ import qualified RnEnv as TcM
 import Var
 import VarEnv
 import VarSet
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bag as Bag
 import UniqSupply
 import Util

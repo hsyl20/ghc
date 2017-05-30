@@ -23,7 +23,7 @@ import RnUnbound        ( isUnboundName )
 import RnSource         ( rnSrcDecls, findSplice )
 import RnPat            ( rnPat )
 import BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
-import Outputable
+import GHC.Utils.Outputable
 import Module
 import SrcLoc
 import RnTypes          ( rnLHsType )

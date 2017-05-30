@@ -113,7 +113,7 @@ import Module
 import TyCon
 import BasicTypes
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import GHC.Data.Unique.Set
 import SrcLoc     ( RealSrcSpan, containsSpan )

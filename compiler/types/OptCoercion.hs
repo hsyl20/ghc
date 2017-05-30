@@ -21,7 +21,7 @@ import TyCon
 import CoAxiom
 import VarSet
 import VarEnv
-import Outputable
+import GHC.Utils.Outputable
 import FamInstEnv ( flattenTys )
 import GHC.Data.Pair
 import ListSetOps ( getNth )

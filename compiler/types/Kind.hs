@@ -28,7 +28,7 @@ import TyCoRep
 import TyCon
 import PrelNames
 
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 {-

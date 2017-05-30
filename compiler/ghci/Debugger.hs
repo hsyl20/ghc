@@ -30,7 +30,7 @@ import VarSet
 import GHC.Data.Unique.Set
 import Type
 import GHC
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Utils.PrettyPrint.TyThing
 import GHC.Utils.Error
 import MonadUtils

@@ -51,7 +51,7 @@ import VarEnv
 import Name
 import PrelNames ( eqPrimTyConKey )
 import GHC.Data.Unique.DeterFiniteMap
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import TrieMap
 import Unique

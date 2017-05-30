@@ -26,7 +26,7 @@ import Cmm
 import PprCmmExpr ()
 import Platform
 
-import Outputable
+import GHC.Utils.Outputable
 import OrdList
 
 --------------------------------------------------------------------------------

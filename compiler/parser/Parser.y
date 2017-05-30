@@ -49,7 +49,7 @@ import OrdList
 import GHC.Data.Bool.Formula   ( BooleanFormula(..), LBooleanFormula(..), mkTrue )
 import GHC.Data.FastString
 import GHC.Data.Maybe           ( orElse )
-import Outputable
+import GHC.Utils.Outputable
 
 -- compiler/basicTypes
 import RdrName

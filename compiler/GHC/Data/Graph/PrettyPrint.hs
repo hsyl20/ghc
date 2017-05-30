@@ -9,7 +9,7 @@ where
 
 import GHC.Data.Graph.Base
 
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap

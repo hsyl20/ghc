@@ -501,7 +501,7 @@ Library
         GHC.Data.Maybe
         MonadUtils
         OrdList
-        Outputable
+        GHC.Utils.Outputable
         GHC.Data.Pair
         Panic
         PprColour

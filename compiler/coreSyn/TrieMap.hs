@@ -46,7 +46,7 @@ import qualified Data.Map    as Map
 import qualified Data.IntMap as IntMap
 import VarEnv
 import NameEnv
-import Outputable
+import GHC.Utils.Outputable
 import Control.Monad( (>=>) )
 
 {-

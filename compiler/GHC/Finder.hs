@@ -40,7 +40,7 @@ import GHC.Data.FastString
 import Util
 import PrelNames        ( gHC_PRIM )
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe           ( expectJust )
 
 import Data.IORef       ( IORef, readIORef, atomicModifyIORef' )

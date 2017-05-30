@@ -58,7 +58,7 @@ import VarSet
 import BasicTypes
 import Util
 import MonadUtils
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Pair
 import PrelRules
 import GHC.Data.FastString       ( fsLit )

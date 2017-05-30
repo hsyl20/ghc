@@ -44,7 +44,7 @@ module GHC.Plugins
    , module Util
    , module GHC.Serialized
    , module SrcLoc
-   , module Outputable
+   , module GHC.Utils.Outputable
    , module UniqSupply
    , module Unique
    , module GHC.Data.FastString
@@ -107,7 +107,7 @@ import GHC.Data.FiniteMap
 import Util
 import GHC.Serialized
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import UniqSupply
 import Unique           ( Unique, Uniquable(..) )
 import GHC.Data.FastString

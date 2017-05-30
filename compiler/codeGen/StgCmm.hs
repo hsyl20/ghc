@@ -39,7 +39,7 @@ import DataCon
 import Name
 import TyCon
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Stream
 import BasicTypes
 

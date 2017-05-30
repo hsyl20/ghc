@@ -15,7 +15,7 @@ import Name
 import UniqSupply
 import TysWiredIn
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import PrelNames
 
 #include "HsVersions.h"

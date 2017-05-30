@@ -3,7 +3,7 @@ module Main where
 import BasicTypes
 import GHC
 import GhcMonad
-import Outputable
+import GHC.Utils.Outputable
 import RepType
 import TysPrim
 import TysWiredIn

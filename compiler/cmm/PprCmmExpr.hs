@@ -40,7 +40,7 @@ where
 
 import CmmExpr
 
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Maybe
 import Numeric ( fromRat )

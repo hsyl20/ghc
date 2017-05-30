@@ -34,7 +34,7 @@ import GHC.Types
 import GHC.Data.Bag
 import GHC.Config.Flags
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import State
 import GHC.Data.Unique.DeterFiniteMap

@@ -30,7 +30,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import MonadUtils
 import Control.Monad
-import Outputable
+import GHC.Utils.Outputable
 
 
 buildPReprTyCon :: TyCon -> TyCon -> SumRepr -> VM FamInst

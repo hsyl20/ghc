@@ -58,7 +58,7 @@ import GHC.Types
 import GHC.Data.Maybe
 import UniqSupply
 import GHC.Utils.Error (Severity(..))
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Unique.DeterFiniteMap
 import SrcLoc
 import qualified GHC.Utils.Error as Err

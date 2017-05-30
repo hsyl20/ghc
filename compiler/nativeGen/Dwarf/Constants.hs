@@ -5,7 +5,7 @@ module Dwarf.Constants where
 
 import GHC.Data.FastString
 import Platform
-import Outputable
+import GHC.Utils.Outputable
 
 import Reg
 import X86.Regs

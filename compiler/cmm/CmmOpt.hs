@@ -28,7 +28,7 @@ import Cmm
 import GHC.Config.Flags
 import Util
 
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 import Data.Bits

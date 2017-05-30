@@ -39,7 +39,7 @@ import TysWiredIn
 import Literal
 import SrcLoc
 import Data.Ratio
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import BasicTypes
 import GHC.Config.Flags
 import Util

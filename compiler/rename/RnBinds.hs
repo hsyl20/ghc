@@ -50,7 +50,7 @@ import BasicTypes       ( RecFlag(..), LexicalFixity(..) )
 import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Data.Bag
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.Set
 import GHC.Data.Maybe           ( orElse )

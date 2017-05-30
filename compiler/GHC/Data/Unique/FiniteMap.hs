@@ -72,7 +72,7 @@ module GHC.Data.Unique.FiniteMap (
     ) where
 
 import Unique           ( Uniquable(..), Unique, getKey )
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.List (foldl')
 

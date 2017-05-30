@@ -135,7 +135,7 @@ module Module
     ) where
 
 import Config
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap

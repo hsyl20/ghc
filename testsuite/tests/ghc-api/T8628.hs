@@ -7,7 +7,7 @@ import GHC.Utils.Exception
 import Module
 import GHC.Data.FastString
 import MonadUtils
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )

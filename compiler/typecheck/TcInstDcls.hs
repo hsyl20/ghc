@@ -58,7 +58,7 @@ import Id
 import MkId
 import Name
 import NameSet
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Util
 import GHC.Data.Bool.Formula ( isUnsatisfied, pprBooleanFormulaNice )

@@ -27,7 +27,7 @@ import TcType
 import CoAxiom
 import GHC.Config.Flags
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import RdrName
 import DataCon ( dataConName )

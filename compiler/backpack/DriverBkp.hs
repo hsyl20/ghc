@@ -38,7 +38,7 @@ import SrcLoc
 import GHC.Program.Main
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import GHC.Syntax.Parsers.HeaderInfo
 import MkIface

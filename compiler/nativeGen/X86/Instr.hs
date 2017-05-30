@@ -30,7 +30,7 @@ import Hoopl
 import CodeGen.Platform
 import Cmm
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 import BasicTypes       (Alignment)

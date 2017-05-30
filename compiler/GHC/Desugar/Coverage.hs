@@ -19,7 +19,7 @@ import GHC.Stack as GHC.Stack.CCS
 import Type
 import HsSyn
 import Module
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import ConLike
 import Control.Monad

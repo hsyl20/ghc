@@ -12,7 +12,7 @@ import Instruction
 
 import Cmm
 
-import Outputable
+import GHC.Utils.Outputable
 
 
 -- | Enforce intra-block invariants.

@@ -48,7 +48,7 @@ import TysPrim
 import PrelNames
 import Type
 import TyCon
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import BasicTypes
 import GHC.Utils.Binary

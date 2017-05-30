@@ -47,7 +47,7 @@ import Module( getModule )
 import Name
 import NameEnv
 import VarSet
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Util( singleton )
 import GHC.Data.Maybe( orElse )

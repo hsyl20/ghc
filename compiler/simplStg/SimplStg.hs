@@ -24,7 +24,7 @@ import Module           ( Module )
 import GHC.Utils.Error
 import SrcLoc
 import UniqSupply       ( mkSplitUniqSupply, splitUniqSupply )
-import Outputable
+import GHC.Utils.Outputable
 import Control.Monad
 
 stg2stg :: DynFlags                  -- includes spec of what stg-to-stg passes to do

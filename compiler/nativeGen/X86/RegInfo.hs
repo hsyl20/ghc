@@ -12,7 +12,7 @@ where
 import Format
 import Reg
 
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import Unique
 

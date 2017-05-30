@@ -30,7 +30,7 @@ import Llvm.MetaData
 import Llvm.Types
 
 import Data.List ( intersperse )
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import GHC.Data.FastString ( sLit )
 

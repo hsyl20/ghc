@@ -33,7 +33,7 @@ import CLabel
 import CmmMachOp
 import CmmType
 import GHC.Config.Flags
-import Outputable (panic)
+import GHC.Utils.Outputable (panic)
 import Unique
 
 import Data.Set (Set)

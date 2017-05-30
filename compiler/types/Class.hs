@@ -34,7 +34,7 @@ import Util
 import SrcLoc
 import PrelNames    ( eqTyConKey, coercibleTyConKey, typeableClassKey,
                       heqTyConKey )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bool.Formula (BooleanFormula, mkTrue)
 
 import qualified Data.Data as Data

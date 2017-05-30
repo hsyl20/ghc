@@ -1,7 +1,7 @@
 {-# LANGUAGE GADTs #-}
 module GHC.Utils.Json where
 
-import Outputable
+import GHC.Utils.Outputable
 import Data.Char
 import Numeric
 

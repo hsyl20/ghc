@@ -37,7 +37,7 @@ import GHC.Config.Flags
 import TcRnMonad
 import UniqSupply
 import Util
-import Outputable
+import GHC.Utils.Outputable
 
 mkDataTyConRhs :: [DataCon] -> AlgTyConRhs
 mkDataTyConRhs cons

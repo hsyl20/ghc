@@ -123,7 +123,7 @@ import Name
 import Id
 import BasicTypes
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import GHC.Config.Flags
 

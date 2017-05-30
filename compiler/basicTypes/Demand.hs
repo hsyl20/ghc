@@ -63,7 +63,7 @@ module Demand (
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Var ( Var )
 import VarEnv
 import GHC.Data.Unique.FiniteMap

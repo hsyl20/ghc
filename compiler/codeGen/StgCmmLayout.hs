@@ -51,7 +51,7 @@ import Module
 
 import Util
 import Data.List
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Control.Monad
 

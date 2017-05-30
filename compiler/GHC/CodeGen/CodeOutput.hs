@@ -28,7 +28,7 @@ import GHC.Data.Stream           (Stream)
 import qualified GHC.Data.Stream as Stream
 
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import Module
 import SrcLoc
 

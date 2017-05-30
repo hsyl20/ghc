@@ -174,7 +174,7 @@ import UniqSupply
 import BasicTypes
 import GHC.Data.Bag
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import ListSetOps
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt

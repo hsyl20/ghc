@@ -27,7 +27,7 @@ import CLabel
 import CmmExpr         ( GlobalReg(..) )
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import Unique
 import Reg

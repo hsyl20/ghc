@@ -244,7 +244,7 @@ import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import Panic
 import GHC.Config.Constants
-import Outputable
+import GHC.Utils.Outputable
 import BasicTypes
 import GHC.Data.Bag              ( emptyBag, unitBag )
 import Var

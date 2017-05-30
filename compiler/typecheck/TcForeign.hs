@@ -53,7 +53,7 @@ import TyCon
 import TcType
 import PrelNames
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import Platform
 import SrcLoc
 import GHC.Data.Bag

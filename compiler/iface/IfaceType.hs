@@ -59,7 +59,7 @@ import PrelNames
 import Name
 import BasicTypes
 import GHC.Utils.Binary
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import Util

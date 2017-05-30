@@ -71,7 +71,7 @@ import SMRep
 import Cmm
 import BlockId
 import CLabel
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 import Util
 import CodeGen.Platform

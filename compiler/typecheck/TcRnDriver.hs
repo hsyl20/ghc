@@ -110,7 +110,7 @@ import TyCon
 import SrcLoc
 import GHC.Types
 import ListSetOps
-import Outputable
+import GHC.Utils.Outputable
 import ConLike
 import DataCon
 import Type

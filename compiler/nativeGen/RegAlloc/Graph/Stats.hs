@@ -27,7 +27,7 @@ import Reg
 import TargetReg
 
 import PprCmm()
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import State

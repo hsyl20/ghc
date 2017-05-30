@@ -20,7 +20,7 @@ import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import UniqSupply
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 import Data.List

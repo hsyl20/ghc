@@ -10,7 +10,7 @@ module GHC.Syntax.Stats ( ppSourceStats ) where
 
 import GHC.Data.Bag
 import HsSyn
-import Outputable
+import GHC.Utils.Outputable
 import RdrName
 import SrcLoc
 import Util

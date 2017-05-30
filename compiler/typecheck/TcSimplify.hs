@@ -26,7 +26,7 @@ import Inst
 import ListSetOps
 import GHC.Data.Maybe
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import PrelInfo
 import PrelNames
 import TcErrors

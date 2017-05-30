@@ -22,7 +22,7 @@ import RegAlloc.Liveness
 import Reg
 
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import GHC.Data.Unique.FiniteMap
 import UniqSupply

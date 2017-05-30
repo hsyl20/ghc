@@ -19,7 +19,7 @@ import GHC.Data.Graph.PrettyPrint
 import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Maybe
 import Data.List

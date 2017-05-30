@@ -20,7 +20,7 @@ import Unsafe.Coerce
 import Control.Monad
 import Data.Maybe
 import GHC.Data.Bag
-import Outputable
+import GHC.Utils.Outputable
 import GhcMonad
 import X
 

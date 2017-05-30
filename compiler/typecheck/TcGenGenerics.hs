@@ -39,7 +39,7 @@ import SrcLoc
 import GHC.Data.Bag
 import VarEnv
 import VarSet (elemVarSet)
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Util
 

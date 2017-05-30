@@ -23,8 +23,8 @@ import Hoopl
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
-import Outputable hiding (panic, pprPanic)
-import qualified Outputable
+import GHC.Utils.Outputable hiding (panic, pprPanic)
+import qualified GHC.Utils.Outputable as Outputable
 import Platform
 import OrdList
 import UniqSupply

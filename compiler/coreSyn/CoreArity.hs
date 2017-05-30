@@ -32,7 +32,7 @@ import Coercion
 import BasicTypes
 import Unique
 import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair
 import Util     ( debugIsOn )

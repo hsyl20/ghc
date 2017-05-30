@@ -42,7 +42,7 @@ import CostCentre
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Module
-import Outputable
+import GHC.Utils.Outputable
 
 import Control.Monad
 import Data.Char (ord)

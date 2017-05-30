@@ -4,7 +4,7 @@ module IfaceType where
 import Var (TyVarBndr, ArgFlag)
 import TyCon (TyConBndrVis)
 import BasicTypes (TyPrec)
-import Outputable (Outputable, SDoc)
+import GHC.Utils.Outputable (Outputable, SDoc)
 import GHC.Data.FastString (FastString)
 
 type IfLclName = FastString

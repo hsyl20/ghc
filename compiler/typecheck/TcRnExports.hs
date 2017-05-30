@@ -24,7 +24,7 @@ import Avail
 import TyCon
 import SrcLoc
 import GHC.Types
-import Outputable
+import GHC.Utils.Outputable
 import ConLike
 import DataCon
 import PatSyn

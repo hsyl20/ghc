@@ -78,7 +78,7 @@ import GHC.Utils.Error( MsgDoc )
 import Unique
 import Util
 import UniqSupply
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import PrelNames hiding ( wildCardName )
 import qualified GHC.LanguageExtensions as LangExt

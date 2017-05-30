@@ -53,7 +53,7 @@ import CoreLint         ( endPassIO )
 import VarSet
 import GHC.Data.FastString
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Desugar.Coverage
 import Util

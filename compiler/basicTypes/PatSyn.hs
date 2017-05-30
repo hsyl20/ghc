@@ -26,7 +26,7 @@ module PatSyn (
 
 import Type
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import Util
 import BasicTypes

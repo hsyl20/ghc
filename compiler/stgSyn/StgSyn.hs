@@ -57,7 +57,7 @@ import Id
 import IdInfo      ( mayHaveCafRefs )
 import Literal     ( Literal, literalType )
 import Module      ( Module )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Packages    ( isDllName )
 import Platform
 import PprCore     ( {- instances -} )

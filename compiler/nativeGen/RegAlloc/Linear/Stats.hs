@@ -11,7 +11,7 @@ import RegAlloc.Liveness
 import Instruction
 
 import GHC.Data.Unique.FiniteMap
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.List
 import State

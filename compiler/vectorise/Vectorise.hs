@@ -24,7 +24,7 @@ import CoreMonad            ( CoreM, getHscEnv )
 import Type
 import Id
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Util                 ( zipLazy )
 import MonadUtils
 

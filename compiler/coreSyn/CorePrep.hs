@@ -50,7 +50,7 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 import Util
 import GHC.Data.Pair
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import GHC.Data.FastString
 import Config

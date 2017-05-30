@@ -4,8 +4,8 @@ module RegClass
 
 where
 
-import  Outputable
-import  Unique
+import GHC.Utils.Outputable as Outputable
+import Unique
 
 
 -- | The class of a register.

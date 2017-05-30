@@ -28,7 +28,7 @@ module ConLike (
 
 import DataCon
 import PatSyn
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import Util
 import Name

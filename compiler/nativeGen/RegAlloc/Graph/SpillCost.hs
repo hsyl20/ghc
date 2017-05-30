@@ -25,7 +25,7 @@ import Cmm
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Data.Graph.Directed          (flattenSCCs)
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import State
 

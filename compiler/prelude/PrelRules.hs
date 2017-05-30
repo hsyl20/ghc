@@ -45,7 +45,7 @@ import OccName     ( occNameFS )
 import PrelNames
 import GHC.Data.Maybe      ( orElse )
 import Name        ( Name, nameOccName )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import BasicTypes
 import GHC.Config.Flags

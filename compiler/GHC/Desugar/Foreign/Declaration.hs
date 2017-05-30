@@ -41,7 +41,7 @@ import TysPrim
 import PrelNames
 import BasicTypes
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
 import Platform

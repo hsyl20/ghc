@@ -37,7 +37,7 @@ import Var ( TyVarBndr(..) )
 import TrieMap
 import GHC.Config.Constants
 import Fingerprint(Fingerprint(..), fingerprintString, fingerprintFingerprints)
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString ( FastString, mkFastString, fsLit )
 
 import Control.Monad.Trans.State

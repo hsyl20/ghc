@@ -13,7 +13,7 @@ import Type
 import TyCoRep
 import NameSet
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import Control.Applicative
 import Prelude -- avoid redundant import warning due to AMP

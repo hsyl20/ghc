@@ -68,7 +68,7 @@ import UniqSupply
 import Module
 import PrelNames
 import Name( isInternalName )
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Util
 import GHC.Config.Flags

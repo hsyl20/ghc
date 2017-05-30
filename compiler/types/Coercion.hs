@@ -116,7 +116,7 @@ import VarEnv
 import Name hiding ( varName )
 import Util
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import GHC.Data.Pair
 import SrcLoc

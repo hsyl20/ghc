@@ -13,7 +13,7 @@ import TcRnTypes
 import Name
 import NameSet
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap

@@ -49,7 +49,7 @@ import BasicTypes       ( failed )
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import Util
 import Panic

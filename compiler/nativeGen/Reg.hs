@@ -26,7 +26,7 @@ module Reg (
 
 where
 
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import RegClass
 import Data.List

@@ -19,7 +19,7 @@ import TyCoRep   -- performs delicate algorithm on types
 import Coercion
 import Var
 import VarEnv
-import Outputable
+import GHC.Utils.Outputable
 import TcSMonad as TcS
 import BasicTypes( SwapFlag(..) )
 

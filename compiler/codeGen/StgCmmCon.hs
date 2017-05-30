@@ -41,7 +41,7 @@ import Id
 import RepType (countConRepArgs)
 import Literal
 import PrelInfo
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import Util
 import MonadUtils (mapMaybeM)

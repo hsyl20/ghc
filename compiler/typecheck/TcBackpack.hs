@@ -42,7 +42,7 @@ import NameSet
 import Avail
 import SrcLoc
 import GHC.Types
-import Outputable
+import GHC.Utils.Outputable
 import Type
 import GHC.Data.FastString
 import RnFixity ( lookupFixityRn )

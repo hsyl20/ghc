@@ -56,7 +56,7 @@ import Module
 import Name
 import NameSet
 import NameEnv
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Unify
 import Util

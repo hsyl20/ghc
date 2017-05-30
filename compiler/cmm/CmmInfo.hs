@@ -49,7 +49,7 @@ import Panic
 import UniqSupply
 import MonadUtils
 import Util
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Bits
 import Data.Word

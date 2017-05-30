@@ -94,7 +94,7 @@ import TyCon
 import PatSyn
 import Type
 import ForeignCall
-import Outputable
+import GHC.Utils.Outputable
 import Module
 import Demand
 import Util

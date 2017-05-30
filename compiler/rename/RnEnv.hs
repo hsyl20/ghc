@@ -66,7 +66,7 @@ import PrelNames        ( rOOT_MAIN )
 import GHC.Utils.Error         ( MsgDoc, ErrMsg )
 import BasicTypes       ( pprWarningTxtForMsg, TopLevelFlag(..))
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import Util
 import GHC.Data.Maybe
 import GHC.Config.Flags

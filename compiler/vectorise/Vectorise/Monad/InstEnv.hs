@@ -17,7 +17,7 @@ import InstEnv
 import Class
 import Type
 import TyCon
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 

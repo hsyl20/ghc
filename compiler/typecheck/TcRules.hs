@@ -26,7 +26,7 @@ import Var( EvVar )
 import Name
 import BasicTypes       ( RuleName )
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag
 import Data.List( partition )

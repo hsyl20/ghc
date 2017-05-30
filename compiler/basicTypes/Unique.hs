@@ -70,7 +70,7 @@ module Unique (
 
 import BasicTypes
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 -- just for implementing a fast [0,61) -> Char function

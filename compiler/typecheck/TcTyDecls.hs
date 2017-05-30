@@ -52,7 +52,7 @@ import Coercion ( ltRole )
 import BasicTypes
 import SrcLoc
 import Unique ( mkBuiltinUnique )
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import GHC.Data.Maybe
 import GHC.Data.Bag

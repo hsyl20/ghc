@@ -18,7 +18,7 @@ import CmmInfo
 import Data.List
 import GHC.Config.Flags
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable
 import SMRep
 import UniqSupply
 import Util

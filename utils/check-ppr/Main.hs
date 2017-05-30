@@ -5,7 +5,7 @@ import SrcLoc
 import GHC hiding (moduleName)
 import HsDumpAst
 import GHC.Config.Flags
-import Outputable hiding (space)
+import GHC.Utils.Outputable hiding (space)
 import System.Environment( getArgs )
 import System.Exit
 import System.FilePath

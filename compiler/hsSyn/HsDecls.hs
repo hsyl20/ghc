@@ -104,7 +104,7 @@ import NameSet
 -- others:
 import InstEnv
 import Class
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import SrcLoc
 

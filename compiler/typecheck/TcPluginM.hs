@@ -78,7 +78,7 @@ import TyCon
 import DataCon
 import Class
 import GHC.Types
-import Outputable
+import GHC.Utils.Outputable
 import Type
 import Id
 import InstEnv

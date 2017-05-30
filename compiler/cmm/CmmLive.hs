@@ -19,7 +19,7 @@ import PprCmmExpr ()
 import Hoopl
 
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable
 
 -----------------------------------------------------------------------------
 -- Calculating what variables are live on entry to a basic block

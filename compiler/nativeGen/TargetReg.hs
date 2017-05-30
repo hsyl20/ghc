@@ -25,7 +25,7 @@ import Reg
 import RegClass
 import Format
 
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import Platform
 

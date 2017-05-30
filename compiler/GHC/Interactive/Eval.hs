@@ -77,7 +77,7 @@ import GHC.Data.Maybe
 import GHC.Utils.Error
 import SrcLoc
 import RtClosureInspect
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag
 import qualified Lexer (P (..), ParseResult(..), unP, mkPState)

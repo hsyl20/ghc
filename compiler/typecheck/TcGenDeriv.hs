@@ -68,7 +68,7 @@ import VarSet
 import VarEnv
 import Util
 import Var
-import Outputable
+import GHC.Utils.Outputable
 import Lexeme
 import GHC.Data.FastString
 import GHC.Data.Pair

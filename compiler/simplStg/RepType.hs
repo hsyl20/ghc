@@ -25,7 +25,7 @@ module RepType
 
 import BasicTypes (Arity, RepArity)
 import DataCon
-import Outputable
+import GHC.Utils.Outputable
 import PrelNames
 import Coercion
 import TyCon

@@ -41,7 +41,7 @@ import CmmUtils
 import PrimOp
 import SMRep
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import Prelude hiding ((<*>))

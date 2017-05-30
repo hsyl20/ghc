@@ -39,7 +39,7 @@ import Cmm
 import CmmInfo
 import GHC.Data.FastString
 import CLabel
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import GHC.Data.Unique.FiniteMap (listToUFM, lookupUFM)
 import UniqSupply

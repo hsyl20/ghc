@@ -5,7 +5,7 @@ import NameSet    ( FreeVars )
 import RdrName    ( RdrName )
 import TcRnTypes
 import SrcLoc     ( Located )
-import Outputable ( Outputable )
+import GHC.Utils.Outputable ( Outputable )
 
 rnLExpr :: LHsExpr RdrName
         -> RnM (LHsExpr Name, FreeVars)

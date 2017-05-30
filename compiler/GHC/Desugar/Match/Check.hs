@@ -31,7 +31,7 @@ import TysWiredIn
 import TyCon
 import SrcLoc
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import DataCon
 import GHC.Types (CompleteMatch(..))

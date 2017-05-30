@@ -219,7 +219,7 @@ import BasicTypes
 import Util
 import GHC.Data.Bag
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils.Error( Validity(..), MsgDoc, isValid )
 import GHC.Data.Var.Free as FV

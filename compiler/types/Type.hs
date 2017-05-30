@@ -229,7 +229,7 @@ import {-# SOURCE #-} Coercion
 
 -- others
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair
 import ListSetOps

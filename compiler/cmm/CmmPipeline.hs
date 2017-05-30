@@ -23,7 +23,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Types
 import Control.Monad
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 -----------------------------------------------------------------------------

@@ -50,7 +50,7 @@ import SrcLoc
 import GHC.Data.Maybe
 import Util
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import BasicTypes ( isGenerated, il_value, fl_value )
 import GHC.Data.FastString
 import Unique

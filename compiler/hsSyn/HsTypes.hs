@@ -84,7 +84,7 @@ import Type
 import HsDoc
 import BasicTypes
 import SrcLoc
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe( isJust )
 

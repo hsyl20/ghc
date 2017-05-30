@@ -110,7 +110,7 @@ module BasicTypes(
    ) where
 
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc ( Located,unLoc )
 import Data.Data hiding (Fixity, Prefix, Infix)
 import Data.Function (on)

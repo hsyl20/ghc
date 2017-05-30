@@ -14,7 +14,7 @@ import IfaceEnv
 import Module
 import OccName
 import Name
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 import Data.Char

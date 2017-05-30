@@ -42,7 +42,7 @@ import CLabel
 import Hoopl
 
 import Unique           ( Uniquable(..), pprUniqueAlways )
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import GHC.Data.FastString
 import Data.Word

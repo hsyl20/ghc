@@ -42,7 +42,7 @@ import BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
                           SourceText(..) )
 import ForeignCall      ( CLabelString )
 import Unique           ( Unique, mkPrimOpIdUnique )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Module           ( UnitId )
 

@@ -14,7 +14,7 @@ import Module
 import Name
 import Fingerprint
 import BinFingerprint
--- import Outputable
+-- import GHC.Utils.Outputable
 
 import qualified GHC.Data.EnumSet as EnumSet
 import System.FilePath (normalise)

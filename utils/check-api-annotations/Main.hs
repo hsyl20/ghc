@@ -4,7 +4,7 @@ import Data.Data
 import Data.List
 import GHC
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import ApiAnnotation
 import System.Environment( getArgs )
 import System.Exit

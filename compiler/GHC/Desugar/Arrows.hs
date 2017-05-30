@@ -43,7 +43,7 @@ import ConLike
 import TysWiredIn
 import BasicTypes
 import PrelNames
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Bag
 import VarSet
 import SrcLoc

@@ -66,7 +66,7 @@ import Util
 import VarEnv  ( emptyTidyEnv )
 import ListSetOps
 import GHC.Data.Maybe
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import Control.Monad
 import Class(classTyCon)

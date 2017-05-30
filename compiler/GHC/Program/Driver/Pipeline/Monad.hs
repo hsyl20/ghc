@@ -10,7 +10,7 @@ module GHC.Program.Driver.Pipeline.Monad (
   ) where
 
 import MonadUtils
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases
 import GHC.Types

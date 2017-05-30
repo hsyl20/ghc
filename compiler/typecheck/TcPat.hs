@@ -45,7 +45,7 @@ import GHC.Config.Flags
 import SrcLoc
 import VarSet
 import Util
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import qualified GHC.LanguageExtensions as LangExt
 import Control.Arrow  ( second )
 import ListSetOps ( getNth )

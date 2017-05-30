@@ -3,7 +3,7 @@ module Main where
 import GHC
 import GHC.Packages
 import GhcMonad
-import Outputable
+import GHC.Utils.Outputable
 import System.Environment
 import GHC.Config.Flags
 import Module

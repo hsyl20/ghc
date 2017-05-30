@@ -45,7 +45,7 @@ import BasicTypes
 import Module       ( Module )
 import GHC.Utils.Error
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Pair
 import Util
 import GHC.Data.Maybe       ( orElse )

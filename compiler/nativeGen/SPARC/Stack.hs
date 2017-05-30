@@ -13,7 +13,7 @@ import SPARC.Base
 import SPARC.Imm
 
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 
 -- | Get an AddrMode relative to the address in sp.
 --      This gives us a stack relative addressing mode for volatile

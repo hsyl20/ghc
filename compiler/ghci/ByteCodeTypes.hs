@@ -17,7 +17,7 @@ import GHC.Data.FastString
 import Id
 import Name
 import NameEnv
-import Outputable
+import GHC.Utils.Outputable
 import PrimOp
 import SizedSeq
 import Type

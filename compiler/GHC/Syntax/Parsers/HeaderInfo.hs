@@ -35,7 +35,7 @@ import SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error
 import Util
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import Pretty           ()
 import GHC.Data.Maybe
 import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )

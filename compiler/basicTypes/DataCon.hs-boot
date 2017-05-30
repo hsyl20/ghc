@@ -4,7 +4,7 @@ import Name( Name, NamedThing )
 import {-# SOURCE #-} TyCon( TyCon )
 import FieldLabel ( FieldLabel )
 import Unique ( Uniquable )
-import Outputable ( Outputable, OutputableBndr )
+import GHC.Utils.Outputable ( Outputable, OutputableBndr )
 import BasicTypes (Arity)
 import {-# SOURCE #-} TyCoRep ( Type, ThetaType )
 

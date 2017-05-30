@@ -24,7 +24,7 @@ import BasicTypes       ( RepArity )
 import GHC.Config.Constants        ( wORD64_SIZE )
 import GHC.Config.Flags
 
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 
 -- I extricated this code as this new module in order to avoid a

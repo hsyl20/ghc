@@ -47,7 +47,7 @@ import Data.List
 import Util
 import ListSetOps       ( removeDups )
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import SrcLoc
 import GHC.Data.FastString
 import Control.Monad

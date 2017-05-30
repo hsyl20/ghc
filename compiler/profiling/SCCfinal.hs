@@ -29,7 +29,7 @@ import Name
 import Module
 import UniqSupply       ( UniqSupply )
 import ListSetOps       ( removeDups )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 import CoreSyn          ( Tickish(..) )
 import GHC.Data.FastString

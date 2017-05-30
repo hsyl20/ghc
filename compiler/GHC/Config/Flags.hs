@@ -179,7 +179,7 @@ import qualified Pretty
 import SrcLoc
 import BasicTypes       ( IntWithInf, treatZeroAsInf )
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Foreign.C        ( CInt(..) )
 import System.IO.Unsafe ( unsafeDupablePerformIO )
 import {-# SOURCE #-} GHC.Utils.Error ( Severity(..), MsgDoc, mkLocMessageAnn

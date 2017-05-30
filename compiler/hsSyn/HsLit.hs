@@ -22,7 +22,7 @@ import {-# SOURCE #-} HsExpr( HsExpr, pprExpr )
 import BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
                     negateFractionalLit,SourceText(..),pprWithSourceText )
 import Type       ( Type )
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 

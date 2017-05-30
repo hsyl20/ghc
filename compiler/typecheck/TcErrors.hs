@@ -48,7 +48,7 @@ import Util
 import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
 import NameEnv (lookupNameEnv)
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Config.Flags
 import ListSetOps       ( equivClasses )

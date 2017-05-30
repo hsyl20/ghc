@@ -29,7 +29,7 @@ import CoreSyn          ( RuleEnv(..) )
 import UniqSupply
 import GHC.Config.Flags
 import CoreMonad
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import MonadUtils
 import GHC.Utils.Error

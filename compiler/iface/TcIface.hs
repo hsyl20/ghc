@@ -63,7 +63,7 @@ import Demand
 import Module
 import GHC.Data.Unique.FiniteMap
 import UniqSupply
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import SrcLoc
 import GHC.Config.Flags

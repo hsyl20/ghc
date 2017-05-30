@@ -35,7 +35,7 @@ import PrimOp
 import Module
 import GHC.Data.FastString
 import Panic
-import Outputable
+import GHC.Utils.Outputable
 import Util
 
 -- Standard libraries

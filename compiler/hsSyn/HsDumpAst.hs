@@ -30,7 +30,7 @@ import OccName hiding (occName)
 import Var
 import Module
 import GHC.Config.Flags
-import Outputable hiding (space)
+import GHC.Utils.Outputable hiding (space)
 
 import qualified Data.ByteString as B
 

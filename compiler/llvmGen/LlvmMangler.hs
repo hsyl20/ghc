@@ -14,7 +14,7 @@ module LlvmMangler ( llvmFixupAsm ) where
 import GHC.Config.Flags ( DynFlags, targetPlatform )
 import Platform ( platformArch, Arch(..) )
 import GHC.Utils.Error ( withTiming )
-import Outputable ( text )
+import GHC.Utils.Outputable ( text )
 
 import Control.Exception
 import qualified Data.ByteString.Char8 as B

@@ -31,7 +31,7 @@ import TyCon
 import DataCon
 import Id
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable
 import Unique
 import Name
 import Util

@@ -9,7 +9,7 @@ import CoreSyn         ( Tickish(..) )
 import Debug
 import GHC.Config.Flags
 import Module
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 import Unique
 import UniqSupply

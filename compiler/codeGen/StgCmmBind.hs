@@ -47,7 +47,7 @@ import Module
 import ListSetOps
 import Util
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
 

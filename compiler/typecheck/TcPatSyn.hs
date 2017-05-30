@@ -29,7 +29,7 @@ import SrcLoc
 import PatSyn
 import NameSet
 import Panic
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Var
 import VarEnv( emptyTidyEnv, mkInScopeSet )

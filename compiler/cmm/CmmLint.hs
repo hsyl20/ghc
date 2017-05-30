@@ -16,7 +16,7 @@ import CmmUtils
 import CmmLive
 import CmmSwitch (switchTargetsToList)
 import PprCmm ()
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Config.Flags
 
 import Control.Monad (liftM, ap)

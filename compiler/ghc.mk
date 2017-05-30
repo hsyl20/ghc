@@ -523,7 +523,7 @@ compiler_stage2_dll0_MODULES = \
 	OccurAnal \
 	OptCoercion \
 	OrdList \
-	Outputable \
+	GHC.Utils.Outputable \
 	GHC.Packages.PackageConfig \
 	GHC.Packages \
 	GHC.Data.Pair \

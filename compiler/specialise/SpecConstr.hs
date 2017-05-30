@@ -49,7 +49,7 @@ import GHC.Serialized   ( deserializeWithData )
 import Util
 import GHC.Data.Pair
 import UniqSupply
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.FiniteMap
 import MonadUtils

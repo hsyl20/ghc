@@ -157,7 +157,7 @@ import SrcLoc           ( noSrcSpan )
 import Unique
 import Data.Array
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 import Util
 import GHC.Data.Bool.Formula   ( mkAnd )
 

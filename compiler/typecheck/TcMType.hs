@@ -111,7 +111,7 @@ import VarEnv
 import NameEnv
 import PrelNames
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import SrcLoc
 import GHC.Data.Bag

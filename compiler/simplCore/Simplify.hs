@@ -46,7 +46,7 @@ import MonadUtils       ( foldlM, mapAccumLM, liftIO )
 import GHC.Data.Maybe           ( isJust, fromJust, orElse, catMaybes )
 --import Unique           ( hasKey ) -- temporalily commented out. See #8326
 import Control.Monad
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair
 import Util

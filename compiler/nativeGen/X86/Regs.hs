@@ -55,7 +55,7 @@ import RegClass
 import Cmm
 import CLabel           ( CLabel )
 import GHC.Config.Flags
-import Outputable
+import GHC.Utils.Outputable
 import Platform
 
 -- | regSqueeze_class reg

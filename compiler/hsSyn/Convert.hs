@@ -33,7 +33,7 @@ import GHC.Data.Bag
 import Lexeme
 import Util
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import MonadUtils ( foldrM )
 
 import qualified Data.ByteString as BS

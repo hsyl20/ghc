@@ -40,7 +40,7 @@ import CLabel
 import Unique           ( pprUniqueAlways, Uniquable(..) )
 import Platform
 import GHC.Data.FastString
-import Outputable
+import GHC.Utils.Outputable
 
 import Data.Word
 

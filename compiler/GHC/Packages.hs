@@ -71,7 +71,7 @@ import GHC.Data.Unique.Set
 import Module
 import Util
 import Panic
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
 
 import System.Environment ( getEnv )

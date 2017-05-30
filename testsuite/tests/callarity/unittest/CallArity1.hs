@@ -9,7 +9,7 @@ import MkId
 import GHC.Utils.SysTools
 import GHC.Config.Flags
 import GHC.Utils.Error
-import Outputable
+import GHC.Utils.Outputable
 import TysWiredIn
 import Literal
 import GHC

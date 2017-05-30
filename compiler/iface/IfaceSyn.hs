@@ -56,7 +56,7 @@ import Literal
 import ForeignCall
 import GHC.Types.Annotations( AnnPayload, AnnTarget )
 import BasicTypes
-import Outputable
+import GHC.Utils.Outputable as Outputable
 import Module
 import SrcLoc
 import Fingerprint

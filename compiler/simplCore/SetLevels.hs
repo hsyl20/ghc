@@ -90,7 +90,7 @@ import DataCon          ( dataConOrigResTy )
 import TysWiredIn
 import UniqSupply
 import Util
-import Outputable
+import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Var.Free
