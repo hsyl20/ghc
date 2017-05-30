@@ -69,7 +69,7 @@ import VarEnv
 import GHC.Data.Unique.FiniteMap
 import Util
 import BasicTypes
-import Binary
+import GHC.Utils.Binary
 import GHC.Data.Maybe           ( orElse )
 
 import Type            ( Type, isUnliftedType )

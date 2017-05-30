@@ -11,7 +11,7 @@ module BinFingerprint
 #include "HsVersions.h"
 
 import Fingerprint
-import Binary
+import GHC.Utils.Binary
 import Name
 import Panic
 import Util

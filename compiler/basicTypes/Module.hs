@@ -141,7 +141,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.DeterSet
 import GHC.Data.FastString
-import Binary
+import GHC.Utils.Binary
 import Util
 import Data.List
 import Data.Ord

@@ -192,7 +192,7 @@ import GHC.Data.StringBuffer     ( StringBuffer )
 import Fingerprint
 import MonadUtils
 import GHC.Data.Bag
-import Binary
+import GHC.Utils.Binary
 import GHC.Utils.Error
 import NameCache
 import Platform

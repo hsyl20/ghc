@@ -37,7 +37,7 @@ import Name
 import Unique
 import Var
 import Util
-import Binary
+import GHC.Utils.Binary
 import GHC.Data.Pair
 import BasicTypes
 import Data.Typeable ( Typeable )

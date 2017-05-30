@@ -21,7 +21,7 @@ import Data.Data
 
 import MonadUtils
 import Outputable
-import Binary
+import GHC.Utils.Binary
 import SrcLoc
 import Unique
 import GHC.Data.Unique.Set

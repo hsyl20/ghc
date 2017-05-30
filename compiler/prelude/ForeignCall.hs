@@ -19,7 +19,7 @@ module ForeignCall (
     ) where
 
 import GHC.Data.FastString
-import Binary
+import GHC.Utils.Binary
 import Outputable
 import Module
 import BasicTypes ( SourceText, pprWithSourceText )

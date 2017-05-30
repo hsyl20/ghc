@@ -58,7 +58,7 @@ import Var
 import PrelNames
 import Name
 import BasicTypes
-import Binary
+import GHC.Utils.Binary
 import Outputable
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment

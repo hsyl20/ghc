@@ -90,7 +90,7 @@ import Name hiding (varName)
 import Unique ( Uniquable, Unique, getKey, getUnique
               , mkUniqueGrimily, nonDetCmpUnique )
 import Util
-import Binary
+import GHC.Utils.Binary
 import GHC.Config.Flags
 import Outputable
 

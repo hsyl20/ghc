@@ -6,7 +6,7 @@ module FlagChecker (
         fingerprintDynFlags
     ) where
 
-import Binary
+import GHC.Utils.Binary
 import BinIface ()
 import GHC.Config.Flags
 import GHC.Types

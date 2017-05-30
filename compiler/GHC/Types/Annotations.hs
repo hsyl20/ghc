@@ -17,7 +17,7 @@ module GHC.Types.Annotations (
         deserializeAnns
     ) where
 
-import Binary
+import GHC.Utils.Binary
 import Module           ( Module )
 import Name
 import Outputable

@@ -101,7 +101,7 @@ import Unique
 import Util             hiding ( eqListBy )
 import GHC.Data.FastString
 import GHC.Data.Maybe
-import Binary
+import GHC.Utils.Binary
 import Fingerprint
 import Exception
 import GHC.Data.Unique.Set

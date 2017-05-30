@@ -114,7 +114,7 @@ import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import Outputable
 import Lexeme
-import Binary
+import GHC.Utils.Binary
 import Control.DeepSeq
 import Data.Char
 import Data.Data

@@ -51,7 +51,7 @@ import TyCon
 import Outputable
 import GHC.Data.FastString
 import BasicTypes
-import Binary
+import GHC.Utils.Binary
 import GHC.Config.Constants
 import GHC.Config.Flags
 import Platform

@@ -128,7 +128,7 @@ import {-# SOURCE #-} TysWiredIn ( runtimeRepTyCon, constraintKind
 import {-# SOURCE #-} DataCon    ( DataCon, dataConExTyVars, dataConFieldLabels
                                  , dataConTyCon )
 
-import Binary
+import GHC.Utils.Binary
 import Var
 import Class
 import BasicTypes

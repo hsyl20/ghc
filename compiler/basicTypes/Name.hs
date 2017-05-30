@@ -86,7 +86,7 @@ import SrcLoc
 import Unique
 import Util
 import GHC.Data.Maybe
-import Binary
+import GHC.Utils.Binary
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Outputable

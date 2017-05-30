@@ -44,7 +44,7 @@ import {-# SOURCE #-} GHC.Config.Flags
 import Outputable
 import Platform
 import System.FilePath
-import Binary
+import GHC.Utils.Binary
 import Util
 
 -----------------------------------------------------------------------------

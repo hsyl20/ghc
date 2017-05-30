@@ -117,7 +117,7 @@ import Outputable
 import Util
 import GHC.Data.Unique.Set
 import SrcLoc     ( RealSrcSpan, containsSpan )
-import Binary
+import GHC.Utils.Binary
 
 import Data.Data hiding (TyCon)
 import Data.Int
