@@ -33,7 +33,7 @@ import           System.Directory
 import qualified CoreUtils
 import           GHC.Desugar.Main
 import           GHC.Config.Flags (HasDynFlags(..))
-import           FastString
+import           GHC.Data.FastString
 import           GHC
 import           GHC.Monad
 import           Name

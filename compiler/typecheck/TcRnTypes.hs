@@ -163,7 +163,7 @@ import NameEnv
 import NameSet
 import Avail
 import Var
-import GHC.Data.Var.Free
+import GHC.Data.Var.Free as FV
 import VarEnv
 import Module
 import SrcLoc

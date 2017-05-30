@@ -57,7 +57,7 @@ import Util
 import Maybes
 import GHC.Data.Bag
 import GHC.Data.FastString
-import GHC.Data.Var.Free
+import GHC.Data.Var.Free as FV
 import Module
 
 import Control.Monad
