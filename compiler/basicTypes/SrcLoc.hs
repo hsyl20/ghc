@@ -84,7 +84,7 @@ module SrcLoc (
 import Util
 import Json
 import Outputable
-import FastString
+import GHC.Data.FastString
 
 import Control.DeepSeq
 import Data.Bits

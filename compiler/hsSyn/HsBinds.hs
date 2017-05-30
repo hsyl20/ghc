@@ -35,7 +35,7 @@ import Outputable
 import SrcLoc
 import Var
 import GHC.Data.Bag
-import FastString
+import GHC.Data.FastString
 import BooleanFormula (LBooleanFormula)
 import GHC.Config.Flags
 

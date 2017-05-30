@@ -43,7 +43,7 @@ import Outputable
 import BasicTypes
 import GHC.Config.Flags
 import Util
-import FastString
+import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

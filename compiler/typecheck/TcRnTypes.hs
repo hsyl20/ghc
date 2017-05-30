@@ -176,7 +176,7 @@ import GHC.Data.Bag
 import GHC.Config.Flags
 import Outputable
 import ListSetOps
-import FastString
+import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 import Fingerprint
 import Util

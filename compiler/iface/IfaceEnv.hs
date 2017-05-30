@@ -29,8 +29,8 @@ import Var
 import Name
 import Avail
 import Module
-import FastString
-import FastStringEnv
+import GHC.Data.FastString
+import GHC.Data.FastString.Environment
 import IfaceType
 import NameCache
 import UniqSupply

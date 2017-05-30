@@ -39,7 +39,7 @@ import Cmm              hiding (topInfoTable)
 import CLabel
 import Unique           ( pprUniqueAlways, Uniquable(..) )
 import Platform
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import Data.Word

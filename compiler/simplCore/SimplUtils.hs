@@ -61,7 +61,7 @@ import MonadUtils
 import Outputable
 import GHC.Data.Pair
 import PrelRules
-import FastString       ( fsLit )
+import GHC.Data.FastString       ( fsLit )
 
 import Control.Monad    ( when )
 import Data.List        ( sortBy )

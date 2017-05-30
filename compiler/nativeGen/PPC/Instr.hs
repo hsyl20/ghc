@@ -37,7 +37,7 @@ import Hoopl
 import GHC.Config.Flags
 import Cmm
 import CmmInfo
-import FastString
+import GHC.Data.FastString
 import CLabel
 import Outputable
 import Platform

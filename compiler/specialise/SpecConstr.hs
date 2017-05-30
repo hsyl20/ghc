@@ -50,7 +50,7 @@ import Util
 import GHC.Data.Pair
 import UniqSupply
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Unique.FiniteMap
 import MonadUtils
 import Control.Monad    ( zipWithM )

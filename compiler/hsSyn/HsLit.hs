@@ -23,7 +23,7 @@ import BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
                     negateFractionalLit,SourceText(..),pprWithSourceText )
 import Type       ( Type )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 
 import Data.ByteString (ByteString)

@@ -21,7 +21,7 @@ import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
 import CoreSyn (Tickish (..))
 import CostCentre (mkUserCC)
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import HsSyn
 import GHC.Types( isHsBootOrSig )
 import TcSigs

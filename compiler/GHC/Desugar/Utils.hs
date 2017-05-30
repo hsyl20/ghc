@@ -72,7 +72,7 @@ import Outputable
 import SrcLoc
 import Util
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 
 import TcEvidence

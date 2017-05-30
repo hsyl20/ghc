@@ -99,7 +99,7 @@ import System.Win32.DLL (loadLibrary, getProcAddress)
 
 import System.Process
 import Control.Concurrent
-import FastString
+import GHC.Data.FastString
 import SrcLoc           ( SrcLoc, mkSrcLoc, noSrcSpan, mkSrcSpan )
 
 #if defined(mingw32_HOST_OS)

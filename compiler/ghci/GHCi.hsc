@@ -62,7 +62,7 @@ import GHC.Utils.Error
 import Outputable
 import Exception
 import BasicTypes
-import FastString
+import GHC.Data.FastString
 import Util
 import GHC.Config.Hooks
 

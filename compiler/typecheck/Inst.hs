@@ -35,7 +35,7 @@ import {-# SOURCE #-}   TcExpr( tcPolyExpr, tcSyntaxOp )
 import {-# SOURCE #-}   TcUnify( unifyType, unifyKind, noThing )
 
 import BasicTypes ( IntegralLit(..), SourceText(..) )
-import FastString
+import GHC.Data.FastString
 import HsSyn
 import TcHsSyn
 import TcRnMonad

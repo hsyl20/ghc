@@ -67,7 +67,7 @@ import qualified IOEnv  ( liftIO )
 import TcEnv            ( lookupGlobal )
 import Var
 import Outputable
-import FastString
+import GHC.Data.FastString
 import qualified GHC.Utils.Error as Err
 import GHC.Utils.Error( Severity(..) )
 import Maybes

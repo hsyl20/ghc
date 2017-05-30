@@ -25,7 +25,7 @@ import GHC.Data.Unique.FiniteMap
 import Util
 
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable hiding ( isEmpty )
 import qualified Data.Set as Set
 import Control.Monad.Fix

@@ -28,7 +28,7 @@ import Outputable
 import Panic
 import SrcLoc
 import Data.List
-import FastString
+import GHC.Data.FastString
 
 import Exception
 import GHC.Utils.Error

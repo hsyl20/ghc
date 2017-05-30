@@ -120,7 +120,7 @@ import CoAxiom
 import GHC.Types.Annotations
 import Data.List ( sortBy, sort )
 import Data.Ord
-import FastString
+import GHC.Data.FastString
 import Maybes
 import Util
 import GHC.Data.Bag

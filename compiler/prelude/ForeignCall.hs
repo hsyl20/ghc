@@ -18,7 +18,7 @@ module ForeignCall (
         Header(..), CType(..),
     ) where
 
-import FastString
+import GHC.Data.FastString
 import Binary
 import Outputable
 import Module

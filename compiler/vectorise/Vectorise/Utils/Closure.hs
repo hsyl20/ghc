@@ -23,7 +23,7 @@ import DataCon
 import MkId
 import TysWiredIn
 import BasicTypes( Boxity(..) )
-import FastString
+import GHC.Data.FastString
 
 
 -- |Make a closure.

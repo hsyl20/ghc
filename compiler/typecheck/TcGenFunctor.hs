@@ -17,7 +17,7 @@ module TcGenFunctor (
 
 import GHC.Data.Bag
 import DataCon
-import FastString
+import GHC.Data.FastString
 import HsSyn
 import Panic
 import PrelNames

@@ -59,7 +59,7 @@ import Data.Bits
 import Data.Word
 
 import BasicTypes
-import FastString
+import GHC.Data.FastString
 import Util
 
 -- -----------------------------------------------------------------------------

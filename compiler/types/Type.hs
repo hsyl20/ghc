@@ -230,7 +230,7 @@ import {-# SOURCE #-} Coercion
 -- others
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Pair
 import ListSetOps
 import GHC.Data.Graph.Directed

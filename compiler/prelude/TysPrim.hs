@@ -100,7 +100,7 @@ import TyCon
 import SrcLoc
 import Unique
 import PrelNames
-import FastString
+import GHC.Data.FastString
 import Outputable
 import TyCoRep   -- Doesn't need special access, but this is easier to avoid
                  -- import loops which show up if you import Type instead

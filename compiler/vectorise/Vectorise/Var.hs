@@ -22,7 +22,7 @@ import CoreSyn
 import Type
 import VarEnv
 import Id
-import FastString
+import GHC.Data.FastString
 import Control.Applicative
 import Prelude -- avoid redundant import warning due to AMP
 

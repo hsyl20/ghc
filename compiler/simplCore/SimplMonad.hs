@@ -30,7 +30,7 @@ import UniqSupply
 import GHC.Config.Flags
 import CoreMonad
 import Outputable
-import FastString
+import GHC.Data.FastString
 import MonadUtils
 import GHC.Utils.Error
 import BasicTypes          ( IntWithInf, treatZeroAsInf, mkIntWithInf )

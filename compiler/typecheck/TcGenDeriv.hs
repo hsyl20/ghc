@@ -70,7 +70,7 @@ import Util
 import Var
 import Outputable
 import Lexeme
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Pair
 import GHC.Data.Bag
 

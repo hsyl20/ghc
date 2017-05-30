@@ -20,7 +20,7 @@ import CoreSyn
 import Name
 import VarEnv
 import Var
-import FastString
+import GHC.Data.FastString
 
 -- Local Environment ----------------------------------------------------------
 

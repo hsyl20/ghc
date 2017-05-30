@@ -25,7 +25,7 @@ import PrelNames ( mkUnboundName, forall_tv_RDR, isUnboundName )
 import Util
 import Maybes
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Data.List
 import Data.Function ( on )
 

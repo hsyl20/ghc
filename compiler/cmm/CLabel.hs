@@ -125,7 +125,7 @@ import PrimOp
 import Config
 import CostCentre
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Config.Flags
 import Platform
 import GHC.Data.Unique.Set

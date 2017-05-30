@@ -178,7 +178,7 @@ import MonadUtils
 import qualified Pretty
 import SrcLoc
 import BasicTypes       ( IntWithInf, treatZeroAsInf )
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Foreign.C        ( CInt(..) )
 import System.IO.Unsafe ( unsafeDupablePerformIO )

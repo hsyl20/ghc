@@ -22,7 +22,7 @@ import CoreUnfold
 import Type
 import Id
 import BasicTypes  (Arity)
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 import Control.Applicative
 import Prelude -- avoid redundant import warning due to AMP

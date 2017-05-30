@@ -60,7 +60,7 @@ module Binary
 #include "../includes/MachDeps.h"
 
 import {-# SOURCE #-} Name (Name)
-import FastString
+import GHC.Data.FastString
 import Panic
 import GHC.Data.Unique.FiniteMap
 import FastMutInt

@@ -145,7 +145,7 @@ import SrcLoc
 import Outputable
 import Unique
 import UniqSupply
-import FastString
+import GHC.Data.FastString
 import Util
 
 -- infixl so you can say (id `set` a `set` b)

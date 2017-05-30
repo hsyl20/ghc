@@ -70,7 +70,7 @@ import Outputable
 import Util
 import Maybes
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 import ListSetOps       ( minusList )
 import qualified GHC.LanguageExtensions as LangExt

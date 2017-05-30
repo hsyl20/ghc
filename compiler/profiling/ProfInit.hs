@@ -12,7 +12,7 @@ import CLabel
 import CostCentre
 import GHC.Config.Flags
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Module
 
 -- -----------------------------------------------------------------------------

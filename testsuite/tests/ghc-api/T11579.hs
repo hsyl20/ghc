@@ -1,6 +1,6 @@
 import System.Environment
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import GHC
 import StringBuffer
 import Lexer

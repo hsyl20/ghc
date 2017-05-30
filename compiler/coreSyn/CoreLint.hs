@@ -53,7 +53,7 @@ import GHC.Utils.Error as Err
 import ListSetOps
 import PrelNames
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Util
 import InstEnv     ( instanceDFunId )
 import OptCoercion ( checkAxInstCo )

@@ -51,7 +51,7 @@ import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Data.Bag
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Unique.Set
 import Maybes           ( orElse )
 import qualified GHC.LanguageExtensions as LangExt

@@ -85,7 +85,7 @@ import HsDoc
 import BasicTypes
 import SrcLoc
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Maybes( isJust )
 
 import Data.Data hiding ( Fixity, Prefix, Infix )

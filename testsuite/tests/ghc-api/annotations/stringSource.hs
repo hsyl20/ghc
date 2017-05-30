@@ -13,7 +13,7 @@ import System.IO
 import GHC
 import BasicTypes
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import ForeignCall
 import MonadUtils
 import Outputable

@@ -33,7 +33,7 @@ module GHC.Packages.PackageConfig (
 import GHC.PackageDb
 import Data.Version
 
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Module
 import Unique

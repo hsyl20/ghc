@@ -18,7 +18,7 @@ import GHCi.FFI (C_ffi_cif)
 import StgCmmLayout     ( ArgRep(..) )
 import PprCore
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Name
 import Unique
 import Id

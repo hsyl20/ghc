@@ -122,7 +122,7 @@ import Module
 import Name
 import Id
 import BasicTypes
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import GHC.Config.Flags

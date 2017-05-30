@@ -77,7 +77,7 @@ import OrdList
 import BasicTypes( ConTagZ )
 import Unique
 import UniqSupply
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import Control.Monad

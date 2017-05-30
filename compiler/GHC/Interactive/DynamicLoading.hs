@@ -48,7 +48,7 @@ import Name             ( Name, nameModule_maybe )
 import Id               ( idType )
 import Module           ( Module, ModuleName )
 import Panic
-import FastString
+import GHC.Data.FastString
 import GHC.Utils.Error
 import Outputable
 import Exception

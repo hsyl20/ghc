@@ -45,7 +45,7 @@ import Cmm
 import CmmUtils
 import CmmSwitch
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable
 import PprCmmDecl
 import PprCmmExpr

@@ -328,7 +328,7 @@ import StringBuffer
 import Outputable
 import BasicTypes
 import Maybes           ( expectJust )
-import FastString
+import GHC.Data.FastString
 import qualified Parser
 import Lexer
 import ApiAnnotation

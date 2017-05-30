@@ -44,7 +44,7 @@ import SrcLoc
 import GHC.Types
 import Outputable
 import Type
-import FastString
+import GHC.Data.FastString
 import RnFixity ( lookupFixityRn )
 import Maybes
 import TcEnv

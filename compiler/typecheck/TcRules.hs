@@ -27,7 +27,7 @@ import Name
 import BasicTypes       ( RuleName )
 import SrcLoc
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Bag
 import Data.List( partition )
 

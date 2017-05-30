@@ -23,7 +23,7 @@ module BufWrite (
         bFlush,
   ) where
 
-import FastString
+import GHC.Data.FastString
 import FastMutInt
 
 import Control.Monad    ( when )

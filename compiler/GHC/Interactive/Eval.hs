@@ -78,7 +78,7 @@ import GHC.Utils.Error
 import SrcLoc
 import RtClosureInspect
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Bag
 import qualified Lexer (P (..), ParseResult(..), unP, mkPState)
 import qualified Parser (parseStmt, parseModule, parseDeclaration, parseImport)

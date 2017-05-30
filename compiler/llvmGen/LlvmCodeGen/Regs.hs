@@ -15,7 +15,7 @@ import Llvm
 
 import CmmExpr
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable ( panic )
 import Unique
 

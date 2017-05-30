@@ -53,7 +53,7 @@ import BasicTypes
 import Outputable
 import GHC.Data.Bag
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import ForeignCall
 import Util
 import Maybes

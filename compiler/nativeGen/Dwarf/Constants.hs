@@ -3,7 +3,7 @@
 
 module Dwarf.Constants where
 
-import FastString
+import GHC.Data.FastString
 import Platform
 import Outputable
 

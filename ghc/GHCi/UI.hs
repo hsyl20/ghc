@@ -71,7 +71,7 @@ import BasicTypes hiding ( isTopLevel )
 import Config
 import GHC.Data.Graph.Directed
 import Encoding
-import FastString
+import GHC.Data.FastString
 import Linker
 import Maybes ( orElse, expectJust )
 import NameSet

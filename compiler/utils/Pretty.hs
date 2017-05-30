@@ -112,7 +112,7 @@ module Pretty (
   ) where
 
 import BufWrite
-import FastString
+import GHC.Data.FastString
 import Panic
 import System.IO
 import Prelude hiding (error)

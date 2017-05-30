@@ -40,7 +40,7 @@ import TyCon
 import DataCon
 import MkId
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 
 #include "HsVersions.h"
 

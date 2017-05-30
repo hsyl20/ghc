@@ -75,7 +75,7 @@ import Outputable
 import Maybes
 
 import System.Environment ( getEnv )
-import FastString
+import GHC.Data.FastString
 import GHC.Utils.Error         ( debugTraceMsg, MsgDoc, printInfoForUser )
 import Exception
 

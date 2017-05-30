@@ -5,7 +5,7 @@ import Var (TyVarBndr, ArgFlag)
 import TyCon (TyConBndrVis)
 import BasicTypes (TyPrec)
 import Outputable (Outputable, SDoc)
-import FastString (FastString)
+import GHC.Data.FastString (FastString)
 
 type IfLclName = FastString
 type IfaceKind = IfaceType

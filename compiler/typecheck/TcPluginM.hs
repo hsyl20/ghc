@@ -82,7 +82,7 @@ import Outputable
 import Type
 import Id
 import InstEnv
-import FastString
+import GHC.Data.FastString
 import Unique
 
 

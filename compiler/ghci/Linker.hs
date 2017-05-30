@@ -44,7 +44,7 @@ import GHC.Utils.Error
 import SrcLoc
 import qualified Maybes
 import GHC.Data.Unique.DeterSet
-import FastString
+import GHC.Data.FastString
 import Platform
 import GHC.Utils.SysTools
 

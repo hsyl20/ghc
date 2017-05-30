@@ -161,7 +161,7 @@ import GHC.Data.Bag
 import Outputable
 import UniqSupply
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Panic
 import Util
 import GHC.Types.Annotations

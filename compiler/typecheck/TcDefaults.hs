@@ -20,7 +20,7 @@ import TcType
 import PrelNames
 import SrcLoc
 import Outputable
-import FastString
+import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 
 tcDefaults :: [LDefaultDecl Name]

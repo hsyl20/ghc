@@ -32,7 +32,7 @@ import GHC.Utils.Error
 import GHC.Data.Bag
 import Lexeme
 import Util
-import FastString
+import GHC.Data.FastString
 import Outputable
 import MonadUtils ( foldrM )
 

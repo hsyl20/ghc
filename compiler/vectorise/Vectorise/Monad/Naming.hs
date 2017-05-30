@@ -26,7 +26,7 @@ import SrcLoc
 import MkId
 import Id
 import IdInfo( IdDetails(VanillaId) )
-import FastString
+import GHC.Data.FastString
 
 import Control.Monad
 

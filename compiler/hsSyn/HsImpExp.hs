@@ -17,7 +17,7 @@ import BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )
 import FieldLabel       ( FieldLbl(..) )
 
 import Outputable
-import FastString
+import GHC.Data.FastString
 import SrcLoc
 
 import Data.Data

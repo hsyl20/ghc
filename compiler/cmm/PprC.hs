@@ -38,7 +38,7 @@ import CmmSwitch
 -- Utils
 import CPrim
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Platform
 import GHC.Data.Unique.Set

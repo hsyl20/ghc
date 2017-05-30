@@ -63,7 +63,7 @@ import Panic
 import qualified PprColour as Col
 import SrcLoc
 import GHC.Config.Flags
-import FastString (unpackFS)
+import GHC.Data.FastString (unpackFS)
 import StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
 import Json
 

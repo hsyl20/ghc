@@ -48,7 +48,7 @@ import ListSetOps
 import Util
 import BasicTypes
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Config.Flags
 
 import Control.Monad

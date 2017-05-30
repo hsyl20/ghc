@@ -29,7 +29,7 @@ import CmmMonad
 import SrcLoc
 import GHC.Data.Unique.FiniteMap
 import StringBuffer
-import FastString
+import GHC.Data.FastString
 import Ctype
 import Util
 --import TRACE

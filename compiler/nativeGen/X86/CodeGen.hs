@@ -65,7 +65,7 @@ import ForeignCall      ( CCallConv(..) )
 import OrdList
 import Outputable
 import Unique
-import FastString
+import GHC.Data.FastString
 import GHC.Config.Flags
 import Util
 import UniqSupply       ( getUniqueM )

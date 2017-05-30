@@ -26,7 +26,7 @@ import CodeGen.Platform
 import CmmExpr
 import CmmSwitch
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import ForeignCall
 import Outputable
 import SMRep

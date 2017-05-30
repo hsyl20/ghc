@@ -21,7 +21,7 @@ import CoAxiom
 import Var
 import Outputable
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 
 

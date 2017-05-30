@@ -18,7 +18,7 @@ import Cmm
 import GHC.Config.Flags
 import Platform
 
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 -- ----------------------------------------------------------------------------

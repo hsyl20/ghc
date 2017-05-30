@@ -90,7 +90,7 @@ import Unique           ( hasKey )
 import OrdList          ( OrdList, fromOL )
 import GHC.Data.Bag              ( emptyBag, consBag )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Maybes
 import Util
 import ApiAnnotation

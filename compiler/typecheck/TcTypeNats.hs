@@ -37,7 +37,7 @@ import PrelNames  ( gHC_TYPELITS
                   , typeSymbolCmpTyFamNameKey
                   , typeSymbolAppendFamNameKey
                   )
-import FastString ( FastString
+import GHC.Data.FastString ( FastString
                   , fsLit, nilFS, nullFS, unpackFS, mkFastString, appendFS
                   )
 import qualified Data.Map as Map

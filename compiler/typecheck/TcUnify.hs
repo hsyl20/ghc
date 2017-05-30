@@ -65,7 +65,7 @@ import Util
 import GHC.Data.Pair( pFst )
 import qualified GHC.LanguageExtensions as LangExt
 import Outputable
-import FastString
+import GHC.Data.FastString
 
 import Control.Monad
 import Control.Arrow ( second )

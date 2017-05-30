@@ -40,7 +40,7 @@ import GHC.Data.Bag
 import VarEnv
 import VarSet (elemVarSet)
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Util
 
 import Control.Monad (mplus)

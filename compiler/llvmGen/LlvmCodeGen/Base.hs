@@ -43,7 +43,7 @@ import LlvmCodeGen.Regs
 import CLabel
 import CodeGen.Platform ( activeStgRegs )
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Cmm              hiding ( succ )
 import Outputable as Outp
 import Platform

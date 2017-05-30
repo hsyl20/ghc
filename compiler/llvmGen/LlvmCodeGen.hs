@@ -25,7 +25,7 @@ import PprCmm
 import BufWrite
 import GHC.Config.Flags
 import GHC.Utils.Error
-import FastString
+import GHC.Data.FastString
 import Outputable
 import UniqSupply
 import GHC.Utils.SysTools ( figureLlvmVersion )

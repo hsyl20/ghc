@@ -33,7 +33,7 @@ import BasicTypes
 import Unique
 import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Pair
 import Util     ( debugIsOn )
 

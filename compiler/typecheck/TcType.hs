@@ -220,7 +220,7 @@ import Util
 import GHC.Data.Bag
 import Maybes
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Utils.Error( Validity(..), MsgDoc, isValid )
 import FV
 import qualified GHC.LanguageExtensions as LangExt

@@ -49,7 +49,7 @@ import ListSetOps       ( removeDups )
 import GHC.Utils.Error
 import Outputable
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 import TysWiredIn       ( nilDataConName )
 import qualified GHC.LanguageExtensions as LangExt

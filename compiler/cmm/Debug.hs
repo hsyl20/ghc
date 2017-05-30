@@ -27,7 +27,7 @@ import CLabel
 import Cmm
 import CmmUtils
 import CoreSyn
-import FastString      ( nilFS, mkFastString )
+import GHC.Data.FastString      ( nilFS, mkFastString )
 import Module
 import Outputable
 import PprCore         ()

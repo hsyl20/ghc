@@ -52,7 +52,7 @@ import Util
 import GHC.Data.Pair
 import Outputable
 import Platform
-import FastString
+import GHC.Data.FastString
 import Config
 import Name             ( NamedThing(..), nameSrcSpan )
 import SrcLoc           ( SrcSpan(..), realSrcLocSpan, mkRealSrcLoc )

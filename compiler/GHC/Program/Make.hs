@@ -51,7 +51,7 @@ import GHC.Data.Bag              ( listToBag )
 import BasicTypes
 import GHC.Data.Graph.Directed
 import Exception        ( tryIO, gbracket, gfinally )
-import FastString
+import GHC.Data.FastString
 import Maybes           ( expectJust )
 import Name
 import MonadUtils       ( allM, MonadIO )

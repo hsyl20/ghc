@@ -42,7 +42,7 @@ import PrelNames
 import BasicTypes
 import SrcLoc
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Config.Flags
 import Platform
 import Config

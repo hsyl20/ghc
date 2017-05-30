@@ -88,7 +88,7 @@ import Util
 import Maybes
 import Binary
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import Control.DeepSeq

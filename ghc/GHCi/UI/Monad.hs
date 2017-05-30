@@ -38,7 +38,7 @@ import GHC.Monad        hiding (liftIO)
 import Outputable       hiding (printForUser, printForUserPartWay)
 import qualified Outputable
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import GHC.Types
 import SrcLoc
 import Module

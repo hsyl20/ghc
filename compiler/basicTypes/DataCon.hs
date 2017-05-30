@@ -76,7 +76,7 @@ import Outputable
 import ListSetOps
 import Util
 import BasicTypes
-import FastString
+import GHC.Data.FastString
 import Module
 import Binary
 import GHC.Data.Unique.Set

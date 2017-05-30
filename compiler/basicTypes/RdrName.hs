@@ -73,7 +73,7 @@ import Avail
 import NameSet
 import Maybes
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 import FieldLabel
 import Outputable
 import Unique

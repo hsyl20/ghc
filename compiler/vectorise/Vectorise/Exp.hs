@@ -41,7 +41,7 @@ import BasicTypes( isStrongLoopBreaker )
 import Literal
 import TysPrim
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Config.Flags
 import Util
 

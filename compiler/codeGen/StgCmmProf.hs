@@ -40,7 +40,7 @@ import CLabel
 import qualified Module
 import CostCentre
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Module
 import Outputable
 

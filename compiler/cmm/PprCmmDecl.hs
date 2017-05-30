@@ -45,7 +45,7 @@ import Cmm
 
 import GHC.Config.Flags
 import Outputable
-import FastString
+import GHC.Data.FastString
 
 import Data.List
 import System.IO

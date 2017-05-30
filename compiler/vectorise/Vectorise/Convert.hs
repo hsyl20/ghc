@@ -12,7 +12,7 @@ import TyCon
 import Type
 import TyCoRep
 import NameSet
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import Control.Applicative

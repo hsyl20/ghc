@@ -71,7 +71,7 @@ import Util
 import GHC.Data.Pair
 import GHC.Config.Flags
 import Outputable
-import FastString
+import GHC.Data.FastString
 import ListSetOps
 import qualified GHC.LanguageExtensions as LangExt
 

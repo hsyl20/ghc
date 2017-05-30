@@ -33,7 +33,7 @@ import CoreSyn
 import Id
 import VarSet
 import Data.List
-import FastString
+import GHC.Data.FastString
 import GHC.Types
 import TyCon
 import UniqSupply

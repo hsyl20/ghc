@@ -29,7 +29,7 @@ import BlockId
 import Hoopl
 import CodeGen.Platform
 import Cmm
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Platform
 

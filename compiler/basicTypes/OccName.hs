@@ -110,8 +110,8 @@ import Unique
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import FastString
-import FastStringEnv
+import GHC.Data.FastString
+import GHC.Data.FastString.Environment
 import Outputable
 import Lexeme
 import Binary

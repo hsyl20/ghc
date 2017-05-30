@@ -1,5 +1,5 @@
 module Module where
-import FastString
+import GHC.Data.FastString
 
 data Module
 data ModuleName

@@ -48,7 +48,7 @@ import GHC.Program.Driver.Phases
 import BasicTypes       ( failed )
 import GHC.Config.Flags
 import GHC.Utils.Error
-import FastString
+import GHC.Data.FastString
 import Outputable
 import SrcLoc
 import Util

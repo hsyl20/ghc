@@ -134,7 +134,7 @@ import RdrName
 import Unique
 import Name
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 import Config ( cIntegerLibraryType, IntegerLibrary(..) )
 import Panic ( panic )
 

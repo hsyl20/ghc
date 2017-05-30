@@ -46,7 +46,7 @@ import PrelNames
 import Maybes      ( orElse )
 import Name        ( Name, nameOccName )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import BasicTypes
 import GHC.Config.Flags
 import Platform

@@ -13,7 +13,7 @@ import Data.Int
 import Numeric
 
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Unique
 

@@ -68,7 +68,7 @@ import GHC.Data.Unique.Set
 import Outputable
 
 import Data.List
-import FastString
+import GHC.Data.FastString
 
 #include "HsVersions.h"
 

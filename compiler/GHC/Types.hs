@@ -187,7 +187,7 @@ import Outputable
 import SrcLoc
 import Unique
 import GHC.Data.Unique.DeterFiniteMap
-import FastString
+import GHC.Data.FastString
 import StringBuffer     ( StringBuffer )
 import Fingerprint
 import MonadUtils

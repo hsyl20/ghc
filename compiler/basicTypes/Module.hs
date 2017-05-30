@@ -140,7 +140,7 @@ import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.DeterSet
-import FastString
+import GHC.Data.FastString
 import Binary
 import Util
 import Data.List

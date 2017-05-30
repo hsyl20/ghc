@@ -33,7 +33,7 @@ import Name
 import NameEnv
 import PrimOp
 import Module
-import FastString
+import GHC.Data.FastString
 import Panic
 import Outputable
 import Util

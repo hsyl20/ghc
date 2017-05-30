@@ -98,7 +98,7 @@ import BasicTypes hiding( SuccessFlag(..) )
 import Module
 import Outputable
 import Encoding
-import FastString
+import GHC.Data.FastString
 import ListSetOps
 import Util
 import Maybes( MaybeErr(..) )

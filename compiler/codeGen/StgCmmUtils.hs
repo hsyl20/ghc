@@ -65,7 +65,7 @@ import Util
 import Unique
 import UniqSupply (MonadUnique(..))
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable
 import RepType
 

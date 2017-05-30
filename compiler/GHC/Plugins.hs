@@ -47,7 +47,7 @@ module GHC.Plugins
    , module Outputable
    , module UniqSupply
    , module Unique
-   , module FastString
+   , module GHC.Data.FastString
    )
 where
 
@@ -110,4 +110,4 @@ import SrcLoc
 import Outputable
 import UniqSupply
 import Unique           ( Unique, Uniquable(..) )
-import FastString
+import GHC.Data.FastString

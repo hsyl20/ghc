@@ -26,7 +26,7 @@ import CLabel
 
 import Unique                ( pprUniqueAlways, Uniquable(..) )
 import Platform
-import FastString
+import GHC.Data.FastString
 import Outputable
 import GHC.Config.Flags
 

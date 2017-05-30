@@ -32,7 +32,7 @@ import TcRnDriver
 import Module
 import GHC.Types
 import StringBuffer
-import FastString
+import GHC.Data.FastString
 import GHC.Utils.Error
 import SrcLoc
 import GHC.Program.Main

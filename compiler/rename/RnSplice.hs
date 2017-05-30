@@ -36,7 +36,7 @@ import TcEnv            ( checkWellStaged )
 import THNames          ( liftName )
 
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import GHC.Utils.Error         ( dumpIfSet_dyn_printer )
 import TcEnv            ( tcMetaTy )
 import GHC.Config.Hooks

@@ -5,7 +5,7 @@ import GHC.Config.Flags
 import GHC
 import Exception
 import Module
-import FastString
+import GHC.Data.FastString
 import MonadUtils
 import Outputable
 import GHC.Data.Bag (filterBag,isEmptyBag)

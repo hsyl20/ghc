@@ -13,7 +13,7 @@ module ByteCodeTypes
   , CCostCentre
   ) where
 
-import FastString
+import GHC.Data.FastString
 import Id
 import Name
 import NameEnv

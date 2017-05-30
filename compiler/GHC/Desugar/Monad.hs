@@ -80,7 +80,7 @@ import Name
 import NameEnv
 import GHC.Config.Flags
 import GHC.Utils.Error
-import FastString
+import GHC.Data.FastString
 import Maybes
 import Var (EvVar)
 import qualified GHC.LanguageExtensions as LangExt

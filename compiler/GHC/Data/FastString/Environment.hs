@@ -6,7 +6,7 @@
 \section[FastStringEnv]{@FastStringEnv@: FastString environments}
 -}
 
-module FastStringEnv (
+module GHC.Data.FastString.Environment (
         -- * FastString environments (maps)
         FastStringEnv,
 
@@ -30,7 +30,7 @@ module FastStringEnv (
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import Maybes
-import FastString
+import GHC.Data.FastString
 
 
 -- | A non-deterministic set of FastStrings.

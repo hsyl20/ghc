@@ -199,7 +199,7 @@ module UnariseStg (unarise) where
 import BasicTypes
 import CoreSyn
 import DataCon
-import FastString (FastString, mkFastString)
+import GHC.Data.FastString (FastString, mkFastString)
 import Id
 import Literal (Literal (..))
 import MkCore (aBSENT_ERROR_ID)

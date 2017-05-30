@@ -25,7 +25,7 @@ import GHC.Config.Constants        ( wORD64_SIZE )
 import GHC.Config.Flags
 
 import Outputable
-import FastString
+import GHC.Data.FastString
 
 -- I extricated this code as this new module in order to avoid a
 -- cyclic dependency between StgCmmLayout and StgCmmTicky.

@@ -48,7 +48,7 @@ import TyCon
 import Maybes
 import BasicTypes
 import GHC.Data.Bag
-import FastString
+import GHC.Data.FastString
 import BooleanFormula
 import Util
 

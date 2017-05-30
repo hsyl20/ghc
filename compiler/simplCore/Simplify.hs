@@ -47,7 +47,7 @@ import Maybes           ( isJust, fromJust, orElse, catMaybes )
 --import Unique           ( hasKey ) -- temporalily commented out. See #8326
 import Control.Monad
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Pair
 import Util
 import GHC.Utils.Error

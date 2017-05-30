@@ -13,7 +13,7 @@ import Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
 import GHC.Data.Bag
 import Exception
-import FastString
+import GHC.Data.FastString
 import MonadUtils       ( liftIO )
 import SrcLoc
 

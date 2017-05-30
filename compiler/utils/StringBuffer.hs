@@ -46,7 +46,7 @@ module StringBuffer
 #include "HsVersions.h"
 
 import Encoding
-import FastString
+import GHC.Data.FastString
 import FastFunctions
 import Outputable
 import Util

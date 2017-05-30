@@ -68,7 +68,7 @@ import Outputable
 import BinIface
 import Panic
 import Util
-import FastString
+import GHC.Data.FastString
 import Fingerprint
 import GHC.Config.Hooks
 import FieldLabel

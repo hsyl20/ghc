@@ -99,7 +99,7 @@ import Unique
 import VarSet           ( isEmptyVarSet, filterVarSet, mkVarSet, elemVarSet )
 import Data.List        ( find )
 import Data.Maybe
-import FastString
+import GHC.Data.FastString
 import BasicTypes hiding( SuccessFlag(..) )
 import Maybes( MaybeErr(..) )
 import GHC.Config.Flags

@@ -146,7 +146,7 @@ import Outputable
 import NameEnv
 import GHC.Syntax.Stats         ( ppSourceStats )
 import GHC.Types
-import FastString
+import GHC.Data.FastString
 import UniqSupply
 import GHC.Data.Bag
 import Exception

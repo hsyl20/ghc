@@ -51,7 +51,7 @@ import BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
 import CoreMonad        ( CoreToDo(..) )
 import CoreLint         ( endPassIO )
 import VarSet
-import FastString
+import GHC.Data.FastString
 import GHC.Utils.Error
 import Outputable
 import SrcLoc

@@ -112,7 +112,7 @@ import NameEnv
 import PrelNames
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import SrcLoc
 import GHC.Data.Bag
 import GHC.Data.Pair

@@ -241,7 +241,7 @@ import SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error
 import StringBuffer
-import FastString
+import GHC.Data.FastString
 import Panic
 import GHC.Config.Constants
 import Outputable

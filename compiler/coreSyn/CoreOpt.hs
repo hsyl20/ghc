@@ -49,7 +49,7 @@ import Outputable
 import GHC.Data.Pair
 import Util
 import Maybes       ( orElse )
-import FastString
+import GHC.Data.FastString
 import Data.List
 import qualified Data.ByteString as BS
 

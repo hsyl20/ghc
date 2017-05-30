@@ -81,7 +81,7 @@ import GHC.Data.Graph.Directed
 import qualified Pretty
 import BufWrite
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Unique.Set
 import GHC.Utils.Error
 import Module

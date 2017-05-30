@@ -44,7 +44,7 @@ import RepType          ( isVoidTy, countConRepArgs, primRepSlot )
 import CostCentre       ( CostCentreStack, currentCCS )
 import Maybes
 import Util
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import Control.Monad (unless,void)

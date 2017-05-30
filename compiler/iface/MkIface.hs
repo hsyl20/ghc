@@ -99,7 +99,7 @@ import Outputable
 import BasicTypes       hiding ( SuccessFlag(..) )
 import Unique
 import Util             hiding ( eqListBy )
-import FastString
+import GHC.Data.FastString
 import Maybes
 import Binary
 import Fingerprint

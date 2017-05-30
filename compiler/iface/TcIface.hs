@@ -68,7 +68,7 @@ import Maybes
 import SrcLoc
 import GHC.Config.Flags
 import Util
-import FastString
+import GHC.Data.FastString
 import BasicTypes hiding ( SuccessFlag(..) )
 import ListSetOps
 import GHC.Fingerprint

@@ -43,7 +43,7 @@ import BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
 import ForeignCall      ( CLabelString )
 import Unique           ( Unique, mkPrimOpIdUnique )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Module           ( UnitId )
 
 {-

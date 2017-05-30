@@ -52,7 +52,7 @@ import Util
 import Name
 import Outputable
 import BasicTypes ( isGenerated, il_value, fl_value )
-import FastString
+import GHC.Data.FastString
 import Unique
 import GHC.Data.Unique.DeterFiniteMap
 

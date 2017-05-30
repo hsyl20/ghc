@@ -26,7 +26,7 @@ import Name
 import NameSet
 import Literal
 import TyCon
-import FastString
+import GHC.Data.FastString
 import StgCmmLayout     ( ArgRep(..) )
 import SMRep
 import GHC.Config.Flags

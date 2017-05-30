@@ -19,7 +19,7 @@ import Data.Data hiding (Fixity)
 import Data.List
 import GHC.Data.Bag
 import BasicTypes
-import FastString
+import GHC.Data.FastString
 import NameSet
 import Name
 import RdrName

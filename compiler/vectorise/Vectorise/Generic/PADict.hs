@@ -20,7 +20,7 @@ import Type
 import Id
 import Var
 import Name
-import FastString
+import GHC.Data.FastString
 
 
 -- |Build the PA dictionary function for some type and hoist it to top level.

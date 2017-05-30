@@ -13,7 +13,7 @@ import Vectorise.Monad
 import Vectorise.Utils.PADict
 import CoreSyn
 import Type
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 
 

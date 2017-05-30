@@ -26,7 +26,7 @@ import RdrName
 import GHC.Types
 import Parser           ( parseHeader )
 import Lexer
-import FastString
+import GHC.Data.FastString
 import HsSyn
 import Module
 import PrelNames

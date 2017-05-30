@@ -32,7 +32,7 @@ module CoAxiom (
 import {-# SOURCE #-} TyCoRep ( Type, pprType )
 import {-# SOURCE #-} TyCon ( TyCon )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Name
 import Unique
 import Var

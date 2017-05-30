@@ -59,7 +59,7 @@ import OrdList
 import GHC.Data.Bag
 import BasicTypes
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Util
 import MonadUtils
 import qualified GHC.LanguageExtensions as LangExt

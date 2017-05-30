@@ -156,7 +156,7 @@ import ForeignCall
 import SrcLoc           ( noSrcSpan )
 import Unique
 import Data.Array
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Util
 import BooleanFormula   ( mkAnd )

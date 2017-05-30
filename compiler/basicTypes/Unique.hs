@@ -69,7 +69,7 @@ module Unique (
 #include "Unique.h"
 
 import BasicTypes
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Util
 

@@ -44,7 +44,7 @@ import Hoopl
 import Unique           ( Uniquable(..), pprUniqueAlways )
 import Outputable
 import Platform
-import FastString
+import GHC.Data.FastString
 import Data.Word
 
 -- -----------------------------------------------------------------------------

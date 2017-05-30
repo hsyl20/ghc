@@ -55,7 +55,7 @@ import PrelNames
 import SrcLoc
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Bag
 import GHC.Data.Pair
 import FV (fvVarList, unionFV, mkFVs)

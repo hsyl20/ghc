@@ -51,7 +51,7 @@ import Data.ByteString ( ByteString )
 import Data.List   ( intersperse )
 import DataCon
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import ForeignCall ( ForeignCall )
 import Id
 import IdInfo      ( mayHaveCafRefs )

@@ -46,7 +46,7 @@ import IdInfo( CafInfo(..), mayHaveCafRefs )
 import Id ( Id )
 import Module
 import GHC.Config.Flags
-import FastString( mkFastString, fsLit )
+import GHC.Data.FastString( mkFastString, fsLit )
 import Panic( sorry )
 
 import Prelude hiding ((<*>))

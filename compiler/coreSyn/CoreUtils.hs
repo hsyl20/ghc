@@ -79,7 +79,7 @@ import Unique
 import Outputable
 import TysPrim
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Maybes
 import ListSetOps       ( minusList )
 import BasicTypes       ( Arity )

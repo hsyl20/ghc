@@ -19,7 +19,7 @@ import Type
 import NameEnv
 import Name
 import Id
-import FastString
+import GHC.Data.FastString
 import Outputable
 
 import Control.Monad

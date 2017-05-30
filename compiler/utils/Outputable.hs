@@ -93,7 +93,7 @@ import {-# SOURCE #-}   Module( UnitId, Module, ModuleName, moduleName )
 import {-# SOURCE #-}   OccName( OccName )
 
 import BufWrite (BufHandle)
-import FastString
+import GHC.Data.FastString
 import qualified Pretty
 import Util
 import Platform

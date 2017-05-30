@@ -28,7 +28,7 @@ import Outputable
 import ConLike
 import DataCon
 import PatSyn
-import FastString
+import GHC.Data.FastString
 import Maybes
 import Util (capitalise)
 

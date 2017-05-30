@@ -42,7 +42,7 @@ import CodeGen.Platform
 import BlockId
 import GHC.Config.Flags
 import Cmm
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Platform
 

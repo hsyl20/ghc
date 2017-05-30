@@ -53,7 +53,7 @@ import CPrim
 -- The rest:
 import BasicTypes
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import OrdList
 import Outputable
 import Platform

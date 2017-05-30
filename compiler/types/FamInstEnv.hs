@@ -59,7 +59,7 @@ import Util
 import Var
 import GHC.Data.Pair
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 import MonadUtils
 import Control.Monad
 import Data.List( mapAccumL, find )

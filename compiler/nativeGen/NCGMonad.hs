@@ -45,7 +45,7 @@ import BlockId
 import Hoopl
 import CLabel           ( CLabel, mkAsmTempLabel )
 import Debug
-import FastString       ( FastString )
+import GHC.Data.FastString       ( FastString )
 import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import Unique           ( Unique )

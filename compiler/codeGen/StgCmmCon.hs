@@ -36,7 +36,7 @@ import CostCentre
 import Module
 import DataCon
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Id
 import RepType (countConRepArgs)
 import Literal

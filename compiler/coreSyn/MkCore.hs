@@ -73,7 +73,7 @@ import IdInfo           ( vanillaIdInfo, setStrictnessInfo,
 import Demand
 import Name      hiding ( varName )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import UniqSupply
 import BasicTypes
 import Util

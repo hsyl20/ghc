@@ -56,7 +56,7 @@ import Outputable
 import Util
 import Maybes
 import GHC.Data.Bag
-import FastString
+import GHC.Data.FastString
 import FV
 import Module
 

@@ -115,7 +115,7 @@ import NameSet
 import NameEnv
 import BasicTypes
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 import Util
 import GHC.Data.Bag
 import Outputable

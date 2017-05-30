@@ -47,7 +47,7 @@ import GHC.Packages.PackageConfig
 -- compiler/utils
 import OrdList
 import BooleanFormula   ( BooleanFormula(..), LBooleanFormula(..), mkTrue )
-import FastString
+import GHC.Data.FastString
 import Maybes           ( orElse )
 import Outputable
 

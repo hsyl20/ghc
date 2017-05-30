@@ -91,7 +91,7 @@ import TysWiredIn
 import UniqSupply
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Unique.DeterFiniteMap
 import FV
 import Data.Maybe

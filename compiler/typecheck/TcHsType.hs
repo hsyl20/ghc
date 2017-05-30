@@ -79,7 +79,7 @@ import Unique
 import Util
 import UniqSupply
 import Outputable
-import FastString
+import GHC.Data.FastString
 import PrelNames hiding ( wildCardName )
 import qualified GHC.LanguageExtensions as LangExt
 

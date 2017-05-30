@@ -30,7 +30,7 @@ import PatSyn
 import NameSet
 import Panic
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Var
 import VarEnv( emptyTidyEnv, mkInScopeSet )
 import Id

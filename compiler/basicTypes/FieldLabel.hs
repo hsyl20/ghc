@@ -72,8 +72,8 @@ module FieldLabel ( FieldLabelString
 import OccName
 import Name
 
-import FastString
-import FastStringEnv
+import GHC.Data.FastString
+import GHC.Data.FastString.Environment
 import Outputable
 import Binary
 

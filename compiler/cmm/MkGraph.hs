@@ -28,7 +28,7 @@ import CmmSwitch (SwitchTargets)
 
 import Compiler.Hoopl hiding (Unique, (<*>), mkFirst, mkMiddle, mkLast, mkLabel, mkBranch, Shape(..))
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import ForeignCall
 import OrdList
 import SMRep (ByteOff)

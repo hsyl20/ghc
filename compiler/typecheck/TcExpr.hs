@@ -67,7 +67,7 @@ import VarEnv  ( emptyTidyEnv )
 import ListSetOps
 import Maybes
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 import Class(classTyCon)
 import GHC.Data.Unique.Set ( nonDetEltsUniqSet )

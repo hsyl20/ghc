@@ -60,8 +60,8 @@ import Name
 import BasicTypes
 import Binary
 import Outputable
-import FastString
-import FastStringEnv
+import GHC.Data.FastString
+import GHC.Data.FastString.Environment
 import Util
 
 import Data.Maybe( isJust )

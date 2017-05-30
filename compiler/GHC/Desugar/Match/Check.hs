@@ -32,7 +32,7 @@ import TyCon
 import SrcLoc
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import DataCon
 import GHC.Types (CompleteMatch(..))
 

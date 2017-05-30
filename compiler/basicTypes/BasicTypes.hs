@@ -109,7 +109,7 @@ module BasicTypes(
         SpliceExplicitFlag(..)
    ) where
 
-import FastString
+import GHC.Data.FastString
 import Outputable
 import SrcLoc ( Located,unLoc )
 import Data.Data hiding (Fixity, Prefix, Infix)

@@ -58,7 +58,7 @@ import Util
 import BasicTypes       ( compareFixity, funTyFixity, negateFixity,
                           Fixity(..), FixityDirection(..), LexicalFixity(..) )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Maybes
 import qualified GHC.LanguageExtensions as LangExt
 

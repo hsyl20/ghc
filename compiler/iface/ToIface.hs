@@ -60,7 +60,7 @@ import BasicTypes
 import Type
 import PatSyn
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Util
 import Var
 import VarEnv

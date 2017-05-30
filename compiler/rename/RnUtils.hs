@@ -41,7 +41,7 @@ import Util
 import BasicTypes       ( TopLevelFlag(..) )
 import ListSetOps       ( removeDups )
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Control.Monad
 import Data.List
 import GHC.Config.Constants        ( mAX_TUPLE_SIZE )

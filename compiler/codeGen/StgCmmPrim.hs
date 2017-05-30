@@ -40,7 +40,7 @@ import CLabel
 import CmmUtils
 import PrimOp
 import SMRep
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Util
 

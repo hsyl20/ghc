@@ -38,7 +38,7 @@ import TrieMap
 import GHC.Config.Constants
 import Fingerprint(Fingerprint(..), fingerprintString, fingerprintFingerprints)
 import Outputable
-import FastString ( FastString, mkFastString, fsLit )
+import GHC.Data.FastString ( FastString, mkFastString, fsLit )
 
 import Control.Monad.Trans.State
 import Control.Monad.Trans.Class (lift)

@@ -43,8 +43,8 @@ import Maybes
 import SrcLoc
 import BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )
 import Util
-import FastString
-import FastStringEnv
+import GHC.Data.FastString
+import GHC.Data.FastString.Environment
 import Id
 import Type
 import PatSyn

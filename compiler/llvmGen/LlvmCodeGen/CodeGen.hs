@@ -21,7 +21,7 @@ import CmmSwitch
 import Hoopl
 
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import ForeignCall
 import Outputable hiding (panic, pprPanic)
 import qualified Outputable

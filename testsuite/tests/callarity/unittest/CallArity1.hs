@@ -21,7 +21,7 @@ import PprCore
 import Unique
 import GHC.Data.Unique.Set
 import CoreLint
-import FastString
+import GHC.Data.FastString
 
 -- Build IDs. use mkTemplateLocal, more predictable than proper uniques
 go, go2, x, d, n, y, z, scrutf, scruta :: Id

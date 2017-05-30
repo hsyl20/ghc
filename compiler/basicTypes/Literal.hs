@@ -49,7 +49,7 @@ import PrelNames
 import Type
 import TyCon
 import Outputable
-import FastString
+import GHC.Data.FastString
 import BasicTypes
 import Binary
 import GHC.Config.Constants

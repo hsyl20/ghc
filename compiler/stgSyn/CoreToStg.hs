@@ -37,7 +37,7 @@ import TysWiredIn       ( unboxedUnitDataCon )
 import Literal
 import Outputable
 import MonadUtils
-import FastString
+import GHC.Data.FastString
 import Util
 import GHC.Config.Flags
 import ForeignCall

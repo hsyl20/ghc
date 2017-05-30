@@ -47,7 +47,7 @@ import ConLike          ( ConLike(..), conLikeWrapId_maybe )
 import Util
 import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
 import NameEnv (lookupNameEnv)
-import FastString
+import GHC.Data.FastString
 import Outputable
 import SrcLoc
 import GHC.Config.Flags

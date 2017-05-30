@@ -485,8 +485,8 @@ Library
         Encoding
         FastFunctions
         FastMutInt
-        FastString
-        FastStringEnv
+        GHC.Data.FastString
+        GHC.Data.FastString.Environment
         Fingerprint
         GHC.Data.FiniteMap
         FV

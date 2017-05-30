@@ -56,7 +56,7 @@ import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )
 import Outputable
-import FastString
+import GHC.Data.FastString
 import Maybes
 import GHC.Data.Bag
 import Util

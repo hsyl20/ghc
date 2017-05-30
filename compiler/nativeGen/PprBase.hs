@@ -19,7 +19,7 @@ where
 import CLabel
 import Cmm
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Outputable
 import Platform
 

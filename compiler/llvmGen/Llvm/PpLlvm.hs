@@ -32,7 +32,7 @@ import Llvm.Types
 import Data.List ( intersperse )
 import Outputable
 import Unique
-import FastString ( sLit )
+import GHC.Data.FastString ( sLit )
 
 --------------------------------------------------------------------------------
 -- * Top Level Print functions

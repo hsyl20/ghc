@@ -3,7 +3,7 @@ module Main where
 import Data.Data
 import System.IO
 import GHC
-import FastString
+import GHC.Data.FastString
 import SrcLoc
 import MonadUtils
 import Outputable

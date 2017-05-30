@@ -29,7 +29,7 @@ import Var
 import NameSet
 import Name
 import NameEnv
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set
 

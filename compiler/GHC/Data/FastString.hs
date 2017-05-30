@@ -29,7 +29,7 @@
 --     arbitrary Unicode strings.
 --
 -- Use 'LitString' unless you want the facilities of 'FastString'.
-module FastString
+module GHC.Data.FastString
        (
         -- * ByteString
         fastStringToByteString,

@@ -32,7 +32,7 @@ import ListSetOps       ( removeDups )
 import Outputable
 import GHC.Config.Flags
 import CoreSyn          ( Tickish(..) )
-import FastString
+import GHC.Data.FastString
 import SrcLoc
 import Util
 

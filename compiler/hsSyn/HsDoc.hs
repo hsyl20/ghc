@@ -10,7 +10,7 @@ module HsDoc (
 
 import Outputable
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 
 import Data.Data
 

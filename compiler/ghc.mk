@@ -475,8 +475,8 @@ compiler_stage2_dll0_MODULES = \
 	FamInstEnv \
 	FastFunctions \
 	FastMutInt \
-	FastString \
-	FastStringEnv \
+	GHC.Data.FastString \
+	GHC.Data.FastString.Environment \
 	FieldLabel \
 	Fingerprint \
 	GHC.Data.FiniteMap \

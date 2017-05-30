@@ -162,7 +162,7 @@ import BasicTypes ( LeftOrRight(..), TyPrec(..), maybeParen, pickLR )
 import PrelNames
 import Outputable
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import GHC.Data.Pair
 import UniqSupply
 import Util

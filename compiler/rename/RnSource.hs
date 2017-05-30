@@ -48,7 +48,7 @@ import Avail
 import Outputable
 import GHC.Data.Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
-import FastString
+import GHC.Data.FastString
 import SrcLoc
 import GHC.Config.Flags
 import Util             ( debugIsOn, lengthExceeds, partitionWith )

@@ -27,7 +27,7 @@ import Module
 import Unique
 import Outputable
 import SrcLoc
-import FastString
+import GHC.Data.FastString
 import Util
 
 import Data.Data

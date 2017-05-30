@@ -45,7 +45,7 @@ import MkGraph
 
 import BlockId
 import GHC.Config.Flags
-import FastString
+import GHC.Data.FastString
 import Module
 import GHC.Data.Unique.FiniteMap
 import Unique

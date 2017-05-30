@@ -54,7 +54,7 @@ import BasicTypes( ConTagZ )
 import GHC.Config.Flags
 import Outputable
 import Platform
-import FastString
+import GHC.Data.FastString
 
 import Data.Char( ord )
 import Data.Word

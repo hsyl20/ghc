@@ -32,7 +32,7 @@ import BasicTypes
 import Maybes
 import Util
 import Outputable
-import FastString
+import GHC.Data.FastString
 import SrcLoc      ( pprUserRealSpan )
 
 {-
