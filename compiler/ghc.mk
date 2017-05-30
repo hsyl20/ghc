@@ -473,7 +473,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Utils.Error \
 	GHC.Utils.Exception \
 	FamInstEnv \
-	FastFunctions \
+	GHC.Utils.IO.Unsafe \
 	FastMutInt \
 	GHC.Data.FastString \
 	GHC.Data.FastString.Environment \

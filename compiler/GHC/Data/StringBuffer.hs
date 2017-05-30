@@ -47,7 +47,7 @@ module GHC.Data.StringBuffer
 
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
-import FastFunctions
+import GHC.Utils.IO.Unsafe
 import GHC.Utils.Outputable
 import Util
 

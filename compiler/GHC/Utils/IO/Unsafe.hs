@@ -4,7 +4,7 @@
 
 {-# LANGUAGE CPP, MagicHash, UnboxedTuples #-}
 
-module FastFunctions (
+module GHC.Utils.IO.Unsafe (
     inlinePerformIO,
   ) where
 

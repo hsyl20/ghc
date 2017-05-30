@@ -483,7 +483,7 @@ Library
         GHC.Utils.Handle.BufferedWrite
         GHC.Data.Graph.Directed
         GHC.Data.Char.Encoding
-        FastFunctions
+        GHC.Utils.IO.Unsafe
         FastMutInt
         GHC.Data.FastString
         GHC.Data.FastString.Environment
