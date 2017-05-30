@@ -15,7 +15,7 @@ import BlockId
 import Hoopl
 
 import MonadUtils
-import State
+import GHC.Utils.Monad.State
 import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set

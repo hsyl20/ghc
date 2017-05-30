@@ -1,6 +1,6 @@
 {-# LANGUAGE UnboxedTuples #-}
 
-module State where
+module GHC.Utils.Monad.State where
 
 newtype State s a = State { runState' :: s -> (# a, s #) }
 

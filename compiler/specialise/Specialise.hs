@@ -36,7 +36,7 @@ import GHC.Config.Flags
 import Util
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import State
+import GHC.Utils.Monad.State
 import GHC.Data.Unique.DeterFiniteMap
 import TrieMap
 

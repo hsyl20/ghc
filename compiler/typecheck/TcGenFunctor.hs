@@ -23,7 +23,7 @@ import Panic
 import PrelNames
 import RdrName
 import SrcLoc
-import State
+import GHC.Utils.Monad.State
 import TcGenDeriv
 import TcType
 import TyCon

@@ -52,7 +52,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Data.Bag
-import State
+import GHC.Utils.Monad.State
 
 import Data.List
 import Data.Maybe

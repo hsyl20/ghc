@@ -27,7 +27,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Graph.Directed          (flattenSCCs)
 import GHC.Utils.Outputable
 import Platform
-import State
+import GHC.Utils.Monad.State
 
 import Data.List        (nub, minimumBy)
 import Data.Maybe

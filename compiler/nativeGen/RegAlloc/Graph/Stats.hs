@@ -30,7 +30,7 @@ import PprCmm()
 import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import State
+import GHC.Utils.Monad.State
 
 import Data.List
 

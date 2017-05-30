@@ -506,7 +506,7 @@ Library
         Panic
         PprColour
         Pretty
-        State
+        GHC.Utils.Monad.State
         GHC.Data.Stream
         GHC.Data.StringBuffer
         GHC.Data.Unique.DeterFiniteMap

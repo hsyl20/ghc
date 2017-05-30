@@ -38,7 +38,7 @@ import Cmm
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import Unique
-import State
+import GHC.Utils.Monad.State
 import GHC.Utils.Outputable
 import Platform
 

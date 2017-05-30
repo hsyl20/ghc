@@ -14,7 +14,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Outputable
 
 import Data.List
-import State
+import GHC.Utils.Monad.State
 
 -- | Build a map of how many times each reg was alloced, clobbered, loaded etc.
 binSpillReasons
