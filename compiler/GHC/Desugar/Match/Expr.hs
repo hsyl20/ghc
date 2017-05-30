@@ -23,7 +23,7 @@ import DataCon
 import ConLike
 import TysWiredIn
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import SrcLoc
 
 import Data.Maybe (mapMaybe)

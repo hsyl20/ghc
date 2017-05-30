@@ -42,7 +42,7 @@ import Data.Ratio
 import GHC.Utils.Outputable as Outputable
 import BasicTypes
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 

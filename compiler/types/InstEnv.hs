@@ -42,7 +42,7 @@ import GHC.Utils.Outputable
 import GHC.Utils.Error
 import BasicTypes
 import GHC.Data.Unique.DeterFiniteMap
-import Util
+import GHC.Utils
 import Id
 import Data.Data        ( Data )
 import Data.Maybe       ( isJust, isNothing )

@@ -53,7 +53,7 @@ import VarEnv
 import VarSet
 import PrelNames
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag

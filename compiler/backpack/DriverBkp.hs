@@ -47,7 +47,7 @@ import GHC.Data.Unique.DeterSet
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Finder
-import Util
+import GHC.Utils
 
 import qualified GHC.LanguageExtensions as LangExt
 

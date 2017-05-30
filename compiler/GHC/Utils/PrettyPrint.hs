@@ -121,7 +121,7 @@ import Prelude hiding (error)
 import GHC.Base ( unpackCString# )
 import GHC.Ptr  ( Ptr(..) )
 
--- Don't import Util( assertPanic ) because it makes a loop in the module structure
+-- Don't import GHC.Utils( assertPanic ) because it makes a loop in the module structure
 
 
 -- ---------------------------------------------------------------------------

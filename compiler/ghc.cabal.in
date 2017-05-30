@@ -109,7 +109,7 @@ Library
         UnboxedTuples
         UndecidableInstances
 
-    Include-Dirs: . parser utils
+    Include-Dirs: . parser
 
     -- We need to set the unit id to ghc (without a version number)
     -- as it's magic.  But we can't set it for old versions of GHC (e.g.
@@ -161,7 +161,6 @@ Library
         stranal
         typecheck
         types
-        utils
         vectorise
 
     Exposed-Modules:
@@ -514,7 +513,7 @@ Library
         GHC.Data.Unique.FiniteMap
         GHC.Data.Unique.Map
         GHC.Data.Unique.Set
-        Util
+        GHC.Utils
         Vectorise.Builtins.Base
         Vectorise.Builtins.Initialise
         Vectorise.Builtins

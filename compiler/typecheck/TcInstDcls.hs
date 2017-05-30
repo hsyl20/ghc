@@ -60,7 +60,7 @@ import Name
 import NameSet
 import GHC.Utils.Outputable
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Data.Bool.Formula ( isUnsatisfied, pprBooleanFormulaNice )
 import qualified GHC.LanguageExtensions as LangExt
 

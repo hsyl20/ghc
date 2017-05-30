@@ -62,7 +62,7 @@ import PrimOp( tagToEnumKey )
 import PrelNames
 import GHC.Config.Flags
 import SrcLoc
-import Util
+import GHC.Utils
 import VarEnv  ( emptyTidyEnv )
 import GHC.Data.List.SetOps
 import GHC.Data.Maybe

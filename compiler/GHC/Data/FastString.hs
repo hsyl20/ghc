@@ -100,7 +100,7 @@ module GHC.Data.FastString
 import GHC.Data.Char.Encoding
 import GHC.Utils.IO.Unsafe
 import GHC.Utils.Panic
-import Util
+import GHC.Utils
 
 import Control.DeepSeq
 import Control.Monad

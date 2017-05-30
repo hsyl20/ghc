@@ -56,7 +56,7 @@ import Coercion hiding( substCo )
 import DataCon          ( dataConWorkId, isNullaryRepDataCon )
 import VarSet
 import BasicTypes
-import Util
+import GHC.Utils
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Data.Pair

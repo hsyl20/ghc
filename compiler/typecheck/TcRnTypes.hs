@@ -179,7 +179,7 @@ import GHC.Data.List.SetOps
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Utils.Fingerprint
-import Util
+import GHC.Utils
 import PrelNames ( isUnboundName )
 
 import Control.Monad (ap, liftM, msum)

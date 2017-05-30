@@ -92,7 +92,7 @@ import GHC.Data.Bag              ( emptyBag, consBag )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import ApiAnnotation
 import Data.List
 import qualified GHC.LanguageExtensions as LangExt

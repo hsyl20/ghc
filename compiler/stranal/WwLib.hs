@@ -36,7 +36,7 @@ import TyCon
 import UniqSupply
 import Unique
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString

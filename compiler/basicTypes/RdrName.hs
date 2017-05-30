@@ -79,7 +79,7 @@ import GHC.Utils.Outputable
 import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import Util
+import GHC.Utils
 import NameEnv
 
 import Data.Data

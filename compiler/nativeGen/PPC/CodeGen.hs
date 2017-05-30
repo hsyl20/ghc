@@ -60,7 +60,7 @@ import Data.Word
 
 import BasicTypes
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 
 -- -----------------------------------------------------------------------------
 -- Top-level of the instruction selector

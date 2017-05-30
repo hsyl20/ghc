@@ -33,7 +33,7 @@ import FieldLabel
 import GHC.Utils.Binary
 import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Data.List ( find )
 import Data.Function

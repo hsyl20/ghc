@@ -61,7 +61,7 @@ import SMRep
 import Module
 import Literal
 import GHC.Data.Graph.Directed
-import Util
+import GHC.Utils
 import Unique
 import UniqSupply (MonadUnique(..))
 import GHC.Config.Flags

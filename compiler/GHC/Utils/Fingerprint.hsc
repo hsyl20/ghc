@@ -21,7 +21,7 @@ module GHC.Utils.Fingerprint (
         getFileHash
    ) where
 
-#include "md5.h"
+#include "GHC/Utils/md5.h"
 ##include "HsVersions.h"
 
 import Foreign

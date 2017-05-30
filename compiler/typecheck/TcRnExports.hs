@@ -30,7 +30,7 @@ import DataCon
 import PatSyn
 import GHC.Data.FastString
 import GHC.Data.Maybe
-import Util (capitalise)
+import GHC.Utils (capitalise)
 
 
 import Control.Monad

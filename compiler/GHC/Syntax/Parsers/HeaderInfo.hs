@@ -34,7 +34,7 @@ import GHC.Data.StringBuffer
 import SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils.PrettyPrint           ()
 import GHC.Data.Maybe

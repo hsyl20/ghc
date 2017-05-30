@@ -65,7 +65,7 @@ import GHC.Data.Maybe
 import SrcLoc
 import GHC.Data.Bag
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import GHC.Data.Unique.FiniteMap
 
 import Control.Monad

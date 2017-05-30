@@ -158,7 +158,7 @@ import Unique
 import Data.Array
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import GHC.Data.Bool.Formula   ( mkAnd )
 
 import qualified Data.ByteString.Char8 as BS

@@ -54,7 +54,7 @@ import SrcLoc
 import NameSet
 import FieldLabel
 
-import Util
+import GHC.Utils
 import BasicTypes       ( compareFixity, funTyFixity, negateFixity,
                           Fixity(..), FixityDirection(..), LexicalFixity(..) )
 import GHC.Utils.Outputable

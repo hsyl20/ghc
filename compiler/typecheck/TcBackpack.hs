@@ -59,7 +59,7 @@ import NameShape
 import TcErrors
 import TcUnify
 import GHC.Interface.Renaming
-import Util
+import GHC.Utils
 
 import Control.Monad
 import Data.List (find, foldl')

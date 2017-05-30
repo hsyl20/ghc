@@ -172,10 +172,10 @@ import GHC.Program.CmdLineParser
 import GHC.Config.Constants
 import GHC.Utils.Panic
 import qualified GHC.Utils.PrettyPrint.Colour as Col
-import Util
+import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Utils.Monad
-import qualified Pretty
+import qualified GHC.Utils.PrettyPrint
 import SrcLoc
 import BasicTypes       ( IntWithInf, treatZeroAsInf )
 import GHC.Data.FastString

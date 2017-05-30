@@ -48,7 +48,7 @@ import GHC.Platform
 import Config
 import GHC.Data.Tree.OrdList
 import GHC.Data.Pair
-import Util
+import GHC.Utils
 import GHC.Config.Hooks
 
 import Data.Maybe

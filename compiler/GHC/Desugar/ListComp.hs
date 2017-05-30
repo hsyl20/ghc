@@ -33,7 +33,7 @@ import SrcLoc
 import GHC.Utils.Outputable
 import TcType
 import GHC.Data.List.SetOps( getNth )
-import Util
+import GHC.Utils
 
 {-
 List comprehensions may be desugared in one of two ways: ``ordinary''

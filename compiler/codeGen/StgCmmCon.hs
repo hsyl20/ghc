@@ -43,7 +43,7 @@ import Literal
 import PrelInfo
 import GHC.Utils.Outputable
 import GHC.Platform
-import Util
+import GHC.Utils
 import GHC.Utils.Monad (mapMaybeM)
 
 import Control.Monad

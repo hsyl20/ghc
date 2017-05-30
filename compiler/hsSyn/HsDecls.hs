@@ -105,7 +105,7 @@ import NameSet
 import InstEnv
 import Class
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import SrcLoc
 
 import GHC.Data.Bag

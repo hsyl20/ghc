@@ -31,7 +31,7 @@ import Coercion
 import TyCon
 import TyCoRep
 import Type
-import Util
+import GHC.Utils
 import TysPrim
 import {-# SOURCE #-} TysWiredIn ( anyTypeOfKind )
 

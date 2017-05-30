@@ -36,7 +36,7 @@ import TyCon
 import TysPrim
 import TcEvidence
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import SrcLoc
 import GHC.Config.Flags
 import PrelNames (monadFailClassName)

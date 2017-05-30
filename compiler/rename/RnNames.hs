@@ -42,7 +42,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
 import SrcLoc
 import BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )
-import Util
+import GHC.Utils
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import Id

@@ -31,7 +31,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import Ctype
-import Util
+import GHC.Utils
 --import TRACE
 
 import Data.Word

@@ -50,7 +50,7 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 import Config
 import GHC.Utils.Panic
-import Util
+import GHC.Utils
 import GHC.Data.StringBuffer     ( hGetStringBuffer )
 import BasicTypes       ( SuccessFlag(..) )
 import GHC.Data.Maybe           ( expectJust )

@@ -142,7 +142,7 @@ import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.DeterSet
 import GHC.Data.FastString
 import GHC.Utils.Binary
-import Util
+import GHC.Utils
 import Data.List
 import Data.Ord
 import GHC.PackageDb (BinaryStringRep(..), DbUnitIdModuleRep(..), DbModule(..), DbUnitId(..))

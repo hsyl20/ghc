@@ -41,7 +41,7 @@ import GHC.Data.Graph.Directed          ( SCC(..), Node(..)
 import Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import Data.List
 import Control.Arrow    ( second )

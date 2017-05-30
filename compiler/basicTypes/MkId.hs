@@ -67,7 +67,7 @@ import Unique
 import UniqSupply
 import PrelNames
 import BasicTypes       hiding ( SuccessFlag(..) )
-import Util
+import GHC.Utils
 import GHC.Data.Pair
 import GHC.Config.Flags
 import GHC.Utils.Outputable

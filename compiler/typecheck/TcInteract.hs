@@ -62,7 +62,7 @@ import GHC.Data.Maybe( isJust )
 import GHC.Data.Pair (Pair(..))
 import Unique( hasKey )
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad.Trans.Class

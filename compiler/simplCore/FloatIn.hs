@@ -29,7 +29,7 @@ import Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )
 import Var
 import Type
 import VarSet
-import Util
+import GHC.Utils
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 -- import Data.List        ( mapAccumL )

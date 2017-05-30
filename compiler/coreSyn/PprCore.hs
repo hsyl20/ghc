@@ -30,7 +30,7 @@ import Coercion
 import GHC.Config.Flags
 import BasicTypes
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import SrcLoc      ( pprUserRealSpan )

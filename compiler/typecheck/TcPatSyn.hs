@@ -48,7 +48,7 @@ import TcTyDecls
 import ConLike
 import FieldLabel
 import GHC.Data.Bag
-import Util
+import GHC.Utils
 import GHC.Utils.Error
 import Control.Monad ( zipWithM )
 import Data.List( partition )

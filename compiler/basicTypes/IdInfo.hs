@@ -97,7 +97,7 @@ import ForeignCall
 import GHC.Utils.Outputable
 import Module
 import Demand
-import Util
+import GHC.Utils
 
 -- infixl so you can say (id `set` a `set` b)
 infixl  1 `setRuleInfo`,

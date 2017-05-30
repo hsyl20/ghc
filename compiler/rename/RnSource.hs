@@ -51,7 +51,7 @@ import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import GHC.Data.FastString
 import SrcLoc
 import GHC.Config.Flags
-import Util             ( debugIsOn, lengthExceeds, partitionWith )
+import GHC.Utils             ( debugIsOn, lengthExceeds, partitionWith )
 import GHC.Types         ( HscEnv, hsc_dflags )
 import GHC.Data.List.SetOps       ( findDupsEq, removeDups, equivClasses )
 import GHC.Data.Graph.Directed          ( SCC, flattenSCC, flattenSCCs, Node(..)

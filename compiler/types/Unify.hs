@@ -35,7 +35,7 @@ import Type hiding ( getTvSubstEnv )
 import Coercion hiding ( getCvSubstEnv )
 import TyCon
 import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
-import Util
+import GHC.Utils
 import GHC.Data.Pair
 import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap

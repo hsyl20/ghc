@@ -36,7 +36,7 @@ import RepType
 import Kind            ( isLiftedTypeKind )
 import DataCon
 import TyCon
-import Util
+import GHC.Utils
 import VarSet
 import TysPrim
 import GHC.Utils.Error

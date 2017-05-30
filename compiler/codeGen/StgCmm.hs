@@ -49,7 +49,7 @@ import MkGraph
 import qualified Data.ByteString as BS
 import Data.IORef
 import Control.Monad (when,void)
-import Util
+import GHC.Utils
 
 codeGen :: DynFlags
         -> Module

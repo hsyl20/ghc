@@ -104,7 +104,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.FiniteMap
 
 -- Common utilities
-import Util
+import GHC.Utils
 import GHC.Serialized
 import SrcLoc
 import GHC.Utils.Outputable

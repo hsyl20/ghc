@@ -27,7 +27,7 @@ import PrelNames
 import Type   ( Type )
 import Module
 import Name
-import Util
+import GHC.Utils
 import SrcLoc
 import GHC.Utils.Outputable
 

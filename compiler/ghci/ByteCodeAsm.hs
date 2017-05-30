@@ -32,7 +32,7 @@ import SMRep
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform
-import Util
+import GHC.Utils
 import Unique
 import GHC.Data.Unique.DeterSet
 

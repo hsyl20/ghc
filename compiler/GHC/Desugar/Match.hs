@@ -48,7 +48,7 @@ import TyCon( isNewTyCon )
 import TysWiredIn
 import SrcLoc
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import Name
 import GHC.Utils.Outputable
 import BasicTypes ( isGenerated, il_value, fl_value )

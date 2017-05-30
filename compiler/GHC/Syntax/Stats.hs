@@ -13,7 +13,7 @@ import HsSyn
 import GHC.Utils.Outputable
 import RdrName
 import SrcLoc
-import Util
+import GHC.Utils
 
 import Data.Char
 import Data.Foldable (foldl')

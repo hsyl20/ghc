@@ -56,7 +56,7 @@ import GHC.Config.Constants
 import GHC.Config.Flags
 import GHC.Platform
 import GHC.Data.Unique.FiniteMap
-import Util
+import GHC.Utils
 
 import Data.ByteString (ByteString)
 import Data.Int

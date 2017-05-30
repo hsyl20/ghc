@@ -62,7 +62,7 @@ import GHC.Utils.Binary
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
-import Util
+import GHC.Utils
 
 import Data.Maybe( isJust )
 import Data.List (foldl')

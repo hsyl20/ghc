@@ -56,7 +56,7 @@ import GHC.Utils.Error
 import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Desugar.Coverage
-import Util
+import GHC.Utils
 import GHC.Utils.Monad
 import GHC.Data.Tree.OrdList
 

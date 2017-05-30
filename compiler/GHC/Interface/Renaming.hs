@@ -28,7 +28,7 @@ import GHC.Utils.Error
 
 import Name
 import TcRnMonad
-import Util
+import GHC.Utils
 import GHC.Utils.Fingerprint
 import BasicTypes
 

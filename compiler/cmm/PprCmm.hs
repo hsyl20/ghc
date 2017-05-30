@@ -49,7 +49,7 @@ import GHC.Data.FastString
 import GHC.Utils.Outputable
 import PprCmmDecl
 import PprCmmExpr
-import Util
+import GHC.Utils
 import PprCore ()
 
 import BasicTypes

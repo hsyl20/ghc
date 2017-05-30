@@ -143,7 +143,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString.Environment
 import FieldLabel
 import GHC.Config.Constants
-import Util
+import GHC.Utils
 import Unique( tyConRepNameUnique, dataConRepNameUnique )
 import GHC.Data.Unique.Set
 import Module

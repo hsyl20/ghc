@@ -41,7 +41,7 @@ import Literal
 import PrelNames
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Data.Maybe
 

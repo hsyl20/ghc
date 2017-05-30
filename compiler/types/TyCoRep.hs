@@ -165,7 +165,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Pair
 import UniqSupply
-import Util
+import GHC.Utils
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 

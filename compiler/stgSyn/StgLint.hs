@@ -23,7 +23,7 @@ import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
 import Type
 import RepType
 import TyCon
-import Util
+import GHC.Utils
 import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import Control.Monad

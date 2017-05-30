@@ -49,7 +49,7 @@ import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import GHC.Utils.IO.Unsafe
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Data.Maybe
 import Control.Exception

@@ -45,7 +45,7 @@ import IdInfo
 import Name
 import Module
 import GHC.Data.List.SetOps
-import Util
+import GHC.Utils
 import BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.FastString

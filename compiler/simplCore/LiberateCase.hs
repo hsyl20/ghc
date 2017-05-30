@@ -14,7 +14,7 @@ import CoreSyn
 import CoreUnfold       ( couldBeSmallEnoughToInline )
 import Id
 import VarEnv
-import Util             ( notNull )
+import GHC.Utils             ( notNull )
 
 {-
 The liberate-case transformation

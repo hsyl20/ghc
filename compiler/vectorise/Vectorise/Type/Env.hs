@@ -39,7 +39,7 @@ import GHC.Data.Unique.FiniteMap
 import OccName
 import Unique
 
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString

@@ -42,7 +42,7 @@ import PrimOp
 import SMRep
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Prelude hiding ((<*>))
 

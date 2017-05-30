@@ -20,7 +20,7 @@ import BasicTypes
 import GHC.Config.Flags
 import Demand
 import WwLib
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import FamInstEnv
 import GHC.Utils.Monad

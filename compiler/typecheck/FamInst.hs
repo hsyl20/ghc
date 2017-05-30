@@ -28,7 +28,7 @@ import CoAxiom
 import GHC.Config.Flags
 import Module
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import RdrName
 import DataCon ( dataConName )
 import GHC.Data.Maybe

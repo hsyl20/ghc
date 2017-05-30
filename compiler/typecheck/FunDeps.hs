@@ -33,7 +33,7 @@ import VarEnv
 import GHC.Utils.Outputable
 import GHC.Utils.Error( Validity(..), allValid )
 import SrcLoc
-import Util
+import GHC.Utils
 
 import GHC.Data.Pair             ( Pair(..) )
 import Data.List        ( nubBy )

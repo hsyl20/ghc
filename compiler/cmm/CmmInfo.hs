@@ -48,7 +48,7 @@ import GHC.Config.Flags
 import GHC.Utils.Panic
 import UniqSupply
 import GHC.Utils.Monad
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 
 import Data.Bits

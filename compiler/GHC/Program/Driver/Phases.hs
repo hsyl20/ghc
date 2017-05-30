@@ -45,7 +45,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 import System.FilePath
 import GHC.Utils.Binary
-import Util
+import GHC.Utils
 
 -----------------------------------------------------------------------------
 -- Phases

@@ -81,7 +81,7 @@ module SrcLoc (
         spans, isSubspanOf, sortLocated
     ) where
 
-import Util
+import GHC.Utils
 import GHC.Utils.Json
 import GHC.Utils.Outputable
 import GHC.Data.FastString

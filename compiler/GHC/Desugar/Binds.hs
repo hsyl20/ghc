@@ -60,7 +60,7 @@ import GHC.Data.Bag
 import BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 import GHC.Utils.Monad
 import qualified GHC.LanguageExtensions as LangExt
 import Control.Monad

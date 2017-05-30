@@ -61,7 +61,7 @@ import GHC.Config.Flags
 import BasicTypes
 import Name   ( Name )
 import GHC.Data.Bag
-import Util
+import GHC.Utils
 import GHC.Data.Pair( pFst )
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Utils.Outputable as Outputable

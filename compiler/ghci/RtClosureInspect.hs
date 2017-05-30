@@ -46,7 +46,7 @@ import TcEnv
 
 import TyCon
 import Name
-import Util
+import GHC.Utils
 import VarSet
 import BasicTypes       ( Boxity(..) )
 import TysPrim

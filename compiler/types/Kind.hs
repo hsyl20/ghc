@@ -29,7 +29,7 @@ import TyCon
 import PrelNames
 
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 {-
 ************************************************************************

@@ -60,7 +60,7 @@ import Id
 import Name
 import VarEnv
 import UniqSupply
-import Util
+import GHC.Utils
 import GHC.Data.Unique.FiniteMap
 import VarSet
 import Unique

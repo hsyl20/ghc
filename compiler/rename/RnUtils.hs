@@ -37,7 +37,7 @@ import NameEnv
 import DataCon
 import SrcLoc
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import BasicTypes       ( TopLevelFlag(..) )
 import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Config.Flags

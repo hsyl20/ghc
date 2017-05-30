@@ -22,7 +22,7 @@ import UniqSupply
 import StgCmmUtils      ( newTemp )
 import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap
-import Util
+import GHC.Utils
 
 import GHC.Config.Flags
 import GHC.Data.FastString

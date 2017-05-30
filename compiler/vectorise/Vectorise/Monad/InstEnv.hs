@@ -18,7 +18,7 @@ import Class
 import Type
 import TyCon
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 
 #include "HsVersions.h"

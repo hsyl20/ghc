@@ -37,7 +37,7 @@ import Module
 import GHC.Types
 import GHC.Packages
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 import PrelNames        ( gHC_PRIM )
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Outputable

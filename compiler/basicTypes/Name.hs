@@ -84,7 +84,7 @@ import OccName
 import Module
 import SrcLoc
 import Unique
-import Util
+import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Utils.Binary
 import GHC.Config.Flags

@@ -51,7 +51,7 @@ import GHC.Utils.Error
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Utils.Panic
 import UniqSupply
 import GHC.Utils.Monad       ( liftIO )

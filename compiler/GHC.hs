@@ -323,7 +323,7 @@ import GHC.Platform
 import GHC.Data.Bag              ( listToBag, unitBag )
 import GHC.Utils.Error
 import GHC.Utils.Monad
-import Util
+import GHC.Utils
 import GHC.Data.StringBuffer
 import GHC.Utils.Outputable
 import BasicTypes

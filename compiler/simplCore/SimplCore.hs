@@ -46,7 +46,7 @@ import CallArity        ( callArityAnalProgram )
 import WorkWrap         ( wwTopBinds )
 import Vectorise        ( vectorise )
 import SrcLoc
-import Util
+import GHC.Utils
 import Module
 
 import GHC.Data.Maybe

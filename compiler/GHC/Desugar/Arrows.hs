@@ -49,7 +49,7 @@ import VarSet
 import SrcLoc
 import GHC.Data.List.SetOps( assocMaybe )
 import Data.List
-import Util
+import GHC.Utils
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set
 

@@ -49,7 +49,7 @@ import NameEnv
 import VarSet
 import GHC.Utils.Outputable
 import SrcLoc
-import Util( singleton )
+import GHC.Utils( singleton )
 import GHC.Data.Maybe( orElse )
 import Data.Maybe( mapMaybe )
 import Control.Monad( unless )

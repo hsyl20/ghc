@@ -18,7 +18,7 @@ import SrcLoc( SrcSpan, noSrcSpan )
 import Var
 import Name
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import Control.Monad
 
 

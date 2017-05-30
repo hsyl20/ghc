@@ -38,7 +38,7 @@ import Literal
 import GHC.Utils.Outputable
 import GHC.Utils.Monad
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 import GHC.Config.Flags
 import ForeignCall
 import Demand           ( isUsedOnce )

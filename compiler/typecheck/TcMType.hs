@@ -110,7 +110,7 @@ import TysPrim
 import VarEnv
 import NameEnv
 import PrelNames
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import SrcLoc

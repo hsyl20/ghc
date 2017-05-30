@@ -58,7 +58,7 @@ import Name
 import NameSet
 import RdrName
 import BasicTypes
-import Util
+import GHC.Utils
 import GHC.Data.List.SetOps          ( removeDups )
 import GHC.Utils.Outputable
 import SrcLoc

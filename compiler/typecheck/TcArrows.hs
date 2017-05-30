@@ -31,7 +31,7 @@ import TysPrim
 import BasicTypes( Arity )
 import SrcLoc
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Control.Monad
 

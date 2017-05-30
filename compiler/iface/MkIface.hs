@@ -98,7 +98,7 @@ import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BasicTypes       hiding ( SuccessFlag(..) )
 import Unique
-import Util             hiding ( eqListBy )
+import GHC.Utils             hiding ( eqListBy )
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Utils.Binary

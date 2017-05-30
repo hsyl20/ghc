@@ -38,7 +38,7 @@ import Data.Maybe
 import Data.List (tails,sortBy)
 import Prelude hiding (succ)
 import Unique (nonDetCmpUnique)
-import Util
+import GHC.Utils
 
 
 ------------------------

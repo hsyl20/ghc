@@ -24,7 +24,7 @@ module GHC.Data.List.SetOps (
 #include "HsVersions.h"
 
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Data.List
 import qualified Data.Set as S

@@ -129,7 +129,7 @@ import GHC.Data.FastString
 import GHC.Config.Flags
 import GHC.Platform
 import GHC.Data.Unique.Set
-import Util
+import GHC.Utils
 import PprCore ( {- instances -} )
 
 -- -----------------------------------------------------------------------------

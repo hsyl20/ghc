@@ -1,6 +1,6 @@
 module Main where
 
-import Util
+import GHC.Utils
 import ManyQueue
 
 main = do

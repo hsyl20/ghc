@@ -73,7 +73,7 @@ import BlockId
 import CLabel
 import GHC.Utils.Outputable
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import CodeGen.Platform
 
 import Data.Word

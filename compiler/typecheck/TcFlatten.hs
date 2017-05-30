@@ -23,7 +23,7 @@ import GHC.Utils.Outputable
 import TcSMonad as TcS
 import BasicTypes( SwapFlag(..) )
 
-import Util
+import GHC.Utils
 import GHC.Data.Bag
 import GHC.Data.Pair
 import Control.Monad

@@ -59,7 +59,7 @@ import NameEnv
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Unify
-import Util
+import GHC.Utils
 import SrcLoc
 import GHC.Data.List.SetOps
 import GHC.Config.Flags

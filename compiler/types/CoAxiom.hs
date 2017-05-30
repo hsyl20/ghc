@@ -36,7 +36,7 @@ import GHC.Data.FastString
 import Name
 import Unique
 import Var
-import Util
+import GHC.Utils
 import GHC.Utils.Binary
 import GHC.Data.Pair
 import BasicTypes

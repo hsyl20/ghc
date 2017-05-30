@@ -37,7 +37,7 @@ import RdrName  ( GlobalRdrEnv )
 import BasicTypes
 import ConLike
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import Type

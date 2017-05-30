@@ -44,7 +44,7 @@ import NameSet
 import RdrName
 import GHC.Data.Unique.Set
 import Data.List
-import Util
+import GHC.Utils
 import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Utils.Error
 import GHC.Utils.Outputable as Outputable

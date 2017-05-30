@@ -146,7 +146,7 @@ import GHC.Utils.Outputable
 import Unique
 import UniqSupply
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 
 -- infixl so you can say (id `set` a `set` b)
 infixl  1 `setIdUnfolding`,

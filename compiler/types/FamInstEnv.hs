@@ -55,7 +55,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import TrieMap
 import Unique
-import Util
+import GHC.Utils
 import Var
 import GHC.Data.Pair
 import SrcLoc

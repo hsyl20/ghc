@@ -50,7 +50,7 @@ import GHC.Data.FastString
 import BasicTypes
 import GHC.Config.Flags
 import GHC.Platform
-import Util
+import GHC.Utils
 import Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))
 
 import Control.Applicative ( Alternative(..) )

@@ -33,7 +33,7 @@ import BasicTypes
 import GHC.Types
 import GHC.Data.Bag
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils.Monad.State

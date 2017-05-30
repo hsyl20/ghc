@@ -22,7 +22,7 @@ import Module
 import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import PrelNames ( mkUnboundName, forall_tv_RDR, isUnboundName )
-import Util
+import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Config.Flags
 import GHC.Data.FastString

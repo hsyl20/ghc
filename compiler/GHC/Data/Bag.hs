@@ -26,7 +26,7 @@ module GHC.Data.Bag (
     ) where
 
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import GHC.Utils.Monad
 import Control.Monad

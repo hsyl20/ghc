@@ -43,7 +43,7 @@ import Type             ( isUnliftedType )
 import RepType          ( isVoidTy, countConRepArgs, primRepSlot )
 import CostCentre       ( CostCentreStack, currentCCS )
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 

@@ -216,7 +216,7 @@ import PrelNames
 import TysWiredIn( coercibleClass, unitTyCon, unitTyConKey
                  , listTyCon, constraintKind )
 import BasicTypes
-import Util
+import GHC.Utils
 import GHC.Data.Bag
 import GHC.Data.Maybe
 import GHC.Utils.Outputable

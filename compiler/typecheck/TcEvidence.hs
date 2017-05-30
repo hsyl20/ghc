@@ -54,7 +54,7 @@ import VarSet
 import Name
 import GHC.Data.Pair
 
-import Util
+import GHC.Utils
 import GHC.Data.Bag
 import GHC.Data.Graph.Directed
 import qualified Data.Data as Data

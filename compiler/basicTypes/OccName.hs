@@ -105,7 +105,7 @@ module OccName (
         FastStringEnv, emptyFsEnv, lookupFsEnv, extendFsEnv, mkFsEnv
     ) where
 
-import Util
+import GHC.Utils
 import Unique
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap

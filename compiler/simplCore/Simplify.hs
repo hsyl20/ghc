@@ -49,7 +49,7 @@ import Control.Monad
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair
-import Util
+import GHC.Utils
 import GHC.Utils.Error
 import Module          ( moduleName, pprModuleName )
 

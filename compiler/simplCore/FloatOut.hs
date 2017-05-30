@@ -25,7 +25,7 @@ import BasicTypes       ( TopLevelFlag(..), isTopLevel )
 import SetLevels
 import UniqSupply       ( UniqSupply )
 import GHC.Data.Bag
-import Util
+import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import Type

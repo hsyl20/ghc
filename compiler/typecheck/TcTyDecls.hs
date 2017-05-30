@@ -53,7 +53,7 @@ import BasicTypes
 import SrcLoc
 import Unique ( mkBuiltinUnique )
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Data.Bag
 import GHC.Data.FastString

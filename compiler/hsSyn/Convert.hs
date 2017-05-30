@@ -31,7 +31,7 @@ import Unique
 import GHC.Utils.Error
 import GHC.Data.Bag
 import Lexeme
-import Util
+import GHC.Utils
 import GHC.Data.FastString
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils.Monad ( foldrM )

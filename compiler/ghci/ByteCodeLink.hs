@@ -36,7 +36,7 @@ import Module
 import GHC.Data.FastString
 import GHC.Utils.Panic
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 -- Standard libraries
 import Data.Array.Unboxed

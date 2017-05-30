@@ -19,7 +19,7 @@ import GHC.Config.Flags
 import GHC.Platform
 import GHC.Utils.Error
 import GHC.Data.Maybe     (MaybeT(..),runMaybeT)
-import Util       (charToC)
+import GHC.Utils       (charToC)
 import GHC.Utils.Outputable (text,hcat,SDoc)
 
 import Control.Monad (when)

@@ -58,7 +58,7 @@ import Coercion hiding          ( substCo, substCoVar, substCoVarBndr )
 import BasicTypes
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import GHC.Data.Unique.FiniteMap                   ( pprUniqFM )
 
 import Data.List

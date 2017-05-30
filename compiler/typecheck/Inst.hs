@@ -61,7 +61,7 @@ import VarEnv
 import PrelNames
 import SrcLoc
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import qualified GHC.LanguageExtensions as LangExt
 

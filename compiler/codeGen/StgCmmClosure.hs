@@ -85,7 +85,7 @@ import RepType
 import BasicTypes
 import GHC.Utils.Outputable
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 
 import Data.Coerce (coerce)
 

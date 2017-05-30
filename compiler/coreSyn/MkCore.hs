@@ -76,7 +76,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import UniqSupply
 import BasicTypes
-import Util
+import GHC.Utils
 import GHC.Config.Flags
 import Data.List
 

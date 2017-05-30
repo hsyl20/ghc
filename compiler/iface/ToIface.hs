@@ -61,7 +61,7 @@ import Type
 import PatSyn
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 import Var
 import VarEnv
 import VarSet

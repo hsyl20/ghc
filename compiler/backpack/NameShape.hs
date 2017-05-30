@@ -22,7 +22,7 @@ import FieldLabel
 import Name
 import NameEnv
 import TcRnMonad
-import Util
+import GHC.Utils
 import IfaceEnv
 
 import Control.Monad

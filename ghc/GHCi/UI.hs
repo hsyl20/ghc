@@ -76,7 +76,7 @@ import Linker
 import GHC.Data.Maybe ( orElse, expectJust )
 import NameSet
 import GHC.Utils.Panic hiding ( showException )
-import Util
+import GHC.Utils
 import qualified GHC.LanguageExtensions as LangExt
 
 -- Haskell Libraries

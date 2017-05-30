@@ -35,7 +35,7 @@ import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair
-import Util     ( debugIsOn )
+import GHC.Utils     ( debugIsOn )
 
 {-
 ************************************************************************

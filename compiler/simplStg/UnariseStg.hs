@@ -212,7 +212,7 @@ import Type
 import TysPrim (intPrimTy)
 import TysWiredIn
 import UniqSupply
-import Util
+import GHC.Utils
 import VarEnv
 
 import Data.Bifunctor (second)

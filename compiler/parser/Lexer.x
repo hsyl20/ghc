@@ -105,7 +105,7 @@ import GHC.Utils.Outputable
 import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import GHC.Data.Unique.FiniteMap
-import Util             ( readRational )
+import GHC.Utils             ( readRational )
 
 -- compiler/main
 import GHC.Utils.Error

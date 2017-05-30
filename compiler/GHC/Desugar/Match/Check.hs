@@ -30,7 +30,7 @@ import FamInstEnv
 import TysWiredIn
 import TyCon
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import DataCon

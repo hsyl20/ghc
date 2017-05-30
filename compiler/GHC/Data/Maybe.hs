@@ -27,7 +27,7 @@ import Control.Monad
 import Control.Monad.Trans.Maybe
 import Control.Exception (catch, SomeException(..))
 import Data.Maybe
-import Util (HasCallStack)
+import GHC.Utils (HasCallStack)
 
 infixr 4 `orElse`
 

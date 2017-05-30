@@ -34,7 +34,7 @@ import BasicTypes
 import GHC.Utils.Outputable
 import Unique
 import Name
-import Util
+import GHC.Utils
 
 import Data.Bits
 import Data.Maybe

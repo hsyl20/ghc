@@ -20,7 +20,7 @@ import TyCon            ( TyCon, tyConFamilySize, isDataTyCon, tyConDataCons )
 import RepType
 import StgCmmLayout     ( mkVirtConstrSizes )
 import StgCmmClosure    ( tagForCon, NonVoid (..) )
-import Util
+import GHC.Utils
 import GHC.Utils.Panic
 
 {-

@@ -46,7 +46,7 @@ import GHC.Config.Flags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen 
 import GHC.Data.Maybe           ( orElse, catMaybes, isJust, isNothing )
 import Demand
 import GHC.Serialized   ( deserializeWithData )
-import Util
+import GHC.Utils
 import GHC.Data.Pair
 import UniqSupply
 import GHC.Utils.Outputable

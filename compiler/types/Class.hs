@@ -30,7 +30,7 @@ import Var
 import Name
 import BasicTypes
 import Unique
-import Util
+import GHC.Utils
 import SrcLoc
 import PrelNames    ( eqTyConKey, coercibleTyConKey, typeableClassKey,
                       heqTyConKey )

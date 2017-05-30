@@ -15,7 +15,7 @@ import Module
 import OccName
 import Name
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 import Data.Char
 import Foreign

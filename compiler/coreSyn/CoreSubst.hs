@@ -57,7 +57,7 @@ import Var
 import IdInfo
 import UniqSupply
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import PprCore          ()              -- Instances
 import Data.List

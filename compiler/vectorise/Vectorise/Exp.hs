@@ -43,7 +43,7 @@ import TysPrim
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 
 import Control.Monad
 import Data.Maybe

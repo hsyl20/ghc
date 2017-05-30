@@ -82,7 +82,7 @@ import TysWiredIn       ( unitTyCon, unitDataCon, tupleTyCon, tupleDataCon, nilD
                           listTyCon_RDR, parrTyCon_RDR, consDataCon_RDR )
 
 -- compiler/utils
-import Util             ( looksLikePackageName )
+import GHC.Utils             ( looksLikePackageName )
 import Prelude
 
 import qualified GHC.LanguageExtensions as LangExt

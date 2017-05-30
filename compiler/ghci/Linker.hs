@@ -39,7 +39,7 @@ import GHC.Config.Flags
 import BasicTypes
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
-import Util
+import GHC.Utils
 import GHC.Utils.Error
 import SrcLoc
 import qualified GHC.Data.Maybe as Maybe

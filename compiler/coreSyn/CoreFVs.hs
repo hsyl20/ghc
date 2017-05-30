@@ -76,7 +76,7 @@ import CoAxiom
 import FamInstEnv
 import TysPrim( funTyConName )
 import GHC.Data.Maybe( orElse )
-import Util
+import GHC.Utils
 import BasicTypes( Activation )
 import GHC.Utils.Outputable
 import GHC.Data.Var.Free as FV

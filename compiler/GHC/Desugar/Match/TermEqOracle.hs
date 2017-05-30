@@ -30,7 +30,7 @@ import Type
 import HsLit
 import TcHsSyn
 import GHC.Utils.Monad
-import Util
+import GHC.Utils
 
 import NameEnv
 

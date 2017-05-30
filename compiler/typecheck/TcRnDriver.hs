@@ -122,7 +122,7 @@ import Data.List ( sortBy, sort )
 import Data.Ord
 import GHC.Data.FastString
 import GHC.Data.Maybe
-import Util
+import GHC.Utils
 import GHC.Data.Bag
 import Inst (tcGetInsts)
 import qualified GHC.LanguageExtensions as LangExt

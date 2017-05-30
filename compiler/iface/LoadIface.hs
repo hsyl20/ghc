@@ -67,7 +67,7 @@ import SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BinIface
 import GHC.Utils.Panic
-import Util
+import GHC.Utils
 import GHC.Data.FastString
 import GHC.Utils.Fingerprint
 import GHC.Config.Hooks

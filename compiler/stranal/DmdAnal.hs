@@ -29,7 +29,7 @@ import TyCon
 import Type
 import Coercion         ( Coercion, coVarsOfCo )
 import FamInstEnv
-import Util
+import GHC.Utils
 import GHC.Data.Maybe           ( isJust )
 import TysWiredIn
 import TysPrim          ( realWorldStatePrimTy )

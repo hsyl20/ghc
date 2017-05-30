@@ -25,7 +25,7 @@ import TcType
 import GHC.Desugar.Monad
 import GHC.Desugar.Utils
 import MkCore   ( mkCoreLets )
-import Util
+import GHC.Utils
 import Id
 import NameEnv
 import FieldLabel ( flSelector )

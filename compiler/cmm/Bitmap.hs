@@ -20,7 +20,7 @@ module Bitmap (
 
 import SMRep
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 
 import Data.Foldable (foldl')
 import Data.Bits

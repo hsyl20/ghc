@@ -29,7 +29,7 @@ import NameSet
 import RdrName
 
 import GHC.Data.Pair
-import Util
+import GHC.Utils
 import GHC.Data.Bag
 import GHC.Utils.Monad
 import Control.Monad

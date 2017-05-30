@@ -228,7 +228,7 @@ import CoAxiom
 import {-# SOURCE #-} Coercion
 
 -- others
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Pair

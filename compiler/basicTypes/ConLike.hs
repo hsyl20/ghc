@@ -30,7 +30,7 @@ import DataCon
 import PatSyn
 import GHC.Utils.Outputable
 import Unique
-import Util
+import GHC.Utils
 import Name
 import BasicTypes
 import TyCoRep (Type, ThetaType)

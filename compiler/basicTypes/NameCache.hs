@@ -14,7 +14,7 @@ import Module
 import Name
 import UniqSupply
 import TysWiredIn
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import PrelNames
 

@@ -66,7 +66,7 @@ import TyCon       ( PrimRep(..), TyCon )
 import Type        ( Type )
 import RepType     ( typePrimRep1 )
 import Unique      ( Unique )
-import Util
+import GHC.Utils
 
 {-
 ************************************************************************

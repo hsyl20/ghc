@@ -114,7 +114,7 @@ import CoAxiom
 import Var
 import VarEnv
 import Name hiding ( varName )
-import Util
+import GHC.Utils
 import BasicTypes
 import GHC.Utils.Outputable
 import Unique

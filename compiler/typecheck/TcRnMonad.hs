@@ -163,7 +163,7 @@ import UniqSupply
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Panic
-import Util
+import GHC.Utils
 import GHC.Types.Annotations
 import BasicTypes( TopLevelFlag )
 import GHC.Data.Maybe

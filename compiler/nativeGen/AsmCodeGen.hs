@@ -73,12 +73,12 @@ import CLabel
 import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import Unique
 
 import BasicTypes       ( Alignment )
 import GHC.Data.Graph.Directed
-import qualified Pretty
+import qualified GHC.Utils.PrettyPrint
 import GHC.Utils.Handle.BufferedWrite
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString

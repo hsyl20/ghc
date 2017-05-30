@@ -84,7 +84,7 @@ import GHC.Data.Maybe
 import GHC.Data.List.SetOps       ( minusList )
 import BasicTypes       ( Arity )
 import GHC.Platform
-import Util
+import GHC.Utils
 import GHC.Data.Pair
 import Data.Function       ( on )
 import Data.List

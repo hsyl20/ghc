@@ -25,7 +25,7 @@ import Type
 import Id
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Util                 ( zipLazy )
+import GHC.Utils                 ( zipLazy )
 import GHC.Utils.Monad
 
 import Control.Monad

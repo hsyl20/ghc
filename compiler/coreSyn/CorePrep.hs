@@ -48,7 +48,7 @@ import GHC.Data.Maybe
 import GHC.Data.Tree.OrdList
 import GHC.Utils.Error
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import GHC.Data.Pair
 import GHC.Utils.Outputable
 import GHC.Platform

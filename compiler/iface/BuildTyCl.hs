@@ -36,7 +36,7 @@ import SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Config.Flags
 import TcRnMonad
 import UniqSupply
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 
 mkDataTyConRhs :: [DataCon] -> AlgTyConRhs

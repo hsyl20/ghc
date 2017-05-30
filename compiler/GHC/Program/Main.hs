@@ -153,7 +153,7 @@ import GHC.Utils.Exception
 import qualified GHC.Data.Stream as Stream
 import GHC.Data.Stream (Stream)
 
-import Util
+import GHC.Utils
 
 import Data.List
 import Control.Monad

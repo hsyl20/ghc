@@ -40,7 +40,7 @@ import NameCache
 import GHC.Platform
 import GHC.Data.FastString
 import GHC.Config.Constants
-import Util
+import GHC.Utils
 
 import Data.Bits
 import Data.Char

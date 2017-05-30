@@ -21,7 +21,7 @@ import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import SMRep
 import UniqSupply
-import Util
+import GHC.Utils
 
 import PprCmm()
 import Data.Map (Map)

@@ -67,7 +67,7 @@ import GHC.Utils.Outputable
 import Var ( Var )
 import VarEnv
 import GHC.Data.Unique.FiniteMap
-import Util
+import GHC.Utils
 import BasicTypes
 import GHC.Utils.Binary
 import GHC.Data.Maybe           ( orElse )

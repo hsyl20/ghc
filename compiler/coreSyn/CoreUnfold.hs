@@ -60,7 +60,7 @@ import Type
 import PrelNames
 import TysPrim          ( realWorldStatePrimTy )
 import GHC.Data.Bag
-import Util
+import GHC.Utils
 import GHC.Utils.Outputable
 import ForeignCall
 

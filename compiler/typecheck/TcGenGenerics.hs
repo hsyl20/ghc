@@ -41,7 +41,7 @@ import VarEnv
 import VarSet (elemVarSet)
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 
 import Control.Monad (mplus)
 import Data.List (zip4, partition)

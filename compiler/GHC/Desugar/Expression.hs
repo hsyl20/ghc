@@ -51,7 +51,7 @@ import BasicTypes
 import GHC.Data.Maybe
 import VarEnv
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Data.Bag
 import GHC.Utils.Outputable as Outputable
 import PatSyn

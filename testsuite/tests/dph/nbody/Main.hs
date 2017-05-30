@@ -4,7 +4,7 @@ import Config
 import Dump
 import World
 import Body
-import Util
+import GHC.Utils
 import Solver
 import Generate
 import Control.Monad

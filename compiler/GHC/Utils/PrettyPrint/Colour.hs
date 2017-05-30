@@ -1,7 +1,7 @@
 module GHC.Utils.PrettyPrint.Colour where
 
 import Data.Maybe (fromMaybe)
-import Util (OverridingBool(..), split)
+import GHC.Utils (OverridingBool(..), split)
 
 -- | A colour\/style for use with 'coloured'.
 newtype PprColour = PprColour String

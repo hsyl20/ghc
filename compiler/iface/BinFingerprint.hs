@@ -14,7 +14,7 @@ import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import Name
 import GHC.Utils.Panic
-import Util
+import GHC.Utils
 
 fingerprintBinMem :: BinHandle -> IO Fingerprint
 fingerprintBinMem bh = withBinBuffer bh f

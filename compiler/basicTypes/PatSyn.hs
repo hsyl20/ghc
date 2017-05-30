@@ -28,7 +28,7 @@ import Type
 import Name
 import GHC.Utils.Outputable
 import Unique
-import Util
+import GHC.Utils
 import BasicTypes
 import Var
 import FieldLabel

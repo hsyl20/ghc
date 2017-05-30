@@ -25,7 +25,7 @@ import GHC.Utils.Outputable
 import BasicTypes       ( TopLevelFlag(..), isTopLevel
                         , isAlwaysActive, isAnyInlinePragma )
 import TrieMap
-import Util             ( filterOut )
+import GHC.Utils             ( filterOut )
 import Data.List        ( mapAccumL )
 
 {-

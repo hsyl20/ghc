@@ -10,7 +10,7 @@ import CoAxiom
 import Var
 import GHC.Utils.Outputable
 import GHC.Data.Pair
-import Util
+import GHC.Utils
 
 mkReflCo :: Role -> Type -> Coercion
 mkTyConAppCo :: HasDebugCallStack => Role -> TyCon -> [Coercion] -> Coercion

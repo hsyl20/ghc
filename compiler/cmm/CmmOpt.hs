@@ -26,7 +26,7 @@ module CmmOpt (
 import CmmUtils
 import Cmm
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 
 import GHC.Utils.Outputable
 import GHC.Platform

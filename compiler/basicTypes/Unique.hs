@@ -71,7 +71,7 @@ module Unique (
 import BasicTypes
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 
 -- just for implementing a fast [0,61) -> Char function
 import GHC.Exts (indexCharOffAddr#, Char(..), Int(..))

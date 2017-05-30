@@ -44,7 +44,7 @@ import GHC.Data.Bag
 import GHC.Utils.Error         ( ErrMsg, errDoc, pprLocErrMsg )
 import BasicTypes
 import ConLike          ( ConLike(..), conLikeWrapId_maybe )
-import Util
+import GHC.Utils
 import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
 import NameEnv (lookupNameEnv)
 import GHC.Data.FastString

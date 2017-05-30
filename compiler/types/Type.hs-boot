@@ -4,7 +4,7 @@ module Type where
 import TyCon
 import Var ( TyVar )
 import {-# SOURCE #-} TyCoRep( Type, Coercion, Kind )
-import Util
+import GHC.Utils
 
 isPredTy     :: Type -> Bool
 isCoercionTy :: Type -> Bool

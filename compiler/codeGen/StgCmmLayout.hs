@@ -49,7 +49,7 @@ import BasicTypes        ( RepArity )
 import GHC.Config.Flags
 import Module
 
-import Util
+import GHC.Utils
 import Data.List
 import GHC.Utils.Outputable
 import GHC.Data.FastString

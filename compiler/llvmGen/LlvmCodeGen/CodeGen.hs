@@ -29,7 +29,7 @@ import GHC.Platform
 import GHC.Data.Tree.OrdList
 import UniqSupply
 import Unique
-import Util
+import GHC.Utils
 
 import Control.Monad.Trans.Class
 import Control.Monad.Trans.Writer

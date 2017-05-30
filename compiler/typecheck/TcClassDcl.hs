@@ -50,7 +50,7 @@ import BasicTypes
 import GHC.Data.Bag
 import GHC.Data.FastString
 import GHC.Data.Bool.Formula
-import Util
+import GHC.Utils
 
 import Control.Monad
 import Data.List ( mapAccumL, partition )

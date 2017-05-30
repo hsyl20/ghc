@@ -74,7 +74,7 @@ import PrelNames
 import Var
 import GHC.Utils.Outputable
 import GHC.Data.List.SetOps
-import Util
+import GHC.Utils
 import BasicTypes
 import GHC.Data.FastString
 import Module

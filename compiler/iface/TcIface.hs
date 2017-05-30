@@ -67,7 +67,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import SrcLoc
 import GHC.Config.Flags
-import Util
+import GHC.Utils
 import GHC.Data.FastString
 import BasicTypes hiding ( SuccessFlag(..) )
 import GHC.Data.List.SetOps

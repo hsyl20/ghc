@@ -59,7 +59,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Data.Bag
-import Util
+import GHC.Utils
 import Data.List
 import Data.Ord
 import Control.Monad    ( guard )

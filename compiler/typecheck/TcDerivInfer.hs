@@ -35,7 +35,7 @@ import TcSimplify
 import TcValidity (validDerivPred)
 import TcUnify (buildImplicationFor)
 import Unify (tcUnifyTy)
-import Util
+import GHC.Utils
 import Var
 import VarEnv
 import VarSet

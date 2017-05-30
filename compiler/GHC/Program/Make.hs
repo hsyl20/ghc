@@ -65,7 +65,7 @@ import GHC.Data.Unique.DeterSet
 import TcBackpack
 import GHC.Packages
 import GHC.Data.Unique.Set
-import Util
+import GHC.Utils
 import qualified GHC.LanguageExtensions as LangExt
 import NameEnv
 

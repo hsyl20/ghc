@@ -23,7 +23,7 @@ import GHC.Platform
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import UniqSupply
-import Util (seqList)
+import GHC.Utils (seqList)
 
 import Data.List
 import Data.Maybe

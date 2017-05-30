@@ -70,7 +70,7 @@ import PrelNames
 import Name( isInternalName )
 import GHC.Utils.Outputable
 import SrcLoc
-import Util
+import GHC.Utils
 import GHC.Config.Flags
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt

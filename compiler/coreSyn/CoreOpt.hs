@@ -47,7 +47,7 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Data.Pair
-import Util
+import GHC.Utils
 import GHC.Data.Maybe       ( orElse )
 import GHC.Data.FastString
 import Data.List

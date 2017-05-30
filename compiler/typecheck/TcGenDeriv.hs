@@ -66,7 +66,7 @@ import Type
 import Class
 import VarSet
 import VarEnv
-import Util
+import GHC.Utils
 import Var
 import GHC.Utils.Outputable
 import Lexeme

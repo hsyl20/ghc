@@ -41,7 +41,7 @@ import BasicTypes
 import GHC.Utils.Monad
 import GHC.Data.Maybe
 import CLabel
-import Util
+import GHC.Utils
 
 import Data.Time
 import System.Directory

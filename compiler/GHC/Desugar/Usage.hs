@@ -14,7 +14,7 @@ import Name
 import NameSet
 import Module
 import GHC.Utils.Outputable
-import Util
+import GHC.Utils
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Fingerprint

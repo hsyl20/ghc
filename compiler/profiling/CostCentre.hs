@@ -28,7 +28,7 @@ import Unique
 import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Data.FastString
-import Util
+import GHC.Utils
 
 import Data.Data
 
