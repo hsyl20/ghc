@@ -36,7 +36,7 @@ import BlockId
 import Hoopl
 import Cmm
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 import State
 import Outputable

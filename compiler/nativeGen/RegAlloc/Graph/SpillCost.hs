@@ -22,7 +22,7 @@ import GraphBase
 
 import Hoopl (mapLookup)
 import Cmm
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import Digraph          (flattenSCCs)
 import Outputable

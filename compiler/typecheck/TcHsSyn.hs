@@ -66,7 +66,7 @@ import SrcLoc
 import GHC.Utils.Data.Bag
 import Outputable
 import Util
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 
 import Control.Monad
 import Data.List  ( partition )

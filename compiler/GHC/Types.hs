@@ -148,7 +148,7 @@ import GHCi.Message         ( Pipe )
 import GHCi.RemoteTypes
 import GHC.ForeignSrcLang
 
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import HsSyn
 import RdrName
 import Avail

@@ -20,7 +20,7 @@ import qualified Data.List as List
 import Data.Word
 import qualified Data.Map as M
 import Outputable
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDFM
 import qualified TrieMap as TM
 import Unique

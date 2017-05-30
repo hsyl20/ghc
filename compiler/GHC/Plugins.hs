@@ -7,20 +7,49 @@
 --
 -- Particularly interesting modules for plugin writers include
 -- "CoreSyn" and "CoreMonad".
-module GHC.Plugins(
-        module GHC.Plugins.Types,
-        module RdrName, module OccName, module Name, module Var, module Id, module IdInfo,
-        module CoreMonad, module CoreSyn, module Literal, module DataCon,
-        module CoreUtils, module MkCore, module CoreFVs, module CoreSubst,
-        module Rules, module GHC.Types.Annotations,
-        module GHC.Config.Flags, module GHC.Packages,
-        module Module, module Type, module TyCon, module Coercion,
-        module TysWiredIn, module GHC.Types, module BasicTypes,
-        module VarSet, module VarEnv, module NameSet, module NameEnv,
-        module UniqSet, module UniqFM, module GHC.Utils.Data.FiniteMap,
-        module Util, module GHC.Serialized, module SrcLoc, module Outputable,
-        module UniqSupply, module Unique, module FastString
-    ) where
+module GHC.Plugins
+   ( module GHC.Plugins.Types
+   , module RdrName
+   , module OccName
+   , module Name
+   , module Var
+   , module Id
+   , module IdInfo
+   , module CoreMonad
+   , module CoreSyn
+   , module Literal
+   , module DataCon
+   , module CoreUtils
+   , module MkCore
+   , module CoreFVs
+   , module CoreSubst
+   , module Rules
+   , module GHC.Types.Annotations
+   , module GHC.Config.Flags
+   , module GHC.Packages
+   , module Module
+   , module Type
+   , module TyCon
+   , module Coercion
+   , module TysWiredIn
+   , module GHC.Types
+   , module BasicTypes
+   , module VarSet
+   , module VarEnv
+   , module NameSet
+   , module NameEnv
+   , module UniqSet
+   , module GHC.Utils.Data.Unique.FiniteMap
+   , module GHC.Utils.Data.FiniteMap
+   , module Util
+   , module GHC.Serialized
+   , module SrcLoc
+   , module Outputable
+   , module UniqSupply
+   , module Unique
+   , module FastString
+   )
+where
 
 -- Plugin stuff itself
 import GHC.Plugins.Types
@@ -69,7 +98,7 @@ import VarEnv
 import NameSet
 import NameEnv
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 -- Conflicts with UniqFM:
 --import LazyUniqFM
 import GHC.Utils.Data.FiniteMap

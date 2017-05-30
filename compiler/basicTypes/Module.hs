@@ -137,7 +137,7 @@ module Module
 import Config
 import Outputable
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDFM
 import UniqDSet
 import FastString

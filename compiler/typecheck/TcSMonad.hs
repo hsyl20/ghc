@@ -148,13 +148,13 @@ import Var
 import VarEnv
 import VarSet
 import Outputable
-import GHC.Utils.Data.Bag
+import GHC.Utils.Data.Bag as Bag
 import UniqSupply
 import Util
 import TcRnTypes
 
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDFM
 import Maybes
 

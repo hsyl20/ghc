@@ -27,7 +27,7 @@ import CmmExpr
 import Lexer
 import CmmMonad
 import SrcLoc
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import StringBuffer
 import FastString
 import Ctype

@@ -20,7 +20,7 @@ where
 
 import NameSet
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import DataCon
 import TyCon
 import TyCoRep

@@ -124,7 +124,7 @@ import PrelNames
 import TysPrim          ( eqPhantPrimTyCon )
 import ListSetOps
 import Maybes
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 
 import Control.Monad (foldM)
 import Control.Arrow ( first )

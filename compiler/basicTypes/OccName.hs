@@ -108,7 +108,7 @@ module OccName (
 import Util
 import Unique
 import GHC.Config.Flags
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import FastString
 import FastStringEnv

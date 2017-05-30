@@ -17,7 +17,7 @@ import GraphOps
 import GraphPpr
 
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import Outputable
 

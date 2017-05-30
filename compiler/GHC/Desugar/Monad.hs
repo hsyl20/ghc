@@ -84,7 +84,7 @@ import FastString
 import Maybes
 import Var (EvVar)
 import qualified GHC.LanguageExtensions as LangExt
-import UniqFM ( lookupWithDefaultUFM )
+import GHC.Utils.Data.Unique.FiniteMap ( lookupWithDefaultUFM )
 
 import Data.IORef
 import Control.Monad

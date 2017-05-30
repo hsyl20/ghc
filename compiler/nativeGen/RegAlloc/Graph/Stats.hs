@@ -28,7 +28,7 @@ import TargetReg
 
 import PprCmm()
 import Outputable
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import State
 

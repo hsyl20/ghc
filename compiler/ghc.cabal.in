@@ -511,7 +511,7 @@ Library
         StringBuffer
         UniqDFM
         UniqDSet
-        UniqFM
+        GHC.Utils.Data.Unique.FiniteMap
         UniqMap
         UniqSet
         Util

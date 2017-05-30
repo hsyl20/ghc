@@ -19,7 +19,7 @@ import SrcLoc
 import Outputable
 import GHC.Types
 import Module
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Avail
 import IfaceSyn
 import FieldLabel

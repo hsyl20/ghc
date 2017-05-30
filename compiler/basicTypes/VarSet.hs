@@ -50,7 +50,7 @@ import Unique
 import Name     ( Name )
 import UniqSet
 import UniqDSet
-import UniqFM( disjointUFM, pluralUFM, pprUFM )
+import GHC.Utils.Data.Unique.FiniteMap( disjointUFM, pluralUFM, pprUFM )
 import UniqDFM( disjointUDFM, udfmToUfm, anyUDFM, allUDFM )
 import Outputable (SDoc)
 

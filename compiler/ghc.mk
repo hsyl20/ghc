@@ -556,7 +556,7 @@ compiler_stage2_dll0_MODULES = \
 	Unify \
 	UniqDFM \
 	UniqDSet \
-	UniqFM \
+	GHC.Utils.Data.Unique.FiniteMap \
 	UniqSet \
 	UniqSupply \
 	Unique \

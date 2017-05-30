@@ -47,7 +47,7 @@ module UniqSet (
         nonDetFoldUniqSet_Directly
     ) where
 
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 import Data.Coerce
 import Outputable

@@ -12,7 +12,7 @@ import GraphBase
 import Outputable
 import Unique
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 
 import Data.List
 import Data.Maybe

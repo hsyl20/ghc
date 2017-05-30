@@ -49,7 +49,7 @@ import MonadUtils
 import Outputable
 import Platform
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Utils.Data.Bag
 import State

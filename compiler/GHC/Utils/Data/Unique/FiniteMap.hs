@@ -25,7 +25,7 @@ of arguments of combining function.
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# OPTIONS_GHC -Wall #-}
 
-module UniqFM (
+module GHC.Utils.Data.Unique.FiniteMap (
         -- * Unique-keyed mappings
         UniqFM,       -- abstract type
 

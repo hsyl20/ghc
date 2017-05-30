@@ -2,4 +2,4 @@ module Package07e where
 import MyHsTypes
 import HsTypes
 import HsUtils
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap

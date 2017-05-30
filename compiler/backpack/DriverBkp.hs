@@ -36,7 +36,7 @@ import FastString
 import GHC.Utils.Error
 import SrcLoc
 import GHC.Program.Main
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDFM
 import Outputable
 import Maybes

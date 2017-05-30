@@ -61,7 +61,7 @@ import Name
 import VarEnv
 import UniqSupply
 import Util
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import VarSet
 import Unique
 import UniqSet

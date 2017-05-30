@@ -169,7 +169,7 @@ import Module
 import SrcLoc
 import VarSet
 import GHC.Utils.Error
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import BasicTypes
 import GHC.Utils.Data.Bag

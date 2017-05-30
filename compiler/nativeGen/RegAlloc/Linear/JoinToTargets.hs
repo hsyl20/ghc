@@ -22,7 +22,7 @@ import Digraph
 import GHC.Config.Flags
 import Outputable
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 
 import Data.Foldable (foldl')

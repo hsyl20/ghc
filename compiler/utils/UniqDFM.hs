@@ -66,7 +66,7 @@ import qualified Data.IntMap as M
 import Data.Data
 import Data.List (sortBy)
 import Data.Function (on)
-import UniqFM (UniqFM, listToUFM_Directly, nonDetUFMToList, ufmToIntMap)
+import GHC.Utils.Data.Unique.FiniteMap (UniqFM, listToUFM_Directly, nonDetUFMToList, ufmToIntMap)
 
 -- Note [Deterministic UniqFM]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~

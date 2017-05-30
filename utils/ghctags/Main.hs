@@ -36,7 +36,7 @@ import Data.Traversable (mapM)
 import Data.Map ( Map )
 import qualified Data.Map as M
 
---import UniqFM
+--GHC.Utils.Data.Unique.FiniteMap
 --import Debug.Trace
 
 -- search for definitions of things

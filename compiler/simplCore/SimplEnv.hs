@@ -59,7 +59,7 @@ import BasicTypes
 import MonadUtils
 import Outputable
 import Util
-import UniqFM                   ( pprUniqFM )
+import GHC.Utils.Data.Unique.FiniteMap                   ( pprUniqFM )
 
 import Data.List
 

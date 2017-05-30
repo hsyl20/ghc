@@ -45,7 +45,7 @@ module UniqMap (
     -- Non-deterministic functions omitted
 ) where
 
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 
 import Unique
 import Outputable

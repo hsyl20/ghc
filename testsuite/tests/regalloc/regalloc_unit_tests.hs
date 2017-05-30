@@ -35,7 +35,7 @@ import Module
 import Debug
 import GHC
 import GhcMonad
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Config.Flags
 import GHC.Utils.Error

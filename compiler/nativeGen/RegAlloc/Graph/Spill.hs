@@ -17,7 +17,7 @@ import Hoopl
 import MonadUtils
 import State
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import UniqSupply
 import Outputable

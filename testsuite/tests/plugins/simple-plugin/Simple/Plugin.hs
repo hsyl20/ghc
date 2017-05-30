@@ -2,7 +2,7 @@
 
 module Simple.Plugin(plugin) where
 
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import GHC.Plugins
 import qualified GHC.Utils.Error
 

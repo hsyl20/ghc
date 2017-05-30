@@ -39,7 +39,7 @@ import Digraph          ( SCC(..), Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq
                         , stronglyConnCompFromEdgedVerticesUniqR )
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import Util
 import Outputable

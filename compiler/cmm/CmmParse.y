@@ -236,7 +236,7 @@ import Module
 import Platform
 import Literal
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error

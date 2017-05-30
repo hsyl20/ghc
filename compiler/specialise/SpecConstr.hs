@@ -51,7 +51,7 @@ import GHC.Utils.Data.Pair
 import UniqSupply
 import Outputable
 import FastString
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import MonadUtils
 import Control.Monad    ( zipWithM )
 import Data.List

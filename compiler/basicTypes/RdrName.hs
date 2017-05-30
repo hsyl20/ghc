@@ -77,7 +77,7 @@ import FastString
 import FieldLabel
 import Outputable
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import Util
 import NameEnv

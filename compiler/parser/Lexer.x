@@ -104,7 +104,7 @@ import GHC.Utils.Data.Bag
 import Outputable
 import StringBuffer
 import FastString
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Util             ( readRational )
 
 -- compiler/main

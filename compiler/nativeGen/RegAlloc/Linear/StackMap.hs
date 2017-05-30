@@ -21,7 +21,7 @@ module RegAlloc.Linear.StackMap (
 where
 
 import GHC.Config.Flags
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 
 

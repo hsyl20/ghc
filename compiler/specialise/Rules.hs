@@ -51,7 +51,7 @@ import VarSet
 import Name             ( Name, NamedThing(..), nameIsLocalOrFrom )
 import NameSet
 import NameEnv
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )

@@ -62,7 +62,7 @@ import Module
 import Maybes
 import GHC.Utils.Error
 import GHC.Finder
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import SrcLoc
 import Outputable
 import BinIface

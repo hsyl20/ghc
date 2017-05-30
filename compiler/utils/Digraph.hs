@@ -61,7 +61,7 @@ import qualified Data.Graph as G
 import Data.Graph hiding (Graph, Edge, transposeG, reachable)
 import Data.Tree
 import Unique
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 
 {-
 ************************************************************************

@@ -38,7 +38,7 @@ import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
 import Util
 import GHC.Utils.Data.Pair
 import Outputable
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 
 import Control.Monad

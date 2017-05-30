@@ -77,7 +77,7 @@ import OccName
 import Var
 import VarSet
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDFM
 import Unique
 import Util

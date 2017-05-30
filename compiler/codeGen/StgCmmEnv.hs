@@ -42,7 +42,7 @@ import Outputable
 import StgSyn
 import Type
 import TysPrim
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Util
 import VarEnv
 

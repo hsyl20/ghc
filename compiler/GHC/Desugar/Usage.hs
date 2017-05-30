@@ -16,7 +16,7 @@ import Module
 import Outputable
 import Util
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Fingerprint
 import Maybes
 

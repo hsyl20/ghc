@@ -125,7 +125,7 @@ import Digraph
 import GHC.Config.Flags
 import Unique
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import Outputable
 import Platform

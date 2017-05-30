@@ -55,7 +55,7 @@ import Binary
 import GHC.Config.Constants
 import GHC.Config.Flags
 import Platform
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Util
 
 import Data.ByteString (ByteString)

@@ -13,7 +13,7 @@ module GraphBase (
 where
 
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 
 
 -- | A fn to check if a node is trivially colorable

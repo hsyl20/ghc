@@ -47,7 +47,7 @@ import FastString
 import Cmm              hiding ( succ )
 import Outputable as Outp
 import Platform
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 import BufWrite   ( BufHandle )
 import UniqSet

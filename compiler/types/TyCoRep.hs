@@ -166,7 +166,7 @@ import FastString
 import GHC.Utils.Data.Pair
 import UniqSupply
 import Util
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 
 -- libraries

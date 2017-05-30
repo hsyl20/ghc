@@ -35,7 +35,7 @@ import Id
 import MkId
 import NameEnv
 import NameSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import OccName
 import Unique
 

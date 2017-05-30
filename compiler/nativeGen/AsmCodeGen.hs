@@ -70,7 +70,7 @@ import CmmOpt           ( cmmMachOpFold )
 import PprCmm
 import CLabel
 
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Config.Flags
 import Util

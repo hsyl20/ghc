@@ -101,7 +101,7 @@ import GHC.Utils.Error
 import Id
 import VarEnv
 import Module
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Name
 import NameEnv
 import NameSet

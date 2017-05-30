@@ -42,7 +42,7 @@ import FastString
 import Outputable
 import Platform
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 import Util
 

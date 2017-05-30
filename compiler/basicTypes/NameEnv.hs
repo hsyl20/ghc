@@ -35,7 +35,7 @@ module NameEnv (
 
 import Digraph
 import Name
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDFM
 import Maybes
 

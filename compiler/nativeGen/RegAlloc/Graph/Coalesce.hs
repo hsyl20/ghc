@@ -10,7 +10,7 @@ import Reg
 import Cmm
 import GHC.Utils.Data.Bag
 import Digraph
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import UniqSupply
 

@@ -20,7 +20,7 @@ import GHC.Utils.Data.Bag
 import GHC.Config.Flags
 import Outputable
 import Platform
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import UniqSupply
 import Util (seqList)

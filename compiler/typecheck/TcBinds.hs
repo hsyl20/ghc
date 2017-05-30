@@ -60,7 +60,7 @@ import Outputable
 import PrelNames( ipClassName )
 import TcValidity (checkValidType)
 import Unique (getUnique)
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSet
 import qualified GHC.LanguageExtensions as LangExt
 import ConLike

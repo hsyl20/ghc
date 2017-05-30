@@ -60,7 +60,7 @@ import Panic
 import SrcLoc
 import StringBuffer
 import GHC.Utils.SysTools
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqDSet
 import TcBackpack
 import GHC.Packages

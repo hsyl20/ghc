@@ -46,7 +46,7 @@ import Hoopl
 import CLabel           ( CLabel, mkAsmTempLabel )
 import Debug
 import FastString       ( FastString )
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import UniqSupply
 import Unique           ( Unique )
 import GHC.Config.Flags

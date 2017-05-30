@@ -22,7 +22,7 @@ module RegAlloc.Graph.ArchBase (
         squeese
 ) where
 import UniqSet
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Unique
 
 

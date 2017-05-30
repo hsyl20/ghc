@@ -24,7 +24,7 @@ import Type( tidyType, tidyTyCoVarBndr )
 import Coercion( tidyCo )
 import Var
 import VarEnv
-import UniqFM
+import GHC.Utils.Data.Unique.FiniteMap
 import Name hiding (tidyNameOcc)
 import SrcLoc
 import Maybes
