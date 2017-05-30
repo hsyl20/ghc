@@ -98,7 +98,7 @@ import qualified Pretty
 import Util
 import GHC.Platform
 import qualified GHC.Utils.PrettyPrint.Colour as Col
-import Pretty           ( Doc, Mode(..) )
+import GHC.Utils.PrettyPrint           ( Doc, Mode(..) )
 import GHC.Utils.Panic
 import GHC.Serialized
 import GHC.LanguageExtensions (Extension)

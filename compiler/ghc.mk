@@ -536,7 +536,7 @@ compiler_stage2_dll0_MODULES = \
 	PprCore \
 	PrelNames \
 	PrelRules \
-	Pretty \
+	GHC.Utils.PrettyPrint \
 	PrimOp \
 	RepType \
 	RdrName \

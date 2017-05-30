@@ -505,7 +505,7 @@ Library
         GHC.Data.Pair
         GHC.Utils.Panic
         GHC.Utils.PrettyPrint.Colour
-        Pretty
+        GHC.Utils.PrettyPrint
         GHC.Utils.Monad.State
         GHC.Data.Stream
         GHC.Data.StringBuffer

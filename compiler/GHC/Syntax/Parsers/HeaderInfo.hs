@@ -36,7 +36,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import Util
 import GHC.Utils.Outputable as Outputable
-import Pretty           ()
+import GHC.Utils.PrettyPrint           ()
 import GHC.Data.Maybe
 import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )
 import GHC.Utils.Monad

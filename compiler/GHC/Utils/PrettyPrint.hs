@@ -3,7 +3,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      :  Pretty
+-- Module      :  PrettyPrint
 -- Copyright   :  (c) The University of Glasgow 2001
 -- License     :  BSD-style (see the file LICENSE)
 --
@@ -29,7 +29,7 @@ source tree:
    https://github.com/haskell/pretty. This is the `pretty` library as released
    on hackage. It is used by several other libraries in the GHC source tree
    (e.g. template-haskell and Cabal).
- * `compiler/utils/Pretty.hs` (this module). It is used by GHC only.
+ * `compiler/GHC/Utils/PrettyPrint.hs` (this module). It is used by GHC only.
 
 There is an ongoing effort in https://github.com/haskell/pretty/issues/1 and
 https://ghc.haskell.org/trac/ghc/ticket/10735 to try to get rid of GHC's copy
@@ -49,7 +49,7 @@ ghc git tree:
     $ cd libraries/pretty
     $ git checkout v1.1.2.0
     $ cd -
-    $ vimdiff compiler/utils/Pretty.hs \
+    $ vimdiff compiler/GHC/Utils/PrettyPrint.hs \
               libraries/pretty/src/Text/PrettyPrint/HughesPJ.hs
 
 For parity with `pretty-1.1.2.1`, the following two `pretty` commits would
@@ -63,7 +63,7 @@ allocation in the compiler (see thomie's comments in
 https://github.com/haskell/pretty/pull/9).
 -}
 
-module Pretty (
+module GHC.Utils.PrettyPrint (
 
         -- * The document type
         Doc, TextDetails(..),
