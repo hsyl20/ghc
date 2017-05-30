@@ -49,7 +49,7 @@ import CLabel
 import Hoopl
 
 -- The rest:
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
 import Unique
 import GHC.Config.Flags

@@ -30,7 +30,7 @@ import Compiler.Hoopl hiding (Unique, (<*>), mkFirst, mkMiddle, mkLast, mkLabel,
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
-import OrdList
+import GHC.Data.Tree.OrdList
 import SMRep (ByteOff)
 import UniqSupply
 

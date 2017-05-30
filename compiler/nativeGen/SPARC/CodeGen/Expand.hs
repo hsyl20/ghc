@@ -17,7 +17,7 @@ import Cmm
 
 
 import GHC.Utils.Outputable
-import OrdList
+import GHC.Data.Tree.OrdList
 
 -- | Expand out synthetic instructions in this top level thing
 expandTop :: NatCmmDecl CmmStatics Instr -> NatCmmDecl CmmStatics Instr

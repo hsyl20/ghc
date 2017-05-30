@@ -46,7 +46,7 @@ import GHC.Data.FastString
 import GHC.Config.Flags
 import Platform
 import Config
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Data.Pair
 import Util
 import GHC.Config.Hooks

@@ -89,7 +89,7 @@ import GHC.Data.Pair
 import Data.Function       ( on )
 import Data.List
 import Data.Ord            ( comparing )
-import OrdList
+import GHC.Data.Tree.OrdList
 
 {-
 ************************************************************************

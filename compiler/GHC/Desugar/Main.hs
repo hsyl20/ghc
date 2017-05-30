@@ -58,7 +58,7 @@ import SrcLoc
 import GHC.Desugar.Coverage
 import Util
 import GHC.Utils.Monad
-import OrdList
+import GHC.Data.Tree.OrdList
 
 import Data.List
 import Data.IORef

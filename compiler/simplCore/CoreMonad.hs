@@ -63,7 +63,7 @@ import BasicTypes       ( CompilerPhase(..) )
 import GHC.Types.Annotations
 
 import GHC.Utils.Monad.IOEnv hiding     ( liftIO, failM, failWithM )
-import qualified IOEnv  ( liftIO )
+import qualified GHC.Utils.Monad.IOEnv as IOEnv
 import TcEnv            ( lookupGlobal )
 import Var
 import GHC.Utils.Outputable as Outputable

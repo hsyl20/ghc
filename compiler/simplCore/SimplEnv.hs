@@ -47,7 +47,7 @@ import CoreUtils
 import Var
 import VarEnv
 import VarSet
-import OrdList
+import GHC.Data.Tree.OrdList
 import Id
 import MkCore                   ( mkWildValBinder )
 import TysWiredIn

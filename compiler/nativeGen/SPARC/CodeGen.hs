@@ -54,7 +54,7 @@ import CPrim
 import BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
 import Platform
 import Unique

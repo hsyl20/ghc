@@ -23,7 +23,7 @@ import Reg
 import Cmm
 
 import GHC.Config.Flags
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
 
 -- | Code to assign a 64 bit value to memory.

@@ -87,7 +87,7 @@ import ForeignCall
 import PrelNames        ( forall_tv_RDR, eqTyCon_RDR, allNameStrings )
 import SrcLoc
 import Unique           ( hasKey )
-import OrdList          ( OrdList, fromOL )
+import GHC.Data.Tree.OrdList          ( OrdList, fromOL )
 import GHC.Data.Bag              ( emptyBag, consBag )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString

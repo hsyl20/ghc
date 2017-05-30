@@ -55,7 +55,7 @@ import GHC.Utils.Outputable
 import Module
 import SrcLoc
 import GHC.Data.Maybe
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Data.Bag
 import BasicTypes
 import GHC.Config.Flags

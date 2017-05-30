@@ -62,7 +62,7 @@ import SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 
 -- The rest:
 import ForeignCall      ( CCallConv(..) )
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
 import Unique
 import GHC.Data.FastString

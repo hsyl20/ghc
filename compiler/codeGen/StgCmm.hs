@@ -43,7 +43,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Stream
 import BasicTypes
 
-import OrdList
+import GHC.Data.Tree.OrdList
 import MkGraph
 
 import qualified Data.ByteString as BS

@@ -45,7 +45,7 @@ import BkpSyn
 import GHC.Packages.PackageConfig
 
 -- compiler/utils
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Data.Bool.Formula   ( BooleanFormula(..), LBooleanFormula(..), mkTrue )
 import GHC.Data.FastString
 import GHC.Data.Maybe           ( orElse )

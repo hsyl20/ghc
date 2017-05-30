@@ -45,7 +45,7 @@ import BasicTypes
 import Module
 import UniqSupply
 import GHC.Data.Maybe
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Utils.Error
 import GHC.Config.Flags
 import Util

@@ -46,7 +46,7 @@ import Panic
 import StgCmmLayout     ( ArgRep(..), toArgRep, argRepSizeW )
 import SMRep
 import Bitmap
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Data.Maybe
 import VarEnv
 

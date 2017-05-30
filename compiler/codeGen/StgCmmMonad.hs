@@ -73,7 +73,7 @@ import SMRep
 import Module
 import Id
 import VarEnv
-import OrdList
+import GHC.Data.Tree.OrdList
 import BasicTypes( ConTagZ )
 import Unique
 import UniqSupply

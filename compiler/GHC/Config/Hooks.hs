@@ -34,7 +34,7 @@ import GHC.Types
 import HsDecls
 import HsBinds
 import HsExpr
-import OrdList
+import GHC.Data.Tree.OrdList
 import Id
 import TcRnTypes
 import GHC.Data.Bag

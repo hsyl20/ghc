@@ -500,7 +500,7 @@ Library
         GHC.Utils.Monad.ListT
         GHC.Data.Maybe
         GHC.Utils.Monad
-        OrdList
+        GHC.Data.Tree.OrdList
         GHC.Utils.Outputable
         GHC.Data.Pair
         Panic

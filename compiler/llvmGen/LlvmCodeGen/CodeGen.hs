@@ -26,7 +26,7 @@ import ForeignCall
 import GHC.Utils.Outputable hiding (panic, pprPanic)
 import qualified GHC.Utils.Outputable as Outputable
 import Platform
-import OrdList
+import GHC.Data.Tree.OrdList
 import UniqSupply
 import Unique
 import Util

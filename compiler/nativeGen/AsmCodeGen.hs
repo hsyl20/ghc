@@ -89,7 +89,7 @@ import GHC.Data.Stream (Stream)
 import qualified GHC.Data.Stream as Stream
 
 -- DEBUGGING ONLY
---import OrdList
+--import GHC.Data.Tree.OrdList
 
 import Data.List
 import Data.Maybe

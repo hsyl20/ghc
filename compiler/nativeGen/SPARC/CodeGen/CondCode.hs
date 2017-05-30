@@ -18,7 +18,7 @@ import Format
 
 import Cmm
 
-import OrdList
+import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
 
 
