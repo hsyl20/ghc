@@ -59,7 +59,7 @@ import Name
 import NameEnv
 import Avail
 import Module
-import Maybes
+import GHC.Data.Maybe
 import GHC.Utils.Error
 import GHC.Finder
 import GHC.Data.Unique.FiniteMap

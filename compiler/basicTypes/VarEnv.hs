@@ -81,7 +81,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import Unique
 import Util
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 
 {-

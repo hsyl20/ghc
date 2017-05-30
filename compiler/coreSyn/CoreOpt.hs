@@ -48,7 +48,7 @@ import GHC.Config.Flags
 import Outputable
 import GHC.Data.Pair
 import Util
-import Maybes       ( orElse )
+import GHC.Data.Maybe       ( orElse )
 import GHC.Data.FastString
 import Data.List
 import qualified Data.ByteString as BS

@@ -65,7 +65,7 @@ import SrcLoc
 import Util
 import VarEnv  ( emptyTidyEnv )
 import ListSetOps
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 import GHC.Data.FastString
 import Control.Monad

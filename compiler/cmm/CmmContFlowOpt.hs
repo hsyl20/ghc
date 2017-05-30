@@ -13,7 +13,7 @@ import BlockId
 import Cmm
 import CmmUtils
 import CmmSwitch (mapSwitchTargets)
-import Maybes
+import GHC.Data.Maybe
 import Panic
 
 import Control.Monad

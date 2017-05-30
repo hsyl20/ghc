@@ -218,7 +218,7 @@ import TysWiredIn( coercibleClass, unitTyCon, unitTyConKey
 import BasicTypes
 import Util
 import GHC.Data.Bag
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 import GHC.Data.FastString
 import GHC.Utils.Error( Validity(..), MsgDoc, isValid )

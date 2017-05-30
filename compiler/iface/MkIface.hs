@@ -100,7 +100,7 @@ import BasicTypes       hiding ( SuccessFlag(..) )
 import Unique
 import Util             hiding ( eqListBy )
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import Binary
 import Fingerprint
 import Exception

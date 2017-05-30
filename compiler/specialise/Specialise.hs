@@ -28,7 +28,7 @@ import CoreArity        ( etaExpandToJoinPointRule )
 import UniqSupply
 import Name
 import MkId             ( voidArgId, voidPrimId )
-import Maybes           ( catMaybes, isJust )
+import GHC.Data.Maybe           ( catMaybes, isJust )
 import BasicTypes
 import GHC.Types
 import GHC.Data.Bag

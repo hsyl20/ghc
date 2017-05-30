@@ -54,7 +54,7 @@ import VarEnv
 import Outputable
 import Module
 import SrcLoc
-import Maybes
+import GHC.Data.Maybe
 import OrdList
 import GHC.Data.Bag
 import BasicTypes

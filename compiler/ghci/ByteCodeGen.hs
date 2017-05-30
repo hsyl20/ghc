@@ -47,7 +47,7 @@ import StgCmmLayout     ( ArgRep(..), toArgRep, argRepSizeW )
 import SMRep
 import Bitmap
 import OrdList
-import Maybes
+import GHC.Data.Maybe
 import VarEnv
 
 import Data.List

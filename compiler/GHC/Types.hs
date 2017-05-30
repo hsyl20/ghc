@@ -182,7 +182,7 @@ import GHC.Config.Flags
 import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
 import BasicTypes
 import IfaceSyn
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 import SrcLoc
 import Unique

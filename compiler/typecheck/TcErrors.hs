@@ -52,7 +52,7 @@ import Outputable
 import SrcLoc
 import GHC.Config.Flags
 import ListSetOps       ( equivClasses )
-import Maybes
+import GHC.Data.Maybe
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Data.Var.Free ( fvVarList, unionFV )
 

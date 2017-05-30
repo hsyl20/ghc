@@ -123,7 +123,7 @@ import SrcLoc
 import PrelNames
 import TysPrim          ( eqPhantPrimTyCon )
 import ListSetOps
-import Maybes
+import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap
 
 import Control.Monad (foldM)

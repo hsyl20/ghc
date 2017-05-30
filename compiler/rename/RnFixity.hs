@@ -21,7 +21,7 @@ import BasicTypes       ( Fixity(..), FixityDirection(..), minPrecedence,
                           defaultFixity, SourceText(..) )
 import SrcLoc
 import Outputable
-import Maybes
+import GHC.Data.Maybe
 import Data.List
 import Data.Function    ( on )
 import RnUnbound

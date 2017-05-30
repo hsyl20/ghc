@@ -53,7 +53,7 @@ import GHC.Data.Bag
 import ListSetOps
 import GHC.Utils.Error
 import GHC.Data.Graph.Directed
-import Maybes
+import GHC.Data.Maybe
 import Util
 import BasicTypes
 import Outputable

@@ -42,7 +42,7 @@ import Class
 import Type
 import GHC.Utils.Error
 import DataCon
-import Maybes
+import GHC.Data.Maybe
 import RdrName
 import Name
 import NameSet

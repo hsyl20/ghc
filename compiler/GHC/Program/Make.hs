@@ -52,7 +52,7 @@ import BasicTypes
 import GHC.Data.Graph.Directed
 import Exception        ( tryIO, gbracket, gfinally )
 import GHC.Data.FastString
-import Maybes           ( expectJust )
+import GHC.Data.Maybe           ( expectJust )
 import Name
 import MonadUtils       ( allM, MonadIO )
 import Outputable

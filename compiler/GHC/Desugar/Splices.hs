@@ -56,7 +56,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
 import Util
-import Maybes
+import GHC.Data.Maybe
 import MonadUtils
 
 import Data.ByteString ( unpack )

@@ -57,7 +57,7 @@ import Name
 import NameSet
 import NameEnv
 import Outputable
-import Maybes
+import GHC.Data.Maybe
 import Unify
 import Util
 import SrcLoc

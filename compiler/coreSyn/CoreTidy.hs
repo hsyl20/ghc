@@ -27,7 +27,7 @@ import VarEnv
 import GHC.Data.Unique.FiniteMap
 import Name hiding (tidyNameOcc)
 import SrcLoc
-import Maybes
+import GHC.Data.Maybe
 import Data.List
 
 {-

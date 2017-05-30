@@ -39,7 +39,7 @@ import TyCon
 import UniqSupply
 import BasicTypes
 import MonadUtils
-import Maybes
+import GHC.Data.Maybe
 import CLabel
 import Util
 

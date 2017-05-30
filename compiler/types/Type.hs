@@ -239,7 +239,7 @@ import SrcLoc  ( SrcSpan )
 import OccName ( OccName )
 import Name    ( mkInternalName )
 
-import Maybes           ( orElse )
+import GHC.Data.Maybe           ( orElse )
 import Data.Maybe       ( isJust, mapMaybe )
 import Control.Monad    ( guard )
 import Control.Arrow    ( first, second )

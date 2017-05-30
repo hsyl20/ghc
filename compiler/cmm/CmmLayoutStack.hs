@@ -20,7 +20,7 @@ import SMRep
 import Hoopl
 import UniqSupply
 import StgCmmUtils      ( newTemp )
-import Maybes
+import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap
 import Util
 

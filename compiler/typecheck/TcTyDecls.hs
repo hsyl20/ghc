@@ -54,7 +54,7 @@ import SrcLoc
 import Unique ( mkBuiltinUnique )
 import Outputable
 import Util
-import Maybes
+import GHC.Data.Maybe
 import GHC.Data.Bag
 import GHC.Data.FastString
 import GHC.Data.Var.Free as FV

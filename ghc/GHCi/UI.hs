@@ -73,7 +73,7 @@ import GHC.Data.Graph.Directed
 import Encoding
 import GHC.Data.FastString
 import Linker
-import Maybes ( orElse, expectJust )
+import GHC.Data.Maybe ( orElse, expectJust )
 import NameSet
 import Panic hiding ( showException )
 import Util

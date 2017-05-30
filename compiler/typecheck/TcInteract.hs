@@ -58,7 +58,7 @@ import SrcLoc
 import VarEnv
 
 import Control.Monad
-import Maybes( isJust )
+import GHC.Data.Maybe( isJust )
 import GHC.Data.Pair (Pair(..))
 import Unique( hasKey )
 import GHC.Config.Flags

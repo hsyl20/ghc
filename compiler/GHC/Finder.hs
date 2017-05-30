@@ -41,7 +41,7 @@ import Util
 import PrelNames        ( gHC_PRIM )
 import GHC.Config.Flags
 import Outputable
-import Maybes           ( expectJust )
+import GHC.Data.Maybe           ( expectJust )
 
 import Data.IORef       ( IORef, readIORef, atomicModifyIORef' )
 import System.Directory

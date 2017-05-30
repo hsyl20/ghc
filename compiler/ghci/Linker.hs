@@ -42,7 +42,7 @@ import Panic
 import Util
 import GHC.Utils.Error
 import SrcLoc
-import qualified Maybes
+import qualified GHC.Data.Maybe
 import GHC.Data.Unique.DeterSet
 import GHC.Data.FastString
 import Platform
@@ -639,8 +639,8 @@ getLinkDeps hsc_env hpt pls replace_osuf span mods
           mb_iface <- initIfaceCheck (text "getLinkDeps") hsc_env $
                         loadInterface msg mod (ImportByUser False)
           iface <- case mb_iface of
-                    Maybes.Failed err      -> throwGhcExceptionIO (ProgramError (showSDoc dflags err))
-                    Maybes.Succeeded iface -> return iface
+                    Maybe.Failed err      -> throwGhcExceptionIO (ProgramError (showSDoc dflags err))
+                    Maybe.Succeeded iface -> return iface
 
           when (mi_boot iface) $ link_boot_mod_error mod
 
@@ -683,7 +683,7 @@ getLinkDeps hsc_env hpt pls replace_osuf span mods
 
     get_linkable osuf mod_name      -- A home-package module
         | Just mod_info <- lookupHpt hpt mod_name
-        = adjust_linkable (Maybes.expectJust "getLinkDeps" (hm_linkable mod_info))
+        = adjust_linkable (Maybe.expectJust "getLinkDeps" (hm_linkable mod_info))
         | otherwise
         = do    -- It's not in the HPT because we are in one shot mode,
                 -- so use the Finder to get a ModLocation...

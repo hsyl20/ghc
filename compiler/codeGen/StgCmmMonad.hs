@@ -65,7 +65,7 @@ import Cmm
 import StgCmmClosure
 import GHC.Config.Flags
 import Hoopl
-import Maybes
+import GHC.Data.Maybe
 import MkGraph
 import BlockId
 import CLabel

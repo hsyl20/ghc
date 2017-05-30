@@ -81,7 +81,7 @@ import NameEnv
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import Var (EvVar)
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Data.Unique.FiniteMap ( lookupWithDefaultUFM )

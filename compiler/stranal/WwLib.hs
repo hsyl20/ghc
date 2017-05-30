@@ -35,7 +35,7 @@ import Literal          ( absentLiteralOf )
 import TyCon
 import UniqSupply
 import Unique
-import Maybes
+import GHC.Data.Maybe
 import Util
 import Outputable
 import GHC.Config.Flags

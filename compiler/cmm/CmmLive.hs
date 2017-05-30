@@ -18,7 +18,7 @@ import Cmm
 import PprCmmExpr ()
 import Hoopl
 
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 
 -----------------------------------------------------------------------------

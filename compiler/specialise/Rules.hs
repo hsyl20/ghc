@@ -57,7 +57,7 @@ import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )
 import Outputable
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import GHC.Data.Bag
 import Util
 import Data.List

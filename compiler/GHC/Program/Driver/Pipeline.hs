@@ -53,7 +53,7 @@ import Panic
 import Util
 import GHC.Data.StringBuffer     ( hGetStringBuffer )
 import BasicTypes       ( SuccessFlag(..) )
-import Maybes           ( expectJust )
+import GHC.Data.Maybe           ( expectJust )
 import SrcLoc
 import LlvmCodeGen      ( llvmFixupAsm )
 import MonadUtils

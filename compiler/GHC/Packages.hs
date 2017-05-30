@@ -72,7 +72,7 @@ import Module
 import Util
 import Panic
 import Outputable
-import Maybes
+import GHC.Data.Maybe
 
 import System.Environment ( getEnv )
 import GHC.Data.FastString

@@ -47,7 +47,7 @@ import TcType ( toTcTypeBag )
 import TyCon( isNewTyCon )
 import TysWiredIn
 import SrcLoc
-import Maybes
+import GHC.Data.Maybe
 import Util
 import Name
 import Outputable

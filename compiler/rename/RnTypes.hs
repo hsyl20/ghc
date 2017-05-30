@@ -59,7 +59,7 @@ import BasicTypes       ( compareFixity, funTyFixity, negateFixity,
                           Fixity(..), FixityDirection(..), LexicalFixity(..) )
 import Outputable
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import qualified GHC.LanguageExtensions as LangExt
 
 import Data.List        ( (\\), nubBy, partition )

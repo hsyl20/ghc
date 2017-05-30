@@ -43,7 +43,7 @@ import Name
 import BasicTypes
 import GHC.Config.Flags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen )
                         , gopt, hasPprDebug )
-import Maybes           ( orElse, catMaybes, isJust, isNothing )
+import GHC.Data.Maybe           ( orElse, catMaybes, isJust, isNothing )
 import Demand
 import GHC.Serialized   ( deserializeWithData )
 import Util

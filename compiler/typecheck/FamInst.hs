@@ -31,7 +31,7 @@ import Outputable
 import Util
 import RdrName
 import DataCon ( dataConName )
-import Maybes
+import GHC.Data.Maybe
 import Type
 import TyCoRep
 import TcMType

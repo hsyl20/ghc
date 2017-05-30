@@ -43,7 +43,7 @@ import Stream (Stream)
 import qualified Stream
 import Hoopl
 
-import Maybes
+import GHC.Data.Maybe
 import GHC.Config.Flags
 import Panic
 import UniqSupply

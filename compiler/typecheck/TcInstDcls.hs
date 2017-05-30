@@ -65,7 +65,7 @@ import BooleanFormula ( isUnsatisfied, pprBooleanFormulaNice )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad
-import Maybes
+import GHC.Data.Maybe
 
 
 {-

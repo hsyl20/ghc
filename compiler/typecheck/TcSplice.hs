@@ -101,7 +101,7 @@ import Data.List        ( find )
 import Data.Maybe
 import GHC.Data.FastString
 import BasicTypes hiding( SuccessFlag(..) )
-import Maybes( MaybeErr(..) )
+import GHC.Data.Maybe( MaybeErr(..) )
 import GHC.Config.Flags
 import Panic
 import Lexeme

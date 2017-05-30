@@ -23,7 +23,7 @@ import SrcLoc
 import Outputable
 import PrelNames ( mkUnboundName, forall_tv_RDR, isUnboundName )
 import Util
-import Maybes
+import GHC.Data.Maybe
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Data.List

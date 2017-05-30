@@ -20,7 +20,7 @@ module TcValidity (
 
 #include "HsVersions.h"
 
-import Maybes
+import GHC.Data.Maybe
 
 -- friends:
 import TcUnify    ( tcSubType_NC )

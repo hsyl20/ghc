@@ -121,7 +121,7 @@ import GHC.Types.Annotations
 import Data.List ( sortBy, sort )
 import Data.Ord
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import Util
 import GHC.Data.Bag
 import Inst (tcGetInsts)

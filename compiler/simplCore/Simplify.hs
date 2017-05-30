@@ -43,7 +43,7 @@ import Rules            ( mkRuleInfo, lookupRule, getRules )
 import BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
                           RecFlag(..) )
 import MonadUtils       ( foldlM, mapAccumLM, liftIO )
-import Maybes           ( isJust, fromJust, orElse, catMaybes )
+import GHC.Data.Maybe           ( isJust, fromJust, orElse, catMaybes )
 --import Unique           ( hasKey ) -- temporalily commented out. See #8326
 import Control.Monad
 import Outputable

@@ -65,7 +65,7 @@ import SrcLoc
 import GHC.Config.Flags
 import GHC.Data.FastString (unpackFS)
 import GHC.Data.StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
-import Json
+import GHC.Utils.Json
 
 import System.Directory
 import System.Exit      ( ExitCode(..), exitWith )

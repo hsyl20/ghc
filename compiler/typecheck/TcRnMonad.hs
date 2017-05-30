@@ -166,7 +166,7 @@ import Panic
 import Util
 import GHC.Types.Annotations
 import BasicTypes( TopLevelFlag )
-import Maybes
+import GHC.Data.Maybe
 
 import qualified GHC.LanguageExtensions as LangExt
 

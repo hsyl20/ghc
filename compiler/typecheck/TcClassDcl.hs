@@ -45,7 +45,7 @@ import VarEnv
 import Outputable
 import SrcLoc
 import TyCon
-import Maybes
+import GHC.Data.Maybe
 import BasicTypes
 import GHC.Data.Bag
 import GHC.Data.FastString

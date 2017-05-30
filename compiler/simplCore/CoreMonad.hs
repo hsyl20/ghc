@@ -70,7 +70,7 @@ import Outputable
 import GHC.Data.FastString
 import qualified GHC.Utils.Error as Err
 import GHC.Utils.Error( Severity(..) )
-import Maybes
+import GHC.Data.Maybe
 import UniqSupply
 import GHC.Data.Unique.FiniteMap       ( UniqFM, mapUFM, filterUFM )
 import MonadUtils

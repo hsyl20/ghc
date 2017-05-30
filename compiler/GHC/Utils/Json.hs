@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs #-}
-module Json where
+module GHC.Utils.Json where
 
 import Outputable
 import Data.Char

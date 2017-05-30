@@ -91,7 +91,7 @@ import OrdList          ( OrdList, fromOL )
 import GHC.Data.Bag              ( emptyBag, consBag )
 import Outputable
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import Util
 import ApiAnnotation
 import Data.List

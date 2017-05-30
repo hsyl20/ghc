@@ -495,10 +495,10 @@ Library
         GHC.Data.Graph.Operations
         GHC.Data.Graph.PrettyPrint
         IOEnv
-        Json
+        GHC.Utils.Json
         ListSetOps
         ListT
-        Maybes
+        GHC.Data.Maybe
         MonadUtils
         OrdList
         Outputable

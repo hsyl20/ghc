@@ -83,7 +83,7 @@ import GHC.Data.FastString
 import PrelNames hiding ( wildCardName )
 import qualified GHC.LanguageExtensions as LangExt
 
-import Maybes
+import GHC.Data.Maybe
 import Data.List ( partition, zipWith4 )
 import Control.Monad
 

@@ -503,7 +503,7 @@ compiler_stage2_dll0_MODULES = \
 	IfaceSyn \
 	IfaceType \
 	GHC.Interactive.Types \
-	Json \
+	GHC.Utils.Json \
 	ToIface \
 	InstEnv \
 	Kind \
@@ -511,7 +511,7 @@ compiler_stage2_dll0_MODULES = \
 	Lexeme \
 	ListSetOps \
 	Literal \
-	Maybes \
+	GHC.Data.Maybe \
 	MkCore \
 	MkId \
 	Module \

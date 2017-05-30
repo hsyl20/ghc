@@ -75,7 +75,7 @@ import TyCon
 import CoAxiom
 import FamInstEnv
 import TysPrim( funTyConName )
-import Maybes( orElse )
+import GHC.Data.Maybe( orElse )
 import Util
 import BasicTypes( Activation )
 import Outputable

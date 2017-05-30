@@ -61,7 +61,7 @@ import VarEnv
 import GHC.Config.Flags
 import Literal
 import BasicTypes
-import Maybes
+import GHC.Data.Maybe
 import SrcLoc
 import GHC.Data.Bag
 import Outputable

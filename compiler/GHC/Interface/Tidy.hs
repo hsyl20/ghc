@@ -55,7 +55,7 @@ import Class
 import Module
 import GHC.Packages( isDllName )
 import GHC.Types
-import Maybes
+import GHC.Data.Maybe
 import UniqSupply
 import GHC.Utils.Error (Severity(..))
 import Outputable

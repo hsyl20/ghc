@@ -70,7 +70,7 @@ import GHC.Data.Unique.FiniteMap
 import Util
 import BasicTypes
 import Binary
-import Maybes           ( orElse )
+import GHC.Data.Maybe           ( orElse )
 
 import Type            ( Type, isUnliftedType )
 import TyCon           ( isNewTyCon, isClassTyCon )

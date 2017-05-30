@@ -37,7 +37,7 @@ import GHC.Data.Graph.Directed
 import Name
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
-import Maybes
+import GHC.Data.Maybe
 
 {-
 ************************************************************************

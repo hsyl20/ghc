@@ -138,7 +138,7 @@ import Name
 import NameEnv
 import CoAxiom
 import PrelNames
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 import GHC.Data.FastString.Environment
 import FieldLabel

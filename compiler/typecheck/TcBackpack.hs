@@ -46,7 +46,7 @@ import Outputable
 import Type
 import GHC.Data.FastString
 import RnFixity ( lookupFixityRn )
-import Maybes
+import GHC.Data.Maybe
 import TcEnv
 import Var
 import IfaceSyn

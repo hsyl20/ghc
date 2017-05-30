@@ -52,7 +52,7 @@ import Name
 import PrelNames ( eqPrimTyConKey )
 import GHC.Data.Unique.DeterFiniteMap
 import Outputable
-import Maybes
+import GHC.Data.Maybe
 import TrieMap
 import Unique
 import Util

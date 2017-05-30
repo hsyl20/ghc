@@ -53,7 +53,7 @@ import Util
 import Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.Set
-import Maybes           ( orElse )
+import GHC.Data.Maybe           ( orElse )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

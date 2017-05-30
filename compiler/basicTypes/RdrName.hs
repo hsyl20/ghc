@@ -71,7 +71,7 @@ import Module
 import Name
 import Avail
 import NameSet
-import Maybes
+import GHC.Data.Maybe
 import SrcLoc
 import GHC.Data.FastString
 import FieldLabel

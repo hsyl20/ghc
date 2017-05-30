@@ -44,7 +44,7 @@ import PrimOp
 import BasicTypes
 import Module
 import UniqSupply
-import Maybes
+import GHC.Data.Maybe
 import OrdList
 import GHC.Utils.Error
 import GHC.Config.Flags

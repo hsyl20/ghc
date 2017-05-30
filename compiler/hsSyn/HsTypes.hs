@@ -86,7 +86,7 @@ import BasicTypes
 import SrcLoc
 import Outputable
 import GHC.Data.FastString
-import Maybes( isJust )
+import GHC.Data.Maybe( isJust )
 
 import Data.Data hiding ( Fixity, Prefix, Infix )
 import Data.Maybe ( fromMaybe )

@@ -82,7 +82,7 @@ module SrcLoc (
     ) where
 
 import Util
-import Json
+import GHC.Utils.Json
 import Outputable
 import GHC.Data.FastString
 

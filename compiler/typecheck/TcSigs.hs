@@ -50,7 +50,7 @@ import VarSet
 import Outputable
 import SrcLoc
 import Util( singleton )
-import Maybes( orElse )
+import GHC.Data.Maybe( orElse )
 import Data.Maybe( mapMaybe )
 import Control.Monad( unless )
 

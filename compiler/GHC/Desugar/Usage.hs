@@ -18,7 +18,7 @@ import Util
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import Fingerprint
-import Maybes
+import GHC.Data.Maybe
 
 import Data.List
 import Data.IORef

@@ -26,7 +26,7 @@ import SetLevels
 import UniqSupply       ( UniqSupply )
 import GHC.Data.Bag
 import Util
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 import Type
 import qualified Data.IntMap as M

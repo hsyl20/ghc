@@ -140,7 +140,7 @@ import Module
 import Class
 import {-# SOURCE #-} PrimOp (PrimOp)
 import ForeignCall
-import Maybes
+import GHC.Data.Maybe
 import SrcLoc
 import Outputable
 import Unique

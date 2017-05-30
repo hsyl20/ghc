@@ -85,7 +85,7 @@ import Module
 import SrcLoc
 import Unique
 import Util
-import Maybes
+import GHC.Data.Maybe
 import Binary
 import GHC.Config.Flags
 import GHC.Data.FastString

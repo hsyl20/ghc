@@ -37,7 +37,7 @@ import GHC.Utils.Error
 import Util
 import Outputable
 import Pretty           ()
-import Maybes
+import GHC.Data.Maybe
 import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )
 import MonadUtils
 import Exception

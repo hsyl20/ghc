@@ -17,7 +17,7 @@ import DataCon
 import CoreSyn          ( AltCon(..) )
 import PrimOp           ( primOpType )
 import Literal          ( literalType )
-import Maybes
+import GHC.Data.Maybe
 import Name             ( getSrcLoc )
 import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
 import Type

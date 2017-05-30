@@ -101,7 +101,7 @@ import Encoding
 import GHC.Data.FastString
 import ListSetOps
 import Util
-import Maybes( MaybeErr(..) )
+import GHC.Data.Maybe( MaybeErr(..) )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Data.IORef

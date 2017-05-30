@@ -43,7 +43,7 @@ import CoreUnfold  ( exprIsConApp_maybe )
 import Type
 import OccName     ( occNameFS )
 import PrelNames
-import Maybes      ( orElse )
+import GHC.Data.Maybe      ( orElse )
 import Name        ( Name, nameOccName )
 import Outputable
 import GHC.Data.FastString

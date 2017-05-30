@@ -42,7 +42,7 @@ import TyCon
 import Type             ( isUnliftedType )
 import RepType          ( isVoidTy, countConRepArgs, primRepSlot )
 import CostCentre       ( CostCentreStack, currentCCS )
-import Maybes
+import GHC.Data.Maybe
 import Util
 import GHC.Data.FastString
 import Outputable

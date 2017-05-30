@@ -120,7 +120,7 @@ import GHC.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad
-import Maybes
+import GHC.Data.Maybe
 import Data.List        ( mapAccumL )
 import Control.Arrow    ( second )
 

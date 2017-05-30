@@ -60,7 +60,7 @@ import Type
 import SrcLoc
 import GHC.Data.Bag -- collect ev vars from pats
 import GHC.Config.Flags( gopt, GeneralFlag(..) )
-import Maybes
+import GHC.Data.Maybe
 -- libraries:
 import Data.Data hiding (TyCon,Fixity)
 

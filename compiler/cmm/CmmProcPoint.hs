@@ -20,7 +20,7 @@ import CmmInfo
 import CmmLive
 import CmmSwitch
 import Data.List (sortBy)
-import Maybes
+import GHC.Data.Maybe
 import Control.Monad
 import Outputable
 import Platform

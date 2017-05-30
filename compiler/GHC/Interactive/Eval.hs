@@ -73,7 +73,7 @@ import MonadUtils
 import Module
 import PrelNames  ( toDynName, pretendNameIsInScope )
 import Panic
-import Maybes
+import GHC.Data.Maybe
 import GHC.Utils.Error
 import SrcLoc
 import RtClosureInspect

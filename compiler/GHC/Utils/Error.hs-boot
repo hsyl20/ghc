@@ -2,7 +2,7 @@ module GHC.Utils.Error where
 
 import Outputable (SDoc, PrintUnqualified )
 import SrcLoc (SrcSpan)
-import Json
+import GHC.Utils.Json
 import {-# SOURCE #-} GHC.Config.Flags ( DynFlags, DumpFlag )
 
 data Severity

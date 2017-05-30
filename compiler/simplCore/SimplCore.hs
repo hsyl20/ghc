@@ -49,7 +49,7 @@ import SrcLoc
 import Util
 import Module
 
-import Maybes
+import GHC.Data.Maybe
 import UniqSupply       ( UniqSupply, mkSplitUniqSupply, splitUniqSupply )
 import GHC.Data.Unique.FiniteMap
 import Outputable

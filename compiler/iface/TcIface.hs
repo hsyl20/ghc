@@ -64,7 +64,7 @@ import Module
 import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import Outputable
-import Maybes
+import GHC.Data.Maybe
 import SrcLoc
 import GHC.Config.Flags
 import Util

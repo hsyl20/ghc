@@ -109,7 +109,7 @@ import Util
 import SrcLoc
 
 import GHC.Data.Bag
-import Maybes
+import GHC.Data.Maybe
 import Data.Data        hiding (TyCon,Fixity, Infix)
 
 {-

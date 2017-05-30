@@ -173,7 +173,7 @@ import GHC.Config.Constants
 import Panic
 import qualified PprColour as Col
 import Util
-import Maybes
+import GHC.Data.Maybe
 import MonadUtils
 import qualified Pretty
 import SrcLoc
@@ -184,7 +184,7 @@ import Foreign.C        ( CInt(..) )
 import System.IO.Unsafe ( unsafeDupablePerformIO )
 import {-# SOURCE #-} GHC.Utils.Error ( Severity(..), MsgDoc, mkLocMessageAnn
                                , getCaretDiagnostic, dumpSDoc )
-import Json
+import GHC.Utils.Json
 import GHC.Utils.SysTools.Terminal ( stderrSupportsAnsiColors )
 
 import System.IO.Unsafe ( unsafePerformIO )

@@ -29,7 +29,7 @@ import ConLike
 import DataCon
 import PatSyn
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import Util (capitalise)
 
 

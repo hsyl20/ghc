@@ -24,7 +24,7 @@ import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , DynFlags( solverIterations ) )
 import Inst
 import ListSetOps
-import Maybes
+import GHC.Data.Maybe
 import Name
 import Outputable
 import PrelInfo

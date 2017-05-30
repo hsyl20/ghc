@@ -80,7 +80,7 @@ import Outputable
 import TysPrim
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Maybes
+import GHC.Data.Maybe
 import ListSetOps       ( minusList )
 import BasicTypes       ( Arity )
 import Platform

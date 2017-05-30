@@ -68,7 +68,7 @@ import BasicTypes       ( pprWarningTxtForMsg, TopLevelFlag(..))
 import SrcLoc
 import Outputable
 import Util
-import Maybes
+import GHC.Data.Maybe
 import GHC.Config.Flags
 import GHC.Data.FastString
 import Control.Monad

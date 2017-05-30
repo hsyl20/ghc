@@ -41,7 +41,7 @@ import CLabel
 import SMRep
 import ForeignCall
 import GHC.Config.Flags
-import Maybes
+import GHC.Data.Maybe
 import Outputable
 import UniqSupply
 import BasicTypes

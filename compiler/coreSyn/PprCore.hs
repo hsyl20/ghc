@@ -29,7 +29,7 @@ import Type
 import Coercion
 import GHC.Config.Flags
 import BasicTypes
-import Maybes
+import GHC.Data.Maybe
 import Util
 import Outputable
 import GHC.Data.FastString

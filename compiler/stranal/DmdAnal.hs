@@ -30,7 +30,7 @@ import Type
 import Coercion         ( Coercion, coVarsOfCo )
 import FamInstEnv
 import Util
-import Maybes           ( isJust )
+import GHC.Data.Maybe           ( isJust )
 import TysWiredIn
 import TysPrim          ( realWorldStatePrimTy )
 import GHC.Utils.Error         ( dumpIfSet_dyn )

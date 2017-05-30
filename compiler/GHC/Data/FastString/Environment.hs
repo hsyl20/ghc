@@ -29,7 +29,7 @@ module GHC.Data.FastString.Environment (
 
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
-import Maybes
+import GHC.Data.Maybe
 import GHC.Data.FastString
 
 

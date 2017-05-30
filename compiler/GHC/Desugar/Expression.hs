@@ -48,7 +48,7 @@ import DataCon
 import TysWiredIn
 import PrelNames
 import BasicTypes
-import Maybes
+import GHC.Data.Maybe
 import VarEnv
 import SrcLoc
 import Util
