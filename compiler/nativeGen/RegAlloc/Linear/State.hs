@@ -40,7 +40,7 @@ import Reg
 
 import GHC.Config.Flags
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Control.Monad (liftM, ap)
 

@@ -55,7 +55,7 @@ import Id
 import Name     ( Name )
 import Var
 import IdInfo
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Utils.Outputable

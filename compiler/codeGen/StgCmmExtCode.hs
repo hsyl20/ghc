@@ -49,7 +49,7 @@ import GHC.Data.FastString
 import Module
 import GHC.Data.Unique.FiniteMap
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Control.Monad (liftM, ap)
 

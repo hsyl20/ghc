@@ -53,7 +53,7 @@ import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Utils
 import GHC.Utils.Panic
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Monad       ( liftIO )
 
 -- Imports for --abi-hash

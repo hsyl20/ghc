@@ -12,7 +12,7 @@ import Module
 import GHC.Utils.Outputable
 import GHC.Platform
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Dwarf.Constants
 import Dwarf.Types

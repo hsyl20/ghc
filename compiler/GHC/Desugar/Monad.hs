@@ -75,7 +75,7 @@ import Module
 import GHC.Utils.Outputable
 import SrcLoc
 import Type
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Name
 import NameEnv
 import GHC.Config.Flags

@@ -50,7 +50,7 @@ import GHC.Utils
 import Module
 
 import GHC.Data.Maybe
-import UniqSupply       ( UniqSupply, mkSplitUniqSupply, splitUniqSupply )
+import GHC.Data.Unique.Supply       ( UniqSupply, mkSplitUniqSupply, splitUniqSupply )
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Outputable
 import Control.Monad

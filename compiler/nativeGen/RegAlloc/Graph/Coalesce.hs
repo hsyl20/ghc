@@ -12,7 +12,7 @@ import GHC.Data.Bag
 import GHC.Data.Graph.Directed
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Data.List
 

@@ -164,7 +164,7 @@ import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Pair
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set

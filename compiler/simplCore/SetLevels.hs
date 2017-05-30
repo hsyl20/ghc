@@ -88,7 +88,7 @@ import Type             ( Type, mkLamTypes, splitTyConApp_maybe )
 import BasicTypes       ( Arity, RecFlag(..), isRec )
 import DataCon          ( dataConOrigResTy )
 import TysWiredIn
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString

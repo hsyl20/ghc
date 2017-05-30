@@ -27,7 +27,7 @@ import GHC.Utils.Outputable hiding (panic, pprPanic)
 import qualified GHC.Utils.Outputable as Outputable
 import GHC.Platform
 import GHC.Data.Tree.OrdList
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Unique
 import GHC.Utils
 

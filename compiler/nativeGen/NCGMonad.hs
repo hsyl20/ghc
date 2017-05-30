@@ -47,7 +47,7 @@ import CLabel           ( CLabel, mkAsmTempLabel )
 import Debug
 import GHC.Data.FastString       ( FastString )
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Unique           ( Unique )
 import GHC.Config.Flags
 import Module

@@ -15,7 +15,7 @@ import Var
 import Id
 import IdInfo
 import Type
-import UniqSupply
+import GHC.Data.Unique.Supply
 import BasicTypes
 import GHC.Config.Flags
 import Demand

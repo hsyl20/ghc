@@ -56,7 +56,7 @@ import Module
 import GHC.Packages( isDllName )
 import GHC.Types
 import GHC.Data.Maybe
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Error (Severity(..))
 import GHC.Utils.Outputable
 import GHC.Data.Unique.DeterFiniteMap

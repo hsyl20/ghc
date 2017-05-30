@@ -20,7 +20,7 @@ import GHC.Config.Flags
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import SMRep
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils
 
 import PprCmm()

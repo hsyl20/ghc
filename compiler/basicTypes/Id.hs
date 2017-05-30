@@ -144,7 +144,7 @@ import GHC.Data.Maybe
 import SrcLoc
 import GHC.Utils.Outputable
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Data.FastString
 import GHC.Utils
 

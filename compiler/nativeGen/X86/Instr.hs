@@ -38,7 +38,7 @@ import CLabel
 import GHC.Config.Flags
 import GHC.Data.Unique.Set
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Debug (UnwindTable)
 
 import Control.Monad

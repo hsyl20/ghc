@@ -18,7 +18,7 @@ import CmmLayoutStack
 import CmmSink
 import Hoopl
 
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Types

@@ -32,7 +32,7 @@ import GHC.Data.FastString
 import ForeignCall
 import GHC.Data.Tree.OrdList
 import SMRep (ByteOff)
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Control.Monad
 import Data.List

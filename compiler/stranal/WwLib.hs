@@ -33,7 +33,7 @@ import FamInstEnv
 import BasicTypes       ( Boxity(..) )
 import Literal          ( absentLiteralOf )
 import TyCon
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Unique
 import GHC.Data.Maybe
 import GHC.Utils

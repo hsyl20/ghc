@@ -50,7 +50,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Data.Bag
 import GHC.Utils.Monad.State
 

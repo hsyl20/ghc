@@ -18,7 +18,7 @@ import CmmLive
 import CmmProcPoint
 import SMRep
 import Hoopl
-import UniqSupply
+import GHC.Data.Unique.Supply
 import StgCmmUtils      ( newTemp )
 import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap

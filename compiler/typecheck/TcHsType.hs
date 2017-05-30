@@ -77,7 +77,7 @@ import GHC.Config.Constants ( mAX_CTUPLE_SIZE )
 import GHC.Utils.Error( MsgDoc )
 import Unique
 import GHC.Utils
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import PrelNames hiding ( wildCardName )

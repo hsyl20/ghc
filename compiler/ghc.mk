@@ -558,7 +558,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Unique.DeterSet \
 	GHC.Data.Unique.FiniteMap \
 	GHC.Data.Unique.Set \
-	UniqSupply \
+	GHC.Data.Unique.Supply \
 	Unique \
 	Util \
 	Var \

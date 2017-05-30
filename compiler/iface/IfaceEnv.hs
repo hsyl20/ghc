@@ -33,7 +33,7 @@ import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import IfaceType
 import NameCache
-import UniqSupply
+import GHC.Data.Unique.Supply
 import SrcLoc
 
 import GHC.Utils.Outputable

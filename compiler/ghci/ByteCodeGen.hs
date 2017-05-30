@@ -55,7 +55,7 @@ import Foreign
 import Control.Monad
 import Data.Char
 
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Module
 import Control.Arrow ( second )
 

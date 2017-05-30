@@ -43,7 +43,7 @@ import GHC.Data.Bag
 import GHC.Utils.Error
 import Var           (EvVar)
 import Type
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Desugar.GuardedRHS       (isTrueLHsExpr)
 
 import Data.List     (find)

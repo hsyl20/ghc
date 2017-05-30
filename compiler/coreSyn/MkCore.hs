@@ -74,7 +74,7 @@ import Demand
 import Name      hiding ( varName )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import UniqSupply
+import GHC.Data.Unique.Supply
 import BasicTypes
 import GHC.Utils
 import GHC.Config.Flags

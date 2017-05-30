@@ -25,7 +25,7 @@ import GHC.Config.Flags
 import GHC.Utils.Outputable
 import Unique
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 
 -- | Used to store the register assignment on entry to a basic block.

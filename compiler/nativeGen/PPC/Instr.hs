@@ -42,7 +42,7 @@ import CLabel
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique.FiniteMap (listToUFM, lookupUFM)
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Control.Monad (replicateM)
 import Data.Maybe (fromMaybe)

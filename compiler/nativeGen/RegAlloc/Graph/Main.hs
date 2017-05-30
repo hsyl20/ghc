@@ -22,7 +22,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils (seqList)
 
 import Data.List

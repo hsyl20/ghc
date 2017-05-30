@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP, UnboxedTuples #-}
 
-module UniqSupply (
+module GHC.Data.Unique.Supply (
         -- * Main data type
         UniqSupply, -- Abstractly
 

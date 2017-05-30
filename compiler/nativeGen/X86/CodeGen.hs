@@ -68,7 +68,7 @@ import Unique
 import GHC.Data.FastString
 import GHC.Config.Flags
 import GHC.Utils
-import UniqSupply       ( getUniqueM )
+import GHC.Data.Unique.Supply       ( getUniqueM )
 
 import Control.Monad
 import Data.Bits

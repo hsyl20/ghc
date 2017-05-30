@@ -64,7 +64,7 @@ import TysWiredIn
 import BasicTypes
 import ConLike
 import GHC.Data.Unique.Set
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Module
 import PrelNames
 import Name( isInternalName )

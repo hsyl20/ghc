@@ -57,7 +57,7 @@ import GHC.Data.FastString
 import GHC.Utils
 import InstEnv     ( instanceDFunId )
 import OptCoercion ( checkAxInstCo )
-import UniqSupply
+import GHC.Data.Unique.Supply
 import CoreArity ( typeArity )
 import Demand ( splitStrictSig, isBotRes )
 

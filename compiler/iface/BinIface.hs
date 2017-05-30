@@ -28,7 +28,7 @@ import Module
 import Name
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Panic
 import GHC.Utils.Binary as Binary
 import SrcLoc

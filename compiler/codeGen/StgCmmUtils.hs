@@ -63,7 +63,7 @@ import Literal
 import GHC.Data.Graph.Directed
 import GHC.Utils
 import Unique
-import UniqSupply (MonadUnique(..))
+import GHC.Data.Unique.Supply (MonadUnique(..))
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable

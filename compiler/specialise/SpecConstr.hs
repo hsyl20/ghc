@@ -48,7 +48,7 @@ import Demand
 import GHC.Serialized   ( deserializeWithData )
 import GHC.Utils
 import GHC.Data.Pair
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.FiniteMap

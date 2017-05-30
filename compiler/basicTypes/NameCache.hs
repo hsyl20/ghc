@@ -12,7 +12,7 @@ module NameCache
 
 import Module
 import Name
-import UniqSupply
+import GHC.Data.Unique.Supply
 import TysWiredIn
 import GHC.Utils
 import GHC.Utils.Outputable

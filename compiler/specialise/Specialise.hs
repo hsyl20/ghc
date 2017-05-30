@@ -25,7 +25,7 @@ import CoreOpt          ( collectBindersPushingCo )
 import CoreUtils        ( exprIsTrivial, applyTypeToArgs, mkCast )
 import CoreFVs          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )
 import CoreArity        ( etaExpandToJoinPointRule )
-import UniqSupply
+import GHC.Data.Unique.Supply
 import Name
 import MkId             ( voidArgId, voidPrimId )
 import GHC.Data.Maybe           ( catMaybes, isJust )

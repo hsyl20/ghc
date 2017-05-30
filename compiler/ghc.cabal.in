@@ -204,7 +204,7 @@ Library
         RdrName
         NameCache
         SrcLoc
-        UniqSupply
+        GHC.Data.Unique.Supply
         Unique
         Var
         VarEnv

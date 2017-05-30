@@ -23,7 +23,7 @@ import Id               ( Id, idArity, idType, isBottomingId,
                           isJoinId, isJoinId_maybe )
 import BasicTypes       ( TopLevelFlag(..), isTopLevel )
 import SetLevels
-import UniqSupply       ( UniqSupply )
+import GHC.Data.Unique.Supply       ( UniqSupply )
 import GHC.Data.Bag
 import GHC.Utils
 import GHC.Data.Maybe

@@ -170,7 +170,7 @@ import SrcLoc
 import VarSet
 import GHC.Utils.Error
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 import BasicTypes
 import GHC.Data.Bag
 import GHC.Config.Flags

@@ -149,7 +149,7 @@ import VarEnv
 import VarSet
 import GHC.Utils.Outputable
 import GHC.Data.Bag as Bag
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils
 import TcRnTypes
 

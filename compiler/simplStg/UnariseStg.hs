@@ -211,7 +211,7 @@ import StgSyn
 import Type
 import TysPrim (intPrimTy)
 import TysWiredIn
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils
 import VarEnv
 

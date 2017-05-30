@@ -51,7 +51,7 @@ import GHC.Data.Unique.FiniteMap
 import Unique
 import GHC.Utils.Handle.BufferedWrite   ( BufHandle )
 import GHC.Data.Unique.Set
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Error
 import qualified GHC.Data.Stream as Stream
 

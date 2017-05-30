@@ -26,7 +26,7 @@ import IdInfo           ( IdDetails(..), vanillaIdInfo, setArityInfo )
 import Type             ( Type, mkLamTypes )
 import FamInstEnv       ( FamInstEnv )
 import CoreSyn          ( RuleEnv(..) )
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import CoreMonad
 import GHC.Utils.Outputable

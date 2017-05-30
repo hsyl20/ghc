@@ -23,7 +23,7 @@ import GHC.Config.Flags
 import Module           ( Module )
 import GHC.Utils.Error
 import SrcLoc
-import UniqSupply       ( mkSplitUniqSupply, splitUniqSupply )
+import GHC.Data.Unique.Supply       ( mkSplitUniqSupply, splitUniqSupply )
 import GHC.Utils.Outputable
 import Control.Monad
 

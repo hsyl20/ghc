@@ -13,7 +13,7 @@ module GHC.CodeGen.CodeOutput( codeOutput, outputForeignStubs ) where
 import AsmCodeGen ( nativeCodeGen )
 import LlvmCodeGen ( llvmCodeGen )
 
-import UniqSupply       ( mkSplitUniqSupply )
+import GHC.Data.Unique.Supply       ( mkSplitUniqSupply )
 
 import GHC.Finder           ( mkStubPaths )
 import PprC             ( writeCs )

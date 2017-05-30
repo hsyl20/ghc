@@ -159,7 +159,7 @@ import NameEnv
 import NameSet
 import GHC.Data.Bag
 import GHC.Utils.Outputable as Outputable
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Panic

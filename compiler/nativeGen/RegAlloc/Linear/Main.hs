@@ -126,7 +126,7 @@ import GHC.Config.Flags
 import Unique
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable
 import GHC.Platform
 

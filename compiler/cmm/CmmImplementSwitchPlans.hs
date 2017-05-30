@@ -9,7 +9,7 @@ import BlockId
 import Cmm
 import CmmUtils
 import CmmSwitch
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 
 --

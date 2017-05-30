@@ -64,7 +64,7 @@ import IdInfo
 import Demand
 import CoreSyn
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 import PrelNames
 import BasicTypes       hiding ( SuccessFlag(..) )
 import GHC.Utils

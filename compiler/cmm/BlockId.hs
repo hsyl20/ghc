@@ -13,7 +13,7 @@ import IdInfo
 import Name
 import GHC.Utils.Outputable
 import Unique
-import UniqSupply
+import GHC.Data.Unique.Supply
 
 import Compiler.Hoopl as Hoopl hiding (Unique)
 import Compiler.Hoopl.Internals (uniqueToLbl, lblToUnique)

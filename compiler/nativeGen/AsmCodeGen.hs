@@ -71,7 +71,7 @@ import PprCmm
 import CLabel
 
 import GHC.Data.Unique.FiniteMap
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import GHC.Utils
 import Unique

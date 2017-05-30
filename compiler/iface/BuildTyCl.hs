@@ -35,7 +35,7 @@ import TcType
 import SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Config.Flags
 import TcRnMonad
-import UniqSupply
+import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Utils.Outputable
 
