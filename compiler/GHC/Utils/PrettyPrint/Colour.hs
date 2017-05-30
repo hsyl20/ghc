@@ -1,4 +1,5 @@
-module PprColour where
+module GHC.Utils.PrettyPrint.Colour where
+
 import Data.Maybe (fromMaybe)
 import Util (OverridingBool(..), split)
 

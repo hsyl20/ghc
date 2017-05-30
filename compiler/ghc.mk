@@ -532,7 +532,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Program.Driver.Pipeline.Monad \
 	Platform \
 	GHC.Config.Platform.Constants \
-	PprColour \
+	GHC.Utils.PrettyPrint.Colour \
 	PprCore \
 	PrelNames \
 	PrelRules \

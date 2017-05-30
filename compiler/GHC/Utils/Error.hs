@@ -60,7 +60,7 @@ import GHC.Data.Bag
 import GHC.Utils.Exception
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils.Panic
-import qualified PprColour as Col
+import qualified GHC.Utils.PrettyPrint.Colour as Col
 import SrcLoc
 import GHC.Config.Flags
 import GHC.Data.FastString (unpackFS)

@@ -171,7 +171,7 @@ import Config
 import GHC.Program.CmdLineParser
 import GHC.Config.Constants
 import GHC.Utils.Panic
-import qualified PprColour as Col
+import qualified GHC.Utils.PrettyPrint.Colour as Col
 import Util
 import GHC.Data.Maybe
 import GHC.Utils.Monad
