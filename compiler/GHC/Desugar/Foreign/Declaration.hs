@@ -24,7 +24,7 @@ import CoreUnfold
 import Id
 import Literal
 import Module
-import Name
+import GHC.Data.Name
 import Type
 import RepType
 import TyCon

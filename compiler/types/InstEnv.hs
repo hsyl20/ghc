@@ -35,8 +35,8 @@ import Module
 import Class
 import GHC.Data.Var
 import GHC.Data.Var.Set
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import Unify
 import GHC.Utils.Outputable
 import GHC.Utils.Error

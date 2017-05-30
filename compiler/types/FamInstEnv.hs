@@ -48,7 +48,7 @@ import Coercion
 import CoAxiom
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
-import Name
+import GHC.Data.Name
 import PrelNames ( eqPrimTyConKey )
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils.Outputable

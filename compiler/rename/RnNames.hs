@@ -30,9 +30,9 @@ import LoadIface        ( loadSrcInterface )
 import TcRnMonad
 import PrelNames
 import Module
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import Avail
 import FieldLabel
 import GHC.Types

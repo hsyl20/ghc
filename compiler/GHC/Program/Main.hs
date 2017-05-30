@@ -110,7 +110,7 @@ import SrcLoc
 import TcRnDriver
 import TcIface          ( typecheckIface )
 import TcRnMonad
-import NameCache        ( initNameCache )
+import GHC.Data.Name.Cache        ( initNameCache )
 import LoadIface        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
@@ -124,7 +124,7 @@ import StgSyn
 import CostCentre
 import ProfInit
 import TyCon
-import Name
+import GHC.Data.Name
 import SimplStg         ( stg2stg )
 import Cmm
 import CmmParse         ( parseCmmFile )
@@ -143,7 +143,7 @@ import GHC.Utils.Error
 import GHC.Platform ( platformOS, osSubsectionsViaSymbols )
 
 import GHC.Utils.Outputable
-import NameEnv
+import GHC.Data.Name.Environment
 import GHC.Syntax.Stats         ( ppSourceStats )
 import GHC.Types
 import GHC.Data.FastString

@@ -22,7 +22,7 @@ import Type
 import FamInst
 import FamInstEnv
 import TcMType
-import Name
+import GHC.Data.Name
 import GHC.Utils
 import GHC.Utils.Monad
 import Control.Monad

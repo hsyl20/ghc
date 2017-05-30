@@ -25,9 +25,9 @@ module Avail (
 
   ) where
 
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 
 import FieldLabel
 import GHC.Utils.Binary

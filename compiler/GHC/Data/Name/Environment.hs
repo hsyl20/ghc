@@ -6,7 +6,7 @@
 -}
 
 {-# LANGUAGE CPP #-}
-module NameEnv (
+module GHC.Data.Name.Environment (
         -- * Var, Id and TyVar environments (maps)
         NameEnv,
 
@@ -34,7 +34,7 @@ module NameEnv (
 #include "HsVersions.h"
 
 import GHC.Data.Graph.Directed
-import Name
+import GHC.Data.Name
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Maybe

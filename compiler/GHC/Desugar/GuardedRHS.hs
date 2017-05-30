@@ -26,7 +26,7 @@ import TysWiredIn
 import PrelNames
 import Type   ( Type )
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Utils
 import SrcLoc
 import GHC.Utils.Outputable

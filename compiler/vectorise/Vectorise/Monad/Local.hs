@@ -17,7 +17,7 @@ import Vectorise.Monad.Base
 import Vectorise.Env
 
 import CoreSyn
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Environment
 import GHC.Data.Var
 import GHC.Data.FastString

@@ -49,9 +49,9 @@ import RdrName
 import PrelNames
 import TysPrim          ( funTyConName )
 import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )
-import Name
+import GHC.Data.Name
 import SrcLoc
-import NameSet
+import GHC.Data.Name.Set
 import FieldLabel
 
 import GHC.Utils

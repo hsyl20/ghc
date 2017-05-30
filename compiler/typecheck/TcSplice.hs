@@ -32,7 +32,7 @@ module TcSplice(
 
 import HsSyn
 import GHC.Types.Annotations
-import Name
+import GHC.Data.Name
 import TcRnMonad
 import TcType
 
@@ -64,7 +64,7 @@ import TcHsSyn
 import TcSimplify
 import Type
 import Kind
-import NameSet
+import GHC.Data.Name.Set
 import TcMType
 import TcHsType
 import TcIface
@@ -73,7 +73,7 @@ import FamInst
 import FamInstEnv
 import InstEnv
 import Inst
-import NameEnv
+import GHC.Data.Name.Environment
 import PrelNames
 import TysWiredIn
 import OccName

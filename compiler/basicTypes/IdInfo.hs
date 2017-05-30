@@ -86,7 +86,7 @@ import CoreSyn
 
 import Class
 import {-# SOURCE #-} PrimOp (PrimOp)
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Set
 import BasicTypes
 import DataCon

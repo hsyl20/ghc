@@ -16,8 +16,8 @@ import TyCon
 import Class
 import CoreSyn
 import Type
-import NameEnv
-import Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name
 import Id
 import GHC.Data.FastString
 import GHC.Utils.Outputable

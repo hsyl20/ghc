@@ -9,7 +9,7 @@ import HsSyn
 import TcRnTypes
 import TcEnv( InstInfo )
 import TcDeriv
-import Name
+import GHC.Data.Name
 
 -- We need this because of the mutual recursion
 -- between TcTyClsDecls and TcInstDcls

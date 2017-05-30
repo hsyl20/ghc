@@ -39,7 +39,7 @@ import MkCore           ( mkImpossibleExpr )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Name
+import GHC.Data.Name
 import BasicTypes
 import GHC.Config.Flags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen )
                         , gopt, hasPprDebug )

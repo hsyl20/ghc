@@ -41,7 +41,7 @@ import HsSyn
 import RdrName
 import BasicTypes
 import DataCon
-import Name
+import GHC.Data.Name
 import GHC.Utils.Fingerprint
 import GHC.Data.Char.Encoding
 

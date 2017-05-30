@@ -32,7 +32,7 @@ import TyCon
 import DataCon
 import TcHsSyn ( shortCutLit )
 import TcType
-import Name
+import GHC.Data.Name
 import Type
 import PrelNames
 import TysWiredIn

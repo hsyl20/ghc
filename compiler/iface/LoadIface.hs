@@ -55,8 +55,8 @@ import TyCon
 import GHC.Types.Annotations
 import InstEnv
 import FamInstEnv
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import Avail
 import Module
 import GHC.Data.Maybe

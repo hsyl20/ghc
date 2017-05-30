@@ -48,9 +48,9 @@ import IdInfo
 import ConLike
 import DataCon
 import PatSyn
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import RdrName
 import TyCon
 import Type

@@ -55,7 +55,7 @@ import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )
 import TysWiredIn ( heqTyCon )
 import MkId ( noinlineIdName )
 import PrelNames
-import Name
+import GHC.Data.Name
 import BasicTypes
 import Type
 import PatSyn

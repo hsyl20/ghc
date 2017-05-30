@@ -1,6 +1,6 @@
 module TcPatSyn where
 
-import Name      ( Name )
+import GHC.Data.Name      ( Name )
 import Id        ( Id )
 import HsSyn     ( PatSynBind, LHsBinds )
 import TcRnTypes ( TcM, TcPatSynInfo )

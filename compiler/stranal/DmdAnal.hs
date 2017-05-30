@@ -34,7 +34,7 @@ import GHC.Data.Maybe           ( isJust )
 import TysWiredIn
 import TysPrim          ( realWorldStatePrimTy )
 import GHC.Utils.Error         ( dumpIfSet_dyn )
-import Name             ( getName, stableNameCmp )
+import GHC.Data.Name             ( getName, stableNameCmp )
 import Data.Function    ( on )
 import GHC.Data.Unique.Set
 

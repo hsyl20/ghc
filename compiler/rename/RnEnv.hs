@@ -54,9 +54,9 @@ import TcEnv
 import TcRnMonad
 import RdrHsSyn         ( setRdrNameSpace )
 import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import Avail
 import Module
 import ConLike

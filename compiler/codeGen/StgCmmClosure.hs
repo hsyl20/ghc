@@ -76,7 +76,7 @@ import CLabel
 import Id
 import IdInfo
 import DataCon
-import Name
+import GHC.Data.Name
 import Type
 import TyCoRep
 import TcType

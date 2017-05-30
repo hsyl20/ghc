@@ -15,8 +15,8 @@ module ByteCodeTypes
 
 import GHC.Data.FastString
 import Id
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
 import PrimOp
 import SizedSeq

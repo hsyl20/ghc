@@ -25,7 +25,7 @@ import FamInst ( tcTopNormaliseNewTypeTF_maybe )
 import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Config.Flags( DynFlags )
-import NameSet
+import GHC.Data.Name.Set
 import RdrName
 
 import GHC.Data.Pair

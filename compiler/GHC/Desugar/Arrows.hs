@@ -36,7 +36,7 @@ import CoreUtils
 import MkCore
 import GHC.Desugar.Binds (dsHsWrapper)
 
-import Name
+import GHC.Data.Name
 import GHC.Data.Var
 import Id
 import ConLike

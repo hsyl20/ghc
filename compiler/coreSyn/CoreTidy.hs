@@ -25,7 +25,7 @@ import Coercion( tidyCo )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap
-import Name hiding (tidyNameOcc)
+import GHC.Data.Name hiding (tidyNameOcc)
 import SrcLoc
 import GHC.Data.Maybe
 import Data.List

@@ -42,7 +42,7 @@ import StgSyn
 import CostCentre
 import Id
 import IdInfo
-import Name
+import GHC.Data.Name
 import Module
 import GHC.Data.List.SetOps
 import GHC.Utils

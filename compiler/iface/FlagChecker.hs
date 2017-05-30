@@ -11,7 +11,7 @@ import BinIface ()
 import GHC.Config.Flags
 import GHC.Types
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Utils.Fingerprint
 import BinFingerprint
 -- import GHC.Utils.Outputable

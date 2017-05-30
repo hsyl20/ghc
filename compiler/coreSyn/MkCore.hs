@@ -71,7 +71,7 @@ import DataCon          ( DataCon, dataConWorkId )
 import IdInfo           ( vanillaIdInfo, setStrictnessInfo,
                           setArityInfo )
 import Demand
-import Name      hiding ( varName )
+import GHC.Data.Name      hiding ( varName )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.Supply

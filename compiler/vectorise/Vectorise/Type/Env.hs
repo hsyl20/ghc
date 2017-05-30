@@ -33,8 +33,8 @@ import Type
 import FamInstEnv
 import Id
 import MkId
-import NameEnv
-import NameSet
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import GHC.Data.Unique.FiniteMap
 import OccName
 import GHC.Data.Unique

@@ -10,8 +10,8 @@ module RnSplice (
 
 #include "HsVersions.h"
 
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import HsSyn
 import RdrName
 import TcRnMonad

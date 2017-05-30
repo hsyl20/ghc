@@ -17,7 +17,7 @@ module RnUnbound ( mkUnboundName
 import RdrName
 import GHC.Types
 import TcRnMonad
-import Name
+import GHC.Data.Name
 import Module
 import SrcLoc
 import GHC.Utils.Outputable as Outputable

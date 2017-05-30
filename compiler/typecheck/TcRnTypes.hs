@@ -158,9 +158,9 @@ import FamInstEnv
 import GHC.Desugar.Match.Expr
 import GHC.Utils.Monad.IOEnv
 import RdrName
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import Avail
 import GHC.Data.Var
 import GHC.Data.Var.Free as FV

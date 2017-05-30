@@ -29,8 +29,8 @@ import GHCi
 import ByteCodeTypes
 import GHC.Types
 import GHC.Config.Flags
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import PrimOp
 import Module
 import GHC.Data.FastString

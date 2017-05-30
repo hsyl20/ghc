@@ -22,7 +22,7 @@ import Id
 import MkId             ( seqId )
 import MkCore           ( mkImpossibleExpr, castBottomExpr )
 import IdInfo
-import Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
+import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
 import Coercion hiding  ( substCo, substCoVar )
 import OptCoercion      ( optCoercion )
 import FamInstEnv       ( topNormaliseType_maybe )

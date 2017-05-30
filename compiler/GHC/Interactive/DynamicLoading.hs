@@ -44,7 +44,7 @@ import GHC.Types
 import GHCi.RemoteTypes ( HValue )
 import Type             ( Type, eqType, mkTyConTy, pprTyThingCategory )
 import TyCon            ( TyCon )
-import Name             ( Name, nameModule_maybe )
+import GHC.Data.Name             ( Name, nameModule_maybe )
 import Id               ( idType )
 import Module           ( Module, ModuleName )
 import GHC.Utils.Panic

@@ -36,9 +36,9 @@ import RnNames
 import GHC.Utils.Error
 import Id
 import Module
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import Avail
 import SrcLoc
 import GHC.Types

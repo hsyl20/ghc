@@ -12,7 +12,7 @@ module BinFingerprint
 
 import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
-import Name
+import GHC.Data.Name
 import GHC.Utils.Panic
 import GHC.Utils
 

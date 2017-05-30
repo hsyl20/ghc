@@ -119,7 +119,7 @@ import CLabel
 import SMRep
 
 import Module
-import Name
+import GHC.Data.Name
 import Id
 import BasicTypes
 import GHC.Data.FastString

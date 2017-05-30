@@ -47,7 +47,7 @@ module GHC.Data.Var.Set (
 
 import GHC.Data.Var      ( Var, TyVar, CoVar, TyCoVar, Id )
 import GHC.Data.Unique
-import Name     ( Name )
+import GHC.Data.Name     ( Name )
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.DeterSet
 import GHC.Data.Unique.FiniteMap( disjointUFM, pluralUFM, pprUFM )

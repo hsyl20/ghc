@@ -18,7 +18,7 @@ import CoreSyn          ( AltCon(..) )
 import PrimOp           ( primOpType )
 import Literal          ( literalType )
 import GHC.Data.Maybe
-import Name             ( getSrcLoc )
+import GHC.Data.Name             ( getSrcLoc )
 import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
 import Type
 import RepType

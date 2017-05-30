@@ -18,7 +18,7 @@ module Vectorise.Type.Classify
   )
 where
 
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import DataCon

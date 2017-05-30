@@ -26,7 +26,7 @@ import CoreUtils        ( exprIsTrivial, applyTypeToArgs, mkCast )
 import CoreFVs          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )
 import CoreArity        ( etaExpandToJoinPointRule )
 import GHC.Data.Unique.Supply
-import Name
+import GHC.Data.Name
 import MkId             ( voidArgId, voidPrimId )
 import GHC.Data.Maybe           ( catMaybes, isJust )
 import BasicTypes

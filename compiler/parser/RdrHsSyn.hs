@@ -73,7 +73,7 @@ import DataCon          ( DataCon, dataConTyCon )
 import ConLike          ( ConLike(..) )
 import CoAxiom          ( Role, fsFromRole )
 import RdrName
-import Name
+import GHC.Data.Name
 import BasicTypes
 import TcEvidence       ( idHsWrapper )
 import Lexer

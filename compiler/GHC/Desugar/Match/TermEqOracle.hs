@@ -25,14 +25,14 @@ module GHC.Desugar.Match.TermEqOracle (
 import GHC.Desugar.Match.Expr
 
 import Id
-import Name
+import GHC.Data.Name
 import Type
 import HsLit
 import TcHsSyn
 import GHC.Utils.Monad
 import GHC.Utils
 
-import NameEnv
+import GHC.Data.Name.Environment
 
 {-
 %************************************************************************

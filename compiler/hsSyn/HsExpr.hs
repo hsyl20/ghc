@@ -31,8 +31,8 @@ import TcEvidence
 import CoreSyn
 import GHC.Data.Var
 import GHC.Config.Flags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import RdrName  ( GlobalRdrEnv )
 import BasicTypes
 import ConLike

@@ -37,9 +37,9 @@ import GHC.Config.Flags
 import FamInst
 import FamInstEnv
 import Id
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable

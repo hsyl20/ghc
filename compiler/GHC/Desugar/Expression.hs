@@ -21,8 +21,8 @@ import GHC.Desugar.ListComp
 import GHC.Desugar.Utils
 import GHC.Desugar.Arrows
 import GHC.Desugar.Monad
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import FamInstEnv( topNormaliseType )
 import GHC.Desugar.Splices
 import HsSyn

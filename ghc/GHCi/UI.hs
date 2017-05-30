@@ -53,7 +53,7 @@ import HsSyn
 import GHC.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
                   setInteractivePrintName, hsc_dflags, msObjFilePath )
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
                   listVisibleModuleNames, pprFlag )
 import IfaceSyn ( showToHeader )
@@ -74,7 +74,7 @@ import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import Linker
 import GHC.Data.Maybe ( orElse, expectJust )
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Utils.Panic hiding ( showException )
 import GHC.Utils
 import qualified GHC.LanguageExtensions as LangExt

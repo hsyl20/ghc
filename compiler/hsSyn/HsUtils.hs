@@ -110,9 +110,9 @@ import TcType
 import DataCon
 import ConLike
 import Id
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import BasicTypes
 import SrcLoc
 import GHC.Data.FastString

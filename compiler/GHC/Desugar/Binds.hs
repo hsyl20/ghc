@@ -47,7 +47,7 @@ import TysWiredIn ( typeNatKind, typeSymbolKind )
 import Id
 import MkId(proxyHashId)
 import Class
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Set
 import Rules
 import GHC.Data.Var.Environment

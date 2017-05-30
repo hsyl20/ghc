@@ -36,8 +36,8 @@ import GHC.Config.Flags (HasDynFlags(..))
 import GHC.Data.FastString
 import GHC
 import GHC.Monad
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import GHC.Utils.Outputable
 import SrcLoc
 import TcHsSyn

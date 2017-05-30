@@ -151,7 +151,7 @@ import IfaceType
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Name hiding ( varName )
+import GHC.Data.Name hiding ( varName )
 import TyCon
 import Class
 import CoAxiom

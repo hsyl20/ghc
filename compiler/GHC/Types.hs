@@ -156,9 +156,9 @@ import Module
 import InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
 import FamInstEnv
 import CoreSyn          ( CoreProgram, RuleBase, CoreRule, CoreVect )
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
@@ -194,7 +194,7 @@ import GHC.Utils.Monad
 import GHC.Data.Bag
 import GHC.Utils.Binary
 import GHC.Utils.Error
-import NameCache
+import GHC.Data.Name.Cache
 import GHC.Platform
 import GHC.Utils
 import GHC.Data.Unique.DeterSet

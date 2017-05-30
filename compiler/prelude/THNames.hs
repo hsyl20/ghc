@@ -8,7 +8,7 @@ module THNames where
 
 import PrelNames( mk_known_key_name )
 import Module( Module, mkModuleNameFS, mkModule, thUnitId )
-import Name( Name )
+import GHC.Data.Name( Name )
 import OccName( tcName, clsName, dataName, varName )
 import RdrName( RdrName, nameRdrName )
 import GHC.Data.Unique

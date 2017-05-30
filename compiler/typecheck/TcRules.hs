@@ -23,7 +23,7 @@ import TcEvidence( mkTcCoVarCo )
 import Type
 import Id
 import GHC.Data.Var( EvVar )
-import Name
+import GHC.Data.Name
 import BasicTypes       ( RuleName )
 import SrcLoc
 import GHC.Utils.Outputable

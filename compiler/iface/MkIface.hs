@@ -85,11 +85,11 @@ import GHC.Config.Flags
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
-import Name
+import GHC.Data.Name
 import Avail
 import RdrName
-import NameEnv
-import NameSet
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import Module
 import BinIface
 import GHC.Utils.Error

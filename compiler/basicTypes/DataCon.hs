@@ -69,7 +69,7 @@ import Unify
 import TyCon
 import FieldLabel
 import Class
-import Name
+import GHC.Data.Name
 import PrelNames
 import GHC.Data.Var
 import GHC.Utils.Outputable

@@ -56,7 +56,7 @@ import TyCon hiding ( pprPromotionQuote )
 import CoAxiom
 import GHC.Data.Var
 import PrelNames
-import Name
+import GHC.Data.Name
 import BasicTypes
 import GHC.Utils.Binary
 import GHC.Utils.Outputable

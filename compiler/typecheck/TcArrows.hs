@@ -24,7 +24,7 @@ import TcEnv
 import TcEvidence
 import Id( mkLocalId )
 import Inst
-import Name
+import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Var.Set
 import TysPrim

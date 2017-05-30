@@ -59,7 +59,7 @@ module GHC.Utils.Binary
 -- The *host* architecture version:
 #include "../includes/MachDeps.h"
 
-import {-# SOURCE #-} Name (Name)
+import {-# SOURCE #-} GHC.Data.Name (Name)
 import GHC.Data.FastString
 import GHC.Utils.Panic
 import GHC.Data.Unique.FiniteMap

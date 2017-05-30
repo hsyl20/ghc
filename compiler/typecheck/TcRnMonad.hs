@@ -142,7 +142,7 @@ import HsSyn hiding (LIE)
 import GHC.Types
 import Module
 import RdrName
-import Name
+import GHC.Data.Name
 import Type
 
 import TcType
@@ -155,8 +155,8 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Error
 import SrcLoc
-import NameEnv
-import NameSet
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import GHC.Data.Bag
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Unique.Supply

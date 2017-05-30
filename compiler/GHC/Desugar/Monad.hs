@@ -76,8 +76,8 @@ import GHC.Utils.Outputable
 import SrcLoc
 import Type
 import GHC.Data.Unique.Supply
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString

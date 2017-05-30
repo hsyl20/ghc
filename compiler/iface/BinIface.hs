@@ -25,7 +25,7 @@ import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
 import IfaceEnv
 import GHC.Types
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
@@ -36,7 +36,7 @@ import GHC.Utils.Error
 import GHC.Data.FastMutableInt
 import GHC.Data.Unique
 import GHC.Utils.Outputable
-import NameCache
+import GHC.Data.Name.Cache
 import GHC.Platform
 import GHC.Data.FastString
 import GHC.Config.Constants

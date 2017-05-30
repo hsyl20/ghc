@@ -25,7 +25,7 @@ import HsSyn
 import TcHsSyn
 import Id
 import ConLike
-import Name
+import GHC.Data.Name
 import FamInstEnv
 import TysWiredIn
 import TyCon

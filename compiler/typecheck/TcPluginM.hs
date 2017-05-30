@@ -73,7 +73,7 @@ import TcRnTypes  ( CtEvidence(..) )
 import GHC.Data.Var        ( EvVar )
 
 import Module
-import Name
+import GHC.Data.Name
 import TyCon
 import DataCon
 import Class

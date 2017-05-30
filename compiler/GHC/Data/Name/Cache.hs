@@ -2,7 +2,7 @@
 {-# LANGUAGE RankNTypes #-}
 
 -- | The Name Cache
-module NameCache
+module GHC.Data.Name.Cache
     ( lookupOrigNameCache
     , extendOrigNameCache
     , extendNameCache
@@ -11,7 +11,7 @@ module NameCache
     ) where
 
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Data.Unique.Supply
 import TysWiredIn
 import GHC.Utils

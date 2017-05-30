@@ -41,10 +41,10 @@ import FamInstEnv
 import Type             ( tidyTopType )
 import Demand           ( appIsBottom, isTopSig, isBottomingSig )
 import BasicTypes
-import Name hiding (varName)
-import NameSet
-import NameEnv
-import NameCache
+import GHC.Data.Name hiding (varName)
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Cache
 import Avail
 import IfaceEnv
 import TcEnv

@@ -30,7 +30,7 @@ import DataCon
 import TcEvidence
 import HsExpr  ( UnboundVar(..) )
 import HsBinds ( PatSynBind(..) )
-import Name
+import GHC.Data.Name
 import RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
                , mkRdrUnqual, isLocalGRE, greSrcSpan, pprNameProvenance
                , GlobalRdrElt (..), globalRdrEnvElts )
@@ -39,14 +39,14 @@ import Id
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Data.Bag
 import GHC.Utils.Error         ( ErrMsg, errDoc, pprLocErrMsg )
 import BasicTypes
 import ConLike          ( ConLike(..), conLikeWrapId_maybe )
 import GHC.Utils
 import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
-import NameEnv (lookupNameEnv)
+import GHC.Data.Name.Environment (lookupNameEnv)
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import SrcLoc

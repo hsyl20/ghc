@@ -54,8 +54,8 @@ import Literal
 import TyCon
 import CoAxiom
 import Class
-import NameSet
-import Name
+import GHC.Data.Name.Set
+import GHC.Data.Name
 import PrimOp
 import ForeignCall
 import DataCon

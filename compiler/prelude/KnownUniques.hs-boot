@@ -1,7 +1,7 @@
 module KnownUniques where
 
 import GHC.Data.Unique
-import Name
+import GHC.Data.Name
 import BasicTypes
 
 -- Needed by TysWiredIn

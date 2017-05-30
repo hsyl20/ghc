@@ -48,7 +48,7 @@ import TcType
 import Type
 import Coercion
 import TcEvidence
-import Name ( isSystemName )
+import GHC.Data.Name ( isSystemName )
 import Inst
 import TyCon
 import TysWiredIn
@@ -59,7 +59,7 @@ import GHC.Data.Var.Environment
 import GHC.Utils.Error
 import GHC.Config.Flags
 import BasicTypes
-import Name   ( Name )
+import GHC.Data.Name   ( Name )
 import GHC.Data.Bag
 import GHC.Utils
 import GHC.Data.Pair( pFst )

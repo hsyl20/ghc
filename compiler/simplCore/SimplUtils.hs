@@ -45,7 +45,7 @@ import CoreFVs
 import CoreUtils
 import CoreArity
 import CoreUnfold
-import Name
+import GHC.Data.Name
 import Id
 import IdInfo
 import GHC.Data.Var

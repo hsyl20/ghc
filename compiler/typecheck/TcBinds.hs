@@ -45,9 +45,9 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment( TidyEnv )
 import Module
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import SrcLoc
 import GHC.Data.Bag
 import GHC.Data.List.SetOps

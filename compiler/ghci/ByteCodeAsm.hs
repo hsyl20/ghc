@@ -22,8 +22,8 @@ import GHCi.RemoteTypes
 import GHCi
 
 import GHC.Types
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import Literal
 import TyCon
 import GHC.Data.FastString

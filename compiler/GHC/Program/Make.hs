@@ -53,7 +53,7 @@ import GHC.Data.Graph.Directed
 import GHC.Utils.Exception        ( tryIO, gbracket, gfinally )
 import GHC.Data.FastString
 import GHC.Data.Maybe           ( expectJust )
-import Name
+import GHC.Data.Name
 import GHC.Utils.Monad       ( allM, MonadIO )
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
@@ -67,7 +67,7 @@ import GHC.Packages
 import GHC.Data.Unique.Set
 import GHC.Utils
 import qualified GHC.LanguageExtensions as LangExt
-import NameEnv
+import GHC.Data.Name.Environment
 
 import Data.Either ( rights, partitionEithers )
 import qualified Data.Map as Map

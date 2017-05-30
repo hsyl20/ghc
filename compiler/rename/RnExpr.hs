@@ -39,8 +39,8 @@ import GHC.Config.Flags
 import PrelNames
 
 import BasicTypes
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import RdrName
 import GHC.Data.Unique.Set
 import Data.List

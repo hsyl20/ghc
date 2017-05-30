@@ -19,7 +19,7 @@ import StgCmmLayout     ( ArgRep(..) )
 import PprCore
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Name
+import GHC.Data.Name
 import GHC.Data.Unique
 import Id
 import CoreSyn

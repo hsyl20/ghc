@@ -10,7 +10,7 @@ module BlockId
 
 import CLabel
 import IdInfo
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply

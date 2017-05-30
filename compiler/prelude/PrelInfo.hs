@@ -56,8 +56,8 @@ import Avail
 import PrimOp
 import DataCon
 import Id
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import MkId
 import TysPrim
 import TysWiredIn

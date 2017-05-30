@@ -7,7 +7,7 @@ import GHC
 import GHC.Data.Graph.Directed          ( flattenSCCs )
 import GHC.Program.Driver.Phases ( isHaskellSrcFilename )
 import GHC.Types        ( msHsFilePath, isBootSummary )
-import Name             ( getOccString )
+import GHC.Data.Name             ( getOccString )
 --import GHC.Utils.Error         ( printBagOfErrors )
 import GHC.Utils.Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )

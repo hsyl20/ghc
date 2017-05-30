@@ -8,8 +8,8 @@ module PlaceHolder where
 
 import Type       ( Type )
 import GHC.Utils.Outputable
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import RdrName
 import GHC.Data.Var
 import Coercion

@@ -53,7 +53,7 @@ import GHC.Types
 import Class( Class )
 import MkId( mkDictFunId )
 import Id
-import Name
+import GHC.Data.Name
 import GHC.Data.Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )
 import DataCon
 import TyCon

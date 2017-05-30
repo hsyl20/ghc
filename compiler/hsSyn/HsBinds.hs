@@ -28,8 +28,8 @@ import PprCore ()
 import CoreSyn
 import TcEvidence
 import Type
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import BasicTypes
 import GHC.Utils.Outputable
 import SrcLoc

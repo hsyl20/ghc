@@ -59,8 +59,8 @@ import RepType
 import TcType           hiding( typeKind )
 import GHC.Data.Var
 import Id
-import Name             hiding ( varName )
-import NameSet
+import GHC.Data.Name             hiding ( varName )
+import GHC.Data.Name.Set
 import Avail
 import RdrName
 import GHC.Data.Var.Environment

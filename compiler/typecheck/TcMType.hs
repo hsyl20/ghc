@@ -103,12 +103,12 @@ import GHC.Data.Var
 import TcRnMonad        -- TcType, amongst others
 import TcEvidence
 import Id
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Set
 import TysWiredIn
 import TysPrim
 import GHC.Data.Var.Environment
-import NameEnv
+import GHC.Data.Name.Environment
 import PrelNames
 import GHC.Utils
 import GHC.Utils.Outputable

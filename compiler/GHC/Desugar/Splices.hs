@@ -37,10 +37,10 @@ import qualified OccName( isDataOcc, isVarOcc, isTcOcc )
 
 import Module
 import Id
-import Name hiding( isVarOcc, isTcOcc, varName, tcName )
+import GHC.Data.Name hiding( isVarOcc, isTcOcc, varName, tcName )
 import THNames
-import NameEnv
-import NameSet
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import TcType
 import TyCon
 import TysWiredIn

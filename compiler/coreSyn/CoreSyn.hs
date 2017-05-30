@@ -104,9 +104,9 @@ import GHC.Data.Var.Environment( InScopeSet )
 import GHC.Data.Var
 import Type
 import Coercion
-import Name
-import NameSet
-import NameEnv( NameEnv, emptyNameEnv )
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment( NameEnv, emptyNameEnv )
 import Literal
 import DataCon
 import Module

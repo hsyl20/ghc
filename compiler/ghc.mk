@@ -497,7 +497,7 @@ compiler_stage2_dll0_MODULES = \
 	HsUtils \
 	GHC.Types \
 	GHC.Utils.Monad.IOEnv \
-	NameCache \
+	GHC.Data.Name.Cache \
 	Id \
 	IdInfo \
 	IfaceSyn \
@@ -517,8 +517,8 @@ compiler_stage2_dll0_MODULES = \
 	Module \
 	GHC.Utils.Monad \
 	Name \
-	NameEnv \
-	NameSet \
+	GHC.Data.Name.Environment \
+	GHC.Data.Name.Set \
 	OccName \
 	OccurAnal \
 	OptCoercion \

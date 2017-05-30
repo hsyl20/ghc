@@ -17,7 +17,7 @@ module GHC.Interactive.Types (
 import GHCi.RemoteTypes
 import GHCi.Message (EvalExpr, ResumeContext)
 import Id
-import Name
+import GHC.Data.Name
 import Module
 import RdrName
 import Type

@@ -87,9 +87,9 @@ import ConLike
 import TyCon
 import CoAxiom
 import Class
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import GHC.Data.Var.Environment
 import GHC.Types
 import GHC.Config.Flags

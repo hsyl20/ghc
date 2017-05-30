@@ -26,9 +26,9 @@ import DataCon
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
-import NameSet
-import Name
-import NameEnv
+import GHC.Data.Name.Set
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import GHC.Data.FastString
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set

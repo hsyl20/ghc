@@ -17,8 +17,8 @@ module GHC.Desugar.Match.Expr (
 
 import HsSyn
 import Id
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import DataCon
 import ConLike
 import TysWiredIn

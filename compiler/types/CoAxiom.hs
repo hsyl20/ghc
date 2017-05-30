@@ -33,7 +33,7 @@ import {-# SOURCE #-} TyCoRep ( Type, pprType )
 import {-# SOURCE #-} TyCon ( TyCon )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Name
+import GHC.Data.Name
 import GHC.Data.Unique
 import GHC.Data.Var
 import GHC.Utils

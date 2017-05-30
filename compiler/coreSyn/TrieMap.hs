@@ -34,7 +34,7 @@ module TrieMap(
 import CoreSyn
 import Coercion
 import Literal
-import Name
+import GHC.Data.Name
 import Type
 import TyCoRep
 import GHC.Data.Var
@@ -45,7 +45,7 @@ import GHC.Data.FastString(FastString)
 import qualified Data.Map    as Map
 import qualified Data.IntMap as IntMap
 import GHC.Data.Var.Environment
-import NameEnv
+import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
 import Control.Monad( (>=>) )
 

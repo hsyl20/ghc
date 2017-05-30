@@ -38,8 +38,8 @@ import TysWiredIn hiding (sumTyCon)
 import Type
 import TyCon
 import DataCon
-import NameEnv
-import Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name
 import GHC.Utils.Outputable
 
 import Data.Array

@@ -40,9 +40,9 @@ import GHC.Types
 import TyCon
 import ConLike
 import DataCon
-import Name
-import NameEnv
-import NameSet hiding (unitFV)
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set hiding (unitFV)
 import RdrName ( mkVarUnqual )
 import Id
 import IdInfo

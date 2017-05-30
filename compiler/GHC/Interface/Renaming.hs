@@ -26,7 +26,7 @@ import FieldLabel
 import GHC.Data.Var
 import GHC.Utils.Error
 
-import Name
+import GHC.Data.Name
 import TcRnMonad
 import GHC.Utils
 import GHC.Utils.Fingerprint

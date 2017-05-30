@@ -49,7 +49,7 @@ import TysWiredIn
 import SrcLoc
 import GHC.Data.Maybe
 import GHC.Utils
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable
 import BasicTypes ( isGenerated, il_value, fl_value )
 import GHC.Data.FastString

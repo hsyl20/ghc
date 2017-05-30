@@ -33,7 +33,7 @@ import Id
 import BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.Unique
-import Name
+import GHC.Data.Name
 import GHC.Utils
 
 import Data.Bits

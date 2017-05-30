@@ -17,7 +17,7 @@ import Control.Monad ( when )
 
 import HsSyn
 import GHC.Types.Annotations
-import Name
+import GHC.Data.Name
 import TcRnMonad
 import SrcLoc
 import GHC.Utils.Outputable

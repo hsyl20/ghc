@@ -30,7 +30,7 @@ import DataCon
 import CostCentre       ( noCCS )
 import GHC.Data.Var.Environment
 import Module
-import Name             ( isExternalName, nameOccName )
+import GHC.Data.Name             ( isExternalName, nameOccName )
 import OccName          ( occNameFS )
 import BasicTypes       ( Arity )
 import TysWiredIn       ( unboxedUnitDataCon )

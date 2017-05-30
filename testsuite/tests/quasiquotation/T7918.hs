@@ -5,7 +5,7 @@ import GHC
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Utils.Monad
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Data.Var
 
 import Data.Data

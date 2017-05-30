@@ -132,7 +132,7 @@ import Module
 import OccName
 import RdrName
 import GHC.Data.Unique
-import Name
+import GHC.Data.Name
 import SrcLoc
 import GHC.Data.FastString
 import Config ( cIntegerLibraryType, IntegerLibrary(..) )

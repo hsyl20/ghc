@@ -25,7 +25,7 @@ import FamInst
 import Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )
 import IfaceEnv         ( newGlobalBinder )
-import Name      hiding ( varName )
+import GHC.Data.Name      hiding ( varName )
 import RdrName
 import BasicTypes
 import TysPrim

@@ -55,9 +55,9 @@ import Literal
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import OccurAnal        ( occurAnalyseExpr )
 import Demand
 import Module

@@ -24,7 +24,7 @@ import PatSyn
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import BasicTypes
-import Name
+import GHC.Data.Name
 import MkId
 import Class
 import TyCon

@@ -28,7 +28,7 @@ module GHC.Config.Hooks
 where
 
 import GHC.Config.Flags
-import Name
+import GHC.Data.Name
 import GHC.Program.Driver.Pipeline.Monad
 import GHC.Types
 import HsDecls

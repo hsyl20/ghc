@@ -74,9 +74,9 @@ import PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..),
                      OutputableBndrId )
 
 import Id ( Id )
-import Name( Name )
+import GHC.Data.Name( Name )
 import RdrName ( RdrName )
-import NameSet ( NameSet, emptyNameSet )
+import GHC.Data.Name.Set ( NameSet, emptyNameSet )
 import DataCon( HsSrcBang(..), HsImplBang(..),
                 SrcStrictness(..), SrcUnpackedness(..) )
 import TysPrim( funTyConName )

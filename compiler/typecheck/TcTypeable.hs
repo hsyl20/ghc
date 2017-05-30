@@ -27,7 +27,7 @@ import Type
 import Kind ( isTYPEApp )
 import TyCon
 import DataCon
-import Name ( Name, getOccName )
+import GHC.Data.Name ( Name, getOccName )
 import OccName
 import Module
 import HsSyn

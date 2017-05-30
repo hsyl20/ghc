@@ -24,7 +24,7 @@ import TcRnMonad
 import Inst
 import Id
 import GHC.Data.Var
-import Name
+import GHC.Data.Name
 import RdrName
 import TcEnv
 import TcMType

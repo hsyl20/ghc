@@ -95,7 +95,7 @@ import {-# SOURCE #-} TysWiredIn
   , mkPromotedListTy )
 
 import GHC.Data.Var              ( TyVar, TyVarBndr(TvBndr), mkTyVar )
-import Name
+import GHC.Data.Name
 import TyCon
 import SrcLoc
 import GHC.Data.Unique

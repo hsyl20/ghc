@@ -21,7 +21,7 @@ import TcType
 import Type
 import GHC.Data.Var
 import Module
-import Name
+import GHC.Data.Name
 import SrcLoc
 import MkId
 import Id

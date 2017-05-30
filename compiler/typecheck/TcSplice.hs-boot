@@ -3,7 +3,7 @@
 module TcSplice where
 import HsSyn    ( HsSplice, HsBracket, HsExpr, LHsExpr )
 import HsExpr   ( PendingRnSplice )
-import Name     ( Name )
+import GHC.Data.Name     ( Name )
 import TcRnTypes( TcM, TcId )
 import TcType   ( ExpRhoType )
 import GHC.Types.Annotations ( Annotation, CoreAnnTarget )

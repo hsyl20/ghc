@@ -24,10 +24,10 @@ import TcHsSyn( zonkTyVarBindersX, zonkTcTypeToTypes
               , zonkTcTypeToType, emptyZonkEnv )
 import TysPrim
 import TysWiredIn  ( runtimeRepTy )
-import Name
+import GHC.Data.Name
 import SrcLoc
 import PatSyn
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Utils.Panic
 import GHC.Utils.Outputable
 import GHC.Data.FastString

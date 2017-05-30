@@ -147,9 +147,9 @@ import {-# SOURCE #-} ConLike
 import TyCon
 import Class            ( Class, mkClass )
 import RdrName
-import Name
-import NameEnv          ( NameEnv, mkNameEnv, lookupNameEnv )
-import NameSet          ( NameSet, mkNameSet, elemNameSet )
+import GHC.Data.Name
+import GHC.Data.Name.Environment          ( NameEnv, mkNameEnv, lookupNameEnv )
+import GHC.Data.Name.Set          ( NameSet, mkNameSet, elemNameSet )
 import BasicTypes       ( Arity, Boxity(..), TupleSort(..), ConTagZ,
                           SourceText(..) )
 import ForeignCall

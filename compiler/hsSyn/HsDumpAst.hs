@@ -20,8 +20,8 @@ import Data.List
 import GHC.Data.Bag
 import BasicTypes
 import GHC.Data.FastString
-import NameSet
-import Name
+import GHC.Data.Name.Set
+import GHC.Data.Name
 import RdrName
 import DataCon
 import SrcLoc

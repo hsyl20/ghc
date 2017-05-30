@@ -25,8 +25,8 @@ import ConLike
 import Control.Monad
 import SrcLoc
 import GHC.Utils.Error
-import NameSet hiding (FreeVars)
-import Name
+import GHC.Data.Name.Set hiding (FreeVars)
+import GHC.Data.Name
 import GHC.Data.Bag
 import CostCentre
 import CoreSyn

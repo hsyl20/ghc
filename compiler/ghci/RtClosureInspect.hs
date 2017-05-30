@@ -45,7 +45,7 @@ import TcUnify
 import TcEnv
 
 import TyCon
-import Name
+import GHC.Data.Name
 import GHC.Utils
 import GHC.Data.Var.Set
 import BasicTypes       ( Boxity(..) )

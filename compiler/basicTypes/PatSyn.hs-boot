@@ -3,7 +3,7 @@ module PatSyn where
 import BasicTypes (Arity)
 import {-# SOURCE #-} TyCoRep (Type)
 import GHC.Data.Var (TyVar)
-import Name (Name)
+import GHC.Data.Name (Name)
 
 data PatSyn
 

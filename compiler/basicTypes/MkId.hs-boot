@@ -1,5 +1,5 @@
 module MkId where
-import Name( Name )
+import GHC.Data.Name( Name )
 import GHC.Data.Var( Id )
 import Class( Class )
 import {-# SOURCE #-} DataCon( DataCon )

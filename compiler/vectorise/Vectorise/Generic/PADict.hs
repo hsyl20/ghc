@@ -19,7 +19,7 @@ import CoAxiom
 import Type
 import Id
 import GHC.Data.Var
-import Name
+import GHC.Data.Name
 import GHC.Data.FastString
 
 

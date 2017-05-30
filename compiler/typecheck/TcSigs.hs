@@ -44,8 +44,8 @@ import PrelNames( mkUnboundName )
 import BasicTypes
 import GHC.Data.Bag( foldrBag )
 import Module( getModule )
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import GHC.Data.Var.Set
 import GHC.Utils.Outputable
 import SrcLoc

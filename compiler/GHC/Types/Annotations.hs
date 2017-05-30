@@ -19,7 +19,7 @@ module GHC.Types.Annotations (
 
 import GHC.Utils.Binary
 import Module           ( Module )
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Serialized
 import GHC.Data.Unique.FiniteMap

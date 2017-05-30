@@ -36,7 +36,7 @@ import Id
 import IdInfo
 import RepType
 import DataCon
-import Name
+import GHC.Data.Name
 import TyCon
 import Module
 import GHC.Utils.Outputable

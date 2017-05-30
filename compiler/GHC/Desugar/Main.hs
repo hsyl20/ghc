@@ -23,7 +23,7 @@ import TcRnTypes
 import TcRnMonad  ( finalSafeMode, fixSafeInstances )
 import TcRnDriver ( runTcInteractive )
 import Id
-import Name
+import GHC.Data.Name
 import Type
 import InstEnv
 import Class
@@ -44,8 +44,8 @@ import TysWiredIn  ( coercibleDataCon )
 import DataCon     ( dataConWrapId )
 import MkCore      ( mkCoreLet )
 import Module
-import NameSet
-import NameEnv
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import Rules
 import BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
 import CoreMonad        ( CoreToDo(..) )

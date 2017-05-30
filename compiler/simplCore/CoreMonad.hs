@@ -53,7 +53,7 @@ module CoreMonad (
     thNameToGhcName
   ) where
 
-import Name( Name )
+import GHC.Data.Name( Name )
 import TcRnMonad        ( initTcForLookup )
 import CoreSyn
 import GHC.Types
@@ -74,7 +74,7 @@ import GHC.Data.Maybe
 import GHC.Data.Unique.Supply
 import GHC.Data.Unique.FiniteMap       ( UniqFM, mapUFM, filterUFM )
 import GHC.Utils.Monad
-import NameCache
+import GHC.Data.Name.Cache
 import SrcLoc
 import Data.List
 import Data.Ord

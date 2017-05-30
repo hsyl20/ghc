@@ -51,7 +51,7 @@ import PrelNames
 import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Name
+import GHC.Data.Name
 import GHC.Data.Pair
 
 import GHC.Utils

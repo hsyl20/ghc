@@ -4,7 +4,7 @@
 -}
 
 {-# LANGUAGE CPP #-}
-module NameSet (
+module GHC.Data.Name.Set (
         -- * Names set type
         NameSet,
 
@@ -33,7 +33,7 @@ module NameSet (
 
 #include "HsVersions.h"
 
-import Name
+import GHC.Data.Name
 import GHC.Data.Unique.Set
 import Data.List (sortBy)
 

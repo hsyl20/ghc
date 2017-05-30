@@ -35,14 +35,14 @@ import GHC.Data.Maybe
 import Type
 import TyCoRep
 import TcMType
-import Name
+import GHC.Data.Name
 import GHC.Data.Pair
 import GHC.Utils.Panic
 import GHC.Data.Var.Set
 import GHC.Data.Bag( Bag, unionBags, unitBag )
 import Control.Monad
 import GHC.Data.Unique
-import NameEnv
+import GHC.Data.Name.Environment
 import Data.Set (Set)
 import qualified Data.Set as Set
 import Data.List

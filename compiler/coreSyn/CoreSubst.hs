@@ -52,7 +52,7 @@ import PrelNames
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import Id
-import Name     ( Name )
+import GHC.Data.Name     ( Name )
 import GHC.Data.Var
 import IdInfo
 import GHC.Data.Unique.Supply

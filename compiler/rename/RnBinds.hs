@@ -40,9 +40,9 @@ import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupAndShadowedNames, bindLocalNamesFV )
 import GHC.Config.Flags
 import Module
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import RdrName          ( RdrName, rdrNameOcc )
 import SrcLoc
 import GHC.Data.List.SetOps       ( findDupsEq )

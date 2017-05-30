@@ -33,7 +33,7 @@
 --  * Internal, if they name things in the module being compiled. Some internal
 --    Names are system names, if they are names manufactured by the compiler
 
-module Name (
+module GHC.Data.Name (
         -- * The main types
         Name,                                   -- Abstract
         BuiltInSyntax(..),

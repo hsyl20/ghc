@@ -11,7 +11,7 @@ import CoreSyn
 import TyCon
 import Type
 import TyCoRep
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 

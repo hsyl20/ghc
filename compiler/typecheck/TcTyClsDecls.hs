@@ -53,9 +53,9 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import Module
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Unify

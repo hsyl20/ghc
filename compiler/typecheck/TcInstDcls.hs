@@ -56,8 +56,8 @@ import GHC.Utils.Error
 import GHC.Data.FastString
 import Id
 import MkId
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import GHC.Utils.Outputable
 import SrcLoc
 import GHC.Utils

@@ -94,12 +94,12 @@ import HsBinds
 import HsTypes
 import HsDoc
 import TyCon
-import Name
+import GHC.Data.Name
 import BasicTypes
 import Coercion
 import ForeignCall
 import PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
-import NameSet
+import GHC.Data.Name.Set
 
 -- others:
 import InstEnv

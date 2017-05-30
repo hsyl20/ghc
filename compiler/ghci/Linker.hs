@@ -31,8 +31,8 @@ import GHC.Packages
 import GHC.Program.Driver.Phases
 import GHC.Finder
 import GHC.Types
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import Module
 import GHC.Data.List.SetOps
 import GHC.Config.Flags

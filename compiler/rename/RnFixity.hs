@@ -14,8 +14,8 @@ import HsSyn
 import RdrName
 import GHC.Types
 import TcRnMonad
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import Module
 import BasicTypes       ( Fixity(..), FixityDirection(..), minPrecedence,
                           defaultFixity, SourceText(..) )

@@ -25,7 +25,7 @@ import CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
                           stripTicksTopE, mkTicks )
 import Id
 import IdInfo
-import Name( localiseName )
+import GHC.Data.Name( localiseName )
 import BasicTypes
 import Module( Module )
 import Coercion

@@ -68,9 +68,9 @@ module RdrName (
 #include "HsVersions.h"
 
 import Module
-import Name
+import GHC.Data.Name
 import Avail
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Data.Maybe
 import SrcLoc
 import GHC.Data.FastString
@@ -80,7 +80,7 @@ import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Utils
-import NameEnv
+import GHC.Data.Name.Environment
 
 import Data.Data
 import Data.List( sortBy, foldl', nub )

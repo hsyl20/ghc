@@ -20,7 +20,7 @@ import BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform
-import Name
+import GHC.Data.Name
 import MkId
 import Id
 import ForeignCall

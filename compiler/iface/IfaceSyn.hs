@@ -48,9 +48,9 @@ import PprCore()            -- Printing DFunArgs
 import Demand
 import Class
 import FieldLabel
-import NameSet
+import GHC.Data.Name.Set
 import CoAxiom ( BranchIndex )
-import Name
+import GHC.Data.Name
 import CostCentre
 import Literal
 import ForeignCall

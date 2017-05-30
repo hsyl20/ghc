@@ -54,8 +54,8 @@ import PrelNames
 import TyCon               ( tyConName )
 import ConLike
 import Type                ( TyThing(..) )
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import RdrName
 import BasicTypes
 import GHC.Utils

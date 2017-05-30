@@ -35,7 +35,7 @@ import TyCoRep
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import NameSet
+import GHC.Data.Name.Set
 import Id
 import BasicTypes( isStrongLoopBreaker )
 import Literal

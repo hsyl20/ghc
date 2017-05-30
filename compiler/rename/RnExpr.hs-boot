@@ -1,7 +1,7 @@
 module RnExpr where
 import HsSyn
-import Name       ( Name )
-import NameSet    ( FreeVars )
+import GHC.Data.Name       ( Name )
+import GHC.Data.Name.Set    ( FreeVars )
 import RdrName    ( RdrName )
 import TcRnTypes
 import SrcLoc     ( Located )

@@ -135,7 +135,7 @@ import RepType
 import TysPrim
 import DataCon
 import Demand
-import Name
+import GHC.Data.Name
 import Module
 import Class
 import {-# SOURCE #-} PrimOp (PrimOp)

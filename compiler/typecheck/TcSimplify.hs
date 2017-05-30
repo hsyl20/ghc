@@ -25,7 +25,7 @@ import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
 import Inst
 import GHC.Data.List.SetOps
 import GHC.Data.Maybe
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable
 import PrelInfo
 import PrelNames

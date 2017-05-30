@@ -82,7 +82,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import Literal          ( litIsTrivial )
 import Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
-import Name             ( getOccName, mkSystemVarName )
+import GHC.Data.Name             ( getOccName, mkSystemVarName )
 import OccName          ( occNameString )
 import Type             ( Type, mkLamTypes, splitTyConApp_maybe )
 import BasicTypes       ( Arity, RecFlag(..), isRec )

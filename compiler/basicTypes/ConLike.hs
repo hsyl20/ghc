@@ -31,7 +31,7 @@ import PatSyn
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils
-import Name
+import GHC.Data.Name
 import BasicTypes
 import TyCoRep (Type, ThetaType)
 import GHC.Data.Var

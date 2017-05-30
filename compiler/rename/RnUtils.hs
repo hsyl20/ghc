@@ -31,9 +31,9 @@ import RdrName
 import GHC.Types
 import TcEnv
 import TcRnMonad
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import DataCon
 import SrcLoc
 import GHC.Utils.Outputable

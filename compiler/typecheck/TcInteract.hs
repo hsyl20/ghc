@@ -25,7 +25,7 @@ import TcMType (newMetaTyVars)
 
 import GHC.Data.Var
 import TcType
-import Name
+import GHC.Data.Name
 import RdrName ( lookupGRE_FieldLabel )
 import PrelNames ( knownNatClassName, knownSymbolClassName,
                    typeableClassName, coercibleTyConKey,

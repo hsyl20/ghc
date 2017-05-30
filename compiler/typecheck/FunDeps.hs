@@ -19,7 +19,7 @@ module FunDeps (
 
 #include "HsVersions.h"
 
-import Name
+import GHC.Data.Name
 import GHC.Data.Var
 import Class
 import Type

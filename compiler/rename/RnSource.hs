@@ -41,9 +41,9 @@ import PrelNames        ( applicativeClassName, pureAName, thenAName
                         , semigroupClassName, sappendName
                         , monoidClassName, mappendName
                         )
-import Name
-import NameSet
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import Avail
 import GHC.Utils.Outputable
 import GHC.Data.Bag

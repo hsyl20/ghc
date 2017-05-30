@@ -35,7 +35,7 @@ import TcType ( isFloatingTy )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Name
+import GHC.Data.Name
 import Id
 import IdInfo
 import PprCore

@@ -28,7 +28,7 @@ import MkIface ( tyThingToIfaceDecl )
 import Type ( tidyOpenType )
 import FamInstEnv( FamInst(..), FamFlavor(..) )
 import Type( Type, pprTypeApp, pprSigmaType )
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Environment( emptyTidyEnv )
 import GHC.Utils.Outputable
 

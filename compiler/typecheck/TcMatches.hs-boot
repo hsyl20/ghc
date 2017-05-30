@@ -1,7 +1,7 @@
 module TcMatches where
 import HsSyn    ( GRHSs, MatchGroup, LHsExpr )
 import TcEvidence( HsWrapper )
-import Name     ( Name )
+import GHC.Data.Name     ( Name )
 import TcType   ( ExpRhoType, TcRhoType )
 import TcRnTypes( TcM, TcId )
 import SrcLoc   ( Located )

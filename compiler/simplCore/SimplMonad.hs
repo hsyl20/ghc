@@ -20,7 +20,7 @@ module SimplMonad (
     ) where
 
 import GHC.Data.Var              ( Var, isTyVar, mkLocalVar )
-import Name             ( mkSystemVarName )
+import GHC.Data.Name             ( mkSystemVarName )
 import Id               ( Id, mkSysLocalOrCoVar )
 import IdInfo           ( IdDetails(..), vanillaIdInfo, setArityInfo )
 import Type             ( Type, mkLamTypes )

@@ -134,8 +134,8 @@ import Class
 import BasicTypes
 import GHC.Config.Flags
 import ForeignCall
-import Name
-import NameEnv
+import GHC.Data.Name
+import GHC.Data.Name.Environment
 import CoAxiom
 import PrelNames
 import GHC.Data.Maybe

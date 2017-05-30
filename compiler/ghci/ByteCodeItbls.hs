@@ -13,8 +13,8 @@ import ByteCodeTypes
 import GHCi
 import GHC.Config.Flags
 import GHC.Types
-import Name             ( Name, getName )
-import NameEnv
+import GHC.Data.Name             ( Name, getName )
+import GHC.Data.Name.Environment
 import DataCon          ( DataCon, dataConRepArgTys, dataConIdentity )
 import TyCon            ( TyCon, tyConFamilySize, isDataTyCon, tyConDataCons )
 import RepType

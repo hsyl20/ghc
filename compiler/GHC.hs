@@ -294,7 +294,7 @@ import GHC.Monad
 import TcRnMonad        ( finalSafeMode, fixSafeInstances )
 import TcRnTypes
 import GHC.Packages
-import NameSet
+import GHC.Data.Name.Set
 import RdrName
 import HsSyn
 import Type     hiding( typeKind )
@@ -304,7 +304,7 @@ import TysPrim          ( alphaTyVars )
 import TyCon
 import Class
 import DataCon
-import Name             hiding ( varName )
+import GHC.Data.Name             hiding ( varName )
 import Avail
 import InstEnv
 import FamInstEnv ( FamInst )

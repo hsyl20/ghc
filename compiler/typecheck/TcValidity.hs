@@ -45,7 +45,7 @@ import InstEnv     ( InstMatch, lookupInstEnv )
 import FamInstEnv  ( isDominatedBy, injectiveBranches,
                      InjectivityCheckResult(..) )
 import FamInst     ( makeInjectivityErrors )
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Unique.Set

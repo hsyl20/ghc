@@ -3,8 +3,8 @@ module RnSplice where
 import HsSyn
 import TcRnMonad
 import RdrName
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import Kind
 
 

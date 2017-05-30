@@ -64,7 +64,7 @@ where
 import GHC.PackageDb
 import GHC.Packages.PackageConfig
 import GHC.Config.Flags
-import Name             ( Name, nameModule_maybe )
+import GHC.Data.Name             ( Name, nameModule_maybe )
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set

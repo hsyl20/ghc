@@ -26,13 +26,13 @@ import TcRnMonad
 import GHC.Types
 import Type
 import GHC.Data.Var
-import Name
+import GHC.Data.Name
 import Avail
 import Module
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import IfaceType
-import NameCache
+import GHC.Data.Name.Cache
 import GHC.Data.Unique.Supply
 import SrcLoc
 

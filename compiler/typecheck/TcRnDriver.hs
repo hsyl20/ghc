@@ -102,9 +102,9 @@ import Id
 import GHC.Data.Var.Environment
 import Module
 import GHC.Data.Unique.FiniteMap
-import Name
-import NameEnv
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Environment
+import GHC.Data.Name.Set
 import Avail
 import TyCon
 import SrcLoc

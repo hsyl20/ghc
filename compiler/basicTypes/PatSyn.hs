@@ -25,7 +25,7 @@ module PatSyn (
 #include "HsVersions.h"
 
 import Type
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils

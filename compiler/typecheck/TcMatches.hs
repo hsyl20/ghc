@@ -29,7 +29,7 @@ import TcMType
 import TcType
 import TcBinds
 import TcUnify
-import Name
+import GHC.Data.Name
 import TysWiredIn
 import Id
 import TyCon

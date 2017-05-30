@@ -48,9 +48,9 @@ import IdInfo           ( RuleInfo( RuleInfo ) )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Name             ( Name, NamedThing(..), nameIsLocalOrFrom )
-import NameSet
-import NameEnv
+import GHC.Data.Name             ( Name, NamedThing(..), nameIsLocalOrFrom )
+import GHC.Data.Name.Set
+import GHC.Data.Name.Environment
 import GHC.Data.Unique.FiniteMap
 import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )

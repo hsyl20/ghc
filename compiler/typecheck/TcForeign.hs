@@ -46,7 +46,7 @@ import Type
 import ForeignCall
 import GHC.Utils.Error
 import Id
-import Name
+import GHC.Data.Name
 import RdrName
 import DataCon
 import TyCon

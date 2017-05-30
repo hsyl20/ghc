@@ -16,7 +16,7 @@ import GHC.Config.Flags
 import BasicTypes( DefMethSpec(..) )
 import SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Data.Var
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Utils
 import Control.Monad

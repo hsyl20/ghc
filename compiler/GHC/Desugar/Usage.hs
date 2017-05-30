@@ -10,8 +10,8 @@ module GHC.Desugar.Usage (
 import GHC.Config.Flags
 import GHC.Types
 import TcRnTypes
-import Name
-import NameSet
+import GHC.Data.Name
+import GHC.Data.Name.Set
 import Module
 import GHC.Utils.Outputable
 import GHC.Utils

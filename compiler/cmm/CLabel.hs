@@ -119,7 +119,7 @@ import IdInfo
 import BasicTypes
 import GHC.Packages
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Data.Unique
 import PrimOp
 import Config

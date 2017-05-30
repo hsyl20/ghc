@@ -141,7 +141,7 @@ import Class
 import TyCon
 import TcErrors   ( solverDepthErrorTcS )
 
-import Name
+import GHC.Data.Name
 import RdrName ( GlobalRdrEnv, GlobalRdrElt )
 import qualified RnEnv as TcM
 import GHC.Data.Var

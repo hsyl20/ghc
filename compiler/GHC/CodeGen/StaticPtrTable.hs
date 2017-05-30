@@ -137,7 +137,7 @@ import GHC.Types
 import Id
 import MkCore (mkStringExprFSWith)
 import Module
-import Name
+import GHC.Data.Name
 import GHC.Utils.Outputable as Outputable
 import GHC.Platform
 import PrelNames

@@ -63,10 +63,10 @@ module CoreFVs (
 import CoreSyn
 import Id
 import IdInfo
-import NameSet
+import GHC.Data.Name.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique (Uniquable (..))
-import Name
+import GHC.Data.Name
 import GHC.Data.Var.Set
 import GHC.Data.Var
 import Type

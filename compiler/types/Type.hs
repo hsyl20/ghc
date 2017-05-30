@@ -237,7 +237,7 @@ import GHC.Data.Graph.Directed
 import GHC.Data.Unique ( nonDetCmpUnique )
 import SrcLoc  ( SrcSpan )
 import OccName ( OccName )
-import Name    ( mkInternalName )
+import GHC.Data.Name    ( mkInternalName )
 
 import GHC.Data.Maybe           ( orElse )
 import Data.Maybe       ( isJust, mapMaybe )
