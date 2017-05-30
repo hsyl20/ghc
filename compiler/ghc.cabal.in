@@ -480,7 +480,7 @@ Library
         GHC.Data.Bag
         Binary
         GHC.Data.Bool.Formula
-        BufWrite
+        GHC.Utils.Handle.BufferedWrite
         GHC.Data.Graph.Directed
         GHC.Data.Char.Encoding
         FastFunctions

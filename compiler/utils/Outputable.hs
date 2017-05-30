@@ -92,7 +92,7 @@ import {-# SOURCE #-}   GHC.Config.Flags
 import {-# SOURCE #-}   Module( UnitId, Module, ModuleName, moduleName )
 import {-# SOURCE #-}   OccName( OccName )
 
-import BufWrite (BufHandle)
+import GHC.Utils.Handle.BufferedWrite (BufHandle)
 import GHC.Data.FastString
 import qualified Pretty
 import Util

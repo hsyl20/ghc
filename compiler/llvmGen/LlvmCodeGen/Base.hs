@@ -49,7 +49,7 @@ import Outputable as Outp
 import Platform
 import GHC.Data.Unique.FiniteMap
 import Unique
-import BufWrite   ( BufHandle )
+import GHC.Utils.Handle.BufferedWrite   ( BufHandle )
 import GHC.Data.Unique.Set
 import UniqSupply
 import GHC.Utils.Error

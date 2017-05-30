@@ -442,7 +442,7 @@ compiler_stage2_dll0_MODULES = \
 	Binary \
 	BinFingerprint \
 	GHC.Data.Bool.Formula \
-	BufWrite \
+	GHC.Utils.Handle.BufferedWrite \
 	ByteCodeTypes \
 	Class \
 	GHC.Program.CmdLineParser \

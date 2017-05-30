@@ -22,7 +22,7 @@ import CmmUtils
 import Hoopl
 import PprCmm
 
-import BufWrite
+import GHC.Utils.Handle.BufferedWrite
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString

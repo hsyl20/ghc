@@ -111,7 +111,7 @@ module Pretty (
 
   ) where
 
-import BufWrite
+import GHC.Utils.Handle.BufferedWrite
 import GHC.Data.FastString
 import Panic
 import System.IO
