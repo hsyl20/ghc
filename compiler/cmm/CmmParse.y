@@ -246,7 +246,7 @@ import Panic
 import GHC.Config.Constants
 import Outputable
 import BasicTypes
-import Bag              ( emptyBag, unitBag )
+import GHC.Utils.Data.Bag              ( emptyBag, unitBag )
 import Var
 
 import Control.Monad

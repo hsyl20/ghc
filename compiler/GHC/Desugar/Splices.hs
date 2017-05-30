@@ -51,7 +51,7 @@ import SrcLoc
 import Unique
 import BasicTypes
 import Outputable
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Config.Flags
 import FastString
 import ForeignCall

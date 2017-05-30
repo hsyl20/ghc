@@ -31,7 +31,7 @@ import MkId             ( voidArgId, voidPrimId )
 import Maybes           ( catMaybes, isJust )
 import BasicTypes
 import GHC.Types
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Config.Flags
 import Util
 import Outputable

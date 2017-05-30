@@ -172,7 +172,7 @@ import GHC.Utils.Error
 import UniqFM
 import UniqSupply
 import BasicTypes
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Config.Flags
 import Outputable
 import ListSetOps

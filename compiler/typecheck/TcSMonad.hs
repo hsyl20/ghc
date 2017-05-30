@@ -148,7 +148,7 @@ import Var
 import VarEnv
 import VarSet
 import Outputable
-import Bag
+import GHC.Utils.Data.Bag
 import UniqSupply
 import Util
 import TcRnTypes

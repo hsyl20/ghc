@@ -30,7 +30,7 @@ import RdrName
 
 import Pair
 import Util
-import Bag
+import GHC.Utils.Data.Bag
 import MonadUtils
 import Control.Monad
 import Data.Maybe ( isJust )

@@ -44,7 +44,7 @@ import TysWiredIn
 import BasicTypes
 import PrelNames
 import Outputable
-import Bag
+import GHC.Utils.Data.Bag
 import VarSet
 import SrcLoc
 import ListSetOps( assocMaybe )

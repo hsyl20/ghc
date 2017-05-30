@@ -58,7 +58,7 @@ import TyCon
 import Outputable
 import Type
 import SrcLoc
-import Bag -- collect ev vars from pats
+import GHC.Utils.Data.Bag -- collect ev vars from pats
 import GHC.Config.Flags( gopt, GeneralFlag(..) )
 import Maybes
 -- libraries:

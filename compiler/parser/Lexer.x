@@ -100,7 +100,7 @@ import Data.Map (Map)
 import qualified Data.Map as Map
 
 -- compiler/utils
-import Bag
+import GHC.Utils.Data.Bag
 import Outputable
 import StringBuffer
 import FastString

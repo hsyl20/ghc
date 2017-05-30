@@ -32,7 +32,7 @@ import VarEnv
 import UniqFM
 import Outputable
 import Data.List
-import Bag
+import GHC.Utils.Data.Bag
 import Unique
 
 import qualified Data.IntSet as S

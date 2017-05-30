@@ -437,7 +437,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Types.Annotations \
 	ApiAnnotation \
 	Avail \
-	Bag \
+	GHC.Utils.Data.Bag \
 	BasicTypes \
 	Binary \
 	BinFingerprint \

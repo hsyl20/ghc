@@ -24,7 +24,7 @@ import Id               ( Id, idArity, idType, isBottomingId,
 import BasicTypes       ( TopLevelFlag(..), isTopLevel )
 import SetLevels
 import UniqSupply       ( UniqSupply )
-import Bag
+import GHC.Utils.Data.Bag
 import Util
 import Maybes
 import Outputable

@@ -56,7 +56,7 @@ module GHC.Utils.Error (
 
 #include "HsVersions.h"
 
-import Bag
+import GHC.Utils.Data.Bag
 import Exception
 import Outputable
 import Panic

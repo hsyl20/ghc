@@ -39,7 +39,7 @@ import GHC.Types (CompleteMatch(..))
 import GHC.Desugar.Monad
 import TcSimplify    (tcCheckSatisfiability)
 import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Utils.Error
 import Var           (EvVar)
 import Type

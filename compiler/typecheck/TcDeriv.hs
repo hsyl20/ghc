@@ -56,7 +56,7 @@ import SrcLoc
 import Util
 import Outputable
 import FastString
-import Bag
+import GHC.Utils.Data.Bag
 import Pair
 import FV (fvVarList, unionFV, mkFVs)
 import qualified GHC.LanguageExtensions as LangExt

@@ -21,7 +21,7 @@ module TcDerivUtils (
         newDerivClsInst, extendLocalInstEnv
     ) where
 
-import Bag
+import GHC.Utils.Data.Bag
 import BasicTypes
 import Class
 import DataCon

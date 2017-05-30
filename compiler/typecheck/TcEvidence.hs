@@ -55,7 +55,7 @@ import Name
 import Pair
 
 import Util
-import Bag
+import GHC.Utils.Data.Bag
 import Digraph
 import qualified Data.Data as Data
 import Outputable

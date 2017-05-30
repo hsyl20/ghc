@@ -8,7 +8,7 @@
 
 module GHC.Syntax.Stats ( ppSourceStats ) where
 
-import Bag
+import GHC.Utils.Data.Bag
 import HsSyn
 import Outputable
 import RdrName

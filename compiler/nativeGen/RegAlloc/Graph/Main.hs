@@ -16,7 +16,7 @@ import TargetReg
 import RegClass
 import Reg
 
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Config.Flags
 import Outputable
 import Platform

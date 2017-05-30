@@ -46,7 +46,7 @@ import NameSet
 import NameEnv
 import Avail
 import Outputable
-import Bag
+import GHC.Utils.Data.Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import FastString
 import SrcLoc

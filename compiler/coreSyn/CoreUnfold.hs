@@ -59,7 +59,7 @@ import BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
 import Type
 import PrelNames
 import TysPrim          ( realWorldStatePrimTy )
-import Bag
+import GHC.Utils.Data.Bag
 import Util
 import Outputable
 import ForeignCall

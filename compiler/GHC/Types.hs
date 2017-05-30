@@ -191,7 +191,7 @@ import FastString
 import StringBuffer     ( StringBuffer )
 import Fingerprint
 import MonadUtils
-import Bag
+import GHC.Utils.Data.Bag
 import Binary
 import GHC.Utils.Error
 import NameCache

@@ -60,7 +60,7 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 import BasicTypes
 import Name   ( Name )
-import Bag
+import GHC.Utils.Data.Bag
 import Util
 import Pair( pFst )
 import qualified GHC.LanguageExtensions as LangExt

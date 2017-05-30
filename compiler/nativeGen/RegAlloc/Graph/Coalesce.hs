@@ -8,7 +8,7 @@ import Instruction
 import Reg
 
 import Cmm
-import Bag
+import GHC.Utils.Data.Bag
 import Digraph
 import UniqFM
 import UniqSet

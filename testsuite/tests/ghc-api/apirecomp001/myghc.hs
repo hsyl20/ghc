@@ -13,7 +13,7 @@ import GHC
 import GHC.Config.Flags
 import MonadUtils ( MonadIO(..) )
 import BasicTypes ( failed )
-import Bag        ( bagToList )
+import GHC.Utils.Data.Bag        ( bagToList )
 import System.Environment
 import Control.Monad
 import System.IO

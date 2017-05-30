@@ -50,7 +50,7 @@ import Outputable
 
 import TcRnTypes
 import TcSMonad
-import Bag
+import GHC.Utils.Data.Bag
 import MonadUtils ( concatMapM )
 
 import Data.List( partition, foldl', deleteFirstsBy )

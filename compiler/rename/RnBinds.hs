@@ -48,7 +48,7 @@ import SrcLoc
 import ListSetOps       ( findDupsEq )
 import BasicTypes       ( RecFlag(..), LexicalFixity(..) )
 import Digraph          ( SCC(..) )
-import Bag
+import GHC.Utils.Data.Bag
 import Util
 import Outputable
 import FastString

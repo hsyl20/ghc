@@ -55,7 +55,7 @@ import Unique ( mkBuiltinUnique )
 import Outputable
 import Util
 import Maybes
-import Bag
+import GHC.Utils.Data.Bag
 import FastString
 import FV
 import Module

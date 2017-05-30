@@ -56,7 +56,7 @@ import GHC.Config.Flags
 import Outputable
 import Platform
 import SrcLoc
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt
 

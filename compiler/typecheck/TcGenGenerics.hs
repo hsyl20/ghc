@@ -36,7 +36,7 @@ import TcRnMonad
 import GHC.Types
 import GHC.Utils.Error( Validity(..), andValid )
 import SrcLoc
-import Bag
+import GHC.Utils.Data.Bag
 import VarEnv
 import VarSet (elemVarSet)
 import Outputable

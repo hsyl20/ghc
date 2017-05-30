@@ -17,7 +17,7 @@ module TcSimplify(
 
 #include "HsVersions.h"
 
-import Bag
+import GHC.Utils.Data.Bag
 import Class         ( Class, classKey, classTyCon )
 import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , WarnReason ( Reason )

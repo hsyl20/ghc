@@ -39,7 +39,7 @@ import Name
 import Pair
 import Panic
 import VarSet
-import Bag( Bag, unionBags, unitBag )
+import GHC.Utils.Data.Bag( Bag, unionBags, unitBag )
 import Control.Monad
 import Unique
 import NameEnv

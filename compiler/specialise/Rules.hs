@@ -58,7 +58,7 @@ import GHC.Config.Flags         ( DynFlags )
 import Outputable
 import FastString
 import Maybes
-import Bag
+import GHC.Utils.Data.Bag
 import Util
 import Data.List
 import Data.Ord

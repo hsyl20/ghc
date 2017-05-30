@@ -47,7 +47,7 @@ import TcIface          ( typecheckIface )
 import TcRnMonad        ( initIfaceCheck )
 import GHC.Program.Main
 
-import Bag              ( listToBag )
+import GHC.Utils.Data.Bag              ( listToBag )
 import BasicTypes
 import Digraph
 import Exception        ( tryIO, gbracket, gfinally )

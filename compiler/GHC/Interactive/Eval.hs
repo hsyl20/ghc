@@ -79,7 +79,7 @@ import SrcLoc
 import RtClosureInspect
 import Outputable
 import FastString
-import Bag
+import GHC.Utils.Data.Bag
 import qualified Lexer (P (..), ParseResult(..), unP, mkPState)
 import qualified Parser (parseStmt, parseModule, parseDeclaration, parseImport)
 

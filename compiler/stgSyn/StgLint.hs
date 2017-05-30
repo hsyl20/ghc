@@ -10,7 +10,7 @@ module StgLint ( lintStgTopBindings ) where
 
 import StgSyn
 
-import Bag              ( Bag, emptyBag, isEmptyBag, snocBag, bagToList )
+import GHC.Utils.Data.Bag              ( Bag, emptyBag, isEmptyBag, snocBag, bagToList )
 import Id               ( Id, idType, isLocalId )
 import VarSet
 import DataCon

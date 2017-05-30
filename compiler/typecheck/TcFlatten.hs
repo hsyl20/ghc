@@ -24,7 +24,7 @@ import TcSMonad as TcS
 import BasicTypes( SwapFlag(..) )
 
 import Util
-import Bag
+import GHC.Utils.Data.Bag
 import Pair
 import Control.Monad
 import MonadUtils ( zipWithAndUnzipM )

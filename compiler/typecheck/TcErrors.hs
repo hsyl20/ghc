@@ -40,7 +40,7 @@ import Var
 import VarSet
 import VarEnv
 import NameSet
-import Bag
+import GHC.Utils.Data.Bag
 import GHC.Utils.Error         ( ErrMsg, errDoc, pprLocErrMsg )
 import BasicTypes
 import ConLike          ( ConLike(..), conLikeWrapId_maybe )

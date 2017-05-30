@@ -65,7 +65,7 @@ import GHC.Finder
 import PrelNames
 import RdrName
 import GHC.Types
-import Bag
+import GHC.Utils.Data.Bag
 import DataCon
 import ConLike
 import TyCon

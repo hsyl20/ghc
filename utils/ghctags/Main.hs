@@ -11,7 +11,7 @@ import Name             ( getOccString )
 --import GHC.Utils.Error         ( printBagOfErrors )
 import Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
-import Bag
+import GHC.Utils.Data.Bag
 import Exception
 import FastString
 import MonadUtils       ( liftIO )

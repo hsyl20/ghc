@@ -51,7 +51,7 @@ import Platform
 import UniqSet
 import UniqFM
 import UniqSupply
-import Bag
+import GHC.Utils.Data.Bag
 import State
 
 import Data.List

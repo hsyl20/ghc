@@ -26,7 +26,7 @@ import CoreFVs
 import CoreUtils
 import CoreStats   ( coreBindsStats )
 import CoreMonad
-import Bag
+import GHC.Utils.Data.Bag
 import Literal
 import DataCon
 import TysWiredIn

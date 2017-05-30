@@ -72,7 +72,7 @@ import Outputable
 import Lexeme
 import FastString
 import Pair
-import Bag
+import GHC.Utils.Data.Bag
 
 import Data.List  ( partition, intersperse )
 

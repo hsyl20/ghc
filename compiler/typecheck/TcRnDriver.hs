@@ -123,7 +123,7 @@ import Data.Ord
 import FastString
 import Maybes
 import Util
-import Bag
+import GHC.Utils.Data.Bag
 import Inst (tcGetInsts)
 import qualified GHC.LanguageExtensions as LangExt
 import Data.Data ( Data )

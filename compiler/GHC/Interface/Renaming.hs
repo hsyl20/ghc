@@ -38,7 +38,7 @@ import GHC.Config.Flags
 
 import qualified Data.Traversable as T
 
-import Bag
+import GHC.Utils.Data.Bag
 import Data.IORef
 import NameShape
 import IfaceEnv

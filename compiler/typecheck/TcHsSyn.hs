@@ -63,7 +63,7 @@ import Literal
 import BasicTypes
 import Maybes
 import SrcLoc
-import Bag
+import GHC.Utils.Data.Bag
 import Outputable
 import Util
 import UniqFM

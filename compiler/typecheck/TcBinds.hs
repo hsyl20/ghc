@@ -49,7 +49,7 @@ import Name
 import NameSet
 import NameEnv
 import SrcLoc
-import Bag
+import GHC.Utils.Data.Bag
 import ListSetOps
 import GHC.Utils.Error
 import Digraph

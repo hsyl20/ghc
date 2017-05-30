@@ -477,7 +477,7 @@ Library
         Type
         TyCoRep
         Unify
-        Bag
+        GHC.Utils.Data.Bag
         Binary
         BooleanFormula
         BufWrite
