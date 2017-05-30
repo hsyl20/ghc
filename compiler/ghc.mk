@@ -474,11 +474,11 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Utils.Exception \
 	FamInstEnv \
 	GHC.Utils.IO.Unsafe \
-	FastMutInt \
+	GHC.Data.FastMutableInt \
 	GHC.Data.FastString \
 	GHC.Data.FastString.Environment \
 	FieldLabel \
-	Fingerprint \
+	GHC.Utils.Fingerprint \
 	GHC.Data.FiniteMap \
 	ForeignCall \
 	GHC.Data.Var.Free \

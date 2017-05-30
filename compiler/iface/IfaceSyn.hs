@@ -59,7 +59,7 @@ import BasicTypes
 import GHC.Utils.Outputable as Outputable
 import Module
 import SrcLoc
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import GHC.Data.Bool.Formula ( BooleanFormula, pprBooleanFormula, isTrue )
 import Var( TyVarBndr(..) )

@@ -42,7 +42,7 @@ import RdrName
 import BasicTypes
 import DataCon
 import Name
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Data.Char.Encoding
 
 import GHC.Config.Flags

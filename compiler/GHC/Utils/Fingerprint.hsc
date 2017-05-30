@@ -10,7 +10,7 @@
 --
 -- ----------------------------------------------------------------------------
 
-module Fingerprint (
+module GHC.Utils.Fingerprint (
         readHexFingerprint,
         fingerprintByteString,
         -- * Re-exported from GHC.Fingerprint

@@ -17,7 +17,7 @@ import GHC.Utils.Outputable
 import Util
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Data.Maybe
 
 import Data.List

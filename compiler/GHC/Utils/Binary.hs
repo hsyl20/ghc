@@ -63,8 +63,8 @@ import {-# SOURCE #-} Name (Name)
 import GHC.Data.FastString
 import Panic
 import GHC.Data.Unique.FiniteMap
-import FastMutInt
-import Fingerprint
+import GHC.Data.FastMutableInt
+import GHC.Utils.Fingerprint
 import BasicTypes
 import SrcLoc
 

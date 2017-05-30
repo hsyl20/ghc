@@ -7,7 +7,7 @@
 --
 -- Unboxed mutable Ints
 
-module FastMutInt(
+module GHC.Data.FastMutableInt(
         FastMutInt, newFastMutInt,
         readFastMutInt, writeFastMutInt,
 

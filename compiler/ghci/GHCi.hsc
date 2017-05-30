@@ -53,7 +53,7 @@ import GHCi.Run
 import GHCi.RemoteTypes
 import GHCi.ResolvedBCO
 import GHCi.BreakArray (BreakArray)
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Types
 import GHC.Data.Unique.FiniteMap
 import Panic

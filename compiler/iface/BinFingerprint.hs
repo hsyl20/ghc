@@ -10,7 +10,7 @@ module BinFingerprint
 
 #include "HsVersions.h"
 
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import Name
 import Panic

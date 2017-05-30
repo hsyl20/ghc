@@ -178,7 +178,7 @@ import GHC.Utils.Outputable
 import ListSetOps
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
-import Fingerprint
+import GHC.Utils.Fingerprint
 import Util
 import PrelNames ( isUnboundName )
 

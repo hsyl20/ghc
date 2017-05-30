@@ -24,7 +24,7 @@ module GHC.Utils.Handle.BufferedWrite (
   ) where
 
 import GHC.Data.FastString
-import FastMutInt
+import GHC.Data.FastMutableInt
 
 import Control.Monad    ( when )
 import Data.ByteString (ByteString)

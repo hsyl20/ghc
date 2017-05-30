@@ -29,7 +29,7 @@ import GHC.Utils.Error
 import Name
 import TcRnMonad
 import Util
-import Fingerprint
+import GHC.Utils.Fingerprint
 import BasicTypes
 
 -- a bit vexing

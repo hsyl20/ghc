@@ -12,7 +12,7 @@ import GHC.Config.Flags
 import GHC.Types
 import Module
 import Name
-import Fingerprint
+import GHC.Utils.Fingerprint
 import BinFingerprint
 -- import GHC.Utils.Outputable
 

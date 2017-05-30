@@ -102,7 +102,7 @@ import Util             hiding ( eqListBy )
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Utils.Binary
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Utils.Exception
 import GHC.Data.Unique.Set
 import GHC.Packages

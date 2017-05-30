@@ -69,7 +69,7 @@ import BinIface
 import Panic
 import Util
 import GHC.Data.FastString
-import Fingerprint
+import GHC.Utils.Fingerprint
 import GHC.Config.Hooks
 import FieldLabel
 import GHC.Interface.Renaming

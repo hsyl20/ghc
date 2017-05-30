@@ -484,10 +484,10 @@ Library
         GHC.Data.Graph.Directed
         GHC.Data.Char.Encoding
         GHC.Utils.IO.Unsafe
-        FastMutInt
+        GHC.Data.FastMutableInt
         GHC.Data.FastString
         GHC.Data.FastString.Environment
-        Fingerprint
+        GHC.Utils.Fingerprint
         GHC.Data.FiniteMap
         GHC.Data.Var.Free
         GHC.Data.Graph.Base

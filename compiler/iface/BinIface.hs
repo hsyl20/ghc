@@ -33,7 +33,7 @@ import Panic
 import GHC.Utils.Binary as Binary
 import SrcLoc
 import GHC.Utils.Error
-import FastMutInt
+import GHC.Data.FastMutableInt
 import Unique
 import GHC.Utils.Outputable
 import NameCache

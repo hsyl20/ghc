@@ -134,7 +134,7 @@ import CmmInfo
 import GHC.CodeGen.CodeOutput
 import InstEnv
 import FamInstEnv
-import Fingerprint      ( Fingerprint )
+import GHC.Utils.Fingerprint      ( Fingerprint )
 import GHC.Config.Hooks
 import TcEnv
 
