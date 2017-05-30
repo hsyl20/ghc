@@ -22,7 +22,7 @@
 --    (<http://www.cs.rutgers.edu/~ccshan/logicprog/ListT-icfp2005.pdf>).
 -------------------------------------------------------------------------
 
-module ListT (
+module GHC.Utils.Monad.ListT (
     ListT(..),
     runListT,
     select,

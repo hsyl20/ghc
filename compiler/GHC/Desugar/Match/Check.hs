@@ -53,7 +53,7 @@ import Coercion
 import TcEvidence
 import GHC.Utils.Monad.IOEnv
 
-import ListT (ListT(..), fold, select)
+import GHC.Utils.Monad.ListT (ListT(..), fold, select)
 
 {-
 This module checks pattern matches for:
