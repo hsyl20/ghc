@@ -31,7 +31,7 @@ import ForeignCall
 import GHC.Utils.Outputable
 import SMRep
 import CoreSyn (Tickish)
-import qualified Unique as U
+import qualified GHC.Data.Unique as U
 
 import Compiler.Hoopl
 import Data.Maybe

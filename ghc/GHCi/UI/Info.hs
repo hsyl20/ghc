@@ -15,33 +15,33 @@ module GHCi.UI.Info
     , getModInfo
     ) where
 
-import           Control.Exception
-import           Control.Monad
-import           Control.Monad.Trans.Class
-import           Control.Monad.Trans.Except
-import           Control.Monad.Trans.Maybe
-import           Data.Data
-import           Data.Function
-import           Data.List
-import           Data.Map.Strict   (Map)
+import Control.Exception
+import Control.Monad
+import Control.Monad.Trans.Class
+import Control.Monad.Trans.Except
+import Control.Monad.Trans.Maybe
+import Data.Data
+import Data.Function
+import Data.List
+import Data.Map.Strict   (Map)
 import qualified Data.Map.Strict   as M
-import           Data.Maybe
-import           Data.Time
-import           Prelude           hiding (mod)
-import           System.Directory
+import Data.Maybe
+import Data.Time
+import Prelude           hiding (mod)
+import System.Directory
 
 import qualified CoreUtils
-import           GHC.Desugar.Main
-import           GHC.Config.Flags (HasDynFlags(..))
-import           GHC.Data.FastString
-import           GHC
-import           GHC.Monad
-import           Name
-import           NameSet
-import           Outputable
-import           SrcLoc
-import           TcHsSyn
-import           Var
+import GHC.Desugar.Main
+import GHC.Config.Flags (HasDynFlags(..))
+import GHC.Data.FastString
+import GHC
+import GHC.Monad
+import Name
+import NameSet
+import GHC.Utils.Outputable
+import SrcLoc
+import TcHsSyn
+import Var
 
 -- | Info about a module. This information is generated every time a
 -- module is loaded.

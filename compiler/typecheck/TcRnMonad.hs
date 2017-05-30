@@ -129,7 +129,7 @@ module TcRnMonad(
 
   -- * Types etc.
   module TcRnTypes,
-  module IOEnv
+  module GHC.Utils.Monad.IOEnv
   ) where
 
 #include "HsVersions.h"

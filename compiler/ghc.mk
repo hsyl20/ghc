@@ -530,7 +530,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Utils.Panic \
 	PatSyn \
 	GHC.Program.Driver.Pipeline.Monad \
-	Platform \
+	GHC.Platform \
 	GHC.Config.Platform.Constants \
 	GHC.Utils.PrettyPrint.Colour \
 	PprCore \
@@ -559,8 +559,8 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Unique.FiniteMap \
 	GHC.Data.Unique.Set \
 	GHC.Data.Unique.Supply \
-	Unique \
-	Util \
+	GHC.Data.Unique \
+	GHC.Utils \
 	Var \
 	VarEnv \
 	VarSet
@@ -660,7 +660,7 @@ $(foreach way,$(compiler_stage3_WAYS),\
 compiler/prelude/PrimOp_HC_OPTS  += -fforce-recomp
 
 ifeq "$(DYNAMIC_GHC_PROGRAMS)" "YES"
-compiler/utils/Util_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS
+compiler/GHC/Utils_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS
 endif
 
 endif

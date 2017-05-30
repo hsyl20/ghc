@@ -94,7 +94,7 @@ import {-# SOURCE #-}   OccName( OccName )
 
 import GHC.Utils.Handle.BufferedWrite (BufHandle)
 import GHC.Data.FastString
-import qualified GHC.Utils.PrettyPrint
+import qualified GHC.Utils.PrettyPrint as Pretty
 import GHC.Utils
 import GHC.Platform
 import qualified GHC.Utils.PrettyPrint.Colour as Col

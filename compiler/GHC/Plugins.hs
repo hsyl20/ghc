@@ -41,12 +41,12 @@ module GHC.Plugins
    , module GHC.Data.Unique.Set
    , module GHC.Data.Unique.FiniteMap
    , module GHC.Data.FiniteMap
-   , module Util
+   , module GHC.Utils
    , module GHC.Serialized
    , module SrcLoc
    , module GHC.Utils.Outputable
-   , module UniqSupply
-   , module Unique
+   , module GHC.Data.Unique.Supply
+   , module GHC.Data.Unique
    , module GHC.Data.FastString
    )
 where

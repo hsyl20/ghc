@@ -169,7 +169,7 @@ import qualified Data.Set as Set
 import Data.Time
 
 #if defined(DEBUG)
-import {-# SOURCE #-} Outputable ( warnPprTrace, text )
+import {-# SOURCE #-} GHC.Utils.Outputable ( warnPprTrace, text )
 #endif
 
 infixr 9 `thenCmp`

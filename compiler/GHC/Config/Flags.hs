@@ -175,7 +175,7 @@ import qualified GHC.Utils.PrettyPrint.Colour as Col
 import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Utils.Monad
-import qualified GHC.Utils.PrettyPrint
+import qualified GHC.Utils.PrettyPrint as Pretty
 import SrcLoc
 import BasicTypes       ( IntWithInf, treatZeroAsInf )
 import GHC.Data.FastString
