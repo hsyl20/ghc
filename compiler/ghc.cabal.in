@@ -489,7 +489,7 @@ Library
         GHC.Data.FastString.Environment
         Fingerprint
         GHC.Data.FiniteMap
-        FV
+        GHC.Data.Var.Free
         GHC.Data.Graph.Base
         GHC.Data.Graph.Color
         GHC.Data.Graph.Operations

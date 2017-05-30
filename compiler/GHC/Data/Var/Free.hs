@@ -7,7 +7,7 @@ Utilities for efficiently and deterministically computing free variables.
 
 {-# LANGUAGE BangPatterns #-}
 
-module FV (
+module GHC.Data.Var.Free (
         -- * Deterministic free vars computations
         FV, InterestingVarFun,
 

@@ -155,7 +155,7 @@ import Name hiding ( varName )
 import TyCon
 import Class
 import CoAxiom
-import FV
+import GHC.Data.Var.Free
 
 -- others
 import BasicTypes ( LeftOrRight(..), TyPrec(..), maybeParen, pickLR )

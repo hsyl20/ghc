@@ -54,7 +54,7 @@ import GHC.Config.Flags
 import ListSetOps       ( equivClasses )
 import Maybes
 import qualified GHC.LanguageExtensions as LangExt
-import FV ( fvVarList, unionFV )
+import GHC.Data.Var.Free ( fvVarList, unionFV )
 
 import Control.Monad    ( when )
 import Data.List        ( partition, mapAccumL, nub, sortBy, unfoldr )

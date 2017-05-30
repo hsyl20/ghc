@@ -79,7 +79,7 @@ import Maybes( orElse )
 import Util
 import BasicTypes( Activation )
 import Outputable
-import FV
+import GHC.Data.Var.Free
 
 {-
 ************************************************************************

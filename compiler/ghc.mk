@@ -481,7 +481,7 @@ compiler_stage2_dll0_MODULES = \
 	Fingerprint \
 	GHC.Data.FiniteMap \
 	ForeignCall \
-	FV \
+	GHC.Data.Var.Free \
 	GHC.Config.Hooks \
 	HsBinds \
 	HsDecls \

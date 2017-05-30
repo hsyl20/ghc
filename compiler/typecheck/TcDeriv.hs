@@ -58,7 +58,7 @@ import Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag
 import GHC.Data.Pair
-import FV (fvVarList, unionFV, mkFVs)
+import GHC.Data.Var.Free (fvVarList, unionFV, mkFVs)
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

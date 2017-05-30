@@ -93,7 +93,7 @@ import Util
 import Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.DeterFiniteMap
-import FV
+import GHC.Data.Var.Free
 import Data.Maybe
 import MonadUtils       ( mapAccumLM )
 

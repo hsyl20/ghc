@@ -222,7 +222,7 @@ import Maybes
 import Outputable
 import GHC.Data.FastString
 import GHC.Utils.Error( Validity(..), MsgDoc, isValid )
-import FV
+import GHC.Data.Var.Free
 import qualified GHC.LanguageExtensions as LangExt
 
 import Data.IORef
