@@ -56,7 +56,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import Unique
 
 import Control.Monad    ( mapAndUnzipM )

@@ -40,7 +40,7 @@ import GHC.Data.Unique.FiniteMap
 import Unique
 import GHC.Utils.Monad.State
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 import Data.List
 import Data.Maybe

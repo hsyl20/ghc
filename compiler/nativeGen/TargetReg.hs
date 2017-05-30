@@ -27,7 +27,7 @@ import Format
 
 import GHC.Utils.Outputable
 import Unique
-import Platform
+import GHC.Platform
 
 import qualified X86.Regs       as X86
 import qualified X86.RegInfo    as X86

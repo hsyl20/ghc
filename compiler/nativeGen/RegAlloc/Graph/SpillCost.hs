@@ -26,7 +26,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Data.Graph.Directed          (flattenSCCs)
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import GHC.Utils.Monad.State
 
 import Data.List        (nub, minimumBy)

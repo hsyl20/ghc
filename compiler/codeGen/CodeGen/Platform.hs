@@ -4,7 +4,7 @@ module CodeGen.Platform
        where
 
 import CmmExpr
-import Platform
+import GHC.Platform
 import Reg
 
 import qualified CodeGen.Platform.ARM        as ARM

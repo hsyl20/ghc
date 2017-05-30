@@ -139,7 +139,7 @@ import MkCore (mkStringExprFSWith)
 import Module
 import Name
 import GHC.Utils.Outputable as Outputable
-import Platform
+import GHC.Platform
 import PrelNames
 import TcEnv (lookupGlobal)
 import Type

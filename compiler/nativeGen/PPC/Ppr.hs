@@ -25,7 +25,7 @@ import Hoopl
 import CLabel
 
 import Unique                ( pprUniqueAlways, Uniquable(..) )
-import Platform
+import GHC.Platform
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Config.Flags

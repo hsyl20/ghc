@@ -44,7 +44,7 @@ import SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
-import Platform
+import GHC.Platform
 import Config
 import GHC.Data.Tree.OrdList
 import GHC.Data.Pair

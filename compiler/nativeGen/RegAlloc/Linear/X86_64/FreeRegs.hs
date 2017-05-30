@@ -7,7 +7,7 @@ import X86.Regs
 import RegClass
 import Reg
 import GHC.Utils.Panic
-import Platform
+import GHC.Platform
 
 import Data.Foldable (foldl')
 import Data.Word

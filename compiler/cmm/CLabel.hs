@@ -127,7 +127,7 @@ import CostCentre
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
-import Platform
+import GHC.Platform
 import GHC.Data.Unique.Set
 import Util
 import PprCore ( {- instances -} )

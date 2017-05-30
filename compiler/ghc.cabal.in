@@ -558,7 +558,7 @@ Library
             Reg
             RegClass
             PIC
-            Platform
+            GHC.Platform
             CPrim
             X86.Regs
             X86.RegInfo

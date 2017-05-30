@@ -49,7 +49,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import BasicTypes
 import GHC.Config.Flags
-import Platform
+import GHC.Platform
 import Util
 import Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))
 

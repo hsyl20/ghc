@@ -19,7 +19,7 @@ import Reg
 import GHC.Data.Bag
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import UniqSupply

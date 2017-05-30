@@ -83,7 +83,7 @@ import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Data.List.SetOps       ( minusList )
 import BasicTypes       ( Arity )
-import Platform
+import GHC.Platform
 import Util
 import GHC.Data.Pair
 import Data.Function       ( on )

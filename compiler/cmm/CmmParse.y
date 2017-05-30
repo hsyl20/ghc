@@ -233,7 +233,7 @@ import CmmMonad
 import CostCentre
 import ForeignCall
 import Module
-import Platform
+import GHC.Platform
 import Literal
 import Unique
 import GHC.Data.Unique.FiniteMap

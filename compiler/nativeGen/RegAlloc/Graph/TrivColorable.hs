@@ -14,7 +14,7 @@ import Reg
 import GHC.Data.Graph.Base
 
 import GHC.Data.Unique.Set
-import Platform
+import GHC.Platform
 import GHC.Utils.Panic
 
 -- trivColorable ---------------------------------------------------------------

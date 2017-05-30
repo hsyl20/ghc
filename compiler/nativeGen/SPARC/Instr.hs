@@ -44,7 +44,7 @@ import GHC.Config.Flags
 import Cmm
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 
 -- | Register or immediate

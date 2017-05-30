@@ -47,7 +47,7 @@ import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import UniqSupply

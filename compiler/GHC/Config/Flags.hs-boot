@@ -1,7 +1,7 @@
 
 module GHC.Config.Flags where
 
-import Platform
+import GHC.Platform
 
 data DynFlags
 data DumpFlag

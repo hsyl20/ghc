@@ -7,7 +7,7 @@ import RegClass
 import Reg
 
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 import Data.Word
 import Data.Bits

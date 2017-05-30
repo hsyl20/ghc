@@ -19,7 +19,7 @@ import GHCi.RemoteTypes
 import BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import Name
 import MkId
 import Id

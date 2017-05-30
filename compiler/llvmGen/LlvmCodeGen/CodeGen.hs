@@ -25,7 +25,7 @@ import GHC.Data.FastString
 import ForeignCall
 import GHC.Utils.Outputable hiding (panic, pprPanic)
 import qualified GHC.Utils.Outputable as Outputable
-import Platform
+import GHC.Platform
 import GHC.Data.Tree.OrdList
 import UniqSupply
 import Unique

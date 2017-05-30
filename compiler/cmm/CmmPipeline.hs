@@ -24,7 +24,7 @@ import GHC.Utils.Error
 import GHC.Types
 import Control.Monad
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 -----------------------------------------------------------------------------
 -- | Top level driver for C-- pipeline

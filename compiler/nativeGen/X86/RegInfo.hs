@@ -13,7 +13,7 @@ import Format
 import Reg
 
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import Unique
 
 import GHC.Data.Unique.FiniteMap

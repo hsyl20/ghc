@@ -9,7 +9,7 @@ import Reg
 
 import CodeGen.Platform
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 import Data.Word
 import Data.Bits

@@ -21,7 +21,7 @@ import Cmm
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 import qualified Data.Array.Unsafe as U ( castSTUArray )
 import Data.Array.ST

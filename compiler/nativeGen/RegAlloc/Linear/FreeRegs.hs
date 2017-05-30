@@ -14,7 +14,7 @@ import RegClass
 
 import GHC.Config.Flags
 import GHC.Utils.Panic
-import Platform
+import GHC.Platform
 
 -- -----------------------------------------------------------------------------
 -- The free register set

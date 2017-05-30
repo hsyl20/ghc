@@ -61,7 +61,7 @@ import Unique
 import CodeGen.Platform
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 import Data.Word        ( Word8, Word16, Word32, Word64 )
 import Data.Int         ( Int8, Int16, Int32, Int64 )

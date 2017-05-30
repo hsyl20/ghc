@@ -21,7 +21,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import UniqSupply
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 
 import Data.List
 import Data.Maybe

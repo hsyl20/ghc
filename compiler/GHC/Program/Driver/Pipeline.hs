@@ -57,7 +57,7 @@ import GHC.Data.Maybe           ( expectJust )
 import SrcLoc
 import LlvmCodeGen      ( llvmFixupAsm )
 import GHC.Utils.Monad
-import Platform
+import GHC.Platform
 import TcRnTypes
 import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt

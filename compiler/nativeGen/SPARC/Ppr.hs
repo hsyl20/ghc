@@ -43,7 +43,7 @@ import Hoopl
 
 import Unique           ( Uniquable(..), pprUniqueAlways )
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import GHC.Data.FastString
 import Data.Word
 

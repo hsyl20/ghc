@@ -31,7 +31,7 @@ import StgCmmLayout     ( ArgRep(..) )
 import SMRep
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import Util
 import Unique
 import GHC.Data.Unique.DeterSet

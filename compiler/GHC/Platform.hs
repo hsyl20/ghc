@@ -1,7 +1,7 @@
 
 -- | A description of the platform we're compiling for.
 --
-module Platform (
+module GHC.Platform (
         Platform(..),
         Arch(..),
         OS(..),

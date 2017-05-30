@@ -52,7 +52,7 @@ import qualified RegAlloc.Graph.Stats           as Color
 import qualified RegAlloc.Graph.TrivColorable   as Color
 
 import TargetReg
-import Platform
+import GHC.Platform
 import Config
 import Instruction
 import PIC

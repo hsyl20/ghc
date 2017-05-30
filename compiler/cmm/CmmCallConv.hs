@@ -15,7 +15,7 @@ import Cmm (Convention(..))
 import PprCmm ()
 
 import GHC.Config.Flags
-import Platform
+import GHC.Platform
 import GHC.Utils.Outputable
 
 -- Calculate the 'GlobalReg' or stack locations for function call

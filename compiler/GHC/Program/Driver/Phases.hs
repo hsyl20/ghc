@@ -42,7 +42,7 @@ module GHC.Program.Driver.Phases (
 
 import {-# SOURCE #-} GHC.Config.Flags
 import GHC.Utils.Outputable
-import Platform
+import GHC.Platform
 import System.FilePath
 import GHC.Utils.Binary
 import Util

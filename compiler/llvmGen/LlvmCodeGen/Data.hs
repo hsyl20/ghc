@@ -16,7 +16,7 @@ import BlockId
 import CLabel
 import Cmm
 import GHC.Config.Flags
-import Platform
+import GHC.Platform
 
 import GHC.Data.FastString
 import GHC.Utils.Outputable

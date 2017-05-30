@@ -24,7 +24,7 @@ import CodeGen.Platform
 import GHC.Config.Flags
 import Cmm
 import PprCmmExpr ()
-import Platform
+import GHC.Platform
 
 import GHC.Utils.Outputable
 import GHC.Data.Tree.OrdList

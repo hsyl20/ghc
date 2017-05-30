@@ -27,7 +27,7 @@ import StgCmmHeap
 import StgCmmProf ( costCentreFrom, curCCS )
 
 import GHC.Config.Flags
-import Platform
+import GHC.Platform
 import BasicTypes
 import BlockId
 import MkGraph

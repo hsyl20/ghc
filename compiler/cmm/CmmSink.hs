@@ -9,7 +9,7 @@ import CmmLive
 import CmmUtils
 import Hoopl
 import CodeGen.Platform
-import Platform (isARM, platformArch)
+import GHC.Platform (isARM, platformArch)
 
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap

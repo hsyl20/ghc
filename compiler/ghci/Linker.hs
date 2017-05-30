@@ -45,7 +45,7 @@ import SrcLoc
 import qualified GHC.Data.Maybe as Maybe
 import GHC.Data.Unique.DeterSet
 import GHC.Data.FastString
-import Platform
+import GHC.Platform
 import GHC.Utils.SysTools
 
 -- Standard libraries

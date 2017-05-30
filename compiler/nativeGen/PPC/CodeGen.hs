@@ -37,7 +37,7 @@ import Format
 import RegClass
 import Reg
 import TargetReg
-import Platform
+import GHC.Platform
 
 -- Our intermediate code:
 import BlockId

@@ -20,7 +20,7 @@ import BlockId
 import Hoopl
 import GHC.Config.Flags
 import Cmm hiding (topInfoTable)
-import Platform
+import GHC.Platform
 
 -- | Holds a list of source and destination registers used by a
 --      particular instruction.

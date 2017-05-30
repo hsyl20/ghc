@@ -45,7 +45,7 @@ import PIC
 import NCGMonad
 import Format
 import Reg
-import Platform
+import GHC.Platform
 
 -- Our intermediate code:
 import BasicTypes

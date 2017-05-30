@@ -140,7 +140,7 @@ import TcEnv
 
 import GHC.Config.Flags
 import GHC.Utils.Error
-import Platform ( platformOS, osSubsectionsViaSymbols )
+import GHC.Platform ( platformOS, osSubsectionsViaSymbols )
 
 import GHC.Utils.Outputable
 import NameEnv
