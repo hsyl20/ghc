@@ -36,10 +36,10 @@ import Type
 import TyCoRep
 import TcMType
 import Name
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Panic
 import VarSet
-import GHC.Utils.Data.Bag( Bag, unionBags, unitBag )
+import GHC.Data.Bag( Bag, unionBags, unitBag )
 import Control.Monad
 import Unique
 import NameEnv

@@ -9,7 +9,7 @@ import BasicTypes ( LeftOrRight )
 import CoAxiom
 import Var
 import Outputable
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Util
 
 mkReflCo :: Role -> Type -> Coercion

@@ -36,14 +36,14 @@ import FastString
 import GHC.Utils.Error
 import SrcLoc
 import GHC.Program.Main
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import Outputable
 import Maybes
 import GHC.Syntax.Parsers.HeaderInfo
 import MkIface
 import GHC.Program.Make
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.DeterSet
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Finder

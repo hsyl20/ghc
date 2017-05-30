@@ -52,17 +52,17 @@ import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
 import VarEnv
 import VarSet
 import Name
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 
 import Util
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Digraph
 import qualified Data.Data as Data
 import Outputable
 import FastString
 import SrcLoc
 import Data.IORef( IORef )
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 
 {-
 Note [TcCoercions]

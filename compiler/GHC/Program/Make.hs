@@ -47,7 +47,7 @@ import TcIface          ( typecheckIface )
 import TcRnMonad        ( initIfaceCheck )
 import GHC.Program.Main
 
-import GHC.Utils.Data.Bag              ( listToBag )
+import GHC.Data.Bag              ( listToBag )
 import BasicTypes
 import Digraph
 import Exception        ( tryIO, gbracket, gfinally )
@@ -60,11 +60,11 @@ import Panic
 import SrcLoc
 import StringBuffer
 import GHC.Utils.SysTools
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterSet
 import TcBackpack
 import GHC.Packages
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Util
 import qualified GHC.LanguageExtensions as LangExt
 import NameEnv
@@ -73,7 +73,7 @@ import Data.Either ( rights, partitionEithers )
 import qualified Data.Map as Map
 import Data.Map (Map)
 import qualified Data.Set as Set
-import qualified GHC.Utils.Data.FiniteMap as Map ( insertListWith )
+import qualified GHC.Data.FiniteMap as Map ( insertListWith )
 
 import Control.Concurrent ( forkIOWithUnmask, killThread )
 import qualified GHC.Conc as CC

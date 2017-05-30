@@ -169,10 +169,10 @@ import Module
 import SrcLoc
 import VarSet
 import GHC.Utils.Error
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import BasicTypes
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import GHC.Config.Flags
 import Outputable
 import ListSetOps

@@ -101,7 +101,7 @@ import GHC.Utils.Error
 import Id
 import VarEnv
 import Module
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Name
 import NameEnv
 import NameSet
@@ -123,7 +123,7 @@ import Data.Ord
 import FastString
 import Maybes
 import Util
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Inst (tcGetInsts)
 import qualified GHC.LanguageExtensions as LangExt
 import Data.Data ( Data )

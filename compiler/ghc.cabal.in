@@ -477,7 +477,7 @@ Library
         Type
         TyCoRep
         Unify
-        GHC.Utils.Data.Bag
+        GHC.Data.Bag
         Binary
         BooleanFormula
         BufWrite
@@ -488,7 +488,7 @@ Library
         FastString
         FastStringEnv
         Fingerprint
-        GHC.Utils.Data.FiniteMap
+        GHC.Data.FiniteMap
         FV
         GraphBase
         GraphColor
@@ -502,18 +502,18 @@ Library
         MonadUtils
         OrdList
         Outputable
-        GHC.Utils.Data.Pair
+        GHC.Data.Pair
         Panic
         PprColour
         Pretty
         State
         Stream
         StringBuffer
-        GHC.Utils.Data.Unique.DeterFiniteMap
-        GHC.Utils.Data.Unique.DeterSet
-        GHC.Utils.Data.Unique.FiniteMap
-        GHC.Utils.Data.Unique.Map
-        GHC.Utils.Data.Unique.Set
+        GHC.Data.Unique.DeterFiniteMap
+        GHC.Data.Unique.DeterSet
+        GHC.Data.Unique.FiniteMap
+        GHC.Data.Unique.Map
+        GHC.Data.Unique.Set
         Util
         Vectorise.Builtins.Base
         Vectorise.Builtins.Initialise

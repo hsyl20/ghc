@@ -46,7 +46,7 @@ import Module       ( Module )
 import GHC.Utils.Error
 import GHC.Config.Flags
 import Outputable
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Util
 import Maybes       ( orElse )
 import FastString

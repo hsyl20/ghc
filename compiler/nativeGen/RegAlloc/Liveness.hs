@@ -48,10 +48,10 @@ import GHC.Config.Flags
 import MonadUtils
 import Outputable
 import Platform
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
 import UniqSupply
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import State
 
 import Data.List

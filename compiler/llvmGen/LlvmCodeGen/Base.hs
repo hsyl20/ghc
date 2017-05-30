@@ -47,10 +47,10 @@ import FastString
 import Cmm              hiding ( succ )
 import Outputable as Outp
 import Platform
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Unique
 import BufWrite   ( BufHandle )
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import UniqSupply
 import GHC.Utils.Error
 import qualified Stream

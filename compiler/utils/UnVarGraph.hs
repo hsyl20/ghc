@@ -29,10 +29,10 @@ module UnVarGraph
 
 import Id
 import VarEnv
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Outputable
 import Data.List
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Unique
 
 import qualified Data.IntSet as S

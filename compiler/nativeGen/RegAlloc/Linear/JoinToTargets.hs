@@ -22,8 +22,8 @@ import Digraph
 import GHC.Config.Flags
 import Outputable
 import Unique
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 
 import Data.Foldable (foldl')
 

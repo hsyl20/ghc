@@ -21,8 +21,8 @@ module RegAlloc.Graph.ArchBase (
         bound,
         squeese
 ) where
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
 import Unique
 
 

@@ -16,12 +16,12 @@ import TargetReg
 import RegClass
 import Reg
 
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import GHC.Config.Flags
 import Outputable
 import Platform
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 import UniqSupply
 import Util (seqList)
 

@@ -157,7 +157,7 @@ import GHC.Utils.Error
 import SrcLoc
 import NameEnv
 import NameSet
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Outputable
 import UniqSupply
 import GHC.Config.Flags

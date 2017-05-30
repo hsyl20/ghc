@@ -15,7 +15,7 @@ module TcGenFunctor (
         gen_Functor_binds, gen_Foldable_binds, gen_Traversable_binds
     ) where
 
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import DataCon
 import FastString
 import HsSyn

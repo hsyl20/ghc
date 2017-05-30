@@ -49,7 +49,7 @@ import OrdList
 import GHC.Utils.Error
 import GHC.Config.Flags
 import Util
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Outputable
 import Platform
 import FastString

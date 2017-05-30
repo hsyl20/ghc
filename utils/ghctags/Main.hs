@@ -11,7 +11,7 @@ import Name             ( getOccString )
 --import GHC.Utils.Error         ( printBagOfErrors )
 import Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Exception
 import FastString
 import MonadUtils       ( liftIO )
@@ -36,7 +36,7 @@ import Data.Traversable (mapM)
 import Data.Map ( Map )
 import qualified Data.Map as M
 
---GHC.Utils.Data.Unique.FiniteMap
+--GHC.Data.Unique.FiniteMap
 --import Debug.Trace
 
 -- search for definitions of things

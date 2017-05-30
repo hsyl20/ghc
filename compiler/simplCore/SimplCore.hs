@@ -51,7 +51,7 @@ import Module
 
 import Maybes
 import UniqSupply       ( UniqSupply, mkSplitUniqSupply, splitUniqSupply )
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Outputable
 import Control.Monad
 import qualified GHC.LanguageExtensions as LangExt

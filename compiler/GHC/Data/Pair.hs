@@ -5,7 +5,7 @@ Traversable instances.
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Utils.Data.Pair
+module GHC.Data.Pair
    ( Pair(..)
    , unPair
    , toPair

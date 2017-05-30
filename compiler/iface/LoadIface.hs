@@ -62,7 +62,7 @@ import Module
 import Maybes
 import GHC.Utils.Error
 import GHC.Finder
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import SrcLoc
 import Outputable
 import BinIface
@@ -73,7 +73,7 @@ import Fingerprint
 import GHC.Config.Hooks
 import FieldLabel
 import GHC.Interface.Renaming
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.DeterSet
 
 import Control.Monad
 import Control.Exception

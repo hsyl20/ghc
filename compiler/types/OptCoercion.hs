@@ -23,7 +23,7 @@ import VarSet
 import VarEnv
 import Outputable
 import FamInstEnv ( flattenTys )
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import ListSetOps ( getNth )
 import Util
 import Unify

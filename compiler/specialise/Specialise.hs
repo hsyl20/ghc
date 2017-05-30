@@ -31,13 +31,13 @@ import MkId             ( voidArgId, voidPrimId )
 import Maybes           ( catMaybes, isJust )
 import BasicTypes
 import GHC.Types
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import GHC.Config.Flags
 import Util
 import Outputable
 import FastString
 import State
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import TrieMap
 
 import Control.Monad

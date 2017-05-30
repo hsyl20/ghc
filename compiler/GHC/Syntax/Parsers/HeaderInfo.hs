@@ -38,7 +38,7 @@ import Util
 import Outputable
 import Pretty           ()
 import Maybes
-import GHC.Utils.Data.Bag              ( emptyBag, listToBag, unitBag )
+import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )
 import MonadUtils
 import Exception
 import BasicTypes

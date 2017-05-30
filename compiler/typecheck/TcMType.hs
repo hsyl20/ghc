@@ -114,9 +114,9 @@ import Util
 import Outputable
 import FastString
 import SrcLoc
-import GHC.Utils.Data.Bag
-import GHC.Utils.Data.Pair
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Bag
+import GHC.Data.Pair
+import GHC.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

@@ -19,7 +19,7 @@ is not deterministic.
 {-# LANGUAGE FlexibleContexts #-}
 {-# OPTIONS_GHC -Wall #-}
 
-module GHC.Utils.Data.Unique.DeterFiniteMap (
+module GHC.Data.Unique.DeterFiniteMap (
         -- * Unique-keyed deterministic mappings
         UniqDFM,       -- abstract type
 
@@ -66,7 +66,7 @@ import qualified Data.IntMap as M
 import Data.Data
 import Data.List (sortBy)
 import Data.Function (on)
-import GHC.Utils.Data.Unique.FiniteMap (UniqFM, listToUFM_Directly, nonDetUFMToList, ufmToIntMap)
+import GHC.Data.Unique.FiniteMap (UniqFM, listToUFM_Directly, nonDetUFMToList, ufmToIntMap)
 
 -- Note [Deterministic UniqFM]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~

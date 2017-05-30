@@ -50,7 +50,7 @@ import Outputable
 
 import TcRnTypes
 import TcSMonad
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import MonadUtils ( concatMapM )
 
 import Data.List( partition, foldl', deleteFirstsBy )
@@ -59,7 +59,7 @@ import VarEnv
 
 import Control.Monad
 import Maybes( isJust )
-import GHC.Utils.Data.Pair (Pair(..))
+import GHC.Data.Pair (Pair(..))
 import Unique( hasKey )
 import GHC.Config.Flags
 import Util

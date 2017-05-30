@@ -64,7 +64,7 @@ import TysWiredIn
 import GHC.Types
 import Class
 import TyCon
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Util
 import Panic
 import {-# SOURCE #-} TcTypeNats ( typeNatTyCons )

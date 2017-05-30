@@ -8,7 +8,7 @@
 --
 -- Basically, the things need to be in class @Uniquable@.
 
-module GHC.Utils.Data.Unique.DeterSet (
+module GHC.Data.Unique.DeterSet (
         -- * Unique set type
         UniqDSet,    -- type synonym for UniqFM a
 
@@ -32,8 +32,8 @@ module GHC.Utils.Data.Unique.DeterSet (
         partitionUniqDSet
     ) where
 
-import GHC.Utils.Data.Unique.DeterFiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.Set
 import Unique
 
 type UniqDSet a = UniqDFM a

@@ -38,7 +38,7 @@ import Unique
 import Var
 import Util
 import Binary
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import BasicTypes
 import Data.Typeable ( Typeable )
 import SrcLoc

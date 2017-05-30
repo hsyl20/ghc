@@ -22,7 +22,7 @@ import Module           ( Module )
 import Name
 import Outputable
 import GHC.Serialized
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Unique
 
 import Control.Monad

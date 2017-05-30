@@ -148,7 +148,7 @@ import GHC.Syntax.Stats         ( ppSourceStats )
 import GHC.Types
 import FastString
 import UniqSupply
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Exception
 import qualified Stream
 import Stream (Stream)

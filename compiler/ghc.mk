@@ -437,7 +437,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Types.Annotations \
 	ApiAnnotation \
 	Avail \
-	GHC.Utils.Data.Bag \
+	GHC.Data.Bag \
 	BasicTypes \
 	Binary \
 	BinFingerprint \
@@ -479,7 +479,7 @@ compiler_stage2_dll0_MODULES = \
 	FastStringEnv \
 	FieldLabel \
 	Fingerprint \
-	GHC.Utils.Data.FiniteMap \
+	GHC.Data.FiniteMap \
 	ForeignCall \
 	FV \
 	GHC.Config.Hooks \
@@ -526,7 +526,7 @@ compiler_stage2_dll0_MODULES = \
 	Outputable \
 	GHC.Packages.PackageConfig \
 	GHC.Packages \
-	GHC.Utils.Data.Pair \
+	GHC.Data.Pair \
 	Panic \
 	PatSyn \
 	GHC.Program.Driver.Pipeline.Monad \
@@ -554,10 +554,10 @@ compiler_stage2_dll0_MODULES = \
 	TysPrim \
 	TysWiredIn \
 	Unify \
-	GHC.Utils.Data.Unique.DeterFiniteMap \
-	GHC.Utils.Data.Unique.DeterSet \
-	GHC.Utils.Data.Unique.FiniteMap \
-	GHC.Utils.Data.Unique.Set \
+	GHC.Data.Unique.DeterFiniteMap \
+	GHC.Data.Unique.DeterSet \
+	GHC.Data.Unique.FiniteMap \
+	GHC.Data.Unique.Set \
 	UniqSupply \
 	Unique \
 	Util \

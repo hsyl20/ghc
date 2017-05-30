@@ -48,11 +48,11 @@ import SrcLoc
 import ListSetOps       ( findDupsEq )
 import BasicTypes       ( RecFlag(..), LexicalFixity(..) )
 import Digraph          ( SCC(..) )
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Util
 import Outputable
 import FastString
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Maybes           ( orElse )
 import qualified GHC.LanguageExtensions as LangExt
 

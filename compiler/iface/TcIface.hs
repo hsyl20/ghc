@@ -61,7 +61,7 @@ import NameSet
 import OccurAnal        ( occurAnalyseExpr )
 import Demand
 import Module
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import Outputable
 import Maybes

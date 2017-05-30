@@ -16,7 +16,7 @@ import Outputable
 import Platform
 import Unique
 
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import X86.Regs
 
 

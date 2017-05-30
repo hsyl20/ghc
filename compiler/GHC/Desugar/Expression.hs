@@ -52,7 +52,7 @@ import Maybes
 import VarEnv
 import SrcLoc
 import Util
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Outputable
 import PatSyn
 

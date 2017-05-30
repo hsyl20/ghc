@@ -117,7 +117,7 @@ import BasicTypes
 import SrcLoc
 import FastString
 import Util
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Outputable
 import GHC.Config.Constants
 

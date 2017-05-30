@@ -72,7 +72,7 @@ import qualified GHC.Utils.Error as Err
 import GHC.Utils.Error( Severity(..) )
 import Maybes
 import UniqSupply
-import GHC.Utils.Data.Unique.FiniteMap       ( UniqFM, mapUFM, filterUFM )
+import GHC.Data.Unique.FiniteMap       ( UniqFM, mapUFM, filterUFM )
 import MonadUtils
 import NameCache
 import SrcLoc

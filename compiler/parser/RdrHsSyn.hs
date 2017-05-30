@@ -88,7 +88,7 @@ import PrelNames        ( forall_tv_RDR, eqTyCon_RDR, allNameStrings )
 import SrcLoc
 import Unique           ( hasKey )
 import OrdList          ( OrdList, fromOL )
-import GHC.Utils.Data.Bag              ( emptyBag, consBag )
+import GHC.Data.Bag              ( emptyBag, consBag )
 import Outputable
 import FastString
 import Maybes

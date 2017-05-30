@@ -76,9 +76,9 @@ module VarEnv (
 import OccName
 import Var
 import VarSet
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import Unique
 import Util
 import Maybes

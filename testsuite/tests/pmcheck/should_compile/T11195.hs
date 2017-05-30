@@ -10,7 +10,7 @@ import TcType       ( exactTyCoVarsOfType )
 import CoAxiom
 import VarSet
 import VarEnv
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import InstEnv
 
 type NormalCo    = Coercion

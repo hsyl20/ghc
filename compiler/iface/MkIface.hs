@@ -104,7 +104,7 @@ import Maybes
 import Binary
 import Fingerprint
 import Exception
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import GHC.Packages
 
 import Control.Monad

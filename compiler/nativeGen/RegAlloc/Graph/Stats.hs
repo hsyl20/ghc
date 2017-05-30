@@ -28,8 +28,8 @@ import TargetReg
 
 import PprCmm()
 import Outputable
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 import State
 
 import Data.List

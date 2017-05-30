@@ -47,7 +47,7 @@ import BlockId
 import GHC.Config.Flags
 import FastString
 import Module
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Unique
 import UniqSupply
 

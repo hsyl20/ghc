@@ -17,7 +17,7 @@ module TcSimplify(
 
 #include "HsVersions.h"
 
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Class         ( Class, classKey, classTyCon )
 import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , WarnReason ( Reason )
@@ -44,7 +44,7 @@ import Unify         ( tcMatchTyKi )
 import Util
 import Var
 import VarSet
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import BasicTypes    ( IntWithInf, intGtLimit )
 import GHC.Utils.Error      ( emptyMessages )
 import qualified GHC.LanguageExtensions as LangExt

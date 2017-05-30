@@ -24,7 +24,7 @@ import Outputable
 import Binary
 import SrcLoc
 import Unique
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 
 ----------------------------------------------------------------------
 -- Boolean formula type and smart constructors

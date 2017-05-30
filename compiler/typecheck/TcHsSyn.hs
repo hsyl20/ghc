@@ -63,10 +63,10 @@ import Literal
 import BasicTypes
 import Maybes
 import SrcLoc
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Outputable
 import Util
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 
 import Control.Monad
 import Data.List  ( partition )

@@ -22,8 +22,8 @@ import GraphBase
 
 import Hoopl (mapLookup)
 import Cmm
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 import Digraph          (flattenSCCs)
 import Outputable
 import Platform

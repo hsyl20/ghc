@@ -118,13 +118,13 @@ import Util
 import BasicTypes
 import Outputable
 import Unique
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import SrcLoc
 import PrelNames
 import TysPrim          ( eqPhantPrimTyCon )
 import ListSetOps
 import Maybes
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 
 import Control.Monad (foldM)
 import Control.Arrow ( first )

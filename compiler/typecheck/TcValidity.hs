@@ -48,7 +48,7 @@ import FamInst     ( makeInjectivityErrors )
 import Name
 import VarEnv
 import VarSet
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Var         ( TyVarBndr(..), mkTyVar )
 import GHC.Utils.Error
 import GHC.Config.Flags

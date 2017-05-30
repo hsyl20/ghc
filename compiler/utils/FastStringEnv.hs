@@ -27,8 +27,8 @@ module FastStringEnv (
         mkDFsEnv, emptyDFsEnv, dFsEnvElts, lookupDFsEnv
     ) where
 
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import Maybes
 import FastString
 

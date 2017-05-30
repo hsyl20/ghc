@@ -35,7 +35,7 @@ import GHC.Utils.Error( Validity(..), allValid )
 import SrcLoc
 import Util
 
-import GHC.Utils.Data.Pair             ( Pair(..) )
+import GHC.Data.Pair             ( Pair(..) )
 import Data.List        ( nubBy )
 import Data.Maybe
 import Data.Foldable    ( fold )

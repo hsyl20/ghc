@@ -19,7 +19,7 @@ import SrcLoc
 import Outputable
 import GHC.Types
 import Module
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Avail
 import IfaceSyn
 import FieldLabel
@@ -38,7 +38,7 @@ import GHC.Config.Flags
 
 import qualified Data.Traversable as T
 
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Data.IORef
 import NameShape
 import IfaceEnv

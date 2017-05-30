@@ -44,14 +44,14 @@ import TysWiredIn
 import BasicTypes
 import PrelNames
 import Outputable
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import VarSet
 import SrcLoc
 import ListSetOps( assocMaybe )
 import Data.List
 import Util
-import GHC.Utils.Data.Unique.DeterFiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.Set
 
 data DsCmdEnv = DsCmdEnv {
         arr_id, compose_id, first_id, app_id, choice_id, loop_id :: CoreExpr

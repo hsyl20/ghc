@@ -41,7 +41,7 @@ import FastString
 import CLabel
 import Outputable
 import Platform
-import GHC.Utils.Data.Unique.FiniteMap (listToUFM, lookupUFM)
+import GHC.Data.Unique.FiniteMap (listToUFM, lookupUFM)
 import UniqSupply
 
 import Control.Monad (replicateM)

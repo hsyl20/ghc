@@ -38,9 +38,9 @@ module GHC.Plugins
    , module VarEnv
    , module NameSet
    , module NameEnv
-   , module GHC.Utils.Data.Unique.Set
-   , module GHC.Utils.Data.Unique.FiniteMap
-   , module GHC.Utils.Data.FiniteMap
+   , module GHC.Data.Unique.Set
+   , module GHC.Data.Unique.FiniteMap
+   , module GHC.Data.FiniteMap
    , module Util
    , module GHC.Serialized
    , module SrcLoc
@@ -97,11 +97,11 @@ import VarSet
 import VarEnv
 import NameSet
 import NameEnv
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
 -- Conflicts with UniqFM:
 --import LazyUniqFM
-import GHC.Utils.Data.FiniteMap
+import GHC.Data.FiniteMap
 
 -- Common utilities
 import Util

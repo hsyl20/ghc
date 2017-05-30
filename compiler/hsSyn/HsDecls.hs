@@ -108,7 +108,7 @@ import Outputable
 import Util
 import SrcLoc
 
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Maybes
 import Data.Data        hiding (TyCon,Fixity, Infix)
 

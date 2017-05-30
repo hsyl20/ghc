@@ -216,7 +216,7 @@ import TyCoRep
 import Var
 import VarEnv
 import VarSet
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 
 import Class
 import TyCon
@@ -231,7 +231,7 @@ import {-# SOURCE #-} Coercion
 import Util
 import Outputable
 import FastString
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import ListSetOps
 import Digraph
 import Unique ( nonDetCmpUnique )

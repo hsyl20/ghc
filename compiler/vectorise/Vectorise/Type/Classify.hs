@@ -19,8 +19,8 @@ module Vectorise.Type.Classify
 where
 
 import NameSet
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
 import DataCon
 import TyCon
 import TyCoRep

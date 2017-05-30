@@ -12,7 +12,7 @@ import CodeGen.Platform
 import Platform (isARM, platformArch)
 
 import GHC.Config.Flags
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import PprCmm ()
 
 import Data.List (partition)

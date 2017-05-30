@@ -70,7 +70,7 @@ import CmmOpt           ( cmmMachOpFold )
 import PprCmm
 import CLabel
 
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import UniqSupply
 import GHC.Config.Flags
 import Util
@@ -82,7 +82,7 @@ import qualified Pretty
 import BufWrite
 import Outputable
 import FastString
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import GHC.Utils.Error
 import Module
 import Stream (Stream)

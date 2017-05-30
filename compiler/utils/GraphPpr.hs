@@ -11,8 +11,8 @@ import GraphBase
 
 import Outputable
 import Unique
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
 
 import Data.List
 import Data.Maybe

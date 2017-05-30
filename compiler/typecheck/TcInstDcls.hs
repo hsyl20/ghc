@@ -49,7 +49,7 @@ import VarEnv
 import VarSet
 import PrelNames  ( typeableClassName, genericClassNames
                   , knownNatClassName, knownSymbolClassName )
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Error

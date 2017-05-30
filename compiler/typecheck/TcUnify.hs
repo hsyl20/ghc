@@ -60,9 +60,9 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 import BasicTypes
 import Name   ( Name )
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Util
-import GHC.Utils.Data.Pair( pFst )
+import GHC.Data.Pair( pFst )
 import qualified GHC.LanguageExtensions as LangExt
 import Outputable
 import FastString

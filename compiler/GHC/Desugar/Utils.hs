@@ -63,7 +63,7 @@ import TysPrim
 import TysWiredIn
 import BasicTypes
 import ConLike
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import UniqSupply
 import Module
 import PrelNames

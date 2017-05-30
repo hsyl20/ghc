@@ -137,9 +137,9 @@ module Module
 import Config
 import Outputable
 import Unique
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.DeterSet
 import FastString
 import Binary
 import Util
@@ -166,7 +166,7 @@ import Data.Map (Map)
 import Data.Set (Set)
 import qualified Data.Map as Map
 import qualified Data.Set as Set
-import qualified GHC.Utils.Data.FiniteMap as Map
+import qualified GHC.Data.FiniteMap as Map
 import System.FilePath
 
 import {-# SOURCE #-} GHC.Config.Flags (DynFlags)

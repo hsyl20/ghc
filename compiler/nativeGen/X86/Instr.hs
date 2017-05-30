@@ -36,7 +36,7 @@ import Platform
 import BasicTypes       (Alignment)
 import CLabel
 import GHC.Config.Flags
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Unique
 import UniqSupply
 import Debug (UnwindTable)

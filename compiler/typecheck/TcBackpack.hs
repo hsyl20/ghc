@@ -54,7 +54,7 @@ import PrelNames
 import qualified Data.Map as Map
 
 import GHC.Finder
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.DeterSet
 import NameShape
 import TcErrors
 import TcUnify

@@ -36,10 +36,10 @@ import Coercion hiding ( getCvSubstEnv )
 import TyCon
 import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
 import Util
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Outputable
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 
 import Control.Monad
 #if __GLASGOW_HASKELL__ > 710

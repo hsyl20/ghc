@@ -42,7 +42,7 @@ import Var      ( TyVar, tyVarName, tyVarKind )
 import Id       ( Id, idName, idType, idInlinePragma, setInlinePragma, mkLocalId )
 import PrelNames( mkUnboundName )
 import BasicTypes
-import GHC.Utils.Data.Bag( foldrBag )
+import GHC.Data.Bag( foldrBag )
 import Module( getModule )
 import Name
 import NameEnv

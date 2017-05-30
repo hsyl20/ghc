@@ -30,8 +30,8 @@ import NameSet
 import Name
 import NameEnv
 import FastString
-import GHC.Utils.Data.Unique.DeterFiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.Set
 
 
 import Data.Maybe

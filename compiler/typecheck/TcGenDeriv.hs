@@ -71,8 +71,8 @@ import Var
 import Outputable
 import Lexeme
 import FastString
-import GHC.Utils.Data.Pair
-import GHC.Utils.Data.Bag
+import GHC.Data.Pair
+import GHC.Data.Bag
 
 import Data.List  ( partition, intersperse )
 

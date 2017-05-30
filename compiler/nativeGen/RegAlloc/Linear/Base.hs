@@ -24,7 +24,7 @@ import Reg
 import GHC.Config.Flags
 import Outputable
 import Unique
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import UniqSupply
 
 

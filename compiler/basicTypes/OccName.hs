@@ -108,8 +108,8 @@ module OccName (
 import Util
 import Unique
 import GHC.Config.Flags
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 import FastString
 import FastStringEnv
 import Outputable

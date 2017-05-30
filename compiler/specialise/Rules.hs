@@ -51,14 +51,14 @@ import VarSet
 import Name             ( Name, NamedThing(..), nameIsLocalOrFrom )
 import NameSet
 import NameEnv
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Unify            ( ruleMatchTyKiX )
 import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )
 import Outputable
 import FastString
 import Maybes
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Util
 import Data.List
 import Data.Ord

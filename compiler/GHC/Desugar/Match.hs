@@ -54,7 +54,7 @@ import Outputable
 import BasicTypes ( isGenerated, il_value, fl_value )
 import FastString
 import Unique
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 
 import Control.Monad( when, unless )
 import qualified Data.Map as Map

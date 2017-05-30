@@ -100,11 +100,11 @@ import Data.Map (Map)
 import qualified Data.Map as Map
 
 -- compiler/utils
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Outputable
 import StringBuffer
 import FastString
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Util             ( readRational )
 
 -- compiler/main

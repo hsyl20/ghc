@@ -14,7 +14,7 @@ import GHC.Config.Flags
 import MonadUtils
 import Outputable
 import ApiAnnotation
-import GHC.Utils.Data.Bag (filterBag,isEmptyBag)
+import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )
 import System.Exit

@@ -145,7 +145,7 @@ import FieldLabel
 import GHC.Config.Constants
 import Util
 import Unique( tyConRepNameUnique, dataConRepNameUnique )
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Module
 
 import qualified Data.Data as Data

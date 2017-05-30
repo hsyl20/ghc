@@ -61,10 +61,10 @@ import Name
 import VarEnv
 import UniqSupply
 import Util
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import VarSet
 import Unique
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Outputable
 
 import Data.List

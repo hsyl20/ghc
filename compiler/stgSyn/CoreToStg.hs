@@ -43,7 +43,7 @@ import GHC.Config.Flags
 import ForeignCall
 import Demand           ( isUsedOnce )
 import PrimOp           ( PrimCall(..) )
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 
 import Data.Maybe    (isJust, fromMaybe)
 import Control.Monad (liftM, ap)

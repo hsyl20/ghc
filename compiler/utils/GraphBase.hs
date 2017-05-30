@@ -12,8 +12,8 @@ module GraphBase (
 
 where
 
-import GHC.Utils.Data.Unique.Set
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
 
 
 -- | A fn to check if a node is trivially colorable

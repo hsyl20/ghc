@@ -10,7 +10,7 @@
 -- makes them a much better drop in replacement for 'Data.Map.Map'.
 --
 -- Key preservation is right-biased.
-module GHC.Utils.Data.Unique.Map (
+module GHC.Data.Unique.Map (
     UniqMap,
     emptyUniqMap,
     isNullUniqMap,
@@ -45,7 +45,7 @@ module GHC.Utils.Data.Unique.Map (
     -- Non-deterministic functions omitted
 ) where
 
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 
 import Unique
 import Outputable

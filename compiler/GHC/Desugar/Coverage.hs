@@ -27,7 +27,7 @@ import SrcLoc
 import GHC.Utils.Error
 import NameSet hiding (FreeVars)
 import Name
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import CostCentre
 import CoreSyn
 import Id

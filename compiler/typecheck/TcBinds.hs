@@ -49,7 +49,7 @@ import Name
 import NameSet
 import NameEnv
 import SrcLoc
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import ListSetOps
 import GHC.Utils.Error
 import Digraph
@@ -60,8 +60,8 @@ import Outputable
 import PrelNames( ipClassName )
 import TcValidity (checkValidType)
 import Unique (getUnique)
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 import ConLike
 

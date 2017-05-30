@@ -29,7 +29,7 @@ import BasicTypes as Hs
 import ForeignCall
 import Unique
 import GHC.Utils.Error
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Lexeme
 import Util
 import FastString

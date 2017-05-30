@@ -35,8 +35,8 @@ module NameEnv (
 
 import Digraph
 import Name
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import Maybes
 
 {-

@@ -47,11 +47,11 @@ import Maybes           ( orElse, catMaybes, isJust, isNothing )
 import Demand
 import GHC.Serialized   ( deserializeWithData )
 import Util
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import UniqSupply
 import Outputable
 import FastString
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import MonadUtils
 import Control.Monad    ( zipWithM )
 import Data.List

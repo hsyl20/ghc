@@ -43,7 +43,7 @@ import Util
 import GHC.Utils.Error
 import SrcLoc
 import qualified Maybes
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.DeterSet
 import FastString
 import Platform
 import GHC.Utils.SysTools

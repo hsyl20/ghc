@@ -236,7 +236,7 @@ import Module
 import Platform
 import Literal
 import Unique
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error
@@ -246,7 +246,7 @@ import Panic
 import GHC.Config.Constants
 import Outputable
 import BasicTypes
-import GHC.Utils.Data.Bag              ( emptyBag, unitBag )
+import GHC.Data.Bag              ( emptyBag, unitBag )
 import Var
 
 import Control.Monad

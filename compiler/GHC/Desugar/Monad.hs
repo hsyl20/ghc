@@ -65,7 +65,7 @@ import GHC.Finder
 import PrelNames
 import RdrName
 import GHC.Types
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import DataCon
 import ConLike
 import TyCon
@@ -84,7 +84,7 @@ import FastString
 import Maybes
 import Var (EvVar)
 import qualified GHC.LanguageExtensions as LangExt
-import GHC.Utils.Data.Unique.FiniteMap ( lookupWithDefaultUFM )
+import GHC.Data.Unique.FiniteMap ( lookupWithDefaultUFM )
 
 import Data.IORef
 import Control.Monad

@@ -34,7 +34,7 @@ import Outputable
 import Platform
 import Util
 import Unique
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.DeterSet
 
 -- From iserv
 import SizedSeq

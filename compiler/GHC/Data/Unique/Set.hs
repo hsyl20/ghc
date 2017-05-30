@@ -12,7 +12,7 @@ Basically, the things need to be in class @Uniquable@.
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveDataTypeable #-}
 
-module GHC.Utils.Data.Unique.Set (
+module GHC.Data.Unique.Set (
         -- * Unique set type
         UniqSet,    -- type synonym for UniqFM a
         getUniqSet,
@@ -47,7 +47,7 @@ module GHC.Utils.Data.Unique.Set (
         nonDetFoldUniqSet_Directly
     ) where
 
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Unique
 import Data.Coerce
 import Outputable

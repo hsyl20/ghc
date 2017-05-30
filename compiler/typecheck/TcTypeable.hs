@@ -32,7 +32,7 @@ import OccName
 import Module
 import HsSyn
 import GHC.Config.Flags
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Var ( TyVarBndr(..) )
 import TrieMap
 import GHC.Config.Constants

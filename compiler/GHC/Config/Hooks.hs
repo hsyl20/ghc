@@ -37,7 +37,7 @@ import HsExpr
 import OrdList
 import Id
 import TcRnTypes
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import RdrName
 import CoreSyn
 import GHCi.RemoteTypes

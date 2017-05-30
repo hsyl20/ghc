@@ -47,7 +47,7 @@ import GHC.Config.Flags
 import Platform
 import Config
 import OrdList
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Util
 import GHC.Config.Hooks
 

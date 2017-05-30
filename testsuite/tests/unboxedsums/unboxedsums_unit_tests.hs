@@ -7,7 +7,7 @@ import Outputable
 import RepType
 import TysPrim
 import TysWiredIn
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Unique
 
 import qualified Control.Exception as E

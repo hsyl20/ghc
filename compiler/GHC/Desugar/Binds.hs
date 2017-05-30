@@ -56,7 +56,7 @@ import Module
 import SrcLoc
 import Maybes
 import OrdList
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import BasicTypes
 import GHC.Config.Flags
 import FastString

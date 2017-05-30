@@ -217,7 +217,7 @@ import TysWiredIn( coercibleClass, unitTyCon, unitTyConKey
                  , listTyCon, constraintKind )
 import BasicTypes
 import Util
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Maybes
 import Outputable
 import FastString

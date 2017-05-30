@@ -10,7 +10,7 @@ import RegAlloc.Linear.Base
 import RegAlloc.Liveness
 import Instruction
 
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Outputable
 
 import Data.List

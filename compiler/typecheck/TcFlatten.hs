@@ -24,8 +24,8 @@ import TcSMonad as TcS
 import BasicTypes( SwapFlag(..) )
 
 import Util
-import GHC.Utils.Data.Bag
-import GHC.Utils.Data.Pair
+import GHC.Data.Bag
+import GHC.Data.Pair
 import Control.Monad
 import MonadUtils ( zipWithAndUnzipM )
 import GHC.Exts ( inline )

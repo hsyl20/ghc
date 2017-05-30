@@ -163,11 +163,11 @@ import PrelNames
 import Outputable
 import GHC.Config.Flags
 import FastString
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import UniqSupply
 import Util
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 
 -- libraries
 import qualified Data.Data as Data hiding ( TyCon )

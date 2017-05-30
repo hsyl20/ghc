@@ -21,7 +21,7 @@ import Hoopl
 import UniqSupply
 import StgCmmUtils      ( newTemp )
 import Maybes
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Util
 
 import GHC.Config.Flags

@@ -34,7 +34,7 @@ module NameSet (
 #include "HsVersions.h"
 
 import Name
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import Data.List (sortBy)
 
 {-

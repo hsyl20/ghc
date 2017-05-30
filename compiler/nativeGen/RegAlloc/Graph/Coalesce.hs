@@ -8,10 +8,10 @@ import Instruction
 import Reg
 
 import Cmm
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Digraph
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.Set
 import UniqSupply
 
 import Data.List

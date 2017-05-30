@@ -47,7 +47,7 @@ import MkId
 import TcTyDecls
 import ConLike
 import FieldLabel
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Util
 import GHC.Utils.Error
 import Control.Monad ( zipWithM )

@@ -50,14 +50,14 @@ import VarSet
 import VarEnv
 import Name
 import PrelNames ( eqPrimTyConKey )
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import Outputable
 import Maybes
 import TrieMap
 import Unique
 import Util
 import Var
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import SrcLoc
 import FastString
 import MonadUtils

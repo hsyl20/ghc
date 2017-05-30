@@ -46,7 +46,7 @@ import NameSet
 import NameEnv
 import Avail
 import Outputable
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import FastString
 import SrcLoc
@@ -56,7 +56,7 @@ import GHC.Types         ( HscEnv, hsc_dflags )
 import ListSetOps       ( findDupsEq, removeDups, equivClasses )
 import Digraph          ( SCC, flattenSCC, flattenSCCs, Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq )
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

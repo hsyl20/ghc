@@ -62,7 +62,7 @@ module Binary
 import {-# SOURCE #-} Name (Name)
 import FastString
 import Panic
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import FastMutInt
 import Fingerprint
 import BasicTypes

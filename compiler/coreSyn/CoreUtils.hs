@@ -85,7 +85,7 @@ import ListSetOps       ( minusList )
 import BasicTypes       ( Arity )
 import Platform
 import Util
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Data.Function       ( on )
 import Data.List
 import Data.Ord            ( comparing )

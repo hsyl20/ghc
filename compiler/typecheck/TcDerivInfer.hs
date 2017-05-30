@@ -12,7 +12,7 @@ module TcDerivInfer (inferConstraints, simplifyInstanceContexts) where
 
 #include "HsVersions.h"
 
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import BasicTypes
 import Class
 import DataCon

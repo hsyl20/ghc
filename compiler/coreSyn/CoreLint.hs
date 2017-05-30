@@ -26,7 +26,7 @@ import CoreFVs
 import CoreUtils
 import CoreStats   ( coreBindsStats )
 import CoreMonad
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Literal
 import DataCon
 import TysWiredIn
@@ -69,7 +69,7 @@ import qualified Control.Monad.Fail as MonadFail
 #endif
 import MonadUtils
 import Data.Maybe
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import qualified GHC.LanguageExtensions as LangExt
 
 {-

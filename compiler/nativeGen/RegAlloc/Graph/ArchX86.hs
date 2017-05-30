@@ -15,7 +15,7 @@ module RegAlloc.Graph.ArchX86 (
         squeese,
 ) where
 import RegAlloc.Graph.ArchBase  (Reg(..), RegSub(..), RegClass(..))
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 
 
 -- | Determine the class of a register

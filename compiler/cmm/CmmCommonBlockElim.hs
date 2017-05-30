@@ -20,8 +20,8 @@ import qualified Data.List as List
 import Data.Word
 import qualified Data.Map as M
 import Outputable
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import qualified TrieMap as TM
 import Unique
 import Control.Arrow (first, second)

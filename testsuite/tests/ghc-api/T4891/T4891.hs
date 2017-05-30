@@ -19,7 +19,7 @@ import Name (getOccString)
 import Unsafe.Coerce
 import Control.Monad
 import Data.Maybe
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Outputable
 import GhcMonad
 import X

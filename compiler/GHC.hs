@@ -320,7 +320,7 @@ import GHC.Types.Annotations
 import Module
 import Panic
 import Platform
-import GHC.Utils.Data.Bag              ( listToBag, unitBag )
+import GHC.Data.Bag              ( listToBag, unitBag )
 import GHC.Utils.Error
 import MonadUtils
 import Util

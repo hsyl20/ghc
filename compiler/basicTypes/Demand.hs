@@ -66,7 +66,7 @@ import GHC.Config.Flags
 import Outputable
 import Var ( Var )
 import VarEnv
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import Util
 import BasicTypes
 import Binary

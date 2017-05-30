@@ -148,14 +148,14 @@ import Var
 import VarEnv
 import VarSet
 import Outputable
-import GHC.Utils.Data.Bag as Bag
+import GHC.Data.Bag as Bag
 import UniqSupply
 import Util
 import TcRnTypes
 
 import Unique
-import GHC.Utils.Data.Unique.FiniteMap
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.FiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import Maybes
 
 import TrieMap
@@ -169,7 +169,7 @@ import Data.List ( foldl', partition )
 
 #if defined(DEBUG)
 import Digraph
-import GHC.Utils.Data.Unique.Set
+import GHC.Data.Unique.Set
 #endif
 
 {-

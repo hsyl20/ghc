@@ -28,9 +28,9 @@ import GHC.Config.Flags( DynFlags )
 import NameSet
 import RdrName
 
-import GHC.Utils.Data.Pair
+import GHC.Data.Pair
 import Util
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import MonadUtils
 import Control.Monad
 import Data.Maybe ( isJust )

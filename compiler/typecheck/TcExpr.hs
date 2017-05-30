@@ -70,7 +70,7 @@ import Outputable
 import FastString
 import Control.Monad
 import Class(classTyCon)
-import GHC.Utils.Data.Unique.Set ( nonDetEltsUniqSet )
+import GHC.Data.Unique.Set ( nonDetEltsUniqSet )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Data.Function

@@ -148,7 +148,7 @@ import GHCi.Message         ( Pipe )
 import GHCi.RemoteTypes
 import GHC.ForeignSrcLang
 
-import GHC.Utils.Data.Unique.FiniteMap
+import GHC.Data.Unique.FiniteMap
 import HsSyn
 import RdrName
 import Avail
@@ -186,18 +186,18 @@ import Maybes
 import Outputable
 import SrcLoc
 import Unique
-import GHC.Utils.Data.Unique.DeterFiniteMap
+import GHC.Data.Unique.DeterFiniteMap
 import FastString
 import StringBuffer     ( StringBuffer )
 import Fingerprint
 import MonadUtils
-import GHC.Utils.Data.Bag
+import GHC.Data.Bag
 import Binary
 import GHC.Utils.Error
 import NameCache
 import Platform
 import Util
-import GHC.Utils.Data.Unique.DeterSet
+import GHC.Data.Unique.DeterSet
 import GHC.Serialized   ( Serialized )
 
 import Foreign
