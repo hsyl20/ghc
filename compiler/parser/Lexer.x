@@ -86,8 +86,8 @@ import Data.List
 import Data.Maybe
 import Data.Word
 
-import EnumSet (EnumSet)
-import qualified EnumSet
+import GHC.Data.EnumSet (EnumSet)
+import qualified GHC.Data.EnumSet as EnumSet
 
 -- ghc-boot
 import qualified GHC.LanguageExtensions as LangExt

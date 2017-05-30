@@ -236,7 +236,7 @@ Library
         CmmType
         CmmUtils
         CmmLayoutStack
-        EnumSet
+        GHC.Data.EnumSet
         MkGraph
         PprBase
         PprC

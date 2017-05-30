@@ -105,7 +105,7 @@ import Maybes( MaybeErr(..) )
 import GHC.Config.Flags
 import Panic
 import Lexeme
-import qualified EnumSet
+import qualified GHC.Data.EnumSet as EnumSet
 
 import qualified Language.Haskell.TH as TH
 -- THSyntax gives access to internal functions and data types

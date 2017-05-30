@@ -16,7 +16,7 @@ import Fingerprint
 import BinFingerprint
 -- import Outputable
 
-import qualified EnumSet
+import qualified GHC.Data.EnumSet as EnumSet
 import System.FilePath (normalise)
 
 -- | Produce a fingerprint of a @DynFlags@ value. We only base

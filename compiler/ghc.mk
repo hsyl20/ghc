@@ -469,7 +469,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Program.Driver.Phases \
 	GHC.Config.Flags \
 	Encoding \
-	EnumSet \
+	GHC.Data.EnumSet \
 	GHC.Utils.Error \
 	Exception \
 	FamInstEnv \

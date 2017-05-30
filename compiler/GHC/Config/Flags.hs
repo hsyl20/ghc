@@ -215,8 +215,8 @@ import System.IO.Error
 import Text.ParserCombinators.ReadP hiding (char)
 import Text.ParserCombinators.ReadP as R
 
-import EnumSet (EnumSet)
-import qualified EnumSet
+import GHC.Data.EnumSet (EnumSet)
+import qualified GHC.Data.EnumSet as EnumSet
 
 import GHC.Foreign (withCString, peekCString)
 import qualified GHC.LanguageExtensions as LangExt
