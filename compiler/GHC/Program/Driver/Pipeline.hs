@@ -62,7 +62,7 @@ import TcRnTypes
 import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt
 
-import Exception
+import GHC.Utils.Exception as Exception
 import System.Directory
 import System.FilePath
 import System.IO

@@ -35,7 +35,7 @@ import GHC.Utils.PrettyPrint.TyThing
 import GHC.Utils.Error
 import MonadUtils
 import GHC.Config.Flags
-import Exception
+import GHC.Utils.Exception
 
 import Control.Monad
 import Data.List

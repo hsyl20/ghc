@@ -77,7 +77,7 @@ import GHC.Data.Maybe
 import System.Environment ( getEnv )
 import GHC.Data.FastString
 import GHC.Utils.Error         ( debugTraceMsg, MsgDoc, printInfoForUser )
-import Exception
+import GHC.Utils.Exception
 
 import System.Directory
 import System.FilePath as FilePath

@@ -471,7 +471,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Char.Encoding \
 	GHC.Data.EnumSet \
 	GHC.Utils.Error \
-	Exception \
+	GHC.Utils.Exception \
 	FamInstEnv \
 	FastFunctions \
 	FastMutInt \

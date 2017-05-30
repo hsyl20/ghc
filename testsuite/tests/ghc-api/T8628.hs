@@ -3,7 +3,7 @@ module Main where
 import System.IO
 import GHC.Config.Flags
 import GHC
-import Exception
+import GHC.Utils.Exception
 import Module
 import GHC.Data.FastString
 import MonadUtils

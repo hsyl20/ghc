@@ -60,7 +60,7 @@ import Control.Concurrent.MVar
 import System.FilePath
 import System.Directory
 
-import Exception
+import GHC.Utils.Exception
 
 import Foreign (Ptr) -- needed for 2nd stage
 

@@ -92,7 +92,7 @@ import GHC.Data.StringBuffer (stringToStringBuffer)
 import Control.Monad
 import GHC.Exts
 import Data.Array
-import Exception
+import GHC.Utils.Exception
 
 -- -----------------------------------------------------------------------------
 -- running a statement interactively

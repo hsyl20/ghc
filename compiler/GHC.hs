@@ -343,7 +343,7 @@ import Data.Typeable    ( Typeable )
 import Data.Word        ( Word8 )
 import Control.Monad
 import System.Exit      ( exitWith, ExitCode(..) )
-import Exception
+import GHC.Utils.Exception
 import Data.IORef
 import System.FilePath
 import System.IO

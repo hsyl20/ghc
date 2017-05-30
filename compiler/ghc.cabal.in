@@ -176,7 +176,7 @@ Library
         PatSyn
         Demand
         Debug
-        Exception
+        GHC.Utils.Exception
         FieldLabel
         GHC.Monad
         GHC.Config.Hooks

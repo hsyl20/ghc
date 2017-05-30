@@ -50,7 +50,7 @@ import GHC.Program.Main
 import GHC.Data.Bag              ( listToBag )
 import BasicTypes
 import GHC.Data.Graph.Directed
-import Exception        ( tryIO, gbracket, gfinally )
+import GHC.Utils.Exception        ( tryIO, gbracket, gfinally )
 import GHC.Data.FastString
 import GHC.Data.Maybe           ( expectJust )
 import Name

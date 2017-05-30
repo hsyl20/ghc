@@ -14,7 +14,7 @@ module GHC.Utils.Elf (
     makeElfNote
   ) where
 
-import Exception
+import GHC.Utils.Exception
 import GHC.Config.Flags
 import Platform
 import GHC.Utils.Error

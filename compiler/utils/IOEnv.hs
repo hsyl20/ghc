@@ -32,7 +32,7 @@ module IOEnv (
   ) where
 
 import GHC.Config.Flags
-import Exception
+import GHC.Utils.Exception
 import Module
 import Panic
 

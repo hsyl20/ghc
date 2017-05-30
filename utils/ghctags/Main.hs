@@ -12,7 +12,7 @@ import Name             ( getOccString )
 import Panic            ( panic )
 import GHC.Config.Flags         ( defaultFatalMessager, defaultFlushOut )
 import GHC.Data.Bag
-import Exception
+import GHC.Utils.Exception
 import GHC.Data.FastString
 import MonadUtils       ( liftIO )
 import SrcLoc

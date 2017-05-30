@@ -103,7 +103,7 @@ import Data.Time.LocalTime ( getZonedTime )
 import Data.Time.Format ( formatTime, defaultTimeLocale )
 import Data.Version ( showVersion )
 
-import Exception hiding (catch)
+import GHC.Utils.Exception hiding (catch)
 import Foreign hiding (void)
 import GHC.Stack hiding (SrcLoc(..))
 

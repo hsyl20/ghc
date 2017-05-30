@@ -60,7 +60,7 @@ import Panic
 import GHC.Config.Flags
 import GHC.Utils.Error
 import Outputable
-import Exception
+import GHC.Utils.Exception
 import BasicTypes
 import GHC.Data.FastString
 import Util

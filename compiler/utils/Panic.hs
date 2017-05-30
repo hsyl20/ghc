@@ -30,7 +30,7 @@ module Panic (
 import {-# SOURCE #-} Outputable (SDoc, showSDocUnsafe)
 
 import Config
-import Exception
+import GHC.Utils.Exception as Exception
 
 import Control.Monad.IO.Class
 import Control.Concurrent

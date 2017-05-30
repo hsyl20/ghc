@@ -205,7 +205,7 @@ import Control.Monad    ( guard, liftM, when, ap )
 import Data.Foldable    ( foldl' )
 import Data.IORef
 import Data.Time
-import Exception
+import GHC.Utils.Exception
 import System.FilePath
 import Control.Concurrent
 import System.Process   ( ProcessHandle )

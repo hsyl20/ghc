@@ -137,7 +137,7 @@ module Util (
 
 #include "HsVersions.h"
 
-import Exception
+import GHC.Utils.Exception
 import Panic
 
 import Data.Data

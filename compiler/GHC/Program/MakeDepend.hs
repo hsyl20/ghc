@@ -30,7 +30,7 @@ import SrcLoc
 import Data.List
 import GHC.Data.FastString
 
-import Exception
+import GHC.Utils.Exception
 import GHC.Utils.Error
 
 import System.Directory

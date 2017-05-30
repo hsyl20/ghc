@@ -40,7 +40,7 @@ import Pretty           ()
 import GHC.Data.Maybe
 import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )
 import MonadUtils
-import Exception
+import GHC.Utils.Exception as Exception
 import BasicTypes
 import qualified GHC.LanguageExtensions as LangExt
 

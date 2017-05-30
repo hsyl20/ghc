@@ -22,7 +22,7 @@ import Module
 import RdrName
 import Type
 import SrcLoc
-import Exception
+import GHC.Utils.Exception
 
 import Data.Word
 #if MIN_VERSION_base(4,9,0)

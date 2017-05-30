@@ -1,8 +1,8 @@
 {-# OPTIONS_GHC -fno-warn-deprecations #-}
-module Exception
+module GHC.Utils.Exception
     (
     module Control.Exception,
-    module Exception
+    module GHC.Utils.Exception
     )
     where
 

@@ -64,7 +64,7 @@ import Panic
 import Platform
 import Util
 import GHC.Config.Flags
-import Exception
+import GHC.Utils.Exception as Exception
 
 import LlvmCodeGen.Base (llvmVersionStr, supportedLlvmVersion)
 

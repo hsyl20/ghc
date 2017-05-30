@@ -103,7 +103,7 @@ import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Utils.Binary
 import Fingerprint
-import Exception
+import GHC.Utils.Exception
 import GHC.Data.Unique.Set
 import GHC.Packages
 

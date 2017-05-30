@@ -149,7 +149,7 @@ import GHC.Types
 import GHC.Data.FastString
 import UniqSupply
 import GHC.Data.Bag
-import Exception
+import GHC.Utils.Exception
 import qualified GHC.Data.Stream as Stream
 import GHC.Data.Stream (Stream)
 

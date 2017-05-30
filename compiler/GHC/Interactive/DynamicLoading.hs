@@ -51,7 +51,7 @@ import Panic
 import GHC.Data.FastString
 import GHC.Utils.Error
 import Outputable
-import Exception
+import GHC.Utils.Exception
 import GHC.Config.Hooks
 
 import Data.Maybe        ( mapMaybe )
