@@ -76,7 +76,7 @@ import MkIface( tyThingToIfaceDecl )
 import GHC.Data.Coercion( pprCoAxiom )
 import CoreFVs( orphNamesOfFamInst )
 import FamInst
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import TcAnnotations
 import TcBinds

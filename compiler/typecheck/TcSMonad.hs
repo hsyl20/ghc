@@ -120,7 +120,7 @@ module TcSMonad (
 import GHC.Types
 
 import qualified Inst as TcM
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInst
 import FamInstEnv
 

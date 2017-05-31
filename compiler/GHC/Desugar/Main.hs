@@ -25,7 +25,7 @@ import TcRnDriver ( runTcInteractive )
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Type
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Available
 import CoreSyn

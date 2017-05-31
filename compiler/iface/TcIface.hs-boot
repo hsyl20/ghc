@@ -4,7 +4,7 @@ import IfaceSyn    ( IfaceDecl, IfaceClsInst, IfaceFamInst, IfaceRule,
                      IfaceAnnotation, IfaceCompleteMatch )
 import GHC.Data.Types     ( TyThing )
 import TcRnTypes   ( IfL )
-import InstEnv     ( ClsInst )
+import GHC.TypeSystem.ClassInstance     ( ClsInst )
 import FamInstEnv  ( FamInst )
 import CoreSyn     ( CoreRule )
 import GHC.Types    ( TypeEnv, VectInfo, IfaceVectInfo, CompleteMatch )

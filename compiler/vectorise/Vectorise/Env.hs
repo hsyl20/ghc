@@ -16,7 +16,7 @@ module Vectorise.Env (
 ) where
 
 import GHC.Types
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import CoreSyn
 import GHC.Data.Type

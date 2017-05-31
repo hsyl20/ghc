@@ -31,7 +31,7 @@ import TcRnMonad
 import GHC.Desugar.Monad
 import GHC.Types hiding ( MonadThings(..) )
 import GHC.Config.Flags
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Name.Set

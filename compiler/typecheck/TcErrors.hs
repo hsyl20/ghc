@@ -23,7 +23,7 @@ import GHC.Data.Module
 import FamInst
 import FamInstEnv       ( flattenTys )
 import Inst
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor

@@ -27,7 +27,7 @@ import TcMType
 import TcType
 import BuildTyCl
 import Inst
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInst
 import FamInstEnv
 import TcDeriv

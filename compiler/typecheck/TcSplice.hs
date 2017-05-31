@@ -71,7 +71,7 @@ import TcIface
 import GHC.Data.Types
 import FamInst
 import FamInstEnv
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import Inst
 import GHC.Data.Name.Environment
 import PrelNames

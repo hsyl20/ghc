@@ -55,7 +55,7 @@ import PrelNames
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Utils
-import InstEnv     ( instanceDFunId )
+import GHC.TypeSystem.ClassInstance     ( instanceDFunId )
 import GHC.Data.Coercion.Optimise ( checkAxInstCo )
 import GHC.Data.Unique.Supply
 import CoreArity ( typeArity )

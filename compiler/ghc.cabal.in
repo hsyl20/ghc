@@ -468,7 +468,7 @@ Library
         THNames
         FamInstEnv
         FunDeps
-        InstEnv
+        GHC.TypeSystem.ClassInstance
         GHC.Data.Type.Constructor
         GHC.Data.Coercion.Axiom
         GHC.Data.Kind

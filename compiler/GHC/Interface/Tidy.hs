@@ -36,7 +36,7 @@ import GHC.Data.Var
 import GHC.Data.Id as Id
 import GHC.Data.Id.Make             ( mkDictSelRhs )
 import GHC.Data.Id.Info
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import GHC.Data.Type             ( tidyTopType )
 import GHC.Data.Demand           ( appIsBottom, isTopSig, isBottomingSig )

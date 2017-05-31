@@ -41,7 +41,7 @@ import HsSyn            -- HsType
 import TcRnMonad        -- TcType, amongst others
 import TcEnv       ( tcGetInstEnvs )
 import FunDeps
-import InstEnv     ( InstMatch, lookupInstEnv )
+import GHC.TypeSystem.ClassInstance     ( InstMatch, lookupInstEnv )
 import FamInstEnv  ( isDominatedBy, injectiveBranches,
                      InjectivityCheckResult(..) )
 import FamInst     ( makeInjectivityErrors )

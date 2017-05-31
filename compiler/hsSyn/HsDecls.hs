@@ -102,7 +102,7 @@ import PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
 import GHC.Data.Name.Set
 
 -- others:
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Utils.Outputable
 import GHC.Utils

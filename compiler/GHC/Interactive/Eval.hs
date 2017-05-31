@@ -49,7 +49,7 @@ import GHC.Monad
 import GHC.Program.Main
 import HsSyn
 import GHC.Types
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import IfaceEnv   ( newInteractiveBinder )
 import FamInstEnv ( FamInst )
 import CoreFVs    ( orphNamesOfFamInst )

@@ -18,7 +18,7 @@ import TcUnify( canSolveByUnification )
 import GHC.Data.Var.Set
 import GHC.Data.Type
 import GHC.Data.Kind( isConstraintKind )
-import InstEnv( DFunInstType, lookupInstEnv, instanceDFunId )
+import GHC.TypeSystem.ClassInstance( DFunInstType, lookupInstEnv, instanceDFunId )
 import GHC.Data.Coercion.Axiom( sfInteractTop, sfInteractInert )
 
 import TcMType (newMetaTyVars)

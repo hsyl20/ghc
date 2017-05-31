@@ -132,7 +132,7 @@ import CmmBuildInfoTables
 import CmmPipeline
 import CmmInfo
 import GHC.CodeGen.CodeOutput
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import GHC.Utils.Fingerprint      ( Fingerprint )
 import GHC.Config.Hooks

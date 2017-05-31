@@ -23,7 +23,7 @@ import TcValidity( allDistinctTyVars )
 import TcClassDcl( tcATDefault, tcMkDeclCtxt )
 import TcEnv
 import TcGenDeriv                       -- Deriv stuff
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import Inst
 import FamInstEnv
 import TcHsType

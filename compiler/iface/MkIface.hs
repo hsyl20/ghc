@@ -75,7 +75,7 @@ import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.Type
 import TcType
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import TcRnMonad
 import HsSyn

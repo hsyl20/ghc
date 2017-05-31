@@ -153,7 +153,7 @@ import HsSyn
 import GHC.Data.RdrName
 import GHC.Data.Available
 import GHC.Data.Module
-import InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
+import GHC.TypeSystem.ClassInstance          ( InstEnv, ClsInst, identicalClsInstHead )
 import FamInstEnv
 import CoreSyn          ( CoreProgram, RuleBase, CoreRule, CoreVect )
 import GHC.Data.Name

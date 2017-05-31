@@ -30,7 +30,7 @@ import GHC.Utils.Error
 import GHC.Types (lookupFixity, mi_fix)
 import HsSyn
 import Inst
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import LoadIface (loadInterfaceForName)
 import GHC.Data.Module (getModule)
 import GHC.Data.Name

@@ -24,7 +24,7 @@ import HsSyn
 import GHC.Data.RdrName
 import TcRnMonad
 import TcTyDecls
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import Inst
 import TcIface

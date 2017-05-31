@@ -53,7 +53,7 @@ import TysPrim  ( funTyConName )
 import Rules
 import GHC.Data.Type.Constructor
 import GHC.Data.Annotation
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import GHC.Data.Name
 import GHC.Data.Name.Environment

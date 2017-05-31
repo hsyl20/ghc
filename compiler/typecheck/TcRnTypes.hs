@@ -153,7 +153,7 @@ import GHC.Data.Id       ( idType, idName )
 import GHC.Data.FieldLabel ( FieldLabel )
 import TcType
 import GHC.Data.Annotation
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import FamInstEnv
 import GHC.Desugar.Match.Expr
 import GHC.Utils.Monad.IOEnv

@@ -41,7 +41,7 @@ import TcHsSyn
 import TcRnMonad
 import TcEnv
 import TcEvidence
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import TysWiredIn  ( heqDataCon, coercibleDataCon )
 import CoreSyn     ( isOrphan )
 import FunDeps

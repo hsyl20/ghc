@@ -13,7 +13,7 @@ import Vectorise.Env
 
 import GHC.Config.Flags
 import FamInstEnv
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

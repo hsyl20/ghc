@@ -11,7 +11,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Pair
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 
 type NormalCo    = Coercion
 type NormalNonIdCo = NormalCo  -- Extra invariant: not the identity

@@ -81,7 +81,7 @@ import GHC.Types
 import GHC.Utils.Outputable
 import GHC.Data.Type
 import GHC.Data.Id
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.FastString
 import GHC.Data.Unique
 

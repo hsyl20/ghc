@@ -27,7 +27,7 @@ import TcType( transSuperClasses )
 import GHC.Data.Coercion.Axiom( TypeEqn )
 import GHC.TypeSystem.Unify
 import FamInst( injTyVarsOfTypes )
-import InstEnv
+import GHC.TypeSystem.ClassInstance
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
