@@ -307,7 +307,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Name             hiding ( varName )
 import GHC.Data.Available
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv ( FamInst )
+import GHC.TypeSystem.FamilyInstance ( FamInst )
 import GHC.Data.SrcLoc
 import CoreSyn
 import GHC.Interface.Tidy

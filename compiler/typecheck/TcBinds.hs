@@ -33,7 +33,7 @@ import TcEvidence
 import TcHsType
 import TcPat
 import TcMType
-import FamInstEnv( normaliseType )
+import GHC.TypeSystem.FamilyInstance( normaliseType )
 import FamInst( tcGetFamInstEnvs )
 import GHC.Data.Type.Constructor
 import TcType

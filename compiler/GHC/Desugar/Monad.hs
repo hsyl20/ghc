@@ -53,7 +53,7 @@ module GHC.Desugar.Monad (
     ) where
 
 import TcRnMonad
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import CoreSyn
 import MkCore    ( unitExpr )
 import CoreUtils ( exprType, isExprLevPoly )

@@ -133,7 +133,7 @@ import CmmPipeline
 import CmmInfo
 import GHC.CodeGen.CodeOutput
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Utils.Fingerprint      ( Fingerprint )
 import GHC.Config.Hooks
 import TcEnv

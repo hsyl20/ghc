@@ -16,7 +16,7 @@ import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvS
 import SimplEnv
 import SimplUtils
 import OccurAnal        ( occurAnalyseExpr )
-import FamInstEnv       ( FamInstEnv )
+import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
 import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
 import GHC.Data.Id
 import GHC.Data.Id.Make             ( seqId )
@@ -25,7 +25,7 @@ import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
 import GHC.Data.Coercion hiding  ( substCo, substCoVar )
 import GHC.Data.Coercion.Optimise      ( optCoercion )
-import FamInstEnv       ( topNormaliseType_maybe )
+import GHC.TypeSystem.FamilyInstance       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
 --import GHC.Data.Type.Constructor            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
 import CoreMonad        ( Tick(..), SimplifierMode(..) )

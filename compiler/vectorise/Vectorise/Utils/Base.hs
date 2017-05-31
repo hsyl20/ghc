@@ -33,7 +33,7 @@ import Vectorise.Builtins
 
 import CoreSyn
 import CoreUtils
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

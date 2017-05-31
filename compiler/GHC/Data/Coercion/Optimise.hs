@@ -22,7 +22,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
-import FamInstEnv ( flattenTys )
+import GHC.TypeSystem.FamilyInstance ( flattenTys )
 import GHC.Data.Pair
 import GHC.Data.List.SetOps ( getNth )
 import GHC.Utils

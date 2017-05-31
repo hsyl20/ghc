@@ -30,7 +30,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Type
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Name.Environment

@@ -51,7 +51,7 @@ import HsSyn
 import GHC.Types
 import GHC.TypeSystem.ClassInstance
 import IfaceEnv   ( newInteractiveBinder )
-import FamInstEnv ( FamInst )
+import GHC.TypeSystem.FamilyInstance ( FamInst )
 import CoreFVs    ( orphNamesOfFamInst )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             hiding( typeKind )

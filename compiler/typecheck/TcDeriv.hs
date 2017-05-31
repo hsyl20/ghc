@@ -25,7 +25,7 @@ import TcEnv
 import TcGenDeriv                       -- Deriv stuff
 import GHC.TypeSystem.ClassInstance
 import Inst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import TcHsType
 import TcMType
 

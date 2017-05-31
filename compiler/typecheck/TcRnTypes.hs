@@ -154,7 +154,7 @@ import GHC.Data.FieldLabel ( FieldLabel )
 import TcType
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Desugar.Match.Expr
 import GHC.Utils.Monad.IOEnv
 import GHC.Data.RdrName

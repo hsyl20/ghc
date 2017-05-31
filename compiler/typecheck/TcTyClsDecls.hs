@@ -39,7 +39,7 @@ import TysWiredIn ( unitTy )
 import TcType
 import RnEnv( lookupConstructorFields )
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
 import GHC.Data.Types   -- for checkValidRoles

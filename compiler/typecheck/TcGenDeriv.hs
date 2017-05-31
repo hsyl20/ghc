@@ -48,7 +48,7 @@ import GHC.Data.Char.Encoding
 import GHC.Config.Flags
 import PrelInfo
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import PrelNames
 import THNames
 import GHC.Data.Module ( moduleName, moduleNameString

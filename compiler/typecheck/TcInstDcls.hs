@@ -29,7 +29,7 @@ import BuildTyCl
 import Inst
 import GHC.TypeSystem.ClassInstance
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import TcDeriv
 import TcEnv
 import TcHsType

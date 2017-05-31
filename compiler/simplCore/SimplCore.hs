@@ -31,7 +31,7 @@ import CoreMonad
 import qualified GHC.Utils.Error as Err
 import FloatIn          ( floatInwards )
 import FloatOut         ( floatOutwards )
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Id
 import GHC.Utils.Error         ( withTiming )
 import GHC.Data.BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )

@@ -25,7 +25,7 @@ import GHC.Data.RdrName
 import TcRnMonad
 import TcTyDecls
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import Inst
 import TcIface
 import TcMType

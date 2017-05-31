@@ -31,7 +31,7 @@ import TcBinds          ( chooseInferredQuantifiers, tcLocalBinds )
 import TcSigs           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )
 import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
-import FamInstEnv       ( FamInstEnvs )
+import GHC.TypeSystem.FamilyInstance       ( FamInstEnvs )
 import RnEnv            ( addUsedGRE )
 import RnUtils          ( addNameClashErrRn, unknownSubordinateErr )
 import TcEnv

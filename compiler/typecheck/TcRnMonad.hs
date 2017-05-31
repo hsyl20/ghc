@@ -147,7 +147,7 @@ import GHC.Data.Type
 
 import TcType
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import PrelNames
 
 import GHC.Data.Id

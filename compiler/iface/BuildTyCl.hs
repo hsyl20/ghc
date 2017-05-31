@@ -16,7 +16,7 @@ module BuildTyCl (
 #include "HsVersions.h"
 
 import IfaceEnv
-import FamInstEnv( FamInstEnvs, mkNewTypeCoAxiom )
+import GHC.TypeSystem.FamilyInstance( FamInstEnvs, mkNewTypeCoAxiom )
 import TysWiredIn( isCTupleTyConName )
 import TysPrim ( voidPrimTy )
 import GHC.Data.DataConstructor

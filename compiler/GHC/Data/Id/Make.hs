@@ -44,7 +44,7 @@ import TysPrim
 import TysWiredIn
 import PrelRules
 import GHC.Data.Type
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import TcType
 import MkCore

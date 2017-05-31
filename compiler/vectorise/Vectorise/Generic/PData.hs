@@ -20,7 +20,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import TcMType
 import GHC.Data.Name
 import GHC.Utils

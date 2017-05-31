@@ -29,7 +29,7 @@ import GHC.Data.Var.Set           ( VarSet )
 import GHC.Data.Type
 import RepType          ( isVoidTy )
 import GHC.Data.Coercion
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.BasicTypes       ( Boxity(..) )
 import GHC.Data.Literal          ( absentLiteralOf )
 import GHC.Data.Type.Constructor

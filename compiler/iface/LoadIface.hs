@@ -54,7 +54,7 @@ import Rules
 import GHC.Data.Type.Constructor
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Available

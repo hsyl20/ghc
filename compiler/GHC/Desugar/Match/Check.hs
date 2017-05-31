@@ -26,7 +26,7 @@ import TcHsSyn
 import GHC.Data.Id
 import GHC.Data.ConstructorLike
 import GHC.Data.Name
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import TysWiredIn
 import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc

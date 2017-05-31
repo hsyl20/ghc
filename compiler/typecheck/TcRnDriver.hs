@@ -77,7 +77,7 @@ import GHC.Data.Coercion( pprCoAxiom )
 import CoreFVs( orphNamesOfFamInst )
 import FamInst
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import TcAnnotations
 import TcBinds
 import GHC.Syntax.Parsers.HeaderInfo       ( mkPrelImports )

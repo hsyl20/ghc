@@ -42,7 +42,7 @@ import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel
 import FunDeps
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.TypeSystem.Unify ( tcUnifyTyWithTFs )
 
 import TcEvidence

@@ -61,7 +61,7 @@ import qualified FamInst   as TcM
 import qualified IfaceEnv
 import qualified GHC.Finder
 
-import FamInstEnv ( FamInstEnv )
+import GHC.TypeSystem.FamilyInstance ( FamInstEnv )
 import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                   , unsafeTcPluginTcM, getEvBindsTcPluginM
                   , liftIO, traceTc )

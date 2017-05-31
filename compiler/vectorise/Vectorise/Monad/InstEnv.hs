@@ -12,7 +12,7 @@ import Vectorise.Monad.Base
 import Vectorise.Env
 
 import GHC.Config.Flags
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Type

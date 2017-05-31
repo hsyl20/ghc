@@ -122,7 +122,7 @@ import GHC.Types
 import qualified Inst as TcM
 import GHC.TypeSystem.ClassInstance
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 
 import qualified TcRnMonad as TcM
 import qualified TcMType as TcM

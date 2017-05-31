@@ -472,7 +472,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.EnumSet \
 	GHC.Utils.Error \
 	GHC.Utils.Exception \
-	FamInstEnv \
+	GHC.TypeSystem.FamilyInstance \
 	GHC.Utils.IO.Unsafe \
 	GHC.Data.FastMutableInt \
 	GHC.Data.FastString \

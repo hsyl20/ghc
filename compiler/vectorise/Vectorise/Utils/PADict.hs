@@ -12,7 +12,7 @@ import Vectorise.Utils.Base
 
 import CoreSyn
 import CoreUtils
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
 import GHC.Data.Types

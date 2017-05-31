@@ -22,7 +22,7 @@ import GHC.Data.Demand
 import WwLib
 import GHC.Utils
 import GHC.Utils.Outputable
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.Utils.Monad
 
 #include "HsVersions.h"

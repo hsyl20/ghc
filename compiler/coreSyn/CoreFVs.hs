@@ -73,7 +73,7 @@ import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import TysPrim( funTyConName )
 import GHC.Data.Maybe( orElse )
 import GHC.Utils

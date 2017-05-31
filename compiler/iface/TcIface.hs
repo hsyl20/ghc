@@ -36,7 +36,7 @@ import GHC.Data.Types    -- needs to build types & coercions in a knot
 import GHC.Types
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import CoreSyn
 import CoreUtils
 import CoreUnfold

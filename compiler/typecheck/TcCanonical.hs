@@ -20,7 +20,7 @@ import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Types   -- cleverly decomposes types, good for completeness checking
 import GHC.Data.Coercion
-import FamInstEnv ( FamInstEnvs )
+import GHC.TypeSystem.FamilyInstance ( FamInstEnvs )
 import FamInst ( tcTopNormaliseNewTypeTF_maybe )
 import GHC.Data.Var
 import GHC.Utils.Outputable

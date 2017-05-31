@@ -70,7 +70,7 @@ import TcHsType
 import TcIface
 import GHC.Data.Types
 import FamInst
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import GHC.TypeSystem.ClassInstance
 import Inst
 import GHC.Data.Name.Environment

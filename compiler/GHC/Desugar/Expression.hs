@@ -23,7 +23,7 @@ import GHC.Desugar.Arrows
 import GHC.Desugar.Monad
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import FamInstEnv( topNormaliseType )
+import GHC.TypeSystem.FamilyInstance( topNormaliseType )
 import GHC.Desugar.Splices
 import HsSyn
 

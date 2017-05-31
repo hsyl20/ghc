@@ -15,7 +15,7 @@ import Vectorise.Builtins
 import Vectorise.Generic.Description
 import CoreSyn
 import CoreUtils
-import FamInstEnv
+import GHC.TypeSystem.FamilyInstance
 import MkCore            ( mkWildCase, mkCoreLet )
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

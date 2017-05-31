@@ -466,7 +466,7 @@ Library
         GHC.Data.Coercion
         GHC.Desugar.Splices
         THNames
-        FamInstEnv
+        GHC.TypeSystem.FamilyInstance
         FunDeps
         GHC.TypeSystem.ClassInstance
         GHC.Data.Type.Constructor

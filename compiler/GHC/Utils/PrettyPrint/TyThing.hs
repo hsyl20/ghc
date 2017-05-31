@@ -26,7 +26,7 @@ import GHC.Data.Coercion.Axiom ( coAxiomTyCon )
 import GHC.Types( tyThingParent_maybe )
 import MkIface ( tyThingToIfaceDecl )
 import GHC.Data.Type ( tidyOpenType )
-import FamInstEnv( FamInst(..), FamFlavor(..) )
+import GHC.TypeSystem.FamilyInstance( FamInst(..), FamFlavor(..) )
 import GHC.Data.Type( Type, pprTypeApp, pprSigmaType )
 import GHC.Data.Name
 import GHC.Data.Var.Environment( emptyTidyEnv )
