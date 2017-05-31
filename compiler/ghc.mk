@@ -446,7 +446,7 @@ compiler_stage2_dll0_MODULES = \
 	ByteCodeTypes \
 	GHC.Data.Class \
 	GHC.Program.CmdLineParser \
-	CmmType \
+	GHC.Cmm.Type \
 	GHC.Data.Coercion.Axiom \
 	GHC.Data.ConstructorLike \
 	GHC.Data.Coercion \

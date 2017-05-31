@@ -31,7 +31,7 @@ where
 import BlockId
 import CLabel
 import CmmMachOp
-import CmmType
+import GHC.Cmm.Type
 import GHC.Config.Flags
 import GHC.Utils.Outputable (panic)
 import GHC.Data.Unique

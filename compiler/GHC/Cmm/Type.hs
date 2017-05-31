@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module CmmType
+module GHC.Cmm.Type
     ( CmmType   -- Abstract
     , b8, b16, b32, b64, b128, b256, b512, f32, f64, bWord, bHalfWord, gcWord
     , cInt

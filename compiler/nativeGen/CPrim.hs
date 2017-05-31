@@ -11,7 +11,7 @@ module CPrim
     , word2FloatLabel
     ) where
 
-import CmmType
+import GHC.Cmm.Type
 import CmmMachOp
 import GHC.Utils.Outputable
 

@@ -230,7 +230,7 @@ Library
         CmmParse
         CmmProcPoint
         CmmSink
-        CmmType
+        GHC.Cmm.Type
         CmmUtils
         CmmLayoutStack
         GHC.Data.EnumSet
