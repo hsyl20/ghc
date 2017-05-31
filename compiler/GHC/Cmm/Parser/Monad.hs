@@ -8,7 +8,7 @@
 -- so 'PD' provides access to 'DynFlags' via a 'HasDynFlags' instance.
 -----------------------------------------------------------------------------
 {-# LANGUAGE CPP #-}
-module CmmMonad (
+module GHC.Cmm.Parser.Monad (
     PD(..)
   , liftP
   ) where

@@ -25,7 +25,7 @@ module GHC.Cmm.Lexer (
 import GHC.Cmm.Expr
 
 import Lexer
-import CmmMonad
+import GHC.Cmm.Parser.Monad
 import GHC.Data.SrcLoc
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.StringBuffer

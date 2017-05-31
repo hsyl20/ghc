@@ -228,7 +228,7 @@ import GHC.Cmm.Lexer
 import GHC.Data.CLabel
 import GHC.RTS.Storage
 import Lexer
-import CmmMonad
+import GHC.Cmm.Parser.Monad
 
 import CostCentre
 import ForeignCall

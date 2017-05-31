@@ -223,7 +223,7 @@ Library
         GHC.Cmm.Analyse.Lint
         GHC.Cmm.Analyse.Liveness
         GHC.Cmm.MachinePrimOps
-        CmmMonad
+        GHC.Cmm.Parser.Monad
         GHC.Cmm.Switch
         GHC.Cmm.Node
         GHC.Cmm.Optimise.ConstantFolding
