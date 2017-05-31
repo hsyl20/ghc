@@ -28,7 +28,7 @@ import StgCmmUtils
 import StgCmmClosure
 import StgCmmProf ( curCCS )
 
-import CmmExpr
+import GHC.Cmm.Expr
 import CLabel
 import MkGraph
 import GHC.RTS.Storage

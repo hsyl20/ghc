@@ -32,7 +32,7 @@ import StgCmmClosure
 import CLabel
 
 import BlockId
-import CmmExpr
+import GHC.Cmm.Expr
 import CmmUtils
 import GHC.Config.Flags
 import GHC.Data.Id

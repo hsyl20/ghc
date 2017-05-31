@@ -9,7 +9,7 @@ module CmmCallConv (
 
 #include "HsVersions.h"
 
-import CmmExpr
+import GHC.Cmm.Expr
 import GHC.RTS.Storage
 import GHC.Cmm (Convention(..))
 import GHC.Cmm.PrettyPrint ()

@@ -217,7 +217,7 @@ Library
         CmmCommonBlockElim
         CmmImplementSwitchPlans
         CmmContFlowOpt
-        CmmExpr
+        GHC.Cmm.Expr
         CmmInfo
         CmmLex
         CmmLint

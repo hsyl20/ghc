@@ -112,7 +112,7 @@ import StgCmmUtils
 import StgCmmMonad
 
 import StgSyn
-import CmmExpr
+import GHC.Cmm.Expr
 import MkGraph
 import CmmUtils
 import CLabel

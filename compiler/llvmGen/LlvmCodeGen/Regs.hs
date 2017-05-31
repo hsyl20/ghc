@@ -13,7 +13,7 @@ module LlvmCodeGen.Regs (
 
 import Llvm
 
-import CmmExpr
+import GHC.Cmm.Expr
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable ( panic )

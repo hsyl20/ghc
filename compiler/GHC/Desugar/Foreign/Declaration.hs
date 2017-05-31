@@ -32,7 +32,7 @@ import GHC.Data.Coercion
 import TcEnv
 import TcType
 
-import CmmExpr
+import GHC.Cmm.Expr
 import CmmUtils
 import GHC.Types
 import ForeignCall

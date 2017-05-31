@@ -11,7 +11,7 @@ module StgCmmHpc ( initHpc, mkTickBox ) where
 import StgCmmMonad
 
 import MkGraph
-import CmmExpr
+import GHC.Cmm.Expr
 import CLabel
 import GHC.Data.Module
 import CmmUtils

@@ -24,7 +24,7 @@ module Dwarf.Types
 
 import Debug
 import CLabel
-import CmmExpr         ( GlobalReg(..) )
+import GHC.Cmm.Expr         ( GlobalReg(..) )
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import GHC.Utils.Outputable

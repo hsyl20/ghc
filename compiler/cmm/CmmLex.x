@@ -22,7 +22,7 @@ module CmmLex (
    CmmToken(..), cmmlex,
   ) where
 
-import CmmExpr
+import GHC.Cmm.Expr
 
 import Lexer
 import CmmMonad

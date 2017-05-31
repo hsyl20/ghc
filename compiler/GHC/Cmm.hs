@@ -30,7 +30,7 @@ import CLabel
 import BlockId
 import GHC.Cmm.Node
 import GHC.RTS.Storage
-import CmmExpr
+import GHC.Cmm.Expr
 import Compiler.Hoopl
 import GHC.Utils.Outputable
 

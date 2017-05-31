@@ -38,7 +38,7 @@ module GHC.Cmm.PrettyPrint.Expression
     )
 where
 
-import CmmExpr
+import GHC.Cmm.Expr
 
 import GHC.Utils.Outputable
 

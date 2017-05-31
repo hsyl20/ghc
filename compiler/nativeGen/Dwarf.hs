@@ -3,7 +3,7 @@ module Dwarf (
   ) where
 
 import CLabel
-import CmmExpr         ( GlobalReg(..) )
+import GHC.Cmm.Expr         ( GlobalReg(..) )
 import Config          ( cProjectName, cProjectVersion )
 import CoreSyn         ( Tickish(..) )
 import Debug

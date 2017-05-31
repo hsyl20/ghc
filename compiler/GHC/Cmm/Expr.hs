@@ -5,7 +5,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE UndecidableInstances #-}
 
-module CmmExpr
+module GHC.Cmm.Expr
     ( CmmExpr(..), cmmExprType, cmmExprWidth, maybeInvertCmmExpr
     , CmmReg(..), cmmRegType
     , CmmLit(..), cmmLitType

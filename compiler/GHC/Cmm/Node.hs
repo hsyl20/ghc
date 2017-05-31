@@ -10,7 +10,7 @@
 
 -- CmmNode type for representation using Hoopl graphs.
 
-module CmmNode (
+module GHC.Cmm.Node (
      CmmNode(..), CmmFormal, CmmActual, CmmTickish,
      UpdFrameOffset, Convention(..),
      ForeignConvention(..), ForeignTarget(..), foreignTargetHints,
@@ -23,7 +23,7 @@ module CmmNode (
   ) where
 
 import CodeGen.Platform
-import CmmExpr
+import GHC.Cmm.Expr
 import CmmSwitch
 import GHC.Config.Flags
 import GHC.Data.FastString
