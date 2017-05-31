@@ -13,7 +13,7 @@ import CmmBuildInfoTables
 import GHC.Cmm.Optimise.CommonBlockElim
 import GHC.Cmm.Switch.Implement
 import GHC.Cmm.ProcPoint
-import CmmContFlowOpt
+import GHC.Cmm.Optimise.Shortcutting
 import CmmLayoutStack
 import GHC.Cmm.Optimise.Sinking
 import Hoopl

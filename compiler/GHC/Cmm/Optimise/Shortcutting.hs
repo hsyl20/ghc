@@ -1,6 +1,6 @@
 {-# LANGUAGE GADTs #-}
 {-# OPTIONS_GHC -fno-warn-incomplete-patterns #-}
-module CmmContFlowOpt
+module GHC.Cmm.Optimise.Shortcutting
     ( cmmCfgOpts
     , cmmCfgOptsProc
     , removeUnreachableBlocksProc

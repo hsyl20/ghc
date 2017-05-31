@@ -216,7 +216,7 @@ Library
         CmmCallConv
         GHC.Cmm.Optimise.CommonBlockElim
         GHC.Cmm.Switch.Implement
-        CmmContFlowOpt
+        GHC.Cmm.Optimise.Shortcutting
         GHC.Cmm.Expr
         CmmInfo
         CmmLex

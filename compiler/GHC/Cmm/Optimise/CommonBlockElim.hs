@@ -9,7 +9,7 @@ import BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch (eqSwitchTargetWith)
-import CmmContFlowOpt
+import GHC.Cmm.Optimise.Shortcutting
 -- import GHC.Cmm.PrettyPrint ()
 import Prelude hiding (iterate, succ, unzip, zip)
 
