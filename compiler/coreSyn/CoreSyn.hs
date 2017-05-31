@@ -108,7 +108,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment( NameEnv, emptyNameEnv )
 import GHC.Data.Literal
-import DataCon
+import GHC.Data.DataCon
 import GHC.Data.Module
 import TyCon
 import BasicTypes

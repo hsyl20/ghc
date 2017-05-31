@@ -86,7 +86,7 @@ import GHC.Data.Name             ( getOccName, mkSystemVarName )
 import GHC.Data.OccName          ( occNameString )
 import Type             ( Type, mkLamTypes, splitTyConApp_maybe )
 import BasicTypes       ( Arity, RecFlag(..), isRec )
-import DataCon          ( dataConOrigResTy )
+import GHC.Data.DataCon          ( dataConOrigResTy )
 import TysWiredIn
 import GHC.Data.Unique.Supply
 import GHC.Utils

@@ -26,7 +26,7 @@ import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Utils.Outputable
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import PatSyn
 import GHC.Data.FastString
 import GHC.Data.Maybe

@@ -15,7 +15,7 @@ import GHC.Config.Flags
 import GHC.Types
 import GHC.Data.Name             ( Name, getName )
 import GHC.Data.Name.Environment
-import DataCon          ( DataCon, dataConRepArgTys, dataConIdentity )
+import GHC.Data.DataCon          ( DataCon, dataConRepArgTys, dataConIdentity )
 import TyCon            ( TyCon, tyConFamilySize, isDataTyCon, tyConDataCons )
 import RepType
 import StgCmmLayout     ( mkVirtConstrSizes )

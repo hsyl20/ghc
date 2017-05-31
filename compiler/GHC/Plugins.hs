@@ -66,7 +66,7 @@ import GHC.Data.Id.Info
 import CoreMonad
 import CoreSyn
 import GHC.Data.Literal
-import DataCon
+import GHC.Data.DataCon
 import CoreUtils
 import MkCore
 import CoreFVs

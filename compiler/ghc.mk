@@ -463,7 +463,7 @@ compiler_stage2_dll0_MODULES = \
 	CoreSeq \
 	CoreStats \
 	CostCentre \
-	DataCon \
+	GHC.Data.DataCon \
 	Demand \
 	GHC.Data.Graph.Directed \
 	GHC.Program.Driver.Phases \

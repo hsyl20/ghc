@@ -37,7 +37,7 @@ import CoreSyn
 import TysWiredIn hiding (sumTyCon)
 import Type
 import TyCon
-import DataCon
+import GHC.Data.DataCon
 import GHC.Data.Name.Environment
 import GHC.Data.Name
 import GHC.Utils.Outputable

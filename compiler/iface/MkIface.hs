@@ -72,7 +72,7 @@ import Class
 import TyCon
 import CoAxiom
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import Type
 import TcType
 import InstEnv

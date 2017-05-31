@@ -67,7 +67,7 @@ import TcType           ( mkSpecSigmaTy )
 import Type
 import Coercion         ( isCoVar )
 import TysPrim
-import DataCon          ( DataCon, dataConWorkId )
+import GHC.Data.DataCon          ( DataCon, dataConWorkId )
 import GHC.Data.Id.Info           ( vanillaIdInfo, setStrictnessInfo,
                           setArityInfo )
 import Demand

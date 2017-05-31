@@ -46,7 +46,7 @@ import GHC.Desugar.Monad
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import PatSyn
 import GHC.Data.Name
 import GHC.Data.Name.Environment

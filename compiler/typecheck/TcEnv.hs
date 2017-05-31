@@ -81,7 +81,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.RdrName
 import InstEnv
-import DataCon ( DataCon )
+import GHC.Data.DataCon ( DataCon )
 import PatSyn  ( PatSyn )
 import ConLike
 import TyCon

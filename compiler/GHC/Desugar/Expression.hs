@@ -44,7 +44,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Module
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import TysWiredIn
 import PrelNames
 import BasicTypes

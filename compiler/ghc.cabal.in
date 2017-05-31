@@ -171,7 +171,7 @@ Library
         Avail
         BasicTypes
         ConLike
-        DataCon
+        GHC.Data.DataCon
         PatSyn
         Demand
         Debug

@@ -21,7 +21,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 
 import CoreSyn
-import DataCon
+import GHC.Data.DataCon
 import TyCon
 import Type
 import Control.Monad

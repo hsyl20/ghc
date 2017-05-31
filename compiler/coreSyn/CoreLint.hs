@@ -28,7 +28,7 @@ import CoreStats   ( coreBindsStats )
 import CoreMonad
 import GHC.Data.Bag
 import GHC.Data.Literal
-import DataCon
+import GHC.Data.DataCon
 import TysWiredIn
 import TysPrim
 import TcType ( isFloatingTy )

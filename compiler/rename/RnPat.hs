@@ -64,7 +64,7 @@ import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
 import GHC.Data.Literal             ( inCharRange )
 import TysWiredIn          ( nilDataCon )
-import DataCon
+import GHC.Data.DataCon
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad       ( when, liftM, ap, unless )

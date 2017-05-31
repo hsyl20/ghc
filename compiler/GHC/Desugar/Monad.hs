@@ -66,7 +66,7 @@ import PrelNames
 import GHC.Data.RdrName
 import GHC.Types
 import GHC.Data.Bag
-import DataCon
+import GHC.Data.DataCon
 import ConLike
 import TyCon
 import GHC.Desugar.Match.Expr

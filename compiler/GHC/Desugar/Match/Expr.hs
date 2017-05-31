@@ -19,7 +19,7 @@ import HsSyn
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import DataCon
+import GHC.Data.DataCon
 import ConLike
 import TysWiredIn
 import GHC.Utils.Outputable

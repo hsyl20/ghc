@@ -34,7 +34,7 @@ import MkGraph
 import SMRep
 import CostCentre
 import GHC.Data.Module
-import DataCon
+import GHC.Data.DataCon
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Id

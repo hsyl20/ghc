@@ -39,7 +39,7 @@ import Vectorise.Env
 import CoreSyn
 import Type
 import TyCon
-import DataCon
+import GHC.Data.DataCon
 import GHC.Config.Flags
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

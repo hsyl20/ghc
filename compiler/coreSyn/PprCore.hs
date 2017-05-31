@@ -23,7 +23,7 @@ import GHC.Data.Var
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import Demand
-import DataCon
+import GHC.Data.DataCon
 import TyCon
 import Type
 import Coercion

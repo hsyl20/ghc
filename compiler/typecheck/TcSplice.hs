@@ -86,7 +86,7 @@ import TyCon
 import CoAxiom
 import PatSyn
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import TcEvidence( TcEvBinds(..) )
 import GHC.Data.Id
 import GHC.Data.Id.Info

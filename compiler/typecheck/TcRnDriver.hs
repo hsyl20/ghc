@@ -112,7 +112,7 @@ import GHC.Types
 import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import Type
 import Class
 import BasicTypes hiding( SuccessFlag(..) )

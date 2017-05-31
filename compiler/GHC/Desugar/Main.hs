@@ -41,7 +41,7 @@ import TysPrim     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
 import Coercion    ( mkCoVarCo )
 import TysWiredIn  ( coercibleDataCon )
-import DataCon     ( dataConWrapId )
+import GHC.Data.DataCon     ( dataConWrapId )
 import MkCore      ( mkCoreLet )
 import GHC.Data.Module
 import GHC.Data.Name.Set

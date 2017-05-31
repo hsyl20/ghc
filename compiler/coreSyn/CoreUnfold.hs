@@ -51,7 +51,7 @@ import CoreArity       ( manifestArity )
 import CoreUtils
 import GHC.Data.Id
 import Demand          ( isBottomingSig )
-import DataCon
+import GHC.Data.DataCon
 import GHC.Data.Literal
 import PrimOp
 import GHC.Data.Id.Info

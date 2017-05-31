@@ -28,7 +28,7 @@ import CoreMonad
 import GHC.Data.Literal          ( litIsLifted )
 import GHC.Types         ( ModGuts(..) )
 import WwLib            ( isWorkerSmallEnough, mkWorkerArgs )
-import DataCon
+import GHC.Data.DataCon
 import Coercion         hiding( substCo )
 import Rules
 import Type             hiding ( substTy )

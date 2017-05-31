@@ -52,7 +52,7 @@ import TysWiredIn
 import Type
 import Coercion
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import GHC.Types
 import GHC.Data.Name
 import GHC.Data.Name.Environment

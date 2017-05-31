@@ -125,8 +125,8 @@ import {-# SOURCE #-} TyCoRep    ( Kind, Type, PredType, pprType )
 import {-# SOURCE #-} TysWiredIn ( runtimeRepTyCon, constraintKind
                                  , vecCountTyCon, vecElemTyCon, liftedTypeKind
                                  , mkFunKind, mkForAllKind )
-import {-# SOURCE #-} DataCon    ( DataCon, dataConExTyVars, dataConFieldLabels
-                                 , dataConTyCon )
+import {-# SOURCE #-} GHC.Data.DataCon ( DataCon, dataConExTyVars
+                                       , dataConFieldLabels , dataConTyCon )
 
 import GHC.Utils.Binary
 import GHC.Data.Var

@@ -41,7 +41,7 @@ import BasicTypes ( DerivStrategy(..) )
 import Class
 import Type
 import GHC.Utils.Error
-import DataCon
+import GHC.Data.DataCon
 import GHC.Data.Maybe
 import GHC.Data.RdrName
 import GHC.Data.Name

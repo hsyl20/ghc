@@ -36,7 +36,7 @@ import TcHsType
 import TysWiredIn
 import TcEvidence
 import TyCon
-import DataCon
+import GHC.Data.DataCon
 import PatSyn
 import ConLike
 import PrelNames

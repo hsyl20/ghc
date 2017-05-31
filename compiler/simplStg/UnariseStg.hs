@@ -198,7 +198,7 @@ module UnariseStg (unarise) where
 
 import BasicTypes
 import CoreSyn
-import DataCon
+import GHC.Data.DataCon
 import GHC.Data.FastString (FastString, mkFastString)
 import GHC.Data.Id
 import GHC.Data.Literal (Literal (..))

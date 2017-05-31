@@ -1,4 +1,4 @@
-module DataCon where
+module GHC.Data.DataCon where
 import GHC.Data.Var( TyVar, TyVarBinder )
 import GHC.Data.Name( Name, NamedThing )
 import {-# SOURCE #-} TyCon( TyCon )

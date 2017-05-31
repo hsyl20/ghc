@@ -55,7 +55,7 @@ import GHC.Data.Id.Make
 import GHC.Data.Id
 import GHC.Data.Literal
 import TyCon
-import DataCon
+import GHC.Data.DataCon
 import PatSyn
 import Type
 import Coercion

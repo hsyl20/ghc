@@ -172,7 +172,7 @@ import Class
 import TyCon
 import CoAxiom
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import PatSyn
 import PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule
                         , eqTyConName )

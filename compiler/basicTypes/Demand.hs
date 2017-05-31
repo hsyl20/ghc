@@ -74,7 +74,7 @@ import GHC.Data.Maybe           ( orElse )
 
 import Type            ( Type, isUnliftedType )
 import TyCon           ( isNewTyCon, isClassTyCon )
-import DataCon         ( splitDataProductType_maybe )
+import GHC.Data.DataCon         ( splitDataProductType_maybe )
 
 {-
 ************************************************************************

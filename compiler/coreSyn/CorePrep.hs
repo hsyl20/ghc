@@ -39,7 +39,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import TysWiredIn
-import DataCon
+import GHC.Data.DataCon
 import PrimOp
 import BasicTypes
 import GHC.Data.Module

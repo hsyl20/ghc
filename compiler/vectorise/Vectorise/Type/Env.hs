@@ -26,7 +26,7 @@ import Vectorise.Utils
 import CoreSyn
 import CoreUtils
 import CoreUnfold
-import DataCon
+import GHC.Data.DataCon
 import TyCon
 import CoAxiom
 import Type

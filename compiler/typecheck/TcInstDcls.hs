@@ -41,7 +41,7 @@ import Type
 import TcEvidence
 import TyCon
 import CoAxiom
-import DataCon
+import GHC.Data.DataCon
 import ConLike
 import Class
 import GHC.Data.Var as Var

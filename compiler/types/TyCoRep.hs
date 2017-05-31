@@ -132,7 +132,7 @@ module TyCoRep (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} DataCon( dataConFullSig
+import {-# SOURCE #-} GHC.Data.DataCon( dataConFullSig
                              , dataConUnivTyVarBinders, dataConExTyVarBinders
                              , DataCon, filterEqSpec )
 import {-# SOURCE #-} Type( isPredTy, isCoercionTy, mkAppTy, mkCastTy

@@ -49,7 +49,7 @@ import CoreSyn     ( AltCon, Tickish )
 import CostCentre  ( CostCentreStack )
 import Data.ByteString ( ByteString )
 import Data.List   ( intersperse )
-import DataCon
+import GHC.Data.DataCon
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall ( ForeignCall )

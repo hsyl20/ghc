@@ -34,7 +34,7 @@ import CoreFVs
 import Type
 import RepType
 import Kind            ( isLiftedTypeKind )
-import DataCon
+import GHC.Data.DataCon
 import TyCon
 import GHC.Utils
 import GHC.Data.Var.Set

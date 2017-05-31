@@ -64,7 +64,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import TyCon
 import ConLike
-import DataCon
+import GHC.Data.DataCon
 import Class
 import GHC.Data.Name
 import GHC.Data.Name.Environment

@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP, DeriveDataTypeable #-}
 
-module DataCon (
+module GHC.Data.DataCon (
         -- * Main data types
         DataCon, DataConRep(..),
         SrcStrictness(..), SrcUnpackedness(..),

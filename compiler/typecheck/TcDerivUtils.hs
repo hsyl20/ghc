@@ -24,7 +24,7 @@ module TcDerivUtils (
 import GHC.Data.Bag
 import BasicTypes
 import Class
-import DataCon
+import GHC.Data.DataCon
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Types (lookupFixity, mi_fix)

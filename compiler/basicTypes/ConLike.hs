@@ -26,7 +26,7 @@ module ConLike (
 
 #include "HsVersions.h"
 
-import DataCon
+import GHC.Data.DataCon
 import PatSyn
 import GHC.Utils.Outputable
 import GHC.Data.Unique
