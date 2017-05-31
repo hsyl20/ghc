@@ -90,7 +90,7 @@ import {-# SOURCE #-}   GHC.Config.Flags
                                   useUnicode, useUnicodeSyntax,
                                   shouldUseColor, unsafeGlobalDynFlags )
 import {-# SOURCE #-}   Module( UnitId, Module, ModuleName, moduleName )
-import {-# SOURCE #-}   OccName( OccName )
+import {-# SOURCE #-} GHC.Data.OccName ( OccName )
 
 import GHC.Utils.Handle.BufferedWrite (BufHandle)
 import GHC.Data.FastString

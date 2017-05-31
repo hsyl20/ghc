@@ -197,7 +197,7 @@ Library
         LlvmMangler
         MkId
         Module
-       GHC.Data.Name
+        GHC.Data.Name
         GHC.Data.Name.Environment
         GHC.Data.Name.Set
         GHC.Data.OccName
@@ -205,8 +205,8 @@ Library
         GHC.Data.Name.Cache
         SrcLoc
         GHC.Data.Unique.Supply
-       GHC.Data.Unique
-        Var
+        GHC.Data.Unique
+        GHC.Data.Var
         GHC.Data.Var.Environment
         GHC.Data.Var.Set
         GHC.Data.Var.UndirectedGraph

@@ -47,7 +47,7 @@ module GHC.Data.Id (
         recordSelectorTyCon,
 
         -- ** Modifying an Id
-        setIdName, setIdUnique, Id.setIdType,
+        setIdName, setIdUnique, GHC.Data.Id.setIdType,
         setIdExported, setIdNotExported,
         globaliseId, localiseId,
         setIdInfo, lazySetIdInfo, modifyIdInfo, maybeModifyIdInfo,

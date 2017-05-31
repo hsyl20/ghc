@@ -1,4 +1,4 @@
-module gHC.Data.Id.Info where
+module GHC.Data.Id.Info where
 
 import GHC.Utils.Outputable
 data IdInfo

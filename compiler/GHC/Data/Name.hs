@@ -74,7 +74,7 @@ module GHC.Data.Name (
         nameStableString,
 
         -- Re-export the OccName stuff
-        module OccName
+        module GHC.Data.OccName
     ) where
 
 import {-# SOURCE #-} TyCoRep( TyThing )

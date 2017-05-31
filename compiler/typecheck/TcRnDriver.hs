@@ -98,7 +98,7 @@ import RnNames
 import RnEnv
 import RnSource
 import GHC.Utils.Error
-import GHC.Data.Id
+import GHC.Data.Id as Id
 import GHC.Data.Var.Environment
 import Module
 import GHC.Data.Unique.FiniteMap

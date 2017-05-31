@@ -15,10 +15,10 @@ module Convert( convertToHsExpr, convertToPat, convertToHsDecls,
 import HsSyn as Hs
 import qualified Class
 import GHC.Data.RdrName
-import qualified Name
+import qualified GHC.Data.Name as Name
 import Module
 import RdrHsSyn
-import qualified OccName
+import qualified GHC.Data.OccName as OccName
 import GHC.Data.OccName
 import SrcLoc
 import Type

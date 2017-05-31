@@ -9,12 +9,12 @@
 -- "CoreSyn" and "CoreMonad".
 module GHC.Plugins
    ( module GHC.Plugins.Types
-   , module RdrName
-   , module OccName
-   , module Name
-   , module Var
-   , module Id
-   , module IdInfo
+   , module GHC.Data.RdrName
+   , module GHC.Data.OccName
+   , module GHC.Data.Name
+   , module GHC.Data.Var
+   , module GHC.Data.Id
+   , module GHC.Data.Id.Info
    , module CoreMonad
    , module CoreSyn
    , module Literal
@@ -34,10 +34,10 @@ module GHC.Plugins
    , module TysWiredIn
    , module GHC.Types
    , module BasicTypes
-   , module VarSet
-   , module VarEnv
-   , module NameSet
-   , module NameEnv
+   , module GHC.Data.Var.Set
+   , module GHC.Data.Var.Environment
+   , module GHC.Data.Name.Set
+   , module GHC.Data.Name.Environment
    , module GHC.Data.Unique.Set
    , module GHC.Data.Unique.FiniteMap
    , module GHC.Data.FiniteMap

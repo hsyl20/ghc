@@ -60,6 +60,7 @@ import IfaceSyn ( showToHeader )
 import GHC.Utils.PrettyPrint.TyThing
 import PrelNames
 import GHC.Data.RdrName ( RdrName, getGRE_NameQualifier_maybes, getRdrName )
+import qualified GHC.Data.RdrName as RdrName
 import SrcLoc
 import qualified Lexer
 

@@ -53,7 +53,7 @@ import Inst
 import TyCon
 import TysWiredIn
 import TysPrim( tYPE )
-import GHC.Data.Var
+import GHC.Data.Var as Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Error

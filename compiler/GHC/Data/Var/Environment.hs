@@ -75,6 +75,7 @@ module GHC.Data.Var.Environment (
 
 import GHC.Data.OccName
 import GHC.Data.Var
+import qualified GHC.Data.Var as Var
 import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap

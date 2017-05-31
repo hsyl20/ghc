@@ -9,7 +9,7 @@ module THNames where
 import PrelNames( mk_known_key_name )
 import Module( Module, mkModuleNameFS, mkModule, thUnitId )
 import GHC.Data.Name( Name )
-import GHC.Data.OccName( tcName, clsName, dataName, varName )
+import qualified GHC.Data.OccName as OccName
 import GHC.Data.RdrName( RdrName, nameRdrName )
 import GHC.Data.Unique
 import GHC.Data.FastString

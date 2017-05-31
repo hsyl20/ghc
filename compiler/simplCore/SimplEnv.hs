@@ -44,11 +44,11 @@ import SimplMonad
 import CoreMonad                ( SimplifierMode(..) )
 import CoreSyn
 import CoreUtils
-import GHC.Data.Var
+import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Tree.OrdList
-import GHC.Data.Id
+import GHC.Data.Id as Id
 import MkCore                   ( mkWildValBinder )
 import TysWiredIn
 import qualified Type

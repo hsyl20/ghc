@@ -26,7 +26,7 @@ import GHC.Data.RdrName
 import DataCon
 import SrcLoc
 import HsSyn
-import GHC.Data.OccName hiding (occName)
+import qualified GHC.Data.OccName as OccName
 import GHC.Data.Var
 import Module
 import GHC.Config.Flags

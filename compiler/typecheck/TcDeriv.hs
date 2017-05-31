@@ -45,10 +45,10 @@ import DataCon
 import GHC.Data.Maybe
 import GHC.Data.RdrName
 import GHC.Data.Name
-import GHC.Data.Name.Set
+import GHC.Data.Name.Set as NameSet
 import TyCon
 import TcType
-import GHC.Data.Var
+import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import PrelNames

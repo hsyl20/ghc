@@ -76,7 +76,7 @@ import Inst
 import GHC.Data.Name.Environment
 import PrelNames
 import TysWiredIn
-import GHC.Data.OccName
+import GHC.Data.OccName as OccName
 import GHC.Config.Hooks
 import GHC.Data.Var
 import Module

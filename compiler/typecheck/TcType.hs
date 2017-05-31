@@ -207,7 +207,7 @@ import TyCon
 -- others:
 import GHC.Config.Flags
 import CoreFVs
-import GHC.Data.Name -- hiding (varName)
+import GHC.Data.Name as Name -- hiding (varName)
             -- We use this to make dictionaries for type literals.
             -- Perhaps there's a better way to do this?
 import GHC.Data.Name.Set

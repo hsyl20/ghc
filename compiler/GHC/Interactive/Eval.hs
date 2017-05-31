@@ -58,7 +58,7 @@ import Type             hiding( typeKind )
 import RepType
 import TcType           hiding( typeKind )
 import GHC.Data.Var
-import GHC.Data.Id
+import GHC.Data.Id as Id
 import GHC.Data.Name             hiding ( varName )
 import GHC.Data.Name.Set
 import Avail

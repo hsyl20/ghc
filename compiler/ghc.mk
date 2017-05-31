@@ -498,7 +498,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Types \
 	GHC.Utils.Monad.IOEnv \
 	GHC.Data.Name.Cache \
-	Id \
+	GHC.Data.Id \
 	GHC.Data.Id.Info \
 	IfaceSyn \
 	IfaceType \
@@ -516,7 +516,7 @@ compiler_stage2_dll0_MODULES = \
 	MkId \
 	Module \
 	GHC.Utils.Monad \
-	Name \
+	GHC.Data.Name \
 	GHC.Data.Name.Environment \
 	GHC.Data.Name.Set \
 	GHC.Data.OccName \
@@ -561,7 +561,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Unique.Supply \
 	GHC.Data.Unique \
 	GHC.Utils \
-	Var \
+	GHC.Data.Var \
 	GHC.Data.Var.Environment \
 	GHC.Data.Var.Set
 

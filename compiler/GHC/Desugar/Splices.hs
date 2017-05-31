@@ -32,8 +32,8 @@ import PrelNames
 -- To avoid clashes with GHC.Desugar.Splices.varName we must make a local alias for
 -- OccName.varName we do this by removing varName from the import of
 -- OccName above, making a qualified instance of OccName and using
--- OccNameAlias.varName where varName ws previously used in this file.
-import qualified OccName( isDataOcc, isVarOcc, isTcOcc )
+-- OccNameAlias.varName where varName was previously used in this file.
+import qualified GHC.Data.OccName as OccName
 
 import Module
 import GHC.Data.Id
@@ -1767,7 +1767,7 @@ globalVar name
               | OccName.isVarOcc  name_occ = mkNameG_vName
               | OccName.isTcOcc   name_occ = mkNameG_tcName
               | otherwise                  =
-		  pprPanic "GHC.Desugar.Splices.globalVar" (ppr name)
+                  pprPanic "GHC.Desugar.Splices.globalVar" (ppr name)
 
 lookupType :: Name      -- Name of type constructor (e.g. TH.ExpQ)
            -> DsM Type  -- The type

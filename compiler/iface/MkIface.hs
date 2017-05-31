@@ -84,7 +84,7 @@ import GHC.Finder
 import GHC.Config.Flags
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import GHC.Data.Var
+import GHC.Data.Var as Var
 import GHC.Data.Name
 import Avail
 import GHC.Data.RdrName

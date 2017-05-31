@@ -44,7 +44,7 @@ import CoAxiom
 import DataCon
 import ConLike
 import Class
-import GHC.Data.Var
+import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import PrelNames  ( typeableClassName, genericClassNames

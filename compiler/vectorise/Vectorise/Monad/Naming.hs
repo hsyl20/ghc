@@ -24,7 +24,7 @@ import Module
 import GHC.Data.Name
 import SrcLoc
 import MkId
-import GHC.Data.Id
+import GHC.Data.Id as Id
 import GHC.Data.Id.Info( IdDetails(VanillaId) )
 import GHC.Data.FastString
 
