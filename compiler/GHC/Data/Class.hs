@@ -25,7 +25,7 @@ module GHC.Data.Class (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
-import {-# SOURCE #-} TyCoRep   ( Type, PredType, pprType )
+import {-# SOURCE #-} GHC.Data.Types   ( Type, PredType, pprType )
 import GHC.Data.Var
 import GHC.Data.Name
 import GHC.Data.BasicTypes
@@ -53,7 +53,7 @@ data Class
   = Class {
         classTyCon :: TyCon,    -- The data type constructor for
                                 -- dictionaries of this class
-                                -- See Note [ATyCon for classes] in TyCoRep
+                                -- See Note [ATyCon for classes] in GHC.Data.Types
 
         className :: Name,              -- Just the cached name of the TyCon
         classKey  :: Unique,            -- Cached unique of TyCon

@@ -20,8 +20,8 @@
 -- * 'Id.Id': see "Id#name_types"
 --
 -- * 'Var.Var' is a synonym for the 'Id.Id' type but it may additionally
---   potentially contain type variables, which have a 'TyCoRep.Kind'
---   rather than a 'TyCoRep.Type' and only contain some extra
+--   potentially contain type variables, which have a 'GHC.Data.Types.Kind'
+--   rather than a 'GHC.Data.Types.Type' and only contain some extra
 --   details during typechecking.
 --
 --   These 'Var.Var' names may either be global or local, see "Var#globalvslocal"
@@ -81,7 +81,7 @@ module GHC.Data.Var (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} TyCoRep( Type, Kind, pprKind )
+import {-# SOURCE #-} GHC.Data.Types( Type, Kind, pprKind )
 import {-# SOURCE #-} TcType( TcTyVarDetails, pprTcTyVarDetails, vanillaSkolemTv )
 import {-# SOURCE #-} GHC.Data.Id.Info ( IdDetails, IdInfo, coVarDetails,
                                          isCoVarDetails, vanillaIdInfo,
@@ -375,7 +375,7 @@ updateVarTypeM f id = do { ty' <- f (varType id)
 -- Is something required to appear in source Haskell ('Required'),
 -- permitted by request ('Specified') (visible type application), or
 -- prohibited entirely from appearing in source Haskell ('Inferred')?
--- See Note [TyBinders and ArgFlags] in TyCoRep
+-- See Note [TyBinders and ArgFlags] in GHC.Data.Types
 data ArgFlag = Required | Specified | Inferred
   deriving (Eq, Data)
 
@@ -415,7 +415,7 @@ data TyVarBndr tyvar argf = TvBndr tyvar argf
 --
 -- A 'TyVarBinder' is the binder of a ForAllTy
 -- It's convenient to define this synonym here rather its natural
--- home in TyCoRep, because it's used in DataCon.hs-boot
+-- home in GHC.Data.Types, because it's used in DataCon.hs-boot
 type TyVarBinder = TyVarBndr TyVar ArgFlag
 
 binderVar :: TyVarBndr tv argf -> tv

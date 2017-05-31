@@ -107,7 +107,7 @@ module GHC.Data.Coercion (
 
 #include "HsVersions.h"
 
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
@@ -136,7 +136,7 @@ import Data.Function ( on )
      -- The coercion arguments always *precisely* saturate
      -- arity of (that branch of) the CoAxiom.  If there are
      -- any left over, we use AppCo.  See
-     -- See [Coercion axioms applied to coercions] in TyCoRep
+     -- See [Coercion axioms applied to coercions] in GHC.Data.Types
 
 \subsection{Coercion variables}
 %*                                                                      *
@@ -167,7 +167,7 @@ puts parens around the type, except for the atomic cases.
 very high.
 -}
 
--- Outputable instances are in TyCoRep, to avoid orphans
+-- Outputable instances are in GHC.Data.Types, to avoid orphans
 
 pprCo, pprParendCo :: Coercion -> SDoc
 pprCo       co = ppr_co TopPrec   co
@@ -643,7 +643,7 @@ mkAppCo (TyConAppCo r tc args) arg
 mkAppCo co arg = AppCo co  arg
 -- Note, mkAppCo is careful to maintain invariants regarding
 -- where Refl constructors appear; see the comments in the definition
--- of Coercion and the Note [Refl invariant] in TyCoRep.
+-- of Coercion and the Note [Refl invariant] in GHC.Data.Types.
 
 -- | Applies multiple 'Coercion's to another 'Coercion', from left to right.
 -- See also 'mkAppCo'.

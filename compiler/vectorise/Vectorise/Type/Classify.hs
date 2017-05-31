@@ -23,7 +23,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
-import TyCoRep
+import GHC.Data.Types
 import qualified Type
 import PrelNames
 import GHC.Data.Graph.Directed

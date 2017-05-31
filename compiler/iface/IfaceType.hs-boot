@@ -1,4 +1,4 @@
--- Exists to allow TyCoRep to import pretty-printers
+-- Exists to allow GHC.Data.Types to import pretty-printers
 module IfaceType where
 
 import GHC.Data.Var (TyVarBndr, ArgFlag)

@@ -3,7 +3,7 @@
 
 module T11195 where
 
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Coercion
 import GHC.Data.Type hiding( substTyVarBndr, substTy, extendTCvSubst )
 import TcType       ( exactTyCoVarsOfType )

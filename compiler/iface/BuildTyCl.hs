@@ -221,7 +221,7 @@ The last part about Required->Specified comes from this:
   data T k (a:k) b = MkT (a b)
 Here k is Required in T's kind, but we don't have Required binders in
 the TyBinders for a term (see Note [No Required TyBinder in terms]
-in TyCoRep), so we change it to Specified when making MkT's TyBinders
+in GHC.Data.Types), so we change it to Specified when making MkT's TyBinders
 
 This merging operation is done by mkDataConUnivTyBinders. In contrast,
 the TyBinders passed to mkDataCon are the final TyBinders stored in the

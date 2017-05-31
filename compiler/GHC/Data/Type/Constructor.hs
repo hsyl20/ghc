@@ -121,7 +121,7 @@ module GHC.Data.Type.Constructor (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} TyCoRep    ( Kind, Type, PredType, pprType )
+import {-# SOURCE #-} GHC.Data.Types    ( Kind, Type, PredType, pprType )
 import {-# SOURCE #-} TysWiredIn ( runtimeRepTyCon, constraintKind
                                  , vecCountTyCon, vecElemTyCon, liftedTypeKind
                                  , mkFunKind, mkForAllKind )
@@ -448,7 +448,7 @@ They fit together like so:
   Note that that are three binders here, including the
   kind variable k.
 
-  See Note [TyBinders and ArgFlags] in TyCoRep for what
+  See Note [TyBinders and ArgFlags] in GHC.Data.Types for what
   the visibility flag means.
 
 * Each TyConBinder tyConBinders has a TyVar, and that TyVar may
@@ -838,7 +838,7 @@ data AlgTyConFlav
        (Maybe TyConRepName)
 
   -- | Type constructors representing a class dictionary.
-  -- See Note [ATyCon for classes] in TyCoRep
+  -- See Note [ATyCon for classes] in GHC.Data.Types
   | ClassTyCon
         Class           -- INVARIANT: the classTyCon of this Class is the
                         -- current tycon
@@ -1337,7 +1337,7 @@ So we compromise, and move their Kind calculation to the call site.
 -}
 
 -- | Given the name of the function type constructor and it's kind, create the
--- corresponding 'TyCon'. It is recomended to use 'TyCoRep.funTyCon' if you want
+-- corresponding 'TyCon'. It is recomended to use 'GHC.Data.Types.funTyCon' if you want
 -- this functionality
 mkFunTyCon :: Name -> [TyConBinder] -> Name -> TyCon
 mkFunTyCon name binders rep_nm

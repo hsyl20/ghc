@@ -31,7 +31,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import TcType
 import GHC.Data.Type
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

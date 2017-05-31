@@ -15,7 +15,7 @@ import GHC.Data.Type
 import TcUnify( occCheckExpand )
 import TcEvidence
 import GHC.Data.Type.Constructor
-import TyCoRep   -- performs delicate algorithm on types
+import GHC.Data.Types   -- performs delicate algorithm on types
 import GHC.Data.Coercion
 import GHC.Data.Var
 import GHC.Data.Var.Environment

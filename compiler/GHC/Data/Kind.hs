@@ -24,7 +24,7 @@ import {-# SOURCE #-} GHC.Data.Type ( typeKind, coreView, tcView
                                     , splitTyConApp_maybe )
 import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon )
 
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import PrelNames
 

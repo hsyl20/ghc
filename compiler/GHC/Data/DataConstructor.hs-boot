@@ -6,7 +6,7 @@ import GHC.Data.FieldLabel ( FieldLabel )
 import GHC.Data.Unique ( Uniquable )
 import GHC.Utils.Outputable ( Outputable, OutputableBndr )
 import GHC.Data.BasicTypes (Arity)
-import {-# SOURCE #-} TyCoRep ( Type, ThetaType )
+import {-# SOURCE #-} GHC.Data.Types ( Type, ThetaType )
 
 data DataCon
 data DataConRep

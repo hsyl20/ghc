@@ -12,7 +12,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 import TcType
 import GHC.Data.Type
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import Control.Monad
 import Control.Applicative

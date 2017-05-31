@@ -32,7 +32,7 @@ import TcType
 import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.Coercion.Axiom
-import TyCoRep    -- needs to build types & coercions in a knot
+import GHC.Data.Types    -- needs to build types & coercions in a knot
 import GHC.Types
 import GHC.Types.Annotations
 import InstEnv

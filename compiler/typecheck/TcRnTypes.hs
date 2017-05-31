@@ -2449,7 +2449,7 @@ data TcEvDest
 
   | HoleDest  CoercionHole  -- ^ fill in this hole with the evidence
               -- HoleDest is always used for type-equalities
-              -- See Note [Coercion holes] in TyCoRep
+              -- See Note [Coercion holes] in GHC.Data.Types
 
 data CtEvidence
   = CtGiven    -- Truly given, not depending on subgoals

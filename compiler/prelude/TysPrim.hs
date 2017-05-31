@@ -102,7 +102,7 @@ import GHC.Data.Unique
 import PrelNames
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import TyCoRep   -- Doesn't need special access, but this is easier to avoid
+import GHC.Data.Types   -- Doesn't need special access, but this is easier to avoid
                  -- import loops which show up if you import GHC.Data.Type instead
 
 import Data.Char
@@ -613,7 +613,7 @@ It responds "yes" to Type.isEqPred and classifies as an EqPred in
 Type.classifyPredType.
 
 All wanted constraints of this type are built with coercion holes.
-(See Note [Coercion holes] in TyCoRep.) But see also
+(See Note [Coercion holes] in GHC.Data.Types.) But see also
 Note [Deferred errors for coercion holes] in TcErrors to see how
 equality constraints are deferred.
 

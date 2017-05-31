@@ -2,7 +2,7 @@ module TysWiredIn where
 
 import GHC.Data.Var( TyVar, ArgFlag )
 import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
-import {-# SOURCE #-} TyCoRep    (Type, Kind)
+import {-# SOURCE #-} GHC.Data.Types    (Type, Kind)
 
 
 mkFunKind :: Kind -> Kind -> Kind

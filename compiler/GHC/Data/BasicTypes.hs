@@ -695,7 +695,7 @@ pprSafeOverlap False = empty
 ************************************************************************
 -}
 
-data TyPrec   -- See Note [Precedence in types] in TyCoRep.hs
+data TyPrec   -- See Note [Precedence in types] in GHC.Data.Types.hs
   = TopPrec         -- No parens
   | FunPrec         -- Function args; no parens for tycon apps
   | TyOpPrec        -- Infix operator

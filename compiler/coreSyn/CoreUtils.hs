@@ -72,7 +72,7 @@ import PrimOp
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Type
-import TyCoRep( TyBinder(..) )
+import GHC.Data.Types( TyBinder(..) )
 import GHC.Data.Coercion
 import GHC.Data.Type.Constructor
 import GHC.Data.Unique

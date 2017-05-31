@@ -550,7 +550,7 @@ compiler_stage2_dll0_MODULES = \
 	TrieMap \
 	GHC.Data.Type.Constructor \
 	Type \
-	TyCoRep \
+	GHC.Data.Types \
 	TysPrim \
 	TysWiredIn \
 	Unify \

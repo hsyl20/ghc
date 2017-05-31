@@ -3,7 +3,7 @@
 module GHC.Data.Type where
 import GHC.Data.Type.Constructor
 import GHC.Data.Var ( TyVar )
-import {-# SOURCE #-} TyCoRep( Type, Coercion, Kind )
+import {-# SOURCE #-} GHC.Data.Types( Type, Coercion, Kind )
 import GHC.Utils
 
 isPredTy     :: Type -> Bool

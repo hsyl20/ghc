@@ -12,7 +12,7 @@ module TcTypeable(mkTypeableBinds) where
 import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
 import TcBinds( addTypecheckedBinds )
 import IfaceEnv( newGlobalBinder )
-import TyCoRep( Type(..), TyLit(..) )
+import GHC.Data.Types( Type(..), TyLit(..) )
 import TcEnv
 import TcEvidence ( mkWpTyApps )
 import TcRnMonad

@@ -29,7 +29,7 @@ module TcTyDecls(
 import TcRnMonad
 import TcEnv
 import TcBinds( tcRecSelBinds )
-import TyCoRep( Type(..), Coercion(..), UnivCoProvenance(..) )
+import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import TcType
 import TysWiredIn( unitTy )
 import MkCore( rEC_SEL_ERROR_ID )

@@ -25,7 +25,7 @@ import GHC.Data.Maybe
 -- friends:
 import TcUnify    ( tcSubType_NC )
 import TcSimplify ( simplifyAmbiguityCheck )
-import TyCoRep
+import GHC.Data.Types
 import TcType hiding ( sizeType, sizeTypes )
 import TcMType
 import PrelNames

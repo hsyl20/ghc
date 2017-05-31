@@ -41,7 +41,7 @@ module TcUnify (
 #include "HsVersions.h"
 
 import HsSyn
-import TyCoRep
+import GHC.Data.Types
 import TcMType
 import TcRnMonad
 import TcType

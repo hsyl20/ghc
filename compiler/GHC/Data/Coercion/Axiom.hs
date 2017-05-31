@@ -29,7 +29,7 @@ module GHC.Data.Coercion.Axiom (
        BuiltInSynFamily(..), trivialBuiltInFamily
        ) where
 
-import {-# SOURCE #-} TyCoRep ( Type, pprType )
+import {-# SOURCE #-} GHC.Data.Types ( Type, pprType )
 import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
 import GHC.Utils.Outputable
 import GHC.Data.FastString

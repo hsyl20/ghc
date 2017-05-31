@@ -34,7 +34,7 @@ import GHC.Data.Name( Name )
 import GHC.Data.Type hiding ( getTvSubstEnv )
 import GHC.Data.Coercion hiding ( getCvSubstEnv )
 import GHC.Data.Type.Constructor
-import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
+import GHC.Data.Types hiding ( getTvSubstEnv, getCvSubstEnv )
 import GHC.Utils
 import GHC.Data.Pair
 import GHC.Utils.Outputable
@@ -578,7 +578,7 @@ Note [Specification of unification]
 The pure unifier, unify_ty, defined in this module, tries to work out
 a substitution to make two types say True to eqType. NB: eqType is
 itself not purely syntactic; it accounts for CastTys;
-see Note [Non-trivial definitional equality] in TyCoRep
+see Note [Non-trivial definitional equality] in GHC.Data.Types
 
 Unlike the "impure unifiers" in the typechecker (the eager unifier in
 TcUnify, and the constraint solver itself in TcCanonical), the pure

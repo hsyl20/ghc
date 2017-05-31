@@ -206,11 +206,11 @@ module GHC.Data.Type (
 
 import GHC.Data.BasicTypes
 
--- We import the representation and primitive functions from TyCoRep.
+-- We import the representation and primitive functions from GHC.Data.Types.
 -- Many things are reexported, but not the representation!
 
 import GHC.Data.Kind
-import TyCoRep
+import GHC.Data.Types
 
 -- friends:
 import GHC.Data.Var
@@ -333,7 +333,7 @@ coreView (TyConApp tc tys) | Just (tenv, rhs, tys') <- expandSynTyCon_maybe tc t
   = Just (mkAppTys (substTy (mkTvSubstPrs tenv) rhs) tys')
                -- The free vars of 'rhs' should all be bound by 'tenv', so it's
                -- ok to use 'substTy' here.
-               -- See also Note [The substitution invariant] in TyCoRep.
+               -- See also Note [The substitution invariant] in GHC.Data.Types.
                -- Its important to use mkAppTys, rather than (foldl AppTy),
                -- because the function part might well return a
                -- partially-applied type constructor; indeed, usually will!
@@ -353,7 +353,7 @@ tcView (TyConApp tc tys) | Just (tenv, rhs, tys') <- expandSynTyCon_maybe tc tys
   = Just (mkAppTys (substTy (mkTvSubstPrs tenv) rhs) tys')
                -- The free vars of 'rhs' should all be bound by 'tenv', so it's
                -- ok to use 'substTy' here.
-               -- See also Note [The substitution invariant] in TyCoRep.
+               -- See also Note [The substitution invariant] in GHC.Data.Types.
                -- Its important to use mkAppTys, rather than (foldl AppTy),
                -- because the function part might well return a
                -- partially-applied type constructor; indeed, usually will!
@@ -461,7 +461,7 @@ on all variables and binding sites. Primarily used for zonking.
 
 Note [Efficiency for mapCoercion ForAllCo case]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-As noted in Note [Forall coercions] in TyCoRep, a ForAllCo is a bit redundant.
+As noted in Note [Forall coercions] in GHC.Data.Types, a ForAllCo is a bit redundant.
 It stores a TyVar and a Coercion, where the kind of the TyVar always matches
 the left-hand kind of the coercion. This is convenient lots of the time, but
 not when mapping a function over a coercion.
@@ -499,7 +499,7 @@ data TyCoMapper env m
       , tcm_hole  :: env -> CoercionHole -> Role
                   -> Type -> Type -> m Coercion
           -- ^ What to do with coercion holes. See Note [Coercion holes] in
-          -- TyCoRep.
+          -- GHC.Data.Types.
 
       , tcm_tybinder :: env -> TyVar -> ArgFlag -> m (env, TyVar)
           -- ^ The returned env is used in the extended scope
@@ -2139,7 +2139,7 @@ eqType :: Type -> Type -> Bool
 -- checks whether the types are equal, ignoring casts and coercions.
 -- (The kind check is a recursive call, but since all kinds have type
 -- @Type@, there is no need to check the types of kinds.)
--- See also Note [Non-trivial definitional equality] in TyCoRep.
+-- See also Note [Non-trivial definitional equality] in GHC.Data.Types.
 eqType t1 t2 = isEqual $ nonDetCmpType t1 t2
   -- It's OK to use nonDetCmpType here and eqType is deterministic,
   -- nonDetCmpType does equality deterministically
@@ -2204,7 +2204,7 @@ data TypeOrdering = TLT  -- ^ @t1 < t2@
                   deriving (Eq, Ord, Enum, Bounded)
 
 nonDetCmpTypeX :: RnEnv2 -> Type -> Type -> Ordering  -- Main workhorse
-    -- See Note [Non-trivial definitional equality] in TyCoRep
+    -- See Note [Non-trivial definitional equality] in GHC.Data.Types
 nonDetCmpTypeX env orig_t1 orig_t2 =
     case go env orig_t1 orig_t2 of
       -- If there are casts then we also need to do a comparison of the kinds of

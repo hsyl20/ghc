@@ -1,15 +1,15 @@
 {-
 (c) The University of Glasgow 2006
 (c) The GRASP/AQUA Project, Glasgow University, 1998
-\section[TyCoRep]{Type and Coercion - friends' interface}
+\section[GHC.Data.Types]{Type and Coercion - friends' interface}
 
 Note [The Type-related module hierarchy]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Class
   CoAxiom
   TyCon    imports Class, CoAxiom
-  TyCoRep  imports Class, CoAxiom, TyCon
-  TysPrim  imports TyCoRep ( including mkTyConTy )
+  GHC.Data.Types  imports Class, CoAxiom, TyCon
+  TysPrim  imports GHC.Data.Types ( including mkTyConTy )
   Kind     imports TysPrim ( mainly for primitive kinds )
   Type     imports Kind
   Coercion imports Type
@@ -20,7 +20,7 @@ Note [The Type-related module hierarchy]
 {-# LANGUAGE CPP, DeriveDataTypeable, MultiWayIf #-}
 {-# LANGUAGE ImplicitParams #-}
 
-module TyCoRep (
+module GHC.Data.Types (
         TyThing(..), tyThingCategory, pprTyThingCategory, pprShortTyThing,
 
         -- * Types

@@ -271,7 +271,7 @@ these unproven assertions leak into interface files, we still need to be able to
 pretty-print them as we use IfaceType's pretty-printer to render Types. For this
 reason IfaceUnivCoProv has a IfaceHoleProv constructor; however, we fails when
 asked to serialize to a IfaceHoleProv to ensure that they don't end up in an
-interface file. To avoid an import loop between IfaceType and TyCoRep we only
+interface file. To avoid an import loop between IfaceType and GHC.Data.Types we only
 keep the hole's Unique, since that is all we need to print.
 -}
 
@@ -813,7 +813,7 @@ pprUserIfaceForAll tvs
 
 -------------------
 
--- See equivalent function in TyCoRep.hs
+-- See equivalent function in GHC.Data.Types.hs
 pprIfaceTyList :: TyPrec -> IfaceType -> IfaceType -> SDoc
 -- Given a type-level list (t1 ': t2), see if we can print
 -- it in list notation [t1, ...].

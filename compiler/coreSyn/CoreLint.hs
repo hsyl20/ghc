@@ -45,7 +45,7 @@ import GHC.Data.SrcLoc
 import GHC.Data.Kind
 import GHC.Data.Type
 import RepType
-import TyCoRep       -- checks validity of types/coercions
+import GHC.Data.Types       -- checks validity of types/coercions
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.BasicTypes
@@ -1024,7 +1024,7 @@ lintTyApp fun_ty arg_ty
         ; in_scope <- getInScope
         -- substTy needs the set of tyvars in scope to avoid generating
         -- uniques that are already in scope.
-        -- See Note [The substitution invariant] in TyCoRep
+        -- See Note [The substitution invariant] in GHC.Data.Types
         ; return (substTyWithInScope in_scope [tv] [arg_ty] body_ty) }
 
   | otherwise
@@ -1387,7 +1387,7 @@ lint_app :: SDoc -> LintedKind -> [(LintedType,LintedKind)] -> LintM Kind
 lint_app doc kfn kas
     = do { in_scope <- getInScope
          -- We need the in_scope set to satisfy the invariant in
-         -- Note [The substitution invariant] in TyCoRep
+         -- Note [The substitution invariant] in GHC.Data.Types
          ; foldlM (go_app in_scope) kfn kas }
   where
     fail_msg = vcat [ hang (text "Kind application error in") 2 doc
@@ -1713,7 +1713,7 @@ lintCoercion the_co@(NthCo n co)
          { (Just (tc_s, tys_s), Just (tc_t, tys_t))
              | tc_s == tc_t
              , isInjectiveTyCon tc_s r
-                 -- see Note [NthCo and newtypes] in TyCoRep
+                 -- see Note [NthCo and newtypes] in GHC.Data.Types
              , tys_s `equalLength` tys_t
              , n < length tys_s
              -> return (ks, kt, ts, tt, tr)

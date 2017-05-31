@@ -1,4 +1,4 @@
-module TyCoRep where
+module GHC.Data.Types where
 
 import GHC.Utils.Outputable ( SDoc )
 import Data.Data  ( Data )

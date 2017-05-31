@@ -77,7 +77,7 @@ module GHC.Data.Name (
         module GHC.Data.OccName
     ) where
 
-import {-# SOURCE #-} TyCoRep( TyThing )
+import {-# SOURCE #-} GHC.Data.Types( TyThing )
 import {-# SOURCE #-} PrelNames( starKindTyConKey, unicodeStarKindTyConKey )
 
 import GHC.Data.OccName
@@ -704,7 +704,7 @@ an operator, it is really a special case.
 This pprPrefixName stuff is really only used when printing HsSyn,
 which has to be polymorphic in the name type, and hence has to go via
 the overloaded function pprPrefixOcc.  It's easier where we know the
-type being pretty printed; eg the pretty-printing code in TyCoRep.
+type being pretty printed; eg the pretty-printing code in GHC.Data.Types.
 
 See Trac #7645, which led to this.
 -}

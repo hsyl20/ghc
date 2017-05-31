@@ -68,7 +68,7 @@ import GHC.Data.Name.Set
 import TcMType
 import TcHsType
 import TcIface
-import TyCoRep
+import GHC.Data.Types
 import FamInst
 import FamInstEnv
 import InstEnv
@@ -1561,7 +1561,7 @@ reifyClass cls
 -- This is used to annotate type patterns for poly-kinded tyvars in
 -- reifying class and type instances. See #8953 and th/T8953.
 annotThType :: Bool   -- True <=> annotate
-            -> TyCoRep.Type -> TH.Type -> TcM TH.Type
+            -> GHC.Data.Types.Type -> TH.Type -> TcM TH.Type
   -- tiny optimization: if the type is annotated, don't annotate again.
 annotThType _    _  th_ty@(TH.SigT {}) = return th_ty
 annotThType True ty th_ty
@@ -1666,7 +1666,7 @@ reifyFamilyInstance is_poly_tvs inst@(FamInst { fi_flavor = flavor
     fam_tc = famInstTyCon inst
 
 ------------------------------
-reifyType :: TyCoRep.Type -> TcM TH.Type
+reifyType :: GHC.Data.Types.Type -> TcM TH.Type
 -- Monadic only because of failure
 reifyType ty@(ForAllTy {})  = reify_for_all ty
 reifyType (LitTy t)         = do { r <- reifyTyLit t; return (TH.LitT r) }
@@ -1679,7 +1679,7 @@ reifyType ty@(FunTy t1 t2)
 reifyType ty@(CastTy {})    = noTH (sLit "kind casts") (ppr ty)
 reifyType ty@(CoercionTy {})= noTH (sLit "coercions in types") (ppr ty)
 
-reify_for_all :: TyCoRep.Type -> TcM TH.Type
+reify_for_all :: GHC.Data.Types.Type -> TcM TH.Type
 reify_for_all ty
   = do { cxt' <- reifyCxt cxt;
        ; tau' <- reifyType tau
@@ -1688,7 +1688,7 @@ reify_for_all ty
   where
     (tvs, cxt, tau) = tcSplitSigmaTy ty
 
-reifyTyLit :: TyCoRep.TyLit -> TcM TH.TyLit
+reifyTyLit :: GHC.Data.Types.TyLit -> TcM TH.TyLit
 reifyTyLit (NumTyLit n) = return (TH.NumTyLit n)
 reifyTyLit (StrTyLit s) = return (TH.StrTyLit (unpackFS s))
 
@@ -1728,7 +1728,7 @@ reifyKind  ki
                                                   }
     reifyNonArrowKind k                      = noTH (sLit "this kind") (ppr k)
 
-reify_kc_app :: TyCon -> [TyCoRep.Kind] -> TcM TH.Kind
+reify_kc_app :: TyCon -> [GHC.Data.Types.Kind] -> TcM TH.Kind
 reify_kc_app kc kis
   = fmap (mkThAppTs r_kc) (mapM reifyKind vis_kis)
   where
@@ -1842,7 +1842,7 @@ reify_tc_app tc tys
         tyCoVarsOfType $
         mkTyConKind (dropList tys tc_binders) tc_res_kind
 
-reifyPred :: TyCoRep.PredType -> TcM TH.Pred
+reifyPred :: GHC.Data.Types.PredType -> TcM TH.Pred
 reifyPred ty
   -- We could reify the invisible parameter as a class but it seems
   -- nicer to support them properly...

@@ -41,7 +41,7 @@ module FamInstEnv (
 
 import Unify
 import GHC.Data.Type
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor (DataCon)
 import GHC.Data.Coercion

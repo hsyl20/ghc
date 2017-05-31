@@ -15,7 +15,7 @@ import CoreUtils
 import FamInstEnv
 import GHC.Data.Coercion
 import GHC.Data.Type
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var

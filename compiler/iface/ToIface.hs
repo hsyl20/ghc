@@ -65,7 +65,7 @@ import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Demand ( isTopSig )
 
 import Data.Maybe ( catMaybes )

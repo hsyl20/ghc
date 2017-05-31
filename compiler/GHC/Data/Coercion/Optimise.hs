@@ -13,7 +13,7 @@ module GHC.Data.Coercion.Optimise ( optCoercion, checkAxInstCo ) where
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Coercion
 import GHC.Data.Type hiding( substTyVarBndr, substTy )
 import TcType       ( exactTyCoVarsOfType )
@@ -931,7 +931,7 @@ etaTyConAppCo_maybe tc co
   , Just (tc1, tys1)  <- splitTyConApp_maybe ty1
   , Just (tc2, tys2)  <- splitTyConApp_maybe ty2
   , tc1 == tc2
-  , isInjectiveTyCon tc r  -- See Note [NthCo and newtypes] in TyCoRep
+  , isInjectiveTyCon tc r  -- See Note [NthCo and newtypes] in GHC.Data.Types
   , let n = length tys1
   = ASSERT( tc == tc1 )
     ASSERT( n == length tys2 )

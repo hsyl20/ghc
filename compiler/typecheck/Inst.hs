@@ -47,7 +47,7 @@ import CoreSyn     ( isOrphan )
 import FunDeps
 import TcMType
 import GHC.Data.Type
-import TyCoRep     ( TyBinder(..) )
+import GHC.Data.Types     ( TyBinder(..) )
 import TcType
 import GHC.Types
 import GHC.Data.Class( Class )

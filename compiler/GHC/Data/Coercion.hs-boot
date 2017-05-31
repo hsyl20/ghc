@@ -2,7 +2,7 @@
 
 module GHC.Data.Coercion where
 
-import {-# SOURCE #-} TyCoRep
+import {-# SOURCE #-} GHC.Data.Types
 import {-# SOURCE #-} GHC.Data.Type.Constructor
 
 import GHC.Data.BasicTypes ( LeftOrRight )

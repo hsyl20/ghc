@@ -91,7 +91,7 @@ module TcMType (
 #include "HsVersions.h"
 
 -- friends:
-import TyCoRep
+import GHC.Data.Types
 import TcType
 import GHC.Data.Type
 import GHC.Data.Kind

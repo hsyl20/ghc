@@ -27,7 +27,7 @@ import GHC.Utils.Monad.State
 import TcGenDeriv
 import TcType
 import GHC.Data.Type.Constructor
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Type
 import GHC.Utils
 import GHC.Data.Var

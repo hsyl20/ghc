@@ -36,7 +36,7 @@ import GHC.Data.Coercion
 import GHC.Data.Literal
 import GHC.Data.Name
 import GHC.Data.Type
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Var
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique( Unique )

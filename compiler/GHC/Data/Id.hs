@@ -17,7 +17,7 @@
 --
 -- * 'Name.Name': see "Name#name_types"
 --
--- * 'Id.Id' represents names that not only have a 'Name.Name' but also a 'TyCoRep.Type' and some additional
+-- * 'Id.Id' represents names that not only have a 'Name.Name' but also a 'GHC.Data.Types.Type' and some additional
 --   details (a 'IdInfo.IdInfo' and one of 'Var.LocalIdDetails' or 'IdInfo.GlobalIdDetails') that
 --   are added, modified and inspected by various compiler passes. These 'Var.Var' names may either
 --   be global or local, see "Var#globalvslocal"

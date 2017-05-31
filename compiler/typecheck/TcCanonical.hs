@@ -18,7 +18,7 @@ import TcSMonad
 import TcEvidence
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
-import TyCoRep   -- cleverly decomposes types, good for completeness checking
+import GHC.Data.Types   -- cleverly decomposes types, good for completeness checking
 import GHC.Data.Coercion
 import FamInstEnv ( FamInstEnvs )
 import FamInst ( tcTopNormaliseNewTypeTF_maybe )
@@ -1103,7 +1103,7 @@ Conclusion:
 It all comes from the fact that newtypes aren't necessarily injective
 w.r.t. representational equality.
 
-Furthermore, as explained in Note [NthCo and newtypes] in TyCoRep, we can't use
+Furthermore, as explained in Note [NthCo and newtypes] in GHC.Data.Types, we can't use
 NthCo on representational coercions over newtypes. NthCo comes into play
 only when decomposing givens.
 

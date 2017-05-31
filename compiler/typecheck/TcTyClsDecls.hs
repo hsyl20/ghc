@@ -42,7 +42,7 @@ import FamInst
 import FamInstEnv
 import GHC.Data.Coercion
 import GHC.Data.Type
-import TyCoRep   -- for checkValidRoles
+import GHC.Data.Types   -- for checkValidRoles
 import GHC.Data.Kind
 import GHC.Data.Class
 import GHC.Data.Coercion.Axiom

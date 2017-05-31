@@ -194,7 +194,7 @@ module TcType (
 
 -- friends:
 import GHC.Data.Kind
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Class
 import GHC.Data.Var
 import ForeignCall
@@ -1639,7 +1639,7 @@ tcEqKind = tcEqType
 
 tcEqType :: TcType -> TcType -> Bool
 -- tcEqType is a proper implements the same Note [Non-trivial definitional
--- equality] (in TyCoRep) as `eqType`, but Type.eqType believes (* ==
+-- equality] (in GHC.Data.Types) as `eqType`, but Type.eqType believes (* ==
 -- Constraint), and that is NOT what we want in the type checker!
 tcEqType ty1 ty2
   = isNothing (tc_eq_type tcView ki1 ki2) &&

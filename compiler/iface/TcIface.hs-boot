@@ -2,7 +2,7 @@ module TcIface where
 
 import IfaceSyn    ( IfaceDecl, IfaceClsInst, IfaceFamInst, IfaceRule,
                      IfaceAnnotation, IfaceCompleteMatch )
-import TyCoRep     ( TyThing )
+import GHC.Data.Types     ( TyThing )
 import TcRnTypes   ( IfL )
 import InstEnv     ( ClsInst )
 import FamInstEnv  ( FamInst )

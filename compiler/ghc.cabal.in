@@ -473,7 +473,7 @@ Library
         GHC.Data.Coercion.Axiom
         GHC.Data.Kind
         GHC.Data.Type
-        TyCoRep
+        GHC.Data.Types
         Unify
         GHC.Data.Bag
         GHC.Utils.Binary

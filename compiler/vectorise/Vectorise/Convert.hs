@@ -10,7 +10,7 @@ import Vectorise.Type.Type
 import CoreSyn
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
-import TyCoRep
+import GHC.Data.Types
 import GHC.Data.Name.Set
 import GHC.Data.FastString
 import GHC.Utils.Outputable

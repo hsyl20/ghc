@@ -1,12 +1,12 @@
 module ToIface where
 
-import {-# SOURCE #-} TyCoRep
+import {-# SOURCE #-} GHC.Data.Types
 import {-# SOURCE #-} IfaceType
 import GHC.Data.Var ( TyVar, TyVarBinder )
 import GHC.Data.Type.Constructor ( TyCon )
 import GHC.Data.Var.Set( VarSet )
 
--- For TyCoRep
+-- For GHC.Data.Types
 toIfaceType :: Type -> IfaceType
 toIfaceTypeX :: VarSet -> Type -> IfaceType
 toIfaceTyLit :: TyLit -> IfaceTyLit
