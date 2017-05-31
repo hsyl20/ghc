@@ -3,7 +3,7 @@
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module CmmLive
+module GHC.Cmm.Analyse.Liveness
     ( CmmLocalLive
     , cmmLocalLiveness
     , cmmGlobalLiveness

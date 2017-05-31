@@ -17,7 +17,7 @@ import GHC.Cmm
 import GHC.Cmm.PrettyPrint ()
 import CmmUtils
 import CmmInfo
-import CmmLive
+import GHC.Cmm.Analyse.Liveness
 import CmmSwitch
 import Data.List (sortBy)
 import GHC.Data.Maybe

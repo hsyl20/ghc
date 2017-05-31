@@ -5,7 +5,7 @@ module GHC.Cmm.Optimise.Sinking (
 
 import GHC.Cmm
 import CmmOpt
-import CmmLive
+import GHC.Cmm.Analyse.Liveness
 import CmmUtils
 import Hoopl
 import CodeGen.Platform

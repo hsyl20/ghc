@@ -221,7 +221,7 @@ Library
         CmmInfo
         CmmLex
         CmmLint
-        CmmLive
+        GHC.Cmm.Analyse.Liveness
         CmmMachOp
         CmmMonad
         CmmSwitch

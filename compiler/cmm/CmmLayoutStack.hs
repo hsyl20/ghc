@@ -14,7 +14,7 @@ import CLabel
 import CmmUtils
 import MkGraph
 import ForeignCall
-import CmmLive
+import GHC.Cmm.Analyse.Liveness
 import CmmProcPoint
 import GHC.RTS.Storage
 import Hoopl
