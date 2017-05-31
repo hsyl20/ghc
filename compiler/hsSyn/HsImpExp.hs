@@ -14,7 +14,7 @@ import Module           ( ModuleName )
 import HsDoc            ( HsDocString )
 import GHC.Data.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
 import BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )
-import FieldLabel       ( FieldLbl(..) )
+import GHC.Data.FieldLabel       ( FieldLbl(..) )
 
 import GHC.Utils.Outputable
 import GHC.Data.FastString

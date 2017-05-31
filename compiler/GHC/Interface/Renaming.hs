@@ -22,7 +22,7 @@ import Module
 import GHC.Data.Unique.FiniteMap
 import Avail
 import IfaceSyn
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Data.Var
 import GHC.Utils.Error
 

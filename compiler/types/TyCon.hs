@@ -141,7 +141,7 @@ import PrelNames
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import GHC.Data.FastString.Environment
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Config.Constants
 import GHC.Utils
 import GHC.Data.Unique( tyConRepNameUnique, dataConRepNameUnique )

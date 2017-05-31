@@ -28,7 +28,7 @@ import MkCore   ( mkCoreLets )
 import GHC.Utils
 import GHC.Data.Id
 import GHC.Data.Name.Environment
-import FieldLabel ( flSelector )
+import GHC.Data.FieldLabel ( flSelector )
 import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Outputable

@@ -17,7 +17,7 @@ import GHC.Types
 import Module
 import GHC.Data.Unique.FiniteMap
 import Avail
-import FieldLabel
+import GHC.Data.FieldLabel
 
 import GHC.Data.Name
 import GHC.Data.Name.Environment

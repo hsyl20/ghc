@@ -150,7 +150,7 @@ import ConLike  ( ConLike(..) )
 import DataCon  ( DataCon, dataConUserType, dataConOrigArgTys )
 import PatSyn   ( PatSyn, pprPatSynType )
 import GHC.Data.Id       ( idType, idName )
-import FieldLabel ( FieldLabel )
+import GHC.Data.FieldLabel ( FieldLabel )
 import TcType
 import GHC.Types.Annotations
 import InstEnv

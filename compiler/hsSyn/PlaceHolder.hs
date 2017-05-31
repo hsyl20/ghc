@@ -14,7 +14,7 @@ import GHC.Data.RdrName
 import GHC.Data.Var
 import Coercion
 import ConLike (ConLike)
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Data.SrcLoc (Located)
 import TcEvidence ( HsWrapper )
 

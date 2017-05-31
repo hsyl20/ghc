@@ -29,7 +29,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Utils.Binary
 import GHC.Data.List.SetOps
 import GHC.Utils.Outputable

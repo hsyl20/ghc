@@ -71,7 +71,7 @@ import GHC.Utils
 import GHC.Data.FastString
 import GHC.Utils.Fingerprint
 import GHC.Config.Hooks
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Interface.Renaming
 import GHC.Data.Unique.DeterSet
 

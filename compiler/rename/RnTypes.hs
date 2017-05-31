@@ -52,7 +52,7 @@ import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )
 import GHC.Data.Name
 import GHC.Data.SrcLoc
 import GHC.Data.Name.Set
-import FieldLabel
+import GHC.Data.FieldLabel
 
 import GHC.Utils
 import BasicTypes       ( compareFixity, funTyFixity, negateFixity,

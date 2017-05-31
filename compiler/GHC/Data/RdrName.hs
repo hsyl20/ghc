@@ -74,7 +74,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc
 import GHC.Data.FastString
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap

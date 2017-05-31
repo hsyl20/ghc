@@ -31,7 +31,7 @@ import GHC.Data.Unique
 import GHC.Utils
 import BasicTypes
 import GHC.Data.Var
-import FieldLabel
+import GHC.Data.FieldLabel
 
 import qualified Data.Data as Data
 import Data.Function

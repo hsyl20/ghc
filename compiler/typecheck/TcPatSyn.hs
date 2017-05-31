@@ -46,7 +46,7 @@ import GHC.Data.Var.Set
 import MkId
 import TcTyDecls
 import ConLike
-import FieldLabel
+import GHC.Data.FieldLabel
 import GHC.Data.Bag
 import GHC.Utils
 import GHC.Utils.Error

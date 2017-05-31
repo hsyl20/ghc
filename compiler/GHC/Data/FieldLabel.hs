@@ -62,12 +62,14 @@ Of course, datatypes with no constructors cannot have any fields.
 {-# LANGUAGE DeriveTraversable #-}
 {-# LANGUAGE StandaloneDeriving #-}
 
-module FieldLabel ( FieldLabelString
-                  , FieldLabelEnv
-                  , FieldLbl(..)
-                  , FieldLabel
-                  , mkFieldLabelOccs
-                  ) where
+module GHC.Data.FieldLabel
+   ( FieldLabelString
+   , FieldLabelEnv
+   , FieldLbl(..)
+   , FieldLabel
+   , mkFieldLabelOccs
+   )
+where
 
 import GHC.Data.OccName
 import GHC.Data.Name

@@ -39,7 +39,7 @@ import CoAxiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import Class
 import TyCon
 import DataCon( dataConWrapId )
-import FieldLabel
+import GHC.Data.FieldLabel
 import FunDeps
 import FamInst
 import FamInstEnv

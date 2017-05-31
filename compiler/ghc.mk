@@ -477,7 +477,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.FastMutableInt \
 	GHC.Data.FastString \
 	GHC.Data.FastString.Environment \
-	FieldLabel \
+	GHC.Data.FieldLabel \
 	GHC.Utils.Fingerprint \
 	GHC.Data.FiniteMap \
 	ForeignCall \

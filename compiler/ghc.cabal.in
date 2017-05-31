@@ -176,7 +176,7 @@ Library
         Demand
         Debug
         GHC.Utils.Exception
-        FieldLabel
+        GHC.Data.FieldLabel
         GHC.Monad
         GHC.Config.Hooks
         GHC.Data.Id

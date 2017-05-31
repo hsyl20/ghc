@@ -67,7 +67,7 @@ import ForeignCall ( CType )
 import Coercion
 import Unify
 import TyCon
-import FieldLabel
+import GHC.Data.FieldLabel
 import Class
 import GHC.Data.Name
 import PrelNames

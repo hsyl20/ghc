@@ -2,7 +2,7 @@ module DataCon where
 import GHC.Data.Var( TyVar, TyVarBinder )
 import GHC.Data.Name( Name, NamedThing )
 import {-# SOURCE #-} TyCon( TyCon )
-import FieldLabel ( FieldLabel )
+import GHC.Data.FieldLabel ( FieldLabel )
 import GHC.Data.Unique ( Uniquable )
 import GHC.Utils.Outputable ( Outputable, OutputableBndr )
 import BasicTypes (Arity)
