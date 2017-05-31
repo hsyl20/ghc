@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs #-}
-module CmmImplementSwitchPlans
+module GHC.Cmm.Switch.Implement
   ( cmmImplementSwitchPlans
   )
 where
@@ -19,11 +19,12 @@ import GHC.Config.Flags
 --
 -- The actual, abstract strategy is determined by createSwitchPlan in
 -- CmmSwitch and returned as a SwitchPlan; here is just the implementation in
--- terms of Cmm code. See Note [Cmm Switches, the general plan] in CmmSwitch.
+-- terms of Cmm code. See Note [Cmm Switches, the general plan] in
+-- GHC.Cmm.Switch.
 --
 -- This division into different modules is both to clearly separate concerns,
 -- but also because createSwitchPlan needs access to the constructors of
--- SwitchTargets, a data type exported abstractly by CmmSwitch.
+-- SwitchTargets, a data type exported abstractly by GHC.Cmm.Switch.
 --
 
 -- | Traverses the 'CmmGraph', making sure that 'CmmSwitch' are suitable for

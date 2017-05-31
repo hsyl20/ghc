@@ -11,7 +11,7 @@ import GHC.Cmm
 import GHC.Cmm.Analyse.Lint
 import CmmBuildInfoTables
 import GHC.Cmm.Optimise.CommonBlockElim
-import CmmImplementSwitchPlans
+import GHC.Cmm.Switch.Implement
 import GHC.Cmm.ProcPoint
 import CmmContFlowOpt
 import CmmLayoutStack
