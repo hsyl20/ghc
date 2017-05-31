@@ -214,7 +214,7 @@ Library
         CmmBuildInfoTables
         CmmPipeline
         CmmCallConv
-        CmmCommonBlockElim
+        GHC.Cmm.Optimise.CommonBlockElim
         CmmImplementSwitchPlans
         CmmContFlowOpt
         GHC.Cmm.Expr

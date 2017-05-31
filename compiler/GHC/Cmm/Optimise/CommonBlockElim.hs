@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs, BangPatterns #-}
-module CmmCommonBlockElim
+module GHC.Cmm.Optimise.CommonBlockElim
   ( elimCommonBlocks
   )
 where
