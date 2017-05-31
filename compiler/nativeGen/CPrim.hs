@@ -12,7 +12,7 @@ module CPrim
     ) where
 
 import GHC.Cmm.Type
-import CmmMachOp
+import GHC.Cmm.MachinePrimOps
 import GHC.Utils.Outputable
 
 popCntLabel :: Width -> String

@@ -222,7 +222,7 @@ Library
         GHC.Cmm.Lexer
         GHC.Cmm.Analyse.Lint
         GHC.Cmm.Analyse.Liveness
-        CmmMachOp
+        GHC.Cmm.MachinePrimOps
         CmmMonad
         GHC.Cmm.Switch
         GHC.Cmm.Node

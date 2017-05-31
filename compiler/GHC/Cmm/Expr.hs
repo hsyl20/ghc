@@ -30,7 +30,7 @@ where
 
 import GHC.Cmm.BlockId
 import GHC.Data.CLabel
-import CmmMachOp
+import GHC.Cmm.MachinePrimOps
 import GHC.Cmm.Type
 import GHC.Config.Flags
 import GHC.Utils.Outputable (panic)

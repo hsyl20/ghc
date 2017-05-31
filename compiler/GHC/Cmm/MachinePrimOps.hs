@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module CmmMachOp
+module GHC.Cmm.MachinePrimOps
     ( MachOp(..)
     , pprMachOp, isCommutableMachOp, isAssociativeMachOp
     , isComparisonMachOp, maybeIntComparison, machOpResultType
