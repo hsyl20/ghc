@@ -46,7 +46,7 @@ module StgCmmUtils (
 import StgCmmMonad
 import StgCmmClosure
 import GHC.Cmm
-import BlockId
+import GHC.Cmm.BlockId
 import MkGraph
 import CodeGen.Platform
 import CLabel

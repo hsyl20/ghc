@@ -40,7 +40,7 @@ import Format
 import NCGMonad
 
 -- Our intermediate code:
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch

@@ -32,7 +32,7 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 
-import BlockId
+import GHC.Cmm.BlockId
 import Hoopl
 import GHC.Cmm
 import GHC.Data.Unique.Set

@@ -12,7 +12,7 @@ import SPARC.Instr
 import SPARC.Imm
 
 import CLabel
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 
 import GHC.Utils.Panic

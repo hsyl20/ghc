@@ -25,7 +25,7 @@ import RegClass
 import Reg
 import TargetReg
 
-import BlockId
+import GHC.Cmm.BlockId
 import Hoopl
 import CodeGen.Platform
 import GHC.Cmm

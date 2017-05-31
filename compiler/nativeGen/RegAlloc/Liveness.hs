@@ -38,7 +38,7 @@ module RegAlloc.Liveness (
 import Reg
 import Instruction
 
-import BlockId
+import GHC.Cmm.BlockId
 import Hoopl
 import GHC.Cmm hiding (RegSet, emptyRegSet)
 import GHC.Cmm.PrettyPrint()

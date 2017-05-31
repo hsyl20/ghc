@@ -69,7 +69,7 @@ import RepType  ( UnaryType, SlotTy (..), typePrimRep1 )
 
 import GHC.RTS.Storage
 import GHC.Cmm
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import GHC.Utils.Outputable
 import GHC.Config.Flags

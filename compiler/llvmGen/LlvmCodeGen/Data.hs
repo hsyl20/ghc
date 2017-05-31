@@ -12,7 +12,7 @@ module LlvmCodeGen.Data (
 import Llvm
 import LlvmCodeGen.Base
 
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import GHC.Cmm
 import GHC.Config.Flags

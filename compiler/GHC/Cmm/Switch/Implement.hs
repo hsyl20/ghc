@@ -5,7 +5,7 @@ module GHC.Cmm.Switch.Implement
 where
 
 import Hoopl
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch

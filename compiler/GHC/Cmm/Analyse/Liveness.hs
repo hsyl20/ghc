@@ -13,7 +13,7 @@ module GHC.Cmm.Analyse.Liveness
 where
 
 import GHC.Config.Flags
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression ()
 import Hoopl

@@ -5,7 +5,7 @@ module GHC.Cmm.Optimise.CommonBlockElim
 where
 
 
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch (eqSwitchTargetWith)

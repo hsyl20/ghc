@@ -9,7 +9,7 @@ import StgCmmForeign    ( saveThreadState, loadThreadState ) -- XXX layering vio
 import GHC.Data.BasicTypes
 import GHC.Cmm
 import CmmInfo
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import GHC.Cmm.Utils
 import MkGraph

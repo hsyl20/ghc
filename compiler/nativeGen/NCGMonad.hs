@@ -41,7 +41,7 @@ import Reg
 import Format
 import TargetReg
 
-import BlockId
+import GHC.Cmm.BlockId
 import Hoopl
 import CLabel           ( CLabel, mkAsmTempLabel )
 import Debug

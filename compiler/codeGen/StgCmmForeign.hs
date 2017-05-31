@@ -30,7 +30,7 @@ import StgCmmUtils
 import StgCmmClosure
 import StgCmmLayout
 
-import BlockId (newBlockId)
+import GHC.Cmm.BlockId (newBlockId)
 import GHC.Cmm
 import GHC.Cmm.Utils
 import MkGraph

@@ -27,7 +27,7 @@ module GHC.Cmm (
   ) where
 
 import CLabel
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm.Node
 import GHC.RTS.Storage
 import GHC.Cmm.Expr

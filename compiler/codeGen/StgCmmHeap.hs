@@ -38,7 +38,7 @@ import MkGraph
 
 import Hoopl
 import GHC.RTS.Storage
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import CostCentre

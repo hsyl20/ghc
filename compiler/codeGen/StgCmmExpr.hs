@@ -30,7 +30,7 @@ import StgCmmClosure
 import StgSyn
 
 import MkGraph
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import CmmInfo
 import CoreSyn

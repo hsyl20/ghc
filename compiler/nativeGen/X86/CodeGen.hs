@@ -49,7 +49,7 @@ import GHC.Platform
 
 -- Our intermediate code:
 import GHC.Data.BasicTypes
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Data.Module           ( primUnitId )
 import GHC.Cmm.PrettyPrint           ()
 import GHC.Cmm.Utils

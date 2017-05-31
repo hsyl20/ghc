@@ -31,7 +31,7 @@ import StgCmmClosure
 
 import CLabel
 
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm.Expr
 import GHC.Cmm.Utils
 import GHC.Config.Flags

@@ -28,7 +28,7 @@ module GHC.Cmm.Expr
     )
 where
 
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import CmmMachOp
 import GHC.Cmm.Type

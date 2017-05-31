@@ -11,7 +11,7 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 import GHC.Cmm hiding (RegSet)
-import BlockId
+import GHC.Cmm.BlockId
 import Hoopl
 
 import GHC.Utils.Monad

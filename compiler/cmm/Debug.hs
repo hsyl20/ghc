@@ -22,7 +22,7 @@ module Debug (
   UnwindExpr(..), toUnwindExpr
   ) where
 
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import GHC.Cmm
 import GHC.Cmm.Utils

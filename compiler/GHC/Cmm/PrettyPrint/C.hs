@@ -26,7 +26,7 @@ module GHC.Cmm.PrettyPrint.C (
 #include "HsVersions.h"
 
 -- Cmm stuff
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import ForeignCall
 import GHC.Cmm hiding (pprBBlock)

@@ -39,7 +39,7 @@ import Format
 
 import CLabel
 import CodeGen.Platform
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Config.Flags
 import GHC.Cmm
 import GHC.Data.FastString

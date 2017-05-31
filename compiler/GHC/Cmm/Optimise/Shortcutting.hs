@@ -9,7 +9,7 @@ module GHC.Cmm.Optimise.Shortcutting
 where
 
 import Hoopl
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch (mapSwitchTargets)

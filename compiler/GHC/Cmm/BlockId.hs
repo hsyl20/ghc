@@ -2,7 +2,7 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 {- BlockId module should probably go away completely, being superseded by Label -}
-module BlockId
+module GHC.Cmm.BlockId
   ( BlockId, mkBlockId -- ToDo: BlockId should be abstract, but it isn't yet
   , newBlockId
   , blockLbl, infoTblLbl

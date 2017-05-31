@@ -22,7 +22,7 @@ where
 
 import PPC.Instr
 
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import CLabel
 

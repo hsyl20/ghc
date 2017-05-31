@@ -208,7 +208,7 @@ Library
         GHC.Data.Var.Environment
         GHC.Data.Var.Set
         GHC.Data.Var.UndirectedGraph
-        BlockId
+        GHC.Cmm.BlockId
         CLabel
         GHC.Cmm
         CmmBuildInfoTables

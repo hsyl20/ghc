@@ -71,7 +71,7 @@ import GHC.RTS.Storage
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression()
 
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import GHC.Data.Id
 import GHC.Data.Id.Info

@@ -11,7 +11,7 @@ import Llvm
 import LlvmCodeGen.Base
 import LlvmCodeGen.Regs
 
-import BlockId
+import GHC.Cmm.BlockId
 import CodeGen.Platform ( activeStgRegs, callerSaves )
 import CLabel
 import GHC.Cmm

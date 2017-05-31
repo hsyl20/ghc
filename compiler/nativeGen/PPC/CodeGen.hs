@@ -40,7 +40,7 @@ import TargetReg
 import GHC.Platform
 
 -- Our intermediate code:
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm.PrettyPrint           ( pprExpr )
 import GHC.Cmm
 import GHC.Cmm.Utils

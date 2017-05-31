@@ -61,7 +61,7 @@ import NCGMonad
 import Dwarf
 import Debug
 
-import BlockId
+import GHC.Cmm.BlockId
 import CgUtils          ( fixStgRegisters )
 import GHC.Cmm
 import GHC.Cmm.Utils

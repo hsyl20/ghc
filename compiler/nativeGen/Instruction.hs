@@ -16,7 +16,7 @@ where
 
 import Reg
 
-import BlockId
+import GHC.Cmm.BlockId
 import Hoopl
 import GHC.Config.Flags
 import GHC.Cmm hiding (topInfoTable)

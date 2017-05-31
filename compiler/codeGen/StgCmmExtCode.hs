@@ -43,7 +43,7 @@ import GHC.Cmm
 import CLabel
 import MkGraph
 
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Module

@@ -223,7 +223,7 @@ import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch        ( mkSwitchTargets )
 import CmmInfo
-import BlockId
+import GHC.Cmm.BlockId
 import CmmLex
 import CLabel
 import GHC.RTS.Storage

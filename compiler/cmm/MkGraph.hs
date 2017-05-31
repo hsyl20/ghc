@@ -21,7 +21,7 @@ module MkGraph
   )
 where
 
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.Cmm
 import CmmCallConv
 import GHC.Cmm.Switch (SwitchTargets)

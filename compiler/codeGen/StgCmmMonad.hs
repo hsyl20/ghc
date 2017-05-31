@@ -67,7 +67,7 @@ import GHC.Config.Flags
 import Hoopl
 import GHC.Data.Maybe
 import MkGraph
-import BlockId
+import GHC.Cmm.BlockId
 import CLabel
 import GHC.RTS.Storage
 import GHC.Data.Module

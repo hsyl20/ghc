@@ -32,7 +32,7 @@ import StgCmmForeign    (emitPrimCall)
 
 import MkGraph
 import CoreSyn          ( AltCon(..), tickishIsCode )
-import BlockId
+import GHC.Cmm.BlockId
 import GHC.RTS.Storage
 import GHC.Cmm
 import CmmInfo

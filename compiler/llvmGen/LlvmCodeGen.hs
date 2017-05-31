@@ -15,7 +15,7 @@ import LlvmCodeGen.Ppr
 import LlvmCodeGen.Regs
 import LlvmMangler
 
-import BlockId
+import GHC.Cmm.BlockId
 import CgUtils ( fixStgRegisters )
 import GHC.Cmm
 import GHC.Cmm.Utils
