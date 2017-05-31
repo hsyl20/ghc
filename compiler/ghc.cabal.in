@@ -323,7 +323,7 @@ Library
         LoadIface
         MkIface
         TcIface
-        FlagChecker
+        GHC.Config.Flags.Fingerprint
         GHC.Data.Annotation
         GHC.Program.CmdLineParser
         GHC.CodeGen.CodeOutput

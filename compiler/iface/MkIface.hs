@@ -62,7 +62,7 @@ import IfaceSyn
 import BinFingerprint
 import LoadIface
 import ToIface
-import FlagChecker
+import GHC.Config.Flags.Fingerprint
 
 import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
