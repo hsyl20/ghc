@@ -17,7 +17,7 @@ import TcType
 import RnUnbound ( unknownNameSuggestions )
 import Type
 import TyCoRep
-import Kind
+import GHC.Data.Kind
 import Unify            ( tcMatchTys )
 import GHC.Data.Module
 import FamInst

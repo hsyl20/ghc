@@ -33,7 +33,7 @@ import PrimOp
 import CoreFVs
 import Type
 import RepType
-import Kind            ( isLiftedTypeKind )
+import GHC.Data.Kind            ( isLiftedTypeKind )
 import GHC.Data.DataConstructor
 import TyCon
 import GHC.Utils

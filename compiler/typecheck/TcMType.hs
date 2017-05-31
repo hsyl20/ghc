@@ -94,7 +94,7 @@ module TcMType (
 import TyCoRep
 import TcType
 import Type
-import Kind
+import GHC.Data.Kind
 import GHC.Data.Coercion
 import GHC.Data.Class
 import GHC.Data.Var

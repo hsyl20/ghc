@@ -17,7 +17,7 @@ import TcFlatten
 import TcUnify( canSolveByUnification )
 import GHC.Data.Var.Set
 import Type
-import Kind( isConstraintKind )
+import GHC.Data.Kind( isConstraintKind )
 import InstEnv( DFunInstType, lookupInstEnv, instanceDFunId )
 import GHC.Data.Coercion.Axiom( sfInteractTop, sfInteractInert )
 

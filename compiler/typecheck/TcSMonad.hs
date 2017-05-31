@@ -129,7 +129,7 @@ import qualified TcMType as TcM
 import qualified TcEnv as TcM
        ( checkWellStaged, topIdLvl, tcGetDefaultTys, tcLookupClass, tcLookupId )
 import PrelNames( heqTyConKey, eqTyConKey )
-import Kind
+import GHC.Data.Kind
 import TcType
 import GHC.Config.Flags
 import Type

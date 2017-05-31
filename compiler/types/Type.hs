@@ -209,7 +209,7 @@ import GHC.Data.BasicTypes
 -- We import the representation and primitive functions from TyCoRep.
 -- Many things are reexported, but not the representation!
 
-import Kind
+import GHC.Data.Kind
 import TyCoRep
 
 -- friends:

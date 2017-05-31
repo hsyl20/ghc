@@ -193,7 +193,7 @@ module TcType (
 #include "HsVersions.h"
 
 -- friends:
-import Kind
+import GHC.Data.Kind
 import TyCoRep
 import GHC.Data.Class
 import GHC.Data.Var

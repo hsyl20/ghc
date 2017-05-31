@@ -5,7 +5,7 @@ import TcRnMonad
 import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import Kind
+import GHC.Data.Kind
 
 
 rnSpliceType :: HsSplice RdrName   -> PostTc Name Kind

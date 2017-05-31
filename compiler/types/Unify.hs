@@ -29,7 +29,7 @@ module Unify (
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Kind
+import GHC.Data.Kind
 import GHC.Data.Name( Name )
 import Type hiding ( getTvSubstEnv )
 import GHC.Data.Coercion hiding ( getCvSubstEnv )

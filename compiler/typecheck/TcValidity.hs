@@ -31,7 +31,7 @@ import TcMType
 import PrelNames
 import Type
 import GHC.Data.Coercion
-import Kind
+import GHC.Data.Kind
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import TyCon

@@ -60,7 +60,7 @@ import GHC.Data.BasicTypes
 
 -- compiler/types
 import Type             ( funTyCon )
-import Kind             ( Kind )
+import GHC.Data.Kind             ( Kind )
 import GHC.Data.Class            ( FunDep )
 
 -- compiler/parser

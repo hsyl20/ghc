@@ -58,7 +58,7 @@ import TcType
 import TcHsSyn( zonkSigType )
 import Inst   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
 import Type
-import Kind
+import GHC.Data.Kind
 import GHC.Data.RdrName( lookupLocalRdrOcc )
 import GHC.Data.Var
 import GHC.Data.Var.Set

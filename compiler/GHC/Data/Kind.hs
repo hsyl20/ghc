@@ -1,7 +1,7 @@
 -- (c) The University of Glasgow 2006-2012
 
 {-# LANGUAGE CPP #-}
-module Kind (
+module GHC.Data.Kind (
         -- * Main data type
         Kind, typeKind,
 

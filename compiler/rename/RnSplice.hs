@@ -15,7 +15,7 @@ import GHC.Data.Name.Set
 import HsSyn
 import GHC.Data.RdrName
 import TcRnMonad
-import Kind
+import GHC.Data.Kind
 
 import RnEnv
 import RnUtils          ( HsDocContext(..), newLocalBndrRn )

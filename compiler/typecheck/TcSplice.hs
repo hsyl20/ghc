@@ -63,7 +63,7 @@ import RnTypes
 import TcHsSyn
 import TcSimplify
 import Type
-import Kind
+import GHC.Data.Kind
 import GHC.Data.Name.Set
 import TcMType
 import TcHsType
