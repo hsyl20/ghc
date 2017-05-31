@@ -27,7 +27,7 @@ import HscMain
 import CgUtils
 import AsmCodeGen
 import GHC.Cmm.BuildInfoTables
-import CmmPipeline
+import GHC.Cmm.Pipeline
 import GHC.Cmm.Parser
 import GHC.RTS.InfoTable
 import GHC.Cmm

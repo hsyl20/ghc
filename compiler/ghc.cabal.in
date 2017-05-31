@@ -212,7 +212,7 @@ Library
         GHC.Data.CLabel
         GHC.Cmm
         GHC.Cmm.BuildInfoTables
-        CmmPipeline
+        GHC.Cmm.Pipeline
         GHC.Cmm.CallConvention
         GHC.Cmm.Optimise.CommonBlockElim
         GHC.Cmm.Switch.Implement

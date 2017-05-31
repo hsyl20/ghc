@@ -154,7 +154,7 @@ OldGHC.Cmm.PrettyPrint.hs   Pretty print for CmmStmt, GenBasicBlock and ListGrap
 CmmOpt.hs      Hopefully-redundant optimiser
 
 -------- Stuff to keep ------------
-CmmPipeline.hs            Driver for new pipeline
+GHC.Cmm.Pipeline.hs            Driver for new pipeline
 
 CmmLive.hs                Liveness analysis, dead code elim
 CmmProcPoint.hs           Identifying and splitting out proc-points
@@ -276,7 +276,7 @@ a dominator analysis, using the Dataflow Engine.
   f's keep-alive refs to include h1.
 
 * The SRT info is the C_SRT field of Cmm.ClosureTypeInfo in a
-  CmmInfoTable attached to each CmmProc.  CmmPipeline.toTops actually does
+  CmmInfoTable attached to each CmmProc.  GHC.Cmm.Pipeline.toTops actually does
   the attaching, right at the end of the pipeline.  The C_SRT part
   gives offsets within a single, shared table of closure pointers.
 

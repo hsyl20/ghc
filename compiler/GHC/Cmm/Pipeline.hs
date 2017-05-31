@@ -1,6 +1,6 @@
 {-# LANGUAGE BangPatterns #-}
 
-module CmmPipeline (
+module GHC.Cmm.Pipeline (
   -- | Converts C-- with an implicit stack and native C-- calls into
   -- optimized, CPS converted and native-call-less C--.  The latter
   -- C-- can be used to generate assembly.
