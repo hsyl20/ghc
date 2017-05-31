@@ -23,7 +23,7 @@ import StgSyn
 import Type
 import RepType
 import TyCon
-import MkId             ( coercionTokenId )
+import GHC.Data.Id.Make             ( coercionTokenId )
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import DataCon

@@ -38,7 +38,7 @@ import Coercion
 import Type
 import TyCon
 import DataCon
-import MkId
+import GHC.Data.Id.Make
 import GHC.Config.Flags
 import GHC.Data.FastString
 

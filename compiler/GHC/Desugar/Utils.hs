@@ -51,7 +51,7 @@ import GHC.Desugar.Monad
 
 import CoreUtils
 import MkCore
-import MkId
+import GHC.Data.Id.Make
 import GHC.Data.Id
 import GHC.Data.Literal
 import TyCon

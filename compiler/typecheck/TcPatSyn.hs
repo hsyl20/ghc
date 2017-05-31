@@ -43,7 +43,7 @@ import TcType
 import TcEvidence
 import BuildTyCl
 import GHC.Data.Var.Set
-import MkId
+import GHC.Data.Id.Make
 import TcTyDecls
 import ConLike
 import GHC.Data.FieldLabel

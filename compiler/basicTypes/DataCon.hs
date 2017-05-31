@@ -61,7 +61,7 @@ module DataCon (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} MkId( DataConBoxer )
+import {-# SOURCE #-} GHC.Data.Id.Make ( DataConBoxer )
 import Type
 import ForeignCall ( CType )
 import Coercion

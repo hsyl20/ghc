@@ -18,7 +18,7 @@ import OccurAnal
 
 import GHC.Types
 import PrelNames
-import MkId             ( realWorldPrimId )
+import GHC.Data.Id.Make             ( realWorldPrimId )
 import CoreUtils
 import CoreArity
 import CoreFVs

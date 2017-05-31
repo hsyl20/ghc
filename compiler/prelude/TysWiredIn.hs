@@ -128,7 +128,7 @@ module TysWiredIn (
 #include "HsVersions.h"
 #include "MachDeps.h"
 
-import {-# SOURCE #-} MkId( mkDataConWorkId, mkDictSelId )
+import {-# SOURCE #-} GHC.Data.Id.Make( mkDataConWorkId, mkDictSelId )
 
 -- friends:
 import PrelNames

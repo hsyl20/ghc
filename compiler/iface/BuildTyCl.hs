@@ -25,7 +25,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import BasicTypes
 import GHC.Data.Name
-import MkId
+import GHC.Data.Id.Make
 import Class
 import TyCon
 import Type

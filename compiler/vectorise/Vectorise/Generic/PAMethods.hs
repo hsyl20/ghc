@@ -22,7 +22,7 @@ import CoAxiom
 import Type
 import GHC.Data.OccName
 import Coercion
-import MkId
+import GHC.Data.Id.Make
 import FamInst
 import TysPrim( intPrimTy )
 

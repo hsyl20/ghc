@@ -27,7 +27,7 @@ import CoreFVs          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsL
 import CoreArity        ( etaExpandToJoinPointRule )
 import GHC.Data.Unique.Supply
 import GHC.Data.Name
-import MkId             ( voidArgId, voidPrimId )
+import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
 import GHC.Data.Maybe           ( catMaybes, isJust )
 import BasicTypes
 import GHC.Types

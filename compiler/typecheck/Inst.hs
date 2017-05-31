@@ -51,7 +51,7 @@ import TyCoRep     ( TyBinder(..) )
 import TcType
 import GHC.Types
 import Class( Class )
-import MkId( mkDictFunId )
+import GHC.Data.Id.Make( mkDictFunId )
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )

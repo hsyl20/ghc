@@ -48,7 +48,7 @@ import GHC.Config.Constants
 import PrelNames
 import PrelInfo
 import PrimOp   ( allThePrimOps, primOpFixity, primOpOcc )
-import MkId     ( seqId )
+import GHC.Data.Id.Make     ( seqId )
 import TysPrim  ( funTyConName )
 import Rules
 import TyCon

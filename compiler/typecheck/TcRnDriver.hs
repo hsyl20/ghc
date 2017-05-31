@@ -51,7 +51,7 @@ import RnTypes
 import RnExpr
 import RnUtils ( HsDocContext(..) )
 import RnFixity ( lookupFixityRn )
-import MkId
+import GHC.Data.Id.Make
 import GHC.Interface.Tidy    ( globaliseAndTidyId )
 import TysWiredIn ( unitTy, mkListTy )
 #if defined(GHCI)

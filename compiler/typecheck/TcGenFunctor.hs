@@ -32,7 +32,7 @@ import Type
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Set
-import MkId (coerceId)
+import GHC.Data.Id.Make (coerceId)
 import TysWiredIn (true_RDR, false_RDR)
 
 import Data.Maybe (catMaybes, isJust)

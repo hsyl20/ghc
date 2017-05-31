@@ -58,7 +58,7 @@ import DataCon
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import MkId
+import GHC.Data.Id.Make
 import TysPrim
 import TysWiredIn
 import GHC.Types

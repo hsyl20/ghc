@@ -43,7 +43,7 @@ import CoreUnfold
 import CoreLint
 import MkCore
 import GHC.Data.Id
-import MkId
+import GHC.Data.Id.Make
 import GHC.Data.Id.Info
 import Class
 import TyCon

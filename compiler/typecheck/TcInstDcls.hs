@@ -55,7 +55,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString
 import GHC.Data.Id
-import MkId
+import GHC.Data.Id.Make
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Utils.Outputable

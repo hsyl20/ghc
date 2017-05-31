@@ -23,7 +23,7 @@ import CoreSyn
 import GHC.Desugar.Monad
 import CoreUtils
 import MkCore
-import MkId
+import GHC.Data.Id.Make
 import ForeignCall
 import DataCon
 import GHC.Desugar.Utils

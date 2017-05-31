@@ -203,7 +203,7 @@ import GHC.Data.FastString (FastString, mkFastString)
 import GHC.Data.Id
 import GHC.Data.Literal (Literal (..))
 import MkCore (aBSENT_ERROR_ID)
-import MkId (voidPrimId, voidArgId)
+import GHC.Data.Id.Make (voidPrimId, voidArgId)
 import GHC.Utils.Monad (mapAccumLM)
 import GHC.Utils.Outputable
 import RepType

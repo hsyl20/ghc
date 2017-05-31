@@ -25,7 +25,7 @@ where
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import {-# SOURCE #-} MkId ( mkPrimOpId, magicDictId )
+import {-# SOURCE #-} GHC.Data.Id.Make ( mkPrimOpId, magicDictId )
 
 import CoreSyn
 import MkCore

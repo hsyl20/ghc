@@ -21,7 +21,7 @@ import DataCon
 import Demand
 import MkCore           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
                         , mkCoreApp, mkCoreLet )
-import MkId             ( voidArgId, voidPrimId )
+import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
 import TysPrim          ( voidPrimTy )
 import TysWiredIn       ( tupleDataCon )
 import GHC.Data.Var.Environment           ( mkInScopeSet )

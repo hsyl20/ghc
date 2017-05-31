@@ -32,7 +32,7 @@ import CoAxiom
 import Type
 import FamInstEnv
 import GHC.Data.Id
-import MkId
+import GHC.Data.Id.Make
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Unique.FiniteMap

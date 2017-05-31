@@ -53,7 +53,7 @@ import TyCon hiding ( pprPromotionQuote )
 import CoAxiom
 import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )
 import TysWiredIn ( heqTyCon )
-import MkId ( noinlineIdName )
+import GHC.Data.Id.Make ( noinlineIdName )
 import PrelNames
 import GHC.Data.Name
 import BasicTypes

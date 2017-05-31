@@ -20,7 +20,7 @@ import MkCore
 import CoreUtils
 import TyCon
 import DataCon
-import MkId
+import GHC.Data.Id.Make
 import TysWiredIn
 import BasicTypes( Boxity(..) )
 import GHC.Data.FastString

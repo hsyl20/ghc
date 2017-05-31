@@ -195,7 +195,7 @@ Library
         LlvmCodeGen.Ppr
         LlvmCodeGen.Regs
         LlvmMangler
-        MkId
+        GHC.Data.Id.Make
         GHC.Data.Module
         GHC.Data.Name
         GHC.Data.Name.Environment

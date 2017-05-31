@@ -34,7 +34,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
 import GHC.Data.Id as Id
-import MkId             ( mkDictSelRhs )
+import GHC.Data.Id.Make             ( mkDictSelRhs )
 import GHC.Data.Id.Info
 import InstEnv
 import FamInstEnv

@@ -1,4 +1,4 @@
-module MkId where
+module GHC.Data.Id.Make where
 import GHC.Data.Name( Name )
 import GHC.Data.Var( Id )
 import Class( Class )

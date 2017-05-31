@@ -19,7 +19,7 @@ import OccurAnal        ( occurAnalyseExpr )
 import FamInstEnv       ( FamInstEnv )
 import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
 import GHC.Data.Id
-import MkId             ( seqId )
+import GHC.Data.Id.Make             ( seqId )
 import MkCore           ( mkImpossibleExpr, castBottomExpr )
 import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
