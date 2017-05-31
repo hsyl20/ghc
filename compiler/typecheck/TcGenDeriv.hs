@@ -69,7 +69,7 @@ import GHC.Data.Var.Environment
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Utils.Outputable
-import Lexeme
+import GHC.Utils.Identifier
 import GHC.Data.FastString
 import GHC.Data.Pair
 import GHC.Data.Bag

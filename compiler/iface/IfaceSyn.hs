@@ -66,7 +66,7 @@ import GHC.Data.Var( TyVarBndr(..) )
 import TyCon ( Role (..), Injectivity(..) )
 import GHC.Utils( filterOut, filterByList )
 import DataCon (SrcStrictness(..), SrcUnpackedness(..))
-import Lexeme (isLexSym)
+import GHC.Utils.Identifier (isLexSym)
 import GHC.Config.Flags
 
 import Control.Monad

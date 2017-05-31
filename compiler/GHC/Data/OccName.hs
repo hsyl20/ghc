@@ -113,7 +113,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import GHC.Utils.Outputable
-import Lexeme
+import GHC.Utils.Identifier
 import GHC.Utils.Binary
 import Control.DeepSeq
 import Data.Char

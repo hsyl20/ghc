@@ -181,7 +181,7 @@ Library
         GHC.Config.Hooks
         GHC.Data.Id
         GHC.Data.Id.Info
-        Lexeme
+        GHC.Utils.Identifier
         GHC.Data.Literal
         Llvm
         Llvm.AbsSyn

@@ -104,7 +104,7 @@ import BasicTypes hiding( SuccessFlag(..) )
 import GHC.Data.Maybe( MaybeErr(..) )
 import GHC.Config.Flags
 import GHC.Utils.Panic as Panic
-import Lexeme
+import GHC.Utils.Identifier
 import qualified GHC.Data.EnumSet as EnumSet
 
 import qualified Language.Haskell.TH as TH

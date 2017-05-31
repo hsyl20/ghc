@@ -30,7 +30,7 @@ import ForeignCall
 import GHC.Data.Unique
 import GHC.Utils.Error
 import GHC.Data.Bag
-import Lexeme
+import GHC.Utils.Identifier
 import GHC.Utils
 import GHC.Data.FastString
 import GHC.Utils.Outputable as Outputable
