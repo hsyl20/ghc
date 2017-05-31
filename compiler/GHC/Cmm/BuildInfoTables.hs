@@ -1,6 +1,6 @@
 {-# LANGUAGE BangPatterns, CPP, GADTs #-}
 
-module CmmBuildInfoTables
+module GHC.Cmm.BuildInfoTables
     ( CAFSet, CAFEnv, cafAnal
     , doSRTs, TopSRT, emptySRT, isEmptySRT, srtToData )
 where

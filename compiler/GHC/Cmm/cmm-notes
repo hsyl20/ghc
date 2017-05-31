@@ -164,7 +164,7 @@ CmmSpillReload.hs         Save and restore across calls
 CmmCommonBlockElim.hs     Common block elim
 CmmContFlowOpt.hs         Other optimisations (branch-chain, merging)
 
-CmmBuildInfoTables.hs     New info-table 
+GHC.Cmm.BuildInfoTables.hs     New info-table 
 CmmStackLayout.hs         and stack layout 
 CmmCallConv.hs
 CmmInfo.hs                Defn of InfoTables, and conversion to exact byte layout

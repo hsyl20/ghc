@@ -9,7 +9,7 @@ module CmmPipeline (
 
 import GHC.Cmm
 import GHC.Cmm.Analyse.Lint
-import CmmBuildInfoTables
+import GHC.Cmm.BuildInfoTables
 import GHC.Cmm.Optimise.CommonBlockElim
 import GHC.Cmm.Switch.Implement
 import GHC.Cmm.ProcPoint

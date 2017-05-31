@@ -723,7 +723,7 @@ hasCAF _                            = False
 
 -- Until 14 Feb 2013, every ticky counter was associated with a
 -- closure. Thus, ticky labels used IdLabel. It is odd that
--- CmmBuildInfoTables.cafTransfers would consider such a ticky label
+-- GHC.Cmm.BuildInfoTables.cafTransfers would consider such a ticky label
 -- reason to add the name to the CAFEnv (and thus eventually the SRT),
 -- but it was harmless because the ticky was only used if the closure
 -- was also.

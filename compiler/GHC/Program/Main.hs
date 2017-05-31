@@ -127,7 +127,7 @@ import GHC.Data.Name
 import SimplStg         ( stg2stg )
 import GHC.Cmm
 import CmmParse         ( parseCmmFile )
-import CmmBuildInfoTables
+import GHC.Cmm.BuildInfoTables
 import CmmPipeline
 import CmmInfo
 import GHC.CodeGen.CodeOutput

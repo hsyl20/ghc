@@ -211,7 +211,7 @@ Library
         GHC.Cmm.BlockId
         GHC.Data.CLabel
         GHC.Cmm
-        CmmBuildInfoTables
+        GHC.Cmm.BuildInfoTables
         CmmPipeline
         CmmCallConv
         GHC.Cmm.Optimise.CommonBlockElim

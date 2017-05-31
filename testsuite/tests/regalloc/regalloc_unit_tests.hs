@@ -26,7 +26,7 @@ import qualified X86.Instr
 import HscMain
 import CgUtils
 import AsmCodeGen
-import CmmBuildInfoTables
+import GHC.Cmm.BuildInfoTables
 import CmmPipeline
 import CmmParse
 import CmmInfo
