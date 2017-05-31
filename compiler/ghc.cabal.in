@@ -140,7 +140,6 @@ Library
     hs-source-dirs:
         ./
         backpack
-        cmm
         codeGen
         coreSyn
         deSugar
