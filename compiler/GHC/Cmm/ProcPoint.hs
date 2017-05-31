@@ -12,7 +12,7 @@ import Prelude hiding (last, unzip, succ, zip)
 
 import GHC.Config.Flags
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint ()
 import GHC.Cmm.Utils

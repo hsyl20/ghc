@@ -22,7 +22,7 @@ import TargetReg
 import GHC.Cmm hiding (topInfoTable)
 import Hoopl
 
-import CLabel
+import GHC.Data.CLabel
 
 import GHC.Data.Unique                ( pprUniqueAlways, Uniquable(..) )
 import GHC.Platform

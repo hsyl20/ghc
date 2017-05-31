@@ -11,7 +11,7 @@ where
 import SPARC.Instr
 import SPARC.Imm
 
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm.BlockId
 import GHC.Cmm
 

@@ -29,7 +29,7 @@ module GHC.Cmm.Expr
 where
 
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import CmmMachOp
 import GHC.Cmm.Type
 import GHC.Config.Flags

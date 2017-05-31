@@ -8,7 +8,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module CLabel (
+module GHC.Data.CLabel (
         CLabel, -- abstract type
         ForeignLabelSource(..),
         pprDebugCLabel,

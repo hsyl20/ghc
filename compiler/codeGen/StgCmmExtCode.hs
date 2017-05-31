@@ -40,7 +40,7 @@ import qualified StgCmmMonad as F
 import StgCmmMonad (FCode, newUnique)
 
 import GHC.Cmm
-import CLabel
+import GHC.Data.CLabel
 import MkGraph
 
 import GHC.Cmm.BlockId

@@ -13,7 +13,7 @@ import Llvm
 import LlvmCodeGen.Base
 import LlvmCodeGen.Data
 
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm
 import GHC.Platform
 

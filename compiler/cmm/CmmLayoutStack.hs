@@ -10,7 +10,7 @@ import GHC.Data.BasicTypes
 import GHC.Cmm
 import CmmInfo
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm.Utils
 import MkGraph
 import ForeignCall

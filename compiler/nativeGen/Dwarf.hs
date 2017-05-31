@@ -2,7 +2,7 @@ module Dwarf (
   dwarfGen
   ) where
 
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm.Expr         ( GlobalReg(..) )
 import Config          ( cProjectName, cProjectVersion )
 import CoreSyn         ( Tickish(..) )

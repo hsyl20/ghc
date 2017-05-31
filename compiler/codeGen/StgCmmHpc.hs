@@ -12,7 +12,7 @@ import StgCmmMonad
 
 import MkGraph
 import GHC.Cmm.Expr
-import CLabel
+import GHC.Data.CLabel
 import GHC.Data.Module
 import GHC.Cmm.Utils
 import StgCmmUtils

@@ -16,7 +16,7 @@ import CodeGen.Platform
 import GHC.Cmm
 import Hoopl
 import GHC.Cmm.Utils
-import CLabel
+import GHC.Data.CLabel
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 

@@ -60,12 +60,12 @@ import NCGMonad
 
 import Hoopl
 import GHC.Cmm
-import CLabel           ( CLabel, ForeignLabelSource(..), pprCLabel,
+import GHC.Data.CLabel           ( CLabel, ForeignLabelSource(..), pprCLabel,
                           mkDynamicLinkerLabel, DynamicLinkerLabelInfo(..),
                           dynamicLinkerLabelInfo, mkPicBaseLabel,
                           labelDynamic, externallyVisibleCLabel )
 
-import CLabel           ( mkForeignLabel )
+import GHC.Data.CLabel           ( mkForeignLabel )
 
 
 import GHC.Data.BasicTypes

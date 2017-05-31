@@ -29,7 +29,7 @@ import StgCmmClosure
 import StgCmmProf ( curCCS )
 
 import GHC.Cmm.Expr
-import CLabel
+import GHC.Data.CLabel
 import MkGraph
 import GHC.RTS.Storage
 import CostCentre

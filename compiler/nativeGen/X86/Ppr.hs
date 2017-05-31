@@ -36,7 +36,7 @@ import Hoopl
 import GHC.Data.BasicTypes       (Alignment)
 import GHC.Config.Flags
 import GHC.Cmm              hiding (topInfoTable)
-import CLabel
+import GHC.Data.CLabel
 import GHC.Data.Unique           ( pprUniqueAlways, Uniquable(..) )
 import GHC.Platform
 import GHC.Data.FastString

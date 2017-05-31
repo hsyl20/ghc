@@ -34,7 +34,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 
 import GHC.Data.BasicTypes       (Alignment)
-import CLabel
+import GHC.Data.CLabel
 import GHC.Config.Flags
 import GHC.Data.Unique.Set
 import GHC.Data.Unique

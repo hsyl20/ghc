@@ -68,7 +68,7 @@ import GHC.Cmm.Utils
 import Hoopl
 import GHC.Cmm.Optimise.ConstantFolding           ( cmmMachOpFold )
 import GHC.Cmm.PrettyPrint
-import CLabel
+import GHC.Data.CLabel
 
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply

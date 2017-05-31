@@ -40,7 +40,7 @@ module LlvmCodeGen.Base (
 import Llvm
 import LlvmCodeGen.Regs
 
-import CLabel
+import GHC.Data.CLabel
 import CodeGen.Platform ( activeStgRegs )
 import GHC.Config.Flags
 import GHC.Data.FastString

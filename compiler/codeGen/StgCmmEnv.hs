@@ -29,7 +29,7 @@ import StgCmmMonad
 import StgCmmUtils
 import StgCmmClosure
 
-import CLabel
+import GHC.Data.CLabel
 
 import GHC.Cmm.BlockId
 import GHC.Cmm.Expr

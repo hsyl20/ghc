@@ -36,7 +36,7 @@ import GHC.Cmm
 import CmmInfo
 import GHC.Data.Type     ( Type, tyConAppTyCon )
 import GHC.Data.Type.Constructor
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm.Utils
 import PrimOp
 import GHC.RTS.Storage

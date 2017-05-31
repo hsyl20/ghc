@@ -41,7 +41,7 @@ import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import CmmInfo
-import CLabel
+import GHC.Data.CLabel
 import StgSyn
 import GHC.Data.Id
 import GHC.Data.Type.Constructor             ( PrimRep(..) )

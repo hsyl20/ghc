@@ -8,7 +8,7 @@ module GHC.Cmm.BlockId
   , blockLbl, infoTblLbl
   ) where
 
-import CLabel
+import GHC.Data.CLabel
 import GHC.Data.Id.Info
 import GHC.Data.Name
 import GHC.Utils.Outputable

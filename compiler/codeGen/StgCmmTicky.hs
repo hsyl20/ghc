@@ -115,7 +115,7 @@ import StgSyn
 import GHC.Cmm.Expr
 import MkGraph
 import GHC.Cmm.Utils
-import CLabel
+import GHC.Data.CLabel
 import GHC.RTS.Storage
 
 import GHC.Data.Module

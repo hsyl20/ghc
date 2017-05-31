@@ -37,7 +37,7 @@ import GHC.RTS.Storage
 import GHC.Cmm
 import CmmInfo
 import GHC.Cmm.Utils
-import CLabel
+import GHC.Data.CLabel
 import StgSyn
 import CostCentre
 import GHC.Data.Id

@@ -27,7 +27,7 @@ module GHC.Cmm.PrettyPrint.C (
 
 -- Cmm stuff
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import ForeignCall
 import GHC.Cmm hiding (pprBBlock)
 import GHC.Cmm.PrettyPrint ()

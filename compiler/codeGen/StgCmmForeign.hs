@@ -37,7 +37,7 @@ import MkGraph
 import GHC.Data.Type
 import RepType
 import TysPrim
-import CLabel
+import GHC.Data.CLabel
 import GHC.RTS.Storage
 import ForeignCall
 import GHC.Config.Flags

@@ -13,7 +13,7 @@ import Llvm
 import LlvmCodeGen.Base
 
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm
 import GHC.Config.Flags
 import GHC.Platform

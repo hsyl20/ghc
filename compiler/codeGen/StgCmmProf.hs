@@ -35,7 +35,7 @@ import GHC.RTS.Storage
 import MkGraph
 import GHC.Cmm
 import GHC.Cmm.Utils
-import CLabel
+import GHC.Data.CLabel
 
 import qualified GHC.Data.Module as Module
 import CostCentre

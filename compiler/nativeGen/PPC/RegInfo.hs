@@ -24,7 +24,7 @@ import PPC.Instr
 
 import GHC.Cmm.BlockId
 import GHC.Cmm
-import CLabel
+import GHC.Data.CLabel
 
 import GHC.Data.Unique
 

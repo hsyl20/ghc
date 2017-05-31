@@ -10,7 +10,7 @@ where
 import Hoopl
 import GHC.Data.Graph.Directed
 import GHC.Utils.Bitmap
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm.PrettyPrint.Declaration ()
 import GHC.Cmm
 import GHC.Cmm.Utils

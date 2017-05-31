@@ -8,7 +8,7 @@
 
 module ProfInit (profilingInitCode) where
 
-import CLabel
+import GHC.Data.CLabel
 import CostCentre
 import GHC.Config.Flags
 import GHC.Utils.Outputable

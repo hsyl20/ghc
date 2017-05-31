@@ -47,7 +47,7 @@ import GHC.Cmm.Switch
 import Hoopl
 import PIC
 import Reg
-import CLabel
+import GHC.Data.CLabel
 import CPrim
 
 -- The rest:

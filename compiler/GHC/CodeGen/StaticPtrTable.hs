@@ -128,7 +128,7 @@ Here is a running example:
   in upsweep after we have compiled the module (see GHC.Program.Make.upsweep').
 -}
 
-import CLabel
+import GHC.Data.CLabel
 import CoreSyn
 import CoreUtils (collectMakeStaticArgs)
 import GHC.Data.DataConstructor

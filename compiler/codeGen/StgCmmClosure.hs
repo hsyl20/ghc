@@ -72,7 +72,7 @@ import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression()
 
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.DataConstructor

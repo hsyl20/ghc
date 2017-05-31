@@ -16,7 +16,7 @@ module PprBase (
 
 where
 
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm
 import GHC.Config.Flags
 import GHC.Data.FastString

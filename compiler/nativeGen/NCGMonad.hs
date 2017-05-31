@@ -43,7 +43,7 @@ import TargetReg
 
 import GHC.Cmm.BlockId
 import Hoopl
-import CLabel           ( CLabel, mkAsmTempLabel )
+import GHC.Data.CLabel           ( CLabel, mkAsmTempLabel )
 import Debug
 import GHC.Data.FastString       ( FastString )
 import GHC.Data.Unique.FiniteMap

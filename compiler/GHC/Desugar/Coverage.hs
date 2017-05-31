@@ -40,7 +40,7 @@ import GHC.Data.Unique.Supply
 import GHC.Data.BasicTypes
 import GHC.Utils.Monad
 import GHC.Data.Maybe
-import CLabel
+import GHC.Data.CLabel
 import GHC.Utils
 
 import Data.Time

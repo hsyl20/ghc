@@ -45,7 +45,7 @@ import GHC.Cmm.PrettyPrint           ( pprExpr )
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
-import CLabel
+import GHC.Data.CLabel
 import Hoopl
 
 -- The rest:

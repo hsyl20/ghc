@@ -38,7 +38,7 @@ import GHC.Config.Flags
 import GHC.Cmm
 import CmmInfo
 import GHC.Data.FastString
-import CLabel
+import GHC.Data.CLabel
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique.FiniteMap (listToUFM, lookupUFM)

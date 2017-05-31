@@ -49,7 +49,7 @@ import GHC.Cmm
 import GHC.Cmm.BlockId
 import MkGraph
 import CodeGen.Platform
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 

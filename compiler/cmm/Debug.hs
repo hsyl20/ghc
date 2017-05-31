@@ -23,7 +23,7 @@ module Debug (
   ) where
 
 import GHC.Cmm.BlockId
-import CLabel
+import GHC.Data.CLabel
 import GHC.Cmm
 import GHC.Cmm.Utils
 import CoreSyn

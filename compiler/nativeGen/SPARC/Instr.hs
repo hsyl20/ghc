@@ -37,7 +37,7 @@ import RegClass
 import Reg
 import Format
 
-import CLabel
+import GHC.Data.CLabel
 import CodeGen.Platform
 import GHC.Cmm.BlockId
 import GHC.Config.Flags

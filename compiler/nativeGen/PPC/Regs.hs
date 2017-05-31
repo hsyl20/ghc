@@ -55,7 +55,7 @@ import RegClass
 import Format
 
 import GHC.Cmm
-import CLabel           ( CLabel )
+import GHC.Data.CLabel           ( CLabel )
 import GHC.Data.Unique
 
 import CodeGen.Platform
