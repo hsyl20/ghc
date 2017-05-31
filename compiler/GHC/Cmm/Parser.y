@@ -198,7 +198,7 @@ necessary to the stack to accommodate it (e.g. 2).
 ----------------------------------------------------------------------------- -}
 
 {
-module CmmParse ( parseCmmFile ) where
+module GHC.Cmm.Parser ( parseCmmFile ) where
 
 import StgCmmExtCode
 import GHC.Cmm.CallConvention

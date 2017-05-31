@@ -80,7 +80,7 @@ pprExpr e
         CmmLit lit -> pprLit lit
         _other     -> pprExpr1 e
 
--- Here's the precedence table from CmmParse.y:
+-- Here's the precedence table from GHC.Cmm.Parser:
 -- %nonassoc '>=' '>' '<=' '<' '!=' '=='
 -- %left '|'
 -- %left '^'
