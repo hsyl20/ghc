@@ -8,7 +8,7 @@
 -- places in generated code (stack frame liveness masks, function
 -- argument liveness masks, SRT bitmaps).
 
-module Bitmap (
+module GHC.Utils.Bitmap (
         Bitmap, mkBitmap,
         intsToBitmap, intsToReverseBitmap,
         mAX_SMALL_BITMAP_SIZE,

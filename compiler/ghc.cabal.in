@@ -240,7 +240,7 @@ Library
         PprCmm
         PprCmmDecl
         PprCmmExpr
-        Bitmap
+        GHC.Utils.Bitmap
         CodeGen.Platform
         CodeGen.Platform.ARM
         CodeGen.Platform.ARM64

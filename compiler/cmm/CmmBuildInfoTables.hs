@@ -9,7 +9,7 @@ where
 
 import Hoopl
 import GHC.Data.Graph.Directed
-import Bitmap
+import GHC.Utils.Bitmap
 import CLabel
 import PprCmmDecl ()
 import Cmm
