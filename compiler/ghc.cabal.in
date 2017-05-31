@@ -236,7 +236,7 @@ Library
         GHC.Data.EnumSet
         MkGraph
         PprBase
-        PprC
+        GHC.Cmm.PrettyPrint.C
         PprCmm
         PprCmmDecl
         PprCmmExpr

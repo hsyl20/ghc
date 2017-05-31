@@ -18,7 +18,7 @@
 --
 -----------------------------------------------------------------------------
 
-module PprC (
+module GHC.Cmm.PrettyPrint.C (
         writeCs,
         pprStringInCStyle
   ) where
