@@ -217,7 +217,7 @@ import StgCmmTicky
 import StgCmmBind       ( emitBlackHoleCode, emitUpdateFrame )
 import CoreSyn          ( Tickish(SourceNote) )
 
-import CmmOpt
+import GHC.Cmm.Optimise.ConstantFolding
 import MkGraph
 import GHC.Cmm
 import GHC.Cmm.Utils

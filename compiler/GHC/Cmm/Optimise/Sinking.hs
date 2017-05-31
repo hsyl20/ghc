@@ -4,7 +4,7 @@ module GHC.Cmm.Optimise.Sinking (
   ) where
 
 import GHC.Cmm
-import CmmOpt
+import GHC.Cmm.Optimise.ConstantFolding
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.Utils
 import Hoopl

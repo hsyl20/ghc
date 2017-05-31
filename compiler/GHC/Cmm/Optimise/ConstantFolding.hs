@@ -14,7 +14,7 @@
 --
 -----------------------------------------------------------------------------
 
-module CmmOpt (
+module GHC.Cmm.Optimise.ConstantFolding (
         constantFoldNode,
         constantFoldExpr,
         cmmMachOpFold,

@@ -226,7 +226,7 @@ Library
         CmmMonad
         GHC.Cmm.Switch
         GHC.Cmm.Node
-        CmmOpt
+        GHC.Cmm.Optimise.ConstantFolding
         CmmParse
         GHC.Cmm.ProcPoint
         GHC.Cmm.Optimise.Sinking

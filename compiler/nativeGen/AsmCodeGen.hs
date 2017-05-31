@@ -66,7 +66,7 @@ import CgUtils          ( fixStgRegisters )
 import GHC.Cmm
 import GHC.Cmm.Utils
 import Hoopl
-import CmmOpt           ( cmmMachOpFold )
+import GHC.Cmm.Optimise.ConstantFolding           ( cmmMachOpFold )
 import GHC.Cmm.PrettyPrint
 import CLabel
 
