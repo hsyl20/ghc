@@ -57,7 +57,7 @@ import ForeignCall
 import GHC.Data.Id.Info
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
-import SMRep
+import GHC.RTS.Closure
 import GHC.Data.Module
 import GHC.Data.Literal
 import GHC.Data.Graph.Directed

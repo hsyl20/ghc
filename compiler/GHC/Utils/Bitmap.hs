@@ -18,7 +18,7 @@ module GHC.Utils.Bitmap (
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import SMRep
+import GHC.RTS.Closure
 import GHC.Config.Flags
 import GHC.Utils
 

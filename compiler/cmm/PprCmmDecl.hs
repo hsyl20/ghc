@@ -51,7 +51,7 @@ import Data.List
 import System.IO
 
 -- Temp Jan08
-import SMRep
+import GHC.RTS.Closure
 #include "../includes/rts/storage/FunTypes.h"
 
 

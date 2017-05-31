@@ -36,7 +36,7 @@ import StgCmmUtils
 import StgCmmProf (curCCS)
 
 import MkGraph
-import SMRep
+import GHC.RTS.Closure
 import BlockId
 import Cmm
 import CmmUtils

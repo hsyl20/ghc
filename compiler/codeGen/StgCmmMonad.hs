@@ -69,7 +69,7 @@ import GHC.Data.Maybe
 import MkGraph
 import BlockId
 import CLabel
-import SMRep
+import GHC.RTS.Closure
 import GHC.Data.Module
 import GHC.Data.Id
 import GHC.Data.Var.Environment

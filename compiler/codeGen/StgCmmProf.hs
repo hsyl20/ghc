@@ -30,7 +30,7 @@ module StgCmmProf (
 import StgCmmClosure
 import StgCmmUtils
 import StgCmmMonad
-import SMRep
+import GHC.RTS.Closure
 
 import MkGraph
 import Cmm

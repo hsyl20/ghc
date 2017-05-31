@@ -37,7 +37,7 @@ import StgCmmEnv
 import MkGraph
 
 import Hoopl
-import SMRep
+import GHC.RTS.Closure
 import BlockId
 import Cmm
 import CmmUtils

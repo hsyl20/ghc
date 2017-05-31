@@ -116,7 +116,7 @@ import CmmExpr
 import MkGraph
 import CmmUtils
 import CLabel
-import SMRep
+import GHC.RTS.Closure
 
 import GHC.Data.Module
 import GHC.Data.Name

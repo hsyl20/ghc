@@ -67,7 +67,7 @@ module CmmUtils(
 import GHC.Data.Type.Constructor    ( PrimRep(..), PrimElemRep(..) )
 import RepType  ( UnaryType, SlotTy (..), typePrimRep1 )
 
-import SMRep
+import GHC.RTS.Closure
 import Cmm
 import BlockId
 import CLabel
