@@ -55,7 +55,7 @@ import GHC.Cmm.PrettyPrint           ()
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 import GHC.Cmm
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.CLabel
 import CoreSyn          ( Tickish(..) )
 import GHC.Data.SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )

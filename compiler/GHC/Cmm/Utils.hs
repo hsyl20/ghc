@@ -79,7 +79,7 @@ import CodeGen.Platform
 import Data.Word
 import Data.Maybe
 import Data.Bits
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 
 ---------------------------------------------------
 --

@@ -1,9 +1,9 @@
 {-# LANGUAGE RankNTypes, ScopedTypeVariables #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-module Hoopl (
+module GHC.Cmm.Optimise.Dataflow (
     module Compiler.Hoopl,
-    module Hoopl.Dataflow,
+    module GHC.Cmm.Optimise.Dataflow.Hoopl,
   ) where
 
 import Compiler.Hoopl hiding
@@ -19,7 +19,7 @@ import Compiler.Hoopl hiding
 
   )
 
-import Hoopl.Dataflow
+import GHC.Cmm.Optimise.Dataflow.Hoopl
 import GHC.Utils.Outputable
 
 instance Outputable LabelSet where

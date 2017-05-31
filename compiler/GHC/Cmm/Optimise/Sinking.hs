@@ -7,7 +7,7 @@ import GHC.Cmm
 import GHC.Cmm.Optimise.ConstantFolding
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.Utils
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import CodeGen.Platform
 import GHC.Platform (isARM, platformArch)
 

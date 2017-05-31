@@ -46,7 +46,7 @@ import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 import GHC.Data.CLabel
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 
 -- The rest:
 import GHC.Data.Tree.OrdList

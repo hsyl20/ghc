@@ -42,7 +42,7 @@ import Format
 import TargetReg
 
 import GHC.Cmm.BlockId
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.CLabel           ( CLabel, mkAsmTempLabel )
 import Debug
 import GHC.Data.FastString       ( FastString )

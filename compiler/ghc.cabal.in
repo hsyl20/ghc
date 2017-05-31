@@ -541,8 +541,8 @@ Library
         Vectorise.Env
         Vectorise.Exp
         Vectorise
-        Hoopl.Dataflow
-        Hoopl
+       GHC.Cmm.Optimise.Dataflow.Hoopl
+        GHC.Cmm.Optimise.Dataflow
 --        CgInfoTbls used in ghci/DebuggerUtils
 --        CgHeapery  mkVirtHeapOffsets used in ghci
 

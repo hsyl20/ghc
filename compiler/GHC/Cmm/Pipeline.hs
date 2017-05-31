@@ -16,7 +16,7 @@ import GHC.Cmm.ProcPoint
 import GHC.Cmm.Optimise.Shortcutting
 import GHC.Cmm.LayoutStack
 import GHC.Cmm.Optimise.Sinking
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags

@@ -32,7 +32,7 @@ import Reg
 import PprBase
 
 
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.BasicTypes       (Alignment)
 import GHC.Config.Flags
 import GHC.Cmm              hiding (topInfoTable)

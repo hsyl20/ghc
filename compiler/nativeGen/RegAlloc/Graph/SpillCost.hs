@@ -20,7 +20,7 @@ import Reg
 
 import GHC.Data.Graph.Base
 
-import Hoopl (mapLookup)
+import GHC.Cmm.Optimise.Dataflow (mapLookup)
 import GHC.Cmm
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set

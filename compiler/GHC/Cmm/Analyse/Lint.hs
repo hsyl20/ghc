@@ -10,7 +10,7 @@ module GHC.Cmm.Analyse.Lint (
     cmmLint, cmmLintGraph
   ) where
 
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Analyse.Liveness

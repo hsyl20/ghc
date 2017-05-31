@@ -17,7 +17,7 @@ import ForeignCall
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.ProcPoint
 import GHC.RTS.Storage
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.Unique.Supply
 import StgCmmUtils      ( newTemp )
 import GHC.Data.Maybe

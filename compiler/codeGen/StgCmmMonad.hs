@@ -64,7 +64,7 @@ module StgCmmMonad (
 import GHC.Cmm
 import StgCmmClosure
 import GHC.Config.Flags
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.Maybe
 import GHC.Cmm.Graph
 import GHC.Cmm.BlockId

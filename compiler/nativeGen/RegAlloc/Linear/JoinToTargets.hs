@@ -17,7 +17,7 @@ import Instruction
 import Reg
 
 import GHC.Cmm.BlockId
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import GHC.Utils.Outputable

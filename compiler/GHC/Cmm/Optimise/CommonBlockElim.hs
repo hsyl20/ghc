@@ -13,7 +13,7 @@ import GHC.Cmm.Optimise.Shortcutting
 -- import GHC.Cmm.PrettyPrint ()
 import Prelude hiding (iterate, succ, unzip, zip)
 
-import Hoopl hiding (ChangeFlag)
+import GHC.Cmm.Optimise.Dataflow hiding (ChangeFlag)
 import Data.Bits
 import Data.Maybe (mapMaybe)
 import qualified Data.List as List

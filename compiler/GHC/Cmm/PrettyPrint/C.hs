@@ -31,7 +31,7 @@ import GHC.Data.CLabel
 import ForeignCall
 import GHC.Cmm hiding (pprBBlock)
 import GHC.Cmm.PrettyPrint ()
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 

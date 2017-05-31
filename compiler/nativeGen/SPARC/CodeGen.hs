@@ -44,7 +44,7 @@ import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import PIC
 import Reg
 import GHC.Data.CLabel

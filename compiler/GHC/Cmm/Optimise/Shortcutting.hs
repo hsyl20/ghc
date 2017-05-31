@@ -8,7 +8,7 @@ module GHC.Cmm.Optimise.Shortcutting
     )
 where
 
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils

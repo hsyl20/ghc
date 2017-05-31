@@ -65,7 +65,7 @@ import GHC.Cmm.BlockId
 import CgUtils          ( fixStgRegisters )
 import GHC.Cmm
 import GHC.Cmm.Utils
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Cmm.Optimise.ConstantFolding           ( cmmMachOpFold )
 import GHC.Cmm.PrettyPrint
 import GHC.Data.CLabel

@@ -58,7 +58,7 @@ import Reg
 import NCGMonad
 
 
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 import GHC.Cmm
 import GHC.Data.CLabel           ( CLabel, ForeignLabelSource(..), pprCLabel,
                           mkDynamicLinkerLabel, DynamicLinkerLabelInfo(..),

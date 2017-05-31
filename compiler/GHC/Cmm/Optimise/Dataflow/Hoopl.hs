@@ -17,7 +17,7 @@
 -- specialised to the UniqSM monad.
 --
 
-module Hoopl.Dataflow
+module GHC.Cmm.Optimise.Dataflow.Hoopl
   ( C, O, Block
   , lastNode, entryLabel
   , foldNodesBwdOO

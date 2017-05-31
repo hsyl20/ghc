@@ -25,7 +25,7 @@ import Control.Monad
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique.Supply
-import Hoopl
+import GHC.Cmm.Optimise.Dataflow
 
 -- Compute a minimal set of proc points for a control-flow graph.
 
