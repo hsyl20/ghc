@@ -225,7 +225,7 @@ Library
         CmmMachOp
         CmmMonad
         CmmSwitch
-        CmmNode
+        GHC.Cmm.Node
         CmmOpt
         CmmParse
         CmmProcPoint

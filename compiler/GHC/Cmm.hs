@@ -22,13 +22,13 @@ module GHC.Cmm (
      ProfilingInfo(..), ConstrDescription,
 
      -- * Statements, expressions and types
-     module CmmNode,
+     module GHC.Cmm.Node,
      module CmmExpr,
   ) where
 
 import CLabel
 import BlockId
-import CmmNode
+import GHC.Cmm.Node
 import GHC.RTS.Storage
 import CmmExpr
 import Compiler.Hoopl
