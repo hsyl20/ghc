@@ -8,7 +8,7 @@ module CmmPipeline (
 ) where
 
 import GHC.Cmm
-import CmmLint
+import GHC.Cmm.Analyse.Lint
 import CmmBuildInfoTables
 import GHC.Cmm.Optimise.CommonBlockElim
 import CmmImplementSwitchPlans

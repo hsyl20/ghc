@@ -220,7 +220,7 @@ Library
         GHC.Cmm.Expr
         CmmInfo
         CmmLex
-        CmmLint
+        GHC.Cmm.Analyse.Lint
         GHC.Cmm.Analyse.Liveness
         CmmMachOp
         CmmMonad

@@ -6,7 +6,7 @@
 --
 -----------------------------------------------------------------------------
 {-# LANGUAGE GADTs #-}
-module CmmLint (
+module GHC.Cmm.Analyse.Lint (
     cmmLint, cmmLintGraph
   ) where
 

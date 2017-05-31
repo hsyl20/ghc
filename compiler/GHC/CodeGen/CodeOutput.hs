@@ -17,7 +17,7 @@ import GHC.Data.Unique.Supply       ( mkSplitUniqSupply )
 
 import GHC.Finder           ( mkStubPaths )
 import GHC.Cmm.PrettyPrint.C ( writeCs )
-import CmmLint          ( cmmLint )
+import GHC.Cmm.Analyse.Lint          ( cmmLint )
 import GHC.Packages
 import GHC.Cmm              ( RawCmmGroup )
 import GHC.Types
