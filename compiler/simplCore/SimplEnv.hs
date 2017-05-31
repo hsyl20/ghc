@@ -51,9 +51,9 @@ import GHC.Data.Tree.OrdList
 import GHC.Data.Id as Id
 import MkCore                   ( mkWildValBinder )
 import TysWiredIn
-import qualified Type
+import qualified GHC.Data.Type as Type
 import GHC.Data.Type hiding              ( substTy, substTyVar, substTyVarBndr )
-import qualified Coercion
+import qualified GHC.Data.Coercion as Coercion
 import GHC.Data.Coercion hiding          ( substCo, substCoVar, substCoVarBndr )
 import GHC.Data.BasicTypes
 import GHC.Utils.Monad

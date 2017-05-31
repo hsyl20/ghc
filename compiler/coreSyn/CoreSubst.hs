@@ -40,8 +40,8 @@ import CoreSyn
 import CoreFVs
 import CoreSeq
 import CoreUtils
-import qualified Type
-import qualified Coercion
+import qualified GHC.Data.Type as Type
+import qualified GHC.Data.Coercion as Coercion
 
         -- We are defining local versions
 import GHC.Data.Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList

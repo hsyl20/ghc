@@ -71,7 +71,7 @@ import GHC.Data.DataConstructor
 import PrimOp
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import GHC.Data.Type
+import GHC.Data.Type as Type
 import GHC.Data.Types( TyBinder(..) )
 import GHC.Data.Coercion
 import GHC.Data.Type.Constructor

@@ -132,7 +132,7 @@ import PrelNames( heqTyConKey, eqTyConKey )
 import GHC.Data.Kind
 import TcType
 import GHC.Config.Flags
-import GHC.Data.Type
+import GHC.Data.Type as Type
 import GHC.Data.Coercion
 import GHC.TypeSystem.Unify
 

@@ -22,7 +22,7 @@ import qualified GHC.Data.OccName as OccName
 import GHC.Data.OccName
 import GHC.Data.SrcLoc
 import GHC.Data.Type
-import qualified Coercion ( Role(..) )
+import qualified GHC.Data.Coercion as Coercion
 import TysWiredIn
 import TysPrim (eqPrimTyCon)
 import GHC.Data.BasicTypes as Hs

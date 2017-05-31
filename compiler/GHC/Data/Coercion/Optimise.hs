@@ -16,6 +16,7 @@ import GHC.Config.Flags
 import GHC.Data.Types
 import GHC.Data.Coercion
 import GHC.Data.Type hiding( substTyVarBndr, substTy )
+import qualified GHC.Data.Type as Type
 import TcType       ( exactTyCoVarsOfType )
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

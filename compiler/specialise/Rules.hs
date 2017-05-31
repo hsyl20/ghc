@@ -39,6 +39,7 @@ import CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,
                           isJoinBind )
 import PprCore          ( pprRules )
 import GHC.Data.Type             ( Type, substTy, mkTCvSubst )
+import qualified GHC.Data.Type as Type
 import TcType           ( tcSplitTyConApp_maybe )
 import TysWiredIn       ( anyTypeOfKind )
 import GHC.Data.Coercion
@@ -52,7 +53,7 @@ import GHC.Data.Name             ( Name, NamedThing(..), nameIsLocalOrFrom )
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Data.Unique.FiniteMap
-import GHC.TypeSystem.Unify            ( ruleMatchTyKiX )
+import qualified GHC.TypeSystem.Unify as Unify
 import GHC.Data.BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )
 import GHC.Utils.Outputable

@@ -40,7 +40,7 @@ module GHC.TypeSystem.FamilyInstance (
 #include "HsVersions.h"
 
 import GHC.TypeSystem.Unify
-import GHC.Data.Type
+import GHC.Data.Type as Type
 import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor (DataCon)

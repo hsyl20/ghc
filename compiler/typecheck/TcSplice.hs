@@ -62,7 +62,7 @@ import RnFixity ( lookupFixityRn_help )
 import RnTypes
 import TcHsSyn
 import TcSimplify
-import GHC.Data.Type
+import GHC.Data.Type as Type
 import GHC.Data.Kind
 import GHC.Data.Name.Set
 import TcMType
@@ -1513,7 +1513,7 @@ reifyClass :: Class -> TcM TH.Info
 reifyClass cls
   = do  { cxt <- reifyCxt theta
         ; inst_envs <- tcGetInstEnvs
-        ; insts <- reifyClassInstances cls (InstEnv.classInstances inst_envs cls)
+        ; insts <- reifyClassInstances cls (classInstances inst_envs cls)
         ; assocTys <- concatMapM reifyAT ats
         ; ops <- concatMapM reify_op op_stuff
         ; tvs' <- reifyTyVars tvs (Just $ classTyCon cls)

@@ -200,7 +200,7 @@ import GHC.Data.Var
 import ForeignCall
 import GHC.Data.Var.Set
 import GHC.Data.Coercion
-import GHC.Data.Type
+import GHC.Data.Type as Type
 import RepType
 import GHC.Data.Type.Constructor
 

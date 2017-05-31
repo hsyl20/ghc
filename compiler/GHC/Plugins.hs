@@ -28,9 +28,9 @@ module GHC.Plugins
    , module GHC.Config.Flags
    , module GHC.Packages
    , module GHC.Data.Module
-   , module Type
-   , module TyCon
-   , module Coercion
+   , module GHC.Data.Type
+   , module GHC.Data.Type.Constructor
+   , module GHC.Data.Coercion
    , module TysWiredIn
    , module GHC.Types
    , module GHC.Data.BasicTypes

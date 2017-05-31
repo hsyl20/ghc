@@ -444,12 +444,12 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Bool.Formula \
 	GHC.Utils.Handle.BufferedWrite \
 	ByteCodeTypes \
-	Class \
+	GHC.Data.Class \
 	GHC.Program.CmdLineParser \
 	CmmType \
 	GHC.Data.Coercion.Axiom \
 	GHC.Data.ConstructorLike \
-	Coercion \
+	GHC.Data.Coercion \
 	Config \
 	GHC.Config.Constants \
 	CoreArity \
@@ -505,8 +505,8 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \
 	ToIface \
-	InstEnv \
-	Kind \
+	GHC.TypeSystem.ClassInstance \
+	GHC.Data.Kind \
 	KnownUniques \
 	GHC.Utils.Identifier \
 	GHC.Data.List.SetOps \
@@ -549,7 +549,7 @@ compiler_stage2_dll0_MODULES = \
 	TcType \
 	TrieMap \
 	GHC.Data.Type.Constructor \
-	Type \
+	GHC.Data.Type \
 	GHC.Data.Types \
 	TysPrim \
 	TysWiredIn \

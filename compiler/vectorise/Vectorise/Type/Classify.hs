@@ -24,7 +24,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Types
-import qualified Type
+import qualified GHC.Data.Type as Type
 import PrelNames
 import GHC.Data.Graph.Directed
 
