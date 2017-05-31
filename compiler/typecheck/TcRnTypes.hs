@@ -152,7 +152,7 @@ import GHC.Data.PatternSynonym   ( PatSyn, pprPatSynType )
 import GHC.Data.Id       ( idType, idName )
 import GHC.Data.FieldLabel ( FieldLabel )
 import TcType
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import InstEnv
 import FamInstEnv
 import GHC.Desugar.Match.Expr

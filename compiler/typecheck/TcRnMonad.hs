@@ -164,7 +164,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Panic
 import GHC.Utils
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import GHC.Data.BasicTypes( TopLevelFlag )
 import GHC.Data.Maybe
 

@@ -167,7 +167,7 @@ import GHC.Data.Id.Info           ( IdDetails(..), RecSelParent(..))
 import GHC.Data.Type
 
 import ApiAnnotation    ( ApiAnns )
-import GHC.Types.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
+import GHC.Data.Annotation      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

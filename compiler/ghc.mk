@@ -434,7 +434,7 @@ compiler_stage3_SplitSections = NO
 # reachable from GHC.Config.Flags:
 compiler_stage2_dll0_START_MODULE = GHC.Config.Flags
 compiler_stage2_dll0_MODULES = \
-	GHC.Types.Annotations \
+	GHC.Data.Annotation \
 	ApiAnnotation \
 	GHC.Data.Available \
 	GHC.Data.Bag \

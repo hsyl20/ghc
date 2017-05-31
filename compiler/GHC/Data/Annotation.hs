@@ -4,7 +4,7 @@
 -- (c) The University of Glasgow 2006
 -- (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 --
-module GHC.Types.Annotations (
+module GHC.Data.Annotation (
         -- * Main Annotation data types
         Annotation(..), AnnPayload,
         AnnTarget(..), CoreAnnTarget,

@@ -6,7 +6,7 @@ import HsExpr   ( PendingRnSplice )
 import GHC.Data.Name     ( Name )
 import TcRnTypes( TcM, TcId )
 import TcType   ( ExpRhoType )
-import GHC.Types.Annotations ( Annotation, CoreAnnTarget )
+import GHC.Data.Annotation ( Annotation, CoreAnnTarget )
 
 import HsSyn      ( LHsType, LPat, LHsDecl, ThModFinalizers )
 import GHC.Data.RdrName    ( RdrName )

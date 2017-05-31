@@ -31,7 +31,7 @@ module TcSplice(
 #include "HsVersions.h"
 
 import HsSyn
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import GHC.Data.Name
 import TcRnMonad
 import TcType

@@ -16,7 +16,7 @@ import GHC.Config.Flags
 import Control.Monad ( when )
 
 import HsSyn
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import GHC.Data.Name
 import TcRnMonad
 import GHC.Data.SrcLoc

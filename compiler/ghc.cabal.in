@@ -326,7 +326,7 @@ Library
         MkIface
         TcIface
         FlagChecker
-        GHC.Types.Annotations
+        GHC.Data.Annotation
         GHC.Program.CmdLineParser
         GHC.CodeGen.CodeOutput
         Config

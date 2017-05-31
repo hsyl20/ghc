@@ -34,7 +34,7 @@ import GHC.Data.Coercion
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Types    -- needs to build types & coercions in a knot
 import GHC.Types
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import InstEnv
 import FamInstEnv
 import CoreSyn

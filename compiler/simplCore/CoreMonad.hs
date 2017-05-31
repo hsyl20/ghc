@@ -60,7 +60,7 @@ import GHC.Types
 import GHC.Data.Module
 import GHC.Config.Flags
 import GHC.Data.BasicTypes       ( CompilerPhase(..) )
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 
 import GHC.Utils.Monad.IOEnv hiding     ( liftIO, failM, failWithM )
 import qualified GHC.Utils.Monad.IOEnv as IOEnv

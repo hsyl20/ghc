@@ -316,7 +316,7 @@ import GHC.Finder
 import GHC.Types
 import GHC.Config.Flags
 import GHC.Utils.SysTools
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import GHC.Data.Module
 import GHC.Utils.Panic
 import GHC.Platform

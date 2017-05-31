@@ -54,7 +54,7 @@ import GHC.Data.Name
 import CostCentre
 import GHC.Data.Literal
 import ForeignCall
-import GHC.Types.Annotations( AnnPayload, AnnTarget )
+import GHC.Data.Annotation( AnnPayload, AnnTarget )
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Module

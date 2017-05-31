@@ -117,7 +117,7 @@ import GHC.Data.Type
 import GHC.Data.Class
 import GHC.Data.BasicTypes hiding( SuccessFlag(..) )
 import GHC.Data.Coercion.Axiom
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import Data.List ( sortBy, sort )
 import Data.Ord
 import GHC.Data.FastString

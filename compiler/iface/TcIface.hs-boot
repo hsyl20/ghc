@@ -9,7 +9,7 @@ import FamInstEnv  ( FamInst )
 import CoreSyn     ( CoreRule )
 import GHC.Types    ( TypeEnv, VectInfo, IfaceVectInfo, CompleteMatch )
 import GHC.Data.Module      ( Module )
-import GHC.Types.Annotations ( Annotation )
+import GHC.Data.Annotation ( Annotation )
 
 tcIfaceDecl         :: Bool -> IfaceDecl -> IfL TyThing
 tcIfaceRules        :: Bool -> [IfaceRule] -> IfL [CoreRule]

@@ -66,7 +66,7 @@ import FlagChecker
 
 import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 import CoreSyn
 import GHC.Data.Class
 import GHC.Data.Type.Constructor

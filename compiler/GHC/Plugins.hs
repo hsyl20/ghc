@@ -24,7 +24,7 @@ module GHC.Plugins
    , module CoreFVs
    , module CoreSubst
    , module Rules
-   , module GHC.Types.Annotations
+   , module GHC.Data.Annotation
    , module GHC.Config.Flags
    , module GHC.Packages
    , module GHC.Data.Module
@@ -75,7 +75,7 @@ import CoreSubst hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
 
 -- Core "extras"
 import Rules
-import GHC.Types.Annotations
+import GHC.Data.Annotation
 
 -- Pipeline-related stuff
 import GHC.Config.Flags
