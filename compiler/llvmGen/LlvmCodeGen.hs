@@ -18,7 +18,7 @@ import LlvmMangler
 import BlockId
 import CgUtils ( fixStgRegisters )
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import Hoopl
 import GHC.Cmm.PrettyPrint
 

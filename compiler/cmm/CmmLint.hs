@@ -12,7 +12,7 @@ module CmmLint (
 
 import Hoopl
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.Switch (switchTargetsToList)
 import GHC.Cmm.PrettyPrint ()

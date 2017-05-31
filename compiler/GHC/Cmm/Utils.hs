@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module CmmUtils(
+module GHC.Cmm.Utils(
         -- CmmType
         primRepCmmType, slotCmmType, slotForeignHint,
         typeCmmType, typeForeignHint, primRepForeignHint,

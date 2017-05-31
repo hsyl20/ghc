@@ -40,7 +40,7 @@ import Hoopl
 import GHC.RTS.Storage
 import BlockId
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import CostCentre
 import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )
 import GHC.Data.Id ( Id )

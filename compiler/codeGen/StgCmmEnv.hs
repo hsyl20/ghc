@@ -33,7 +33,7 @@ import CLabel
 
 import BlockId
 import GHC.Cmm.Expr
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Config.Flags
 import GHC.Data.Id
 import MkGraph

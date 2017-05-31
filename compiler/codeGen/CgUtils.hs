@@ -15,7 +15,7 @@ module CgUtils ( fixStgRegisters ) where
 import CodeGen.Platform
 import GHC.Cmm
 import Hoopl
-import CmmUtils
+import GHC.Cmm.Utils
 import CLabel
 import GHC.Config.Flags
 import GHC.Utils.Outputable

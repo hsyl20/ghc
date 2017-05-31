@@ -36,7 +36,7 @@ import BlockId
 import GHC.RTS.Storage
 import GHC.Cmm
 import CmmInfo
-import CmmUtils
+import GHC.Cmm.Utils
 import CLabel
 import StgSyn
 import CostCentre

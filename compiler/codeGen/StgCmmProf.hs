@@ -34,7 +34,7 @@ import GHC.RTS.Storage
 
 import MkGraph
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import CLabel
 
 import qualified GHC.Data.Module as Module

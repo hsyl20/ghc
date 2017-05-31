@@ -64,7 +64,7 @@ import Debug
 import BlockId
 import CgUtils          ( fixStgRegisters )
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import Hoopl
 import CmmOpt           ( cmmMachOpFold )
 import GHC.Cmm.PrettyPrint

@@ -42,7 +42,7 @@ where
 import BlockId ()
 import CLabel
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 import GHC.Config.Flags
 import GHC.Data.FastString

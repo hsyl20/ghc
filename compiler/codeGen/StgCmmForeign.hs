@@ -32,7 +32,7 @@ import StgCmmLayout
 
 import BlockId (newBlockId)
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import MkGraph
 import GHC.Data.Type
 import RepType

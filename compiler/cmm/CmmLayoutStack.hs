@@ -11,11 +11,11 @@ import GHC.Cmm
 import CmmInfo
 import BlockId
 import CLabel
-import CmmUtils
+import GHC.Cmm.Utils
 import MkGraph
 import ForeignCall
 import GHC.Cmm.Analyse.Liveness
-import CmmProcPoint
+import GHC.Cmm.ProcPoint
 import GHC.RTS.Storage
 import Hoopl
 import GHC.Data.Unique.Supply

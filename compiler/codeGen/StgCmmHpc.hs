@@ -14,7 +14,7 @@ import MkGraph
 import GHC.Cmm.Expr
 import CLabel
 import GHC.Data.Module
-import CmmUtils
+import GHC.Cmm.Utils
 import StgCmmUtils
 import GHC.Types
 import GHC.Config.Flags

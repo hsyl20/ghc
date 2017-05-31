@@ -12,7 +12,7 @@ import CmmLint
 import CmmBuildInfoTables
 import CmmCommonBlockElim
 import CmmImplementSwitchPlans
-import CmmProcPoint
+import GHC.Cmm.ProcPoint
 import CmmContFlowOpt
 import CmmLayoutStack
 import GHC.Cmm.Optimise.Sinking

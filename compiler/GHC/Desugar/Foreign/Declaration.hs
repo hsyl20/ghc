@@ -33,7 +33,7 @@ import TcEnv
 import TcType
 
 import GHC.Cmm.Expr
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Types
 import ForeignCall
 import TysWiredIn

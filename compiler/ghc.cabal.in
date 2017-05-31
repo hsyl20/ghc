@@ -228,10 +228,10 @@ Library
         GHC.Cmm.Node
         CmmOpt
         CmmParse
-        CmmProcPoint
+        GHC.Cmm.ProcPoint
         GHC.Cmm.Optimise.Sinking
         GHC.Cmm.Type
-        CmmUtils
+        GHC.Cmm.Utils
         CmmLayoutStack
         GHC.Data.EnumSet
         MkGraph

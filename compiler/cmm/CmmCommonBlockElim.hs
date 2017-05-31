@@ -7,7 +7,7 @@ where
 
 import BlockId
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch (eqSwitchTargetWith)
 import CmmContFlowOpt
 -- import GHC.Cmm.PrettyPrint ()

@@ -32,7 +32,7 @@ import ForeignCall
 import GHC.Cmm hiding (pprBBlock)
 import GHC.Cmm.PrettyPrint ()
 import Hoopl
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 
 -- Utils

@@ -39,7 +39,7 @@ import MkGraph
 import GHC.RTS.Storage
 import BlockId
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import CmmInfo
 import CLabel
 import StgSyn

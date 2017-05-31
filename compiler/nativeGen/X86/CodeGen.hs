@@ -52,7 +52,7 @@ import GHC.Data.BasicTypes
 import BlockId
 import GHC.Data.Module           ( primUnitId )
 import GHC.Cmm.PrettyPrint           ()
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 import GHC.Cmm
 import Hoopl

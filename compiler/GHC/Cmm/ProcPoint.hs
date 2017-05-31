@@ -1,6 +1,6 @@
 {-# LANGUAGE GADTs, DisambiguateRecordFields, BangPatterns #-}
 
-module CmmProcPoint
+module GHC.Cmm.ProcPoint
     ( ProcPointSet, Status(..)
     , callProcPoints, minimalProcPointSet
     , splitAtProcPoints, procPointAnalysis
@@ -15,7 +15,7 @@ import BlockId
 import CLabel
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint ()
-import CmmUtils
+import GHC.Cmm.Utils
 import CmmInfo
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.Switch

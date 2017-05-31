@@ -50,7 +50,7 @@ import BlockId
 import MkGraph
 import CodeGen.Platform
 import CLabel
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 
 import ForeignCall

@@ -23,7 +23,7 @@ module CmmOpt (
 
 #include "HsVersions.h"
 
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm
 import GHC.Config.Flags
 import GHC.Utils

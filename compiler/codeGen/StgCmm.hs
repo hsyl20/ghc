@@ -24,7 +24,7 @@ import StgCmmHpc
 import StgCmmTicky
 
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import CLabel
 
 import StgSyn

@@ -11,7 +11,7 @@ where
 import Hoopl
 import BlockId
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch (mapSwitchTargets)
 import GHC.Data.Maybe
 import GHC.Utils.Panic

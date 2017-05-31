@@ -16,7 +16,7 @@ import CodeGen.Platform ( activeStgRegs, callerSaves )
 import CLabel
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint
-import CmmUtils
+import GHC.Cmm.Utils
 import GHC.Cmm.Switch
 import Hoopl
 

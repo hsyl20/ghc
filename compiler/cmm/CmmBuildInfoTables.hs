@@ -13,7 +13,7 @@ import GHC.Utils.Bitmap
 import CLabel
 import GHC.Cmm.PrettyPrint.Declaration ()
 import GHC.Cmm
-import CmmUtils
+import GHC.Cmm.Utils
 import CmmInfo
 import Data.List
 import GHC.Config.Flags
