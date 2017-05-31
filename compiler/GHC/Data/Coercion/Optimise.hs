@@ -8,7 +8,7 @@
 {-# OPTIONS_GHC -fmax-pmcheck-iterations=10000000 #-}
 #endif
 
-module OptCoercion ( optCoercion, checkAxInstCo ) where
+module GHC.Data.Coercion.Optimise ( optCoercion, checkAxInstCo ) where
 
 #include "HsVersions.h"
 

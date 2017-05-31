@@ -362,7 +362,7 @@ Library
         Ctype
         HaddockUtils
         Lexer
-        OptCoercion
+        GHC.Data.Coercion.Optimise
         Parser
         RdrHsSyn
         ApiAnnotation

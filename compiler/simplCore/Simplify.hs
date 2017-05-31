@@ -24,7 +24,7 @@ import MkCore           ( mkImpossibleExpr, castBottomExpr )
 import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
 import GHC.Data.Coercion hiding  ( substCo, substCoVar )
-import OptCoercion      ( optCoercion )
+import GHC.Data.Coercion.Optimise      ( optCoercion )
 import FamInstEnv       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
 --import TyCon            ( isEnumerationTyCon ) -- temporalily commented out. See #8326

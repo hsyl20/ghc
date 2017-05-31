@@ -56,7 +56,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Utils
 import InstEnv     ( instanceDFunId )
-import OptCoercion ( checkAxInstCo )
+import GHC.Data.Coercion.Optimise ( checkAxInstCo )
 import GHC.Data.Unique.Supply
 import CoreArity ( typeArity )
 import GHC.Data.Demand ( splitStrictSig, isBotRes )

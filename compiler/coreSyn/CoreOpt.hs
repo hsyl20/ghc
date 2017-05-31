@@ -34,7 +34,7 @@ import GHC.Data.Var      ( varType )
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.DataConstructor
-import OptCoercion ( optCoercion )
+import GHC.Data.Coercion.Optimise ( optCoercion )
 import Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList
                        , isInScope, substTyVarBndr, cloneTyVarBndr )
 import GHC.Data.Coercion hiding ( substCo, substCoVarBndr )
