@@ -116,7 +116,7 @@ import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.Unique.Set
-import SrcLoc     ( RealSrcSpan, containsSpan )
+import GHC.Data.SrcLoc     ( RealSrcSpan, containsSpan )
 import GHC.Utils.Binary
 
 import Data.Data hiding (TyCon)

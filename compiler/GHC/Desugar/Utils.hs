@@ -69,7 +69,7 @@ import Module
 import PrelNames
 import GHC.Data.Name( isInternalName )
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Config.Flags
 import GHC.Data.FastString

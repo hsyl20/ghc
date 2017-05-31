@@ -14,7 +14,7 @@ import TyCon
 import DataCon
 import GHC.Config.Flags
 import BasicTypes( DefMethSpec(..) )
-import SrcLoc( SrcSpan, noSrcSpan )
+import GHC.Data.SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Data.Var as Var
 import GHC.Data.Name
 import GHC.Utils.Outputable

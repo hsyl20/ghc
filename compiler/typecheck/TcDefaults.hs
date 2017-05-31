@@ -18,7 +18,7 @@ import TcSimplify
 import TcValidity
 import TcType
 import PrelNames
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt

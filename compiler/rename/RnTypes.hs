@@ -50,7 +50,7 @@ import PrelNames
 import TysPrim          ( funTyConName )
 import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )
 import GHC.Data.Name
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Name.Set
 import FieldLabel
 

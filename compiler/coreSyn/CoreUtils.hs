@@ -62,7 +62,7 @@ import PrelNames ( makeStaticName )
 import PprCore
 import CoreFVs( exprFreeVars )
 import GHC.Data.Var
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Name

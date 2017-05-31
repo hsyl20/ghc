@@ -21,7 +21,7 @@ import GHC.Data.Name
 import Module
 import GHC.Data.RdrName
 import Type
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Exception
 
 import Data.Word

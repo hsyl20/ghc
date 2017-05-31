@@ -100,7 +100,7 @@ import System.Win32.DLL (loadLibrary, getProcAddress)
 import System.Process
 import Control.Concurrent
 import GHC.Data.FastString
-import SrcLoc           ( SrcLoc, mkSrcLoc, noSrcSpan, mkSrcSpan )
+import GHC.Data.SrcLoc           ( SrcLoc, mkSrcLoc, noSrcSpan, mkSrcSpan )
 
 #if defined(mingw32_HOST_OS)
 # if defined(i386_HOST_ARCH)

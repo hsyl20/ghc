@@ -1,7 +1,7 @@
 module GHC.Utils.Error where
 
 import GHC.Utils.Outputable (SDoc, PrintUnqualified )
-import SrcLoc (SrcSpan)
+import GHC.Data.SrcLoc (SrcSpan)
 import GHC.Utils.Json
 import {-# SOURCE #-} GHC.Config.Flags ( DynFlags, DumpFlag )
 

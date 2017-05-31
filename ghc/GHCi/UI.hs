@@ -61,7 +61,7 @@ import GHC.Utils.PrettyPrint.TyThing
 import PrelNames
 import GHC.Data.RdrName ( RdrName, getGRE_NameQualifier_maybes, getRdrName )
 import qualified GHC.Data.RdrName as RdrName
-import SrcLoc
+import GHC.Data.SrcLoc
 import qualified Lexer
 
 import GHC.Data.StringBuffer

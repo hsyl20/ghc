@@ -29,7 +29,7 @@ import TysWiredIn
 import GHC.Data.Var.Set
 import TysPrim
 import BasicTypes( Arity )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Utils
 

@@ -48,7 +48,7 @@ import GHC.Data.OccName          ( HasOccName(..) )
 
 -- others:
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import Module           ( ModuleName )
 
 -- libraries:

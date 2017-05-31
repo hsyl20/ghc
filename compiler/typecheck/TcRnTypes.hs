@@ -166,7 +166,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Free as FV
 import GHC.Data.Var.Environment
 import Module
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Var.Set
 import GHC.Utils.Error
 import GHC.Data.Unique.FiniteMap

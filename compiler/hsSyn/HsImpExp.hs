@@ -18,7 +18,7 @@ import FieldLabel       ( FieldLbl(..) )
 
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Data.Data
 

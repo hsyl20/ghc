@@ -48,7 +48,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Var.Set
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils( singleton )
 import GHC.Data.Maybe( orElse )
 import Data.Maybe( mapMaybe )

@@ -50,7 +50,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import Coercion ( ltRole )
 import BasicTypes
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Unique ( mkBuiltinUnique )
 import GHC.Utils.Outputable
 import GHC.Utils

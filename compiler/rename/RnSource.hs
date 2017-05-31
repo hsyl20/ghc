@@ -49,7 +49,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import GHC.Data.FastString
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils             ( debugIsOn, lengthExceeds, partitionWith )
 import GHC.Types         ( HscEnv, hsc_dflags )

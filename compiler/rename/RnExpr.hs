@@ -48,7 +48,7 @@ import GHC.Utils
 import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Utils.Error
 import GHC.Utils.Outputable as Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import Control.Monad
 import TysWiredIn       ( nilDataConName )

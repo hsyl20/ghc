@@ -2,7 +2,7 @@
 module HaddockUtils where
 
 import HsSyn
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Control.Monad
 

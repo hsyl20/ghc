@@ -54,7 +54,7 @@ import GHC.Utils
 import GHC.Data.StringBuffer     ( hGetStringBuffer )
 import BasicTypes       ( SuccessFlag(..) )
 import GHC.Data.Maybe           ( expectJust )
-import SrcLoc
+import GHC.Data.SrcLoc
 import LlvmCodeGen      ( llvmFixupAsm )
 import GHC.Utils.Monad
 import GHC.Platform

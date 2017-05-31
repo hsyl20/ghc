@@ -308,7 +308,7 @@ import GHC.Data.Name             hiding ( varName )
 import Avail
 import InstEnv
 import FamInstEnv ( FamInst )
-import SrcLoc
+import GHC.Data.SrcLoc
 import CoreSyn
 import GHC.Interface.Tidy
 import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )

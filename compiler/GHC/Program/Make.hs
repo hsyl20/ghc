@@ -57,7 +57,7 @@ import GHC.Data.Name
 import GHC.Utils.Monad       ( allM, MonadIO )
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.StringBuffer
 import GHC.Utils.SysTools
 import GHC.Data.Unique.FiniteMap

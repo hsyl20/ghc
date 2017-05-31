@@ -60,7 +60,7 @@ import GHC.Data.Unique.Supply
 import GHC.Utils.Error (Severity(..))
 import GHC.Utils.Outputable
 import GHC.Data.Unique.DeterFiniteMap
-import SrcLoc
+import GHC.Data.SrcLoc
 import qualified GHC.Utils.Error as Err
 
 import Control.Monad

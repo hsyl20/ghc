@@ -93,7 +93,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Var.Environment
 import GHC.Types
 import GHC.Config.Flags
-import SrcLoc
+import GHC.Data.SrcLoc
 import BasicTypes hiding( SuccessFlag(..) )
 import Module
 import GHC.Utils.Outputable

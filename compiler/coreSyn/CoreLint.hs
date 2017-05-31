@@ -41,7 +41,7 @@ import GHC.Data.Id.Info
 import PprCore
 import GHC.Utils.Error
 import Coercion
-import SrcLoc
+import GHC.Data.SrcLoc
 import Kind
 import Type
 import RepType

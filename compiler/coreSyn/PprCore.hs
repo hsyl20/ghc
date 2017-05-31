@@ -33,7 +33,7 @@ import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import SrcLoc      ( pprUserRealSpan )
+import GHC.Data.SrcLoc      ( pprUserRealSpan )
 
 {-
 ************************************************************************

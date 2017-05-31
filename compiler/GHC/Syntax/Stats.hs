@@ -12,7 +12,7 @@ import GHC.Data.Bag
 import HsSyn
 import GHC.Utils.Outputable
 import GHC.Data.RdrName
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 
 import Data.Char

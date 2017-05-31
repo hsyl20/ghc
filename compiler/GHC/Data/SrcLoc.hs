@@ -14,7 +14,7 @@
 
 -- | This module contains types that relate to the positions of things
 -- in source files, and allow tagging of those things with locations
-module SrcLoc (
+module GHC.Data.SrcLoc (
         -- * SrcLoc
         RealSrcLoc,             -- Abstract
         SrcLoc(..),

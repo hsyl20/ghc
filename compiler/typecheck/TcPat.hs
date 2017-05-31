@@ -42,7 +42,7 @@ import ConLike
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Config.Flags
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Var.Set
 import GHC.Utils
 import GHC.Utils.Outputable as Outputable

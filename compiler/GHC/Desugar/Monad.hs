@@ -73,7 +73,7 @@ import GHC.Desugar.Match.Expr
 import GHC.Data.Id
 import Module
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import Type
 import GHC.Data.Unique.Supply
 import GHC.Data.Name

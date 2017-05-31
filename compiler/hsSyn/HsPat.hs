@@ -57,7 +57,7 @@ import DataCon
 import TyCon
 import GHC.Utils.Outputable
 import Type
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Bag -- collect ev vars from pats
 import GHC.Config.Flags( gopt, GeneralFlag(..) )
 import GHC.Data.Maybe

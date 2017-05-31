@@ -59,7 +59,7 @@ import DataCon
 import TyCon
 import GHC.Data.Var.Environment
 import PrelNames
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils
 import GHC.Utils.Outputable

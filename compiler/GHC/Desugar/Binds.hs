@@ -53,7 +53,7 @@ import Rules
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import Module
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Maybe
 import GHC.Data.Tree.OrdList
 import GHC.Data.Bag

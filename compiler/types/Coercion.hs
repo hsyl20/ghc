@@ -119,7 +119,7 @@ import BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Pair
-import SrcLoc
+import GHC.Data.SrcLoc
 import PrelNames
 import TysPrim          ( eqPhantPrimTyCon )
 import GHC.Data.List.SetOps

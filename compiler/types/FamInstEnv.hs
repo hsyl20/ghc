@@ -58,7 +58,7 @@ import GHC.Data.Unique
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Pair
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import GHC.Utils.Monad
 import Control.Monad

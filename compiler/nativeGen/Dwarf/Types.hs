@@ -31,7 +31,7 @@ import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique
 import Reg
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Dwarf.Constants
 

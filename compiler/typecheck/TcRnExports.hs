@@ -22,7 +22,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import Avail
 import TyCon
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Utils.Outputable
 import ConLike

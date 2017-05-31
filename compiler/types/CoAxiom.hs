@@ -41,7 +41,7 @@ import GHC.Utils.Binary
 import GHC.Data.Pair
 import BasicTypes
 import Data.Typeable ( Typeable )
-import SrcLoc
+import GHC.Data.SrcLoc
 import qualified Data.Data as Data
 import Data.Array
 import Data.List ( mapAccumL )

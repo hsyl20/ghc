@@ -28,7 +28,7 @@ import Type   ( Type )
 import Module
 import GHC.Data.Name
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 
 {-

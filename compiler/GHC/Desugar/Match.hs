@@ -46,7 +46,7 @@ import Coercion ( eqCoercion )
 import TcType ( toTcTypeBag )
 import TyCon( isNewTyCon )
 import TysWiredIn
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Data.Name

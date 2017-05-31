@@ -33,7 +33,7 @@ import GHC.Utils.Outputable
 import GHC.Config.Flags
 import CoreSyn          ( Tickish(..) )
 import GHC.Data.FastString
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 
 import Control.Monad (liftM, ap)

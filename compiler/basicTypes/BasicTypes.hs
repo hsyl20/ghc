@@ -111,7 +111,7 @@ module BasicTypes(
 
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import SrcLoc ( Located,unLoc )
+import GHC.Data.SrcLoc ( Located,unLoc )
 import Data.Data hiding (Fixity, Prefix, Infix)
 import Data.Function (on)
 

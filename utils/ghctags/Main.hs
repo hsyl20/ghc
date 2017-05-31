@@ -15,7 +15,7 @@ import GHC.Data.Bag
 import GHC.Utils.Exception
 import GHC.Data.FastString
 import GHC.Utils.Monad       ( liftIO )
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Distribution.Simple.GHC ( componentGhcOptions )
 import Distribution.Simple.Configure ( getPersistBuildConfig )

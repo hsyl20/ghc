@@ -22,7 +22,7 @@ import Data.Data
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Utils.Binary
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Unique
 import GHC.Data.Unique.Set
 

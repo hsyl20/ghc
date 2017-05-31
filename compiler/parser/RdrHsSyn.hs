@@ -85,7 +85,7 @@ import TysWiredIn       ( cTupleTyConName, tupleTyCon, tupleDataCon,
                           starKindTyConName, unicodeStarKindTyConName )
 import ForeignCall
 import PrelNames        ( forall_tv_RDR, eqTyCon_RDR, allNameStrings )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Unique           ( hasKey )
 import GHC.Data.Tree.OrdList          ( OrdList, fromOL )
 import GHC.Data.Bag              ( emptyBag, consBag )

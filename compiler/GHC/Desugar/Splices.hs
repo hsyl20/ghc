@@ -47,7 +47,7 @@ import TysWiredIn
 import CoreSyn
 import MkCore
 import CoreUtils
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Unique
 import BasicTypes
 import GHC.Utils.Outputable

@@ -60,7 +60,7 @@ import GHC.Data.Graph.Directed
 import qualified Data.Data as Data
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import SrcLoc
+import GHC.Data.SrcLoc
 import Data.IORef( IORef )
 import GHC.Data.Unique.Set
 

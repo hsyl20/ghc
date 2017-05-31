@@ -94,7 +94,7 @@ import Module
 import BinIface
 import GHC.Utils.Error
 import GHC.Data.Graph.Directed
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BasicTypes       hiding ( SuccessFlag(..) )
 import GHC.Data.Unique

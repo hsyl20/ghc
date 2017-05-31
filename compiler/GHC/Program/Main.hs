@@ -106,7 +106,7 @@ import CoreSyn
 import GHC.Data.StringBuffer
 import Parser
 import Lexer
-import SrcLoc
+import GHC.Data.SrcLoc
 import TcRnDriver
 import TcIface          ( typecheckIface )
 import TcRnMonad

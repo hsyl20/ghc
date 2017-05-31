@@ -31,7 +31,7 @@ import HsSyn
 import Module
 import PrelNames
 import GHC.Data.StringBuffer
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Utils

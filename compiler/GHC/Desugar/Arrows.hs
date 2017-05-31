@@ -46,7 +46,7 @@ import PrelNames
 import GHC.Utils.Outputable
 import GHC.Data.Bag
 import GHC.Data.Var.Set
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.List.SetOps( assocMaybe )
 import Data.List
 import GHC.Utils

@@ -541,7 +541,7 @@ compiler_stage2_dll0_MODULES = \
 	RepType \
 	GHC.Data.RdrName \
 	Rules \
-	SrcLoc \
+	GHC.Data.SrcLoc \
 	GHC.Data.StringBuffer \
 	GHC.Utils.SysTools.Terminal \
 	TcEvidence \

@@ -32,7 +32,7 @@ import Module
 import GHC.Utils.Outputable
 import PprCore         ()
 import PprCmmExpr      ( pprExpr )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 
 import Compiler.Hoopl

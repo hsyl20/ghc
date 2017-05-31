@@ -106,7 +106,7 @@ import InstEnv
 import Class
 import GHC.Utils.Outputable
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import GHC.Data.Bag
 import GHC.Data.Maybe

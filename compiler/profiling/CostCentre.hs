@@ -26,7 +26,7 @@ import GHC.Data.Name
 import Module
 import GHC.Data.Unique
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import GHC.Utils
 

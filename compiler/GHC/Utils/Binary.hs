@@ -66,7 +66,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.FastMutableInt
 import GHC.Utils.Fingerprint
 import BasicTypes
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Foreign
 import Data.Array

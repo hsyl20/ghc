@@ -133,7 +133,7 @@ import GHC.Data.OccName
 import GHC.Data.RdrName
 import GHC.Data.Unique
 import GHC.Data.Name
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import Config ( cIntegerLibraryType, IntegerLibrary(..) )
 import GHC.Utils.Panic ( panic )

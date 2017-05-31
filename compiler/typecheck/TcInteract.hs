@@ -54,7 +54,7 @@ import GHC.Data.Bag
 import GHC.Utils.Monad ( concatMapM )
 
 import Data.List( partition, foldl', deleteFirstsBy )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Var.Environment
 
 import Control.Monad

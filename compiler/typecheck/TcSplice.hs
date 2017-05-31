@@ -38,7 +38,7 @@ import TcType
 
 import GHC.Utils.Outputable
 import TcExpr
-import SrcLoc
+import GHC.Data.SrcLoc
 import THNames
 import TcUnify
 import TcEnv

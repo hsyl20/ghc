@@ -15,7 +15,7 @@ module ApiAnnotation (
 
 import GHC.Data.RdrName
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import qualified Data.Map as Map
 import Data.Data
 

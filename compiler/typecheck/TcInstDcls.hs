@@ -59,7 +59,7 @@ import MkId
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Data.Bool.Formula ( isUnsatisfied, pprBooleanFormulaNice )
 import qualified GHC.LanguageExtensions as LangExt

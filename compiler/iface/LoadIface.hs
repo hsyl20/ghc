@@ -63,7 +63,7 @@ import GHC.Data.Maybe
 import GHC.Utils.Error
 import GHC.Finder
 import GHC.Data.Unique.FiniteMap
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BinIface
 import GHC.Utils.Panic

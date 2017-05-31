@@ -25,7 +25,7 @@ import GHC.Data.Id
 import GHC.Data.Var( EvVar )
 import GHC.Data.Name
 import BasicTypes       ( RuleName )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag

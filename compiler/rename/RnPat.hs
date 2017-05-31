@@ -61,7 +61,7 @@ import BasicTypes
 import GHC.Utils
 import GHC.Data.List.SetOps          ( removeDups )
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import Literal             ( inCharRange )
 import TysWiredIn          ( nilDataCon )
 import DataCon

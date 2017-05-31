@@ -62,7 +62,7 @@ import GHC.Config.Flags
 import Literal
 import BasicTypes
 import GHC.Data.Maybe
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Bag
 import GHC.Utils.Outputable
 import GHC.Utils

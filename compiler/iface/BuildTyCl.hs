@@ -32,7 +32,7 @@ import Type
 import GHC.Data.Id
 import TcType
 
-import SrcLoc( SrcSpan, noSrcSpan )
+import GHC.Data.SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Config.Flags
 import TcRnMonad
 import GHC.Data.Unique.Supply

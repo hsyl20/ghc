@@ -4,7 +4,7 @@ import GHC.Data.Name       ( Name )
 import GHC.Data.Name.Set    ( FreeVars )
 import GHC.Data.RdrName    ( RdrName )
 import TcRnTypes
-import SrcLoc     ( Located )
+import GHC.Data.SrcLoc     ( Located )
 import GHC.Utils.Outputable ( Outputable )
 
 rnLExpr :: LHsExpr RdrName

@@ -43,7 +43,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import TyCon
 import GHC.Data.Maybe
 import BasicTypes

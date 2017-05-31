@@ -54,7 +54,7 @@ import GHC.Data.Var.Set
 import GHC.Data.FastString
 import GHC.Utils.Error
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Desugar.Coverage
 import GHC.Utils
 import GHC.Utils.Monad

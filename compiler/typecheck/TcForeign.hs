@@ -55,7 +55,7 @@ import PrelNames
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Outputable
 import GHC.Platform
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Bag
 import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt

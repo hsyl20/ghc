@@ -32,7 +32,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import GHC.Utils.Error( Validity(..), allValid )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 
 import GHC.Data.Pair             ( Pair(..) )

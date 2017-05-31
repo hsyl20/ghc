@@ -50,7 +50,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Panic
 import GHC.Data.Unique.Supply

@@ -1,7 +1,7 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 import Data.List
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC hiding (moduleName)
 import HsDumpAst
 import GHC.Config.Flags

@@ -154,7 +154,7 @@ import GHC.Data.Id
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Error
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Bag

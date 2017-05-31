@@ -65,7 +65,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils
 import GHC.Data.FastString

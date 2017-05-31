@@ -35,7 +35,7 @@ import TcEnv
 import TcRnMonad
 import GHC.Types
 import GHC.Utils.Error( Validity(..), andValid )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Bag
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set (elemVarSet)

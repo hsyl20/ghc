@@ -44,7 +44,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.RdrName          ( RdrName, rdrNameOcc )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.List.SetOps       ( findDupsEq )
 import BasicTypes       ( RecFlag(..), LexicalFixity(..) )
 import GHC.Data.Graph.Directed          ( SCC(..) )

@@ -4,7 +4,7 @@ import TcEvidence( HsWrapper )
 import GHC.Data.Name     ( Name )
 import TcType   ( ExpRhoType, TcRhoType )
 import TcRnTypes( TcM, TcId )
-import SrcLoc   ( Located )
+import GHC.Data.SrcLoc   ( Located )
 
 tcGRHSsPat    :: GRHSs Name (LHsExpr Name)
               -> TcRhoType

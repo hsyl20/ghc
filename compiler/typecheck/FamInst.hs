@@ -21,7 +21,7 @@ import Coercion
 import TcEvidence
 import LoadIface
 import TcRnMonad
-import SrcLoc
+import GHC.Data.SrcLoc
 import TyCon
 import TcType
 import CoAxiom

@@ -72,7 +72,7 @@ import GHC.Data.Name
 import Avail
 import GHC.Data.Name.Set
 import GHC.Data.Maybe
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import FieldLabel
 import GHC.Utils.Outputable

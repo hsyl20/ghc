@@ -58,7 +58,7 @@ import GHC.Types.Annotations( AnnPayload, AnnTarget )
 import BasicTypes
 import GHC.Utils.Outputable as Outputable
 import Module
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import GHC.Data.Bool.Formula ( BooleanFormula, pprBooleanFormula, isTrue )

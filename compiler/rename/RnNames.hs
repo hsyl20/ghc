@@ -40,7 +40,7 @@ import GHC.Data.RdrName
 import RdrHsSyn        ( setRdrNameSpace )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
-import SrcLoc
+import GHC.Data.SrcLoc
 import BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )
 import GHC.Utils
 import GHC.Data.FastString

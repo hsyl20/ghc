@@ -41,7 +41,7 @@ import GHC.Data.Bag
 import GHC.Data.RdrName
 import CoreSyn
 import GHCi.RemoteTypes
-import SrcLoc
+import GHC.Data.SrcLoc
 import Type
 import System.Process
 import BasicTypes

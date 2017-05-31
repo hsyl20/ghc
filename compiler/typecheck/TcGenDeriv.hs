@@ -55,7 +55,7 @@ import Module ( moduleName, moduleNameString
               , moduleUnitId, unitIdString )
 import MkId ( coerceId )
 import PrimOp
-import SrcLoc
+import GHC.Data.SrcLoc
 import TyCon
 import TcEnv
 import TcType

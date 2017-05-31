@@ -75,7 +75,7 @@ import GHC.Data.Unique.Supply
 import GHC.Data.Unique.FiniteMap       ( UniqFM, mapUFM, filterUFM )
 import GHC.Utils.Monad
 import GHC.Data.Name.Cache
-import SrcLoc
+import GHC.Data.SrcLoc
 import Data.List
 import Data.Ord
 import Data.Dynamic

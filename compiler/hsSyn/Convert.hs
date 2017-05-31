@@ -20,7 +20,7 @@ import Module
 import RdrHsSyn
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.OccName
-import SrcLoc
+import GHC.Data.SrcLoc
 import Type
 import qualified Coercion ( Role(..) )
 import TysWiredIn

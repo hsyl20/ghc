@@ -83,7 +83,7 @@ import TysPrim( funTyConName )
 import Type
 import HsDoc
 import BasicTypes
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe( isJust )

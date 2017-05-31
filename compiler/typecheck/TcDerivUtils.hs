@@ -37,7 +37,7 @@ import GHC.Data.Name
 import GHC.Utils.Outputable
 import PrelNames
 import GHC.Data.RdrName
-import SrcLoc
+import GHC.Data.SrcLoc
 import TcGenDeriv
 import TcGenFunctor
 import TcGenGenerics

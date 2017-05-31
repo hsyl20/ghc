@@ -112,7 +112,7 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 
 -- compiler/basicTypes
-import SrcLoc
+import GHC.Data.SrcLoc
 import Module
 import BasicTypes     ( InlineSpec(..), RuleMatchInfo(..),
                         IntegralLit(..), FractionalLit(..),

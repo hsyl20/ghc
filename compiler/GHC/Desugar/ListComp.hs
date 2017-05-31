@@ -29,7 +29,7 @@ import Type
 import TysWiredIn
 import GHC.Desugar.Match
 import PrelNames
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import TcType
 import GHC.Data.List.SetOps( getNth )

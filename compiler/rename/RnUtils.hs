@@ -35,7 +35,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import DataCon
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Utils
 import BasicTypes       ( TopLevelFlag(..) )

@@ -32,7 +32,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import BasicTypes
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Var
 import GHC.Data.Bag
 import GHC.Data.FastString

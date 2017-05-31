@@ -31,7 +31,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
 import GHC.Utils.Panic
 import GHC.Utils.Binary as Binary
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Error
 import GHC.Data.FastMutableInt
 import GHC.Data.Unique

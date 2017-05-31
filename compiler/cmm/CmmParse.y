@@ -237,7 +237,7 @@ import GHC.Platform
 import Literal
 import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.StringBuffer

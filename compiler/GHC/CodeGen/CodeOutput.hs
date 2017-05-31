@@ -30,7 +30,7 @@ import qualified GHC.Data.Stream as Stream
 import GHC.Utils.Error
 import GHC.Utils.Outputable
 import Module
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Control.Exception
 import System.Directory

@@ -26,7 +26,7 @@ import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
 import GHC.Data.Bag
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Data.Function
 import Data.List

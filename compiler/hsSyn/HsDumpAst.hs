@@ -24,7 +24,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name
 import GHC.Data.RdrName
 import DataCon
-import SrcLoc
+import GHC.Data.SrcLoc
 import HsSyn
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.Var

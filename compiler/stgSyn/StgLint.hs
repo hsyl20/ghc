@@ -24,7 +24,7 @@ import Type
 import RepType
 import TyCon
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import Control.Monad
 import Data.Function

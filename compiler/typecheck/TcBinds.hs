@@ -48,7 +48,7 @@ import Module
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Bag
 import GHC.Data.List.SetOps
 import GHC.Utils.Error

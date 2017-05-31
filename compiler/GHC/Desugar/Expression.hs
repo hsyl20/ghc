@@ -50,7 +50,7 @@ import PrelNames
 import BasicTypes
 import GHC.Data.Maybe
 import GHC.Data.Var.Environment
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Data.Bag
 import GHC.Utils.Outputable as Outputable

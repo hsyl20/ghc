@@ -41,7 +41,7 @@ import GHC.Utils.Outputable
 import GHC.Utils.Panic
 import GHC.Utils
 import GHC.Utils.Error
-import SrcLoc
+import GHC.Data.SrcLoc
 import qualified GHC.Data.Maybe as Maybe
 import GHC.Data.Unique.DeterSet
 import GHC.Data.FastString

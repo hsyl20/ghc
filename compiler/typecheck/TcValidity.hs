@@ -54,7 +54,7 @@ import GHC.Utils.Error
 import GHC.Config.Flags
 import GHC.Utils
 import GHC.Data.List.SetOps
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BasicTypes
 import Module

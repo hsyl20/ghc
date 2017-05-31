@@ -24,7 +24,7 @@ import ConLike
 import TysWiredIn
 import GHC.Utils.Outputable
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import Data.Maybe (mapMaybe)
 import Data.List (groupBy, sortBy, nubBy)

@@ -58,7 +58,7 @@ import Cmm
 import Hoopl
 import CLabel
 import CoreSyn          ( Tickish(..) )
-import SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
+import GHC.Data.SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 
 -- The rest:
 import ForeignCall      ( CCallConv(..) )

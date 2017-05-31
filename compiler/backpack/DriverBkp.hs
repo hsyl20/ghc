@@ -34,7 +34,7 @@ import GHC.Types
 import GHC.Data.StringBuffer
 import GHC.Data.FastString
 import GHC.Utils.Error
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Program.Main
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap

@@ -6,7 +6,7 @@
 {-# LANGUAGE RoleAnnotations #-}
 
 module HsPat where
-import SrcLoc( Located )
+import GHC.Data.SrcLoc( Located )
 
 import Data.Data hiding (Fixity)
 import GHC.Utils.Outputable

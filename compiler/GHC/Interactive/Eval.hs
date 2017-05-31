@@ -75,7 +75,7 @@ import PrelNames  ( toDynName, pretendNameIsInScope )
 import GHC.Utils.Panic
 import GHC.Data.Maybe
 import GHC.Utils.Error
-import SrcLoc
+import GHC.Data.SrcLoc
 import RtClosureInspect
 import GHC.Utils.Outputable
 import GHC.Data.FastString

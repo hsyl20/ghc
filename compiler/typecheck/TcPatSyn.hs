@@ -25,7 +25,7 @@ import TcHsSyn( zonkTyVarBindersX, zonkTcTypeToTypes
 import TysPrim
 import TysWiredIn  ( runtimeRepTy )
 import GHC.Data.Name
-import SrcLoc
+import GHC.Data.SrcLoc
 import PatSyn
 import GHC.Data.Name.Set
 import GHC.Utils.Panic

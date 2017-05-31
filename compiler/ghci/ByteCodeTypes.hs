@@ -21,7 +21,7 @@ import GHC.Utils.Outputable
 import PrimOp
 import SizedSeq
 import Type
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHCi.BreakArray
 import GHCi.RemoteTypes
 import GHCi.FFI

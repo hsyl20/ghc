@@ -31,7 +31,7 @@ import GHC.Data.Name
 import BasicTypes
 import GHC.Data.Unique
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 import PrelNames    ( eqTyConKey, coercibleTyConKey, typeableClassKey,
                       heqTyConKey )
 import GHC.Utils.Outputable

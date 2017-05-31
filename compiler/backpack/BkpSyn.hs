@@ -19,7 +19,7 @@ module BkpSyn (
 
 import HsSyn
 import GHC.Data.RdrName
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import Module
 import GHC.Packages.PackageConfig

@@ -153,7 +153,7 @@ import GHC.Data.Name.Set          ( NameSet, mkNameSet, elemNameSet )
 import BasicTypes       ( Arity, Boxity(..), TupleSort(..), ConTagZ,
                           SourceText(..) )
 import ForeignCall
-import SrcLoc           ( noSrcSpan )
+import GHC.Data.SrcLoc           ( noSrcSpan )
 import GHC.Data.Unique
 import Data.Array
 import GHC.Data.FastString

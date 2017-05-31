@@ -40,7 +40,7 @@ import qualified GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Types
-import SrcLoc
+import GHC.Data.SrcLoc
 import Module
 import GHCi
 import GHCi.RemoteTypes

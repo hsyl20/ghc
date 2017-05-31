@@ -52,7 +52,7 @@ import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import PrelNames
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString

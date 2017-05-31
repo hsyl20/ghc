@@ -184,7 +184,7 @@ import BasicTypes
 import IfaceSyn
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Unique
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.FastString

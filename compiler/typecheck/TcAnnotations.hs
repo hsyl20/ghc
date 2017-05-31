@@ -19,7 +19,7 @@ import HsSyn
 import GHC.Types.Annotations
 import GHC.Data.Name
 import TcRnMonad
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 
 -- Some platforms don't support the external interpreter, and

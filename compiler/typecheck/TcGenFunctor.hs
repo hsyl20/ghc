@@ -22,7 +22,7 @@ import HsSyn
 import GHC.Utils.Panic
 import PrelNames
 import GHC.Data.RdrName
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Monad.State
 import TcGenDeriv
 import TcType

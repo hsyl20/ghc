@@ -19,7 +19,7 @@ import GHC.Data.Name.Environment
 import Module
 import BasicTypes       ( Fixity(..), FixityDirection(..), minPrecedence,
                           defaultFixity, SourceText(..) )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Data.List

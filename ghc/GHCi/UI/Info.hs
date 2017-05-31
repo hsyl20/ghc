@@ -39,7 +39,7 @@ import GHC.Monad
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import TcHsSyn
 import GHC.Data.Var
 

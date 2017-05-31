@@ -60,7 +60,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Unify
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.List.SetOps
 import GHC.Config.Flags
 import GHC.Data.Unique

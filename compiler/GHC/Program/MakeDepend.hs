@@ -26,7 +26,7 @@ import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Finder
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
-import SrcLoc
+import GHC.Data.SrcLoc
 import Data.List
 import GHC.Data.FastString
 

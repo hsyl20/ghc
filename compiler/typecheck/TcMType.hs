@@ -113,7 +113,7 @@ import PrelNames
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.Bag
 import GHC.Data.Pair
 import GHC.Data.Unique.Set

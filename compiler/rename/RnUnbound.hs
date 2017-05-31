@@ -19,7 +19,7 @@ import GHC.Types
 import TcRnMonad
 import GHC.Data.Name
 import Module
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import PrelNames ( mkUnboundName, forall_tv_RDR, isUnboundName )
 import GHC.Utils

@@ -22,7 +22,7 @@ import Type
 import GHC.Data.Var
 import Module
 import GHC.Data.Name
-import SrcLoc
+import GHC.Data.SrcLoc
 import MkId
 import GHC.Data.Id as Id
 import GHC.Data.Id.Info( IdDetails(VanillaId) )

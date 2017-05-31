@@ -9,7 +9,7 @@ module HsDoc (
 #include "HsVersions.h"
 
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 
 import Data.Data

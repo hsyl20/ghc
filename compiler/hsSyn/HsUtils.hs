@@ -114,7 +114,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import BasicTypes
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import GHC.Utils
 import GHC.Data.Bag

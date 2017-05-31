@@ -34,7 +34,7 @@ import GHC.Data.FastString.Environment
 import IfaceType
 import GHC.Data.Name.Cache
 import GHC.Data.Unique.Supply
-import SrcLoc
+import GHC.Data.SrcLoc
 
 import GHC.Utils.Outputable
 import Data.List     ( partition )

@@ -55,7 +55,7 @@ import GHC.Platform
 import GHC.Data.FastString
 import Config
 import GHC.Data.Name             ( NamedThing(..), nameSrcSpan )
-import SrcLoc           ( SrcSpan(..), realSrcLocSpan, mkRealSrcLoc )
+import GHC.Data.SrcLoc           ( SrcSpan(..), realSrcLocSpan, mkRealSrcLoc )
 import Data.Bits
 import GHC.Utils.Monad       ( mapAccumLM )
 import Data.List        ( mapAccumL )

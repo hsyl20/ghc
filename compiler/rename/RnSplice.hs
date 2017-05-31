@@ -25,7 +25,7 @@ import RnPat            ( rnPat )
 import BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
 import GHC.Utils.Outputable
 import Module
-import SrcLoc
+import GHC.Data.SrcLoc
 import RnTypes          ( rnLHsType )
 
 import Control.Monad    ( unless, when )

@@ -49,7 +49,7 @@ import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )
 import GHC.Data.Name.Environment (lookupNameEnv)
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Data.List.SetOps       ( equivClasses )
 import GHC.Data.Maybe

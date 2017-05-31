@@ -37,7 +37,7 @@ import TysPrim
 import TcEvidence
 import GHC.Utils.Outputable
 import GHC.Utils
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import PrelNames (monadFailClassName)
 import qualified GHC.LanguageExtensions as LangExt

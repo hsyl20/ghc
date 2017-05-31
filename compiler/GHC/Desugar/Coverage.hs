@@ -23,7 +23,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import ConLike
 import Control.Monad
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils.Error
 import GHC.Data.Name.Set hiding (FreeVars)
 import GHC.Data.Name

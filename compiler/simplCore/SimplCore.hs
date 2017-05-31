@@ -45,7 +45,7 @@ import DmdAnal          ( dmdAnalProgram )
 import CallArity        ( callArityAnalProgram )
 import WorkWrap         ( wwTopBinds )
 import Vectorise        ( vectorise )
-import SrcLoc
+import GHC.Data.SrcLoc
 import GHC.Utils
 import Module
 
