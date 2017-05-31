@@ -1,5 +1,5 @@
 {-# LANGUAGE CPP, RecordWildCards, GADTs #-}
-module CmmLayoutStack (
+module GHC.Cmm.LayoutStack (
        cmmLayoutStack, setInfoTableStackMap
   ) where
 

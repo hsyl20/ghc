@@ -232,7 +232,7 @@ Library
         GHC.Cmm.Optimise.Sinking
         GHC.Cmm.Type
         GHC.Cmm.Utils
-        CmmLayoutStack
+        GHC.Cmm.LayoutStack
         GHC.Data.EnumSet
         MkGraph
         PprBase
