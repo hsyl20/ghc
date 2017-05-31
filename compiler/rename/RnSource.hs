@@ -44,7 +44,7 @@ import PrelNames        ( applicativeClassName, pureAName, thenAName
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import Avail
+import GHC.Data.Available
 import GHC.Utils.Outputable
 import GHC.Data.Bag
 import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )

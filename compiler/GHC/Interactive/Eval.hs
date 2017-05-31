@@ -61,7 +61,7 @@ import GHC.Data.Var
 import GHC.Data.Id as Id
 import GHC.Data.Name             hiding ( varName )
 import GHC.Data.Name.Set
-import Avail
+import GHC.Data.Available
 import GHC.Data.RdrName
 import GHC.Data.Var.Environment
 import ByteCodeTypes

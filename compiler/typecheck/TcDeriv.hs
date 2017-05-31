@@ -34,7 +34,7 @@ import RnBinds
 import RnEnv
 import RnUtils    ( bindLocalNamesFV )
 import RnSource   ( addTcgDUs )
-import Avail
+import GHC.Data.Available
 
 import Unify( tcUnifyTy )
 import BasicTypes ( DerivStrategy(..) )

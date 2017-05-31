@@ -69,7 +69,7 @@ module GHC.Data.RdrName (
 
 import GHC.Data.Module
 import GHC.Data.Name
-import Avail
+import GHC.Data.Available
 import GHC.Data.Name.Set
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc

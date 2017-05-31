@@ -57,7 +57,7 @@ import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import Avail
+import GHC.Data.Available
 import GHC.Data.Module
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructorstructor

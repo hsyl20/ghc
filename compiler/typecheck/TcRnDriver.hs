@@ -105,7 +105,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import Avail
+import GHC.Data.Available
 import TyCon
 import GHC.Data.SrcLoc
 import GHC.Types

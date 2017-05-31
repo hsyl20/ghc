@@ -45,7 +45,7 @@ import GHC.Data.Name hiding (varName)
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Cache
-import Avail
+import GHC.Data.Available
 import IfaceEnv
 import TcEnv
 import TcRnMonad

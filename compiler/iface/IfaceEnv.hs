@@ -27,7 +27,7 @@ import GHC.Types
 import Type
 import GHC.Data.Var
 import GHC.Data.Name
-import Avail
+import GHC.Data.Available
 import GHC.Data.Module
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment

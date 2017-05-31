@@ -161,7 +161,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import Avail
+import GHC.Data.Available
 import GHC.Data.Var
 import GHC.Data.Var.Free as FV
 import GHC.Data.Var.Environment

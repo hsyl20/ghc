@@ -39,7 +39,7 @@ import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import Avail
+import GHC.Data.Available
 import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Utils.Outputable

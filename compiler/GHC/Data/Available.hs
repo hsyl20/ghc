@@ -5,7 +5,7 @@
 
 #include "HsVersions.h"
 
-module Avail (
+module GHC.Data.Available (
     Avails,
     AvailInfo(..),
     avail,

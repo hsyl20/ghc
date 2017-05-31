@@ -305,7 +305,7 @@ import TyCon
 import Class
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Name             hiding ( varName )
-import Avail
+import GHC.Data.Available
 import InstEnv
 import FamInstEnv ( FamInst )
 import GHC.Data.SrcLoc

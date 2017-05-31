@@ -20,7 +20,7 @@ import GHC.Utils.Outputable
 import GHC.Types
 import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap
-import Avail
+import GHC.Data.Available
 import IfaceSyn
 import GHC.Data.FieldLabel
 import GHC.Data.Var

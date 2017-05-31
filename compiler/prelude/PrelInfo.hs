@@ -52,7 +52,7 @@ import GHC.Data.ConstructorLike          ( ConLike(..) )
 import THNames          ( templateHaskellNames )
 import PrelNames
 import PrelRules
-import Avail
+import GHC.Data.Available
 import PrimOp
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Id

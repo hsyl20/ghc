@@ -151,7 +151,7 @@ import GHC.ForeignSrcLang
 import GHC.Data.Unique.FiniteMap
 import HsSyn
 import GHC.Data.RdrName
-import Avail
+import GHC.Data.Available
 import GHC.Data.Module
 import InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
 import FamInstEnv

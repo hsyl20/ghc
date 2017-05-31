@@ -168,7 +168,7 @@ Library
         BkpSyn
         NameShape
         GHC.Interface.Renaming
-        Avail
+        GHC.Data.Available
         BasicTypes
         GHC.Data.ConstructorLike
         GHC.Data.DataConstructor

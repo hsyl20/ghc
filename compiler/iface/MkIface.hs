@@ -86,7 +86,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var as Var
 import GHC.Data.Name
-import Avail
+import GHC.Data.Available
 import GHC.Data.RdrName
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

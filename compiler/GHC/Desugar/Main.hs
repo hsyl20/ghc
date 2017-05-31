@@ -27,7 +27,7 @@ import GHC.Data.Name
 import Type
 import InstEnv
 import Class
-import Avail
+import GHC.Data.Available
 import CoreSyn
 import CoreFVs     ( exprsSomeFreeVarsList )
 import CoreOpt     ( simpleOptPgm, simpleOptExpr )

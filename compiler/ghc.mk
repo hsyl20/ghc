@@ -436,7 +436,7 @@ compiler_stage2_dll0_START_MODULE = GHC.Config.Flags
 compiler_stage2_dll0_MODULES = \
 	GHC.Types.Annotations \
 	ApiAnnotation \
-	Avail \
+	GHC.Data.Available \
 	GHC.Data.Bag \
 	BasicTypes \
 	GHC.Utils.Binary \
