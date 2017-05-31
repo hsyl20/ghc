@@ -52,7 +52,7 @@ import HsImpExp
 import HsSyn
 import GHC.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
                   setInteractivePrintName, hsc_dflags, msObjFilePath )
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
                   listVisibleModuleNames, pprFlag )

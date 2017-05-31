@@ -11,7 +11,7 @@
 module TcAnnotations ( tcAnnotations, annCtxt ) where
 
 import {-# SOURCE #-} TcSplice ( runAnnotation )
-import Module
+import GHC.Data.Module
 import GHC.Config.Flags
 import Control.Monad ( when )
 

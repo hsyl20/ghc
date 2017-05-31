@@ -43,7 +43,7 @@ import CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Name
-import Module
+import GHC.Data.Module
 import GHC.Data.List.SetOps
 import GHC.Utils
 import BasicTypes

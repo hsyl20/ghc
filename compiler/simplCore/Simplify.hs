@@ -51,7 +51,7 @@ import GHC.Data.FastString
 import GHC.Data.Pair
 import GHC.Utils
 import GHC.Utils.Error
-import Module          ( moduleName, pprModuleName )
+import GHC.Data.Module          ( moduleName, pprModuleName )
 
 {-
 The guts of the simplifier is in this module, but the driver loop for

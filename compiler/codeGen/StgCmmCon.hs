@@ -33,7 +33,7 @@ import CLabel
 import MkGraph
 import SMRep
 import CostCentre
-import Module
+import GHC.Data.Module
 import DataCon
 import GHC.Config.Flags
 import GHC.Data.FastString

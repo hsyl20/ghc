@@ -152,7 +152,7 @@ import GHC.Data.Unique.FiniteMap
 import HsSyn
 import GHC.Data.RdrName
 import Avail
-import Module
+import GHC.Data.Module
 import InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
 import FamInstEnv
 import CoreSyn          ( CoreProgram, RuleBase, CoreRule, CoreVect )

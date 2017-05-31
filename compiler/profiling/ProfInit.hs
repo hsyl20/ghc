@@ -13,7 +13,7 @@ import CostCentre
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Module
+import GHC.Data.Module
 
 -- -----------------------------------------------------------------------------
 -- Initialising cost centres

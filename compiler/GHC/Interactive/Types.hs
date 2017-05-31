@@ -18,7 +18,7 @@ import GHCi.RemoteTypes
 import GHCi.Message (EvalExpr, ResumeContext)
 import GHC.Data.Id
 import GHC.Data.Name
-import Module
+import GHC.Data.Module
 import GHC.Data.RdrName
 import Type
 import GHC.Data.SrcLoc

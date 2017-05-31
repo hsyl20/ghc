@@ -32,7 +32,7 @@ import GHC.Config.Flags
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import PrimOp
-import Module
+import GHC.Data.Module
 import GHC.Data.FastString
 import GHC.Utils.Panic
 import GHC.Utils.Outputable

@@ -140,7 +140,7 @@ import TcEvidence
 
 import HsSyn hiding (LIE)
 import GHC.Types
-import Module
+import GHC.Data.Module
 import GHC.Data.RdrName
 import GHC.Data.Name
 import Type

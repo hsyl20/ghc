@@ -118,7 +118,7 @@ module CLabel (
 import GHC.Data.Id.Info
 import BasicTypes
 import GHC.Packages
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Unique
 import PrimOp

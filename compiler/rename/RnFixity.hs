@@ -16,7 +16,7 @@ import GHC.Types
 import TcRnMonad
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import Module
+import GHC.Data.Module
 import BasicTypes       ( Fixity(..), FixityDirection(..), minPrecedence,
                           defaultFixity, SourceText(..) )
 import GHC.Data.SrcLoc

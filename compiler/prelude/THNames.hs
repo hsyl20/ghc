@@ -7,7 +7,7 @@
 module THNames where
 
 import PrelNames( mk_known_key_name )
-import Module( Module, mkModuleNameFS, mkModule, thUnitId )
+import GHC.Data.Module( Module, mkModuleNameFS, mkModule, thUnitId )
 import GHC.Data.Name( Name )
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.RdrName( RdrName, nameRdrName )

@@ -317,7 +317,7 @@ import GHC.Types
 import GHC.Config.Flags
 import GHC.Utils.SysTools
 import GHC.Types.Annotations
-import Module
+import GHC.Data.Module
 import GHC.Utils.Panic
 import GHC.Platform
 import GHC.Data.Bag              ( listToBag, unitBag )

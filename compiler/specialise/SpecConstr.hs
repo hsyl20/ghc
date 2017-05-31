@@ -56,7 +56,7 @@ import GHC.Utils.Monad
 import Control.Monad    ( zipWithM )
 import Data.List
 import PrelNames        ( specTyConName )
-import Module
+import GHC.Data.Module
 
 -- See Note [Forcing specialisation]
 

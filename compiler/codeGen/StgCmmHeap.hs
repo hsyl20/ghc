@@ -44,7 +44,7 @@ import CmmUtils
 import CostCentre
 import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )
 import GHC.Data.Id ( Id )
-import Module
+import GHC.Data.Module
 import GHC.Config.Flags
 import GHC.Data.FastString( mkFastString, fsLit )
 import GHC.Utils.Panic( sorry )

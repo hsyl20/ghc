@@ -47,7 +47,7 @@ import WorkWrap         ( wwTopBinds )
 import Vectorise        ( vectorise )
 import GHC.Data.SrcLoc
 import GHC.Utils
-import Module
+import GHC.Data.Module
 
 import GHC.Data.Maybe
 import GHC.Data.Unique.Supply       ( UniqSupply, mkSplitUniqSupply, splitUniqSupply )

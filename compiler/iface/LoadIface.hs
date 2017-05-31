@@ -58,7 +58,7 @@ import FamInstEnv
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import Avail
-import Module
+import GHC.Data.Module
 import GHC.Data.Maybe
 import GHC.Utils.Error
 import GHC.Finder

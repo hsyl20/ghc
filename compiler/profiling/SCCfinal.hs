@@ -26,7 +26,7 @@ import StgSyn
 import CostCentre       -- lots of things
 import GHC.Data.Id
 import GHC.Data.Name
-import Module
+import GHC.Data.Module
 import GHC.Data.Unique.Supply       ( UniqSupply )
 import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Utils.Outputable

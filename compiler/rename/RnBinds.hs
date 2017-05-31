@@ -39,7 +39,7 @@ import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds
                         , checkDupAndShadowedNames, bindLocalNamesFV )
 import GHC.Config.Flags
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

@@ -44,7 +44,7 @@ import ForeignCall      ( CLabelString )
 import GHC.Data.Unique           ( Unique, mkPrimOpIdUnique )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Module           ( UnitId )
+import GHC.Data.Module           ( UnitId )
 
 {-
 ************************************************************************

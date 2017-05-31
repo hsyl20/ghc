@@ -1,4 +1,4 @@
-module Module where
+module GHC.Data.Module where
 import GHC.Data.FastString
 
 data Module

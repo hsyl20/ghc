@@ -14,7 +14,7 @@ import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases
 import GHC.Types
-import Module
+import GHC.Data.Module
 
 import Control.Monad
 

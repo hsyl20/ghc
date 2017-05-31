@@ -32,7 +32,7 @@ import TcAnnotations    ( annCtxt )
 import TcRnMonad
 
 import ForeignCall      ( CCallTarget(..) )
-import Module
+import GHC.Data.Module
 import GHC.Types         ( Warnings(..), plusWarns )
 import Class            ( FunDep )
 import PrelNames        ( applicativeClassName, pureAName, thenAName

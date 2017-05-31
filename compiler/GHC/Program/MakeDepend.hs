@@ -21,7 +21,7 @@ import GHC.Utils
 import GHC.Types
 import GHC.Utils.SysTools         ( newTempName )
 import qualified GHC.Utils.SysTools
-import Module
+import GHC.Data.Module
 import GHC.Data.Graph.Directed          ( SCC(..) )
 import GHC.Finder
 import GHC.Utils.Outputable

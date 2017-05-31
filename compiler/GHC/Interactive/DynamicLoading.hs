@@ -46,7 +46,7 @@ import Type             ( Type, eqType, mkTyConTy, pprTyThingCategory )
 import TyCon            ( TyCon )
 import GHC.Data.Name             ( Name, nameModule_maybe )
 import GHC.Data.Id               ( idType )
-import Module           ( Module, ModuleName )
+import GHC.Data.Module           ( Module, ModuleName )
 import GHC.Utils.Panic
 import GHC.Data.FastString
 import GHC.Utils.Error
@@ -59,7 +59,7 @@ import GHC.Exts          ( unsafeCoerce# )
 
 #else
 
-import Module           ( ModuleName, moduleNameString )
+import GHC.Data.Module           ( ModuleName, moduleNameString )
 import GHC.Utils.Panic
 
 import Data.List        ( intercalate )

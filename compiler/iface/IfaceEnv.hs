@@ -28,7 +28,7 @@ import Type
 import GHC.Data.Var
 import GHC.Data.Name
 import Avail
-import Module
+import GHC.Data.Module
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import IfaceType

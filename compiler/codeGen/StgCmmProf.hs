@@ -41,7 +41,7 @@ import qualified Module
 import CostCentre
 import GHC.Config.Flags
 import GHC.Data.FastString
-import Module
+import GHC.Data.Module
 import GHC.Utils.Outputable
 
 import Control.Monad

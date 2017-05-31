@@ -45,7 +45,7 @@ import GHC.Program.Main
 import GHC.Finder
 import GHC.Types hiding ( Hsc )
 import GHC.Utils.Outputable as Outputable
-import Module
+import GHC.Data.Module
 import GHC.Utils.Error
 import GHC.Config.Flags
 import Config

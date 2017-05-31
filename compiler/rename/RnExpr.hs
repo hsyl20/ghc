@@ -24,7 +24,7 @@ import RnBinds   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
                    rnMatchGroup, rnGRHS, makeMiniFixityEnv)
 import HsSyn
 import TcRnMonad
-import Module           ( getModule )
+import GHC.Data.Module           ( getModule )
 import RnEnv
 import RnFixity
 import RnUtils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames

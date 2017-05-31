@@ -33,7 +33,7 @@ module GHC.Finder (
 
 #include "HsVersions.h"
 
-import Module
+import GHC.Data.Module
 import GHC.Types
 import GHC.Packages
 import GHC.Data.FastString

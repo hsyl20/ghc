@@ -71,7 +71,7 @@ import ConLike
 import TyCon
 import GHC.Desugar.Match.Expr
 import GHC.Data.Id
-import Module
+import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
 import Type

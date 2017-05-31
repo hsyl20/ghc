@@ -26,7 +26,7 @@ import TyCon
 import TcType
 import CoAxiom
 import GHC.Config.Flags
-import Module
+import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.RdrName

@@ -29,7 +29,7 @@ import GHC.Monad
 import GHC.Config.Flags
 import TcRnMonad
 import TcRnDriver
-import Module
+import GHC.Data.Module
 import GHC.Types
 import GHC.Data.StringBuffer
 import GHC.Data.FastString

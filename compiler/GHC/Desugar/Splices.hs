@@ -35,7 +35,7 @@ import PrelNames
 -- OccNameAlias.varName where varName was previously used in this file.
 import qualified GHC.Data.OccName as OccName
 
-import Module
+import GHC.Data.Module
 import GHC.Data.Id
 import GHC.Data.Name hiding( isVarOcc, isTcOcc, varName, tcName )
 import THNames

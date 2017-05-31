@@ -23,7 +23,7 @@ module CostCentre (
 import GHC.Utils.Binary
 import GHC.Data.Var
 import GHC.Data.Name
-import Module
+import GHC.Data.Module
 import GHC.Data.Unique
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc

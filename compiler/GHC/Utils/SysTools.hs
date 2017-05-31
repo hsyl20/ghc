@@ -55,7 +55,7 @@ module GHC.Utils.SysTools (
 #include "HsVersions.h"
 
 import GHC.Program.Driver.Phases
-import Module
+import GHC.Data.Module
 import GHC.Packages
 import Config
 import GHC.Utils.Outputable

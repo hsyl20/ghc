@@ -52,7 +52,7 @@ import TcRnMonad
 import DataCon
 import TyCon
 import Class
-import Module
+import GHC.Data.Module
 import GHC.Packages( isDllName )
 import GHC.Types
 import GHC.Data.Maybe

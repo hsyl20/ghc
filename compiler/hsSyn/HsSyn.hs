@@ -49,7 +49,7 @@ import GHC.Data.OccName          ( HasOccName(..) )
 -- others:
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import Module           ( ModuleName )
+import GHC.Data.Module           ( ModuleName )
 
 -- libraries:
 import Data.Data hiding ( Fixity )

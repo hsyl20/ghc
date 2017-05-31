@@ -57,7 +57,7 @@ import GHC.Data.Name( Name )
 import TcRnMonad        ( initTcForLookup )
 import CoreSyn
 import GHC.Types
-import Module
+import GHC.Data.Module
 import GHC.Config.Flags
 import BasicTypes       ( CompilerPhase(..) )
 import GHC.Types.Annotations

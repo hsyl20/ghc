@@ -20,7 +20,7 @@ import UnariseStg       ( unarise )
 import StgCse           ( stgCse )
 
 import GHC.Config.Flags
-import Module           ( Module )
+import GHC.Data.Module           ( Module )
 import GHC.Utils.Error
 import GHC.Data.SrcLoc
 import GHC.Data.Unique.Supply       ( mkSplitUniqSupply, splitUniqSupply )

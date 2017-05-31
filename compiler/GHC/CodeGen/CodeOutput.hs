@@ -29,7 +29,7 @@ import qualified GHC.Data.Stream as Stream
 
 import GHC.Utils.Error
 import GHC.Utils.Outputable
-import Module
+import GHC.Data.Module
 import GHC.Data.SrcLoc
 
 import Control.Exception

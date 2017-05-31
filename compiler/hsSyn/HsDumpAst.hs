@@ -28,7 +28,7 @@ import GHC.Data.SrcLoc
 import HsSyn
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.Var
-import Module
+import GHC.Data.Module
 import GHC.Config.Flags
 import GHC.Utils.Outputable hiding (space)
 

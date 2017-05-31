@@ -1,7 +1,7 @@
 module GHC.Packages.PackageConfig where
 
 import GHC.Data.FastString
-import {-# SOURCE #-} Module
+import {-# SOURCE #-} GHC.Data.Module
 import GHC.PackageDb
 newtype PackageName = PackageName FastString
 newtype SourcePackageId = SourcePackageId FastString

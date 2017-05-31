@@ -161,7 +161,7 @@ module GHC.Config.Flags (
 
 import GHC.Platform
 import GHC.Config.Platform.Constants
-import Module
+import GHC.Data.Module
 import GHC.Packages.PackageConfig
 import {-# SOURCE #-} GHC.Config.Hooks
 import {-# SOURCE #-} PrelNames ( mAIN )

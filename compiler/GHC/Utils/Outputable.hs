@@ -84,12 +84,12 @@ module GHC.Utils.Outputable (
         pprDebugAndThen, callStackDoc
     ) where
 
-import {-# SOURCE #-}   GHC.Config.Flags
+import {-# SOURCE #-} GHC.Config.Flags
                                   ( DynFlags, hasPprDebug, hasNoDebugOutput,
                                   targetPlatform, pprUserLength, pprCols,
                                   useUnicode, useUnicodeSyntax,
                                   shouldUseColor, unsafeGlobalDynFlags )
-import {-# SOURCE #-}   Module( UnitId, Module, ModuleName, moduleName )
+import {-# SOURCE #-} GHC.Data.Module ( UnitId, Module, ModuleName, moduleName )
 import {-# SOURCE #-} GHC.Data.OccName ( OccName )
 
 import GHC.Utils.Handle.BufferedWrite (BufHandle)

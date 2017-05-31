@@ -43,7 +43,7 @@ import Coercion    ( mkCoVarCo )
 import TysWiredIn  ( coercibleDataCon )
 import DataCon     ( dataConWrapId )
 import MkCore      ( mkCoreLet )
-import Module
+import GHC.Data.Module
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import Rules

@@ -42,7 +42,7 @@ import GHC.Finder
 import GHC.Monad
 import GHC.Syntax.Parsers.HeaderInfo
 import GHC.Types
-import Module
+import GHC.Data.Module
 import TcIface          ( typecheckIface )
 import TcRnMonad        ( initIfaceCheck )
 import GHC.Program.Main

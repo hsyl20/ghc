@@ -58,7 +58,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import Avail
-import Module
+import GHC.Data.Module
 import ConLike
 import DataCon
 import TyCon

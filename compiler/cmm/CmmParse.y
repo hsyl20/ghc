@@ -232,7 +232,7 @@ import CmmMonad
 
 import CostCentre
 import ForeignCall
-import Module
+import GHC.Data.Module
 import GHC.Platform
 import GHC.Data.Literal
 import GHC.Data.Unique

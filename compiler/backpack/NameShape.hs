@@ -14,7 +14,7 @@ module NameShape(
 
 import GHC.Utils.Outputable
 import GHC.Types
-import Module
+import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap
 import Avail
 import GHC.Data.FieldLabel

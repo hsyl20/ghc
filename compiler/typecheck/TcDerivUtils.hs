@@ -32,7 +32,7 @@ import HsSyn
 import Inst
 import InstEnv
 import LoadIface (loadInterfaceForName)
-import Module (getModule)
+import GHC.Data.Module (getModule)
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import PrelNames

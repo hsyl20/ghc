@@ -42,7 +42,7 @@ import TysWiredIn
 import DataCon
 import PrimOp
 import BasicTypes
-import Module
+import GHC.Data.Module
 import GHC.Data.Unique.Supply
 import GHC.Data.Maybe
 import GHC.Data.Tree.OrdList

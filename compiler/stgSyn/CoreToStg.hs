@@ -29,7 +29,7 @@ import GHC.Data.Id.Info
 import DataCon
 import CostCentre       ( noCCS )
 import GHC.Data.Var.Environment
-import Module
+import GHC.Data.Module
 import GHC.Data.Name             ( isExternalName, nameOccName )
 import GHC.Data.OccName          ( occNameFS )
 import BasicTypes       ( Arity )

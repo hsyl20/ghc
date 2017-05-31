@@ -12,7 +12,7 @@ module Specialise ( specProgram, specUnfolding ) where
 import GHC.Data.Id
 import TcType hiding( substTy )
 import Type   hiding( substTy, extendTvSubstList )
-import Module( Module, HasModule(..) )
+import GHC.Data.Module( Module, HasModule(..) )
 import Coercion( Coercion )
 import CoreMonad
 import qualified CoreSubst

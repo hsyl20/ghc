@@ -90,7 +90,7 @@ import Avail
 import GHC.Data.RdrName
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import Module
+import GHC.Data.Module
 import BinIface
 import GHC.Utils.Error
 import GHC.Data.Graph.Directed

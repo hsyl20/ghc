@@ -82,7 +82,7 @@ import GHC.Config.Flags
 import GHC.Packages
 
 -- Important GHC types
-import Module
+import GHC.Data.Module
 import Type     hiding {- conflict with CoreSubst -}
                 ( substTy, extendTvSubst, extendTvSubstList, isInScope )
 import Coercion hiding {- conflict with CoreSubst -}

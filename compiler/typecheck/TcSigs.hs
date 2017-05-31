@@ -43,7 +43,7 @@ import GHC.Data.Id       ( Id, idName, idType, idInlinePragma, setInlinePragma, 
 import PrelNames( mkUnboundName )
 import BasicTypes
 import GHC.Data.Bag( foldrBag )
-import Module( getModule )
+import GHC.Data.Module( getModule )
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Var.Set

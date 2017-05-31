@@ -19,7 +19,7 @@ import Type
 import TyCoRep
 import Kind
 import Unify            ( tcMatchTys )
-import Module
+import GHC.Data.Module
 import FamInst
 import FamInstEnv       ( flattenTys )
 import Inst

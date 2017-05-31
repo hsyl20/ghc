@@ -10,7 +10,7 @@ import GHC.Utils.Binary
 import BinIface ()
 import GHC.Config.Flags
 import GHC.Types
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils.Fingerprint
 import BinFingerprint

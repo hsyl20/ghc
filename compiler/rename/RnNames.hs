@@ -29,7 +29,7 @@ import RnUtils          ( warnUnusedTopBinds, mkFieldEnv )
 import LoadIface        ( loadSrcInterface )
 import TcRnMonad
 import PrelNames
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

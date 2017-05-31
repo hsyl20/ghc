@@ -52,7 +52,7 @@ import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment

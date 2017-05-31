@@ -136,7 +136,7 @@ import TysPrim
 import DataCon
 import Demand
 import GHC.Data.Name
-import Module
+import GHC.Data.Module
 import Class
 import {-# SOURCE #-} PrimOp (PrimOp)
 import ForeignCall

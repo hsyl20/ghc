@@ -69,7 +69,7 @@ import CLabel           ( mkForeignLabel )
 
 
 import BasicTypes
-import Module
+import GHC.Data.Module
 
 import GHC.Utils.Outputable
 

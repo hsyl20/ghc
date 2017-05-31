@@ -4,7 +4,7 @@ import System.IO
 import GHC.Config.Flags
 import GHC
 import GHC.Utils.Exception
-import Module
+import GHC.Data.Module
 import GHC.Data.FastString
 import GHC.Utils.Monad
 import GHC.Utils.Outputable

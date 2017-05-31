@@ -95,7 +95,7 @@ import PatSyn
 import Type
 import ForeignCall
 import GHC.Utils.Outputable
-import Module
+import GHC.Data.Module
 import Demand
 import GHC.Utils
 

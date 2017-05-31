@@ -51,7 +51,7 @@ import FamInst
 import FamInstEnv
 import PrelNames
 import THNames
-import Module ( moduleName, moduleNameString
+import GHC.Data.Module ( moduleName, moduleNameString
               , moduleUnitId, unitIdString )
 import MkId ( coerceId )
 import PrimOp

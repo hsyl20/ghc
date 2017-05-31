@@ -12,7 +12,7 @@ the keys.
 {-# LANGUAGE RecordWildCards #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 
-module Module
+module GHC.Data.Module
     (
         -- * The ModuleName type
         ModuleName,

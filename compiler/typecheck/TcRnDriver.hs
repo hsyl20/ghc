@@ -100,7 +100,7 @@ import RnSource
 import GHC.Utils.Error
 import GHC.Data.Id as Id
 import GHC.Data.Var.Environment
-import Module
+import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Name
 import GHC.Data.Name.Environment

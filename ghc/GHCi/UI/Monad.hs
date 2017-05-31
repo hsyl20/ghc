@@ -41,7 +41,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Types
 import GHC.Data.SrcLoc
-import Module
+import GHC.Data.Module
 import GHCi
 import GHCi.RemoteTypes
 import HsSyn (ImportDecl)

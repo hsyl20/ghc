@@ -58,7 +58,7 @@ import GHC.Data.Id.Info
 import Type
 import TyCon
 import SMRep
-import Module
+import GHC.Data.Module
 import GHC.Data.Literal
 import GHC.Data.Graph.Directed
 import GHC.Utils

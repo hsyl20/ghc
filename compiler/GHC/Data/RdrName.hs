@@ -67,7 +67,7 @@ module GHC.Data.RdrName (
 
 #include "HsVersions.h"
 
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import Avail
 import GHC.Data.Name.Set

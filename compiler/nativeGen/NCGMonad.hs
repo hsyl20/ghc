@@ -50,7 +50,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
 import GHC.Data.Unique           ( Unique )
 import GHC.Config.Flags
-import Module
+import GHC.Data.Module
 
 import Control.Monad    ( liftM, ap )
 

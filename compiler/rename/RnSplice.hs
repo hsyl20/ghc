@@ -24,7 +24,7 @@ import RnSource         ( rnSrcDecls, findSplice )
 import RnPat            ( rnPat )
 import BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
 import GHC.Utils.Outputable
-import Module
+import GHC.Data.Module
 import GHC.Data.SrcLoc
 import RnTypes          ( rnLHsType )
 

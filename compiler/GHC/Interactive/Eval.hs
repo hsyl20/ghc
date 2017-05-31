@@ -70,7 +70,7 @@ import GHC.Config.Flags
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import GHC.Utils.Monad
-import Module
+import GHC.Data.Module
 import PrelNames  ( toDynName, pretendNameIsInScope )
 import GHC.Utils.Panic
 import GHC.Data.Maybe

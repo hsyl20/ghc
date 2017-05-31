@@ -1,6 +1,6 @@
 module IfaceEnv where
 
-import Module
+import GHC.Data.Module
 import GHC.Data.OccName
 import TcRnMonad
 import GHC.Data.Name

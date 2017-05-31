@@ -42,7 +42,7 @@ import GHC.Config.Flags
 import CostCentre
 import GHC.Data.Id
 import MkId
-import Module
+import GHC.Data.Module
 import ConLike
 import DataCon
 import TysWiredIn

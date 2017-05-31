@@ -42,7 +42,7 @@ import TyCon        ( tyConArity )
 import TysWiredIn
 import PrelNames
 import BasicTypes
-import Module       ( Module )
+import GHC.Data.Module       ( Module )
 import GHC.Utils.Error
 import GHC.Config.Flags
 import GHC.Utils.Outputable

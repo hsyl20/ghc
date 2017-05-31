@@ -139,7 +139,7 @@ import {-# SOURCE #-} KnownUniques
 import CoAxiom
 import GHC.Data.Id
 import GHC.Config.Constants        ( mAX_TUPLE_SIZE, mAX_CTUPLE_SIZE, mAX_SUM_SIZE )
-import Module           ( Module )
+import GHC.Data.Module           ( Module )
 import Type
 import RepType
 import DataCon

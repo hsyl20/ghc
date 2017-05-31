@@ -68,7 +68,7 @@ import GHC.Data.Name             ( Name, nameModule_maybe )
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Unique.Set
-import Module
+import GHC.Data.Module
 import GHC.Utils
 import GHC.Utils.Panic
 import GHC.Utils.Outputable as Outputable

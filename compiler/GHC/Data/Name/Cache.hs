@@ -10,7 +10,7 @@ module GHC.Data.Name.Cache
     , NameCache(..), OrigNameCache
     ) where
 
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Unique.Supply
 import TysWiredIn

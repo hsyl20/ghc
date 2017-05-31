@@ -13,7 +13,7 @@ import BasicTypes
 import CoreSyn
 import CoreUtils
 import CoreUnfold
-import Module
+import GHC.Data.Module
 import TyCon
 import CoAxiom
 import Type

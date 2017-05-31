@@ -65,7 +65,7 @@ import BasicTypes
 import ConLike
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.Supply
-import Module
+import GHC.Data.Module
 import PrelNames
 import GHC.Data.Name( isInternalName )
 import GHC.Utils.Outputable

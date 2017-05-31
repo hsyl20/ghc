@@ -165,7 +165,7 @@ import Avail
 import GHC.Data.Var
 import GHC.Data.Var.Free as FV
 import GHC.Data.Var.Environment
-import Module
+import GHC.Data.Module
 import GHC.Data.SrcLoc
 import GHC.Data.Var.Set
 import GHC.Utils.Error

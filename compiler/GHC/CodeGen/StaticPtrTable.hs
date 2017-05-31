@@ -136,7 +136,7 @@ import GHC.Config.Flags
 import GHC.Types
 import GHC.Data.Id
 import MkCore (mkStringExprFSWith)
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils.Outputable as Outputable
 import GHC.Platform

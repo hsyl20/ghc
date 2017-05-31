@@ -18,7 +18,7 @@ import GHC.Stack as GHC.Stack.CCS
 #endif
 import Type
 import HsSyn
-import Module
+import GHC.Data.Module
 import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
 import ConLike

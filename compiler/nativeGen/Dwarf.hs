@@ -8,7 +8,7 @@ import Config          ( cProjectName, cProjectVersion )
 import CoreSyn         ( Tickish(..) )
 import Debug
 import GHC.Config.Flags
-import Module
+import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique

@@ -56,7 +56,7 @@ import Control.Monad
 import Data.Char
 
 import GHC.Data.Unique.Supply
-import Module
+import GHC.Data.Module
 import Control.Arrow ( second )
 
 import Control.Exception

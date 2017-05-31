@@ -20,7 +20,7 @@ import GHC.Desugar.Monad
 import TcType
 import Type
 import GHC.Data.Var
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.SrcLoc
 import MkId

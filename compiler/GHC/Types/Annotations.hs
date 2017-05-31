@@ -18,7 +18,7 @@ module GHC.Types.Annotations (
     ) where
 
 import GHC.Utils.Binary
-import Module           ( Module )
+import GHC.Data.Module           ( Module )
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Serialized

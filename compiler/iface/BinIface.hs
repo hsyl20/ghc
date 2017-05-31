@@ -24,7 +24,7 @@ import TcRnMonad
 import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
 import IfaceEnv
 import GHC.Types
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap

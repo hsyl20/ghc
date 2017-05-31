@@ -79,7 +79,7 @@ import TysWiredIn
 import GHC.Data.OccName as OccName
 import GHC.Config.Hooks
 import GHC.Data.Var
-import Module
+import GHC.Data.Module
 import LoadIface
 import Class
 import TyCon

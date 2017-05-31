@@ -42,7 +42,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Utils.Error
 import GHC.Utils.Outputable
-import Module
+import GHC.Data.Module
 
 import Control.Monad (join)
 

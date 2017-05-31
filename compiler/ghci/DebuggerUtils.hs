@@ -11,7 +11,7 @@ import GHC.Data.FastString
 import TcRnTypes
 import TcRnMonad
 import IfaceEnv
-import Module
+import GHC.Data.Module
 import GHC.Data.OccName as OccName
 import GHC.Data.Name
 import GHC.Utils.Outputable

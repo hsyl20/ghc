@@ -56,7 +56,7 @@ import GHC.Data.RdrName
 import GHC.Data.OccName          ( varName, dataName, tcClsName, tvName, startsWithUnderscore )
 import DataCon          ( DataCon, dataConName )
 import GHC.Data.SrcLoc
-import Module
+import GHC.Data.Module
 import BasicTypes
 
 -- compiler/types

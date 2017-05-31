@@ -70,7 +70,7 @@ import MkGraph
 import BlockId
 import CLabel
 import SMRep
-import Module
+import GHC.Data.Module
 import GHC.Data.Id
 import GHC.Data.Var.Environment
 import GHC.Data.Tree.OrdList

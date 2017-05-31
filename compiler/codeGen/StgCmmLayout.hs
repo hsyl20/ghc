@@ -47,7 +47,7 @@ import GHC.Data.Id
 import TyCon             ( PrimRep(..) )
 import BasicTypes        ( RepArity )
 import GHC.Config.Flags
-import Module
+import GHC.Data.Module
 
 import GHC.Utils
 import Data.List

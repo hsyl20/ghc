@@ -56,7 +56,7 @@ import ForeignCall ( ForeignCall )
 import GHC.Data.Id
 import GHC.Data.Id.Info      ( mayHaveCafRefs )
 import GHC.Data.Literal     ( Literal, literalType )
-import Module      ( Module )
+import GHC.Data.Module      ( Module )
 import GHC.Utils.Outputable
 import GHC.Packages    ( isDllName )
 import GHC.Platform

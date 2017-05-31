@@ -97,7 +97,7 @@ import GHC.Utils.Panic
 import ConLike
 import Control.Concurrent
 
-import Module
+import GHC.Data.Module
 import GHC.Packages
 import GHC.Data.RdrName
 import HsSyn

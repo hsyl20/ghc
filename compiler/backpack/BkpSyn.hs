@@ -21,7 +21,7 @@ import HsSyn
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
-import Module
+import GHC.Data.Module
 import GHC.Packages.PackageConfig
 
 {-

@@ -72,7 +72,7 @@ import TcEvidence ( TcCoercion, CoercionHole
 import TcRnTypes  ( CtEvidence(..) )
 import GHC.Data.Var        ( EvVar )
 
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import TyCon
 import DataCon

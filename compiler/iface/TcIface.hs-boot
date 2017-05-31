@@ -8,7 +8,7 @@ import InstEnv     ( ClsInst )
 import FamInstEnv  ( FamInst )
 import CoreSyn     ( CoreRule )
 import GHC.Types    ( TypeEnv, VectInfo, IfaceVectInfo, CompleteMatch )
-import Module      ( Module )
+import GHC.Data.Module      ( Module )
 import GHC.Types.Annotations ( Annotation )
 
 tcIfaceDecl         :: Bool -> IfaceDecl -> IfL TyThing

@@ -27,7 +27,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Name( localiseName )
 import BasicTypes
-import Module( Module )
+import GHC.Data.Module( Module )
 import Coercion
 import Type
 

@@ -1,7 +1,7 @@
 module GHC.Packages where
 
 import {-# SOURCE #-} GHC.Config.Flags (DynFlags)
-import {-# SOURCE #-} Module(ComponentId, UnitId, InstalledUnitId)
+import {-# SOURCE #-} GHC.Data.Module (ComponentId, UnitId, InstalledUnitId)
 data PackageState
 data PackageConfigMap
 emptyPackageState :: PackageState

@@ -77,7 +77,7 @@ import GHC.Data.List.SetOps
 import GHC.Utils
 import BasicTypes
 import GHC.Data.FastString
-import Module
+import GHC.Data.Module
 import GHC.Utils.Binary
 import GHC.Data.Unique.Set
 import GHC.Data.Unique( mkAlphaTyVarUnique )

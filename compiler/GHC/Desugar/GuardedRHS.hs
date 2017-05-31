@@ -25,7 +25,7 @@ import GHC.Desugar.Utils
 import TysWiredIn
 import PrelNames
 import Type   ( Type )
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils
 import GHC.Data.SrcLoc

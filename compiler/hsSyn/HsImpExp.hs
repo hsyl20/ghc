@@ -10,7 +10,7 @@ HsImpExp: Abstract syntax: imports, exports, interfaces
 
 module HsImpExp where
 
-import Module           ( ModuleName )
+import GHC.Data.Module           ( ModuleName )
 import HsDoc            ( HsDocString )
 import GHC.Data.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
 import BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )

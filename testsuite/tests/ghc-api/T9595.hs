@@ -6,7 +6,7 @@ import GhcMonad
 import GHC.Utils.Outputable
 import System.Environment
 import GHC.Config.Flags
-import Module
+import GHC.Data.Module
 
 main =
   do [libdir] <- getArgs

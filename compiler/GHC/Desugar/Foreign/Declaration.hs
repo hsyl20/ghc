@@ -23,7 +23,7 @@ import DataCon
 import CoreUnfold
 import GHC.Data.Id
 import GHC.Data.Literal
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import Type
 import RepType

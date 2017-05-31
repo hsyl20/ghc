@@ -50,7 +50,7 @@ import GHC.Platform
 -- Our intermediate code:
 import BasicTypes
 import BlockId
-import Module           ( primUnitId )
+import GHC.Data.Module           ( primUnitId )
 import PprCmm           ()
 import CmmUtils
 import CmmSwitch

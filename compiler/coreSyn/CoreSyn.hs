@@ -109,7 +109,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment( NameEnv, emptyNameEnv )
 import GHC.Data.Literal
 import DataCon
-import Module
+import GHC.Data.Module
 import TyCon
 import BasicTypes
 import GHC.Config.Flags

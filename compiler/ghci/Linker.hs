@@ -33,7 +33,7 @@ import GHC.Finder
 import GHC.Types
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import Module
+import GHC.Data.Module
 import GHC.Data.List.SetOps
 import GHC.Config.Flags
 import BasicTypes

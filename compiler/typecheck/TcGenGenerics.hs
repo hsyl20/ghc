@@ -22,7 +22,7 @@ import DataCon
 import TyCon
 import FamInstEnv       ( FamInst, FamFlavor(..), mkSingleCoAxiom )
 import FamInst
-import Module           ( moduleName, moduleNameFS
+import GHC.Data.Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )
 import IfaceEnv         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )

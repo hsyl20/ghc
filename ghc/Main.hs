@@ -36,7 +36,7 @@ import GHC.Plugins.Types
 #else
 import GHC.Interactive.DynamicLoading   ( pluginError )
 #endif
-import Module           ( ModuleName )
+import GHC.Data.Module           ( ModuleName )
 
 
 -- Various other random stuff that we need
@@ -58,7 +58,7 @@ import GHC.Utils.Monad       ( liftIO )
 
 -- Imports for --abi-hash
 import LoadIface           ( loadUserInterface )
-import Module              ( mkModuleName )
+import GHC.Data.Module              ( mkModuleName )
 import GHC.Finder              ( findImportedModule, cannotFindModule )
 import TcRnMonad           ( initIfaceCheck )
 import GHC.Utils.Binary              ( openBinMem, put_ )

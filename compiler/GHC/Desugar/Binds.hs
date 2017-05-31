@@ -52,7 +52,7 @@ import GHC.Data.Var.Set
 import Rules
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
-import Module
+import GHC.Data.Module
 import GHC.Data.SrcLoc
 import GHC.Data.Maybe
 import GHC.Data.Tree.OrdList

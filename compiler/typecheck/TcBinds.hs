@@ -44,7 +44,7 @@ import GHC.Data.Id
 import GHC.Data.Var as Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment( TidyEnv )
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment

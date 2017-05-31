@@ -16,7 +16,7 @@ import RnUnbound ( reportUnboundName )
 import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

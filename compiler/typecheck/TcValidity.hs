@@ -57,7 +57,7 @@ import GHC.Data.List.SetOps
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import BasicTypes
-import Module
+import GHC.Data.Module
 import GHC.Data.Unique      ( mkAlphaTyVarUnique )
 import qualified GHC.LanguageExtensions as LangExt
 

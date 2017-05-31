@@ -118,7 +118,7 @@ import CmmUtils
 import CLabel
 import SMRep
 
-import Module
+import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Id
 import BasicTypes

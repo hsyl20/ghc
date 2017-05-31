@@ -12,7 +12,7 @@ import GHC.Types
 import TcRnTypes
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import Module
+import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.Unique.Set

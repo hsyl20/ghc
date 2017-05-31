@@ -28,7 +28,7 @@ import Parser           ( parseHeader )
 import Lexer
 import GHC.Data.FastString
 import HsSyn
-import Module
+import GHC.Data.Module
 import PrelNames
 import GHC.Data.StringBuffer
 import GHC.Data.SrcLoc

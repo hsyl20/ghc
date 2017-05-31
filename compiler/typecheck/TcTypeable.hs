@@ -29,7 +29,7 @@ import TyCon
 import DataCon
 import GHC.Data.Name ( Name, getOccName )
 import GHC.Data.OccName
-import Module
+import GHC.Data.Module
 import HsSyn
 import GHC.Config.Flags
 import GHC.Data.Bag

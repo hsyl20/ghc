@@ -31,7 +31,7 @@ import CmmPipeline
 import CmmParse
 import CmmInfo
 import Cmm
-import Module
+import GHC.Data.Module
 import Debug
 import GHC
 import GhcMonad

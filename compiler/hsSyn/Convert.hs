@@ -16,7 +16,7 @@ import HsSyn as Hs
 import qualified Class
 import GHC.Data.RdrName
 import qualified GHC.Data.Name as Name
-import Module
+import GHC.Data.Module
 import RdrHsSyn
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.OccName
