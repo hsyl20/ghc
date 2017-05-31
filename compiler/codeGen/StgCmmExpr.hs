@@ -31,7 +31,7 @@ import StgSyn
 
 import MkGraph
 import BlockId
-import Cmm
+import GHC.Cmm
 import CmmInfo
 import CoreSyn
 import GHC.Data.DataConstructor

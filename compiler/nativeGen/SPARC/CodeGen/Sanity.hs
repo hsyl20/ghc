@@ -10,7 +10,7 @@ import SPARC.Instr
 import SPARC.Ppr        ()
 import Instruction
 
-import Cmm
+import GHC.Cmm
 
 import GHC.Utils.Outputable
 

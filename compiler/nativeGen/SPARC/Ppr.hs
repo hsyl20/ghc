@@ -36,7 +36,7 @@ import Reg
 import Format
 import PprBase
 
-import Cmm hiding (topInfoTable)
+import GHC.Cmm hiding (topInfoTable)
 import GHC.Cmm.PrettyPrint()
 import CLabel
 import Hoopl

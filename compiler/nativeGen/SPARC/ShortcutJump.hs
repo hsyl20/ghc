@@ -13,7 +13,7 @@ import SPARC.Imm
 
 import CLabel
 import BlockId
-import Cmm
+import GHC.Cmm
 
 import GHC.Utils.Panic
 import GHC.Data.Unique

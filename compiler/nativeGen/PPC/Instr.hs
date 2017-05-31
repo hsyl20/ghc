@@ -35,7 +35,7 @@ import CodeGen.Platform
 import BlockId
 import Hoopl
 import GHC.Config.Flags
-import Cmm
+import GHC.Cmm
 import CmmInfo
 import GHC.Data.FastString
 import CLabel

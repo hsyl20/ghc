@@ -32,7 +32,7 @@ import GHC.Data.BasicTypes
 import BlockId
 import MkGraph
 import StgSyn
-import Cmm
+import GHC.Cmm
 import CmmInfo
 import GHC.Data.Type     ( Type, tyConAppTyCon )
 import GHC.Data.Type.Constructor

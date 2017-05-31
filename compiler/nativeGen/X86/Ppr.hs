@@ -35,7 +35,7 @@ import PprBase
 import Hoopl
 import GHC.Data.BasicTypes       (Alignment)
 import GHC.Config.Flags
-import Cmm              hiding (topInfoTable)
+import GHC.Cmm              hiding (topInfoTable)
 import CLabel
 import GHC.Data.Unique           ( pprUniqueAlways, Uniquable(..) )
 import GHC.Platform

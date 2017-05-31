@@ -3,7 +3,7 @@ module CmmSink (
      cmmSink
   ) where
 
-import Cmm
+import GHC.Cmm
 import CmmOpt
 import CmmLive
 import CmmUtils

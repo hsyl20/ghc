@@ -6,7 +6,7 @@ where
 
 import Hoopl
 import BlockId
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmSwitch
 import GHC.Data.Unique.Supply

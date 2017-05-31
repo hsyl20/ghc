@@ -7,7 +7,7 @@ import StgCmmUtils      ( callerSaveVolatileRegs ) -- XXX layering violation
 import StgCmmForeign    ( saveThreadState, loadThreadState ) -- XXX layering violation
 
 import GHC.Data.BasicTypes
-import Cmm
+import GHC.Cmm
 import CmmInfo
 import BlockId
 import CLabel

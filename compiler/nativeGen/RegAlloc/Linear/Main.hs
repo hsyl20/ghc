@@ -119,7 +119,7 @@ import Reg
 
 import BlockId
 import Hoopl
-import Cmm hiding (RegSet)
+import GHC.Cmm hiding (RegSet)
 
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags

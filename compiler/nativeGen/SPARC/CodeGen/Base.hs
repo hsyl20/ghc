@@ -22,7 +22,7 @@ import Reg
 
 import CodeGen.Platform
 import GHC.Config.Flags
-import Cmm
+import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression ()
 import GHC.Platform
 

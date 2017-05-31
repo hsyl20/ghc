@@ -42,7 +42,7 @@ import GHC.Platform
 -- Our intermediate code:
 import BlockId
 import GHC.Cmm.PrettyPrint           ( pprExpr )
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmSwitch
 import CLabel

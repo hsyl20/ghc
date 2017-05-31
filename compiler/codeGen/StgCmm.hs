@@ -23,7 +23,7 @@ import StgCmmClosure
 import StgCmmHpc
 import StgCmmTicky
 
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CLabel
 

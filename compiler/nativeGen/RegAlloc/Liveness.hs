@@ -40,7 +40,7 @@ import Instruction
 
 import BlockId
 import Hoopl
-import Cmm hiding (RegSet, emptyRegSet)
+import GHC.Cmm hiding (RegSet, emptyRegSet)
 import GHC.Cmm.PrettyPrint()
 
 import GHC.Data.Graph.Directed

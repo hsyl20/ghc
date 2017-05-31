@@ -14,7 +14,7 @@ import LlvmCodeGen.Regs
 import BlockId
 import CodeGen.Platform ( activeStgRegs, callerSaves )
 import CLabel
-import Cmm
+import GHC.Cmm
 import GHC.Cmm.PrettyPrint
 import CmmUtils
 import CmmSwitch

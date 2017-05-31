@@ -13,7 +13,7 @@ import SPARC.Ppr        ()
 import Instruction
 import Reg
 import Format
-import Cmm
+import GHC.Cmm
 
 
 import GHC.Utils.Outputable

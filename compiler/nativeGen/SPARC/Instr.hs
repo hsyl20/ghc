@@ -41,7 +41,7 @@ import CLabel
 import CodeGen.Platform
 import BlockId
 import GHC.Config.Flags
-import Cmm
+import GHC.Cmm
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform

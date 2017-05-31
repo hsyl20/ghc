@@ -61,7 +61,7 @@ module StgCmmMonad (
 
 #include "HsVersions.h"
 
-import Cmm
+import GHC.Cmm
 import StgCmmClosure
 import GHC.Config.Flags
 import Hoopl

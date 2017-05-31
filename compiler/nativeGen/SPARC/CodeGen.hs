@@ -41,7 +41,7 @@ import NCGMonad
 
 -- Our intermediate code:
 import BlockId
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmSwitch
 import Hoopl

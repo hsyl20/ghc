@@ -29,7 +29,7 @@ module GHC.Cmm.PrettyPrint.C (
 import BlockId
 import CLabel
 import ForeignCall
-import Cmm hiding (pprBBlock)
+import GHC.Cmm hiding (pprBBlock)
 import GHC.Cmm.PrettyPrint ()
 import Hoopl
 import CmmUtils

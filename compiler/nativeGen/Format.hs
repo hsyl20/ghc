@@ -20,7 +20,7 @@ module Format (
 
 where
 
-import Cmm
+import GHC.Cmm
 import GHC.Utils.Outputable
 
 -- It looks very like the old MachRep, but it's now of purely local

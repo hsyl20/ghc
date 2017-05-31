@@ -22,7 +22,7 @@ module MkGraph
 where
 
 import BlockId
-import Cmm
+import GHC.Cmm
 import CmmCallConv
 import CmmSwitch (SwitchTargets)
 

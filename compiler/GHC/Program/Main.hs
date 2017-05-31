@@ -125,7 +125,7 @@ import ProfInit
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import SimplStg         ( stg2stg )
-import Cmm
+import GHC.Cmm
 import CmmParse         ( parseCmmFile )
 import CmmBuildInfoTables
 import CmmPipeline

@@ -34,7 +34,7 @@ module CmmInfo (
 
 #include "HsVersions.h"
 
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CLabel
 import GHC.RTS.Storage

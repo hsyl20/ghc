@@ -219,7 +219,7 @@ import CoreSyn          ( Tickish(SourceNote) )
 
 import CmmOpt
 import MkGraph
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmSwitch        ( mkSwitchTargets )
 import CmmInfo

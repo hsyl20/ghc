@@ -21,7 +21,7 @@ import Reg
 import GHC.Data.Graph.Base
 
 import Hoopl (mapLookup)
-import Cmm
+import GHC.Cmm
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Data.Graph.Directed          (flattenSCCs)

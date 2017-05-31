@@ -11,7 +11,7 @@ module CmmLint (
   ) where
 
 import Hoopl
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmLive
 import CmmSwitch (switchTargetsToList)

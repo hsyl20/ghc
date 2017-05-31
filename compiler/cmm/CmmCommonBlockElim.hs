@@ -6,7 +6,7 @@ where
 
 
 import BlockId
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmSwitch (eqSwitchTargetWith)
 import CmmContFlowOpt

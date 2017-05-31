@@ -52,7 +52,7 @@ import CodeGen.Platform
 import Reg
 import RegClass
 
-import Cmm
+import GHC.Cmm
 import CLabel           ( CLabel )
 import GHC.Config.Flags
 import GHC.Utils.Outputable

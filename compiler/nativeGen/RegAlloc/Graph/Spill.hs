@@ -10,7 +10,7 @@ module RegAlloc.Graph.Spill (
 import RegAlloc.Liveness
 import Instruction
 import Reg
-import Cmm hiding (RegSet)
+import GHC.Cmm hiding (RegSet)
 import BlockId
 import Hoopl
 

@@ -39,7 +39,7 @@ where
 import qualified StgCmmMonad as F
 import StgCmmMonad (FCode, newUnique)
 
-import Cmm
+import GHC.Cmm
 import CLabel
 import MkGraph
 

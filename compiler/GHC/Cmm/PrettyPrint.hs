@@ -41,7 +41,7 @@ where
 
 import BlockId ()
 import CLabel
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CmmSwitch
 import GHC.Config.Flags

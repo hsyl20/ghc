@@ -13,7 +13,7 @@ module CgUtils ( fixStgRegisters ) where
 #include "HsVersions.h"
 
 import CodeGen.Platform
-import Cmm
+import GHC.Cmm
 import Hoopl
 import CmmUtils
 import CLabel

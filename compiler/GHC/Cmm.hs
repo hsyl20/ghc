@@ -1,7 +1,7 @@
 -- Cmm representations using Hoopl's Graph CmmNode e x.
 {-# LANGUAGE CPP, GADTs #-}
 
-module Cmm (
+module GHC.Cmm (
      -- * Cmm top-level datatypes
      CmmProgram, CmmGroup, GenCmmGroup,
      CmmDecl, GenCmmDecl(..),

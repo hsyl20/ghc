@@ -39,7 +39,7 @@ import MkGraph
 import Hoopl
 import GHC.RTS.Storage
 import BlockId
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CostCentre
 import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )

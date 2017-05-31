@@ -63,7 +63,7 @@ import Debug
 
 import BlockId
 import CgUtils          ( fixStgRegisters )
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import Hoopl
 import CmmOpt           ( cmmMachOpFold )

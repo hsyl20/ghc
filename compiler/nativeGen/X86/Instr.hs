@@ -28,7 +28,7 @@ import TargetReg
 import BlockId
 import Hoopl
 import CodeGen.Platform
-import Cmm
+import GHC.Cmm
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform

@@ -30,7 +30,7 @@ module Hoopl.Dataflow
   )
 where
 
-import Cmm
+import GHC.Cmm
 
 import Data.Array
 import Data.List

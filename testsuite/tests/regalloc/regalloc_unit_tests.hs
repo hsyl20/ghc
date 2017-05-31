@@ -30,7 +30,7 @@ import CmmBuildInfoTables
 import CmmPipeline
 import CmmParse
 import CmmInfo
-import Cmm
+import GHC.Cmm
 import GHC.Data.Module
 import Debug
 import GHC

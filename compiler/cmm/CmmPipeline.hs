@@ -7,7 +7,7 @@ module CmmPipeline (
   cmmPipeline
 ) where
 
-import Cmm
+import GHC.Cmm
 import CmmLint
 import CmmBuildInfoTables
 import CmmCommonBlockElim

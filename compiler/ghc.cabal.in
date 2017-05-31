@@ -210,7 +210,7 @@ Library
         GHC.Data.Var.UndirectedGraph
         BlockId
         CLabel
-        Cmm
+        GHC.Cmm
         CmmBuildInfoTables
         CmmPipeline
         CmmCallConv

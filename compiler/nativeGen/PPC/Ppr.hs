@@ -19,7 +19,7 @@ import Reg
 import RegClass
 import TargetReg
 
-import Cmm hiding (topInfoTable)
+import GHC.Cmm hiding (topInfoTable)
 import Hoopl
 
 import CLabel

@@ -14,7 +14,7 @@ where
 
 import GHC.Config.Flags
 import BlockId
-import Cmm
+import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression ()
 import Hoopl
 

@@ -24,7 +24,7 @@ module Debug (
 
 import BlockId
 import CLabel
-import Cmm
+import GHC.Cmm
 import CmmUtils
 import CoreSyn
 import GHC.Data.FastString      ( nilFS, mkFastString )

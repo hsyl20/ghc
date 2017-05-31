@@ -54,7 +54,7 @@ import GHC.Data.Module           ( primUnitId )
 import GHC.Cmm.PrettyPrint           ()
 import CmmUtils
 import CmmSwitch
-import Cmm
+import GHC.Cmm
 import Hoopl
 import CLabel
 import CoreSyn          ( Tickish(..) )

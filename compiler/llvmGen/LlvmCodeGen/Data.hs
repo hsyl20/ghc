@@ -14,7 +14,7 @@ import LlvmCodeGen.Base
 
 import BlockId
 import CLabel
-import Cmm
+import GHC.Cmm
 import GHC.Config.Flags
 import GHC.Platform
 

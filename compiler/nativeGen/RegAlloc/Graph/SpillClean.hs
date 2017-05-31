@@ -34,7 +34,7 @@ import Reg
 
 import BlockId
 import Hoopl
-import Cmm
+import GHC.Cmm
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique
