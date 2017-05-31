@@ -24,7 +24,7 @@ module GHC.Cmm.Node (
 
 import CodeGen.Platform
 import GHC.Cmm.Expr
-import CmmSwitch
+import GHC.Cmm.Switch
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall

@@ -12,7 +12,7 @@ import Hoopl
 import BlockId
 import GHC.Cmm
 import CmmUtils
-import CmmSwitch (mapSwitchTargets)
+import GHC.Cmm.Switch (mapSwitchTargets)
 import GHC.Data.Maybe
 import GHC.Utils.Panic
 

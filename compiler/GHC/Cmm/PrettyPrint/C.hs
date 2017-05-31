@@ -33,7 +33,7 @@ import GHC.Cmm hiding (pprBBlock)
 import GHC.Cmm.PrettyPrint ()
 import Hoopl
 import CmmUtils
-import CmmSwitch
+import GHC.Cmm.Switch
 
 -- Utils
 import CPrim

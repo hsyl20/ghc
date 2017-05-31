@@ -221,7 +221,7 @@ import CmmOpt
 import MkGraph
 import GHC.Cmm
 import CmmUtils
-import CmmSwitch        ( mkSwitchTargets )
+import GHC.Cmm.Switch        ( mkSwitchTargets )
 import CmmInfo
 import BlockId
 import CmmLex

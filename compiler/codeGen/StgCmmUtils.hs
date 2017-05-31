@@ -51,7 +51,7 @@ import MkGraph
 import CodeGen.Platform
 import CLabel
 import CmmUtils
-import CmmSwitch
+import GHC.Cmm.Switch
 
 import ForeignCall
 import GHC.Data.Id.Info

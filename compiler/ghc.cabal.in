@@ -224,7 +224,7 @@ Library
         GHC.Cmm.Analyse.Liveness
         CmmMachOp
         CmmMonad
-        CmmSwitch
+        GHC.Cmm.Switch
         GHC.Cmm.Node
         CmmOpt
         CmmParse

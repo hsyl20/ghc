@@ -8,7 +8,7 @@ where
 import BlockId
 import GHC.Cmm
 import CmmUtils
-import CmmSwitch (eqSwitchTargetWith)
+import GHC.Cmm.Switch (eqSwitchTargetWith)
 import CmmContFlowOpt
 -- import GHC.Cmm.PrettyPrint ()
 import Prelude hiding (iterate, succ, unzip, zip)

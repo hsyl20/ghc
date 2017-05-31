@@ -8,7 +8,7 @@ import Hoopl
 import BlockId
 import GHC.Cmm
 import CmmUtils
-import CmmSwitch
+import GHC.Cmm.Switch
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 

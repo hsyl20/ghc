@@ -24,7 +24,7 @@ where
 import BlockId
 import GHC.Cmm
 import CmmCallConv
-import CmmSwitch (SwitchTargets)
+import GHC.Cmm.Switch (SwitchTargets)
 
 import Compiler.Hoopl hiding (Unique, (<*>), mkFirst, mkMiddle, mkLast, mkLabel, mkBranch, Shape(..))
 import GHC.Config.Flags

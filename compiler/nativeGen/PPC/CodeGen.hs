@@ -44,7 +44,7 @@ import BlockId
 import GHC.Cmm.PrettyPrint           ( pprExpr )
 import GHC.Cmm
 import CmmUtils
-import CmmSwitch
+import GHC.Cmm.Switch
 import CLabel
 import Hoopl
 

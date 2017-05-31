@@ -14,7 +14,7 @@ import Hoopl
 import GHC.Cmm
 import CmmUtils
 import GHC.Cmm.Analyse.Liveness
-import CmmSwitch (switchTargetsToList)
+import GHC.Cmm.Switch (switchTargetsToList)
 import GHC.Cmm.PrettyPrint ()
 import GHC.Utils.Outputable
 import GHC.Config.Flags

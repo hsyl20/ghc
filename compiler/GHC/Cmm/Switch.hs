@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs #-}
-module CmmSwitch (
+module GHC.Cmm.Switch (
      SwitchTargets,
      mkSwitchTargets,
      switchTargetsCases, switchTargetsDefault, switchTargetsRange, switchTargetsSigned,

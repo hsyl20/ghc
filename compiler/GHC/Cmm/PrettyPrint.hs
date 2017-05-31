@@ -43,7 +43,7 @@ import BlockId ()
 import CLabel
 import GHC.Cmm
 import CmmUtils
-import CmmSwitch
+import GHC.Cmm.Switch
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable

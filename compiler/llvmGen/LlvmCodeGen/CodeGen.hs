@@ -17,7 +17,7 @@ import CLabel
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint
 import CmmUtils
-import CmmSwitch
+import GHC.Cmm.Switch
 import Hoopl
 
 import GHC.Config.Flags
