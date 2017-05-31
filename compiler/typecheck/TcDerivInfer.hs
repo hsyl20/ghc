@@ -30,7 +30,7 @@ import TcMType
 import TcRnMonad
 import TcType
 import TyCon
-import Type
+import GHC.Data.Type
 import TcSimplify
 import TcValidity (validDerivPred)
 import TcUnify (buildImplicationFor)

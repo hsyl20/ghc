@@ -9,7 +9,7 @@ import Vectorise.Env( GlobalEnv( global_fam_inst_env ) )
 import BuildTyCl( TcMethInfo, buildClass, buildDataCon, newTyConRepName )
 import GHC.Data.OccName
 import GHC.Data.Class
-import Type
+import GHC.Data.Type
 import TyCon
 import GHC.Data.DataConstructor
 import GHC.Config.Flags

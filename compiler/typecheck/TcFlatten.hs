@@ -11,7 +11,7 @@ module TcFlatten(
 
 import TcRnTypes
 import TcType
-import Type
+import GHC.Data.Type
 import TcUnify( occCheckExpand )
 import TcEvidence
 import TyCon

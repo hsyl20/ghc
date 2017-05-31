@@ -21,7 +21,7 @@ module HsLit where
 import {-# SOURCE #-} HsExpr( HsExpr, pprExpr )
 import GHC.Data.BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
                     negateFractionalLit,SourceText(..),pprWithSourceText )
-import Type       ( Type )
+import GHC.Data.Type       ( Type )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )

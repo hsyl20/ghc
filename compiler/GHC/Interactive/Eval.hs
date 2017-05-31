@@ -54,7 +54,7 @@ import IfaceEnv   ( newInteractiveBinder )
 import FamInstEnv ( FamInst )
 import CoreFVs    ( orphNamesOfFamInst )
 import TyCon
-import Type             hiding( typeKind )
+import GHC.Data.Type             hiding( typeKind )
 import RepType
 import TcType           hiding( typeKind )
 import GHC.Data.Var

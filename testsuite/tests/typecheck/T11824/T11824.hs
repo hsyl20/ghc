@@ -1,4 +1,4 @@
-import Type
+import GHC.Data.Type
 
 main :: IO ()
 main = return ()

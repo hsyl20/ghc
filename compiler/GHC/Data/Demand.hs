@@ -72,7 +72,7 @@ import GHC.Data.BasicTypes
 import GHC.Utils.Binary
 import GHC.Data.Maybe           ( orElse )
 
-import Type            ( Type, isUnliftedType )
+import GHC.Data.Type            ( Type, isUnliftedType )
 import TyCon           ( isNewTyCon, isClassTyCon )
 import GHC.Data.DataConstructor ( splitDataProductType_maybe )
 

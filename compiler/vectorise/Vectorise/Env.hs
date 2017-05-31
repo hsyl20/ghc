@@ -19,7 +19,7 @@ import GHC.Types
 import InstEnv
 import FamInstEnv
 import CoreSyn
-import Type
+import GHC.Data.Type
 import GHC.Data.Class
 import TyCon
 import GHC.Data.DataConstructor

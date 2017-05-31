@@ -102,7 +102,7 @@ module CoreSyn (
 import CostCentre
 import GHC.Data.Var.Environment( InScopeSet )
 import GHC.Data.Var
-import Type
+import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.Name
 import GHC.Data.Name.Set

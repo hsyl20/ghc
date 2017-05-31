@@ -19,7 +19,7 @@ import FamInstEnv
 import MkCore            ( mkWildCase, mkCoreLet )
 import TyCon
 import GHC.Data.Coercion.Axiom
-import Type
+import GHC.Data.Type
 import GHC.Data.OccName
 import GHC.Data.Coercion
 import GHC.Data.Id.Make

@@ -28,7 +28,7 @@ import qualified HsUtils
 import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
 import TcType
-import Type ( splitPiTy )
+import GHC.Data.Type ( splitPiTy )
 import TcEvidence
 import CoreSyn
 import CoreFVs

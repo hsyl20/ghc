@@ -24,7 +24,7 @@ import GHC.Desugar.Monad
 import GHC.Desugar.Utils
 import TysWiredIn
 import PrelNames
-import Type   ( Type )
+import GHC.Data.Type   ( Type )
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils

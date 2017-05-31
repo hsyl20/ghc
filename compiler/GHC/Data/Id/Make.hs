@@ -43,7 +43,7 @@ import Rules
 import TysPrim
 import TysWiredIn
 import PrelRules
-import Type
+import GHC.Data.Type
 import FamInstEnv
 import GHC.Data.Coercion
 import TcType

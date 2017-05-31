@@ -18,7 +18,7 @@ import Vectorise.Monad.Base
 
 import GHC.Desugar.Monad
 import TcType
-import Type
+import GHC.Data.Type
 import GHC.Data.Var
 import GHC.Data.Module
 import GHC.Data.Name

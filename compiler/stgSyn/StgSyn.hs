@@ -63,7 +63,7 @@ import GHC.Platform
 import PprCore     ( {- instances -} )
 import PrimOp      ( PrimOp, PrimCall )
 import TyCon       ( PrimRep(..), TyCon )
-import Type        ( Type )
+import GHC.Data.Type        ( Type )
 import RepType     ( typePrimRep1 )
 import GHC.Data.Unique      ( Unique )
 import GHC.Utils

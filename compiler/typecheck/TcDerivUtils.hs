@@ -45,7 +45,7 @@ import TcRnMonad
 import TcType
 import THNames (liftClassKey)
 import TyCon
-import Type
+import GHC.Data.Type
 import GHC.Utils
 import GHC.Data.Var.Set
 

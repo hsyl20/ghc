@@ -40,7 +40,7 @@ import TyCon       ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
 import GHC.Data.DataConstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
 import CoreUtils   ( cheapEqExpr, exprIsHNF )
 import CoreUnfold  ( exprIsConApp_maybe )
-import Type
+import GHC.Data.Type
 import GHC.Data.OccName     ( occNameFS )
 import PrelNames
 import GHC.Data.Maybe      ( orElse )

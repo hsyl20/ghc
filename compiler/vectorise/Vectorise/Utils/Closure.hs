@@ -15,7 +15,7 @@ import Vectorise.Utils.PADict
 import Vectorise.Utils.Hoisting
 
 import CoreSyn
-import Type
+import GHC.Data.Type
 import MkCore
 import CoreUtils
 import TyCon

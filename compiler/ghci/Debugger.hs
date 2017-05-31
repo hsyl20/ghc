@@ -28,7 +28,7 @@ import GHC.Data.Name
 import GHC.Data.Var hiding ( varName )
 import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
-import Type
+import GHC.Data.Type
 import GHC
 import GHC.Utils.Outputable
 import GHC.Utils.PrettyPrint.TyThing

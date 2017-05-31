@@ -40,7 +40,7 @@ import MkGraph
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import StgSyn
-import Type
+import GHC.Data.Type
 import TysPrim
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils

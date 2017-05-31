@@ -142,7 +142,7 @@ import HsSyn
 import CoreSyn
 import GHC.Types
 import TcEvidence
-import Type
+import GHC.Data.Type
 import GHC.Data.Class    ( Class )
 import TyCon    ( TyCon )
 import GHC.Data.Coercion ( Coercion, mkHoleCo )

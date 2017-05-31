@@ -38,7 +38,7 @@ import CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,
                           stripTicksTopT, stripTicksTopE,
                           isJoinBind )
 import PprCore          ( pprRules )
-import Type             ( Type, substTy, mkTCvSubst )
+import GHC.Data.Type             ( Type, substTy, mkTCvSubst )
 import TcType           ( tcSplitTyConApp_maybe )
 import TysWiredIn       ( anyTypeOfKind )
 import GHC.Data.Coercion

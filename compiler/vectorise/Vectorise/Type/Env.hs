@@ -29,7 +29,7 @@ import CoreUnfold
 import GHC.Data.DataConstructor
 import TyCon
 import GHC.Data.Coercion.Axiom
-import Type
+import GHC.Data.Type
 import FamInstEnv
 import GHC.Data.Id
 import GHC.Data.Id.Make

@@ -23,7 +23,7 @@ import TysWiredIn ( tupleTyCon, sumTyCon, runtimeRepTyCon
                   , vecCountTyCon, vecElemTyCon
                   , nilDataCon, consDataCon )
 import GHC.Data.Id
-import Type
+import GHC.Data.Type
 import GHC.Data.Kind ( isTYPEApp )
 import TyCon
 import GHC.Data.DataConstructor

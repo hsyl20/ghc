@@ -19,15 +19,15 @@ module GHC.Utils.PrettyPrint.TyThing (
 
 #include "HsVersions.h"
 
-import Type    ( TyThing(..) )
+import GHC.Data.Type    ( TyThing(..) )
 import IfaceSyn ( ShowSub(..), ShowHowMuch(..), AltPpr(..)
   , showToHeader, pprIfaceDecl )
 import GHC.Data.Coercion.Axiom ( coAxiomTyCon )
 import GHC.Types( tyThingParent_maybe )
 import MkIface ( tyThingToIfaceDecl )
-import Type ( tidyOpenType )
+import GHC.Data.Type ( tidyOpenType )
 import FamInstEnv( FamInst(..), FamFlavor(..) )
-import Type( Type, pprTypeApp, pprSigmaType )
+import GHC.Data.Type( Type, pprTypeApp, pprSigmaType )
 import GHC.Data.Name
 import GHC.Data.Var.Environment( emptyTidyEnv )
 import GHC.Utils.Outputable

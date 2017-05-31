@@ -20,7 +20,7 @@ import CoreArity
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Demand ( zapUsageEnvSig )
-import Type( tidyType, tidyTyCoVarBndr )
+import GHC.Data.Type( tidyType, tidyTyCoVarBndr )
 import GHC.Data.Coercion( tidyCo )
 import GHC.Data.Var
 import GHC.Data.Var.Environment

@@ -21,7 +21,7 @@ import CoreUnfold           ( mkInlineUnfoldingWithArity )
 import PprCore
 import CoreSyn
 import CoreMonad            ( CoreM, getHscEnv )
-import Type
+import GHC.Data.Type
 import GHC.Data.Id
 import GHC.Config.Flags
 import GHC.Utils.Outputable

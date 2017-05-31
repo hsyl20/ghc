@@ -27,7 +27,7 @@ import HsTypes
 import PprCore ()
 import CoreSyn
 import TcEvidence
-import Type
+import GHC.Data.Type
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.BasicTypes

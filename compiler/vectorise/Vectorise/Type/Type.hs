@@ -11,7 +11,7 @@ import Vectorise.Utils
 import Vectorise.Monad
 import Vectorise.Builtins
 import TcType
-import Type
+import GHC.Data.Type
 import TyCoRep
 import TyCon
 import Control.Monad

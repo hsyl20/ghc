@@ -20,7 +20,7 @@ import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
 import PrimOp
 import SizedSeq
-import Type
+import GHC.Data.Type
 import GHC.Data.SrcLoc
 import GHCi.BreakArray
 import GHCi.RemoteTypes

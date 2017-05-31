@@ -56,7 +56,7 @@ import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import TyCon
 import GHC.Utils.Outputable
-import Type
+import GHC.Data.Type
 import GHC.Data.SrcLoc
 import GHC.Data.Bag -- collect ev vars from pats
 import GHC.Config.Flags( gopt, GeneralFlag(..) )

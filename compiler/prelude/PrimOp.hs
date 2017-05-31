@@ -36,7 +36,7 @@ import CmmType
 import GHC.Data.Demand
 import GHC.Data.OccName          ( OccName, pprOccName, mkVarOccFS )
 import TyCon            ( TyCon, isPrimTyCon, PrimRep(..) )
-import Type
+import GHC.Data.Type
 import RepType          ( typePrimRep1, tyConPrimRep1 )
 import GHC.Data.BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
                           SourceText(..) )

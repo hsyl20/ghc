@@ -19,7 +19,7 @@ import Vectorise.Utils.Poly
 import CoreSyn
 import CoreUtils
 import CoreUnfold
-import Type
+import GHC.Data.Type
 import GHC.Data.Id
 import GHC.Data.BasicTypes  (Arity)
 import GHC.Data.FastString

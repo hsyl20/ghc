@@ -15,7 +15,7 @@ module TcTypeNats
   , typeSymbolAppendTyCon
   ) where
 
-import Type
+import GHC.Data.Type
 import GHC.Data.Pair
 import TcType     ( TcType, tcEqType )
 import TyCon      ( TyCon, FamTyConFlav(..), mkFamilyTyCon

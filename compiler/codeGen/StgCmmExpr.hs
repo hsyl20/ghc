@@ -39,7 +39,7 @@ import ForeignCall
 import GHC.Data.Id
 import PrimOp
 import TyCon
-import Type             ( isUnliftedType )
+import GHC.Data.Type             ( isUnliftedType )
 import RepType          ( isVoidTy, countConRepArgs, primRepSlot )
 import CostCentre       ( CostCentreStack, currentCCS )
 import GHC.Data.Maybe

@@ -31,7 +31,7 @@ import WwLib            ( isWorkerSmallEnough, mkWorkerArgs )
 import GHC.Data.DataConstructor
 import GHC.Data.Coercion         hiding( substCo )
 import Rules
-import Type             hiding ( substTy )
+import GHC.Data.Type             hiding ( substTy )
 import TyCon            ( tyConName )
 import GHC.Data.Id
 import PprCore          ( pprParendExpr )

@@ -15,7 +15,7 @@ import TcMType
 import TcUnify( occCheckForErrors, OccCheckResult(..) )
 import TcType
 import RnUnbound ( unknownNameSuggestions )
-import Type
+import GHC.Data.Type
 import TyCoRep
 import GHC.Data.Kind
 import Unify            ( tcMatchTys )

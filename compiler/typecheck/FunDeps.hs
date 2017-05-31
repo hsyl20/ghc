@@ -22,7 +22,7 @@ module FunDeps (
 import GHC.Data.Name
 import GHC.Data.Var
 import GHC.Data.Class
-import Type
+import GHC.Data.Type
 import TcType( transSuperClasses )
 import GHC.Data.Coercion.Axiom( TypeEqn )
 import Unify

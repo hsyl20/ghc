@@ -62,7 +62,7 @@ module GHC.Data.DataConstructor (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Data.Id.Make ( DataConBoxer )
-import Type
+import GHC.Data.Type
 import ForeignCall ( CType )
 import GHC.Data.Coercion
 import Unify

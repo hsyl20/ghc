@@ -35,7 +35,7 @@ import CoreSyn
 import CoreUtils
 import FamInstEnv
 import GHC.Data.Coercion
-import Type
+import GHC.Data.Type
 import TyCon
 import GHC.Data.DataConstructor
 import GHC.Data.Id.Make

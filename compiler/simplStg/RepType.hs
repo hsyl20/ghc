@@ -30,7 +30,7 @@ import PrelNames
 import GHC.Data.Coercion
 import TyCon
 import TyCoRep
-import Type
+import GHC.Data.Type
 import GHC.Utils
 import TysPrim
 import {-# SOURCE #-} TysWiredIn ( anyTypeOfKind )

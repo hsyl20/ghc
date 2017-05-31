@@ -46,7 +46,7 @@ import TysWiredIn  ( heqDataCon, coercibleDataCon )
 import CoreSyn     ( isOrphan )
 import FunDeps
 import TcMType
-import Type
+import GHC.Data.Type
 import TyCoRep     ( TyBinder(..) )
 import TcType
 import GHC.Types

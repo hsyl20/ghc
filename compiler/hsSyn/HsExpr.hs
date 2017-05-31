@@ -40,7 +40,7 @@ import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import Type
+import GHC.Data.Type
 
 -- libraries:
 import Data.Data hiding (Fixity(..))

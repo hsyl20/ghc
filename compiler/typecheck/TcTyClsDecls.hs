@@ -41,7 +41,7 @@ import RnEnv( lookupConstructorFields )
 import FamInst
 import FamInstEnv
 import GHC.Data.Coercion
-import Type
+import GHC.Data.Type
 import TyCoRep   -- for checkValidRoles
 import GHC.Data.Kind
 import GHC.Data.Class

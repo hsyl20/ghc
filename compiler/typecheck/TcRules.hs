@@ -20,7 +20,7 @@ import TcExpr
 import TcEnv
 import TcUnify( buildImplicationFor )
 import TcEvidence( mkTcCoVarCo )
-import Type
+import GHC.Data.Type
 import GHC.Data.Id
 import GHC.Data.Var( EvVar )
 import GHC.Data.Name

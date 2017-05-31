@@ -42,7 +42,7 @@ import GHC.Data.RdrName
 import CoreSyn
 import GHCi.RemoteTypes
 import GHC.Data.SrcLoc
-import Type
+import GHC.Data.Type
 import System.Process
 import GHC.Data.BasicTypes
 

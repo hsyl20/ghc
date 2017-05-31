@@ -43,7 +43,7 @@ import GHC.Data.Available
 import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Utils.Outputable
-import Type
+import GHC.Data.Type
 import GHC.Data.FastString
 import RnFixity ( lookupFixityRn )
 import GHC.Data.Maybe

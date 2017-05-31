@@ -31,7 +31,7 @@ import PprCore
 import GHC.Data.Literal
 import PrimOp
 import CoreFVs
-import Type
+import GHC.Data.Type
 import RepType
 import GHC.Data.Kind            ( isLiftedTypeKind )
 import GHC.Data.DataConstructor

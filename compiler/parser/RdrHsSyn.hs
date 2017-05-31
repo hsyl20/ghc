@@ -78,7 +78,7 @@ import GHC.Data.BasicTypes
 import TcEvidence       ( idHsWrapper )
 import Lexer
 import GHC.Utils.Identifier           ( isLexCon )
-import Type             ( TyThing(..) )
+import GHC.Data.Type             ( TyThing(..) )
 import TysWiredIn       ( cTupleTyConName, tupleTyCon, tupleDataCon,
                           nilDataConName, nilDataConKey,
                           listTyConName, listTyConKey,

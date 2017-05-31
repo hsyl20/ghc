@@ -16,7 +16,7 @@ import GHC.Data.Demand( seqDemand, seqStrictSig )
 import GHC.Data.BasicTypes( seqOccInfo )
 import GHC.Data.Var.Set( seqDVarSet )
 import GHC.Data.Var( varType, tyVarKind )
-import Type( seqType, isTyVar )
+import GHC.Data.Type( seqType, isTyVar )
 import GHC.Data.Coercion( seqCo )
 import GHC.Data.Id( Id, idInfo )
 

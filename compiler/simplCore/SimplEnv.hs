@@ -52,7 +52,7 @@ import GHC.Data.Id as Id
 import MkCore                   ( mkWildValBinder )
 import TysWiredIn
 import qualified Type
-import Type hiding              ( substTy, substTyVar, substTyVarBndr )
+import GHC.Data.Type hiding              ( substTy, substTyVar, substTyVarBndr )
 import qualified Coercion
 import GHC.Data.Coercion hiding          ( substCo, substCoVar, substCoVarBndr )
 import GHC.Data.BasicTypes

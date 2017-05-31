@@ -84,7 +84,7 @@ import GHC.Data.Literal          ( litIsTrivial )
 import GHC.Data.Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
 import GHC.Data.Name             ( getOccName, mkSystemVarName )
 import GHC.Data.OccName          ( occNameString )
-import Type             ( Type, mkLamTypes, splitTyConApp_maybe )
+import GHC.Data.Type             ( Type, mkLamTypes, splitTyConApp_maybe )
 import GHC.Data.BasicTypes       ( Arity, RecFlag(..), isRec )
 import GHC.Data.DataConstructor          ( dataConOrigResTy )
 import TysWiredIn

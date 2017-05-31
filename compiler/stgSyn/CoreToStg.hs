@@ -20,7 +20,7 @@ import CoreUtils        ( exprType, findDefault, isJoinBind )
 import CoreArity        ( manifestArity )
 import StgSyn
 
-import Type
+import GHC.Data.Type
 import RepType
 import TyCon
 import GHC.Data.Id.Make             ( coercionTokenId )

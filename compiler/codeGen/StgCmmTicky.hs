@@ -130,7 +130,7 @@ import GHC.Config.Flags
 -- Turgid imports for showTypeCategory
 import PrelNames
 import TcType
-import Type
+import GHC.Data.Type
 import TyCon
 
 import Data.Maybe

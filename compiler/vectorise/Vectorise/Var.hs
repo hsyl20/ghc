@@ -19,7 +19,7 @@ import Vectorise.Env
 import Vectorise.Vect
 import Vectorise.Type.Type
 import CoreSyn
-import Type
+import GHC.Data.Type
 import GHC.Data.Var.Environment
 import GHC.Data.Id as Id
 import GHC.Data.FastString

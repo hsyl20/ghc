@@ -12,7 +12,7 @@ module TcCanonical(
 import TcRnTypes
 import TcUnify( swapOverTyVars, metaTyVarUpdateOK )
 import TcType
-import Type
+import GHC.Data.Type
 import TcFlatten
 import TcSMonad
 import TcEvidence

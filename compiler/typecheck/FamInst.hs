@@ -32,7 +32,7 @@ import GHC.Utils
 import GHC.Data.RdrName
 import GHC.Data.DataConstructor ( dataConName )
 import GHC.Data.Maybe
-import Type
+import GHC.Data.Type
 import TyCoRep
 import TcMType
 import GHC.Data.Name

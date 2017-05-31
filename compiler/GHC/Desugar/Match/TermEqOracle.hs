@@ -26,7 +26,7 @@ import GHC.Desugar.Match.Expr
 
 import GHC.Data.Id
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 import HsLit
 import TcHsSyn
 import GHC.Utils.Monad

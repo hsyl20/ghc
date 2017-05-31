@@ -41,7 +41,7 @@ import PrelNames
 import TyCon
 import TcEvidence
 import TcType
-import Type
+import GHC.Data.Type
 import GHC.Data.Coercion
 import TysWiredIn ( typeNatKind, typeSymbolKind )
 import GHC.Data.Id

@@ -93,7 +93,7 @@ module TcMType (
 -- friends:
 import TyCoRep
 import TcType
-import Type
+import GHC.Data.Type
 import GHC.Data.Kind
 import GHC.Data.Coercion
 import GHC.Data.Class

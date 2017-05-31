@@ -35,7 +35,7 @@ import TcUnify( tcSkolemise, unifyType, noThing )
 import Inst( topInstantiate )
 import TcEnv( tcLookupId )
 import TcEvidence( HsWrapper, (<.>) )
-import Type( mkTyVarBinders )
+import GHC.Data.Type( mkTyVarBinders )
 
 import GHC.Config.Flags
 import GHC.Data.Var      ( TyVar, tyVarName, tyVarKind )

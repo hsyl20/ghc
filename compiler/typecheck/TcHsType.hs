@@ -57,7 +57,7 @@ import TcSimplify ( solveEqualities )
 import TcType
 import TcHsSyn( zonkSigType )
 import Inst   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
-import Type
+import GHC.Data.Type
 import GHC.Data.Kind
 import GHC.Data.RdrName( lookupLocalRdrOcc )
 import GHC.Data.Var

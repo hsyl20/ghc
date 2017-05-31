@@ -26,7 +26,7 @@ import TysPrim          ( voidPrimTy )
 import TysWiredIn       ( tupleDataCon )
 import GHC.Data.Var.Environment           ( mkInScopeSet )
 import GHC.Data.Var.Set           ( VarSet )
-import Type
+import GHC.Data.Type
 import RepType          ( isVoidTy )
 import GHC.Data.Coercion
 import FamInstEnv

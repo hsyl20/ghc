@@ -34,7 +34,7 @@ import BlockId (newBlockId)
 import Cmm
 import CmmUtils
 import MkGraph
-import Type
+import GHC.Data.Type
 import RepType
 import TysPrim
 import CLabel

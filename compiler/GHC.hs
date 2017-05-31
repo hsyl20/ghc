@@ -297,7 +297,7 @@ import GHC.Packages
 import GHC.Data.Name.Set
 import GHC.Data.RdrName
 import HsSyn
-import Type     hiding( typeKind )
+import GHC.Data.Type     hiding( typeKind )
 import TcType           hiding( typeKind )
 import GHC.Data.Id
 import TysPrim          ( alphaTyVars )

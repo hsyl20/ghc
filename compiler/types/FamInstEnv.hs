@@ -40,7 +40,7 @@ module FamInstEnv (
 #include "HsVersions.h"
 
 import Unify
-import Type
+import GHC.Data.Type
 import TyCoRep
 import TyCon
 import GHC.Data.DataConstructor (DataCon)

@@ -43,7 +43,7 @@ import GHC.Utils.Error
 import GHC.Data.Coercion
 import GHC.Data.SrcLoc
 import GHC.Data.Kind
-import Type
+import GHC.Data.Type
 import RepType
 import TyCoRep       -- checks validity of types/coercions
 import TyCon

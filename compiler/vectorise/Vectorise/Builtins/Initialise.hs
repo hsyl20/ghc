@@ -15,7 +15,7 @@ import GHC.Data.DataConstructor
 import TyCon
 import GHC.Data.Class
 import CoreSyn
-import Type
+import GHC.Data.Type
 import GHC.Data.Name.Environment
 import GHC.Data.Name
 import GHC.Data.Id

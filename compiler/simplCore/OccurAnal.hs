@@ -29,7 +29,7 @@ import GHC.Data.Name( localiseName )
 import GHC.Data.BasicTypes
 import GHC.Data.Module( Module )
 import GHC.Data.Coercion
-import Type
+import GHC.Data.Type
 
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

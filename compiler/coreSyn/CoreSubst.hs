@@ -44,7 +44,7 @@ import qualified Type
 import qualified Coercion
 
         -- We are defining local versions
-import Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList
+import GHC.Data.Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList
                        , isInScope, substTyVarBndr, cloneTyVarBndr )
 import GHC.Data.Coercion hiding ( substCo, substCoVarBndr )
 

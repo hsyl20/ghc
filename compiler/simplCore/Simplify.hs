@@ -12,7 +12,7 @@ module Simplify ( simplTopBinds, simplExpr, simplRules ) where
 
 import GHC.Config.Flags
 import SimplMonad
-import Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvSubst )
+import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvSubst )
 import SimplEnv
 import SimplUtils
 import OccurAnal        ( occurAnalyseExpr )

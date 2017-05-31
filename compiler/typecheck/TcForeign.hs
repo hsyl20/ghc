@@ -42,7 +42,7 @@ import TcEnv
 import FamInst
 import FamInstEnv
 import GHC.Data.Coercion
-import Type
+import GHC.Data.Type
 import ForeignCall
 import GHC.Utils.Error
 import GHC.Data.Id

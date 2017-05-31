@@ -39,7 +39,7 @@ import GHC.Data.Available
 import Unify( tcUnifyTy )
 import GHC.Data.BasicTypes ( DerivStrategy(..) )
 import GHC.Data.Class
-import Type
+import GHC.Data.Type
 import GHC.Utils.Error
 import GHC.Data.DataConstructor
 import GHC.Data.Maybe

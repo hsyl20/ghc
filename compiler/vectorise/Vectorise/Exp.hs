@@ -30,7 +30,7 @@ import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TyCon
 import TcType
-import Type
+import GHC.Data.Type
 import TyCoRep
 import GHC.Data.Var
 import GHC.Data.Var.Environment

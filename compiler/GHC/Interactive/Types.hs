@@ -20,7 +20,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Module
 import GHC.Data.RdrName
-import Type
+import GHC.Data.Type
 import GHC.Data.SrcLoc
 import GHC.Utils.Exception
 

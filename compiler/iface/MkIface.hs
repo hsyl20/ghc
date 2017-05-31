@@ -73,7 +73,7 @@ import TyCon
 import GHC.Data.Coercion.Axiom
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
-import Type
+import GHC.Data.Type
 import TcType
 import InstEnv
 import FamInstEnv

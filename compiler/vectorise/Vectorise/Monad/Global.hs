@@ -37,7 +37,7 @@ import Vectorise.Monad.Base
 import Vectorise.Env
 
 import CoreSyn
-import Type
+import GHC.Data.Type
 import TyCon
 import GHC.Data.DataConstructor
 import GHC.Config.Flags

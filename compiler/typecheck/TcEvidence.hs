@@ -44,7 +44,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.Coercion
 import PprCore ()   -- Instance OutputableBndr TyVar
 import TcType
-import Type
+import GHC.Data.Type
 import TyCon
 import GHC.Data.Class( Class )
 import PrelNames

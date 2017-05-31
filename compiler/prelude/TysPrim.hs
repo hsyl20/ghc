@@ -103,7 +103,7 @@ import PrelNames
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import TyCoRep   -- Doesn't need special access, but this is easier to avoid
-                 -- import loops which show up if you import Type instead
+                 -- import loops which show up if you import GHC.Data.Type instead
 
 import Data.Char
 

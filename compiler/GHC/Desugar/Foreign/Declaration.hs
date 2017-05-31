@@ -25,7 +25,7 @@ import GHC.Data.Id
 import GHC.Data.Literal
 import GHC.Data.Module
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 import RepType
 import TyCon
 import GHC.Data.Coercion

@@ -14,7 +14,7 @@ module TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
 
 import HsSyn
 import TcPat
-import Type( mkTyVarBinders, mkEmptyTCvSubst
+import GHC.Data.Type( mkTyVarBinders, mkEmptyTCvSubst
            , tidyTyVarBinders, tidyTypes, tidyType )
 import TcRnMonad
 import TcSigs( emptyPragEnv, completeSigFromId )

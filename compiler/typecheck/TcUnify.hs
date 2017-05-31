@@ -45,7 +45,7 @@ import TyCoRep
 import TcMType
 import TcRnMonad
 import TcType
-import Type
+import GHC.Data.Type
 import GHC.Data.Coercion
 import TcEvidence
 import GHC.Data.Name ( isSystemName )

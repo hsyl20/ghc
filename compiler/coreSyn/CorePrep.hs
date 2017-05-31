@@ -27,7 +27,7 @@ import CoreLint         ( endPassIO )
 import CoreSyn
 import CoreSubst
 import MkCore hiding( FloatBind(..) )   -- We use our own FloatBind here
-import Type
+import GHC.Data.Type
 import GHC.Data.Literal
 import GHC.Data.Coercion
 import TcEnv

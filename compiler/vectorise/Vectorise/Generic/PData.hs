@@ -18,7 +18,7 @@ import GHC.Data.BasicTypes ( SourceText(..) )
 import BuildTyCl
 import GHC.Data.DataConstructor
 import TyCon
-import Type
+import GHC.Data.Type
 import FamInst
 import FamInstEnv
 import TcMType

@@ -35,7 +35,7 @@ import CoreSyn
 import GHC.Data.Coercion
 import GHC.Data.Literal
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 import TyCoRep
 import GHC.Data.Var
 import GHC.Data.Unique.DeterFiniteMap

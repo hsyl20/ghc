@@ -130,7 +130,7 @@ import GHC.Data.Var( Id, CoVar, DictId, JoinId,
             isId, isLocalId, isGlobalId, isExportedId )
 import qualified GHC.Data.Var as Var
 
-import Type
+import GHC.Data.Type
 import RepType
 import TysPrim
 import GHC.Data.DataConstructor

@@ -29,7 +29,7 @@ import GHC.Data.RdrName
 import TcEnv
 import TcMType
 import TcValidity( arityErr )
-import Type ( pprTyVars )
+import GHC.Data.Type ( pprTyVars )
 import TcType
 import TcUnify
 import TcHsType

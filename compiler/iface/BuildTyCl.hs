@@ -28,7 +28,7 @@ import GHC.Data.Name
 import GHC.Data.Id.Make
 import GHC.Data.Class
 import TyCon
-import Type
+import GHC.Data.Type
 import GHC.Data.Id
 import TcType
 

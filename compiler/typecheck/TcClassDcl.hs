@@ -26,7 +26,7 @@ import TcBinds
 import TcUnify
 import TcHsType
 import TcMType
-import Type     ( getClassPredTys_maybe, piResultTys )
+import GHC.Data.Type     ( getClassPredTys_maybe, piResultTys )
 import TcType
 import TcRnMonad
 import GHC.Program.Driver.Phases (HscSource(..))

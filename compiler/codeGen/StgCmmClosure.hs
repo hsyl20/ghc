@@ -77,7 +77,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.DataConstructor
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 import TyCoRep
 import TcType
 import TyCon

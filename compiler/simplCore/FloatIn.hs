@@ -27,7 +27,7 @@ import CoreFVs
 import CoreMonad        ( CoreM )
 import GHC.Data.Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )
 import GHC.Data.Var
-import Type
+import GHC.Data.Type
 import GHC.Data.Var.Set
 import GHC.Utils
 import GHC.Config.Flags

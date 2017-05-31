@@ -14,7 +14,7 @@ import CoreFVs          ( exprFreeVars )
 import GHC.Data.Var
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import Type
+import GHC.Data.Type
 import GHC.Data.Unique.Supply
 import GHC.Data.BasicTypes
 import GHC.Config.Flags

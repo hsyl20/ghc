@@ -33,7 +33,7 @@ import TcType
 import TcEvidence
 import TcRnMonad
 import TcHsSyn
-import Type
+import GHC.Data.Type
 import CoreSyn
 import CoreUtils
 import MkCore

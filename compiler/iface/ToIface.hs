@@ -57,7 +57,7 @@ import GHC.Data.Id.Make ( noinlineIdName )
 import PrelNames
 import GHC.Data.Name
 import GHC.Data.BasicTypes
-import Type
+import GHC.Data.Type
 import GHC.Data.PatternSynonym
 import GHC.Utils.Outputable
 import GHC.Data.FastString

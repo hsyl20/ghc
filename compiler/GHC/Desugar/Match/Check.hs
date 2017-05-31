@@ -42,7 +42,7 @@ import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
 import GHC.Data.Bag
 import GHC.Utils.Error
 import GHC.Data.Var           (EvVar)
-import Type
+import GHC.Data.Type
 import GHC.Data.Unique.Supply
 import GHC.Desugar.GuardedRHS       (isTrueLHsExpr)
 

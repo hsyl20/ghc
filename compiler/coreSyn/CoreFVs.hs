@@ -69,7 +69,7 @@ import GHC.Data.Unique (Uniquable (..))
 import GHC.Data.Name
 import GHC.Data.Var.Set
 import GHC.Data.Var
-import Type
+import GHC.Data.Type
 import TyCoRep
 import TyCon
 import GHC.Data.Coercion.Axiom

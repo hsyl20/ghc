@@ -142,7 +142,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Platform
 import PrelNames
 import TcEnv (lookupGlobal)
-import Type
+import GHC.Data.Type
 
 import Control.Monad.Trans.Class (lift)
 import Control.Monad.Trans.State

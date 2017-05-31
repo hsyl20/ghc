@@ -24,7 +24,7 @@ module GHC.Data.PatternSynonym (
 
 #include "HsVersions.h"
 
-import Type
+import GHC.Data.Type
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Data.Unique

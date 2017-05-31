@@ -143,7 +143,7 @@ import GHC.Types
 import GHC.Data.Module
 import GHC.Data.RdrName
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 
 import TcType
 import InstEnv

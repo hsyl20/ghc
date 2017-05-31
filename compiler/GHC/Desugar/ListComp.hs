@@ -25,7 +25,7 @@ import GHC.Desugar.Utils
 import GHC.Config.Flags
 import CoreUtils
 import GHC.Data.Id
-import Type
+import GHC.Data.Type
 import TysWiredIn
 import GHC.Desugar.Match
 import PrelNames

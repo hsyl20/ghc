@@ -11,7 +11,7 @@ import HscTypes
 import Linker
 import RtClosureInspect
 import TcEnv
-import Type
+import GHC.Data.Type
 import TcRnMonad
 import TcType
 import Control.Applicative

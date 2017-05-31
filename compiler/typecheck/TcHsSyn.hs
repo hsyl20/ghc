@@ -49,7 +49,7 @@ import TcEvidence
 import TysPrim
 import TyCon   ( isUnboxedTupleTyCon )
 import TysWiredIn
-import Type
+import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor

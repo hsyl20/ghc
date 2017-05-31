@@ -113,7 +113,7 @@ import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
-import Type
+import GHC.Data.Type
 import GHC.Data.Class
 import GHC.Data.BasicTypes hiding( SuccessFlag(..) )
 import GHC.Data.Coercion.Axiom

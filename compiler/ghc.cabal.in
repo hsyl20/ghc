@@ -472,7 +472,7 @@ Library
         TyCon
         GHC.Data.Coercion.Axiom
         GHC.Data.Kind
-        Type
+        GHC.Data.Type
         TyCoRep
         Unify
         GHC.Data.Bag

@@ -208,7 +208,7 @@ import GHC.Utils.Monad (mapAccumLM)
 import GHC.Utils.Outputable
 import RepType
 import StgSyn
-import Type
+import GHC.Data.Type
 import TysPrim (intPrimTy)
 import TysWiredIn
 import GHC.Data.Unique.Supply

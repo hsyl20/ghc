@@ -1,6 +1,6 @@
 {-# LANGUAGE FlexibleContexts #-}
 
-module Type where
+module GHC.Data.Type where
 import TyCon
 import GHC.Data.Var ( TyVar )
 import {-# SOURCE #-} TyCoRep( Type, Coercion, Kind )

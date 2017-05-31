@@ -23,7 +23,7 @@ import Vectorise.Builtins
 import CoreSyn
 import GHC.Data.DataConstructor
 import TyCon
-import Type
+import GHC.Data.Type
 import Control.Monad
 import GHC.Utils.Outputable
 

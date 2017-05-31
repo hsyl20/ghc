@@ -74,7 +74,7 @@ import GHC.Data.Id
 import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import Type
+import GHC.Data.Type
 import GHC.Data.Unique.Supply
 import GHC.Data.Name
 import GHC.Data.Name.Environment

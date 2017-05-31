@@ -62,7 +62,7 @@ import RnFixity ( lookupFixityRn_help )
 import RnTypes
 import TcHsSyn
 import TcSimplify
-import Type
+import GHC.Data.Type
 import GHC.Data.Kind
 import GHC.Data.Name.Set
 import TcMType

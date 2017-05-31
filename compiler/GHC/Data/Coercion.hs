@@ -108,7 +108,7 @@ module GHC.Data.Coercion (
 #include "HsVersions.h"
 
 import TyCoRep
-import Type
+import GHC.Data.Type
 import TyCon
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var

@@ -24,7 +24,7 @@ import TcRnMonad  ( finalSafeMode, fixSafeInstances )
 import TcRnDriver ( runTcInteractive )
 import GHC.Data.Id
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 import InstEnv
 import GHC.Data.Class
 import GHC.Data.Available

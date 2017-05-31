@@ -29,7 +29,7 @@ import GHC.Data.DataConstructor
 import GHC.Desugar.Utils
 
 import TcType
-import Type
+import GHC.Data.Type
 import GHC.Data.Id   ( Id )
 import GHC.Data.Coercion
 import PrimOp

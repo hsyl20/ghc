@@ -2,7 +2,7 @@
 import CoreSyn
 import CoreUtils
 import GHC.Data.Id
-import Type
+import GHC.Data.Type
 import MkCore
 import CallArity (callArityRHS)
 import GHC.Data.Id.Make

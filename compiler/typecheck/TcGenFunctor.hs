@@ -28,7 +28,7 @@ import TcGenDeriv
 import TcType
 import TyCon
 import TyCoRep
-import Type
+import GHC.Data.Type
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Set

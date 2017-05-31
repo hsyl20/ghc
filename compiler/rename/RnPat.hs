@@ -53,7 +53,7 @@ import RnTypes
 import PrelNames
 import TyCon               ( tyConName )
 import GHC.Data.ConstructorLike
-import Type                ( TyThing(..) )
+import GHC.Data.Type                ( TyThing(..) )
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.RdrName

@@ -200,7 +200,7 @@ import GHC.Data.Var
 import ForeignCall
 import GHC.Data.Var.Set
 import GHC.Data.Coercion
-import Type
+import GHC.Data.Type
 import RepType
 import TyCon
 

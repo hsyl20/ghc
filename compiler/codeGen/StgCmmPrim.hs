@@ -34,7 +34,7 @@ import MkGraph
 import StgSyn
 import Cmm
 import CmmInfo
-import Type     ( Type, tyConAppTyCon )
+import GHC.Data.Type     ( Type, tyConAppTyCon )
 import TyCon
 import CLabel
 import CmmUtils

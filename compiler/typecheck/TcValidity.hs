@@ -29,7 +29,7 @@ import TyCoRep
 import TcType hiding ( sizeType, sizeTypes )
 import TcMType
 import PrelNames
-import Type
+import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.Kind
 import GHC.Data.Coercion.Axiom

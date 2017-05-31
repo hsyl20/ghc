@@ -1,7 +1,7 @@
 module TcRnDriver where
 
 import GHC.Config.Flags (DynFlags)
-import Type (TyThing)
+import GHC.Data.Type (TyThing)
 import TcRnTypes (TcM)
 import GHC.Utils.Outputable (SDoc)
 import GHC.Data.Name (Name)

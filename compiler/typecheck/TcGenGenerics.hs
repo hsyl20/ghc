@@ -14,7 +14,7 @@ module TcGenGenerics (canDoGenerics, canDoGenerics1,
                       gen_Generic_binds, get_gen1_constrained_tys) where
 
 import HsSyn
-import Type
+import GHC.Data.Type
 import TcType
 import TcGenDeriv
 import TcGenFunctor

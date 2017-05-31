@@ -54,7 +54,7 @@ module SAT ( doStaticArgs ) where
 import GHC.Data.Var
 import CoreSyn
 import CoreUtils
-import Type
+import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.Id
 import GHC.Data.Name

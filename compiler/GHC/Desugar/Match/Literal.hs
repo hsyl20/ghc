@@ -33,7 +33,7 @@ import GHC.Data.DataConstructor
 import TcHsSyn ( shortCutLit )
 import TcType
 import GHC.Data.Name
-import Type
+import GHC.Data.Type
 import PrelNames
 import TysWiredIn
 import GHC.Data.Literal

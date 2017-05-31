@@ -15,7 +15,7 @@ module GHC.Data.Coercion.Optimise ( optCoercion, checkAxInstCo ) where
 import GHC.Config.Flags
 import TyCoRep
 import GHC.Data.Coercion
-import Type hiding( substTyVarBndr, substTy )
+import GHC.Data.Type hiding( substTyVarBndr, substTy )
 import TcType       ( exactTyCoVarsOfType )
 import TyCon
 import GHC.Data.Coercion.Axiom

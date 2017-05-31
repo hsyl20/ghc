@@ -7,7 +7,7 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 -- | Main functions for manipulating types and type-related things
-module Type (
+module GHC.Data.Type (
         -- Note some of this is just re-exports from TyCon..
 
         -- * Main data types representing Types
@@ -234,12 +234,12 @@ import GHC.Data.FastString
 import GHC.Data.Pair
 import GHC.Data.List.SetOps
 import GHC.Data.Graph.Directed
-import GHC.Data.Unique ( nonDetCmpUnique )
+import GHC.Data.Unique  ( nonDetCmpUnique )
 import GHC.Data.SrcLoc  ( SrcSpan )
 import GHC.Data.OccName ( OccName )
 import GHC.Data.Name    ( mkInternalName )
 
-import GHC.Data.Maybe           ( orElse )
+import GHC.Data.Maybe   ( orElse )
 import Data.Maybe       ( isJust, mapMaybe )
 import Control.Monad    ( guard )
 import Control.Arrow    ( first, second )

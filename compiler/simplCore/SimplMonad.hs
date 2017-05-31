@@ -23,7 +23,7 @@ import GHC.Data.Var              ( Var, isTyVar, mkLocalVar )
 import GHC.Data.Name             ( mkSystemVarName )
 import GHC.Data.Id               ( Id, mkSysLocalOrCoVar )
 import GHC.Data.Id.Info           ( IdDetails(..), vanillaIdInfo, setArityInfo )
-import Type             ( Type, mkLamTypes )
+import GHC.Data.Type             ( Type, mkLamTypes )
 import FamInstEnv       ( FamInstEnv )
 import CoreSyn          ( RuleEnv(..) )
 import GHC.Data.Unique.Supply

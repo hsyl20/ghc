@@ -46,7 +46,7 @@ import GHC.Utils
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import GHC.Data.Id
-import Type
+import GHC.Data.Type
 import GHC.Data.PatternSynonym
 import qualified GHC.LanguageExtensions as LangExt
 

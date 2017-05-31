@@ -20,7 +20,7 @@ import GHC.Data.Literal          ( literalType )
 import GHC.Data.Maybe
 import GHC.Data.Name             ( getSrcLoc )
 import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
-import Type
+import GHC.Data.Type
 import RepType
 import TyCon
 import GHC.Utils

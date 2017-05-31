@@ -35,7 +35,7 @@ import GHC.Data.BasicTypes
 import GHC.Data.Class
 import CoreSyn
 import TysWiredIn hiding (sumTyCon)
-import Type
+import GHC.Data.Type
 import TyCon
 import GHC.Data.DataConstructor
 import GHC.Data.Name.Environment

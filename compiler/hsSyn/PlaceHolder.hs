@@ -6,7 +6,7 @@
 
 module PlaceHolder where
 
-import Type       ( Type )
+import GHC.Data.Type       ( Type )
 import GHC.Utils.Outputable
 import GHC.Data.Name
 import GHC.Data.Name.Set

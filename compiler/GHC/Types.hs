@@ -164,7 +164,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( IdDetails(..), RecSelParent(..))
-import Type
+import GHC.Data.Type
 
 import ApiAnnotation    ( ApiAnns )
 import GHC.Types.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )

@@ -19,7 +19,7 @@ import GHC.Data.Id               ( Id, idType, idInlineActivation, isDeadBinder
 import CoreUtils        ( mkAltExpr, eqExpr
                         , exprIsLiteralString
                         , stripTicksE, stripTicksT, mkTicks )
-import Type             ( tyConAppArgs )
+import GHC.Data.Type             ( tyConAppArgs )
 import CoreSyn
 import GHC.Utils.Outputable
 import GHC.Data.BasicTypes       ( TopLevelFlag(..), isTopLevel

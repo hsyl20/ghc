@@ -24,7 +24,7 @@ module IfaceEnv (
 
 import TcRnMonad
 import GHC.Types
-import Type
+import GHC.Data.Type
 import GHC.Data.Var
 import GHC.Data.Name
 import GHC.Data.Available

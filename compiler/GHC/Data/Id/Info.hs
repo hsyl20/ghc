@@ -92,7 +92,7 @@ import GHC.Data.BasicTypes
 import GHC.Data.DataConstructor
 import TyCon
 import GHC.Data.PatternSynonym
-import Type
+import GHC.Data.Type
 import ForeignCall
 import GHC.Utils.Outputable
 import GHC.Data.Module

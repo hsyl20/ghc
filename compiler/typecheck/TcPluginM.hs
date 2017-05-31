@@ -79,7 +79,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Class
 import GHC.Types
 import GHC.Utils.Outputable
-import Type
+import GHC.Data.Type
 import GHC.Data.Id
 import InstEnv
 import GHC.Data.FastString

@@ -35,7 +35,7 @@ import GHC.Data.Name
 import GHC.Data.BasicTypes
 import TyCoRep (Type, ThetaType)
 import GHC.Data.Var
-import Type (mkTyConApp)
+import GHC.Data.Type (mkTyConApp)
 
 import qualified Data.Data as Data
 

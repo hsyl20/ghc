@@ -9,7 +9,7 @@ import Vectorise.Type.Type
 
 import CoreSyn
 import TyCon
-import Type
+import GHC.Data.Type
 import TyCoRep
 import GHC.Data.Name.Set
 import GHC.Data.FastString

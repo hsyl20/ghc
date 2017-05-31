@@ -31,7 +31,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Kind
 import GHC.Data.Name( Name )
-import Type hiding ( getTvSubstEnv )
+import GHC.Data.Type hiding ( getTvSubstEnv )
 import GHC.Data.Coercion hiding ( getCvSubstEnv )
 import TyCon
 import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )

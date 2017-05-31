@@ -53,7 +53,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.RdrName
 import TyCon
-import Type
+import GHC.Data.Type
 import TcEvidence
 import GHC.Data.Var.Set
 import TysWiredIn
