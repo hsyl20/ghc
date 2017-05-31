@@ -33,7 +33,7 @@ import StgCmmForeign    (emitPrimCall)
 import MkGraph
 import CoreSyn          ( AltCon(..), tickishIsCode )
 import BlockId
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import Cmm
 import CmmInfo
 import CmmUtils

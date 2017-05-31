@@ -37,7 +37,7 @@ module CmmInfo (
 import Cmm
 import CmmUtils
 import CLabel
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import GHC.Utils.Bitmap
 import GHC.Data.Stream (Stream)
 import qualified GHC.Data.Stream as Stream

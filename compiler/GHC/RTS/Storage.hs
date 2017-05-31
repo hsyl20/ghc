@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP,GeneralizedNewtypeDeriving #-}
 
-module SMRep (
+module GHC.RTS.Storage (
         -- * Words and bytes
         WordOff, ByteOff,
         wordsToBytes, bytesToWordsRoundUp,

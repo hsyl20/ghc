@@ -39,7 +39,7 @@ import GHC.Data.Type.Constructor
 import CLabel
 import CmmUtils
 import PrimOp
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Utils

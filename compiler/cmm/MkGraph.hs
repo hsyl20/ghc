@@ -31,7 +31,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
 import GHC.Data.Tree.OrdList
-import GHC.RTS.Closure (ByteOff)
+import GHC.RTS.Storage (ByteOff)
 import GHC.Data.Unique.Supply
 
 import Control.Monad

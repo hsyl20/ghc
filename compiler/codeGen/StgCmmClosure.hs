@@ -67,7 +67,7 @@ module StgCmmClosure (
 #include "HsVersions.h"
 
 import StgSyn
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import Cmm
 import PprCmmExpr()
 

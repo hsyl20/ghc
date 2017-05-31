@@ -27,7 +27,7 @@ import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import GHC.Data.Var.Set
 import PrimOp
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 
 import Data.Word
 #if MIN_VERSION_base(4,9,0)

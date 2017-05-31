@@ -16,7 +16,7 @@ import MkGraph
 import ForeignCall
 import CmmLive
 import CmmProcPoint
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import Hoopl
 import GHC.Data.Unique.Supply
 import StgCmmUtils      ( newTemp )

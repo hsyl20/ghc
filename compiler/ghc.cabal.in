@@ -268,7 +268,7 @@ Library
         StgCmmTicky
         StgCmmUtils
         StgCmmExtCode
-        GHC.RTS.Closure
+        GHC.RTS.Storage
         CoreArity
         CoreFVs
         CoreLint

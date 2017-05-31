@@ -29,7 +29,7 @@ module Cmm (
 import CLabel
 import BlockId
 import CmmNode
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import CmmExpr
 import Compiler.Hoopl
 import GHC.Utils.Outputable

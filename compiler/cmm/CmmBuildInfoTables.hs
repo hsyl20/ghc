@@ -19,7 +19,7 @@ import Data.List
 import GHC.Config.Flags
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import GHC.Data.Unique.Supply
 import GHC.Utils
 

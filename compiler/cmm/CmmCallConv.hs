@@ -10,7 +10,7 @@ module CmmCallConv (
 #include "HsVersions.h"
 
 import CmmExpr
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import Cmm (Convention(..))
 import PprCmm ()
 

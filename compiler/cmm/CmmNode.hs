@@ -29,7 +29,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall
 import GHC.Utils.Outputable
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import CoreSyn (Tickish)
 import qualified GHC.Data.Unique as U
 

@@ -28,7 +28,7 @@ import GHC.Data.Literal
 import GHC.Data.Type.Constructor
 import GHC.Data.FastString
 import StgCmmLayout     ( ArgRep(..) )
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform

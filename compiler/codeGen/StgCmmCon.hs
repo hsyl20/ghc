@@ -31,7 +31,7 @@ import StgCmmProf ( curCCS )
 import CmmExpr
 import CLabel
 import MkGraph
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import CostCentre
 import GHC.Data.Module
 import GHC.Data.DataConstructor

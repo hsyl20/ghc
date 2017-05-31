@@ -17,7 +17,7 @@ module StgCmmArgRep (
 
 import StgCmmClosure    ( idPrimRep )
 
-import GHC.RTS.Closure            ( WordOff )
+import GHC.RTS.Storage            ( WordOff )
 import GHC.Data.Id               ( Id )
 import GHC.Data.Type.Constructor            ( PrimRep(..), primElemRepSizeB )
 import GHC.Data.BasicTypes       ( RepArity )

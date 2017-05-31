@@ -226,7 +226,7 @@ import CmmInfo
 import BlockId
 import CmmLex
 import CLabel
-import GHC.RTS.Closure
+import GHC.RTS.Storage
 import Lexer
 import CmmMonad
 
