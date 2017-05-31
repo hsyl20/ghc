@@ -37,7 +37,7 @@ import RnSource   ( addTcgDUs )
 import GHC.Data.Available
 
 import Unify( tcUnifyTy )
-import BasicTypes ( DerivStrategy(..) )
+import GHC.Data.BasicTypes ( DerivStrategy(..) )
 import Class
 import Type
 import GHC.Utils.Error

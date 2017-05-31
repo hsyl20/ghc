@@ -45,7 +45,7 @@ import MkIface
 import GHC.Program.Make
 import GHC.Data.Unique.DeterSet
 import PrelNames
-import BasicTypes hiding (SuccessFlag(..))
+import GHC.Data.BasicTypes hiding (SuccessFlag(..))
 import GHC.Finder
 import GHC.Utils
 

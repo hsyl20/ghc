@@ -45,7 +45,7 @@ import CLabel
 import StgSyn
 import GHC.Data.Id
 import TyCon             ( PrimRep(..) )
-import BasicTypes        ( RepArity )
+import GHC.Data.BasicTypes        ( RepArity )
 import GHC.Config.Flags
 import GHC.Data.Module
 

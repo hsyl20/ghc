@@ -90,7 +90,7 @@ import Coercion hiding {- conflict with CoreSubst -}
 import TyCon
 import TysWiredIn
 import GHC.Types
-import BasicTypes hiding ( Version {- conflicts with Packages.Version -} )
+import GHC.Data.BasicTypes hiding ( Version {- conflicts with Packages.Version -} )
 
 -- Collections and maps
 import GHC.Data.Var.Set

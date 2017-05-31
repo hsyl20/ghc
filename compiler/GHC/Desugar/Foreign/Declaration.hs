@@ -39,7 +39,7 @@ import ForeignCall
 import TysWiredIn
 import TysPrim
 import PrelNames
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString

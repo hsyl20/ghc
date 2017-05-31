@@ -2,7 +2,7 @@ module KnownUniques where
 
 import GHC.Data.Unique
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 
 -- Needed by TysWiredIn
 knownUniqueName :: Unique -> Maybe Name

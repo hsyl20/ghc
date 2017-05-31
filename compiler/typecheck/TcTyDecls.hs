@@ -49,7 +49,7 @@ import GHC.Data.Id.Info
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import Coercion ( ltRole )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Data.Unique ( mkBuiltinUnique )
 import GHC.Utils.Outputable

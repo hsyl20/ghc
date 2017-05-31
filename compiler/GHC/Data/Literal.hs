@@ -50,7 +50,7 @@ import Type
 import TyCon
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Binary
 import GHC.Config.Constants
 import GHC.Config.Flags

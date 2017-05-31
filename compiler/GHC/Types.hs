@@ -180,7 +180,7 @@ import TysWiredIn
 import GHC.Packages hiding  ( Version(..) )
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
-import BasicTypes
+import GHC.Data.BasicTypes
 import IfaceSyn
 import GHC.Data.Maybe
 import GHC.Utils.Outputable

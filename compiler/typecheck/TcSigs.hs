@@ -41,7 +41,7 @@ import GHC.Config.Flags
 import GHC.Data.Var      ( TyVar, tyVarName, tyVarKind )
 import GHC.Data.Id       ( Id, idName, idType, idInlinePragma, setInlinePragma, mkLocalId )
 import PrelNames( mkUnboundName )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Bag( foldrBag )
 import GHC.Data.Module( getModule )
 import GHC.Data.Name

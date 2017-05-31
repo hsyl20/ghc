@@ -36,7 +36,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Module
 import GHC.Data.List.SetOps
 import GHC.Config.Flags
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
 import GHC.Utils

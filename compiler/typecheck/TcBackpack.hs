@@ -16,7 +16,7 @@ module TcBackpack (
     instantiateSignature,
 ) where
 
-import BasicTypes (defaultFixity)
+import GHC.Data.BasicTypes (defaultFixity)
 import GHC.Packages
 import TcRnExports
 import GHC.Config.Flags

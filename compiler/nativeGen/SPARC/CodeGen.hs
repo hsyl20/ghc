@@ -51,7 +51,7 @@ import CLabel
 import CPrim
 
 -- The rest:
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Tree.OrdList

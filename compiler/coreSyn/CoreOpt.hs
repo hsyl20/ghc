@@ -41,7 +41,7 @@ import Coercion hiding ( substCo, substCoVarBndr )
 import TyCon        ( tyConArity )
 import TysWiredIn
 import PrelNames
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Module       ( Module )
 import GHC.Utils.Error
 import GHC.Config.Flags

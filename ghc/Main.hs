@@ -45,7 +45,7 @@ import GHC.Config.Constants
 import GHC.Types
 import GHC.Packages         ( pprPackages, pprPackagesSimple )
 import GHC.Program.Driver.Phases
-import BasicTypes       ( failed )
+import GHC.Data.BasicTypes       ( failed )
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString

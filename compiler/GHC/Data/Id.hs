@@ -120,7 +120,7 @@ import GHC.Config.Flags
 import CoreSyn ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
 
 import GHC.Data.Id.Info
-import BasicTypes
+import GHC.Data.BasicTypes
 
 -- Imported and re-exported
 import GHC.Data.Var( Id, CoVar, DictId, JoinId,
@@ -134,7 +134,7 @@ import Type
 import RepType
 import TysPrim
 import GHC.Data.DataConstructorstructor
-import Demand
+import GHC.Data.Demand
 import GHC.Data.Name
 import GHC.Data.Module
 import Class

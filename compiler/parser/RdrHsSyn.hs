@@ -74,7 +74,7 @@ import GHC.Data.ConstructorLike          ( ConLike(..) )
 import CoAxiom          ( Role, fsFromRole )
 import GHC.Data.RdrName
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 import TcEvidence       ( idHsWrapper )
 import Lexer
 import GHC.Utils.Identifier           ( isLexCon )

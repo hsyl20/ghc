@@ -48,7 +48,7 @@ import Reg
 import GHC.Platform
 
 -- Our intermediate code:
-import BasicTypes
+import GHC.Data.BasicTypes
 import BlockId
 import GHC.Data.Module           ( primUnitId )
 import PprCmm           ()

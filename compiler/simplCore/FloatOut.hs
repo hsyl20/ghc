@@ -21,7 +21,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error         ( dumpIfSet_dyn )
 import GHC.Data.Id               ( Id, idArity, idType, isBottomingId,
                           isJoinId, isJoinId_maybe )
-import BasicTypes       ( TopLevelFlag(..), isTopLevel )
+import GHC.Data.BasicTypes       ( TopLevelFlag(..), isTopLevel )
 import SetLevels
 import GHC.Data.Unique.Supply       ( UniqSupply )
 import GHC.Data.Bag

@@ -55,7 +55,7 @@ import GHC.Data.Name.Set
 import GHC.Data.FieldLabel
 
 import GHC.Utils
-import BasicTypes       ( compareFixity, funTyFixity, negateFixity,
+import GHC.Data.BasicTypes       ( compareFixity, funTyFixity, negateFixity,
                           Fixity(..), FixityDirection(..), LexicalFixity(..) )
 import GHC.Utils.Outputable
 import GHC.Data.FastString

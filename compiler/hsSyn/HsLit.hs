@@ -19,7 +19,7 @@ module HsLit where
 #include "HsVersions.h"
 
 import {-# SOURCE #-} HsExpr( HsExpr, pprExpr )
-import BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
+import GHC.Data.BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
                     negateFractionalLit,SourceText(..),pprWithSourceText )
 import Type       ( Type )
 import GHC.Utils.Outputable

@@ -13,7 +13,7 @@ import Type
 import TyCon
 import GHC.Data.DataConstructorstructor
 import GHC.Config.Flags
-import BasicTypes( DefMethSpec(..) )
+import GHC.Data.BasicTypes( DefMethSpec(..) )
 import GHC.Data.SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Data.Var as Var
 import GHC.Data.Name

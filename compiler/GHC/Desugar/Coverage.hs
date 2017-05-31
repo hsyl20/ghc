@@ -37,7 +37,7 @@ import GHC.Data.FastString
 import GHC.Types
 import TyCon
 import GHC.Data.Unique.Supply
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Monad
 import GHC.Data.Maybe
 import CLabel

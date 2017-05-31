@@ -34,7 +34,7 @@ import GHC.Config.Flags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.RdrName  ( GlobalRdrEnv )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.ConstructorLike
 import GHC.Data.SrcLoc
 import GHC.Utils

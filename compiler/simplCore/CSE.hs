@@ -22,7 +22,7 @@ import CoreUtils        ( mkAltExpr, eqExpr
 import Type             ( tyConAppArgs )
 import CoreSyn
 import GHC.Utils.Outputable
-import BasicTypes       ( TopLevelFlag(..), isTopLevel
+import GHC.Data.BasicTypes       ( TopLevelFlag(..), isTopLevel
                         , isAlwaysActive, isAnyInlinePragma )
 import TrieMap
 import GHC.Utils             ( filterOut )

@@ -25,7 +25,7 @@ import Type
 import qualified Coercion ( Role(..) )
 import TysWiredIn
 import TysPrim (eqPrimTyCon)
-import BasicTypes as Hs
+import GHC.Data.BasicTypes as Hs
 import ForeignCall
 import GHC.Data.Unique
 import GHC.Utils.Error

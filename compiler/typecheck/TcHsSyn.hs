@@ -60,7 +60,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Config.Flags
 import GHC.Data.Literal
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc
 import GHC.Data.Bag

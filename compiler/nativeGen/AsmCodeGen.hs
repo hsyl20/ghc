@@ -76,7 +76,7 @@ import GHC.Config.Flags
 import GHC.Utils
 import GHC.Data.Unique
 
-import BasicTypes       ( Alignment )
+import GHC.Data.BasicTypes       ( Alignment )
 import GHC.Data.Graph.Directed
 import qualified GHC.Utils.PrettyPrint as Pretty
 import GHC.Utils.Handle.BufferedWrite

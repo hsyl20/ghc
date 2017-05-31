@@ -121,7 +121,7 @@ import SMRep
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Id
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 

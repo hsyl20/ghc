@@ -57,7 +57,7 @@ import Type                ( TyThing(..) )
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.RdrName
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils
 import GHC.Data.List.SetOps          ( removeDups )
 import GHC.Utils.Outputable

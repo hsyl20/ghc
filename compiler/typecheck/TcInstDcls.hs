@@ -50,7 +50,7 @@ import GHC.Data.Var.Set
 import PrelNames  ( typeableClassName, genericClassNames
                   , knownNatClassName, knownSymbolClassName )
 import GHC.Data.Bag
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Data.FastString

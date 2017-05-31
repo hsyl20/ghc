@@ -5,7 +5,7 @@ module Coercion where
 import {-# SOURCE #-} TyCoRep
 import {-# SOURCE #-} TyCon
 
-import BasicTypes ( LeftOrRight )
+import GHC.Data.BasicTypes ( LeftOrRight )
 import CoAxiom
 import GHC.Data.Var
 import GHC.Utils.Outputable

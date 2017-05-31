@@ -41,7 +41,7 @@ import GHC.Data.Maybe
 import GHC.Data.Bag              ( emptyBag, listToBag, unitBag )
 import GHC.Utils.Monad
 import GHC.Utils.Exception as Exception
-import BasicTypes
+import GHC.Data.BasicTypes
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

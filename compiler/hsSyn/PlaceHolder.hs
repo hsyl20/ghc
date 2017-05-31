@@ -19,7 +19,7 @@ import GHC.Data.SrcLoc (Located)
 import TcEvidence ( HsWrapper )
 
 import Data.Data hiding ( Fixity )
-import BasicTypes       (Fixity)
+import GHC.Data.BasicTypes       (Fixity)
 
 
 {-

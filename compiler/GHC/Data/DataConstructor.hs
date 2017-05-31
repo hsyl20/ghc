@@ -75,7 +75,7 @@ import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Data.List.SetOps
 import GHC.Utils
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.FastString
 import GHC.Data.Module
 import GHC.Utils.Binary

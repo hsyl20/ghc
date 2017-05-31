@@ -18,7 +18,7 @@ import CoreUtils        ( exprType, mkCast )
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( JoinArity, vanillaIdInfo )
 import GHC.Data.DataConstructorstructor
-import Demand
+import GHC.Data.Demand
 import MkCore           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
                         , mkCoreApp, mkCoreLet )
 import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
@@ -30,7 +30,7 @@ import Type
 import RepType          ( isVoidTy )
 import Coercion
 import FamInstEnv
-import BasicTypes       ( Boxity(..) )
+import GHC.Data.BasicTypes       ( Boxity(..) )
 import GHC.Data.Literal          ( absentLiteralOf )
 import TyCon
 import GHC.Data.Unique.Supply

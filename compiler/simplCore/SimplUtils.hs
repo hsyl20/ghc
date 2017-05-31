@@ -49,13 +49,13 @@ import GHC.Data.Name
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Var
-import Demand
+import GHC.Data.Demand
 import SimplMonad
 import Type     hiding( substTy )
 import Coercion hiding( substCo )
 import GHC.Data.DataConstructorstructor          ( dataConWorkId, isNullaryRepDataCon )
 import GHC.Data.Var.Set
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils
 import GHC.Utils.Monad
 import GHC.Utils.Outputable

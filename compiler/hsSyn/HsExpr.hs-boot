@@ -10,7 +10,7 @@ module HsExpr where
 import GHC.Data.SrcLoc     ( Located )
 import GHC.Utils.Outputable ( SDoc, Outputable )
 import {-# SOURCE #-} HsPat  ( LPat )
-import BasicTypes ( SpliceExplicitFlag(..))
+import GHC.Data.BasicTypes ( SpliceExplicitFlag(..))
 import PlaceHolder ( DataId, OutputableBndrId )
 import Data.Data hiding ( Fixity )
 

@@ -61,12 +61,12 @@ import ForeignCall
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import Demand
+import GHC.Data.Demand
 import CoreSyn
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import PrelNames
-import BasicTypes       hiding ( SuccessFlag(..) )
+import GHC.Data.BasicTypes       hiding ( SuccessFlag(..) )
 import GHC.Utils
 import GHC.Data.Pair
 import GHC.Config.Flags

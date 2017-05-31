@@ -25,7 +25,7 @@ import HsSyn
 import TcHsSyn
 import TcRnMonad
 import TcUnify
-import BasicTypes
+import GHC.Data.BasicTypes
 import Inst
 import TcBinds          ( chooseInferredQuantifiers, tcLocalBinds )
 import TcSigs           ( tcUserTypeSig, tcInstSig )

@@ -32,7 +32,7 @@ import GHC.Data.Literal
 import Coercion
 import TcEnv
 import TyCon
-import Demand
+import GHC.Data.Demand
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
@@ -41,7 +41,7 @@ import GHC.Data.Id.Info
 import TysWiredIn
 import GHC.Data.DataConstructorstructor
 import PrimOp
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Module
 import GHC.Data.Unique.Supply
 import GHC.Data.Maybe

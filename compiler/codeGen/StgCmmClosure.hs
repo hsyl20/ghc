@@ -82,7 +82,7 @@ import TyCoRep
 import TcType
 import TyCon
 import RepType
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Utils

@@ -40,7 +40,7 @@ import GHC.Data.Literal
 import GHC.Data.SrcLoc
 import Data.Ratio
 import GHC.Utils.Outputable as Outputable
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Utils
 import GHC.Data.FastString

@@ -11,7 +11,7 @@ module CoreStats (
         CoreStats(..), coreBindsStats, exprStats,
     ) where
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import CoreSyn
 import GHC.Utils.Outputable
 import Coercion

@@ -40,11 +40,11 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags         ( DynFlags(..), GeneralFlag( Opt_SpecConstrKeen )
                         , gopt, hasPprDebug )
 import GHC.Data.Maybe           ( orElse, catMaybes, isJust, isNothing )
-import Demand
+import GHC.Data.Demand
 import GHC.Serialized   ( deserializeWithData )
 import GHC.Utils
 import GHC.Data.Pair

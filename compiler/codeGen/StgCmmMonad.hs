@@ -74,7 +74,7 @@ import GHC.Data.Module
 import GHC.Data.Id
 import GHC.Data.Var.Environment
 import GHC.Data.Tree.OrdList
-import BasicTypes( ConTagZ )
+import GHC.Data.BasicTypes( ConTagZ )
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import GHC.Data.FastString

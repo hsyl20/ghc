@@ -16,7 +16,7 @@ import ByteCodeTypes
 import GHCi
 import GHCi.FFI
 import GHCi.RemoteTypes
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform

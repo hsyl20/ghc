@@ -40,7 +40,7 @@ import GHC.Data.Name.Set
 import Unify
 import GHC.Utils.Outputable
 import GHC.Utils.Error
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils
 import GHC.Data.Id
@@ -642,7 +642,7 @@ in this case by a little known `optimization' that was disabled in
 an instance declaration.  In this case, it silently inserts the `C
 [a]', and everything happens to work out.
 
-(See `basicTypes/MkId:mkDictFunId' for the code in question.  Search for
+(See `GHC.Data.Id.Make.mkDictFunId' for the code in question.  Search for
 `Mark Jones', although Mark claims no credit for the `optimization' in
 question, and would rather it stopped being called the `Mark Jones
 optimization' ;-)

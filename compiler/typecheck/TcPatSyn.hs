@@ -36,7 +36,7 @@ import GHC.Data.Var.Environment( emptyTidyEnv, mkInScopeSet )
 import GHC.Data.Id
 import GHC.Data.Id.Info( RecSelParent(..), setLevityInfoWithType )
 import TcBinds
-import BasicTypes
+import GHC.Data.BasicTypes
 import TcSimplify
 import TcUnify
 import TcType

@@ -111,12 +111,11 @@ import GHC.Utils             ( readRational )
 import GHC.Utils.Error
 import GHC.Config.Flags
 
--- compiler/basicTypes
 import GHC.Data.SrcLoc
 import GHC.Data.Module
-import BasicTypes     ( InlineSpec(..), RuleMatchInfo(..),
-                        IntegralLit(..), FractionalLit(..),
-                        SourceText(..) )
+import GHC.Data.BasicTypes ( InlineSpec(..), RuleMatchInfo(..),
+                             IntegralLit(..), FractionalLit(..),
+                             SourceText(..) )
 
 -- compiler/parser
 import Ctype
@@ -127,7 +126,8 @@ import ApiAnnotation
 -- -----------------------------------------------------------------------------
 -- Alex "Character set macros"
 
--- NB: The logic behind these definitions is also reflected in basicTypes/Lexeme.hs
+-- NB: The logic behind these definitions is also reflected in
+-- `GHC.Utils.Identifier`
 -- Any changes here should likely be reflected there.
 $unispace    = \x05 -- Trick Alex into handling Unicode. See alexGetByte.
 $nl          = [\n\r\f]
@@ -2007,7 +2007,7 @@ alexGetByte (AI loc s)
           -- with the actual character value hidden in the state.
           | otherwise =
                 -- NB: The logic behind these definitions is also reflected
-                -- in basicTypes/Lexeme.hs
+                -- in `GHC.Utils.Identifier`
                 -- Any changes here should likely be reflected there.
 
                 case generalCategory c of

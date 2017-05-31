@@ -59,7 +59,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import OccurAnal        ( occurAnalyseExpr )
-import Demand
+import GHC.Data.Demand
 import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
@@ -69,7 +69,7 @@ import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils
 import GHC.Data.FastString
-import BasicTypes hiding ( SuccessFlag(..) )
+import GHC.Data.BasicTypes hiding ( SuccessFlag(..) )
 import GHC.Data.List.SetOps
 import GHC.Fingerprint
 import qualified GHC.Data.Bool.Formula as BF

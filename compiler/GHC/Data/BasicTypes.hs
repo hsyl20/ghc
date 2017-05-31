@@ -16,7 +16,7 @@ types that
 
 {-# LANGUAGE DeriveDataTypeable #-}
 
-module BasicTypes(
+module GHC.Data.BasicTypes(
         Version, bumpVersion, initialVersion,
 
         LeftOrRight(..),

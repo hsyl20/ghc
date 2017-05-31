@@ -41,7 +41,7 @@ import RdrHsSyn        ( setRdrNameSpace )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc
-import BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )
+import GHC.Data.BasicTypes      ( TopLevelFlag(..), StringLiteral(..) )
 import GHC.Utils
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment

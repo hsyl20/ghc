@@ -53,7 +53,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Data.Unique.FiniteMap
 import Unify            ( ruleMatchTyKiX )
-import BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
+import GHC.Data.BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
 import GHC.Config.Flags         ( DynFlags )
 import GHC.Utils.Outputable
 import GHC.Data.FastString

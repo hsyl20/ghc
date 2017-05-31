@@ -48,7 +48,7 @@ import TyCon
 import GHC.Data.Name
 import GHC.Utils
 import GHC.Data.Var.Set
-import BasicTypes       ( Boxity(..) )
+import GHC.Data.BasicTypes       ( Boxity(..) )
 import TysPrim
 import PrelNames
 import TysWiredIn

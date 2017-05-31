@@ -33,12 +33,12 @@ import TysPrim
 import TysWiredIn
 
 import CmmType
-import Demand
+import GHC.Data.Demand
 import GHC.Data.OccName          ( OccName, pprOccName, mkVarOccFS )
 import TyCon            ( TyCon, isPrimTyCon, PrimRep(..) )
 import Type
 import RepType          ( typePrimRep1, tyConPrimRep1 )
-import BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
+import GHC.Data.BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
                           SourceText(..) )
 import ForeignCall      ( CLabelString )
 import GHC.Data.Unique           ( Unique, mkPrimOpIdUnique )

@@ -34,7 +34,7 @@ module Inst (
 import {-# SOURCE #-}   TcExpr( tcPolyExpr, tcSyntaxOp )
 import {-# SOURCE #-}   TcUnify( unifyType, unifyKind, noThing )
 
-import BasicTypes ( IntegralLit(..), SourceText(..) )
+import GHC.Data.BasicTypes ( IntegralLit(..), SourceText(..) )
 import GHC.Data.FastString
 import HsSyn
 import TcHsSyn

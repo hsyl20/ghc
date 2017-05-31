@@ -28,7 +28,7 @@ import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Var.Set
 import TysPrim
-import BasicTypes( Arity )
+import GHC.Data.BasicTypes( Arity )
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Utils

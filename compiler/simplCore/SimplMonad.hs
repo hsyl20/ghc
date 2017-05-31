@@ -33,7 +33,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils.Monad
 import GHC.Utils.Error
-import BasicTypes          ( IntWithInf, treatZeroAsInf, mkIntWithInf )
+import GHC.Data.BasicTypes          ( IntWithInf, treatZeroAsInf, mkIntWithInf )
 import Control.Monad       ( when, liftM, ap )
 
 {-

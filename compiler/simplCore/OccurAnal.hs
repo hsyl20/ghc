@@ -26,7 +26,7 @@ import CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Name( localiseName )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Module( Module )
 import Coercion
 import Type
@@ -34,7 +34,7 @@ import Type
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Var
-import Demand           ( argOneShots, argsOneShots )
+import GHC.Data.Demand           ( argOneShots, argsOneShots )
 import GHC.Data.Graph.Directed          ( SCC(..), Node(..)
                         , stronglyConnCompFromEdgedVerticesUniq
                         , stronglyConnCompFromEdgedVerticesUniqR )

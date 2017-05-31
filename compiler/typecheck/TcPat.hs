@@ -40,7 +40,7 @@ import GHC.Data.DataConstructorstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import PrelNames
-import BasicTypes hiding (SuccessFlag(..))
+import GHC.Data.BasicTypes hiding (SuccessFlag(..))
 import GHC.Config.Flags
 import GHC.Data.SrcLoc
 import GHC.Data.Var.Set

@@ -39,7 +39,7 @@ import GHC.Data.Var
 import GHC.Utils
 import GHC.Utils.Binary
 import GHC.Data.Pair
-import BasicTypes
+import GHC.Data.BasicTypes
 import Data.Typeable ( Typeable )
 import GHC.Data.SrcLoc
 import qualified Data.Data as Data

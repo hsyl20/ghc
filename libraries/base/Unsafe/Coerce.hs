@@ -56,5 +56,5 @@ Sigh. This is horrible, but then so is unsafeCoerce.
 
 unsafeCoerce :: a -> b
 unsafeCoerce x = local_id (unsafeCoerce# x)
-  -- See Note [Unsafe coerce magic] in basicTypes/MkId
+  -- See Note [Unsafe coerce magic] in `GHC.Data.Id.Make`
   -- NB: Do not eta-reduce this definition (see above)

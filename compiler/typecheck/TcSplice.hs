@@ -100,7 +100,7 @@ import GHC.Data.Var.Set           ( isEmptyVarSet, filterVarSet, mkVarSet, elemV
 import Data.List        ( find )
 import Data.Maybe
 import GHC.Data.FastString
-import BasicTypes hiding( SuccessFlag(..) )
+import GHC.Data.BasicTypes hiding( SuccessFlag(..) )
 import GHC.Data.Maybe( MaybeErr(..) )
 import GHC.Config.Flags
 import GHC.Utils.Panic as Panic

@@ -131,7 +131,7 @@ import {-# SOURCE #-} GHC.Data.DataCon ( DataCon, dataConExTyVars
 import GHC.Utils.Binary
 import GHC.Data.Var
 import Class
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import ForeignCall
 import GHC.Data.Name

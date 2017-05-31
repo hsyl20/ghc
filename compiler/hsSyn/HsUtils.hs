@@ -113,7 +113,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import GHC.Utils

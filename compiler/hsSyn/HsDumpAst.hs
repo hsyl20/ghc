@@ -18,7 +18,7 @@ module HsDumpAst (
 import Data.Data hiding (Fixity)
 import Data.List
 import GHC.Data.Bag
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.FastString
 import GHC.Data.Name.Set
 import GHC.Data.Name

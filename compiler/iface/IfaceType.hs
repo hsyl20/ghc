@@ -57,7 +57,7 @@ import CoAxiom
 import GHC.Data.Var
 import PrelNames
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Binary
 import GHC.Utils.Outputable
 import GHC.Data.FastString

@@ -47,7 +47,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Available
 import GHC.Utils.Outputable
 import GHC.Data.Bag
-import BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
+import GHC.Data.BasicTypes       ( DerivStrategy, RuleName, pprRuleName )
 import GHC.Data.FastString
 import GHC.Data.SrcLoc
 import GHC.Config.Flags

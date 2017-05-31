@@ -61,7 +61,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Utils.Outputable
 import GHC.Utils.Exception
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.FastString
 import GHC.Utils
 import GHC.Config.Hooks

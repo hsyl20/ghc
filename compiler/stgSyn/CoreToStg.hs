@@ -32,7 +32,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Module
 import GHC.Data.Name             ( isExternalName, nameOccName )
 import GHC.Data.OccName          ( occNameFS )
-import BasicTypes       ( Arity )
+import GHC.Data.BasicTypes       ( Arity )
 import TysWiredIn       ( unboxedUnitDataCon )
 import GHC.Data.Literal
 import GHC.Utils.Outputable
@@ -41,7 +41,7 @@ import GHC.Data.FastString
 import GHC.Utils
 import GHC.Config.Flags
 import ForeignCall
-import Demand           ( isUsedOnce )
+import GHC.Data.Demand           ( isUsedOnce )
 import PrimOp           ( PrimCall(..) )
 import GHC.Data.Unique.FiniteMap
 

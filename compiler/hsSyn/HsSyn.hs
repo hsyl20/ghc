@@ -41,7 +41,7 @@ import HsLit
 import PlaceHolder
 import HsPat
 import HsTypes
-import BasicTypes       ( Fixity, WarningTxt )
+import GHC.Data.BasicTypes       ( Fixity, WarningTxt )
 import HsUtils
 import HsDoc
 import GHC.Data.OccName          ( HasOccName(..) )

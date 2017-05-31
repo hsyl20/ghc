@@ -9,7 +9,7 @@
 module TcTypeable(mkTypeableBinds) where
 
 
-import BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
+import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
 import TcBinds( addTypecheckedBinds )
 import IfaceEnv( newGlobalBinder )
 import TyCoRep( Type(..), TyLit(..) )

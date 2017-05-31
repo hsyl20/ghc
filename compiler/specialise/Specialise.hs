@@ -29,7 +29,7 @@ import GHC.Data.Unique.Supply
 import GHC.Data.Name
 import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
 import GHC.Data.Maybe           ( catMaybes, isJust )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Types
 import GHC.Data.Bag
 import GHC.Config.Flags

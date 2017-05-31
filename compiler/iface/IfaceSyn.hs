@@ -45,7 +45,7 @@ import IfaceType
 import BinFingerprint
 import CoreSyn( IsOrphan, isOrphan )
 import PprCore()            -- Printing DFunArgs
-import Demand
+import GHC.Data.Demand
 import Class
 import GHC.Data.FieldLabel
 import GHC.Data.Name.Set
@@ -55,7 +55,7 @@ import CostCentre
 import GHC.Data.Literal
 import ForeignCall
 import GHC.Types.Annotations( AnnPayload, AnnTarget )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Module
 import GHC.Data.SrcLoc

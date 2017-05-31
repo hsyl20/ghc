@@ -158,7 +158,7 @@ import CoAxiom
 import GHC.Data.Var.Free
 
 -- others
-import BasicTypes ( LeftOrRight(..), TyPrec(..), maybeParen, pickLR )
+import GHC.Data.BasicTypes ( LeftOrRight(..), TyPrec(..), maybeParen, pickLR )
 import PrelNames
 import GHC.Utils.Outputable
 import GHC.Config.Flags

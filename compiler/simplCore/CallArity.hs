@@ -11,13 +11,13 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Config.Flags ( DynFlags )
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import CoreSyn
 import GHC.Data.Id
 import CoreArity ( typeArity )
 import CoreUtils ( exprIsCheap, exprIsTrivial )
 import GHC.Data.Var.UndirectedGraph
-import Demand
+import GHC.Data.Demand
 
 import Control.Arrow ( first, second )
 

@@ -16,9 +16,9 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import Type
 import GHC.Data.Unique.Supply
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
-import Demand
+import GHC.Data.Demand
 import WwLib
 import GHC.Utils
 import GHC.Utils.Outputable

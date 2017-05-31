@@ -21,7 +21,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import TcSMonad as TcS
-import BasicTypes( SwapFlag(..) )
+import GHC.Data.BasicTypes( SwapFlag(..) )
 
 import GHC.Utils
 import GHC.Data.Bag

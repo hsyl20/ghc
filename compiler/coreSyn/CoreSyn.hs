@@ -111,7 +111,7 @@ import GHC.Data.Literal
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Module
 import TyCon
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Utils

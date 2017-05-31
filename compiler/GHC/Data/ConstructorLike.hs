@@ -32,7 +32,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 import TyCoRep (Type, ThetaType)
 import GHC.Data.Var
 import Type (mkTyConApp)

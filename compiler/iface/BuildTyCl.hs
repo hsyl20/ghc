@@ -23,7 +23,7 @@ import GHC.Data.DataConstructorstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Var
 import GHC.Data.Var.Set
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Name
 import GHC.Data.Id.Make
 import Class

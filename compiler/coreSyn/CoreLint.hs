@@ -48,7 +48,7 @@ import RepType
 import TyCoRep       -- checks validity of types/coercions
 import TyCon
 import CoAxiom
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Error as Err
 import GHC.Data.List.SetOps
 import PrelNames
@@ -59,7 +59,7 @@ import InstEnv     ( instanceDFunId )
 import OptCoercion ( checkAxInstCo )
 import GHC.Data.Unique.Supply
 import CoreArity ( typeArity )
-import Demand ( splitStrictSig, isBotRes )
+import GHC.Data.Demand ( splitStrictSig, isBotRes )
 
 import GHC.Types
 import GHC.Config.Flags

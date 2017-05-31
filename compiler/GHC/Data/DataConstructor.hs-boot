@@ -5,7 +5,7 @@ import {-# SOURCE #-} TyCon( TyCon )
 import GHC.Data.FieldLabel ( FieldLabel )
 import GHC.Data.Unique ( Uniquable )
 import GHC.Utils.Outputable ( Outputable, OutputableBndr )
-import BasicTypes (Arity)
+import GHC.Data.BasicTypes (Arity)
 import {-# SOURCE #-} TyCoRep ( Type, ThetaType )
 
 data DataCon

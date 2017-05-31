@@ -115,7 +115,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Name hiding ( varName )
 import GHC.Utils
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Pair

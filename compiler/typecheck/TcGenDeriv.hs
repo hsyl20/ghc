@@ -39,7 +39,7 @@ module TcGenDeriv (
 import TcRnMonad
 import HsSyn
 import GHC.Data.RdrName
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Name
 import GHC.Utils.Fingerprint

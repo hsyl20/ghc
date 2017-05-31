@@ -19,7 +19,7 @@ module GHC.Desugar.Match.Check (
 
 import GHC.Desugar.Match.TermEqOracle
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import HsSyn
 import TcHsSyn

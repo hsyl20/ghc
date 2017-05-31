@@ -28,7 +28,7 @@ import StgCmmProf ( costCentreFrom, curCCS )
 
 import GHC.Config.Flags
 import GHC.Platform
-import BasicTypes
+import GHC.Data.BasicTypes
 import BlockId
 import MkGraph
 import StgSyn

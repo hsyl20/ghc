@@ -46,7 +46,7 @@ import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
 import TyCon
 import GHC.Data.Maybe
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Bag
 import GHC.Data.FastString
 import GHC.Data.Bool.Formula

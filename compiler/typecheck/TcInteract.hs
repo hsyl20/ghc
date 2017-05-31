@@ -9,7 +9,7 @@ module TcInteract (
 
 #include "HsVersions.h"
 
-import BasicTypes ( SwapFlag(..), isSwapped,
+import GHC.Data.BasicTypes ( SwapFlag(..), isSwapped,
                     infinity, IntWithInf, intGtLimit )
 import HsTypes ( HsIPName(..) )
 import TcCanonical

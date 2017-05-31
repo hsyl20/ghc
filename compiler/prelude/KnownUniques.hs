@@ -30,7 +30,7 @@ import TysWiredIn
 import TyCon
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Id
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Name

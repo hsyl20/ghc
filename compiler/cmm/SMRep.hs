@@ -50,7 +50,7 @@ module SMRep (
 #include "../HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import BasicTypes( ConTagZ )
+import GHC.Data.BasicTypes( ConTagZ )
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform

@@ -95,7 +95,7 @@ import HsTypes
 import HsDoc
 import TyCon
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 import Coercion
 import ForeignCall
 import PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )

@@ -12,8 +12,8 @@ module CoreSeq (
 
 import CoreSyn
 import GHC.Data.Id.Info
-import Demand( seqDemand, seqStrictSig )
-import BasicTypes( seqOccInfo )
+import GHC.Data.Demand( seqDemand, seqStrictSig )
+import GHC.Data.BasicTypes( seqOccInfo )
 import GHC.Data.Var.Set( seqDVarSet )
 import GHC.Data.Var( varType, tyVarKind )
 import Type( seqType, isTyVar )

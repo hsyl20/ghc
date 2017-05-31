@@ -34,7 +34,7 @@ import FloatOut         ( floatOutwards )
 import FamInstEnv
 import GHC.Data.Id
 import GHC.Utils.Error         ( withTiming )
-import BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )
+import GHC.Data.BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import LiberateCase     ( liberateCase )

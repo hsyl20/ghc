@@ -57,7 +57,7 @@ import GHC.Data.SrcLoc
 import GHC.Data.Maybe
 import GHC.Data.Tree.OrdList
 import GHC.Data.Bag
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils

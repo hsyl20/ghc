@@ -64,7 +64,7 @@ import GHC.Data.DataConstructorstructor
 import TyCon
 import PrelNames        ( rOOT_MAIN )
 import GHC.Utils.Error         ( MsgDoc, ErrMsg )
-import BasicTypes       ( pprWarningTxtForMsg, TopLevelFlag(..))
+import GHC.Data.BasicTypes       ( pprWarningTxtForMsg, TopLevelFlag(..))
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils

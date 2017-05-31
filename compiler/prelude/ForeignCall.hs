@@ -22,7 +22,7 @@ import GHC.Data.FastString
 import GHC.Utils.Binary
 import GHC.Utils.Outputable
 import GHC.Data.Module
-import BasicTypes ( SourceText, pprWithSourceText )
+import GHC.Data.BasicTypes ( SourceText, pprWithSourceText )
 
 import Data.Char
 import Data.Data

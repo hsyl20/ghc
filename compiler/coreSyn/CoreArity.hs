@@ -22,14 +22,14 @@ import CoreSyn
 import CoreFVs
 import CoreUtils
 import CoreSubst
-import Demand
+import GHC.Data.Demand
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Id
 import Type
 import TyCon    ( initRecTc, checkRecTc )
 import Coercion
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Unique
 import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )
 import GHC.Utils.Outputable

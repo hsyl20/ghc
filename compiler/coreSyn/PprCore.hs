@@ -22,13 +22,13 @@ import GHC.Data.Name( pprInfixName, pprPrefixName )
 import GHC.Data.Var
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import Demand
+import GHC.Data.Demand
 import GHC.Data.DataConstructorstructor
 import TyCon
 import Type
 import Coercion
 import GHC.Config.Flags
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Utils.Outputable

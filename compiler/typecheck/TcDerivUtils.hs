@@ -22,7 +22,7 @@ module TcDerivUtils (
     ) where
 
 import GHC.Data.Bag
-import BasicTypes
+import GHC.Data.BasicTypes
 import Class
 import GHC.Data.DataConstructorstructor
 import GHC.Config.Flags

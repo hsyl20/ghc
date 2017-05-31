@@ -81,11 +81,11 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Literal          ( litIsTrivial )
-import Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
+import GHC.Data.Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
 import GHC.Data.Name             ( getOccName, mkSystemVarName )
 import GHC.Data.OccName          ( occNameString )
 import Type             ( Type, mkLamTypes, splitTyConApp_maybe )
-import BasicTypes       ( Arity, RecFlag(..), isRec )
+import GHC.Data.BasicTypes       ( Arity, RecFlag(..), isRec )
 import GHC.Data.DataConstructorstructor          ( dataConOrigResTy )
 import TysWiredIn
 import GHC.Data.Unique.Supply

@@ -22,7 +22,7 @@ import TyCon
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Id.Make
 import TysWiredIn
-import BasicTypes( Boxity(..) )
+import GHC.Data.BasicTypes( Boxity(..) )
 import GHC.Data.FastString
 
 

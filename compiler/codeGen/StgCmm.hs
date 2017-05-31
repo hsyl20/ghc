@@ -41,7 +41,7 @@ import TyCon
 import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Data.Stream
-import BasicTypes
+import GHC.Data.BasicTypes
 
 import GHC.Data.Tree.OrdList
 import MkGraph

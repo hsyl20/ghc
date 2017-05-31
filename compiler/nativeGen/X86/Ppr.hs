@@ -33,7 +33,7 @@ import PprBase
 
 
 import Hoopl
-import BasicTypes       (Alignment)
+import GHC.Data.BasicTypes       (Alignment)
 import GHC.Config.Flags
 import Cmm              hiding (topInfoTable)
 import CLabel

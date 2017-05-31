@@ -24,7 +24,7 @@ import Type
 import GHC.Data.Id
 import GHC.Data.Var( EvVar )
 import GHC.Data.Name
-import BasicTypes       ( RuleName )
+import GHC.Data.BasicTypes       ( RuleName )
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString

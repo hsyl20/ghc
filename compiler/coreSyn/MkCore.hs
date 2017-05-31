@@ -70,12 +70,12 @@ import TysPrim
 import GHC.Data.DataConstructorstructor          ( DataCon, dataConWorkId )
 import GHC.Data.Id.Info           ( vanillaIdInfo, setStrictnessInfo,
                           setArityInfo )
-import Demand
+import GHC.Data.Demand
 import GHC.Data.Name      hiding ( varName )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Unique.Supply
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils
 import GHC.Config.Flags
 import Data.List

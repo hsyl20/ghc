@@ -14,7 +14,7 @@ import Vectorise.Generic.Description
 import Vectorise.Utils
 import Vectorise.Env( GlobalEnv( global_fam_inst_env ) )
 
-import BasicTypes ( SourceText(..) )
+import GHC.Data.BasicTypes ( SourceText(..) )
 import BuildTyCl
 import GHC.Data.DataConstructorstructor
 import TyCon

@@ -326,7 +326,7 @@ import GHC.Utils.Monad
 import GHC.Utils
 import GHC.Data.StringBuffer
 import GHC.Utils.Outputable
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Maybe           ( expectJust )
 import GHC.Data.FastString
 import qualified Parser

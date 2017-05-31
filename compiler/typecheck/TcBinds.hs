@@ -55,7 +55,7 @@ import GHC.Utils.Error
 import GHC.Data.Graph.Directed
 import GHC.Data.Maybe
 import GHC.Utils
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable as Outputable
 import PrelNames( ipClassName )
 import TcValidity (checkValidType)

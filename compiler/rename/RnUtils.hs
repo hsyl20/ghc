@@ -38,7 +38,7 @@ import GHC.Data.DataConstructorstructor
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Utils
-import BasicTypes       ( TopLevelFlag(..) )
+import GHC.Data.BasicTypes       ( TopLevelFlag(..) )
 import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Config.Flags
 import GHC.Data.FastString

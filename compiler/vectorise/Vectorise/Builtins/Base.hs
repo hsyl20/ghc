@@ -31,7 +31,7 @@ module Vectorise.Builtins.Base (
 ) where
 
 import TysPrim
-import BasicTypes
+import GHC.Data.BasicTypes
 import Class
 import CoreSyn
 import TysWiredIn hiding (sumTyCon)

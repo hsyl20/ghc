@@ -7,7 +7,7 @@ module Vectorise.Builtins.Initialise (
 
 import Vectorise.Builtins.Base
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import TysPrim
 import GHC.Desugar.Monad
 import TysWiredIn

@@ -42,7 +42,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Bag
 import GHC.Utils.Error         ( ErrMsg, errDoc, pprLocErrMsg )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.ConstructorLike          ( ConLike(..), conLikeWrapId_maybe )
 import GHC.Utils
 import GHC.Types (HscEnv, lookupTypeHscEnv, TypeEnv, lookupTypeEnv )

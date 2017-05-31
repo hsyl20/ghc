@@ -30,7 +30,7 @@ import GHC.Data.Name
 import TcRnMonad
 import GHC.Utils
 import GHC.Utils.Fingerprint
-import BasicTypes
+import GHC.Data.BasicTypes
 
 -- a bit vexing
 import {-# SOURCE #-} LoadIface

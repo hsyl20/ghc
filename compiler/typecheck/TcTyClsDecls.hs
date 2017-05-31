@@ -64,7 +64,7 @@ import GHC.Data.SrcLoc
 import GHC.Data.List.SetOps
 import GHC.Config.Flags
 import GHC.Data.Unique
-import BasicTypes
+import GHC.Data.BasicTypes
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

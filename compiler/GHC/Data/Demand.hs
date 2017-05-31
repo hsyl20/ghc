@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP, FlexibleInstances, TypeSynonymInstances, RecordWildCards #-}
 
-module Demand (
+module GHC.Data.Demand (
         StrDmd, UseDmd(..), Count,
 
         Demand, CleanDemand, getStrDmd, getUseDmd,
@@ -68,7 +68,7 @@ import GHC.Data.Var ( Var )
 import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Binary
 import GHC.Data.Maybe           ( orElse )
 

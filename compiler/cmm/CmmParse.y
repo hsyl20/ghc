@@ -245,7 +245,7 @@ import GHC.Data.FastString
 import GHC.Utils.Panic
 import GHC.Config.Constants
 import GHC.Utils.Outputable
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Bag              ( emptyBag, unitBag )
 import GHC.Data.Var
 

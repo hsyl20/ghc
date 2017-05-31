@@ -58,7 +58,7 @@ import Control.Monad    ( mapAndUnzipM, when )
 import Data.Bits
 import Data.Word
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.FastString
 import GHC.Utils
 

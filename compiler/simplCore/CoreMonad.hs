@@ -59,7 +59,7 @@ import CoreSyn
 import GHC.Types
 import GHC.Data.Module
 import GHC.Config.Flags
-import BasicTypes       ( CompilerPhase(..) )
+import GHC.Data.BasicTypes       ( CompilerPhase(..) )
 import GHC.Types.Annotations
 
 import GHC.Utils.Monad.IOEnv hiding     ( liftIO, failM, failWithM )

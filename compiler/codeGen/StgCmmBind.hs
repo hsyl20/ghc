@@ -46,7 +46,7 @@ import GHC.Data.Name
 import GHC.Data.Module
 import GHC.Data.List.SetOps
 import GHC.Utils
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags

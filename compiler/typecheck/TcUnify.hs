@@ -58,7 +58,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils.Error
 import GHC.Config.Flags
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Name   ( Name )
 import GHC.Data.Bag
 import GHC.Utils

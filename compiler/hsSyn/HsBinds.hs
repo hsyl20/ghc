@@ -30,7 +30,7 @@ import TcEvidence
 import Type
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
 import GHC.Data.Var

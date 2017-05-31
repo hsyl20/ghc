@@ -19,7 +19,7 @@ import CoreSeq ( seqUnfolding )
 import CoreArity
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import Demand ( zapUsageEnvSig )
+import GHC.Data.Demand ( zapUsageEnvSig )
 import Type( tidyType, tidyTyCoVarBndr )
 import Coercion( tidyCo )
 import GHC.Data.Var

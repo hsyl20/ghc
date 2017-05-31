@@ -22,7 +22,7 @@ import RnUtils          ( HsDocContext(..), newLocalBndrRn )
 import RnUnbound        ( isUnboundName )
 import RnSource         ( rnSrcDecls, findSplice )
 import RnPat            ( rnPat )
-import BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
+import GHC.Data.BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
 import GHC.Utils.Outputable
 import GHC.Data.Module
 import GHC.Data.SrcLoc

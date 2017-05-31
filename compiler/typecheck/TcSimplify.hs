@@ -45,7 +45,7 @@ import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
-import BasicTypes    ( IntWithInf, intGtLimit )
+import GHC.Data.BasicTypes    ( IntWithInf, intGtLimit )
 import GHC.Utils.Error      ( emptyMessages )
 import qualified GHC.LanguageExtensions as LangExt
 

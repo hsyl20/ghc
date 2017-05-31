@@ -52,7 +52,7 @@ import PprCmmExpr
 import GHC.Utils
 import PprCore ()
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import Compiler.Hoopl
 import Data.List
 import Prelude hiding (succ)

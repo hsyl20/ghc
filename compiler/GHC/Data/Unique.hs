@@ -68,7 +68,7 @@ module GHC.Data.Unique (
 #include "HsVersions.h"
 #include "Unique.h"
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Utils

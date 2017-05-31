@@ -55,7 +55,7 @@ import qualified Type
 import Type hiding              ( substTy, substTyVar, substTyVarBndr )
 import qualified Coercion
 import Coercion hiding          ( substCo, substCoVar, substCoVarBndr )
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Utils

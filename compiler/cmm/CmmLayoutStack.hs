@@ -6,7 +6,7 @@ module CmmLayoutStack (
 import StgCmmUtils      ( callerSaveVolatileRegs ) -- XXX layering violation
 import StgCmmForeign    ( saveThreadState, loadThreadState ) -- XXX layering violation
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import Cmm
 import CmmInfo
 import BlockId

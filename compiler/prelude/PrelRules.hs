@@ -47,7 +47,7 @@ import GHC.Data.Maybe      ( orElse )
 import GHC.Data.Name        ( Name, nameOccName )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Platform
 import GHC.Utils
@@ -1183,7 +1183,7 @@ match_inline (Type _ : e : _)
 match_inline _ = Nothing
 
 
--- See Note [magicDictId magic] in `basicTypes/MkId.hs`
+-- See Note [magicDictId magic] in `GHC.Data.Id.Make`
 -- for a description of what is going on here.
 match_magicDict :: [Expr CoreBndr] -> Maybe (Expr CoreBndr)
 match_magicDict [Type _, Var wrap `App` Type a `App` Type _ `App` f, x, y ]

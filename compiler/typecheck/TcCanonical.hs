@@ -35,7 +35,7 @@ import GHC.Utils.Monad
 import Control.Monad
 import Data.Maybe ( isJust )
 import Data.List  ( zip4, foldl' )
-import BasicTypes
+import GHC.Data.BasicTypes
 
 import Data.Bifunctor ( bimap )
 

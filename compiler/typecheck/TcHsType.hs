@@ -71,7 +71,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Var.Environment
 import TysWiredIn
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Config.Constants ( mAX_CTUPLE_SIZE )
 import GHC.Utils.Error( MsgDoc )

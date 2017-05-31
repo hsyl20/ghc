@@ -39,8 +39,8 @@ import GHC.Data.Id.Info
 import InstEnv
 import FamInstEnv
 import Type             ( tidyTopType )
-import Demand           ( appIsBottom, isTopSig, isBottomingSig )
-import BasicTypes
+import GHC.Data.Demand           ( appIsBottom, isTopSig, isBottomingSig )
+import GHC.Data.BasicTypes
 import GHC.Data.Name hiding (varName)
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment

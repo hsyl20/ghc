@@ -52,7 +52,7 @@ import Config
 import GHC.Utils.Panic
 import GHC.Utils
 import GHC.Data.StringBuffer     ( hGetStringBuffer )
-import BasicTypes       ( SuccessFlag(..) )
+import GHC.Data.BasicTypes       ( SuccessFlag(..) )
 import GHC.Data.Maybe           ( expectJust )
 import GHC.Data.SrcLoc
 import LlvmCodeGen      ( llvmFixupAsm )

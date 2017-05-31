@@ -82,7 +82,7 @@ import GHC.Data.DataConstructorstructor( HsSrcBang(..), HsImplBang(..),
 import TysPrim( funTyConName )
 import Type
 import HsDoc
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString

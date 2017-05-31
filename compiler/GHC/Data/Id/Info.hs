@@ -88,7 +88,7 @@ import Class
 import {-# SOURCE #-} PrimOp (PrimOp)
 import GHC.Data.Name
 import GHC.Data.Var.Set
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.DataConstructorstructor
 import TyCon
 import GHC.Data.PatternSynonym
@@ -96,7 +96,7 @@ import Type
 import ForeignCall
 import GHC.Utils.Outputable
 import GHC.Data.Module
-import Demand
+import GHC.Data.Demand
 import GHC.Utils
 
 -- infixl so you can say (id `set` a `set` b)

@@ -204,7 +204,7 @@ module Type (
 
 #include "HsVersions.h"
 
-import BasicTypes
+import GHC.Data.BasicTypes
 
 -- We import the representation and primitive functions from TyCoRep.
 -- Many things are reexported, but not the representation!

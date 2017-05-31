@@ -27,7 +27,7 @@ import GHC.Data.Module           ( moduleName, moduleNameFS
 import IfaceEnv         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )
 import GHC.Data.RdrName
-import BasicTypes
+import GHC.Data.BasicTypes
 import TysPrim
 import TysWiredIn
 import PrelNames

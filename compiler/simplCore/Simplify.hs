@@ -30,7 +30,7 @@ import GHC.Data.DataConstructorstructor          ( DataCon, dataConWorkId, dataC
 --import TyCon            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
 import CoreMonad        ( Tick(..), SimplifierMode(..) )
 import CoreSyn
-import Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
+import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
 import PprCore          ( pprCoreExpr )
 import CoreUnfold
 import CoreUtils
@@ -40,7 +40,7 @@ import CoreOpt          ( pushCoTyArg, pushCoValArg
 --import PrimOp           ( tagToEnumKey ) -- temporalily commented out. See #8326
 import Rules            ( mkRuleInfo, lookupRule, getRules )
 --import TysPrim          ( intPrimTy ) -- temporalily commented out. See #8326
-import BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
+import GHC.Data.BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
                           RecFlag(..) )
 import GHC.Utils.Monad       ( foldlM, mapAccumLM, liftIO )
 import GHC.Data.Maybe           ( isJust, fromJust, orElse, catMaybes )

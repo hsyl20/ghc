@@ -51,13 +51,12 @@ import GHC.Data.FastString
 import GHC.Data.Maybe           ( orElse )
 import GHC.Utils.Outputable
 
--- compiler/basicTypes
 import GHC.Data.RdrName
 import GHC.Data.OccName          ( varName, dataName, tcClsName, tvName, startsWithUnderscore )
 import GHC.Data.DataConstructor          ( DataCon, dataConName )
 import GHC.Data.SrcLoc
 import GHC.Data.Module
-import BasicTypes
+import GHC.Data.BasicTypes
 
 -- compiler/types
 import Type             ( funTyCon )

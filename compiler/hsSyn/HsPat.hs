@@ -46,7 +46,7 @@ import HsLit
 import PlaceHolder
 import HsTypes
 import TcEvidence
-import BasicTypes
+import GHC.Data.BasicTypes
 -- others:
 import PprCore          ( {- instance OutputableBndr TyVar -} )
 import TysWiredIn

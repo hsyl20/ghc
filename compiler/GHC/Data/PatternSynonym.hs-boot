@@ -1,6 +1,6 @@
 module GHC.Data.PatternSynonym where
 
-import BasicTypes (Arity)
+import GHC.Data.BasicTypes (Arity)
 import {-# SOURCE #-} TyCoRep (Type)
 import GHC.Data.Var (TyVar)
 import GHC.Data.Name (Name)

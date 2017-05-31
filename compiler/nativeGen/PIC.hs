@@ -68,7 +68,7 @@ import CLabel           ( CLabel, ForeignLabelSource(..), pprCLabel,
 import CLabel           ( mkForeignLabel )
 
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Module
 
 import GHC.Utils.Outputable

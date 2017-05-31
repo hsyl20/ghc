@@ -11,7 +11,7 @@ import Data.Data hiding (Fixity)
 import Data.List
 import System.IO
 import GHC
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
 import ForeignCall

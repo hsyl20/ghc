@@ -33,7 +33,7 @@ import GHC.Utils
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 -- import Data.List        ( mapAccumL )
-import BasicTypes       ( RecFlag(..), isRec )
+import GHC.Data.BasicTypes       ( RecFlag(..), isRec )
 
 {-
 Top-level interface function, @floatInwards@.  Note that we do not

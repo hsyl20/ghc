@@ -44,7 +44,7 @@ import GHCi.RemoteTypes
 import GHC.Data.SrcLoc
 import Type
 import System.Process
-import BasicTypes
+import GHC.Data.BasicTypes
 
 import Data.Maybe
 

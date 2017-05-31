@@ -140,7 +140,6 @@ Library
     hs-source-dirs:
         ./
         backpack
-        basicTypes
         cmm
         codeGen
         coreSyn
@@ -169,11 +168,11 @@ Library
         NameShape
         GHC.Interface.Renaming
         GHC.Data.Available
-        BasicTypes
+        GHC.Data.BasicTypes
         GHC.Data.ConstructorLike
         GHC.Data.DataConstructor
         GHC.Data.PatternSynonym
-        Demand
+        GHC.Data.Demand
         Debug
         GHC.Utils.Exception
         GHC.Data.FieldLabel

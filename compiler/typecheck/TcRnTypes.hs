@@ -171,7 +171,7 @@ import GHC.Data.Var.Set
 import GHC.Utils.Error
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Bag
 import GHC.Config.Flags
 import GHC.Utils.Outputable

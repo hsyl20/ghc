@@ -41,7 +41,7 @@ import GHC.Data.Var
 import GHC.Data.Id
 import GHC.Data.ConstructorLike
 import TysWiredIn
-import BasicTypes
+import GHC.Data.BasicTypes
 import PrelNames
 import GHC.Utils.Outputable
 import GHC.Data.Bag

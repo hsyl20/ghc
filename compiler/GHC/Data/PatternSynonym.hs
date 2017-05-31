@@ -29,7 +29,7 @@ import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.Var
 import GHC.Data.FieldLabel
 

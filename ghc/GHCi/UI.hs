@@ -68,7 +68,7 @@ import GHC.Data.StringBuffer
 import GHC.Utils.Outputable hiding ( printForUser, printForUserPartWay )
 
 -- Other random utilities
-import BasicTypes hiding ( isTopLevel )
+import GHC.Data.BasicTypes hiding ( isTopLevel )
 import Config
 import GHC.Data.Graph.Directed
 import GHC.Data.Char.Encoding

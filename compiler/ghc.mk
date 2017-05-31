@@ -438,7 +438,7 @@ compiler_stage2_dll0_MODULES = \
 	ApiAnnotation \
 	GHC.Data.Available \
 	GHC.Data.Bag \
-	BasicTypes \
+	GHC.Data.BasicTypes \
 	GHC.Utils.Binary \
 	BinFingerprint \
 	GHC.Data.Bool.Formula \
@@ -464,7 +464,7 @@ compiler_stage2_dll0_MODULES = \
 	CoreStats \
 	CostCentre \
 	GHC.Data.DataConstructor \
-	Demand \
+	GHC.Data.Demand \
 	GHC.Data.Graph.Directed \
 	GHC.Program.Driver.Phases \
 	GHC.Config.Flags \

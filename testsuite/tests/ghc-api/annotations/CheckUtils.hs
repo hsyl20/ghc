@@ -8,7 +8,7 @@ import Data.Data
 import Data.List
 import System.IO
 import GHC
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Monad
 import GHC.Utils.Outputable

@@ -51,7 +51,7 @@ import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Data.Name
 import GHC.Utils.Outputable
-import BasicTypes ( isGenerated, il_value, fl_value )
+import GHC.Data.BasicTypes ( isGenerated, il_value, fl_value )
 import GHC.Data.FastString
 import GHC.Data.Unique
 import GHC.Data.Unique.DeterFiniteMap

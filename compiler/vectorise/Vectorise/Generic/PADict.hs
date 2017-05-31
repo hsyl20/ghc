@@ -9,7 +9,7 @@ import Vectorise.Generic.Description
 import Vectorise.Generic.PAMethods ( buildPAScAndMethods )
 import Vectorise.Utils
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import CoreSyn
 import CoreUtils
 import CoreUnfold

@@ -50,12 +50,12 @@ import CoreOpt
 import CoreArity       ( manifestArity )
 import CoreUtils
 import GHC.Data.Id
-import Demand          ( isBottomingSig )
+import GHC.Data.Demand          ( isBottomingSig )
 import GHC.Data.DataConstructorstructor
 import GHC.Data.Literal
 import PrimOp
 import GHC.Data.Id.Info
-import BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
+import GHC.Data.BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
 import Type
 import PrelNames
 import TysPrim          ( realWorldStatePrimTy )

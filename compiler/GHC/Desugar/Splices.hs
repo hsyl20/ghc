@@ -49,7 +49,7 @@ import MkCore
 import CoreUtils
 import GHC.Data.SrcLoc
 import GHC.Data.Unique
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Data.Bag
 import GHC.Config.Flags

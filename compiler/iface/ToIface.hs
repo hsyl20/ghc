@@ -56,7 +56,7 @@ import TysWiredIn ( heqTyCon )
 import GHC.Data.Id.Make ( noinlineIdName )
 import PrelNames
 import GHC.Data.Name
-import BasicTypes
+import GHC.Data.BasicTypes
 import Type
 import GHC.Data.PatternSynonym
 import GHC.Utils.Outputable
@@ -66,7 +66,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import TyCoRep
-import Demand ( isTopSig )
+import GHC.Data.Demand ( isTopSig )
 
 import Data.Maybe ( catMaybes )
 

@@ -150,7 +150,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name as Name
 import GHC.Data.Name.Environment          ( NameEnv, mkNameEnv, lookupNameEnv )
 import GHC.Data.Name.Set          ( NameSet, mkNameSet, elemNameSet )
-import BasicTypes       ( Arity, Boxity(..), TupleSort(..), ConTagZ,
+import GHC.Data.BasicTypes       ( Arity, Boxity(..), TupleSort(..), ConTagZ,
                           SourceText(..) )
 import ForeignCall
 import GHC.Data.SrcLoc           ( noSrcSpan )

@@ -65,7 +65,7 @@ import GHC.Utils.Panic
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.FastMutableInt
 import GHC.Utils.Fingerprint
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 
 import Foreign
@@ -506,7 +506,7 @@ instance Binary DiffTime where
 -- we just change this instance to be portable like the rest of the
 -- instances? (binary package has code to steal for that)
 --
--- yes, we need Binary Integer and Binary Rational in basicTypes/Literal.hs
+-- yes, we need Binary Integer and Binary Rational in GHC.Data.Literal
 
 instance Binary Integer where
     put_ bh i

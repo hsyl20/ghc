@@ -41,7 +41,7 @@ import IfaceSyn
 import IfaceEnv
 import GHC.Types
 
-import BasicTypes hiding (SuccessFlag(..))
+import GHC.Data.BasicTypes hiding (SuccessFlag(..))
 import TcRnMonad
 
 import GHC.Config.Constants

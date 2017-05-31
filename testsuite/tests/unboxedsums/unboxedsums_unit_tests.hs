@@ -1,6 +1,6 @@
 module Main where
 
-import BasicTypes
+import GHC.Data.BasicTypes
 import GHC
 import GhcMonad
 import GHC.Utils.Outputable

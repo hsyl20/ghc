@@ -21,7 +21,7 @@ import CoreUtils
 import CoreUnfold
 import Type
 import GHC.Data.Id
-import BasicTypes  (Arity)
+import GHC.Data.BasicTypes  (Arity)
 import GHC.Data.FastString
 import Control.Monad
 import Control.Applicative

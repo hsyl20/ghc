@@ -96,7 +96,7 @@ import GHC.Utils.Error
 import GHC.Data.Graph.Directed
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
-import BasicTypes       hiding ( SuccessFlag(..) )
+import GHC.Data.BasicTypes       hiding ( SuccessFlag(..) )
 import GHC.Data.Unique
 import GHC.Utils             hiding ( eqListBy )
 import GHC.Data.FastString

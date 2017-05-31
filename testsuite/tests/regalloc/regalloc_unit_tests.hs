@@ -40,7 +40,7 @@ import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Utils.Outputable
-import BasicTypes
+import GHC.Data.BasicTypes
 
 import GHC.Data.Stream (collect, yield)
 
