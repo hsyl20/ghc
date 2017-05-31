@@ -1,7 +1,7 @@
 module GHC.Data.Id.Make where
 import GHC.Data.Name( Name )
 import GHC.Data.Var( Id )
-import Class( Class )
+import GHC.Data.Class( Class )
 import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon )
 import {-# SOURCE #-} PrimOp( PrimOp )
 

@@ -103,7 +103,7 @@ import GHC.Data.Name.Set
 
 -- others:
 import InstEnv
-import Class
+import GHC.Data.Class
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.SrcLoc

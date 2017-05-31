@@ -153,7 +153,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Name hiding ( varName )
 import TyCon
-import Class
+import GHC.Data.Class
 import CoAxiom
 import GHC.Data.Var.Free
 

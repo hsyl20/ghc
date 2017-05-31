@@ -46,7 +46,7 @@ import PprCore ()   -- Instance OutputableBndr TyVar
 import TcType
 import Type
 import TyCon
-import Class( Class )
+import GHC.Data.Class( Class )
 import PrelNames
 import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
 import GHC.Data.Var.Environment

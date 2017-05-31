@@ -68,7 +68,7 @@ import Coercion
 import Unify
 import TyCon
 import GHC.Data.FieldLabel
-import Class
+import GHC.Data.Class
 import GHC.Data.Name
 import PrelNames
 import GHC.Data.Var

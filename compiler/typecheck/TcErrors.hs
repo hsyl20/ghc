@@ -25,7 +25,7 @@ import FamInstEnv       ( flattenTys )
 import Inst
 import InstEnv
 import TyCon
-import Class
+import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TcEvidence
 import HsExpr  ( UnboundVar(..) )

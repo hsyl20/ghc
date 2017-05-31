@@ -61,7 +61,7 @@ import GHC.Data.BasicTypes
 -- compiler/types
 import Type             ( funTyCon )
 import Kind             ( Kind )
-import Class            ( FunDep )
+import GHC.Data.Class            ( FunDep )
 
 -- compiler/parser
 import RdrHsSyn

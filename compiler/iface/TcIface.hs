@@ -45,7 +45,7 @@ import MkCore
 import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Id.Info
-import Class
+import GHC.Data.Class
 import TyCon
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor

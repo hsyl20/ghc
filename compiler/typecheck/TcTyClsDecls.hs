@@ -44,7 +44,7 @@ import Coercion
 import Type
 import TyCoRep   -- for checkValidRoles
 import Kind
-import Class
+import GHC.Data.Class
 import CoAxiom
 import TyCon
 import GHC.Data.DataConstructor

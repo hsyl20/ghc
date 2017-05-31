@@ -96,7 +96,7 @@ import TcType
 import Type
 import Kind
 import Coercion
-import Class
+import GHC.Data.Class
 import GHC.Data.Var
 
 -- others:

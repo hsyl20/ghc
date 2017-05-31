@@ -46,7 +46,7 @@ import Coercion
 import TysWiredIn ( typeNatKind, typeSymbolKind )
 import GHC.Data.Id
 import GHC.Data.Id.Make(proxyHashId)
-import Class
+import GHC.Data.Class
 import GHC.Data.Name
 import GHC.Data.Var.Set
 import Rules

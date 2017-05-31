@@ -53,7 +53,7 @@ import CoreUnfold
 import GHC.Data.Literal
 import TyCon
 import CoAxiom
-import Class
+import GHC.Data.Class
 import GHC.Data.Name.Set
 import GHC.Data.Name
 import PrimOp

@@ -34,7 +34,7 @@ import TcType
 import TysWiredIn( unitTy )
 import MkCore( rEC_SEL_ERROR_ID )
 import HsSyn
-import Class
+import GHC.Data.Class
 import Type
 import GHC.Types
 import TyCon

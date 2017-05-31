@@ -68,7 +68,7 @@ import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
 import GHC.Types.Annotations
 import CoreSyn
-import Class
+import GHC.Data.Class
 import TyCon
 import CoAxiom
 import GHC.Data.ConstructorLike

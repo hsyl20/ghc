@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module Class (
+module GHC.Data.Class (
         Class,
         ClassOpItem,
         ClassATItem(..),

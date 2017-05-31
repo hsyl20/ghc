@@ -21,7 +21,7 @@ module FunDeps (
 
 import GHC.Data.Name
 import GHC.Data.Var
-import Class
+import GHC.Data.Class
 import Type
 import TcType( transSuperClasses )
 import CoAxiom( TypeEqn )

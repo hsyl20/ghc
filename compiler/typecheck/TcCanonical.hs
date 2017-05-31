@@ -16,7 +16,7 @@ import Type
 import TcFlatten
 import TcSMonad
 import TcEvidence
-import Class
+import GHC.Data.Class
 import TyCon
 import TyCoRep   -- cleverly decomposes types, good for completeness checking
 import Coercion

@@ -218,7 +218,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
 
-import Class
+import GHC.Data.Class
 import TyCon
 import TysPrim
 import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind

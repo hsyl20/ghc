@@ -69,7 +69,7 @@ import GHC.Data.Maybe
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import Control.Monad
-import Class(classTyCon)
+import GHC.Data.Class(classTyCon)
 import GHC.Data.Unique.Set ( nonDetEltsUniqSet )
 import qualified GHC.LanguageExtensions as LangExt
 

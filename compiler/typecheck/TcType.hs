@@ -195,7 +195,7 @@ module TcType (
 -- friends:
 import Kind
 import TyCoRep
-import Class
+import GHC.Data.Class
 import GHC.Data.Var
 import ForeignCall
 import GHC.Data.Var.Set

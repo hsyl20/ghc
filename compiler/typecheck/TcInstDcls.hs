@@ -43,7 +43,7 @@ import TyCon
 import CoAxiom
 import GHC.Data.DataConstructor
 import GHC.Data.ConstructorLike
-import Class
+import GHC.Data.Class
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

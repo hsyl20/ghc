@@ -13,7 +13,7 @@ module Convert( convertToHsExpr, convertToPat, convertToHsDecls,
                 thRdrNameGuesses ) where
 
 import HsSyn as Hs
-import qualified Class
+import qualified GHC.Data.Class as Class
 import GHC.Data.RdrName
 import qualified GHC.Data.Name as Name
 import GHC.Data.Module

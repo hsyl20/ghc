@@ -36,7 +36,7 @@ import TysWiredIn ( typeNatKind, typeSymbolKind, heqDataCon,
 import TysPrim    ( eqPrimTyCon, eqReprPrimTyCon )
 import GHC.Data.Id( idType, isNaughtyRecordSelector )
 import CoAxiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
-import Class
+import GHC.Data.Class
 import TyCon
 import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel

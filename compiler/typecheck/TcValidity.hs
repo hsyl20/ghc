@@ -33,7 +33,7 @@ import Type
 import Coercion
 import Kind
 import CoAxiom
-import Class
+import GHC.Data.Class
 import TyCon
 
 -- others:

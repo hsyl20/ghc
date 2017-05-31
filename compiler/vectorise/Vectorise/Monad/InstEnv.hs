@@ -14,7 +14,7 @@ import Vectorise.Env
 import GHC.Config.Flags
 import FamInstEnv
 import InstEnv
-import Class
+import GHC.Data.Class
 import Type
 import TyCon
 import GHC.Utils.Outputable

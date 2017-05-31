@@ -84,7 +84,7 @@ module GHC.Data.Id.Info (
 
 import CoreSyn
 
-import Class
+import GHC.Data.Class
 import {-# SOURCE #-} PrimOp (PrimOp)
 import GHC.Data.Name
 import GHC.Data.Var.Set

@@ -143,7 +143,7 @@ import CoreSyn
 import GHC.Types
 import TcEvidence
 import Type
-import Class    ( Class )
+import GHC.Data.Class    ( Class )
 import TyCon    ( TyCon )
 import Coercion ( Coercion, mkHoleCo )
 import GHC.Data.ConstructorLike  ( ConLike(..) )

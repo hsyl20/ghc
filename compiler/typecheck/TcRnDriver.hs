@@ -114,7 +114,7 @@ import GHC.Utils.Outputable
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import Type
-import Class
+import GHC.Data.Class
 import GHC.Data.BasicTypes hiding( SuccessFlag(..) )
 import CoAxiom
 import GHC.Types.Annotations

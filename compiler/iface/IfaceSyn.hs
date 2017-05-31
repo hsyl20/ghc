@@ -46,7 +46,7 @@ import BinFingerprint
 import CoreSyn( IsOrphan, isOrphan )
 import PprCore()            -- Printing DFunArgs
 import GHC.Data.Demand
-import Class
+import GHC.Data.Class
 import GHC.Data.FieldLabel
 import GHC.Data.Name.Set
 import CoAxiom ( BranchIndex )

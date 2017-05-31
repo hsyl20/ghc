@@ -462,7 +462,7 @@ Library
         TcSMonad
         TcTypeNats
         TcSplice
-        Class
+        GHC.Data.Class
         Coercion
         GHC.Desugar.Splices
         THNames

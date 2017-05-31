@@ -137,7 +137,7 @@ import Coercion
 import Unify
 
 import TcEvidence
-import Class
+import GHC.Data.Class
 import TyCon
 import TcErrors   ( solverDepthErrorTcS )
 

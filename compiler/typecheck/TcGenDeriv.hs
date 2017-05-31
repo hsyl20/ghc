@@ -63,7 +63,7 @@ import TcValidity ( checkValidTyFamEqn )
 import TysPrim
 import TysWiredIn
 import Type
-import Class
+import GHC.Data.Class
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Utils

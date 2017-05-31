@@ -62,7 +62,7 @@ import GHC.Data.Id.Make
 import TysPrim
 import TysWiredIn
 import GHC.Types
-import Class
+import GHC.Data.Class
 import TyCon
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils

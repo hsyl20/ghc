@@ -81,7 +81,7 @@ import GHC.Config.Hooks
 import GHC.Data.Var
 import GHC.Data.Module
 import LoadIface
-import Class
+import GHC.Data.Class
 import TyCon
 import CoAxiom
 import GHC.Data.PatternSynonym

@@ -67,7 +67,7 @@ module   RdrHsSyn (
     ) where
 
 import HsSyn            -- Lots of it
-import Class            ( FunDep )
+import GHC.Data.Class            ( FunDep )
 import TyCon            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConTyCon )
 import GHC.Data.ConstructorLike          ( ConLike(..) )

@@ -26,7 +26,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import Type
 import InstEnv
-import Class
+import GHC.Data.Class
 import GHC.Data.Available
 import CoreSyn
 import CoreFVs     ( exprsSomeFreeVarsList )

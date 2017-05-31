@@ -34,7 +34,7 @@ import TcRnMonad
 import ForeignCall      ( CCallTarget(..) )
 import GHC.Data.Module
 import GHC.Types         ( Warnings(..), plusWarns )
-import Class            ( FunDep )
+import GHC.Data.Class            ( FunDep )
 import PrelNames        ( applicativeClassName, pureAName, thenAName
                         , monadClassName, returnMName, thenMName
                         , monadFailClassName, failMName, failMName_preMFP

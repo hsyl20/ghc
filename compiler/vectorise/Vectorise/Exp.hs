@@ -26,7 +26,7 @@ import CoreUtils
 import MkCore
 import CoreSyn
 import CoreFVs
-import Class
+import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TyCon
 import TcType

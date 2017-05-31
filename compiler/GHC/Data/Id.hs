@@ -137,7 +137,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Demand
 import GHC.Data.Name
 import GHC.Data.Module
-import Class
+import GHC.Data.Class
 import {-# SOURCE #-} PrimOp (PrimOp)
 import ForeignCall
 import GHC.Data.Maybe

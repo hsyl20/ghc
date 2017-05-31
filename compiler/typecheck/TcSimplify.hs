@@ -18,7 +18,7 @@ module TcSimplify(
 #include "HsVersions.h"
 
 import GHC.Data.Bag
-import Class         ( Class, classKey, classTyCon )
+import GHC.Data.Class         ( Class, classKey, classTyCon )
 import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , WarnReason ( Reason )
                      , DynFlags( solverIterations ) )

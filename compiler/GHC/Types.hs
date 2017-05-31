@@ -168,7 +168,7 @@ import Type
 
 import ApiAnnotation    ( ApiAnns )
 import GHC.Types.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
-import Class
+import GHC.Data.Class
 import TyCon
 import CoAxiom
 import GHC.Data.ConstructorLike

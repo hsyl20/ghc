@@ -13,7 +13,7 @@ import GHC.Desugar.Monad
 import TysWiredIn
 import GHC.Data.DataConstructor
 import TyCon
-import Class
+import GHC.Data.Class
 import CoreSyn
 import Type
 import GHC.Data.Name.Environment

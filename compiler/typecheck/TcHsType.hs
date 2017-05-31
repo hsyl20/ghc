@@ -65,7 +65,7 @@ import GHC.Data.Var.Set
 import TyCon
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
-import Class
+import GHC.Data.Class
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

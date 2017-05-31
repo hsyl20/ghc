@@ -20,7 +20,7 @@ import InstEnv
 import FamInstEnv
 import CoreSyn
 import Type
-import Class
+import GHC.Data.Class
 import TyCon
 import GHC.Data.DataConstructor
 import GHC.Data.Var.Environment
