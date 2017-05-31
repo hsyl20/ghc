@@ -38,7 +38,7 @@ import X86.Regs
 import X86.RegInfo
 import CodeGen.Platform
 import CPrim
-import Debug            ( DebugBlock(..), UnwindPoint(..), UnwindTable
+import GHC.Cmm.DebugBlock           ( DebugBlock(..), UnwindPoint(..), UnwindTable
                         , UnwindExpr(UwReg), toUnwindExpr )
 import Instruction
 import PIC

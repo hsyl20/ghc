@@ -39,7 +39,7 @@ import GHC.Config.Flags
 import GHC.Data.Unique.Set
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
-import Debug (UnwindTable)
+import GHC.Cmm.DebugBlock(UnwindTable)
 
 import Control.Monad
 import Data.Maybe       (fromMaybe)

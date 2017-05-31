@@ -9,7 +9,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Debug (
+module GHC.Cmm.DebugBlock (
 
   DebugBlock(..), dblIsEntry,
   cmmDebugGen,
