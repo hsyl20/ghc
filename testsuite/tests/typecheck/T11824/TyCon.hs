@@ -1,7 +1,7 @@
 module TyCon where
 
 import Unbound.Generics.LocallyNameless (Alpha (..))
-import {-# SOURCE #-} Type   (TyName)
+import {-# SOURCE #-} GHC.Data.Type   (TyName)
 
 data AlgTyConRhs
   = NewTyCon TyName

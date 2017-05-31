@@ -20,8 +20,8 @@ module GHC.Data.Kind (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} Type    ( typeKind, coreView, tcView
-                              , splitTyConApp_maybe )
+import {-# SOURCE #-} GHC.Data.Type ( typeKind, coreView, tcView
+                                    , splitTyConApp_maybe )
 import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon )
 
 import TyCoRep

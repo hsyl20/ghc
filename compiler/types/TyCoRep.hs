@@ -135,7 +135,7 @@ module TyCoRep (
 import {-# SOURCE #-} GHC.Data.DataConstructor ( dataConFullSig
                              , dataConUnivTyVarBinders, dataConExTyVarBinders
                              , DataCon, filterEqSpec )
-import {-# SOURCE #-} Type( isPredTy, isCoercionTy, mkAppTy, mkCastTy
+import {-# SOURCE #-} GHC.Data.Type( isPredTy, isCoercionTy, mkAppTy, mkCastTy
                           , tyCoVarsOfTypesWellScoped
                           , tyCoVarsOfTypeWellScoped
                           , coreView, typeKind )
