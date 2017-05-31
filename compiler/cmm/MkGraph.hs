@@ -23,7 +23,7 @@ where
 
 import GHC.Cmm.BlockId
 import GHC.Cmm
-import CmmCallConv
+import GHC.Cmm.CallConvention
 import GHC.Cmm.Switch (SwitchTargets)
 
 import Compiler.Hoopl hiding (Unique, (<*>), mkFirst, mkMiddle, mkLast, mkLabel, mkBranch, Shape(..))

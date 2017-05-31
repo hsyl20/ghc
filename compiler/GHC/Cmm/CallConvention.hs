@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module CmmCallConv (
+module GHC.Cmm.CallConvention (
   ParamLocation(..),
   assignArgumentsPos,
   assignStack,

@@ -213,7 +213,7 @@ Library
         GHC.Cmm
         GHC.Cmm.BuildInfoTables
         CmmPipeline
-        CmmCallConv
+        GHC.Cmm.CallConvention
         GHC.Cmm.Optimise.CommonBlockElim
         GHC.Cmm.Switch.Implement
         GHC.Cmm.Optimise.Shortcutting

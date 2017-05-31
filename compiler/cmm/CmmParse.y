@@ -201,7 +201,7 @@ necessary to the stack to accommodate it (e.g. 2).
 module CmmParse ( parseCmmFile ) where
 
 import StgCmmExtCode
-import CmmCallConv
+import GHC.Cmm.CallConvention
 import StgCmmProf
 import StgCmmHeap
 import StgCmmMonad hiding ( getCode, getCodeR, getCodeScoped, emitLabel, emit, emitStore
