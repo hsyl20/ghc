@@ -154,7 +154,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name hiding ( varName )
 import TyCon
 import GHC.Data.Class
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Free
 
 -- others

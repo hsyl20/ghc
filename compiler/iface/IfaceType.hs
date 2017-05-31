@@ -53,7 +53,7 @@ import {-# SOURCE #-} TysWiredIn ( liftedRepDataConTyCon )
 
 import GHC.Config.Flags
 import TyCon hiding ( pprPromotionQuote )
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Var
 import PrelNames
 import GHC.Data.Name

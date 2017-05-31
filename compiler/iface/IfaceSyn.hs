@@ -49,7 +49,7 @@ import GHC.Data.Demand
 import GHC.Data.Class
 import GHC.Data.FieldLabel
 import GHC.Data.Name.Set
-import CoAxiom ( BranchIndex )
+import GHC.Data.Coercion.Axiom ( BranchIndex )
 import GHC.Data.Name
 import CostCentre
 import GHC.Data.Literal

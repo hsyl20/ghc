@@ -28,7 +28,7 @@ import CoreUtils
 import CoreUnfold
 import GHC.Data.DataConstructor
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import Type
 import FamInstEnv
 import GHC.Data.Id

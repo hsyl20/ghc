@@ -470,7 +470,7 @@ Library
         FunDeps
         InstEnv
         TyCon
-        CoAxiom
+        GHC.Data.Coercion.Axiom
         Kind
         Type
         TyCoRep

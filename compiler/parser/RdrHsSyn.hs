@@ -71,7 +71,7 @@ import GHC.Data.Class            ( FunDep )
 import TyCon            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConTyCon )
 import GHC.Data.ConstructorLike          ( ConLike(..) )
-import CoAxiom          ( Role, fsFromRole )
+import GHC.Data.Coercion.Axiom          ( Role, fsFromRole )
 import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.BasicTypes

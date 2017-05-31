@@ -15,7 +15,7 @@ import CoreUtils
 import CoreUnfold
 import GHC.Data.Module
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import Type
 import GHC.Data.Id
 import GHC.Data.Var

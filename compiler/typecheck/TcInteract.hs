@@ -19,7 +19,7 @@ import GHC.Data.Var.Set
 import Type
 import Kind( isConstraintKind )
 import InstEnv( DFunInstType, lookupInstEnv, instanceDFunId )
-import CoAxiom( sfInteractTop, sfInteractInert )
+import GHC.Data.Coercion.Axiom( sfInteractTop, sfInteractInert )
 
 import TcMType (newMetaTyVars)
 
@@ -35,7 +35,7 @@ import TysWiredIn ( typeNatKind, typeSymbolKind, heqDataCon,
                     coercibleDataCon, constraintKindTyCon )
 import TysPrim    ( eqPrimTyCon, eqReprPrimTyCon )
 import GHC.Data.Id( idType, isNaughtyRecordSelector )
-import CoAxiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
+import GHC.Data.Coercion.Axiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import GHC.Data.Class
 import TyCon
 import GHC.Data.DataConstructor( dataConWrapId )

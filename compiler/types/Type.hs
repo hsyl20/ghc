@@ -224,7 +224,7 @@ import TysPrim
 import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )
 import PrelNames
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import {-# SOURCE #-} GHC.Data.Coercion
 
 -- others

@@ -45,7 +45,7 @@ import TyCoRep
 import TyCon
 import GHC.Data.DataConstructor (DataCon)
 import GHC.Data.Coercion
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Name

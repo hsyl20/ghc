@@ -6,7 +6,7 @@
 -- | Module for coercion axioms, used to represent type family instances
 -- and newtypes
 
-module CoAxiom (
+module GHC.Data.Coercion.Axiom (
        BranchFlag, Branched, Unbranched, BranchIndex, Branches,
        manyBranches, unbranched,
        fromBranches, numBranches,

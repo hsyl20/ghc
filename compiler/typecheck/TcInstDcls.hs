@@ -40,7 +40,7 @@ import CoreUnfold ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import Type
 import TcEvidence
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.DataConstructor
 import GHC.Data.ConstructorLike
 import GHC.Data.Class

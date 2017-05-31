@@ -52,7 +52,7 @@ import CoreUtils        ( exprType, mkCast )
 import CoreUnfold
 import GHC.Data.Literal
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import GHC.Data.Name.Set
 import GHC.Data.Name

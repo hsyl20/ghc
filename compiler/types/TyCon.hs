@@ -136,7 +136,7 @@ import GHC.Config.Flags
 import ForeignCall
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import PrelNames
 import GHC.Data.Maybe
 import GHC.Utils.Outputable

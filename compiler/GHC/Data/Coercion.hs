@@ -110,7 +110,7 @@ module GHC.Data.Coercion (
 import TyCoRep
 import Type
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Name hiding ( varName )

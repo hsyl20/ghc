@@ -6,7 +6,7 @@ import {-# SOURCE #-} TyCoRep
 import {-# SOURCE #-} TyCon
 
 import GHC.Data.BasicTypes ( LeftOrRight )
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Data.Pair

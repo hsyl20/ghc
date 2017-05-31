@@ -85,7 +85,7 @@ import GHC.Data.DataConstructor ( DataCon )
 import GHC.Data.PatternSynonym  ( PatSyn )
 import GHC.Data.ConstructorLike
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import GHC.Data.Name
 import GHC.Data.Name.Set

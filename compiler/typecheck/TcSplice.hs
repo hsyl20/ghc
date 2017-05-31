@@ -83,7 +83,7 @@ import GHC.Data.Module
 import LoadIface
 import GHC.Data.Class
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor as DataCon

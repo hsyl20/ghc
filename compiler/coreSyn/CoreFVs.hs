@@ -72,7 +72,7 @@ import GHC.Data.Var
 import Type
 import TyCoRep
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import FamInstEnv
 import TysPrim( funTyConName )
 import GHC.Data.Maybe( orElse )

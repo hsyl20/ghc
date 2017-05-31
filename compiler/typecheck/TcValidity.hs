@@ -32,7 +32,7 @@ import PrelNames
 import Type
 import GHC.Data.Coercion
 import Kind
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import TyCon
 

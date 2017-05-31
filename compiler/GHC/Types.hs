@@ -170,7 +170,7 @@ import ApiAnnotation    ( ApiAnns )
 import GHC.Types.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
 import GHC.Data.Class
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym

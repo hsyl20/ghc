@@ -116,7 +116,7 @@ import GHC.Data.DataConstructor
 import Type
 import GHC.Data.Class
 import GHC.Data.BasicTypes hiding( SuccessFlag(..) )
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Types.Annotations
 import Data.List ( sortBy, sort )
 import Data.Ord

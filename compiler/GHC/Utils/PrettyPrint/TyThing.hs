@@ -22,7 +22,7 @@ module GHC.Utils.PrettyPrint.TyThing (
 import Type    ( TyThing(..) )
 import IfaceSyn ( ShowSub(..), ShowHowMuch(..), AltPpr(..)
   , showToHeader, pprIfaceDecl )
-import CoAxiom ( coAxiomTyCon )
+import GHC.Data.Coercion.Axiom ( coAxiomTyCon )
 import GHC.Types( tyThingParent_maybe )
 import MkIface ( tyThingToIfaceDecl )
 import Type ( tidyOpenType )

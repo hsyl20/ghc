@@ -24,7 +24,7 @@ import TcRnMonad
 import GHC.Data.SrcLoc
 import TyCon
 import TcType
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Config.Flags
 import GHC.Data.Module
 import GHC.Utils.Outputable

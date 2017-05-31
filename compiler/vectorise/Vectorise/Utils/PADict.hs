@@ -17,7 +17,7 @@ import GHC.Data.Coercion
 import Type
 import TyCoRep
 import TyCon
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Config.Flags

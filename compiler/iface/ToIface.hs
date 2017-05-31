@@ -50,7 +50,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import CoreSyn
 import TyCon hiding ( pprPromotionQuote )
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )
 import TysWiredIn ( heqTyCon )
 import GHC.Data.Id.Make ( noinlineIdName )

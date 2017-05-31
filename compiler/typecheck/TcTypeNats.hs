@@ -22,7 +22,7 @@ import TyCon      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                   , Injectivity(..) )
 import GHC.Data.Coercion   ( Role(..) )
 import TcRnTypes  ( Xi )
-import CoAxiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeEqn )
+import GHC.Data.Coercion.Axiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeEqn )
 import GHC.Data.Name       ( Name, BuiltInSyntax(..) )
 import TysWiredIn
 import TysPrim    ( mkTemplateAnonTyConBinders )

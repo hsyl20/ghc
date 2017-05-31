@@ -40,7 +40,7 @@ module TcEvidence (
 #include "HsVersions.h"
 
 import GHC.Data.Var
-import CoAxiom
+import GHC.Data.Coercion.Axiom
 import GHC.Data.Coercion
 import PprCore ()   -- Instance OutputableBndr TyVar
 import TcType
