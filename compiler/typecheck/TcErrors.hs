@@ -18,7 +18,7 @@ import RnUnbound ( unknownNameSuggestions )
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Kind
-import Unify            ( tcMatchTys )
+import GHC.TypeSystem.Unify            ( tcMatchTys )
 import GHC.Data.Module
 import FamInst
 import FamInstEnv       ( flattenTys )

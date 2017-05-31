@@ -26,7 +26,7 @@ import FamInstEnv ( flattenTys )
 import GHC.Data.Pair
 import GHC.Data.List.SetOps ( getNth )
 import GHC.Utils
-import Unify
+import GHC.TypeSystem.Unify
 import InstEnv
 import Control.Monad   ( zipWithM )
 

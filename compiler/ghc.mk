@@ -553,7 +553,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Types \
 	TysPrim \
 	TysWiredIn \
-	Unify \
+	GHC.TypeSystem.Unify \
 	GHC.Data.Unique.DeterFiniteMap \
 	GHC.Data.Unique.DeterSet \
 	GHC.Data.Unique.FiniteMap \

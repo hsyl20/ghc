@@ -39,7 +39,7 @@ module FamInstEnv (
 
 #include "HsVersions.h"
 
-import Unify
+import GHC.TypeSystem.Unify
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Type.Constructor

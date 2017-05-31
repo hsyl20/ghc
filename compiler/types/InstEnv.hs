@@ -37,7 +37,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Name
 import GHC.Data.Name.Set
-import Unify
+import GHC.TypeSystem.Unify
 import GHC.Utils.Outputable
 import GHC.Utils.Error
 import GHC.Data.BasicTypes

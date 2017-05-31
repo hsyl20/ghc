@@ -134,7 +134,7 @@ import TcType
 import GHC.Config.Flags
 import GHC.Data.Type
 import GHC.Data.Coercion
-import Unify
+import GHC.TypeSystem.Unify
 
 import TcEvidence
 import GHC.Data.Class

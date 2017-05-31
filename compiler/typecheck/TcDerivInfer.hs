@@ -34,7 +34,7 @@ import GHC.Data.Type
 import TcSimplify
 import TcValidity (validDerivPred)
 import TcUnify (buildImplicationFor)
-import Unify (tcUnifyTy)
+import GHC.TypeSystem.Unify (tcUnifyTy)
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Environment

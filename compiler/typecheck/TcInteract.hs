@@ -43,7 +43,7 @@ import GHC.Data.FieldLabel
 import FunDeps
 import FamInst
 import FamInstEnv
-import Unify ( tcUnifyTyWithTFs )
+import GHC.TypeSystem.Unify ( tcUnifyTyWithTFs )
 
 import TcEvidence
 import GHC.Utils.Outputable

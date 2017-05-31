@@ -40,7 +40,7 @@ import TcType
 import TrieMap       () -- DV: for now
 import GHC.Data.Type
 import TysWiredIn    ( liftedRepTy )
-import Unify         ( tcMatchTyKi )
+import GHC.TypeSystem.Unify         ( tcMatchTyKi )
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Set
