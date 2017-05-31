@@ -39,7 +39,7 @@ import Type
 import GHC.Types
 import TyCon
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set hiding (unitFV)

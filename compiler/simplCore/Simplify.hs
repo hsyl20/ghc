@@ -26,7 +26,7 @@ import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOcc
 import Coercion hiding  ( substCo, substCoVar )
 import OptCoercion      ( optCoercion )
 import FamInstEnv       ( topNormaliseType_maybe )
-import GHC.Data.DataCon          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
+import GHC.Data.DataConstructorstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
 --import TyCon            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
 import CoreMonad        ( Tick(..), SimplifierMode(..) )
 import CoreSyn

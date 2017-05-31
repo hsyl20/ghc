@@ -43,7 +43,7 @@ import Unify
 import Type
 import TyCoRep
 import TyCon
-import GHC.Data.DataCon (DataCon)
+import GHC.Data.DataConstructorstructor (DataCon)
 import Coercion
 import CoAxiom
 import GHC.Data.Var.Set

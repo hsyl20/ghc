@@ -107,7 +107,7 @@ import TyCoRep
 import Type   ( filterOutInvisibleTypes )
 import TysWiredIn ( unitTy )
 import TcType
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.ConstructorLike
 import GHC.Data.Id
 import GHC.Data.Name

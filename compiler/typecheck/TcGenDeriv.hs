@@ -40,7 +40,7 @@ import TcRnMonad
 import HsSyn
 import GHC.Data.RdrName
 import BasicTypes
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Name
 import GHC.Utils.Fingerprint
 import GHC.Data.Char.Encoding

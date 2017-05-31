@@ -112,7 +112,7 @@ import GHC.Types
 import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import Type
 import Class
 import BasicTypes hiding( SuccessFlag(..) )

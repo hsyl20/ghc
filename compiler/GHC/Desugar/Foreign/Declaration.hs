@@ -19,7 +19,7 @@ import GHC.Desugar.Foreign.Call
 import GHC.Desugar.Monad
 
 import HsSyn
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import CoreUnfold
 import GHC.Data.Id
 import GHC.Data.Literal

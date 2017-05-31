@@ -75,7 +75,7 @@ import BlockId
 import CLabel
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Name
 import Type
 import TyCoRep

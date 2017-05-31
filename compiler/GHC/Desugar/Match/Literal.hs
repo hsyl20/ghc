@@ -29,7 +29,7 @@ import GHC.Data.Id
 import CoreSyn
 import MkCore
 import TyCon
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TcHsSyn ( shortCutLit )
 import TcType
 import GHC.Data.Name

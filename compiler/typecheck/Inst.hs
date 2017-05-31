@@ -55,7 +55,7 @@ import GHC.Data.Id.Make( mkDictFunId )
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TyCon
 import GHC.Data.Var.Environment
 import PrelNames

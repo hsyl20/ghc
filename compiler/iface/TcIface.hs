@@ -48,7 +48,7 @@ import GHC.Data.Id.Info
 import Class
 import TyCon
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import PrelNames
 import TysWiredIn
 import GHC.Data.Literal

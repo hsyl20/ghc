@@ -15,7 +15,7 @@ module TcDerivInfer (inferConstraints, simplifyInstanceContexts) where
 import GHC.Data.Bag
 import BasicTypes
 import Class
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 -- import GHC.Config.Flags
 import GHC.Utils.Error
 import Inst

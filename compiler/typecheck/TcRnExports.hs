@@ -26,7 +26,7 @@ import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Utils.Outputable
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.FastString
 import GHC.Data.Maybe

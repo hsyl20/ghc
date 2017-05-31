@@ -4,7 +4,7 @@ module Main where
 import ByteCodeLink
 import CoreMonad
 import Data.Array
-import GHC.Data.DataCon
+import GHC.Data.DataConstructor
 import DebuggerUtils
 import GHC
 import HscTypes

@@ -19,7 +19,7 @@ import IfaceEnv
 import FamInstEnv( FamInstEnvs, mkNewTypeCoAxiom )
 import TysWiredIn( isCTupleTyConName )
 import TysPrim ( voidPrimTy )
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Var
 import GHC.Data.Var.Set

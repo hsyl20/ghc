@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Data.ConLike (
+module GHC.Data.ConstructorLike (
           ConLike(..)
         , conLikeArity
         , conLikeFieldLabels
@@ -26,7 +26,7 @@ module GHC.Data.ConLike (
 
 #include "HsVersions.h"
 
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.PatternSynonym
 import GHC.Utils.Outputable
 import GHC.Data.Unique

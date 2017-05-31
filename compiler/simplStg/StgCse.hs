@@ -70,7 +70,7 @@ and nothing stops us from transforming that to
 -}
 module StgCse (stgCse) where
 
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Id
 import StgSyn
 import GHC.Utils.Outputable

@@ -86,7 +86,7 @@ import TyCon
 import CoAxiom
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TcEvidence( TcEvBinds(..) )
 import GHC.Data.Id
 import GHC.Data.Id.Info

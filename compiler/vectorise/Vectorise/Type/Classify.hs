@@ -21,7 +21,7 @@ where
 import GHC.Data.Name.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TyCon
 import TyCoRep
 import qualified Type

@@ -26,7 +26,7 @@ import TyCon
 import GHC.Data.Id.Make             ( coercionTokenId )
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import CostCentre       ( noCCS )
 import GHC.Data.Var.Environment
 import GHC.Data.Module

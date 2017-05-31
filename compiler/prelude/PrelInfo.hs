@@ -54,7 +54,7 @@ import PrelNames
 import PrelRules
 import Avail
 import PrimOp
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment

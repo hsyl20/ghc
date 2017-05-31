@@ -18,7 +18,7 @@ import Type
 import TcType
 import TcGenDeriv
 import TcGenFunctor
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TyCon
 import FamInstEnv       ( FamInst, FamFlavor(..), mkSingleCoAxiom )
 import FamInst

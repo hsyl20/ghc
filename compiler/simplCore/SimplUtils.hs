@@ -53,7 +53,7 @@ import Demand
 import SimplMonad
 import Type     hiding( substTy )
 import Coercion hiding( substCo )
-import GHC.Data.DataCon          ( dataConWorkId, isNullaryRepDataCon )
+import GHC.Data.DataConstructorstructor          ( dataConWorkId, isNullaryRepDataCon )
 import GHC.Data.Var.Set
 import BasicTypes
 import GHC.Utils

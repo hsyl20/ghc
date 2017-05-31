@@ -25,7 +25,7 @@ import CoreUtils
 import MkCore
 import GHC.Data.Id.Make
 import ForeignCall
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Desugar.Utils
 
 import TcType

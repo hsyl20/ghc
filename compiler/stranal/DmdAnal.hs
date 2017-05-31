@@ -22,7 +22,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Var.Environment
 import BasicTypes
 import Data.List
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Id
 import CoreUtils        ( exprIsHNF, exprType, exprIsTrivial )
 import TyCon

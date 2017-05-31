@@ -171,7 +171,7 @@ Library
         Avail
         BasicTypes
         GHC.Data.ConstructorLike
-        GHC.Data.DataCon
+        GHC.Data.DataConstructor
         GHC.Data.PatternSynonym
         Demand
         Debug

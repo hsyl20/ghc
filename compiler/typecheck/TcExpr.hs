@@ -46,7 +46,7 @@ import GHC.Desugar.Monad
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Name
 import GHC.Data.Name.Environment

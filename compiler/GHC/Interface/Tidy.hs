@@ -49,7 +49,7 @@ import Avail
 import IfaceEnv
 import TcEnv
 import TcRnMonad
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TyCon
 import Class
 import GHC.Data.Module

@@ -45,7 +45,7 @@ module ToIface
 #include "HsVersions.h"
 
 import IfaceSyn
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import CoreSyn

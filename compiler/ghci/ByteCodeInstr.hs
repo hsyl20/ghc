@@ -24,7 +24,7 @@ import GHC.Data.Unique
 import GHC.Data.Id
 import CoreSyn
 import GHC.Data.Literal
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import GHC.Data.Var.Set
 import PrimOp
 import SMRep

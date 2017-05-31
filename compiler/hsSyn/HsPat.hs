@@ -53,7 +53,7 @@ import TysWiredIn
 import GHC.Data.Var
 import GHC.Data.RdrName ( RdrName )
 import GHC.Data.ConstructorLike
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TyCon
 import GHC.Utils.Outputable
 import Type

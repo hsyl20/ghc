@@ -26,7 +26,7 @@ import Inst
 import InstEnv
 import TyCon
 import Class
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TcEvidence
 import HsExpr  ( UnboundVar(..) )
 import HsBinds ( PatSynBind(..) )

@@ -48,7 +48,7 @@ import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.RdrName
-import GHC.Data.DataCon
+import GHC.Data.DataConstructorstructor
 import TyCon
 import TcType
 import PrelNames
