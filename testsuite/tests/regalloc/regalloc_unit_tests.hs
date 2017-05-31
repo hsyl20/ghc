@@ -29,7 +29,7 @@ import AsmCodeGen
 import GHC.Cmm.BuildInfoTables
 import CmmPipeline
 import CmmParse
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Cmm
 import GHC.Data.Module
 import Debug

@@ -8,7 +8,7 @@ import StgCmmForeign    ( saveThreadState, loadThreadState ) -- XXX layering vio
 
 import GHC.Data.BasicTypes
 import GHC.Cmm
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.Cmm.Utils

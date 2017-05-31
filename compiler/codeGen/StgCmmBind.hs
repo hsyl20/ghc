@@ -35,7 +35,7 @@ import CoreSyn          ( AltCon(..), tickishIsCode )
 import GHC.Cmm.BlockId
 import GHC.RTS.Storage
 import GHC.Cmm
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Cmm.Utils
 import GHC.Data.CLabel
 import StgSyn

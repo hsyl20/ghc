@@ -5,7 +5,7 @@ module DebuggerUtils (
   ) where
 
 import GHCi.InfoTable
-import CmmInfo ( stdInfoTableSizeB )
+import GHC.RTS.InfoTable ( stdInfoTableSizeB )
 import GHC.Config.Flags
 import GHC.Data.FastString
 import TcRnTypes

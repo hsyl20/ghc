@@ -218,7 +218,7 @@ Library
         GHC.Cmm.Switch.Implement
         GHC.Cmm.Optimise.Shortcutting
         GHC.Cmm.Expr
-        CmmInfo
+        GHC.RTS.InfoTable
         CmmLex
         GHC.Cmm.Analyse.Lint
         GHC.Cmm.Analyse.Liveness

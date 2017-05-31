@@ -16,7 +16,7 @@ import GHC.Data.CLabel
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint ()
 import GHC.Cmm.Utils
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.Switch
 import Data.List (sortBy)

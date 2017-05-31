@@ -33,7 +33,7 @@ import GHC.Cmm.BlockId
 import MkGraph
 import StgSyn
 import GHC.Cmm
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Data.Type     ( Type, tyConAppTyCon )
 import GHC.Data.Type.Constructor
 import GHC.Data.CLabel

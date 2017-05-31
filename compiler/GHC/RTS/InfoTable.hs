@@ -1,5 +1,5 @@
 {-# LANGUAGE CPP #-}
-module CmmInfo (
+module GHC.RTS.InfoTable (
   mkEmptyContInfoTable,
   cmmToRawCmm,
   mkInfoTable,

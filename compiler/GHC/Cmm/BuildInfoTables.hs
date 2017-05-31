@@ -14,7 +14,7 @@ import GHC.Data.CLabel
 import GHC.Cmm.PrettyPrint.Declaration ()
 import GHC.Cmm
 import GHC.Cmm.Utils
-import CmmInfo
+import GHC.RTS.InfoTable
 import Data.List
 import GHC.Config.Flags
 import GHC.Data.Maybe

@@ -222,7 +222,7 @@ import MkGraph
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch        ( mkSwitchTargets )
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Cmm.BlockId
 import CmmLex
 import GHC.Data.CLabel

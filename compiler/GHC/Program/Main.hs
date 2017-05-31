@@ -129,7 +129,7 @@ import GHC.Cmm
 import CmmParse         ( parseCmmFile )
 import GHC.Cmm.BuildInfoTables
 import CmmPipeline
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.CodeGen.CodeOutput
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance

@@ -40,7 +40,7 @@ import GHC.RTS.Storage
 import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils
-import CmmInfo
+import GHC.RTS.InfoTable
 import GHC.Data.CLabel
 import StgSyn
 import GHC.Data.Id
