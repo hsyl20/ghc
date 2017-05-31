@@ -159,7 +159,6 @@ Library
         stgSyn
         stranal
         typecheck
-        types
         vectorise
 
     Exposed-Modules:
