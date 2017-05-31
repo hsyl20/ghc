@@ -38,7 +38,7 @@ import Class
 import Type
 import GHC.Types
 import TyCon
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.DataCon
 import GHC.Data.Name
 import GHC.Data.Name.Environment

@@ -171,7 +171,7 @@ import GHC.Types.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
 import Class
 import TyCon
 import CoAxiom
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.DataCon
 import PatSyn
 import PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule

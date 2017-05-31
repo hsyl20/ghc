@@ -21,7 +21,7 @@ import HsSyn
 import GHC.Data.Module
 import GHC.Utils.Outputable as Outputable
 import GHC.Config.Flags
-import ConLike
+import GHC.Data.ConLike
 import Control.Monad
 import GHC.Data.SrcLoc
 import GHC.Utils.Error

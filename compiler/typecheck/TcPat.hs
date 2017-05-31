@@ -38,7 +38,7 @@ import TcEvidence
 import TyCon
 import GHC.Data.DataCon
 import PatSyn
-import ConLike
+import GHC.Data.ConLike
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Config.Flags

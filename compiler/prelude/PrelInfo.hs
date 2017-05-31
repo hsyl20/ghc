@@ -48,7 +48,7 @@ module PrelInfo (
 import KnownUniques
 import GHC.Data.Unique           ( isValidKnownKeyUnique )
 
-import ConLike          ( ConLike(..) )
+import GHC.Data.ConLike          ( ConLike(..) )
 import THNames          ( templateHaskellNames )
 import PrelNames
 import PrelRules

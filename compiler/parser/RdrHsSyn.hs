@@ -70,7 +70,7 @@ import HsSyn            -- Lots of it
 import Class            ( FunDep )
 import TyCon            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import GHC.Data.DataCon          ( DataCon, dataConTyCon )
-import ConLike          ( ConLike(..) )
+import GHC.Data.ConLike          ( ConLike(..) )
 import CoAxiom          ( Role, fsFromRole )
 import GHC.Data.RdrName
 import GHC.Data.Name

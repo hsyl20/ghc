@@ -111,7 +111,7 @@ import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Data.List.SetOps
 import GHC.Utils.Outputable
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.DataCon
 import Type
 import Class

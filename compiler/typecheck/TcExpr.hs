@@ -45,7 +45,7 @@ import TcType
 import GHC.Desugar.Monad
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.DataCon
 import PatSyn
 import GHC.Data.Name

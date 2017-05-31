@@ -143,7 +143,7 @@ import GHC.Data.Module           ( Module )
 import Type
 import RepType
 import GHC.Data.DataCon
-import {-# SOURCE #-} ConLike
+import {-# SOURCE #-} GHC.Data.ConLike
 import TyCon
 import Class            ( Class, mkClass )
 import GHC.Data.RdrName

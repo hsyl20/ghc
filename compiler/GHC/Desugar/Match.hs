@@ -36,7 +36,7 @@ import GHC.Desugar.Binds
 import GHC.Desugar.GuardedRHS
 import GHC.Desugar.Utils
 import GHC.Data.Id
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.DataCon
 import PatSyn
 import GHC.Desugar.Match.Constructor

@@ -35,7 +35,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.RdrName  ( GlobalRdrEnv )
 import BasicTypes
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Outputable

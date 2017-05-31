@@ -1,4 +1,4 @@
-module ConLike where
+module GHC.Data.ConLike where
 import {-# SOURCE #-} GHC.Data.DataCon (DataCon)
 import {-# SOURCE #-} PatSyn (PatSyn)
 import GHC.Data.Name ( Name )

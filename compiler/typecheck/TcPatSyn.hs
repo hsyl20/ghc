@@ -45,7 +45,7 @@ import BuildTyCl
 import GHC.Data.Var.Set
 import GHC.Data.Id.Make
 import TcTyDecls
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.FieldLabel
 import GHC.Data.Bag
 import GHC.Utils

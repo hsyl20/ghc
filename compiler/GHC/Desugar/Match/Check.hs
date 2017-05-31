@@ -24,7 +24,7 @@ import GHC.Config.Flags
 import HsSyn
 import TcHsSyn
 import GHC.Data.Id
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.Name
 import FamInstEnv
 import TysWiredIn

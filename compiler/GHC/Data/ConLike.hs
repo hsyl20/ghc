@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module ConLike (
+module GHC.Data.ConLike (
           ConLike(..)
         , conLikeArity
         , conLikeFieldLabels

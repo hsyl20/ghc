@@ -170,7 +170,7 @@ Library
         GHC.Interface.Renaming
         Avail
         BasicTypes
-        ConLike
+        GHC.Data.ConLike
         GHC.Data.DataCon
         PatSyn
         Demand

@@ -52,7 +52,7 @@ import RnUtils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
 import RnTypes
 import PrelNames
 import TyCon               ( tyConName )
-import ConLike
+import GHC.Data.ConLike
 import Type                ( TyThing(..) )
 import GHC.Data.Name
 import GHC.Data.Name.Set

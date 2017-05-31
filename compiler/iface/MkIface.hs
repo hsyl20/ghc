@@ -71,7 +71,7 @@ import CoreSyn
 import Class
 import TyCon
 import CoAxiom
-import ConLike
+import GHC.Data.ConLike
 import GHC.Data.DataCon
 import Type
 import TcType
