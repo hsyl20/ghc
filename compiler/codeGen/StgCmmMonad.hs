@@ -66,7 +66,7 @@ import StgCmmClosure
 import GHC.Config.Flags
 import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.Maybe
-import GHC.Cmm.Graph
+import GHC.Cmm.Graph as MkGraph
 import GHC.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.RTS.Storage

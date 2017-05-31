@@ -171,7 +171,7 @@ Library
         GHC.Data.DataConstructor
         GHC.Data.PatternSynonym
         GHC.Data.Demand
-        Debug
+        GHC.Cmm.DebugBlock
         GHC.Utils.Exception
         GHC.Data.FieldLabel
         GHC.Monad
@@ -233,7 +233,7 @@ Library
         GHC.Cmm.Utils
         GHC.Cmm.LayoutStack
         GHC.Data.EnumSet
-       GHC.Cmm.Graph
+        GHC.Cmm.Graph
         PprBase
         GHC.Cmm.PrettyPrint.C
         GHC.Cmm.PrettyPrint
@@ -540,7 +540,7 @@ Library
         Vectorise.Env
         Vectorise.Exp
         Vectorise
-       GHC.Cmm.Optimise.Dataflow.Hoopl
+        GHC.Cmm.Optimise.Dataflow.Hoopl
         GHC.Cmm.Optimise.Dataflow
 --        CgInfoTbls used in ghci/DebuggerUtils
 --        CgHeapery  mkVirtHeapOffsets used in ghci

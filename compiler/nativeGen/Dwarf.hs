@@ -6,7 +6,7 @@ import GHC.Data.CLabel
 import GHC.Cmm.Expr         ( GlobalReg(..) )
 import Config          ( cProjectName, cProjectVersion )
 import CoreSyn         ( Tickish(..) )
-import Debug
+import GHC.Cmm.DebugBlock
 import GHC.Config.Flags
 import GHC.Data.Module
 import GHC.Utils.Outputable

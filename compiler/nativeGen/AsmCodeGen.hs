@@ -59,7 +59,7 @@ import PIC
 import Reg
 import NCGMonad
 import Dwarf
-import Debug
+import GHC.Cmm.DebugBlock
 
 import GHC.Cmm.BlockId
 import CgUtils          ( fixStgRegisters )

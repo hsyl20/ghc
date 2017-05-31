@@ -23,7 +23,7 @@ module GHC.Cmm (
 
      -- * Statements, expressions and types
      module GHC.Cmm.Node,
-     module CmmExpr,
+     module GHC.Cmm.Expr,
   ) where
 
 import GHC.Data.CLabel

@@ -23,8 +23,8 @@ module GHC.Cmm.Expr
     , regSetToList
 
     , Area(..)
-    , module CmmMachOp
-    , module CmmType
+    , module GHC.Cmm.MachinePrimOps
+    , module GHC.Cmm.Type
     )
 where
 

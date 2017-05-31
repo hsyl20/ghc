@@ -44,7 +44,7 @@ import TargetReg
 import GHC.Cmm.BlockId
 import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.CLabel           ( CLabel, mkAsmTempLabel )
-import Debug
+import GHC.Cmm.DebugBlock
 import GHC.Data.FastString       ( FastString )
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
