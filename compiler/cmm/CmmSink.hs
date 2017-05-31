@@ -13,7 +13,7 @@ import GHC.Platform (isARM, platformArch)
 
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap
-import PprCmm ()
+import GHC.Cmm.PrettyPrint ()
 
 import Data.List (partition)
 import qualified Data.Set as Set

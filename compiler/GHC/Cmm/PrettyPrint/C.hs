@@ -30,7 +30,7 @@ import BlockId
 import CLabel
 import ForeignCall
 import Cmm hiding (pprBBlock)
-import PprCmm ()
+import GHC.Cmm.PrettyPrint ()
 import Hoopl
 import CmmUtils
 import CmmSwitch

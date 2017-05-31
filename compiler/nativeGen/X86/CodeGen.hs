@@ -51,7 +51,7 @@ import GHC.Platform
 import GHC.Data.BasicTypes
 import BlockId
 import GHC.Data.Module           ( primUnitId )
-import PprCmm           ()
+import GHC.Cmm.PrettyPrint           ()
 import CmmUtils
 import CmmSwitch
 import Cmm

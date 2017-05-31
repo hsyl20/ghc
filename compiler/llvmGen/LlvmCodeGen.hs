@@ -20,7 +20,7 @@ import CgUtils ( fixStgRegisters )
 import Cmm
 import CmmUtils
 import Hoopl
-import PprCmm
+import GHC.Cmm.PrettyPrint
 
 import GHC.Utils.Handle.BufferedWrite
 import GHC.Config.Flags

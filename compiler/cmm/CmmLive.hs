@@ -15,7 +15,7 @@ where
 import GHC.Config.Flags
 import BlockId
 import Cmm
-import PprCmmExpr ()
+import GHC.Cmm.PrettyPrint.Expression ()
 import Hoopl
 
 import GHC.Data.Maybe

@@ -11,7 +11,7 @@ import Hoopl
 import GHC.Data.Graph.Directed
 import GHC.Utils.Bitmap
 import CLabel
-import PprCmmDecl ()
+import GHC.Cmm.PrettyPrint.Declaration ()
 import Cmm
 import CmmUtils
 import CmmInfo
@@ -23,7 +23,7 @@ import GHC.RTS.Storage
 import GHC.Data.Unique.Supply
 import GHC.Utils
 
-import PprCmm()
+import GHC.Cmm.PrettyPrint()
 import Data.Map (Map)
 import qualified Data.Map as Map
 import Data.Set (Set)

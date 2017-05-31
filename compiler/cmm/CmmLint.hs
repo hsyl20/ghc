@@ -15,7 +15,7 @@ import Cmm
 import CmmUtils
 import CmmLive
 import CmmSwitch (switchTargetsToList)
-import PprCmm ()
+import GHC.Cmm.PrettyPrint ()
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 

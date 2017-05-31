@@ -69,7 +69,7 @@ module StgCmmClosure (
 import StgSyn
 import GHC.RTS.Storage
 import Cmm
-import PprCmmExpr()
+import GHC.Cmm.PrettyPrint.Expression()
 
 import BlockId
 import CLabel

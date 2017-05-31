@@ -33,7 +33,7 @@
 --
 
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module PprCmmExpr
+module GHC.Cmm.PrettyPrint.Expression
     ( pprExpr, pprLit
     )
 where
@@ -151,7 +151,7 @@ genMachOp mop args
         -- unary
         [x]   -> doc <> pprExpr9 x
 
-        _     -> pprTrace "PprCmm.genMachOp: machop with strange number of args"
+        _     -> pprTrace "GHC.Cmm.PrettyPrint.genMachOp: machop with strange number of args"
                           (pprMachOp mop <+>
                             parens (hcat $ punctuate comma (map pprExpr args)))
                           empty

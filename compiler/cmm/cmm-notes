@@ -150,7 +150,7 @@ ClosureInfo.lhs
 OldCmm.hs      Definition of flowgraph of old representation
                Imports some data types from (new) Cmm
 OldCmmUtil.hs  Utilites that operates mostly on on CmmStmt
-OldPprCmm.hs   Pretty print for CmmStmt, GenBasicBlock and ListGraph
+OldGHC.Cmm.PrettyPrint.hs   Pretty print for CmmStmt, GenBasicBlock and ListGraph
 CmmOpt.hs      Hopefully-redundant optimiser
 
 -------- Stuff to keep ------------
@@ -175,8 +175,8 @@ Cmm.hs              Cmm instantiations of dataflow graph framework
   CmmType.hs        Type of Cmm types and their widths
   CmmMachOp.hs      MachOp type and accompanying utilities
 
-PprCmm.hs	    Pretty printer for Cmm
-  PprCmmExpr.hs     Pretty printer for CmmExpr
+GHC.Cmm.PrettyPrint.hs	    Pretty printer for Cmm
+  GHC.Cmm.PrettyPrint.Expression.hs     Pretty printer for CmmExpr
 
 MkGraph.hs          Interface for building Cmm for codeGen/Stg*.hs modules
 

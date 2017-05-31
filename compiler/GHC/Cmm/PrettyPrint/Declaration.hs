@@ -35,12 +35,12 @@
 --
 
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module PprCmmDecl
+module GHC.Cmm.PrettyPrint.Declaration
     ( writeCmms, pprCmms, pprCmmGroup, pprSection, pprStatic
     )
 where
 
-import PprCmmExpr
+import GHC.Cmm.PrettyPrint.Expression
 import Cmm
 
 import GHC.Config.Flags

@@ -15,7 +15,7 @@ import BlockId
 import CodeGen.Platform ( activeStgRegs, callerSaves )
 import CLabel
 import Cmm
-import PprCmm
+import GHC.Cmm.PrettyPrint
 import CmmUtils
 import CmmSwitch
 import Hoopl
@@ -912,7 +912,7 @@ genStore_slow addr val meta = do
 
         other ->
             pprPanic "genStore: ptr not right type!"
-                    (PprCmm.pprExpr addr <+> text (
+                    (GHC.Cmm.PrettyPrint.pprExpr addr <+> text (
                         "Size of Ptr: " ++ show (llvmPtrBits dflags) ++
                         ", Size of var: " ++ show (llvmWidthInBits dflags other) ++
                         ", Var: " ++ showSDoc dflags (ppr vaddr)))
@@ -1399,7 +1399,7 @@ genMachOp_slow opt op [x, y] = case op of
                     dflags <- getDynFlags
                     let style = mkCodeStyle CStyle
                         toString doc = renderWithStyle dflags doc style
-                        cmmToStr = (lines . toString . PprCmm.pprExpr)
+                        cmmToStr = (lines . toString . GHC.Cmm.PrettyPrint.pprExpr)
                     statement $ Comment $ map fsLit $ cmmToStr x
                     statement $ Comment $ map fsLit $ cmmToStr y
                     doExprW (ty vx) $ binOp vx vy
@@ -1550,7 +1550,7 @@ genLoad_slow atomic e ty meta = runExprData $ do
                     doExprW (cmmToLlvmType ty) (MExpr meta $ loadInstr ptr)
 
          other -> do pprPanic "exprToVar: CmmLoad expression is not right type!"
-                        (PprCmm.pprExpr e <+> text (
+                        (GHC.Cmm.PrettyPrint.pprExpr e <+> text (
                             "Size of Ptr: " ++ show (llvmPtrBits dflags) ++
                             ", Size of var: " ++ show (llvmWidthInBits dflags other) ++
                             ", Var: " ++ showSDoc dflags (ppr iptr)))

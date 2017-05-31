@@ -41,7 +41,7 @@ import Instruction
 import BlockId
 import Hoopl
 import Cmm hiding (RegSet, emptyRegSet)
-import PprCmm()
+import GHC.Cmm.PrettyPrint()
 
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags

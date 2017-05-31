@@ -10,7 +10,7 @@ import Cmm
 import CmmUtils
 import CmmSwitch (eqSwitchTargetWith)
 import CmmContFlowOpt
--- import PprCmm ()
+-- import GHC.Cmm.PrettyPrint ()
 import Prelude hiding (iterate, succ, unzip, zip)
 
 import Hoopl hiding (ChangeFlag)

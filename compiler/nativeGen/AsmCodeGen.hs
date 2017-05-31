@@ -67,7 +67,7 @@ import Cmm
 import CmmUtils
 import Hoopl
 import CmmOpt           ( cmmMachOpFold )
-import PprCmm
+import GHC.Cmm.PrettyPrint
 import CLabel
 
 import GHC.Data.Unique.FiniteMap

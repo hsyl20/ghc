@@ -12,7 +12,7 @@ module CmmCallConv (
 import CmmExpr
 import GHC.RTS.Storage
 import Cmm (Convention(..))
-import PprCmm ()
+import GHC.Cmm.PrettyPrint ()
 
 import GHC.Config.Flags
 import GHC.Platform

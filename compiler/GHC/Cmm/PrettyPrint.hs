@@ -33,9 +33,9 @@
 --
 -- A useful example pass over Cmm is in nativeGen/MachCodeGen.hs
 
-module PprCmm
-  ( module PprCmmDecl
-  , module PprCmmExpr
+module GHC.Cmm.PrettyPrint
+  ( module GHC.Cmm.PrettyPrint.Declaration
+  , module GHC.Cmm.PrettyPrint.Expression
   )
 where
 
@@ -47,8 +47,8 @@ import CmmSwitch
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import PprCmmDecl
-import PprCmmExpr
+import GHC.Cmm.PrettyPrint.Declaration
+import GHC.Cmm.PrettyPrint.Expression
 import GHC.Utils
 import PprCore ()
 

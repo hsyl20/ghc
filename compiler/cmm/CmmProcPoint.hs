@@ -14,7 +14,7 @@ import GHC.Config.Flags
 import BlockId
 import CLabel
 import Cmm
-import PprCmm ()
+import GHC.Cmm.PrettyPrint ()
 import CmmUtils
 import CmmInfo
 import CmmLive

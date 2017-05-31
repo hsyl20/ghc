@@ -237,9 +237,9 @@ Library
         MkGraph
         PprBase
         GHC.Cmm.PrettyPrint.C
-        PprCmm
-        PprCmmDecl
-        PprCmmExpr
+        GHC.Cmm.PrettyPrint
+        GHC.Cmm.PrettyPrint.Declaration
+        GHC.Cmm.PrettyPrint.Expression
         GHC.Utils.Bitmap
         CodeGen.Platform
         CodeGen.Platform.ARM
