@@ -56,7 +56,7 @@ import GHC.Data.Module ( moduleName, moduleNameString
 import GHC.Data.Id.Make ( coerceId )
 import PrimOp
 import GHC.Data.SrcLoc
-import TyCon
+import GHC.Data.Type.Constructor
 import TcEnv
 import TcType
 import TcValidity ( checkValidTyFamEqn )

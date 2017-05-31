@@ -131,7 +131,7 @@ import GHC.Config.Flags
 import PrelNames
 import TcType
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 
 import Data.Maybe
 import qualified Data.Char

@@ -1,4 +1,4 @@
-module TyCon where
+module GHC.Data.Type.Constructor where
 
 data TyCon
 

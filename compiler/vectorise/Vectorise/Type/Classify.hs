@@ -22,7 +22,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import TyCoRep
 import qualified Type
 import PrelNames

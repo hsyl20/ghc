@@ -63,7 +63,7 @@ import TysPrim
 import TysWiredIn
 import GHC.Types
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
 import GHC.Utils.Panic

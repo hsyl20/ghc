@@ -25,7 +25,7 @@ import Data.List
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import CoreUtils        ( exprIsHNF, exprType, exprIsTrivial )
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.Data.Coercion         ( Coercion, coVarsOfCo )
 import FamInstEnv

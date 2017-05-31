@@ -25,7 +25,7 @@ import {-# SOURCE #-} GHC.Data.Type ( typeKind, coreView, tcView
 import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon )
 
 import TyCoRep
-import TyCon
+import GHC.Data.Type.Constructor
 import PrelNames
 
 import GHC.Utils.Outputable

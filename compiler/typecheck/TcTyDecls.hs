@@ -37,7 +37,7 @@ import HsSyn
 import GHC.Data.Class
 import GHC.Data.Type
 import GHC.Types
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.Name

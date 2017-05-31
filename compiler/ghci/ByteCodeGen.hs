@@ -35,7 +35,7 @@ import GHC.Data.Type
 import RepType
 import GHC.Data.Kind            ( isLiftedTypeKind )
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Utils
 import GHC.Data.Var.Set
 import TysPrim

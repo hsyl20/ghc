@@ -44,7 +44,7 @@ import GHC.Desugar.Match.Literal
 import GHC.Data.Type
 import GHC.Data.Coercion ( eqCoercion )
 import TcType ( toTcTypeBag )
-import TyCon( isNewTyCon )
+import GHC.Data.Type.Constructor( isNewTyCon )
 import TysWiredIn
 import GHC.Data.SrcLoc
 import GHC.Data.Maybe

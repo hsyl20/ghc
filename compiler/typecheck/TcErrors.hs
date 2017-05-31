@@ -24,7 +24,7 @@ import FamInst
 import FamInstEnv       ( flattenTys )
 import Inst
 import InstEnv
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TcEvidence

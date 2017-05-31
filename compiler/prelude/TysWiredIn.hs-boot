@@ -1,7 +1,7 @@
 module TysWiredIn where
 
 import GHC.Data.Var( TyVar, ArgFlag )
-import {-# SOURCE #-} TyCon      ( TyCon )
+import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
 import {-# SOURCE #-} TyCoRep    (Type, Kind)
 
 

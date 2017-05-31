@@ -35,7 +35,7 @@ import TcPat
 import TcMType
 import FamInstEnv( normaliseType )
 import FamInst( tcGetFamInstEnvs )
-import TyCon
+import GHC.Data.Type.Constructor
 import TcType
 import GHC.Data.Type( mkStrLitTy, tidyOpenType, mkTyVarBinder, splitTyConApp_maybe)
 import TysPrim

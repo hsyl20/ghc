@@ -47,7 +47,7 @@ module GHC.Data.Literal
 import TysPrim
 import PrelNames
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.BasicTypes

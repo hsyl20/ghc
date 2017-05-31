@@ -548,7 +548,7 @@ compiler_stage2_dll0_MODULES = \
 	TcRnTypes \
 	TcType \
 	TrieMap \
-	TyCon \
+	GHC.Data.Type.Constructor \
 	Type \
 	TyCoRep \
 	TysPrim \

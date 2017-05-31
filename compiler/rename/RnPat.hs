@@ -51,7 +51,7 @@ import RnUtils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
                            , unknownSubordinateErr )
 import RnTypes
 import PrelNames
-import TyCon               ( tyConName )
+import GHC.Data.Type.Constructor               ( tyConName )
 import GHC.Data.ConstructorLike
 import GHC.Data.Type                ( TyThing(..) )
 import GHC.Data.Name

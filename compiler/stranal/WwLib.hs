@@ -32,7 +32,7 @@ import GHC.Data.Coercion
 import FamInstEnv
 import GHC.Data.BasicTypes       ( Boxity(..) )
 import GHC.Data.Literal          ( absentLiteralOf )
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Unique.Supply
 import GHC.Data.Unique
 import GHC.Data.Maybe

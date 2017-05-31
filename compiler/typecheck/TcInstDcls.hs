@@ -39,7 +39,7 @@ import MkCore     ( nO_METHOD_BINDING_ERROR_ID )
 import CoreUnfold ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import GHC.Data.Type
 import TcEvidence
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.DataConstructor
 import GHC.Data.ConstructorLike

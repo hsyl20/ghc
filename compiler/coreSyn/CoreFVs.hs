@@ -71,7 +71,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var
 import GHC.Data.Type
 import TyCoRep
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import FamInstEnv
 import TysPrim( funTyConName )

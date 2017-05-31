@@ -44,7 +44,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Maybe
 import GHC.Data.BasicTypes
 import GHC.Data.Bag

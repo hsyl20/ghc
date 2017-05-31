@@ -144,7 +144,7 @@ import GHC.Data.Type
 import RepType
 import GHC.Data.DataConstructor
 import {-# SOURCE #-} GHC.Data.ConstructorLike
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Class            ( Class, mkClass )
 import GHC.Data.RdrName
 import GHC.Data.Name as Name

@@ -18,7 +18,7 @@ module TcTypeNats
 import GHC.Data.Type
 import GHC.Data.Pair
 import TcType     ( TcType, tcEqType )
-import TyCon      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
+import GHC.Data.Type.Constructor      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                   , Injectivity(..) )
 import GHC.Data.Coercion   ( Role(..) )
 import TcRnTypes  ( Xi )

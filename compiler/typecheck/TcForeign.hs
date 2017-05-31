@@ -49,7 +49,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.RdrName
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import TcType
 import PrelNames
 import GHC.Config.Flags

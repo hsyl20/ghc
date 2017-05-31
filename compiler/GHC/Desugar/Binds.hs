@@ -38,7 +38,7 @@ import CoreFVs
 import GHC.Data.Graph.Directed
 
 import PrelNames
-import TyCon
+import GHC.Data.Type.Constructor
 import TcEvidence
 import TcType
 import GHC.Data.Type

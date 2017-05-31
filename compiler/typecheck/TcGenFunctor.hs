@@ -26,7 +26,7 @@ import GHC.Data.SrcLoc
 import GHC.Utils.Monad.State
 import TcGenDeriv
 import TcType
-import TyCon
+import GHC.Data.Type.Constructor
 import TyCoRep
 import GHC.Data.Type
 import GHC.Utils

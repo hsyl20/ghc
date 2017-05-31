@@ -1,7 +1,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 
 module GHC.Data.Type where
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Var ( TyVar )
 import {-# SOURCE #-} TyCoRep( Type, Coercion, Kind )
 import GHC.Utils

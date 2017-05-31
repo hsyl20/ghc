@@ -27,7 +27,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Id
 import GHC.Data.Type
-import TyCon    ( initRecTc, checkRecTc )
+import GHC.Data.Type.Constructor    ( initRecTc, checkRecTc )
 import GHC.Data.Coercion
 import GHC.Data.BasicTypes
 import GHC.Data.Unique

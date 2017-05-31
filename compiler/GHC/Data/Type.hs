@@ -219,7 +219,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Unique.Set
 
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import TysPrim
 import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )

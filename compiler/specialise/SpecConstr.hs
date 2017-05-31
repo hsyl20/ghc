@@ -32,7 +32,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Coercion         hiding( substCo )
 import Rules
 import GHC.Data.Type             hiding ( substTy )
-import TyCon            ( tyConName )
+import GHC.Data.Type.Constructor            ( tyConName )
 import GHC.Data.Id
 import PprCore          ( pprParendExpr )
 import MkCore           ( mkImpossibleExpr )
@@ -60,7 +60,7 @@ import GHC.Data.Module
 
 -- See Note [Forcing specialisation]
 
-import TyCon ( TyCon )
+import GHC.Data.Type.Constructor ( TyCon )
 import GHC.Exts( SpecConstrAnnotation(..) )
 import Data.Ord( comparing )
 

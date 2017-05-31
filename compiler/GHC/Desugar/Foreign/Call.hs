@@ -34,7 +34,7 @@ import GHC.Data.Id   ( Id )
 import GHC.Data.Coercion
 import PrimOp
 import TysPrim
-import TyCon
+import GHC.Data.Type.Constructor
 import TysWiredIn
 import GHC.Data.BasicTypes
 import GHC.Data.Literal

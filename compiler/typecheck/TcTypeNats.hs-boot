@@ -1,5 +1,5 @@
 module TcTypeNats where
 
-import TyCon (TyCon)
+import GHC.Data.Type.Constructor (TyCon)
 
 typeNatTyCons :: [TyCon]

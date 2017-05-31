@@ -27,7 +27,7 @@ import GHC.Data.Coercion hiding  ( substCo, substCoVar )
 import GHC.Data.Coercion.Optimise      ( optCoercion )
 import FamInstEnv       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
---import TyCon            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
+--import GHC.Data.Type.Constructor            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
 import CoreMonad        ( Tick(..), SimplifierMode(..) )
 import CoreSyn
 import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )

@@ -68,7 +68,7 @@ module   RdrHsSyn (
 
 import HsSyn            -- Lots of it
 import GHC.Data.Class            ( FunDep )
-import TyCon            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
+import GHC.Data.Type.Constructor            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConTyCon )
 import GHC.Data.ConstructorLike          ( ConLike(..) )
 import GHC.Data.Coercion.Axiom          ( Role, fsFromRole )

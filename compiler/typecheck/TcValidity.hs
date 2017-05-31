@@ -34,7 +34,7 @@ import GHC.Data.Coercion
 import GHC.Data.Kind
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 
 -- others:
 import HsSyn            -- HsType

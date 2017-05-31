@@ -25,7 +25,7 @@ import TysWiredIn ( tupleTyCon, sumTyCon, runtimeRepTyCon
 import GHC.Data.Id
 import GHC.Data.Type
 import GHC.Data.Kind ( isTYPEApp )
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Name ( Name, getOccName )
 import GHC.Data.OccName

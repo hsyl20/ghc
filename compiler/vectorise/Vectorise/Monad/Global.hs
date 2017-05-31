@@ -38,7 +38,7 @@ import Vectorise.Env
 
 import CoreSyn
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Data.Name.Environment

@@ -469,7 +469,7 @@ Library
         FamInstEnv
         FunDeps
         InstEnv
-        TyCon
+        GHC.Data.Type.Constructor
         GHC.Data.Coercion.Axiom
         GHC.Data.Kind
         GHC.Data.Type

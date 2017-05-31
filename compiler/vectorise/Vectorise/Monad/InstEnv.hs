@@ -16,7 +16,7 @@ import FamInstEnv
 import InstEnv
 import GHC.Data.Class
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Utils.Outputable
 import GHC.Utils
 

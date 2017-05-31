@@ -27,7 +27,7 @@ module KnownUniques
 #include "HsVersions.h"
 
 import TysWiredIn
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.BasicTypes

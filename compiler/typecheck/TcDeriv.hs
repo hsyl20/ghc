@@ -46,7 +46,7 @@ import GHC.Data.Maybe
 import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Set as NameSet
-import TyCon
+import GHC.Data.Type.Constructor
 import TcType
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment

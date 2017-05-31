@@ -90,7 +90,7 @@ import GHC.Data.Name
 import GHC.Data.Var.Set
 import GHC.Data.BasicTypes
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Type
 import ForeignCall

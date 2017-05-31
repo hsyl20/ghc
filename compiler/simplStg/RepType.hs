@@ -28,7 +28,7 @@ import GHC.Data.DataConstructor
 import GHC.Utils.Outputable
 import PrelNames
 import GHC.Data.Coercion
-import TyCon
+import GHC.Data.Type.Constructor
 import TyCoRep
 import GHC.Data.Type
 import GHC.Utils

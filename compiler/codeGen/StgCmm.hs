@@ -37,7 +37,7 @@ import GHC.Data.Id.Info
 import RepType
 import GHC.Data.DataConstructor
 import GHC.Data.Name
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Data.Stream

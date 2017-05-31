@@ -123,7 +123,7 @@ import qualified StgCmm ( codeGen )
 import StgSyn
 import CostCentre
 import ProfInit
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import SimplStg         ( stg2stg )
 import Cmm

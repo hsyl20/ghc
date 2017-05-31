@@ -44,7 +44,7 @@ import TcHsSyn ( zonkTcTypeToType, mkEmptyZonkEnv )
 import TcUnify
 import TcEnv
 
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.Utils
 import GHC.Data.Var.Set

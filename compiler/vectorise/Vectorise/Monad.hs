@@ -33,7 +33,7 @@ import GHC.Types hiding ( MonadThings(..) )
 import GHC.Config.Flags
 import InstEnv
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Name.Set
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

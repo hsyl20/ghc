@@ -28,7 +28,7 @@ import HsSyn
 import GHC.Data.Id
 import CoreSyn
 import MkCore
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import TcHsSyn ( shortCutLit )
 import TcType

@@ -38,7 +38,7 @@ import GHC.Data.DataConstructor
 import ForeignCall
 import GHC.Data.Id
 import PrimOp
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Type             ( isUnliftedType )
 import RepType          ( isVoidTy, countConRepArgs, primRepSlot )
 import CostCentre       ( CostCentreStack, currentCCS )

@@ -8,7 +8,7 @@ The @TyCon@ datatype
 
 {-# LANGUAGE CPP, FlexibleInstances #-}
 
-module TyCon(
+module GHC.Data.Type.Constructor (
         -- * Main TyCon data types
         TyCon, AlgTyConRhs(..), visibleDataCons,
         AlgTyConFlav(..), isNoParent,
@@ -192,7 +192,7 @@ We also support injective type families -- see Note [Injective type families]
 
 Note [Data type families]
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-See also Note [Wrappers for data instance tycons] in MkId.hs
+See also Note [Wrappers for data instance tycons] in GHC.Data.Id.Make
 
 * Data type families are declared thus
         data family T a :: *

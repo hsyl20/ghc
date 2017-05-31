@@ -3,7 +3,7 @@
 module GHC.Data.Coercion where
 
 import {-# SOURCE #-} TyCoRep
-import {-# SOURCE #-} TyCon
+import {-# SOURCE #-} GHC.Data.Type.Constructor
 
 import GHC.Data.BasicTypes ( LeftOrRight )
 import GHC.Data.Coercion.Axiom

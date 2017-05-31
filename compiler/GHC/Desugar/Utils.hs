@@ -54,7 +54,7 @@ import MkCore
 import GHC.Data.Id.Make
 import GHC.Data.Id
 import GHC.Data.Literal
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Type

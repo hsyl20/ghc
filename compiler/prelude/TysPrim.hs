@@ -96,7 +96,7 @@ import {-# SOURCE #-} TysWiredIn
 
 import GHC.Data.Var              ( TyVar, TyVarBndr(TvBndr), mkTyVar )
 import GHC.Data.Name
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc
 import GHC.Data.Unique
 import PrelNames

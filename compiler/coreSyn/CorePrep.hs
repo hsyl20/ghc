@@ -31,7 +31,7 @@ import GHC.Data.Type
 import GHC.Data.Literal
 import GHC.Data.Coercion
 import TcEnv
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Demand
 import GHC.Data.Var
 import GHC.Data.Var.Set

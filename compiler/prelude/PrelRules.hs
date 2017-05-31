@@ -35,7 +35,7 @@ import CoreOpt     ( exprIsLiteral_maybe )
 import PrimOp      ( PrimOp(..), tagToEnumKey )
 import TysWiredIn
 import TysPrim
-import TyCon       ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
+import GHC.Data.Type.Constructor       ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
                    , unwrapNewTyCon_maybe, tyConDataCons )
 import GHC.Data.DataConstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
 import CoreUtils   ( cheapEqExpr, exprIsHNF )

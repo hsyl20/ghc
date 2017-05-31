@@ -46,7 +46,7 @@ import GHC.Data.Kind
 import GHC.Data.Type
 import RepType
 import TyCoRep       -- checks validity of types/coercions
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.BasicTypes
 import GHC.Utils.Error as Err

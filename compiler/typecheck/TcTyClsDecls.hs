@@ -46,7 +46,7 @@ import TyCoRep   -- for checkValidRoles
 import GHC.Data.Kind
 import GHC.Data.Class
 import GHC.Data.Coercion.Axiom
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Var

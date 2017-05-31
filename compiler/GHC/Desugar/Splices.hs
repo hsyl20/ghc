@@ -42,7 +42,7 @@ import THNames
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import TcType
-import TyCon
+import GHC.Data.Type.Constructor
 import TysWiredIn
 import CoreSyn
 import MkCore

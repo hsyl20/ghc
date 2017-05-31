@@ -21,7 +21,7 @@ import FamInstEnv
 import CoreSyn
 import GHC.Data.Type
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

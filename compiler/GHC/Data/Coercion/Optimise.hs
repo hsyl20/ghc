@@ -17,7 +17,7 @@ import TyCoRep
 import GHC.Data.Coercion
 import GHC.Data.Type hiding( substTyVarBndr, substTy )
 import TcType       ( exactTyCoVarsOfType )
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

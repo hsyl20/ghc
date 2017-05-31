@@ -74,7 +74,7 @@ import GHC.Data.Id.Info
 import GHC.Data.Type
 import TyCoRep( TyBinder(..) )
 import GHC.Data.Coercion
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Unique
 import GHC.Utils.Outputable
 import TysPrim

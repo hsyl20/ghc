@@ -202,7 +202,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Coercion
 import GHC.Data.Type
 import RepType
-import TyCon
+import GHC.Data.Type.Constructor
 
 -- others:
 import GHC.Config.Flags

@@ -49,7 +49,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import CoreSyn
-import TyCon hiding ( pprPromotionQuote )
+import GHC.Data.Type.Constructor hiding ( pprPromotionQuote )
 import GHC.Data.Coercion.Axiom
 import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )
 import TysWiredIn ( heqTyCon )

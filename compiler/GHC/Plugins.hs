@@ -87,7 +87,7 @@ import GHC.Data.Type     hiding {- conflict with CoreSubst -}
                 ( substTy, extendTvSubst, extendTvSubstList, isInScope )
 import GHC.Data.Coercion hiding {- conflict with CoreSubst -}
                 ( substCo )
-import TyCon
+import GHC.Data.Type.Constructor
 import TysWiredIn
 import GHC.Types
 import GHC.Data.BasicTypes hiding ( Version {- conflicts with Packages.Version -} )

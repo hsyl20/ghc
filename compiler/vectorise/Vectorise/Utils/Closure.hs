@@ -18,7 +18,7 @@ import CoreSyn
 import GHC.Data.Type
 import MkCore
 import CoreUtils
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Id.Make
 import TysWiredIn

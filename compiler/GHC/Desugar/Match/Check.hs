@@ -28,7 +28,7 @@ import GHC.Data.ConstructorLike
 import GHC.Data.Name
 import FamInstEnv
 import TysWiredIn
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Outputable

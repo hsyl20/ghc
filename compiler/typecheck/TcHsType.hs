@@ -62,7 +62,7 @@ import GHC.Data.Kind
 import GHC.Data.RdrName( lookupLocalRdrOcc )
 import GHC.Data.Var
 import GHC.Data.Var.Set
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.Class

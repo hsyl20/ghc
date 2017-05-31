@@ -43,7 +43,7 @@ import PrelNames        ( pluginTyConName, frontendPluginTyConName )
 import GHC.Types
 import GHCi.RemoteTypes ( HValue )
 import GHC.Data.Type             ( Type, eqType, mkTyConTy, pprTyThingCategory )
-import TyCon            ( TyCon )
+import GHC.Data.Type.Constructor            ( TyCon )
 import GHC.Data.Name             ( Name, nameModule_maybe )
 import GHC.Data.Id               ( idType )
 import GHC.Data.Module           ( Module, ModuleName )

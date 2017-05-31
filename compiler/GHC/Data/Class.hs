@@ -24,7 +24,7 @@ module GHC.Data.Class (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} TyCon     ( TyCon )
+import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
 import {-# SOURCE #-} TyCoRep   ( Type, PredType, pprType )
 import GHC.Data.Var
 import GHC.Data.Name

@@ -30,7 +30,7 @@ module GHC.Data.Coercion.Axiom (
        ) where
 
 import {-# SOURCE #-} TyCoRep ( Type, pprType )
-import {-# SOURCE #-} TyCon ( TyCon )
+import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Name

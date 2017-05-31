@@ -138,7 +138,7 @@ import Unify
 
 import TcEvidence
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import TcErrors   ( solverDepthErrorTcS )
 
 import GHC.Data.Name

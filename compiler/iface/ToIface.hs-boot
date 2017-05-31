@@ -3,7 +3,7 @@ module ToIface where
 import {-# SOURCE #-} TyCoRep
 import {-# SOURCE #-} IfaceType
 import GHC.Data.Var ( TyVar, TyVarBinder )
-import TyCon ( TyCon )
+import GHC.Data.Type.Constructor ( TyCon )
 import GHC.Data.Var.Set( VarSet )
 
 -- For TyCoRep

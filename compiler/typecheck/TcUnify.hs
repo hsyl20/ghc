@@ -50,7 +50,7 @@ import GHC.Data.Coercion
 import TcEvidence
 import GHC.Data.Name ( isSystemName )
 import Inst
-import TyCon
+import GHC.Data.Type.Constructor
 import TysWiredIn
 import TysPrim( tYPE )
 import GHC.Data.Var as Var

@@ -35,7 +35,7 @@ import GHC.Data.Var.Set
 import Data.List
 import GHC.Data.FastString
 import GHC.Types
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Unique.Supply
 import GHC.Data.BasicTypes
 import GHC.Utils.Monad

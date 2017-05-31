@@ -52,7 +52,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.RdrName
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import TcEvidence
 import GHC.Data.Var.Set

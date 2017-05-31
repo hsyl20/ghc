@@ -51,7 +51,7 @@ import PrimOp   ( allThePrimOps, primOpFixity, primOpOcc )
 import GHC.Data.Id.Make     ( seqId )
 import TysPrim  ( funTyConName )
 import Rules
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Types.Annotations
 import InstEnv
 import FamInstEnv

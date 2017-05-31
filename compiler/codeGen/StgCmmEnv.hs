@@ -24,7 +24,7 @@ module StgCmmEnv (
 
 #include "HsVersions.h"
 
-import TyCon
+import GHC.Data.Type.Constructor
 import StgCmmMonad
 import StgCmmUtils
 import StgCmmClosure

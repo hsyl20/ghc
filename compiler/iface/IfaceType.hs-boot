@@ -2,7 +2,7 @@
 module IfaceType where
 
 import GHC.Data.Var (TyVarBndr, ArgFlag)
-import TyCon (TyConBndrVis)
+import GHC.Data.Type.Constructor (TyConBndrVis)
 import GHC.Data.BasicTypes (TyPrec)
 import GHC.Utils.Outputable (Outputable, SDoc)
 import GHC.Data.FastString (FastString)

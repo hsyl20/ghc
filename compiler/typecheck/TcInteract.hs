@@ -37,7 +37,7 @@ import TysPrim    ( eqPrimTyCon, eqReprPrimTyCon )
 import GHC.Data.Id( idType, isNaughtyRecordSelector )
 import GHC.Data.Coercion.Axiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel
 import FunDeps

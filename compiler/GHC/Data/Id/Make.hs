@@ -51,7 +51,7 @@ import MkCore
 import CoreUtils        ( exprType, mkCast )
 import CoreUnfold
 import GHC.Data.Literal
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import GHC.Data.Name.Set

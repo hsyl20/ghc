@@ -10,7 +10,7 @@ import BuildTyCl( TcMethInfo, buildClass, buildDataCon, newTyConRepName )
 import GHC.Data.OccName
 import GHC.Data.Class
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Data.BasicTypes( DefMethSpec(..) )

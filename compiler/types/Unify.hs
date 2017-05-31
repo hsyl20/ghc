@@ -33,7 +33,7 @@ import GHC.Data.Kind
 import GHC.Data.Name( Name )
 import GHC.Data.Type hiding ( getTvSubstEnv )
 import GHC.Data.Coercion hiding ( getCvSubstEnv )
-import TyCon
+import GHC.Data.Type.Constructor
 import TyCoRep hiding ( getTvSubstEnv, getCvSubstEnv )
 import GHC.Utils
 import GHC.Data.Pair

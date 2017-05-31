@@ -63,7 +63,7 @@ import GHC.Utils.Fingerprint
 import GHC.Utils.Binary
 import GHC.Data.Bool.Formula ( BooleanFormula, pprBooleanFormula, isTrue )
 import GHC.Data.Var( TyVarBndr(..) )
-import TyCon ( Role (..), Injectivity(..) )
+import GHC.Data.Type.Constructor ( Role (..), Injectivity(..) )
 import GHC.Utils( filterOut, filterByList )
 import GHC.Data.DataConstructor (SrcStrictness(..), SrcUnpackedness(..))
 import GHC.Utils.Identifier (isLexSym)

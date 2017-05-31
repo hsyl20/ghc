@@ -47,7 +47,7 @@ import TcType
 import TcMType
 import TcEvidence
 import TysPrim
-import TyCon   ( isUnboxedTupleTyCon )
+import GHC.Data.Type.Constructor   ( isUnboxedTupleTyCon )
 import TysWiredIn
 import GHC.Data.Type
 import GHC.Data.Coercion

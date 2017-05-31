@@ -22,7 +22,7 @@ import GHC.Data.Name             ( getSrcLoc )
 import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
 import GHC.Data.Type
 import RepType
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Utils
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable

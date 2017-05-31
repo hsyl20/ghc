@@ -19,7 +19,7 @@ import StgCmmClosure    ( idPrimRep )
 
 import SMRep            ( WordOff )
 import GHC.Data.Id               ( Id )
-import TyCon            ( PrimRep(..), primElemRepSizeB )
+import GHC.Data.Type.Constructor            ( PrimRep(..), primElemRepSizeB )
 import GHC.Data.BasicTypes       ( RepArity )
 import GHC.Config.Constants        ( wORD64_SIZE )
 import GHC.Config.Flags

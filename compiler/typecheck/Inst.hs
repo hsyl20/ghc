@@ -56,7 +56,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Var.Environment
 import PrelNames
 import GHC.Data.SrcLoc

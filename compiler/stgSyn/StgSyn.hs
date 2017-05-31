@@ -62,7 +62,7 @@ import GHC.Packages    ( isDllName )
 import GHC.Platform
 import PprCore     ( {- instances -} )
 import PrimOp      ( PrimOp, PrimCall )
-import TyCon       ( PrimRep(..), TyCon )
+import GHC.Data.Type.Constructor       ( PrimRep(..), TyCon )
 import GHC.Data.Type        ( Type )
 import RepType     ( typePrimRep1 )
 import GHC.Data.Unique      ( Unique )

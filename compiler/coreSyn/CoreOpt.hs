@@ -38,7 +38,7 @@ import GHC.Data.Coercion.Optimise ( optCoercion )
 import GHC.Data.Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList
                        , isInScope, substTyVarBndr, cloneTyVarBndr )
 import GHC.Data.Coercion hiding ( substCo, substCoVarBndr )
-import TyCon        ( tyConArity )
+import GHC.Data.Type.Constructor        ( tyConArity )
 import TysWiredIn
 import PrelNames
 import GHC.Data.BasicTypes

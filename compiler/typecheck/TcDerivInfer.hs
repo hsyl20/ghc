@@ -29,7 +29,7 @@ import TcGenGenerics
 import TcMType
 import TcRnMonad
 import TcType
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import TcSimplify
 import TcValidity (validDerivPred)

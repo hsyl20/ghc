@@ -27,7 +27,7 @@ import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Type
 import RepType
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion
 import TcEnv
 import TcType

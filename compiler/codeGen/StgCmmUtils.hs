@@ -56,7 +56,7 @@ import CmmSwitch
 import ForeignCall
 import GHC.Data.Id.Info
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 import SMRep
 import GHC.Data.Module
 import GHC.Data.Literal

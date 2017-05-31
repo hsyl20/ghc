@@ -8,7 +8,7 @@ import Vectorise.Builtins
 import Vectorise.Type.Type
 
 import CoreSyn
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import TyCoRep
 import GHC.Data.Name.Set

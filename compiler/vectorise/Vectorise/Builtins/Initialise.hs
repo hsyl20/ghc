@@ -12,7 +12,7 @@ import TysPrim
 import GHC.Desugar.Monad
 import TysWiredIn
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import CoreSyn
 import GHC.Data.Type

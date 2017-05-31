@@ -32,7 +32,7 @@ import TcUnify
 import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Id
-import TyCon
+import GHC.Data.Type.Constructor
 import TysPrim
 import TcEvidence
 import GHC.Utils.Outputable

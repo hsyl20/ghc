@@ -22,7 +22,7 @@ import TcEvidence
 import LoadIface
 import TcRnMonad
 import GHC.Data.SrcLoc
-import TyCon
+import GHC.Data.Type.Constructor
 import TcType
 import GHC.Data.Coercion.Axiom
 import GHC.Config.Flags

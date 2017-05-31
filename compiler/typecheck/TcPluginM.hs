@@ -74,7 +74,7 @@ import GHC.Data.Var        ( EvVar )
 
 import GHC.Data.Module
 import GHC.Data.Name
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Class
 import GHC.Types

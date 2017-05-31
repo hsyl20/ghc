@@ -80,7 +80,7 @@ import GHC.Data.Name
 import GHC.Data.Type
 import TyCoRep
 import TcType
-import TyCon
+import GHC.Data.Type.Constructor
 import RepType
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable

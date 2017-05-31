@@ -69,7 +69,7 @@ import GHC.Data.Id
 import GHC.Types.Annotations
 import CoreSyn
 import GHC.Data.Class
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor

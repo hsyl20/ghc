@@ -106,7 +106,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Available
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Data.List.SetOps

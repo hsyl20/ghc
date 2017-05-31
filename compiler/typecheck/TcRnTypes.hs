@@ -144,7 +144,7 @@ import GHC.Types
 import TcEvidence
 import GHC.Data.Type
 import GHC.Data.Class    ( Class )
-import TyCon    ( TyCon )
+import GHC.Data.Type.Constructor    ( TyCon )
 import GHC.Data.Coercion ( Coercion, mkHoleCo )
 import GHC.Data.ConstructorLike  ( ConLike(..) )
 import GHC.Data.DataConstructor  ( DataCon, dataConUserType, dataConOrigArgTys )

@@ -93,7 +93,7 @@ import {-# SOURCE #-}   HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr,
 import HsBinds
 import HsTypes
 import HsDoc
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 import GHC.Data.Coercion

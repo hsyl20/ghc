@@ -50,7 +50,7 @@ import IfaceEnv
 import TcEnv
 import TcRnMonad
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.Module
 import GHC.Packages( isDllName )

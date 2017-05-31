@@ -68,7 +68,7 @@ import GHC.Types
 import GHC.Data.Bag
 import GHC.Data.DataConstructor
 import GHC.Data.ConstructorLike
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Desugar.Match.Expr
 import GHC.Data.Id
 import GHC.Data.Module

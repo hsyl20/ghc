@@ -54,7 +54,7 @@ import GHC.Data.Var
 import GHC.Data.RdrName ( RdrName )
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Utils.Outputable
 import GHC.Data.Type
 import GHC.Data.SrcLoc

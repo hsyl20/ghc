@@ -109,7 +109,7 @@ module GHC.Data.Coercion (
 
 import TyCoRep
 import GHC.Data.Type
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var
 import GHC.Data.Var.Environment

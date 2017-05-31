@@ -66,7 +66,7 @@ import GHC.Data.Type
 import ForeignCall ( CType )
 import GHC.Data.Coercion
 import Unify
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.FieldLabel
 import GHC.Data.Class
 import GHC.Data.Name

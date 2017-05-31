@@ -28,7 +28,7 @@ import CoreSyn
 import CoreFVs
 import GHC.Data.Class
 import GHC.Data.DataConstructor
-import TyCon
+import GHC.Data.Type.Constructor
 import TcType
 import GHC.Data.Type
 import TyCoRep

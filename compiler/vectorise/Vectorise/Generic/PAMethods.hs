@@ -17,7 +17,7 @@ import CoreSyn
 import CoreUtils
 import FamInstEnv
 import MkCore            ( mkWildCase, mkCoreLet )
-import TyCon
+import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Type
 import GHC.Data.OccName

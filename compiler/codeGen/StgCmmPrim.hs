@@ -35,7 +35,7 @@ import StgSyn
 import Cmm
 import CmmInfo
 import GHC.Data.Type     ( Type, tyConAppTyCon )
-import TyCon
+import GHC.Data.Type.Constructor
 import CLabel
 import CmmUtils
 import PrimOp

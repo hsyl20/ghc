@@ -1,7 +1,7 @@
 module GHC.Data.DataConstructor where
 import GHC.Data.Var( TyVar, TyVarBinder )
 import GHC.Data.Name( Name, NamedThing )
-import {-# SOURCE #-} TyCon( TyCon )
+import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
 import GHC.Data.FieldLabel ( FieldLabel )
 import GHC.Data.Unique ( Uniquable )
 import GHC.Utils.Outputable ( Outputable, OutputableBndr )
