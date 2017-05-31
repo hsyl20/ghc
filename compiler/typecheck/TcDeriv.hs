@@ -41,7 +41,7 @@ import GHC.Data.BasicTypes ( DerivStrategy(..) )
 import Class
 import Type
 import GHC.Utils.Error
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Maybe
 import GHC.Data.RdrName
 import GHC.Data.Name

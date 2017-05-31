@@ -77,7 +77,7 @@ import GHC.Data.Id ( Id )
 import GHC.Data.Name( Name )
 import GHC.Data.RdrName ( RdrName )
 import GHC.Data.Name.Set ( NameSet, emptyNameSet )
-import GHC.Data.DataConstructorstructor( HsSrcBang(..), HsImplBang(..),
+import GHC.Data.DataConstructor( HsSrcBang(..), HsImplBang(..),
                 SrcStrictness(..), SrcUnpackedness(..) )
 import TysPrim( funTyConName )
 import Type

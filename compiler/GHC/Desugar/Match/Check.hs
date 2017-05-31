@@ -33,7 +33,7 @@ import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Types (CompleteMatch(..))
 
 import GHC.Desugar.Monad

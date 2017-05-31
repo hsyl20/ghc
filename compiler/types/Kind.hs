@@ -22,7 +22,7 @@ module Kind (
 
 import {-# SOURCE #-} Type    ( typeKind, coreView, tcView
                               , splitTyConApp_maybe )
-import {-# SOURCE #-} GHC.Data.DataCon ( DataCon )
+import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon )
 
 import TyCoRep
 import TyCon

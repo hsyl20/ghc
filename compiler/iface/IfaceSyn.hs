@@ -65,7 +65,7 @@ import GHC.Data.Bool.Formula ( BooleanFormula, pprBooleanFormula, isTrue )
 import GHC.Data.Var( TyVarBndr(..) )
 import TyCon ( Role (..), Injectivity(..) )
 import GHC.Utils( filterOut, filterByList )
-import GHC.Data.DataConstructorstructor (SrcStrictness(..), SrcUnpackedness(..))
+import GHC.Data.DataConstructor (SrcStrictness(..), SrcUnpackedness(..))
 import GHC.Utils.Identifier (isLexSym)
 import GHC.Config.Flags
 

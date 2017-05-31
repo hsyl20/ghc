@@ -131,7 +131,7 @@ Here is a running example:
 import CLabel
 import CoreSyn
 import CoreUtils (collectMakeStaticArgs)
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Types
 import GHC.Data.Id

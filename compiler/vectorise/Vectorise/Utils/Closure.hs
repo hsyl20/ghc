@@ -19,7 +19,7 @@ import Type
 import MkCore
 import CoreUtils
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Id.Make
 import TysWiredIn
 import GHC.Data.BasicTypes( Boxity(..) )

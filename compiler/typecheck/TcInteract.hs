@@ -38,7 +38,7 @@ import GHC.Data.Id( idType, isNaughtyRecordSelector )
 import CoAxiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import Class
 import TyCon
-import GHC.Data.DataConstructorstructor( dataConWrapId )
+import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel
 import FunDeps
 import FamInst

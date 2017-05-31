@@ -35,7 +35,7 @@ import CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import RepType
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Name
 import TyCon
 import GHC.Data.Module

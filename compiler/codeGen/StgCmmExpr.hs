@@ -34,7 +34,7 @@ import BlockId
 import Cmm
 import CmmInfo
 import CoreSyn
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import ForeignCall
 import GHC.Data.Id
 import PrimOp

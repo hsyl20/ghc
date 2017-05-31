@@ -22,7 +22,7 @@ import CoreSyn
 import Type
 import Class
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var

@@ -11,7 +11,7 @@ import GHC.Data.OccName
 import Class
 import Type
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Data.BasicTypes( DefMethSpec(..) )
 import GHC.Data.SrcLoc( SrcSpan, noSrcSpan )

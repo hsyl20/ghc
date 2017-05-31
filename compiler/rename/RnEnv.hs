@@ -60,7 +60,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Available
 import GHC.Data.Module
 import GHC.Data.ConstructorLike
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import TyCon
 import PrelNames        ( rOOT_MAIN )
 import GHC.Utils.Error         ( MsgDoc, ErrMsg )

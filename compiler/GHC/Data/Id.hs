@@ -133,7 +133,7 @@ import qualified GHC.Data.Var as Var
 import Type
 import RepType
 import TysPrim
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Demand
 import GHC.Data.Name
 import GHC.Data.Module

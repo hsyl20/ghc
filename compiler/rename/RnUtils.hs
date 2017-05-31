@@ -34,7 +34,7 @@ import TcRnMonad
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Utils

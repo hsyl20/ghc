@@ -17,8 +17,8 @@ module GHC.Plugins
    , module GHC.Data.Id.Info
    , module CoreMonad
    , module CoreSyn
-   , module Literal
-   , module DataCon
+   , module GHC.Data.Literal
+   , module GHC.Data.DataConstructor
    , module CoreUtils
    , module MkCore
    , module CoreFVs
@@ -27,13 +27,13 @@ module GHC.Plugins
    , module GHC.Types.Annotations
    , module GHC.Config.Flags
    , module GHC.Packages
-   , module Module
+   , module GHC.Data.Module
    , module Type
    , module TyCon
    , module Coercion
    , module TysWiredIn
    , module GHC.Types
-   , module BasicTypes
+   , module GHC.Data.BasicTypes
    , module GHC.Data.Var.Set
    , module GHC.Data.Var.Environment
    , module GHC.Data.Name.Set
@@ -43,7 +43,7 @@ module GHC.Plugins
    , module GHC.Data.FiniteMap
    , module GHC.Utils
    , module GHC.Serialized
-   , module SrcLoc
+   , module GHC.Data.SrcLoc
    , module GHC.Utils.Outputable
    , module GHC.Data.Unique.Supply
    , module GHC.Data.Unique
@@ -66,7 +66,7 @@ import GHC.Data.Id.Info
 import CoreMonad
 import CoreSyn
 import GHC.Data.Literal
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import CoreUtils
 import MkCore
 import CoreFVs

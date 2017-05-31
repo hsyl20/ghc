@@ -16,7 +16,7 @@ module TcGenFunctor (
     ) where
 
 import GHC.Data.Bag
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.FastString
 import HsSyn
 import GHC.Utils.Panic

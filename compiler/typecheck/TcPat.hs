@@ -36,7 +36,7 @@ import TcHsType
 import TysWiredIn
 import TcEvidence
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import PrelNames

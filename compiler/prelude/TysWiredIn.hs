@@ -142,8 +142,8 @@ import GHC.Config.Constants        ( mAX_TUPLE_SIZE, mAX_CTUPLE_SIZE, mAX_SUM_SI
 import GHC.Data.Module           ( Module )
 import Type
 import RepType
-import GHC.Data.DataConstructorstructor
-import {-# SOURCE #-} GHC.Data.ConLike
+import GHC.Data.DataConstructor
+import {-# SOURCE #-} GHC.Data.ConstructorLike
 import TyCon
 import Class            ( Class, mkClass )
 import GHC.Data.RdrName

@@ -11,7 +11,7 @@ import GHC.Data.BasicTypes
 import TysPrim
 import GHC.Desugar.Monad
 import TysWiredIn
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import TyCon
 import Class
 import CoreSyn

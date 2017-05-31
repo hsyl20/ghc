@@ -37,7 +37,7 @@ import Cmm
 import CmmUtils
 import CLabel
 
-import qualified Module
+import qualified GHC.Data.Module as Module
 import CostCentre
 import GHC.Config.Flags
 import GHC.Data.FastString

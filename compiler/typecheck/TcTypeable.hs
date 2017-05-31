@@ -26,7 +26,7 @@ import GHC.Data.Id
 import Type
 import Kind ( isTYPEApp )
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Name ( Name, getOccName )
 import GHC.Data.OccName
 import GHC.Data.Module

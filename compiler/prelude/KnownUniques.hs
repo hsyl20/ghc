@@ -28,7 +28,7 @@ module KnownUniques
 
 import TysWiredIn
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable

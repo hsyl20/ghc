@@ -24,7 +24,7 @@ module RepType
 #include "HsVersions.h"
 
 import GHC.Data.BasicTypes (Arity, RepArity)
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Utils.Outputable
 import PrelNames
 import Coercion

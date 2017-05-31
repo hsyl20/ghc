@@ -47,7 +47,7 @@ import Kind
 import Class
 import CoAxiom
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Environment

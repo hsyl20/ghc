@@ -37,7 +37,7 @@ import TysWiredIn
 import TysPrim
 import TyCon       ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
                    , unwrapNewTyCon_maybe, tyConDataCons )
-import GHC.Data.DataConstructorstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
+import GHC.Data.DataConstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
 import CoreUtils   ( cheapEqExpr, exprIsHNF )
 import CoreUnfold  ( exprIsConApp_maybe )
 import Type

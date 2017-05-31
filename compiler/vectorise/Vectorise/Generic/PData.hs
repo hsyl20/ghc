@@ -16,7 +16,7 @@ import Vectorise.Env( GlobalEnv( global_fam_inst_env ) )
 
 import GHC.Data.BasicTypes ( SourceText(..) )
 import BuildTyCl
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import TyCon
 import Type
 import FamInst

@@ -72,7 +72,7 @@ import Class
 import TyCon
 import CoAxiom
 import GHC.Data.ConstructorLike
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import Type
 import TcType
 import InstEnv

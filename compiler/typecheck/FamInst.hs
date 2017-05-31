@@ -30,7 +30,7 @@ import GHC.Data.Module
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.RdrName
-import GHC.Data.DataConstructorstructor ( dataConName )
+import GHC.Data.DataConstructor ( dataConName )
 import GHC.Data.Maybe
 import Type
 import TyCoRep

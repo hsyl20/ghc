@@ -35,7 +35,7 @@ import Data.Version
 
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import GHC.Data.Module
+import GHC.Data.Module as Module
 import GHC.Data.Unique
 
 -- -----------------------------------------------------------------------------

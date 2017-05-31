@@ -17,7 +17,7 @@ import CoreSyn
 import CoreUtils        ( exprType, mkCast )
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( JoinArity, vanillaIdInfo )
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Demand
 import MkCore           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
                         , mkCoreApp, mkCoreLet )

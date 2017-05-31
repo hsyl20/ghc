@@ -55,7 +55,7 @@ import GHC.Data.Id.Make
 import GHC.Data.Id
 import GHC.Data.Literal
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import Type
 import Coercion

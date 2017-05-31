@@ -81,7 +81,7 @@ import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.RdrName
 import InstEnv
-import GHC.Data.DataConstructorstructor ( DataCon )
+import GHC.Data.DataConstructor ( DataCon )
 import GHC.Data.PatternSynonym  ( PatSyn )
 import GHC.Data.ConstructorLike
 import TyCon

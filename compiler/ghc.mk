@@ -508,13 +508,13 @@ compiler_stage2_dll0_MODULES = \
 	InstEnv \
 	Kind \
 	KnownUniques \
-	Lexeme \
+	GHC.Utils.Identifier \
 	GHC.Data.List.SetOps \
-	Literal \
+	GHC.Data.Literal \
 	GHC.Data.Maybe \
 	MkCore \
 	GHC.Data.Id.Make \
-	Module \
+	GHC.Data.Module \
 	GHC.Utils.Monad \
 	GHC.Data.Name \
 	GHC.Data.Name.Environment \
@@ -528,7 +528,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Packages \
 	GHC.Data.Pair \
 	GHC.Utils.Panic \
-	PatSyn \
+	GHC.Data.PatternSynonym \
 	GHC.Program.Driver.Pipeline.Monad \
 	GHC.Platform \
 	GHC.Config.Platform.Constants \

@@ -23,7 +23,7 @@ import GHC.Data.FastString
 import GHC.Data.Name.Set
 import GHC.Data.Name
 import GHC.Data.RdrName
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.SrcLoc
 import HsSyn
 import qualified GHC.Data.OccName as OccName

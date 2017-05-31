@@ -89,7 +89,7 @@ import {-# SOURCE #-} PrimOp (PrimOp)
 import GHC.Data.Name
 import GHC.Data.Var.Set
 import GHC.Data.BasicTypes
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import TyCon
 import GHC.Data.PatternSynonym
 import Type

@@ -26,7 +26,7 @@ module GHC.Data.ConstructorLike (
 
 #include "HsVersions.h"
 
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import GHC.Utils.Outputable
 import GHC.Data.Unique

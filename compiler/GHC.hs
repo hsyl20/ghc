@@ -303,7 +303,7 @@ import GHC.Data.Id
 import TysPrim          ( alphaTyVars )
 import TyCon
 import Class
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Name             hiding ( varName )
 import GHC.Data.Available
 import InstEnv

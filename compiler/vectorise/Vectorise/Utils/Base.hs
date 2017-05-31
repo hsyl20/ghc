@@ -37,7 +37,7 @@ import FamInstEnv
 import Coercion
 import Type
 import TyCon
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Id.Make
 import GHC.Config.Flags
 import GHC.Data.FastString

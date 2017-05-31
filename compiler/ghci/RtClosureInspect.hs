@@ -32,7 +32,7 @@ import qualified GHCi.InfoTable as InfoTable
 import GHCi.InfoTable (StgInfoTable, peekItbl)
 import GHC.Types
 
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import Type
 import RepType
 import qualified Unify as U

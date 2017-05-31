@@ -86,7 +86,7 @@ import TyCon
 import CoAxiom
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor as DataCon
 import TcEvidence( TcEvBinds(..) )
 import GHC.Data.Id
 import GHC.Data.Id.Info
@@ -101,6 +101,7 @@ import Data.List        ( find )
 import Data.Maybe
 import GHC.Data.FastString
 import GHC.Data.BasicTypes hiding( SuccessFlag(..) )
+import qualified GHC.Data.BasicTypes as BasicTypes
 import GHC.Data.Maybe( MaybeErr(..) )
 import GHC.Config.Flags
 import GHC.Utils.Panic as Panic

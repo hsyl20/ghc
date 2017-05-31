@@ -44,7 +44,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Module
 import GHC.Data.ConstructorLike
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import TysWiredIn
 import PrelNames
 import GHC.Data.BasicTypes

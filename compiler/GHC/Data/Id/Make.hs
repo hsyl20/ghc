@@ -58,7 +58,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name
 import PrimOp
 import ForeignCall
-import GHC.Data.DataConstructorstructor
+import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Demand
