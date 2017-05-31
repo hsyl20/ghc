@@ -59,7 +59,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import Avail
 import GHC.Data.Module
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Data.DataCon
 import TyCon
 import PrelNames        ( rOOT_MAIN )

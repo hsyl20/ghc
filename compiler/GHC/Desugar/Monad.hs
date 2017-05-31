@@ -67,7 +67,7 @@ import GHC.Data.RdrName
 import GHC.Types
 import GHC.Data.Bag
 import GHC.Data.DataCon
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import TyCon
 import GHC.Desugar.Match.Expr
 import GHC.Data.Id

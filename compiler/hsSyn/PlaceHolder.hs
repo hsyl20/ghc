@@ -13,7 +13,7 @@ import GHC.Data.Name.Set
 import GHC.Data.RdrName
 import GHC.Data.Var
 import Coercion
-import GHC.Data.ConLike (ConLike)
+import GHC.Data.ConstructorLike (ConLike)
 import GHC.Data.FieldLabel
 import GHC.Data.SrcLoc (Located)
 import TcEvidence ( HsWrapper )

@@ -62,7 +62,7 @@ import Coercion
 import TysPrim
 import TysWiredIn
 import BasicTypes
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.Supply
 import GHC.Data.Module

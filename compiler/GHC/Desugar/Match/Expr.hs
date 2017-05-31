@@ -20,7 +20,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.DataCon
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import TysWiredIn
 import GHC.Utils.Outputable
 import GHC.Utils

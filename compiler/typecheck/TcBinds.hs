@@ -63,7 +63,7 @@ import GHC.Data.Unique (getUnique)
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import qualified GHC.LanguageExtensions as LangExt
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 
 import Control.Monad
 

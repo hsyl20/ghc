@@ -38,7 +38,7 @@ import TcEvidence
 import TyCon
 import GHC.Data.DataCon
 import GHC.Data.PatternSynonym
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))
 import GHC.Config.Flags

@@ -94,7 +94,7 @@ import {- Kind parts of -} Type         ( Kind )
 import CoreLint         ( lintInteractiveExpr )
 import GHC.Data.Var.Environment           ( emptyTidyEnv )
 import GHC.Utils.Panic
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import Control.Concurrent
 
 import GHC.Data.Module

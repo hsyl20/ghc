@@ -27,7 +27,7 @@ import CoreLint
 import GHC.Data.Literal
 import Rules
 import GHC.Data.PatternSynonym
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import CoreArity        ( exprArity, exprBotStrictness_maybe )
 import GHC.CodeGen.StaticPtrTable
 import GHC.Data.Var.Environment

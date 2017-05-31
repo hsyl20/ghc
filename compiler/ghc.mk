@@ -448,7 +448,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Program.CmdLineParser \
 	CmmType \
 	CoAxiom \
-	GHC.Data.ConLike \
+	GHC.Data.ConstructorLike \
 	Coercion \
 	Config \
 	GHC.Config.Constants \

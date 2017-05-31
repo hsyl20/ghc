@@ -42,7 +42,7 @@ import TcEvidence
 import TyCon
 import CoAxiom
 import GHC.Data.DataCon
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import Class
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment

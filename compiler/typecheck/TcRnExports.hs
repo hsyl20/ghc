@@ -25,7 +25,7 @@ import TyCon
 import GHC.Data.SrcLoc
 import GHC.Types
 import GHC.Utils.Outputable
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Data.DataCon
 import GHC.Data.PatternSynonym
 import GHC.Data.FastString

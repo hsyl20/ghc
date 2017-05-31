@@ -43,7 +43,7 @@ import CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Module
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Data.DataCon
 import TysWiredIn
 import PrelNames

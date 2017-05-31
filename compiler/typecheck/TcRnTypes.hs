@@ -146,7 +146,7 @@ import Type
 import Class    ( Class )
 import TyCon    ( TyCon )
 import Coercion ( Coercion, mkHoleCo )
-import GHC.Data.ConLike  ( ConLike(..) )
+import GHC.Data.ConstructorLike  ( ConLike(..) )
 import GHC.Data.DataCon  ( DataCon, dataConUserType, dataConOrigArgTys )
 import GHC.Data.PatternSynonym   ( PatSyn, pprPatSynType )
 import GHC.Data.Id       ( idType, idName )

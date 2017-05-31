@@ -22,7 +22,7 @@ import GHC.Utils.Outputable
 -- into the GHC API instead
 import GHC.Data.Name (nameOccName)
 import GHC.Data.OccName (pprOccName)
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Utils.Monad
 
 import Data.Function

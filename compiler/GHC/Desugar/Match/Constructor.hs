@@ -20,7 +20,7 @@ import {-# SOURCE #-} GHC.Desugar.Match     ( match )
 
 import HsSyn
 import GHC.Desugar.Binds
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import TcType
 import GHC.Desugar.Monad
 import GHC.Desugar.Utils

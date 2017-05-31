@@ -108,7 +108,7 @@ import Type   ( filterOutInvisibleTypes )
 import TysWiredIn ( unitTy )
 import TcType
 import GHC.Data.DataCon
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set

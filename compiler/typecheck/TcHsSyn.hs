@@ -51,7 +51,7 @@ import TyCon   ( isUnboxedTupleTyCon )
 import TysWiredIn
 import Type
 import Coercion
-import GHC.Data.ConLike
+import GHC.Data.ConstructorLike
 import GHC.Data.DataCon
 import GHC.Types
 import GHC.Data.Name
