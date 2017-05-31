@@ -47,7 +47,7 @@ import StgCmmMonad
 import StgCmmClosure
 import GHC.Cmm
 import GHC.Cmm.BlockId
-import MkGraph
+import GHC.Cmm.Graph
 import CodeGen.Platform
 import GHC.Data.CLabel
 import GHC.Cmm.Utils

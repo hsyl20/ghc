@@ -34,7 +34,7 @@ import StgCmmTicky
 import StgCmmClosure
 import StgCmmEnv
 
-import MkGraph
+import GHC.Cmm.Graph
 
 import Hoopl
 import GHC.RTS.Storage

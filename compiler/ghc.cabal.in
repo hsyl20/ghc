@@ -234,7 +234,7 @@ Library
         GHC.Cmm.Utils
         GHC.Cmm.LayoutStack
         GHC.Data.EnumSet
-        MkGraph
+       GHC.Cmm.Graph
         PprBase
         GHC.Cmm.PrettyPrint.C
         GHC.Cmm.PrettyPrint

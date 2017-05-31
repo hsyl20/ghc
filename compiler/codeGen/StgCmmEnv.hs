@@ -36,7 +36,7 @@ import GHC.Cmm.Expr
 import GHC.Cmm.Utils
 import GHC.Config.Flags
 import GHC.Data.Id
-import MkGraph
+import GHC.Cmm.Graph
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import StgSyn

@@ -1,6 +1,6 @@
 {-# LANGUAGE BangPatterns, CPP, GADTs #-}
 
-module MkGraph
+module GHC.Cmm.Graph
   ( CmmAGraph, CmmAGraphScoped, CgStmt(..)
   , (<*>), catAGraphs
   , mkLabel, mkMiddle, mkLast, outOfLine

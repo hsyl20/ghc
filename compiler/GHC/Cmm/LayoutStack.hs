@@ -12,7 +12,7 @@ import GHC.RTS.InfoTable
 import GHC.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.Cmm.Utils
-import MkGraph
+import GHC.Cmm.Graph
 import ForeignCall
 import GHC.Cmm.Analyse.Liveness
 import GHC.Cmm.ProcPoint

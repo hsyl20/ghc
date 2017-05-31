@@ -33,7 +33,7 @@ import StgCmmLayout
 import GHC.Cmm.BlockId (newBlockId)
 import GHC.Cmm
 import GHC.Cmm.Utils
-import MkGraph
+import GHC.Cmm.Graph
 import GHC.Data.Type
 import RepType
 import TysPrim

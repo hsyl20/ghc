@@ -30,7 +30,7 @@ import StgCmmUtils
 import StgCmmClosure
 import StgCmmForeign    (emitPrimCall)
 
-import MkGraph
+import GHC.Cmm.Graph
 import CoreSyn          ( AltCon(..), tickishIsCode )
 import GHC.Cmm.BlockId
 import GHC.RTS.Storage

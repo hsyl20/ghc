@@ -44,7 +44,7 @@ import GHC.Data.Stream
 import GHC.Data.BasicTypes
 
 import GHC.Data.Tree.OrdList
-import MkGraph
+import GHC.Cmm.Graph
 
 import qualified Data.ByteString as BS
 import Data.IORef

@@ -30,7 +30,7 @@ import GHC.Config.Flags
 import GHC.Platform
 import GHC.Data.BasicTypes
 import GHC.Cmm.BlockId
-import MkGraph
+import GHC.Cmm.Graph
 import StgSyn
 import GHC.Cmm
 import GHC.RTS.InfoTable

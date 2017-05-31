@@ -32,7 +32,7 @@ import StgCmmUtils
 import StgCmmMonad
 import GHC.RTS.Storage
 
-import MkGraph
+import GHC.Cmm.Graph
 import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Data.CLabel

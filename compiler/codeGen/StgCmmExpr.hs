@@ -29,7 +29,7 @@ import StgCmmClosure
 
 import StgSyn
 
-import MkGraph
+import GHC.Cmm.Graph
 import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.RTS.InfoTable

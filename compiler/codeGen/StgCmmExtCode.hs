@@ -41,7 +41,7 @@ import StgCmmMonad (FCode, newUnique)
 
 import GHC.Cmm
 import GHC.Data.CLabel
-import MkGraph
+import GHC.Cmm.Graph
 
 import GHC.Cmm.BlockId
 import GHC.Config.Flags

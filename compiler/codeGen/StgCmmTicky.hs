@@ -113,7 +113,7 @@ import StgCmmMonad
 
 import StgSyn
 import GHC.Cmm.Expr
-import MkGraph
+import GHC.Cmm.Graph
 import GHC.Cmm.Utils
 import GHC.Data.CLabel
 import GHC.RTS.Storage
