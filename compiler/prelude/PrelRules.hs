@@ -30,7 +30,7 @@ import {-# SOURCE #-} MkId ( mkPrimOpId, magicDictId )
 import CoreSyn
 import MkCore
 import GHC.Data.Id
-import Literal
+import GHC.Data.Literal
 import CoreOpt     ( exprIsLiteral_maybe )
 import PrimOp      ( PrimOp(..), tagToEnumKey )
 import TysWiredIn

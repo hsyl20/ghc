@@ -24,7 +24,7 @@ import CoreUtils        (rhsIsStatic)
 import CoreStats        (coreBindsStats, CoreStats(..))
 import CoreSeq          (seqBinds)
 import CoreLint
-import Literal
+import GHC.Data.Literal
 import Rules
 import PatSyn
 import ConLike

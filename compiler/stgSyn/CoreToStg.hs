@@ -34,7 +34,7 @@ import GHC.Data.Name             ( isExternalName, nameOccName )
 import GHC.Data.OccName          ( occNameFS )
 import BasicTypes       ( Arity )
 import TysWiredIn       ( unboxedUnitDataCon )
-import Literal
+import GHC.Data.Literal
 import GHC.Utils.Outputable
 import GHC.Utils.Monad
 import GHC.Data.FastString

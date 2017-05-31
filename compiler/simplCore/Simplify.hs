@@ -17,7 +17,7 @@ import SimplEnv
 import SimplUtils
 import OccurAnal        ( occurAnalyseExpr )
 import FamInstEnv       ( FamInstEnv )
-import Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
+import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
 import GHC.Data.Id
 import MkId             ( seqId )
 import MkCore           ( mkImpossibleExpr, castBottomExpr )

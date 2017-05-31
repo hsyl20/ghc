@@ -17,7 +17,7 @@ module PprCore (
 
 import CoreSyn
 import CoreStats (exprStats)
-import Literal( pprLiteral )
+import GHC.Data.Literal( pprLiteral )
 import GHC.Data.Name( pprInfixName, pprPrefixName )
 import GHC.Data.Var
 import GHC.Data.Id

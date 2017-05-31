@@ -23,7 +23,7 @@ import GHC.Data.Name
 import GHC.Data.Unique
 import GHC.Data.Id
 import CoreSyn
-import Literal
+import GHC.Data.Literal
 import DataCon
 import GHC.Data.Var.Set
 import PrimOp

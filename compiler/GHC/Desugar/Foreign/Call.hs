@@ -37,7 +37,7 @@ import TysPrim
 import TyCon
 import TysWiredIn
 import BasicTypes
-import Literal
+import GHC.Data.Literal
 import PrelNames
 import GHC.Config.Flags
 import GHC.Utils.Outputable

@@ -11,7 +11,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Utils.Outputable
 import TysWiredIn
-import Literal
+import GHC.Data.Literal
 import GHC
 import Control.Monad
 import Control.Monad.IO.Class

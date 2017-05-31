@@ -80,7 +80,7 @@ import GHC.Data.Id.Info
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
-import Literal          ( litIsTrivial )
+import GHC.Data.Literal          ( litIsTrivial )
 import Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
 import GHC.Data.Name             ( getOccName, mkSystemVarName )
 import GHC.Data.OccName          ( occNameString )

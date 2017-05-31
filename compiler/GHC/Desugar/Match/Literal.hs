@@ -36,7 +36,7 @@ import GHC.Data.Name
 import Type
 import PrelNames
 import TysWiredIn
-import Literal
+import GHC.Data.Literal
 import GHC.Data.SrcLoc
 import Data.Ratio
 import GHC.Utils.Outputable as Outputable

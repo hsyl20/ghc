@@ -182,7 +182,7 @@ Library
         GHC.Data.Id
         GHC.Data.Id.Info
         Lexeme
-        Literal
+        GHC.Data.Literal
         Llvm
         Llvm.AbsSyn
         Llvm.MetaData

@@ -107,7 +107,7 @@ import Coercion
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment( NameEnv, emptyNameEnv )
-import Literal
+import GHC.Data.Literal
 import DataCon
 import Module
 import TyCon

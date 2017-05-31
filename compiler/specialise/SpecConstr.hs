@@ -25,7 +25,7 @@ import CoreUtils
 import CoreUnfold       ( couldBeSmallEnoughToInline )
 import CoreFVs          ( exprsFreeVarsList )
 import CoreMonad
-import Literal          ( litIsLifted )
+import GHC.Data.Literal          ( litIsLifted )
 import GHC.Types         ( ModGuts(..) )
 import WwLib            ( isWorkerSmallEnough, mkWorkerArgs )
 import DataCon

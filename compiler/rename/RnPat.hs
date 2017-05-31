@@ -62,7 +62,7 @@ import GHC.Utils
 import GHC.Data.List.SetOps          ( removeDups )
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import Literal             ( inCharRange )
+import GHC.Data.Literal             ( inCharRange )
 import TysWiredIn          ( nilDataCon )
 import DataCon
 import qualified GHC.LanguageExtensions as LangExt

@@ -39,7 +39,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Id
 import RepType (countConRepArgs)
-import Literal
+import GHC.Data.Literal
 import PrelInfo
 import GHC.Utils.Outputable
 import GHC.Platform

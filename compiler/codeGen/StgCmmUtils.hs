@@ -59,7 +59,7 @@ import Type
 import TyCon
 import SMRep
 import Module
-import Literal
+import GHC.Data.Literal
 import GHC.Data.Graph.Directed
 import GHC.Utils
 import GHC.Data.Unique

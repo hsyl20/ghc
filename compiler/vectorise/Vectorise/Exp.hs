@@ -38,7 +38,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name.Set
 import GHC.Data.Id
 import BasicTypes( isStrongLoopBreaker )
-import Literal
+import GHC.Data.Literal
 import TysPrim
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString

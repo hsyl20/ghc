@@ -201,7 +201,7 @@ import CoreSyn
 import DataCon
 import GHC.Data.FastString (FastString, mkFastString)
 import GHC.Data.Id
-import Literal (Literal (..))
+import GHC.Data.Literal (Literal (..))
 import MkCore (aBSENT_ERROR_ID)
 import MkId (voidPrimId, voidArgId)
 import GHC.Utils.Monad (mapAccumLM)

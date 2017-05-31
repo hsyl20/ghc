@@ -51,7 +51,7 @@ import ConLike
 import DataCon
 import PrelNames
 import TysWiredIn
-import Literal
+import GHC.Data.Literal
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

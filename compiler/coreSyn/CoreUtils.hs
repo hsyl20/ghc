@@ -66,7 +66,7 @@ import GHC.Data.SrcLoc
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Name
-import Literal
+import GHC.Data.Literal
 import DataCon
 import PrimOp
 import GHC.Data.Id

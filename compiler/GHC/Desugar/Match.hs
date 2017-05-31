@@ -28,7 +28,7 @@ import TcEvidence
 import TcRnMonad
 import GHC.Desugar.Match.Check
 import CoreSyn
-import Literal
+import GHC.Data.Literal
 import CoreUtils
 import MkCore
 import GHC.Desugar.Monad

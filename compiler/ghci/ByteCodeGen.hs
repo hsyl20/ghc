@@ -28,7 +28,7 @@ import GHC.Types
 import CoreUtils
 import CoreSyn
 import PprCore
-import Literal
+import GHC.Data.Literal
 import PrimOp
 import CoreFVs
 import Type

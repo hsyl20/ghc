@@ -22,7 +22,7 @@ import HsSyn
 import DataCon
 import CoreUnfold
 import GHC.Data.Id
-import Literal
+import GHC.Data.Literal
 import Module
 import GHC.Data.Name
 import Type

@@ -234,7 +234,7 @@ import CostCentre
 import ForeignCall
 import Module
 import GHC.Platform
-import Literal
+import GHC.Data.Literal
 import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.SrcLoc

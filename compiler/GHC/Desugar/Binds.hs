@@ -27,7 +27,7 @@ import GHC.Desugar.Utils
 
 import HsSyn            -- lots of things
 import CoreSyn          -- lots of things
-import Literal          ( Literal(MachStr) )
+import GHC.Data.Literal          ( Literal(MachStr) )
 import CoreOpt          ( simpleOptExpr )
 import OccurAnal        ( occurAnalyseExpr )
 import MkCore

@@ -52,7 +52,7 @@ import CoreUtils
 import GHC.Data.Id
 import Demand          ( isBottomingSig )
 import DataCon
-import Literal
+import GHC.Data.Literal
 import PrimOp
 import GHC.Data.Id.Info
 import BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )

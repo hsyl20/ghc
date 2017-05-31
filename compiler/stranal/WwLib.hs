@@ -31,7 +31,7 @@ import RepType          ( isVoidTy )
 import Coercion
 import FamInstEnv
 import BasicTypes       ( Boxity(..) )
-import Literal          ( absentLiteralOf )
+import GHC.Data.Literal          ( absentLiteralOf )
 import TyCon
 import GHC.Data.Unique.Supply
 import GHC.Data.Unique

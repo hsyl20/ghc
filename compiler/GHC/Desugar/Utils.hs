@@ -53,7 +53,7 @@ import CoreUtils
 import MkCore
 import MkId
 import GHC.Data.Id
-import Literal
+import GHC.Data.Literal
 import TyCon
 import DataCon
 import PatSyn

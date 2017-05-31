@@ -52,7 +52,7 @@ import GHC.Data.Name.Set
 import CoAxiom ( BranchIndex )
 import GHC.Data.Name
 import CostCentre
-import Literal
+import GHC.Data.Literal
 import ForeignCall
 import GHC.Types.Annotations( AnnPayload, AnnTarget )
 import BasicTypes

@@ -33,7 +33,7 @@ module TrieMap(
 
 import CoreSyn
 import Coercion
-import Literal
+import GHC.Data.Literal
 import GHC.Data.Name
 import Type
 import TyCoRep

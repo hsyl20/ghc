@@ -56,7 +56,7 @@ import GHC.Data.Var      ( EvVar, setTyVarUnique )
 
 import CoreSyn
 import CoreUtils        ( exprType, needsCaseBinding, bindNonRec )
-import Literal
+import GHC.Data.Literal
 import GHC.Types
 
 import TysWiredIn

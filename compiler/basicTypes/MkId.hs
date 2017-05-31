@@ -50,7 +50,7 @@ import TcType
 import MkCore
 import CoreUtils        ( exprType, mkCast )
 import CoreUnfold
-import Literal
+import GHC.Data.Literal
 import TyCon
 import CoAxiom
 import Class

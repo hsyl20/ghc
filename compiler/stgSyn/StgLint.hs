@@ -16,7 +16,7 @@ import GHC.Data.Var.Set
 import DataCon
 import CoreSyn          ( AltCon(..) )
 import PrimOp           ( primOpType )
-import Literal          ( literalType )
+import GHC.Data.Literal          ( literalType )
 import GHC.Data.Maybe
 import GHC.Data.Name             ( getSrcLoc )
 import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
