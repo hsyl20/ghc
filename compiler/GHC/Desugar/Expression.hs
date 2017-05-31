@@ -54,7 +54,7 @@ import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Data.Bag
 import GHC.Utils.Outputable as Outputable
-import PatSyn
+import GHC.Data.PatternSynonym
 
 import Control.Monad
 

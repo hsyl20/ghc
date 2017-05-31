@@ -82,7 +82,7 @@ import GHC.Data.Var.Set
 import GHC.Data.RdrName
 import InstEnv
 import GHC.Data.DataCon ( DataCon )
-import PatSyn  ( PatSyn )
+import GHC.Data.PatternSynonym  ( PatSyn )
 import GHC.Data.ConLike
 import TyCon
 import CoAxiom

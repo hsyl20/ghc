@@ -56,7 +56,7 @@ import GHC.Data.Id
 import GHC.Data.Literal
 import TyCon
 import GHC.Data.DataCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import Type
 import Coercion
 import TysPrim

@@ -27,7 +27,7 @@ import GHC.Types
 import GHC.Utils.Outputable
 import GHC.Data.ConLike
 import GHC.Data.DataCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Utils (capitalise)

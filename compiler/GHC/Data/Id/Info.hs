@@ -91,7 +91,7 @@ import GHC.Data.Var.Set
 import BasicTypes
 import GHC.Data.DataCon
 import TyCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import Type
 import ForeignCall
 import GHC.Utils.Outputable

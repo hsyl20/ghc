@@ -172,7 +172,7 @@ Library
         BasicTypes
         GHC.Data.ConLike
         GHC.Data.DataCon
-        PatSyn
+        GHC.Data.PatternSynonym
         Demand
         Debug
         GHC.Utils.Exception

@@ -47,7 +47,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.ConLike
 import GHC.Data.DataCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

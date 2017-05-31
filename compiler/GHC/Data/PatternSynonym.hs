@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module PatSyn (
+module GHC.Data.PatternSynonym (
         -- * Main data types
         PatSyn, mkPatSyn,
 

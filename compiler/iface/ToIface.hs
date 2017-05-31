@@ -58,7 +58,7 @@ import PrelNames
 import GHC.Data.Name
 import BasicTypes
 import Type
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils

@@ -37,7 +37,7 @@ import TysWiredIn
 import TcEvidence
 import TyCon
 import GHC.Data.DataCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Data.ConLike
 import PrelNames
 import BasicTypes hiding (SuccessFlag(..))

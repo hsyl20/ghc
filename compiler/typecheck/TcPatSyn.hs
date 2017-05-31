@@ -26,7 +26,7 @@ import TysPrim
 import TysWiredIn  ( runtimeRepTy )
 import GHC.Data.Name
 import GHC.Data.SrcLoc
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Data.Name.Set
 import GHC.Utils.Panic
 import GHC.Utils.Outputable

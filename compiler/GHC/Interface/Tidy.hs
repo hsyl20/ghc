@@ -26,7 +26,7 @@ import CoreSeq          (seqBinds)
 import CoreLint
 import GHC.Data.Literal
 import Rules
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Data.ConLike
 import CoreArity        ( exprArity, exprBotStrictness_maybe )
 import GHC.CodeGen.StaticPtrTable

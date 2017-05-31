@@ -173,7 +173,7 @@ import TyCon
 import CoAxiom
 import GHC.Data.ConLike
 import GHC.Data.DataCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule
                         , eqTyConName )
 import TysWiredIn

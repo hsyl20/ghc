@@ -38,7 +38,7 @@ import GHC.Desugar.Utils
 import GHC.Data.Id
 import GHC.Data.ConLike
 import GHC.Data.DataCon
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Desugar.Match.Constructor
 import GHC.Desugar.Match.Literal
 import Type

@@ -47,7 +47,7 @@ import GHC.Data.FastString
 import GHC.Data.FastString.Environment
 import GHC.Data.Id
 import Type
-import PatSyn
+import GHC.Data.PatternSynonym
 import qualified GHC.LanguageExtensions as LangExt
 
 import Control.Monad

@@ -84,7 +84,7 @@ import LoadIface
 import Class
 import TyCon
 import CoAxiom
-import PatSyn
+import GHC.Data.PatternSynonym
 import GHC.Data.ConLike
 import GHC.Data.DataCon
 import TcEvidence( TcEvBinds(..) )

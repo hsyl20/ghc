@@ -1,4 +1,4 @@
-module PatSyn where
+module GHC.Data.PatternSynonym where
 
 import BasicTypes (Arity)
 import {-# SOURCE #-} TyCoRep (Type)

@@ -148,7 +148,7 @@ import TyCon    ( TyCon )
 import Coercion ( Coercion, mkHoleCo )
 import GHC.Data.ConLike  ( ConLike(..) )
 import GHC.Data.DataCon  ( DataCon, dataConUserType, dataConOrigArgTys )
-import PatSyn   ( PatSyn, pprPatSynType )
+import GHC.Data.PatternSynonym   ( PatSyn, pprPatSynType )
 import GHC.Data.Id       ( idType, idName )
 import GHC.Data.FieldLabel ( FieldLabel )
 import TcType
