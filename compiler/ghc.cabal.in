@@ -219,7 +219,7 @@ Library
         GHC.Cmm.Optimise.Shortcutting
         GHC.Cmm.Expr
         GHC.RTS.InfoTable
-        CmmLex
+        GHC.Cmm.Lexer
         GHC.Cmm.Analyse.Lint
         GHC.Cmm.Analyse.Liveness
         CmmMachOp

@@ -224,7 +224,7 @@ import GHC.Cmm.Utils
 import GHC.Cmm.Switch        ( mkSwitchTargets )
 import GHC.RTS.InfoTable
 import GHC.Cmm.BlockId
-import CmmLex
+import GHC.Cmm.Lexer
 import GHC.Data.CLabel
 import GHC.RTS.Storage
 import Lexer

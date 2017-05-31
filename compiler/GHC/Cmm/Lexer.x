@@ -18,7 +18,7 @@
 {-# OPTIONS_GHC -fno-warn-tabs #-}
 {-# OPTIONS_GHC -fno-warn-missing-signatures #-}
 
-module CmmLex (
+module GHC.Cmm.Lexer (
    CmmToken(..), cmmlex,
   ) where
 
