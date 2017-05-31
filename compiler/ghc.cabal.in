@@ -229,7 +229,7 @@ Library
         CmmOpt
         CmmParse
         CmmProcPoint
-        CmmSink
+        GHC.Cmm.Optimise.Sinking
         GHC.Cmm.Type
         CmmUtils
         CmmLayoutStack

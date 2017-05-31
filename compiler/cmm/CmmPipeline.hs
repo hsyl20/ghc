@@ -15,7 +15,7 @@ import CmmImplementSwitchPlans
 import CmmProcPoint
 import CmmContFlowOpt
 import CmmLayoutStack
-import CmmSink
+import GHC.Cmm.Optimise.Sinking
 import Hoopl
 
 import GHC.Data.Unique.Supply

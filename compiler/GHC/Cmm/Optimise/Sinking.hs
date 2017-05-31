@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs #-}
-module CmmSink (
+module GHC.Cmm.Optimise.Sinking (
      cmmSink
   ) where
 

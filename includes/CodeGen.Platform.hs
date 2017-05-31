@@ -99,7 +99,7 @@ import Reg
 # define zmm14 70
 # define zmm15 71
 
--- Note: these are only needed for ARM/ARM64 because globalRegMaybe is now used in CmmSink.hs.
+-- Note: these are only needed for ARM/ARM64 because globalRegMaybe is now used in CmmSink.
 -- Since it's only used to check 'isJust', the actual values don't matter, thus
 -- I'm not sure if these are the correct numberings.
 -- Normally, the register names are just stringified as part of the REG() macro
