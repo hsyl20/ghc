@@ -29,7 +29,7 @@ import CoreSubst
 import MkCore hiding( FloatBind(..) )   -- We use our own FloatBind here
 import Type
 import GHC.Data.Literal
-import Coercion
+import GHC.Data.Coercion
 import TcEnv
 import TyCon
 import GHC.Data.Demand

@@ -26,7 +26,7 @@ import GHC.Data.Demand
 import GHC.Data.DataConstructor
 import TyCon
 import Type
-import Coercion
+import GHC.Data.Coercion
 import GHC.Config.Flags
 import GHC.Data.BasicTypes
 import GHC.Data.Maybe

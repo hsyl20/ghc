@@ -14,7 +14,7 @@ module CoreStats (
 import GHC.Data.BasicTypes
 import CoreSyn
 import GHC.Utils.Outputable
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.Var
 import Type (Type, typeSize, seqType)
 import GHC.Data.Id (idType, isJoinId)

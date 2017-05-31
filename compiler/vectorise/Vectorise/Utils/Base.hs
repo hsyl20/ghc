@@ -34,7 +34,7 @@ import Vectorise.Builtins
 import CoreSyn
 import CoreUtils
 import FamInstEnv
-import Coercion
+import GHC.Data.Coercion
 import Type
 import TyCon
 import GHC.Data.DataConstructor

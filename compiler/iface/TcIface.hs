@@ -30,7 +30,7 @@ import BuildTyCl
 import TcRnMonad
 import TcType
 import Type
-import Coercion
+import GHC.Data.Coercion
 import CoAxiom
 import TyCoRep    -- needs to build types & coercions in a knot
 import GHC.Types

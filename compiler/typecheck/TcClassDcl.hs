@@ -32,7 +32,7 @@ import TcRnMonad
 import GHC.Program.Driver.Phases (HscSource(..))
 import BuildTyCl( TcMethInfo )
 import GHC.Data.Class
-import Coercion ( pprCoAxiom )
+import GHC.Data.Coercion ( pprCoAxiom )
 import GHC.Config.Flags
 import FamInst
 import FamInstEnv

@@ -95,7 +95,7 @@ import TyCoRep
 import TcType
 import Type
 import Kind
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.Class
 import GHC.Data.Var
 

@@ -41,7 +41,7 @@ import PprCore          ( pprRules )
 import Type             ( Type, substTy, mkTCvSubst )
 import TcType           ( tcSplitTyConApp_maybe )
 import TysWiredIn       ( anyTypeOfKind )
-import Coercion
+import GHC.Data.Coercion
 import CoreTidy         ( tidyRules )
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( RuleInfo( RuleInfo ) )

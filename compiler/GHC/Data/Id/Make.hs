@@ -45,7 +45,7 @@ import TysWiredIn
 import PrelRules
 import Type
 import FamInstEnv
-import Coercion
+import GHC.Data.Coercion
 import TcType
 import MkCore
 import CoreUtils        ( exprType, mkCast )

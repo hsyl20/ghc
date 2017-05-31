@@ -21,7 +21,7 @@ import TyCon
 import CoAxiom
 import Type
 import GHC.Data.OccName
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.Id.Make
 import FamInst
 import TysPrim( intPrimTy )

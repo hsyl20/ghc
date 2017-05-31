@@ -64,7 +64,7 @@ module GHC.Data.DataConstructor (
 import {-# SOURCE #-} GHC.Data.Id.Make ( DataConBoxer )
 import Type
 import ForeignCall ( CType )
-import Coercion
+import GHC.Data.Coercion
 import Unify
 import TyCon
 import GHC.Data.FieldLabel

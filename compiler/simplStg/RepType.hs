@@ -27,7 +27,7 @@ import GHC.Data.BasicTypes (Arity, RepArity)
 import GHC.Data.DataConstructor
 import GHC.Utils.Outputable
 import PrelNames
-import Coercion
+import GHC.Data.Coercion
 import TyCon
 import TyCoRep
 import Type

@@ -1,6 +1,6 @@
 {-# LANGUAGE FlexibleContexts #-}
 
-module Coercion where
+module GHC.Data.Coercion where
 
 import {-# SOURCE #-} TyCoRep
 import {-# SOURCE #-} TyCon

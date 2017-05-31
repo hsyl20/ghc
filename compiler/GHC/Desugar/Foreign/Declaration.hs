@@ -28,7 +28,7 @@ import GHC.Data.Name
 import Type
 import RepType
 import TyCon
-import Coercion
+import GHC.Data.Coercion
 import TcEnv
 import TcType
 

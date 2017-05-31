@@ -14,7 +14,7 @@ module OptCoercion ( optCoercion, checkAxInstCo ) where
 
 import GHC.Config.Flags
 import TyCoRep
-import Coercion
+import GHC.Data.Coercion
 import Type hiding( substTyVarBndr, substTy )
 import TcType       ( exactTyCoVarsOfType )
 import TyCon

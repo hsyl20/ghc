@@ -27,7 +27,7 @@ import GHC.Data.Id
 import CoreUtils        ( exprIsHNF, exprType, exprIsTrivial )
 import TyCon
 import Type
-import Coercion         ( Coercion, coVarsOfCo )
+import GHC.Data.Coercion         ( Coercion, coVarsOfCo )
 import FamInstEnv
 import GHC.Utils
 import GHC.Data.Maybe           ( isJust )

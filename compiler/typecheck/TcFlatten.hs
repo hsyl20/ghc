@@ -16,7 +16,7 @@ import TcUnify( occCheckExpand )
 import TcEvidence
 import TyCon
 import TyCoRep   -- performs delicate algorithm on types
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable

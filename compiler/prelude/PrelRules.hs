@@ -51,7 +51,7 @@ import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Platform
 import GHC.Utils
-import Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))
+import GHC.Data.Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))
 
 import Control.Applicative ( Alternative(..) )
 

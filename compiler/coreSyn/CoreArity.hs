@@ -28,7 +28,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Id
 import Type
 import TyCon    ( initRecTc, checkRecTc )
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.BasicTypes
 import GHC.Data.Unique
 import GHC.Config.Flags ( DynFlags, GeneralFlag(..), gopt )

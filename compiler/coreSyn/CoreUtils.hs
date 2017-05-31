@@ -73,7 +73,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import Type
 import TyCoRep( TyBinder(..) )
-import Coercion
+import GHC.Data.Coercion
 import TyCon
 import GHC.Data.Unique
 import GHC.Utils.Outputable

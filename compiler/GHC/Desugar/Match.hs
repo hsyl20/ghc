@@ -42,7 +42,7 @@ import GHC.Data.PatternSynonym
 import GHC.Desugar.Match.Constructor
 import GHC.Desugar.Match.Literal
 import Type
-import Coercion ( eqCoercion )
+import GHC.Data.Coercion ( eqCoercion )
 import TcType ( toTcTypeBag )
 import TyCon( isNewTyCon )
 import TysWiredIn

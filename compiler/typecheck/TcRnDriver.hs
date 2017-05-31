@@ -73,7 +73,7 @@ import TcEvidence
 import qualified GHC.Data.Bool.Formula as BF
 import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
 import MkIface( tyThingToIfaceDecl )
-import Coercion( pprCoAxiom )
+import GHC.Data.Coercion( pprCoAxiom )
 import CoreFVs( orphNamesOfFamInst )
 import FamInst
 import InstEnv

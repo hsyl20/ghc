@@ -28,7 +28,7 @@ import GHC.Data.Var.Environment           ( mkInScopeSet )
 import GHC.Data.Var.Set           ( VarSet )
 import Type
 import RepType          ( isVoidTy )
-import Coercion
+import GHC.Data.Coercion
 import FamInstEnv
 import GHC.Data.BasicTypes       ( Boxity(..) )
 import GHC.Data.Literal          ( absentLiteralOf )

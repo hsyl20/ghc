@@ -85,7 +85,7 @@ import GHC.Packages
 import GHC.Data.Module
 import Type     hiding {- conflict with CoreSubst -}
                 ( substTy, extendTvSubst, extendTvSubstList, isInScope )
-import Coercion hiding {- conflict with CoreSubst -}
+import GHC.Data.Coercion hiding {- conflict with CoreSubst -}
                 ( substCo )
 import TyCon
 import TysWiredIn

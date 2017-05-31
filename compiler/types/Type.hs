@@ -225,7 +225,7 @@ import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )
 import PrelNames
 import CoAxiom
-import {-# SOURCE #-} Coercion
+import {-# SOURCE #-} GHC.Data.Coercion
 
 -- others
 import GHC.Utils

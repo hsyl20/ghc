@@ -20,7 +20,7 @@ import GHC.Data.Pair
 import TcType     ( TcType, tcEqType )
 import TyCon      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                   , Injectivity(..) )
-import Coercion   ( Role(..) )
+import GHC.Data.Coercion   ( Role(..) )
 import TcRnTypes  ( Xi )
 import CoAxiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeEqn )
 import GHC.Data.Name       ( Name, BuiltInSyntax(..) )

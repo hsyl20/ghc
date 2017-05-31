@@ -141,7 +141,7 @@ import {-# SOURCE #-} Type( isPredTy, isCoercionTy, mkAppTy, mkCastTy
                           , coreView, typeKind )
    -- Transitively pulls in a LOT of stuff, better to break the loop
 
-import {-# SOURCE #-} Coercion
+import {-# SOURCE #-} GHC.Data.Coercion
 import {-# SOURCE #-} GHC.Data.ConstructorLike ( ConLike(..), conLikeName )
 import {-# SOURCE #-} ToIface( toIfaceTypeX, toIfaceTyLit, toIfaceForAllBndr
                              , toIfaceTyCon, toIfaceTcArgs, toIfaceCoercion )

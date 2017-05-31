@@ -4,7 +4,7 @@
 module T11195 where
 
 import TyCoRep
-import Coercion
+import GHC.Data.Coercion
 import Type hiding( substTyVarBndr, substTy, extendTCvSubst )
 import TcType       ( exactTyCoVarsOfType )
 import CoAxiom

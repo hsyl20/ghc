@@ -12,7 +12,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.RdrName
 import GHC.Data.Var
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.ConstructorLike (ConLike)
 import GHC.Data.FieldLabel
 import GHC.Data.SrcLoc (Located)

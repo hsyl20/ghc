@@ -8,7 +8,7 @@
 -- as used in System FC. See 'CoreSyn.Expr' for
 -- more on System FC and how coercions fit into it.
 --
-module Coercion (
+module GHC.Data.Coercion (
         -- * Main data type
         Coercion, CoercionN, CoercionR, CoercionP,
         UnivCoProvenance, CoercionHole, LeftOrRight(..),

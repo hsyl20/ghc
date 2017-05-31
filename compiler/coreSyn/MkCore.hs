@@ -65,7 +65,7 @@ import PrelNames
 import HsUtils          ( mkChunkified, chunkify )
 import TcType           ( mkSpecSigmaTy )
 import Type
-import Coercion         ( isCoVar )
+import GHC.Data.Coercion         ( isCoVar )
 import TysPrim
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId )
 import GHC.Data.Id.Info           ( vanillaIdInfo, setStrictnessInfo,

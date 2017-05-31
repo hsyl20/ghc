@@ -21,7 +21,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Demand ( zapUsageEnvSig )
 import Type( tidyType, tidyTyCoVarBndr )
-import Coercion( tidyCo )
+import GHC.Data.Coercion( tidyCo )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Unique.FiniteMap

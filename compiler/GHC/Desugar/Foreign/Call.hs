@@ -31,7 +31,7 @@ import GHC.Desugar.Utils
 import TcType
 import Type
 import GHC.Data.Id   ( Id )
-import Coercion
+import GHC.Data.Coercion
 import PrimOp
 import TysPrim
 import TyCon

@@ -19,7 +19,7 @@ import TcEvidence
 import GHC.Data.Class
 import TyCon
 import TyCoRep   -- cleverly decomposes types, good for completeness checking
-import Coercion
+import GHC.Data.Coercion
 import FamInstEnv ( FamInstEnvs )
 import FamInst ( tcTopNormaliseNewTypeTF_maybe )
 import GHC.Data.Var

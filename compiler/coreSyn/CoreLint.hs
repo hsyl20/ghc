@@ -40,7 +40,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import PprCore
 import GHC.Utils.Error
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.SrcLoc
 import Kind
 import Type

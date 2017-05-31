@@ -46,7 +46,7 @@ import qualified Coercion
         -- We are defining local versions
 import Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendTvSubstList
                        , isInScope, substTyVarBndr, cloneTyVarBndr )
-import Coercion hiding ( substCo, substCoVarBndr )
+import GHC.Data.Coercion hiding ( substCo, substCoVarBndr )
 
 import PrelNames
 import GHC.Data.Var.Set

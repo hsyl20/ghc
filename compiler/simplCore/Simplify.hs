@@ -23,7 +23,7 @@ import GHC.Data.Id.Make             ( seqId )
 import MkCore           ( mkImpossibleExpr, castBottomExpr )
 import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
-import Coercion hiding  ( substCo, substCoVar )
+import GHC.Data.Coercion hiding  ( substCo, substCoVar )
 import OptCoercion      ( optCoercion )
 import FamInstEnv       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )

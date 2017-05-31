@@ -39,7 +39,7 @@ import GHC.Desugar.Foreign.Declaration
 import PrelNames   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
-import Coercion    ( mkCoVarCo )
+import GHC.Data.Coercion    ( mkCoVarCo )
 import TysWiredIn  ( coercibleDataCon )
 import GHC.Data.DataConstructor     ( dataConWrapId )
 import MkCore      ( mkCoreLet )

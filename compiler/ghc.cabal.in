@@ -463,7 +463,7 @@ Library
         TcTypeNats
         TcSplice
         GHC.Data.Class
-        Coercion
+        GHC.Data.Coercion
         GHC.Desugar.Splices
         THNames
         FamInstEnv

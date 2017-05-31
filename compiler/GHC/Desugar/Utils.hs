@@ -58,7 +58,7 @@ import TyCon
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import Type
-import Coercion
+import GHC.Data.Coercion
 import TysPrim
 import TysWiredIn
 import GHC.Data.BasicTypes

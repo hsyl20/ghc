@@ -46,7 +46,7 @@ import TcMType
 import TcRnMonad
 import TcType
 import Type
-import Coercion
+import GHC.Data.Coercion
 import TcEvidence
 import GHC.Data.Name ( isSystemName )
 import Inst

@@ -133,7 +133,7 @@ import Kind
 import TcType
 import GHC.Config.Flags
 import Type
-import Coercion
+import GHC.Data.Coercion
 import Unify
 
 import TcEvidence

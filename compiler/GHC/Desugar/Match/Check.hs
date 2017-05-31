@@ -49,7 +49,7 @@ import GHC.Desugar.GuardedRHS       (isTrueLHsExpr)
 import Data.List     (find)
 import Data.Maybe    (isJust, fromMaybe)
 import Control.Monad (forM, when, forM_)
-import Coercion
+import GHC.Data.Coercion
 import TcEvidence
 import GHC.Utils.Monad.IOEnv
 

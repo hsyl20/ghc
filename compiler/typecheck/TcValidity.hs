@@ -30,7 +30,7 @@ import TcType hiding ( sizeType, sizeTypes )
 import TcMType
 import PrelNames
 import Type
-import Coercion
+import GHC.Data.Coercion
 import Kind
 import CoAxiom
 import GHC.Data.Class

@@ -41,7 +41,7 @@ module TcEvidence (
 
 import GHC.Data.Var
 import CoAxiom
-import Coercion
+import GHC.Data.Coercion
 import PprCore ()   -- Instance OutputableBndr TyVar
 import TcType
 import Type

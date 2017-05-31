@@ -13,7 +13,7 @@ import Vectorise.Utils.Base
 import CoreSyn
 import CoreUtils
 import FamInstEnv
-import Coercion
+import GHC.Data.Coercion
 import Type
 import TyCoRep
 import TyCon

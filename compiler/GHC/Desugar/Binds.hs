@@ -42,7 +42,7 @@ import TyCon
 import TcEvidence
 import TcType
 import Type
-import Coercion
+import GHC.Data.Coercion
 import TysWiredIn ( typeNatKind, typeSymbolKind )
 import GHC.Data.Id
 import GHC.Data.Id.Make(proxyHashId)

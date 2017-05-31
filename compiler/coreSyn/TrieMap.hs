@@ -32,7 +32,7 @@ module TrieMap(
  ) where
 
 import CoreSyn
-import Coercion
+import GHC.Data.Coercion
 import GHC.Data.Literal
 import GHC.Data.Name
 import Type
