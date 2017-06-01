@@ -46,7 +46,7 @@ import GHC.Config.Flags
 import GHC.Core.Syntax
 import GHC.Core.PrettyPrint          ()      -- Instances
 import OccurAnal        ( occurAnalyseExpr )
-import GHC.Core.Optimise
+import GHC.Core.Optimise.Simple
 import GHC.Core.Arity       ( manifestArity )
 import GHC.Core.Utils
 import GHC.Data.Id

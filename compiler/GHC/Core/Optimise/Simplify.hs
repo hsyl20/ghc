@@ -40,7 +40,7 @@ import GHC.Core.PrettyPrint          ( pprCoreExpr )
 import GHC.Core.Optimise.Unfolding
 import GHC.Core.Utils
 import GHC.Core.Arity
-import GHC.Core.Optimise          ( pushCoTyArg, pushCoValArg
+import GHC.Core.Optimise.Simple         ( pushCoTyArg, pushCoValArg
                         , joinPointBinding_maybe, joinPointBindings_maybe )
 --import PrimOp           ( tagToEnumKey ) -- temporalily commented out. See #8326
 import Rules            ( mkRuleInfo, lookupRule, getRules )
@@ -60,7 +60,7 @@ import GHC.Data.Module          ( moduleName, pprModuleName )
 
 {-
 The guts of the simplifier is in this module, but the driver loop for
-the simplifier is in SimplCore.hs.
+the simplifier is in GHC.Core.Optimise.Pipeline.hs.
 
 
 -----------------------------------------

@@ -28,7 +28,7 @@ import GHC.Desugar.Utils
 import GHC.Syntax            -- lots of things
 import GHC.Core.Syntax          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
-import GHC.Core.Optimise          ( simpleOptExpr )
+import GHC.Core.Optimise.Simple         ( simpleOptExpr )
 import OccurAnal        ( occurAnalyseExpr )
 import GHC.Core.Syntax.Make
 import GHC.Core.Utils
@@ -431,7 +431,7 @@ thereby be completely lost.  Bad, bad, bad.
 Instead we want to generate
         M.f = ...f_lcl...
         f_lcl = M.f
-Now all is cool. The RULES are attached to M.f (by SimplCore),
+Now all is cool. The RULES are attached to M.f (by GHC.Core.Optimise.Pipeline),
 and f_lcl is rapidly inlined away.
 
 This does not happen in the same way to polymorphic binds,

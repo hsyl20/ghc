@@ -1514,7 +1514,7 @@ generator, though.  So:
 
  * Just before TidyCore, we add a pass of the demand analyser,
       but WITHOUT subsequent worker/wrapper and simplifier,
-   right before TidyCore.  See SimplCore.getCoreToDo.
+   right before TidyCore.  See GHC.Core.Optimise.Pipeline.getCoreToDo.
 
    This way, correct information finds its way into the module interface
    (strictness signatures!) and the code generator (single-entry thunks!)

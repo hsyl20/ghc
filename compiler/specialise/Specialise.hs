@@ -21,7 +21,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Core.Syntax
 import Rules
-import GHC.Core.Optimise          ( collectBindersPushingCo )
+import GHC.Core.Optimise.Simple         ( collectBindersPushingCo )
 import GHC.Core.Utils        ( exprIsTrivial, applyTypeToArgs, mkCast )
 import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )
 import GHC.Core.Arity        ( etaExpandToJoinPointRule )

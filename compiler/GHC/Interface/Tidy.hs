@@ -573,7 +573,7 @@ much like any other Id.  But doing "light" optimisation on an implicit
 Id still makes sense.]
 
 At one time I tried injecting the implicit bindings *early*, at the
-beginning of SimplCore.  But that gave rise to real difficulty,
+beginning of GHC.Core.Optimise.Pipeline.  But that gave rise to real difficulty,
 because GlobalIds are supposed to have *fixed* IdInfo, but the
 simplifier and other core-to-core passes mess with IdInfo all the
 time.  The straw that broke the camels back was when a class selector

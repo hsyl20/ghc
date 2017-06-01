@@ -392,7 +392,7 @@ Library
         OccurAnal
         SAT
         SetLevels
-        SimplCore
+        GHC.Core.Optimise.Pipeline
         GHC.Core.Optimise.Simplify.Environment
         GHC.Core.Optimise.Simplify.Monad
         GHC.Core.Optimise.Simplify.Utils

@@ -31,7 +31,7 @@ import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
 import GHC.Data.Id
 import GHC.Data.Literal
-import GHC.Core.Optimise     ( exprIsLiteral_maybe )
+import GHC.Core.Optimise.Simple    ( exprIsLiteral_maybe )
 import PrimOp      ( PrimOp(..), tagToEnumKey )
 import TysWiredIn
 import TysPrim

@@ -31,7 +31,7 @@ module Rules (
 import GHC.Core.Syntax          -- All of it
 import GHC.Data.Module           ( Module, ModuleSet, elemModuleSet )
 import GHC.Core.Substitution
-import GHC.Core.Optimise          ( exprIsLambda_maybe )
+import GHC.Core.Optimise.Simple         ( exprIsLambda_maybe )
 import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, bindFreeVars
                         , rulesFreeVarsDSet, exprsOrphNames, exprFreeVarsList )
 import GHC.Core.Utils        ( exprType, eqExpr, mkTick, mkTicks,

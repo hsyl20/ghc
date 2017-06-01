@@ -4,7 +4,7 @@
 -}
 
 {-# LANGUAGE CPP #-}
-module GHC.Core.Optimise (
+module GHC.Core.Optimise.Simple (
         -- ** Simple expression optimiser
         simpleOptPgm, simpleOptExpr, simpleOptExprWith,
 

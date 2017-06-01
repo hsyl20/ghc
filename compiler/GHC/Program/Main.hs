@@ -114,7 +114,7 @@ import LoadIface        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
 import GHC.Desugar.Main
-import SimplCore
+import GHC.Core.Optimise.Pipeline
 import GHC.Interface.Tidy
 import GHC.Core.Prepare
 import CoreToStg        ( coreToStg )

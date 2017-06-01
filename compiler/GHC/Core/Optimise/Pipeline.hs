@@ -1,12 +1,12 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[SimplCore]{Driver for simplifying @Core@ programs}
+\section[GHC.Core.Optimise.Pipeline]{Driver for simplifying @Core@ programs}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module SimplCore ( core2core, simplifyExpr ) where
+module GHC.Core.Optimise.Pipeline ( core2core, simplifyExpr ) where
 
 #include "HsVersions.h"
 
