@@ -21,7 +21,7 @@ import GHC.Core.Tidy
 import CoreMonad
 import CorePrep
 import CoreUtils        (rhsIsStatic)
-import CoreStats        (coreBindsStats, CoreStats(..))
+import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
 import CoreSeq          (seqBinds)
 import GHC.Core.Analyse.Lint
 import GHC.Data.Literal

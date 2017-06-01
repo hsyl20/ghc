@@ -461,7 +461,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Core.Optimise.Unfolding \
 	CoreUtils \
 	CoreSeq \
-	CoreStats \
+	GHC.Core.Analyse.Stats \
 	CostCentre \
 	GHC.Data.DataConstructor \
 	GHC.Data.Demand \

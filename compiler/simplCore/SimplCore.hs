@@ -19,7 +19,7 @@ import Rules            ( mkRuleBase, unionRuleBase,
 import PprCore          ( pprCoreBindings, pprCoreExpr )
 import OccurAnal        ( occurAnalysePgm, occurAnalyseExpr )
 import GHC.Data.Id.Info
-import CoreStats        ( coreBindsSize, coreBindsStats, exprSize )
+import GHC.Core.Analyse.Stats        ( coreBindsSize, coreBindsStats, exprSize )
 import CoreUtils        ( mkTicks, stripTicksTop )
 import GHC.Core.Analyse.Lint         ( endPass, lintPassResult, dumpPassResult,
                           lintAnnots )

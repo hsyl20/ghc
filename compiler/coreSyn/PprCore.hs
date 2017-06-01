@@ -16,7 +16,7 @@ module PprCore (
     ) where
 
 import GHC.Core.Syntax
-import CoreStats (exprStats)
+import GHC.Core.Analyse.Stats (exprStats)
 import GHC.Data.Literal( pprLiteral )
 import GHC.Data.Name( pprInfixName, pprPrefixName )
 import GHC.Data.Var

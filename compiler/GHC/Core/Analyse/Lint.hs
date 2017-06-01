@@ -24,7 +24,7 @@ module GHC.Core.Analyse.Lint (
 import GHC.Core.Syntax
 import CoreFVs
 import CoreUtils
-import CoreStats   ( coreBindsStats )
+import GHC.Core.Analyse.Stats   ( coreBindsStats )
 import CoreMonad
 import GHC.Data.Bag
 import GHC.Data.Literal
