@@ -1,10 +1,10 @@
 {-
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[SimplMonad]{The simplifier Monad}
+\section[GHC.Core.Optimise.Simplify.Monad]{The simplifier Monad}
 -}
 
-module SimplMonad (
+module GHC.Core.Optimise.Simplify.Monad (
         -- The monad
         SimplM,
         initSmpl, traceSmpl,

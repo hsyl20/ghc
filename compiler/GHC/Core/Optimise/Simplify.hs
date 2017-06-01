@@ -16,7 +16,7 @@ where
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import SimplMonad
+import GHC.Core.Optimise.Simplify.Monad
 import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvSubst )
 import GHC.Core.Optimise.Simplify.Environment
 import SimplUtils

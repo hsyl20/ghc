@@ -394,7 +394,7 @@ Library
         SetLevels
         SimplCore
         GHC.Core.Optimise.Simplify.Environment
-        SimplMonad
+        GHC.Core.Optimise.Simplify.Monad
         SimplUtils
         GHC.Core.Optimise.Simplify
         SimplStg

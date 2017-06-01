@@ -1,12 +1,12 @@
 {-
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[SimplMonad]{The simplifier Monad}
+\section[GHC.Core.Optimise.Simplify.Monad]{The simplifier Monad}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module SimplEnv (
+module GHC.Core.Optimise.Simplify.Environment (
         -- * The simplifier mode
         setMode, getMode, updMode,
 
@@ -40,7 +40,7 @@ module SimplEnv (
 
 #include "HsVersions.h"
 
-import SimplMonad
+import GHC.Core.Optimise.Simplify.Monad
 import CoreMonad                ( SimplifierMode(..) )
 import GHC.Core.Syntax
 import GHC.Core.Utils

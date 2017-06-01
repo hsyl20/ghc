@@ -163,7 +163,7 @@ pprPassDetails (CoreDoSimplify n md) = vcat [ text "Max iterations =" <+> int n
                                             , ppr md ]
 pprPassDetails _ = Outputable.empty
 
-data SimplifierMode             -- See comments in SimplMonad
+data SimplifierMode             -- See comments in GHC.Core.Optimise.Simplify.Monad
   = SimplMode
         { sm_names      :: [String] -- Name(s) of the phase
         , sm_phase      :: CompilerPhase

@@ -50,7 +50,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Var
 import GHC.Data.Demand
-import SimplMonad
+import GHC.Core.Optimise.Simplify.Monad
 import GHC.Data.Type     hiding( substTy )
 import GHC.Data.Coercion hiding( substCo )
 import GHC.Data.DataConstructor          ( dataConWorkId, isNullaryRepDataCon )

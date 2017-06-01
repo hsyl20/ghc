@@ -26,7 +26,7 @@ import GHC.Core.Analyse.Lint         ( endPass, lintPassResult, dumpPassResult,
 import GHC.Core.Optimise.Simplify         ( simplTopBinds, simplExpr, simplRules )
 import SimplUtils       ( simplEnvForGHCi, activeRule )
 import GHC.Core.Optimise.Simplify.Environment
-import SimplMonad
+import GHC.Core.Optimise.Simplify.Monad
 import CoreMonad
 import qualified GHC.Utils.Error as Err
 import FloatIn          ( floatInwards )
