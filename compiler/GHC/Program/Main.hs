@@ -116,7 +116,7 @@ import MkIface
 import GHC.Desugar.Main
 import SimplCore
 import GHC.Interface.Tidy
-import CorePrep
+import GHC.Core.Prepare
 import CoreToStg        ( coreToStg )
 import qualified StgCmm ( codeGen )
 import StgSyn

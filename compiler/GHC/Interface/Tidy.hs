@@ -19,7 +19,7 @@ import GHC.Core.Optimise.Unfolding
 import GHC.Core.FreeVars
 import GHC.Core.Tidy
 import CoreMonad
-import CorePrep
+import GHC.Core.Prepare
 import CoreUtils        (rhsIsStatic)
 import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
 import CoreSeq          (seqBinds)

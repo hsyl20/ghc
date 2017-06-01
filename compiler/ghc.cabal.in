@@ -269,7 +269,7 @@ Library
         GHC.Core.Arity
         GHC.Core.FreeVars
         GHC.Core.Analyse.Lint
-        CorePrep
+        GHC.Core.Prepare
         CoreSubst
         GHC.Core.Optimise
         GHC.Core.Syntax
