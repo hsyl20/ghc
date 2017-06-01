@@ -390,7 +390,7 @@ Library
         FloatOut
         GHC.Core.Optimise.LiberateCase
         GHC.Core.Analyse.Occurence
-        SAT
+        GHC.Core.Optimise.StaticArgument
         SetLevels
         GHC.Core.Optimise.Pipeline
         GHC.Core.Optimise.Simplify.Environment

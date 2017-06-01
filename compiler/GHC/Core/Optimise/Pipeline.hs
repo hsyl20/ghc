@@ -38,7 +38,7 @@ import GHC.Data.BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Core.Optimise.LiberateCase     ( liberateCase )
-import SAT              ( doStaticArgs )
+import GHC.Core.Optimise.StaticArgument   ( doStaticArgs )
 import Specialise       ( specProgram)
 import SpecConstr       ( specConstrProgram)
 import DmdAnal          ( dmdAnalProgram )

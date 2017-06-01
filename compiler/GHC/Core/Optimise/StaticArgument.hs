@@ -49,7 +49,7 @@ essential to make this work well!
 -}
 
 {-# LANGUAGE CPP #-}
-module SAT ( doStaticArgs ) where
+module GHC.Core.Optimise.StaticArgument ( doStaticArgs ) where
 
 import GHC.Data.Var
 import GHC.Core.Syntax
