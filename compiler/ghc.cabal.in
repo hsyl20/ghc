@@ -337,7 +337,7 @@ Library
         GHC.Interactive.DynamicLoading
         GHC.Syntax.Parsers.HeaderInfo
         GHC.Program.Main
-        GHC.Syntax.Stats
+        GHC.Syntax.Analyse.Stats
         GHC.Types
         GHC.Interactive.Eval
         GHC.Interactive.Types
@@ -396,7 +396,7 @@ Library
         GHC.Core.Optimise.Simplify.Utils
         GHC.Core.Optimise.Simplify
         SimplStg
-        StgStats
+        GHC.STG.Analyse.Stats
         GHC.STG.Optimise.CommonSubExpr
         UnariseStg
         RepType

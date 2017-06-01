@@ -6,7 +6,7 @@
 
 {-# LANGUAGE FlexibleContexts #-}
 
-module GHC.Syntax.Stats ( ppSourceStats ) where
+module GHC.Syntax.Analyse.Stats ( ppSourceStats ) where
 
 import GHC.Data.Bag
 import GHC.Syntax

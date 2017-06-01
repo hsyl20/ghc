@@ -143,7 +143,7 @@ import GHC.Platform ( platformOS, osSubsectionsViaSymbols )
 
 import GHC.Utils.Outputable
 import GHC.Data.Name.Environment
-import GHC.Syntax.Stats         ( ppSourceStats )
+import GHC.Syntax.Analyse.Stats         ( ppSourceStats )
 import GHC.Types
 import GHC.Data.FastString
 import GHC.Data.Unique.Supply
