@@ -16,7 +16,7 @@
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module HsPat (
+module GHC.Syntax.Pattern (
         Pat(..), InPat, OutPat, LPat,
 
         HsConPatDetails, hsConPatArgs,

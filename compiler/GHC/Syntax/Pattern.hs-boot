@@ -5,7 +5,7 @@
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE RoleAnnotations #-}
 
-module HsPat where
+module GHC.Syntax.Pattern where
 import GHC.Data.SrcLoc( Located )
 
 import Data.Data hiding (Fixity)

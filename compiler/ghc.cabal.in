@@ -308,7 +308,7 @@ Library
         GHC.Syntax.ImportExport
         GHC.Syntax.Literal
         PlaceHolder
-        HsPat
+        GHC.Syntax.Pattern
         HsSyn
         HsTypes
         HsUtils

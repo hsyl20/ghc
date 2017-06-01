@@ -95,7 +95,7 @@ module HsUtils(
 import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import GHC.Syntax.Expression
-import HsPat
+import GHC.Syntax.Pattern
 import HsTypes
 import GHC.Syntax.Literal
 import PlaceHolder
