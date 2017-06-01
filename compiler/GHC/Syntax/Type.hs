@@ -168,7 +168,7 @@ is a bit complicated.  Here's how it works.
      f :: _a -> _
   The enclosing HsWildCardBndrs binds the wildcards _a and _.
 
-* The explicit presence of these wrappers specifies, in the HsSyn,
+* The explicit presence of these wrappers specifies, in the GHC.Syntax,
   exactly where implicit quantification is allowed, and where
   wildcards are allowed.
 
@@ -493,7 +493,7 @@ data HsType name
 
       -- For details on above see note [Api annotations] in ApiAnnotation
 
-  | HsParTy             (LHsType name)   -- See Note [Parens in HsSyn] in HsExpr
+  | HsParTy             (LHsType name)   -- See Note [Parens in GHC.Syntax] in HsExpr
         -- Parenthesis preserved for the precedence re-arrangement in RnTypes
         -- It's important that a * (b + c) doesn't get rearranged to (a*b) + c!
       -- ^ - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.AnnOpen' @'('@,
@@ -556,7 +556,7 @@ data HsType name
       -- For details on above see note [Api annotations] in ApiAnnotation
 
   | HsCoreTy Type       -- An escape hatch for tunnelling a *closed*
-                        -- Core Type through HsSyn.
+                        -- Core Type through GHC.Syntax.
       -- ^ - 'ApiAnnotation.AnnKeywordId' : None
 
       -- For details on above see note [Api annotations] in ApiAnnotation

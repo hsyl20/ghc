@@ -2,7 +2,7 @@
 module RnHsDoc ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
 
 import TcRnTypes
-import HsSyn
+import GHC.Syntax
 import GHC.Data.SrcLoc
 
 

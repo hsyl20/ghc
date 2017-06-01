@@ -10,7 +10,7 @@ module RnFixity ( MiniFixityEnv,
   lookupFieldFixityRn, lookupTyFixityRn ) where
 
 import LoadIface
-import HsSyn
+import GHC.Syntax
 import GHC.Data.RdrName
 import GHC.Types
 import TcRnMonad

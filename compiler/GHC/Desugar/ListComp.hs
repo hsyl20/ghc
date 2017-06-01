@@ -14,7 +14,7 @@ module GHC.Desugar.ListComp ( dsListComp, dsPArrComp, dsMonadComp ) where
 
 import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
-import HsSyn
+import GHC.Syntax
 import TcHsSyn
 import CoreSyn
 import MkCore

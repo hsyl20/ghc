@@ -21,7 +21,7 @@ import GHC.Desugar.Match.TermEqOracle
 
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
-import HsSyn
+import GHC.Syntax
 import TcHsSyn
 import GHC.Data.Id
 import GHC.Data.ConstructorLike

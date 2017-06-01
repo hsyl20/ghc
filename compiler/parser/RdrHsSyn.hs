@@ -2,7 +2,7 @@
 --  (c) The University of Glasgow 2002-2006
 --
 
--- Functions over HsSyn specialised to RdrName.
+-- Functions over GHC.Syntax specialised to RdrName.
 
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
@@ -66,7 +66,7 @@ module   RdrHsSyn (
 
     ) where
 
-import HsSyn            -- Lots of it
+import GHC.Syntax            -- Lots of it
 import GHC.Data.Class            ( FunDep )
 import GHC.Data.Type.Constructor            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConTyCon )

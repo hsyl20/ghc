@@ -1998,7 +1998,7 @@ type constructor at the head.  So,
   (t1,t2)           TupleT 2 `AppT` t1 `AppT` t2
   '(t1,t2)          PromotedTupleT 2 `AppT` t1 `AppT` t2
 
-But if the original HsSyn used prefix application, we won't use
+But if the original GHC.Syntax used prefix application, we won't use
 these special TH constructors.  For example
   [] t              ConT "[]" `AppT` t
   (->) t            ConT "->" `AppT` t

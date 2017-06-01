@@ -17,7 +17,7 @@ module BkpSyn (
     LRenaming, Renaming(..),
     ) where
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable

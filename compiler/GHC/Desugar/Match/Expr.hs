@@ -15,7 +15,7 @@ module GHC.Desugar.Match.Expr (
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set

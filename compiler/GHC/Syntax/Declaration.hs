@@ -1267,7 +1267,7 @@ ppr_con_names = pprWithCommas (pprPrefixOcc . unLoc)
 *                                                                      *
 ************************************************************************
 
-Note [Type family instance declarations in HsSyn]
+Note [Type family instance declarations in GHC.Syntax]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The data type TyFamEqn represents one equation of a type family instance.
 It is parameterised over its tfe_pats field:
@@ -1337,12 +1337,12 @@ type TyFamInstEqn  name = TyFamEqn name (HsTyPats name)
 
 -- | Type Family Default Equation
 type TyFamDefltEqn name = TyFamEqn name (LHsQTyVars name)
-  -- See Note [Type family instance declarations in HsSyn]
+  -- See Note [Type family instance declarations in GHC.Syntax]
 
 -- | Type Family Equation
 --
 -- One equation in a type family instance declaration
--- See Note [Type family instance declarations in HsSyn]
+-- See Note [Type family instance declarations in GHC.Syntax]
 data TyFamEqn name pats
   = TyFamEqn
        { tfe_tycon  :: Located name

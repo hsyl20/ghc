@@ -18,7 +18,7 @@ where
 
 import {-# SOURCE #-} GHC.Desugar.Match     ( match )
 
-import HsSyn
+import GHC.Syntax
 import GHC.Desugar.Binds
 import GHC.Data.ConstructorLike
 import TcType

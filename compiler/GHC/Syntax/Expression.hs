@@ -354,11 +354,11 @@ data HsExpr id
   --             'ApiAnnotation.AnnClose' @')'@
 
   -- For details on above see note [Api annotations] in ApiAnnotation
-  | HsPar       (LHsExpr id)    -- ^ Parenthesised expr; see Note [Parens in HsSyn]
+  | HsPar       (LHsExpr id)    -- ^ Parenthesised expr; see Note [Parens in GHC.Syntax]
 
-  | SectionL    (LHsExpr id)    -- operand; see Note [Sections in HsSyn]
+  | SectionL    (LHsExpr id)    -- operand; see Note [Sections in GHC.Syntax]
                 (LHsExpr id)    -- operator
-  | SectionR    (LHsExpr id)    -- operator; see Note [Sections in HsSyn]
+  | SectionR    (LHsExpr id)    -- operator; see Note [Sections in GHC.Syntax]
                 (LHsExpr id)    -- operand
 
   -- | Used for explicit tuples and sections thereof
@@ -720,7 +720,7 @@ tupArgPresent (L _ (Present {})) = True
 tupArgPresent (L _ (Missing {})) = False
 
 {-
-Note [Parens in HsSyn]
+Note [Parens in GHC.Syntax]
 ~~~~~~~~~~~~~~~~~~~~~~
 HsPar (and ParPat in patterns, HsParTy in types) is used as follows
 
@@ -739,7 +739,7 @@ HsPar (and ParPat in patterns, HsParTy in types) is used as follows
     completed, to be treated the same as HsPar.
 
 
-Note [Sections in HsSyn]
+Note [Sections in GHC.Syntax]
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Sections should always appear wrapped in an HsPar, thus
          HsPar (SectionR ...)
@@ -1064,7 +1064,7 @@ pprExternalSrcLoc (StringLiteral _ src,(n1,n2),(n3,n4))
   = ppr (src,(n1,n2),(n3,n4))
 
 {-
-HsSyn records exactly where the user put parens, with HsPar.
+GHC.Syntax records exactly where the user put parens, with HsPar.
 So generally speaking we print without adding any parens.
 However, some code is internally generated, and in some places
 parens are absolutely required; so for these places we use

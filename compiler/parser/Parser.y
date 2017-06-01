@@ -36,7 +36,7 @@ import Control.Monad    ( mplus )
 import Control.Applicative ((<$))
 
 -- compiler/hsSyn
-import HsSyn
+import GHC.Syntax
 
 -- compiler/main
 import GHC.Types         ( IsBootInterface, WarningTxt(..) )

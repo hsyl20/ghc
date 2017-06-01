@@ -60,7 +60,7 @@ import GHC.Plugins.Types ( tcPlugin )
 #endif
 
 import GHC.Config.Flags
-import HsSyn
+import GHC.Syntax
 import IfaceSyn ( ShowSub(..), showToHeader )
 import IfaceType( ShowForAllFlag(..) )
 import PrelNames

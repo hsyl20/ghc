@@ -21,7 +21,7 @@ module RnNames (
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import HsSyn
+import GHC.Syntax
 import TcEnv
 import RnEnv
 import RnFixity

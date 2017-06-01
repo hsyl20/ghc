@@ -2,7 +2,7 @@ module TcPatSyn where
 
 import GHC.Data.Name      ( Name )
 import GHC.Data.Id        ( Id )
-import HsSyn     ( PatSynBind, LHsBinds )
+import GHC.Syntax     ( PatSynBind, LHsBinds )
 import TcRnTypes ( TcM, TcPatSynInfo )
 import TcRnMonad ( TcGblEnv)
 import GHC.Utils.Outputable ( Outputable )

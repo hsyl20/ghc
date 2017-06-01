@@ -142,9 +142,7 @@ Library
         backpack
         codeGen
         coreSyn
-        deSugar
         ghci
-        hsSyn
         iface
         llvmGen
         nativeGen
@@ -309,7 +307,7 @@ Library
         GHC.Syntax.Literal
         GHC.Syntax.PlaceHolder
         GHC.Syntax.Pattern
-        HsSyn
+        GHC.Syntax
         GHC.Syntax.Type
         GHC.Syntax.Utils
         GHC.Syntax.PrettyPrint.Dump

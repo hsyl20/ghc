@@ -18,7 +18,7 @@ module TcGenFunctor (
 import GHC.Data.Bag
 import GHC.Data.DataConstructor
 import GHC.Data.FastString
-import HsSyn
+import GHC.Syntax
 import GHC.Utils.Panic
 import PrelNames
 import GHC.Data.RdrName

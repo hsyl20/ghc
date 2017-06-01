@@ -40,7 +40,7 @@ module TcUnify (
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Types
 import TcMType
 import TcRnMonad

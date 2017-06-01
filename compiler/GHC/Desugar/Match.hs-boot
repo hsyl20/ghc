@@ -3,7 +3,7 @@ import GHC.Data.Var      ( Id )
 import TcType   ( Type )
 import GHC.Desugar.Monad  ( DsM, EquationInfo, MatchResult )
 import CoreSyn  ( CoreExpr )
-import HsSyn    ( LPat, HsMatchContext, MatchGroup, LHsExpr )
+import GHC.Syntax    ( LPat, HsMatchContext, MatchGroup, LHsExpr )
 import GHC.Data.Name     ( Name )
 
 match   :: [Id]

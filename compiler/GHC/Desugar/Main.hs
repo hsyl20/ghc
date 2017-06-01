@@ -3,7 +3,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-The Desugarer: turning HsSyn into Core.
+The Desugarer: turning GHC.Syntax into Core.
 -}
 
 {-# LANGUAGE CPP #-}
@@ -18,7 +18,7 @@ module GHC.Desugar.Main (
 import GHC.Desugar.Usage
 import GHC.Config.Flags
 import GHC.Types
-import HsSyn
+import GHC.Syntax
 import TcRnTypes
 import TcRnMonad  ( finalSafeMode, fixSafeInstances )
 import TcRnDriver ( runTcInteractive )

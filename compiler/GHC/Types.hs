@@ -149,7 +149,7 @@ import GHCi.RemoteTypes
 import GHC.ForeignSrcLang
 
 import GHC.Data.Unique.FiniteMap
-import HsSyn
+import GHC.Syntax
 import GHC.Data.RdrName
 import GHC.Data.Available
 import GHC.Data.Module

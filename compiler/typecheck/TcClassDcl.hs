@@ -18,7 +18,7 @@ module TcClassDcl ( tcClassSigs, tcClassDecl2,
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import TcEnv
 import TcSigs
 import TcEvidence ( idHsWrapper )

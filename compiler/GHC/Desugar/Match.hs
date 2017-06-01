@@ -22,7 +22,7 @@ where
 import {-#SOURCE#-} GHC.Desugar.Expression (dsLExpr, dsSyntaxExpr)
 
 import GHC.Config.Flags
-import HsSyn
+import GHC.Syntax
 import TcHsSyn
 import TcEvidence
 import TcRnMonad
@@ -987,7 +987,7 @@ sameGroup _          _          = False
 --
 -- Currently: compare applications of literals and variables
 --            and anything else that we can do without involving other
---            HsSyn types in the recursion
+--            GHC.Syntax types in the recursion
 --
 -- NB we can't assume that the two view expressions have the same type.  Consider
 --   f (e1 -> True) = ...

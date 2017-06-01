@@ -26,7 +26,7 @@ module RnUtils (
 where
 
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.RdrName
 import GHC.Types
 import TcEnv

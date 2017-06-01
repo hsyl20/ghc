@@ -701,7 +701,7 @@ Note [Special treatment for kind *]
 Do not put parens around the kind '*'.  Even though it looks like
 an operator, it is really a special case.
 
-This pprPrefixName stuff is really only used when printing HsSyn,
+This pprPrefixName stuff is really only used when printing GHC.Syntax,
 which has to be polymorphic in the name type, and hence has to go via
 the overloaded function pprPrefixOcc.  It's easier where we know the
 type being pretty printed; eg the pretty-printing code in GHC.Data.Types.

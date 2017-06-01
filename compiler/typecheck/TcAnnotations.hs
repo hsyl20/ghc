@@ -15,7 +15,7 @@ import GHC.Data.Module
 import GHC.Config.Flags
 import Control.Monad ( when )
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Annotation
 import GHC.Data.Name
 import TcRnMonad

@@ -22,7 +22,7 @@ module RnExpr (
 
 import RnBinds   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
                    rnMatchGroup, rnGRHS, makeMiniFixityEnv)
-import HsSyn
+import GHC.Syntax
 import TcRnMonad
 import GHC.Data.Module           ( getModule )
 import RnEnv

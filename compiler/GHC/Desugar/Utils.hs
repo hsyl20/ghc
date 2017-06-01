@@ -43,7 +43,7 @@ module GHC.Desugar.Utils (
 import {-# SOURCE #-} GHC.Desugar.Match  ( matchSimply )
 import {-# SOURCE #-} GHC.Desugar.Expression ( dsLExpr )
 
-import HsSyn
+import GHC.Syntax
 import TcHsSyn
 import TcType( tcSplitTyConApp )
 import CoreSyn

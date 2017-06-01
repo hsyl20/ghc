@@ -10,7 +10,7 @@ TcRules: Typechecking transformation rules
 
 module TcRules ( tcRules ) where
 
-import HsSyn
+import GHC.Syntax
 import TcRnMonad
 import TcSimplify
 import TcMType

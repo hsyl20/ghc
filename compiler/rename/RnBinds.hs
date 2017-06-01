@@ -27,7 +27,7 @@ module RnBinds (
 
 import {-# SOURCE #-} RnExpr( rnLExpr, rnStmts )
 
-import HsSyn
+import GHC.Syntax
 import TcRnMonad
 import TcEvidence     ( emptyTcEvBinds )
 import RnTypes

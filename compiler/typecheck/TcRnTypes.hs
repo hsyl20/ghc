@@ -138,7 +138,7 @@ module TcRnTypes(
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import CoreSyn
 import GHC.Types
 import TcEvidence
@@ -1386,7 +1386,7 @@ data TcIdSigInfo   -- See Note [Complete and partial type signatures]
                    -- the polymorphic Id, because we are going to /infer/ its
                    -- type, so we can't make the polymorphic Id ab-initio
       { psig_name  :: Name               -- Name of the function; used when report wildcards
-      , psig_hs_ty :: LHsSigWcType Name  -- The original partial signature in HsSyn form
+      , psig_hs_ty :: LHsSigWcType Name  -- The original partial signature in GHC.Syntax form
       , sig_ctxt   :: UserTypeCtxt
       , sig_loc    :: SrcSpan            -- Location of the type signature
       }

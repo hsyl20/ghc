@@ -35,7 +35,7 @@ module RnTypes (
 import {-# SOURCE #-} RnSplice( rnSpliceType )
 
 import GHC.Config.Flags
-import HsSyn
+import GHC.Syntax
 import RnHsDoc          ( rnLHsDoc, rnMbLHsDoc )
 import RnEnv
 import RnUnbound        ( perhapsForallMsg )

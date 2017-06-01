@@ -33,7 +33,7 @@ import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import TcType
 import TysWiredIn( unitTy )
 import MkCore( rEC_SEL_ERROR_ID )
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Class
 import GHC.Data.Type
 import GHC.Types

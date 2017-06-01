@@ -12,7 +12,7 @@ module TcInstDcls ( tcInstDecls1, tcInstDeclsDeriv, tcInstDecls2 ) where
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import TcBinds
 import TcTyClsDecls
 import TcClassDcl( tcClassDecl2, tcATDefault,

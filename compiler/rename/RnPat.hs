@@ -40,7 +40,7 @@ import {-# SOURCE #-} RnSplice ( rnSplicePat )
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import TcRnMonad
 import TcHsSyn             ( hsOverLitName )
 import RnEnv

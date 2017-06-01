@@ -37,7 +37,7 @@ module TcGenDeriv (
 #include "HsVersions.h"
 
 import TcRnMonad
-import HsSyn
+import GHC.Syntax
 import GHC.Data.RdrName
 import GHC.Data.BasicTypes
 import GHC.Data.DataConstructor

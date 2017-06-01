@@ -3,7 +3,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-This module converts Template Haskell syntax into HsSyn
+This module converts Template Haskell syntax into GHC.Syntax
 -}
 
 {-# LANGUAGE ScopedTypeVariables #-}
@@ -12,7 +12,7 @@ module Convert( convertToHsExpr, convertToPat, convertToHsDecls,
                 convertToHsType,
                 thRdrNameGuesses ) where
 
-import HsSyn as Hs
+import GHC.Syntax as Hs
 import qualified GHC.Data.Class as Class
 import GHC.Data.RdrName
 import qualified GHC.Data.Name as Name
@@ -831,7 +831,7 @@ cvtl e = wrapL (cvt e)
                             -- See Note [Operator association]
     cvt (InfixE Nothing  s (Just y)) = do { s' <- cvtl s; y' <- cvtl y
                                           ; wrapParL HsPar $ SectionR s' y' }
-                                            -- See Note [Sections in HsSyn] in HsExpr
+                                            -- See Note [Sections in GHC.Syntax] in HsExpr
     cvt (InfixE (Just x) s Nothing ) = do { x' <- cvtl x; s' <- cvtl s
                                           ; wrapParL HsPar $ SectionL x' s' }
 
@@ -1631,7 +1631,7 @@ c) We *do* want 'x' (dynamically bound with mkName) to bind
 d) When pretty printing, we want to print a unique with x1,x2
    etc, else they'll all print as "x" which isn't very helpful
 
-When we convert all this to HsSyn, the TH.Names are converted with
+When we convert all this to GHC.Syntax, the TH.Names are converted with
 thRdrName.  To achieve (b) we want the binders to be Exact RdrNames.
 Achieving (a) is a bit awkward, because
    - We must check for duplicate and shadowed names on Names,
@@ -1688,13 +1688,13 @@ which might be empty), pattern synonym type signatures are treated
 specially in GHC.Desugar.Splices, `hsSyn/Convert.hs`, and
 `typecheck/TcSplice.hs`:
 
-   (a) When desugaring a pattern synonym from HsSyn to TH.Dec in
+   (a) When desugaring a pattern synonym from GHC.Syntax to TH.Dec in
        GHC.Desugar.Splices, we represent its *full* type signature in TH, i.e.:
 
            ForallT univs reqs (ForallT exis provs ty)
               (where ty is the AST representation of t1 -> t2 -> ... -> tn -> t)
 
-   (b) When converting pattern synonyms from TH.Dec to HsSyn in
+   (b) When converting pattern synonyms from TH.Dec to GHC.Syntax in
        `hsSyn/Convert.hs`, we convert their TH type signatures back to an
        appropriate Haskell pattern synonym type of the form
 

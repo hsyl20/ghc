@@ -16,17 +16,17 @@ therefore, is almost nothing but re-exporting.
                                       -- in module PlaceHolder
 {-# LANGUAGE ConstraintKinds #-}
 
-module HsSyn (
+module GHC.Syntax (
         module GHC.Syntax.Binding,
         module GHC.Syntax.Declaration,
-        module HsExpr,
+        module GHC.Syntax.Expression,
         module GHC.Syntax.ImportExport,
-        module HsLit,
-        module HsPat,
-        module HsTypes,
+        module GHC.Syntax.Literal,
+        module GHC.Syntax.Pattern,
+        module GHC.Syntax.Type,
         module GHC.Syntax.Utils,
-        module HsDoc,
-        module PlaceHolder,
+        module GHC.Syntax.Documentation,
+        module GHC.Syntax.PlaceHolder,
         Fixity,
 
         HsModule(..)

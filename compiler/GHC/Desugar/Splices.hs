@@ -26,7 +26,7 @@ import GHC.Desugar.Monad
 
 import qualified Language.Haskell.TH as TH
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Class
 import PrelNames
 -- To avoid clashes with GHC.Desugar.Splices.varName we must make a local alias for

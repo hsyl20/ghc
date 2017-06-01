@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
 
 module TcSplice where
-import HsSyn    ( HsSplice, HsBracket, HsExpr, LHsExpr )
+import GHC.Syntax    ( HsSplice, HsBracket, HsExpr, LHsExpr )
 import GHC.Syntax.Expression   ( PendingRnSplice )
 import GHC.Data.Name     ( Name )
 import TcRnTypes( TcM, TcId )
 import TcType   ( ExpRhoType )
 import GHC.Data.Annotation ( Annotation, CoreAnnTarget )
 
-import HsSyn      ( LHsType, LPat, LHsDecl, ThModFinalizers )
+import GHC.Syntax      ( LHsType, LPat, LHsDecl, ThModFinalizers )
 import GHC.Data.RdrName    ( RdrName )
 import TcRnTypes  ( SpliceType )
 import qualified Language.Haskell.TH as TH

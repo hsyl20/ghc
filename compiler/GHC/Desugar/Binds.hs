@@ -25,7 +25,7 @@ import GHC.Desugar.Monad
 import GHC.Desugar.GuardedRHS
 import GHC.Desugar.Utils
 
-import HsSyn            -- lots of things
+import GHC.Syntax            -- lots of things
 import CoreSyn          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
 import CoreOpt          ( simpleOptExpr )

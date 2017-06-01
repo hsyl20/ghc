@@ -7,7 +7,7 @@
 
 module TcDefaults ( tcDefaults ) where
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Name
 import GHC.Data.Class
 import TcRnMonad

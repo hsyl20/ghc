@@ -25,7 +25,7 @@ import GHC.Data.Name
 import GHC.Data.RdrName
 import GHC.Data.DataConstructor
 import GHC.Data.SrcLoc
-import HsSyn
+import GHC.Syntax
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.Var
 import GHC.Data.Module

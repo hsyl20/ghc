@@ -45,7 +45,7 @@ module TcHsType (
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import TcRnMonad
 import TcEvidence
 import TcEnv

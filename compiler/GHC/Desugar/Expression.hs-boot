@@ -1,5 +1,5 @@
 module GHC.Desugar.Expression where
-import HsSyn    ( HsExpr, LHsExpr, LHsLocalBinds, SyntaxExpr )
+import GHC.Syntax    ( HsExpr, LHsExpr, LHsLocalBinds, SyntaxExpr )
 import GHC.Data.Var      ( Id )
 import GHC.Desugar.Monad  ( DsM )
 import CoreSyn  ( CoreExpr )

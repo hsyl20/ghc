@@ -1,5 +1,5 @@
 module RnExpr where
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Name       ( Name )
 import GHC.Data.Name.Set    ( FreeVars )
 import GHC.Data.RdrName    ( RdrName )

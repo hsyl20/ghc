@@ -49,7 +49,7 @@ import GHC ( LoadHowMuch(..), Target(..),  TargetId(..), InteractiveImport(..),
              TyThing(..), Phase, BreakIndex, Resume, SingleStep, Ghc,
              getModuleGraph, handleSourceError )
 import GHC.Syntax.ImportExport
-import HsSyn
+import GHC.Syntax
 import GHC.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
                   setInteractivePrintName, hsc_dflags, msObjFilePath )
 import GHC.Data.Module

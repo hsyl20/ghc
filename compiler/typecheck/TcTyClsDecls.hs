@@ -21,7 +21,7 @@ module TcTyClsDecls (
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import GHC.Types
 import BuildTyCl
 import TcRnMonad
@@ -701,7 +701,7 @@ must store *something* in the *global* environment. Even though we
 discard the result of kind-checking, we sometimes need to produce error
 messages. These error messages will want to refer to the tycons being
 checked, except that they don't exist yet, and it would be Terribly
-Annoying to get the error messages to refer back to HsSyn. So we
+Annoying to get the error messages to refer back to GHC.Syntax. So we
 create a TcTyCon and put it in the global env. This tycon can
 print out its name and knows its kind,
 but any other action taken on it will panic. Note

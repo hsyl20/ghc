@@ -30,7 +30,7 @@ module TcSplice(
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Annotation
 import GHC.Data.Name
 import TcRnMonad
@@ -244,7 +244,7 @@ very straightforwardly:
   1. tcTopSpliceExpr: typecheck the body e of the splice $(e)
 
   2. runMetaT: desugar, compile, run it, and convert result back to
-     HsSyn RdrName (of the appropriate flavour, eg HsType RdrName,
+     GHC.Syntax RdrName (of the appropriate flavour, eg HsType RdrName,
      HsExpr RdrName etc)
 
   3. treat the result as if that's what you saw in the first place
@@ -754,7 +754,7 @@ runMeta' show_code ppr_hs run_and_convert expr
              do { mb_result <- run_and_convert expr_span hval
                 ; case mb_result of
                     Left err     -> failWithTc err
-                    Right result -> do { traceTc "Got HsSyn result:" (ppr_hs result)
+                    Right result -> do { traceTc "Got GHC.Syntax result:" (ppr_hs result)
                                        ; return $! result } }
 
         ; case either_tval of

@@ -13,7 +13,7 @@ module TcGenGenerics (canDoGenerics, canDoGenerics1,
                       GenericKind(..),
                       gen_Generic_binds, get_gen1_constrained_tys) where
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Type
 import TcType
 import TcGenDeriv

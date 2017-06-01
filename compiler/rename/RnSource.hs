@@ -15,7 +15,7 @@ module RnSource (
 import {-# SOURCE #-} RnExpr( rnLExpr )
 import {-# SOURCE #-} RnSplice ( rnSpliceDecl, rnTopSpliceDecls )
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.FieldLabel
 import GHC.Data.RdrName
 import RnTypes

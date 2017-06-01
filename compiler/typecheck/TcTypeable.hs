@@ -30,7 +30,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Name ( Name, getOccName )
 import GHC.Data.OccName
 import GHC.Data.Module
-import HsSyn
+import GHC.Syntax
 import GHC.Config.Flags
 import GHC.Data.Bag
 import GHC.Data.Var ( TyVarBndr(..) )

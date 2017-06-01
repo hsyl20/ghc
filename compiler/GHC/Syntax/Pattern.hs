@@ -94,7 +94,7 @@ data Pat id
     -- For details on above see note [Api annotations] in ApiAnnotation
 
   | ParPat      (LPat id)               -- ^ Parenthesised pattern
-                                        -- See Note [Parens in HsSyn] in HsExpr
+                                        -- See Note [Parens in GHC.Syntax] in HsExpr
     -- ^ - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.AnnOpen' @'('@,
     --                                    'ApiAnnotation.AnnClose' @')'@
 

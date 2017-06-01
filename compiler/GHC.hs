@@ -215,7 +215,7 @@ module GHC (
         TyThing(..),
 
         -- ** Syntax
-        module HsSyn, -- ToDo: remove extraneous bits
+        module GHC.Syntax, -- ToDo: remove extraneous bits
 
         -- ** Fixities
         FixityDirection(..),
@@ -296,7 +296,7 @@ import TcRnTypes
 import GHC.Packages
 import GHC.Data.Name.Set
 import GHC.Data.RdrName
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Type     hiding( typeKind )
 import TcType           hiding( typeKind )
 import GHC.Data.Id
@@ -1263,7 +1263,7 @@ pprParenSymName a = parenSymOcc (getOccName a) (ppr (getName a))
 #if 0
 
 -- ToDo:
---   - Data and Typeable instances for HsSyn.
+--   - Data and Typeable instances for GHC.Syntax.
 
 -- ToDo: check for small transformations that happen to the syntax in
 -- the typechecker (eg. -e ==> negate e, perhaps for fromIntegral)

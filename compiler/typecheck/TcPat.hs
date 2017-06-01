@@ -17,7 +17,7 @@ module TcPat ( tcLetPat, newLetBndr, LetBndrSpec(..)
 
 import {-# SOURCE #-}   TcExpr( tcSyntaxOp, tcSyntaxOpGen, tcInferSigma )
 
-import HsSyn
+import GHC.Syntax
 import TcHsSyn
 import TcSigs( TcPragEnv, lookupPragEnv, addInlinePrags )
 import TcRnMonad

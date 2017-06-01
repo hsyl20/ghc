@@ -12,7 +12,7 @@ module TcDeriv ( tcDeriving, DerivInfo(..), mkDerivInfos ) where
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import GHC.Config.Flags
 
 import TcRnMonad
@@ -484,7 +484,7 @@ in derived code.
 
 ************************************************************************
 *                                                                      *
-                From HsSyn to DerivSpec
+                From GHC.Syntax to DerivSpec
 *                                                                      *
 ************************************************************************
 

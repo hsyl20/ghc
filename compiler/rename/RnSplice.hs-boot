@@ -1,6 +1,6 @@
 module RnSplice where
 
-import HsSyn
+import GHC.Syntax
 import TcRnMonad
 import GHC.Data.RdrName
 import GHC.Data.Name

@@ -23,7 +23,7 @@ import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsSyntaxExpr )
 import GHC.Desugar.Monad
 import GHC.Desugar.Utils
 
-import HsSyn
+import GHC.Syntax
 
 import GHC.Data.Id
 import CoreSyn

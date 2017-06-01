@@ -3,19 +3,19 @@
 (c) The AQUA Project, Glasgow University, 1996-1998
 
 
-TcHsSyn: Specialisations of the @HsSyn@ syntax for the typechecker
+TcHsSyn: Specialisations of the @GHC.Syntax@ syntax for the typechecker
 
-This module is an extension of @HsSyn@ syntax, for use in the type
+This module is an extension of @GHC.Syntax@ syntax, for use in the type
 checker.
 -}
 
 {-# LANGUAGE CPP, TupleSections #-}
 
 module TcHsSyn (
-        -- * Extracting types from HsSyn
+        -- * Extracting types from GHC.Syntax
         hsLitType, hsLPatType, hsPatType,
 
-        -- * Other HsSyn functions
+        -- * Other GHC.Syntax functions
         mkHsDictLet, mkHsApp,
         mkHsAppTy, mkHsCaseAlt,
         shortCutLit, hsOverLitName,
@@ -38,7 +38,7 @@ module TcHsSyn (
 
 #include "HsVersions.h"
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import TcRnMonad
@@ -75,7 +75,7 @@ import Control.Arrow ( second )
 {-
 ************************************************************************
 *                                                                      *
-       Extracting the type from HsSyn
+       Extracting the type from GHC.Syntax
 *                                                                      *
 ************************************************************************
 
@@ -175,7 +175,7 @@ The Ids are converted by binding them in the normal Tc envt; that
 way we maintain sharing; eg an Id is zonked at its binding site and they
 all occurrences of that Id point to the common zonked copy
 
-It's all pretty boring stuff, because HsSyn is such a large type, and
+It's all pretty boring stuff, because GHC.Syntax is such a large type, and
 the environment manipulation is tiresome.
 -}
 

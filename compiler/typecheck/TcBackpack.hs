@@ -20,7 +20,7 @@ import GHC.Data.BasicTypes (defaultFixity)
 import GHC.Packages
 import TcRnExports
 import GHC.Config.Flags
-import HsSyn
+import GHC.Syntax
 import GHC.Data.RdrName
 import TcRnMonad
 import TcTyDecls

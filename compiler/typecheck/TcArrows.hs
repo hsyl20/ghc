@@ -11,7 +11,7 @@ module TcArrows ( tcProc ) where
 
 import {-# SOURCE #-}   TcExpr( tcMonoExpr, tcInferRho, tcSyntaxOp, tcCheckId, tcPolyExpr )
 
-import HsSyn
+import GHC.Syntax
 import TcMatches
 import TcHsSyn( hsLPatType )
 import TcType

@@ -18,7 +18,7 @@ import CoreSyn
 import GHC.Desugar.Foreign.Call
 import GHC.Desugar.Monad
 
-import HsSyn
+import GHC.Syntax
 import GHC.Data.DataConstructor
 import CoreUnfold
 import GHC.Data.Id

@@ -138,7 +138,7 @@ import TcRnTypes        -- Re-export all
 import GHC.Utils.Monad.IOEnv            -- Re-export all
 import TcEvidence
 
-import HsSyn hiding (LIE)
+import GHC.Syntax hiding (LIE)
 import GHC.Types
 import GHC.Data.Module
 import GHC.Data.RdrName

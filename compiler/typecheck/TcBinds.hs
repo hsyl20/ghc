@@ -22,7 +22,7 @@ import CoreSyn (Tickish (..))
 import CostCentre (mkUserCC)
 import GHC.Config.Flags
 import GHC.Data.FastString
-import HsSyn
+import GHC.Syntax
 import GHC.Types( isHsBootOrSig )
 import TcSigs
 import TcRnMonad

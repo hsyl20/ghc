@@ -78,7 +78,7 @@ import TcType
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
 import TcRnMonad
-import HsSyn
+import GHC.Syntax
 import GHC.Types
 import GHC.Finder
 import GHC.Config.Flags

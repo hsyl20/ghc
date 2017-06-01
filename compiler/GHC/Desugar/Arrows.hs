@@ -16,7 +16,7 @@ import GHC.Desugar.Match
 import GHC.Desugar.Utils
 import GHC.Desugar.Monad
 
-import HsSyn    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
+import GHC.Syntax    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
 import TcHsSyn
 import qualified GHC.Syntax.Utils
 

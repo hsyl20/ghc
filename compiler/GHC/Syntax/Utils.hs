@@ -3,7 +3,7 @@
 
 
 Here we collect a variety of helper functions that construct or
-analyse HsSyn.  All these functions deal with generic HsSyn; functions
+analyse GHC.Syntax.  All these functions deal with generic GHC.Syntax; functions
 which deal with the instantiated versions are located elsewhere:
 
    Parameterised by     Module
@@ -784,10 +784,10 @@ it should return [x, y, f, a, b] (remember, order important).
 
 Note [Collect binders only after renaming]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-These functions should only be used on HsSyn *after* the renamer,
+These functions should only be used on GHC.Syntax *after* the renamer,
 to return a [Name] or [Id].  Before renaming the record punning
 and wild-card mechanism makes it hard to know what is bound.
-So these functions should not be applied to (HsSyn RdrName)
+So these functions should not be applied to (GHC.Syntax RdrName)
 
 Note [Unlifted id check in isHsUnliftedBind]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -15,7 +15,7 @@ module GHC.Desugar.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) wher
 import {-# SOURCE #-} GHC.Desugar.Expression  ( dsLExpr, dsLocalBinds )
 import {-# SOURCE #-} GHC.Desugar.Match   ( matchSinglePat )
 
-import HsSyn
+import GHC.Syntax
 import MkCore
 import CoreSyn
 import GHC.Data.Var
