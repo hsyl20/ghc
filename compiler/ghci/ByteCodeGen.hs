@@ -32,7 +32,7 @@ import GHC.Data.Literal
 import PrimOp
 import GHC.Core.FreeVars
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import GHC.Data.Kind            ( isLiftedTypeKind )
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor

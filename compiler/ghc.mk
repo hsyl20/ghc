@@ -538,7 +538,7 @@ compiler_stage2_dll0_MODULES = \
 	PrelRules \
 	GHC.Utils.PrettyPrint \
 	PrimOp \
-	RepType \
+	GHC.Data.RepType \
 	GHC.Data.RdrName \
 	Rules \
 	GHC.Data.SrcLoc \

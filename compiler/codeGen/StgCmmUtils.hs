@@ -67,7 +67,7 @@ import GHC.Data.Unique.Supply (MonadUnique(..))
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import RepType
+import GHC.Data.RepType
 
 import qualified Data.ByteString as BS
 import qualified Data.Map as M

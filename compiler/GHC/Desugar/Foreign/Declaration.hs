@@ -26,7 +26,7 @@ import GHC.Data.Literal
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion
 import TcEnv

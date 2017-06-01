@@ -38,7 +38,7 @@ import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Id
-import RepType (countConRepArgs)
+import GHC.Data.RepType (countConRepArgs)
 import GHC.Data.Literal
 import PrelInfo
 import GHC.Utils.Outputable

@@ -65,7 +65,7 @@ module GHC.Cmm.Utils(
 #include "HsVersions.h"
 
 import GHC.Data.Type.Constructor    ( PrimRep(..), PrimElemRep(..) )
-import RepType  ( UnaryType, SlotTy (..), typePrimRep1 )
+import GHC.Data.RepType  ( UnaryType, SlotTy (..), typePrimRep1 )
 
 import GHC.RTS.Storage
 import GHC.Cmm

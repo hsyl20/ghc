@@ -34,7 +34,7 @@ import GHC.Types
 
 import GHC.Data.DataConstructor
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import qualified GHC.TypeSystem.Unify as U
 import GHC.Data.Var
 import TcRnMonad

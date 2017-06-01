@@ -149,7 +149,6 @@ Library
         prelude
         profiling
         rename
-        simplStg
         specialise
         stranal
         typecheck
@@ -398,8 +397,8 @@ Library
         GHC.STG.Optimise.Pipeline
         GHC.STG.Analyse.Stats
         GHC.STG.Optimise.CommonSubExpr
-        UnariseStg
-        RepType
+        GHC.STG.Optimise.Unarise
+        GHC.Data.RepType
         Rules
         SpecConstr
         Specialise

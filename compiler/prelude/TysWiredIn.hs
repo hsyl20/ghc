@@ -141,7 +141,7 @@ import GHC.Data.Id
 import GHC.Config.Constants        ( mAX_TUPLE_SIZE, mAX_CTUPLE_SIZE, mAX_SUM_SIZE )
 import GHC.Data.Module           ( Module )
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import GHC.Data.DataConstructor
 import {-# SOURCE #-} GHC.Data.ConstructorLike
 import GHC.Data.Type.Constructor

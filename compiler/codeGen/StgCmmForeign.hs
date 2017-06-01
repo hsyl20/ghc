@@ -35,7 +35,7 @@ import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Cmm.Graph
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import TysPrim
 import GHC.Data.CLabel
 import GHC.RTS.Storage

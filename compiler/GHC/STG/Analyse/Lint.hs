@@ -21,7 +21,7 @@ import GHC.Data.Maybe
 import GHC.Data.Name             ( getSrcLoc )
 import GHC.Utils.Error         ( MsgDoc, Severity(..), mkLocMessage )
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import GHC.Data.Type.Constructor
 import GHC.Utils
 import GHC.Data.SrcLoc

@@ -37,7 +37,7 @@ import GHC.Data.Demand
 import GHC.Data.OccName          ( OccName, pprOccName, mkVarOccFS )
 import GHC.Data.Type.Constructor            ( TyCon, isPrimTyCon, PrimRep(..) )
 import GHC.Data.Type
-import RepType          ( typePrimRep1, tyConPrimRep1 )
+import GHC.Data.RepType          ( typePrimRep1, tyConPrimRep1 )
 import GHC.Data.BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
                           SourceText(..) )
 import ForeignCall      ( CLabelString )

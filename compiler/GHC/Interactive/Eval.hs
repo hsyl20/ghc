@@ -55,7 +55,7 @@ import GHC.TypeSystem.FamilyInstance ( FamInst )
 import GHC.Core.FreeVars    ( orphNamesOfFamInst )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             hiding( typeKind )
-import RepType
+import GHC.Data.RepType
 import TcType           hiding( typeKind )
 import GHC.Data.Var
 import GHC.Data.Id as Id

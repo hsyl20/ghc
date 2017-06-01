@@ -64,7 +64,7 @@ import GHC.Core.PrettyPrint     ( {- instances -} )
 import PrimOp      ( PrimOp, PrimCall )
 import GHC.Data.Type.Constructor       ( PrimRep(..), TyCon )
 import GHC.Data.Type        ( Type )
-import RepType     ( typePrimRep1 )
+import GHC.Data.RepType     ( typePrimRep1 )
 import GHC.Data.Unique      ( Unique )
 import GHC.Utils
 
@@ -199,7 +199,7 @@ primitives, and literals.
         -- which can't be let-bound first
   | StgConApp   DataCon
                 [GenStgArg occ] -- Saturated
-                [Type]          -- See Note [Types in StgConApp] in UnariseStg
+                [Type]          -- See Note [Types in StgConApp] in GHC.STG.Optimise.Unarise
 
   | StgOpApp    StgOp           -- Primitive op or foreign call
                 [GenStgArg occ] -- Saturated.

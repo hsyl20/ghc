@@ -44,7 +44,7 @@ import GHC.Data.Coercion
 import GHC.Data.SrcLoc
 import GHC.Data.Kind
 import GHC.Data.Type as Type
-import RepType
+import GHC.Data.RepType
 import GHC.Data.Types       -- checks validity of types/coercions
 import GHC.Data.Type.Constructor as TyCon
 import GHC.Data.Coercion.Axiom

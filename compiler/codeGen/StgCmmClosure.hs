@@ -81,7 +81,7 @@ import GHC.Data.Type
 import GHC.Data.Types
 import TcType
 import GHC.Data.Type.Constructor
-import RepType
+import GHC.Data.RepType
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable
 import GHC.Config.Flags
@@ -140,7 +140,7 @@ nonVoidIds ids = [NonVoid id | id <- ids, not (isVoidTy (idType id))]
 
 -- | Used in places where some invariant ensures that all these Ids are
 -- non-void; e.g. constructor field binders in case expressions.
--- See Note [Post-unarisation invariants] in UnariseStg.
+-- See Note [Post-unarisation invariants] in GHC.STG.Optimise.Unarise.
 assertNonVoidIds :: [Id] -> [NonVoid Id]
 assertNonVoidIds ids = ASSERT(not (any (isVoidTy . idType) ids))
                        coerce ids
@@ -150,7 +150,7 @@ nonVoidStgArgs args = [NonVoid arg | arg <- args, not (isVoidTy (stgArgType arg)
 
 -- | Used in places where some invariant ensures that all these arguments are
 -- non-void; e.g. constructor arguments.
--- See Note [Post-unarisation invariants] in UnariseStg.
+-- See Note [Post-unarisation invariants] in GHC.STG.Optimise.Unarise.
 assertNonVoidStgArgs :: [StgArg] -> [NonVoid StgArg]
 assertNonVoidStgArgs args = ASSERT(not (any (isVoidTy . stgArgType) args))
                             coerce args

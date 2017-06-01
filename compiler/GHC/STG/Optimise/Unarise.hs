@@ -192,7 +192,7 @@ STG programs after unarisation have these invariants:
 
 {-# LANGUAGE CPP, TupleSections #-}
 
-module UnariseStg (unarise) where
+module GHC.STG.Optimise.Unarise (unarise) where
 
 #include "HsVersions.h"
 
@@ -206,7 +206,7 @@ import GHC.Core.Syntax.Make (aBSENT_ERROR_ID)
 import GHC.Data.Id.Make (voidPrimId, voidArgId)
 import GHC.Utils.Monad (mapAccumLM)
 import GHC.Utils.Outputable
-import RepType
+import GHC.Data.RepType
 import GHC.STG.Syntax
 import GHC.Data.Type
 import TysPrim (intPrimTy)

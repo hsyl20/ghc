@@ -16,7 +16,7 @@ import CostCentre       ( CollectedCCs )
 import SCCfinal         ( stgMassageForProfiling )
 import GHC.STG.Analyse.Lint  ( lintStgTopBindings )
 import GHC.STG.Analyse.Stats ( showStgStats )
-import UnariseStg       ( unarise )
+import GHC.STG.Optimise.Unarise       ( unarise )
 import GHC.STG.Optimise.StgCse ( stgCse )
 
 import GHC.Config.Flags

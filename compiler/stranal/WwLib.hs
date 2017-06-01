@@ -27,7 +27,7 @@ import TysWiredIn       ( tupleDataCon )
 import GHC.Data.Var.Environment           ( mkInScopeSet )
 import GHC.Data.Var.Set           ( VarSet )
 import GHC.Data.Type
-import RepType          ( isVoidTy )
+import GHC.Data.RepType          ( isVoidTy )
 import GHC.Data.Coercion
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.BasicTypes       ( Boxity(..) )

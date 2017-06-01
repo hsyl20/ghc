@@ -34,7 +34,7 @@ import GHC.Types
 import CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import RepType
+import GHC.Data.RepType
 import GHC.Data.DataConstructor
 import GHC.Data.Name
 import GHC.Data.Type.Constructor
@@ -149,7 +149,7 @@ cgTopRhs :: DynFlags -> RecFlag -> Id -> StgRhs -> (CgIdInfo, FCode ())
 cgTopRhs dflags _rec bndr (StgRhsCon _cc con args)
   = cgTopRhsCon dflags bndr con (assertNonVoidStgArgs args)
       -- con args are always non-void,
-      -- see Note [Post-unarisation invariants] in UnariseStg
+      -- see Note [Post-unarisation invariants] in GHC.STG.Optimise.Unarise
 
 cgTopRhs dflags rec bndr (StgRhsClosure cc bi fvs upd_flag args body)
   = ASSERT(null fvs)    -- There should be no free variables

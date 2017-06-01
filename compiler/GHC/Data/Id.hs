@@ -131,7 +131,7 @@ import GHC.Data.Var( Id, CoVar, DictId, JoinId,
 import qualified GHC.Data.Var as Var
 
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import TysPrim
 import GHC.Data.DataConstructor
 import GHC.Data.Demand

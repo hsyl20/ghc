@@ -209,7 +209,7 @@ cgRhs id (StgRhsCon cc con args)
   = withNewTickyCounterCon (idName id) $
     buildDynCon id True cc con (assertNonVoidStgArgs args)
       -- con args are always non-void,
-      -- see Note [Post-unarisation invariants] in UnariseStg
+      -- see Note [Post-unarisation invariants] in GHC.STG.Optimise.Unarise
 
 {- See Note [GC recovery] in compiler/codeGen/StgCmmClosure.hs -}
 cgRhs id (StgRhsClosure cc bi fvs upd_flag args body)
@@ -278,7 +278,7 @@ mkRhsClosure    dflags bndr _cc _bi
 
   , let (_, _, params_w_offsets) = mkVirtConstrOffsets dflags (addIdReps (assertNonVoidIds params))
                                    -- pattern binders are always non-void,
-                                   -- see Note [Post-unarisation invariants] in UnariseStg
+                                   -- see Note [Post-unarisation invariants] in GHC.STG.Optimise.Unarise
   , Just the_offset <- assocMaybe params_w_offsets (NonVoid selectee)
 
   , let offset_into_int = bytesToWordsRoundUp dflags the_offset

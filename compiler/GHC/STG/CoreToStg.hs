@@ -21,7 +21,7 @@ import GHC.Core.Arity        ( manifestArity )
 import GHC.STG.Syntax
 
 import GHC.Data.Type
-import RepType
+import GHC.Data.RepType
 import GHC.Data.Type.Constructor
 import GHC.Data.Id.Make             ( coercionTokenId )
 import GHC.Data.Id
