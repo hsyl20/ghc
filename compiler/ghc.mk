@@ -458,7 +458,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Core.Optimise \
 	CoreSyn \
 	GHC.Core.Tidy \
-	CoreUnfold \
+	GHC.Core.Optimise.Unfolding \
 	CoreUtils \
 	CoreSeq \
 	CoreStats \

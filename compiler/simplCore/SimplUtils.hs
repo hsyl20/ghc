@@ -44,7 +44,7 @@ import PprCore
 import CoreFVs
 import CoreUtils
 import GHC.Core.Arity
-import CoreUnfold
+import GHC.Core.Optimise.Unfolding
 import GHC.Data.Name
 import GHC.Data.Id
 import GHC.Data.Id.Info
@@ -327,7 +327,7 @@ mkFunRules rs = Just (n_required, rs)
 mkBoringStop :: OutType -> SimplCont
 mkBoringStop ty = Stop ty BoringCtxt
 
-mkRhsStop :: OutType -> SimplCont       -- See Note [RHS of lets] in CoreUnfold
+mkRhsStop :: OutType -> SimplCont       -- See Note [RHS of lets] in GHC.Core.Optimise.Unfolding
 mkRhsStop ty = Stop ty RhsCtxt
 
 mkLazyArgStop :: OutType -> CallCtxt -> SimplCont
@@ -402,7 +402,7 @@ contArgs cont
   | lone cont = (True, [], cont)
   | otherwise = go [] cont
   where
-    lone (ApplyToTy  {}) = False  -- See Note [Lone variables] in CoreUnfold
+    lone (ApplyToTy  {}) = False  -- See Note [Lone variables] in GHC.Core.Optimise.Unfolding
     lone (ApplyToVal {}) = False
     lone (CastIt {})     = False
     lone _               = True
@@ -558,7 +558,7 @@ interestingCallContext cont
         -- Can happen if we have (f Int |> co) y
         -- If f has an INLINE prag we need to give it some
         -- motivation to inline. See Note [Cast then apply]
-        -- in CoreUnfold
+        -- in GHC.Core.Optimise.Unfolding
 
     interesting (StrictArg { sc_cci = cci }) = cci
     interesting (StrictBind {})              = BoringCtxt

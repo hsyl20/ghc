@@ -32,7 +32,7 @@ import CoreMonad        ( Tick(..), SimplifierMode(..) )
 import CoreSyn
 import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
 import PprCore          ( pprCoreExpr )
-import CoreUnfold
+import GHC.Core.Optimise.Unfolding
 import CoreUtils
 import GHC.Core.Arity
 import GHC.Core.Optimise          ( pushCoTyArg, pushCoValArg
@@ -3400,7 +3400,7 @@ simplUnfolding env top_lvl mb_cont id unf
                         -- Note [Single-method classes] in TcInstDcls.
                         -- A test case is Trac #4138
                         in return (mkCoreUnfolding src is_top_lvl expr' guide')
-                            -- See Note [Top-level flag on inline rules] in CoreUnfold
+                            -- See Note [Top-level flag on inline rules] in GHC.Core.Optimise.Unfolding
 
                   _other              -- Happens for INLINABLE things
                      -> is_bottoming `seq` -- See Note [Force bottoming field]

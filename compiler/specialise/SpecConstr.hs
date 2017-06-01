@@ -22,7 +22,7 @@ module SpecConstr(
 import CoreSyn
 import CoreSubst
 import CoreUtils
-import CoreUnfold       ( couldBeSmallEnoughToInline )
+import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )
 import CoreFVs          ( exprsFreeVarsList )
 import CoreMonad
 import GHC.Data.Literal          ( litIsLifted )

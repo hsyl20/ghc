@@ -39,7 +39,7 @@ import GHC.Data.Type.Constructor       ( tyConDataCons_maybe, isEnumerationTyCon
                    , unwrapNewTyCon_maybe, tyConDataCons )
 import GHC.Data.DataConstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
 import CoreUtils   ( cheapEqExpr, exprIsHNF )
-import CoreUnfold  ( exprIsConApp_maybe )
+import GHC.Core.Optimise.Unfolding  ( exprIsConApp_maybe )
 import GHC.Data.Type
 import GHC.Data.OccName     ( occNameFS )
 import PrelNames

@@ -1296,7 +1296,7 @@ The @Unfolding@ type is declared here to avoid numerous loops
 
 -- | Records the /unfolding/ of an identifier, which is approximately the form the
 -- identifier would have if we substituted its definition in for the identifier.
--- This type should be treated as abstract everywhere except in "CoreUnfold"
+-- This type should be treated as abstract everywhere except in "GHC.Core.Optimise.Unfolding"
 data Unfolding
   = NoUnfolding        -- ^ We have no information about the unfolding.
 
@@ -1397,7 +1397,7 @@ data UnfoldingGuidance
   = UnfWhen {   -- Inline without thinking about the *size* of the uf_tmpl
                 -- Used (a) for small *and* cheap unfoldings
                 --      (b) for INLINE functions
-                -- See Note [INLINE for small functions] in CoreUnfold
+                -- See Note [INLINE for small functions] in GHC.Core.Optimise.Unfolding
       ug_arity    :: Arity,     -- Number of value arguments expected
 
       ug_unsat_ok  :: Bool,     -- True <=> ok to inline even if unsaturated
@@ -1643,7 +1643,7 @@ on the left, thus
 it'd only inline when applied to three arguments.  This slightly-experimental
 change was requested by Roman, but it seems to make sense.
 
-See also Note [Inlining an InlineRule] in CoreUnfold.
+See also Note [Inlining an InlineRule] in GHC.Core.Optimise.Unfolding.
 
 
 Note [OccInfo in unfoldings and rules]

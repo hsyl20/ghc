@@ -15,7 +15,7 @@ module GHC.Interface.Tidy (
 import TcRnTypes
 import GHC.Config.Flags
 import CoreSyn
-import CoreUnfold
+import GHC.Core.Optimise.Unfolding
 import CoreFVs
 import GHC.Core.Tidy
 import CoreMonad
@@ -563,7 +563,7 @@ constructed in an optimised form.  E.g. record selector for
 Then the unfolding looks like
         x = \t. case t of MkT x1 -> let x = I# x1 in x
 This generates bad code unless it's first simplified a bit.  That is
-why CoreUnfold.mkImplicitUnfolding uses simpleOptExpr to do a bit of
+why GHC.Core.Optimise.Unfolding.mkImplicitUnfolding uses simpleOptExpr to do a bit of
 optimisation first.  (Only matters when the selector is used curried;
 eg map x ys.)  See Trac #2070.
 

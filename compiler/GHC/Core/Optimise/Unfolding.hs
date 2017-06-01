@@ -17,7 +17,7 @@ find, unsurprisingly, a Core expression.
 
 {-# LANGUAGE CPP #-}
 
-module CoreUnfold (
+module GHC.Core.Optimise.Unfolding (
         Unfolding, UnfoldingGuidance,   -- Abstract types
 
         noUnfolding, mkImplicitUnfolding,
@@ -695,7 +695,7 @@ sizeExpr dflags bOMB_OUT_SIZE top_args expr
 
 -- | Finds a nominal size of a string literal.
 litSize :: Literal -> Int
--- Used by CoreUnfold.sizeExpr
+-- Used by GHC.Core.Optimise.Unfolding.sizeExpr
 litSize (LitInteger {}) = 100   -- Note [Size of literal integers]
 litSize (MachStr str)   = 10 + 10 * ((BS.length str + 3) `div` 4)
         -- If size could be 0 then @f "x"@ might be too small

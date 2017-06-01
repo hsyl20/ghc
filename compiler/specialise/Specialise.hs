@@ -16,7 +16,7 @@ import GHC.Data.Module( Module, HasModule(..) )
 import GHC.Data.Coercion( Coercion )
 import CoreMonad
 import qualified CoreSubst
-import CoreUnfold
+import GHC.Core.Optimise.Unfolding
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import CoreSyn

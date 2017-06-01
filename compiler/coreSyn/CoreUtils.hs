@@ -1036,7 +1036,7 @@ Moreover it improves arities of overloaded functions where
 there is only dictionary selection (no construction) involved
 
 Note [exprIsCheap]   See also Note [Interaction of exprIsCheap and lone variables]
-~~~~~~~~~~~~~~~~~~   in CoreUnfold.hs
+~~~~~~~~~~~~~~~~~~   in GHC.Core.Optimise.Unfolding.hs
 @exprIsCheap@ looks at a Core expression and returns \tr{True} if
 it is obviously in weak head normal form, or is cheap to get to WHNF.
 [Note that that's not the same as exprIsDupable; an expression might be

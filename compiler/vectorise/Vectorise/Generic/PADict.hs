@@ -12,7 +12,7 @@ import Vectorise.Utils
 import GHC.Data.BasicTypes
 import CoreSyn
 import CoreUtils
-import CoreUnfold
+import GHC.Core.Optimise.Unfolding
 import GHC.Data.Module
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

@@ -8,7 +8,7 @@
 module WorkWrap ( wwTopBinds ) where
 
 import CoreSyn
-import CoreUnfold       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding )
+import GHC.Core.Optimise.Unfolding       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding )
 import CoreUtils        ( exprType, exprIsHNF )
 import CoreFVs          ( exprFreeVars )
 import GHC.Data.Var
@@ -197,7 +197,7 @@ unfolding to the *worker*.  So we will get something like this:
   fw d x y' = let y = I# y' in ...f...
 
 How do we "transfer the unfolding"? Easy: by using the old one, wrapped
-in work_fn! See CoreUnfold.mkWorkerUnfolding.
+in work_fn! See GHC.Core.Optimise.Unfolding.mkWorkerUnfolding.
 
 Note [Worker-wrapper for NOINLINE functions]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -49,7 +49,7 @@ import GHC.Data.Coercion
 import TcType
 import MkCore
 import CoreUtils        ( exprType, mkCast )
-import CoreUnfold
+import GHC.Core.Optimise.Unfolding
 import GHC.Data.Literal
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

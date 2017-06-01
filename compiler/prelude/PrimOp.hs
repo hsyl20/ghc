@@ -513,7 +513,7 @@ primOpIsCheap op = primOpOkForSpeculation op
 primOpCodeSize
 ~~~~~~~~~~~~~~
 Gives an indication of the code size of a primop, for the purposes of
-calculating unfolding sizes; see CoreUnfold.sizeExpr.
+calculating unfolding sizes; see GHC.Core.Optimise.Unfolding.sizeExpr.
 -}
 
 primOpCodeSize :: PrimOp -> Int
@@ -521,7 +521,7 @@ primOpCodeSize :: PrimOp -> Int
 
 primOpCodeSizeDefault :: Int
 primOpCodeSizeDefault = 1
-  -- CoreUnfold.primOpSize already takes into account primOpOutOfLine
+  -- GHC.Core.Optimise.Unfolding.primOpSize already takes into account primOpOutOfLine
   -- and adds some further costs for the args in that case.
 
 primOpCodeSizeForeignCall :: Int

@@ -36,7 +36,7 @@ import TcHsType
 import TcUnify
 import CoreSyn    ( Expr(..), mkApps, mkVarApps, mkLams )
 import MkCore     ( nO_METHOD_BINDING_ERROR_ID )
-import CoreUnfold ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
+import GHC.Core.Optimise.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import GHC.Data.Type
 import TcEvidence
 import GHC.Data.Type.Constructor
@@ -180,7 +180,7 @@ Instead we use a cunning trick.
  * We give 'df' a magical unfolding (DFunUnfolding [$cop1, $cop2, ..])
    that lists its methods.
 
- * We make CoreUnfold.exprIsConApp_maybe spot a DFunUnfolding and return
+ * We make GHC.Core.Optimise.Unfolding.exprIsConApp_maybe spot a DFunUnfolding and return
    a suitable constructor application -- inlining df "on the fly" as it
    were.
 
