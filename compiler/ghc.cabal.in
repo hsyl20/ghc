@@ -150,7 +150,6 @@ Library
         profiling
         rename
         specialise
-        stranal
         typecheck
         vectorise
 
@@ -407,8 +406,8 @@ Library
         GHC.STG.Syntax
         GHC.Core.Analyse.CallArity
         GHC.Core.Analyse.Demand
-        WorkWrap
-        WwLib
+        GHC.Core.Optimise.WorkerWrapper
+        GHC.Core.Optimise.WorkerWrapper.Utils
         FamInst
         Inst
         TcAnnotations

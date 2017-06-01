@@ -27,7 +27,7 @@ import GHC.Core.FreeVars          ( exprsFreeVarsList )
 import GHC.Core.Monad
 import GHC.Data.Literal          ( litIsLifted )
 import GHC.Types         ( ModGuts(..) )
-import WwLib            ( isWorkerSmallEnough, mkWorkerArgs )
+import GHC.Core.Optimise.WorkerWrapper.Utils            ( isWorkerSmallEnough, mkWorkerArgs )
 import GHC.Data.DataConstructor
 import GHC.Data.Coercion         hiding( substCo )
 import Rules
@@ -1913,7 +1913,7 @@ callsToNewPats env fn spec_info@(SI { si_specs = done_specs }) bndr_occs calls
               too_big (vars,_) = not (isWorkerSmallEnough (sc_dflags env) vars)
                   -- We are about to construct w/w pair in 'spec_one'.
                   -- Omit specialisation leading to high arity workers.
-                  -- See Note [Limit w/w arity] in WwLib
+                  -- See Note [Limit w/w arity] in GHC.Core.Optimise.WorkerWrapper.Utils
 
                 -- Discard specialisations if there are too many of them
               trimmed_pats = trim_pats env fn spec_info small_pats

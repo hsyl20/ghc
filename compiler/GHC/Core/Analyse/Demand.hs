@@ -14,7 +14,7 @@ module GHC.Core.Analyse.Demand ( dmdAnalProgram ) where
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import WwLib            ( findTypeShape, deepSplitProductType_maybe )
+import GHC.Core.Optimise.WorkerWrapper.Utils            ( findTypeShape, deepSplitProductType_maybe )
 import GHC.Data.Demand   -- All of it
 import GHC.Core.Syntax
 import GHC.Core.Force          ( seqBinds )

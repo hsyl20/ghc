@@ -5,7 +5,7 @@
 -}
 
 {-# LANGUAGE CPP #-}
-module WorkWrap ( wwTopBinds ) where
+module GHC.Core.Optimise.WorkerWrapper ( wwTopBinds ) where
 
 import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding )
@@ -19,7 +19,7 @@ import GHC.Data.Unique.Supply
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Data.Demand
-import WwLib
+import GHC.Core.Optimise.WorkerWrapper.Utils
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.TypeSystem.FamilyInstance
@@ -597,7 +597,7 @@ Consider this rather common form of binding:
         $j = \x:Void# -> ...no use of x...
 
 Since x is not used it'll be marked as absent.  But there is no point
-in w/w-ing because we'll simply add (\y:Void#), see WwLib.mkWorerArgs.
+in w/w-ing because we'll simply add (\y:Void#), see GHC.Core.Optimise.WorkerWrapper.Utils.mkWorerArgs.
 
 If x has a more interesting type (eg Int, or Int#), there *is* a point
 in w/w so that we don't pass the argument at all.

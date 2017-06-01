@@ -1,15 +1,20 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1993-1998
 
-\section[WwLib]{A library for the ``worker\/wrapper'' back-end to the strictness analyser}
+\section[GHC.Core.Optimise.WorkerWrapper.Utils]{A library for the ``worker\/wrapper'' back-end to the strictness analyser}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module WwLib ( mkWwBodies, mkWWstr, mkWorkerArgs
-             , deepSplitProductType_maybe, findTypeShape
-             , isWorkerSmallEnough
- ) where
+module GHC.Core.Optimise.WorkerWrapper.Utils
+   ( mkWwBodies
+   , mkWWstr
+   , mkWorkerArgs
+   , deepSplitProductType_maybe
+   , findTypeShape
+   , isWorkerSmallEnough
+   )
+where
 
 #include "HsVersions.h"
 

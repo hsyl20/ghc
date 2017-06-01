@@ -1272,7 +1272,7 @@ specCalls mb_mod env rules_for_me calls_for_me fn rhs
            {    -- Figure out the type of the specialised function
              let body_ty = applyTypeToArgs rhs fn_type rule_args
                  (lam_args, app_args)           -- Add a dummy argument if body_ty is unlifted
-                   | isUnliftedType body_ty     -- C.f. WwLib.mkWorkerArgs
+                   | isUnliftedType body_ty     -- C.f. GHC.Core.Optimise.WorkerWrapper.Utils.mkWorkerArgs
                    , not (isJoinId fn)
                    = (poly_tyvars ++ [voidArgId], poly_tyvars ++ [voidPrimId])
                    | otherwise = (poly_tyvars, poly_tyvars)

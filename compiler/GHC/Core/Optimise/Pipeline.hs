@@ -43,7 +43,7 @@ import Specialise       ( specProgram)
 import SpecConstr       ( specConstrProgram)
 import GHC.Core.Analyse.Demand          ( dmdAnalProgram )
 import GHC.Core.Analyse.CallArity        ( callArityAnalProgram )
-import WorkWrap         ( wwTopBinds )
+import GHC.Core.Optimise.WorkerWrapper   ( wwTopBinds )
 import Vectorise        ( vectorise )
 import GHC.Data.SrcLoc
 import GHC.Utils
