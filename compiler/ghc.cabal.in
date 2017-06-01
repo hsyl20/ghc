@@ -385,7 +385,7 @@ Library
         RnUtils
         RnUnbound
         CoreMonad
-        CSE
+        GHC.Core.Optimise.CommonSubExpr
         FloatIn
         FloatOut
         LiberateCase

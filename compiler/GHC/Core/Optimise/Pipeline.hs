@@ -13,7 +13,7 @@ module GHC.Core.Optimise.Pipeline ( core2core, simplifyExpr ) where
 import GHC.Config.Flags
 import GHC.Core.Syntax
 import GHC.Types
-import CSE              ( cseProgram )
+import GHC.Core.Optimise.CommonSubExpr ( cseProgram )
 import Rules            ( mkRuleBase, unionRuleBase,
                           extendRuleBaseList, ruleCheckProgram, addRuleInfo, )
 import GHC.Core.PrettyPrint          ( pprCoreBindings, pprCoreExpr )
