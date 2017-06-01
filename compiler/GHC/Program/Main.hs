@@ -100,7 +100,7 @@ import GHC.Data.Module
 import GHC.Packages
 import GHC.Data.RdrName
 import HsSyn
-import HsDumpAst
+import GHC.Syntax.PrettyPrint.Dump
 import CoreSyn
 import GHC.Data.StringBuffer
 import Parser

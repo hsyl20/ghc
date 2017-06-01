@@ -3,7 +3,7 @@
 import Data.List
 import GHC.Data.SrcLoc
 import GHC hiding (moduleName)
-import HsDumpAst
+import GHC.Syntax.PrettyPrint.Dump
 import GHC.Config.Flags
 import GHC.Utils.Outputable hiding (space)
 import System.Environment( getArgs )

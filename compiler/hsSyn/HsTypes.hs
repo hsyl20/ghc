@@ -81,7 +81,7 @@ import GHC.Data.DataConstructor( HsSrcBang(..), HsImplBang(..),
                 SrcStrictness(..), SrcUnpackedness(..) )
 import TysPrim( funTyConName )
 import GHC.Data.Type
-import HsDoc
+import GHC.Syntax.Documentation
 import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable

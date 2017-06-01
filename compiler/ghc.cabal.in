@@ -303,7 +303,7 @@ Library
         GHC.Desugar.Match.Literal
         GHC.Syntax.Binding
         GHC.Syntax.Declaration
-        HsDoc
+        GHC.Syntax.Documentation
         HsExpr
         HsImpExp
         HsLit
@@ -312,7 +312,7 @@ Library
         HsSyn
         HsTypes
         HsUtils
-        HsDumpAst
+        GHC.Syntax.PrettyPrint.Dump
         BinIface
         BinFingerprint
         BuildTyCl

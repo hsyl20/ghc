@@ -43,7 +43,7 @@ import HsPat
 import HsTypes
 import GHC.Data.BasicTypes       ( Fixity, WarningTxt )
 import HsUtils
-import HsDoc
+import GHC.Syntax.Documentation
 import GHC.Data.OccName          ( HasOccName(..) )
 
 -- others:

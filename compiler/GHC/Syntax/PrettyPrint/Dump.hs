@@ -9,7 +9,7 @@
 -- traversal which falls back to displaying based on the constructor name, so
 -- can be used to dump anything having a @Data.Data@ instance.
 
-module HsDumpAst (
+module GHC.Syntax.PrettyPrint.Dump (
         -- * Dumping ASTs
         showAstData,
         BlankSrcSpan(..),

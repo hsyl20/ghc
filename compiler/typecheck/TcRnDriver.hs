@@ -127,7 +127,7 @@ import GHC.Data.Bag
 import Inst (tcGetInsts)
 import qualified GHC.LanguageExtensions as LangExt
 import Data.Data ( Data )
-import HsDumpAst
+import GHC.Syntax.PrettyPrint.Dump
 import qualified Data.Set as S
 
 import Control.Monad

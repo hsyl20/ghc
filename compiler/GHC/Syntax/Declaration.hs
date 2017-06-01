@@ -92,7 +92,7 @@ import {-# SOURCE #-}   HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr,
 
 import GHC.Syntax.Binding
 import HsTypes
-import HsDoc
+import GHC.Syntax.Documentation
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.Data.BasicTypes
