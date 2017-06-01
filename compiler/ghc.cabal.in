@@ -397,7 +397,7 @@ Library
         GHC.Core.Optimise.Simplify
         SimplStg
         StgStats
-        StgCse
+        GHC.STG.Optimise.CommonSubExpr
         UnariseStg
         RepType
         Rules

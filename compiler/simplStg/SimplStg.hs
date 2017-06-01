@@ -17,7 +17,7 @@ import SCCfinal         ( stgMassageForProfiling )
 import GHC.STG.Analyse.Lint ( lintStgTopBindings )
 import StgStats         ( showStgStats )
 import UnariseStg       ( unarise )
-import StgCse           ( stgCse )
+import GHC.STG.Optimise.StgCse ( stgCse )
 
 import GHC.Config.Flags
 import GHC.Data.Module           ( Module )

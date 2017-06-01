@@ -68,7 +68,7 @@ and nothing stops us from transforming that to
                           , Right [x] -> b}
 
 -}
-module StgCse (stgCse) where
+module GHC.STG.Optimise.CommonSubExpr (stgCse) where
 
 import GHC.Data.DataConstructor
 import GHC.Data.Id
