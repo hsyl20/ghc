@@ -91,7 +91,7 @@ import {-# SOURCE #-}   HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr,
         -- Because Expr imports Decls via HsBracket
 
 import GHC.Syntax.Binding
-import HsTypes
+import GHC.Syntax.Type
 import GHC.Syntax.Documentation
 import GHC.Data.Type.Constructor
 import GHC.Data.Name

@@ -23,7 +23,7 @@ import {-# SOURCE #-} HsExpr ( pprExpr, LHsExpr,
 import {-# SOURCE #-} HsPat  ( LPat )
 
 import PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
-import HsTypes
+import GHC.Syntax.Type
 import PprCore ()
 import CoreSyn
 import TcEvidence

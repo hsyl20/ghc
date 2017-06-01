@@ -44,7 +44,7 @@ import {-# SOURCE #-} HsExpr            (SyntaxExpr, LHsExpr, HsSplice, pprLExpr
 import GHC.Syntax.Binding
 import GHC.Syntax.Literal
 import PlaceHolder
-import HsTypes
+import GHC.Syntax.Type
 import TcEvidence
 import GHC.Data.BasicTypes
 -- others:

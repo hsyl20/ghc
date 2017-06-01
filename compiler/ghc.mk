@@ -493,7 +493,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Desugar.Match.Expr \
 	GHC.Syntax.Pattern \
 	HsSyn \
-	HsTypes \
+	GHC.Syntax.Type \
 	HsUtils \
 	GHC.Types \
 	GHC.Utils.Monad.IOEnv \

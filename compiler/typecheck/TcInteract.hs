@@ -11,7 +11,7 @@ module TcInteract (
 
 import GHC.Data.BasicTypes ( SwapFlag(..), isSwapped,
                     infinity, IntWithInf, intGtLimit )
-import HsTypes ( HsIPName(..) )
+import GHC.Syntax.Type ( HsIPName(..) )
 import TcCanonical
 import TcFlatten
 import TcUnify( canSolveByUnification )

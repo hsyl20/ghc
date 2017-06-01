@@ -1,4 +1,4 @@
 module Package05 where
-import HsTypes
+import GHC.Syntax.Type
 import MyHsTypes
 import HsUtils

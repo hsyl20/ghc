@@ -96,7 +96,7 @@ import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import GHC.Syntax.Expression
 import GHC.Syntax.Pattern
-import HsTypes
+import GHC.Syntax.Type
 import GHC.Syntax.Literal
 import PlaceHolder
 

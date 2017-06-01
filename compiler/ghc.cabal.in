@@ -310,7 +310,7 @@ Library
         PlaceHolder
         GHC.Syntax.Pattern
         HsSyn
-        HsTypes
+        GHC.Syntax.Type
         HsUtils
         GHC.Syntax.PrettyPrint.Dump
         BinIface

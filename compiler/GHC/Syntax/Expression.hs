@@ -23,7 +23,7 @@ import GHC.Syntax.Pattern
 import GHC.Syntax.Literal
 import PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
                      NameOrRdrName,OutputableBndrId )
-import HsTypes
+import GHC.Syntax.Type
 import GHC.Syntax.Binding
 
 -- others:

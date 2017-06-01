@@ -40,7 +40,7 @@ import GHC.Syntax.ImportExport
 import GHC.Syntax.Literal
 import PlaceHolder
 import GHC.Syntax.Pattern
-import HsTypes
+import GHC.Syntax.Type
 import GHC.Data.BasicTypes       ( Fixity, WarningTxt )
 import HsUtils
 import GHC.Syntax.Documentation
