@@ -1390,7 +1390,7 @@ match_smallIntegerTo _ _ _ _ _ = Nothing
 --------------------------------------------------------
 -- Constant folding through case-expressions
 --
--- cf Scrutinee Constant Folding in simplCore/SimplUtils
+-- cf Scrutinee Constant Folding in simplCore/GHC.Core.Optimise.Simplify.Utils
 --------------------------------------------------------
 
 -- | Match the scrutinee of a case and potentially return a new scrutinee and a
@@ -1525,7 +1525,7 @@ we generate
     True  -> e1
 and it is nice to then get rid of the tagToEnum.
 
-NB: in SimplUtils, where we invoke caseRules,
+NB: in GHC.Core.Optimise.Simplify.Utils, where we invoke caseRules,
     we convert that 0# to DEFAULT
 
 Note [caseRules for dataToTag]

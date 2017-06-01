@@ -247,7 +247,7 @@ Follows on from Note [Worker-wrapper for INLINABLE functions]
 It is *vital* that if the worker gets an INLINABLE pragma (from the
 original function), then the worker has the same phase activation as
 the wrapper (or later).  That is necessary to allow the wrapper to
-inline into the worker's unfolding: see SimplUtils
+inline into the worker's unfolding: see GHC.Core.Optimise.Simplify.Utils
 Note [Simplifying inside stable unfoldings].
 
 If the original is NOINLINE, it's important that the work inherit the

@@ -366,7 +366,7 @@ simple_bind_pair env@(SOE { soe_inl = inl_env, soe_subst = subst })
     pre_inline_unconditionally :: Bool
     pre_inline_unconditionally
        | isCoVar in_bndr          = False    -- See Note [Do not inline CoVars unconditionally]
-       | isExportedId in_bndr     = False    --     in SimplUtils
+       | isExportedId in_bndr     = False    --     in GHC.Core.Optimise.Simplify.Utils
        | stable_unf               = False
        | not active               = False    -- Note [Inline prag in simplOpt]
        | not (safe_to_inline occ) = False
@@ -437,7 +437,7 @@ simple_out_bind_pair env in_bndr mb_out_bndr out_rhs
 {- Note [Exported Ids and trivial RHSs]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We obviously do not want to unconditionally inline an Id that is exported.
-In SimplUtils, Note [Top level and postInlineUnconditionally], we
+In GHC.Core.Optimise.Simplify.Utils, Note [Top level and postInlineUnconditionally], we
 explain why we don't inline /any/ top-level things unconditionally, even
 trivial ones.  But we do here!  Why?  In the simple optimiser
 

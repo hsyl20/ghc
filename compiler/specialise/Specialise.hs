@@ -1363,7 +1363,7 @@ Consider
 
 In f's stable unfolding we have done some modest simplification which
 has pushed the cast to the outside.  (I wonder if this is the Right
-Thing, but it's what happens now; see SimplUtils Note [Casts and
+Thing, but it's what happens now; see GHC.Core.Optimise.Simplify.Utils Note [Casts and
 lambdas].)  Now that stable unfolding must be specialised, so we want
 to push the cast back inside. It would be terrible if the cast
 defeated specialisation!  Hence the use of collectBindersPushingCo.

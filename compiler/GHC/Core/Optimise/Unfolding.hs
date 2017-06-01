@@ -480,7 +480,7 @@ Things to note:
     unconditional-inline thing for *trivial* expressions.
 
     NB: you might think that PostInlineUnconditionally would do this
-    but it doesn't fire for top-level things; see SimplUtils
+    but it doesn't fire for top-level things; see GHC.Core.Optimise.Simplify.Utils
     Note [Top level and postInlineUnconditionally]
 -}
 

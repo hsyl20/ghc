@@ -1,12 +1,12 @@
 {-
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[SimplUtils]{The simplifier utilities}
+\section[GHC.Core.Optimise.Simplify.Utils]{The simplifier utilities}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module SimplUtils (
+module GHC.Core.Optimise.Simplify.Utils (
         -- Rebuilding
         mkLam, mkCase, prepareAlts, tryEtaExpandRhs,
 
@@ -462,7 +462,7 @@ mkArgInfo fun rules n_val_args call_cont
                         -- interesting context.  This avoids substituting
                         -- top-level bindings for (say) strings into
                         -- calls to error.  But now we are more careful about
-                        -- inlining lone variables, so its ok (see SimplUtils.analyseCont)
+                        -- inlining lone variables, so its ok (see GHC.Core.Optimise.Simplify.Utils.analyseCont)
                    if isBotRes result_info then
                         map isStrictDmd demands         -- Finite => result is bottom
                    else
@@ -1528,7 +1528,7 @@ So I have elaborated simplLazyBind to understand right-hand sides that look
 like
         /\ a1..an. body
 
-and treat them specially. The real work is done in SimplUtils.abstractFloats,
+and treat them specially. The real work is done in GHC.Core.Optimise.Simplify.Utils.abstractFloats,
 but there is quite a bit of plumbing in simplLazyBind as well.
 
 The same transformation is good when there are lets in the body:

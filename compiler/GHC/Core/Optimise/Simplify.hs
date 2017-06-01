@@ -19,7 +19,7 @@ import GHC.Config.Flags
 import GHC.Core.Optimise.Simplify.Monad
 import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvSubst )
 import GHC.Core.Optimise.Simplify.Environment
-import SimplUtils
+import GHC.Core.Optimise.Simplify.Utils
 import OccurAnal        ( occurAnalyseExpr )
 import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
 import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
@@ -75,7 +75,7 @@ documented with simplifyArgs.
         *** IMPORTANT NOTE ***
 -----------------------------------------
 Many parts of the simplifier return a bunch of "floats" as well as an
-expression. This is wrapped as a datatype SimplUtils.FloatsWith.
+expression. This is wrapped as a datatype GHC.Core.Optimise.Simplify.Utils.FloatsWith.
 
 All "floats" are let-binds, not case-binds, but some non-rec lets may
 be unlifted (with RHS ok-for-speculation).
@@ -405,7 +405,7 @@ simplLazyBind env top_lvl is_rec bndr bndr1 rhs rhs_se
 
 
         ; (body_env, tvs') <- simplBinders rhs_env tvs
-                -- See Note [Floating and type abstraction] in SimplUtils
+                -- See Note [Floating and type abstraction] in GHC.Core.Optimise.Simplify.Utils
 
         -- Simplify the RHS
         ; let rhs_cont = mkRhsStop (substTy body_env (exprType body))
@@ -816,7 +816,7 @@ completeBind env top_lvl is_rec mb_cont old_bndr new_bndr new_rhs
             occ_info = occInfo old_info
 
         -- Do eta-expansion on the RHS of the binding
-        -- See Note [Eta-expanding at let bindings] in SimplUtils
+        -- See Note [Eta-expanding at let bindings] in GHC.Core.Optimise.Simplify.Utils
       ; (new_arity, final_rhs) <- if isJoinId new_bndr
                                     then return (manifestArity new_rhs, new_rhs)
                                          -- Note [Don't eta-expand join points]
@@ -1766,7 +1766,7 @@ rebuildCall :: SimplEnv
 ---------- Bottoming applications --------------
 rebuildCall env (ArgInfo { ai_fun = fun, ai_args = rev_args, ai_strs = [] }) cont
   -- When we run out of strictness args, it means
-  -- that the call is definitely bottom; see SimplUtils.mkArgInfo
+  -- that the call is definitely bottom; see GHC.Core.Optimise.Simplify.Utils.mkArgInfo
   -- Then we want to discard the entire strict continuation.  E.g.
   --    * case (error "hello") of { ... }
   --    * (error "Hello") arg
@@ -2173,7 +2173,7 @@ Start with a simple situation:
 do this for algebraic cases, because we might turn bottom into
 non-bottom!
 
-The code in SimplUtils.prepareAlts has the effect of generalise this
+The code in GHC.Core.Optimise.Simplify.Utils.prepareAlts has the effect of generalise this
 idea to look for a case where we're scrutinising a variable, and we
 know that only the default case can match.  For example:
 
@@ -2187,7 +2187,7 @@ Here the inner case is first trimmed to have only one alternative, the
 DEFAULT, after which it's an instance of the previous case.  This
 really only shows up in eliminating error-checking code.
 
-Note that SimplUtils.mkCase combines identical RHSs.  So
+Note that GHC.Core.Optimise.Simplify.Utils.mkCase combines identical RHSs.  So
 
         case e of       ===> case e of DEFAULT -> r
            True  -> r
@@ -3421,7 +3421,7 @@ simplUnfolding env top_lvl mb_cont id unf
     is_bottoming = isBottomingId id
     act          = idInlineActivation id
     rule_env     = updMode (updModeForStableUnfoldings act) env
-         -- See Note [Simplifying inside stable unfoldings] in SimplUtils
+         -- See Note [Simplifying inside stable unfoldings] in GHC.Core.Optimise.Simplify.Utils
 
 {-
 Note [Force bottoming field]

@@ -395,7 +395,7 @@ Library
         SimplCore
         GHC.Core.Optimise.Simplify.Environment
         GHC.Core.Optimise.Simplify.Monad
-        SimplUtils
+        GHC.Core.Optimise.Simplify.Utils
         GHC.Core.Optimise.Simplify
         SimplStg
         StgStats

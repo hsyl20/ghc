@@ -872,7 +872,7 @@ Note [transferPolyIdInfo]
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 This transfer is used in two places:
         FloatOut (long-distance let-floating)
-        SimplUtils.abstractFloats (short-distance let-floating)
+        GHC.Core.Optimise.Simplify.Utils.abstractFloats (short-distance let-floating)
 
 Consider the short-distance let-floating:
 
