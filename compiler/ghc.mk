@@ -457,7 +457,7 @@ compiler_stage2_dll0_MODULES = \
 	CoreSubst \
 	CoreOpt \
 	CoreSyn \
-	CoreTidy \
+	GHC.Core.Tidy \
 	CoreUnfold \
 	CoreUtils \
 	CoreSeq \

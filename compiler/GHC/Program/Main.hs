@@ -88,7 +88,7 @@ import GHCi             ( addSptEntry )
 import GHCi.RemoteTypes ( ForeignHValue )
 import ByteCodeGen      ( byteCodeGen, coreExprToBCOs )
 import Linker
-import CoreTidy         ( tidyExpr )
+import GHC.Core.Tidy         ( tidyExpr )
 import GHC.Data.Type    ( Type, Kind )
 import GHC.Core.Analyse.Lint         ( lintInteractiveExpr )
 import GHC.Data.Var.Environment           ( emptyTidyEnv )

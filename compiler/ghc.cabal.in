@@ -274,7 +274,7 @@ Library
         CoreOpt
         CoreSyn
         TrieMap
-        CoreTidy
+        GHC.Core.Tidy
         CoreUnfold
         CoreUtils
         CoreSeq

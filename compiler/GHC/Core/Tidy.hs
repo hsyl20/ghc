@@ -8,7 +8,7 @@ The code for *top-level* bindings is in GHC.Interface.Tidy.
 -}
 
 {-# LANGUAGE CPP #-}
-module CoreTidy (
+module GHC.Core.Tidy (
         tidyExpr, tidyVarOcc, tidyRule, tidyRules, tidyUnfolding
     ) where
 

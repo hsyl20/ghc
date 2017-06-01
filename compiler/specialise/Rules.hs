@@ -43,7 +43,7 @@ import qualified GHC.Data.Type as Type
 import TcType           ( tcSplitTyConApp_maybe )
 import TysWiredIn       ( anyTypeOfKind )
 import GHC.Data.Coercion
-import CoreTidy         ( tidyRules )
+import GHC.Core.Tidy         ( tidyRules )
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( RuleInfo( RuleInfo ) )
 import GHC.Data.Var

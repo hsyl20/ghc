@@ -17,7 +17,7 @@ import GHC.Config.Flags
 import CoreSyn
 import CoreUnfold
 import CoreFVs
-import CoreTidy
+import GHC.Core.Tidy
 import CoreMonad
 import CorePrep
 import CoreUtils        (rhsIsStatic)
