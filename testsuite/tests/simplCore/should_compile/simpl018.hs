@@ -1,7 +1,7 @@
 {-# LANGUAGE UnboxedTuples #-}
 
 -- See Note [Float coercions (unlifted)] in Simplify
--- This one gave a CoreLint error when compiled optimised
+-- This one gave a GHC.Core.Analyse.Lint error when compiled optimised
 --
 -- See also Trac #1718, of which this is a simplified version
 

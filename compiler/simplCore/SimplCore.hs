@@ -21,7 +21,7 @@ import OccurAnal        ( occurAnalysePgm, occurAnalyseExpr )
 import GHC.Data.Id.Info
 import CoreStats        ( coreBindsSize, coreBindsStats, exprSize )
 import CoreUtils        ( mkTicks, stripTicksTop )
-import CoreLint         ( endPass, lintPassResult, dumpPassResult,
+import GHC.Core.Analyse.Lint         ( endPass, lintPassResult, dumpPassResult,
                           lintAnnots )
 import Simplify         ( simplTopBinds, simplExpr, simplRules )
 import SimplUtils       ( simplEnvForGHCi, activeRule )

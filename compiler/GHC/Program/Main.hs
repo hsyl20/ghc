@@ -90,7 +90,7 @@ import ByteCodeGen      ( byteCodeGen, coreExprToBCOs )
 import Linker
 import CoreTidy         ( tidyExpr )
 import GHC.Data.Type    ( Type, Kind )
-import CoreLint         ( lintInteractiveExpr )
+import GHC.Core.Analyse.Lint         ( lintInteractiveExpr )
 import GHC.Data.Var.Environment           ( emptyTidyEnv )
 import GHC.Utils.Panic
 import GHC.Data.ConstructorLike

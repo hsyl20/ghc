@@ -268,7 +268,7 @@ Library
         GHC.RTS.Storage
         GHC.Core.Arity
         CoreFVs
-        CoreLint
+        GHC.Core.Analyse.Lint
         CorePrep
         CoreSubst
         CoreOpt

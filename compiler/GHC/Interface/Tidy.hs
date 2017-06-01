@@ -23,7 +23,7 @@ import CorePrep
 import CoreUtils        (rhsIsStatic)
 import CoreStats        (coreBindsStats, CoreStats(..))
 import CoreSeq          (seqBinds)
-import CoreLint
+import GHC.Core.Analyse.Lint
 import GHC.Data.Literal
 import Rules
 import GHC.Data.PatternSynonym

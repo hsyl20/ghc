@@ -23,7 +23,7 @@ import CoreUtils
 import GHC.Core.Arity
 import CoreFVs
 import CoreMonad        ( CoreToDo(..) )
-import CoreLint         ( endPassIO )
+import GHC.Core.Analyse.Lint         ( endPassIO )
 import CoreSyn
 import CoreSubst
 import MkCore hiding( FloatBind(..) )   -- We use our own FloatBind here

@@ -1007,7 +1007,7 @@ pushCoTyArg co ty
        -- co1 :: k1 ~ k2
        -- Note that NthCo can extract an equality between the kinds
        -- of the types related by a coercion between forall-types.
-       -- See the NthCo case in CoreLint.
+       -- See the NthCo case in GHC.Core.Analyse.Lint.
 
     co2 = mkInstCo co (mkCoherenceLeftCo (mkNomReflCo ty) co1)
         -- co2 :: ty1[ (ty|>co1)/a1 ] ~ ty2[ ty/a2 ]

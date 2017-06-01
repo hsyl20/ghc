@@ -981,7 +981,7 @@ piResultTy_maybe ty arg
 -- there are more type args than foralls in 'undefined's type.
 
 -- If you edit this function, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 
 -- This is a heavily used function (e.g. from typeKind),
 -- so we pay attention to efficiency, especially in the special case

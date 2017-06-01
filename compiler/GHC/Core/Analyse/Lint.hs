@@ -8,7 +8,7 @@ A ``lint'' pass to check for Core correctness
 
 {-# LANGUAGE CPP #-}
 
-module CoreLint (
+module GHC.Core.Analyse.Lint (
     lintCoreBindings, lintUnfolding,
     lintPassResult, lintInteractiveExpr, lintExpr,
     lintAnnots,
@@ -16,7 +16,7 @@ module CoreLint (
     -- ** Debug output
     endPass, endPassIO,
     dumpPassResult,
-    CoreLint.dumpIfSet,
+    GHC.Core.Analyse.Lint.dumpIfSet,
  ) where
 
 #include "HsVersions.h"

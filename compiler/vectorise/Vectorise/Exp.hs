@@ -353,7 +353,7 @@ vectExpr aexpr@(_, AnnLam _ _)
     vectFnExpr True False aexpr
 
   -- SPECIAL CASE: Vectorise/lift 'patError @ ty err' by only vectorising/lifting the type 'ty';
-  --   its only purpose is to abort the program, but we need to adjust the type to keep CoreLint
+  --   its only purpose is to abort the program, but we need to adjust the type to keep GHC.Core.Analyse.Lint
   --   happy.
 -- FIXME: can't be do this with a VECTORISE pragma on 'pAT_ERROR_ID' now?
 vectExpr (_, AnnApp (_, AnnApp (_, AnnVar v) (_, AnnType ty)) err)

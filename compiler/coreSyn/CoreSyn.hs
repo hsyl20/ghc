@@ -267,7 +267,7 @@ These data types are the heart of the compiler
 -- *  A coercion
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 data Expr b
   = Var   Id
   | Lit   Literal
@@ -290,13 +290,13 @@ type Arg b = Expr b
 -- The default alternative is @(DEFAULT, [], rhs)@
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 type Alt b = (AltCon, [b], Expr b)
 
 -- | A case alternative constructor (i.e. pattern match)
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 data AltCon
   = DataAlt DataCon   --  ^ A plain data constructor: @case e of { Foo x -> ... }@.
                       -- Invariant: the 'DataCon' is always from a @data@ type, and never from a @newtype@
@@ -325,7 +325,7 @@ instance Ord AltCon where
 -- | Binding, used for top level bindings in a module and local bindings in a @let@.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 data Bind b = NonRec b (Expr b)
             | Rec [(b, (Expr b))]
   deriving Data
@@ -401,7 +401,7 @@ be thunks, so we just allow string literals.
 It is important to note that top-level primitive string literals cannot be
 wrapped in Ticks, as is otherwise done with lifted bindings. CoreToStg expects
 to see just a plain (Lit (MachStr ...)) expression on the RHS of primitive
-string bindings; anything else and things break. CoreLint checks this invariant.
+string bindings; anything else and things break. GHC.Core.Analyse.Lint checks this invariant.
 
 Also see Note [Compilation plan for top-level string literals].
 
@@ -771,7 +771,7 @@ type OutArg      = CoreArg
 -- | Allows attaching extra information to points in expressions
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 data Tickish id =
     -- | An @{-# SCC #-}@ profiling annotation, either automatically
     -- added by the desugarer as a result of -auto-all, or added by
@@ -1726,7 +1726,7 @@ a list of CoreBind
 -}
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 type CoreProgram = [CoreBind]   -- See Note [CoreProgram]
 
 -- | The common case for the type of binders and variables when
@@ -1957,7 +1957,7 @@ exprToCoercion_maybe _             = Nothing
 -- | Extract every variable by this group
 bindersOf  :: Bind b -> [b]
 -- If you edit this function, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 bindersOf (NonRec binder _) = [binder]
 bindersOf (Rec pairs)       = [binder | (binder, _) <- pairs]
 

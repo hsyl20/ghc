@@ -766,7 +766,7 @@ coercion and checking.
 checkAxInstCo :: Coercion -> Maybe CoAxBranch
 -- defined here to avoid dependencies in Coercion
 -- If you edit this function, you may need to update the GHC formalism
--- See Note [GHC Formalism] in CoreLint
+-- See Note [GHC Formalism] in GHC.Core.Analyse.Lint
 checkAxInstCo (AxiomInstCo ax ind cos)
   = let branch       = coAxiomNthBranch ax ind
         tvs          = coAxBranchTyVars branch

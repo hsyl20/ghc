@@ -248,7 +248,7 @@ type KindOrType = Type -- See Note [Arguments to type constructors]
 type Kind = Type
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 data Type
   -- See Note [Non-trivial definitional equality]
   = TyVarTy Var -- ^ Vanilla type or kind variable (*never* a coercion variable)
@@ -752,7 +752,7 @@ dropRuntimeRepArgs = dropWhile isRuntimeRepKindedTy
 -- of two types.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/CoreLint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
 data Coercion
   -- Each constructor has a "role signature", indicating the way roles are
   -- propagated through coercions.

@@ -20,7 +20,7 @@ import GHC.Data.Var.Set
 import PprCore
 import GHC.Data.Unique
 import GHC.Data.Unique.Set
-import CoreLint
+import GHC.Core.Analyse.Lint
 import GHC.Data.FastString
 
 -- Build IDs. use mkTemplateLocal, more predictable than proper uniques

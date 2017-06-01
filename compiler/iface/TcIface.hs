@@ -40,7 +40,7 @@ import GHC.TypeSystem.FamilyInstance
 import CoreSyn
 import CoreUtils
 import CoreUnfold
-import CoreLint
+import GHC.Core.Analyse.Lint
 import MkCore
 import GHC.Data.Id
 import GHC.Data.Id.Make
