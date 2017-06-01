@@ -8,7 +8,7 @@
 
 -- | Functions for collecting together and applying rewrite rules to a module.
 -- The 'CoreRule' datatype itself is declared elsewhere.
-module Rules (
+module GHC.Core.Transform.Rules (
         -- ** Constructing
         emptyRuleBase, mkRuleBase, extendRuleBaseList,
         unionRuleBase, pprRuleBase,

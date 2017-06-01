@@ -23,7 +23,7 @@ module GHC.Plugins
    , module GHC.Core.Syntax.Make
    , module GHC.Core.FreeVars
    , module GHC.Core.Substitution
-   , module Rules
+   , module GHC.Core.Transform.Rules
    , module GHC.Data.Annotation
    , module GHC.Config.Flags
    , module GHC.Packages

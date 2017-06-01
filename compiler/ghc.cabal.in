@@ -150,7 +150,6 @@ Library
         profiling
         rename
         typecheck
-        vectorise
 
     Exposed-Modules:
         DriverBkp
@@ -503,35 +502,35 @@ Library
         GHC.Data.Unique.Map
         GHC.Data.Unique.Set
         GHC.Utils
-        Vectorise.Builtins.Base
-        Vectorise.Builtins.Initialise
-        Vectorise.Builtins
-        Vectorise.Monad.Base
-        Vectorise.Monad.Naming
-        Vectorise.Monad.Local
-        Vectorise.Monad.Global
-        Vectorise.Monad.InstEnv
-        Vectorise.Monad
-        Vectorise.Utils.Base
-        Vectorise.Utils.Closure
-        Vectorise.Utils.Hoisting
-        Vectorise.Utils.PADict
-        Vectorise.Utils.Poly
-        Vectorise.Utils
-        Vectorise.Generic.Description
-        Vectorise.Generic.PAMethods
-        Vectorise.Generic.PADict
-        Vectorise.Generic.PData
-        Vectorise.Type.Env
-        Vectorise.Type.Type
-        Vectorise.Type.TyConDecl
-        Vectorise.Type.Classify
-        Vectorise.Convert
-        Vectorise.Vect
-        Vectorise.Var
-        Vectorise.Env
-        Vectorise.Exp
-        Vectorise
+        GHC.Core.Transform.Vectorise.Builtins.Base
+        GHC.Core.Transform.Vectorise.Builtins.Initialise
+        GHC.Core.Transform.Vectorise.Builtins
+        GHC.Core.Transform.Vectorise.Monad.Base
+        GHC.Core.Transform.Vectorise.Monad.Naming
+        GHC.Core.Transform.Vectorise.Monad.Local
+        GHC.Core.Transform.Vectorise.Monad.Global
+        GHC.Core.Transform.Vectorise.Monad.InstEnv
+        GHC.Core.Transform.Vectorise.Monad
+        GHC.Core.Transform.Vectorise.Utils.Base
+        GHC.Core.Transform.Vectorise.Utils.Closure
+        GHC.Core.Transform.Vectorise.Utils.Hoisting
+        GHC.Core.Transform.Vectorise.Utils.PADict
+        GHC.Core.Transform.Vectorise.Utils.Poly
+        GHC.Core.Transform.Vectorise.Utils
+        GHC.Core.Transform.Vectorise.Generic.Description
+        GHC.Core.Transform.Vectorise.Generic.PAMethods
+        GHC.Core.Transform.Vectorise.Generic.PADict
+        GHC.Core.Transform.Vectorise.Generic.PData
+        GHC.Core.Transform.Vectorise.Type.Env
+        GHC.Core.Transform.Vectorise.Type.Type
+        GHC.Core.Transform.Vectorise.Type.TyConDecl
+        GHC.Core.Transform.Vectorise.Type.Classify
+        GHC.Core.Transform.Vectorise.Convert
+        GHC.Core.Transform.Vectorise.Vect
+        GHC.Core.Transform.Vectorise.Var
+        GHC.Core.Transform.Vectorise.Env
+        GHC.Core.Transform.Vectorise.Exp
+        GHC.Core.Transform.Vectorise
         GHC.Cmm.Transform.Dataflow.Hoopl
         GHC.Cmm.Transform.Dataflow
 --        CgInfoTbls used in ghci/DebuggerUtils

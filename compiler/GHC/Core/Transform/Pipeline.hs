@@ -44,7 +44,7 @@ import GHC.Core.Transform.Specialise.Constructor       ( specConstrProgram)
 import GHC.Core.Analyse.Demand          ( dmdAnalProgram )
 import GHC.Core.Analyse.CallArity        ( callArityAnalProgram )
 import GHC.Core.Transform.WorkerWrapper   ( wwTopBinds )
-import Vectorise        ( vectorise )
+import GHC.Core.Transform.Vectorise        ( vectorise )
 import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Data.Module
