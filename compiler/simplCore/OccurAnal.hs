@@ -21,7 +21,7 @@ module OccurAnal (
 
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
-import CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
+import GHC.Core.Utils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
                           stripTicksTopE, mkTicks )
 import GHC.Data.Id
 import GHC.Data.Id.Info

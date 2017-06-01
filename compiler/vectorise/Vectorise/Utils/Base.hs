@@ -32,7 +32,7 @@ import Vectorise.Vect
 import Vectorise.Builtins
 
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type

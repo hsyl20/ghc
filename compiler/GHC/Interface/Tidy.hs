@@ -20,7 +20,7 @@ import GHC.Core.FreeVars
 import GHC.Core.Tidy
 import CoreMonad
 import GHC.Core.Prepare
-import CoreUtils        (rhsIsStatic)
+import GHC.Core.Utils        (rhsIsStatic)
 import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
 import CoreSeq          (seqBinds)
 import GHC.Core.Analyse.Lint

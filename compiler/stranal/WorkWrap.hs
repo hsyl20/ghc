@@ -9,7 +9,7 @@ module WorkWrap ( wwTopBinds ) where
 
 import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding )
-import CoreUtils        ( exprType, exprIsHNF )
+import GHC.Core.Utils        ( exprType, exprIsHNF )
 import GHC.Core.FreeVars          ( exprFreeVars )
 import GHC.Data.Var
 import GHC.Data.Id

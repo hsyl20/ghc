@@ -48,7 +48,7 @@ import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import TcType
 import MkCore
-import CoreUtils        ( exprType, mkCast )
+import GHC.Core.Utils        ( exprType, mkCast )
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Literal
 import GHC.Data.Type.Constructor

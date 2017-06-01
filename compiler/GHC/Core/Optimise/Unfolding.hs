@@ -48,7 +48,7 @@ import GHC.Core.PrettyPrint          ()      -- Instances
 import OccurAnal        ( occurAnalyseExpr )
 import GHC.Core.Optimise
 import GHC.Core.Arity       ( manifestArity )
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Demand          ( isBottomingSig )
 import GHC.Data.DataConstructor

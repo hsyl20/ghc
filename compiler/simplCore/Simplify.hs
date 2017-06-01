@@ -33,7 +33,7 @@ import GHC.Core.Syntax
 import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
 import GHC.Core.PrettyPrint          ( pprCoreExpr )
 import GHC.Core.Optimise.Unfolding
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Arity
 import GHC.Core.Optimise          ( pushCoTyArg, pushCoValArg
                         , joinPointBinding_maybe, joinPointBindings_maybe )
@@ -2266,7 +2266,7 @@ Just for reference, the original code (added Jan 13) looked like this:
     case_bndr_evald_next _               = False
 
 (This came up when fixing Trac #7542. See also Note [Eta reduction of
-an eval'd function] in CoreUtils.)
+an eval'd function] in GHC.Core.Utils.)
 
 
 Note [Case elimination: unlifted case]

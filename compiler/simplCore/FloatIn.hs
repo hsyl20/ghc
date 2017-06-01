@@ -22,7 +22,7 @@ module FloatIn ( floatInwards ) where
 import GHC.Core.Syntax
 import MkCore
 import GHC.Types         ( ModGuts(..) )
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.FreeVars
 import CoreMonad        ( CoreM )
 import GHC.Data.Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )

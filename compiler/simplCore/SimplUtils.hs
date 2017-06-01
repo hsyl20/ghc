@@ -42,7 +42,7 @@ import GHC.Core.Syntax
 import qualified GHC.Core.Substitution
 import GHC.Core.PrettyPrint
 import GHC.Core.FreeVars
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Arity
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Name

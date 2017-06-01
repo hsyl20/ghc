@@ -22,7 +22,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 import Vectorise.Utils
 
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 import GHC.Core.Syntax
 import GHC.Core.FreeVars

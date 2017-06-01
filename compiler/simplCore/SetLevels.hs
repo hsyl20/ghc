@@ -64,7 +64,7 @@ module SetLevels (
 
 import GHC.Core.Syntax
 import CoreMonad        ( FloatOutSwitches(..) )
-import CoreUtils        ( exprType, exprIsHNF
+import GHC.Core.Utils        ( exprType, exprIsHNF
                         , exprOkForSpeculation
                         , exprIsTopLevelBindable
                         , isExprLevPoly

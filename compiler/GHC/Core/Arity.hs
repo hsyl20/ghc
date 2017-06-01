@@ -20,7 +20,7 @@ module GHC.Core.Arity (
 
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Substitution
 import GHC.Data.Demand
 import GHC.Data.Var

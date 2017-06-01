@@ -1,6 +1,6 @@
 {-# LANGUAGE TupleSections #-}
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
 import MkCore

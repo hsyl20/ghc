@@ -12,7 +12,7 @@
 module FloatOut ( floatOutwards ) where
 
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 import GHC.Core.Arity        ( etaExpand )
 import CoreMonad        ( FloatOutSwitches(..) )

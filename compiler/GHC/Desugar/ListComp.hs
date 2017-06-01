@@ -23,7 +23,7 @@ import GHC.Desugar.Monad          -- the monadery used in the desugarer
 import GHC.Desugar.Utils
 
 import GHC.Config.Flags
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
 import TysWiredIn

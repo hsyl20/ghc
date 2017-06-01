@@ -39,7 +39,7 @@ module GHC.Core.Substitution (
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import CoreSeq
-import CoreUtils
+import GHC.Core.Utils
 import qualified GHC.Data.Type as Type
 import qualified GHC.Data.Coercion as Coercion
 

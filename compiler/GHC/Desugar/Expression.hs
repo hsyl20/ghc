@@ -35,7 +35,7 @@ import TcRnMonad
 import TcHsSyn
 import GHC.Data.Type
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 
 import GHC.Config.Flags

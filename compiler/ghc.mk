@@ -459,7 +459,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Core.Syntax \
 	GHC.Core.Tidy \
 	GHC.Core.Optimise.Unfolding \
-	CoreUtils \
+	GHC.Core.Utils \
 	CoreSeq \
 	GHC.Core.Analyse.Stats \
 	CostCentre \

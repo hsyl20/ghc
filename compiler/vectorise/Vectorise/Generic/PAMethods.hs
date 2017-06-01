@@ -14,7 +14,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 import Vectorise.Generic.Description
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import GHC.TypeSystem.FamilyInstance
 import MkCore            ( mkWildCase, mkCoreLet )
 import GHC.Data.Type.Constructor

@@ -43,7 +43,7 @@ module SimplEnv (
 import SimplMonad
 import CoreMonad                ( SimplifierMode(..) )
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

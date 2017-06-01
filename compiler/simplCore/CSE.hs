@@ -16,7 +16,7 @@ import GHC.Data.Var.Environment           ( elemInScopeSet )
 import GHC.Data.Id               ( Id, idType, idInlineActivation, isDeadBinder
                         , zapIdOccInfo, zapIdUsageInfo, idInlinePragma
                         , isJoinId )
-import CoreUtils        ( mkAltExpr, eqExpr
+import GHC.Core.Utils        ( mkAltExpr, eqExpr
                         , exprIsLiteralString
                         , stripTicksE, stripTicksT, mkTicks )
 import GHC.Data.Type             ( tyConAppArgs )

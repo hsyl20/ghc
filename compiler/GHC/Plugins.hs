@@ -19,7 +19,7 @@ module GHC.Plugins
    , module GHC.Core.Syntax
    , module GHC.Data.Literal
    , module GHC.Data.DataConstructor
-   , module CoreUtils
+   , module GHC.Core.Utils
    , module MkCore
    , module GHC.Core.FreeVars
    , module GHC.Core.Substitution
@@ -67,7 +67,7 @@ import CoreMonad
 import GHC.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 import GHC.Core.FreeVars
 import GHC.Core.Substitution hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )

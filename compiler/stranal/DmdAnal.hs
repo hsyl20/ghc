@@ -24,7 +24,7 @@ import GHC.Data.BasicTypes
 import Data.List
 import GHC.Data.DataConstructor
 import GHC.Data.Id
-import CoreUtils        ( exprIsHNF, exprType, exprIsTrivial )
+import GHC.Core.Utils        ( exprIsHNF, exprType, exprIsTrivial )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.Data.Coercion         ( Coercion, coVarsOfCo )

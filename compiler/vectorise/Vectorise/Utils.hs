@@ -31,7 +31,7 @@ import Vectorise.Utils.Poly
 import Vectorise.Monad
 import Vectorise.Builtins
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
 import Control.Monad

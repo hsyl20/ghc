@@ -24,7 +24,7 @@ import GHC.Core.Arity( joinRhsArity, etaExpandToJoinPoint )
 
 import GHC.Core.Syntax
 import GHC.Core.Substitution
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.FreeVars
 import GHC.Core.PrettyPrint  ( pprCoreBindings, pprRules )
 import OccurAnal( occurAnalyseExpr, occurAnalysePgm )

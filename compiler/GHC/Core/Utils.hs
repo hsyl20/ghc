@@ -9,7 +9,7 @@ Utility functions on @Core@ syntax
 {-# LANGUAGE CPP #-}
 
 -- | Commonly useful utilites for manipulating the Core language
-module CoreUtils (
+module GHC.Core.Utils (
         -- * Constructing expressions
         mkCast,
         mkTick, mkTicks, mkTickNoHNF, tickHNFArgs,
@@ -2213,7 +2213,7 @@ rhsIsStatic :: Platform
 --      t = /\a. (:) (case w a of ...) (Nil a)  FALSE (redex)
 --
 --
--- This is a bit like CoreUtils.exprIsHNF, with the following differences:
+-- This is a bit like GHC.Core.Utils.exprIsHNF, with the following differences:
 --    a) scc "foo" (\x -> ...) is updatable (so we catch the right SCC)
 --
 --    b) (C x xs), where C is a constructor is updatable if the application is

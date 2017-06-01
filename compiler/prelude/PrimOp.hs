@@ -461,7 +461,7 @@ primOpCanFail :: PrimOp -> Bool
 
 primOpOkForSpeculation :: PrimOp -> Bool
   -- See Note [PrimOp can_fail and has_side_effects]
-  -- See comments with CoreUtils.exprOkForSpeculation
+  -- See comments with GHC.Core.Utils.exprOkForSpeculation
   -- primOpOkForSpeculation => primOpOkForSideEffects
 primOpOkForSpeculation op
   =  primOpOkForSideEffects op

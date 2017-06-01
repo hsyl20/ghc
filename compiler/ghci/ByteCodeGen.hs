@@ -25,7 +25,7 @@ import GHC.Data.Id.Make
 import GHC.Data.Id as Id
 import ForeignCall
 import GHC.Types
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Syntax
 import GHC.Core.PrettyPrint
 import GHC.Data.Literal
@@ -1354,7 +1354,7 @@ pushAtom _ _ (AnnCoercion {})   -- Coercions are zero-width things,
    = return (nilOL, 0)          -- treated just like a variable V
 
 -- See Note [Empty case alternatives] in coreSyn/GHC.Core.Syntax.hs
--- and Note [Bottoming expressions] in coreSyn/CoreUtils.hs:
+-- and Note [Bottoming expressions] in coreSyn/GHC.Core.Utils.hs:
 -- The scrutinee of an empty case evaluates to bottom
 pushAtom d p (AnnCase (_, a) _ _ []) -- trac #12128
    = pushAtom d p a

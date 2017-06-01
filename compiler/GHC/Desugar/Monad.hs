@@ -56,7 +56,7 @@ import TcRnMonad
 import GHC.TypeSystem.FamilyInstance
 import GHC.Core.Syntax
 import MkCore    ( unitExpr )
-import CoreUtils ( exprType, isExprLevPoly )
+import GHC.Core.Utils ( exprType, isExprLevPoly )
 import GHC.Syntax
 import TcIface
 import TcMType ( checkForLevPolyX, formatLevPolyErr )

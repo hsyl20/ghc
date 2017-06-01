@@ -29,7 +29,7 @@ import TcRnMonad
 import GHC.Desugar.Match.Check
 import GHC.Core.Syntax
 import GHC.Data.Literal
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 import GHC.Desugar.Monad
 import GHC.Desugar.Binds

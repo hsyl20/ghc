@@ -24,7 +24,7 @@ import Vectorise.Generic.Description
 import Vectorise.Utils
 
 import GHC.Core.Syntax
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor

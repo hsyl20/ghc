@@ -55,7 +55,7 @@ import GHC.Data.Id
 import GHC.Data.Var      ( EvVar, setTyVarUnique )
 
 import GHC.Core.Syntax
-import CoreUtils        ( exprType, needsCaseBinding, bindNonRec )
+import GHC.Core.Utils        ( exprType, needsCaseBinding, bindNonRec )
 import GHC.Data.Literal
 import GHC.Types
 

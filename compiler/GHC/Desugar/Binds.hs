@@ -31,7 +31,7 @@ import GHC.Data.Literal          ( Literal(MachStr) )
 import GHC.Core.Optimise          ( simpleOptExpr )
 import OccurAnal        ( occurAnalyseExpr )
 import MkCore
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Arity ( etaExpand )
 import GHC.Core.Optimise.Unfolding
 import GHC.Core.FreeVars

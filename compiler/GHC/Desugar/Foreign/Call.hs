@@ -21,7 +21,7 @@ module GHC.Desugar.Foreign.Call
 import GHC.Core.Syntax
 
 import GHC.Desugar.Monad
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 import GHC.Data.Id.Make
 import ForeignCall

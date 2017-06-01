@@ -34,7 +34,7 @@ import GHC.Core.Substitution
 import GHC.Core.Optimise          ( exprIsLambda_maybe )
 import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, bindFreeVars
                         , rulesFreeVarsDSet, exprsOrphNames, exprFreeVarsList )
-import CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,
+import GHC.Core.Utils        ( exprType, eqExpr, mkTick, mkTicks,
                           stripTicksTopT, stripTicksTopE,
                           isJoinBind )
 import GHC.Core.PrettyPrint          ( pprRules )

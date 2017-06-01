@@ -16,7 +16,7 @@ module CoreToStg ( coreToStg, coreExprToStg ) where
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreUtils        ( exprType, findDefault, isJoinBind )
+import GHC.Core.Utils        ( exprType, findDefault, isJoinBind )
 import GHC.Core.Arity        ( manifestArity )
 import StgSyn
 

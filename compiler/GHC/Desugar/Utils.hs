@@ -49,7 +49,7 @@ import TcType( tcSplitTyConApp )
 import GHC.Core.Syntax
 import GHC.Desugar.Monad
 
-import CoreUtils
+import GHC.Core.Utils
 import MkCore
 import GHC.Data.Id.Make
 import GHC.Data.Id
@@ -558,14 +558,14 @@ mkCoreAppsDs :: SDoc -> CoreExpr -> [CoreExpr] -> CoreExpr
 mkCoreAppsDs s fun args = foldl (mkCoreAppDs s) fun args
 
 mkCastDs :: CoreExpr -> Coercion -> CoreExpr
--- We define a desugarer-specific version of CoreUtils.mkCast,
+-- We define a desugarer-specific version of GHC.Core.Utils.mkCast,
 -- because in the immediate output of the desugarer, we can have
 -- apparently-mis-matched coercions:  E.g.
 --     let a = b
 --     in (x :: a) |> (co :: b ~ Int)
 -- Lint know about type-bindings for let and does not complain
 -- So here we do not make the assertion checks that we make in
--- CoreUtils.mkCast; and we do less peephole optimisation too
+-- GHC.Core.Utils.mkCast; and we do less peephole optimisation too
 mkCastDs e co | isReflCo co = e
               | otherwise   = Cast e co
 

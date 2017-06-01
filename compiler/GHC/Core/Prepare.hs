@@ -19,7 +19,7 @@ import OccurAnal
 import GHC.Types
 import PrelNames
 import GHC.Data.Id.Make             ( realWorldPrimId )
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Arity
 import GHC.Core.FreeVars
 import CoreMonad        ( CoreToDo(..) )

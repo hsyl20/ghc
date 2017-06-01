@@ -276,7 +276,7 @@ Library
         TrieMap
         GHC.Core.Tidy
         GHC.Core.Optimise.Unfolding
-        CoreUtils
+        GHC.Core.Utils
         CoreSeq
         GHC.Core.Analyse.Stats
         MkCore

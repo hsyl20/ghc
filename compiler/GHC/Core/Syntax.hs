@@ -444,7 +444,7 @@ expression is floated out:
    y::Int# = fac 4#
 
 In this situation you should use @case@ rather than a @let@. The function
-'CoreUtils.needsCaseBinding' can help you determine which to generate, or
+'GHC.Core.Utils.needsCaseBinding' can help you determine which to generate, or
 alternatively use 'MkCore.mkCoreLet' rather than this constructor directly,
 which will generate a @case@ if necessary
 
@@ -492,7 +492,7 @@ this exhaustive list can be empty!
 
 * A case expression can have empty alternatives if (and only if) the
   scrutinee is bound to raise an exception or diverge. When do we know
-  this?  See Note [Bottoming expressions] in CoreUtils.
+  this?  See Note [Bottoming expressions] in GHC.Core.Utils.
 
 * The possiblity of empty alternatives is one reason we need a type on
   the case expression: if the alternatives are empty we can't get the
@@ -530,8 +530,8 @@ this exhaustive list can be empty!
   unboxed type.
 
 * We treat a case expression with empty alternatives as trivial iff
-  its scrutinee is (see CoreUtils.exprIsTrivial).  This is actually
-  important; see Note [Empty case is trivial] in CoreUtils
+  its scrutinee is (see GHC.Core.Utils.exprIsTrivial).  This is actually
+  important; see Note [Empty case is trivial] in GHC.Core.Utils
 
 * An empty case is replaced by its scrutinee during the CoreToStg
   conversion; remember STG is un-typed, so there is no need for
@@ -591,7 +591,7 @@ Join points must follow these invariants:
      "join arity" (to distinguish from regular arity, which only counts values).
 
   2. For join arity n, the right-hand side must begin with at least n lambdas.
-     No ticks, no casts, just lambdas!  C.f. CoreUtils.joinRhsArity.
+     No ticks, no casts, just lambdas!  C.f. GHC.Core.Utils.joinRhsArity.
 
   2a. Moreover, this same constraint applies to any unfolding of the binder.
      Reason: if we want to push a continuation into the RHS we must push it
@@ -667,7 +667,7 @@ and join points] in Simplify):
 
 The body of the join point now returns a Bool, so the label `j` has to have its
 type updated accordingly. Inconvenient though this may be, it has the advantage
-that 'CoreUtils.exprType' can still return a type for any expression, including
+that 'GHC.Core.Utils.exprType' can still return a type for any expression, including
 a jump.
 
 This differs from the paper (see Note [Invariants on join points]). In the
@@ -1926,7 +1926,7 @@ varsToCoreExprs vs = map varToCoreExpr vs
 *                                                                      *
 ************************************************************************
 
-These are defined here to avoid a module loop between CoreUtils and GHC.Core.FreeVars
+These are defined here to avoid a module loop between GHC.Core.Utils and GHC.Core.FreeVars
 
 -}
 

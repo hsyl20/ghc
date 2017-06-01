@@ -21,7 +21,7 @@ module SpecConstr(
 
 import GHC.Core.Syntax
 import GHC.Core.Substitution
-import CoreUtils
+import GHC.Core.Utils
 import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )
 import GHC.Core.FreeVars          ( exprsFreeVarsList )
 import CoreMonad

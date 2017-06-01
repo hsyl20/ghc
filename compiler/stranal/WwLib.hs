@@ -14,7 +14,7 @@ module WwLib ( mkWwBodies, mkWWstr, mkWorkerArgs
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreUtils        ( exprType, mkCast )
+import GHC.Core.Utils        ( exprType, mkCast )
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( JoinArity, vanillaIdInfo )
 import GHC.Data.DataConstructor
