@@ -1,12 +1,12 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1993-1998
 
-\section[SimplStg]{Driver for simplifying @STG@ programs}
+\section[GHC.STG.Optimise.Pipeline]{Driver for simplifying @STG@ programs}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module SimplStg ( stg2stg ) where
+module GHC.STG.Optimise.Pipeline ( stg2stg ) where
 
 #include "HsVersions.h"
 

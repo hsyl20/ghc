@@ -395,7 +395,7 @@ Library
         GHC.Core.Optimise.Simplify.Monad
         GHC.Core.Optimise.Simplify.Utils
         GHC.Core.Optimise.Simplify
-        SimplStg
+        GHC.STG.Optimise.Pipeline
         GHC.STG.Analyse.Stats
         GHC.STG.Optimise.CommonSubExpr
         UnariseStg

@@ -347,7 +347,7 @@ Allocation of unique supply characters:
 
         d       desugarer
         f       AbsC flattener
-        g       SimplStg
+        g       GHC.STG.Optimise.Pipeline
         k       constraint tuple tycons
         m       constraint tuple datacons
         n       Native codegen
