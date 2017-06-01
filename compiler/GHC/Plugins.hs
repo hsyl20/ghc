@@ -74,7 +74,7 @@ import GHC.Core.Substitution hiding( substTyVarBndr, substCoVarBndr, extendCvSub
        -- These names are also exported by Type
 
 -- Core "extras"
-import Rules
+import GHC.Core.Optimise.Rules
 import GHC.Data.Annotation
 
 -- Pipeline-related stuff

@@ -25,7 +25,7 @@ import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
 import GHC.Core.Force          (seqBinds)
 import GHC.Core.Analyse.Lint
 import GHC.Data.Literal
-import Rules
+import GHC.Core.Optimise.Rules
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import GHC.Core.Arity        ( exprArity, exprBotStrictness_maybe )

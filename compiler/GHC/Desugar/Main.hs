@@ -46,7 +46,7 @@ import GHC.Core.Syntax.Make      ( mkCoreLet )
 import GHC.Data.Module
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import Rules
+import GHC.Core.Optimise.Rules
 import GHC.Data.BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
 import GHC.Core.Monad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )

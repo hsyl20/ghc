@@ -149,7 +149,6 @@ Library
         prelude
         profiling
         rename
-        specialise
         typecheck
         vectorise
 
@@ -398,9 +397,9 @@ Library
         GHC.STG.Optimise.CommonSubExpr
         GHC.STG.Optimise.Unarise
         GHC.Data.RepType
-        Rules
-        SpecConstr
-        Specialise
+        GHC.Core.Optimise.Rules
+        GHC.Core.Optimise.Specialise.Constructor
+        GHC.Core.Optimise.Specialise
         GHC.STG.CoreToStg
         GHC.STG.Analyse.Lint
         GHC.STG.Syntax

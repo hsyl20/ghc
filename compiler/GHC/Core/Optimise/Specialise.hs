@@ -5,7 +5,7 @@
 -}
 
 {-# LANGUAGE CPP #-}
-module Specialise ( specProgram, specUnfolding ) where
+module GHC.Core.Optimise.Specialise ( specProgram, specUnfolding ) where
 
 #include "HsVersions.h"
 
@@ -20,7 +20,7 @@ import GHC.Core.Optimise.Unfolding
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Core.Syntax
-import Rules
+import GHC.Core.Optimise.Rules
 import GHC.Core.Optimise.Simple         ( collectBindersPushingCo )
 import GHC.Core.Utils        ( exprIsTrivial, applyTypeToArgs, mkCast )
 import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )

@@ -49,7 +49,7 @@ import GHC.Data.Id.Make(proxyHashId)
 import GHC.Data.Class
 import GHC.Data.Name
 import GHC.Data.Var.Set
-import Rules
+import GHC.Core.Optimise.Rules
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import GHC.Data.Module

@@ -540,7 +540,7 @@ compiler_stage2_dll0_MODULES = \
 	PrimOp \
 	GHC.Data.RepType \
 	GHC.Data.RdrName \
-	Rules \
+	GHC.Core.Optimise.Rules \
 	GHC.Data.SrcLoc \
 	GHC.Data.StringBuffer \
 	GHC.Utils.SysTools.Terminal \

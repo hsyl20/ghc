@@ -39,7 +39,7 @@ module GHC.Data.Id.Make (
 
 #include "HsVersions.h"
 
-import Rules
+import GHC.Core.Optimise.Rules
 import TysPrim
 import TysWiredIn
 import PrelRules

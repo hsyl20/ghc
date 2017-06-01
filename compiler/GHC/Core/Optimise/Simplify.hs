@@ -43,7 +43,7 @@ import GHC.Core.Arity
 import GHC.Core.Optimise.Simple         ( pushCoTyArg, pushCoValArg
                         , joinPointBinding_maybe, joinPointBindings_maybe )
 --import PrimOp           ( tagToEnumKey ) -- temporalily commented out. See #8326
-import Rules            ( mkRuleInfo, lookupRule, getRules )
+import GHC.Core.Optimise.Rules            ( mkRuleInfo, lookupRule, getRules )
 --import TysPrim          ( intPrimTy ) -- temporalily commented out. See #8326
 import GHC.Data.BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
                           RecFlag(..) )

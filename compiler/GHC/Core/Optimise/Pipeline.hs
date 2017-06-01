@@ -14,7 +14,7 @@ import GHC.Config.Flags
 import GHC.Core.Syntax
 import GHC.Types
 import GHC.Core.Optimise.CommonSubExpr ( cseProgram )
-import Rules            ( mkRuleBase, unionRuleBase,
+import GHC.Core.Optimise.Rules            ( mkRuleBase, unionRuleBase,
                           extendRuleBaseList, ruleCheckProgram, addRuleInfo, )
 import GHC.Core.PrettyPrint          ( pprCoreBindings, pprCoreExpr )
 import GHC.Core.Analyse.Occurence        ( occurAnalysePgm, occurAnalyseExpr )
@@ -39,8 +39,8 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Core.Optimise.LiberateCase     ( liberateCase )
 import GHC.Core.Optimise.StaticArgument   ( doStaticArgs )
-import Specialise       ( specProgram)
-import SpecConstr       ( specConstrProgram)
+import GHC.Core.Optimise.Specialise       ( specProgram)
+import GHC.Core.Optimise.Specialise.Constructor       ( specConstrProgram)
 import GHC.Core.Analyse.Demand          ( dmdAnalProgram )
 import GHC.Core.Analyse.CallArity        ( callArityAnalProgram )
 import GHC.Core.Optimise.WorkerWrapper   ( wwTopBinds )
