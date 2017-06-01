@@ -34,7 +34,7 @@ import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
 import PprCore          ( pprCoreExpr )
 import CoreUnfold
 import CoreUtils
-import CoreArity
+import GHC.Core.Arity
 import CoreOpt          ( pushCoTyArg, pushCoValArg
                         , joinPointBinding_maybe, joinPointBindings_maybe )
 --import PrimOp           ( tagToEnumKey ) -- temporalily commented out. See #8326

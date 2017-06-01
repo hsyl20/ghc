@@ -32,7 +32,7 @@ import CoreOpt          ( simpleOptExpr )
 import OccurAnal        ( occurAnalyseExpr )
 import MkCore
 import CoreUtils
-import CoreArity ( etaExpand )
+import GHC.Core.Arity ( etaExpand )
 import CoreUnfold
 import CoreFVs
 import GHC.Data.Graph.Directed

@@ -20,7 +20,7 @@ import GHC.Types
 import PrelNames
 import GHC.Data.Id.Make             ( realWorldPrimId )
 import CoreUtils
-import CoreArity
+import GHC.Core.Arity
 import CoreFVs
 import CoreMonad        ( CoreToDo(..) )
 import CoreLint         ( endPassIO )
@@ -1083,7 +1083,7 @@ After ANFing we get
 and now we do NOT want eta expansion to give
                 f = /\a -> \ y -> (let s = h 3 in g s) y
 
-Instead CoreArity.etaExpand gives
+Instead GHC.Core.Arity.etaExpand gives
                 f = /\a -> \y -> let s = h 3 in g s y
 -}
 

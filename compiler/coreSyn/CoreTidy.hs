@@ -16,7 +16,7 @@ module CoreTidy (
 
 import CoreSyn
 import CoreSeq ( seqUnfolding )
-import CoreArity
+import GHC.Core.Arity
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Demand ( zapUsageEnvSig )

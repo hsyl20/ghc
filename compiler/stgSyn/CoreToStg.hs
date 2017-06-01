@@ -17,7 +17,7 @@ module CoreToStg ( coreToStg, coreExprToStg ) where
 
 import CoreSyn
 import CoreUtils        ( exprType, findDefault, isJoinBind )
-import CoreArity        ( manifestArity )
+import GHC.Core.Arity        ( manifestArity )
 import StgSyn
 
 import GHC.Data.Type

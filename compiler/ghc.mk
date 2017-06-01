@@ -452,7 +452,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Coercion \
 	Config \
 	GHC.Config.Constants \
-	CoreArity \
+	GHC.Core.Arity \
 	CoreFVs \
 	CoreSubst \
 	CoreOpt \

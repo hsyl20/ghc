@@ -14,7 +14,7 @@ module FloatOut ( floatOutwards ) where
 import CoreSyn
 import CoreUtils
 import MkCore
-import CoreArity        ( etaExpand )
+import GHC.Core.Arity        ( etaExpand )
 import CoreMonad        ( FloatOutSwitches(..) )
 
 import GHC.Config.Flags

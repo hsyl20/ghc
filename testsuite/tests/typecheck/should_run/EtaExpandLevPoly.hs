@@ -9,7 +9,7 @@ data G a where
   MkG :: G (TupleRep [LiftedRep, IntRep])
 
 -- tests that we don't eta-expand functions that are levity-polymorphic
--- see CoreArity.mkEtaWW
+-- see GHC.Core.Arity.mkEtaWW
 foo :: forall a (b :: TYPE a). G a -> b -> b
 foo MkG = (\x -> x) :: forall (c :: TYPE (TupleRep [LiftedRep, IntRep])). c -> c
 

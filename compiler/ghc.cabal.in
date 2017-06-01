@@ -266,7 +266,7 @@ Library
         StgCmmUtils
         StgCmmExtCode
         GHC.RTS.Storage
-        CoreArity
+        GHC.Core.Arity
         CoreFVs
         CoreLint
         CorePrep

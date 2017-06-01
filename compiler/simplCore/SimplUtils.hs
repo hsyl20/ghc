@@ -43,7 +43,7 @@ import qualified CoreSubst
 import PprCore
 import CoreFVs
 import CoreUtils
-import CoreArity
+import GHC.Core.Arity
 import CoreUnfold
 import GHC.Data.Name
 import GHC.Data.Id
@@ -1453,7 +1453,7 @@ Note [Eta-expanding at let bindings]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We now eta expand at let-bindings, which is where the payoff comes.
 The most significant thing is that we can do a simple arity analysis
-(in CoreArity.findRhsArity), which we can't do for free-floating lambdas
+(in GHC.Core.Arity.findRhsArity), which we can't do for free-floating lambdas
 
 One useful consequence of not eta-expanding lambdas is this example:
    genMap :: C a => ...

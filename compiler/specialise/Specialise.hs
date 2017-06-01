@@ -24,7 +24,7 @@ import Rules
 import CoreOpt          ( collectBindersPushingCo )
 import CoreUtils        ( exprIsTrivial, applyTypeToArgs, mkCast )
 import CoreFVs          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )
-import CoreArity        ( etaExpandToJoinPointRule )
+import GHC.Core.Arity        ( etaExpandToJoinPointRule )
 import GHC.Data.Unique.Supply
 import GHC.Data.Name
 import GHC.Data.Id.Make             ( voidArgId, voidPrimId )

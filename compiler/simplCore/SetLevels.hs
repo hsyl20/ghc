@@ -70,7 +70,7 @@ import CoreUtils        ( exprType, exprIsHNF
                         , isExprLevPoly
                         , collectMakeStaticArgs
                         )
-import CoreArity        ( exprBotStrictness_maybe )
+import GHC.Core.Arity        ( exprBotStrictness_maybe )
 import CoreFVs          -- all of it
 import CoreSubst
 import MkCore           ( sortQuantVars )

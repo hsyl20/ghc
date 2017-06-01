@@ -747,7 +747,7 @@ casts, type applications, and the like.
 
 Note that this can mean that 'foo' has an arity that is smaller than that
 indicated by its demand info.  e.g. if co :: (Int->Int->Int) ~ T, then
-foo's arity will be zero (see Note [exprArity invariant] in CoreArity),
+foo's arity will be zero (see Note [exprArity invariant] in GHC.Core.Arity),
 but its demand signature will be that of plusInt. A small example is the
 test case of Trac #8963.
 

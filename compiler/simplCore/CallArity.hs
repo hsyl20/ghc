@@ -14,7 +14,7 @@ import GHC.Config.Flags ( DynFlags )
 import GHC.Data.BasicTypes
 import CoreSyn
 import GHC.Data.Id
-import CoreArity ( typeArity )
+import GHC.Core.Arity ( typeArity )
 import CoreUtils ( exprIsCheap, exprIsTrivial )
 import GHC.Data.Var.UndirectedGraph
 import GHC.Data.Demand
@@ -381,7 +381,7 @@ the case for Core!
  1. We need to ensure the invariant
       callArity e <= typeArity (exprType e)
     for the same reasons that exprArity needs this invariant (see Note
-    [exprArity invariant] in CoreArity).
+    [exprArity invariant] in GHC.Core.Arity).
 
     If we are not doing that, a too-high arity annotation will be stored with
     the id, confusing the simplifier later on.

@@ -58,7 +58,7 @@ import GHC.Utils
 import GHC.TypeSystem.ClassInstance     ( instanceDFunId )
 import GHC.Data.Coercion.Optimise ( checkAxInstCo )
 import GHC.Data.Unique.Supply
-import CoreArity ( typeArity )
+import GHC.Core.Arity ( typeArity )
 import GHC.Data.Demand ( splitStrictSig, isBotRes )
 
 import GHC.Types
@@ -1492,7 +1492,7 @@ argument to be made for allowing a situation like this:
 
 Applying this rule can't turn a well-typed program into an ill-typed one, so
 conceivably we could allow it. But we can always eta-expand such an
-"undersaturated" rule (see 'CoreArity.etaExpandToJoinPointRule'), and in fact
+"undersaturated" rule (see 'GHC.Core.Arity.etaExpandToJoinPointRule'), and in fact
 the simplifier would have to in order to deal with the RHS. So we take a
 conservative view and don't allow undersaturated rules for join points. See
 Note [Rules and join points] in OccurAnal for further discussion.

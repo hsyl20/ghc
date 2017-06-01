@@ -890,7 +890,7 @@ getIdFromTrivialExpr_maybe e = go e
 {-
 exprIsBottom is a very cheap and cheerful function; it may return
 False for bottoming expressions, but it never costs much to ask.  See
-also CoreArity.exprBotStrictness_maybe, but that's a bit more
+also GHC.Core.Arity.exprBotStrictness_maybe, but that's a bit more
 expensive.
 -}
 

@@ -762,7 +762,7 @@ idOneShotInfo :: Id -> OneShotInfo
 idOneShotInfo id = oneShotInfo (idInfo id)
 
 -- | Like 'idOneShotInfo', but taking the Horrible State Hack in to account
--- See Note [The state-transformer hack] in CoreArity
+-- See Note [The state-transformer hack] in GHC.Core.Arity
 idStateHackOneShotInfo :: Id -> OneShotInfo
 idStateHackOneShotInfo id
     | isStateHackType (idType id) = stateHackOneShot
@@ -772,7 +772,7 @@ idStateHackOneShotInfo id
 -- This one is the "business end", called externally.
 -- It works on type variables as well as Ids, returning True
 -- Its main purpose is to encapsulate the Horrible State Hack
--- See Note [The state-transformer hack] in CoreArity
+-- See Note [The state-transformer hack] in GHC.Core.Arity
 isOneShotBndr :: Var -> Bool
 isOneShotBndr var
   | isTyVar var                              = True

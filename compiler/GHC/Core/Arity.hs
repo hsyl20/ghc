@@ -9,7 +9,7 @@
 {-# LANGUAGE CPP #-}
 
 -- | Arity and eta expansion
-module CoreArity (
+module GHC.Core.Arity (
         manifestArity, joinRhsArity, exprArity, typeArity,
         exprEtaExpandArity, findRhsArity, CheapFun, etaExpand,
         etaExpandToJoinPoint, etaExpandToJoinPointRule,
@@ -1078,7 +1078,7 @@ mkEtaWW orig_n orig_expr in_scope orig_ty
 -- TODO Check if we actually *are* changing any join points' types
 
 subst_expr :: Subst -> CoreExpr -> CoreExpr
-subst_expr = substExpr (text "CoreArity:substExpr")
+subst_expr = substExpr (text "GHC.Core.Arity:substExpr")
 
 
 --------------
