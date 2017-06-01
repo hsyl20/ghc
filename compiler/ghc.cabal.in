@@ -141,7 +141,6 @@ Library
         ./
         backpack
         codeGen
-        coreSyn
         ghci
         iface
         llvmGen

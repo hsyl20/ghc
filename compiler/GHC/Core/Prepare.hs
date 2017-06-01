@@ -7,7 +7,7 @@ Core pass to saturate constructors and PrimOps
 
 {-# LANGUAGE BangPatterns, CPP, MultiWayIf #-}
 
-module CorePrep (
+module GHC.Core.Prepare (
       corePrepPgm, corePrepExpr, cvtLitInteger,
       lookupMkIntegerName, lookupIntegerSDataConName
   ) where

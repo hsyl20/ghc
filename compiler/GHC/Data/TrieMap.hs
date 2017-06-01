@@ -9,7 +9,7 @@
 {-# LANGUAGE TypeSynonymInstances #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE UndecidableInstances #-}
-module TrieMap(
+module GHC.Data.TrieMap(
    -- * Maps over Core expressions
    CoreMap, emptyCoreMap, extendCoreMap, lookupCoreMap, foldCoreMap,
    -- * Maps over 'Type's
