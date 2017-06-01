@@ -803,7 +803,7 @@ data Tickish id =
                                 -- appropriate entry in GHC.Types.ModBreaks.
                                 --
                                 -- Careful about substitution!  See
-                                -- Note [substTickish] in CoreSubst.
+                                -- Note [substTickish] in GHC.Core.Substitution.
     }
 
   -- | A source note.

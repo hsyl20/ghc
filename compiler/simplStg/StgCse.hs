@@ -217,7 +217,7 @@ substVar env id = fromMaybe id $ lookupVarEnv (ce_subst env) id
 
 -- Functions to enter binders
 
--- This is much simpler than the requivalent code in CoreSubst:
+-- This is much simpler than the requivalent code in GHC.Core.Substitution:
 --  * We do not substitute type variables, and
 --  * There is nothing relevant in IdInfo at this stage
 --    that needs substitutions.

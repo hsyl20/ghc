@@ -39,7 +39,7 @@ import SimplEnv
 import CoreMonad        ( SimplifierMode(..), Tick(..) )
 import GHC.Config.Flags
 import GHC.Core.Syntax
-import qualified CoreSubst
+import qualified GHC.Core.Substitution
 import PprCore
 import GHC.Core.FreeVars
 import CoreUtils
@@ -1607,20 +1607,20 @@ abstractFloats :: [OutTyVar] -> SimplEnv -> OutExpr -> SimplM ([OutBind], OutExp
 abstractFloats main_tvs body_env body
   = ASSERT( notNull body_floats )
     do  { (subst, float_binds) <- mapAccumLM abstract empty_subst body_floats
-        ; return (float_binds, CoreSubst.substExpr (text "abstract_floats1") subst body) }
+        ; return (float_binds, GHC.Core.Substitution.substExpr (text "abstract_floats1") subst body) }
   where
     main_tv_set = mkVarSet main_tvs
     body_floats = getFloatBinds body_env
-    empty_subst = CoreSubst.mkEmptySubst (seInScope body_env)
+    empty_subst = GHC.Core.Substitution.mkEmptySubst (seInScope body_env)
 
-    abstract :: CoreSubst.Subst -> OutBind -> SimplM (CoreSubst.Subst, OutBind)
+    abstract :: GHC.Core.Substitution.Subst -> OutBind -> SimplM (GHC.Core.Substitution.Subst, OutBind)
     abstract subst (NonRec id rhs)
       = do { (poly_id, poly_app) <- mk_poly tvs_here id
            ; let poly_rhs = mkLams tvs_here rhs'
-                 subst'   = CoreSubst.extendIdSubst subst id poly_app
+                 subst'   = GHC.Core.Substitution.extendIdSubst subst id poly_app
            ; return (subst', (NonRec poly_id poly_rhs)) }
       where
-        rhs' = CoreSubst.substExpr (text "abstract_floats2") subst rhs
+        rhs' = GHC.Core.Substitution.substExpr (text "abstract_floats2") subst rhs
 
         -- tvs_here: see Note [Which type variables to abstract over]
         tvs_here = toposortTyVars $
@@ -1630,8 +1630,8 @@ abstractFloats main_tvs body_env body
 
     abstract subst (Rec prs)
        = do { (poly_ids, poly_apps) <- mapAndUnzipM (mk_poly tvs_here) ids
-            ; let subst' = CoreSubst.extendSubstList subst (ids `zip` poly_apps)
-                  poly_rhss = [mkLams tvs_here (CoreSubst.substExpr (text "abstract_floats3") subst' rhs)
+            ; let subst' = GHC.Core.Substitution.extendSubstList subst (ids `zip` poly_apps)
+                  poly_rhss = [mkLams tvs_here (GHC.Core.Substitution.substExpr (text "abstract_floats3") subst' rhs)
                               | rhs <- rhss]
             ; return (subst', Rec (poly_ids `zip` poly_rhss)) }
        where

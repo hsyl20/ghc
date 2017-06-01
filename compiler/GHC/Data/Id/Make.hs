@@ -1195,7 +1195,7 @@ seqId = pcMiscPrelId seqName ty info
          = alwaysInlinePragma `setInlinePragmaActivation` ActiveAfter
                  NoSourceText 0
                   -- Make 'seq' not inline-always, so that simpleOptExpr
-                  -- (see CoreSubst.simple_app) won't inline 'seq' on the
+                  -- (see GHC.Core.Substitution.simple_app) won't inline 'seq' on the
                   -- LHS of rules.  That way we can have rules for 'seq';
                   -- see Note [seqId magic]
 

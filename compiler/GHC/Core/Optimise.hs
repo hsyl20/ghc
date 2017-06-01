@@ -23,7 +23,7 @@ module GHC.Core.Optimise (
 import GHC.Core.Arity( joinRhsArity, etaExpandToJoinPoint )
 
 import GHC.Core.Syntax
-import CoreSubst
+import GHC.Core.Substitution
 import CoreUtils
 import GHC.Core.FreeVars
 import PprCore  ( pprCoreBindings, pprRules )
@@ -468,7 +468,7 @@ subst_opt_id_bndr :: SimpleOptEnv -> InId -> (SimpleOptEnv, OutId)
 --    it gets added back later by add_info
 -- Rather like SimplEnv.substIdBndr
 --
--- It's important to zap fragile OccInfo (which CoreSubst.substIdBndr
+-- It's important to zap fragile OccInfo (which GHC.Core.Substitution.substIdBndr
 -- carefully does not do) because simplOptExpr invalidates it
 
 subst_opt_id_bndr (SOE { soe_subst = subst, soe_inl = inl }) old_id
@@ -815,10 +815,10 @@ exprIsConApp_maybe (in_scope, id_unf) expr
     go _ _ _ = Nothing
 
     ----------------------------
-    -- Operations on the (Either InScopeSet CoreSubst)
+    -- Operations on the (Either InScopeSet GHC.Core.Substitution)
     -- The Left case is wildly dominant
     subst_co (Left {}) co = co
-    subst_co (Right s) co = CoreSubst.substCo s co
+    subst_co (Right s) co = GHC.Core.Substitution.substCo s co
 
     subst_arg (Left {}) e = e
     subst_arg (Right s) e = substExpr (text "exprIsConApp2") s e

@@ -158,7 +158,7 @@ will propagate that Name to all the occurrence sites, as well as
 un-shadowing it, so we'll get
              M.a{r8} = case e of (v:_) ->
                        case v of Just a{s77} -> a{s77}
-In fact, even CoreSubst.simplOptExpr will do this, and simpleOptExpr
+In fact, even GHC.Core.Substitution.simplOptExpr will do this, and simpleOptExpr
 runs on the output of the desugarer, so all is well by the end of
 the desugaring pass.
 

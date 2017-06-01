@@ -496,7 +496,7 @@ For that we replace any forall'ed `c :: Coercible a b` value in a RULE by
 corresponding `co :: a ~#R b` and wrap the LHS and the RHS in
 `let c = MkCoercible co in ...`. This is later simplified to the desired form
 by simpleOptExpr (for the LHS) resp. the simplifiers (for the RHS).
-See also Note [Getting the map/coerce RULE to work] in CoreSubst.
+See also Note [Getting the map/coerce RULE to work] in GHC.Core.Substitution.
 
 Note [Rules and inlining/other rules]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

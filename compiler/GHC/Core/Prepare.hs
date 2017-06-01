@@ -25,7 +25,7 @@ import GHC.Core.FreeVars
 import CoreMonad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )
 import GHC.Core.Syntax
-import CoreSubst
+import GHC.Core.Substitution
 import MkCore hiding( FloatBind(..) )   -- We use our own FloatBind here
 import GHC.Data.Type
 import GHC.Data.Literal

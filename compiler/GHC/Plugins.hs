@@ -22,7 +22,7 @@ module GHC.Plugins
    , module CoreUtils
    , module MkCore
    , module GHC.Core.FreeVars
-   , module CoreSubst
+   , module GHC.Core.Substitution
    , module Rules
    , module GHC.Data.Annotation
    , module GHC.Config.Flags
@@ -70,7 +70,7 @@ import GHC.Data.DataConstructor
 import CoreUtils
 import MkCore
 import GHC.Core.FreeVars
-import CoreSubst hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
+import GHC.Core.Substitution hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
        -- These names are also exported by Type
 
 -- Core "extras"
@@ -83,9 +83,9 @@ import GHC.Packages
 
 -- Important GHC types
 import GHC.Data.Module
-import GHC.Data.Type     hiding {- conflict with CoreSubst -}
+import GHC.Data.Type     hiding {- conflict with GHC.Core.Substitution -}
                 ( substTy, extendTvSubst, extendTvSubstList, isInScope )
-import GHC.Data.Coercion hiding {- conflict with CoreSubst -}
+import GHC.Data.Coercion hiding {- conflict with GHC.Core.Substitution -}
                 ( substCo )
 import GHC.Data.Type.Constructor
 import TysWiredIn

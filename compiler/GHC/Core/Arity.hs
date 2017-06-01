@@ -21,7 +21,7 @@ module GHC.Core.Arity (
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import CoreUtils
-import CoreSubst
+import GHC.Core.Substitution
 import GHC.Data.Demand
 import GHC.Data.Var
 import GHC.Data.Var.Environment
@@ -970,19 +970,19 @@ etaInfoApp :: Subst -> CoreExpr -> [EtaInfo] -> CoreExpr
 --             ((substExpr s e) `appliedto` eis)
 
 etaInfoApp subst (Lam v1 e) (EtaVar v2 : eis)
-  = etaInfoApp (CoreSubst.extendSubstWithVar subst v1 v2) e eis
+  = etaInfoApp (GHC.Core.Substitution.extendSubstWithVar subst v1 v2) e eis
 
 etaInfoApp subst (Cast e co1) eis
   = etaInfoApp subst e (pushCoercion co' eis)
   where
-    co' = CoreSubst.substCo subst co1
+    co' = GHC.Core.Substitution.substCo subst co1
 
 etaInfoApp subst (Case e b ty alts) eis
   = Case (subst_expr subst e) b1 ty' alts'
   where
     (subst1, b1) = substBndr subst b
     alts' = map subst_alt alts
-    ty'   = etaInfoAppTy (CoreSubst.substTy subst ty) eis
+    ty'   = etaInfoAppTy (GHC.Core.Substitution.substTy subst ty) eis
     subst_alt (con, bs, rhs) = (con, bs', etaInfoApp subst2 rhs eis)
               where
                  (subst2,bs') = substBndrs subst1 bs

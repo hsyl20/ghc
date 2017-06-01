@@ -1335,7 +1335,7 @@ simplTick env tickish expr cont
   splitCont other = (mkBoringStop (contHoleType other), other)
 
   getDoneId (DoneId id)  = id
-  getDoneId (DoneEx e _) = getIdFromTrivialExpr e -- Note [substTickish] in CoreSubst
+  getDoneId (DoneEx e _) = getIdFromTrivialExpr e -- Note [substTickish] in GHC.Core.Substitution
   getDoneId other = pprPanic "getDoneId" (ppr other)
 
 -- Note [case-of-scc-of-case]

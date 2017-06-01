@@ -7,7 +7,7 @@ Utility functions on @Core@ syntax
 -}
 
 {-# LANGUAGE CPP #-}
-module CoreSubst (
+module GHC.Core.Substitution (
         -- * Main data types
         Subst(..), -- Implementation exported for supercompiler's Renaming.hs only
         TvSubstEnv, IdSubstEnv, InScopeSet,
@@ -179,7 +179,7 @@ mkEmptySubst in_scope = Subst in_scope emptyVarEnv emptyVarEnv emptyVarEnv
 mkSubst :: InScopeSet -> TvSubstEnv -> CvSubstEnv -> IdSubstEnv -> Subst
 mkSubst in_scope tvs cvs ids = Subst in_scope ids tvs cvs
 
--- | Find the in-scope set: see "CoreSubst#in_scope_invariant"
+-- | Find the in-scope set: see "GHC.Core.Substitution#in_scope_invariant"
 substInScope :: Subst -> InScopeSet
 substInScope (Subst in_scope _ _ _) = in_scope
 
@@ -189,7 +189,7 @@ zapSubstEnv :: Subst -> Subst
 zapSubstEnv (Subst in_scope _ _ _) = Subst in_scope emptyVarEnv emptyVarEnv emptyVarEnv
 
 -- | Add a substitution for an 'Id' to the 'Subst': you must ensure that the in-scope set is
--- such that the "CoreSubst#in_scope_invariant" is true after extending the substitution like this
+-- such that the "GHC.Core.Substitution#in_scope_invariant" is true after extending the substitution like this
 extendIdSubst :: Subst -> Id -> CoreExpr -> Subst
 -- ToDo: add an ASSERT that fvs(subst-result) is already in the in-scope set
 extendIdSubst (Subst in_scope ids tvs cvs) v r
@@ -205,7 +205,7 @@ extendIdSubstList (Subst in_scope ids tvs cvs) prs
 -- | Add a substitution for a 'TyVar' to the 'Subst'
 -- The 'TyVar' *must* be a real TyVar, and not a CoVar
 -- You must ensure that the in-scope set is such that
--- the "CoreSubst#in_scope_invariant" is true after extending
+-- the "GHC.Core.Substitution#in_scope_invariant" is true after extending
 -- the substitution like this.
 extendTvSubst :: Subst -> TyVar -> Type -> Subst
 extendTvSubst (Subst in_scope ids tvs cvs) tv ty
@@ -220,7 +220,7 @@ extendTvSubstList subst vrs
     extend subst (v, r) = extendTvSubst subst v r
 
 -- | Add a substitution from a 'CoVar' to a 'Coercion' to the 'Subst': you must ensure that the in-scope set is
--- such that the "CoreSubst#in_scope_invariant" is true after extending the substitution like this
+-- such that the "GHC.Core.Substitution#in_scope_invariant" is true after extending the substitution like this
 extendCvSubst :: Subst -> CoVar -> Coercion -> Subst
 extendCvSubst (Subst in_scope ids tvs cvs) v r
   = ASSERT( isCoVar v )
@@ -256,7 +256,7 @@ lookupIdSubst doc (Subst in_scope ids _ _) v
   | Just e  <- lookupVarEnv ids       v = e
   | Just v' <- lookupInScope in_scope v = Var v'
         -- Vital! See Note [Extending the Subst]
-  | otherwise = WARN( True, text "CoreSubst.lookupIdSubst" <+> doc <+> ppr v
+  | otherwise = WARN( True, text "GHC.Core.Substitution.lookupIdSubst" <+> doc <+> ppr v
                             $$ ppr in_scope)
                 Var v
 
@@ -343,7 +343,7 @@ instance Outputable Subst where
 -}
 
 -- | Apply a substitution to an entire 'CoreExpr'. Remember, you may only
--- apply the substitution /once/: see "CoreSubst#apply_once"
+-- apply the substitution /once/: see "GHC.Core.Substitution#apply_once"
 --
 -- Do *not* attempt to short-cut in the case of an empty substitution!
 -- See Note [Extending the Subst]

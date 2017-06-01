@@ -270,7 +270,7 @@ Library
         GHC.Core.FreeVars
         GHC.Core.Analyse.Lint
         GHC.Core.Prepare
-        CoreSubst
+        GHC.Core.Substitution
         GHC.Core.Optimise
         GHC.Core.Syntax
         TrieMap

@@ -35,7 +35,7 @@ module GHC.Core.Optimise.Unfolding (
 
         callSiteInline, CallCtxt(..),
 
-        -- Reexport from CoreSubst (it only live there so it can be used
+        -- Reexport from GHC.Core.Substitution (it only live there so it can be used
         -- by the Very Simple Optimiser)
         exprIsConApp_maybe, exprIsLiteral_maybe
     ) where

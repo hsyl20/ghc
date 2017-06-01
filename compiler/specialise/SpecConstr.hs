@@ -20,7 +20,7 @@ module SpecConstr(
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreSubst
+import GHC.Core.Substitution
 import CoreUtils
 import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )
 import GHC.Core.FreeVars          ( exprsFreeVarsList )

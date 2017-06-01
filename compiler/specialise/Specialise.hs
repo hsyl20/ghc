@@ -15,7 +15,7 @@ import GHC.Data.Type   hiding( substTy, extendTvSubstList )
 import GHC.Data.Module( Module, HasModule(..) )
 import GHC.Data.Coercion( Coercion )
 import CoreMonad
-import qualified CoreSubst
+import qualified GHC.Core.Substitution
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
@@ -605,7 +605,7 @@ specProgram guts@(ModGuts { mg_module = this_mod
         -- accidentally re-use a unique that's already in use
         -- Easiest thing is to do it all at once, as if all the top-level
         -- decls were mutually recursive
-    top_env = SE { se_subst = CoreSubst.mkEmptySubst $ mkInScopeSet $ mkVarSet $
+    top_env = SE { se_subst = GHC.Core.Substitution.mkEmptySubst $ mkInScopeSet $ mkVarSet $
                               bindersOfBinds binds
                  , se_interesting = emptyVarSet }
 
@@ -831,7 +831,7 @@ Avoiding this recursive specialisation loop is the reason for the
 -}
 
 data SpecEnv
-  = SE { se_subst :: CoreSubst.Subst
+  = SE { se_subst :: GHC.Core.Substitution.Subst
              -- We carry a substitution down:
              -- a) we must clone any binding that might float outwards,
              --    to avoid name clashes
@@ -846,7 +846,7 @@ data SpecEnv
      }
 
 specVar :: SpecEnv -> Id -> CoreExpr
-specVar env v = CoreSubst.lookupIdSubst (text "specVar") (se_subst env) v
+specVar env v = GHC.Core.Substitution.lookupIdSubst (text "specVar") (se_subst env) v
 
 specExpr :: SpecEnv -> CoreExpr -> SpecM (CoreExpr, UsageDetails)
 
@@ -939,7 +939,7 @@ specCase env scrut' case_bndr [(con, args, rhs)]
              subst_prs  = (case_bndr, Var case_bndr_flt)
                         : [ (arg, Var sc_flt)
                           | (arg, Just sc_flt) <- args `zip` mb_sc_flts ]
-             env_rhs' = env_rhs { se_subst = CoreSubst.extendIdSubstList (se_subst env_rhs) subst_prs
+             env_rhs' = env_rhs { se_subst = GHC.Core.Substitution.extendIdSubstList (se_subst env_rhs) subst_prs
                                 , se_interesting = se_interesting env_rhs `extendVarSetList`
                                                    (case_bndr_flt : sc_args_flt) }
 
@@ -1205,7 +1205,7 @@ specCalls mb_mod env rules_for_me calls_for_me fn rhs
     already_covered :: DynFlags -> [CoreExpr] -> Bool
     already_covered dflags args      -- Note [Specialisations already covered]
        = isJust (lookupRule dflags
-                            (CoreSubst.substInScope (se_subst env), realIdUnfolding)
+                            (GHC.Core.Substitution.substInScope (se_subst env), realIdUnfolding)
                             (const True)
                             fn args rules_for_me)
 
@@ -1420,9 +1420,9 @@ bindAuxiliaryDicts env@(SE { se_subst = subst, se_interesting = interesting })
   = (env', dx_binds, spec_dict_args)
   where
     (dx_binds, spec_dict_args) = go call_ds inst_dict_ids
-    env' = env { se_subst = subst `CoreSubst.extendSubstList`
+    env' = env { se_subst = subst `GHC.Core.Substitution.extendSubstList`
                                      (orig_dict_ids `zip` spec_dict_args)
-                                  `CoreSubst.extendInScopeList` dx_ids
+                                  `GHC.Core.Substitution.extendInScopeList` dx_ids
                , se_interesting = interesting `unionVarSet` interesting_dicts }
 
     dx_ids = [dx_id | (NonRec dx_id _, _) <- dx_binds]
@@ -2264,20 +2264,20 @@ mapAndCombineSM f (x:xs) = do (y, uds1) <- f x
 
 extendTvSubstList :: SpecEnv -> [(TyVar,Type)] -> SpecEnv
 extendTvSubstList env tv_binds
-  = env { se_subst = CoreSubst.extendTvSubstList (se_subst env) tv_binds }
+  = env { se_subst = GHC.Core.Substitution.extendTvSubstList (se_subst env) tv_binds }
 
 substTy :: SpecEnv -> Type -> Type
-substTy env ty = CoreSubst.substTy (se_subst env) ty
+substTy env ty = GHC.Core.Substitution.substTy (se_subst env) ty
 
 substCo :: SpecEnv -> Coercion -> Coercion
-substCo env co = CoreSubst.substCo (se_subst env) co
+substCo env co = GHC.Core.Substitution.substCo (se_subst env) co
 
 substBndr :: SpecEnv -> CoreBndr -> (SpecEnv, CoreBndr)
-substBndr env bs = case CoreSubst.substBndr (se_subst env) bs of
+substBndr env bs = case GHC.Core.Substitution.substBndr (se_subst env) bs of
                       (subst', bs') -> (env { se_subst = subst' }, bs')
 
 substBndrs :: SpecEnv -> [CoreBndr] -> (SpecEnv, [CoreBndr])
-substBndrs env bs = case CoreSubst.substBndrs (se_subst env) bs of
+substBndrs env bs = case GHC.Core.Substitution.substBndrs (se_subst env) bs of
                       (subst', bs') -> (env { se_subst = subst' }, bs')
 
 cloneBindSM :: SpecEnv -> CoreBind -> SpecM (SpecEnv, SpecEnv, CoreBind)
@@ -2285,7 +2285,7 @@ cloneBindSM :: SpecEnv -> CoreBind -> SpecM (SpecEnv, SpecEnv, CoreBind)
 -- Return the substitution to use for RHSs, and the one to use for the body
 cloneBindSM env@(SE { se_subst = subst, se_interesting = interesting }) (NonRec bndr rhs)
   = do { us <- getUniqueSupplyM
-       ; let (subst', bndr') = CoreSubst.cloneIdBndr subst us bndr
+       ; let (subst', bndr') = GHC.Core.Substitution.cloneIdBndr subst us bndr
              interesting' | interestingDict env rhs
                           = interesting `extendVarSet` bndr'
                           | otherwise = interesting
@@ -2294,7 +2294,7 @@ cloneBindSM env@(SE { se_subst = subst, se_interesting = interesting }) (NonRec 
 
 cloneBindSM env@(SE { se_subst = subst, se_interesting = interesting }) (Rec pairs)
   = do { us <- getUniqueSupplyM
-       ; let (subst', bndrs') = CoreSubst.cloneRecIdBndrs subst us (map fst pairs)
+       ; let (subst', bndrs') = GHC.Core.Substitution.cloneRecIdBndrs subst us (map fst pairs)
              env' = env { se_subst = subst'
                         , se_interesting = interesting `extendVarSetList`
                                            [ v | (v,r) <- pairs, interestingDict env r ] }

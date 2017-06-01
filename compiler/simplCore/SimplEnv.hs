@@ -124,7 +124,7 @@ pprSimplEnv env
              | otherwise = ppr v
 
 type SimplIdSubst = IdEnv SimplSR -- IdId |--> OutExpr
-        -- See Note [Extending the Subst] in CoreSubst
+        -- See Note [Extending the Subst] in GHC.Core.Substitution
 
 -- | A substitution result.
 data SimplSR
@@ -735,7 +735,7 @@ substNonCoVarIdBndr
 -- Augment the substitution  if the unique changed
 -- Extend the in-scope set with the new Id
 --
--- Similar to CoreSubst.substIdBndr, except that
+-- Similar to GHC.Core.Substitution.substIdBndr, except that
 --      the type of id_subst differs
 --      all fragile info is zapped
 substNonCoVarIdBndr new_res_ty

@@ -72,7 +72,7 @@ import CoreUtils        ( exprType, exprIsHNF
                         )
 import GHC.Core.Arity        ( exprBotStrictness_maybe )
 import GHC.Core.FreeVars          -- all of it
-import CoreSubst
+import GHC.Core.Substitution
 import MkCore           ( sortQuantVars )
 
 import GHC.Data.Id
@@ -332,7 +332,7 @@ don't want @lvlExpr@ to turn the scrutinee of the @case@ into an MFE
 If there were another lambda in @r@'s rhs, it would get level-2 as well.
 -}
 
-lvlExpr env (_, AnnType ty)     = return (Type (CoreSubst.substTy (le_subst env) ty))
+lvlExpr env (_, AnnType ty)     = return (Type (GHC.Core.Substitution.substTy (le_subst env) ty))
 lvlExpr env (_, AnnCoercion co) = return (Coercion (substCo (le_subst env) co))
 lvlExpr env (_, AnnVar v)       = return (lookupVar env v)
 lvlExpr _   (_, AnnLit lit)     = return (Lit lit)
@@ -549,7 +549,7 @@ lvlMFE ::  LevelEnv             -- Level of in-scope names/tyvars
 -- the expression, so that it can itself be floated.
 
 lvlMFE env _ (_, AnnType ty)
-  = return (Type (CoreSubst.substTy (le_subst env) ty))
+  = return (Type (GHC.Core.Substitution.substTy (le_subst env) ty))
 
 -- No point in floating out an expression wrapped in a coercion or note
 -- If we do we'll transform  lvl = e |> co
@@ -1257,7 +1257,7 @@ substAndLvlBndrs is_rec env lvl bndrs
     (subst_env, subst_bndrs) = substBndrsSL is_rec env bndrs
 
 substBndrsSL :: RecFlag -> LevelEnv -> [InVar] -> (LevelEnv, [OutVar])
--- So named only to avoid the name clash with CoreSubst.substBndrs
+-- So named only to avoid the name clash with GHC.Core.Substitution.substBndrs
 substBndrsSL is_rec env@(LE { le_subst = subst, le_env = id_env }) bndrs
   = ( env { le_subst    = subst'
           , le_env      = foldl add_id  id_env (bndrs `zip` bndrs') }
@@ -1571,7 +1571,7 @@ newPolyBndrs dest_lvl
                              mkSysLocalOrCoVar (mkFastString str) uniq poly_ty
                            where
                              str     = "poly_" ++ occNameString (getOccName bndr)
-                             poly_ty = mkLamTypes abs_vars (CoreSubst.substTy subst (idType bndr))
+                             poly_ty = mkLamTypes abs_vars (GHC.Core.Substitution.substTy subst (idType bndr))
 
     -- If we are floating a join point to top level, it stops being
     -- a join point.  Otherwise it continues to be a join point,

@@ -30,7 +30,7 @@ module Rules (
 
 import GHC.Core.Syntax          -- All of it
 import GHC.Data.Module           ( Module, ModuleSet, elemModuleSet )
-import CoreSubst
+import GHC.Core.Substitution
 import GHC.Core.Optimise          ( exprIsLambda_maybe )
 import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, bindFreeVars
                         , rulesFreeVarsDSet, exprsOrphNames, exprFreeVarsList )
@@ -1069,7 +1069,7 @@ Our cunning plan is this:
     check that does not mention any locally bound (lambda, case)
     variables.  If so we fail
 
-  * We use CoreSubst.substBind to freshen the binding, using an
+  * We use GHC.Core.Substitution.substBind to freshen the binding, using an
     in-scope set that is the original in-scope variables plus the
     rs_bndrs (currently floated let-bindings).  So in (a) above
     we'll freshen the 'v' binding; in (b) above we'll freshen

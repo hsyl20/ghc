@@ -10,7 +10,7 @@ module CSE (cseProgram, cseOneExpr) where
 
 #include "HsVersions.h"
 
-import CoreSubst
+import GHC.Core.Substitution
 import GHC.Data.Var              ( Var )
 import GHC.Data.Var.Environment           ( elemInScopeSet )
 import GHC.Data.Id               ( Id, idType, idInlineActivation, isDeadBinder

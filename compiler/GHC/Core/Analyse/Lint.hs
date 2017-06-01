@@ -957,10 +957,10 @@ rules: naively reducing the above example using lets will capture any free
 occurrence of y in e2. More fundamentally, type lets are tricky; many passes,
 such as Float Out, tacitly assume that the incoming program's type lets have
 all been dealt with by the simplifier. Thus we don't want to let-bind any types
-in, say, CoreSubst.simpleOptPgm, which in some circumstances can run immediately
+in, say, GHC.Core.Substitution.simpleOptPgm, which in some circumstances can run immediately
 before Float Out.
 
-All that said, currently CoreSubst.simpleOptPgm is the only thing using this
+All that said, currently GHC.Core.Substitution.simpleOptPgm is the only thing using this
 loophole, doing so to avoid re-traversing large functions (beta-reducing a type
 lambda without introducing a type let requires a substitution). TODO: Improve
 simpleOptPgm so that we can forget all this ever happened.
