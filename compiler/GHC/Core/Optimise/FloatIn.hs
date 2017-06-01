@@ -3,7 +3,7 @@
 
 ************************************************************************
 *                                                                      *
-\section[FloatIn]{Floating Inwards pass}
+\section[GHC.Core.Optimise.GHC.Core.Optimise.FloatIn]{Floating Inwards pass}
 *                                                                      *
 ************************************************************************
 
@@ -15,7 +15,7 @@ then discover that they aren't needed in the chosen branch.
 {-# LANGUAGE CPP #-}
 {-# OPTIONS_GHC -fprof-auto #-}
 
-module FloatIn ( floatInwards ) where
+module GHC.Core.Optimise.GHC.Core.Optimise.FloatIn ( floatInwards ) where
 
 #include "HsVersions.h"
 
@@ -701,7 +701,7 @@ sepBindsByDropPoint dflags is_case drop_pts floaters
           new_boxes | drop_here = (insert here_box : fork_boxes)
                     | otherwise = (here_box : new_fork_boxes)
 
-          new_fork_boxes = zipWithEqual "FloatIn.sepBinds" insert_maybe
+          new_fork_boxes = zipWithEqual "GHC.Core.Optimise.GHC.Core.Optimise.FloatIn.sepBinds" insert_maybe
                                         fork_boxes used_in_flags
 
           insert :: DropBox -> DropBox

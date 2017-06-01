@@ -386,7 +386,7 @@ Library
         RnUnbound
         GHC.Core.Monad
         GHC.Core.Optimise.CommonSubExpr
-        FloatIn
+        GHC.Core.Optimise.FloatIn
         FloatOut
         LiberateCase
         OccurAnal

@@ -29,7 +29,7 @@ import GHC.Core.Optimise.Simplify.Environment
 import GHC.Core.Optimise.Simplify.Monad
 import GHC.Core.Monad
 import qualified GHC.Utils.Error as Err
-import FloatIn          ( floatInwards )
+import GHC.Core.Optimise.GHC.Core.Optimise.FloatIn          ( floatInwards )
 import FloatOut         ( floatOutwards )
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Id
