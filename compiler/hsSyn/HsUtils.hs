@@ -92,7 +92,7 @@ module HsUtils(
 
 #include "HsVersions.h"
 
-import HsDecls
+import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import HsExpr
 import HsPat

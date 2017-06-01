@@ -1300,7 +1300,7 @@ tcWildCardBindersX new_wc wc_names thing_inside
 -- Used in 'getInitialKind' (for tycon kinds and other kinds)
 -- and in kind-checking (but not for tycon kinds, which are checked with
 -- tcTyClDecls). See also Note [Complete user-supplied kind signatures] in
--- HsDecls.
+-- GHC.Syntax.Declaration.
 --
 -- This function does not do telescope checking.
 kcHsTyVarBndrs :: Name    -- ^ of the thing being checked

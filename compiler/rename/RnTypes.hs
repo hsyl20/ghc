@@ -842,7 +842,7 @@ bindHsQTyVars :: forall a b.
               -> (LHsQTyVars Name -> NameSet -> RnM (b, FreeVars))
                   -- also returns all names used in kind signatures, for the
                   -- TypeInType clause of Note [Complete user-supplied kind
-                  -- signatures] in HsDecls
+                  -- signatures] in GHC.Syntax.Declaration
               -> RnM (b, FreeVars)
 -- (a) Bring kind variables into scope
 --     both (i)  passed in (kv_bndrs)

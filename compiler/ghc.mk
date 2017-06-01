@@ -484,7 +484,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Var.Free \
 	GHC.Config.Hooks \
 	GHC.Syntax.Binding \
-	HsDecls \
+	GHC.Syntax.Declaration \
 	HsDoc \
 	HsExpr \
 	HsImpExp \

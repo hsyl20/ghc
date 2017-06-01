@@ -18,7 +18,7 @@ module HsExpr where
 #include "HsVersions.h"
 
 -- friends:
-import HsDecls
+import GHC.Syntax.Declaration
 import HsPat
 import HsLit
 import PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,

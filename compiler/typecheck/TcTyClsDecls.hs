@@ -139,7 +139,7 @@ tcTyAndClassDecls tyclds_s
 tcTyClGroup :: TyClGroup Name
             -> TcM (TcGblEnv, [InstInfo Name], [DerivInfo])
 -- Typecheck one strongly-connected component of type, class, and instance decls
--- See Note [TyClGroups and dependency analysis] in HsDecls
+-- See Note [TyClGroups and dependency analysis] in GHC.Syntax.Declaration
 tcTyClGroup (TyClGroup { group_tyclds = tyclds
                        , group_roles  = roles
                        , group_instds = instds })

@@ -18,7 +18,7 @@ therefore, is almost nothing but re-exporting.
 
 module HsSyn (
         module GHC.Syntax.Binding,
-        module HsDecls,
+        module GHC.Syntax.Declaration,
         module HsExpr,
         module HsImpExp,
         module HsLit,
@@ -33,7 +33,7 @@ module HsSyn (
 ) where
 
 -- friends:
-import HsDecls
+import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import HsExpr
 import HsImpExp

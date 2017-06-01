@@ -1670,7 +1670,7 @@ rnTyClDecl (DataDecl { tcdLName = tycon, tcdTyVars = tyvars,
                  ; let sig_tvs         = filterNameSet isTyVarName kind_sig_fvs
                        unbound_sig_tvs = sig_tvs `minusNameSet` dep_vars
                  ; return ((tyvars', defn', isEmptyNameSet unbound_sig_tvs), fvs) }
-          -- See Note [Complete user-supplied kind signatures] in HsDecls
+          -- See Note [Complete user-supplied kind signatures] in GHC.Syntax.Declaration
        ; typeintype <- xoptM LangExt.TypeInType
        ; let cusk = hsTvbAllKinded tyvars' &&
                     (not typeintype || no_kvs)

@@ -16,7 +16,7 @@
 --
 -- Definitions for: @SynDecl@ and @ConDecl@, @ClassDecl@,
 -- @InstDecl@, @DefaultDecl@ and @ForeignDecl@.
-module HsDecls (
+module GHC.Syntax.Declaration (
   -- * Toplevel declarations
   HsDecl(..), LHsDecl, HsDataDefn(..), HsDeriving,
   HsDerivingClause(..), LHsDerivingClause,
@@ -1915,9 +1915,9 @@ lvectDeclName (L _ (HsVectTypeOut  _ tycon _))       = getName tycon
 lvectDeclName (L _ (HsVectClassIn _ (L _ name)))     = getName name
 lvectDeclName (L _ (HsVectClassOut cls))             = getName cls
 lvectDeclName (L _ (HsVectInstIn _))
-  = panic "HsDecls.lvectDeclName: HsVectInstIn"
+  = panic "GHC.Syntax.Declaration.lvectDeclName: HsVectInstIn"
 lvectDeclName (L _ (HsVectInstOut  _))
-  = panic "HsDecls.lvectDeclName: HsVectInstOut"
+  = panic "GHC.Syntax.Declaration.lvectDeclName: HsVectInstOut"
 
 lvectInstDecl :: LVectDecl name -> Bool
 lvectInstDecl (L _ (HsVectInstIn _))  = True

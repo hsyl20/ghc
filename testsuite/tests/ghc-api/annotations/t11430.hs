@@ -17,7 +17,7 @@ import GHC.Data.FastString
 import ForeignCall
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
-import HsDecls
+import GHC.Syntax.Declaration
 import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )

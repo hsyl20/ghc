@@ -31,7 +31,7 @@ import GHC.Config.Flags
 import GHC.Data.Name
 import GHC.Program.Driver.Pipeline.Monad
 import GHC.Types
-import HsDecls
+import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import HsExpr
 import GHC.Data.Tree.OrdList

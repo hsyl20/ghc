@@ -19,7 +19,7 @@ import System.IO ( putStr )
 import System.Environment hiding ( getArgs )
 import Control.Monad
 
--- HsDecls stuff
+-- GHC.Syntax.Declaration stuff
 
 infix   6 `fixn`
 infixl  7 +#

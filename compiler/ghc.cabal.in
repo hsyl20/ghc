@@ -302,7 +302,7 @@ Library
         GHC.Desugar.Match.Constructor
         GHC.Desugar.Match.Literal
         GHC.Syntax.Binding
-        HsDecls
+        GHC.Syntax.Declaration
         HsDoc
         HsExpr
         HsImpExp
