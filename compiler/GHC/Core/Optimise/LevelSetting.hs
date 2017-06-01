@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section{SetLevels}
+\section{GHC.Core.Optimise.LevelSetting}
 
                 ***************************
                         Overview
@@ -50,7 +50,7 @@
 -}
 
 {-# LANGUAGE CPP, MultiWayIf #-}
-module SetLevels (
+module GHC.Core.Optimise.LevelSetting (
         setLevels,
 
         Level(..), LevelType(..), tOP_LEVEL, isJoinCeilLvl, asJoinCeilLvl,
@@ -170,7 +170,7 @@ But, check this out:
 --      __inline (let x = e in \d. x)
 -- things are bad.  The inliner doesn't even inline it because it doesn't look
 -- like a head-normal form.  So it seems a lesser evil to let things float.
--- In SetLevels we do set the context to (Level 0 0) when we get to an InlineMe
+-- In GHC.Core.Optimise.LevelSetting we do set the context to (Level 0 0) when we get to an InlineMe
 -- which discourages floating out.
 
 So the conclusion is: don't do any floating at all inside an InlineMe.
@@ -367,7 +367,7 @@ lvlExpr env expr@(_, AnnLam {})
         -- a lambda like this (\x -> coerce t (\s -> ...))
         -- This used to happen quite a bit in state-transformer programs,
         -- but not nearly so much now non-recursive newtypes are transparent.
-        -- [See SetLevels rev 1.50 for a version with this approach.]
+        -- [See GHC.Core.Optimise.LevelSetting rev 1.50 for a version with this approach.]
 
 lvlExpr env (_, AnnLet bind body)
   = do { (bind', new_env) <- lvlBind env bind
@@ -426,7 +426,7 @@ lvlApp env orig_expr ((_,AnnVar fn), args)
     left n (_, AnnApp f a) rargs
        | isValArg (deAnnotate a) = left (n-1) f (a:rargs)
        | otherwise               = left n     f (a:rargs)
-    left _ _ _                   = panic "SetLevels.lvlExpr.left"
+    left _ _ _                   = panic "GHC.Core.Optimise.LevelSetting.lvlExpr.left"
 
     is_val_arg :: CoreExprWithFVs -> Bool
     is_val_arg (_, AnnType {}) = False
@@ -895,7 +895,7 @@ Note [Bottoming floats: eta expansion] c.f Note [Bottoming floats]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Tiresomely, though, the simplifier has an invariant that the manifest
 arity of the RHS should be the same as the arity; but we can't call
-etaExpand during SetLevels because it works over a decorated form of
+etaExpand during GHC.Core.Optimise.LevelSetting because it works over a decorated form of
 CoreExpr.  So we do the eta expansion later, in FloatOut.
 
 Note [Case MFEs]

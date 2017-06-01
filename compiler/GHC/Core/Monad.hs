@@ -202,7 +202,7 @@ data FloatOutSwitches = FloatOutSwitches {
                              -- ^ True <=> float out over-saturated applications
                              --            based on arity information.
                              -- See Note [Floating over-saturated applications]
-                             -- in SetLevels
+                             -- in GHC.Core.Optimise.LevelSetting
   floatToTopLevelOnly :: Bool      -- ^ Allow floating to the top level only.
   }
 instance Outputable FloatOutSwitches where

@@ -391,7 +391,7 @@ Library
         GHC.Core.Optimise.LiberateCase
         GHC.Core.Analyse.Occurence
         GHC.Core.Optimise.StaticArgument
-        SetLevels
+        GHC.Core.Optimise.LevelSetting
         GHC.Core.Optimise.Pipeline
         GHC.Core.Optimise.Simplify.Environment
         GHC.Core.Optimise.Simplify.Monad

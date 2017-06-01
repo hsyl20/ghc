@@ -151,7 +151,7 @@ isExprLevPoly = go
    go e@(Cast {})                  = check_type e
    go (Tick _ e)                   = go e
    go e@(Type {})                  = pprPanic "isExprLevPoly ty" (ppr e)
-   go (Coercion {})                = False  -- this case can happen in SetLevels
+   go (Coercion {})                = False  -- this case can happen in GHC.Core.Optimise.LevelSetting
 
    check_type = isTypeLevPoly . exprType  -- slow approach
 
@@ -1311,7 +1311,7 @@ exprOkForSpeculation, exprOkForSideEffects :: Expr b -> Bool
 exprOkForSpeculation = expr_ok primOpOkForSpeculation
 exprOkForSideEffects = expr_ok primOpOkForSideEffects
   -- Polymorphic in binder type
-  -- There is one call at a non-Id binder type, in SetLevels
+  -- There is one call at a non-Id binder type, in GHC.Core.Optimise.LevelSetting
 
 expr_ok :: (PrimOp -> Bool) -> Expr b -> Bool
 expr_ok _ (Lit _)      = True

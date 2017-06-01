@@ -427,7 +427,7 @@ result of #4978.
 Note [Do not inline top-level bottoming functions]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The FloatOut pass has gone to some trouble to float out calls to 'error'
-and similar friends.  See Note [Bottoming floats] in SetLevels.
+and similar friends.  See Note [Bottoming floats] in GHC.Core.Optimise.LevelSetting.
 Do not re-inline them!  But we *do* still inline if they are very small
 (the uncondInline stuff).
 

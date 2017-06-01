@@ -478,7 +478,7 @@ isDataConId_maybe id = case Var.idDetails id of
                          _                 -> Nothing
 
 isJoinId :: Var -> Bool
--- It is convenient in SetLevels.lvlMFE to apply isJoinId
+-- It is convenient in GHC.Core.Optimise.LevelSetting.lvlMFE to apply isJoinId
 -- to the free vars of an expression, so it's convenient
 -- if it returns False for type variables
 isJoinId id

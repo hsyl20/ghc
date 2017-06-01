@@ -545,7 +545,7 @@ data FloatBind
   = FloatLet  CoreBind
   | FloatCase CoreExpr Id AltCon [Var]
       -- case e of y { C ys -> ... }
-      -- See Note [Floating cases] in SetLevels
+      -- See Note [Floating cases] in GHC.Core.Optimise.LevelSetting
 
 instance Outputable FloatBind where
   ppr (FloatLet b) = text "LET" <+> ppr b
