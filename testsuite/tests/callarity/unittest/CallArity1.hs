@@ -4,7 +4,7 @@ import GHC.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
 import GHC.Core.Syntax.Make
-import CallArity (callArityRHS)
+import GHC.Core.Analyse.CallArity (callArityRHS)
 import GHC.Data.Id.Make
 import GHC.Utils.SysTools
 import GHC.Config.Flags

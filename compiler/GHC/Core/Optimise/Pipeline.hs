@@ -42,7 +42,7 @@ import SAT              ( doStaticArgs )
 import Specialise       ( specProgram)
 import SpecConstr       ( specConstrProgram)
 import DmdAnal          ( dmdAnalProgram )
-import CallArity        ( callArityAnalProgram )
+import GHC.Core.Analyse.CallArity        ( callArityAnalProgram )
 import WorkWrap         ( wwTopBinds )
 import Vectorise        ( vectorise )
 import GHC.Data.SrcLoc

@@ -408,7 +408,7 @@ Library
         CoreToStg
         StgLint
         StgSyn
-        CallArity
+        GHC.Core.Analyse.CallArity
         DmdAnal
         WorkWrap
         WwLib

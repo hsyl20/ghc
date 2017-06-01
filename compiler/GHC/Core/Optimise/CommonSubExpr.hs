@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module CSE (cseProgram, cseOneExpr) where
+module GHC.Core.Optimise.CommonSubExpr (cseProgram, cseOneExpr) where
 
 #include "HsVersions.h"
 
