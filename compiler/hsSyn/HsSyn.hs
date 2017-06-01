@@ -17,7 +17,7 @@ therefore, is almost nothing but re-exporting.
 {-# LANGUAGE ConstraintKinds #-}
 
 module HsSyn (
-        module HsBinds,
+        module GHC.Syntax.Binding,
         module HsDecls,
         module HsExpr,
         module HsImpExp,
@@ -34,7 +34,7 @@ module HsSyn (
 
 -- friends:
 import HsDecls
-import HsBinds
+import GHC.Syntax.Binding
 import HsExpr
 import HsImpExp
 import HsLit

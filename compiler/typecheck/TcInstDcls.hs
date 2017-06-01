@@ -1236,7 +1236,7 @@ decide what silent arguments are to be added.
 ************************************************************************
 
 tcMethod
-- Make the method bindings, as a [(NonRec, HsBinds)], one per method
+- Make the method bindings, as a [(NonRec, GHC.Syntax.Binding)], one per method
 - Remembering to use fresh Name (the instance method Name) as the binder
 - Bring the instance method Ids into scope, for the benefit of tcInstSig
 - Use sig_fn mapping instance method Name -> instance tyvars

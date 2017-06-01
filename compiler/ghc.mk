@@ -483,7 +483,7 @@ compiler_stage2_dll0_MODULES = \
 	ForeignCall \
 	GHC.Data.Var.Free \
 	GHC.Config.Hooks \
-	HsBinds \
+	GHC.Syntax.Binding \
 	HsDecls \
 	HsDoc \
 	HsExpr \

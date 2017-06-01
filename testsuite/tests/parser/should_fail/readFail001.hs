@@ -51,7 +51,7 @@ instance (Eq a) => EqClass (Tree a) where
 
 default (Integer, Rational)
 
--- HsBinds stuff
+-- GHC.Syntax.Binding stuff
 
 singlebind x = x
 

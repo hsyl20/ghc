@@ -32,7 +32,7 @@ import GHC.Data.Name
 import GHC.Program.Driver.Pipeline.Monad
 import GHC.Types
 import HsDecls
-import HsBinds
+import GHC.Syntax.Binding
 import HsExpr
 import GHC.Data.Tree.OrdList
 import GHC.Data.Id

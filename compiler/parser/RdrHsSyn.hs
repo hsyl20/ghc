@@ -322,7 +322,7 @@ mkRoleAnnotDecl loc tycon roles
 
 {- **********************************************************************
 
-  #cvBinds-etc# Converting to @HsBinds@, etc.
+  #cvBinds-etc# Converting to @GHC.Syntax.Binding@, etc.
 
   ********************************************************************* -}
 

@@ -301,7 +301,7 @@ Library
         GHC.Desugar.Match
         GHC.Desugar.Match.Constructor
         GHC.Desugar.Match.Literal
-        HsBinds
+        GHC.Syntax.Binding
         HsDecls
         HsDoc
         HsExpr

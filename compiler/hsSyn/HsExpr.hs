@@ -24,7 +24,7 @@ import HsLit
 import PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
                      NameOrRdrName,OutputableBndrId )
 import HsTypes
-import HsBinds
+import GHC.Syntax.Binding
 
 -- others:
 import TcEvidence
@@ -1512,12 +1512,12 @@ pprMatches MG { mg_alts = matches }
     = vcat (map pprMatch (map unLoc (unLoc matches)))
       -- Don't print the type; it's only a place-holder before typechecking
 
--- Exported to HsBinds, which can't see the defn of HsMatchContext
+-- Exported to GHC.Syntax.Binding, which can't see the defn of HsMatchContext
 pprFunBind :: (OutputableBndrId idR, Outputable body)
            => MatchGroup idR body -> SDoc
 pprFunBind matches = pprMatches matches
 
--- Exported to HsBinds, which can't see the defn of HsMatchContext
+-- Exported to GHC.Syntax.Binding, which can't see the defn of HsMatchContext
 pprPatBind :: forall bndr id body. (OutputableBndrId bndr,
                                     OutputableBndrId id,
                                     Outputable body)

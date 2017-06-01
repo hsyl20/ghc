@@ -68,7 +68,7 @@ especially on value bindings.  Here's an overview.
     g = ...f...
 
 * HsSyn: a signature in a binding starts of as a TypeSig, in
-  type HsBinds.Sig
+  type GHC.Syntax.Binding.Sig
 
 * When starting a mutually recursive group, like f/g above, we
   call tcTySig on each signature in the group.

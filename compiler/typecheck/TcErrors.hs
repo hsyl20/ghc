@@ -29,7 +29,7 @@ import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TcEvidence
 import HsExpr  ( UnboundVar(..) )
-import HsBinds ( PatSynBind(..) )
+import GHC.Syntax.Binding ( PatSynBind(..) )
 import GHC.Data.Name
 import GHC.Data.RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
                , mkRdrUnqual, isLocalGRE, greSrcSpan, pprNameProvenance

@@ -41,7 +41,7 @@ module HsPat (
 import {-# SOURCE #-} HsExpr            (SyntaxExpr, LHsExpr, HsSplice, pprLExpr, pprSplice)
 
 -- friends:
-import HsBinds
+import GHC.Syntax.Binding
 import HsLit
 import PlaceHolder
 import HsTypes

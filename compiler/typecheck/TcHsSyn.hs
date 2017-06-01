@@ -157,7 +157,7 @@ hsOverLitName (HsIsString {})   = fromStringName
 {-
 ************************************************************************
 *                                                                      *
-\subsection[BackSubst-HsBinds]{Running a substitution over @HsBinds@}
+\subsection[BackSubst-GHC.Syntax.Binding]{Running a substitution over @GHC.Syntax.Binding@}
 *                                                                      *
 ************************************************************************
 

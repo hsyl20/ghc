@@ -90,7 +90,7 @@ import {-# SOURCE #-}   HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr,
                                 pprSpliceDecl )
         -- Because Expr imports Decls via HsBracket
 
-import HsBinds
+import GHC.Syntax.Binding
 import HsTypes
 import HsDoc
 import GHC.Data.Type.Constructor
@@ -363,7 +363,7 @@ Default methods
    E.g. $dmmax
 
  - If there is a default method name at all, it's recorded in
-   the ClassOpSig (in HsBinds), in the DefMethInfo field.
+   the ClassOpSig (in GHC.Syntax.Binding), in the DefMethInfo field.
    (DefMethInfo is defined in Class.hs)
 
 Source-code class decls and interface-code class decls are treated subtly

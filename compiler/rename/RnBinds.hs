@@ -97,7 +97,7 @@ within one @MonoBinds@, so that unique-Int plumbing is done explicitly
 
 The basic algorithm involves walking over the tree and returning a tuple
 containing the new tree plus its free variables. Some functions, such
-as those walking polymorphic bindings (HsBinds) and qualifier lists in
+as those walking polymorphic bindings (GHC.Syntax.Binding) and qualifier lists in
 list comprehensions (@Quals@), return the variables bound in local
 environments. These are then used to calculate the free variables of the
 expression evaluated in these environments.
@@ -120,7 +120,7 @@ a set of variables free in @Exp@ is written @fvExp@
 *                                                                      *
 ************************************************************************
 
-\subsubsection[dep-HsBinds]{Polymorphic bindings}
+\subsubsection[dep-GHC.Syntax.Binding]{Polymorphic bindings}
 
 Non-recursive expressions are reconstructed without any changes at top
 level, although their component expressions may have to be altered.

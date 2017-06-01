@@ -91,7 +91,7 @@ addTypecheckedBinds tcg_env binds
 *                                                                      *
 ************************************************************************
 
-@tcBindsAndThen@ typechecks a @HsBinds@.  The "and then" part is because
+@tcBindsAndThen@ typechecks a @GHC.Syntax.Binding@.  The "and then" part is because
 it needs to know something about the {\em usage} of the things bound,
 so that it can create specialisations of them.  So @tcBindsAndThen@
 takes a function which, given an extended environment, E, typechecks
@@ -483,7 +483,7 @@ tc_group top_lvl sig_fn prag_fn (Recursive, binds) closed thing_inside
         -- strongly-connected-component analysis, this time omitting
         -- any references to variables with type signatures.
         -- (This used to be optional, but isn't now.)
-        -- See Note [Polymorphic recursion] in HsBinds.
+        -- See Note [Polymorphic recursion] in GHC.Syntax.Binding.
     do  { traceTc "tc_group rec" (pprLHsBinds binds)
         ; when hasPatSyn $ recursivePatSynErr binds
         ; (binds1, thing) <- go sccs
@@ -550,7 +550,7 @@ tc_single top_lvl sig_fn prag_fn lbind closed thing_inside
 type BKey = Int -- Just number off the bindings
 
 mkEdges :: TcSigFun -> LHsBinds Name -> [Node BKey (LHsBind Name)]
--- See Note [Polymorphic recursion] in HsBinds.
+-- See Note [Polymorphic recursion] in GHC.Syntax.Binding.
 mkEdges sig_fn binds
   = [ DigraphNode bind key [key | n <- nonDetEltsUniqSet (bind_fvs (unLoc bind)),
                          Just key <- [lookupNameEnv key_map n], no_sig n ]
@@ -1230,7 +1230,7 @@ for a non-overloaded function.
 *                                                                      *
 ************************************************************************
 
-@tcMonoBinds@ deals with a perhaps-recursive group of HsBinds.
+@tcMonoBinds@ deals with a perhaps-recursive group of GHC.Syntax.Binding.
 The signatures have been dealt with already.
 -}
 

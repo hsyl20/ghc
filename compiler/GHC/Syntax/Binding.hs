@@ -2,7 +2,7 @@
 (c) The University of Glasgow 2006
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[HsBinds]{Abstract syntax: top-level bindings and signatures}
+\section[GHC.Syntax.Binding]{Abstract syntax: top-level bindings and signatures}
 
 Datatype for: @BindGroup@, @Bind@, @Sig@, @Bind@.
 -}
@@ -15,7 +15,7 @@ Datatype for: @BindGroup@, @Bind@, @Sig@, @Bind@.
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE BangPatterns #-}
 
-module HsBinds where
+module GHC.Syntax.Binding where
 
 import {-# SOURCE #-} HsExpr ( pprExpr, LHsExpr,
                                MatchGroup, pprFunBind,
@@ -534,7 +534,7 @@ plusHsValBinds (ValBindsIn ds1 sigs1) (ValBindsIn ds2 sigs2)
 plusHsValBinds (ValBindsOut ds1 sigs1) (ValBindsOut ds2 sigs2)
   = ValBindsOut (ds1 ++ ds2) (sigs1 ++ sigs2)
 plusHsValBinds _ _
-  = panic "HsBinds.plusHsValBinds"
+  = panic "GHC.Syntax.Binding.plusHsValBinds"
 
 {-
 What AbsBinds means

@@ -3,9 +3,9 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-Pattern-matching bindings (HsBinds and MonoBinds)
+Pattern-matching bindings (GHC.Syntax.Binding and MonoBinds)
 
-Handles @HsBinds@; those at the top level require different handling,
+Handles @GHC.Syntax.Binding@; those at the top level require different handling,
 in that the @Rec@/@NonRec@/etc structure is thrown away (whereas at
 lower levels it is preserved with @let@/@letrec@s).
 -}
@@ -182,7 +182,7 @@ dsHsBind dflags
         , abe_mono = local, abe_prags = prags } <- export
   , not (xopt LangExt.Strict dflags)             -- Handle strict binds
   , not (anyBag (isBangedPatBind . unLoc) binds) --        in the next case
-  = -- See Note [AbsBinds wrappers] in HsBinds
+  = -- See Note [AbsBinds wrappers] in GHC.Syntax.Binding
     addDictsDs (toTcTypeBag (listToBag dicts)) $
          -- addDictsDs: push type constraints deeper for pattern match check
     do { (_, bind_prs) <- dsLHsBinds binds
@@ -254,7 +254,7 @@ dsHsBind dflags
         ; let mk_bind (ABE { abe_wrap = wrap
                            , abe_poly = global
                            , abe_mono = local, abe_prags = spec_prags })
-                         -- See Note [AbsBinds wrappers] in HsBinds
+                         -- See Note [AbsBinds wrappers] in GHC.Syntax.Binding
                 = do { tup_id  <- newSysLocalDs tup_ty
                      ; core_wrap <- dsHsWrapper wrap
                      ; let rhs = core_wrap $ mkLams tyvars $ mkLams dicts $
