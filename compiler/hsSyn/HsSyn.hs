@@ -20,7 +20,7 @@ module HsSyn (
         module GHC.Syntax.Binding,
         module GHC.Syntax.Declaration,
         module HsExpr,
-        module HsImpExp,
+        module GHC.Syntax.ImportExport,
         module HsLit,
         module HsPat,
         module HsTypes,
@@ -36,7 +36,7 @@ module HsSyn (
 import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import GHC.Syntax.Expression
-import HsImpExp
+import GHC.Syntax.ImportExport
 import HsLit
 import PlaceHolder
 import HsPat

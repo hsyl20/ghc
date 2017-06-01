@@ -305,7 +305,7 @@ Library
         GHC.Syntax.Declaration
         GHC.Syntax.Documentation
         GHC.Syntax.Expression
-        HsImpExp
+        GHC.Syntax.ImportExport
         HsLit
         PlaceHolder
         HsPat

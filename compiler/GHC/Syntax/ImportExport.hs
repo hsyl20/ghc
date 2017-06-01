@@ -3,15 +3,15 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-HsImpExp: Abstract syntax: imports, exports, interfaces
+Abstract syntax: imports, exports, interfaces
 -}
 
 {-# LANGUAGE DeriveDataTypeable #-}
 
-module HsImpExp where
+module GHC.Syntax.ImportExport where
 
 import GHC.Data.Module           ( ModuleName )
-import GHC.Syntax.Documentation            ( HsDocString )
+import GHC.Syntax.Documentation  ( HsDocString )
 import GHC.Data.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
 import GHC.Data.BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )
 import GHC.Data.FieldLabel       ( FieldLbl(..) )

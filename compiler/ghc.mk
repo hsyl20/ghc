@@ -487,7 +487,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Syntax.Declaration \
 	GHC.Syntax.Documentation \
 	GHC.Syntax.Expression \
-	HsImpExp \
+	GHC.Syntax.ImportExport \
 	HsLit \
 	PlaceHolder \
 	GHC.Desugar.Match.Expr \

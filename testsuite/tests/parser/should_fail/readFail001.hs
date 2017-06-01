@@ -1,6 +1,6 @@
 -- !!! this module supposedly includes one of each Haskell construct
 
--- HsImpExp stuff
+-- GHC.Syntax.ImportExport stuff
 
 module OneOfEverything (
         fixn,
