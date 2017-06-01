@@ -42,7 +42,7 @@ module TcEvidence (
 import GHC.Data.Var
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Coercion
-import PprCore ()   -- Instance OutputableBndr TyVar
+import GHC.Core.PrettyPrint ()   -- Instance OutputableBndr TyVar
 import TcType
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

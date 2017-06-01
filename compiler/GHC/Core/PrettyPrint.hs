@@ -8,7 +8,7 @@ Printing of Core syntax
 
 {-# LANGUAGE MultiWayIf #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module PprCore (
+module GHC.Core.PrettyPrint (
         pprCoreExpr, pprParendExpr,
         pprCoreBinding, pprCoreBindings, pprCoreAlt,
         pprCoreBindingWithSize, pprCoreBindingsWithSize,
@@ -465,7 +465,7 @@ ppIdInfo id info
     , (not (null rules), text "RULES:" <+> vcat (map pprRule rules))
     ]   -- Inline pragma, occ, demand, one-shot info
         -- printed out with all binders (when debug is on);
-        -- see PprCore.pprIdBndr
+        -- see GHC.Core.PrettyPrint.pprIdBndr
   where
     pp_scope | isGlobalId id   = text "GblId"
              | isExportedId id = text "LclIdX"

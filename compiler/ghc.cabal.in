@@ -280,7 +280,7 @@ Library
         CoreSeq
         GHC.Core.Analyse.Stats
         MkCore
-        PprCore
+        GHC.Core.PrettyPrint
         GHC.Desugar.Match.Expr
         GHC.Desugar.Match.TermEqOracle
         GHC.Desugar.Match.Check

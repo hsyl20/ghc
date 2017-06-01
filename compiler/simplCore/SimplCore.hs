@@ -16,7 +16,7 @@ import GHC.Types
 import CSE              ( cseProgram )
 import Rules            ( mkRuleBase, unionRuleBase,
                           extendRuleBaseList, ruleCheckProgram, addRuleInfo, )
-import PprCore          ( pprCoreBindings, pprCoreExpr )
+import GHC.Core.PrettyPrint          ( pprCoreBindings, pprCoreExpr )
 import OccurAnal        ( occurAnalysePgm, occurAnalyseExpr )
 import GHC.Data.Id.Info
 import GHC.Core.Analyse.Stats        ( coreBindsSize, coreBindsStats, exprSize )

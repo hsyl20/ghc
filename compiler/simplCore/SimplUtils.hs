@@ -40,7 +40,7 @@ import CoreMonad        ( SimplifierMode(..), Tick(..) )
 import GHC.Config.Flags
 import GHC.Core.Syntax
 import qualified GHC.Core.Substitution
-import PprCore
+import GHC.Core.PrettyPrint
 import GHC.Core.FreeVars
 import CoreUtils
 import GHC.Core.Arity

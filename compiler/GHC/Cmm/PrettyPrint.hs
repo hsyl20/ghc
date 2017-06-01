@@ -50,7 +50,7 @@ import GHC.Utils.Outputable
 import GHC.Cmm.PrettyPrint.Declaration
 import GHC.Cmm.PrettyPrint.Expression
 import GHC.Utils
-import PprCore ()
+import GHC.Core.PrettyPrint ()
 
 import GHC.Data.BasicTypes
 import Compiler.Hoopl

@@ -16,7 +16,7 @@ import ByteCodeTypes
 import GHCi.RemoteTypes
 import GHCi.FFI (C_ffi_cif)
 import StgCmmLayout     ( ArgRep(..) )
-import PprCore
+import GHC.Core.PrettyPrint
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Name

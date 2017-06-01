@@ -31,7 +31,7 @@ import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStr
 import CoreMonad        ( Tick(..), SimplifierMode(..) )
 import GHC.Core.Syntax
 import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
-import PprCore          ( pprCoreExpr )
+import GHC.Core.PrettyPrint          ( pprCoreExpr )
 import GHC.Core.Optimise.Unfolding
 import CoreUtils
 import GHC.Core.Arity

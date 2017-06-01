@@ -44,7 +44,7 @@ module IfaceSyn (
 import IfaceType
 import BinFingerprint
 import GHC.Core.Syntax( IsOrphan, isOrphan )
-import PprCore()            -- Printing DFunArgs
+import GHC.Core.PrettyPrint()            -- Printing DFunArgs
 import GHC.Data.Demand
 import GHC.Data.Class
 import GHC.Data.FieldLabel

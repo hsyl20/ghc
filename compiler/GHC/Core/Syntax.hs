@@ -1136,7 +1136,7 @@ Orphan-hood is computed
 ************************************************************************
 
 The CoreRule type and its friends are dealt with mainly in CoreRules,
-but GHC.Core.FreeVars, Subst, PprCore, CoreTidy also inspect the representation.
+but GHC.Core.FreeVars, Subst, GHC.Core.PrettyPrint, CoreTidy also inspect the representation.
 -}
 
 -- | Gathers a collection of 'CoreRule's. Maps (the name of) an 'Id' to its rules

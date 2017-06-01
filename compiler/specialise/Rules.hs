@@ -37,7 +37,7 @@ import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, bindFreeVars
 import CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,
                           stripTicksTopT, stripTicksTopE,
                           isJoinBind )
-import PprCore          ( pprRules )
+import GHC.Core.PrettyPrint          ( pprRules )
 import GHC.Data.Type             ( Type, substTy, mkTCvSubst )
 import qualified GHC.Data.Type as Type
 import TcType           ( tcSplitTyConApp_maybe )
@@ -260,7 +260,7 @@ pprRulesForUser :: DynFlags -> [CoreRule] -> SDoc
 -- (b) sort them into order based on the rule name
 -- (c) suppress uniques (unless -dppr-debug is on)
 -- This combination makes the output stable so we can use in testing
--- It's here rather than in PprCore because it calls tidyRules
+-- It's here rather than in GHC.Core.PrettyPrint because it calls tidyRules
 pprRulesForUser dflags rules
   = withPprStyle (defaultUserStyle dflags) $
     pprRules $

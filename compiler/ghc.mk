@@ -533,7 +533,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Platform \
 	GHC.Config.Platform.Constants \
 	GHC.Utils.PrettyPrint.Colour \
-	PprCore \
+	GHC.Core.PrettyPrint \
 	PrelNames \
 	PrelRules \
 	GHC.Utils.PrettyPrint \

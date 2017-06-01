@@ -38,7 +38,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import PprCore
+import GHC.Core.PrettyPrint
 import GHC.Utils.Error
 import GHC.Data.Coercion
 import GHC.Data.SrcLoc

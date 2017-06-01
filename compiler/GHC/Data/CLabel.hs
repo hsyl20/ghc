@@ -130,7 +130,7 @@ import GHC.Config.Flags
 import GHC.Platform
 import GHC.Data.Unique.Set
 import GHC.Utils
-import PprCore ( {- instances -} )
+import GHC.Core.PrettyPrint ( {- instances -} )
 
 -- -----------------------------------------------------------------------------
 -- The CLabel type

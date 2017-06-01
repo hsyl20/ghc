@@ -59,7 +59,7 @@ import GHC.Data.Unique.Supply
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Utils.Outputable
-import PprCore          ()              -- Instances
+import GHC.Core.PrettyPrint          ()              -- Instances
 import Data.List
 
 

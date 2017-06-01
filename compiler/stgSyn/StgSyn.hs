@@ -60,7 +60,7 @@ import GHC.Data.Module      ( Module )
 import GHC.Utils.Outputable
 import GHC.Packages    ( isDllName )
 import GHC.Platform
-import PprCore     ( {- instances -} )
+import GHC.Core.PrettyPrint     ( {- instances -} )
 import PrimOp      ( PrimOp, PrimCall )
 import GHC.Data.Type.Constructor       ( PrimRep(..), TyCon )
 import GHC.Data.Type        ( Type )

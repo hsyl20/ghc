@@ -49,7 +49,7 @@ import GHC.Syntax.Type
 import TcEvidence
 import GHC.Data.BasicTypes
 -- others:
-import PprCore          ( {- instance OutputableBndr TyVar -} )
+import GHC.Core.PrettyPrint          ( {- instance OutputableBndr TyVar -} )
 import TysWiredIn
 import GHC.Data.Var
 import GHC.Data.RdrName ( RdrName )

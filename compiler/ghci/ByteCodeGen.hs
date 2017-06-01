@@ -27,7 +27,7 @@ import ForeignCall
 import GHC.Types
 import CoreUtils
 import GHC.Core.Syntax
-import PprCore
+import GHC.Core.PrettyPrint
 import GHC.Data.Literal
 import PrimOp
 import GHC.Core.FreeVars

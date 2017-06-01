@@ -30,7 +30,7 @@ import GHC.Core.Syntax
 import GHC.Data.FastString      ( nilFS, mkFastString )
 import GHC.Data.Module
 import GHC.Utils.Outputable
-import PprCore         ()
+import GHC.Core.PrettyPrint         ()
 import GHC.Cmm.PrettyPrint.Expression      ( pprExpr )
 import GHC.Data.SrcLoc
 import GHC.Utils

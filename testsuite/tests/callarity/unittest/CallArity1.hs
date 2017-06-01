@@ -17,7 +17,7 @@ import Control.Monad
 import Control.Monad.IO.Class
 import System.Environment( getArgs )
 import GHC.Data.Var.Set
-import PprCore
+import GHC.Core.PrettyPrint
 import GHC.Data.Unique
 import GHC.Data.Unique.Set
 import GHC.Core.Analyse.Lint
