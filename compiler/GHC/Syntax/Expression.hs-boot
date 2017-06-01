@@ -5,7 +5,7 @@
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE RoleAnnotations #-}
 
-module HsExpr where
+module GHC.Syntax.Expression where
 
 import GHC.Data.SrcLoc     ( Located )
 import GHC.Utils.Outputable ( SDoc, Outputable )

@@ -28,7 +28,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TcEvidence
-import HsExpr  ( UnboundVar(..) )
+import GHC.Syntax.Expression  ( UnboundVar(..) )
 import GHC.Syntax.Binding ( PatSynBind(..) )
 import GHC.Data.Name
 import GHC.Data.RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv

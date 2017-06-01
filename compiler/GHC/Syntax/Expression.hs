@@ -13,7 +13,7 @@
 {-# LANGUAGE DeriveFunctor #-}
 
 -- | Abstract Haskell syntax for expressions.
-module HsExpr where
+module GHC.Syntax.Expression where
 
 #include "HsVersions.h"
 

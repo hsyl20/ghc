@@ -94,7 +94,7 @@ module HsUtils(
 
 import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
-import HsExpr
+import GHC.Syntax.Expression
 import HsPat
 import HsTypes
 import HsLit

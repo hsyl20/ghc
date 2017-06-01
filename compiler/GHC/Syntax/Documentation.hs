@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP, DeriveDataTypeable #-}
 
-module HsDoc (
+module GHC.Syntax.Documentation (
   HsDocString(..),
   LHsDocString,
   ppr_mbDoc

@@ -3,7 +3,7 @@ import TcType     ( TcTauType )
 import TcRnTypes  ( TcM )
 import TcEvidence ( TcCoercion )
 import GHC.Utils.Outputable ( Outputable )
-import HsExpr     ( HsExpr )
+import GHC.Syntax.Expression     ( HsExpr )
 import GHC.Data.Name       ( Name )
 
 -- This boot file exists only to tie the knot between

@@ -35,7 +35,7 @@ module HsSyn (
 -- friends:
 import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
-import HsExpr
+import GHC.Syntax.Expression
 import HsImpExp
 import HsLit
 import PlaceHolder

@@ -486,7 +486,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Syntax.Binding \
 	GHC.Syntax.Declaration \
 	GHC.Syntax.Documentation \
-	HsExpr \
+	GHC.Syntax.Expression \
 	HsImpExp \
 	HsLit \
 	PlaceHolder \

@@ -33,7 +33,7 @@ import GHC.Program.Driver.Pipeline.Monad
 import GHC.Types
 import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
-import HsExpr
+import GHC.Syntax.Expression
 import GHC.Data.Tree.OrdList
 import GHC.Data.Id
 import TcRnTypes

@@ -2,7 +2,7 @@
 
 module TcSplice where
 import HsSyn    ( HsSplice, HsBracket, HsExpr, LHsExpr )
-import HsExpr   ( PendingRnSplice )
+import GHC.Syntax.Expression   ( PendingRnSplice )
 import GHC.Data.Name     ( Name )
 import TcRnTypes( TcM, TcId )
 import TcType   ( ExpRhoType )
