@@ -27,7 +27,7 @@ import GHC.Syntax
 
 import GHC.Data.Id
 import GHC.Core.Syntax
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import TcHsSyn ( shortCutLit )

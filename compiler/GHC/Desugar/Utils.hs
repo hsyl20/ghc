@@ -50,7 +50,7 @@ import GHC.Core.Syntax
 import GHC.Desugar.Monad
 
 import GHC.Core.Utils
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Data.Id.Make
 import GHC.Data.Id
 import GHC.Data.Literal
@@ -551,7 +551,7 @@ mkCoreAppDs _ (Var f `App` Type ty1 `App` Type ty2 `App` arg1) arg2
                           -> v1        -- Note [Desugaring seq (2) and (3)]
                    _      -> mkWildValBinder ty1
 
-mkCoreAppDs s fun arg = mkCoreApp s fun arg  -- The rest is done in MkCore
+mkCoreAppDs s fun arg = mkCoreApp s fun arg  -- The rest is done in GHC.Core.Syntax.Make
 
 -- NB: No argument can be levity polymorphic
 mkCoreAppsDs :: SDoc -> CoreExpr -> [CoreExpr] -> CoreExpr

@@ -73,7 +73,7 @@ import GHC.Core.Utils        ( exprType, exprIsHNF
 import GHC.Core.Arity        ( exprBotStrictness_maybe )
 import GHC.Core.FreeVars          -- all of it
 import GHC.Core.Substitution
-import MkCore           ( sortQuantVars )
+import GHC.Core.Syntax.Make           ( sortQuantVars )
 
 import GHC.Data.Id
 import GHC.Data.Id.Info

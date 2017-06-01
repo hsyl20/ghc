@@ -16,7 +16,7 @@ import {-# SOURCE #-} GHC.Desugar.Expression  ( dsLExpr, dsLocalBinds )
 import {-# SOURCE #-} GHC.Desugar.Match   ( matchSinglePat )
 
 import GHC.Syntax
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Core.Syntax
 import GHC.Data.Var
 

@@ -33,7 +33,7 @@ import TcEvidence
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import GHC.Core.Utils
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Desugar.Binds (dsHsWrapper)
 
 import GHC.Data.Name

@@ -47,7 +47,7 @@ import GHC.Data.Type
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import TcType
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Core.Utils        ( exprType, mkCast )
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Literal
@@ -123,7 +123,7 @@ is right here.
 wiredInIds :: [Id]
 wiredInIds
   =  [lazyId, dollarId, oneShotId, runRWId, noinlineId]
-  ++ errorIds           -- Defined in MkCore
+  ++ errorIds           -- Defined in GHC.Core.Syntax.Make
   ++ ghcPrimIds
 
 -- These Ids are exported from GHC.Prim

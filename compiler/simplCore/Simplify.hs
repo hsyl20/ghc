@@ -20,7 +20,7 @@ import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
 import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
 import GHC.Data.Id
 import GHC.Data.Id.Make             ( seqId )
-import MkCore           ( mkImpossibleExpr, castBottomExpr )
+import GHC.Core.Syntax.Make           ( mkImpossibleExpr, castBottomExpr )
 import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
 import GHC.Data.Coercion hiding  ( substCo, substCoVar )

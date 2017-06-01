@@ -35,7 +35,7 @@ import GHC.Data.Type             hiding ( substTy )
 import GHC.Data.Type.Constructor            ( tyConName )
 import GHC.Data.Id
 import GHC.Core.PrettyPrint          ( pprParendExpr )
-import MkCore           ( mkImpossibleExpr )
+import GHC.Core.Syntax.Make           ( mkImpossibleExpr )
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

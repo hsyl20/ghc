@@ -471,7 +471,7 @@ bindNonRec :: Id -> CoreExpr -> CoreExpr -> CoreExpr
 -- It's used by the desugarer to avoid building bindings
 -- that give Core Lint a heart attack, although actually
 -- the simplifier deals with them perfectly well. See
--- also 'MkCore.mkCoreLet'
+-- also 'GHC.Core.Syntax.Make.mkCoreLet'
 bindNonRec bndr rhs body
   | needsCaseBinding (idType bndr) rhs = Case rhs bndr (exprType body) [(DEFAULT, [], body)]
   | otherwise                          = Let (NonRec bndr rhs) body

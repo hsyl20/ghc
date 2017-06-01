@@ -49,7 +49,7 @@ import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Tree.OrdList
 import GHC.Data.Id as Id
-import MkCore                   ( mkWildValBinder )
+import GHC.Core.Syntax.Make                   ( mkWildValBinder )
 import TysWiredIn
 import qualified GHC.Data.Type as Type
 import GHC.Data.Type hiding              ( substTy, substTyVar, substTyVarBndr )
@@ -267,7 +267,7 @@ way to do that is to start of with a representative
 Id in the in-scope set
 
 There can be *occurrences* of wild-id.  For example,
-MkCore.mkCoreApp transforms
+GHC.Core.Syntax.Make.mkCoreApp transforms
    e (a /# b)   -->   case (a /# b) of wild { DEFAULT -> e wild }
 This is ok provided 'wild' isn't free in 'e', and that's the delicate
 thing. Generally, you want to run the simplifier to get rid of the

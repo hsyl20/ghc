@@ -41,7 +41,7 @@ import GHC.Core.Syntax
 import GHC.Core.Utils
 import GHC.Core.Optimise.Unfolding
 import GHC.Core.Analyse.Lint
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Id.Info

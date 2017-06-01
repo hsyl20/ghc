@@ -20,7 +20,7 @@ module GHC.Plugins
    , module GHC.Data.Literal
    , module GHC.Data.DataConstructor
    , module GHC.Core.Utils
-   , module MkCore
+   , module GHC.Core.Syntax.Make
    , module GHC.Core.FreeVars
    , module GHC.Core.Substitution
    , module Rules
@@ -68,7 +68,7 @@ import GHC.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import GHC.Core.Utils
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Core.FreeVars
 import GHC.Core.Substitution hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
        -- These names are also exported by Type

@@ -445,11 +445,11 @@ expression is floated out:
 
 In this situation you should use @case@ rather than a @let@. The function
 'GHC.Core.Utils.needsCaseBinding' can help you determine which to generate, or
-alternatively use 'MkCore.mkCoreLet' rather than this constructor directly,
+alternatively use 'GHC.Core.Syntax.Make.mkCoreLet' rather than this constructor directly,
 which will generate a @case@ if necessary
 
 The let/app invariant is initially enforced by mkCoreLet and mkCoreApp in
-coreSyn/MkCore.
+coreSyn/GHC.Core.Syntax.Make.
 
 Note [GHC.Core.Syntax case invariants]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1788,7 +1788,7 @@ deTagAlt (con, bndrs, rhs) = (con, [b | TB b _ <- bndrs], deTagExpr rhs)
 -}
 
 -- | Apply a list of argument expressions to a function expression in a nested fashion. Prefer to
--- use 'MkCore.mkCoreApps' if possible
+-- use 'GHC.Core.Syntax.Make.mkCoreApps' if possible
 mkApps    :: Expr b -> [Arg b]  -> Expr b
 -- | Apply a list of type argument expressions to a function expression in a nested fashion
 mkTyApps  :: Expr b -> [Type]   -> Expr b
@@ -1797,7 +1797,7 @@ mkCoApps  :: Expr b -> [Coercion] -> Expr b
 -- | Apply a list of type or value variables to a function expression in a nested fashion
 mkVarApps :: Expr b -> [Var] -> Expr b
 -- | Apply a list of argument expressions to a data constructor in a nested fashion. Prefer to
--- use 'MkCore.mkCoreConApps' if possible
+-- use 'GHC.Core.Syntax.Make.mkCoreConApps' if possible
 mkConApp      :: DataCon -> [Arg b] -> Expr b
 
 mkApps    f args = foldl App                       f args
@@ -1818,20 +1818,20 @@ mkTyArg ty
   | otherwise                        = Type ty
 
 -- | Create a machine integer literal expression of type @Int#@ from an @Integer@.
--- If you want an expression of type @Int@ use 'MkCore.mkIntExpr'
+-- If you want an expression of type @Int@ use 'GHC.Core.Syntax.Make.mkIntExpr'
 mkIntLit      :: DynFlags -> Integer -> Expr b
 -- | Create a machine integer literal expression of type @Int#@ from an @Int@.
--- If you want an expression of type @Int@ use 'MkCore.mkIntExpr'
+-- If you want an expression of type @Int@ use 'GHC.Core.Syntax.Make.mkIntExpr'
 mkIntLitInt   :: DynFlags -> Int     -> Expr b
 
 mkIntLit    dflags n = Lit (mkMachInt dflags n)
 mkIntLitInt dflags n = Lit (mkMachInt dflags (toInteger n))
 
 -- | Create a machine word literal expression of type  @Word#@ from an @Integer@.
--- If you want an expression of type @Word@ use 'MkCore.mkWordExpr'
+-- If you want an expression of type @Word@ use 'GHC.Core.Syntax.Make.mkWordExpr'
 mkWordLit     :: DynFlags -> Integer -> Expr b
 -- | Create a machine word literal expression of type  @Word#@ from a @Word@.
--- If you want an expression of type @Word@ use 'MkCore.mkWordExpr'
+-- If you want an expression of type @Word@ use 'GHC.Core.Syntax.Make.mkWordExpr'
 mkWordLitWord :: DynFlags -> Word -> Expr b
 
 mkWordLit     dflags w = Lit (mkMachWord dflags w)
@@ -1844,41 +1844,41 @@ mkInt64LitInt64 :: Int64 -> Expr b
 mkInt64LitInt64 w = Lit (mkMachInt64 (toInteger w))
 
 -- | Create a machine character literal expression of type @Char#@.
--- If you want an expression of type @Char@ use 'MkCore.mkCharExpr'
+-- If you want an expression of type @Char@ use 'GHC.Core.Syntax.Make.mkCharExpr'
 mkCharLit :: Char -> Expr b
 -- | Create a machine string literal expression of type @Addr#@.
--- If you want an expression of type @String@ use 'MkCore.mkStringExpr'
+-- If you want an expression of type @String@ use 'GHC.Core.Syntax.Make.mkStringExpr'
 mkStringLit :: String -> Expr b
 
 mkCharLit   c = Lit (mkMachChar c)
 mkStringLit s = Lit (mkMachString s)
 
 -- | Create a machine single precision literal expression of type @Float#@ from a @Rational@.
--- If you want an expression of type @Float@ use 'MkCore.mkFloatExpr'
+-- If you want an expression of type @Float@ use 'GHC.Core.Syntax.Make.mkFloatExpr'
 mkFloatLit :: Rational -> Expr b
 -- | Create a machine single precision literal expression of type @Float#@ from a @Float@.
--- If you want an expression of type @Float@ use 'MkCore.mkFloatExpr'
+-- If you want an expression of type @Float@ use 'GHC.Core.Syntax.Make.mkFloatExpr'
 mkFloatLitFloat :: Float -> Expr b
 
 mkFloatLit      f = Lit (mkMachFloat f)
 mkFloatLitFloat f = Lit (mkMachFloat (toRational f))
 
 -- | Create a machine double precision literal expression of type @Double#@ from a @Rational@.
--- If you want an expression of type @Double@ use 'MkCore.mkDoubleExpr'
+-- If you want an expression of type @Double@ use 'GHC.Core.Syntax.Make.mkDoubleExpr'
 mkDoubleLit :: Rational -> Expr b
 -- | Create a machine double precision literal expression of type @Double#@ from a @Double@.
--- If you want an expression of type @Double@ use 'MkCore.mkDoubleExpr'
+-- If you want an expression of type @Double@ use 'GHC.Core.Syntax.Make.mkDoubleExpr'
 mkDoubleLitDouble :: Double -> Expr b
 
 mkDoubleLit       d = Lit (mkMachDouble d)
 mkDoubleLitDouble d = Lit (mkMachDouble (toRational d))
 
 -- | Bind all supplied binding groups over an expression in a nested let expression. Assumes
--- that the rhs satisfies the let/app invariant.  Prefer to use 'MkCore.mkCoreLets' if
+-- that the rhs satisfies the let/app invariant.  Prefer to use 'GHC.Core.Syntax.Make.mkCoreLets' if
 -- possible, which does guarantee the invariant
 mkLets        :: [Bind b] -> Expr b -> Expr b
 -- | Bind all supplied binders over an expression in a nested lambda expression. Prefer to
--- use 'MkCore.mkCoreLams' if possible
+-- use 'GHC.Core.Syntax.Make.mkCoreLams' if possible
 mkLams        :: [b] -> Expr b -> Expr b
 
 mkLams binders body = foldr Lam body binders

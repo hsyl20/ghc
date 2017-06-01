@@ -22,7 +22,7 @@ import GHC.Core.Syntax
 
 import GHC.Desugar.Monad
 import GHC.Core.Utils
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Data.Id.Make
 import ForeignCall
 import GHC.Data.DataConstructor

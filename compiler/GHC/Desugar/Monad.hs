@@ -55,7 +55,7 @@ module GHC.Desugar.Monad (
 import TcRnMonad
 import GHC.TypeSystem.FamilyInstance
 import GHC.Core.Syntax
-import MkCore    ( unitExpr )
+import GHC.Core.Syntax.Make    ( unitExpr )
 import GHC.Core.Utils ( exprType, isExprLevPoly )
 import GHC.Syntax
 import TcIface

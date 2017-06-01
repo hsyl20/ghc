@@ -17,7 +17,7 @@ import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsL
 import GHC.Syntax
 import TcHsSyn
 import GHC.Core.Syntax
-import MkCore
+import GHC.Core.Syntax.Make
 
 import GHC.Desugar.Monad          -- the monadery used in the desugarer
 import GHC.Desugar.Utils

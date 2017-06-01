@@ -26,7 +26,7 @@ import CoreMonad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )
 import GHC.Core.Syntax
 import GHC.Core.Substitution
-import MkCore hiding( FloatBind(..) )   -- We use our own FloatBind here
+import GHC.Core.Syntax.Make hiding( FloatBind(..) )   -- We use our own FloatBind here
 import GHC.Data.Type
 import GHC.Data.Literal
 import GHC.Data.Coercion

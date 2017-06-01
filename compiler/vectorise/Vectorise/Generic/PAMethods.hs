@@ -16,7 +16,7 @@ import Vectorise.Generic.Description
 import GHC.Core.Syntax
 import GHC.Core.Utils
 import GHC.TypeSystem.FamilyInstance
-import MkCore            ( mkWildCase, mkCoreLet )
+import GHC.Core.Syntax.Make            ( mkWildCase, mkCoreLet )
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Type

@@ -35,7 +35,7 @@ import TcEnv
 import TcHsType
 import TcUnify
 import GHC.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
-import MkCore     ( nO_METHOD_BINDING_ERROR_ID )
+import GHC.Core.Syntax.Make     ( nO_METHOD_BINDING_ERROR_ID )
 import GHC.Core.Optimise.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import GHC.Data.Type
 import TcEvidence

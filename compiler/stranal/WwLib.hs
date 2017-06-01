@@ -19,7 +19,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info           ( JoinArity, vanillaIdInfo )
 import GHC.Data.DataConstructor
 import GHC.Data.Demand
-import MkCore           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
+import GHC.Core.Syntax.Make           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
                         , mkCoreApp, mkCoreLet )
 import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
 import TysPrim          ( voidPrimTy )

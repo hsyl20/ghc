@@ -717,7 +717,7 @@ Note [exprIsConApp_maybe on literal strings]
 See #9400 and #13317.
 
 Conceptually, a string literal "abc" is just ('a':'b':'c':[]), but in Core
-they are represented as unpackCString# "abc"# by MkCore.mkStringExprFS, or
+they are represented as unpackCString# "abc"# by GHC.Core.Syntax.Make.mkStringExprFS, or
 unpackCStringUtf8# when the literal contains multi-byte UTF8 characters.
 
 For optimizations we want to be able to treat it as a list, so they can be
@@ -831,7 +831,7 @@ exprIsConApp_maybe (in_scope, id_unf) expr
 dealWithStringLiteral :: Var -> BS.ByteString -> Coercion
                       -> Maybe (DataCon, [Type], [CoreExpr])
 
--- This is not possible with user-supplied empty literals, MkCore.mkStringExprFS
+-- This is not possible with user-supplied empty literals, GHC.Core.Syntax.Make.mkStringExprFS
 -- turns those into [] automatically, but just in case something else in GHC
 -- generates a string literal directly.
 dealWithStringLiteral _   str co

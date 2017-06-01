@@ -512,7 +512,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.List.SetOps \
 	GHC.Data.Literal \
 	GHC.Data.Maybe \
-	MkCore \
+	GHC.Core.Syntax.Make \
 	GHC.Data.Id.Make \
 	GHC.Data.Module \
 	GHC.Utils.Monad \

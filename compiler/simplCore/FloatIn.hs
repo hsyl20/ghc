@@ -20,7 +20,7 @@ module FloatIn ( floatInwards ) where
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Types         ( ModGuts(..) )
 import GHC.Core.Utils
 import GHC.Core.FreeVars

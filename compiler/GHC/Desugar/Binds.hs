@@ -30,7 +30,7 @@ import GHC.Core.Syntax          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
 import GHC.Core.Optimise          ( simpleOptExpr )
 import OccurAnal        ( occurAnalyseExpr )
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Core.Utils
 import GHC.Core.Arity ( etaExpand )
 import GHC.Core.Optimise.Unfolding

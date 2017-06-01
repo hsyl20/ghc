@@ -32,7 +32,7 @@ import TcBinds( tcRecSelBinds )
 import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import TcType
 import TysWiredIn( unitTy )
-import MkCore( rEC_SEL_ERROR_ID )
+import GHC.Core.Syntax.Make( rEC_SEL_ERROR_ID )
 import GHC.Syntax
 import GHC.Data.Class
 import GHC.Data.Type

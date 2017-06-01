@@ -3,7 +3,7 @@ import GHC.Core.Syntax
 import GHC.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
-import MkCore
+import GHC.Core.Syntax.Make
 import CallArity (callArityRHS)
 import GHC.Data.Id.Make
 import GHC.Utils.SysTools

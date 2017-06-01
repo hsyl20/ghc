@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 
 -- | Handy functions for creating much Core syntax
-module MkCore (
+module GHC.Core.Syntax.Make (
         -- * Constructing normal syntax
         mkCoreLet, mkCoreLets,
         mkCoreApp, mkCoreApps, mkCoreConApps,

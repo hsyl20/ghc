@@ -42,7 +42,7 @@ import GHC.Data.Unique      ( hasKey )
 import GHC.Data.Coercion    ( mkCoVarCo )
 import TysWiredIn  ( coercibleDataCon )
 import GHC.Data.DataConstructor     ( dataConWrapId )
-import MkCore      ( mkCoreLet )
+import GHC.Core.Syntax.Make      ( mkCoreLet )
 import GHC.Data.Module
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment

@@ -23,7 +23,7 @@ import Vectorise.Builtins
 import Vectorise.Utils
 
 import GHC.Core.Utils
-import MkCore
+import GHC.Core.Syntax.Make
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import GHC.Data.Class

@@ -279,7 +279,7 @@ Library
         GHC.Core.Utils
         GHC.Core.Force
         GHC.Core.Analyse.Stats
-        MkCore
+        GHC.Core.Syntax.Make
         GHC.Core.PrettyPrint
         GHC.Desugar.Match.Expr
         GHC.Desugar.Match.TermEqOracle

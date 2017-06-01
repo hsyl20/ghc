@@ -36,7 +36,7 @@ import TcHsSyn
 import GHC.Data.Type
 import GHC.Core.Syntax
 import GHC.Core.Utils
-import MkCore
+import GHC.Core.Syntax.Make
 
 import GHC.Config.Flags
 import CostCentre
