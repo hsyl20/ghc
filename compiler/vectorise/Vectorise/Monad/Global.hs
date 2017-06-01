@@ -36,7 +36,7 @@ module Vectorise.Monad.Global (
 import Vectorise.Monad.Base
 import Vectorise.Env
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor

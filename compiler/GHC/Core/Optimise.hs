@@ -22,7 +22,7 @@ module GHC.Core.Optimise (
 
 import GHC.Core.Arity( joinRhsArity, etaExpandToJoinPoint )
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreSubst
 import CoreUtils
 import CoreFVs
@@ -680,7 +680,7 @@ unfolding captured by the INLINE pragma has arity 1.  If we try to
 convert g to be a join point, its unfolding will still have arity 1
 (since it is stable, and we don't meddle with stable unfoldings), and
 Lint will complain (see Note [Invariants on join points], (2a), in
-CoreSyn.  Trac #13413.
+GHC.Core.Syntax.  Trac #13413.
 
 Moreover, since g is going to be inlined anyway, there is no benefit
 from making it a join point.
@@ -869,7 +869,7 @@ Note [DFun arity check]
 ~~~~~~~~~~~~~~~~~~~~~~~
 Here we check that the total number of supplied arguments (inclding
 type args) matches what the dfun is expecting.  This may be *less*
-than the ordinary arity of the dfun: see Note [DFun unfoldings] in CoreSyn
+than the ordinary arity of the dfun: see Note [DFun unfoldings] in GHC.Core.Syntax
 -}
 
 exprIsLiteral_maybe :: InScopeEnv -> CoreExpr -> Maybe Literal

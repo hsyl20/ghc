@@ -10,7 +10,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 import Vectorise.Utils.Base
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion

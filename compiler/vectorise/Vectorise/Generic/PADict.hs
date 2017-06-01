@@ -10,7 +10,7 @@ import Vectorise.Generic.PAMethods ( buildPAScAndMethods )
 import Vectorise.Utils
 
 import GHC.Data.BasicTypes
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Module

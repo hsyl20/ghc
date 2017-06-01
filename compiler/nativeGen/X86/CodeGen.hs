@@ -57,7 +57,7 @@ import GHC.Cmm.Switch
 import GHC.Cmm
 import GHC.Cmm.Optimise.Dataflow
 import GHC.Data.CLabel
-import CoreSyn          ( Tickish(..) )
+import GHC.Core.Syntax          ( Tickish(..) )
 import GHC.Data.SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 
 -- The rest:

@@ -1,6 +1,6 @@
 -- !!! Tickled a bug in core2stg 
--- !!! (CoreSyn.Coerce constructors were not peeled off
--- !!! when converting CoreSyn.App)
+-- !!! (GHC.Core.Syntax.Coerce constructors were not peeled off
+-- !!! when converting GHC.Core.Syntax.App)
 
 module Main where
 

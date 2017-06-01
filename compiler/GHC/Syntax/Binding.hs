@@ -25,7 +25,7 @@ import {-# SOURCE #-} GHC.Syntax.Pattern  ( LPat )
 import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 import GHC.Syntax.Type
 import PprCore ()
-import CoreSyn
+import GHC.Core.Syntax
 import TcEvidence
 import GHC.Data.Type
 import GHC.Data.Name

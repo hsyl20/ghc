@@ -11,7 +11,7 @@ module SimplCore ( core2core, simplifyExpr ) where
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Types
 import CSE              ( cseProgram )
 import Rules            ( mkRuleBase, unionRuleBase,

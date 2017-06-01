@@ -30,7 +30,7 @@ import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsL
 import TcType
 import GHC.Data.Type ( splitPiTy )
 import TcEvidence
-import CoreSyn
+import GHC.Core.Syntax
 import CoreFVs
 import CoreUtils
 import MkCore

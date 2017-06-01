@@ -21,7 +21,7 @@ module GHC.Core.Analyse.Lint (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreFVs
 import CoreUtils
 import CoreStats   ( coreBindsStats )
@@ -140,7 +140,7 @@ Note [Linting type lets]
 ~~~~~~~~~~~~~~~~~~~~~~~~
 In the desugarer, it's very very convenient to be able to say (in effect)
         let a = Type Int in <body>
-That is, use a type let.   See Note [Type let] in CoreSyn.
+That is, use a type let.   See Note [Type let] in GHC.Core.Syntax.
 
 However, when linting <body> we need to remember that a=Int, else we might
 reject a correct program.  So we carry a type substitution (in this example
@@ -175,7 +175,7 @@ different types, called bad coercions. Following coercions are forbidden:
 
 Note [Join points]
 ~~~~~~~~~~~~~~~~~~
-We check the rules listed in Note [Invariants on join points] in CoreSyn. The
+We check the rules listed in Note [Invariants on join points] in GHC.Core.Syntax. The
 only one that causes any difficulty is the first: All occurrences must be tail
 calls. To this end, along with the in-scope set, we remember in le_joins the
 subset of in-scope Ids that are valid join ids. For example:
@@ -516,7 +516,7 @@ lintSingleBinding top_lvl_flag rec_flag (binder,rhs)
                 (badBndrTyMsg binder (text "levity-polymorphic"))
 
         -- Check the let/app invariant
-        -- See Note [CoreSyn let/app invariant] in CoreSyn
+        -- See Note [GHC.Core.Syntax let/app invariant] in GHC.Core.Syntax
        ; checkL ( isJoinId binder
                || not (isUnliftedType binder_ty)
                || (isNonRec rec_flag && exprOkForSpeculation rhs)
@@ -525,7 +525,7 @@ lintSingleBinding top_lvl_flag rec_flag (binder,rhs)
 
         -- Check that if the binder is top-level or recursive, it's not
         -- demanded. Primitive string literals are exempt as there is no
-        -- computation to perform, see Note [CoreSyn top-level string literals].
+        -- computation to perform, see Note [GHC.Core.Syntax top-level string literals].
        ; checkL (not (isStrictId binder)
             || (isNonRec rec_flag && not (isTopLevel top_lvl_flag))
             || exprIsLiteralString rhs)
@@ -533,7 +533,7 @@ lintSingleBinding top_lvl_flag rec_flag (binder,rhs)
 
         -- Check that if the binder is at the top level and has type Addr#,
         -- that it is a string literal, see
-        -- Note [CoreSyn top-level string literals].
+        -- Note [GHC.Core.Syntax top-level string literals].
        ; checkL (not (isTopLevel top_lvl_flag && binder_ty `eqType` addrPrimTy)
                  || exprIsLiteralString rhs)
            (mkTopNonLitStrMsg binder)
@@ -947,7 +947,7 @@ Consider:
 
 This is clearly ill-typed, since the jump is inside both an application and a
 lambda, either of which is enough to disqualify it as a tail call (see Note
-[Invariants on join points] in CoreSyn). However, strictly from a
+[Invariants on join points] in GHC.Core.Syntax). However, strictly from a
 lambda-calculus perspective, the term doesn't go wrong---after the two beta
 reductions, the jump *is* a tail call and everything is fine.
 
@@ -989,7 +989,7 @@ lintCoreArg fun_ty (Type arg_ty)
 
 lintCoreArg fun_ty arg
   = do { arg_ty <- markAllJoinsBad $ lintCoreExpr arg
-           -- See Note [Levity polymorphism invariants] in CoreSyn
+           -- See Note [Levity polymorphism invariants] in GHC.Core.Syntax
        ; lintL (not (isTypeLevPoly arg_ty))
            (text "Levity-polymorphic argument:" <+>
              (ppr arg <+> dcolon <+> parens (ppr arg_ty <+> dcolon <+> ppr (typeKind arg_ty))))
@@ -1081,7 +1081,7 @@ checkCaseAlts e ty alts =
 
           -- For types Int#, Word# with an infinite (well, large!) number of
           -- possible values, there should usually be a DEFAULT case
-          -- But (see Note [Empty case alternatives] in CoreSyn) it's ok to
+          -- But (see Note [Empty case alternatives] in GHC.Core.Syntax) it's ok to
           -- have *no* case alternatives.
           -- In effect, this is a kind of partial test. I suppose it's possible
           -- that we might *know* that 'x' was 1 or 2, in which case
@@ -1218,7 +1218,7 @@ lintIdBndr top_lvl bind_site id linterF
            (mkNonTopExternalNameMsg id)
 
        ; (ty, k) <- lintInTy (idType id)
-          -- See Note [Levity polymorphism invariants] in CoreSyn
+          -- See Note [Levity polymorphism invariants] in GHC.Core.Syntax
        ; lintL (isJoinId id || not (isKindLevPoly k))
            (text "Levity-polymorphic binder:" <+>
                  (ppr id <+> dcolon <+> parens (ppr ty <+> dcolon <+> ppr k)))

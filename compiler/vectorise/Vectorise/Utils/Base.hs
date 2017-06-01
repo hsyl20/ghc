@@ -31,7 +31,7 @@ import Vectorise.Monad
 import Vectorise.Vect
 import Vectorise.Builtins
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion

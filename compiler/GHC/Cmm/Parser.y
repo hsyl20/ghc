@@ -215,7 +215,7 @@ import StgCmmClosure
 import StgCmmLayout     hiding (ArgRep(..))
 import StgCmmTicky
 import StgCmmBind       ( emitBlackHoleCode, emitUpdateFrame )
-import CoreSyn          ( Tickish(SourceNote) )
+import GHC.Core.Syntax          ( Tickish(SourceNote) )
 
 import GHC.Cmm.Optimise.ConstantFolding
 import GHC.Cmm.Graph

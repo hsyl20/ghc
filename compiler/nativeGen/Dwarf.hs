@@ -5,7 +5,7 @@ module Dwarf (
 import GHC.Data.CLabel
 import GHC.Cmm.Expr         ( GlobalReg(..) )
 import Config          ( cProjectName, cProjectVersion )
-import CoreSyn         ( Tickish(..) )
+import GHC.Core.Syntax         ( Tickish(..) )
 import GHC.Cmm.DebugBlock
 import GHC.Config.Flags
 import GHC.Data.Module

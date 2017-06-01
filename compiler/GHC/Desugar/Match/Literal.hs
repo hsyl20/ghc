@@ -26,7 +26,7 @@ import GHC.Desugar.Utils
 import GHC.Syntax
 
 import GHC.Data.Id
-import CoreSyn
+import GHC.Core.Syntax
 import MkCore
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor

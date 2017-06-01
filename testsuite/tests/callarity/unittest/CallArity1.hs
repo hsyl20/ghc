@@ -1,5 +1,5 @@
 {-# LANGUAGE TupleSections #-}
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Data.Id
 import GHC.Data.Type

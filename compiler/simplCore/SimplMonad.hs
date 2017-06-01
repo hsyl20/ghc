@@ -25,7 +25,7 @@ import GHC.Data.Id               ( Id, mkSysLocalOrCoVar )
 import GHC.Data.Id.Info           ( IdDetails(..), vanillaIdInfo, setArityInfo )
 import GHC.Data.Type             ( Type, mkLamTypes )
 import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
-import CoreSyn          ( RuleEnv(..) )
+import GHC.Core.Syntax          ( RuleEnv(..) )
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
 import CoreMonad

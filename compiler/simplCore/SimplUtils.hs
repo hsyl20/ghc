@@ -38,7 +38,7 @@ module SimplUtils (
 import SimplEnv
 import CoreMonad        ( SimplifierMode(..), Tick(..) )
 import GHC.Config.Flags
-import CoreSyn
+import GHC.Core.Syntax
 import qualified CoreSubst
 import PprCore
 import CoreFVs
@@ -1056,7 +1056,7 @@ the former.
 
 preInlineUnconditionally :: DynFlags -> SimplEnv -> TopLevelFlag -> InId -> InExpr -> Bool
 -- Precondition: rhs satisfies the let/app invariant
--- See Note [CoreSyn let/app invariant] in CoreSyn
+-- See Note [GHC.Core.Syntax let/app invariant] in GHC.Core.Syntax
 -- Reason: we don't want to inline single uses, or discard dead bindings,
 --         for unlifted, side-effect-ful bindings
 preInlineUnconditionally dflags env top_lvl bndr rhs
@@ -1171,7 +1171,7 @@ postInlineUnconditionally
     -> Unfolding
     -> Bool
 -- Precondition: rhs satisfies the let/app invariant
--- See Note [CoreSyn let/app invariant] in CoreSyn
+-- See Note [GHC.Core.Syntax let/app invariant] in GHC.Core.Syntax
 -- Reason: we don't want to inline single uses, or discard dead bindings,
 --         for unlifted, side-effect-ful bindings
 postInlineUnconditionally dflags env top_lvl bndr occ_info rhs unfolding

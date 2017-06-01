@@ -19,7 +19,7 @@ import qualified CoreSubst
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
-import CoreSyn
+import GHC.Core.Syntax
 import Rules
 import GHC.Core.Optimise          ( collectBindersPushingCo )
 import CoreUtils        ( exprIsTrivial, applyTypeToArgs, mkCast )

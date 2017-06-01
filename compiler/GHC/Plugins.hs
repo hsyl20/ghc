@@ -6,7 +6,7 @@
 -- with saying "import GHC.Plugins".
 --
 -- Particularly interesting modules for plugin writers include
--- "CoreSyn" and "CoreMonad".
+-- "GHC.Core.Syntax" and "CoreMonad".
 module GHC.Plugins
    ( module GHC.Plugins.Types
    , module GHC.Data.RdrName
@@ -16,7 +16,7 @@ module GHC.Plugins
    , module GHC.Data.Id
    , module GHC.Data.Id.Info
    , module CoreMonad
-   , module CoreSyn
+   , module GHC.Core.Syntax
    , module GHC.Data.Literal
    , module GHC.Data.DataConstructor
    , module CoreUtils
@@ -64,7 +64,7 @@ import GHC.Data.Id.Info
 
 -- Core
 import CoreMonad
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import CoreUtils

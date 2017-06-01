@@ -12,7 +12,7 @@ import GHC.Data.Var.Environment
 import GHC.Config.Flags ( DynFlags )
 
 import GHC.Data.BasicTypes
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Id
 import GHC.Core.Arity ( typeArity )
 import CoreUtils ( exprIsCheap, exprIsTrivial )

@@ -2,7 +2,7 @@ module GHC.Desugar.Match where
 import GHC.Data.Var      ( Id )
 import TcType   ( Type )
 import GHC.Desugar.Monad  ( DsM, EquationInfo, MatchResult )
-import CoreSyn  ( CoreExpr )
+import GHC.Core.Syntax  ( CoreExpr )
 import GHC.Syntax    ( LPat, HsMatchContext, MatchGroup, LHsExpr )
 import GHC.Data.Name     ( Name )
 

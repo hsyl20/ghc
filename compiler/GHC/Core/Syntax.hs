@@ -6,8 +6,8 @@
 {-# LANGUAGE CPP, DeriveDataTypeable, FlexibleContexts #-}
 {-# LANGUAGE NamedFieldPuns #-}
 
--- | CoreSyn holds all the main data types for use by for the Glasgow Haskell Compiler midsection
-module CoreSyn (
+-- | GHC.Core.Syntax holds all the main data types for use by for the Glasgow Haskell Compiler midsection
+module GHC.Core.Syntax (
         -- * Main data types
         Expr(..), Alt, Bind(..), AltCon(..), Arg,
         Tickish(..), TickishScoping(..), TickishPlacement(..),
@@ -178,7 +178,7 @@ These data types are the heart of the compiler
 -- *  Primitive literals
 --
 -- *  Applications: note that the argument may be a 'Type'.
---    See Note [CoreSyn let/app invariant]
+--    See Note [GHC.Core.Syntax let/app invariant]
 --    See Note [Levity polymorphism invariants]
 --
 -- *  Lambda abstraction
@@ -195,9 +195,9 @@ These data types are the heart of the compiler
 --    /must/ be of lifted type (see "Type#type_classification" for
 --    the meaning of /lifted/ vs. /unlifted/). There is one exception
 --    to this rule, top-level @let@s are allowed to bind primitive
---    string literals, see Note [CoreSyn top-level string literals].
+--    string literals, see Note [GHC.Core.Syntax top-level string literals].
 --
---    See Note [CoreSyn let/app invariant]
+--    See Note [GHC.Core.Syntax let/app invariant]
 --    See Note [Levity polymorphism invariants]
 --
 --    #type_let#
@@ -369,17 +369,17 @@ Also, we do not permit case analysis with literal patterns on floating-point
 types. See Trac #9238 and Note [Rules for floating-point comparisons] in
 PrelRules for the rationale for this restriction.
 
--------------------------- CoreSyn INVARIANTS ---------------------------
+-------------------------- GHC.Core.Syntax INVARIANTS ---------------------------
 
-Note [CoreSyn top-level invariant]
+Note [GHC.Core.Syntax top-level invariant]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 See #toplevel_invariant#
 
-Note [CoreSyn letrec invariant]
+Note [GHC.Core.Syntax letrec invariant]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 See #letrec_invariant#
 
-Note [CoreSyn top-level string literals]
+Note [GHC.Core.Syntax top-level string literals]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As an exception to the usual rule that top-level binders must be lifted,
 we allow binding primitive string literals (of type Addr#) of type Addr# at the
@@ -414,7 +414,7 @@ parts of the compilation pipeline.
   at the top leve.
 
 * In Core, we have a special rule that permits top-level Addr# bindings. See
-  Note [CoreSyn top-level string literals]. Core-to-core passes may introduce
+  Note [GHC.Core.Syntax top-level string literals]. Core-to-core passes may introduce
   new top-level string literals.
 
 * In STG, top-level string literals are explicitly represented in the syntax
@@ -424,7 +424,7 @@ parts of the compilation pipeline.
   in the object file, the content of the exported literal is given a label with
   the _bytes suffix.
 
-Note [CoreSyn let/app invariant]
+Note [GHC.Core.Syntax let/app invariant]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The let/app invariant
      the right hand side of a non-recursive 'Let', and
@@ -451,7 +451,7 @@ which will generate a @case@ if necessary
 The let/app invariant is initially enforced by mkCoreLet and mkCoreApp in
 coreSyn/MkCore.
 
-Note [CoreSyn case invariants]
+Note [GHC.Core.Syntax case invariants]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 See #case_invariants#
 
@@ -475,7 +475,7 @@ is illegal because x's type has kind (TYPE r), which has 'r' free.
 See Note [Levity polymorphism checking] in GHC.Desugar.Monad to see where these
 invariants are established for user-written code.
 
-Note [CoreSyn let goal]
+Note [GHC.Core.Syntax let goal]
 ~~~~~~~~~~~~~~~~~~~~~~~
 * The simplifier tries to ensure that if the RHS of a let is a constructor
   application, its arguments are trivial, so that the constructor can be
@@ -1900,12 +1900,12 @@ mkLetRec :: [(b, Expr b)] -> Expr b -> Expr b
 mkLetRec [] body = body
 mkLetRec bs body = Let (Rec bs) body
 
--- | Create a binding group where a type variable is bound to a type. Per "CoreSyn#type_let",
+-- | Create a binding group where a type variable is bound to a type. Per "GHC.Core.Syntax#type_let",
 -- this can only be used to bind something in a non-recursive @let@ expression
 mkTyBind :: TyVar -> Type -> CoreBind
 mkTyBind tv ty      = NonRec tv (Type ty)
 
--- | Create a binding group where a type variable is bound to a type. Per "CoreSyn#type_let",
+-- | Create a binding group where a type variable is bound to a type. Per "GHC.Core.Syntax#type_let",
 -- this can only be used to bind something in a non-recursive @let@ expression
 mkCoBind :: CoVar -> Coercion -> CoreBind
 mkCoBind cv co      = NonRec cv (Coercion co)

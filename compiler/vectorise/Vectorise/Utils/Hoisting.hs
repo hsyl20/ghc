@@ -16,7 +16,7 @@ import Vectorise.Env
 import Vectorise.Vect
 import Vectorise.Utils.Poly
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Type

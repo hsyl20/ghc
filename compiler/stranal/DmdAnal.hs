@@ -16,7 +16,7 @@ module DmdAnal ( dmdAnalProgram ) where
 import GHC.Config.Flags
 import WwLib            ( findTypeShape, deepSplitProductType_maybe )
 import GHC.Data.Demand   -- All of it
-import CoreSyn
+import GHC.Core.Syntax
 import CoreSeq          ( seqBinds )
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment

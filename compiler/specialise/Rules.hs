@@ -28,7 +28,7 @@ module Rules (
 
 #include "HsVersions.h"
 
-import CoreSyn          -- All of it
+import GHC.Core.Syntax          -- All of it
 import GHC.Data.Module           ( Module, ModuleSet, elemModuleSet )
 import CoreSubst
 import GHC.Core.Optimise          ( exprIsLambda_maybe )
@@ -169,7 +169,7 @@ where pi' :: Lift Int# is the specialised version of pi.
 mkRule :: Module -> Bool -> Bool -> RuleName -> Activation
        -> Name -> [CoreBndr] -> [CoreExpr] -> CoreExpr -> CoreRule
 -- ^ Used to make 'CoreRule' for an 'Id' defined in the module being
--- compiled. See also 'CoreSyn.CoreRule'
+-- compiled. See also 'GHC.Core.Syntax.CoreRule'
 mkRule this_mod is_auto is_local name act fn bndrs args rhs
   = Rule { ru_name = name, ru_fn = fn, ru_act = act,
            ru_bndrs = bndrs, ru_args = args,
@@ -339,7 +339,7 @@ but that isn't quite right:
 ************************************************************************
 -}
 
--- RuleBase itself is defined in CoreSyn, along with CoreRule
+-- RuleBase itself is defined in GHC.Core.Syntax, along with CoreRule
 
 emptyRuleBase :: RuleBase
 emptyRuleBase = emptyNameEnv

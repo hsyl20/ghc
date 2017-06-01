@@ -75,7 +75,7 @@ import GHC.Data.Id
 import StgSyn
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment
-import CoreSyn (AltCon(..))
+import GHC.Core.Syntax (AltCon(..))
 import Data.List (mapAccumL)
 import Data.Maybe (fromMaybe)
 import TrieMap

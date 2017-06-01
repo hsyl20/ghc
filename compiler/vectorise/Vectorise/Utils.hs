@@ -30,7 +30,7 @@ import Vectorise.Utils.PADict
 import Vectorise.Utils.Poly
 import Vectorise.Monad
 import Vectorise.Builtins
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Data.Id
 import GHC.Data.Type

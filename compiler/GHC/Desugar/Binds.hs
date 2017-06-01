@@ -26,7 +26,7 @@ import GHC.Desugar.GuardedRHS
 import GHC.Desugar.Utils
 
 import GHC.Syntax            -- lots of things
-import CoreSyn          -- lots of things
+import GHC.Core.Syntax          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
 import GHC.Core.Optimise          ( simpleOptExpr )
 import OccurAnal        ( occurAnalyseExpr )

@@ -55,7 +55,7 @@ module CoreMonad (
 
 import GHC.Data.Name( Name )
 import TcRnMonad        ( initTcForLookup )
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Types
 import GHC.Data.Module
 import GHC.Config.Flags

@@ -24,7 +24,7 @@ import GHC.Core.Arity
 import CoreFVs
 import CoreMonad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )
-import CoreSyn
+import GHC.Core.Syntax
 import CoreSubst
 import MkCore hiding( FloatBind(..) )   -- We use our own FloatBind here
 import GHC.Data.Type
@@ -1040,7 +1040,7 @@ of the scope of a `seq`, or dropped the `seq` altogether.
 
 ************************************************************************
 *                                                                      *
-                Simple CoreSyn operations
+                Simple GHC.Core.Syntax operations
 *                                                                      *
 ************************************************************************
 -}

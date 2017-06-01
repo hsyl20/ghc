@@ -27,7 +27,7 @@ where
 
 import {-# SOURCE #-} GHC.Data.Id.Make ( mkPrimOpId, magicDictId )
 
-import CoreSyn
+import GHC.Core.Syntax
 import MkCore
 import GHC.Data.Id
 import GHC.Data.Literal

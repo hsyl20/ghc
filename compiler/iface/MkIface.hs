@@ -67,7 +67,7 @@ import GHC.Config.Flags.Fingerprint
 import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
 import GHC.Data.Annotation
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

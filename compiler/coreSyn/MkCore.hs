@@ -54,7 +54,7 @@ module MkCore (
 import GHC.Data.Id
 import GHC.Data.Var      ( EvVar, setTyVarUnique )
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils        ( exprType, needsCaseBinding, bindNonRec )
 import GHC.Data.Literal
 import GHC.Types
@@ -87,7 +87,7 @@ infixl 4 `mkCoreApp`, `mkCoreApps`
 {-
 ************************************************************************
 *                                                                      *
-\subsection{Basic CoreSyn construction}
+\subsection{Basic GHC.Core.Syntax construction}
 *                                                                      *
 ************************************************************************
 -}
@@ -103,9 +103,9 @@ sortQuantVars vs = sorted_tcvs ++ ids
     sorted_tcvs = toposortTyVars tcvs
 
 -- | Bind a binding group over an expression, using a @let@ or @case@ as
--- appropriate (see "CoreSyn#let_app_invariant")
+-- appropriate (see "GHC.Core.Syntax#let_app_invariant")
 mkCoreLet :: CoreBind -> CoreExpr -> CoreExpr
-mkCoreLet (NonRec bndr rhs) body        -- See Note [CoreSyn let/app invariant]
+mkCoreLet (NonRec bndr rhs) body        -- See Note [GHC.Core.Syntax let/app invariant]
   | needsCaseBinding (idType bndr) rhs
   , not (isJoinId bndr)
   = Case rhs bndr (exprType body) [(DEFAULT,[],body)]
@@ -121,7 +121,7 @@ mkCoreLets binds body = foldr mkCoreLet body binds
 -- to the other
 mkCoreApp :: SDoc -> CoreExpr -> CoreExpr -> CoreExpr
 -- Respects the let/app invariant by building a case expression where necessary
---   See CoreSyn Note [CoreSyn let/app invariant]
+--   See GHC.Core.Syntax Note [GHC.Core.Syntax let/app invariant]
 mkCoreApp _ fun (Type ty)     = App fun (Type ty)
 mkCoreApp _ fun (Coercion co) = App fun (Coercion co)
 mkCoreApp d fun arg           = ASSERT2( isFunTy fun_ty, ppr fun $$ ppr arg $$ d )
@@ -133,7 +133,7 @@ mkCoreApp d fun arg           = ASSERT2( isFunTy fun_ty, ppr fun $$ ppr arg $$ d
 -- | Construct an expression which represents the application of a number of
 -- expressions to another. The leftmost expression in the list is applied first
 -- Respects the let/app invariant by building a case expression where necessary
---   See CoreSyn Note [CoreSyn let/app invariant]
+--   See GHC.Core.Syntax Note [GHC.Core.Syntax let/app invariant]
 mkCoreApps :: CoreExpr -> [CoreExpr] -> CoreExpr
 -- Slightly more efficient version of (foldl mkCoreApp)
 mkCoreApps orig_fun orig_args
@@ -157,7 +157,7 @@ mk_val_app :: CoreExpr -> CoreExpr -> Type -> Type -> CoreExpr
 -- Build an application (e1 e2),
 -- or a strict binding  (case e2 of x -> e1 x)
 -- using the latter when necessary to respect the let/app invariant
---   See Note [CoreSyn let/app invariant]
+--   See Note [GHC.Core.Syntax let/app invariant]
 mk_val_app fun arg arg_ty res_ty
   | not (needsCaseBinding arg_ty arg)
   = App fun arg                -- The vastly common case
@@ -203,7 +203,7 @@ mkIfThenElse guard then_expr else_expr
 castBottomExpr :: CoreExpr -> Type -> CoreExpr
 -- (castBottomExpr e ty), assuming that 'e' diverges,
 -- return an expression of type 'ty'
--- See Note [Empty case alternatives] in CoreSyn
+-- See Note [Empty case alternatives] in GHC.Core.Syntax
 castBottomExpr e res_ty
   | e_ty `eqType` res_ty = e
   | otherwise            = Case e (mkWildValBinder e_ty) res_ty []
@@ -212,7 +212,7 @@ castBottomExpr e res_ty
 
 {-
 The functions from this point don't really do anything cleverer than
-their counterparts in CoreSyn, but they are here for consistency
+their counterparts in GHC.Core.Syntax, but they are here for consistency
 -}
 
 -- | Create a lambda where the given expression has a number of variables

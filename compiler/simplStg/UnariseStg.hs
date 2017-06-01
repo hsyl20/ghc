@@ -197,7 +197,7 @@ module UnariseStg (unarise) where
 #include "HsVersions.h"
 
 import GHC.Data.BasicTypes
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.DataConstructor
 import GHC.Data.FastString (FastString, mkFastString)
 import GHC.Data.Id

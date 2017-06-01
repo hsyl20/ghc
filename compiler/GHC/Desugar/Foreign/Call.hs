@@ -18,7 +18,7 @@ module GHC.Desugar.Foreign.Call
 #include "HsVersions.h"
 
 
-import CoreSyn
+import GHC.Core.Syntax
 
 import GHC.Desugar.Monad
 import CoreUtils

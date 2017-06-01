@@ -27,7 +27,7 @@ import TcHsSyn
 import TcEvidence
 import TcRnMonad
 import GHC.Desugar.Match.Check
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Literal
 import CoreUtils
 import MkCore
@@ -336,7 +336,7 @@ In that situation we desugar to
 The *desugarer* isn't certain whether there really should be no
 alternatives, so it adds a default case, as it always does.  A later
 pass may remove it if it's inaccessible.  (See also Note [Empty case
-alternatives] in CoreSyn.)
+alternatives] in GHC.Core.Syntax.)
 
 We do *not* desugar simply to
    error "empty case"

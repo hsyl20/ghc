@@ -34,7 +34,7 @@ import TcDeriv
 import TcEnv
 import TcHsType
 import TcUnify
-import CoreSyn    ( Expr(..), mkApps, mkVarApps, mkLams )
+import GHC.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
 import MkCore     ( nO_METHOD_BINDING_ERROR_ID )
 import GHC.Core.Optimise.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import GHC.Data.Type

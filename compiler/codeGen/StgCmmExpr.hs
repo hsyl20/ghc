@@ -33,7 +33,7 @@ import GHC.Cmm.Graph
 import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.RTS.InfoTable
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.DataConstructor
 import ForeignCall
 import GHC.Data.Id

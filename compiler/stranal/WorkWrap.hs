@@ -7,7 +7,7 @@
 {-# LANGUAGE CPP #-}
 module WorkWrap ( wwTopBinds ) where
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding       ( certainlyWillInline, mkWwInlineRule, mkWorkerUnfolding )
 import CoreUtils        ( exprType, exprIsHNF )
 import CoreFVs          ( exprFreeVars )

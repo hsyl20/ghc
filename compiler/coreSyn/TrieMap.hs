@@ -31,7 +31,7 @@ module TrieMap(
    (>.>), (|>), (|>>),
  ) where
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Coercion
 import GHC.Data.Literal
 import GHC.Data.Name
@@ -465,7 +465,7 @@ We could compare the return type regardless, but the wildly common case
 is that it's unnecessary, so we have two fields (cm_case and cm_ecase)
 for the two possibilities.  Only cm_ecase looks at the type.
 
-See also Note [Empty case alternatives] in CoreSyn.
+See also Note [Empty case alternatives] in GHC.Core.Syntax.
 -}
 
 -- | @CoreMap a@ is a map from 'CoreExpr' to @a@.  If you are a client, this

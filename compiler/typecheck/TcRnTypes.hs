@@ -139,7 +139,7 @@ module TcRnTypes(
 #include "HsVersions.h"
 
 import GHC.Syntax
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Types
 import TcEvidence
 import GHC.Data.Type

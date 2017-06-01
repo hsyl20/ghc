@@ -52,7 +52,7 @@ essential to make this work well!
 module SAT ( doStaticArgs ) where
 
 import GHC.Data.Var
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Data.Type
 import GHC.Data.Coercion

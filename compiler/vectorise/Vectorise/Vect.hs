@@ -20,7 +20,7 @@ module Vectorise.Vect
   )
 where
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Type           ( Type )
 import GHC.Data.Var
 

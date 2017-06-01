@@ -18,7 +18,7 @@ module GHC.Core.Arity (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreFVs
 import CoreUtils
 import CoreSubst
@@ -1043,7 +1043,7 @@ mkEtaWW orig_n orig_expr in_scope orig_ty
 
        | Just (arg_ty, res_ty) <- splitFunTy_maybe ty
        , not (isTypeLevPoly arg_ty)
-          -- See Note [Levity polymorphism invariants] in CoreSyn
+          -- See Note [Levity polymorphism invariants] in GHC.Core.Syntax
           -- See also test case typecheck/should_run/EtaExpandLevPoly
 
        , let (subst', eta_id') = freshEtaId n subst arg_ty

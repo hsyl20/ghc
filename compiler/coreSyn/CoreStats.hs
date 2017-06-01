@@ -12,7 +12,7 @@ module CoreStats (
     ) where
 
 import GHC.Data.BasicTypes
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Utils.Outputable
 import GHC.Data.Coercion
 import GHC.Data.Var

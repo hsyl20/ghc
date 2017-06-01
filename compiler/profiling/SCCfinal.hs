@@ -31,7 +31,7 @@ import GHC.Data.Unique.Supply       ( UniqSupply )
 import GHC.Data.List.SetOps       ( removeDups )
 import GHC.Utils.Outputable
 import GHC.Config.Flags
-import CoreSyn          ( Tickish(..) )
+import GHC.Core.Syntax          ( Tickish(..) )
 import GHC.Data.FastString
 import GHC.Data.SrcLoc
 import GHC.Utils

@@ -18,7 +18,7 @@ import {-# SOURCE #-} TcMatches ( tcGRHSsPat, tcMatchesFun )
 import {-# SOURCE #-} TcExpr  ( tcMonoExpr )
 import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
                                , tcPatSynBuilderBind )
-import CoreSyn (Tickish (..))
+import GHC.Core.Syntax (Tickish (..))
 import CostCentre (mkUserCC)
 import GHC.Config.Flags
 import GHC.Data.FastString

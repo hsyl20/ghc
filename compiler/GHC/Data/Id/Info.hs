@@ -82,7 +82,7 @@ module GHC.Data.Id.Info (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 
 import GHC.Data.Class
 import {-# SOURCE #-} PrimOp (PrimOp)
@@ -159,7 +159,7 @@ data IdDetails
                -- This only covers /un-lifted/ coercions, of type
                -- (t1 ~# t2) or (t1 ~R# t2), not their lifted variants
   | JoinId JoinArity           -- ^ An 'Id' for a join point taking n arguments
-       -- Note [Join points] in CoreSyn
+       -- Note [Join points] in GHC.Core.Syntax
 
 -- | Recursive Selector Parent
 data RecSelParent = RecSelData TyCon | RecSelPatSyn PatSyn deriving Eq

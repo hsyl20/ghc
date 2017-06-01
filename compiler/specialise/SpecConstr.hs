@@ -19,7 +19,7 @@ module SpecConstr(
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreSubst
 import CoreUtils
 import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )

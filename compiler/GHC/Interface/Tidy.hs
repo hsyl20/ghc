@@ -14,7 +14,7 @@ module GHC.Interface.Tidy (
 
 import TcRnTypes
 import GHC.Config.Flags
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding
 import CoreFVs
 import GHC.Core.Tidy

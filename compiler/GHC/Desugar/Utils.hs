@@ -46,7 +46,7 @@ import {-# SOURCE #-} GHC.Desugar.Expression ( dsLExpr )
 import GHC.Syntax
 import TcHsSyn
 import TcType( tcSplitTyConApp )
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Desugar.Monad
 
 import CoreUtils
@@ -479,7 +479,7 @@ Note [Desugaring seq (1)]  cf Trac #1031
 ~~~~~~~~~~~~~~~~~~~~~~~~~
    f x y = x `seq` (y `seq` (# x,y #))
 
-The [CoreSyn let/app invariant] means that, other things being equal, because
+The [GHC.Core.Syntax let/app invariant] means that, other things being equal, because
 the argument to the outer 'seq' has an unlifted type, we'll use call-by-value thus:
 
    f x y = case (y `seq` (# x,y #)) of v -> x `seq` v

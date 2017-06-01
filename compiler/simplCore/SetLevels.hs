@@ -62,7 +62,7 @@ module SetLevels (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreMonad        ( FloatOutSwitches(..) )
 import CoreUtils        ( exprType, exprIsHNF
                         , exprOkForSpeculation
@@ -574,7 +574,7 @@ lvlMFE env strict_ctxt ann_expr
                                -- See Note [Free join points]
   || isExprLevPoly expr
          -- We can't let-bind levity polymorphic expressions
-         -- See Note [Levity polymorphism invariants] in CoreSyn
+         -- See Note [Levity polymorphism invariants] in GHC.Core.Syntax
   || notWorthFloating expr abs_vars
   || not float_me
   =     -- Don't float it out

@@ -101,7 +101,7 @@ import GHC.Packages
 import GHC.Data.RdrName
 import GHC.Syntax
 import GHC.Syntax.PrettyPrint.Dump
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.StringBuffer
 import Parser
 import Lexer

@@ -155,7 +155,7 @@ import GHC.Data.Available
 import GHC.Data.Module
 import GHC.TypeSystem.ClassInstance          ( InstEnv, ClsInst, identicalClsInstHead )
 import GHC.TypeSystem.FamilyInstance
-import CoreSyn          ( CoreProgram, RuleBase, CoreRule, CoreVect )
+import GHC.Core.Syntax          ( CoreProgram, RuleBase, CoreRule, CoreVect )
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set

@@ -37,7 +37,7 @@ import GHC.Types
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Core.Optimise.Unfolding
 import GHC.Core.Analyse.Lint

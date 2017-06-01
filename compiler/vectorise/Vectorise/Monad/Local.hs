@@ -16,7 +16,7 @@ where
 import Vectorise.Monad.Base
 import Vectorise.Env
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Name
 import GHC.Data.Var.Environment
 import GHC.Data.Var

@@ -13,7 +13,7 @@ module GHC.Desugar.Foreign.Declaration ( dsForeigns ) where
 #include "HsVersions.h"
 import TcRnMonad        -- temp
 
-import CoreSyn
+import GHC.Core.Syntax
 
 import GHC.Desugar.Foreign.Call
 import GHC.Desugar.Monad

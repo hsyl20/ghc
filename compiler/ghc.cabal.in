@@ -272,7 +272,7 @@ Library
         CorePrep
         CoreSubst
         GHC.Core.Optimise
-        CoreSyn
+        GHC.Core.Syntax
         TrieMap
         GHC.Core.Tidy
         GHC.Core.Optimise.Unfolding

@@ -10,7 +10,7 @@ module CoreSeq (
         megaSeqIdInfo, seqRuleInfo, seqBinds,
     ) where
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Id.Info
 import GHC.Data.Demand( seqDemand, seqStrictSig )
 import GHC.Data.BasicTypes( seqOccInfo )

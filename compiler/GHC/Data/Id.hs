@@ -117,7 +117,7 @@ module GHC.Data.Id (
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import CoreSyn ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
+import GHC.Core.Syntax ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
 
 import GHC.Data.Id.Info
 import GHC.Data.BasicTypes

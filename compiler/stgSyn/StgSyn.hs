@@ -4,7 +4,7 @@
 \section[StgSyn]{Shared term graph (STG) syntax for spineless-tagless code generation}
 
 This data type represents programs just before code generation (conversion to
-@Cmm@): basically, what we have is a stylised form of @CoreSyntax@, the style
+@Cmm@): basically, what we have is a stylised form of @GHC.Core.Syntaxtax@, the style
 being one that happens to be ideally suited to spineless tagless code
 generation.
 -}
@@ -45,7 +45,7 @@ module StgSyn (
 
 #include "HsVersions.h"
 
-import CoreSyn     ( AltCon, Tickish )
+import GHC.Core.Syntax     ( AltCon, Tickish )
 import CostCentre  ( CostCentreStack )
 import Data.ByteString ( ByteString )
 import Data.List   ( intersperse )
@@ -78,12 +78,12 @@ import GHC.Utils
 As usual, expressions are interesting; other things are boring. Here
 are the boring things [except note the @GenStgRhs@], parameterised
 with respect to binder and occurrence information (just as in
-@CoreSyn@):
+@GHC.Core.Syntax@):
 -}
 
 -- | A top-level binding.
 data GenStgTopBinding bndr occ
--- See Note [CoreSyn top-level string literals]
+-- See Note [GHC.Core.Syntax top-level string literals]
   = StgTopLifted (GenStgBinding bndr occ)
   | StgTopStringLit bndr ByteString
 
@@ -526,7 +526,7 @@ pp_binder_info SatCallsOnly    = text "sat-only"
 *                                                                      *
 ************************************************************************
 
-Very like in @CoreSyntax@ (except no type-world stuff).
+Very like in @GHC.Core.Syntaxtax@ (except no type-world stuff).
 
 The type constructor is guaranteed not to be abstract; that is, we can
 see its representation. This is important because the code generator
@@ -569,7 +569,7 @@ type StgAlt      = GenStgAlt      Id Id
 
 {- Many passes apply a substitution, and it's very handy to have type
    synonyms to remind us whether or not the substitution has been applied.
-   See CoreSyn for precedence in Core land
+   See GHC.Core.Syntax for precedence in Core land
 -}
 
 type InStgTopBinding  = StgTopBinding

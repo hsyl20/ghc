@@ -28,7 +28,7 @@ import GHC.Data.Type
 import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Available
-import CoreSyn
+import GHC.Core.Syntax
 import CoreFVs     ( exprsSomeFreeVarsList )
 import GHC.Core.Optimise     ( simpleOptPgm, simpleOptExpr )
 import PprCore

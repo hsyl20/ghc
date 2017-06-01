@@ -17,7 +17,7 @@ import {-# SOURCE #-} GHC.Desugar.Match   ( matchSinglePat )
 
 import GHC.Syntax
 import MkCore
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Var
 
 import GHC.Desugar.Monad

@@ -57,7 +57,7 @@ module CoreUtils (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import PrelNames ( makeStaticName )
 import PprCore
 import CoreFVs( exprFreeVars )
@@ -101,7 +101,7 @@ import GHC.Data.Tree.OrdList
 
 exprType :: CoreExpr -> Type
 -- ^ Recover the type of a well-typed Core expression. Fails when
--- applied to the actual 'CoreSyn.Type' expression as it cannot
+-- applied to the actual 'GHC.Core.Syntax.Type' expression as it cannot
 -- really be said to have a type
 exprType (Var var)           = idType var
 exprType (Lit lit)           = literalType lit
@@ -211,7 +211,7 @@ Various possibilities suggest themselves:
 Note that there might be existentially quantified coercion variables, too.
 -}
 
--- Not defined with applyTypeToArg because you can't print from CoreSyn.
+-- Not defined with applyTypeToArg because you can't print from GHC.Core.Syntax.
 applyTypeToArgs :: CoreExpr -> Type -> [CoreExpr] -> Type
 -- ^ A more efficient version of 'applyTypeToArg' when we have several arguments.
 -- The first argument is just for debugging, and gives some context
@@ -477,7 +477,7 @@ bindNonRec bndr rhs body
   | otherwise                          = Let (NonRec bndr rhs) body
 
 -- | Tests whether we have to use a @case@ rather than @let@ binding for this expression
--- as per the invariants of 'CoreExpr': see "CoreSyn#let_app_invariant"
+-- as per the invariants of 'CoreExpr': see "GHC.Core.Syntax#let_app_invariant"
 needsCaseBinding :: Type -> CoreExpr -> Bool
 needsCaseBinding ty rhs = isUnliftedType ty && not (exprOkForSpeculation rhs)
         -- Make a case expression instead of a let
@@ -827,7 +827,7 @@ Note [Empty case is trivial]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The expression (case (x::Int) Bool of {}) is just a type-changing
 case used when we are sure that 'x' will not return.  See
-Note [Empty case alternatives] in CoreSyn.
+Note [Empty case alternatives] in GHC.Core.Syntax.
 
 If the scrutinee is trivial, then so is the whole expression; and the
 CoreToSTG pass in fact drops the case expression leaving only the
@@ -910,7 +910,7 @@ exprIsBottom e
     go n (Let _ e)               = go n e
     go n (Lam v e) | isTyVar v   = go n e
     go _ (Case _ _ _ alts)       = null alts
-       -- See Note [Empty case alternatives] in CoreSyn
+       -- See Note [Empty case alternatives] in GHC.Core.Syntax
     go _ _                       = False
 
 {- Note [Bottoming expressions]
@@ -1526,7 +1526,7 @@ Bottom line:
 -- > C (f x :: Int#)
 --
 -- Suppose @f x@ diverges; then @C (f x)@ is not a value. However this can't
--- happen: see "CoreSyn#let_app_invariant". This invariant states that arguments of
+-- happen: see "GHC.Core.Syntax#let_app_invariant". This invariant states that arguments of
 -- unboxed type must be ok-for-speculation (or trivial).
 exprIsHNF :: CoreExpr -> Bool           -- True => Value-lambda, constructor, PAP
 exprIsHNF = exprIsHNFlike isDataConWorkId isEvaldUnfolding
@@ -1599,7 +1599,7 @@ don't want to discard a seq on it.
 
 -- | Can we bind this 'CoreExpr' at the top level?
 exprIsTopLevelBindable :: CoreExpr -> Type -> Bool
--- See Note [CoreSyn top-level string literals]
+-- See Note [GHC.Core.Syntax top-level string literals]
 -- Precondition: exprType expr = ty
 exprIsTopLevelBindable expr ty
   = exprIsLiteralString expr

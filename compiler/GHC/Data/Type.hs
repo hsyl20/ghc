@@ -2065,7 +2065,7 @@ isPrimitiveType ty = case splitTyConApp_maybe ty of
 -- in its return type, since given
 --   join j @a @b x y z = e1 in e2,
 -- the types of e1 and e2 must be the same, and a and b are not in scope for e2.
--- (See Note [The polymorphism rule of join points] in CoreSyn.) Returns False
+-- (See Note [The polymorphism rule of join points] in GHC.Core.Syntax.) Returns False
 -- also if the type simply doesn't have enough arguments.
 --
 -- Note that we need to know how many arguments (type *and* value) the putative

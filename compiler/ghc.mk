@@ -456,7 +456,7 @@ compiler_stage2_dll0_MODULES = \
 	CoreFVs \
 	CoreSubst \
 	GHC.Core.Optimise \
-	CoreSyn \
+	GHC.Core.Syntax \
 	GHC.Core.Tidy \
 	GHC.Core.Optimise.Unfolding \
 	CoreUtils \

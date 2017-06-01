@@ -19,7 +19,7 @@ import Vectorise.Monad
 import GHC.Types hiding      ( MonadThings(..) )
 import GHC.Core.Optimise.Unfolding           ( mkInlineUnfoldingWithArity )
 import PprCore
-import CoreSyn
+import GHC.Core.Syntax
 import CoreMonad            ( CoreM, getHscEnv )
 import GHC.Data.Type
 import GHC.Data.Id

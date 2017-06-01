@@ -10,7 +10,7 @@ module LiberateCase ( liberateCase ) where
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )
 import GHC.Data.Id
 import GHC.Data.Var.Environment

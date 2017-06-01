@@ -42,7 +42,7 @@ module SimplEnv (
 
 import SimplMonad
 import CoreMonad                ( SimplifierMode(..) )
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
@@ -455,7 +455,7 @@ unitFloat bind = ASSERT(all (not . isJoinId) (bindersOf bind))
       | not (isStrictId bndr)    = FltLifted
       | exprIsLiteralString rhs  = FltLifted
           -- String literals can be floated freely.
-          -- See Note [CoreSyn top-level string ltierals] in CoreSyn.
+          -- See Note [GHC.Core.Syntax top-level string ltierals] in GHC.Core.Syntax.
       | exprOkForSpeculation rhs = FltOkSpec  -- Unlifted, and lifted but ok-for-spec (eg HNF)
       | otherwise                = ASSERT2( not (isUnliftedType (idType bndr)), ppr bndr )
                                    FltCareful

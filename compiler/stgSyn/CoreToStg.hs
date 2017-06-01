@@ -15,7 +15,7 @@ module CoreToStg ( coreToStg, coreExprToStg ) where
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils        ( exprType, findDefault, isJoinBind )
 import GHC.Core.Arity        ( manifestArity )
 import StgSyn
@@ -396,7 +396,7 @@ coreToStgExpr (Cast expr _)
 
 coreToStgExpr (Case scrut _ _ [])
   = coreToStgExpr scrut
-    -- See Note [Empty case alternatives] in CoreSyn If the case
+    -- See Note [Empty case alternatives] in GHC.Core.Syntax If the case
     -- alternatives are empty, the scrutinee must diverge or raise an
     -- exception, so we can just dive into it.
     --

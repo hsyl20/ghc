@@ -60,7 +60,7 @@ module CoreFVs (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Name.Set

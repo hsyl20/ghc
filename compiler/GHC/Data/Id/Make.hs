@@ -62,7 +62,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Demand
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import PrelNames

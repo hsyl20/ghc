@@ -13,7 +13,7 @@ module WwLib ( mkWwBodies, mkWWstr, mkWorkerArgs
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils        ( exprType, mkCast )
 import GHC.Data.Id
 import GHC.Data.Id.Info           ( JoinArity, vanillaIdInfo )

@@ -44,7 +44,7 @@ import GHC.Data.Name.Set
 import TcType
 import GHC.Data.Type.Constructor
 import TysWiredIn
-import CoreSyn
+import GHC.Core.Syntax
 import MkCore
 import CoreUtils
 import GHC.Data.SrcLoc

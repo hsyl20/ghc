@@ -309,7 +309,7 @@ import GHC.Data.Available
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance ( FamInst )
 import GHC.Data.SrcLoc
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Interface.Tidy
 import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
 import GHC.Finder

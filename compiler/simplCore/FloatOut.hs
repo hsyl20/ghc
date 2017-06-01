@@ -11,7 +11,7 @@
 
 module FloatOut ( floatOutwards ) where
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils
 import MkCore
 import GHC.Core.Arity        ( etaExpand )
@@ -111,7 +111,7 @@ Well, maybe.  We don't do this at the moment.
 Note [Join points]
 ~~~~~~~~~~~~~~~~~~
 Every occurrence of a join point must be a tail call (see Note [Invariants on
-join points] in CoreSyn), so we must be careful with how far we float them. The
+join points] in GHC.Core.Syntax), so we must be careful with how far we float them. The
 mechanism for doing so is the *join ceiling*, detailed in Note [Join ceiling]
 in SetLevels. For us, the significance is that a binder might be marked to be
 dropped at the nearest boundary between tail calls and non-tail calls. For
@@ -750,7 +750,7 @@ wrapTick t (FB tops ceils defns)
     maybe_tick :: TopLevelFlag -> CoreExpr -> CoreExpr
     maybe_tick toplvl e
         -- We must take care not to tick top-level literal
-        -- strings as this violated the Core invariants. See Note [CoreSyn
+        -- strings as this violated the Core invariants. See Note [GHC.Core.Syntax
         -- top-level string literals].
       | isTopLevel toplvl && exprIsLiteralString e = e
       | exprIsHNF e = tickHNFArgs t e

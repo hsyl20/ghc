@@ -20,7 +20,7 @@ import Vectorise.Utils
 import Vectorise.Monad
 import Vectorise.Builtins
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Type

@@ -7,7 +7,7 @@ import Vectorise.Monad
 import Vectorise.Builtins
 import Vectorise.Type.Type
 
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.Data.Types

@@ -19,7 +19,7 @@ module OccurAnal (
 
 #include "HsVersions.h"
 
-import CoreSyn
+import GHC.Core.Syntax
 import CoreFVs
 import CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
                           stripTicksTopE, mkTicks )
@@ -703,7 +703,7 @@ Note [Excess polymorphism and join points]
 
 In principle, if a function would be a join point except that it fails
 the polymorphism rule (see Note [The polymorphism rule of join points] in
-CoreSyn), it can still be made a join point with some effort. This is because
+GHC.Core.Syntax), it can still be made a join point with some effort. This is because
 all tail calls must return the same type (they return to the same context!), and
 thus if the return type depends on an argument, that argument must always be the
 same.
@@ -2686,7 +2686,7 @@ setBinderOcc occ_info bndr
 -- all-or-nothing decision, as if multiple binders are given, they're assumed to
 -- be mutually recursive.
 --
--- See Note [Invariants for join points] in CoreSyn.
+-- See Note [Invariants for join points] in GHC.Core.Syntax.
 decideJoinPointHood :: TopLevelFlag -> UsageDetails
                     -> [CoreBndr]
                     -> Bool

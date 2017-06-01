@@ -43,7 +43,7 @@ module GHC.Core.Optimise.Unfolding (
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import CoreSyn
+import GHC.Core.Syntax
 import PprCore          ()      -- Instances
 import OccurAnal        ( occurAnalyseExpr )
 import GHC.Core.Optimise

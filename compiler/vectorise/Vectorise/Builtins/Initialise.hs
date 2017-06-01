@@ -14,7 +14,7 @@ import TysWiredIn
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Class
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Type
 import GHC.Data.Name.Environment
 import GHC.Data.Name

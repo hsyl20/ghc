@@ -29,7 +29,7 @@ import GHC.TypeSystem.FamilyInstance       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
 --import GHC.Data.Type.Constructor            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
 import CoreMonad        ( Tick(..), SimplifierMode(..) )
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
 import PprCore          ( pprCoreExpr )
 import GHC.Core.Optimise.Unfolding
@@ -478,7 +478,7 @@ completeNonRecX :: TopLevelFlag -> SimplEnv
                 -> SimplM SimplEnv      -- The new binding extends the seLetFloats
                                         -- of the resulting SimpleEnv
 -- Precondition: rhs satisfies the let/app invariant
---               See Note [CoreSyn let/app invariant] in CoreSyn
+--               See Note [GHC.Core.Syntax let/app invariant] in GHC.Core.Syntax
 
 completeNonRecX top_lvl env is_strict old_bndr new_bndr new_rhs
   = ASSERT2( not (isJoinId new_bndr), ppr new_bndr )
@@ -617,7 +617,7 @@ prepareRhs top_lvl env0 id rhs0
                     -- the makeTrivial calls in 'go'; no join floats
              ; let tickIt (id, expr)
                        -- we have to take care not to tick top-level literal
-                       -- strings. See Note [CoreSyn top-level string literals].
+                       -- strings. See Note [GHC.Core.Syntax top-level string literals].
                      | isTopLevel top_lvl && exprIsLiteralString expr
                      = (id, expr)
                      | otherwise
@@ -757,7 +757,7 @@ We want to turn this into:
    foo1 = "blob"#
    foo = Ptr foo1
 
-See Note [CoreSyn top-level string literals] in CoreSyn.
+See Note [GHC.Core.Syntax top-level string literals] in GHC.Core.Syntax.
 
 ************************************************************************
 *                                                                      *
@@ -1437,7 +1437,7 @@ simplCast env body co0 cont0
          | Just (co1, co2) <- pushCoValArg co
          , Pair _ new_ty <- coercionKind co1
          , not (isTypeLevPoly new_ty)  -- without this check, we get a lev-poly arg
-                                       -- See Note [Levity polymorphism invariants] in CoreSyn
+                                       -- See Note [Levity polymorphism invariants] in GHC.Core.Syntax
                                        -- test: typecheck/should_run/EtaExpandLevPoly
          = do { tail' <- addCoerce co2 tail
               ; if isReflCo co1
@@ -1583,7 +1583,7 @@ simplNonRecE :: SimplEnv
 -- which may abort the whole process
 --
 -- Precondition: rhs satisfies the let/app invariant
---               Note [CoreSyn let/app invariant] in CoreSyn
+--               Note [GHC.Core.Syntax let/app invariant] in GHC.Core.Syntax
 --
 -- The "body" of the binding comes as a pair of ([InId],InExpr)
 -- representing a lambda; so we recurse back to simplLam
@@ -2252,7 +2252,7 @@ this transformation. If you want to fix the evaluation order, use
 'pseq'.  See Trac #8900 for an example where the loss of this
 transformation bit us in practice.
 
-See also Note [Empty case alternatives] in CoreSyn.
+See also Note [Empty case alternatives] in GHC.Core.Syntax.
 
 Just for reference, the original code (added Jan 13) looked like this:
      || case_bndr_evald_next rhs

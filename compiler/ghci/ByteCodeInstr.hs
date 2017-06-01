@@ -22,7 +22,7 @@ import GHC.Data.FastString
 import GHC.Data.Name
 import GHC.Data.Unique
 import GHC.Data.Id
-import CoreSyn
+import GHC.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import GHC.Data.Var.Set

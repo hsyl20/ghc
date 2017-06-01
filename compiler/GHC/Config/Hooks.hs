@@ -39,7 +39,7 @@ import GHC.Data.Id
 import TcRnTypes
 import GHC.Data.Bag
 import GHC.Data.RdrName
-import CoreSyn
+import GHC.Core.Syntax
 import GHCi.RemoteTypes
 import GHC.Data.SrcLoc
 import GHC.Data.Type

@@ -129,7 +129,7 @@ Here is a running example:
 -}
 
 import GHC.Data.CLabel
-import CoreSyn
+import GHC.Core.Syntax
 import CoreUtils (collectMakeStaticArgs)
 import GHC.Data.DataConstructor
 import GHC.Config.Flags
