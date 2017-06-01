@@ -39,7 +39,7 @@ import Reg
 import Instruction
 
 import GHC.Cmm.BlockId
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Cmm hiding (RegSet, emptyRegSet)
 import GHC.Cmm.PrettyPrint()
 

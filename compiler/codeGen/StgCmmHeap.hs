@@ -36,7 +36,7 @@ import StgCmmEnv
 
 import GHC.Cmm.Graph
 
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.RTS.Storage
 import GHC.Cmm.BlockId
 import GHC.Cmm

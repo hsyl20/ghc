@@ -28,7 +28,7 @@
 --
 -- The linker must find the definitions matching the @extern StgPtr <name>@
 -- declarations. For this to work, the identifiers of static pointers need to be
--- exported. This is done in GHC.Core.Optimise.LevelSetting.newLvlVar.
+-- exported. This is done in GHC.Core.Transform.LevelSetting.newLvlVar.
 --
 -- There is also a finalization function for the time when the module is
 -- unloaded.

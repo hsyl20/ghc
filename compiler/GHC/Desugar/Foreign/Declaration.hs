@@ -20,7 +20,7 @@ import GHC.Desugar.Monad
 
 import GHC.Syntax
 import GHC.Data.DataConstructor
-import GHC.Core.Optimise.Unfolding
+import GHC.Core.Transform.Unfolding
 import GHC.Data.Id
 import GHC.Data.Literal
 import GHC.Data.Module

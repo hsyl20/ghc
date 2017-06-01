@@ -163,7 +163,7 @@ pprPassDetails (CoreDoSimplify n md) = vcat [ text "Max iterations =" <+> int n
                                             , ppr md ]
 pprPassDetails _ = Outputable.empty
 
-data SimplifierMode             -- See comments in GHC.Core.Optimise.Simplify.Monad
+data SimplifierMode             -- See comments in GHC.Core.Transform.Simplify.Monad
   = SimplMode
         { sm_names      :: [String] -- Name(s) of the phase
         , sm_phase      :: CompilerPhase
@@ -202,7 +202,7 @@ data FloatOutSwitches = FloatOutSwitches {
                              -- ^ True <=> float out over-saturated applications
                              --            based on arity information.
                              -- See Note [Floating over-saturated applications]
-                             -- in GHC.Core.Optimise.LevelSetting
+                             -- in GHC.Core.Transform.LevelSetting
   floatToTopLevelOnly :: Bool      -- ^ Allow floating to the top level only.
   }
 instance Outputable FloatOutSwitches where

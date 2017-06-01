@@ -455,10 +455,10 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Core.Arity \
 	GHC.Core.FreeVars \
 	GHC.Core.Substitution \
-	GHC.Core.Optimise.Simple\
+	GHC.Core.Transform.Simple\
 	GHC.Core.Syntax \
 	GHC.Core.Tidy \
-	GHC.Core.Optimise.Unfolding \
+	GHC.Core.Transform.Unfolding \
 	GHC.Core.Utils \
 	GHC.Core.Force \
 	GHC.Core.Analyse.Stats \
@@ -540,7 +540,7 @@ compiler_stage2_dll0_MODULES = \
 	PrimOp \
 	GHC.Data.RepType \
 	GHC.Data.RdrName \
-	GHC.Core.Optimise.Rules \
+	GHC.Core.Transform.Rules \
 	GHC.Data.SrcLoc \
 	GHC.Data.StringBuffer \
 	GHC.Utils.SysTools.Terminal \

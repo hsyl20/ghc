@@ -12,7 +12,7 @@ import Instruction
 import Reg
 import GHC.Cmm hiding (RegSet)
 import GHC.Cmm.BlockId
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Utils.Monad
 import GHC.Utils.Monad.State

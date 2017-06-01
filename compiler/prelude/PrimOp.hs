@@ -476,7 +476,7 @@ primOpOkForSideEffects op
 {-
 Note [primOpIsCheap]
 ~~~~~~~~~~~~~~~~~~~~
-@primOpIsCheap@, as used in \tr{GHC.Core.Optimise.Simplify.Utils.hs}.  For now (HACK
+@primOpIsCheap@, as used in \tr{GHC.Core.Transform.Simplify.Utils.hs}.  For now (HACK
 WARNING), we just borrow some other predicates for a
 what-should-be-good-enough test.  "Cheap" means willing to call it more
 than once, and/or push it inside a lambda.  The latter could change the
@@ -513,7 +513,7 @@ primOpIsCheap op = primOpOkForSpeculation op
 primOpCodeSize
 ~~~~~~~~~~~~~~
 Gives an indication of the code size of a primop, for the purposes of
-calculating unfolding sizes; see GHC.Core.Optimise.Unfolding.sizeExpr.
+calculating unfolding sizes; see GHC.Core.Transform.Unfolding.sizeExpr.
 -}
 
 primOpCodeSize :: PrimOp -> Int
@@ -521,7 +521,7 @@ primOpCodeSize :: PrimOp -> Int
 
 primOpCodeSizeDefault :: Int
 primOpCodeSizeDefault = 1
-  -- GHC.Core.Optimise.Unfolding.primOpSize already takes into account primOpOutOfLine
+  -- GHC.Core.Transform.Unfolding.primOpSize already takes into account primOpOutOfLine
   -- and adds some further costs for the args in that case.
 
 primOpCodeSizeForeignCall :: Int

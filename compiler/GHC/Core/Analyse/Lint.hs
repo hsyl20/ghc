@@ -1910,7 +1910,7 @@ See Note [Grand plan for static forms] in StaticPtrTable for an overview.
 Every occurrence of the function 'makeStatic' should be moved to the
 top level by the FloatOut pass.  It's vital that we don't have nested
 'makeStatic' occurrences after CorePrep, because we populate the Static
-Pointer Table from the top-level bindings. See GHC.Core.Optimise.Pipeline Note [Grand
+Pointer Table from the top-level bindings. See GHC.Core.Transform.Pipeline Note [Grand
 plan for static forms].
 
 The linter checks that no occurrence is left behind, nested within an

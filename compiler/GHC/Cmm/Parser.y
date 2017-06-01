@@ -217,7 +217,7 @@ import StgCmmTicky
 import StgCmmBind       ( emitBlackHoleCode, emitUpdateFrame )
 import GHC.Core.Syntax          ( Tickish(SourceNote) )
 
-import GHC.Cmm.Optimise.ConstantFolding
+import GHC.Cmm.Transform.ConstantFolding
 import GHC.Cmm.Graph
 import GHC.Cmm
 import GHC.Cmm.Utils

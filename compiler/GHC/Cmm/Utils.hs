@@ -79,7 +79,7 @@ import CodeGen.Platform
 import Data.Word
 import Data.Maybe
 import Data.Bits
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 ---------------------------------------------------
 --

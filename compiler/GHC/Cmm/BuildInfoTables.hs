@@ -7,7 +7,7 @@ where
 
 #include "HsVersions.h"
 
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Data.Graph.Directed
 import GHC.Utils.Bitmap
 import GHC.Data.CLabel

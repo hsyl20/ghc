@@ -17,7 +17,7 @@ where
 import Reg
 
 import GHC.Cmm.BlockId
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Config.Flags
 import GHC.Cmm hiding (topInfoTable)
 import GHC.Platform

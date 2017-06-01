@@ -30,7 +30,7 @@ import GHC.Data.Class
 import GHC.Data.Available
 import GHC.Core.Syntax
 import GHC.Core.FreeVars     ( exprsSomeFreeVarsList )
-import GHC.Core.Optimise.Simple    ( simpleOptPgm, simpleOptExpr )
+import GHC.Core.Transform.Simple    ( simpleOptPgm, simpleOptExpr )
 import GHC.Core.PrettyPrint
 import GHC.Desugar.Monad
 import GHC.Desugar.Expression
@@ -46,7 +46,7 @@ import GHC.Core.Syntax.Make      ( mkCoreLet )
 import GHC.Data.Module
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import GHC.Core.Optimise.Rules
+import GHC.Core.Transform.Rules
 import GHC.Data.BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
 import GHC.Core.Monad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )

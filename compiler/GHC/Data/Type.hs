@@ -1192,7 +1192,7 @@ Unforunately, that's not the end of the story. Consider comparing
   (T a b c)      =?       (T a b |> (co -> <Type>)) (c |> sym co)
 These two types have the same kind (Type), but the left type is a TyConApp
 while the right type is not. To handle this case, we will have to implement
-some variant of the dreaded KPush algorithm (c.f. GHC.Core.Optimise.pushCoDataCon).
+some variant of the dreaded KPush algorithm (c.f. GHC.Core.Transform.pushCoDataCon).
 This stone is left unturned for now, meaning that we don't yet uphold (*).
 
 The other place where (*) will be hard to guarantee is in splitAppTy, because

@@ -4,7 +4,7 @@ module GHC.Cmm.Switch.Implement
   )
 where
 
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.Utils

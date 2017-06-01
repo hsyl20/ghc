@@ -33,7 +33,7 @@ import Reg
 
 import CodeGen.Platform
 import GHC.Cmm.BlockId
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Config.Flags
 import GHC.Cmm
 import GHC.RTS.InfoTable

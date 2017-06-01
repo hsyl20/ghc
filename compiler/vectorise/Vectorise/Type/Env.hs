@@ -25,7 +25,7 @@ import Vectorise.Utils
 
 import GHC.Core.Syntax
 import GHC.Core.Utils
-import GHC.Core.Optimise.Unfolding
+import GHC.Core.Transform.Unfolding
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

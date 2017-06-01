@@ -14,7 +14,7 @@ module GHC.Core.Analyse.Demand ( dmdAnalProgram ) where
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import GHC.Core.Optimise.WorkerWrapper.Utils            ( findTypeShape, deepSplitProductType_maybe )
+import GHC.Core.Transform.WorkerWrapper.Utils            ( findTypeShape, deepSplitProductType_maybe )
 import GHC.Data.Demand   -- All of it
 import GHC.Core.Syntax
 import GHC.Core.Force          ( seqBinds )
@@ -1514,7 +1514,7 @@ generator, though.  So:
 
  * Just before TidyCore, we add a pass of the demand analyser,
       but WITHOUT subsequent worker/wrapper and simplifier,
-   right before TidyCore.  See GHC.Core.Optimise.Pipeline.getCoreToDo.
+   right before TidyCore.  See GHC.Core.Transform.Pipeline.getCoreToDo.
 
    This way, correct information finds its way into the module interface
    (strictness signatures!) and the code generator (single-entry thunks!)

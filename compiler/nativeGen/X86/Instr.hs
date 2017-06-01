@@ -26,7 +26,7 @@ import Reg
 import TargetReg
 
 import GHC.Cmm.BlockId
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import CodeGen.Platform
 import GHC.Cmm
 import GHC.Data.FastString

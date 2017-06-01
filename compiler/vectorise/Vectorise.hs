@@ -17,7 +17,7 @@ import Vectorise.Env
 import Vectorise.Monad
 
 import GHC.Types hiding      ( MonadThings(..) )
-import GHC.Core.Optimise.Unfolding           ( mkInlineUnfoldingWithArity )
+import GHC.Core.Transform.Unfolding           ( mkInlineUnfoldingWithArity )
 import GHC.Core.PrettyPrint
 import GHC.Core.Syntax
 import GHC.Core.Monad            ( CoreM, getHscEnv )

@@ -39,7 +39,7 @@ module GHC.Data.Id.Make (
 
 #include "HsVersions.h"
 
-import GHC.Core.Optimise.Rules
+import GHC.Core.Transform.Rules
 import TysPrim
 import TysWiredIn
 import PrelRules
@@ -49,7 +49,7 @@ import GHC.Data.Coercion
 import TcType
 import GHC.Core.Syntax.Make
 import GHC.Core.Utils        ( exprType, mkCast )
-import GHC.Core.Optimise.Unfolding
+import GHC.Core.Transform.Unfolding
 import GHC.Data.Literal
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

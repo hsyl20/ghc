@@ -151,7 +151,7 @@ isExprLevPoly = go
    go e@(Cast {})                  = check_type e
    go (Tick _ e)                   = go e
    go e@(Type {})                  = pprPanic "isExprLevPoly ty" (ppr e)
-   go (Coercion {})                = False  -- this case can happen in GHC.Core.Optimise.LevelSetting
+   go (Coercion {})                = False  -- this case can happen in GHC.Core.Transform.LevelSetting
 
    check_type = isTypeLevPoly . exprType  -- slow approach
 
@@ -1036,7 +1036,7 @@ Moreover it improves arities of overloaded functions where
 there is only dictionary selection (no construction) involved
 
 Note [exprIsCheap]   See also Note [Interaction of exprIsCheap and lone variables]
-~~~~~~~~~~~~~~~~~~   in GHC.Core.Optimise.Unfolding.hs
+~~~~~~~~~~~~~~~~~~   in GHC.Core.Transform.Unfolding.hs
 @exprIsCheap@ looks at a Core expression and returns \tr{True} if
 it is obviously in weak head normal form, or is cheap to get to WHNF.
 [Note that that's not the same as exprIsDupable; an expression might be
@@ -1311,7 +1311,7 @@ exprOkForSpeculation, exprOkForSideEffects :: Expr b -> Bool
 exprOkForSpeculation = expr_ok primOpOkForSpeculation
 exprOkForSideEffects = expr_ok primOpOkForSideEffects
   -- Polymorphic in binder type
-  -- There is one call at a non-Id binder type, in GHC.Core.Optimise.LevelSetting
+  -- There is one call at a non-Id binder type, in GHC.Core.Transform.LevelSetting
 
 expr_ok :: (PrimOp -> Bool) -> Expr b -> Bool
 expr_ok _ (Lit _)      = True

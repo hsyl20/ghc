@@ -20,7 +20,7 @@ import RegClass
 import TargetReg
 
 import GHC.Cmm hiding (topInfoTable)
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Data.CLabel
 

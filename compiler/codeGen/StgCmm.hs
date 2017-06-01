@@ -149,7 +149,7 @@ cgTopRhs :: DynFlags -> RecFlag -> Id -> StgRhs -> (CgIdInfo, FCode ())
 cgTopRhs dflags _rec bndr (StgRhsCon _cc con args)
   = cgTopRhsCon dflags bndr con (assertNonVoidStgArgs args)
       -- con args are always non-void,
-      -- see Note [Post-unarisation invariants] in GHC.STG.Optimise.Unarise
+      -- see Note [Post-unarisation invariants] in GHC.STG.Transform.Unarise
 
 cgTopRhs dflags rec bndr (StgRhsClosure cc bi fvs upd_flag args body)
   = ASSERT(null fvs)    -- There should be no free variables

@@ -19,7 +19,7 @@ import GHC.Cmm.BlockId
 import CgUtils ( fixStgRegisters )
 import GHC.Cmm
 import GHC.Cmm.Utils
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Cmm.PrettyPrint
 
 import GHC.Utils.Handle.BufferedWrite

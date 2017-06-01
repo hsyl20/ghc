@@ -16,7 +16,7 @@ import GHC.Config.Flags
 import GHC.Cmm.BlockId
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression ()
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Data.Maybe
 import GHC.Utils.Outputable

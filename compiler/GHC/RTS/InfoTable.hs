@@ -41,7 +41,7 @@ import GHC.RTS.Storage
 import GHC.Utils.Bitmap
 import GHC.Data.Stream (Stream)
 import qualified GHC.Data.Stream as Stream
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Data.Maybe
 import GHC.Config.Flags

@@ -33,7 +33,7 @@ import Instruction
 import Reg
 
 import GHC.Cmm.BlockId
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Cmm
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap

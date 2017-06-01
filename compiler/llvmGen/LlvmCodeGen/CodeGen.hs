@@ -18,7 +18,7 @@ import GHC.Cmm
 import GHC.Cmm.PrettyPrint
 import GHC.Cmm.Utils
 import GHC.Cmm.Switch
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Config.Flags
 import GHC.Data.FastString

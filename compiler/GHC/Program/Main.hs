@@ -114,7 +114,7 @@ import LoadIface        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
 import GHC.Desugar.Main
-import GHC.Core.Optimise.Pipeline
+import GHC.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Core.Prepare
 import GHC.STG.CoreToStg ( coreToStg )
@@ -124,7 +124,7 @@ import CostCentre
 import ProfInit
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
-import GHC.STG.Optimise.Pipeline         ( stg2stg )
+import GHC.STG.Transform.Pipeline         ( stg2stg )
 import GHC.Cmm
 import GHC.Cmm.Parser         ( parseCmmFile )
 import GHC.Cmm.BuildInfoTables

@@ -39,7 +39,7 @@ import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
 import GHC.Core.Syntax
 import GHC.Core.Utils
-import GHC.Core.Optimise.Unfolding
+import GHC.Core.Transform.Unfolding
 import GHC.Core.Analyse.Lint
 import GHC.Core.Syntax.Make
 import GHC.Data.Id

@@ -39,7 +39,7 @@ import PprBase
 import GHC.Cmm hiding (topInfoTable)
 import GHC.Cmm.PrettyPrint()
 import GHC.Data.CLabel
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Data.Unique           ( Uniquable(..), pprUniqueAlways )
 import GHC.Utils.Outputable

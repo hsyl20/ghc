@@ -205,9 +205,9 @@ Library
         GHC.Cmm.BuildInfoTables
         GHC.Cmm.Pipeline
         GHC.Cmm.CallConvention
-        GHC.Cmm.Optimise.CommonBlockElim
+        GHC.Cmm.Transform.CommonBlockElim
         GHC.Cmm.Switch.Implement
-        GHC.Cmm.Optimise.Shortcutting
+        GHC.Cmm.Transform.Shortcutting
         GHC.Cmm.Expr
         GHC.RTS.InfoTable
         GHC.Cmm.Lexer
@@ -217,10 +217,10 @@ Library
         GHC.Cmm.Parser.Monad
         GHC.Cmm.Switch
         GHC.Cmm.Node
-        GHC.Cmm.Optimise.ConstantFolding
+        GHC.Cmm.Transform.ConstantFolding
         GHC.Cmm.Parser
         GHC.Cmm.ProcPoint
-        GHC.Cmm.Optimise.Sinking
+        GHC.Cmm.Transform.Sinking
         GHC.Cmm.Type
         GHC.Cmm.Utils
         GHC.Cmm.LayoutStack
@@ -265,11 +265,11 @@ Library
         GHC.Core.Analyse.Lint
         GHC.Core.Prepare
         GHC.Core.Substitution
-        GHC.Core.Optimise.Simple
+        GHC.Core.Transform.Simple
         GHC.Core.Syntax
         GHC.Data.TrieMap
         GHC.Core.Tidy
-        GHC.Core.Optimise.Unfolding
+        GHC.Core.Transform.Unfolding
         GHC.Core.Utils
         GHC.Core.Force
         GHC.Core.Analyse.Stats
@@ -380,33 +380,33 @@ Library
         RnUtils
         RnUnbound
         GHC.Core.Monad
-        GHC.Core.Optimise.CommonSubExpr
-        GHC.Core.Optimise.FloatIn
-        GHC.Core.Optimise.FloatOut
-        GHC.Core.Optimise.LiberateCase
+        GHC.Core.Transform.CommonSubExpr
+        GHC.Core.Transform.FloatIn
+        GHC.Core.Transform.FloatOut
+        GHC.Core.Transform.LiberateCase
         GHC.Core.Analyse.Occurence
-        GHC.Core.Optimise.StaticArgument
-        GHC.Core.Optimise.LevelSetting
-        GHC.Core.Optimise.Pipeline
-        GHC.Core.Optimise.Simplify.Environment
-        GHC.Core.Optimise.Simplify.Monad
-        GHC.Core.Optimise.Simplify.Utils
-        GHC.Core.Optimise.Simplify
-        GHC.STG.Optimise.Pipeline
+        GHC.Core.Transform.StaticArgument
+        GHC.Core.Transform.LevelSetting
+        GHC.Core.Transform.Pipeline
+        GHC.Core.Transform.Simplify.Environment
+        GHC.Core.Transform.Simplify.Monad
+        GHC.Core.Transform.Simplify.Utils
+        GHC.Core.Transform.Simplify
+        GHC.STG.Transform.Pipeline
         GHC.STG.Analyse.Stats
-        GHC.STG.Optimise.CommonSubExpr
-        GHC.STG.Optimise.Unarise
+        GHC.STG.Transform.CommonSubExpr
+        GHC.STG.Transform.Unarise
         GHC.Data.RepType
-        GHC.Core.Optimise.Rules
-        GHC.Core.Optimise.Specialise.Constructor
-        GHC.Core.Optimise.Specialise
+        GHC.Core.Transform.Rules
+        GHC.Core.Transform.Specialise.Constructor
+        GHC.Core.Transform.Specialise
         GHC.STG.CoreToStg
         GHC.STG.Analyse.Lint
         GHC.STG.Syntax
         GHC.Core.Analyse.CallArity
         GHC.Core.Analyse.Demand
-        GHC.Core.Optimise.WorkerWrapper
-        GHC.Core.Optimise.WorkerWrapper.Utils
+        GHC.Core.Transform.WorkerWrapper
+        GHC.Core.Transform.WorkerWrapper.Utils
         FamInst
         Inst
         TcAnnotations
@@ -532,8 +532,8 @@ Library
         Vectorise.Env
         Vectorise.Exp
         Vectorise
-        GHC.Cmm.Optimise.Dataflow.Hoopl
-        GHC.Cmm.Optimise.Dataflow
+        GHC.Cmm.Transform.Dataflow.Hoopl
+        GHC.Cmm.Transform.Dataflow
 --        CgInfoTbls used in ghci/DebuggerUtils
 --        CgHeapery  mkVirtHeapOffsets used in ghci
 

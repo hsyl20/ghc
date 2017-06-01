@@ -7,7 +7,7 @@
   , PolyKinds -- Comment out PolyKinds and the bug goes away.
   #-}
 {-# OPTIONS_GHC -O #-}
-  -- The bug is in GHC.Core.Optimise.Simplify.Utils.abstractFloats, so we need -O to trigger it
+  -- The bug is in GHC.Core.Transform.Simplify.Utils.abstractFloats, so we need -O to trigger it
 
 module KeyValue where
 

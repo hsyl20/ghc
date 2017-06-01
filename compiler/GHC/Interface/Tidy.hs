@@ -15,7 +15,7 @@ module GHC.Interface.Tidy (
 import TcRnTypes
 import GHC.Config.Flags
 import GHC.Core.Syntax
-import GHC.Core.Optimise.Unfolding
+import GHC.Core.Transform.Unfolding
 import GHC.Core.FreeVars
 import GHC.Core.Tidy
 import GHC.Core.Monad
@@ -25,7 +25,7 @@ import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
 import GHC.Core.Force          (seqBinds)
 import GHC.Core.Analyse.Lint
 import GHC.Data.Literal
-import GHC.Core.Optimise.Rules
+import GHC.Core.Transform.Rules
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import GHC.Core.Arity        ( exprArity, exprBotStrictness_maybe )
@@ -563,7 +563,7 @@ constructed in an optimised form.  E.g. record selector for
 Then the unfolding looks like
         x = \t. case t of MkT x1 -> let x = I# x1 in x
 This generates bad code unless it's first simplified a bit.  That is
-why GHC.Core.Optimise.Unfolding.mkImplicitUnfolding uses simpleOptExpr to do a bit of
+why GHC.Core.Transform.Unfolding.mkImplicitUnfolding uses simpleOptExpr to do a bit of
 optimisation first.  (Only matters when the selector is used curried;
 eg map x ys.)  See Trac #2070.
 
@@ -573,7 +573,7 @@ much like any other Id.  But doing "light" optimisation on an implicit
 Id still makes sense.]
 
 At one time I tried injecting the implicit bindings *early*, at the
-beginning of GHC.Core.Optimise.Pipeline.  But that gave rise to real difficulty,
+beginning of GHC.Core.Transform.Pipeline.  But that gave rise to real difficulty,
 because GlobalIds are supposed to have *fixed* IdInfo, but the
 simplifier and other core-to-core passes mess with IdInfo all the
 time.  The straw that broke the camels back was when a class selector

@@ -18,7 +18,7 @@ import Vectorise.Utils.Poly
 
 import GHC.Core.Syntax
 import GHC.Core.Utils
-import GHC.Core.Optimise.Unfolding
+import GHC.Core.Transform.Unfolding
 import GHC.Data.Type
 import GHC.Data.Id
 import GHC.Data.BasicTypes  (Arity)

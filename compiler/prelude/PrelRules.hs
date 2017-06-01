@@ -31,7 +31,7 @@ import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
 import GHC.Data.Id
 import GHC.Data.Literal
-import GHC.Core.Optimise.Simple    ( exprIsLiteral_maybe )
+import GHC.Core.Transform.Simple    ( exprIsLiteral_maybe )
 import PrimOp      ( PrimOp(..), tagToEnumKey )
 import TysWiredIn
 import TysPrim
@@ -39,7 +39,7 @@ import GHC.Data.Type.Constructor       ( tyConDataCons_maybe, isEnumerationTyCon
                    , unwrapNewTyCon_maybe, tyConDataCons )
 import GHC.Data.DataConstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
 import GHC.Core.Utils   ( cheapEqExpr, exprIsHNF )
-import GHC.Core.Optimise.Unfolding  ( exprIsConApp_maybe )
+import GHC.Core.Transform.Unfolding  ( exprIsConApp_maybe )
 import GHC.Data.Type
 import GHC.Data.OccName     ( occNameFS )
 import PrelNames
@@ -1390,7 +1390,7 @@ match_smallIntegerTo _ _ _ _ _ = Nothing
 --------------------------------------------------------
 -- Constant folding through case-expressions
 --
--- cf Scrutinee Constant Folding in simplCore/GHC.Core.Optimise.Simplify.Utils
+-- cf Scrutinee Constant Folding in simplCore/GHC.Core.Transform.Simplify.Utils
 --------------------------------------------------------
 
 -- | Match the scrutinee of a case and potentially return a new scrutinee and a
@@ -1525,7 +1525,7 @@ we generate
     True  -> e1
 and it is nice to then get rid of the tagToEnum.
 
-NB: in GHC.Core.Optimise.Simplify.Utils, where we invoke caseRules,
+NB: in GHC.Core.Transform.Simplify.Utils, where we invoke caseRules,
     we convert that 0# to DEFAULT
 
 Note [caseRules for dataToTag]

@@ -64,7 +64,7 @@ module StgCmmMonad (
 import GHC.Cmm
 import StgCmmClosure
 import GHC.Config.Flags
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Dataflow
 import GHC.Data.Maybe
 import GHC.Cmm.Graph as MkGraph
 import GHC.Cmm.BlockId

@@ -199,7 +199,7 @@ primitives, and literals.
         -- which can't be let-bound first
   | StgConApp   DataCon
                 [GenStgArg occ] -- Saturated
-                [Type]          -- See Note [Types in StgConApp] in GHC.STG.Optimise.Unarise
+                [Type]          -- See Note [Types in StgConApp] in GHC.STG.Transform.Unarise
 
   | StgOpApp    StgOp           -- Primitive op or foreign call
                 [GenStgArg occ] -- Saturated.

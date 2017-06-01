@@ -10,13 +10,13 @@ module GHC.Cmm.Pipeline (
 import GHC.Cmm
 import GHC.Cmm.Analyse.Lint
 import GHC.Cmm.BuildInfoTables
-import GHC.Cmm.Optimise.CommonBlockElim
+import GHC.Cmm.Transform.CommonBlockElim
 import GHC.Cmm.Switch.Implement
 import GHC.Cmm.ProcPoint
-import GHC.Cmm.Optimise.Shortcutting
+import GHC.Cmm.Transform.Shortcutting
 import GHC.Cmm.LayoutStack
-import GHC.Cmm.Optimise.Sinking
-import GHC.Cmm.Optimise.Dataflow
+import GHC.Cmm.Transform.Sinking
+import GHC.Cmm.Transform.Dataflow
 
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
