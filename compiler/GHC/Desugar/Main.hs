@@ -29,7 +29,7 @@ import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Available
 import GHC.Core.Syntax
-import CoreFVs     ( exprsSomeFreeVarsList )
+import GHC.Core.FreeVars     ( exprsSomeFreeVarsList )
 import GHC.Core.Optimise     ( simpleOptPgm, simpleOptExpr )
 import PprCore
 import GHC.Desugar.Monad

@@ -267,7 +267,7 @@ Library
         StgCmmExtCode
         GHC.RTS.Storage
         GHC.Core.Arity
-        CoreFVs
+        GHC.Core.FreeVars
         GHC.Core.Analyse.Lint
         CorePrep
         CoreSubst

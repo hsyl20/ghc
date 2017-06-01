@@ -453,7 +453,7 @@ compiler_stage2_dll0_MODULES = \
 	Config \
 	GHC.Config.Constants \
 	GHC.Core.Arity \
-	CoreFVs \
+	GHC.Core.FreeVars \
 	CoreSubst \
 	GHC.Core.Optimise \
 	GHC.Core.Syntax \

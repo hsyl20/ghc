@@ -23,7 +23,7 @@ import GHC.Core.Syntax
 import CoreSubst
 import CoreUtils
 import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )
-import CoreFVs          ( exprsFreeVarsList )
+import GHC.Core.FreeVars          ( exprsFreeVarsList )
 import CoreMonad
 import GHC.Data.Literal          ( litIsLifted )
 import GHC.Types         ( ModGuts(..) )

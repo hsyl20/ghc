@@ -71,7 +71,7 @@ import CoreUtils        ( exprType, exprIsHNF
                         , collectMakeStaticArgs
                         )
 import GHC.Core.Arity        ( exprBotStrictness_maybe )
-import CoreFVs          -- all of it
+import GHC.Core.FreeVars          -- all of it
 import CoreSubst
 import MkCore           ( sortQuantVars )
 

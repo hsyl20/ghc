@@ -21,7 +21,7 @@ module GHC.Plugins
    , module GHC.Data.DataConstructor
    , module CoreUtils
    , module MkCore
-   , module CoreFVs
+   , module GHC.Core.FreeVars
    , module CoreSubst
    , module Rules
    , module GHC.Data.Annotation
@@ -69,7 +69,7 @@ import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import CoreUtils
 import MkCore
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreSubst hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
        -- These names are also exported by Type
 

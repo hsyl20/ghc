@@ -30,7 +30,7 @@ import GHC.Core.Syntax
 import PprCore
 import GHC.Data.Literal
 import PrimOp
-import CoreFVs
+import GHC.Core.FreeVars
 import GHC.Data.Type
 import RepType
 import GHC.Data.Kind            ( isLiftedTypeKind )

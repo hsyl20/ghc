@@ -41,7 +41,7 @@ import GHC.Config.Flags
 import GHC.Core.Syntax
 import qualified CoreSubst
 import PprCore
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreUtils
 import GHC.Core.Arity
 import GHC.Core.Optimise.Unfolding

@@ -25,7 +25,7 @@ import Vectorise.Utils
 import CoreUtils
 import MkCore
 import GHC.Core.Syntax
-import CoreFVs
+import GHC.Core.FreeVars
 import GHC.Data.Class
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor

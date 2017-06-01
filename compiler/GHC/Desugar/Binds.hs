@@ -34,7 +34,7 @@ import MkCore
 import CoreUtils
 import GHC.Core.Arity ( etaExpand )
 import GHC.Core.Optimise.Unfolding
-import CoreFVs
+import GHC.Core.FreeVars
 import GHC.Data.Graph.Directed
 
 import PrelNames

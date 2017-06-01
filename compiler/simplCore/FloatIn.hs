@@ -23,7 +23,7 @@ import GHC.Core.Syntax
 import MkCore
 import GHC.Types         ( ModGuts(..) )
 import CoreUtils
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreMonad        ( CoreM )
 import GHC.Data.Id               ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )
 import GHC.Data.Var

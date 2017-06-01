@@ -956,7 +956,7 @@ minusFVBinders vs fv = foldr minusFVBinder fv vs
 minusFVBinder :: Id -> FreeVarsInfo -> FreeVarsInfo
 minusFVBinder v fv = fv `delVarEnv` v
         -- When removing a binder, remember to add its type variables
-        -- c.f. CoreFVs.delBinderFV
+        -- c.f. GHC.Core.FreeVars.delBinderFV
 
 elementOfFVInfo :: Id -> FreeVarsInfo -> Bool
 elementOfFVInfo id fvs = isJust (lookupVarEnv fvs id)

@@ -31,7 +31,7 @@ import TcType
 import GHC.Data.Type ( splitPiTy )
 import TcEvidence
 import GHC.Core.Syntax
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreUtils
 import MkCore
 import GHC.Desugar.Binds (dsHsWrapper)

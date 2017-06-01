@@ -16,7 +16,7 @@ import TcRnTypes
 import GHC.Config.Flags
 import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding
-import CoreFVs
+import GHC.Core.FreeVars
 import GHC.Core.Tidy
 import CoreMonad
 import CorePrep

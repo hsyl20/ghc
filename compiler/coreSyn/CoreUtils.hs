@@ -60,7 +60,7 @@ module CoreUtils (
 import GHC.Core.Syntax
 import PrelNames ( makeStaticName )
 import PprCore
-import CoreFVs( exprFreeVars )
+import GHC.Core.FreeVars( exprFreeVars )
 import GHC.Data.Var
 import GHC.Data.SrcLoc
 import GHC.Data.Var.Environment

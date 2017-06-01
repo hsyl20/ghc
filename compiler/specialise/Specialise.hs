@@ -23,7 +23,7 @@ import GHC.Core.Syntax
 import Rules
 import GHC.Core.Optimise          ( collectBindersPushingCo )
 import CoreUtils        ( exprIsTrivial, applyTypeToArgs, mkCast )
-import CoreFVs          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )
+import GHC.Core.FreeVars          ( exprFreeVars, exprsFreeVars, idFreeVars, exprsFreeIdsList )
 import GHC.Core.Arity        ( etaExpandToJoinPointRule )
 import GHC.Data.Unique.Supply
 import GHC.Data.Name

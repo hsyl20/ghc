@@ -19,7 +19,7 @@ module GHC.Core.Arity (
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreUtils
 import CoreSubst
 import GHC.Data.Demand

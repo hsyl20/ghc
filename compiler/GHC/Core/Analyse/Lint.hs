@@ -22,7 +22,7 @@ module GHC.Core.Analyse.Lint (
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreUtils
 import GHC.Core.Analyse.Stats   ( coreBindsStats )
 import CoreMonad
@@ -659,7 +659,7 @@ lintIdUnfolding bndr bndr_ty (DFunUnfolding { df_con = con, df_bndrs = bndrs
 
 lintIdUnfolding  _ _ _
   = return ()       -- Do not Lint unstable unfoldings, because that leads
-                    -- to exponential behaviour; c.f. CoreFVs.idUnfoldingVars
+                    -- to exponential behaviour; c.f. GHC.Core.FreeVars.idUnfoldingVars
 
 {-
 Note [Checking for INLINE loop breakers]

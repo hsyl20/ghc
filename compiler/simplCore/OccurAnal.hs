@@ -20,7 +20,7 @@ module OccurAnal (
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
                           stripTicksTopE, mkTicks )
 import GHC.Data.Id

@@ -375,7 +375,7 @@ It's very important that they are *LocalIds*, not GlobalIds, for lots
 of reasons:
 
  * We want to treat them as free variables for the purpose of
-   dependency analysis (e.g. CoreFVs.exprFreeVars).
+   dependency analysis (e.g. GHC.Core.FreeVars.exprFreeVars).
 
  * Look them up in the current substitution when we come across
    occurrences of them (in Subst.lookupIdSubst). Lacking this we

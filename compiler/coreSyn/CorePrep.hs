@@ -21,7 +21,7 @@ import PrelNames
 import GHC.Data.Id.Make             ( realWorldPrimId )
 import CoreUtils
 import GHC.Core.Arity
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreMonad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )
 import GHC.Core.Syntax

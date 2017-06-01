@@ -37,7 +37,7 @@ module CoreSubst (
 
 
 import GHC.Core.Syntax
-import CoreFVs
+import GHC.Core.FreeVars
 import CoreSeq
 import CoreUtils
 import qualified GHC.Data.Type as Type
