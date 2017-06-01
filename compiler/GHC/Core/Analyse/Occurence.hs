@@ -13,7 +13,7 @@ core expression with (hopefully) improved usage information.
 
 {-# LANGUAGE CPP, BangPatterns, MultiWayIf, ViewPatterns  #-}
 
-module OccurAnal (
+module GHC.Core.Analyse.Occurence (
         occurAnalysePgm, occurAnalyseExpr, occurAnalyseExpr_NoBinderSwap
     ) where
 

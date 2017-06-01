@@ -269,7 +269,7 @@ Library
         GHC.Core.Analyse.Lint
         GHC.Core.Prepare
         GHC.Core.Substitution
-        GHC.Core.Optimise
+        GHC.Core.Optimise.Simple
         GHC.Core.Syntax
         GHC.Data.TrieMap
         GHC.Core.Tidy
@@ -386,7 +386,7 @@ Library
         GHC.Core.Monad
         GHC.Core.Optimise.CommonSubExpr
         GHC.Core.Optimise.FloatIn
-        FloatOut
+        GHC.Core.Optimise.FloatOut
         GHC.Core.Optimise.LiberateCase
         GHC.Core.Analyse.Occurence
         GHC.Core.Optimise.StaticArgument

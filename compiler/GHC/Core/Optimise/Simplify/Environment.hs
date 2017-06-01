@@ -11,9 +11,11 @@ module GHC.Core.Optimise.Simplify.Environment (
         setMode, getMode, updMode,
 
         -- * Environments
-        SimplEnv(..), StaticEnv, pprSimplEnv,   -- Temp not abstract
+        GHC.Core.Optimise.Simplify.Environment.SimplEnv(..),
+        StaticEnv, pprSimplEnv,   -- Temp not abstract
         mkSimplEnv, extendIdSubst,
-        SimplEnv.extendTvSubst, SimplEnv.extendCvSubst,
+        GHC.Core.Optimise.Simplify.Environment.extendTvSubst,
+        GHC.Core.Optimise.Simplify.Environment.extendCvSubst,
         zapSubstEnv, setSubstEnv,
         getInScope, setInScopeAndZapFloats,
         setInScopeSet, modifyInScope, addNewInScopeIds,
