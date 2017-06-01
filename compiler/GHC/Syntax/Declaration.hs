@@ -86,7 +86,7 @@ module GHC.Syntax.Declaration (
     ) where
 
 -- friends:
-import {-# SOURCE #-}   HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr,
+import {-# SOURCE #-} GHC.Syntax.Expression ( LHsExpr, HsExpr, HsSplice, pprExpr,
                                 pprSpliceDecl )
         -- Because Expr imports Decls via HsBracket
 

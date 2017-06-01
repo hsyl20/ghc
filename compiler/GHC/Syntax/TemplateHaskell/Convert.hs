@@ -8,9 +8,14 @@ This module converts Template Haskell syntax into GHC.Syntax
 
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module Convert( convertToHsExpr, convertToPat, convertToHsDecls,
-                convertToHsType,
-                thRdrNameGuesses ) where
+module GHC.Syntax.TemplateHaskell.Convert
+   ( convertToHsExpr
+   , convertToPat
+   , convertToHsDecls
+   , convertToHsType
+   , thRdrNameGuesses
+   )
+where
 
 import GHC.Syntax as Hs
 import qualified GHC.Data.Class as Class

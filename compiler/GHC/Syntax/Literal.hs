@@ -18,7 +18,7 @@ module GHC.Syntax.Literal where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} HsExpr( HsExpr, pprExpr )
+import {-# SOURCE #-} GHC.Syntax.Expression ( HsExpr, pprExpr )
 import GHC.Data.BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
                     negateFractionalLit,SourceText(..),pprWithSourceText )
 import GHC.Data.Type       ( Type )

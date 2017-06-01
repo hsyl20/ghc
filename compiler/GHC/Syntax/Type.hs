@@ -68,7 +68,7 @@ module GHC.Syntax.Type (
         pprHsContext, pprHsContextNoArrow, pprHsContextMaybe
     ) where
 
-import {-# SOURCE #-} HsExpr ( HsSplice, pprSplice )
+import {-# SOURCE #-} GHC.Syntax.Expression ( HsSplice, pprSplice )
 
 import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..),
                      OutputableBndrId )

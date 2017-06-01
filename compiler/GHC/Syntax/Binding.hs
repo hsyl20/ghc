@@ -17,10 +17,10 @@ Datatype for: @BindGroup@, @Bind@, @Sig@, @Bind@.
 
 module GHC.Syntax.Binding where
 
-import {-# SOURCE #-} HsExpr ( pprExpr, LHsExpr,
+import {-# SOURCE #-} GHC.Syntax.Expression ( pprExpr, LHsExpr,
                                MatchGroup, pprFunBind,
                                GRHSs, pprPatBind )
-import {-# SOURCE #-} HsPat  ( LPat )
+import {-# SOURCE #-} GHC.Syntax.Pattern  ( LPat )
 
 import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 import GHC.Syntax.Type

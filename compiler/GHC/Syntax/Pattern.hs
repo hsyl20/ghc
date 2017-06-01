@@ -38,7 +38,8 @@ module GHC.Syntax.Pattern (
         pprParendLPat, pprConArgs
     ) where
 
-import {-# SOURCE #-} HsExpr            (SyntaxExpr, LHsExpr, HsSplice, pprLExpr, pprSplice)
+import {-# SOURCE #-} GHC.Syntax.Expression (SyntaxExpr, LHsExpr
+                                 , HsSplice, pprLExpr, pprSplice)
 
 -- friends:
 import GHC.Syntax.Binding
