@@ -37,7 +37,7 @@ import GHC.Syntax.Declaration
 import GHC.Syntax.Binding
 import GHC.Syntax.Expression
 import GHC.Syntax.ImportExport
-import HsLit
+import GHC.Syntax.Literal
 import PlaceHolder
 import HsPat
 import HsTypes

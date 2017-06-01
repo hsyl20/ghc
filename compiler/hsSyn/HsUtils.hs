@@ -97,7 +97,7 @@ import GHC.Syntax.Binding
 import GHC.Syntax.Expression
 import HsPat
 import HsTypes
-import HsLit
+import GHC.Syntax.Literal
 import PlaceHolder
 
 import TcEvidence

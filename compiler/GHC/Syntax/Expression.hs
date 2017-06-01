@@ -20,7 +20,7 @@ module GHC.Syntax.Expression where
 -- friends:
 import GHC.Syntax.Declaration
 import HsPat
-import HsLit
+import GHC.Syntax.Literal
 import PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
                      NameOrRdrName,OutputableBndrId )
 import HsTypes

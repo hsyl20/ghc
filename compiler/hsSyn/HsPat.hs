@@ -42,7 +42,7 @@ import {-# SOURCE #-} HsExpr            (SyntaxExpr, LHsExpr, HsSplice, pprLExpr
 
 -- friends:
 import GHC.Syntax.Binding
-import HsLit
+import GHC.Syntax.Literal
 import PlaceHolder
 import HsTypes
 import TcEvidence
