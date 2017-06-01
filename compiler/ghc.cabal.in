@@ -307,7 +307,7 @@ Library
         GHC.Syntax.Expression
         GHC.Syntax.ImportExport
         GHC.Syntax.Literal
-        PlaceHolder
+        GHC.Syntax.PlaceHolder
         GHC.Syntax.Pattern
         HsSyn
         GHC.Syntax.Type

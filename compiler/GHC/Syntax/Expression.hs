@@ -21,7 +21,7 @@ module GHC.Syntax.Expression where
 import GHC.Syntax.Declaration
 import GHC.Syntax.Pattern
 import GHC.Syntax.Literal
-import PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
+import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
                      NameOrRdrName,OutputableBndrId )
 import GHC.Syntax.Type
 import GHC.Syntax.Binding

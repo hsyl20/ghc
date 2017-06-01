@@ -11,7 +11,7 @@ import GHC.Data.SrcLoc     ( Located )
 import GHC.Utils.Outputable ( SDoc, Outputable )
 import {-# SOURCE #-} HsPat  ( LPat )
 import GHC.Data.BasicTypes ( SpliceExplicitFlag(..))
-import PlaceHolder ( DataId, OutputableBndrId )
+import GHC.Syntax.PlaceHolder ( DataId, OutputableBndrId )
 import Data.Data hiding ( Fixity )
 
 type role HsExpr nominal

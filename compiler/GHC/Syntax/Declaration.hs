@@ -98,7 +98,7 @@ import GHC.Data.Name
 import GHC.Data.BasicTypes
 import GHC.Data.Coercion
 import ForeignCall
-import PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
+import GHC.Syntax.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
 import GHC.Data.Name.Set
 
 -- others:

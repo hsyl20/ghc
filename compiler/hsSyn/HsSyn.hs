@@ -38,7 +38,7 @@ import GHC.Syntax.Binding
 import GHC.Syntax.Expression
 import GHC.Syntax.ImportExport
 import GHC.Syntax.Literal
-import PlaceHolder
+import GHC.Syntax.PlaceHolder
 import GHC.Syntax.Pattern
 import GHC.Syntax.Type
 import GHC.Data.BasicTypes       ( Fixity, WarningTxt )

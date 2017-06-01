@@ -10,7 +10,7 @@ import GHC.Data.SrcLoc( Located )
 
 import Data.Data hiding (Fixity)
 import GHC.Utils.Outputable
-import PlaceHolder      ( DataId, OutputableBndrId )
+import GHC.Syntax.PlaceHolder      ( DataId, OutputableBndrId )
 
 type role Pat nominal
 data Pat (i :: *)

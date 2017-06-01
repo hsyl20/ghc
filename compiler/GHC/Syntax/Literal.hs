@@ -24,7 +24,7 @@ import GHC.Data.BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit
 import GHC.Data.Type       ( Type )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
+import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 
 import Data.ByteString (ByteString)
 import Data.Data hiding ( Fixity )

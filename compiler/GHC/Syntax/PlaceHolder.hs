@@ -4,7 +4,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE StandaloneDeriving #-}
 
-module PlaceHolder where
+module GHC.Syntax.PlaceHolder where
 
 import GHC.Data.Type       ( Type )
 import GHC.Utils.Outputable

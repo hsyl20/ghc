@@ -70,7 +70,7 @@ module GHC.Syntax.Type (
 
 import {-# SOURCE #-} HsExpr ( HsSplice, pprSplice )
 
-import PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..),
+import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..),
                      OutputableBndrId )
 
 import GHC.Data.Id ( Id )

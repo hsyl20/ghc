@@ -98,7 +98,7 @@ import GHC.Syntax.Expression
 import GHC.Syntax.Pattern
 import GHC.Syntax.Type
 import GHC.Syntax.Literal
-import PlaceHolder
+import GHC.Syntax.PlaceHolder
 
 import TcEvidence
 import GHC.Data.RdrName
