@@ -277,7 +277,7 @@ Library
         GHC.Core.Tidy
         GHC.Core.Optimise.Unfolding
         GHC.Core.Utils
-        CoreSeq
+        GHC.Core.Force
         GHC.Core.Analyse.Stats
         MkCore
         GHC.Core.PrettyPrint

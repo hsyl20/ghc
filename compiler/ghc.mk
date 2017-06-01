@@ -460,7 +460,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Core.Tidy \
 	GHC.Core.Optimise.Unfolding \
 	GHC.Core.Utils \
-	CoreSeq \
+	GHC.Core.Force \
 	GHC.Core.Analyse.Stats \
 	CostCentre \
 	GHC.Data.DataConstructor \

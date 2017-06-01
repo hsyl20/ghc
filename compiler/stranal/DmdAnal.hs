@@ -17,7 +17,7 @@ import GHC.Config.Flags
 import WwLib            ( findTypeShape, deepSplitProductType_maybe )
 import GHC.Data.Demand   -- All of it
 import GHC.Core.Syntax
-import CoreSeq          ( seqBinds )
+import GHC.Core.Force          ( seqBinds )
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment
 import GHC.Data.BasicTypes

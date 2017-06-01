@@ -15,7 +15,7 @@ module GHC.Core.Tidy (
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreSeq ( seqUnfolding )
+import GHC.Core.Force ( seqUnfolding )
 import GHC.Core.Arity
 import GHC.Data.Id
 import GHC.Data.Id.Info

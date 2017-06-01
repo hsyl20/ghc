@@ -22,7 +22,7 @@ import CoreMonad
 import GHC.Core.Prepare
 import GHC.Core.Utils        (rhsIsStatic)
 import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
-import CoreSeq          (seqBinds)
+import GHC.Core.Force          (seqBinds)
 import GHC.Core.Analyse.Lint
 import GHC.Data.Literal
 import Rules
