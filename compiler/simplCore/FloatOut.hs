@@ -15,7 +15,7 @@ import GHC.Core.Syntax
 import GHC.Core.Utils
 import GHC.Core.Syntax.Make
 import GHC.Core.Arity        ( etaExpand )
-import CoreMonad        ( FloatOutSwitches(..) )
+import GHC.Core.Monad        ( FloatOutSwitches(..) )
 
 import GHC.Config.Flags
 import GHC.Utils.Error         ( dumpIfSet_dyn )

@@ -36,7 +36,7 @@ module GHC.Core.Optimise.Simplify.Utils (
 #include "HsVersions.h"
 
 import GHC.Core.Optimise.Simplify.Environment
-import CoreMonad        ( SimplifierMode(..), Tick(..) )
+import GHC.Core.Monad        ( SimplifierMode(..), Tick(..) )
 import GHC.Config.Flags
 import GHC.Core.Syntax
 import qualified GHC.Core.Substitution
@@ -699,7 +699,7 @@ interestingArg env e = go env 0 e
 ************************************************************************
 
 The SimplifierMode controls several switches; see its definition in
-CoreMonad
+GHC.Core.Monad
         sm_rules      :: Bool     -- Whether RULES are enabled
         sm_inline     :: Bool     -- Whether inlining is enabled
         sm_case_case  :: Bool     -- Whether case-of-case is enabled

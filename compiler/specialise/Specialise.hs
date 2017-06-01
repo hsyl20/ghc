@@ -14,7 +14,7 @@ import TcType hiding( substTy )
 import GHC.Data.Type   hiding( substTy, extendTvSubstList )
 import GHC.Data.Module( Module, HasModule(..) )
 import GHC.Data.Coercion( Coercion )
-import CoreMonad
+import GHC.Core.Monad
 import qualified GHC.Core.Substitution
 import GHC.Core.Optimise.Unfolding
 import GHC.Data.Var.Set

@@ -4,7 +4,7 @@ module GHC.Plugins.Types (
     defaultPlugin
     ) where
 
-import CoreMonad ( CoreToDo, CoreM )
+import GHC.Core.Monad ( CoreToDo, CoreM )
 import TcRnTypes ( TcPlugin )
 import GHC.Monad
 import GHC.Program.Driver.Phases

@@ -24,7 +24,7 @@ import GHC.Core.Substitution
 import GHC.Core.Utils
 import GHC.Core.Optimise.Unfolding       ( couldBeSmallEnoughToInline )
 import GHC.Core.FreeVars          ( exprsFreeVarsList )
-import CoreMonad
+import GHC.Core.Monad
 import GHC.Data.Literal          ( litIsLifted )
 import GHC.Types         ( ModGuts(..) )
 import WwLib            ( isWorkerSmallEnough, mkWorkerArgs )

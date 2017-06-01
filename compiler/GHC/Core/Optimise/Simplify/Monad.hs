@@ -28,7 +28,7 @@ import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
 import GHC.Core.Syntax          ( RuleEnv(..) )
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
-import CoreMonad
+import GHC.Core.Monad
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils.Monad

@@ -48,7 +48,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import Rules
 import GHC.Data.BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
-import CoreMonad        ( CoreToDo(..) )
+import GHC.Core.Monad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )
 import GHC.Data.Var.Set
 import GHC.Data.FastString

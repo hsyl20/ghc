@@ -63,7 +63,7 @@ module SetLevels (
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
-import CoreMonad        ( FloatOutSwitches(..) )
+import GHC.Core.Monad        ( FloatOutSwitches(..) )
 import GHC.Core.Utils        ( exprType, exprIsHNF
                         , exprOkForSpeculation
                         , exprIsTopLevelBindable

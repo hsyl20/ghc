@@ -27,7 +27,7 @@ import GHC.Core.Optimise.Simplify         ( simplTopBinds, simplExpr, simplRules
 import GHC.Core.Optimise.Simplify.Utils       ( simplEnvForGHCi, activeRule )
 import GHC.Core.Optimise.Simplify.Environment
 import GHC.Core.Optimise.Simplify.Monad
-import CoreMonad
+import GHC.Core.Monad
 import qualified GHC.Utils.Error as Err
 import FloatIn          ( floatInwards )
 import FloatOut         ( floatOutwards )

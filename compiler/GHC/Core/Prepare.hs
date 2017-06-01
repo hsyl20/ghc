@@ -22,7 +22,7 @@ import GHC.Data.Id.Make             ( realWorldPrimId )
 import GHC.Core.Utils
 import GHC.Core.Arity
 import GHC.Core.FreeVars
-import CoreMonad        ( CoreToDo(..) )
+import GHC.Core.Monad        ( CoreToDo(..) )
 import GHC.Core.Analyse.Lint         ( endPassIO )
 import GHC.Core.Syntax
 import GHC.Core.Substitution

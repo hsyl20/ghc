@@ -111,7 +111,7 @@ Note [Overall plumbing for rules]
     (d) Rules in the ExternalPackageTable. These can grow in response
         to lazy demand-loading of interfaces.
 
-* At the moment (c) is carried in a reader-monad way by the CoreMonad.
+* At the moment (c) is carried in a reader-monad way by the GHC.Core.Monad.
   The HomePackageTable doesn't have a single RuleBase because technically
   we should only be able to "see" rules "below" this module; so we
   generate a RuleBase for (c) by combing rules from all the modules
@@ -124,7 +124,7 @@ Note [Overall plumbing for rules]
 * So in the outer simplifier loop, we combine (b-d) into a single
   RuleBase, reading
      (b) from the ModGuts,
-     (c) from the CoreMonad, and
+     (c) from the GHC.Core.Monad, and
      (d) from its mutable variable
   [Of coures this means that we won't see new EPS rules that come in
   during a single simplifier iteration, but that probably does not

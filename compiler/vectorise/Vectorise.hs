@@ -20,7 +20,7 @@ import GHC.Types hiding      ( MonadThings(..) )
 import GHC.Core.Optimise.Unfolding           ( mkInlineUnfoldingWithArity )
 import GHC.Core.PrettyPrint
 import GHC.Core.Syntax
-import CoreMonad            ( CoreM, getHscEnv )
+import GHC.Core.Monad            ( CoreM, getHscEnv )
 import GHC.Data.Type
 import GHC.Data.Id
 import GHC.Config.Flags

@@ -41,7 +41,7 @@ module GHC.Core.Optimise.Simplify.Environment (
 #include "HsVersions.h"
 
 import GHC.Core.Optimise.Simplify.Monad
-import CoreMonad                ( SimplifierMode(..) )
+import GHC.Core.Monad                ( SimplifierMode(..) )
 import GHC.Core.Syntax
 import GHC.Core.Utils
 import GHC.Data.Var as Var

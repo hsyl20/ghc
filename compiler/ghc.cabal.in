@@ -384,7 +384,7 @@ Library
         RnFixity
         RnUtils
         RnUnbound
-        CoreMonad
+        GHC.Core.Monad
         GHC.Core.Optimise.CommonSubExpr
         FloatIn
         FloatOut

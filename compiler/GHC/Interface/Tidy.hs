@@ -18,7 +18,7 @@ import GHC.Core.Syntax
 import GHC.Core.Optimise.Unfolding
 import GHC.Core.FreeVars
 import GHC.Core.Tidy
-import CoreMonad
+import GHC.Core.Monad
 import GHC.Core.Prepare
 import GHC.Core.Utils        (rhsIsStatic)
 import GHC.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
