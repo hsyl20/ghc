@@ -30,7 +30,7 @@ import GHC.Data.Class
 import GHC.Data.Available
 import CoreSyn
 import CoreFVs     ( exprsSomeFreeVarsList )
-import CoreOpt     ( simpleOptPgm, simpleOptExpr )
+import GHC.Core.Optimise     ( simpleOptPgm, simpleOptExpr )
 import PprCore
 import GHC.Desugar.Monad
 import GHC.Desugar.Expression

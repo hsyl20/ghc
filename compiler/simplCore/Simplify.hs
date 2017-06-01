@@ -35,7 +35,7 @@ import PprCore          ( pprCoreExpr )
 import CoreUnfold
 import CoreUtils
 import GHC.Core.Arity
-import CoreOpt          ( pushCoTyArg, pushCoValArg
+import GHC.Core.Optimise          ( pushCoTyArg, pushCoValArg
                         , joinPointBinding_maybe, joinPointBindings_maybe )
 --import PrimOp           ( tagToEnumKey ) -- temporalily commented out. See #8326
 import Rules            ( mkRuleInfo, lookupRule, getRules )

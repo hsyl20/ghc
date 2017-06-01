@@ -46,7 +46,7 @@ import GHC.Config.Flags
 import CoreSyn
 import PprCore          ()      -- Instances
 import OccurAnal        ( occurAnalyseExpr )
-import CoreOpt
+import GHC.Core.Optimise
 import GHC.Core.Arity       ( manifestArity )
 import CoreUtils
 import GHC.Data.Id

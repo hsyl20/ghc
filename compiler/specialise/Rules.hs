@@ -31,7 +31,7 @@ module Rules (
 import CoreSyn          -- All of it
 import GHC.Data.Module           ( Module, ModuleSet, elemModuleSet )
 import CoreSubst
-import CoreOpt          ( exprIsLambda_maybe )
+import GHC.Core.Optimise          ( exprIsLambda_maybe )
 import CoreFVs          ( exprFreeVars, exprsFreeVars, bindFreeVars
                         , rulesFreeVarsDSet, exprsOrphNames, exprFreeVarsList )
 import CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,

@@ -271,7 +271,7 @@ Library
         GHC.Core.Analyse.Lint
         CorePrep
         CoreSubst
-        CoreOpt
+        GHC.Core.Optimise
         CoreSyn
         TrieMap
         GHC.Core.Tidy
