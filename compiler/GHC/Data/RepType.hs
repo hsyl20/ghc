@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module RepType
+module GHC.Data.RepType
   (
     -- * Code generator views onto Types
     UnaryType, NvUnaryType, isNvUnaryType,

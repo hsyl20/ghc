@@ -557,7 +557,7 @@ lintSingleBinding top_lvl_flag rec_flag (binder,rhs)
       -- already happened)
       --
       -- Note (Apr 2014): this is actually ok.  See Note [Demand analysis for trivial right-hand sides]
-      --                  in DmdAnal.  After eta-expansion in CorePrep the rhs is no longer trivial.
+      --                  in GHC.Core.Analyse.Demand.  After eta-expansion in CorePrep the rhs is no longer trivial.
       --       ; let dmdTy = idStrictness binder
       --       ; checkL (case dmdTy of
       --                  StrictSig dmd_ty -> idArity binder >= dmdTypeDepth dmd_ty || exprIsTrivial rhs)

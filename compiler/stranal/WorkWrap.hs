@@ -428,14 +428,14 @@ In the worker-wrapper pass we zap the DmdEnv.  Why?
 Why here?
  * Because we don’t want to do it in the Demand Analyzer, as we never know
    there when we are doing the last pass.
- * We want them to be still there at the end of DmdAnal, so that
+ * We want them to be still there at the end of GHC.Core.Analyse.Demand, so that
    -ddump-str-anal contains them.
  * We don’t want a second pass just for that.
  * WorkWrap looks at all bindings anyway.
 
 We also need to do it in TidyCore.tidyLetBndr to clean up after the
 final, worker/wrapper-less run of the demand analyser (see
-Note [Final Demand Analyser run] in DmdAnal).
+Note [Final Demand Analyser run] in GHC.Core.Analyse.Demand).
 
 Note [Zapping Used Once info in WorkWrap]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

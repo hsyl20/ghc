@@ -406,7 +406,7 @@ Library
         GHC.STG.Analyse.Lint
         GHC.STG.Syntax
         GHC.Core.Analyse.CallArity
-        DmdAnal
+        GHC.Core.Analyse.Demand
         WorkWrap
         WwLib
         FamInst

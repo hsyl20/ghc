@@ -41,7 +41,7 @@ import GHC.Core.Optimise.LiberateCase     ( liberateCase )
 import GHC.Core.Optimise.StaticArgument   ( doStaticArgs )
 import Specialise       ( specProgram)
 import SpecConstr       ( specConstrProgram)
-import DmdAnal          ( dmdAnalProgram )
+import GHC.Core.Analyse.Demand          ( dmdAnalProgram )
 import GHC.Core.Analyse.CallArity        ( callArityAnalProgram )
 import WorkWrap         ( wwTopBinds )
 import Vectorise        ( vectorise )
@@ -350,7 +350,7 @@ getCoreToDo dflags
 
         -- Final run of the demand_analyser, ensures that one-shot thunks are
         -- really really one-shot thunks. Only needed if the demand analyser
-        -- has run at all. See Note [Final Demand Analyser run] in DmdAnal
+        -- has run at all. See Note [Final Demand Analyser run] in GHC.Core.Analyse.Demand
         -- It is EXTREMELY IMPORTANT to run this pass, otherwise execution
         -- can become /exponentially/ more expensive. See Trac #11731, #12996.
         runWhen (strictness || late_dmd_anal) CoreDoStrictness,

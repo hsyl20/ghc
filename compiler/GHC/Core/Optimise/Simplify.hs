@@ -3171,7 +3171,7 @@ So instead we do both: we pass 'c' and 'c#' , and record in c's inlining
 Absence analysis may later discard 'c'.
 
 NB: take great care when doing strictness analysis;
-    see Note [Lambda-bound unfoldings] in DmdAnal.
+    see Note [Lambda-bound unfoldings] in GHC.Core.Analyse.Demand.
 
 Also note that we can still end up passing stuff that isn't used.  Before
 strictness analysis we have
