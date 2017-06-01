@@ -810,7 +810,7 @@ is_triv_pat _           = False
 *                                                                      *
   Creating big tuples and their types for full Haskell expressions.
   They work over *Ids*, and create tuples replete with their types,
-  which is whey they are not in HsUtils.
+  which is whey they are not in GHC.Syntax.Utils.
 *                                                                      *
 ********************************************************************* -}
 

@@ -620,7 +620,7 @@ We define an "unlifted bind" to be any bind that binds an unlifted id. Note that
   x :: Char
   (# True, x #) = blah
 
-is *not* an unlifted bind. Unlifted binds are detected by HsUtils.isUnliftedHsBind.
+is *not* an unlifted bind. Unlifted binds are detected by GHC.Syntax.Utils.isUnliftedHsBind.
 
 Define a "banged bind" to have a top-level bang. Detected by HsPat.isBangedPatBind.
 Define a "strict bind" to be either an unlifted bind or a banged bind.

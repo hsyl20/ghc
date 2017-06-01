@@ -494,7 +494,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Syntax.Pattern \
 	HsSyn \
 	GHC.Syntax.Type \
-	HsUtils \
+	GHC.Syntax.Utils \
 	GHC.Types \
 	GHC.Utils.Monad.IOEnv \
 	GHC.Data.Name.Cache \

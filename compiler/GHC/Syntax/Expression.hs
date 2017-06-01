@@ -691,7 +691,7 @@ data HsExpr id
   -- Finally, HsWrap appears only in typechecker output
   -- The contained Expr is *NOT* itself an HsWrap.
   -- See Note [Detecting forced eta expansion] in GHC.Desugar.Expression. This invariant
-  -- is maintained by HsUtils.mkHsWrap.
+  -- is maintained by GHC.Syntax.Utils.mkHsWrap.
 
   |  HsWrap     HsWrapper    -- TRANSLATION
                 (HsExpr id)

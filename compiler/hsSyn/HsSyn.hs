@@ -24,7 +24,7 @@ module HsSyn (
         module HsLit,
         module HsPat,
         module HsTypes,
-        module HsUtils,
+        module GHC.Syntax.Utils,
         module HsDoc,
         module PlaceHolder,
         Fixity,
@@ -42,7 +42,7 @@ import PlaceHolder
 import GHC.Syntax.Pattern
 import GHC.Syntax.Type
 import GHC.Data.BasicTypes       ( Fixity, WarningTxt )
-import HsUtils
+import GHC.Syntax.Utils
 import GHC.Syntax.Documentation
 import GHC.Data.OccName          ( HasOccName(..) )
 

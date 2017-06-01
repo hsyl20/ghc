@@ -18,7 +18,7 @@ which deal with the instantiated versions are located elsewhere:
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module HsUtils(
+module GHC.Syntax.Utils(
   -- Terms
   mkHsPar, mkHsApp, mkHsAppType, mkHsAppTypeOut, mkHsCaseAlt,
   mkSimpleMatch, unguardedGRHSs, unguardedRHS,

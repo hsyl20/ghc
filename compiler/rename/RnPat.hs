@@ -313,7 +313,7 @@ rnPats ctxt pats thing_inside
         ; unCpsRn (rnLPatsAndThen (matchNameMaker ctxt) pats) $ \ pats' -> do
         { -- Check for duplicated and shadowed names
           -- Must do this *after* renaming the patterns
-          -- See Note [Collect binders only after renaming] in HsUtils
+          -- See Note [Collect binders only after renaming] in GHC.Syntax.Utils
           -- Because we don't bind the vars all at once, we can't
           --    check incrementally for duplicates;
           -- Nor can we check incrementally for shadowing, else we'll

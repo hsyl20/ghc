@@ -311,7 +311,7 @@ Library
         GHC.Syntax.Pattern
         HsSyn
         GHC.Syntax.Type
-        HsUtils
+        GHC.Syntax.Utils
         GHC.Syntax.PrettyPrint.Dump
         BinIface
         BinFingerprint

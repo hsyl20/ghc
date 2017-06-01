@@ -965,7 +965,7 @@ checkFunBind msg ann lhs_loc fun is_infix pats opt_sig (L rhs_span grhss)
 
 makeFunBind :: Located RdrName -> [LMatch RdrName (LHsExpr RdrName)]
             -> HsBind RdrName
--- Like HsUtils.mkFunBind, but we need to be able to set the fixity too
+-- Like GHC.Syntax.Utils.mkFunBind, but we need to be able to set the fixity too
 makeFunBind fn ms
   = FunBind { fun_id = fn,
               fun_matches = mkMatchGroup FromSource ms,

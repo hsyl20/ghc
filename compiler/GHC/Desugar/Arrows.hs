@@ -18,7 +18,7 @@ import GHC.Desugar.Monad
 
 import HsSyn    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
 import TcHsSyn
-import qualified HsUtils
+import qualified GHC.Syntax.Utils
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
 --     needs to see source types (newtypes etc), and sometimes not
@@ -1151,10 +1151,10 @@ foldb f xs = foldb f (fold_pairs xs)
     fold_pairs (x1:x2:xs) = f x1 x2:fold_pairs xs
 
 {-
-Note [Dictionary binders in ConPatOut] See also same Note in HsUtils
+Note [Dictionary binders in ConPatOut] See also same Note in GHC.Syntax.Utils
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The following functions to collect value variables from patterns are
-copied from HsUtils, with one change: we also collect the dictionary
+copied from GHC.Syntax.Utils, with one change: we also collect the dictionary
 bindings (pat_binds) from ConPatOut.  We need them for cases like
 
 h :: Arrow a => Int -> a (Int,Int) Int
@@ -1168,7 +1168,7 @@ The type checker turns the case into
 
 Here p77 is a local binding for the (+) operation.
 
-See comments in HsUtils for why the other version does not include
+See comments in GHC.Syntax.Utils for why the other version does not include
 these bindings.
 -}
 
@@ -1227,4 +1227,4 @@ collectLStmtBinders = collectStmtBinders . unLoc
 
 collectStmtBinders :: Stmt Id body -> [Id]
 collectStmtBinders (RecStmt { recS_later_ids = later_ids }) = later_ids
-collectStmtBinders stmt = HsUtils.collectStmtBinders stmt
+collectStmtBinders stmt = GHC.Syntax.Utils.collectStmtBinders stmt
