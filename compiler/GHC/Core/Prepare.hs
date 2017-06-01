@@ -14,7 +14,7 @@ module GHC.Core.Prepare (
 
 #include "HsVersions.h"
 
-import OccurAnal
+import GHC.Core.Analyse.Occurence
 
 import GHC.Types
 import PrelNames

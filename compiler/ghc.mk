@@ -520,7 +520,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Name.Environment \
 	GHC.Data.Name.Set \
 	GHC.Data.OccName \
-	OccurAnal \
+	GHC.Core.Analyse.Occurence \
 	GHC.Data.Coercion.Optimise \
 	GHC.Data.Tree.OrdList \
 	GHC.Utils.Outputable \

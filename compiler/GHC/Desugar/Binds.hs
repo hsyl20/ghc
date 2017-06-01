@@ -29,7 +29,7 @@ import GHC.Syntax            -- lots of things
 import GHC.Core.Syntax          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
 import GHC.Core.Optimise.Simple         ( simpleOptExpr )
-import OccurAnal        ( occurAnalyseExpr )
+import GHC.Core.Analyse.Occurence        ( occurAnalyseExpr )
 import GHC.Core.Syntax.Make
 import GHC.Core.Utils
 import GHC.Core.Arity ( etaExpand )

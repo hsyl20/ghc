@@ -58,7 +58,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import OccurAnal        ( occurAnalyseExpr )
+import GHC.Core.Analyse.Occurence        ( occurAnalyseExpr )
 import GHC.Data.Demand
 import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap

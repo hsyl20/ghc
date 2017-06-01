@@ -27,7 +27,7 @@ import GHC.Core.Substitution
 import GHC.Core.Utils
 import GHC.Core.FreeVars
 import GHC.Core.PrettyPrint  ( pprCoreBindings, pprRules )
-import OccurAnal( occurAnalyseExpr, occurAnalysePgm )
+import GHC.Core.Analyse.Occurence( occurAnalyseExpr, occurAnalysePgm )
 import GHC.Data.Literal  ( Literal(MachStr) )
 import GHC.Data.Id
 import GHC.Data.Var      ( varType )

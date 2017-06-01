@@ -20,7 +20,7 @@ import GHC.Core.Optimise.Simplify.Monad
 import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvSubst )
 import GHC.Core.Optimise.Simplify.Environment
 import GHC.Core.Optimise.Simplify.Utils
-import OccurAnal        ( occurAnalyseExpr )
+import GHC.Core.Analyse.Occurence        ( occurAnalyseExpr )
 import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
 import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
 import GHC.Data.Id

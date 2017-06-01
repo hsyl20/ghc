@@ -389,7 +389,7 @@ Library
         GHC.Core.Optimise.FloatIn
         FloatOut
         GHC.Core.Optimise.LiberateCase
-        OccurAnal
+        GHC.Core.Analyse.Occurence
         SAT
         SetLevels
         GHC.Core.Optimise.Pipeline

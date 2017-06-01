@@ -45,7 +45,7 @@ module GHC.Core.Optimise.Unfolding (
 import GHC.Config.Flags
 import GHC.Core.Syntax
 import GHC.Core.PrettyPrint          ()      -- Instances
-import OccurAnal        ( occurAnalyseExpr )
+import GHC.Core.Analyse.Occurence        ( occurAnalyseExpr )
 import GHC.Core.Optimise.Simple
 import GHC.Core.Arity       ( manifestArity )
 import GHC.Core.Utils

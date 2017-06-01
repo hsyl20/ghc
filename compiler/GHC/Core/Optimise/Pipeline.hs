@@ -17,7 +17,7 @@ import GHC.Core.Optimise.CommonSubExpr ( cseProgram )
 import Rules            ( mkRuleBase, unionRuleBase,
                           extendRuleBaseList, ruleCheckProgram, addRuleInfo, )
 import GHC.Core.PrettyPrint          ( pprCoreBindings, pprCoreExpr )
-import OccurAnal        ( occurAnalysePgm, occurAnalyseExpr )
+import GHC.Core.Analyse.Occurence        ( occurAnalysePgm, occurAnalyseExpr )
 import GHC.Data.Id.Info
 import GHC.Core.Analyse.Stats        ( coreBindsSize, coreBindsStats, exprSize )
 import GHC.Core.Utils        ( mkTicks, stripTicksTop )
