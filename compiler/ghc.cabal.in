@@ -149,7 +149,6 @@ Library
         prelude
         profiling
         rename
-        simplCore
         simplStg
         specialise
         stgSyn
