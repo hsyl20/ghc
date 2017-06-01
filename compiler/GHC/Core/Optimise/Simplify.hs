@@ -6,7 +6,12 @@
 
 {-# LANGUAGE CPP #-}
 
-module Simplify ( simplTopBinds, simplExpr, simplRules ) where
+module GHC.Core.Optimise.Simplify
+   ( simplTopBinds
+   , simplExpr
+   , simplRules
+   )
+where
 
 #include "HsVersions.h"
 

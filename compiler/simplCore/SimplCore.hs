@@ -23,7 +23,7 @@ import GHC.Core.Analyse.Stats        ( coreBindsSize, coreBindsStats, exprSize )
 import GHC.Core.Utils        ( mkTicks, stripTicksTop )
 import GHC.Core.Analyse.Lint         ( endPass, lintPassResult, dumpPassResult,
                           lintAnnots )
-import Simplify         ( simplTopBinds, simplExpr, simplRules )
+import GHC.Core.Optimise.Simplify         ( simplTopBinds, simplExpr, simplRules )
 import SimplUtils       ( simplEnvForGHCi, activeRule )
 import SimplEnv
 import SimplMonad

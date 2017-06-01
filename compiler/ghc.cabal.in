@@ -396,7 +396,7 @@ Library
         SimplEnv
         SimplMonad
         SimplUtils
-        Simplify
+        GHC.Core.Optimise.Simplify
         SimplStg
         StgStats
         StgCse
