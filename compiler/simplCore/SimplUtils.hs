@@ -35,7 +35,7 @@ module SimplUtils (
 
 #include "HsVersions.h"
 
-import SimplEnv
+import GHC.Core.Optimise.Simplify.Environment
 import CoreMonad        ( SimplifierMode(..), Tick(..) )
 import GHC.Config.Flags
 import GHC.Core.Syntax

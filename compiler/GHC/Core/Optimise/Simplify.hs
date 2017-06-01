@@ -18,7 +18,7 @@ where
 import GHC.Config.Flags
 import SimplMonad
 import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvSubst )
-import SimplEnv
+import GHC.Core.Optimise.Simplify.Environment
 import SimplUtils
 import OccurAnal        ( occurAnalyseExpr )
 import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )

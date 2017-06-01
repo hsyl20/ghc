@@ -393,7 +393,7 @@ Library
         SAT
         SetLevels
         SimplCore
-        SimplEnv
+        GHC.Core.Optimise.Simplify.Environment
         SimplMonad
         SimplUtils
         GHC.Core.Optimise.Simplify
