@@ -609,7 +609,7 @@ Library
             Dwarf
             Dwarf.Types
             Dwarf.Constants
-            Convert
+            GHC.Syntax.TemplateHaskell.Convert
             ByteCodeTypes
             ByteCodeAsm
             ByteCodeGen

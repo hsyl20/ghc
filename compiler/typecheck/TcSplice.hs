@@ -54,7 +54,7 @@ import GHC.Program.Main
 import RnSplice( traceSplice, SpliceInfo(..) )
 import GHC.Data.RdrName
 import GHC.Types
-import Convert
+import GHC.Syntax.TemplateHaskell.Convert
 import RnExpr
 import RnEnv
 import RnUtils ( HsDocContext(..) )
