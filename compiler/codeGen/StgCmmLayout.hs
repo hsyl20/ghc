@@ -42,7 +42,7 @@ import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.RTS.InfoTable
 import GHC.Data.CLabel
-import StgSyn
+import GHC.STG.Syntax
 import GHC.Data.Id
 import GHC.Data.Type.Constructor             ( PrimRep(..) )
 import GHC.Data.BasicTypes        ( RepArity )

@@ -10,11 +10,11 @@ module SimplStg ( stg2stg ) where
 
 #include "HsVersions.h"
 
-import StgSyn
+import GHC.STG.Syntax
 
 import CostCentre       ( CollectedCCs )
 import SCCfinal         ( stgMassageForProfiling )
-import StgLint          ( lintStgTopBindings )
+import GHC.STG.Analyse.Lint ( lintStgTopBindings )
 import StgStats         ( showStgStats )
 import UnariseStg       ( unarise )
 import StgCse           ( stgCse )

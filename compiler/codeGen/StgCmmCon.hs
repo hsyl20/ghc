@@ -17,7 +17,7 @@ module StgCmmCon (
 
 #include "HsVersions.h"
 
-import StgSyn
+import GHC.STG.Syntax
 import GHC.Core.Syntax  ( AltCon(..) )
 
 import StgCmmMonad

@@ -142,7 +142,7 @@ data ProfilingInfo
   = NoProfilingInfo
   | ProfilingInfo [Word8] [Word8] -- closure_type, closure_desc
 
--- C_SRT is what StgSyn.SRT gets translated to...
+-- C_SRT is what GHC.STG.Syntax.SRT gets translated to...
 -- we add a label for the table, and expect only the 'offset/length' form
 
 data C_SRT = NoC_SRT

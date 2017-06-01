@@ -111,7 +111,7 @@ import StgCmmClosure
 import StgCmmUtils
 import StgCmmMonad
 
-import StgSyn
+import GHC.STG.Syntax
 import GHC.Cmm.Expr
 import GHC.Cmm.Graph
 import GHC.Cmm.Utils

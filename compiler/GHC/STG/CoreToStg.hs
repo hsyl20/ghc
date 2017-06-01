@@ -11,14 +11,14 @@
 -- And, as we have the info in hand, we may convert some lets to
 -- let-no-escapes.
 
-module CoreToStg ( coreToStg, coreExprToStg ) where
+module GHC.STG.CoreToStg ( coreToStg, coreExprToStg ) where
 
 #include "HsVersions.h"
 
 import GHC.Core.Syntax
 import GHC.Core.Utils        ( exprType, findDefault, isJoinBind )
 import GHC.Core.Arity        ( manifestArity )
-import StgSyn
+import GHC.STG.Syntax
 
 import GHC.Data.Type
 import RepType

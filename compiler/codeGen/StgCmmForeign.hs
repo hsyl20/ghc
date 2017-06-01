@@ -22,7 +22,7 @@ module StgCmmForeign (
 
 #include "HsVersions.h"
 
-import StgSyn
+import GHC.STG.Syntax
 import StgCmmProf (storeCurCCS, ccsType, curCCS)
 import StgCmmEnv
 import StgCmmMonad

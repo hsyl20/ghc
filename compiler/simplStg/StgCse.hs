@@ -72,7 +72,7 @@ module StgCse (stgCse) where
 
 import GHC.Data.DataConstructor
 import GHC.Data.Id
-import StgSyn
+import GHC.STG.Syntax
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment
 import GHC.Core.Syntax (AltCon(..))

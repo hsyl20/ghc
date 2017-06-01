@@ -27,7 +27,7 @@ import GHC.Cmm
 import GHC.Cmm.Utils
 import GHC.Data.CLabel
 
-import StgSyn
+import GHC.STG.Syntax
 import GHC.Config.Flags
 
 import GHC.Types

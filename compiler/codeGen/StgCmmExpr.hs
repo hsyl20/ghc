@@ -27,7 +27,7 @@ import StgCmmTicky
 import StgCmmUtils
 import StgCmmClosure
 
-import StgSyn
+import GHC.STG.Syntax
 
 import GHC.Cmm.Graph
 import GHC.Cmm.BlockId

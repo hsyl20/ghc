@@ -117,9 +117,9 @@ import GHC.Desugar.Main
 import GHC.Core.Optimise.Pipeline
 import GHC.Interface.Tidy
 import GHC.Core.Prepare
-import CoreToStg        ( coreToStg )
+import GHC.STG.CoreToStg ( coreToStg )
 import qualified StgCmm ( codeGen )
-import StgSyn
+import GHC.STG.Syntax
 import CostCentre
 import ProfInit
 import GHC.Data.Type.Constructor

@@ -207,7 +207,7 @@ import GHC.Data.Id.Make (voidPrimId, voidArgId)
 import GHC.Utils.Monad (mapAccumLM)
 import GHC.Utils.Outputable
 import RepType
-import StgSyn
+import GHC.STG.Syntax
 import GHC.Data.Type
 import TysPrim (intPrimTy)
 import TysWiredIn

@@ -27,7 +27,7 @@ module StgStats ( showStgStats ) where
 
 #include "HsVersions.h"
 
-import StgSyn
+import GHC.STG.Syntax
 
 import GHC.Data.Id (Id)
 import GHC.Utils.Panic
