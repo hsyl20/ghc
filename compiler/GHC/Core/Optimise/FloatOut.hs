@@ -9,7 +9,7 @@
 {-# LANGUAGE CPP #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-module FloatOut ( floatOutwards ) where
+module GHC.Core.Optimise.FloatOut ( floatOutwards ) where
 
 import GHC.Core.Syntax
 import GHC.Core.Utils

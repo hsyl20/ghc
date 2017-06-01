@@ -388,7 +388,7 @@ Library
         GHC.Core.Optimise.CommonSubExpr
         GHC.Core.Optimise.FloatIn
         FloatOut
-        LiberateCase
+        GHC.Core.Optimise.LiberateCase
         OccurAnal
         SAT
         SetLevels
