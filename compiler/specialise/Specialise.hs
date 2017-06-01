@@ -38,7 +38,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils.Monad.State
 import GHC.Data.Unique.DeterFiniteMap
-import TrieMap
+import GHC.Data.TrieMap
 
 import Control.Monad
 #if __GLASGOW_HASKELL__ > 710

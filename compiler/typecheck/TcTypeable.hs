@@ -34,7 +34,7 @@ import GHC.Syntax
 import GHC.Config.Flags
 import GHC.Data.Bag
 import GHC.Data.Var ( TyVarBndr(..) )
-import TrieMap
+import GHC.Data.TrieMap
 import GHC.Config.Constants
 import GHC.Utils.Fingerprint(Fingerprint(..), fingerprintString, fingerprintFingerprints)
 import GHC.Utils.Outputable

@@ -37,7 +37,7 @@ import TcMType   as TcM
 import TcRnMonad as TcM
 import TcSMonad  as TcS
 import TcType
-import TrieMap       () -- DV: for now
+import GHC.Data.TrieMap       () -- DV: for now
 import GHC.Data.Type
 import TysWiredIn    ( liftedRepTy )
 import GHC.TypeSystem.Unify         ( tcMatchTyKi )

@@ -158,7 +158,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Data.Maybe
 
-import TrieMap
+import GHC.Data.TrieMap
 import Control.Monad
 #if __GLASGOW_HASKELL__ > 710
 import qualified Control.Monad.Fail as MonadFail

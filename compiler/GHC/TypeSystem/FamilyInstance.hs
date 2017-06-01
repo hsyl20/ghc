@@ -53,7 +53,7 @@ import PrelNames ( eqPrimTyConKey )
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
-import TrieMap
+import GHC.Data.TrieMap
 import GHC.Data.Unique
 import GHC.Utils
 import GHC.Data.Var

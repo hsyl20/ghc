@@ -547,7 +547,7 @@ compiler_stage2_dll0_MODULES = \
 	TcEvidence \
 	TcRnTypes \
 	TcType \
-	TrieMap \
+	GHC.Data.TrieMap \
 	GHC.Data.Type.Constructor \
 	GHC.Data.Type \
 	GHC.Data.Types \

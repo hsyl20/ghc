@@ -273,7 +273,7 @@ Library
         GHC.Core.Substitution
         GHC.Core.Optimise
         GHC.Core.Syntax
-        TrieMap
+        GHC.Data.TrieMap
         GHC.Core.Tidy
         GHC.Core.Optimise.Unfolding
         GHC.Core.Utils
