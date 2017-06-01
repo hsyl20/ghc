@@ -446,7 +446,7 @@ Two main predicates on primpops test these flags:
     exprOkForSpeculation is false of can_fail and has_side_effects.
 
   * So can_fail and has_side_effects primops will appear only as the
-    scrutinees of cases, and that's why the GHC.Core.Optimise.GHC.Core.Optimise.FloatIn pass is capable
+    scrutinees of cases, and that's why the FloatIn pass is capable
     of floating case bindings inwards.
 
   * The no-duplicate thing is done via primOpIsCheap, by making
