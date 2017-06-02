@@ -142,7 +142,7 @@ module GHC.Types (
 
 #include "HsVersions.h"
 
-import ByteCodeTypes
+import GHC.IR.ByteCode.Types
 import GHC.Interactive.Types ( Resume )
 import GHCi.Message         ( Pipe )
 import GHCi.RemoteTypes

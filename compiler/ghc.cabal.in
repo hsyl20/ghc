@@ -600,12 +600,12 @@ Library
             Dwarf.Types
             Dwarf.Constants
             GHC.Syntax.TemplateHaskell.Convert
-            ByteCodeTypes
-            ByteCodeAsm
-            ByteCodeGen
-            ByteCodeInstr
-            ByteCodeItbls
-            ByteCodeLink
+            GHC.IR.ByteCode.Types
+            GHC.IR.ByteCode.Assembler
+            GHC.Compilers.CoreToByteCode
+            GHC.IR.ByteCode.Instruction
+            GHC.IR.ByteCode.InfoTable
+            GHC.IR.ByteCode.Linker
             Debugger
             Linker
             RtClosureInspect

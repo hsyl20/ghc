@@ -443,7 +443,7 @@ compiler_stage2_dll0_MODULES = \
 	BinFingerprint \
 	GHC.Data.Bool.Formula \
 	GHC.Utils.Handle.BufferedWrite \
-	ByteCodeTypes \
+	GHC.IR.ByteCode.Types \
 	GHC.Data.Class \
 	GHC.Program.CmdLineParser \
 	GHC.IR.Cmm.Type \

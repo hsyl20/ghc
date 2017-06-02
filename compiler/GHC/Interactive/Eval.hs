@@ -64,7 +64,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Available
 import GHC.Data.RdrName
 import GHC.Data.Var.Environment
-import ByteCodeTypes
+import GHC.IR.ByteCode.Types
 import Linker
 import GHC.Config.Flags
 import GHC.Data.Unique

@@ -4,15 +4,15 @@
 --  (c) The University of Glasgow 2002-2006
 --
 
--- | ByteCodeInstrs: Bytecode instruction definitions
-module ByteCodeInstr (
+-- | Bytecode instruction definitions
+module GHC.IR.ByteCode.Instruction (
         BCInstr(..), ProtoBCO(..), bciStackUse,
   ) where
 
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import ByteCodeTypes
+import GHC.IR.ByteCode.Types
 import GHCi.RemoteTypes
 import GHCi.FFI (C_ffi_cif)
 import StgCmmLayout     ( ArgRep(..) )

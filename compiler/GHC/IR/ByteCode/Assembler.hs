@@ -4,8 +4,8 @@
 --  (c) The University of Glasgow 2002-2006
 --
 
--- | ByteCodeLink: Bytecode assembler and linker
-module ByteCodeAsm (
+-- | GHC.IR.ByteCode.Linker: Bytecode assembler and linker
+module GHC.IR.ByteCode.Assembler (
         assembleBCOs, assembleOneBCO,
 
         bcoFreeNames,
@@ -15,9 +15,9 @@ module ByteCodeAsm (
 
 #include "HsVersions.h"
 
-import ByteCodeInstr
-import ByteCodeItbls
-import ByteCodeTypes
+import GHC.IR.ByteCode.Instruction
+import GHC.IR.ByteCode.InfoTable
+import GHC.IR.ByteCode.Types
 import GHCi.RemoteTypes
 import GHCi
 
@@ -437,7 +437,7 @@ assembleI dflags i = case i of
     literal (MachWord64 ii)    = int64 (fromIntegral ii)
     literal (MachStr bs)       = lit [BCONPtrStr bs]
        -- MachStr requires a zero-terminator when emitted
-    literal LitInteger{}       = panic "ByteCodeAsm.literal: LitInteger"
+    literal LitInteger{}       = panic "GHC.IR.ByteCode.Assembler.literal: LitInteger"
 
     litlabel fs = lit [BCONPtrLbl fs]
     addr (RemotePtr a) = words [fromIntegral a]

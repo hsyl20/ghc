@@ -279,7 +279,7 @@ module GHC (
 
 #include "HsVersions.h"
 
-import ByteCodeTypes
+import GHC.IR.ByteCode.Types
 import GHC.Interactive.Eval
 import GHC.Interactive.Types
 import TcRnDriver       ( runTcInteractive )

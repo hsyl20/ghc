@@ -10,7 +10,7 @@ module GHC.Compilers.SyntaxToCore.Coverage (addTicksToBinds, hpcInitCode) where
 import qualified GHCi
 import GHCi.RemoteTypes
 import Data.Array
-import ByteCodeTypes
+import GHC.IR.ByteCode.Types
 #if MIN_VERSION_base(4,9,0)
 import GHC.Stack.CCS
 #else

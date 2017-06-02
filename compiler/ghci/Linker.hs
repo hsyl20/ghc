@@ -23,9 +23,9 @@ module Linker ( getHValue, showLinkerState,
 import GHCi
 import GHCi.RemoteTypes
 import LoadIface
-import ByteCodeLink
-import ByteCodeAsm
-import ByteCodeTypes
+import GHC.IR.ByteCode.Linker
+import GHC.IR.ByteCode.Assembler
+import GHC.IR.ByteCode.Types
 import TcRnMonad
 import GHC.Packages
 import GHC.Program.Driver.Phases
@@ -193,7 +193,7 @@ getHValue hsc_env name = do
               m <- lookupClosure hsc_env (unpackFS sym_to_find)
               case m of
                 Just hvref -> mkFinalizedHValue hsc_env hvref
-                Nothing -> linkFail "ByteCodeLink.lookupCE"
+                Nothing -> linkFail "GHC.IR.ByteCode.Linker.lookupCE"
                              (unpackFS sym_to_find)
 
 linkDependencies :: HscEnv -> PersistentLinkerState

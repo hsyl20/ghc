@@ -1,7 +1,7 @@
 {-# LANGUAGE BangPatterns #-}
 module Main where
 
-import ByteCodeLink
+import GHC.IR.ByteCode.Linker
 import GHC.IR.Core.Monad
 import Data.Array
 import GHC.Data.DataConstructor

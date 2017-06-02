@@ -4,7 +4,7 @@
 --
 
 -- | Bytecode assembler types
-module ByteCodeTypes
+module GHC.IR.ByteCode.Types
   ( CompiledByteCode(..), seqCompiledByteCode, FFIInfo(..)
   , UnlinkedBCO(..), BCOPtr(..), BCONPtr(..)
   , ItblEnv, ItblPtr(..)

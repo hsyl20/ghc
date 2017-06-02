@@ -4,12 +4,12 @@
 --  (c) The University of Glasgow 2002-2006
 --
 
--- | ByteCodeItbls: Generate infotables for interpreter-made bytecodes
-module ByteCodeItbls ( mkITbls ) where
+-- | Generate infotables for interpreter-made bytecodes
+module GHC.IR.ByteCode.InfoTable ( mkITbls ) where
 
 #include "HsVersions.h"
 
-import ByteCodeTypes
+import GHC.IR.ByteCode.Types
 import GHCi
 import GHC.Config.Flags
 import GHC.Types

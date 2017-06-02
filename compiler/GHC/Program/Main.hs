@@ -86,7 +86,7 @@ import Data.Data hiding (Fixity, TyCon)
 import GHC.Data.Id
 import GHCi             ( addSptEntry )
 import GHCi.RemoteTypes ( ForeignHValue )
-import ByteCodeGen      ( byteCodeGen, coreExprToBCOs )
+import GHC.Compilers.CoreToByteCode      ( byteCodeGen, coreExprToBCOs )
 import Linker
 import GHC.IR.Core.Tidy         ( tidyExpr )
 import GHC.Data.Type    ( Type, Kind )
