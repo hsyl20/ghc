@@ -54,7 +54,7 @@ import qualified X86.Instr      as X86
 
 import GHC.Platform
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Monad
 
 

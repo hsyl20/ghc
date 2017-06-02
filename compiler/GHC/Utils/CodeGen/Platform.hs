@@ -5,7 +5,7 @@ module GHC.Utils.CodeGen.Platform
 
 import GHC.IR.Cmm.Expr
 import GHC.Platform
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import qualified GHC.Utils.CodeGen.Platform.ARM        as ARM
 import qualified GHC.Utils.CodeGen.Platform.ARM64      as ARM64

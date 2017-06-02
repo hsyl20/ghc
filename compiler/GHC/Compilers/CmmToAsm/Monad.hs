@@ -37,7 +37,7 @@ where
 
 #include "HsVersions.h"
 
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Format
 import TargetReg
 

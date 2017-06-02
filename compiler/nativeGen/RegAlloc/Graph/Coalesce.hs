@@ -5,7 +5,7 @@ module RegAlloc.Graph.Coalesce (
 ) where
 import RegAlloc.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 import GHC.Data.Bag

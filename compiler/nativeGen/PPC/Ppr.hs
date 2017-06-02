@@ -15,8 +15,8 @@ import PPC.Cond
 import PprBase
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
-import Reg
-import RegClass
+import GHC.Compilers.CmmToAsm.Register
+import GHC.Compilers.CmmToAsm.Register.Class
 import TargetReg
 
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)

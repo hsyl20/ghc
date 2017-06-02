@@ -8,8 +8,8 @@ where
 
 #include "HsVersions.h"
 
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Data.Graph.Base
 

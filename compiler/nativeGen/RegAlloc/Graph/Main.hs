@@ -13,8 +13,8 @@ import RegAlloc.Graph.Stats
 import RegAlloc.Graph.TrivColorable
 import GHC.Compilers.CmmToAsm.Instruction
 import TargetReg
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Data.Bag
 import GHC.Config.Flags

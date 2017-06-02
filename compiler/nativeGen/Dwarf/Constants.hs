@@ -7,7 +7,7 @@ import GHC.Data.FastString
 import GHC.Platform
 import GHC.Utils.Outputable
 
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import X86.Regs
 
 import Data.Word

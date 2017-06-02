@@ -115,7 +115,7 @@ import qualified RegAlloc.Linear.X86_64.FreeRegs as X86_64
 import TargetReg
 import RegAlloc.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

@@ -11,7 +11,7 @@ import SPARC.AddrMode
 import SPARC.Regs
 import SPARC.Ppr        ()
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Format
 import GHC.IR.Cmm.Syntax
 

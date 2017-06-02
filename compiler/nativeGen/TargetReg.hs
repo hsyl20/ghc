@@ -21,8 +21,8 @@ where
 
 #include "HsVersions.h"
 
-import Reg
-import RegClass
+import GHC.Compilers.CmmToAsm.Register
+import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Format
 
 import GHC.Utils.Outputable

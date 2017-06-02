@@ -56,7 +56,7 @@ import GHC.Platform
 import Config
 import GHC.Compilers.CmmToAsm.Instruction
 import PIC
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Monad
 import Dwarf
 import GHC.IR.Cmm.DebugBlock

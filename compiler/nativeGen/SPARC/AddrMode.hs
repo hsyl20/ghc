@@ -8,7 +8,7 @@ where
 
 import SPARC.Imm
 import SPARC.Base
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 -- addressing modes ------------------------------------------------------------
 

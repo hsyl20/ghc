@@ -36,7 +36,7 @@ import RegAlloc.Linear.StackMap
 import RegAlloc.Linear.Base
 import RegAlloc.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Config.Flags
 import GHC.Data.Unique

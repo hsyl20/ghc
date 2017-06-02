@@ -18,7 +18,7 @@ import SPARC.Cond
 import SPARC.AddrMode
 import SPARC.Regs
 import GHC.Compilers.CmmToAsm.Format
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.Config.Flags

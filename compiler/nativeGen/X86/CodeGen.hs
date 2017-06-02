@@ -44,7 +44,7 @@ import GHC.Compilers.CmmToAsm.Instruction
 import PIC
 import GHC.Compilers.CmmToAsm.Monad
 import GHC.Compilers.CmmToAsm.Format
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Platform
 
 -- Our intermediate code:

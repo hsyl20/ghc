@@ -28,7 +28,7 @@ import X86.Instr
 import X86.Cond
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import PprBase
 
 

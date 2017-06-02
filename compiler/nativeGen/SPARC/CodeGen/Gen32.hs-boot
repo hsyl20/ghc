@@ -8,7 +8,7 @@ where
 
 import SPARC.CodeGen.Base
 import GHC.Compilers.CmmToAsm.Monad
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 

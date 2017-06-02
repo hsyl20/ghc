@@ -34,8 +34,8 @@ import GHC.Compilers.CmmToAsm.Monad
 import GHC.Compilers.CmmToAsm.Instruction
 import PIC
 import GHC.Compilers.CmmToAsm.Format
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 import TargetReg
 import GHC.Platform
 

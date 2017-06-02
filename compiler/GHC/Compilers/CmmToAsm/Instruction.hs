@@ -14,7 +14,7 @@ module Instruction (
 
 where
 
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

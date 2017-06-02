@@ -9,8 +9,8 @@ module RegAlloc.Linear.FreeRegs (
 
 where
 
-import Reg
-import RegClass
+import GHC.Compilers.CmmToAsm.Register
+import GHC.Compilers.CmmToAsm.Register.Class
 
 import GHC.Config.Flags
 import GHC.Utils.Panic

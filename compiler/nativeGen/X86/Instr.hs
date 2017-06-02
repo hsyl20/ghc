@@ -21,8 +21,8 @@ import X86.Cond
 import X86.Regs
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 import TargetReg
 
 import GHC.IR.Cmm.BlockId

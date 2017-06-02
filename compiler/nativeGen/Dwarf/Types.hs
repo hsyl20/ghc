@@ -30,7 +30,7 @@ import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform
 import GHC.Data.Unique
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Data.SrcLoc
 
 import Dwarf.Constants

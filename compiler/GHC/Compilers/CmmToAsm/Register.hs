@@ -28,7 +28,7 @@ where
 
 import GHC.Utils.Outputable
 import GHC.Data.Unique
-import RegClass
+import GHC.Compilers.CmmToAsm.Register.Class
 import Data.List
 
 -- | An identifier for a primitive real machine register.

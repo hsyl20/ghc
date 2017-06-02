@@ -19,7 +19,7 @@ import SPARC.Regs
 import SPARC.Base
 import GHC.Compilers.CmmToAsm.Monad
 import GHC.Compilers.CmmToAsm.Format
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 

@@ -49,8 +49,8 @@ where
 #include "HsVersions.h"
 
 import GHC.Utils.CodeGen.Platform
-import Reg
-import RegClass
+import GHC.Compilers.CmmToAsm.Register
+import GHC.Compilers.CmmToAsm.Register.Class
 
 import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel           ( CLabel )

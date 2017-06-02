@@ -15,8 +15,8 @@ module RegAlloc.Graph.SpillCost (
 ) where
 import RegAlloc.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Data.Graph.Base
 

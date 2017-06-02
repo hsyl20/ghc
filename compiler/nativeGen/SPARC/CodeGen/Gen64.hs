@@ -18,7 +18,7 @@ import SPARC.Ppr()
 import GHC.Compilers.CmmToAsm.Monad
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 

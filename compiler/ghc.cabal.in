@@ -536,8 +536,8 @@ Library
             GHC.Compilers.CmmToAsm.Monad
             GHC.Compilers.CmmToAsm.Instruction
             GHC.Compilers.CmmToAsm.Format
-            Reg
-            RegClass
+            GHC.Compilers.CmmToAsm.Register
+            GHC.Compilers.CmmToAsm.Register.Class
             PIC
             GHC.Platform
             GHC.Utils.CodeGen.Primitive

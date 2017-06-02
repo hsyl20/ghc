@@ -28,8 +28,8 @@ import PPC.Cond
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import TargetReg
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.BlockId

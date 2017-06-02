@@ -4,8 +4,8 @@ module RegAlloc.Linear.X86_64.FreeRegs
 where
 
 import X86.Regs
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Utils.Panic
 import GHC.Platform
 

@@ -33,8 +33,8 @@ import SPARC.Regs
 import SPARC.Base
 import TargetReg
 import GHC.Compilers.CmmToAsm.Instruction
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Format
 
 import GHC.Data.CLabel

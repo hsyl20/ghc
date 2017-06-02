@@ -19,7 +19,7 @@ where
 
 import RegAlloc.Linear.StackMap
 import RegAlloc.Liveness
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Config.Flags
 import GHC.Utils.Outputable

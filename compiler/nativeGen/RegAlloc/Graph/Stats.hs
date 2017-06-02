@@ -22,8 +22,8 @@ import RegAlloc.Graph.Spill
 import RegAlloc.Graph.SpillCost
 import RegAlloc.Graph.TrivColorable
 import GHC.Compilers.CmmToAsm.Instruction
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 import TargetReg
 
 import GHC.IR.Cmm.PrettyPrint()

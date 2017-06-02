@@ -10,7 +10,7 @@ where
 #include "HsVersions.h"
 
 import GHC.Compilers.CmmToAsm.Format
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.Outputable
 import GHC.Platform

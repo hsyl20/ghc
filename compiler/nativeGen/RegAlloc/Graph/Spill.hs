@@ -9,7 +9,7 @@ module RegAlloc.Graph.Spill (
 ) where
 import RegAlloc.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 import GHC.IR.Cmm.Syntax hiding (RegSet)
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

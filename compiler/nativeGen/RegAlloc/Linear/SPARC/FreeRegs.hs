@@ -4,8 +4,8 @@ module RegAlloc.Linear.SPARC.FreeRegs
 where
 
 import SPARC.Regs
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.Utils.Outputable

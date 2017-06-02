@@ -30,7 +30,7 @@ module RegAlloc.Graph.SpillClean (
 ) where
 import RegAlloc.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
-import Reg
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

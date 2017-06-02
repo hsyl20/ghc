@@ -3,8 +3,8 @@ module RegAlloc.Linear.PPC.FreeRegs
 where
 
 import PPC.Regs
-import RegClass
-import Reg
+import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.Outputable
 import GHC.Platform
