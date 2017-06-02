@@ -132,7 +132,7 @@ Then we use a LHsBndrSig on the binder, so that the
 renamer can decorate it with the variables bound
 by the pattern ('a' in the first example, 'k' in the second),
 assuming that neither of them is in scope already
-See also Note [Kind and type-variable binders] in RnTypes
+See also Note [Kind and type-variable binders] in GHC.Rename.Type
 
 Note [HsType binders]
 ~~~~~~~~~~~~~~~~~~~~~
@@ -494,7 +494,7 @@ data HsType name
       -- For details on above see note [Api annotations] in ApiAnnotation
 
   | HsParTy             (LHsType name)   -- See Note [Parens in GHC.Syntax] in HsExpr
-        -- Parenthesis preserved for the precedence re-arrangement in RnTypes
+        -- Parenthesis preserved for the precedence re-arrangement in GHC.Rename.Type
         -- It's important that a * (b + c) doesn't get rearranged to (a*b) + c!
       -- ^ - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.AnnOpen' @'('@,
       --         'ApiAnnotation.AnnClose' @')'@
@@ -631,7 +631,7 @@ After renaming
 Qualified currently behaves exactly as Implicit,
 but it is deprecated to use it for implicit quantification.
 In this case, GHC 7.10 gives a warning; see
-Note [Context quantification] in RnTypes, and Trac #4426.
+Note [Context quantification] in GHC.Rename.Type, and Trac #4426.
 In GHC 8.0, Qualified will no longer bind variables
 and this will become an error.
 
@@ -680,7 +680,7 @@ How to parse
 
 ? Is it `(*) Foo Int` or `Foo GHC.Types.* Int`? There's no way to know until renaming.
 So we just take type expressions like this and put each component in a list, so be
-sorted out in the renamer. The sorting out is done by RnTypes.mkHsOpTyRn. This means
+sorted out in the renamer. The sorting out is done by GHC.Rename.Type.mkHsOpTyRn. This means
 that the parser should never produce HsAppTy or HsOpTy.
 
 Note [Promoted lists and tuples]

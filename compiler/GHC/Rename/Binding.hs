@@ -30,7 +30,7 @@ import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr, rnStmts )
 import GHC.Syntax
 import TcRnMonad
 import TcEvidence     ( emptyTcEvBinds )
-import RnTypes
+import GHC.Rename.Type
 import GHC.Rename.Pattern
 import GHC.Rename.ImportExport
 import GHC.Rename.Environment

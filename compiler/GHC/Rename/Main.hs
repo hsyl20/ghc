@@ -18,7 +18,7 @@ import {-# SOURCE #-} GHC.Rename.Splice ( rnSpliceDecl, rnTopSpliceDecls )
 import GHC.Syntax
 import GHC.Data.FieldLabel
 import GHC.Data.RdrName
-import RnTypes
+import GHC.Rename.Type
 import GHC.Rename.Binding
 import GHC.Rename.Environment
 import RnUtils          ( HsDocContext(..), mapFvRn, bindLocalNames

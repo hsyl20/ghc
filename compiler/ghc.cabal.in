@@ -374,7 +374,7 @@ Library
         GHC.Rename.Pattern
         GHC.Rename.Main
         GHC.Rename.Splice
-        RnTypes
+        GHC.Rename.Type
         GHC.Rename.Fixity
         RnUtils
         RnUnbound

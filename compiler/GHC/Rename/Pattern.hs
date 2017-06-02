@@ -49,7 +49,7 @@ import RnUtils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
                            , warnUnusedMatches, newLocalBndrRn
                            , checkDupAndShadowedNames, checkTupSize
                            , unknownSubordinateErr )
-import RnTypes
+import GHC.Rename.Type
 import PrelNames
 import GHC.Data.Type.Constructor               ( tyConName )
 import GHC.Data.ConstructorLike

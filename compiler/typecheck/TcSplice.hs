@@ -59,7 +59,7 @@ import GHC.Rename.Expression
 import GHC.Rename.Environment
 import RnUtils ( HsDocContext(..) )
 import GHC.Rename.Fixity ( lookupFixityRn_help )
-import RnTypes
+import GHC.Rename.Type
 import TcHsSyn
 import TcSimplify
 import GHC.Data.Type as Type

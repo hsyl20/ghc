@@ -33,7 +33,7 @@ import RnUtils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames
                         , warnUnusedLocalBinds )
 import RnUnbound        ( reportUnboundName )
 import GHC.Rename.Splice         ( rnBracket, rnSpliceExpr, checkThLocalName )
-import RnTypes
+import GHC.Rename.Type
 import GHC.Rename.Pattern
 import GHC.Config.Flags
 import PrelNames

@@ -26,7 +26,7 @@ import GHC.Data.BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
 import GHC.Utils.Outputable
 import GHC.Data.Module
 import GHC.Data.SrcLoc
-import RnTypes          ( rnLHsType )
+import GHC.Rename.Type          ( rnLHsType )
 
 import Control.Monad    ( unless, when )
 
@@ -567,7 +567,7 @@ are given names during renaming. These names are collected right after
 renaming. The names generated for anonymous wild cards in TH type splices will
 thus be collected as well.
 
-For more details about renaming wild cards, see RnTypes.rnHsSigWcType
+For more details about renaming wild cards, see GHC.Rename.Type.rnHsSigWcType
 
 Note that partial type signatures are fully supported in TH declaration
 splices, e.g.:
