@@ -1,5 +1,5 @@
 -- | Free regs map for PowerPC
-module RegAlloc.Linear.PPC.FreeRegs
+module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
 where
 
 import PPC.Regs
@@ -36,7 +36,7 @@ releaseReg (RealRegSingle r) (FreeRegs g f)
     | otherwise = FreeRegs (g .|. (1 `shiftL` r)) f
 
 releaseReg _ _
-        = panic "RegAlloc.Linear.PPC.releaseReg: bad reg"
+        = panic "GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.releaseReg: bad reg"
 
 initFreeRegs :: Platform -> FreeRegs
 initFreeRegs platform = foldl' (flip releaseReg) noFreeRegs (allocatableRegs platform)
@@ -57,4 +57,4 @@ allocateReg (RealRegSingle r) (FreeRegs g f)
     | otherwise = FreeRegs (g .&. complement (1 `shiftL` r)) f
 
 allocateReg _ _
-        = panic "RegAlloc.Linear.PPC.allocateReg: bad reg"
+        = panic "GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.allocateReg: bad reg"

@@ -1,5 +1,5 @@
 
-module RegAlloc.Graph.SpillCost (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillCost (
         SpillCostRecord,
         plusSpillCostRecord,
         pprSpillCostRecord,
@@ -13,7 +13,7 @@ module RegAlloc.Graph.SpillCost (
 
         lifeMapFromSpillCostInfo
 ) where
-import RegAlloc.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
@@ -91,7 +91,7 @@ slurpSpillCostInfo platform cmm
                 = countLIs rsLiveEntry_virt instrs
 
                 | otherwise
-                = error "RegAlloc.SpillCost.slurpSpillCostInfo: bad block"
+                = error "GHC.Compilers.CmmToAsm.Register.Allocator.SpillCost.slurpSpillCostInfo: bad block"
 
         countLIs _      []
                 = return ()

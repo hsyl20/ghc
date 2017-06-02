@@ -6,7 +6,7 @@
 --   See RegArchBase.hs for the reference.
 --   See MachRegs.hs for the actual trivColorable function used in GHC.
 --
-module RegAlloc.Graph.ArchX86 (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchX86 (
         classOfReg,
         regsOfClass,
         regName,
@@ -14,7 +14,7 @@ module RegAlloc.Graph.ArchX86 (
         worst,
         squeese,
 ) where
-import RegAlloc.Graph.ArchBase  (Reg(..), RegSub(..), RegClass(..))
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchBase  (Reg(..), RegSub(..), RegClass(..))
 import GHC.Data.Unique.Set
 
 

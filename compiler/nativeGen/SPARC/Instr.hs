@@ -31,7 +31,7 @@ import SPARC.AddrMode
 import SPARC.Cond
 import SPARC.Regs
 import SPARC.Base
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register

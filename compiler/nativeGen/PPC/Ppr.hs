@@ -17,7 +17,7 @@ import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Register.Class
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.IR.Cmm.Transform.Dataflow

@@ -2,7 +2,7 @@
 
 -- | Carries interesting info for debugging / profiling of the
 --   graph coloring register allocator.
-module RegAlloc.Graph.Stats (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats (
         RegAllocStats (..),
 
         pprStats,
@@ -17,14 +17,14 @@ module RegAlloc.Graph.Stats (
 #include "nativeGen/NCG.h"
 
 import qualified GHC.Data.Graph.Color as Color
-import RegAlloc.Liveness
-import RegAlloc.Graph.Spill
-import RegAlloc.Graph.SpillCost
-import RegAlloc.Graph.TrivColorable
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillCost
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.PrettyPrint()
 import GHC.Utils.Outputable

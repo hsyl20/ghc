@@ -1,7 +1,7 @@
 
 -- | Put common type definitions here to break recursive module dependencies.
 
-module RegAlloc.Linear.Base (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base (
         BlockAssignment,
 
         Loc(..),
@@ -17,8 +17,8 @@ module RegAlloc.Linear.Base (
 
 where
 
-import RegAlloc.Linear.StackMap
-import RegAlloc.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.StackMap
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Config.Flags

@@ -12,7 +12,7 @@
 --   This code is here because we can test the architecture specific code against
 --   it.
 --
-module RegAlloc.Graph.ArchBase (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchBase (
         RegClass(..),
         Reg(..),
         RegSub(..),

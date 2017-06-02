@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module RegAlloc.Linear.FreeRegs (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs (
     FR(..),
     maxSpillSlots
 )
@@ -28,10 +28,10 @@ import GHC.Platform
 --      getFreeRegs cls f = filter ( (==cls) . regClass . RealReg ) f
 --      allocateReg f r = filter (/= r) f
 
-import qualified RegAlloc.Linear.PPC.FreeRegs    as PPC
-import qualified RegAlloc.Linear.SPARC.FreeRegs  as SPARC
-import qualified RegAlloc.Linear.X86.FreeRegs    as X86
-import qualified RegAlloc.Linear.X86_64.FreeRegs as X86_64
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
 
 import qualified PPC.Instr
 import qualified SPARC.Instr

@@ -43,15 +43,15 @@ import qualified PPC.RegInfo
 import qualified PPC.Instr
 import qualified PPC.Ppr
 
-import RegAlloc.Liveness
-import qualified RegAlloc.Linear.Main           as Linear
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main           as Linear
 
 import qualified GHC.Data.Graph.Color                     as Color
-import qualified RegAlloc.Graph.Main            as Color
-import qualified RegAlloc.Graph.Stats           as Color
-import qualified RegAlloc.Graph.TrivColorable   as Color
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main            as Color
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats           as Color
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable   as Color
 
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 import GHC.Platform
 import Config
 import GHC.Compilers.CmmToAsm.Instruction
@@ -605,7 +605,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
 
                 -- do the graph coloring register allocation
                 let ((alloced, regAllocStats), usAlloc)
-                        = {-# SCC "RegAlloc-color" #-}
+                        = {-# SCC "GHC.Compilers.CmmToAsm.Register.Allocator-color" #-}
                           initUs usLive
                           $ Color.regAlloc
                                 dflags
@@ -649,7 +649,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                            return (alloced', ra_stats )
 
                 let ((alloced, regAllocStats), usAlloc)
-                        = {-# SCC "RegAlloc-linear" #-}
+                        = {-# SCC "GHC.Compilers.CmmToAsm.Register.Allocator-linear" #-}
                           initUs usLive
                           $ liftM unzip
                           $ mapM reg_alloc withLiveness

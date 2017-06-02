@@ -27,7 +27,7 @@ import PPC.Regs
 import PPC.Cond
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
 

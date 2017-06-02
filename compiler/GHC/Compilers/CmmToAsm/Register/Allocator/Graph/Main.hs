@@ -1,18 +1,18 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 -- | Graph coloring register allocator.
-module RegAlloc.Graph.Main (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main (
         regAlloc
 ) where
 import qualified GHC.Data.Graph.Color as Color
-import RegAlloc.Liveness
-import RegAlloc.Graph.Spill
-import RegAlloc.Graph.SpillClean
-import RegAlloc.Graph.SpillCost
-import RegAlloc.Graph.Stats
-import RegAlloc.Graph.TrivColorable
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillClean
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillCost
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats
+import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
 import GHC.Compilers.CmmToAsm.Instruction
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
 

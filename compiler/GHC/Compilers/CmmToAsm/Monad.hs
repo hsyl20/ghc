@@ -39,7 +39,7 @@ where
 
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Format
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

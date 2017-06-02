@@ -36,7 +36,7 @@ import PIC
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 import GHC.Platform
 
 -- Our intermediate code:

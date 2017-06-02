@@ -23,7 +23,7 @@ import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
-import TargetReg
+import GHC.Compilers.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

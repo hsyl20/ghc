@@ -93,27 +93,27 @@ The algorithm is roughly:
 
 -}
 
-module RegAlloc.Linear.Main (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main (
         regAlloc,
-        module  RegAlloc.Linear.Base,
-        module  RegAlloc.Linear.Stats
+        module  GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base,
+        module  GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Stats
   ) where
 
 #include "HsVersions.h"
 
 
-import RegAlloc.Linear.State
-import RegAlloc.Linear.Base
-import RegAlloc.Linear.StackMap
-import RegAlloc.Linear.FreeRegs
-import RegAlloc.Linear.Stats
-import RegAlloc.Linear.JoinToTargets
-import qualified RegAlloc.Linear.PPC.FreeRegs    as PPC
-import qualified RegAlloc.Linear.SPARC.FreeRegs  as SPARC
-import qualified RegAlloc.Linear.X86.FreeRegs    as X86
-import qualified RegAlloc.Linear.X86_64.FreeRegs as X86_64
-import TargetReg
-import RegAlloc.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.State
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.StackMap
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Stats
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.JoinToTargets
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
+import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
+import GHC.Compilers.CmmToAsm.Register.Target
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register
 
@@ -291,7 +291,7 @@ process entry_ids block_live [] next_round accum madeProgress
         | not madeProgress
 
           {- BUGS: There are so many unreachable blocks in the code the warnings are overwhelming.
-             pprTrace "RegAlloc.Linear.Main.process: no progress made, bailing out."
+             pprTrace "GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main.process: no progress made, bailing out."
                 (  text "Unreachable blocks:"
                 $$ vcat (map ppr next_round)) -}
         = return $ reverse accum

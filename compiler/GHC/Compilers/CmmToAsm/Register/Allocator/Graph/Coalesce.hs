@@ -1,9 +1,9 @@
 -- | Register coalescing.
-module RegAlloc.Graph.Coalesce (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Coalesce (
         regCoalesce,
         slurpJoinMovs
 ) where
-import RegAlloc.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register
 

@@ -7,8 +7,8 @@
 --      We'd probably do better with a Register type class, and hook this to
 --      Instruction somehow.
 --
---      TODO: We should also make arch specific versions of RegAlloc.Graph.TrivColorable
-module TargetReg (
+--      TODO: We should also make arch specific versions of GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
+module GHC.Compilers.CmmToAsm.Register.Target (
         targetVirtualRegSqueeze,
         targetRealRegSqueeze,
         targetClassOfRealReg,

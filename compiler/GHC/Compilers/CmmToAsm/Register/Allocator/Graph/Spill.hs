@@ -2,12 +2,12 @@
 -- | When there aren't enough registers to hold all the vregs we have to spill
 --   some of those vregs to slots on the stack. This module is used modify the
 --   code to use those slots.
-module RegAlloc.Graph.Spill (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill (
         regSpill,
         SpillStats(..),
         accSpillSL
 ) where
-import RegAlloc.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register
 import GHC.IR.Cmm.Syntax hiding (RegSet)
@@ -302,7 +302,7 @@ patchInstr reg instr
                  -> RegVirtual (renameVirtualReg nUnique vr)
 
                 RegReal{}
-                 -> panic "RegAlloc.Graph.Spill.patchIntr: not patching real reg"
+                 -> panic "GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill.patchIntr: not patching real reg"
 
         let instr'      = patchReg1 reg nReg instr
         return          (instr', nReg)

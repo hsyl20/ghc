@@ -532,7 +532,7 @@ Library
 
     Exposed-Modules:
             GHC.Compilers.CmmToAsm
-            TargetReg
+            GHC.Compilers.CmmToAsm.Register.Target
             GHC.Compilers.CmmToAsm.Monad
             GHC.Compilers.CmmToAsm.Instruction
             GHC.Compilers.CmmToAsm.Format
@@ -570,27 +570,27 @@ Library
             SPARC.CodeGen.Gen64
             SPARC.CodeGen.Sanity
             SPARC.CodeGen.Expand
-            RegAlloc.Liveness
-            RegAlloc.Graph.Main
-            RegAlloc.Graph.Stats
-            RegAlloc.Graph.ArchBase
-            RegAlloc.Graph.ArchX86
-            RegAlloc.Graph.Coalesce
-            RegAlloc.Graph.Spill
-            RegAlloc.Graph.SpillClean
-            RegAlloc.Graph.SpillCost
-            RegAlloc.Graph.TrivColorable
-            RegAlloc.Linear.Main
-            RegAlloc.Linear.JoinToTargets
-            RegAlloc.Linear.State
-            RegAlloc.Linear.Stats
-            RegAlloc.Linear.FreeRegs
-            RegAlloc.Linear.StackMap
-            RegAlloc.Linear.Base
-            RegAlloc.Linear.X86.FreeRegs
-            RegAlloc.Linear.X86_64.FreeRegs
-            RegAlloc.Linear.PPC.FreeRegs
-            RegAlloc.Linear.SPARC.FreeRegs
+            GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchBase
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchX86
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Coalesce
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillClean
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillCost
+            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.JoinToTargets
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.State
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Stats
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.StackMap
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
+            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
             Dwarf
             Dwarf.Types
             Dwarf.Constants

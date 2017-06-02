@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module RegAlloc.Graph.TrivColorable (
+module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable (
         trivColorable,
 )
 

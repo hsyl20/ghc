@@ -7,12 +7,12 @@
 --      stored one.  They might be different if spilling has occurred in one
 --      branch; so some fixup code will be required to match up the assignments.
 --
-module RegAlloc.Linear.JoinToTargets (joinToTargets) where
+module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.JoinToTargets (joinToTargets) where
 
-import RegAlloc.Linear.State
-import RegAlloc.Linear.Base
-import RegAlloc.Linear.FreeRegs
-import RegAlloc.Liveness
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.State
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base
+import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs
+import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register
 
