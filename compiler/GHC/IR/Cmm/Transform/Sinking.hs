@@ -8,7 +8,7 @@ import GHC.IR.Cmm.Transform.ConstantFolding
 import GHC.IR.Cmm.Analyse.Liveness
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Transform.Dataflow
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.Platform (isARM, platformArch)
 
 import GHC.Config.Flags

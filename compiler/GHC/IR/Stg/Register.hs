@@ -12,7 +12,7 @@ module GHC.IR.Stg.Register ( fixStgRegisters ) where
 
 #include "HsVersions.h"
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.IR.Cmm.Utils

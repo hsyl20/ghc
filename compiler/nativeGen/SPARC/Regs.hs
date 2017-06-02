@@ -32,7 +32,7 @@ module SPARC.Regs (
 where
 
 
-import CodeGen.Platform.SPARC
+import GHC.Utils.CodeGen.Platform.SPARC
 import Reg
 import RegClass
 import Format

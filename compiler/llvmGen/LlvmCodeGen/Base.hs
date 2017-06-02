@@ -41,7 +41,7 @@ import Llvm
 import LlvmCodeGen.Regs
 
 import GHC.Data.CLabel
-import CodeGen.Platform ( activeStgRegs )
+import GHC.Utils.CodeGen.Platform ( activeStgRegs )
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.IR.Cmm              hiding ( succ )

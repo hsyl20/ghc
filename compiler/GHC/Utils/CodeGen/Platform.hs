@@ -1,5 +1,5 @@
 
-module CodeGen.Platform
+module GHC.Utils.CodeGen.Platform
        (callerSaves, activeStgRegs, haveRegBase, globalRegMaybe, freeReg)
        where
 

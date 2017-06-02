@@ -22,7 +22,7 @@ module GHC.IR.Cmm.Node (
      CmmTickScope(..), isTickSubScope, combineTickScopes,
   ) where
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.Expr
 import GHC.IR.Cmm.Switch
 import GHC.Config.Flags

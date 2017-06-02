@@ -140,7 +140,6 @@ Library
     hs-source-dirs:
         ./
         backpack
-        codeGen
         iface
         llvmGen
         nativeGen
@@ -229,15 +228,15 @@ Library
         GHC.IR.Cmm.PrettyPrint.Declaration
         GHC.IR.Cmm.PrettyPrint.Expression
         GHC.Utils.Bitmap
-        CodeGen.Platform
-        CodeGen.Platform.ARM
-        CodeGen.Platform.ARM64
-        CodeGen.Platform.NoRegs
-        CodeGen.Platform.PPC
-        CodeGen.Platform.PPC_Darwin
-        CodeGen.Platform.SPARC
-        CodeGen.Platform.X86
-        CodeGen.Platform.X86_64
+        GHC.Utils.CodeGen.Platform
+        GHC.Utils.CodeGen.Platform.ARM
+        GHC.Utils.CodeGen.Platform.ARM64
+        GHC.Utils.CodeGen.Platform.NoRegs
+        GHC.Utils.CodeGen.Platform.PPC
+        GHC.Utils.CodeGen.Platform.PPC_Darwin
+        GHC.Utils.CodeGen.Platform.SPARC
+        GHC.Utils.CodeGen.Platform.X86
+        GHC.Utils.CodeGen.Platform.X86_64
         GHC.IR.Stg.Register
         GHC.Compilers.StgToCmm
         GHC.Compilers.StgToCmm.Binding

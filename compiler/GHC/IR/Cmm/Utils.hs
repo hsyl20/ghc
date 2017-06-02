@@ -74,7 +74,7 @@ import GHC.Data.CLabel
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Utils
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 
 import Data.Word
 import Data.Maybe

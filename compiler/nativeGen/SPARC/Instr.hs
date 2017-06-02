@@ -38,7 +38,7 @@ import Reg
 import Format
 
 import GHC.Data.CLabel
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.BlockId
 import GHC.Config.Flags
 import GHC.IR.Cmm

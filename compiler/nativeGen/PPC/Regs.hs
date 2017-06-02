@@ -58,7 +58,7 @@ import GHC.IR.Cmm
 import GHC.Data.CLabel           ( CLabel )
 import GHC.Data.Unique
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Platform

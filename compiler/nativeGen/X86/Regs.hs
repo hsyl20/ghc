@@ -48,7 +48,7 @@ where
 #include "nativeGen/NCG.h"
 #include "HsVersions.h"
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import Reg
 import RegClass
 

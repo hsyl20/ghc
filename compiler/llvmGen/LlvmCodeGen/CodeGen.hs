@@ -12,7 +12,7 @@ import LlvmCodeGen.Base
 import LlvmCodeGen.Regs
 
 import GHC.IR.Cmm.BlockId
-import CodeGen.Platform ( activeStgRegs, callerSaves )
+import GHC.Utils.CodeGen.Platform ( activeStgRegs, callerSaves )
 import GHC.Data.CLabel
 import GHC.IR.Cmm
 import GHC.IR.Cmm.PrettyPrint

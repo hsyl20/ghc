@@ -1,8 +1,8 @@
 {-# LANGUAGE CPP #-}
 
-module CodeGen.Platform.ARM64 where
+module GHC.Utils.CodeGen.Platform.X86 where
 
 #define MACHREGS_NO_REGS 0
-#define MACHREGS_aarch64 1
+#define MACHREGS_i386 1
 #include "../../../../includes/CodeGen.Platform.hs"
 

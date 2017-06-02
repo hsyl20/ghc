@@ -7,7 +7,7 @@ import SPARC.Regs
 import RegClass
 import Reg
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.Utils.Outputable
 import GHC.Platform
 

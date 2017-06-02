@@ -48,7 +48,7 @@ import GHC.Compilers.StgToCmm.Closure
 import GHC.IR.Cmm
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Graph as MkGraph
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch

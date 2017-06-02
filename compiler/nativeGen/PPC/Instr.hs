@@ -31,7 +31,7 @@ import TargetReg
 import RegClass
 import Reg
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Config.Flags

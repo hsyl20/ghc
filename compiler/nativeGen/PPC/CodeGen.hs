@@ -25,7 +25,7 @@ where
 #include "../includes/MachDeps.h"
 
 -- NCG stuff:
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import PPC.Instr
 import PPC.Cond
 import PPC.Regs

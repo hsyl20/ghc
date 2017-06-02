@@ -20,7 +20,7 @@ import SPARC.Regs
 import Format
 import Reg
 
-import CodeGen.Platform
+import GHC.Utils.CodeGen.Platform
 import GHC.Config.Flags
 import GHC.IR.Cmm
 import GHC.IR.Cmm.PrettyPrint.Expression ()
