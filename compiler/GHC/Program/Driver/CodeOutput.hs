@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module GHC.CodeGen.CodeOutput( codeOutput, outputForeignStubs ) where
+module GHC.Program.Driver.CodeOutput( codeOutput, outputForeignStubs ) where
 
 #include "HsVersions.h"
 

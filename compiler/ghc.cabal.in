@@ -316,7 +316,7 @@ Library
         GHC.Config.Flags.Fingerprint
         GHC.Data.Annotation
         GHC.Program.CmdLineParser
-        GHC.CodeGen.CodeOutput
+        GHC.Program.Driver.CodeOutput
         Config
         GHC.Config.Constants
         GHC.Program.MakeDepend
@@ -342,7 +342,7 @@ Library
         GHC.Plugins.Types
         TcPluginM
         GHC.Utils.PrettyPrint.TyThing
-        GHC.CodeGen.StaticPtrTable
+        GHC.Utils.CodeGen.StaticPtrTable
         GHC.Utils.SysTools
         GHC.Utils.SysTools.Terminal
         GHC.Utils.Elf

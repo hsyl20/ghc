@@ -46,7 +46,7 @@
 --
 
 {-# LANGUAGE ViewPatterns, TupleSections #-}
-module GHC.CodeGen.StaticPtrTable
+module GHC.Utils.CodeGen.StaticPtrTable
     ( sptCreateStaticBinds
     , sptModuleInitCode
     ) where

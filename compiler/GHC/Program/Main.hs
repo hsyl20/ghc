@@ -130,7 +130,7 @@ import GHC.IR.Cmm.Parser         ( parseCmmFile )
 import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Pipeline
 import GHC.RTS.InfoTable
-import GHC.CodeGen.CodeOutput
+import GHC.Program.Driver.CodeOutput
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
 import GHC.Utils.Fingerprint      ( Fingerprint )
@@ -1608,7 +1608,7 @@ hscDeclsWithLocation hsc_env0 str source linenumber =
     return (new_tythings, new_ictxt)
 
 -- | Load the given static-pointer table entries into the interpreter.
--- See Note [Grand plan for static forms] in GHC.CodeGen.StaticPtrTable.
+-- See Note [Grand plan for static forms] in GHC.Utils.CodeGen.StaticPtrTable.
 hscAddSptEntries :: HscEnv -> [SptEntry] -> IO ()
 hscAddSptEntries hsc_env entries = do
     let add_spt_entry :: SptEntry -> IO ()

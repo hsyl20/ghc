@@ -29,7 +29,7 @@ import GHC.IR.Core.Transform.Rules
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import GHC.IR.Core.Arity        ( exprArity, exprBotStrictness_maybe )
-import GHC.CodeGen.StaticPtrTable
+import GHC.Utils.CodeGen.StaticPtrTable
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
 import GHC.Data.Var
@@ -378,7 +378,7 @@ tidyProgram hsc_env  (ModGuts { mg_module    = mod
 
               ; tidy_type_env = tidyTypeEnv omit_prags type_env2
               }
-          -- See Note [Grand plan for static forms] in GHC.CodeGen.StaticPtrTable.
+          -- See Note [Grand plan for static forms] in GHC.Utils.CodeGen.StaticPtrTable.
         ; (spt_entries, tidy_binds') <-
              sptCreateStaticBinds hsc_env mod tidy_binds
         ; let { spt_init_code = sptModuleInitCode mod spt_entries
