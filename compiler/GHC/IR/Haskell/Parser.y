@@ -22,7 +22,8 @@
 --       buffer = stringToStringBuffer str
 --       parseState = mkPState flags buffer location
 -- @
-module Parser (parseModule, parseSignature, parseImport, parseStatement, parseBackpack,
+module GHC.IR.Haskell.Parser (parseModule, parseSignature,
+               parseImport, parseStatement, parseBackpack,
                parseDeclaration, parseExpression, parsePattern,
                parseTypeSignature,
                parseStmt, parseIdentifier,

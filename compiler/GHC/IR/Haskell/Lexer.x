@@ -52,7 +52,7 @@
 
 {-# OPTIONS_GHC -funbox-strict-fields #-}
 
-module Lexer (
+module GHC.IR.Haskell.Lexer (
    Token(..), lexer, pragState, mkPState, mkPStatePure, PState(..),
    P(..), ParseResult(..), mkParserFlags, ParserFlags(..), getSrcLoc,
    getPState, extopt, withThisPackage,

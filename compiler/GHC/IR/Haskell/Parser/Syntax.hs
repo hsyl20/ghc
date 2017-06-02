@@ -7,7 +7,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module   GHC.IR.Haskell.Parser.Syntax (
+module GHC.IR.Haskell.Parser.Syntax (
         mkHsOpApp,
         mkHsIntegral, mkHsFractional, mkHsIsString,
         mkHsDo, mkSpliceDecl,

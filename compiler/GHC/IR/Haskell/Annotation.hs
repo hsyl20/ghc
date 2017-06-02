@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 
-module ApiAnnotation (
+module GHC.IR.Haskell.Annotation (
   getAnnotation, getAndRemoveAnnotation,
   getAnnotationComments,getAndRemoveAnnotationComments,
   ApiAnns,
