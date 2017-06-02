@@ -21,7 +21,7 @@ import GHC.Data.RdrName
 import GHC.Rename.Type
 import GHC.Rename.Binding
 import GHC.Rename.Environment
-import RnUtils          ( HsDocContext(..), mapFvRn, bindLocalNames
+import GHC.Rename.Utils          ( HsDocContext(..), mapFvRn, bindLocalNames
                         , checkDupRdrNames, inHsDocContext, bindLocalNamesFV
                         , checkShadowedRdrNames, warnUnusedTypePatterns
                         , extendTyVarEnvFVRn, newLocalBndrsRn )

@@ -376,7 +376,7 @@ Library
         GHC.Rename.Splice
         GHC.Rename.Type
         GHC.Rename.Fixity
-        RnUtils
+        GHC.Rename.Utils
         RnUnbound
         GHC.Core.Monad
         GHC.Core.Transform.CommonSubExpr

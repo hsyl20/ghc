@@ -27,7 +27,7 @@ import TcRnMonad
 import GHC.Data.Module           ( getModule )
 import GHC.Rename.Environment
 import GHC.Rename.Fixity
-import RnUtils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames
+import GHC.Rename.Utils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames
                         , bindLocalNames
                         , mapMaybeFvRn, mapFvRn
                         , warnUnusedLocalBinds )

@@ -35,7 +35,7 @@ import GHC.Rename.Pattern
 import GHC.Rename.ImportExport
 import GHC.Rename.Environment
 import GHC.Rename.Fixity
-import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
+import GHC.Rename.Utils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds
                         , checkDupAndShadowedNames, bindLocalNamesFV )
 import GHC.Config.Flags

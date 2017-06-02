@@ -33,7 +33,7 @@ import TcSimplify       ( simplifyInfer, InferMode(..) )
 import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
 import GHC.TypeSystem.FamilyInstance       ( FamInstEnvs )
 import GHC.Rename.Environment            ( addUsedGRE )
-import RnUtils          ( addNameClashErrRn, unknownSubordinateErr )
+import GHC.Rename.Utils          ( addNameClashErrRn, unknownSubordinateErr )
 import TcEnv
 import TcArrows
 import TcMatches

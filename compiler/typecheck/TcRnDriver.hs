@@ -49,7 +49,7 @@ import Inst( deeplyInstantiate )
 import TcUnify( checkConstraints )
 import GHC.Rename.Type
 import GHC.Rename.Expression
-import RnUtils ( HsDocContext(..) )
+import GHC.Rename.Utils ( HsDocContext(..) )
 import GHC.Rename.Fixity ( lookupFixityRn )
 import GHC.Data.Id.Make
 import GHC.Interface.Tidy    ( globaliseAndTidyId )

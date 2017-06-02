@@ -39,7 +39,7 @@ import GHC.Syntax
 import GHC.Rename.Documentation          ( rnLHsDoc, rnMbLHsDoc )
 import GHC.Rename.Environment
 import RnUnbound        ( perhapsForallMsg )
-import RnUtils          ( HsDocContext(..), withHsDocContext, mapFvRn
+import GHC.Rename.Utils          ( HsDocContext(..), withHsDocContext, mapFvRn
                         , pprHsDocContext, bindLocalNamesFV, dupNamesErr
                         , newLocalBndrRn, checkShadowedRdrNames )
 import GHC.Rename.Fixity         ( lookupFieldFixityRn, lookupFixityRn

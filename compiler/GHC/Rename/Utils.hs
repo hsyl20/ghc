@@ -3,7 +3,7 @@
 This module contains miscellaneous functions related to renaming.
 
 -}
-module RnUtils (
+module GHC.Rename.Utils (
         checkDupRdrNames, checkShadowedRdrNames,
         checkDupNames, checkDupAndShadowedNames, dupNamesErr,
         checkTupSize,

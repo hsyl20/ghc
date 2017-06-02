@@ -18,7 +18,7 @@ import TcRnMonad
 import GHC.Data.Kind
 
 import GHC.Rename.Environment
-import RnUtils          ( HsDocContext(..), newLocalBndrRn )
+import GHC.Rename.Utils          ( HsDocContext(..), newLocalBndrRn )
 import RnUnbound        ( isUnboundName )
 import GHC.Rename.Main         ( rnSrcDecls, findSplice )
 import GHC.Rename.Pattern            ( rnPat )
