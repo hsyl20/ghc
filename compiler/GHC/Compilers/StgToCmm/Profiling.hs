@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmProf (
+module GHC.Compilers.StgToCmm.Profiling (
         initCostCentres, ccType, ccsType,
         mkCCostCentre, mkCCostCentreStack,
 
@@ -27,9 +27,9 @@ module StgCmmProf (
 
 #include "HsVersions.h"
 
-import StgCmmClosure
-import StgCmmUtils
-import StgCmmMonad
+import GHC.Compilers.StgToCmm.Closure
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Monad
 import GHC.RTS.Storage
 
 import GHC.IR.Cmm.Graph

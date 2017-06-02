@@ -52,7 +52,7 @@ Things to do:
    we ultimately want to share this with the Cmm branch eliminator.
 
  - At the moment, references to global registers like Hp are "lowered" 
-   late (in CgUtils.fixStgRegisters). We should do this early, in the
+   late (in GHC.IR.Stg.Register.fixStgRegisters). We should do this early, in the
 	new native codegen, much in the way that we lower calling conventions.
 	Might need to be a bit sophisticated about aliasing.
 
@@ -104,20 +104,20 @@ CgExtCode.hs   used in CmmParse.y
 ------- New codegen ---------
 
 StgCmm.hs
-StgCmmBind.hs
-StgCmmClosure.hs     (corresponds to old ClosureInfo)
-StgCmmCon.hs
-StgCmmEnv.hs
-StgCmmExpr.hs
-StgCmmForeign.hs
-StgCmmHeap.hs
-StgCmmHpc.hs
-StgCmmLayout.hs
-StgCmmMonad.hs
-StgCmmPrim.hs
-StgCmmProf.hs
-StgCmmTicky.hs
-StgCmmUtils.hs
+GHC.Compilers.StgToCmm.Binding.hs
+GHC.Compilers.StgToCmm.Closure.hs     (corresponds to old ClosureInfo)
+GHC.Compilers.StgToCmm.Constructor.hs
+GHC.Compilers.StgToCmm.Environment.hs
+GHC.Compilers.StgToCmm.Expression.hs
+GHC.Compilers.StgToCmm.ForeignCall.hs
+GHC.Compilers.StgToCmm.Heap.hs
+GHC.Compilers.StgToCmm.Coverage.hs
+GHC.Compilers.StgToCmm.Layout.hs
+GHC.Compilers.StgToCmm.Monad.hs
+GHC.Compilers.StgToCmm.PrimOp.hs
+GHC.Compilers.StgToCmm.Profiling.hs
+GHC.Compilers.StgToCmm.Profiling.Ticky.hs
+GHC.Compilers.StgToCmm.Utils.hs
 
 ------- Old codegen (moribund) ---------
 CodeGen.lhs
@@ -139,7 +139,7 @@ CgProf.hs
 CgStackery.lhs
 CgTailCall.lhs
 CgTicky.hs
-CgUtils.hs
+GHC.IR.Stg.Register.hs
 ClosureInfo.lhs
 
 ----------------------------------------------------

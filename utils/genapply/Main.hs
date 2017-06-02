@@ -523,7 +523,7 @@ enterFastPath regstatus no_load_regs args_in_regs args
     = enterFastPathHelper tag regstatus no_load_regs args_in_regs args
 enterFastPath _ _ _ _ = empty
 
--- Copied from Constants.hs & CgUtils.hs, i'd rather have this imported:
+-- Copied from Constants.hs & GHC.IR.Stg.Register.hs, i'd rather have this imported:
 -- (arity,tag)
 tAG_BITS = (TAG_BITS :: Int)
 tAG_BITS_MAX = ((1 `shiftL` tAG_BITS) :: Int)
@@ -994,7 +994,7 @@ applyTypes = [
 --
 --  NOTE: other places to change if you change stackApplyTypes:
 --       - includes/rts/storage/FunTypes.h
---       - compiler/codeGen/StgCmmLayout.hs: stdPattern
+--       - compiler/codeGen/GHC.Compilers.StgToCmm.Layout.hs: stdPattern
 stackApplyTypes = [
         [],
         [N],

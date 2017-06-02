@@ -231,7 +231,7 @@ RTS_THUNK(stg_ap_6_upd);
 RTS_THUNK(stg_ap_7_upd);
 
 /* standard application routines (see also utils/genapply,
- * and compiler/codeGen/StgCmmArgRep.hs).
+ * and compiler/GHC/Compilers/StgToCmm/ArgRep.hs).
  */
 RTS_RET(stg_ap_v);
 RTS_RET(stg_ap_f);
@@ -515,13 +515,13 @@ extern unsigned int RTS_VAR(CC_ID);            /* global ids */
 extern unsigned int RTS_VAR(CCS_ID);
 
 // Calls to these rts functions are generated directly
-// by codegen (see compiler/codeGen/StgCmmProf.hs)
+// by codegen (see GHC.Compilers.StgToCmm.Profiling)
 // and don't require (don't emit) forward declarations.
 //
 // In unregisterised mode (when building via .hc files)
 // the calls are ordinary C calls. Functions must be in
 // scope and must match prototype assumed by
-//    'compiler/codeGen/StgCmmProf.hs'
+//    'GHC.Compilers.StgToCmm.Profiling'
 // as opposed to real prototype declared in
 //    'includes/rts/prof/CCS.h'
 void enterFunCCS (void *reg, void *ccsfn);

@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmPrim (
+module GHC.Compilers.StgToCmm.PrimOp (
    cgOpApp,
    cgPrimOp, -- internal(ish), used by cgCase to get code for a
              -- comparison without also turning it into a Bool.
@@ -17,14 +17,14 @@ module StgCmmPrim (
 
 #include "HsVersions.h"
 
-import StgCmmLayout
-import StgCmmForeign
-import StgCmmEnv
-import StgCmmMonad
-import StgCmmUtils
-import StgCmmTicky
-import StgCmmHeap
-import StgCmmProf ( costCentreFrom, curCCS )
+import GHC.Compilers.StgToCmm.Layout
+import GHC.Compilers.StgToCmm.ForeignCall
+import GHC.Compilers.StgToCmm.Environment
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Profiling.Ticky
+import GHC.Compilers.StgToCmm.Heap
+import GHC.Compilers.StgToCmm.Profiling ( costCentreFrom, curCCS )
 
 import GHC.Config.Flags
 import GHC.Platform
@@ -1327,7 +1327,7 @@ doIndexOffAddrOp :: Maybe MachOp
 doIndexOffAddrOp maybe_post_read_cast rep [res] [addr,idx]
    = mkBasicIndexedRead 0 maybe_post_read_cast rep res addr rep idx
 doIndexOffAddrOp _ _ _ _
-   = panic "StgCmmPrim: doIndexOffAddrOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doIndexOffAddrOp"
 
 doIndexOffAddrOpAs :: Maybe MachOp
                    -> CmmType
@@ -1338,7 +1338,7 @@ doIndexOffAddrOpAs :: Maybe MachOp
 doIndexOffAddrOpAs maybe_post_read_cast rep idx_rep [res] [addr,idx]
    = mkBasicIndexedRead 0 maybe_post_read_cast rep res addr idx_rep idx
 doIndexOffAddrOpAs _ _ _ _ _
-   = panic "StgCmmPrim: doIndexOffAddrOpAs"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doIndexOffAddrOpAs"
 
 doIndexByteArrayOp :: Maybe MachOp
                    -> CmmType
@@ -1349,7 +1349,7 @@ doIndexByteArrayOp maybe_post_read_cast rep [res] [addr,idx]
    = do dflags <- getDynFlags
         mkBasicIndexedRead (arrWordsHdrSize dflags) maybe_post_read_cast rep res addr rep idx
 doIndexByteArrayOp _ _ _ _
-   = panic "StgCmmPrim: doIndexByteArrayOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doIndexByteArrayOp"
 
 doIndexByteArrayOpAs :: Maybe MachOp
                     -> CmmType
@@ -1361,7 +1361,7 @@ doIndexByteArrayOpAs maybe_post_read_cast rep idx_rep [res] [addr,idx]
    = do dflags <- getDynFlags
         mkBasicIndexedRead (arrWordsHdrSize dflags) maybe_post_read_cast rep res addr idx_rep idx
 doIndexByteArrayOpAs _ _ _ _ _
-   = panic "StgCmmPrim: doIndexByteArrayOpAs"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doIndexByteArrayOpAs"
 
 doReadPtrArrayOp :: LocalReg
                  -> CmmExpr
@@ -1379,7 +1379,7 @@ doWriteOffAddrOp :: Maybe MachOp
 doWriteOffAddrOp maybe_pre_write_cast idx_ty [] [addr,idx,val]
    = mkBasicIndexedWrite 0 maybe_pre_write_cast addr idx_ty idx val
 doWriteOffAddrOp _ _ _ _
-   = panic "StgCmmPrim: doWriteOffAddrOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doWriteOffAddrOp"
 
 doWriteByteArrayOp :: Maybe MachOp
                    -> CmmType
@@ -1390,7 +1390,7 @@ doWriteByteArrayOp maybe_pre_write_cast idx_ty [] [addr,idx,val]
    = do dflags <- getDynFlags
         mkBasicIndexedWrite (arrWordsHdrSize dflags) maybe_pre_write_cast addr idx_ty idx val
 doWriteByteArrayOp _ _ _ _
-   = panic "StgCmmPrim: doWriteByteArrayOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doWriteByteArrayOp"
 
 doWritePtrArrayOp :: CmmExpr
                   -> CmmExpr
@@ -1651,7 +1651,7 @@ doPrefetchByteArrayOp locality  [addr,idx]
    = do dflags <- getDynFlags
         mkBasicPrefetch locality (arrWordsHdrSize dflags)  addr idx
 doPrefetchByteArrayOp _ _
-   = panic "StgCmmPrim: doPrefetchByteArrayOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doPrefetchByteArrayOp"
 
 -- | Translate mutable byte array prefetch operations into proper primcalls.
 doPrefetchMutableByteArrayOp :: Int
@@ -1661,7 +1661,7 @@ doPrefetchMutableByteArrayOp locality  [addr,idx]
    = do dflags <- getDynFlags
         mkBasicPrefetch locality (arrWordsHdrSize dflags)  addr idx
 doPrefetchMutableByteArrayOp _ _
-   = panic "StgCmmPrim: doPrefetchByteArrayOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doPrefetchByteArrayOp"
 
 -- | Translate address prefetch operations into proper primcalls.
 doPrefetchAddrOp ::Int
@@ -1670,7 +1670,7 @@ doPrefetchAddrOp ::Int
 doPrefetchAddrOp locality   [addr,idx]
    = mkBasicPrefetch locality 0  addr idx
 doPrefetchAddrOp _ _
-   = panic "StgCmmPrim: doPrefetchAddrOp"
+   = panic "GHC.Compilers.StgToCmm.PrimOp: doPrefetchAddrOp"
 
 -- | Translate value prefetch operations into proper primcalls.
 doPrefetchValueOp :: Int
@@ -1680,7 +1680,7 @@ doPrefetchValueOp  locality   [addr]
   =  do dflags <- getDynFlags
         mkBasicPrefetch locality 0 addr  (CmmLit (CmmInt 0 (wordWidth dflags)))
 doPrefetchValueOp _ _
-  = panic "StgCmmPrim: doPrefetchValueOp"
+  = panic "GHC.Compilers.StgToCmm.PrimOp: doPrefetchValueOp"
 
 -- | helper to generate prefetch primcalls
 mkBasicPrefetch :: Int          -- Locality level 0-3

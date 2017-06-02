@@ -18,8 +18,8 @@ import GHC.Data.Name.Environment
 import GHC.Data.DataConstructor          ( DataCon, dataConRepArgTys, dataConIdentity )
 import GHC.Data.Type.Constructor            ( TyCon, tyConFamilySize, isDataTyCon, tyConDataCons )
 import GHC.Data.RepType
-import StgCmmLayout     ( mkVirtConstrSizes )
-import StgCmmClosure    ( tagForCon, NonVoid (..) )
+import GHC.Compilers.StgToCmm.Layout     ( mkVirtConstrSizes )
+import GHC.Compilers.StgToCmm.Closure    ( tagForCon, NonVoid (..) )
 import GHC.Utils
 import GHC.Utils.Panic
 

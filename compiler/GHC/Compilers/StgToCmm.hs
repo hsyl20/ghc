@@ -12,16 +12,16 @@ module GHC.Compilers.StgToCmm ( codeGen ) where
 
 #include "HsVersions.h"
 
-import StgCmmProf (initCostCentres, ldvEnter)
-import StgCmmMonad
-import StgCmmEnv
-import StgCmmBind
-import StgCmmCon
-import StgCmmLayout
-import StgCmmUtils
-import StgCmmClosure
-import StgCmmHpc
-import StgCmmTicky
+import GHC.Compilers.StgToCmm.Profiling (initCostCentres, ldvEnter)
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Environment
+import GHC.Compilers.StgToCmm.Binding
+import GHC.Compilers.StgToCmm.Constructor
+import GHC.Compilers.StgToCmm.Layout
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Closure
+import GHC.Compilers.StgToCmm.Coverage
+import GHC.Compilers.StgToCmm.Profiling.Ticky
 
 import GHC.IR.Cmm
 import GHC.IR.Cmm.Utils
@@ -231,7 +231,7 @@ cgDataCon data_con
 maybeExternaliseId :: DynFlags -> Id -> FCode Id
 maybeExternaliseId dflags id
   | gopt Opt_SplitObjs dflags,  -- See Note [Externalise when splitting]
-                                -- in StgCmmMonad
+                                -- in GHC.Compilers.StgToCmm.Monad
     isInternalName name = do { mod <- getModuleName
                              ; returnFC (setIdName id (externalise mod)) }
   | otherwise           = returnFC id

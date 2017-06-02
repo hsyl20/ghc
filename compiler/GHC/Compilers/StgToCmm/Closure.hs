@@ -11,7 +11,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmClosure (
+module GHC.Compilers.StgToCmm.Closure (
         DynTag,  tagForCon, isSmallFamily,
 
         idPrimRep, isVoidRep, isGcPtrRep, addIdReps, addArgReps,
@@ -93,7 +93,7 @@ import Data.Coerce (coerce)
 --                Data types and synonyms
 -----------------------------------------------------------------------------
 
--- These data types are mostly used by other modules, especially StgCmmMonad,
+-- These data types are mostly used by other modules, especially GHC.Compilers.StgToCmm.Monad,
 -- but we define them here because some functions in this module need to
 -- have access to them as well
 
@@ -559,7 +559,7 @@ getCallMethod dflags _ id _ n_args v_args _cg_loc
   --   * function is performing a self-recursive call in a tail position
   --   * number of non-void parameters of the function matches functions arity.
   -- See Note [Self-recursive tail calls] and Note [Void arguments in
-  -- self-recursive tail calls] in StgCmmExpr for more details
+  -- self-recursive tail calls] in GHC.Compilers.StgToCmm.Expression for more details
   = JumpToIt block_id args
 
 getCallMethod dflags name id (LFReEntrant _ _ arity _ _) n_args _v_args _cg_loc

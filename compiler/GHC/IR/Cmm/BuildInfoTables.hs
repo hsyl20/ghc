@@ -222,7 +222,7 @@ procpointSRT dflags top_srt top_table entries =
 maxBmpSize :: DynFlags -> Int
 maxBmpSize dflags = widthInBits (wordWidth dflags) `div` 2
 
--- Adapted from codeGen/StgCmmUtils, which converts from SRT to C_SRT.
+-- Adapted from GHC.Compilers.StgToCmm.Utils, which converts from SRT to C_SRT.
 to_SRT :: DynFlags -> CLabel -> Int -> Int -> Bitmap -> UniqSM (Maybe CmmDecl, C_SRT)
 to_SRT dflags top_srt off len bmp
   | len > maxBmpSize dflags || bmp == [toStgWord dflags (fromStgHalfWord (srtEscape dflags))]

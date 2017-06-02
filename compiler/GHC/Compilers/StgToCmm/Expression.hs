@@ -9,23 +9,23 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmExpr ( cgExpr ) where
+module GHC.Compilers.StgToCmm.Expression ( cgExpr ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} StgCmmBind ( cgBind )
+import {-# SOURCE #-} GHC.Compilers.StgToCmm.Binding ( cgBind )
 
-import StgCmmMonad
-import StgCmmHeap
-import StgCmmEnv
-import StgCmmCon
-import StgCmmProf (saveCurrentCostCentre, restoreCurrentCostCentre, emitSetCCC)
-import StgCmmLayout
-import StgCmmPrim
-import StgCmmHpc
-import StgCmmTicky
-import StgCmmUtils
-import StgCmmClosure
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Heap
+import GHC.Compilers.StgToCmm.Environment
+import GHC.Compilers.StgToCmm.Constructor
+import GHC.Compilers.StgToCmm.Profiling (saveCurrentCostCentre, restoreCurrentCostCentre, emitSetCCC)
+import GHC.Compilers.StgToCmm.Layout
+import GHC.Compilers.StgToCmm.PrimOp
+import GHC.Compilers.StgToCmm.Coverage
+import GHC.Compilers.StgToCmm.Profiling.Ticky
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Closure
 
 import GHC.IR.Stg.Syntax
 
@@ -520,9 +520,9 @@ check will reset the heap usage. Slop in the heap breaks LDV profiling
 
 Note [Inlining out-of-line primops and heap checks]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If shouldInlinePrimOp returns True when called from StgCmmExpr for the
+If shouldInlinePrimOp returns True when called from GHC.Compilers.StgToCmm.Expression for the
 purpose of heap check placement, we *must* inline the primop later in
-StgCmmPrim. If we don't things will go wrong.
+GHC.Compilers.StgToCmm.PrimOp. If we don't things will go wrong.
 -}
 
 -----------------
@@ -728,7 +728,7 @@ cgIdApp fun_id args = do
     let cg_fun_id   = cg_id fun_info
            -- NB: use (cg_id fun_info) instead of fun_id, because
            -- the former may be externalised for -split-objs.
-           -- See Note [Externalise when splitting] in StgCmmMonad
+           -- See Note [Externalise when splitting] in GHC.Compilers.StgToCmm.Monad
 
         fun_arg     = StgVarArg cg_fun_id
         fun_name    = idName    cg_fun_id
@@ -823,18 +823,18 @@ cgIdApp fun_id args = do
 --
 --   * Whenever we are compiling a function, we set that information to reflect
 --     the fact that function currently being compiled can be jumped to, instead
---     of called. This is done in closureCodyBody in StgCmmBind.
+--     of called. This is done in closureCodyBody in GHC.Compilers.StgToCmm.Binding.
 --
 --   * We also have to emit a label to which we will be jumping. We make sure
 --     that the label is placed after a stack check but before the heap
 --     check. The reason is that making a recursive tail-call does not increase
 --     the stack so we only need to check once. But it may grow the heap, so we
 --     have to repeat the heap check in every self-call. This is done in
---     do_checks in StgCmmHeap.
+--     do_checks in GHC.Compilers.StgToCmm.Heap.
 --
 --   * When we begin compilation of another closure we remove the additional
 --     information from the environment. This is done by forkClosureBody
---     in StgCmmMonad. Other functions that duplicate the environment -
+--     in GHC.Compilers.StgToCmm.Monad. Other functions that duplicate the environment -
 --     forkLneBody, forkAlts, codeOnly - duplicate that information. In other
 --     words, we only need to clean the environment of the self-loop information
 --     when compiling right hand side of a closure (binding).

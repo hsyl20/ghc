@@ -238,24 +238,24 @@ Library
         CodeGen.Platform.SPARC
         CodeGen.Platform.X86
         CodeGen.Platform.X86_64
-        CgUtils
+        GHC.IR.Stg.Register
         GHC.Compilers.StgToCmm
-        StgCmmBind
-        StgCmmClosure
-        StgCmmCon
-        StgCmmEnv
-        StgCmmExpr
-        StgCmmForeign
-        StgCmmHeap
-        StgCmmHpc
-        StgCmmArgRep
-        StgCmmLayout
-        StgCmmMonad
-        StgCmmPrim
-        StgCmmProf
-        StgCmmTicky
-        StgCmmUtils
-        StgCmmExtCode
+        GHC.Compilers.StgToCmm.Binding
+        GHC.Compilers.StgToCmm.Closure
+        GHC.Compilers.StgToCmm.Constructor
+        GHC.Compilers.StgToCmm.Environment
+        GHC.Compilers.StgToCmm.Expression
+        GHC.Compilers.StgToCmm.ForeignCall
+        GHC.Compilers.StgToCmm.Heap
+        GHC.Compilers.StgToCmm.Coverage
+        GHC.Compilers.StgToCmm.ArgRep
+        GHC.Compilers.StgToCmm.Layout
+        GHC.Compilers.StgToCmm.Monad
+        GHC.Compilers.StgToCmm.PrimOp
+        GHC.Compilers.StgToCmm.Profiling
+        GHC.Compilers.StgToCmm.Profiling.Ticky
+        GHC.Compilers.StgToCmm.Utils
+        GHC.Compilers.StgToCmm.Monad.Extended
         GHC.RTS.Storage
         GHC.IR.Core.Arity
         GHC.IR.Core.FreeVars

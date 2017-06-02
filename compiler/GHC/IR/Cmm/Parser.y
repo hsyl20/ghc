@@ -200,21 +200,21 @@ necessary to the stack to accommodate it (e.g. 2).
 {
 module GHC.IR.Cmm.Parser ( parseCmmFile ) where
 
-import StgCmmExtCode
+import GHC.Compilers.StgToCmm.Monad.Extended
 import GHC.IR.Cmm.CallConvention
-import StgCmmProf
-import StgCmmHeap
-import StgCmmMonad hiding ( getCode, getCodeR, getCodeScoped, emitLabel, emit, emitStore
+import GHC.Compilers.StgToCmm.Profiling
+import GHC.Compilers.StgToCmm.Heap
+import GHC.Compilers.StgToCmm.Monad hiding ( getCode, getCodeR, getCodeScoped, emitLabel, emit, emitStore
                           , emitAssign, emitOutOfLine, withUpdFrameOff
                           , getUpdFrameOff )
-import qualified StgCmmMonad as F
-import StgCmmUtils
-import StgCmmForeign
-import StgCmmExpr
-import StgCmmClosure
-import StgCmmLayout     hiding (ArgRep(..))
-import StgCmmTicky
-import StgCmmBind       ( emitBlackHoleCode, emitUpdateFrame )
+import qualified GHC.Compilers.StgToCmm.Monad as F
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.ForeignCall
+import GHC.Compilers.StgToCmm.Expression
+import GHC.Compilers.StgToCmm.Closure
+import GHC.Compilers.StgToCmm.Layout     hiding (ArgRep(..))
+import GHC.Compilers.StgToCmm.Profiling.Ticky
+import GHC.Compilers.StgToCmm.Binding       ( emitBlackHoleCode, emitUpdateFrame )
 import GHC.IR.Core.Syntax          ( Tickish(SourceNote) )
 
 import GHC.IR.Cmm.Transform.ConstantFolding

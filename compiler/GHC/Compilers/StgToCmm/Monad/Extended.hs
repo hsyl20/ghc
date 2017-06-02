@@ -9,7 +9,7 @@
 -- to collect declarations as we parse the proc, and feed the environment
 -- back in circularly (to avoid a two-pass algorithm).
 
-module StgCmmExtCode (
+module GHC.Compilers.StgToCmm.Monad.Extended (
         CmmParse, unEC,
         Named(..), Env,
 
@@ -36,8 +36,8 @@ module StgCmmExtCode (
 
 where
 
-import qualified StgCmmMonad as F
-import StgCmmMonad (FCode, newUnique)
+import qualified GHC.Compilers.StgToCmm.Monad as F
+import GHC.Compilers.StgToCmm.Monad (FCode, newUnique)
 
 import GHC.IR.Cmm
 import GHC.Data.CLabel

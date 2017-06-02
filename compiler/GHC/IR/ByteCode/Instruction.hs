@@ -15,7 +15,7 @@ module GHC.IR.ByteCode.Instruction (
 import GHC.IR.ByteCode.Types
 import GHCi.RemoteTypes
 import GHCi.FFI (C_ffi_cif)
-import StgCmmLayout     ( ArgRep(..) )
+import GHC.Compilers.StgToCmm.Layout     ( ArgRep(..) )
 import GHC.IR.Core.PrettyPrint
 import GHC.Utils.Outputable
 import GHC.Data.FastString

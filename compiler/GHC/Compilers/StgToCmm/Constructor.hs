@@ -11,7 +11,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmCon (
+module GHC.Compilers.StgToCmm.Constructor (
         cgTopRhsCon, buildDynCon, bindConArgs
     ) where
 
@@ -20,13 +20,13 @@ module StgCmmCon (
 import GHC.IR.Stg.Syntax
 import GHC.IR.Core.Syntax  ( AltCon(..) )
 
-import StgCmmMonad
-import StgCmmEnv
-import StgCmmHeap
-import StgCmmLayout
-import StgCmmUtils
-import StgCmmClosure
-import StgCmmProf ( curCCS )
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Environment
+import GHC.Compilers.StgToCmm.Heap
+import GHC.Compilers.StgToCmm.Layout
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Closure
+import GHC.Compilers.StgToCmm.Profiling ( curCCS )
 
 import GHC.IR.Cmm.Expr
 import GHC.Data.CLabel

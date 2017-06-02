@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmForeign (
+module GHC.Compilers.StgToCmm.ForeignCall (
   cgForeignCall,
   emitPrimCall, emitCCall,
   emitForeignCall,     -- For CmmParse
@@ -23,12 +23,12 @@ module StgCmmForeign (
 #include "HsVersions.h"
 
 import GHC.IR.Stg.Syntax
-import StgCmmProf (storeCurCCS, ccsType, curCCS)
-import StgCmmEnv
-import StgCmmMonad
-import StgCmmUtils
-import StgCmmClosure
-import StgCmmLayout
+import GHC.Compilers.StgToCmm.Profiling (storeCurCCS, ccsType, curCCS)
+import GHC.Compilers.StgToCmm.Environment
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Closure
+import GHC.Compilers.StgToCmm.Layout
 
 import GHC.IR.Cmm.BlockId (newBlockId)
 import GHC.IR.Cmm

@@ -16,7 +16,7 @@ import LlvmCodeGen.Regs
 import LlvmMangler
 
 import GHC.IR.Cmm.BlockId
-import CgUtils ( fixStgRegisters )
+import GHC.IR.Stg.Register ( fixStgRegisters )
 import GHC.IR.Cmm
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Transform.Dataflow

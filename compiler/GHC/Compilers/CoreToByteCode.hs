@@ -43,7 +43,7 @@ import GHC.Utils.Error
 import GHC.Data.Unique
 import GHC.Data.FastString
 import GHC.Utils.Panic
-import StgCmmLayout     ( ArgRep(..), toArgRep, argRepSizeW )
+import GHC.Compilers.StgToCmm.Layout     ( ArgRep(..), toArgRep, argRepSizeW )
 import GHC.RTS.Storage
 import GHC.Utils.Bitmap
 import GHC.Data.Tree.OrdList

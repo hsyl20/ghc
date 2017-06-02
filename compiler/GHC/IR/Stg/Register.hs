@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module CgUtils ( fixStgRegisters ) where
+module GHC.IR.Stg.Register ( fixStgRegisters ) where
 
 #include "HsVersions.h"
 
@@ -84,10 +84,10 @@ baseRegOffset dflags HpAlloc             = oFFSET_StgRegTable_rHpAlloc dflags
 baseRegOffset dflags EagerBlackholeInfo  = oFFSET_stgEagerBlackholeInfo dflags
 baseRegOffset dflags GCEnter1            = oFFSET_stgGCEnter1 dflags
 baseRegOffset dflags GCFun               = oFFSET_stgGCFun dflags
-baseRegOffset _      BaseReg             = panic "CgUtils.baseRegOffset:BaseReg"
-baseRegOffset _      PicBaseReg          = panic "CgUtils.baseRegOffset:PicBaseReg"
-baseRegOffset _      MachSp              = panic "CgUtils.baseRegOffset:MachSp"
-baseRegOffset _      UnwindReturnReg     = panic "CgUtils.baseRegOffset:UnwindReturnReg"
+baseRegOffset _      BaseReg             = panic "GHC.IR.Stg.Register.baseRegOffset:BaseReg"
+baseRegOffset _      PicBaseReg          = panic "GHC.IR.Stg.Register.baseRegOffset:PicBaseReg"
+baseRegOffset _      MachSp              = panic "GHC.IR.Stg.Register.baseRegOffset:MachSp"
+baseRegOffset _      UnwindReturnReg     = panic "GHC.IR.Stg.Register.baseRegOffset:UnwindReturnReg"
 
 
 -- -----------------------------------------------------------------------------

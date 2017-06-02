@@ -3,8 +3,8 @@ module GHC.IR.Cmm.LayoutStack (
        cmmLayoutStack, setInfoTableStackMap
   ) where
 
-import StgCmmUtils      ( callerSaveVolatileRegs ) -- XXX layering violation
-import StgCmmForeign    ( saveThreadState, loadThreadState ) -- XXX layering violation
+import GHC.Compilers.StgToCmm.Utils      ( callerSaveVolatileRegs ) -- XXX layering violation
+import GHC.Compilers.StgToCmm.ForeignCall    ( saveThreadState, loadThreadState ) -- XXX layering violation
 
 import GHC.Data.BasicTypes
 import GHC.IR.Cmm
@@ -19,7 +19,7 @@ import GHC.IR.Cmm.ProcPoint
 import GHC.RTS.Storage
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.Unique.Supply
-import StgCmmUtils      ( newTemp )
+import GHC.Compilers.StgToCmm.Utils      ( newTemp )
 import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
@@ -875,7 +875,7 @@ areaToSp dflags sp_old _sp_hwm area_off (CmmStackSlot area n)
 areaToSp dflags _ sp_hwm _ (CmmLit CmmHighStackMark)
   = mkIntExpr dflags sp_hwm
     -- Replace CmmHighStackMark with the number of bytes of stack used,
-    -- the sp_hwm.   See Note [Stack usage] in StgCmmHeap
+    -- the sp_hwm.   See Note [Stack usage] in GHC.Compilers.StgToCmm.Heap
 
 areaToSp dflags _ _ _ (CmmMachOp (MO_U_Lt _) args)
   | falseStackCheck args

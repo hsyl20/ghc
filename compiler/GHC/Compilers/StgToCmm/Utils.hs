@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmUtils (
+module GHC.Compilers.StgToCmm.Utils (
         cgLit, mkSimpleLit,
         emitDataLits, mkDataLits,
         emitRODataLits, mkRODataLits,
@@ -43,8 +43,8 @@ module StgCmmUtils (
 
 #include "HsVersions.h"
 
-import StgCmmMonad
-import StgCmmClosure
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Closure
 import GHC.IR.Cmm
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Graph as MkGraph
@@ -298,7 +298,8 @@ baseRegOffset dflags CurrentNursery = oFFSET_StgRegTable_rCurrentNursery dflags
 baseRegOffset dflags HpAlloc        = oFFSET_StgRegTable_rHpAlloc dflags
 baseRegOffset dflags GCEnter1       = oFFSET_stgGCEnter1 dflags
 baseRegOffset dflags GCFun          = oFFSET_stgGCFun dflags
-baseRegOffset _      reg            = pprPanic "StgCmmUtils.baseRegOffset:" (ppr reg)
+baseRegOffset _      reg            =
+   pprPanic "GHC.Compilers.StgToCmm.Utils.baseRegOffset:" (ppr reg)
 
 -------------------------------------------------------------------------
 --

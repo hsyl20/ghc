@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmmBind (
+module GHC.Compilers.StgToCmm.Binding (
         cgTopRhsClosure,
         cgBind,
         emitBlackHoleCode,
@@ -17,18 +17,18 @@ module StgCmmBind (
 
 #include "HsVersions.h"
 
-import StgCmmExpr
-import StgCmmMonad
-import StgCmmEnv
-import StgCmmCon
-import StgCmmHeap
-import StgCmmProf (curCCS, ldvEnterClosure, enterCostCentreFun, enterCostCentreThunk,
+import GHC.Compilers.StgToCmm.Expression
+import GHC.Compilers.StgToCmm.Monad
+import GHC.Compilers.StgToCmm.Environment
+import GHC.Compilers.StgToCmm.Constructor
+import GHC.Compilers.StgToCmm.Heap
+import GHC.Compilers.StgToCmm.Profiling (curCCS, ldvEnterClosure, enterCostCentreFun, enterCostCentreThunk,
                    initUpdFrameProf)
-import StgCmmTicky
-import StgCmmLayout
-import StgCmmUtils
-import StgCmmClosure
-import StgCmmForeign    (emitPrimCall)
+import GHC.Compilers.StgToCmm.Profiling.Ticky
+import GHC.Compilers.StgToCmm.Layout
+import GHC.Compilers.StgToCmm.Utils
+import GHC.Compilers.StgToCmm.Closure
+import GHC.Compilers.StgToCmm.ForeignCall    (emitPrimCall)
 
 import GHC.IR.Cmm.Graph
 import GHC.IR.Core.Syntax          ( AltCon(..), tickishIsCode )
@@ -211,7 +211,7 @@ cgRhs id (StgRhsCon cc con args)
       -- con args are always non-void,
       -- see Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise
 
-{- See Note [GC recovery] in compiler/codeGen/StgCmmClosure.hs -}
+{- See Note [GC recovery] in GHC.Compilers.StgToCmm.Closure -}
 cgRhs id (StgRhsClosure cc bi fvs upd_flag args body)
   = do dflags <- getDynFlags
        mkRhsClosure dflags id cc bi (nonVoidIds fvs) upd_flag args body
@@ -302,7 +302,7 @@ mkRhsClosure    dflags bndr _cc _bi
                 []                      -- No args; a thunk
                 (StgApp fun_id args)
 
-  -- We are looking for an "ApThunk"; see data con ApThunk in StgCmmClosure
+  -- We are looking for an "ApThunk"; see data con ApThunk in StgToCmm.Closure
   -- of form (x1 x2 .... xn), where all the xi are locals (not top-level)
   -- So the xi will all be free variables
   | args `lengthIs` (n_fvs-1)  -- This happens only if the fun_id and
@@ -489,7 +489,7 @@ closureCodeBody top_lvl bndr cl_info cc args arity body fv_details
                 ; loop_header_id <- newBlockId
                 -- Extend reader monad with information that
                 -- self-recursive tail calls can be optimized into local
-                -- jumps. See Note [Self-recursive tail calls] in StgCmmExpr.
+                -- jumps. See Note [Self-recursive tail calls] in GHC.Compilers.StgToCmm.Expression.
                 ; withSelfLoop (bndr, loop_header_id, arg_regs) $ do
                 {
                 -- Main payload
