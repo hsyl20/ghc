@@ -108,7 +108,7 @@ import Data.IORef
 import Data.Map (Map)
 import qualified Data.Map as M
 import Data.Maybe
-import GHC.Compilers.SyntaxToCore
+import GHC.Desugar
 import qualified Language.Haskell.TH        as TH
 import qualified Language.Haskell.TH.Syntax as TH
 import Unsafe.Coerce

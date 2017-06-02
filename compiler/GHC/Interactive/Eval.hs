@@ -42,7 +42,7 @@ module GHC.Interactive.Eval (
 
 import GHC.Interactive.Types
 
-import GHC.Interactive.Interpreter
+import GHC.Interactive.Interpreter as GHCi
 import GHCi.Message
 import GHCi.RemoteTypes
 import GHC.Monad
@@ -65,7 +65,7 @@ import GHC.Data.Available
 import GHC.Data.RdrName
 import GHC.Data.Var.Environment
 import GHC.IR.ByteCode.Types
-import GHC.Interactive.Linker
+import GHC.Interactive.Linker as Linker
 import GHC.Config.Flags
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply

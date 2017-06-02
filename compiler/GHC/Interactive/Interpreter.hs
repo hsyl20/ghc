@@ -4,7 +4,7 @@
 -- | Interacting with the interpreter, whether it is running on an
 -- external process or in the current process.
 --
-module GHCi
+module GHC.Interactive.Interpreter
   ( -- * High-level interface to the interpreter
     evalStmt, EvalStatus_(..), EvalStatus, EvalResult(..), EvalExpr(..)
   , resumeStmt

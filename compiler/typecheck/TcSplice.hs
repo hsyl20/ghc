@@ -112,8 +112,8 @@ import qualified Language.Haskell.TH as TH
 -- THSyntax gives access to internal functions and data types
 import qualified Language.Haskell.TH.Syntax as TH
 
--- Because GHC.Compilers.SyntaxToCore might not be in the base library of the bootstrapping compiler
-import GHC.Compilers.SyntaxToCore      ( AnnotationWrapper(..) )
+-- Because GHC.Desugar might not be in the base library of the bootstrapping compiler
+import GHC.Desugar      ( AnnotationWrapper(..) )
 
 import Control.Exception
 import Data.Binary

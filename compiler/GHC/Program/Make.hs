@@ -32,7 +32,7 @@ module GHC.Program.Make(
 
 #include "HsVersions.h"
 
-import qualified Linker         ( unload )
+import qualified GHC.Interactive.Linker as Linker
 
 import GHC.Program.Driver.Phases
 import GHC.Program.Driver.Pipeline

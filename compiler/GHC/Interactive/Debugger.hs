@@ -12,7 +12,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Debugger (pprintClosureCommand, showTerm, pprTypeAndContents) where
+module GHC.Interactive.Debugger (pprintClosureCommand, showTerm, pprTypeAndContents) where
 
 import GHC.Interactive.Linker
 import GHC.Interactive.ClosureInspect

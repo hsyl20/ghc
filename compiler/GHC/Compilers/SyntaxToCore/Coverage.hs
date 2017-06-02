@@ -7,7 +7,7 @@
 
 module GHC.Compilers.SyntaxToCore.Coverage (addTicksToBinds, hpcInitCode) where
 
-import qualified GHCi
+import qualified GHC.Interactive.Interpreter as GHCi
 import GHCi.RemoteTypes
 import Data.Array
 import GHC.IR.ByteCode.Types

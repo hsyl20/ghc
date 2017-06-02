@@ -607,7 +607,7 @@ Library
             GHC.Interactive.Linker
             GHC.Interactive.ClosureInspect
             GHC.Interactive.Debugger.Utils
-            GHCi
+            GHC.Interactive.Interpreter
 
     if !flag(stage1)
         -- ghc:Serialized moved to ghc-boot:GHC.Serialized.  So for

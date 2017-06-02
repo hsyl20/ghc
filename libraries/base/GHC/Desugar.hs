@@ -19,7 +19,7 @@
 -- 
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.SyntaxToCore ((>>>), AnnotationWrapper(..), toAnnotationWrapper) where
+module GHC.Desugar ((>>>), AnnotationWrapper(..), toAnnotationWrapper) where
 
 import Control.Arrow    (Arrow(..))
 import Control.Category ((.))
