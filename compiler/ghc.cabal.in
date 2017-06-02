@@ -222,7 +222,7 @@ Library
         GHC.Data.EnumSet
         GHC.IR.Cmm.Graph
         PprBase
-        GHC.IR.Cmm.PrettyPrint.C
+        GHC.Compilers.CmmToC
         GHC.IR.Cmm.PrettyPrint
         GHC.IR.Cmm.PrettyPrint.Declaration
         GHC.IR.Cmm.PrettyPrint.Expression
@@ -540,7 +540,7 @@ Library
             RegClass
             PIC
             GHC.Platform
-            CPrim
+            GHC.Utils.CodeGen.Primitive
             X86.Regs
             X86.RegInfo
             X86.Instr

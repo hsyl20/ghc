@@ -48,7 +48,7 @@ import GHC.IR.Cmm.Transform.Dataflow
 import PIC
 import Reg
 import GHC.Data.CLabel
-import CPrim
+import GHC.Utils.CodeGen.Primitive
 
 -- The rest:
 import GHC.Data.BasicTypes

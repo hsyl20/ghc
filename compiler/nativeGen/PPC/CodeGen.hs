@@ -29,7 +29,7 @@ import GHC.Utils.CodeGen.Platform
 import PPC.Instr
 import PPC.Cond
 import PPC.Regs
-import CPrim
+import GHC.Utils.CodeGen.Primitive
 import NCGMonad
 import Instruction
 import PIC

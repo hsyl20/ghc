@@ -18,7 +18,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.IR.Cmm.PrettyPrint.C (
+module GHC.Compilers.CmmToC (
         writeCs,
         pprStringInCStyle
   ) where
@@ -36,7 +36,7 @@ import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch
 
 -- Utils
-import CPrim
+import GHC.Utils.CodeGen.Primitive
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable

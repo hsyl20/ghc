@@ -1,5 +1,5 @@
 -- | Generating C symbol names emitted by the compiler.
-module CPrim
+module GHC.Utils.CodeGen.Primitive
     ( atomicReadLabel
     , atomicWriteLabel
     , atomicRMWLabel
