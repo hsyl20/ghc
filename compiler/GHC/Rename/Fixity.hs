@@ -24,7 +24,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Data.List
 import Data.Function    ( on )
-import RnUnbound
+import GHC.Rename.Utils.Unbound
 
 {-
 *********************************************************

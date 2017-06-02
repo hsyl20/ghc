@@ -12,7 +12,7 @@ import TcMType
 import TcType
 import GHC.Rename.ImportExport
 import GHC.Rename.Environment
-import RnUnbound ( reportUnboundName )
+import GHC.Rename.Utils.Unbound ( reportUnboundName )
 import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Id.Info

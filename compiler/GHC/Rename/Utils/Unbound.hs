@@ -4,7 +4,7 @@ This module contains helper functions for reporting and creating
 unbound variables.
 
 -}
-module RnUnbound ( mkUnboundName
+module GHC.Rename.Utils.Unbound ( mkUnboundName
                  , mkUnboundNameRdr
                  , isUnboundName
                  , reportUnboundName

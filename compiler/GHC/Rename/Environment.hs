@@ -74,7 +74,7 @@ import GHC.Data.FastString
 import Control.Monad
 import GHC.Data.List.SetOps       ( minusList )
 import qualified GHC.LanguageExtensions as LangExt
-import RnUnbound
+import GHC.Rename.Utils.Unbound
 import GHC.Rename.Utils
 import Data.Functor (($>))
 

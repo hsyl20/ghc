@@ -38,7 +38,7 @@ import GHC.Config.Flags
 import GHC.Syntax
 import GHC.Rename.Documentation          ( rnLHsDoc, rnMbLHsDoc )
 import GHC.Rename.Environment
-import RnUnbound        ( perhapsForallMsg )
+import GHC.Rename.Utils.Unbound        ( perhapsForallMsg )
 import GHC.Rename.Utils          ( HsDocContext(..), withHsDocContext, mapFvRn
                         , pprHsDocContext, bindLocalNamesFV, dupNamesErr
                         , newLocalBndrRn, checkShadowedRdrNames )

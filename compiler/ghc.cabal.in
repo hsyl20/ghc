@@ -148,7 +148,6 @@ Library
         parser
         prelude
         profiling
-        rename
         typecheck
 
     Exposed-Modules:
@@ -377,7 +376,7 @@ Library
         GHC.Rename.Type
         GHC.Rename.Fixity
         GHC.Rename.Utils
-        RnUnbound
+        GHC.Rename.Utils.Unbound
         GHC.Core.Monad
         GHC.Core.Transform.CommonSubExpr
         GHC.Core.Transform.FloatIn

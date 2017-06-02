@@ -19,7 +19,7 @@ import GHC.Data.Kind
 
 import GHC.Rename.Environment
 import GHC.Rename.Utils          ( HsDocContext(..), newLocalBndrRn )
-import RnUnbound        ( isUnboundName )
+import GHC.Rename.Utils.Unbound        ( isUnboundName )
 import GHC.Rename.Main         ( rnSrcDecls, findSplice )
 import GHC.Rename.Pattern            ( rnPat )
 import GHC.Data.BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )

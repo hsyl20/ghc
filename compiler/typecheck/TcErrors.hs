@@ -14,7 +14,7 @@ import TcRnMonad
 import TcMType
 import TcUnify( occCheckForErrors, OccCheckResult(..) )
 import TcType
-import RnUnbound ( unknownNameSuggestions )
+import GHC.Rename.Utils.Unbound ( unknownNameSuggestions )
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Kind

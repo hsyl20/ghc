@@ -25,7 +25,7 @@ import GHC.Rename.Utils          ( HsDocContext(..), mapFvRn, bindLocalNames
                         , checkDupRdrNames, inHsDocContext, bindLocalNamesFV
                         , checkShadowedRdrNames, warnUnusedTypePatterns
                         , extendTyVarEnvFVRn, newLocalBndrsRn )
-import RnUnbound        ( mkUnboundName )
+import GHC.Rename.Utils.Unbound        ( mkUnboundName )
 import GHC.Rename.ImportExport
 import GHC.Rename.Documentation          ( rnHsDoc, rnMbLHsDoc )
 import TcAnnotations    ( annCtxt )
