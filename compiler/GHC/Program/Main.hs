@@ -118,7 +118,7 @@ import GHC.IR.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Compilers.CoreToStg.Prepare
 import GHC.Compilers.CoreToStg ( coreToStg )
-import qualified GHC.Compilers.StgToCmm ( codeGen )
+import qualified GHC.Compilers.StgToCmm as StgCmm
 import GHC.IR.Stg.Syntax
 import CostCentre
 import ProfInit
