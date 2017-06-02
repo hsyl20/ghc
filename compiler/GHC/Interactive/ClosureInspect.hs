@@ -40,7 +40,7 @@ import GHC.Data.Var
 import TcRnMonad
 import TcType
 import TcMType
-import GHC.IR.Haskell.Syntax.TypeChecker ( zonkTcTypeToType, mkEmptyZonkEnv )
+import GHC.IR.Haskell.TypeSystem.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
 import TcUnify
 import TcEnv
 

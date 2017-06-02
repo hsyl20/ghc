@@ -5,7 +5,7 @@ import Data.List
 import GHC
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import ApiAnnotation
+import GHC.IR.Haskell.Annotation
 import System.Environment( getArgs )
 import System.Exit
 import qualified Data.Map as Map

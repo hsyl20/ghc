@@ -778,7 +778,7 @@ instance (Outputable arg, Outputable rec)
 
 -- Takes details and result type of a GADT data constructor as created by the
 -- parser and rejigs them using information about fixities from the renamer.
--- See Note [Sorting out the result type] in GHC.IR.Haskell.Syntax.Parsed
+-- See Note [Sorting out the result type] in GHC.IR.Haskell.Parser.Syntax
 updateGadtResult
   :: (Monad m)
      => (SDoc -> m ())

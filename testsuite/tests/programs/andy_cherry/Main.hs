@@ -3,7 +3,7 @@
 
  import GenUtils
  import DataTypes
- import Parser
+ import GHC.IR.Haskell.Parser
  import Interp
  import PrintTEX
 

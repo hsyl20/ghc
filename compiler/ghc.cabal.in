@@ -109,7 +109,7 @@ Library
         UnboxedTuples
         UndecidableInstances
 
-    Include-Dirs: . parser
+    Include-Dirs: . cbits
 
     -- We need to set the unit id to ghc (without a version number)
     -- as it's magic.  But we can't set it for old versions of GHC (e.g.
@@ -133,7 +133,7 @@ Library
     Install-Includes: HsVersions.h, ghc_boot_platform.h
 
     c-sources:
-        parser/cutils.c
+        cbits/cutils.c
         cbits/keepCAFsForGHCi.c
         cbits/genSym.c
 
@@ -143,7 +143,6 @@ Library
         iface
         llvmGen
         nativeGen
-        parser
         prelude
         profiling
         typecheck
@@ -328,7 +327,7 @@ Library
         GHC.Program.Make
         GHC.Plugins
         GHC.Interactive.DynamicLoading
-        GHC.IR.Haskell.Parsers.HeaderInfo
+        GHC.IR.Haskell.Parser.HeaderInfo
         GHC.Program.Main
         GHC.IR.Haskell.Analyse.Stats
         GHC.Types
@@ -346,12 +345,12 @@ Library
         GHC.Utils.Elf
         GHC.Interface.Tidy
         Ctype
-        HaddockUtils
+        GHC.IR.Haskell.Parser.Utils
         Lexer
         GHC.Data.Coercion.Optimise
         Parser
-        GHC.IR.Haskell.Syntax.Parsed
-        ApiAnnotation
+        GHC.IR.Haskell.Parser.Syntax
+        GHC.IR.Haskell.Annotation
         ForeignCall
         KnownUniques
         PrelInfo
@@ -420,7 +419,7 @@ Library
         TcGenDeriv
         TcGenFunctor
         TcGenGenerics
-        GHC.IR.Haskell.Syntax.TypeChecker
+        GHC.IR.Haskell.TypeSystem.Syntax
         TcHsType
         TcInstDcls
         TcMType

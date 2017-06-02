@@ -24,13 +24,13 @@ module GHC.IR.Cmm.Lexer (
 
 import GHC.IR.Cmm.Expr
 
-import Lexer
+import GHC.IR.Haskell.Lexer
 import GHC.IR.Cmm.Parser.Monad
 import GHC.Data.SrcLoc
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.StringBuffer
 import GHC.Data.FastString
-import Ctype
+import GHC.Utils.CharType
 import GHC.Utils
 --import TRACE
 

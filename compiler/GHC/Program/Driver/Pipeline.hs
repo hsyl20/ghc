@@ -37,7 +37,7 @@ module GHC.Program.Driver.Pipeline (
 
 import GHC.Program.Driver.Pipeline.Monad
 import GHC.Packages
-import GHC.IR.Haskell.Parsers.HeaderInfo
+import GHC.IR.Haskell.Parser.HeaderInfo
 import GHC.Program.Driver.Phases
 import GHC.Utils.SysTools as SysTools
 import GHC.Utils.Elf

@@ -374,7 +374,7 @@ have (Just binds) in the tcdMeths field, whereas interface decls have Nothing.
 In *source-code* class declarations:
 
  - When parsing, every ClassOpSig gets a DefMeth with a suitable RdrName
-   This is done by GHC.IR.Haskell.Syntax.Parsed.mkClassOpSigDM
+   This is done by GHC.IR.Haskell.Parser.Syntax.mkClassOpSigDM
 
  - The renamer renames it to a Name
 

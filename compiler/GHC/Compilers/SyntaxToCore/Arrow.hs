@@ -18,7 +18,7 @@ import GHC.Compilers.SyntaxToCore.Monad
 
 import GHC.IR.Haskell.Syntax hiding (collectPatBinders, collectPatsBinders,
             collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
-import GHC.IR.Haskell.Syntax.TypeChecker
+import GHC.IR.Haskell.TypeSystem.Syntax
 import qualified GHC.IR.Haskell.Utils
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes

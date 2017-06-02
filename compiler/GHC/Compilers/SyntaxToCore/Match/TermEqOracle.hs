@@ -28,7 +28,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Type
 import GHC.IR.Haskell.Literal
-import GHC.IR.Haskell.Syntax.TypeChecker
+import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.Utils.Monad
 import GHC.Utils
 

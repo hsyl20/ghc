@@ -55,7 +55,7 @@ import TcUnify
 import TcIface
 import TcSimplify ( solveEqualities )
 import TcType
-import GHC.IR.Haskell.Syntax.TypeChecker( zonkSigType )
+import GHC.IR.Haskell.TypeSystem.Syntax( zonkSigType )
 import Inst   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
 import GHC.Data.Type
 import GHC.Data.Kind
@@ -1078,7 +1078,7 @@ look at the TyCon or Class involved.
     in kinds shouldn't be knot-tied, because they come from a previous
     mutually recursive group.
 
-  * GHC.IR.Haskell.Syntax.TypeChecker.zonkTcTypeToType also can safely check/establish
+  * GHC.IR.Haskell.TypeSystem.Syntax.zonkTcTypeToType also can safely check/establish
     invariants.
 
 This is horribly delicate.  I hate it.  A good example of how
@@ -1182,7 +1182,7 @@ The type desugarer is phase 2 of dealing with HsTypes.  Specifically:
   * It zonks any kinds.  The returned type should have no mutable kind
     or type variables (hence returning Type not TcType):
       - any unconstrained kind variables are defaulted to (Any *) just
-        as in GHC.IR.Haskell.Syntax.TypeChecker.
+        as in GHC.IR.Haskell.TypeSystem.Syntax.
       - there are no mutable type variables because we are
         kind-checking a type
     Reason: the returned type may be put in a TyCon or DataCon where

@@ -20,7 +20,7 @@ import TcRnMonad
 import TcSigs( emptyPragEnv, completeSigFromId )
 import TcEnv
 import TcMType
-import GHC.IR.Haskell.Syntax.TypeChecker( zonkTyVarBindersX, zonkTcTypeToTypes
+import GHC.IR.Haskell.TypeSystem.Syntax( zonkTyVarBindersX, zonkTcTypeToTypes
               , zonkTcTypeToType, emptyZonkEnv )
 import TysPrim
 import TysWiredIn  ( runtimeRepTy )

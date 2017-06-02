@@ -5,7 +5,7 @@
  import GenUtils
  import DataTypes
  import InterpUtils
- import Parser (pgnLexer)
+ import GHC.IR.Haskell.Parser (pgnLexer)
 
 
 

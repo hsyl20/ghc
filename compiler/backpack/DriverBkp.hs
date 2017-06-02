@@ -23,8 +23,8 @@ import BkpSyn
 
 import GHC hiding (Failed, Succeeded)
 import GHC.Packages
-import Parser
-import Lexer
+import GHC.IR.Haskell.Parser
+import GHC.IR.Haskell.Lexer
 import GHC.Monad
 import GHC.Config.Flags
 import TcRnMonad
@@ -40,7 +40,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
-import GHC.IR.Haskell.Parsers.HeaderInfo
+import GHC.IR.Haskell.Parser.HeaderInfo
 import MkIface
 import GHC.Program.Make
 import GHC.Data.Unique.DeterSet

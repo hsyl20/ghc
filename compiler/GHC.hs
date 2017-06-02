@@ -215,7 +215,7 @@ module GHC (
         TyThing(..),
 
         -- ** Syntax
-        module GHC.IR.Haskell, -- ToDo: remove extraneous bits
+        module GHC.IR.Haskell.Syntax, -- ToDo: remove extraneous bits
 
         -- ** Fixities
         FixityDirection(..),
@@ -330,8 +330,8 @@ import GHC.Data.BasicTypes
 import GHC.Data.Maybe           ( expectJust )
 import GHC.Data.FastString
 import qualified Parser
-import Lexer
-import ApiAnnotation
+import GHC.IR.Haskell.Lexer
+import GHC.IR.Haskell.Annotation
 import qualified GHC.LanguageExtensions as LangExt
 import Data.Set (Set)
 

@@ -290,7 +290,7 @@ unpackCoercionHole_maybe (CoercionHole _ ref) = readTcRef ref
 
 -- | Check that a coercion is appropriate for filling a hole. (The hole
 -- itself is needed only for printing. NB: This must be /lazy/ in the coercion,
--- as it's used in GHC.IR.Haskell.Syntax.TypeChecker in the presence of knots.
+-- as it's used in GHC.IR.Haskell.TypeSystem.Syntax in the presence of knots.
 -- Always returns the checked coercion, but this return value is necessary
 -- so that the input coercion is forced only when the output is forced.
 checkCoercionHole :: Coercion -> CoercionHole -> Role -> Type -> Type -> TcM Coercion
@@ -536,7 +536,7 @@ instSkolTyCoVarX :: TcTyVarMaker
                  -> TCvSubst -> TyCoVar -> TcRnIf gbl lcl (TCvSubst, TyCoVar)
 instSkolTyCoVarX mk_tcv subst tycovar
   = do  { uniq <- newUnique  -- using a new unique is critical. See
-                             -- Note [Skolems in zonkSyntaxExpr] in GHC.IR.Haskell.Syntax.TypeChecker
+                             -- Note [Skolems in zonkSyntaxExpr] in GHC.IR.Haskell.TypeSystem.Syntax
         ; let new_tcv = mk_tcv uniq old_name kind
               subst1 | isTyVar new_tcv
                      = extendTvSubstWithClone subst tycovar new_tcv

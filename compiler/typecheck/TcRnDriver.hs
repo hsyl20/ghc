@@ -65,7 +65,7 @@ import IfaceSyn ( ShowSub(..), showToHeader )
 import IfaceType( ShowForAllFlag(..) )
 import PrelNames
 import GHC.Data.RdrName
-import GHC.IR.Haskell.Syntax.TypeChecker
+import GHC.IR.Haskell.TypeSystem.Syntax
 import TcExpr
 import TcRnMonad
 import TcRnExports
@@ -80,7 +80,7 @@ import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
 import TcAnnotations
 import TcBinds
-import GHC.IR.Haskell.Parsers.HeaderInfo       ( mkPrelImports )
+import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )
 import TcDefaults
 import TcEnv
 import TcRules

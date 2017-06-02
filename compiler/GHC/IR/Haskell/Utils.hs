@@ -8,9 +8,9 @@ which deal with the instantiated versions are located elsewhere:
 
    Parameterised by     Module
    ----------------     -------------
-   RdrName              parser/GHC.IR.Haskell.Syntax.Parsed
+   RdrName              parser/GHC.IR.Haskell.Parser.Syntax
    Name                 rename/RnHsSyn
-   Id                   typecheck/GHC.IR.Haskell.Syntax.TypeChecker
+   Id                   typecheck/GHC.IR.Haskell.TypeSystem.Syntax
 -}
 
 {-# LANGUAGE CPP #-}
@@ -894,7 +894,7 @@ collect_bind _ (VarBind { var_id = f })            acc = f : acc
 collect_bind _ (AbsBinds { abs_exports = dbinds }) acc = map abe_poly dbinds ++ acc
         -- I don't think we want the binders from the abe_binds
         -- The only time we collect binders from a typechecked
-        -- binding (hence see AbsBinds) is in zonking in GHC.IR.Haskell.Syntax.TypeChecker
+        -- binding (hence see AbsBinds) is in zonking in GHC.IR.Haskell.TypeSystem.Syntax
 collect_bind _ (AbsBindsSig { abs_sig_export = poly }) acc = poly : acc
 collect_bind omitPatSyn (PatSynBind (PSB { psb_id = L _ ps })) acc
   | omitPatSyn                  = acc

@@ -37,7 +37,7 @@ import GHC.Data.Available
 import GHC.Data.FieldLabel
 import GHC.Types
 import GHC.Data.RdrName
-import GHC.IR.Haskell.Syntax.Parsed        ( setRdrNameSpace )
+import GHC.IR.Haskell.Parser.Syntax        ( setRdrNameSpace )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc

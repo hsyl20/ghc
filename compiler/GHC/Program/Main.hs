@@ -103,8 +103,8 @@ import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.PrettyPrint.Dump
 import GHC.IR.Core.Syntax
 import GHC.Data.StringBuffer
-import Parser
-import Lexer
+import GHC.IR.Haskell.Parser
+import GHC.IR.Haskell.Lexer
 import GHC.Data.SrcLoc
 import TcRnDriver
 import TcIface          ( typecheckIface )

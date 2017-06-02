@@ -37,7 +37,7 @@ import {-# SOURCE #-}   TcUnify( unifyType, unifyKind, noThing )
 import GHC.Data.BasicTypes ( IntegralLit(..), SourceText(..) )
 import GHC.Data.FastString
 import GHC.IR.Haskell.Syntax
-import GHC.IR.Haskell.Syntax.TypeChecker
+import GHC.IR.Haskell.TypeSystem.Syntax
 import TcRnMonad
 import TcEnv
 import TcEvidence

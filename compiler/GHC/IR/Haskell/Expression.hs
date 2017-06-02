@@ -604,7 +604,7 @@ data HsExpr id
   ---------------------------------------
   -- The following are commands, not expressions proper
   -- They are only used in the parsing stage and are removed
-  --    immediately in parser.GHC.IR.Haskell.Syntax.Parsed.checkCommand
+  --    immediately in parser.GHC.IR.Haskell.Parser.Syntax.checkCommand
 
   -- | - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.Annlarrowtail',
   --          'ApiAnnotation.Annrarrowtail','ApiAnnotation.AnnLarrowtail',

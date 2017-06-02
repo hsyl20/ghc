@@ -166,7 +166,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info           ( IdDetails(..), RecSelParent(..))
 import GHC.Data.Type
 
-import ApiAnnotation    ( ApiAnns )
+import GHC.IR.Haskell.Annotation    ( ApiAnns )
 import GHC.Data.Annotation      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
 import GHC.Data.Class
 import GHC.Data.Type.Constructor

@@ -42,7 +42,7 @@ import {-# SOURCE #-} GHC.Rename.Splice ( rnSplicePat )
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
-import GHC.IR.Haskell.Syntax.TypeChecker             ( hsOverLitName )
+import GHC.IR.Haskell.TypeSystem.Syntax             ( hsOverLitName )
 import GHC.Rename.Environment
 import GHC.Rename.Fixity
 import GHC.Rename.Utils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames

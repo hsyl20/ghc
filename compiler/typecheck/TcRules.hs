@@ -99,7 +99,7 @@ tcRule (HsRule name act hs_bndrs lhs fv_lhs rhs fv_rhs)
        --
        -- We also need to get the completely-uconstrained tyvars of
        -- the LHS, lest they otherwise get defaulted to Any; but we do that
-       -- during zonking (see GHC.IR.Haskell.Syntax.TypeChecker.zonkRule)
+       -- during zonking (see GHC.IR.Haskell.TypeSystem.Syntax.zonkRule)
 
        ; let tpl_ids = lhs_evs ++ id_bndrs
        ; forall_tkvs <- zonkTcTypesAndSplitDepVars $

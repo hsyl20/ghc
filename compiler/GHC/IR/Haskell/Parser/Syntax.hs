@@ -7,7 +7,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module   GHC.IR.Haskell.Syntax.Parsed (
+module   GHC.IR.Haskell.Parser.Syntax (
         mkHsOpApp,
         mkHsIntegral, mkHsFractional, mkHsIsString,
         mkHsDo, mkSpliceDecl,
@@ -76,7 +76,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 import TcEvidence       ( idHsWrapper )
-import Lexer
+import GHC.IR.Haskell.Lexer
 import GHC.Utils.Identifier           ( isLexCon )
 import GHC.Data.Type             ( TyThing(..) )
 import TysWiredIn       ( cTupleTyConName, tupleTyCon, tupleDataCon,
@@ -93,7 +93,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Utils
-import ApiAnnotation
+import GHC.IR.Haskell.Annotation
 import Data.List
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Utils.Monad
@@ -424,7 +424,7 @@ getMonoBind (L loc1 (FunBind { fun_id = fun_id1@(L _ f1),
 getMonoBind bind binds = (bind, binds)
 
 has_args :: [LMatch RdrName (LHsExpr RdrName)] -> Bool
-has_args []                           = panic "GHC.IR.Haskell.Syntax.Parsed:has_args"
+has_args []                           = panic "GHC.IR.Haskell.Parser.Syntax:has_args"
 has_args ((L _ (Match _ args _ _)) : _) = not (null args)
         -- Don't group together FunBinds if they have
         -- no arguments.  This is necessary now that variable bindings

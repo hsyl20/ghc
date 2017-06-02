@@ -428,7 +428,7 @@ data Role = Nominal | Representational | Phantom
 -- These names are slurped into the parser code. Changing these strings
 -- will change the **surface syntax** that GHC accepts! If you want to
 -- change only the pretty-printing, do some replumbing. See
--- mkRoleAnnotDecl in GHC.IR.Haskell.Syntax.Parsed
+-- mkRoleAnnotDecl in GHC.IR.Haskell.Parser.Syntax
 fsFromRole :: Role -> FastString
 fsFromRole Nominal          = fsLit "nominal"
 fsFromRole Representational = fsLit "representational"

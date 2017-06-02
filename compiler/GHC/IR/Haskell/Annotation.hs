@@ -77,7 +77,7 @@ keywords that are applicable for it (e.g., you'll never see an
 'import' keyword associated with a let-binding.)  The set of allowed
 keywords is documented in a comment associated with the constructor
 of a given AST element, although the ground truth is in Parser
-and GHC.IR.Haskell.Syntax.Parsed (which actually add the annotations; see #13012).
+and GHC.IR.Haskell.Parser.Syntax (which actually add the annotations; see #13012).
 
 COMMENT ELEMENTS
 

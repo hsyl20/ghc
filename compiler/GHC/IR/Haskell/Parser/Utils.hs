@@ -1,5 +1,5 @@
 
-module HaddockUtils where
+module GHC.IR.Haskell.Parser.Utils where
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.SrcLoc

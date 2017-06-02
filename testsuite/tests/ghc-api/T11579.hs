@@ -3,7 +3,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC
 import GHC.Data.StringBuffer
-import Lexer
+import GHC.IR.Haskell.Lexer
 import GHC.Data.SrcLoc
 
 main :: IO ()

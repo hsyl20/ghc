@@ -118,9 +118,9 @@ import GHC.Data.BasicTypes ( InlineSpec(..), RuleMatchInfo(..),
                              SourceText(..) )
 
 -- compiler/parser
-import Ctype
+import GHC.Utils.CharType
 
-import ApiAnnotation
+import GHC.IR.Haskell.Annotation
 }
 
 -- -----------------------------------------------------------------------------

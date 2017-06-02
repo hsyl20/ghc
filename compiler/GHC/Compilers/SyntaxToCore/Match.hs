@@ -23,7 +23,7 @@ import {-#SOURCE#-} GHC.Compilers.SyntaxToCore.Expression (dsLExpr, dsSyntaxExpr
 
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
-import GHC.IR.Haskell.Syntax.TypeChecker
+import GHC.IR.Haskell.TypeSystem.Syntax
 import TcEvidence
 import TcRnMonad
 import GHC.Compilers.SyntaxToCore.Match.Check

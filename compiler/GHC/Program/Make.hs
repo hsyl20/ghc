@@ -40,7 +40,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Finder
 import GHC.Monad
-import GHC.IR.Haskell.Parsers.HeaderInfo
+import GHC.IR.Haskell.Parser.HeaderInfo
 import GHC.Types
 import GHC.Data.Module
 import TcIface          ( typecheckIface )

@@ -250,7 +250,7 @@ tcFImport (L dloc fo@(ForeignImport { fd_name = L nloc nm, fd_sig_ty = hs_ty
              id                = mkLocalId nm sig_ty
                  -- Use a LocalId to obey the invariant that locally-defined
                  -- things are LocalIds.  However, it does not need zonking,
-                 -- (so GHC.IR.Haskell.Syntax.TypeChecker.zonkForeignExports ignores it).
+                 -- (so GHC.IR.Haskell.TypeSystem.Syntax.zonkForeignExports ignores it).
 
        ; imp_decl' <- tcCheckFIType arg_tys res_ty imp_decl
           -- Can't use sig_ty here because sig_ty :: Type and
