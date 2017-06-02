@@ -8,7 +8,7 @@ module RegAlloc.Graph.Spill (
         accSpillSL
 ) where
 import RegAlloc.Liveness
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import Reg
 import GHC.IR.Cmm.Syntax hiding (RegSet)
 import GHC.IR.Cmm.BlockId

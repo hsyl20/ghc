@@ -11,7 +11,7 @@ import RegAlloc.Graph.SpillClean
 import RegAlloc.Graph.SpillCost
 import RegAlloc.Graph.Stats
 import RegAlloc.Graph.TrivColorable
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import TargetReg
 import RegClass
 import Reg

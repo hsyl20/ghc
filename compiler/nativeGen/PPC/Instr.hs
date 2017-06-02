@@ -25,7 +25,7 @@ where
 
 import PPC.Regs
 import PPC.Cond
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import TargetReg
 import RegClass

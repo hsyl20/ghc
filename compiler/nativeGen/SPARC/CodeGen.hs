@@ -35,7 +35,7 @@ import SPARC.Imm
 import SPARC.AddrMode
 import SPARC.Regs
 import SPARC.Stack
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Monad
 

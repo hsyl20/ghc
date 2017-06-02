@@ -31,7 +31,7 @@ import SPARC.Cond
 import SPARC.Imm
 import SPARC.AddrMode
 import SPARC.Base
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import Reg
 import GHC.Compilers.CmmToAsm.Format
 import PprBase

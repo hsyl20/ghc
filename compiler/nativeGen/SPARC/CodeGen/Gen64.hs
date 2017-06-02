@@ -16,7 +16,7 @@ import SPARC.Imm
 import SPARC.Instr
 import SPARC.Ppr()
 import GHC.Compilers.CmmToAsm.Monad
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import Reg
 

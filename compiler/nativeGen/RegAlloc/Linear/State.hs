@@ -35,7 +35,7 @@ import RegAlloc.Linear.Stats
 import RegAlloc.Linear.StackMap
 import RegAlloc.Linear.Base
 import RegAlloc.Liveness
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import Reg
 
 import GHC.Config.Flags

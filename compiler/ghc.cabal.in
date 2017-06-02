@@ -534,7 +534,7 @@ Library
             GHC.Compilers.CmmToAsm
             TargetReg
             GHC.Compilers.CmmToAsm.Monad
-            Instruction
+            GHC.Compilers.CmmToAsm.Instruction
             GHC.Compilers.CmmToAsm.Format
             Reg
             RegClass

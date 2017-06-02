@@ -13,7 +13,7 @@ import PPC.Regs
 import PPC.Instr
 import PPC.Cond
 import PprBase
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import Reg
 import RegClass

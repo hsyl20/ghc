@@ -32,7 +32,7 @@ import SPARC.Cond
 import SPARC.Regs
 import SPARC.Base
 import TargetReg
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import RegClass
 import Reg
 import GHC.Compilers.CmmToAsm.Format

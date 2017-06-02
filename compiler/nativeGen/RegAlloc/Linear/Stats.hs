@@ -8,7 +8,7 @@ where
 
 import RegAlloc.Linear.Base
 import RegAlloc.Liveness
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Outputable

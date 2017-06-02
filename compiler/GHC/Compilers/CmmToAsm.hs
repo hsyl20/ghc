@@ -54,7 +54,7 @@ import qualified RegAlloc.Graph.TrivColorable   as Color
 import TargetReg
 import GHC.Platform
 import Config
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import PIC
 import Reg
 import GHC.Compilers.CmmToAsm.Monad

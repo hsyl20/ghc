@@ -36,7 +36,7 @@ module RegAlloc.Liveness (
         natCmmTopToLive
   ) where
 import Reg
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

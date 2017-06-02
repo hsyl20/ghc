@@ -13,7 +13,7 @@ import RegAlloc.Linear.State
 import RegAlloc.Linear.Base
 import RegAlloc.Linear.FreeRegs
 import RegAlloc.Liveness
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import Reg
 
 import GHC.IR.Cmm.BlockId

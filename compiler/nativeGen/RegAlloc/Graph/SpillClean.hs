@@ -29,7 +29,7 @@ module RegAlloc.Graph.SpillClean (
         cleanSpills
 ) where
 import RegAlloc.Liveness
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import Reg
 
 import GHC.IR.Cmm.BlockId

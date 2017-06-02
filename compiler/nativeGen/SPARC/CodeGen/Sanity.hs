@@ -8,7 +8,7 @@ where
 
 import SPARC.Instr
 import SPARC.Ppr        ()
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 
 import GHC.IR.Cmm.Syntax
 

@@ -14,7 +14,7 @@ module RegAlloc.Graph.SpillCost (
         lifeMapFromSpillCostInfo
 ) where
 import RegAlloc.Liveness
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import RegClass
 import Reg
 

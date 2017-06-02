@@ -26,7 +26,7 @@ where
 import X86.Regs
 import X86.Instr
 import X86.Cond
-import Instruction
+import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import Reg
 import PprBase
