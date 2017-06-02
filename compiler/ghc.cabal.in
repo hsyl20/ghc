@@ -367,7 +367,7 @@ Library
         ProfInit
         SCCfinal
         GHC.Rename.Binding
-        RnEnv
+        GHC.Rename.Environment
         RnExpr
         RnHsDoc
         RnNames

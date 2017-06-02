@@ -143,7 +143,7 @@ import TcErrors   ( solverDepthErrorTcS )
 
 import GHC.Data.Name
 import GHC.Data.RdrName ( GlobalRdrEnv, GlobalRdrElt )
-import qualified RnEnv as TcM
+import qualified GHC.Rename.Environment as TcM
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

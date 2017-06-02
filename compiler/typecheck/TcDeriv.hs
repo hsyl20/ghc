@@ -31,7 +31,7 @@ import TcMType
 
 import RnNames( extendGlobalRdrEnvRn )
 import GHC.Rename.Binding
-import RnEnv
+import GHC.Rename.Environment
 import RnUtils    ( bindLocalNamesFV )
 import RnSource   ( addTcgDUs )
 import GHC.Data.Available

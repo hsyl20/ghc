@@ -33,7 +33,7 @@ import TcEvidence     ( emptyTcEvBinds )
 import RnTypes
 import GHC.Rename.Pattern
 import RnNames
-import RnEnv
+import GHC.Rename.Environment
 import RnFixity
 import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds

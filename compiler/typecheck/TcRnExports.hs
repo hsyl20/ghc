@@ -11,7 +11,7 @@ import TcEnv
 import TcMType
 import TcType
 import RnNames
-import RnEnv
+import GHC.Rename.Environment
 import RnUnbound ( reportUnboundName )
 import GHC.Utils.Error
 import GHC.Data.Id

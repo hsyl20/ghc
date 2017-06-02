@@ -95,7 +95,7 @@ import TcTypeable ( mkTypeableBinds )
 import TcBackpack
 import LoadIface
 import RnNames
-import RnEnv
+import GHC.Rename.Environment
 import RnSource
 import GHC.Utils.Error
 import GHC.Data.Id as Id

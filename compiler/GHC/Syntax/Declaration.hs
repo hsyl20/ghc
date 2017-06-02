@@ -351,7 +351,7 @@ Plan of attack:
    (See RnHiFiles.getSysBinders)
 
  - When typechecking the decl, we build the implicit TyCons and Ids.
-   When doing so we look them up in the name cache (RnEnv.lookupSysName),
+   When doing so we look them up in the name cache (GHC.Rename.Environment.lookupSysName),
    to ensure correct module and provenance is set
 
 These are the two places that we have to conjure up the magic derived

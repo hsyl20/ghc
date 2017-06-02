@@ -32,7 +32,7 @@ import TcSigs           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )
 import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
 import GHC.TypeSystem.FamilyInstance       ( FamInstEnvs )
-import RnEnv            ( addUsedGRE )
+import GHC.Rename.Environment            ( addUsedGRE )
 import RnUtils          ( addNameClashErrRn, unknownSubordinateErr )
 import TcEnv
 import TcArrows

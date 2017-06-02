@@ -235,7 +235,7 @@ data Pat id
                      -- a new hs-boot file. Not worth it.
 
                     (SyntaxExpr id)     -- (>=) function, of type t1->t2->Bool
-                    (SyntaxExpr id)     -- Name of '-' (see RnEnv.lookupSyntaxName)
+                    (SyntaxExpr id)     -- Name of '-' (see GHC.Rename.Environment.lookupSyntaxName)
                     (PostTc id Type)    -- Type of overall pattern
   -- ^ n+k pattern
 

@@ -43,7 +43,7 @@ import {-# SOURCE #-} RnSplice ( rnSplicePat )
 import GHC.Syntax
 import TcRnMonad
 import TcHsSyn             ( hsOverLitName )
-import RnEnv
+import GHC.Rename.Environment
 import RnFixity
 import RnUtils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
                            , warnUnusedMatches, newLocalBndrRn

@@ -56,7 +56,7 @@ import GHC.Data.RdrName
 import GHC.Types
 import GHC.Syntax.TemplateHaskell.Convert
 import RnExpr
-import RnEnv
+import GHC.Rename.Environment
 import RnUtils ( HsDocContext(..) )
 import RnFixity ( lookupFixityRn_help )
 import RnTypes

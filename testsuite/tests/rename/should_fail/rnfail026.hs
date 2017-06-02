@@ -1,7 +1,7 @@
 {-# LANGUAGE RankNTypes, FlexibleInstances #-}
 
 -- This one made ghc-4.08 crash 
--- rename/RnEnv.lhs:239: Non-exhaustive patterns in function get_tycon_key
+-- rename/GHC.Rename.Environment.lhs:239: Non-exhaustive patterns in function get_tycon_key
 -- The type in the Monad instance is utterly bogus, of course
 
 module ShouldCompile ( Set ) where

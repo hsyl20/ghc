@@ -25,7 +25,7 @@ import GHC.Rename.Binding   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalVa
 import GHC.Syntax
 import TcRnMonad
 import GHC.Data.Module           ( getModule )
-import RnEnv
+import GHC.Rename.Environment
 import RnFixity
 import RnUtils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames
                         , bindLocalNames

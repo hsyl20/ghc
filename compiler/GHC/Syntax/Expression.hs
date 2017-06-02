@@ -232,7 +232,7 @@ then generates the associated error message, which specifies both the type of
         • ‘bar’ (line 13) is not in scope before the splice on line 11
           Perhaps you meant ‘bat’ (line 9)
 
-When it calls RnEnv.unknownNameSuggestions to identify these alternatives, the
+When it calls GHC.Rename.Environment.unknownNameSuggestions to identify these alternatives, the
 typechecker must provide a GlobalRdrEnv.  If it provided the current one, which
 contains top-level declarations for the entire module, the error message would
 incorrectly suggest the out-of-scope `bar` and `bad` as possible alternatives

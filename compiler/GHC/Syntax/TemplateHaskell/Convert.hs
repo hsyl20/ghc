@@ -1663,7 +1663,7 @@ usually want to print the name with the unique, and that is indeed
 the way System Names are printed.
 
 There's a small complication of course; see Note [Looking up Exact
-RdrNames] in RnEnv.
+RdrNames] in GHC.Rename.Environment.
 -}
 
 {-

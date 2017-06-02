@@ -176,7 +176,7 @@ availFlds _                = []
 plusAvail :: AvailInfo -> AvailInfo -> AvailInfo
 plusAvail a1 a2
   | debugIsOn && availName a1 /= availName a2
-  = pprPanic "RnEnv.plusAvail names differ" (hsep [ppr a1,ppr a2])
+  = pprPanic "GHC.Rename.Environment.plusAvail names differ" (hsep [ppr a1,ppr a2])
 plusAvail a1@(Avail {})         (Avail {})        = a1
 plusAvail (AvailTC _ [] [])     a2@(AvailTC {})   = a2
 plusAvail a1@(AvailTC {})       (AvailTC _ [] []) = a1
@@ -194,7 +194,7 @@ plusAvail (AvailTC n1 ss1 fs1) (AvailTC _ [] fs2)
   = AvailTC n1 ss1 (fs1 `unionLists` fs2)
 plusAvail (AvailTC n1 [] fs1)  (AvailTC _ ss2 fs2)
   = AvailTC n1 ss2 (fs1 `unionLists` fs2)
-plusAvail a1 a2 = pprPanic "RnEnv.plusAvail" (hsep [ppr a1,ppr a2])
+plusAvail a1 a2 = pprPanic "GHC.Rename.Environment.plusAvail" (hsep [ppr a1,ppr a2])
 
 -- | trims an 'AvailInfo' to keep only a single name
 trimAvail :: AvailInfo -> Name -> AvailInfo

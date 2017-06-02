@@ -343,7 +343,7 @@ instance Ord RdrName where
 -- (@let@, @where@, lambda, @case@).
 -- It is keyed by OccName, because we never use it for qualified names
 -- We keep the current mapping, *and* the set of all Names in scope
--- Reason: see Note [Splicing Exact names] in RnEnv
+-- Reason: see Note [Splicing Exact names] in GHC.Rename.Environment
 data LocalRdrEnv = LRE { lre_env      :: OccEnv Name
                        , lre_in_scope :: NameSet }
 

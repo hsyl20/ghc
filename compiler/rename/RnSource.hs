@@ -20,7 +20,7 @@ import GHC.Data.FieldLabel
 import GHC.Data.RdrName
 import RnTypes
 import GHC.Rename.Binding
-import RnEnv
+import GHC.Rename.Environment
 import RnUtils          ( HsDocContext(..), mapFvRn, bindLocalNames
                         , checkDupRdrNames, inHsDocContext, bindLocalNamesFV
                         , checkShadowedRdrNames, warnUnusedTypePatterns
