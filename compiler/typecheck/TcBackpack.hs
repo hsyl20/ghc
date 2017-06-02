@@ -45,7 +45,7 @@ import GHC.Types
 import GHC.Utils.Outputable
 import GHC.Data.Type
 import GHC.Data.FastString
-import RnFixity ( lookupFixityRn )
+import GHC.Rename.Fixity ( lookupFixityRn )
 import GHC.Data.Maybe
 import TcEnv
 import GHC.Data.Var

@@ -42,7 +42,7 @@ import RnUnbound        ( perhapsForallMsg )
 import RnUtils          ( HsDocContext(..), withHsDocContext, mapFvRn
                         , pprHsDocContext, bindLocalNamesFV, dupNamesErr
                         , newLocalBndrRn, checkShadowedRdrNames )
-import RnFixity         ( lookupFieldFixityRn, lookupFixityRn
+import GHC.Rename.Fixity         ( lookupFieldFixityRn, lookupFixityRn
                         , lookupTyFixityRn )
 import TcRnMonad
 import GHC.Data.RdrName

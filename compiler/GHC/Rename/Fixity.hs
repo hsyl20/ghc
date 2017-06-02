@@ -4,7 +4,7 @@ This module contains code which maintains and manipulates the
 fixity environment during renaming.
 
 -}
-module RnFixity ( MiniFixityEnv,
+module GHC.Rename.Fixity ( MiniFixityEnv,
                   addLocalFixities,
   lookupFixityRn, lookupFixityRn_help,
   lookupFieldFixityRn, lookupTyFixityRn ) where

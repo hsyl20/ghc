@@ -34,7 +34,7 @@ import RnTypes
 import GHC.Rename.Pattern
 import RnNames
 import GHC.Rename.Environment
-import RnFixity
+import GHC.Rename.Fixity
 import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds
                         , checkDupAndShadowedNames, bindLocalNamesFV )

@@ -50,7 +50,7 @@ import TcUnify( checkConstraints )
 import RnTypes
 import GHC.Rename.Expression
 import RnUtils ( HsDocContext(..) )
-import RnFixity ( lookupFixityRn )
+import GHC.Rename.Fixity ( lookupFixityRn )
 import GHC.Data.Id.Make
 import GHC.Interface.Tidy    ( globaliseAndTidyId )
 import TysWiredIn ( unitTy, mkListTy )

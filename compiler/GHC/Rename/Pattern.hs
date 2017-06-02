@@ -44,7 +44,7 @@ import GHC.Syntax
 import TcRnMonad
 import TcHsSyn             ( hsOverLitName )
 import GHC.Rename.Environment
-import RnFixity
+import GHC.Rename.Fixity
 import RnUtils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
                            , warnUnusedMatches, newLocalBndrRn
                            , checkDupAndShadowedNames, checkTupSize

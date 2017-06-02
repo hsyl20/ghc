@@ -375,7 +375,7 @@ Library
         RnSource
         RnSplice
         RnTypes
-        RnFixity
+        GHC.Rename.Fixity
         RnUtils
         RnUnbound
         GHC.Core.Monad

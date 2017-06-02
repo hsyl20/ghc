@@ -58,7 +58,7 @@ import GHC.Syntax.TemplateHaskell.Convert
 import GHC.Rename.Expression
 import GHC.Rename.Environment
 import RnUtils ( HsDocContext(..) )
-import RnFixity ( lookupFixityRn_help )
+import GHC.Rename.Fixity ( lookupFixityRn_help )
 import RnTypes
 import TcHsSyn
 import TcSimplify

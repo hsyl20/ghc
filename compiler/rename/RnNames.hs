@@ -24,7 +24,7 @@ import GHC.Config.Flags
 import GHC.Syntax
 import TcEnv
 import GHC.Rename.Environment
-import RnFixity
+import GHC.Rename.Fixity
 import RnUtils          ( warnUnusedTopBinds, mkFieldEnv )
 import LoadIface        ( loadSrcInterface )
 import TcRnMonad
