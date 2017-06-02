@@ -15,7 +15,7 @@ import SPARC.AddrMode
 import SPARC.Imm
 import SPARC.Instr
 import SPARC.Ppr()
-import NCGMonad
+import GHC.Compilers.CmmToAsm.Monad
 import Instruction
 import GHC.Compilers.CmmToAsm.Format
 import Reg

@@ -8,7 +8,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module NCGMonad (
+module GHC.Compilers.CmmToAsm.Monad (
         NatM_State(..), mkNatM_State,
 
         NatM, -- instance Monad

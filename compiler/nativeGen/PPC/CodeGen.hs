@@ -30,7 +30,7 @@ import PPC.Instr
 import PPC.Cond
 import PPC.Regs
 import GHC.Utils.CodeGen.Primitive
-import NCGMonad
+import GHC.Compilers.CmmToAsm.Monad
 import Instruction
 import PIC
 import GHC.Compilers.CmmToAsm.Format

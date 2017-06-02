@@ -57,7 +57,7 @@ import Config
 import Instruction
 import PIC
 import Reg
-import NCGMonad
+import GHC.Compilers.CmmToAsm.Monad
 import Dwarf
 import GHC.IR.Cmm.DebugBlock
 

@@ -1,6 +1,6 @@
 -- | An architecture independent description of a register.
 --      This needs to stay architecture independent because it is used
---      by NCGMonad and the register allocators, which are shared
+--      by GHC.Compilers.CmmToAsm.Monad and the register allocators, which are shared
 --      by all architectures.
 --
 module Reg (

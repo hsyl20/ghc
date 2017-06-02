@@ -533,7 +533,7 @@ Library
     Exposed-Modules:
             GHC.Compilers.CmmToAsm
             TargetReg
-            NCGMonad
+            GHC.Compilers.CmmToAsm.Monad
             Instruction
             GHC.Compilers.CmmToAsm.Format
             Reg

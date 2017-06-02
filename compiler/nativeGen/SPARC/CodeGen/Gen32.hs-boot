@@ -7,7 +7,7 @@ module SPARC.CodeGen.Gen32 (
 where
 
 import SPARC.CodeGen.Base
-import NCGMonad
+import GHC.Compilers.CmmToAsm.Monad
 import Reg
 
 import GHC.IR.Cmm.Syntax

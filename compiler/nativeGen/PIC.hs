@@ -55,7 +55,7 @@ import qualified X86.Instr      as X86
 import GHC.Platform
 import Instruction
 import Reg
-import NCGMonad
+import GHC.Compilers.CmmToAsm.Monad
 
 
 import GHC.IR.Cmm.Transform.Dataflow

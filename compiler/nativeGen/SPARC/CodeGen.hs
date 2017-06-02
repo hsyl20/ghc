@@ -37,7 +37,7 @@ import SPARC.Regs
 import SPARC.Stack
 import Instruction
 import GHC.Compilers.CmmToAsm.Format
-import NCGMonad
+import GHC.Compilers.CmmToAsm.Monad
 
 -- Our intermediate code:
 import GHC.IR.Cmm.BlockId
