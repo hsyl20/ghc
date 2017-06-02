@@ -34,7 +34,7 @@ import GHC.Core.Transform.Simple    ( simpleOptPgm, simpleOptExpr )
 import GHC.Core.PrettyPrint
 import GHC.Desugar.Monad
 import GHC.Desugar.Expression
-import GHC.Desugar.Binds
+import GHC.Desugar.Binding
 import GHC.Desugar.Foreign.Declaration
 import PrelNames   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )

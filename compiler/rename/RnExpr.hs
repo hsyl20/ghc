@@ -994,7 +994,7 @@ lookupStmtNamePoly ctxt name
 
 -- | Is this a context where we respect RebindableSyntax?
 -- but ListComp/PArrComp are never rebindable
--- Neither is ArrowExpr, which has its own desugarer in GHC.Desugar.Arrows
+-- Neither is ArrowExpr, which has its own desugarer in GHC.Desugar.Arrow
 rebindableContext :: HsStmtContext Name -> Bool
 rebindableContext ctxt = case ctxt of
   ListComp        -> False

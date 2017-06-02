@@ -19,7 +19,7 @@ where
 import {-# SOURCE #-} GHC.Desugar.Match     ( match )
 
 import GHC.Syntax
-import GHC.Desugar.Binds
+import GHC.Desugar.Binding
 import GHC.Data.ConstructorLike
 import TcType
 import GHC.Desugar.Monad

@@ -8,7 +8,7 @@ Desugaring arrow commands
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Arrows ( dsProcExpr ) where
+module GHC.Desugar.Arrow ( dsProcExpr ) where
 
 #include "HsVersions.h"
 
@@ -34,7 +34,7 @@ import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import GHC.Core.Utils
 import GHC.Core.Syntax.Make
-import GHC.Desugar.Binds (dsHsWrapper)
+import GHC.Desugar.Binding (dsHsWrapper)
 
 import GHC.Data.Name
 import GHC.Data.Var

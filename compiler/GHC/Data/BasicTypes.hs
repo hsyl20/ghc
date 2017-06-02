@@ -1187,7 +1187,7 @@ if an Id has defaultInlinePragma it means the user didn't specify anything.
 
 If inl_inline = Inline or Inlineable, then the Id should have an InlineRule unfolding.
 
-If you want to know where InlinePragmas take effect: Look in GHC.Desugar.Binds.makeCorePair
+If you want to know where InlinePragmas take effect: Look in GHC.Desugar.Binding.makeCorePair
 
 Note [inl_inline and inl_act]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

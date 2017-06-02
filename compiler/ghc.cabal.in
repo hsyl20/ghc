@@ -279,8 +279,8 @@ Library
         GHC.Desugar.Match.Check
         GHC.Desugar.Coverage
         GHC.Desugar.Main
-        GHC.Desugar.Arrows
-        GHC.Desugar.Binds
+        GHC.Desugar.Arrow
+        GHC.Desugar.Binding
         GHC.Desugar.Foreign.Call
         GHC.Desugar.Expression
         GHC.Desugar.Foreign.Declaration

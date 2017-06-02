@@ -729,7 +729,7 @@ mkSelectorBinds :: [[Tickish Id]] -- ^ ticks to add, possibly
                 -> CoreExpr       -- ^ Expression to which the pattern is bound
                 -> DsM (Id,[(Id,CoreExpr)])
                 -- ^ Id the rhs is bound to, for desugaring strict
-                -- binds (see Note [Desugar Strict binds] in GHC.Desugar.Binds)
+                -- binds (see Note [Desugar Strict binds] in GHC.Desugar.Binding)
                 -- and all the desugared binds
 
 mkSelectorBinds ticks pat val_expr

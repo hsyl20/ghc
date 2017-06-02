@@ -839,7 +839,7 @@ is a lifted function type, with no trouble at all.
 -- | Should we treat this as an unlifted bind? This will be true for any
 -- bind that binds an unlifted variable, but we must be careful around
 -- AbsBinds. See Note [Unlifted id check in isUnliftedHsBind]. For usage
--- information, see Note [Strict binds check] is GHC.Desugar.Binds.
+-- information, see Note [Strict binds check] is GHC.Desugar.Binding.
 isUnliftedHsBind :: HsBind Id -> Bool  -- works only over typechecked binds
 isUnliftedHsBind (AbsBindsSig { abs_sig_export = id })
   = isUnliftedType (idType id)
@@ -972,7 +972,7 @@ collect_lpat (L _ pat) bndrs
     go (CoPat _ pat _)            = go pat
 
 {-
-Note [Dictionary binders in ConPatOut] See also same Note in GHC.Desugar.Arrows
+Note [Dictionary binders in ConPatOut] See also same Note in GHC.Desugar.Arrow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Do *not* gather (a) dictionary and (b) dictionary bindings as binders
 of a ConPatOut pattern.  For most calls it doesn't matter, because
@@ -982,7 +982,7 @@ collectPatBinders.  In a lazy pattern, for example f ~(C x y) = ...,
 we want to generate bindings for x,y but not for dictionaries bound by
 C.  (The type checker ensures they would not be used.)
 
-Desugaring of arrow case expressions needs these bindings (see GHC.Desugar.Arrows
+Desugaring of arrow case expressions needs these bindings (see GHC.Desugar.Arrow
 and arrowcase1), but SPJ (Jan 2007) says it's safer for it to use its
 own pat-binder-collector:
 

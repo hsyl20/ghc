@@ -32,7 +32,7 @@ import GHC.Data.Literal
 import GHC.Core.Utils
 import GHC.Core.Syntax.Make
 import GHC.Desugar.Monad
-import GHC.Desugar.Binds
+import GHC.Desugar.Binding
 import GHC.Desugar.GuardedRHS
 import GHC.Desugar.Utils
 import GHC.Data.Id

@@ -12,7 +12,7 @@ lower levels it is preserved with @let@/@letrec@s).
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Binds ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
+module GHC.Desugar.Binding ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
                  dsHsWrapper, dsTcEvBinds, dsTcEvBinds_s, dsEvBinds, dsMkUserRule
   ) where
 
