@@ -390,17 +390,17 @@ Library
         GHC.Core.Transform.Simplify.Monad
         GHC.Core.Transform.Simplify.Utils
         GHC.Core.Transform.Simplify
-        GHC.STG.Transform.Pipeline
-        GHC.STG.Analyse.Stats
-        GHC.STG.Transform.CommonSubExpr
-        GHC.STG.Transform.Unarise
+        GHC.IR.Stg.Transform.Pipeline
+        GHC.IR.Stg.Analyse.Stats
+        GHC.IR.Stg.Transform.CommonSubExpr
+        GHC.IR.Stg.Transform.Unarise
         GHC.Data.RepType
         GHC.Core.Transform.Rules
         GHC.Core.Transform.Specialise.Constructor
         GHC.Core.Transform.Specialise
-        GHC.STG.CoreToStg
-        GHC.STG.Analyse.Lint
-        GHC.STG.Syntax
+        GHC.IR.Stg.CoreToStg
+        GHC.IR.Stg.Analyse.Lint
+        GHC.IR.Stg.Syntax
         GHC.Core.Analyse.CallArity
         GHC.Core.Analyse.Demand
         GHC.Core.Transform.WorkerWrapper

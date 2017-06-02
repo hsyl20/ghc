@@ -23,11 +23,11 @@ The program gather statistics about
 
 {-# LANGUAGE CPP #-}
 
-module GHC.STG.Analyse.Stats ( showStgStats ) where
+module GHC.IR.Stg.Analyse.Stats ( showStgStats ) where
 
 #include "HsVersions.h"
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 
 import GHC.Data.Id (Id)
 import GHC.Utils.Panic

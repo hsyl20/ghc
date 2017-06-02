@@ -39,7 +39,7 @@ import GHC.Data.Id
 import GHC.Cmm.Graph
 import GHC.Data.Name
 import GHC.Utils.Outputable
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 import GHC.Data.Type
 import TysPrim
 import GHC.Data.Unique.FiniteMap

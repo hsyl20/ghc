@@ -68,11 +68,11 @@ and nothing stops us from transforming that to
                           , Right [x] -> b}
 
 -}
-module GHC.STG.Transform.CommonSubExpr (stgCse) where
+module GHC.IR.Stg.Transform.CommonSubExpr (stgCse) where
 
 import GHC.Data.DataConstructor
 import GHC.Data.Id
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment
 import GHC.Core.Syntax (AltCon(..))

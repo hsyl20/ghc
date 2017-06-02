@@ -131,7 +131,7 @@ isVoidTy = null . typePrimRep
 {- **********************************************************************
 *                                                                       *
                 Unboxed sums
- See Note [Translating unboxed sums to unboxed tuples] in GHC.STG.Transform.Unarise.hs
+ See Note [Translating unboxed sums to unboxed tuples] in GHC.IR.Stg.Transform.Unarise.hs
 *                                                                       *
 ********************************************************************** -}
 

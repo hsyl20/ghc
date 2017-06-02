@@ -117,14 +117,14 @@ import GHC.Desugar.Main
 import GHC.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Core.Prepare
-import GHC.STG.CoreToStg ( coreToStg )
+import GHC.IR.Stg.CoreToStg ( coreToStg )
 import qualified StgCmm ( codeGen )
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 import CostCentre
 import ProfInit
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
-import GHC.STG.Transform.Pipeline         ( stg2stg )
+import GHC.IR.Stg.Transform.Pipeline         ( stg2stg )
 import GHC.Cmm
 import GHC.Cmm.Parser         ( parseCmmFile )
 import GHC.Cmm.BuildInfoTables

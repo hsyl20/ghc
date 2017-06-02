@@ -31,7 +31,7 @@ import GHC.Platform
 import GHC.Data.BasicTypes
 import GHC.Cmm.BlockId
 import GHC.Cmm.Graph
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 import GHC.Cmm
 import GHC.RTS.InfoTable
 import GHC.Data.Type     ( Type, tyConAppTyCon )

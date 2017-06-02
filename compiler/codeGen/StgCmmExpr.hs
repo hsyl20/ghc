@@ -27,7 +27,7 @@ import StgCmmTicky
 import StgCmmUtils
 import StgCmmClosure
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 
 import GHC.Cmm.Graph
 import GHC.Cmm.BlockId
@@ -557,7 +557,7 @@ isSimpleOp (StgPrimCallOp _) _                           = return False
 chooseReturnBndrs :: Id -> AltType -> [StgAlt] -> [NonVoid Id]
 -- These are the binders of a case that are assigned by the evaluation of the
 -- scrutinee.
--- They're non-void, see Note [Post-unarisation invariants] in GHC.STG.Transform.Unarise.
+-- They're non-void, see Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise.
 chooseReturnBndrs bndr (PrimAlt _) _alts
   = assertNonVoidIds [bndr]
 
@@ -683,7 +683,7 @@ cgAltRhss gc_plan bndr alts = do
         maybeAltHeapCheck gc_plan $
         do { _ <- bindConArgs con base_reg (assertNonVoidIds bndrs)
                     -- alt binders are always non-void,
-                    -- see Note [Post-unarisation invariants] in GHC.STG.Transform.Unarise
+                    -- see Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise
            ; _ <- cgExpr rhs
            ; return con }
   forkAlts (map cg_alt alts)
@@ -711,7 +711,7 @@ cgConApp con stg_args
     do  { (idinfo, fcode_init) <- buildDynCon (dataConWorkId con) False
                                      currentCCS con (assertNonVoidStgArgs stg_args)
                                      -- con args are always non-void,
-                                     -- see Note [Post-unarisation invariants] in GHC.STG.Transform.Unarise
+                                     -- see Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise
                 -- The first "con" says that the name bound to this
                 -- closure is "con", which is a bit of a fudge, but
                 -- it only affects profiling (hence the False)

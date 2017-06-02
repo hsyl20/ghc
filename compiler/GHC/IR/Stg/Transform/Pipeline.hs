@@ -1,23 +1,23 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1993-1998
 
-\section[GHC.STG.Transform.Pipeline]{Driver for simplifying @STG@ programs}
+\section[GHC.IR.Stg.Transform.Pipeline]{Driver for simplifying @STG@ programs}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module GHC.STG.Transform.Pipeline ( stg2stg ) where
+module GHC.IR.Stg.Transform.Pipeline ( stg2stg ) where
 
 #include "HsVersions.h"
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 
 import CostCentre       ( CollectedCCs )
 import SCCfinal         ( stgMassageForProfiling )
-import GHC.STG.Analyse.Lint  ( lintStgTopBindings )
-import GHC.STG.Analyse.Stats ( showStgStats )
-import GHC.STG.Transform.Unarise       ( unarise )
-import GHC.STG.Transform.CommonSubExpr ( stgCse )
+import GHC.IR.Stg.Analyse.Lint  ( lintStgTopBindings )
+import GHC.IR.Stg.Analyse.Stats ( showStgStats )
+import GHC.IR.Stg.Transform.Unarise       ( unarise )
+import GHC.IR.Stg.Transform.CommonSubExpr ( stgCse )
 
 import GHC.Config.Flags
 import GHC.Data.Module           ( Module )

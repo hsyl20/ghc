@@ -66,7 +66,7 @@ module StgCmmClosure (
 
 #include "HsVersions.h"
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 import GHC.RTS.Storage
 import GHC.Cmm
 import GHC.Cmm.PrettyPrint.Expression()
@@ -140,7 +140,7 @@ nonVoidIds ids = [NonVoid id | id <- ids, not (isVoidTy (idType id))]
 
 -- | Used in places where some invariant ensures that all these Ids are
 -- non-void; e.g. constructor field binders in case expressions.
--- See Note [Post-unarisation invariants] in GHC.STG.Transform.Unarise.
+-- See Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise.
 assertNonVoidIds :: [Id] -> [NonVoid Id]
 assertNonVoidIds ids = ASSERT(not (any (isVoidTy . idType) ids))
                        coerce ids
@@ -150,7 +150,7 @@ nonVoidStgArgs args = [NonVoid arg | arg <- args, not (isVoidTy (stgArgType arg)
 
 -- | Used in places where some invariant ensures that all these arguments are
 -- non-void; e.g. constructor arguments.
--- See Note [Post-unarisation invariants] in GHC.STG.Transform.Unarise.
+-- See Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise.
 assertNonVoidStgArgs :: [StgArg] -> [NonVoid StgArg]
 assertNonVoidStgArgs args = ASSERT(not (any (isVoidTy . stgArgType) args))
                             coerce args

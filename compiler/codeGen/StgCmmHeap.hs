@@ -24,7 +24,7 @@ module StgCmmHeap (
 
 #include "HsVersions.h"
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 import GHC.Data.CLabel
 import StgCmmLayout
 import StgCmmUtils

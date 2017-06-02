@@ -21,7 +21,7 @@ module SCCfinal ( stgMassageForProfiling ) where
 
 #include "HsVersions.h"
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 
 import CostCentre       -- lots of things
 import GHC.Data.Id

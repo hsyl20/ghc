@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.STG.Syntax]{Shared term graph (STG) syntax for spineless-tagless code generation}
+\section[GHC.IR.Stg.Syntax]{Shared term graph (STG) syntax for spineless-tagless code generation}
 
 This data type represents programs just before code generation (conversion to
 @Cmm@): basically, what we have is a stylised form of @GHC.Core.Syntaxtax@, the style
@@ -11,7 +11,7 @@ generation.
 
 {-# LANGUAGE CPP #-}
 
-module GHC.STG.Syntax (
+module GHC.IR.Stg.Syntax (
         GenStgArg(..),
 
         GenStgTopBinding(..), GenStgBinding(..), GenStgExpr(..), GenStgRhs(..),
@@ -199,7 +199,7 @@ primitives, and literals.
         -- which can't be let-bound first
   | StgConApp   DataCon
                 [GenStgArg occ] -- Saturated
-                [Type]          -- See Note [Types in StgConApp] in GHC.STG.Transform.Unarise
+                [Type]          -- See Note [Types in StgConApp] in GHC.IR.Stg.Transform.Unarise
 
   | StgOpApp    StgOp           -- Primitive op or foreign call
                 [GenStgArg occ] -- Saturated.

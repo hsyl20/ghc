@@ -6,9 +6,9 @@
 
 {-# LANGUAGE CPP #-}
 
-module GHC.STG.Analyse.Lint ( lintStgTopBindings ) where
+module GHC.IR.Stg.Analyse.Lint ( lintStgTopBindings ) where
 
-import GHC.STG.Syntax
+import GHC.IR.Stg.Syntax
 
 import GHC.Data.Bag              ( Bag, emptyBag, isEmptyBag, snocBag, bagToList )
 import GHC.Data.Id               ( Id, idType, isLocalId )
