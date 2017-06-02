@@ -1,5 +1,5 @@
 
-module RnHsDoc ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
+module GHC.Rename.Documentation ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
 
 import TcRnTypes
 import GHC.Syntax

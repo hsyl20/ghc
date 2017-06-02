@@ -35,7 +35,7 @@ import GHC.Utils (capitalise)
 
 import Control.Monad
 import GHC.Config.Flags
-import RnHsDoc          ( rnHsDoc )
+import GHC.Rename.Documentation          ( rnHsDoc )
 import RdrHsSyn        ( setRdrNameSpace )
 import Data.Either      ( partitionEithers )
 

@@ -27,7 +27,7 @@ import RnUtils          ( HsDocContext(..), mapFvRn, bindLocalNames
                         , extendTyVarEnvFVRn, newLocalBndrsRn )
 import RnUnbound        ( mkUnboundName )
 import RnNames
-import RnHsDoc          ( rnHsDoc, rnMbLHsDoc )
+import GHC.Rename.Documentation          ( rnHsDoc, rnMbLHsDoc )
 import TcAnnotations    ( annCtxt )
 import TcRnMonad
 

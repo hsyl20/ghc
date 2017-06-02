@@ -369,7 +369,7 @@ Library
         GHC.Rename.Binding
         GHC.Rename.Environment
         GHC.Rename.Expression
-        RnHsDoc
+        GHC.Rename.Documentation
         RnNames
         GHC.Rename.Pattern
         RnSource

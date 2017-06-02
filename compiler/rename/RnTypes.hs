@@ -36,7 +36,7 @@ import {-# SOURCE #-} RnSplice( rnSpliceType )
 
 import GHC.Config.Flags
 import GHC.Syntax
-import RnHsDoc          ( rnLHsDoc, rnMbLHsDoc )
+import GHC.Rename.Documentation          ( rnLHsDoc, rnMbLHsDoc )
 import GHC.Rename.Environment
 import RnUnbound        ( perhapsForallMsg )
 import RnUtils          ( HsDocContext(..), withHsDocContext, mapFvRn
