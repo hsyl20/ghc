@@ -25,8 +25,8 @@ module GHC.Interactive.DynamicLoading (
     ) where
 
 #if defined(GHCI)
-import Linker           ( linkModule, getHValue )
-import GHCi             ( wormhole )
+import GHC.Interactive.Linker           ( linkModule, getHValue )
+import GHC.Interactive.Interpreter      ( wormhole )
 import GHC.Data.SrcLoc           ( noSrcSpan )
 import GHC.Finder           ( findPluginModule, cannotFindModule )
 import TcRnMonad        ( initTcInteractive, initIfaceTcRn )

@@ -391,7 +391,7 @@ We want to gnerate an assignment
      y := x
 We want to allow this assignment to be generated in the case when the
 types are compatible, because this allows some slightly-dodgy but
-occasionally-useful casts to be used, such as in RtClosureInspect
+occasionally-useful casts to be used, such as in GHC.Interactive.ClosureInspect
 where we cast an HValue to a MutVar# so we can print out the contents
 of the MutVar#.  If instead we generate code that enters the HValue,
 then we'll get a runtime panic, because the HValue really is a

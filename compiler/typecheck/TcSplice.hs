@@ -47,7 +47,7 @@ import Control.Monad
 
 import GHCi.Message
 import GHCi.RemoteTypes
-import GHCi
+import GHC.Interactive.Interpreter
 import GHC.Program.Main
         -- These imports are the reason that TcSplice
         -- is very high up the module hierarchy

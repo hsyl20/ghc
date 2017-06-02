@@ -10,7 +10,7 @@
 -- This module deals with the top-level issues of dynamic linking,
 -- calling the object-code linker and the byte-code linker where
 -- necessary.
-module Linker ( getHValue, showLinkerState,
+module GHC.Interactive.Linker ( getHValue, showLinkerState,
                 linkExpr, linkDecls, unload, withExtendedLinkEnv,
                 extendLinkEnv, deleteFromLinkEnv,
                 extendLoadedPkgs,
@@ -20,7 +20,7 @@ module Linker ( getHValue, showLinkerState,
 
 #include "HsVersions.h"
 
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 import LoadIface
 import GHC.IR.ByteCode.Linker

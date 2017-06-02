@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module DebuggerUtils (
+module GHC.Interactive.Debugger.Utils (
        dataConInfoPtrToName,
   ) where
 

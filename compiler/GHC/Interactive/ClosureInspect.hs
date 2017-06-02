@@ -7,7 +7,7 @@
 -- Pepe Iborra (supported by Google SoC) 2006
 --
 -----------------------------------------------------------------------------
-module RtClosureInspect(
+module GHC.Interactive.ClosureInspect(
      cvObtainTerm,      -- :: HscEnv -> Int -> Bool -> Maybe Type -> HValue -> IO Term
      cvReconstructType,
      improveRTTIType,
@@ -26,7 +26,7 @@ module RtClosureInspect(
 
 #include "HsVersions.h"
 
-import DebuggerUtils
+import GHC.Interactive.Debugger.Utils
 import GHCi.RemoteTypes ( HValue )
 import qualified GHCi.InfoTable as InfoTable
 import GHCi.InfoTable (StgInfoTable, peekItbl)

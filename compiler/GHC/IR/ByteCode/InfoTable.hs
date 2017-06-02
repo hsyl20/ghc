@@ -10,7 +10,7 @@ module GHC.IR.ByteCode.InfoTable ( mkITbls ) where
 #include "HsVersions.h"
 
 import GHC.IR.ByteCode.Types
-import GHCi
+import GHC.Interactive.Interpreter
 import GHC.Config.Flags
 import GHC.Types
 import GHC.Data.Name             ( Name, getName )

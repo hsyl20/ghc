@@ -343,7 +343,7 @@ compiler_stage2_CONFIGURE_OPTS += --ghc-option=-DGHCI_TABLES_NEXT_TO_CODE
 endif
 
 # Should the debugger commands be enabled?
-ifeq "$(GhciWithDebugger)" "YES"
+ifeq "$(GhciWithGHC.Interactive.Debugger)" "YES"
 compiler_stage2_CONFIGURE_OPTS += --ghc-option=-DDEBUGGER
 endif
 

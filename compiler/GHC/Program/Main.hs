@@ -84,10 +84,10 @@ module GHC.Program.Main
 
 import Data.Data hiding (Fixity, TyCon)
 import GHC.Data.Id
-import GHCi             ( addSptEntry )
+import GHC.Interactive.Interpreter       ( addSptEntry )
 import GHCi.RemoteTypes ( ForeignHValue )
 import GHC.Compilers.CoreToByteCode      ( byteCodeGen, coreExprToBCOs )
-import Linker
+import GHC.Interactive.Linker
 import GHC.IR.Core.Tidy         ( tidyExpr )
 import GHC.Data.Type    ( Type, Kind )
 import GHC.IR.Core.Analyse.Lint         ( lintInteractiveExpr )

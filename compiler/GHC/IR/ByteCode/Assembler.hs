@@ -19,7 +19,7 @@ import GHC.IR.ByteCode.Instruction
 import GHC.IR.ByteCode.InfoTable
 import GHC.IR.ByteCode.Types
 import GHCi.RemoteTypes
-import GHCi
+import GHC.Interactive.Interpreter
 
 import GHC.Types
 import GHC.Data.Name

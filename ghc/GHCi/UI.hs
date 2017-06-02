@@ -35,10 +35,10 @@ import qualified GHCi.UI.Monad as GhciMonad ( args, runStmt, runDecls )
 import GHCi.UI.Monad hiding ( args, runStmt, runDecls )
 import GHCi.UI.Tags
 import GHCi.UI.Info
-import Debugger
+import GHC.Interactive.Debugger
 
 -- The GHC interface
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 import GHCi.BreakArray
 import GHC.Config.Flags
@@ -73,7 +73,7 @@ import Config
 import GHC.Data.Graph.Directed
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
-import Linker
+import GHC.Interactive.Linker
 import GHC.Data.Maybe ( orElse, expectJust )
 import GHC.Data.Name.Set
 import GHC.Utils.Panic hiding ( showException )

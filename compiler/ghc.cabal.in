@@ -134,14 +134,13 @@ Library
 
     c-sources:
         parser/cutils.c
-        ghci/keepCAFsForGHCi.c
+        cbits/keepCAFsForGHCi.c
         cbits/genSym.c
 
     hs-source-dirs:
         ./
         backpack
         codeGen
-        ghci
         iface
         llvmGen
         nativeGen
@@ -532,8 +531,6 @@ Library
         GHC.IR.Core.Transform.Vectorise
         GHC.IR.Cmm.Transform.Dataflow.Hoopl
         GHC.IR.Cmm.Transform.Dataflow
---        CgInfoTbls used in ghci/DebuggerUtils
---        CgHeapery  mkVirtHeapOffsets used in ghci
 
     Exposed-Modules:
             AsmCodeGen
@@ -606,10 +603,10 @@ Library
             GHC.IR.ByteCode.Instruction
             GHC.IR.ByteCode.InfoTable
             GHC.IR.ByteCode.Linker
-            Debugger
-            Linker
-            RtClosureInspect
-            DebuggerUtils
+            GHC.Interactive.Debugger
+            GHC.Interactive.Linker
+            GHC.Interactive.ClosureInspect
+            GHC.Interactive.Debugger.Utils
             GHCi
 
     if !flag(stage1)

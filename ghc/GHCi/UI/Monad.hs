@@ -42,7 +42,7 @@ import GHC.Data.FastString
 import GHC.Types
 import GHC.Data.SrcLoc
 import GHC.Data.Module
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 import GHC.Syntax (ImportDecl)
 import GHC.Data.RdrName (RdrName)

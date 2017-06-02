@@ -5,11 +5,11 @@ import GHC.IR.ByteCode.Linker
 import GHC.IR.Core.Monad
 import Data.Array
 import GHC.Data.DataConstructor
-import DebuggerUtils
+import GHC.Interactive.Debugger.Utils
 import GHC
 import HscTypes
-import Linker
-import RtClosureInspect
+import GHC.Interactive.Linker
+import GHC.Interactive.ClosureInspect
 import TcEnv
 import GHC.Data.Type
 import TcRnMonad

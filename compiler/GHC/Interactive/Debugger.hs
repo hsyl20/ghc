@@ -14,10 +14,10 @@
 
 module Debugger (pprintClosureCommand, showTerm, pprTypeAndContents) where
 
-import Linker
-import RtClosureInspect
+import GHC.Interactive.Linker
+import GHC.Interactive.ClosureInspect
 
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 import GHC.Monad
 import GHC.Types

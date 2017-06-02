@@ -283,7 +283,7 @@ import GHC.IR.ByteCode.Types
 import GHC.Interactive.Eval
 import GHC.Interactive.Types
 import TcRnDriver       ( runTcInteractive )
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 
 import GHC.Utils.PrettyPrint.TyThing       ( pprFamInst )

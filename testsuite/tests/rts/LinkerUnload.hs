@@ -2,7 +2,7 @@ module LinkerUnload (init) where
 
 import GHC
 import GHC.Config.Flags
-import Linker
+import GHC.Interactive.Linker
 import System.Environment
 import GHC.Utils.Monad ( MonadIO(..) )
 

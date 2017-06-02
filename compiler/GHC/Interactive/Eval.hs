@@ -42,7 +42,7 @@ module GHC.Interactive.Eval (
 
 import GHC.Interactive.Types
 
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.Message
 import GHCi.RemoteTypes
 import GHC.Monad
@@ -65,7 +65,7 @@ import GHC.Data.Available
 import GHC.Data.RdrName
 import GHC.Data.Var.Environment
 import GHC.IR.ByteCode.Types
-import Linker
+import GHC.Interactive.Linker
 import GHC.Config.Flags
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
@@ -76,7 +76,7 @@ import GHC.Utils.Panic
 import GHC.Data.Maybe
 import GHC.Utils.Error
 import GHC.Data.SrcLoc
-import RtClosureInspect
+import GHC.Interactive.ClosureInspect
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag

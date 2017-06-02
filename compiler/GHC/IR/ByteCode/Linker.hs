@@ -25,7 +25,7 @@ import GHCi.InfoTable
 import GHCi.BreakArray
 import SizedSeq
 
-import GHCi
+import GHC.Interactive.Interpreter
 import GHC.IR.ByteCode.Types
 import GHC.Types
 import GHC.Config.Flags

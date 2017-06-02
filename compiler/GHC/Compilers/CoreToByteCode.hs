@@ -13,7 +13,7 @@ import GHC.IR.ByteCode.Instruction
 import GHC.IR.ByteCode.Assembler
 import GHC.IR.ByteCode.Types
 
-import GHCi
+import GHC.Interactive.Interpreter
 import GHCi.FFI
 import GHCi.RemoteTypes
 import GHC.Data.BasicTypes
