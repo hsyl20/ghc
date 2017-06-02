@@ -1252,7 +1252,7 @@ instance Outputable OpName where
 
 get_op :: LHsExpr Name -> OpName
 -- An unbound name could be either HsVar or HsUnboundVar
--- See RnExpr.rnUnboundVar
+-- See GHC.Rename.Expression.rnUnboundVar
 get_op (L _ (HsVar (L _ n)))   = NormalOp n
 get_op (L _ (HsUnboundVar uv)) = UnboundOp uv
 get_op (L _ (HsRecFld fld))    = RecFldOp fld

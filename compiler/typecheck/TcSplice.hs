@@ -55,7 +55,7 @@ import RnSplice( traceSplice, SpliceInfo(..) )
 import GHC.Data.RdrName
 import GHC.Types
 import GHC.Syntax.TemplateHaskell.Convert
-import RnExpr
+import GHC.Rename.Expression
 import GHC.Rename.Environment
 import RnUtils ( HsDocContext(..) )
 import RnFixity ( lookupFixityRn_help )

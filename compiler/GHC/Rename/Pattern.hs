@@ -35,7 +35,7 @@ module GHC.Rename.Pattern (-- main entry points
 
 -- ENH: thin imports to only what is necessary for patterns
 
-import {-# SOURCE #-} RnExpr ( rnLExpr )
+import {-# SOURCE #-} GHC.Rename.Expression ( rnLExpr )
 import {-# SOURCE #-} RnSplice ( rnSplicePat )
 
 #include "HsVersions.h"

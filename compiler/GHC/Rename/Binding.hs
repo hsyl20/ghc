@@ -25,7 +25,7 @@ module GHC.Rename.Binding (
    HsSigCtxt(..)
    ) where
 
-import {-# SOURCE #-} RnExpr( rnLExpr, rnStmts )
+import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr, rnStmts )
 
 import GHC.Syntax
 import TcRnMonad

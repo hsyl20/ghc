@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[RnExpr]{Renaming of expressions}
+\section[GHC.Rename.Expression]{Renaming of expressions}
 
 Basically dependency analysis.
 
@@ -14,7 +14,7 @@ free variables.
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE MultiWayIf #-}
 
-module RnExpr (
+module GHC.Rename.Expression (
         rnLExpr, rnExpr, rnStmts
    ) where
 

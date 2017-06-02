@@ -368,7 +368,7 @@ Library
         SCCfinal
         GHC.Rename.Binding
         GHC.Rename.Environment
-        RnExpr
+        GHC.Rename.Expression
         RnHsDoc
         RnNames
         GHC.Rename.Pattern

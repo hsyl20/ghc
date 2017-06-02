@@ -12,7 +12,7 @@ module RnSource (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} RnExpr( rnLExpr )
+import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr )
 import {-# SOURCE #-} RnSplice ( rnSpliceDecl, rnTopSpliceDecls )
 
 import GHC.Syntax

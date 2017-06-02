@@ -173,7 +173,7 @@ This is Less Cool than what we normally do for rebindable syntax, which is to
 make fully-instantiated piece of evidence at every use site.  The Cmd way
 is Less Cool because
   * The renamer has to predict which methods are needed.
-    See the tedious RnExpr.methodNamesCmd.
+    See the tedious GHC.Rename.Expression.methodNamesCmd.
 
   * The desugarer has to know the polymorphic type of the instantiated
     method. This is checked by Inst.tcSyntaxName, but is less flexible
@@ -1660,7 +1660,7 @@ data StmtLR idL idR body -- body should always be (LHs**** idR)
   -- appropriate applicative expression by the desugarer, but it is intended
   -- to be invisible in error messages.
   --
-  -- For full details, see Note [ApplicativeDo] in RnExpr
+  -- For full details, see Note [ApplicativeDo] in GHC.Rename.Expression
   --
   | ApplicativeStmt
              [ ( SyntaxExpr idR

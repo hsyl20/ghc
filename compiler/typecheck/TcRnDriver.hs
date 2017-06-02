@@ -48,7 +48,7 @@ import TcMatches
 import Inst( deeplyInstantiate )
 import TcUnify( checkConstraints )
 import RnTypes
-import RnExpr
+import GHC.Rename.Expression
 import RnUtils ( HsDocContext(..) )
 import RnFixity ( lookupFixityRn )
 import GHC.Data.Id.Make

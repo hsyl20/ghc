@@ -110,7 +110,7 @@ test10 = do
   return (const () (x3,x4,x5))
 
 -- (a | b)
--- This demonstrated a bug in RnExpr.segments (#11612)
+-- This demonstrated a bug in GHC.Rename.Expression.segments (#11612)
 test11 :: M ()
 test11 = do
   x1 <- a

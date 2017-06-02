@@ -30,7 +30,7 @@ import RnTypes          ( rnLHsType )
 
 import Control.Monad    ( unless, when )
 
-import {-# SOURCE #-} RnExpr   ( rnLExpr )
+import {-# SOURCE #-} GHC.Rename.Expression   ( rnLExpr )
 
 import TcEnv            ( checkWellStaged )
 import THNames          ( liftName )
