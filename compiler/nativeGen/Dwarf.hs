@@ -3,10 +3,10 @@ module Dwarf (
   ) where
 
 import GHC.Data.CLabel
-import GHC.Cmm.Expr         ( GlobalReg(..) )
+import GHC.IR.Cmm.Expr         ( GlobalReg(..) )
 import Config          ( cProjectName, cProjectVersion )
 import GHC.Core.Syntax         ( Tickish(..) )
-import GHC.Cmm.DebugBlock
+import GHC.IR.Cmm.DebugBlock
 import GHC.Config.Flags
 import GHC.Data.Module
 import GHC.Utils.Outputable

@@ -28,9 +28,9 @@ import StgCmmUtils
 import StgCmmClosure
 import StgCmmProf ( curCCS )
 
-import GHC.Cmm.Expr
+import GHC.IR.Cmm.Expr
 import GHC.Data.CLabel
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 import GHC.RTS.Storage
 import CostCentre
 import GHC.Data.Module

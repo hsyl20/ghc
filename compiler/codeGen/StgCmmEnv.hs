@@ -31,12 +31,12 @@ import StgCmmClosure
 
 import GHC.Data.CLabel
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Expr
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Expr
+import GHC.IR.Cmm.Utils
 import GHC.Config.Flags
 import GHC.Data.Id
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.IR.Stg.Syntax

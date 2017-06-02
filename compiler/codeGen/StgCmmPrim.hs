@@ -29,15 +29,15 @@ import StgCmmProf ( costCentreFrom, curCCS )
 import GHC.Config.Flags
 import GHC.Platform
 import GHC.Data.BasicTypes
-import GHC.Cmm.BlockId
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Graph
 import GHC.IR.Stg.Syntax
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.RTS.InfoTable
 import GHC.Data.Type     ( Type, tyConAppTyCon )
 import GHC.Data.Type.Constructor
 import GHC.Data.CLabel
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.Utils
 import PrimOp
 import GHC.RTS.Storage
 import GHC.Data.FastString

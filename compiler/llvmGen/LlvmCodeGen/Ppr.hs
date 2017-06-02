@@ -14,7 +14,7 @@ import LlvmCodeGen.Base
 import LlvmCodeGen.Data
 
 import GHC.Data.CLabel
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.Platform
 
 import GHC.Data.FastString

@@ -117,9 +117,9 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm hiding (RegSet)
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm hiding (RegSet)
 
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
@@ -768,7 +768,7 @@ allocateRegsAndSpill reading keep spills alloc (r:rs)
                    -- NOTE: if the input to the NCG contains some
                    -- unreachable blocks with junk code, this panic
                    -- might be triggered.  Make sure you only feed
-                   -- sensible code into the NCG.  In GHC.Cmm.Pipeline we
+                   -- sensible code into the NCG.  In GHC.IR.Cmm.Pipeline we
                    -- call removeUnreachableBlocks at the end for this
                    -- reason.
 

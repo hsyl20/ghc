@@ -58,8 +58,8 @@ import Reg
 import NCGMonad
 
 
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm
 import GHC.Data.CLabel           ( CLabel, ForeignLabelSource(..), pprCLabel,
                           mkDynamicLinkerLabel, DynamicLinkerLabelInfo(..),
                           dynamicLinkerLabelInfo, mkPicBaseLabel,

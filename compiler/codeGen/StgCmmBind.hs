@@ -30,13 +30,13 @@ import StgCmmUtils
 import StgCmmClosure
 import StgCmmForeign    (emitPrimCall)
 
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 import GHC.Core.Syntax          ( AltCon(..), tickishIsCode )
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import GHC.RTS.Storage
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.RTS.InfoTable
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 import GHC.IR.Stg.Syntax
 import CostCentre

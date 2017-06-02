@@ -40,11 +40,11 @@ import Format
 import NCGMonad
 
 -- Our intermediate code:
-import GHC.Cmm.BlockId
-import GHC.Cmm
-import GHC.Cmm.Utils
-import GHC.Cmm.Switch
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Switch
+import GHC.IR.Cmm.Transform.Dataflow
 import PIC
 import Reg
 import GHC.Data.CLabel

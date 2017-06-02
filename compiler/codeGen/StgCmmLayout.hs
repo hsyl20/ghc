@@ -35,11 +35,11 @@ import StgCmmMonad
 import StgCmmUtils
 import StgCmmProf (curCCS)
 
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 import GHC.RTS.Storage
-import GHC.Cmm.BlockId
-import GHC.Cmm
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
 import GHC.RTS.InfoTable
 import GHC.Data.CLabel
 import GHC.IR.Stg.Syntax

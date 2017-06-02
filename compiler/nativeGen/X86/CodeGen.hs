@@ -38,7 +38,7 @@ import X86.Regs
 import X86.RegInfo
 import CodeGen.Platform
 import CPrim
-import GHC.Cmm.DebugBlock           ( DebugBlock(..), UnwindPoint(..), UnwindTable
+import GHC.IR.Cmm.DebugBlock           ( DebugBlock(..), UnwindPoint(..), UnwindTable
                         , UnwindExpr(UwReg), toUnwindExpr )
 import Instruction
 import PIC
@@ -49,13 +49,13 @@ import GHC.Platform
 
 -- Our intermediate code:
 import GHC.Data.BasicTypes
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import GHC.Data.Module           ( primUnitId )
-import GHC.Cmm.PrettyPrint           ()
-import GHC.Cmm.Utils
-import GHC.Cmm.Switch
-import GHC.Cmm
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.PrettyPrint           ()
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Switch
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.CLabel
 import GHC.Core.Syntax          ( Tickish(..) )
 import GHC.Data.SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )

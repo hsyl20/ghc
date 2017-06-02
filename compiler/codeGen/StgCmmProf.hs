@@ -32,9 +32,9 @@ import StgCmmUtils
 import StgCmmMonad
 import GHC.RTS.Storage
 
-import GHC.Cmm.Graph
-import GHC.Cmm
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.Graph
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 
 import qualified GHC.Data.Module as Module

@@ -32,8 +32,8 @@ import GHC.Data.Coercion
 import TcEnv
 import TcType
 
-import GHC.Cmm.Expr
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.Expr
+import GHC.IR.Cmm.Utils
 import GHC.Types
 import ForeignCall
 import TysWiredIn

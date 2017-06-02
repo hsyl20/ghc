@@ -23,8 +23,8 @@ import StgCmmClosure
 import StgCmmHpc
 import StgCmmTicky
 
-import GHC.Cmm
-import GHC.Cmm.Utils
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 
 import GHC.IR.Stg.Syntax
@@ -44,7 +44,7 @@ import GHC.Data.Stream
 import GHC.Data.BasicTypes
 
 import GHC.Data.Tree.OrdList
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 
 import qualified Data.ByteString as BS
 import Data.IORef

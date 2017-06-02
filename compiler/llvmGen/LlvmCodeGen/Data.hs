@@ -12,9 +12,9 @@ module LlvmCodeGen.Data (
 import Llvm
 import LlvmCodeGen.Base
 
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.Config.Flags
 import GHC.Platform
 

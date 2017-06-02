@@ -10,11 +10,11 @@ module StgCmmHpc ( initHpc, mkTickBox ) where
 
 import StgCmmMonad
 
-import GHC.Cmm.Graph
-import GHC.Cmm.Expr
+import GHC.IR.Cmm.Graph
+import GHC.IR.Cmm.Expr
 import GHC.Data.CLabel
 import GHC.Data.Module
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.Utils
 import StgCmmUtils
 import GHC.Types
 import GHC.Config.Flags

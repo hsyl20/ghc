@@ -26,11 +26,11 @@ import qualified X86.Instr
 import HscMain
 import CgUtils
 import AsmCodeGen
-import GHC.Cmm.BuildInfoTables
-import GHC.Cmm.Pipeline
-import GHC.Cmm.Parser
+import GHC.IR.Cmm.BuildInfoTables
+import GHC.IR.Cmm.Pipeline
+import GHC.IR.Cmm.Parser
 import GHC.RTS.InfoTable
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.Data.Module
 import Debug
 import GHC

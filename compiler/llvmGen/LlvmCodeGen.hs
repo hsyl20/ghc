@@ -15,12 +15,12 @@ import LlvmCodeGen.Ppr
 import LlvmCodeGen.Regs
 import LlvmMangler
 
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import CgUtils ( fixStgRegisters )
-import GHC.Cmm
-import GHC.Cmm.Utils
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm.PrettyPrint
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.PrettyPrint
 
 import GHC.Utils.Handle.BufferedWrite
 import GHC.Config.Flags

@@ -36,10 +36,10 @@ import Reg
 import Format
 import PprBase
 
-import GHC.Cmm hiding (topInfoTable)
-import GHC.Cmm.PrettyPrint()
+import GHC.IR.Cmm hiding (topInfoTable)
+import GHC.IR.Cmm.PrettyPrint()
 import GHC.Data.CLabel
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Transform.Dataflow
 
 import GHC.Data.Unique           ( Uniquable(..), pprUniqueAlways )
 import GHC.Utils.Outputable

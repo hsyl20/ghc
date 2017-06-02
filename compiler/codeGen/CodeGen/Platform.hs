@@ -3,7 +3,7 @@ module CodeGen.Platform
        (callerSaves, activeStgRegs, haveRegBase, globalRegMaybe, freeReg)
        where
 
-import GHC.Cmm.Expr
+import GHC.IR.Cmm.Expr
 import GHC.Platform
 import Reg
 

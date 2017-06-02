@@ -112,9 +112,9 @@ import StgCmmUtils
 import StgCmmMonad
 
 import GHC.IR.Stg.Syntax
-import GHC.Cmm.Expr
-import GHC.Cmm.Graph
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.Expr
+import GHC.IR.Cmm.Graph
+import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 import GHC.RTS.Storage
 

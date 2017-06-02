@@ -16,8 +16,8 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
 import GHC.Utils.Outputable

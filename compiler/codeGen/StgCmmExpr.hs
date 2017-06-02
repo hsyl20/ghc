@@ -29,9 +29,9 @@ import StgCmmClosure
 
 import GHC.IR.Stg.Syntax
 
-import GHC.Cmm.Graph
-import GHC.Cmm.BlockId
-import GHC.Cmm
+import GHC.IR.Cmm.Graph
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm
 import GHC.RTS.InfoTable
 import GHC.Core.Syntax
 import GHC.Data.DataConstructor

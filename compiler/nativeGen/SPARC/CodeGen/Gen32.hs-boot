@@ -10,7 +10,7 @@ import SPARC.CodeGen.Base
 import NCGMonad
 import Reg
 
-import GHC.Cmm
+import GHC.IR.Cmm
 
 getSomeReg  :: CmmExpr -> NatM (Reg, InstrBlock)
 getRegister :: CmmExpr -> NatM Register

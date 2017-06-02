@@ -20,8 +20,8 @@ import Reg
 
 import GHC.Data.Graph.Base
 
-import GHC.Cmm.Transform.Dataflow (mapLookup)
-import GHC.Cmm
+import GHC.IR.Cmm.Transform.Dataflow (mapLookup)
+import GHC.IR.Cmm
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Data.Graph.Directed          (flattenSCCs)

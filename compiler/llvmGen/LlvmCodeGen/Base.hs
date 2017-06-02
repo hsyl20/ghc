@@ -44,7 +44,7 @@ import GHC.Data.CLabel
 import CodeGen.Platform ( activeStgRegs )
 import GHC.Config.Flags
 import GHC.Data.FastString
-import GHC.Cmm              hiding ( succ )
+import GHC.IR.Cmm              hiding ( succ )
 import GHC.Utils.Outputable as Outp
 import GHC.Platform
 import GHC.Data.Unique.FiniteMap

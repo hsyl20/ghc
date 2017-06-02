@@ -16,10 +16,10 @@ where
 
 import Reg
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Config.Flags
-import GHC.Cmm hiding (topInfoTable)
+import GHC.IR.Cmm hiding (topInfoTable)
 import GHC.Platform
 
 -- | Holds a list of source and destination registers used by a

@@ -106,7 +106,7 @@ Note [Strictness when building Bitmaps]
 ========================================
 
 One of the places where @Bitmap@ is used is in in building Static Reference
-Tables (SRTs) (in @GHC.Cmm.BuildInfoTables.procpointSRT@). In #7450 it was noticed
+Tables (SRTs) (in @GHC.IR.Cmm.BuildInfoTables.procpointSRT@). In #7450 it was noticed
 that some test cases (particularly those whose C-- have large numbers of CAFs)
 produced large quantities of allocations from this function.
 

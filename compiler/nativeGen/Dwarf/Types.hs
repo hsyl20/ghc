@@ -22,9 +22,9 @@ module Dwarf.Types
   )
   where
 
-import GHC.Cmm.DebugBlock
+import GHC.IR.Cmm.DebugBlock
 import GHC.Data.CLabel
-import GHC.Cmm.Expr         ( GlobalReg(..) )
+import GHC.IR.Cmm.Expr         ( GlobalReg(..) )
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import GHC.Utils.Outputable

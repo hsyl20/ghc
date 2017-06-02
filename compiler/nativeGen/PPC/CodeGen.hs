@@ -40,13 +40,13 @@ import TargetReg
 import GHC.Platform
 
 -- Our intermediate code:
-import GHC.Cmm.BlockId
-import GHC.Cmm.PrettyPrint           ( pprExpr )
-import GHC.Cmm
-import GHC.Cmm.Utils
-import GHC.Cmm.Switch
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.PrettyPrint           ( pprExpr )
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Switch
 import GHC.Data.CLabel
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Transform.Dataflow
 
 -- The rest:
 import GHC.Data.Tree.OrdList

@@ -30,10 +30,10 @@ import StgCmmUtils
 import StgCmmClosure
 import StgCmmLayout
 
-import GHC.Cmm.BlockId (newBlockId)
-import GHC.Cmm
-import GHC.Cmm.Utils
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.BlockId (newBlockId)
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Graph
 import GHC.Data.Type
 import GHC.Data.RepType
 import TysPrim

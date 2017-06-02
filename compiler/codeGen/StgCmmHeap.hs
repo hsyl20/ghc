@@ -34,13 +34,13 @@ import StgCmmTicky
 import StgCmmClosure
 import StgCmmEnv
 
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.RTS.Storage
-import GHC.Cmm.BlockId
-import GHC.Cmm
-import GHC.Cmm.Utils
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
 import CostCentre
 import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )
 import GHC.Data.Id ( Id )

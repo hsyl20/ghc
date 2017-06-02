@@ -32,10 +32,10 @@ import RegClass
 import Reg
 
 import CodeGen.Platform
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Config.Flags
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.RTS.InfoTable
 import GHC.Data.FastString
 import GHC.Data.CLabel

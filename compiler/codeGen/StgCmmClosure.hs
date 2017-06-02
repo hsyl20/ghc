@@ -68,10 +68,10 @@ module StgCmmClosure (
 
 import GHC.IR.Stg.Syntax
 import GHC.RTS.Storage
-import GHC.Cmm
-import GHC.Cmm.PrettyPrint.Expression()
+import GHC.IR.Cmm
+import GHC.IR.Cmm.PrettyPrint.Expression()
 
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.Data.Id
 import GHC.Data.Id.Info

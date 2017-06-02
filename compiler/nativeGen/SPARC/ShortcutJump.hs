@@ -12,8 +12,8 @@ import SPARC.Instr
 import SPARC.Imm
 
 import GHC.Data.CLabel
-import GHC.Cmm.BlockId
-import GHC.Cmm
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm
 
 import GHC.Utils.Panic
 import GHC.Data.Unique

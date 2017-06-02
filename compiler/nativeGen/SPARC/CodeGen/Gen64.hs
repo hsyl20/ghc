@@ -20,7 +20,7 @@ import Instruction
 import Format
 import Reg
 
-import GHC.Cmm
+import GHC.IR.Cmm
 
 import GHC.Config.Flags
 import GHC.Data.Tree.OrdList

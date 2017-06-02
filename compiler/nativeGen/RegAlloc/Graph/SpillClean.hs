@@ -32,9 +32,9 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique

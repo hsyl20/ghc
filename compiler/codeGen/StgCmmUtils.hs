@@ -45,13 +45,13 @@ module StgCmmUtils (
 
 import StgCmmMonad
 import StgCmmClosure
-import GHC.Cmm
-import GHC.Cmm.BlockId
-import GHC.Cmm.Graph as MkGraph
+import GHC.IR.Cmm
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Graph as MkGraph
 import CodeGen.Platform
 import GHC.Data.CLabel
-import GHC.Cmm.Utils
-import GHC.Cmm.Switch
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Switch
 
 import ForeignCall
 import GHC.Data.Id.Info

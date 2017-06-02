@@ -38,10 +38,10 @@ module RegAlloc.Liveness (
 import Reg
 import Instruction
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm hiding (RegSet, emptyRegSet)
-import GHC.Cmm.PrettyPrint()
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm hiding (RegSet, emptyRegSet)
+import GHC.IR.Cmm.PrettyPrint()
 
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags

@@ -161,7 +161,7 @@ Library
         GHC.Data.DataConstructor
         GHC.Data.PatternSynonym
         GHC.Data.Demand
-        GHC.Cmm.DebugBlock
+        GHC.IR.Cmm.DebugBlock
         GHC.Utils.Exception
         GHC.Data.FieldLabel
         GHC.Monad
@@ -197,38 +197,38 @@ Library
         GHC.Data.Var.Environment
         GHC.Data.Var.Set
         GHC.Data.Var.UndirectedGraph
-        GHC.Cmm.BlockId
+        GHC.IR.Cmm.BlockId
         GHC.Data.CLabel
-        GHC.Cmm
-        GHC.Cmm.BuildInfoTables
-        GHC.Cmm.Pipeline
-        GHC.Cmm.CallConvention
-        GHC.Cmm.Transform.CommonBlockElim
-        GHC.Cmm.Switch.Implement
-        GHC.Cmm.Transform.Shortcutting
-        GHC.Cmm.Expr
+        GHC.IR.Cmm
+        GHC.IR.Cmm.BuildInfoTables
+        GHC.IR.Cmm.Pipeline
+        GHC.IR.Cmm.CallConvention
+        GHC.IR.Cmm.Transform.CommonBlockElim
+        GHC.IR.Cmm.Switch.Implement
+        GHC.IR.Cmm.Transform.Shortcutting
+        GHC.IR.Cmm.Expr
         GHC.RTS.InfoTable
-        GHC.Cmm.Lexer
-        GHC.Cmm.Analyse.Lint
-        GHC.Cmm.Analyse.Liveness
-        GHC.Cmm.MachinePrimOps
-        GHC.Cmm.Parser.Monad
-        GHC.Cmm.Switch
-        GHC.Cmm.Node
-        GHC.Cmm.Transform.ConstantFolding
-        GHC.Cmm.Parser
-        GHC.Cmm.ProcPoint
-        GHC.Cmm.Transform.Sinking
-        GHC.Cmm.Type
-        GHC.Cmm.Utils
-        GHC.Cmm.LayoutStack
+        GHC.IR.Cmm.Lexer
+        GHC.IR.Cmm.Analyse.Lint
+        GHC.IR.Cmm.Analyse.Liveness
+        GHC.IR.Cmm.MachinePrimOps
+        GHC.IR.Cmm.Parser.Monad
+        GHC.IR.Cmm.Switch
+        GHC.IR.Cmm.Node
+        GHC.IR.Cmm.Transform.ConstantFolding
+        GHC.IR.Cmm.Parser
+        GHC.IR.Cmm.ProcPoint
+        GHC.IR.Cmm.Transform.Sinking
+        GHC.IR.Cmm.Type
+        GHC.IR.Cmm.Utils
+        GHC.IR.Cmm.LayoutStack
         GHC.Data.EnumSet
-        GHC.Cmm.Graph
+        GHC.IR.Cmm.Graph
         PprBase
-        GHC.Cmm.PrettyPrint.C
-        GHC.Cmm.PrettyPrint
-        GHC.Cmm.PrettyPrint.Declaration
-        GHC.Cmm.PrettyPrint.Expression
+        GHC.IR.Cmm.PrettyPrint.C
+        GHC.IR.Cmm.PrettyPrint
+        GHC.IR.Cmm.PrettyPrint.Declaration
+        GHC.IR.Cmm.PrettyPrint.Expression
         GHC.Utils.Bitmap
         CodeGen.Platform
         CodeGen.Platform.ARM
@@ -530,8 +530,8 @@ Library
         GHC.Core.Transform.Vectorise.Env
         GHC.Core.Transform.Vectorise.Exp
         GHC.Core.Transform.Vectorise
-        GHC.Cmm.Transform.Dataflow.Hoopl
-        GHC.Cmm.Transform.Dataflow
+        GHC.IR.Cmm.Transform.Dataflow.Hoopl
+        GHC.IR.Cmm.Transform.Dataflow
 --        CgInfoTbls used in ghci/DebuggerUtils
 --        CgHeapery  mkVirtHeapOffsets used in ghci
 

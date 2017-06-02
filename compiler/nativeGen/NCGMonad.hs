@@ -41,10 +41,10 @@ import Reg
 import Format
 import TargetReg
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.CLabel           ( CLabel, mkAsmTempLabel )
-import GHC.Cmm.DebugBlock
+import GHC.IR.Cmm.DebugBlock
 import GHC.Data.FastString       ( FastString )
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply

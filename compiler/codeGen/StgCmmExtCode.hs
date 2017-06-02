@@ -39,11 +39,11 @@ where
 import qualified StgCmmMonad as F
 import StgCmmMonad (FCode, newUnique)
 
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.Data.CLabel
-import GHC.Cmm.Graph
+import GHC.IR.Cmm.Graph
 
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Module

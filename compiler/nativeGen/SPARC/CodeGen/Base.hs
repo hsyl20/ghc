@@ -22,8 +22,8 @@ import Reg
 
 import CodeGen.Platform
 import GHC.Config.Flags
-import GHC.Cmm
-import GHC.Cmm.PrettyPrint.Expression ()
+import GHC.IR.Cmm
+import GHC.IR.Cmm.PrettyPrint.Expression ()
 import GHC.Platform
 
 import GHC.Utils.Outputable

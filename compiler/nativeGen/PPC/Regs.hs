@@ -54,7 +54,7 @@ import Reg
 import RegClass
 import Format
 
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.Data.CLabel           ( CLabel )
 import GHC.Data.Unique
 

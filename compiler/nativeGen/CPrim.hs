@@ -11,8 +11,8 @@ module CPrim
     , word2FloatLabel
     ) where
 
-import GHC.Cmm.Type
-import GHC.Cmm.MachinePrimOps
+import GHC.IR.Cmm.Type
+import GHC.IR.Cmm.MachinePrimOps
 import GHC.Utils.Outputable
 
 popCntLabel :: Width -> String

@@ -13,9 +13,9 @@ module CgUtils ( fixStgRegisters ) where
 #include "HsVersions.h"
 
 import CodeGen.Platform
-import GHC.Cmm
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm.Utils
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 import GHC.Config.Flags
 import GHC.Utils.Outputable

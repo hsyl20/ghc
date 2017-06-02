@@ -22,8 +22,8 @@ where
 
 import PPC.Instr
 
-import GHC.Cmm.BlockId
-import GHC.Cmm
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm
 import GHC.Data.CLabel
 
 import GHC.Data.Unique

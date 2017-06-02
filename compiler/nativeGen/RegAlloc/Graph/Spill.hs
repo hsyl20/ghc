@@ -10,9 +10,9 @@ module RegAlloc.Graph.Spill (
 import RegAlloc.Liveness
 import Instruction
 import Reg
-import GHC.Cmm hiding (RegSet)
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm hiding (RegSet)
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
 
 import GHC.Utils.Monad
 import GHC.Utils.Monad.State

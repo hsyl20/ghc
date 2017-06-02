@@ -32,7 +32,7 @@ module PrimOp (
 import TysPrim
 import TysWiredIn
 
-import GHC.Cmm.Type
+import GHC.IR.Cmm.Type
 import GHC.Data.Demand
 import GHC.Data.OccName          ( OccName, pprOccName, mkVarOccFS )
 import GHC.Data.Type.Constructor            ( TyCon, isPrimTyCon, PrimRep(..) )

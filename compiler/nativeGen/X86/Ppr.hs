@@ -32,10 +32,10 @@ import Reg
 import PprBase
 
 
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.BasicTypes       (Alignment)
 import GHC.Config.Flags
-import GHC.Cmm              hiding (topInfoTable)
+import GHC.IR.Cmm              hiding (topInfoTable)
 import GHC.Data.CLabel
 import GHC.Data.Unique           ( pprUniqueAlways, Uniquable(..) )
 import GHC.Platform

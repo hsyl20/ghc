@@ -26,7 +26,7 @@ import RegClass
 import Reg
 import TargetReg
 
-import GHC.Cmm.PrettyPrint()
+import GHC.IR.Cmm.PrettyPrint()
 import GHC.Utils.Outputable
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set

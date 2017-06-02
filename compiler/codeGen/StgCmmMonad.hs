@@ -61,13 +61,13 @@ module StgCmmMonad (
 
 #include "HsVersions.h"
 
-import GHC.Cmm
+import GHC.IR.Cmm
 import StgCmmClosure
 import GHC.Config.Flags
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.Maybe
-import GHC.Cmm.Graph as MkGraph
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.Graph as MkGraph
+import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.RTS.Storage
 import GHC.Data.Module

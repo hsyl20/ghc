@@ -59,15 +59,15 @@ import PIC
 import Reg
 import NCGMonad
 import Dwarf
-import GHC.Cmm.DebugBlock
+import GHC.IR.Cmm.DebugBlock
 
-import GHC.Cmm.BlockId
+import GHC.IR.Cmm.BlockId
 import CgUtils          ( fixStgRegisters )
-import GHC.Cmm
-import GHC.Cmm.Utils
-import GHC.Cmm.Transform.Dataflow
-import GHC.Cmm.Transform.ConstantFolding           ( cmmMachOpFold )
-import GHC.Cmm.PrettyPrint
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Utils
+import GHC.IR.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.Transform.ConstantFolding           ( cmmMachOpFold )
+import GHC.IR.Cmm.PrettyPrint
 import GHC.Data.CLabel
 
 import GHC.Data.Unique.FiniteMap

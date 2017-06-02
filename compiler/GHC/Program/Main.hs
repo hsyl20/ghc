@@ -125,10 +125,10 @@ import ProfInit
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.IR.Stg.Transform.Pipeline         ( stg2stg )
-import GHC.Cmm
-import GHC.Cmm.Parser         ( parseCmmFile )
-import GHC.Cmm.BuildInfoTables
-import GHC.Cmm.Pipeline
+import GHC.IR.Cmm
+import GHC.IR.Cmm.Parser         ( parseCmmFile )
+import GHC.IR.Cmm.BuildInfoTables
+import GHC.IR.Cmm.Pipeline
 import GHC.RTS.InfoTable
 import GHC.CodeGen.CodeOutput
 import GHC.TypeSystem.ClassInstance

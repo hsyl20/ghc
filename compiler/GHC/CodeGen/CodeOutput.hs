@@ -16,10 +16,10 @@ import LlvmCodeGen ( llvmCodeGen )
 import GHC.Data.Unique.Supply       ( mkSplitUniqSupply )
 
 import GHC.Finder           ( mkStubPaths )
-import GHC.Cmm.PrettyPrint.C ( writeCs )
-import GHC.Cmm.Analyse.Lint          ( cmmLint )
+import GHC.IR.Cmm.PrettyPrint.C ( writeCs )
+import GHC.IR.Cmm.Analyse.Lint          ( cmmLint )
 import GHC.Packages
-import GHC.Cmm              ( RawCmmGroup )
+import GHC.IR.Cmm              ( RawCmmGroup )
 import GHC.Types
 import GHC.Config.Flags
 import Config

@@ -25,10 +25,10 @@ import RegClass
 import Reg
 import TargetReg
 
-import GHC.Cmm.BlockId
-import GHC.Cmm.Transform.Dataflow
+import GHC.IR.Cmm.BlockId
+import GHC.IR.Cmm.Transform.Dataflow
 import CodeGen.Platform
-import GHC.Cmm
+import GHC.IR.Cmm
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform
@@ -39,7 +39,7 @@ import GHC.Config.Flags
 import GHC.Data.Unique.Set
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
-import GHC.Cmm.DebugBlock(UnwindTable)
+import GHC.IR.Cmm.DebugBlock(UnwindTable)
 
 import Control.Monad
 import Data.Maybe       (fromMaybe)
