@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[RnSource]{Main pass of renamer}
+\section[GHC.Rename.Main]{Main pass of renamer}
 -}
 
 {-# LANGUAGE ScopedTypeVariables #-}
@@ -68,7 +68,7 @@ import Control.Monad    ( unless, when )
 #include "HsVersions.h"
 
 {-
-These type renamers are in a separate module, rather than in (say) RnSource,
+These type renamers are in a separate module, rather than in (say) GHC.Rename.Main,
 to break several loop.
 
 *********************************************************
@@ -1099,7 +1099,7 @@ argument, build a map and look them up.
 
 rnConDeclFields :: HsDocContext -> [FieldLabel] -> [LConDeclField RdrName]
                 -> RnM ([LConDeclField Name], FreeVars)
--- Also called from RnSource
+-- Also called from GHC.Rename.Main
 -- No wildcards can appear in record fields
 rnConDeclFields ctxt fls fields
    = mapFvRn (rnField fl_env env) fields

@@ -1,12 +1,12 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[RnSource]{Main pass of renamer}
+\section[GHC.Rename.Main]{Main pass of renamer}
 -}
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module RnSource (
+module GHC.Rename.Main (
         rnSrcDecls, addTcgDUs, findSplice
     ) where
 
@@ -1132,19 +1132,19 @@ rnHsVectDecl (HsVectTypeIn s isScalar tycon (Just rhs_tycon))
                 , mkFVs [unLoc tycon', unLoc rhs_tycon'])
        }
 rnHsVectDecl (HsVectTypeOut _ _ _)
-  = panic "RnSource.rnHsVectDecl: Unexpected 'HsVectTypeOut'"
+  = panic "GHC.Rename.Main.rnHsVectDecl: Unexpected 'HsVectTypeOut'"
 rnHsVectDecl (HsVectClassIn s cls)
   = do { cls' <- lookupLocatedOccRn cls
        ; return (HsVectClassIn s cls', unitFV (unLoc cls'))
        }
 rnHsVectDecl (HsVectClassOut _)
-  = panic "RnSource.rnHsVectDecl: Unexpected 'HsVectClassOut'"
+  = panic "GHC.Rename.Main.rnHsVectDecl: Unexpected 'HsVectClassOut'"
 rnHsVectDecl (HsVectInstIn instTy)
   = do { (instTy', fvs) <- rnLHsInstType (text "a VECTORISE pragma") instTy
        ; return (HsVectInstIn instTy', fvs)
        }
 rnHsVectDecl (HsVectInstOut _)
-  = panic "RnSource.rnHsVectDecl: Unexpected 'HsVectInstOut'"
+  = panic "GHC.Rename.Main.rnHsVectDecl: Unexpected 'HsVectInstOut'"
 
 {- **************************************************************
          *                                                      *

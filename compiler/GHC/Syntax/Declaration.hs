@@ -758,7 +758,7 @@ Invariants
    ones.
 
 See Note [Dependency analsis of type, class, and instance decls]
-in RnSource for more info.
+in GHC.Rename.Main for more info.
 -}
 
 -- | Type or Class Group

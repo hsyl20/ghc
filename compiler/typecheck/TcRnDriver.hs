@@ -96,7 +96,7 @@ import TcBackpack
 import LoadIface
 import GHC.Rename.ImportExport
 import GHC.Rename.Environment
-import RnSource
+import GHC.Rename.Main
 import GHC.Utils.Error
 import GHC.Data.Id as Id
 import GHC.Data.Var.Environment
@@ -573,7 +573,7 @@ tcRnHsBootDecls hsc_src decls
                             , hs_valds  = ValBindsOut val_binds val_sigs })
               <- rnTopSrcDecls first_group
         -- The empty list is for extra dependencies coming from .hs-boot files
-        -- See Note [Extra dependencies from .hs-boot files] in RnSource
+        -- See Note [Extra dependencies from .hs-boot files] in GHC.Rename.Main
         ; (gbl_env, lie) <- captureTopConstraints $ setGblEnv tcg_env $ do {
 
 

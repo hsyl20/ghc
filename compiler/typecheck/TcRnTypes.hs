@@ -746,7 +746,7 @@ data SelfBootInfo
        { sb_mds :: ModDetails   -- There was a hi-boot file,
        , sb_tcs :: NameSet }    -- defining these TyCons,
 -- What is sb_tcs used for?  See Note [Extra dependencies from .hs-boot files]
--- in RnSource
+-- in GHC.Rename.Main
 
 
 {- Note [Tracking unused binding and imports]

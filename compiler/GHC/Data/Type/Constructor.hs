@@ -367,7 +367,7 @@ must be True.
 
 See also:
  * [Injectivity annotation] in GHC.Syntax.Declaration
- * [Renaming injectivity annotation] in RnSource
+ * [Renaming injectivity annotation] in GHC.Rename.Main
  * [Verifying injectivity annotation] in FamInstEnv
  * [Type inference for type families with injectivity] in TcInteract
 
