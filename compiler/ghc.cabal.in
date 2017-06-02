@@ -531,7 +531,7 @@ Library
         GHC.IR.Cmm.Transform.Dataflow
 
     Exposed-Modules:
-            AsmCodeGen
+            GHC.Compilers.CmmToAsm
             TargetReg
             NCGMonad
             Instruction

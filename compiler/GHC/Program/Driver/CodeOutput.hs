@@ -10,7 +10,7 @@ module GHC.Program.Driver.CodeOutput( codeOutput, outputForeignStubs ) where
 
 #include "HsVersions.h"
 
-import AsmCodeGen ( nativeCodeGen )
+import GHC.Compilers.CmmToAsm ( nativeCodeGen )
 import LlvmCodeGen ( llvmCodeGen )
 
 import GHC.Data.Unique.Supply       ( mkSplitUniqSupply )

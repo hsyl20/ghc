@@ -8,7 +8,7 @@
 
 {-# LANGUAGE BangPatterns, CPP, GADTs, ScopedTypeVariables, UnboxedTuples #-}
 
-module AsmCodeGen (
+module GHC.Compilers.CmmToAsm (
                     -- * Module entry point
                     nativeCodeGen
 
@@ -102,7 +102,7 @@ import System.IO
 The native-code generator has machine-independent and
 machine-dependent modules.
 
-This module ("AsmCodeGen") is the top-level machine-independent
+This module ("GHC.Compilers.CmmToAsm") is the top-level machine-independent
 module.  Before entering machine-dependent land, we do some
 machine-independent optimisations (defined below) on the
 'CmmStmts's.

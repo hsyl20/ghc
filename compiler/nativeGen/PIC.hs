@@ -22,7 +22,7 @@
       because Win32 doesn't support external references in data sections.
       TODO: make sure this still works, it might be bitrotted
   + NCG
-    - The cmmToCmm pass in AsmCodeGen calls cmmMakeDynamicReference for all
+    - The cmmToCmm pass in GHC.Compilers.CmmToAsm calls cmmMakeDynamicReference for all
       labels.
     - nativeCodeGen calls pprImportedSymbol and pprGotDeclaration to output
       all the necessary stuff for imported symbols.

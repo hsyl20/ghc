@@ -1694,10 +1694,9 @@ mkNoteObjsToLinkIntoBinary dflags dep_packages = do
       -- "link info" section (see Note [LinkInfo section])
       makeElfNote dflags ghcLinkInfoSectionName ghcLinkInfoNoteName 0 info,
 
-      -- ALL generated assembly must have this section to disable
-      -- executable stacks.  See also
-      -- compiler/nativeGen/AsmCodeGen.hs for another instance
-      -- where we need to do this.
+      -- ALL generated assembly must have this section to disable executable
+      -- stacks.  See also GHC.Compilers.CmmToAsm for another instance where we
+      -- need to do this.
       if platformHasGnuNonexecStack (targetPlatform dflags)
         then text ".section .note.GNU-stack,\"\",@progbits\n"
         else Outputable.empty

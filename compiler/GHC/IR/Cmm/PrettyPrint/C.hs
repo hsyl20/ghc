@@ -131,8 +131,8 @@ pprTop (CmmData section (Statics lbl lits)) =
 -- --------------------------------------------------------------------------
 -- BasicBlocks are self-contained entities: they always end in a jump.
 --
--- Like nativeGen/AsmCodeGen, we could probably reorder blocks to turn
--- as many jumps as possible into fall throughs.
+-- Like GHC.Compilers.CmmToAsm, we could probably reorder blocks to turn as many
+-- jumps as possible into fall throughs.
 --
 
 pprBBlock :: CmmBlock -> SDoc

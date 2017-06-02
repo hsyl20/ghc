@@ -25,7 +25,7 @@ import qualified RegAlloc.Linear.Base as Linear
 import qualified X86.Instr
 import HscMain
 import GHC.IR.Stg.Register
-import AsmCodeGen
+import GHC.Compilers.CmmToAsm
 import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Pipeline
 import GHC.IR.Cmm.Parser
@@ -131,7 +131,7 @@ compileCmmForRegAllocStats dflags' cmmFile ncgImplF us = do
     where
           --the register allocator's intermediate data
           --structures are usually discarded
-          --(in AsmCodeGen.cmmNativeGen) for performance
+          --(in GHC.Compilers.CmmToAsm.cmmNativeGen) for performance
           --reasons.  To prevent this we need to tell
           --cmmNativeGen we want them printed out even
           --though we ignore stderr in the test configuration.
