@@ -1,5 +1,5 @@
 -- | An architecture independent description of a register's class.
-module RegClass
+module GHC.Compilers.CmmToAsm.Register.Class
         ( RegClass (..) )
 
 where

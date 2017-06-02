@@ -1,6 +1,6 @@
 -- Character classification
 {-# LANGUAGE CPP #-}
-module Ctype
+module GHC.Utils.CharType
         ( is_ident      -- Char# -> Bool
         , is_symbol     -- Char# -> Bool
         , is_any        -- Char# -> Bool

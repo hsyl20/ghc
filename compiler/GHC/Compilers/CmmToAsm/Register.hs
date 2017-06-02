@@ -3,7 +3,7 @@
 --      by GHC.Compilers.CmmToAsm.Monad and the register allocators, which are shared
 --      by all architectures.
 --
-module Reg (
+module GHC.Compilers.CmmToAsm.Register (
         RegNo,
         Reg(..),
         regPair,

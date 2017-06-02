@@ -4,7 +4,7 @@
 
 module Main where
 
-import GHC.IR.Haskell.Parser
+import Parser
 import Syntax
 
 import Data.Char

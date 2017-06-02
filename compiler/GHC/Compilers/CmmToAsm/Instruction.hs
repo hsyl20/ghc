@@ -1,5 +1,5 @@
 
-module Instruction (
+module GHC.Compilers.CmmToAsm.Instruction (
         RegUsage(..),
         noUsage,
         GenBasicBlock(..), blockId,

@@ -104,7 +104,7 @@ import GHC.IR.Haskell.PrettyPrint.Dump
 import GHC.IR.Core.Syntax
 import GHC.Data.StringBuffer
 import GHC.IR.Haskell.Parser
-import GHC.IR.Haskell.Lexer
+import GHC.IR.Haskell.Lexer as Lexer
 import GHC.Data.SrcLoc
 import TcRnDriver
 import TcIface          ( typecheckIface )
@@ -118,7 +118,7 @@ import GHC.IR.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Compilers.CoreToStg.Prepare
 import GHC.Compilers.CoreToStg ( coreToStg )
-import qualified GHC.Compilers.StgToCmm as StgCmm
+import qualified GHC.Compilers.StgToCmm as StgToCmm
 import GHC.IR.Stg.Syntax
 import CostCentre
 import ProfInit
@@ -1386,7 +1386,7 @@ doCodeGen hsc_env this_mod data_tycons
 
     let cmm_stream :: Stream IO CmmGroup ()
         cmm_stream = {-# SCC "StgCmm" #-}
-            StgCmm.codeGen dflags this_mod data_tycons
+            StgToCmm.codeGen dflags this_mod data_tycons
                            cost_centre_info stg_binds hpc_info
 
         -- codegen consumes a stream of CmmGroup, and produces a new

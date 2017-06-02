@@ -329,7 +329,7 @@ import GHC.Utils.Outputable
 import GHC.Data.BasicTypes
 import GHC.Data.Maybe           ( expectJust )
 import GHC.Data.FastString
-import qualified Parser
+import qualified GHC.IR.Haskell.Parser as Parser
 import GHC.IR.Haskell.Lexer
 import GHC.IR.Haskell.Annotation
 import qualified GHC.LanguageExtensions as LangExt

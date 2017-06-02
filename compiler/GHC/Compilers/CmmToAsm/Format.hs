@@ -8,7 +8,7 @@
 --              to have architecture specific formats, and do the overloading
 --              properly. eg SPARC doesn't care about FF80.
 --
-module Format (
+module GHC.Compilers.CmmToAsm.Format (
     Format(..),
     intFormat,
     floatFormat,

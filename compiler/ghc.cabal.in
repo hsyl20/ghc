@@ -344,11 +344,11 @@ Library
         GHC.Utils.SysTools.Terminal
         GHC.Utils.Elf
         GHC.Interface.Tidy
-        Ctype
+        GHC.Utils.CharType
         GHC.IR.Haskell.Parser.Utils
-        Lexer
+        GHC.IR.Haskell.Lexer
         GHC.Data.Coercion.Optimise
-        Parser
+        GHC.IR.Haskell.Parser
         GHC.IR.Haskell.Parser.Syntax
         GHC.IR.Haskell.Annotation
         ForeignCall

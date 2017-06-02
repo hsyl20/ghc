@@ -80,9 +80,8 @@ import GHC.Interactive.ClosureInspect
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Bag
-import qualified Lexer (P (..), ParseResult(..), unP, mkPState)
-import qualified Parser (parseStmt, parseModule, parseDeclaration, parseImport)
-
+import qualified GHC.IR.Haskell.Lexer as Lexer
+import qualified GHC.IR.Haskell.Parser as Parser
 import System.Directory
 import Data.Dynamic
 import Data.Either

@@ -62,7 +62,7 @@ import PrelNames
 import GHC.Data.RdrName ( RdrName, getRdrName )
 import qualified GHC.Data.RdrName as RdrName
 import GHC.Data.SrcLoc
-import qualified Lexer
+import qualified GHC.IR.Haskell.Lexer as Lexer
 
 import GHC.Data.StringBuffer
 import GHC.Utils.Outputable hiding ( printForUser, printForUserPartWay )
