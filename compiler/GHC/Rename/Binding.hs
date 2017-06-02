@@ -31,7 +31,7 @@ import GHC.Syntax
 import TcRnMonad
 import TcEvidence     ( emptyTcEvBinds )
 import RnTypes
-import RnPat
+import GHC.Rename.Pattern
 import RnNames
 import RnEnv
 import RnFixity

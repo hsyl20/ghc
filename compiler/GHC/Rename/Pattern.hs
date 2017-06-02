@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[RnPat]{Renaming of patterns}
+\section[GHC.Rename.Pattern]{Renaming of patterns}
 
 Basically dependency analysis.
 
@@ -12,7 +12,7 @@ free variables.
 
 {-# LANGUAGE CPP, RankNTypes, ScopedTypeVariables #-}
 
-module RnPat (-- main entry points
+module GHC.Rename.Pattern (-- main entry points
               rnPat, rnPats, rnBindPat, rnPatAndThen,
 
               NameMaker, applyNameMaker,     -- a utility for making names:

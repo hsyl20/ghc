@@ -371,7 +371,7 @@ Library
         RnExpr
         RnHsDoc
         RnNames
-        RnPat
+        GHC.Rename.Pattern
         RnSource
         RnSplice
         RnTypes

@@ -21,7 +21,7 @@ import RnEnv
 import RnUtils          ( HsDocContext(..), newLocalBndrRn )
 import RnUnbound        ( isUnboundName )
 import RnSource         ( rnSrcDecls, findSplice )
-import RnPat            ( rnPat )
+import GHC.Rename.Pattern            ( rnPat )
 import GHC.Data.BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
 import GHC.Utils.Outputable
 import GHC.Data.Module
@@ -653,10 +653,10 @@ Note [rnSplicePat]
 Renaming a pattern splice is a bit tricky, because we need the variables
 bound in the pattern to be in scope in the RHS of the pattern. This scope
 management is effectively done by using continuation-passing style in
-RnPat, through the CpsRn monad. We don't wish to be in that monad here
+GHC.Rename.Pattern, through the CpsRn monad. We don't wish to be in that monad here
 (it would create import cycles and generally conflict with renaming other
 splices), so we really want to return a (Pat RdrName) -- the result of
-running the splice -- which can then be further renamed in RnPat, in
+running the splice -- which can then be further renamed in GHC.Rename.Pattern, in
 the CpsRn monad.
 
 The problem is that if we're renaming a splice within a bracket, we
