@@ -40,7 +40,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
-import GHC.Syntax.Parsers.HeaderInfo
+import GHC.IR.Haskell.Parsers.HeaderInfo
 import MkIface
 import GHC.Program.Make
 import GHC.Data.Unique.DeterSet

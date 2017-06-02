@@ -41,7 +41,7 @@ import GHC.Data.CLabel
 import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.BlockId
 import GHC.Config.Flags
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform

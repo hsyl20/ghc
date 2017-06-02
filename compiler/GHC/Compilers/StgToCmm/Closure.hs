@@ -68,7 +68,7 @@ module GHC.Compilers.StgToCmm.Closure (
 
 import GHC.IR.Stg.Syntax
 import GHC.RTS.Storage
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.PrettyPrint.Expression()
 
 import GHC.IR.Cmm.BlockId

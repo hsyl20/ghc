@@ -7,7 +7,7 @@ module GHC.IR.Cmm.Pipeline (
   cmmPipeline
 ) where
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Analyse.Lint
 import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Transform.CommonBlockElim

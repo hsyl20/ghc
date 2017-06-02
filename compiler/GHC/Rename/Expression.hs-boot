@@ -1,5 +1,5 @@
 module GHC.Rename.Expression where
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.Name       ( Name )
 import GHC.Data.Name.Set    ( FreeVars )
 import GHC.Data.RdrName    ( RdrName )

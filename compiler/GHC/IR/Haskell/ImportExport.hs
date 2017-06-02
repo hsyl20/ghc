@@ -8,10 +8,10 @@ Abstract syntax: imports, exports, interfaces
 
 {-# LANGUAGE DeriveDataTypeable #-}
 
-module GHC.Syntax.ImportExport where
+module GHC.IR.Haskell.ImportExport where
 
 import GHC.Data.Module           ( ModuleName )
-import GHC.Syntax.Documentation  ( HsDocString )
+import GHC.IR.Haskell.Documentation  ( HsDocString )
 import GHC.Data.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
 import GHC.Data.BasicTypes       ( SourceText(..), StringLiteral(..), pprWithSourceText )
 import GHC.Data.FieldLabel       ( FieldLbl(..) )

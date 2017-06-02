@@ -2,7 +2,7 @@
 (c) The University of Glasgow 2006
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Syntax.Binding]{Abstract syntax: top-level bindings and signatures}
+\section[GHC.IR.Haskell.Binding]{Abstract syntax: top-level bindings and signatures}
 
 Datatype for: @BindGroup@, @Bind@, @Sig@, @Bind@.
 -}
@@ -15,15 +15,15 @@ Datatype for: @BindGroup@, @Bind@, @Sig@, @Bind@.
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE BangPatterns #-}
 
-module GHC.Syntax.Binding where
+module GHC.IR.Haskell.Binding where
 
-import {-# SOURCE #-} GHC.Syntax.Expression ( pprExpr, LHsExpr,
+import {-# SOURCE #-} GHC.IR.Haskell.Expression ( pprExpr, LHsExpr,
                                MatchGroup, pprFunBind,
                                GRHSs, pprPatBind )
-import {-# SOURCE #-} GHC.Syntax.Pattern  ( LPat )
+import {-# SOURCE #-} GHC.IR.Haskell.Pattern  ( LPat )
 
-import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
-import GHC.Syntax.Type
+import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
+import GHC.IR.Haskell.Type
 import GHC.IR.Core.PrettyPrint ()
 import GHC.IR.Core.Syntax
 import TcEvidence
@@ -534,7 +534,7 @@ plusHsValBinds (ValBindsIn ds1 sigs1) (ValBindsIn ds2 sigs2)
 plusHsValBinds (ValBindsOut ds1 sigs1) (ValBindsOut ds2 sigs2)
   = ValBindsOut (ds1 ++ ds2) (sigs1 ++ sigs2)
 plusHsValBinds _ _
-  = panic "GHC.Syntax.Binding.plusHsValBinds"
+  = panic "GHC.IR.Haskell.Binding.plusHsValBinds"
 
 {-
 What AbsBinds means

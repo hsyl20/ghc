@@ -16,7 +16,7 @@
 --
 -- Definitions for: @SynDecl@ and @ConDecl@, @ClassDecl@,
 -- @InstDecl@, @DefaultDecl@ and @ForeignDecl@.
-module GHC.Syntax.Declaration (
+module GHC.IR.Haskell.Declaration (
   -- * Toplevel declarations
   HsDecl(..), LHsDecl, HsDataDefn(..), HsDeriving,
   HsDerivingClause(..), LHsDerivingClause,
@@ -86,19 +86,19 @@ module GHC.Syntax.Declaration (
     ) where
 
 -- friends:
-import {-# SOURCE #-} GHC.Syntax.Expression ( LHsExpr, HsExpr, HsSplice, pprExpr,
+import {-# SOURCE #-} GHC.IR.Haskell.Expression ( LHsExpr, HsExpr, HsSplice, pprExpr,
                                 pprSpliceDecl )
         -- Because Expr imports Decls via HsBracket
 
-import GHC.Syntax.Binding
-import GHC.Syntax.Type
-import GHC.Syntax.Documentation
+import GHC.IR.Haskell.Binding
+import GHC.IR.Haskell.Type
+import GHC.IR.Haskell.Documentation
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 import GHC.Data.Coercion
 import ForeignCall
-import GHC.Syntax.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
+import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
 import GHC.Data.Name.Set
 
 -- others:
@@ -363,7 +363,7 @@ Default methods
    E.g. $dmmax
 
  - If there is a default method name at all, it's recorded in
-   the ClassOpSig (in GHC.Syntax.Binding), in the DefMethInfo field.
+   the ClassOpSig (in GHC.IR.Haskell.Binding), in the DefMethInfo field.
    (DefMethInfo is defined in Class.hs)
 
 Source-code class decls and interface-code class decls are treated subtly
@@ -1267,7 +1267,7 @@ ppr_con_names = pprWithCommas (pprPrefixOcc . unLoc)
 *                                                                      *
 ************************************************************************
 
-Note [Type family instance declarations in GHC.Syntax]
+Note [Type family instance declarations in GHC.IR.Haskell]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The data type TyFamEqn represents one equation of a type family instance.
 It is parameterised over its tfe_pats field:
@@ -1337,12 +1337,12 @@ type TyFamInstEqn  name = TyFamEqn name (HsTyPats name)
 
 -- | Type Family Default Equation
 type TyFamDefltEqn name = TyFamEqn name (LHsQTyVars name)
-  -- See Note [Type family instance declarations in GHC.Syntax]
+  -- See Note [Type family instance declarations in GHC.IR.Haskell]
 
 -- | Type Family Equation
 --
 -- One equation in a type family instance declaration
--- See Note [Type family instance declarations in GHC.Syntax]
+-- See Note [Type family instance declarations in GHC.IR.Haskell]
 data TyFamEqn name pats
   = TyFamEqn
        { tfe_tycon  :: Located name
@@ -1915,9 +1915,9 @@ lvectDeclName (L _ (HsVectTypeOut  _ tycon _))       = getName tycon
 lvectDeclName (L _ (HsVectClassIn _ (L _ name)))     = getName name
 lvectDeclName (L _ (HsVectClassOut cls))             = getName cls
 lvectDeclName (L _ (HsVectInstIn _))
-  = panic "GHC.Syntax.Declaration.lvectDeclName: HsVectInstIn"
+  = panic "GHC.IR.Haskell.Declaration.lvectDeclName: HsVectInstIn"
 lvectDeclName (L _ (HsVectInstOut  _))
-  = panic "GHC.Syntax.Declaration.lvectDeclName: HsVectInstOut"
+  = panic "GHC.IR.Haskell.Declaration.lvectDeclName: HsVectInstOut"
 
 lvectInstDecl :: LVectDecl name -> Bool
 lvectInstDecl (L _ (HsVectInstIn _))  = True

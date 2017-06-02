@@ -12,7 +12,7 @@ import GHC.Data.Graph.Directed
 import GHC.Utils.Bitmap
 import GHC.Data.CLabel
 import GHC.IR.Cmm.PrettyPrint.Declaration ()
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.RTS.InfoTable
 import Data.List

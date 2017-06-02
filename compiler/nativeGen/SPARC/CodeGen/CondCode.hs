@@ -16,7 +16,7 @@ import SPARC.Base
 import NCGMonad
 import Format
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 
 import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable

@@ -21,7 +21,7 @@ module TcTyClsDecls (
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Types
 import BuildTyCl
 import TcRnMonad
@@ -139,7 +139,7 @@ tcTyAndClassDecls tyclds_s
 tcTyClGroup :: TyClGroup Name
             -> TcM (TcGblEnv, [InstInfo Name], [DerivInfo])
 -- Typecheck one strongly-connected component of type, class, and instance decls
--- See Note [TyClGroups and dependency analysis] in GHC.Syntax.Declaration
+-- See Note [TyClGroups and dependency analysis] in GHC.IR.Haskell.Declaration
 tcTyClGroup (TyClGroup { group_tyclds = tyclds
                        , group_roles  = roles
                        , group_instds = instds })
@@ -701,7 +701,7 @@ must store *something* in the *global* environment. Even though we
 discard the result of kind-checking, we sometimes need to produce error
 messages. These error messages will want to refer to the tycons being
 checked, except that they don't exist yet, and it would be Terribly
-Annoying to get the error messages to refer back to GHC.Syntax. So we
+Annoying to get the error messages to refer back to GHC.IR.Haskell. So we
 create a TcTyCon and put it in the global env. This tycon can
 print out its name and knows its kind,
 but any other action taken on it will panic. Note

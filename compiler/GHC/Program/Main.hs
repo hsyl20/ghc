@@ -99,8 +99,8 @@ import Control.Concurrent
 import GHC.Data.Module
 import GHC.Packages
 import GHC.Data.RdrName
-import GHC.Syntax
-import GHC.Syntax.PrettyPrint.Dump
+import GHC.IR.Haskell.Syntax
+import GHC.IR.Haskell.PrettyPrint.Dump
 import GHC.IR.Core.Syntax
 import GHC.Data.StringBuffer
 import Parser
@@ -125,7 +125,7 @@ import ProfInit
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.IR.Stg.Transform.Pipeline         ( stg2stg )
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Parser         ( parseCmmFile )
 import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Pipeline
@@ -143,7 +143,7 @@ import GHC.Platform ( platformOS, osSubsectionsViaSymbols )
 
 import GHC.Utils.Outputable
 import GHC.Data.Name.Environment
-import GHC.Syntax.Analyse.Stats         ( ppSourceStats )
+import GHC.IR.Haskell.Analyse.Stats         ( ppSourceStats )
 import GHC.Types
 import GHC.Data.FastString
 import GHC.Data.Unique.Supply

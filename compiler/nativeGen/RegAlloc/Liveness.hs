@@ -40,7 +40,7 @@ import Instruction
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
-import GHC.IR.Cmm hiding (RegSet, emptyRegSet)
+import GHC.IR.Cmm.Syntax hiding (RegSet, emptyRegSet)
 import GHC.IR.Cmm.PrettyPrint()
 
 import GHC.Data.Graph.Directed

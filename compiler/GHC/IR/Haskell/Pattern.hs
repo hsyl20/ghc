@@ -16,7 +16,7 @@
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module GHC.Syntax.Pattern (
+module GHC.IR.Haskell.Pattern (
         Pat(..), InPat, OutPat, LPat,
 
         HsConPatDetails, hsConPatArgs,
@@ -38,14 +38,14 @@ module GHC.Syntax.Pattern (
         pprParendLPat, pprConArgs
     ) where
 
-import {-# SOURCE #-} GHC.Syntax.Expression (SyntaxExpr, LHsExpr
+import {-# SOURCE #-} GHC.IR.Haskell.Expression (SyntaxExpr, LHsExpr
                                  , HsSplice, pprLExpr, pprSplice)
 
 -- friends:
-import GHC.Syntax.Binding
-import GHC.Syntax.Literal
-import GHC.Syntax.PlaceHolder
-import GHC.Syntax.Type
+import GHC.IR.Haskell.Binding
+import GHC.IR.Haskell.Literal
+import GHC.IR.Haskell.PlaceHolder
+import GHC.IR.Haskell.Type
 import TcEvidence
 import GHC.Data.BasicTypes
 -- others:
@@ -95,7 +95,7 @@ data Pat id
     -- For details on above see note [Api annotations] in ApiAnnotation
 
   | ParPat      (LPat id)               -- ^ Parenthesised pattern
-                                        -- See Note [Parens in GHC.Syntax] in HsExpr
+                                        -- See Note [Parens in GHC.IR.Haskell] in HsExpr
     -- ^ - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.AnnOpen' @'('@,
     --                                    'ApiAnnotation.AnnClose' @')'@
 

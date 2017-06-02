@@ -34,7 +34,7 @@ module GHC.RTS.InfoTable (
 
 #include "HsVersions.h"
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 import GHC.RTS.Storage

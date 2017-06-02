@@ -61,7 +61,7 @@ module GHC.Compilers.StgToCmm.Monad (
 
 #include "HsVersions.h"
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Compilers.StgToCmm.Closure
 import GHC.Config.Flags
 import GHC.IR.Cmm.Transform.Dataflow

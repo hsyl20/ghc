@@ -28,7 +28,7 @@ import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Types (lookupFixity, mi_fix)
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import Inst
 import GHC.TypeSystem.ClassInstance
 import LoadIface (loadInterfaceForName)

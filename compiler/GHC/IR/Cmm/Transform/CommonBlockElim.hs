@@ -6,7 +6,7 @@ where
 
 
 import GHC.IR.Cmm.BlockId
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch (eqSwitchTargetWith)
 import GHC.IR.Cmm.Transform.Shortcutting

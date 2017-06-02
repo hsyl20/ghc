@@ -19,7 +19,7 @@ import GHC.Finder           ( mkStubPaths )
 import GHC.IR.Cmm.PrettyPrint.C ( writeCs )
 import GHC.IR.Cmm.Analyse.Lint          ( cmmLint )
 import GHC.Packages
-import GHC.IR.Cmm              ( RawCmmGroup )
+import GHC.IR.Cmm.Syntax              ( RawCmmGroup )
 import GHC.Types
 import GHC.Config.Flags
 import Config

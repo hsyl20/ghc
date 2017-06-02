@@ -33,7 +33,7 @@ import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import TcType
 import TysWiredIn( unitTy )
 import GHC.IR.Core.Syntax.Make( rEC_SEL_ERROR_ID )
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.Class
 import GHC.Data.Type
 import GHC.Types

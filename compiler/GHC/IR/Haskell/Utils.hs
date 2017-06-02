@@ -3,7 +3,7 @@
 
 
 Here we collect a variety of helper functions that construct or
-analyse GHC.Syntax.  All these functions deal with generic GHC.Syntax; functions
+analyse GHC.IR.Haskell.  All these functions deal with generic GHC.IR.Haskell; functions
 which deal with the instantiated versions are located elsewhere:
 
    Parameterised by     Module
@@ -18,7 +18,7 @@ which deal with the instantiated versions are located elsewhere:
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module GHC.Syntax.Utils(
+module GHC.IR.Haskell.Utils(
   -- Terms
   mkHsPar, mkHsApp, mkHsAppType, mkHsAppTypeOut, mkHsCaseAlt,
   mkSimpleMatch, unguardedGRHSs, unguardedRHS,
@@ -92,13 +92,13 @@ module GHC.Syntax.Utils(
 
 #include "HsVersions.h"
 
-import GHC.Syntax.Declaration
-import GHC.Syntax.Binding
-import GHC.Syntax.Expression
-import GHC.Syntax.Pattern
-import GHC.Syntax.Type
-import GHC.Syntax.Literal
-import GHC.Syntax.PlaceHolder
+import GHC.IR.Haskell.Declaration
+import GHC.IR.Haskell.Binding
+import GHC.IR.Haskell.Expression
+import GHC.IR.Haskell.Pattern
+import GHC.IR.Haskell.Type
+import GHC.IR.Haskell.Literal
+import GHC.IR.Haskell.PlaceHolder
 
 import TcEvidence
 import GHC.Data.RdrName
@@ -784,10 +784,10 @@ it should return [x, y, f, a, b] (remember, order important).
 
 Note [Collect binders only after renaming]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-These functions should only be used on GHC.Syntax *after* the renamer,
+These functions should only be used on GHC.IR.Haskell *after* the renamer,
 to return a [Name] or [Id].  Before renaming the record punning
 and wild-card mechanism makes it hard to know what is bound.
-So these functions should not be applied to (GHC.Syntax RdrName)
+So these functions should not be applied to (GHC.IR.Haskell RdrName)
 
 Note [Unlifted id check in isHsUnliftedBind]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

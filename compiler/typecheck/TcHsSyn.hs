@@ -3,19 +3,19 @@
 (c) The AQUA Project, Glasgow University, 1996-1998
 
 
-TcHsSyn: Specialisations of the @GHC.Syntax@ syntax for the typechecker
+TcHsSyn: Specialisations of the @GHC.IR.Haskell@ syntax for the typechecker
 
-This module is an extension of @GHC.Syntax@ syntax, for use in the type
+This module is an extension of @GHC.IR.Haskell@ syntax, for use in the type
 checker.
 -}
 
 {-# LANGUAGE CPP, TupleSections #-}
 
 module TcHsSyn (
-        -- * Extracting types from GHC.Syntax
+        -- * Extracting types from GHC.IR.Haskell
         hsLitType, hsLPatType, hsPatType,
 
-        -- * Other GHC.Syntax functions
+        -- * Other GHC.IR.Haskell functions
         mkHsDictLet, mkHsApp,
         mkHsAppTy, mkHsCaseAlt,
         shortCutLit, hsOverLitName,
@@ -38,7 +38,7 @@ module TcHsSyn (
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import TcRnMonad
@@ -75,7 +75,7 @@ import Control.Arrow ( second )
 {-
 ************************************************************************
 *                                                                      *
-       Extracting the type from GHC.Syntax
+       Extracting the type from GHC.IR.Haskell
 *                                                                      *
 ************************************************************************
 
@@ -157,7 +157,7 @@ hsOverLitName (HsIsString {})   = fromStringName
 {-
 ************************************************************************
 *                                                                      *
-\subsection[BackSubst-GHC.Syntax.Binding]{Running a substitution over @GHC.Syntax.Binding@}
+\subsection[BackSubst-GHC.IR.Haskell.Binding]{Running a substitution over @GHC.IR.Haskell.Binding@}
 *                                                                      *
 ************************************************************************
 
@@ -175,7 +175,7 @@ The Ids are converted by binding them in the normal Tc envt; that
 way we maintain sharing; eg an Id is zonked at its binding site and they
 all occurrences of that Id point to the common zonked copy
 
-It's all pretty boring stuff, because GHC.Syntax is such a large type, and
+It's all pretty boring stuff, because GHC.IR.Haskell is such a large type, and
 the environment manipulation is tiresome.
 -}
 

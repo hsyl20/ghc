@@ -15,7 +15,7 @@ module GHC.Compilers.SyntaxToCore.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTru
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression  ( dsLExpr, dsLocalBinds )
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match   ( matchSinglePat )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.IR.Core.Syntax.Make
 import GHC.IR.Core.Syntax
 import GHC.Data.Var

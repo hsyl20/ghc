@@ -15,7 +15,7 @@ module GHC.Rename.Main (
 import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr )
 import {-# SOURCE #-} GHC.Rename.Splice ( rnSpliceDecl, rnTopSpliceDecls )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.FieldLabel
 import GHC.Data.RdrName
 import GHC.Rename.Type
@@ -1670,7 +1670,7 @@ rnTyClDecl (DataDecl { tcdLName = tycon, tcdTyVars = tyvars,
                  ; let sig_tvs         = filterNameSet isTyVarName kind_sig_fvs
                        unbound_sig_tvs = sig_tvs `minusNameSet` dep_vars
                  ; return ((tyvars', defn', isEmptyNameSet unbound_sig_tvs), fvs) }
-          -- See Note [Complete user-supplied kind signatures] in GHC.Syntax.Declaration
+          -- See Note [Complete user-supplied kind signatures] in GHC.IR.Haskell.Declaration
        ; typeintype <- xoptM LangExt.TypeInType
        ; let cusk = hsTvbAllKinded tyvars' &&
                     (not typeintype || no_kvs)

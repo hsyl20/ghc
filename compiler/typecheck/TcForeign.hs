@@ -32,7 +32,7 @@ module TcForeign
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 
 import TcRnMonad
 import TcHsType

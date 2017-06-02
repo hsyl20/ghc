@@ -68,7 +68,7 @@ module TcEnv(
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import IfaceEnv
 import TcRnMonad
 import TcMType

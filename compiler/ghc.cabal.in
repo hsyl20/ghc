@@ -197,7 +197,7 @@ Library
         GHC.Data.Var.UndirectedGraph
         GHC.IR.Cmm.BlockId
         GHC.Data.CLabel
-        GHC.IR.Cmm
+        GHC.IR.Cmm.Syntax
         GHC.IR.Cmm.BuildInfoTables
         GHC.IR.Cmm.Pipeline
         GHC.IR.Cmm.CallConvention
@@ -289,18 +289,18 @@ Library
         GHC.Compilers.SyntaxToCore.Match
         GHC.Compilers.SyntaxToCore.Match.Constructor
         GHC.Compilers.SyntaxToCore.Match.Literal
-        GHC.Syntax.Binding
-        GHC.Syntax.Declaration
-        GHC.Syntax.Documentation
-        GHC.Syntax.Expression
-        GHC.Syntax.ImportExport
-        GHC.Syntax.Literal
-        GHC.Syntax.PlaceHolder
-        GHC.Syntax.Pattern
-        GHC.Syntax
-        GHC.Syntax.Type
-        GHC.Syntax.Utils
-        GHC.Syntax.PrettyPrint.Dump
+        GHC.IR.Haskell.Binding
+        GHC.IR.Haskell.Declaration
+        GHC.IR.Haskell.Documentation
+        GHC.IR.Haskell.Expression
+        GHC.IR.Haskell.ImportExport
+        GHC.IR.Haskell.Literal
+        GHC.IR.Haskell.PlaceHolder
+        GHC.IR.Haskell.Pattern
+        GHC.IR.Haskell.Syntax
+        GHC.IR.Haskell.Type
+        GHC.IR.Haskell.Utils
+        GHC.IR.Haskell.PrettyPrint.Dump
         BinIface
         BinFingerprint
         BuildTyCl
@@ -328,9 +328,9 @@ Library
         GHC.Program.Make
         GHC.Plugins
         GHC.Interactive.DynamicLoading
-        GHC.Syntax.Parsers.HeaderInfo
+        GHC.IR.Haskell.Parsers.HeaderInfo
         GHC.Program.Main
-        GHC.Syntax.Analyse.Stats
+        GHC.IR.Haskell.Analyse.Stats
         GHC.Types
         GHC.Interactive.Eval
         GHC.Interactive.Types
@@ -595,7 +595,7 @@ Library
             Dwarf
             Dwarf.Types
             Dwarf.Constants
-            GHC.Syntax.TemplateHaskell.Convert
+            GHC.IR.Haskell.TemplateHaskell.Convert
             GHC.IR.ByteCode.Types
             GHC.IR.ByteCode.Assembler
             GHC.Compilers.CoreToByteCode

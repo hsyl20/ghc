@@ -14,7 +14,7 @@ module GHC.Compilers.SyntaxToCore.ListComp ( dsListComp, dsPArrComp, dsMonadComp
 
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcHsSyn
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Syntax.Make

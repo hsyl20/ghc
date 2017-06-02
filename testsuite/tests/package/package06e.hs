@@ -1,3 +1,3 @@
 module Package06e where
-import GHC.Syntax.Type
+import GHC.IR.Haskell.Type
 import GHC.Data.Unique.FiniteMap

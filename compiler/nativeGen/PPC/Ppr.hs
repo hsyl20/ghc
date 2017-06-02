@@ -19,7 +19,7 @@ import Reg
 import RegClass
 import TargetReg
 
-import GHC.IR.Cmm hiding (topInfoTable)
+import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.IR.Cmm.Transform.Dataflow
 
 import GHC.Data.CLabel

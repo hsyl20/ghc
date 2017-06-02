@@ -7,7 +7,7 @@ import RegAlloc.Liveness
 import Instruction
 import Reg
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.Bag
 import GHC.Data.Graph.Directed
 import GHC.Data.Unique.FiniteMap

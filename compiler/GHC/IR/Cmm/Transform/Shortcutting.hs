@@ -10,7 +10,7 @@ where
 
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.IR.Cmm.BlockId
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch (mapSwitchTargets)
 import GHC.Data.Maybe

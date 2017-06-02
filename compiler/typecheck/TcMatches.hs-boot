@@ -1,5 +1,5 @@
 module TcMatches where
-import GHC.Syntax    ( GRHSs, MatchGroup, LHsExpr )
+import GHC.IR.Haskell.Syntax ( GRHSs, MatchGroup, LHsExpr )
 import TcEvidence( HsWrapper )
 import GHC.Data.Name     ( Name )
 import TcType   ( ExpRhoType, TcRhoType )

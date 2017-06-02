@@ -1,6 +1,6 @@
 module GHC.Rename.Splice where
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import GHC.Data.RdrName
 import GHC.Data.Name

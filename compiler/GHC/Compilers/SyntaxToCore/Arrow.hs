@@ -16,9 +16,10 @@ import GHC.Compilers.SyntaxToCore.Match
 import GHC.Compilers.SyntaxToCore.Utils
 import GHC.Compilers.SyntaxToCore.Monad
 
-import GHC.Syntax    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
+import GHC.IR.Haskell.Syntax hiding (collectPatBinders, collectPatsBinders,
+            collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
 import TcHsSyn
-import qualified GHC.Syntax.Utils
+import qualified GHC.IR.Haskell.Utils
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
 --     needs to see source types (newtypes etc), and sometimes not
@@ -1151,10 +1152,10 @@ foldb f xs = foldb f (fold_pairs xs)
     fold_pairs (x1:x2:xs) = f x1 x2:fold_pairs xs
 
 {-
-Note [Dictionary binders in ConPatOut] See also same Note in GHC.Syntax.Utils
+Note [Dictionary binders in ConPatOut] See also same Note in GHC.IR.Haskell.Utils
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The following functions to collect value variables from patterns are
-copied from GHC.Syntax.Utils, with one change: we also collect the dictionary
+copied from GHC.IR.Haskell.Utils, with one change: we also collect the dictionary
 bindings (pat_binds) from ConPatOut.  We need them for cases like
 
 h :: Arrow a => Int -> a (Int,Int) Int
@@ -1168,7 +1169,7 @@ The type checker turns the case into
 
 Here p77 is a local binding for the (+) operation.
 
-See comments in GHC.Syntax.Utils for why the other version does not include
+See comments in GHC.IR.Haskell.Utils for why the other version does not include
 these bindings.
 -}
 
@@ -1227,4 +1228,4 @@ collectLStmtBinders = collectStmtBinders . unLoc
 
 collectStmtBinders :: Stmt Id body -> [Id]
 collectStmtBinders (RecStmt { recS_later_ids = later_ids }) = later_ids
-collectStmtBinders stmt = GHC.Syntax.Utils.collectStmtBinders stmt
+collectStmtBinders stmt = GHC.IR.Haskell.Utils.collectStmtBinders stmt

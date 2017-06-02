@@ -60,7 +60,7 @@ import GHC.Plugins.Types ( tcPlugin )
 #endif
 
 import GHC.Config.Flags
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import IfaceSyn ( ShowSub(..), showToHeader )
 import IfaceType( ShowForAllFlag(..) )
 import PrelNames
@@ -80,7 +80,7 @@ import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
 import TcAnnotations
 import TcBinds
-import GHC.Syntax.Parsers.HeaderInfo       ( mkPrelImports )
+import GHC.IR.Haskell.Parsers.HeaderInfo       ( mkPrelImports )
 import TcDefaults
 import TcEnv
 import TcRules
@@ -127,7 +127,7 @@ import GHC.Data.Bag
 import Inst (tcGetInsts)
 import qualified GHC.LanguageExtensions as LangExt
 import Data.Data ( Data )
-import GHC.Syntax.PrettyPrint.Dump
+import GHC.IR.Haskell.PrettyPrint.Dump
 import qualified Data.Set as S
 
 import Control.Monad

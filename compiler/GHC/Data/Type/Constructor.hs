@@ -366,7 +366,7 @@ invariant that if `famTcInj` is a Just then at least one element in the list
 must be True.
 
 See also:
- * [Injectivity annotation] in GHC.Syntax.Declaration
+ * [Injectivity annotation] in GHC.IR.Haskell.Declaration
  * [Renaming injectivity annotation] in GHC.Rename.Main
  * [Verifying injectivity annotation] in FamInstEnv
  * [Type inference for type families with injectivity] in TcInteract

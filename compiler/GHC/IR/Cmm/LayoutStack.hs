@@ -7,7 +7,7 @@ import GHC.Compilers.StgToCmm.Utils      ( callerSaveVolatileRegs ) -- XXX layer
 import GHC.Compilers.StgToCmm.ForeignCall    ( saveThreadState, loadThreadState ) -- XXX layering violation
 
 import GHC.Data.BasicTypes
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.RTS.InfoTable
 import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel

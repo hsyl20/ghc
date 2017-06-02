@@ -35,7 +35,7 @@ import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Config.Flags
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.RTS.InfoTable
 import GHC.Data.FastString
 import GHC.Data.CLabel

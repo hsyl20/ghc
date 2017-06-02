@@ -9,7 +9,7 @@
 -- traversal which falls back to displaying based on the constructor name, so
 -- can be used to dump anything having a @Data.Data@ instance.
 
-module GHC.Syntax.PrettyPrint.Dump (
+module GHC.IR.Haskell.PrettyPrint.Dump (
         -- * Dumping ASTs
         showAstData,
         BlankSrcSpan(..),
@@ -25,7 +25,7 @@ import GHC.Data.Name
 import GHC.Data.RdrName
 import GHC.Data.DataConstructor
 import GHC.Data.SrcLoc
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.Var
 import GHC.Data.Module

@@ -2,7 +2,7 @@
 --  (c) The University of Glasgow 2002-2006
 --
 
--- Functions over GHC.Syntax specialised to RdrName.
+-- Functions over GHC.IR.Haskell specialised to RdrName.
 
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
@@ -66,7 +66,7 @@ module   RdrHsSyn (
 
     ) where
 
-import GHC.Syntax            -- Lots of it
+import GHC.IR.Haskell.Syntax            -- Lots of it
 import GHC.Data.Class            ( FunDep )
 import GHC.Data.Type.Constructor            ( TyCon, isTupleTyCon, tyConSingleDataCon_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConTyCon )
@@ -121,7 +121,7 @@ import Data.Data       ( dataTypeOf, fromConstr, dataTypeConstrs )
 
 -- Similarly for mkConDecl, mkClassOpSig and default-method names.
 
---         *** See Note [The Naming story] in GHC.Syntax.Declaration ****
+--         *** See Note [The Naming story] in GHC.IR.Haskell.Declaration ****
 
 mkTyClD :: LTyClDecl n -> LHsDecl n
 mkTyClD (L loc d) = L loc (TyClD d)
@@ -322,7 +322,7 @@ mkRoleAnnotDecl loc tycon roles
 
 {- **********************************************************************
 
-  #cvBinds-etc# Converting to @GHC.Syntax.Binding@, etc.
+  #cvBinds-etc# Converting to @GHC.IR.Haskell.Binding@, etc.
 
   ********************************************************************* -}
 
@@ -965,7 +965,7 @@ checkFunBind msg ann lhs_loc fun is_infix pats opt_sig (L rhs_span grhss)
 
 makeFunBind :: Located RdrName -> [LMatch RdrName (LHsExpr RdrName)]
             -> HsBind RdrName
--- Like GHC.Syntax.Utils.mkFunBind, but we need to be able to set the fixity too
+-- Like GHC.IR.Haskell.Utils.mkFunBind, but we need to be able to set the fixity too
 makeFunBind fn ms
   = FunBind { fun_id = fn,
               fun_matches = mkMatchGroup FromSource ms,

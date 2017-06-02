@@ -30,7 +30,7 @@ import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Pipeline
 import GHC.IR.Cmm.Parser
 import GHC.RTS.InfoTable
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.Module
 import Debug
 import GHC

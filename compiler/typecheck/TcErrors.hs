@@ -28,8 +28,8 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor
 import TcEvidence
-import GHC.Syntax.Expression  ( UnboundVar(..) )
-import GHC.Syntax.Binding ( PatSynBind(..) )
+import GHC.IR.Haskell.Expression  ( UnboundVar(..) )
+import GHC.IR.Haskell.Binding ( PatSynBind(..) )
 import GHC.Data.Name
 import GHC.Data.RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
                , mkRdrUnqual, isLocalGRE, greSrcSpan, pprNameProvenance

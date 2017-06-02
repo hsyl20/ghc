@@ -22,7 +22,7 @@ module GHC.Rename.Expression (
 
 import GHC.Rename.Binding   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
                    rnMatchGroup, rnGRHS, makeMiniFixityEnv)
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import GHC.Data.Module           ( getModule )
 import GHC.Rename.Environment

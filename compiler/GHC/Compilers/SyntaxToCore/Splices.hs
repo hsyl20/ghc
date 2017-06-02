@@ -26,7 +26,7 @@ import GHC.Compilers.SyntaxToCore.Monad
 
 import qualified Language.Haskell.TH as TH
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.Class
 import PrelNames
 -- To avoid clashes with GHC.Compilers.SyntaxToCore.Splices.varName we must make a local alias for

@@ -32,7 +32,7 @@ import GHC.Data.BasicTypes
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Graph
 import GHC.IR.Stg.Syntax
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.RTS.InfoTable
 import GHC.Data.Type     ( Type, tyConAppTyCon )
 import GHC.Data.Type.Constructor

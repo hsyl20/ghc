@@ -31,9 +31,9 @@ import GHC.Config.Flags
 import GHC.Data.Name
 import GHC.Program.Driver.Pipeline.Monad
 import GHC.Types
-import GHC.Syntax.Declaration
-import GHC.Syntax.Binding
-import GHC.Syntax.Expression
+import GHC.IR.Haskell.Declaration
+import GHC.IR.Haskell.Binding
+import GHC.IR.Haskell.Expression
 import GHC.Data.Tree.OrdList
 import GHC.Data.Id
 import TcRnTypes

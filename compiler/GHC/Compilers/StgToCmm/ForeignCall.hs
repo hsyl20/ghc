@@ -31,7 +31,7 @@ import GHC.Compilers.StgToCmm.Closure
 import GHC.Compilers.StgToCmm.Layout
 
 import GHC.IR.Cmm.BlockId (newBlockId)
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Graph
 import GHC.Data.Type

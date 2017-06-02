@@ -39,7 +39,7 @@ where
 import qualified GHC.Compilers.StgToCmm.Monad as F
 import GHC.Compilers.StgToCmm.Monad (FCode, newUnique)
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Graph
 

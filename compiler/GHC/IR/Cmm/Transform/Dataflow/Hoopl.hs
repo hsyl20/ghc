@@ -30,7 +30,7 @@ module GHC.IR.Cmm.Transform.Dataflow.Hoopl
   )
 where
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 
 import Data.Array
 import Data.List

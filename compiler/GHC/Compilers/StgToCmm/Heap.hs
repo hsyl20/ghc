@@ -39,7 +39,7 @@ import GHC.IR.Cmm.Graph
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.RTS.Storage
 import GHC.IR.Cmm.BlockId
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import CostCentre
 import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )

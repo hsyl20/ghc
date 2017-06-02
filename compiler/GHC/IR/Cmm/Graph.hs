@@ -22,7 +22,7 @@ module GHC.IR.Cmm.Graph
 where
 
 import GHC.IR.Cmm.BlockId
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.CallConvention
 import GHC.IR.Cmm.Switch (SwitchTargets)
 

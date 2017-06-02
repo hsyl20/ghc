@@ -12,7 +12,7 @@ module TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
                 , tcPatSynBuilderBind, tcPatSynBuilderOcc, nonBidirectionalErr
   ) where
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcPat
 import GHC.Data.Type( mkTyVarBinders, mkEmptyTCvSubst
            , tidyTyVarBinders, tidyTypes, tidyType )

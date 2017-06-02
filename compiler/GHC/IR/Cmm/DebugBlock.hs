@@ -24,7 +24,7 @@ module GHC.IR.Cmm.DebugBlock (
 
 import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Core.Syntax
 import GHC.Data.FastString      ( nilFS, mkFastString )

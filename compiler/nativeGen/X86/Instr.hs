@@ -28,7 +28,7 @@ import TargetReg
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Utils.CodeGen.Platform
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Platform

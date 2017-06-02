@@ -21,7 +21,7 @@ import GHC.Compilers.SyntaxToCore.Match.TermEqOracle
 
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcHsSyn
 import GHC.Data.Id
 import GHC.Data.ConstructorLike

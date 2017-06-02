@@ -27,7 +27,7 @@ import GHC.Compilers.SyntaxToCore.Match.Expr
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Type
-import GHC.Syntax.Literal
+import GHC.IR.Haskell.Literal
 import TcHsSyn
 import GHC.Utils.Monad
 import GHC.Utils

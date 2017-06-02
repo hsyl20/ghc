@@ -12,7 +12,7 @@ module TcInstDcls ( tcInstDecls1, tcInstDeclsDeriv, tcInstDecls2 ) where
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcBinds
 import TcTyClsDecls
 import TcClassDcl( tcClassDecl2, tcATDefault,
@@ -1236,7 +1236,7 @@ decide what silent arguments are to be added.
 ************************************************************************
 
 tcMethod
-- Make the method bindings, as a [(NonRec, GHC.Syntax.Binding)], one per method
+- Make the method bindings, as a [(NonRec, GHC.IR.Haskell.Binding)], one per method
 - Remembering to use fresh Name (the instance method Name) as the binder
 - Bring the instance method Ids into scope, for the benefit of tcInstSig
 - Use sig_fn mapping instance method Name -> instance tyvars

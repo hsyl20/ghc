@@ -35,7 +35,7 @@ module GHC.Rename.Type (
 import {-# SOURCE #-} GHC.Rename.Splice( rnSpliceType )
 
 import GHC.Config.Flags
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Rename.Documentation          ( rnLHsDoc, rnMbLHsDoc )
 import GHC.Rename.Environment
 import GHC.Rename.Utils.Unbound        ( perhapsForallMsg )
@@ -842,7 +842,7 @@ bindHsQTyVars :: forall a b.
               -> (LHsQTyVars Name -> NameSet -> RnM (b, FreeVars))
                   -- also returns all names used in kind signatures, for the
                   -- TypeInType clause of Note [Complete user-supplied kind
-                  -- signatures] in GHC.Syntax.Declaration
+                  -- signatures] in GHC.IR.Haskell.Declaration
               -> RnM (b, FreeVars)
 -- (a) Bring kind variables into scope
 --     both (i)  passed in (kv_bndrs)

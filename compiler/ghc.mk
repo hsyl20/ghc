@@ -483,18 +483,18 @@ compiler_stage2_dll0_MODULES = \
 	ForeignCall \
 	GHC.Data.Var.Free \
 	GHC.Config.Hooks \
-	GHC.Syntax.Binding \
-	GHC.Syntax.Declaration \
-	GHC.Syntax.Documentation \
-	GHC.Syntax.Expression \
-	GHC.Syntax.ImportExport \
-	GHC.Syntax.Literal \
-	GHC.Syntax.PlaceHolder \
+	GHC.IR.Haskell.Binding \
+	GHC.IR.Haskell.Declaration \
+	GHC.IR.Haskell.Documentation \
+	GHC.IR.Haskell.Expression \
+	GHC.IR.Haskell.ImportExport \
+	GHC.IR.Haskell.Literal \
+	GHC.IR.Haskell.PlaceHolder \
 	GHC.Compilers.SyntaxToCore.Match.Expr \
-	GHC.Syntax.Pattern \
-	GHC.Syntax \
-	GHC.Syntax.Type \
-	GHC.Syntax.Utils \
+	GHC.IR.Haskell.Pattern \
+	GHC.IR.Haskell.Syntax\
+	GHC.IR.Haskell.Type \
+	GHC.IR.Haskell.Utils \
 	GHC.Types \
 	GHC.Utils.Monad.IOEnv \
 	GHC.Data.Name.Cache \

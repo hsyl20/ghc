@@ -43,7 +43,7 @@ module GHC.Compilers.SyntaxToCore.Utils (
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match  ( matchSimply )
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsLExpr )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcHsSyn
 import TcType( tcSplitTyConApp )
 import GHC.IR.Core.Syntax
@@ -810,7 +810,7 @@ is_triv_pat _           = False
 *                                                                      *
   Creating big tuples and their types for full Haskell expressions.
   They work over *Ids*, and create tuples replete with their types,
-  which is whey they are not in GHC.Syntax.Utils.
+  which is whey they are not in GHC.IR.Haskell.Utils.
 *                                                                      *
 ********************************************************************* -}
 

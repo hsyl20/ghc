@@ -21,7 +21,7 @@ import NCGMonad
 import Format
 import Reg
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 
 import Control.Monad (liftM)
 import GHC.Config.Flags

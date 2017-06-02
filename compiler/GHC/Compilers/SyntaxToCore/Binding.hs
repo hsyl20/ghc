@@ -3,9 +3,9 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-Pattern-matching bindings (GHC.Syntax.Binding and MonoBinds)
+Pattern-matching bindings (GHC.IR.Haskell.Binding and MonoBinds)
 
-Handles @GHC.Syntax.Binding@; those at the top level require different handling,
+Handles @GHC.IR.Haskell.Binding@; those at the top level require different handling,
 in that the @Rec@/@NonRec@/etc structure is thrown away (whereas at
 lower levels it is preserved with @let@/@letrec@s).
 -}
@@ -25,7 +25,7 @@ import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Compilers.SyntaxToCore.GuardedRHS
 import GHC.Compilers.SyntaxToCore.Utils
 
-import GHC.Syntax            -- lots of things
+import GHC.IR.Haskell.Syntax            -- lots of things
 import GHC.IR.Core.Syntax          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
 import GHC.IR.Core.Transform.Simple         ( simpleOptExpr )
@@ -182,7 +182,7 @@ dsHsBind dflags
         , abe_mono = local, abe_prags = prags } <- export
   , not (xopt LangExt.Strict dflags)             -- Handle strict binds
   , not (anyBag (isBangedPatBind . unLoc) binds) --        in the next case
-  = -- See Note [AbsBinds wrappers] in GHC.Syntax.Binding
+  = -- See Note [AbsBinds wrappers] in GHC.IR.Haskell.Binding
     addDictsDs (toTcTypeBag (listToBag dicts)) $
          -- addDictsDs: push type constraints deeper for pattern match check
     do { (_, bind_prs) <- dsLHsBinds binds
@@ -254,7 +254,7 @@ dsHsBind dflags
         ; let mk_bind (ABE { abe_wrap = wrap
                            , abe_poly = global
                            , abe_mono = local, abe_prags = spec_prags })
-                         -- See Note [AbsBinds wrappers] in GHC.Syntax.Binding
+                         -- See Note [AbsBinds wrappers] in GHC.IR.Haskell.Binding
                 = do { tup_id  <- newSysLocalDs tup_ty
                      ; core_wrap <- dsHsWrapper wrap
                      ; let rhs = core_wrap $ mkLams tyvars $ mkLams dicts $
@@ -620,7 +620,7 @@ We define an "unlifted bind" to be any bind that binds an unlifted id. Note that
   x :: Char
   (# True, x #) = blah
 
-is *not* an unlifted bind. Unlifted binds are detected by GHC.Syntax.Utils.isUnliftedHsBind.
+is *not* an unlifted bind. Unlifted binds are detected by GHC.IR.Haskell.Utils.isUnliftedHsBind.
 
 Define a "banged bind" to have a top-level bang. Detected by HsPat.isBangedPatBind.
 Define a "strict bind" to be either an unlifted bind or a banged bind.

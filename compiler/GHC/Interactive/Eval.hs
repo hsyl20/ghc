@@ -47,7 +47,7 @@ import GHCi.Message
 import GHCi.RemoteTypes
 import GHC.Monad
 import GHC.Program.Main
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Types
 import GHC.TypeSystem.ClassInstance
 import IfaceEnv   ( newInteractiveBinder )

@@ -24,7 +24,7 @@ module GHC.IR.Cmm.Transform.ConstantFolding (
 #include "HsVersions.h"
 
 import GHC.IR.Cmm.Utils
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Config.Flags
 import GHC.Utils
 

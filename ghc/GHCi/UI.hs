@@ -48,8 +48,8 @@ import qualified GHC
 import GHC ( LoadHowMuch(..), Target(..),  TargetId(..), InteractiveImport(..),
              TyThing(..), Phase, BreakIndex, Resume, SingleStep, Ghc,
              getModuleGraph, handleSourceError )
-import GHC.Syntax.ImportExport
-import GHC.Syntax
+import GHC.IR.Haskell.ImportExport
+import GHC.IR.Haskell.Syntax
 import GHC.Types ( tyThingParent_maybe, handleFlagWarnings, getSafeMode, hsc_IC,
                   setInteractivePrintName, hsc_dflags, msObjFilePath )
 import GHC.Data.Module

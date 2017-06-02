@@ -45,7 +45,7 @@ module GHC.Compilers.StgToCmm.Utils (
 
 import GHC.Compilers.StgToCmm.Monad
 import GHC.Compilers.StgToCmm.Closure
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Graph as MkGraph
 import GHC.Utils.CodeGen.Platform

@@ -21,7 +21,7 @@ module TcExpr ( tcPolyExpr, tcMonoExpr, tcMonoExprNC,
 import {-# SOURCE #-}   TcSplice( tcSpliceExpr, tcTypedBracket, tcUntypedBracket )
 import THNames( liftStringName, liftName )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcHsSyn
 import TcRnMonad
 import TcUnify

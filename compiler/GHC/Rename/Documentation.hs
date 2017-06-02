@@ -2,7 +2,7 @@
 module GHC.Rename.Documentation ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
 
 import TcRnTypes
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.SrcLoc
 
 

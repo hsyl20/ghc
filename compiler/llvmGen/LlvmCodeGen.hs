@@ -17,7 +17,7 @@ import LlvmMangler
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Stg.Register ( fixStgRegisters )
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.IR.Cmm.PrettyPrint

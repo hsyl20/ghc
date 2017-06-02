@@ -25,7 +25,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.TypeSystem.FamilyInstance( topNormaliseType )
 import GHC.Compilers.SyntaxToCore.Splices
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
 --     needs to see source types
@@ -754,7 +754,7 @@ ds_expr _ (HsTickPragma _ _ _ expr) = do
     then panic "dsExpr:HsTickPragma"
     else dsLExpr expr
 
--- GHC.Syntax constructs that just shouldn't be here:
+-- GHC.IR.Haskell constructs that just shouldn't be here:
 ds_expr _ (ExprWithTySig {})  = panic "dsExpr:ExprWithTySig"
 ds_expr _ (HsBracket     {})  = panic "dsExpr:HsBracket"
 ds_expr _ (HsArrApp      {})  = panic "dsExpr:HsArrApp"

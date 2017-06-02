@@ -41,7 +41,7 @@ module GHC.IR.Cmm.PrettyPrint.Declaration
 where
 
 import GHC.IR.Cmm.PrettyPrint.Expression
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 
 import GHC.Config.Flags
 import GHC.Utils.Outputable

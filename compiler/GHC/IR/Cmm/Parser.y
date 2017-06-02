@@ -219,7 +219,7 @@ import GHC.IR.Core.Syntax          ( Tickish(SourceNote) )
 
 import GHC.IR.Cmm.Transform.ConstantFolding
 import GHC.IR.Cmm.Graph
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch        ( mkSwitchTargets )
 import GHC.RTS.InfoTable

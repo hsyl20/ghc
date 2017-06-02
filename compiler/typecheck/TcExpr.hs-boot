@@ -1,5 +1,5 @@
 module TcExpr where
-import GHC.Syntax    ( HsExpr, LHsExpr, SyntaxExpr )
+import GHC.IR.Haskell.Syntax    ( HsExpr, LHsExpr, SyntaxExpr )
 import GHC.Data.Name     ( Name )
 import TcType   ( TcRhoType, TcSigmaType, SyntaxOpType, ExpType, ExpRhoType )
 import TcRnTypes( TcM, TcId, CtOrigin )

@@ -27,7 +27,7 @@ module GHC.Rename.Binding (
 
 import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr, rnStmts )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import TcEvidence     ( emptyTcEvBinds )
 import GHC.Rename.Type
@@ -97,7 +97,7 @@ within one @MonoBinds@, so that unique-Int plumbing is done explicitly
 
 The basic algorithm involves walking over the tree and returning a tuple
 containing the new tree plus its free variables. Some functions, such
-as those walking polymorphic bindings (GHC.Syntax.Binding) and qualifier lists in
+as those walking polymorphic bindings (GHC.IR.Haskell.Binding) and qualifier lists in
 list comprehensions (@Quals@), return the variables bound in local
 environments. These are then used to calculate the free variables of the
 expression evaluated in these environments.
@@ -120,7 +120,7 @@ a set of variables free in @Exp@ is written @fvExp@
 *                                                                      *
 ************************************************************************
 
-\subsubsection[dep-GHC.Syntax.Binding]{Polymorphic bindings}
+\subsubsection[dep-GHC.IR.Haskell.Binding]{Polymorphic bindings}
 
 Non-recursive expressions are reconstructed without any changes at top
 level, although their component expressions may have to be altered.
@@ -238,7 +238,7 @@ rnLocalValBindsLHS fix_env binds
 
          -- Check for duplicates and shadowing
          -- Must do this *after* renaming the patterns
-         -- See Note [Collect binders only after renaming] in GHC.Syntax.Utils
+         -- See Note [Collect binders only after renaming] in GHC.IR.Haskell.Utils
 
          -- We need to check for dups here because we
          -- don't don't bind all of the variables from the ValBinds at once

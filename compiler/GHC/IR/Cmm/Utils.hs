@@ -68,7 +68,7 @@ import GHC.Data.Type.Constructor    ( PrimRep(..), PrimElemRep(..) )
 import GHC.Data.RepType  ( UnaryType, SlotTy (..), typePrimRep1 )
 
 import GHC.RTS.Storage
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.Utils.Outputable

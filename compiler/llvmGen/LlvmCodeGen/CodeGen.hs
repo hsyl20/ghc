@@ -14,7 +14,7 @@ import LlvmCodeGen.Regs
 import GHC.IR.Cmm.BlockId
 import GHC.Utils.CodeGen.Platform ( activeStgRegs, callerSaves )
 import GHC.Data.CLabel
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.PrettyPrint
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch

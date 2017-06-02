@@ -19,7 +19,7 @@ import Reg
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Config.Flags
-import GHC.IR.Cmm hiding (topInfoTable)
+import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.Platform
 
 -- | Holds a list of source and destination registers used by a

@@ -11,7 +11,7 @@ module GHC.IR.Cmm.CallConvention (
 
 import GHC.IR.Cmm.Expr
 import GHC.RTS.Storage
-import GHC.IR.Cmm (Convention(..))
+import GHC.IR.Cmm.Syntax (Convention(..))
 import GHC.IR.Cmm.PrettyPrint ()
 
 import GHC.Config.Flags

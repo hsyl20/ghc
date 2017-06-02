@@ -36,7 +36,7 @@ import Reg
 import Format
 import PprBase
 
-import GHC.IR.Cmm hiding (topInfoTable)
+import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.IR.Cmm.PrettyPrint()
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Transform.Dataflow

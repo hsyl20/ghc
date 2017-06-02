@@ -37,7 +37,7 @@ import GHC.Data.Class
 import GHC.Data.Type.Constructor
 
 -- others:
-import GHC.Syntax            -- HsType
+import GHC.IR.Haskell.Syntax            -- HsType
 import TcRnMonad        -- TcType, amongst others
 import TcEnv       ( tcGetInstEnvs )
 import FunDeps

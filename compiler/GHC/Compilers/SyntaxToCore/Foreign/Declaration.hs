@@ -18,7 +18,7 @@ import GHC.IR.Core.Syntax
 import GHC.Compilers.SyntaxToCore.Foreign.Call
 import GHC.Compilers.SyntaxToCore.Monad
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.DataConstructor
 import GHC.IR.Core.Transform.Unfolding
 import GHC.Data.Id

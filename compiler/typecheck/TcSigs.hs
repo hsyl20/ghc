@@ -24,7 +24,7 @@ module TcSigs(
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcHsType
 import TcRnTypes
 import TcRnMonad
@@ -67,8 +67,8 @@ especially on value bindings.  Here's an overview.
     f = ...g...
     g = ...f...
 
-* GHC.Syntax: a signature in a binding starts of as a TypeSig, in
-  type GHC.Syntax.Binding.Sig
+* GHC.IR.Haskell: a signature in a binding starts of as a TypeSig, in
+  type GHC.IR.Haskell.Binding.Sig
 
 * When starting a mutually recursive group, like f/g above, we
   call tcTySig on each signature in the group.
@@ -89,7 +89,7 @@ especially on value bindings.  Here's an overview.
   binder.  You can see this in TcBinds.tcLhsId.
 
   The instantiation does the obvious thing for complete signatures,
-  but for /partial/ signatures it starts from the GHC.Syntax, so it
+  but for /partial/ signatures it starts from the GHC.IR.Haskell, so it
   has to kind-check it etc: tcHsPartialSigType.  It's convenient
   to do this at the same time as instantiation, because we can
   make the wildcards into unification variables right away, raather

@@ -6,10 +6,10 @@
 
 {-# LANGUAGE FlexibleContexts #-}
 
-module GHC.Syntax.Analyse.Stats ( ppSourceStats ) where
+module GHC.IR.Haskell.Analyse.Stats ( ppSourceStats ) where
 
 import GHC.Data.Bag
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Utils.Outputable
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc

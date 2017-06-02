@@ -3,7 +3,7 @@ module GHC.IR.Cmm.Transform.Sinking (
      cmmSink
   ) where
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Transform.ConstantFolding
 import GHC.IR.Cmm.Analyse.Liveness
 import GHC.IR.Cmm.Utils

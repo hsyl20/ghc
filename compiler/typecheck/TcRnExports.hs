@@ -3,7 +3,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module TcRnExports (tcRnExports, exports_from_avail) where
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import PrelNames
 import GHC.Data.RdrName
 import TcRnMonad

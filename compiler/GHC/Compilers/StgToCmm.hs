@@ -23,7 +23,7 @@ import GHC.Compilers.StgToCmm.Closure
 import GHC.Compilers.StgToCmm.Coverage
 import GHC.Compilers.StgToCmm.Profiling.Ticky
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 

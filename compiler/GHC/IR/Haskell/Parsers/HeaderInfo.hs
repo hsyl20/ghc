@@ -10,7 +10,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Syntax.Parsers.HeaderInfo
+module GHC.IR.Haskell.Parsers.HeaderInfo
    ( getImports
    , mkPrelImports -- used by the renamer too
    , getOptionsFromFile
@@ -27,7 +27,7 @@ import GHC.Types
 import Parser           ( parseHeader )
 import Lexer
 import GHC.Data.FastString
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.Module
 import PrelNames
 import GHC.Data.StringBuffer

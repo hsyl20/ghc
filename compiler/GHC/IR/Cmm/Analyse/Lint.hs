@@ -11,7 +11,7 @@ module GHC.IR.Cmm.Analyse.Lint (
   ) where
 
 import GHC.IR.Cmm.Transform.Dataflow
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Analyse.Liveness
 import GHC.IR.Cmm.Switch (switchTargetsToList)

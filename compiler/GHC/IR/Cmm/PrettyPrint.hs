@@ -41,7 +41,7 @@ where
 
 import GHC.IR.Cmm.BlockId ()
 import GHC.Data.CLabel
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch
 import GHC.Config.Flags

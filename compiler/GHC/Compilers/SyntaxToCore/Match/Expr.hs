@@ -15,7 +15,7 @@ module GHC.Compilers.SyntaxToCore.Match.Expr (
 
 #include "HsVersions.h"
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Set

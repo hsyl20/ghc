@@ -59,7 +59,7 @@ import NCGMonad
 
 
 import GHC.IR.Cmm.Transform.Dataflow
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel           ( CLabel, ForeignLabelSource(..), pprCLabel,
                           mkDynamicLinkerLabel, DynamicLinkerLabelInfo(..),
                           dynamicLinkerLabelInfo, mkPicBaseLabel,

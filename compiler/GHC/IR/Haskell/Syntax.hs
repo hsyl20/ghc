@@ -16,34 +16,34 @@ therefore, is almost nothing but re-exporting.
                                       -- in module PlaceHolder
 {-# LANGUAGE ConstraintKinds #-}
 
-module GHC.Syntax (
-        module GHC.Syntax.Binding,
-        module GHC.Syntax.Declaration,
-        module GHC.Syntax.Expression,
-        module GHC.Syntax.ImportExport,
-        module GHC.Syntax.Literal,
-        module GHC.Syntax.Pattern,
-        module GHC.Syntax.Type,
-        module GHC.Syntax.Utils,
-        module GHC.Syntax.Documentation,
-        module GHC.Syntax.PlaceHolder,
+module GHC.IR.Haskell.Syntax (
+        module GHC.IR.Haskell.Binding,
+        module GHC.IR.Haskell.Declaration,
+        module GHC.IR.Haskell.Expression,
+        module GHC.IR.Haskell.ImportExport,
+        module GHC.IR.Haskell.Literal,
+        module GHC.IR.Haskell.Pattern,
+        module GHC.IR.Haskell.Type,
+        module GHC.IR.Haskell.Utils,
+        module GHC.IR.Haskell.Documentation,
+        module GHC.IR.Haskell.PlaceHolder,
         Fixity,
 
         HsModule(..)
 ) where
 
 -- friends:
-import GHC.Syntax.Declaration
-import GHC.Syntax.Binding
-import GHC.Syntax.Expression
-import GHC.Syntax.ImportExport
-import GHC.Syntax.Literal
-import GHC.Syntax.PlaceHolder
-import GHC.Syntax.Pattern
-import GHC.Syntax.Type
+import GHC.IR.Haskell.Declaration
+import GHC.IR.Haskell.Binding
+import GHC.IR.Haskell.Expression
+import GHC.IR.Haskell.ImportExport
+import GHC.IR.Haskell.Literal
+import GHC.IR.Haskell.PlaceHolder
+import GHC.IR.Haskell.Pattern
+import GHC.IR.Haskell.Type
 import GHC.Data.BasicTypes       ( Fixity, WarningTxt )
-import GHC.Syntax.Utils
-import GHC.Syntax.Documentation
+import GHC.IR.Haskell.Utils
+import GHC.IR.Haskell.Documentation
 import GHC.Data.OccName          ( HasOccName(..) )
 
 -- others:

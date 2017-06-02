@@ -23,7 +23,7 @@ import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsSyntaxEx
 import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Compilers.SyntaxToCore.Utils
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 
 import GHC.Data.Id
 import GHC.IR.Core.Syntax

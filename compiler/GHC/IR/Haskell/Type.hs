@@ -16,7 +16,7 @@ HsTypes: Abstract syntax: user-defined types
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE CPP #-}
 
-module GHC.Syntax.Type (
+module GHC.IR.Haskell.Type (
         HsType(..), LHsType, HsKind, LHsKind,
         HsTyVarBndr(..), LHsTyVarBndr,
         LHsQTyVars(..),
@@ -68,9 +68,9 @@ module GHC.Syntax.Type (
         pprHsContext, pprHsContextNoArrow, pprHsContextMaybe
     ) where
 
-import {-# SOURCE #-} GHC.Syntax.Expression ( HsSplice, pprSplice )
+import {-# SOURCE #-} GHC.IR.Haskell.Expression ( HsSplice, pprSplice )
 
-import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..),
+import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..),
                      OutputableBndrId )
 
 import GHC.Data.Id ( Id )
@@ -81,7 +81,7 @@ import GHC.Data.DataConstructor( HsSrcBang(..), HsImplBang(..),
                 SrcStrictness(..), SrcUnpackedness(..) )
 import TysPrim( funTyConName )
 import GHC.Data.Type
-import GHC.Syntax.Documentation
+import GHC.IR.Haskell.Documentation
 import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
@@ -168,7 +168,7 @@ is a bit complicated.  Here's how it works.
      f :: _a -> _
   The enclosing HsWildCardBndrs binds the wildcards _a and _.
 
-* The explicit presence of these wrappers specifies, in the GHC.Syntax,
+* The explicit presence of these wrappers specifies, in the GHC.IR.Haskell,
   exactly where implicit quantification is allowed, and where
   wildcards are allowed.
 
@@ -493,7 +493,7 @@ data HsType name
 
       -- For details on above see note [Api annotations] in ApiAnnotation
 
-  | HsParTy             (LHsType name)   -- See Note [Parens in GHC.Syntax] in HsExpr
+  | HsParTy             (LHsType name)   -- See Note [Parens in GHC.IR.Haskell] in HsExpr
         -- Parenthesis preserved for the precedence re-arrangement in GHC.Rename.Type
         -- It's important that a * (b + c) doesn't get rearranged to (a*b) + c!
       -- ^ - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.AnnOpen' @'('@,
@@ -556,7 +556,7 @@ data HsType name
       -- For details on above see note [Api annotations] in ApiAnnotation
 
   | HsCoreTy Type       -- An escape hatch for tunnelling a *closed*
-                        -- Core Type through GHC.Syntax.
+                        -- Core Type through GHC.IR.Haskell.
       -- ^ - 'ApiAnnotation.AnnKeywordId' : None
 
       -- For details on above see note [Api annotations] in ApiAnnotation

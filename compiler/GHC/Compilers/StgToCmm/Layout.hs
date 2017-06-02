@@ -38,7 +38,7 @@ import GHC.Compilers.StgToCmm.Profiling (curCCS)
 import GHC.IR.Cmm.Graph
 import GHC.RTS.Storage
 import GHC.IR.Cmm.BlockId
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.RTS.InfoTable
 import GHC.Data.CLabel

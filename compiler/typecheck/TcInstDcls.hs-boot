@@ -5,7 +5,7 @@
 
 module TcInstDcls ( tcInstDecls1 ) where
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcRnTypes
 import TcEnv( InstInfo )
 import TcDeriv

@@ -1,6 +1,6 @@
 -- !!! this module supposedly includes one of each Haskell construct
 
--- GHC.Syntax.ImportExport stuff
+-- GHC.IR.Haskell.ImportExport stuff
 
 module OneOfEverything (
         fixn,
@@ -19,7 +19,7 @@ import System.IO ( putStr )
 import System.Environment hiding ( getArgs )
 import Control.Monad
 
--- GHC.Syntax.Declaration stuff
+-- GHC.IR.Haskell.Declaration stuff
 
 infix   6 `fixn`
 infixl  7 +#
@@ -51,7 +51,7 @@ instance (Eq a) => EqClass (Tree a) where
 
 default (Integer, Rational)
 
--- GHC.Syntax.Binding stuff
+-- GHC.IR.Haskell.Binding stuff
 
 singlebind x = x
 

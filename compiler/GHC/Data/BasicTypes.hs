@@ -1136,7 +1136,7 @@ data Activation = NeverActive
                 | ActiveAfter SourceText PhaseNum
                   -- Active in this phase and later
                 deriving( Eq, Data )
-                  -- Eq used in comparing rules in GHC.Syntax.Declaration
+                  -- Eq used in comparing rules in GHC.IR.Haskell.Declaration
 
 -- | Rule Match Information
 data RuleMatchInfo = ConLike                    -- See Note [CONLIKE pragma]

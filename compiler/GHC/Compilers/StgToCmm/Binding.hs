@@ -34,7 +34,7 @@ import GHC.IR.Cmm.Graph
 import GHC.IR.Core.Syntax          ( AltCon(..), tickishIsCode )
 import GHC.IR.Cmm.BlockId
 import GHC.RTS.Storage
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.RTS.InfoTable
 import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel

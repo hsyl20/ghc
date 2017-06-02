@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP, DeriveDataTypeable #-}
 
-module GHC.Syntax.Documentation (
+module GHC.IR.Haskell.Documentation (
   HsDocString(..),
   LHsDocString,
   ppr_mbDoc

@@ -29,7 +29,7 @@ module GHC.IR.Cmm.PrettyPrint.C (
 import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
 import ForeignCall
-import GHC.IR.Cmm hiding (pprBBlock)
+import GHC.IR.Cmm.Syntax hiding (pprBBlock)
 import GHC.IR.Cmm.PrettyPrint ()
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.IR.Cmm.Utils

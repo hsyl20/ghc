@@ -14,7 +14,7 @@ where
 
 import GHC.Config.Flags
 import GHC.IR.Cmm.BlockId
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.PrettyPrint.Expression ()
 import GHC.IR.Cmm.Transform.Dataflow
 

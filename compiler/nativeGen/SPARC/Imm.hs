@@ -7,7 +7,7 @@ module SPARC.Imm (
 
 where
 
-import GHC.IR.Cmm
+import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel
 
 import GHC.Utils.Outputable

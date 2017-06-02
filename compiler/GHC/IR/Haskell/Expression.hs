@@ -13,18 +13,18 @@
 {-# LANGUAGE DeriveFunctor #-}
 
 -- | Abstract Haskell syntax for expressions.
-module GHC.Syntax.Expression where
+module GHC.IR.Haskell.Expression where
 
 #include "HsVersions.h"
 
 -- friends:
-import GHC.Syntax.Declaration
-import GHC.Syntax.Pattern
-import GHC.Syntax.Literal
-import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
+import GHC.IR.Haskell.Declaration
+import GHC.IR.Haskell.Pattern
+import GHC.IR.Haskell.Literal
+import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,DataId,DataIdPost,
                      NameOrRdrName,OutputableBndrId )
-import GHC.Syntax.Type
-import GHC.Syntax.Binding
+import GHC.IR.Haskell.Type
+import GHC.IR.Haskell.Binding
 
 -- others:
 import TcEvidence
@@ -354,11 +354,11 @@ data HsExpr id
   --             'ApiAnnotation.AnnClose' @')'@
 
   -- For details on above see note [Api annotations] in ApiAnnotation
-  | HsPar       (LHsExpr id)    -- ^ Parenthesised expr; see Note [Parens in GHC.Syntax]
+  | HsPar       (LHsExpr id)    -- ^ Parenthesised expr; see Note [Parens in GHC.IR.Haskell]
 
-  | SectionL    (LHsExpr id)    -- operand; see Note [Sections in GHC.Syntax]
+  | SectionL    (LHsExpr id)    -- operand; see Note [Sections in GHC.IR.Haskell]
                 (LHsExpr id)    -- operator
-  | SectionR    (LHsExpr id)    -- operator; see Note [Sections in GHC.Syntax]
+  | SectionR    (LHsExpr id)    -- operator; see Note [Sections in GHC.IR.Haskell]
                 (LHsExpr id)    -- operand
 
   -- | Used for explicit tuples and sections thereof
@@ -691,7 +691,7 @@ data HsExpr id
   -- Finally, HsWrap appears only in typechecker output
   -- The contained Expr is *NOT* itself an HsWrap.
   -- See Note [Detecting forced eta expansion] in GHC.Compilers.SyntaxToCore.Expression. This invariant
-  -- is maintained by GHC.Syntax.Utils.mkHsWrap.
+  -- is maintained by GHC.IR.Haskell.Utils.mkHsWrap.
 
   |  HsWrap     HsWrapper    -- TRANSLATION
                 (HsExpr id)
@@ -720,7 +720,7 @@ tupArgPresent (L _ (Present {})) = True
 tupArgPresent (L _ (Missing {})) = False
 
 {-
-Note [Parens in GHC.Syntax]
+Note [Parens in GHC.IR.Haskell]
 ~~~~~~~~~~~~~~~~~~~~~~
 HsPar (and ParPat in patterns, HsParTy in types) is used as follows
 
@@ -739,7 +739,7 @@ HsPar (and ParPat in patterns, HsParTy in types) is used as follows
     completed, to be treated the same as HsPar.
 
 
-Note [Sections in GHC.Syntax]
+Note [Sections in GHC.IR.Haskell]
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Sections should always appear wrapped in an HsPar, thus
          HsPar (SectionR ...)
@@ -1064,7 +1064,7 @@ pprExternalSrcLoc (StringLiteral _ src,(n1,n2),(n3,n4))
   = ppr (src,(n1,n2),(n3,n4))
 
 {-
-GHC.Syntax records exactly where the user put parens, with HsPar.
+GHC.IR.Haskell records exactly where the user put parens, with HsPar.
 So generally speaking we print without adding any parens.
 However, some code is internally generated, and in some places
 parens are absolutely required; so for these places we use
@@ -1512,12 +1512,12 @@ pprMatches MG { mg_alts = matches }
     = vcat (map pprMatch (map unLoc (unLoc matches)))
       -- Don't print the type; it's only a place-holder before typechecking
 
--- Exported to GHC.Syntax.Binding, which can't see the defn of HsMatchContext
+-- Exported to GHC.IR.Haskell.Binding, which can't see the defn of HsMatchContext
 pprFunBind :: (OutputableBndrId idR, Outputable body)
            => MatchGroup idR body -> SDoc
 pprFunBind matches = pprMatches matches
 
--- Exported to GHC.Syntax.Binding, which can't see the defn of HsMatchContext
+-- Exported to GHC.IR.Haskell.Binding, which can't see the defn of HsMatchContext
 pprPatBind :: forall bndr id body. (OutputableBndrId bndr,
                                     OutputableBndrId id,
                                     Outputable body)

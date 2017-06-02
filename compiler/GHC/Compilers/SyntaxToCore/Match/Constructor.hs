@@ -18,7 +18,7 @@ where
 
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match     ( match )
 
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import GHC.Compilers.SyntaxToCore.Binding
 import GHC.Data.ConstructorLike
 import TcType

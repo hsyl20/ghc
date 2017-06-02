@@ -14,17 +14,17 @@
                                       -- in module PlaceHolder
 {-# LANGUAGE ConstraintKinds #-}
 
-module GHC.Syntax.Literal where
+module GHC.IR.Haskell.Literal where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Syntax.Expression ( HsExpr, pprExpr )
+import {-# SOURCE #-} GHC.IR.Haskell.Expression ( HsExpr, pprExpr )
 import GHC.Data.BasicTypes ( IntegralLit(..),FractionalLit(..),negateIntegralLit,
                     negateFractionalLit,SourceText(..),pprWithSourceText )
 import GHC.Data.Type       ( Type )
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
+import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 
 import Data.ByteString (ByteString)
 import Data.Data hiding ( Fixity )

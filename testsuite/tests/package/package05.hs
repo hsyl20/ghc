@@ -1,4 +1,4 @@
 module Package05 where
-import GHC.Syntax.Type
+import GHC.IR.Haskell.Type
 import MyHsTypes
-import GHC.Syntax.Utils
+import GHC.IR.Haskell.Utils

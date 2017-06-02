@@ -21,7 +21,7 @@ module GHC.Rename.ImportExport (
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import GHC.Syntax
+import GHC.IR.Haskell.Syntax
 import TcEnv
 import GHC.Rename.Environment
 import GHC.Rename.Fixity
@@ -539,7 +539,7 @@ extendGlobalRdrEnvRn avails new_fixities
     getLocalDeclBindersd@ returns the names for an HsDecl
              It's used for source code.
 
-        *** See Note [The Naming story] in GHC.Syntax.Declaration ****
+        *** See Note [The Naming story] in GHC.IR.Haskell.Declaration ****
 *                                                                      *
 ********************************************************************* -}
 

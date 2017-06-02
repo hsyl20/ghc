@@ -119,7 +119,7 @@ import Reg
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
-import GHC.IR.Cmm hiding (RegSet)
+import GHC.IR.Cmm.Syntax hiding (RegSet)
 
 import GHC.Data.Graph.Directed
 import GHC.Config.Flags
