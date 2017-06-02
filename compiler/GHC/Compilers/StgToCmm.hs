@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module StgCmm ( codeGen ) where
+module GHC.Compilers.StgToCmm ( codeGen ) where
 
 #include "HsVersions.h"
 

@@ -239,7 +239,7 @@ Library
         CodeGen.Platform.X86
         CodeGen.Platform.X86_64
         CgUtils
-        StgCmm
+        GHC.Compilers.StgToCmm
         StgCmmBind
         StgCmmClosure
         StgCmmCon
