@@ -21,7 +21,7 @@ import TcClassDcl( tcClassDecl2, tcATDefault,
 import TcSigs
 import TcRnMonad
 import TcValidity
-import TcHsSyn    ( zonkTyBndrsX, emptyZonkEnv
+import GHC.IR.Haskell.Syntax.TypeChecker    ( zonkTyBndrsX, emptyZonkEnv
                   , zonkTcTypeToTypes, zonkTcTypeToType )
 import TcMType
 import TcType

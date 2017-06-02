@@ -32,7 +32,7 @@ import GHC.IR.Haskell.Syntax
 import TcType
 import TcEvidence
 import TcRnMonad
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import GHC.Data.Type
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Utils
@@ -233,7 +233,7 @@ dsLExpr :: LHsExpr Id -> DsM CoreExpr
 dsLExpr (L loc e)
   = putSrcSpanDs loc $
     do { core_expr <- dsExpr e
-   -- uncomment this check to test the hsExprType function in TcHsSyn
+   -- uncomment this check to test the hsExprType function in GHC.IR.Haskell.Syntax.TypeChecker
    --    ; MASSERT2( exprType core_expr `eqType` hsExprType e
    --              , ppr e <+> dcolon <+> ppr (hsExprType e) $$
    --                ppr core_expr <+> dcolon <+> ppr (exprType core_expr) )

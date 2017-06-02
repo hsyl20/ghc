@@ -13,7 +13,7 @@ import GHC.Data.Class
 import TcRnMonad
 import TcEnv
 import TcHsType
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import TcSimplify
 import TcValidity
 import TcType

@@ -40,7 +40,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import GHC.Data.Var
 
 -- | Info about a module. This information is generated every time a

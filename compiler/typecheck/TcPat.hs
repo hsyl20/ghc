@@ -18,7 +18,7 @@ module TcPat ( tcLetPat, newLetBndr, LetBndrSpec(..)
 import {-# SOURCE #-}   TcExpr( tcSyntaxOp, tcSyntaxOpGen, tcInferSigma )
 
 import GHC.IR.Haskell.Syntax
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import TcSigs( TcPragEnv, lookupPragEnv, addInlinePrags )
 import TcRnMonad
 import Inst

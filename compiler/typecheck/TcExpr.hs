@@ -22,7 +22,7 @@ import {-# SOURCE #-}   TcSplice( tcSpliceExpr, tcTypedBracket, tcUntypedBracket
 import THNames( liftStringName, liftName )
 
 import GHC.IR.Haskell.Syntax
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import TcRnMonad
 import TcUnify
 import GHC.Data.BasicTypes

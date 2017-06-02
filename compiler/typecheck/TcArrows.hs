@@ -13,7 +13,7 @@ import {-# SOURCE #-}   TcExpr( tcMonoExpr, tcInferRho, tcSyntaxOp, tcCheckId, t
 
 import GHC.IR.Haskell.Syntax
 import TcMatches
-import TcHsSyn( hsLPatType )
+import GHC.IR.Haskell.Syntax.TypeChecker( hsLPatType )
 import TcType
 import TcMType
 import TcBinds

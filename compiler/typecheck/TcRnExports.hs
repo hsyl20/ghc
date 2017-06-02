@@ -36,7 +36,7 @@ import GHC.Utils (capitalise)
 import Control.Monad
 import GHC.Config.Flags
 import GHC.Rename.Documentation          ( rnHsDoc )
-import RdrHsSyn        ( setRdrNameSpace )
+import GHC.IR.Haskell.Syntax.Parsed        ( setRdrNameSpace )
 import Data.Either      ( partitionEithers )
 
 {-

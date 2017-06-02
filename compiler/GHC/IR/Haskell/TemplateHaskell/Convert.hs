@@ -22,7 +22,7 @@ import qualified GHC.Data.Class as Class
 import GHC.Data.RdrName
 import qualified GHC.Data.Name as Name
 import GHC.Data.Module
-import RdrHsSyn
+import GHC.IR.Haskell.Syntax.Parsed
 import qualified GHC.Data.OccName as OccName
 import GHC.Data.OccName
 import GHC.Data.SrcLoc
@@ -254,8 +254,8 @@ cvtDec (ClassD ctxt cl tvs fds decs)
         }
   where
     cvt_at_def :: LTyFamInstDecl RdrName -> CvtM (LTyFamDefltEqn RdrName)
-    -- Very similar to what happens in RdrHsSyn.mkClassDecl
-    cvt_at_def decl = case RdrHsSyn.mkATDefault decl of
+    -- Very similar to what happens in GHC.IR.Haskell.Syntax.Parsed.mkClassDecl
+    cvt_at_def decl = case GHC.IR.Haskell.Syntax.Parsed.mkATDefault decl of
                         Right def     -> return def
                         Left (_, msg) -> failWith msg
 
@@ -590,7 +590,7 @@ cvt_fundep (FunDep xs ys) = do { xs' <- mapM tNameL xs
 cvtForD :: Foreign -> CvtM (ForeignDecl RdrName)
 cvtForD (ImportF callconv safety from nm ty)
   -- the prim and javascript calling conventions do not support headers
-  -- and are inserted verbatim, analogous to mkImport in RdrHsSyn
+  -- and are inserted verbatim, analogous to mkImport in GHC.IR.Haskell.Syntax.Parsed
   | callconv == TH.Prim || callconv == TH.JavaScript
   = mk_imp (CImport (noLoc (cvt_conv callconv)) (noLoc safety') Nothing
                     (CFunction (StaticTarget (SourceText from)

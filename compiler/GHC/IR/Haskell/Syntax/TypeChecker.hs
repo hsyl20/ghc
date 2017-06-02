@@ -3,7 +3,7 @@
 (c) The AQUA Project, Glasgow University, 1996-1998
 
 
-TcHsSyn: Specialisations of the @GHC.IR.Haskell@ syntax for the typechecker
+GHC.IR.Haskell.Syntax.TypeChecker: Specialisations of the @GHC.IR.Haskell@ syntax for the typechecker
 
 This module is an extension of @GHC.IR.Haskell@ syntax, for use in the type
 checker.
@@ -11,7 +11,7 @@ checker.
 
 {-# LANGUAGE CPP, TupleSections #-}
 
-module TcHsSyn (
+module GHC.IR.Haskell.Syntax.TypeChecker (
         -- * Extracting types from GHC.IR.Haskell
         hsLitType, hsLPatType, hsPatType,
 
@@ -1397,13 +1397,13 @@ zonkVect env (HsNoVect s v)
        }
 zonkVect _env (HsVectTypeOut s t rt)
   = return $ HsVectTypeOut s t rt
-zonkVect _ (HsVectTypeIn _ _ _ _) = panic "TcHsSyn.zonkVect: HsVectTypeIn"
+zonkVect _ (HsVectTypeIn _ _ _ _) = panic "GHC.IR.Haskell.Syntax.TypeChecker.zonkVect: HsVectTypeIn"
 zonkVect _env (HsVectClassOut c)
   = return $ HsVectClassOut c
-zonkVect _ (HsVectClassIn _ _) = panic "TcHsSyn.zonkVect: HsVectClassIn"
+zonkVect _ (HsVectClassIn _ _) = panic "GHC.IR.Haskell.Syntax.TypeChecker.zonkVect: HsVectClassIn"
 zonkVect _env (HsVectInstOut i)
   = return $ HsVectInstOut i
-zonkVect _ (HsVectInstIn _) = panic "TcHsSyn.zonkVect: HsVectInstIn"
+zonkVect _ (HsVectInstIn _) = panic "GHC.IR.Haskell.Syntax.TypeChecker.zonkVect: HsVectInstIn"
 
 {-
 ************************************************************************

@@ -60,7 +60,7 @@ import GHC.Rename.Environment
 import GHC.Rename.Utils ( HsDocContext(..) )
 import GHC.Rename.Fixity ( lookupFixityRn_help )
 import GHC.Rename.Type
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import TcSimplify
 import GHC.Data.Type as Type
 import GHC.Data.Kind

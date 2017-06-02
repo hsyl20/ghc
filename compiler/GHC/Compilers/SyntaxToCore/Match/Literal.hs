@@ -30,7 +30,7 @@ import GHC.IR.Core.Syntax
 import GHC.IR.Core.Syntax.Make
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
-import TcHsSyn ( shortCutLit )
+import GHC.IR.Haskell.Syntax.TypeChecker ( shortCutLit )
 import TcType
 import GHC.Data.Name
 import GHC.Data.Type

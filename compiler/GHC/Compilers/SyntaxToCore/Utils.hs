@@ -44,7 +44,7 @@ import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match  ( matchSimply )
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsLExpr )
 
 import GHC.IR.Haskell.Syntax
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import TcType( tcSplitTyConApp )
 import GHC.IR.Core.Syntax
 import GHC.Compilers.SyntaxToCore.Monad

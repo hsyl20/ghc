@@ -64,7 +64,7 @@ import GHC.Data.Kind             ( Kind )
 import GHC.Data.Class            ( FunDep )
 
 -- compiler/parser
-import RdrHsSyn
+import GHC.IR.Haskell.Syntax.Parsed
 import Lexer
 import HaddockUtils
 import ApiAnnotation
@@ -1825,7 +1825,7 @@ btype :: { LHsType RdrName }
 -- Used for parsing Haskell98-style data constructors,
 -- in order to forbid the blasphemous
 -- > data Foo = Int :+ Char :* Bool
--- See also Note [Parsing data constructors is hard] in RdrHsSyn
+-- See also Note [Parsing data constructors is hard] in GHC.IR.Haskell.Syntax.Parsed
 btype_no_ops :: { LHsType RdrName }
         : btype_no_ops atype            { sLL $1 $> $ HsAppTy $1 $2 }
         | atype                         { $1 }
@@ -1968,7 +1968,7 @@ Note [Parsing ~]
 Due to parsing conflicts between laziness annotations in data type
 declarations (see strict_mark) and equality types ~'s are always
 parsed as laziness annotations, and turned into HsEqTy's in the
-correct places using RdrHsSyn.splitTilde.
+correct places using GHC.IR.Haskell.Syntax.Parsed.splitTilde.
 
 Since strict_mark is parsed as part of atype which is part of type,
 typedoc and context (where HsEqTy previously appeared) it made most
@@ -2089,7 +2089,7 @@ forall :: { Located ([AddAnn], Maybe [LHsTyVarBndr RdrName]) }
         | {- empty -}                 { noLoc ([], Nothing) }
 
 constr_stuff :: { Located (Located RdrName, HsConDeclDetails RdrName) }
-    -- See Note [Parsing data constructors is hard] in RdrHsSyn
+    -- See Note [Parsing data constructors is hard] in GHC.IR.Haskell.Syntax.Parsed
         : btype_no_ops                         {% do { c <- splitCon $1
                                                      ; return $ sLL $1 $> c } }
         | btype_no_ops conop btype_no_ops      {% do { ty <- splitTilde $1

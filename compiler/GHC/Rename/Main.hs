@@ -2284,8 +2284,8 @@ add_role_annot d (tycls@(TyClGroup { group_roles = roles }) : rest)
 
 add_bind :: LHsBind a -> HsValBinds a -> HsValBinds a
 add_bind b (ValBindsIn bs sigs) = ValBindsIn (bs `snocBag` b) sigs
-add_bind _ (ValBindsOut {})     = panic "RdrHsSyn:add_bind"
+add_bind _ (ValBindsOut {})     = panic "GHC.IR.Haskell.Syntax.Parsed:add_bind"
 
 add_sig :: LSig a -> HsValBinds a -> HsValBinds a
 add_sig s (ValBindsIn bs sigs) = ValBindsIn bs (s:sigs)
-add_sig _ (ValBindsOut {})     = panic "RdrHsSyn:add_sig"
+add_sig _ (ValBindsOut {})     = panic "GHC.IR.Haskell.Syntax.Parsed:add_sig"

@@ -27,7 +27,7 @@ import BuildTyCl
 import TcRnMonad
 import TcEnv
 import TcValidity
-import TcHsSyn
+import GHC.IR.Haskell.Syntax.TypeChecker
 import TcTyDecls
 import TcClassDcl
 import {-# SOURCE #-} TcInstDcls( tcInstDecls1 )

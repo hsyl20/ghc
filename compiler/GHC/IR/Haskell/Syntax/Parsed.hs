@@ -7,7 +7,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module   RdrHsSyn (
+module   GHC.IR.Haskell.Syntax.Parsed (
         mkHsOpApp,
         mkHsIntegral, mkHsFractional, mkHsIsString,
         mkHsDo, mkSpliceDecl,
@@ -424,7 +424,7 @@ getMonoBind (L loc1 (FunBind { fun_id = fun_id1@(L _ f1),
 getMonoBind bind binds = (bind, binds)
 
 has_args :: [LMatch RdrName (LHsExpr RdrName)] -> Bool
-has_args []                           = panic "RdrHsSyn:has_args"
+has_args []                           = panic "GHC.IR.Haskell.Syntax.Parsed:has_args"
 has_args ((L _ (Match _ args _ _)) : _) = not (null args)
         -- Don't group together FunBinds if they have
         -- no arguments.  This is necessary now that variable bindings

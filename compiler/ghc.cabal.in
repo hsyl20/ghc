@@ -350,7 +350,7 @@ Library
         Lexer
         GHC.Data.Coercion.Optimise
         Parser
-        RdrHsSyn
+        GHC.IR.Haskell.Syntax.Parsed
         ApiAnnotation
         ForeignCall
         KnownUniques
@@ -420,7 +420,7 @@ Library
         TcGenDeriv
         TcGenFunctor
         TcGenGenerics
-        TcHsSyn
+        GHC.IR.Haskell.Syntax.TypeChecker
         TcHsType
         TcInstDcls
         TcMType
