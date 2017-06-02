@@ -19,7 +19,7 @@ import GHC.IR.Core.Transform.Unfolding
 import GHC.IR.Core.FreeVars
 import GHC.IR.Core.Tidy
 import GHC.IR.Core.Monad
-import GHC.IR.Core.Prepare
+import GHC.Compilers.CoreToStg.Prepare
 import GHC.IR.Core.Utils        (rhsIsStatic)
 import GHC.IR.Core.Analyse.Stats        (coreBindsStats, CoreStats(..))
 import GHC.IR.Core.Force          (seqBinds)

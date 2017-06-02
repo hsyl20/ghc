@@ -261,7 +261,7 @@ Library
         GHC.IR.Core.Arity
         GHC.IR.Core.FreeVars
         GHC.IR.Core.Analyse.Lint
-        GHC.IR.Core.Prepare
+        GHC.Compilers.CoreToStg.Prepare
         GHC.IR.Core.Substitution
         GHC.IR.Core.Transform.Simple
         GHC.IR.Core.Syntax

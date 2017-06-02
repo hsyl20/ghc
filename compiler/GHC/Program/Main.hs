@@ -116,7 +116,7 @@ import MkIface
 import GHC.Compilers.SyntaxToCore.Main
 import GHC.IR.Core.Transform.Pipeline
 import GHC.Interface.Tidy
-import GHC.IR.Core.Prepare
+import GHC.Compilers.CoreToStg.Prepare
 import GHC.Compilers.CoreToStg ( coreToStg )
 import qualified StgCmm ( codeGen )
 import GHC.IR.Stg.Syntax
