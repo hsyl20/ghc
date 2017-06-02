@@ -612,7 +612,7 @@ Note that
 
 
 
-From the TcSpecPrag, in GHC.Desugar.Binding we generate a binding for f_spec and a RULE:
+From the TcSpecPrag, in GHC.Compilers.SyntaxToCore.Binding we generate a binding for f_spec and a RULE:
 
    f_spec :: Int -> b -> Int
    f_spec = wrap<f rhs>

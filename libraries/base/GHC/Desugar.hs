@@ -7,7 +7,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      :  GHC.Desugar
+-- Module      :  GHC.Compilers.SyntaxToCore
 -- Copyright   :  (c) The University of Glasgow, 2007
 -- License     :  see libraries/base/LICENSE
 -- 
@@ -19,7 +19,7 @@
 -- 
 -----------------------------------------------------------------------------
 
-module GHC.Desugar ((>>>), AnnotationWrapper(..), toAnnotationWrapper) where
+module GHC.Compilers.SyntaxToCore ((>>>), AnnotationWrapper(..), toAnnotationWrapper) where
 
 import Control.Arrow    (Arrow(..))
 import Control.Category ((.))

@@ -29,7 +29,7 @@ module GHC.Core.Transform.Vectorise.Monad.Base (
 import GHC.Core.Transform.Vectorise.Builtins
 import GHC.Core.Transform.Vectorise.Env
 
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Monad
 import TcRnMonad
 import GHC.Utils.Error
 import GHC.Utils.Outputable

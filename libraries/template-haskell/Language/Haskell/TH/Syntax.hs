@@ -533,7 +533,7 @@ instance Quasi Q where
 
 
 ----------------------------------------------------
--- The following operations are used solely in GHC.Desugar.Splices when
+-- The following operations are used solely in GHC.Compilers.SyntaxToCore.Splices when
 -- desugaring brackets
 -- They are not necessary for the user, who can use ordinary return and (>>=) etc
 

@@ -11,7 +11,7 @@ This module exports some utility functions of no great interest.
 {-# LANGUAGE CPP #-}
 
 -- | Utility functions for constructing Core syntax, principally for desugaring
-module GHC.Desugar.Utils (
+module GHC.Compilers.SyntaxToCore.Utils (
         EquationInfo(..),
         firstPat, shiftEqns,
 
@@ -40,14 +40,14 @@ module GHC.Desugar.Utils (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Desugar.Match  ( matchSimply )
-import {-# SOURCE #-} GHC.Desugar.Expression ( dsLExpr )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match  ( matchSimply )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsLExpr )
 
 import GHC.Syntax
 import TcHsSyn
 import TcType( tcSplitTyConApp )
 import GHC.Core.Syntax
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Monad
 
 import GHC.Core.Utils
 import GHC.Core.Syntax.Make
@@ -332,8 +332,8 @@ mkCoAlgCaseMatchResult dflags var ty match_alts
       case (isPArrFakeCon (alt_pat alt), isPArrFakeAlts alts) of
         (True , True ) -> True
         (False, False) -> False
-        _              -> panic "GHC.Desugar.Utils: you may not mix `[:...:]' with `PArr' patterns"
-    isPArrFakeAlts [] = panic "GHC.Desugar.Utils: unexpectedly found an empty list of PArr fake alternatives"
+        _              -> panic "GHC.Compilers.SyntaxToCore.Utils: you may not mix `[:...:]' with `PArr' patterns"
+    isPArrFakeAlts [] = panic "GHC.Compilers.SyntaxToCore.Utils: unexpectedly found an empty list of PArr fake alternatives"
 
 mkCoSynCaseMatchResult :: Id -> Type -> CaseAlt PatSyn -> MatchResult
 mkCoSynCaseMatchResult var ty alt = MatchResult CanFail $ mkPatSynCase var ty alt
@@ -423,7 +423,7 @@ mkPArrCase dflags var ty sorted_alts fail = do
     elemTy      = case splitTyConApp (idType var) of
         (_, [elemTy]) -> elemTy
         _             -> panic panicMsg
-    panicMsg    = "GHC.Desugar.Utils.mkCoAlgCaseMatchResult: not a parallel array?"
+    panicMsg    = "GHC.Compilers.SyntaxToCore.Utils.mkCoAlgCaseMatchResult: not a parallel array?"
     len lengthP = mkApps (Var lengthP) [Type elemTy, Var var]
     --
     unboxAlt = do
@@ -729,7 +729,7 @@ mkSelectorBinds :: [[Tickish Id]] -- ^ ticks to add, possibly
                 -> CoreExpr       -- ^ Expression to which the pattern is bound
                 -> DsM (Id,[(Id,CoreExpr)])
                 -- ^ Id the rhs is bound to, for desugaring strict
-                -- binds (see Note [Desugar Strict binds] in GHC.Desugar.Binding)
+                -- binds (see Note [Desugar Strict binds] in GHC.Compilers.SyntaxToCore.Binding)
                 -- and all the desugared binds
 
 mkSelectorBinds ticks pat val_expr

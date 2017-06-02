@@ -3,20 +3,20 @@
 (c) The AQUA Project, Glasgow University, 1998
 
 
-Desugaring foreign declarations (see also GHC.Desugar.Foreign.Call).
+Desugaring foreign declarations (see also GHC.Compilers.SyntaxToCore.Foreign.Call).
 -}
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Foreign.Declaration ( dsForeigns ) where
+module GHC.Compilers.SyntaxToCore.Foreign.Declaration ( dsForeigns ) where
 
 #include "HsVersions.h"
 import TcRnMonad        -- temp
 
 import GHC.Core.Syntax
 
-import GHC.Desugar.Foreign.Call
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Foreign.Call
+import GHC.Compilers.SyntaxToCore.Monad
 
 import GHC.Syntax
 import GHC.Data.DataConstructor
@@ -66,7 +66,7 @@ is the same as
   f :: prim_args -> IO prim_res
   f a1 ... an = _ccall_ nm cc a1 ... an
 \end{verbatim}
-so we reuse the desugaring code in @GHC.Desugar.Foreign.Call@ to deal with these.
+so we reuse the desugaring code in @GHC.Compilers.SyntaxToCore.Foreign.Call@ to deal with these.
 -}
 
 type Binding = (Id, CoreExpr)   -- No rec/nonrec structure;
@@ -727,7 +727,7 @@ typeTyCon ty
   | Just (tc, _) <- tcSplitTyConApp_maybe (unwrapType ty)
   = tc
   | otherwise
-  = pprPanic "GHC.Desugar.Foreign.Declaration.typeTyCon" (ppr ty)
+  = pprPanic "GHC.Compilers.SyntaxToCore.Foreign.Declaration.typeTyCon" (ppr ty)
 
 insertRetAddr :: DynFlags -> CCallConv
               -> [(SDoc, SDoc, Type, CmmType)]
@@ -781,7 +781,7 @@ getPrimTyOf ty
         ASSERT(dataConSourceArity data_con == 1)
         ASSERT2(isUnliftedType prim_ty, ppr prim_ty)
         prim_ty
-     _other -> pprPanic "GHC.Desugar.Foreign.Declaration.getPrimTyOf" (ppr ty)
+     _other -> pprPanic "GHC.Compilers.SyntaxToCore.Foreign.Declaration.getPrimTyOf" (ppr ty)
   where
         rep_ty = unwrapType ty
 

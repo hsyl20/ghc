@@ -1642,7 +1642,7 @@ tidySigSkol env cx ty tv_prs
 *                                                                      *
 ************************************************************************
 
-See Note [Levity polymorphism checking] in GHC.Desugar.Monad
+See Note [Levity polymorphism checking] in GHC.Compilers.SyntaxToCore.Monad
 
 -}
 
@@ -1663,7 +1663,7 @@ ensureNotLevPoly ty doc
                    -- forall a. a. See, for example, test ghci/scripts/T9140
     checkForLevPoly doc ty
 
-  -- See Note [Levity polymorphism checking] in GHC.Desugar.Monad
+  -- See Note [Levity polymorphism checking] in GHC.Compilers.SyntaxToCore.Monad
 checkForLevPoly :: SDoc -> Type -> TcM ()
 checkForLevPoly = checkForLevPolyX addErr
 

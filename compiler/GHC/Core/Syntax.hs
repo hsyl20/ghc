@@ -472,7 +472,7 @@ For example
   \(r::RuntimeRep). \(a::TYPE r). \(x::a). e
 is illegal because x's type has kind (TYPE r), which has 'r' free.
 
-See Note [Levity polymorphism checking] in GHC.Desugar.Monad to see where these
+See Note [Levity polymorphism checking] in GHC.Compilers.SyntaxToCore.Monad to see where these
 invariants are established for user-written code.
 
 Note [GHC.Core.Syntax let goal]

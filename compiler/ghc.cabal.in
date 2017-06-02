@@ -273,24 +273,24 @@ Library
         GHC.Core.Analyse.Stats
         GHC.Core.Syntax.Make
         GHC.Core.PrettyPrint
-        GHC.Desugar.Match.Expr
-        GHC.Desugar.Match.TermEqOracle
-        GHC.Desugar.Match.Check
-        GHC.Desugar.Coverage
-        GHC.Desugar.Main
-        GHC.Desugar.Arrow
-        GHC.Desugar.Binding
-        GHC.Desugar.Foreign.Call
-        GHC.Desugar.Expression
-        GHC.Desugar.Foreign.Declaration
-        GHC.Desugar.GuardedRHS
-        GHC.Desugar.ListComp
-        GHC.Desugar.Monad
-        GHC.Desugar.Usage
-        GHC.Desugar.Utils
-        GHC.Desugar.Match
-        GHC.Desugar.Match.Constructor
-        GHC.Desugar.Match.Literal
+        GHC.Compilers.SyntaxToCore.Match.Expr
+        GHC.Compilers.SyntaxToCore.Match.TermEqOracle
+        GHC.Compilers.SyntaxToCore.Match.Check
+        GHC.Compilers.SyntaxToCore.Coverage
+        GHC.Compilers.SyntaxToCore.Main
+        GHC.Compilers.SyntaxToCore.Arrow
+        GHC.Compilers.SyntaxToCore.Binding
+        GHC.Compilers.SyntaxToCore.Foreign.Call
+        GHC.Compilers.SyntaxToCore.Expression
+        GHC.Compilers.SyntaxToCore.Foreign.Declaration
+        GHC.Compilers.SyntaxToCore.GuardedRHS
+        GHC.Compilers.SyntaxToCore.ListComp
+        GHC.Compilers.SyntaxToCore.Monad
+        GHC.Compilers.SyntaxToCore.Usage
+        GHC.Compilers.SyntaxToCore.Utils
+        GHC.Compilers.SyntaxToCore.Match
+        GHC.Compilers.SyntaxToCore.Match.Constructor
+        GHC.Compilers.SyntaxToCore.Match.Literal
         GHC.Syntax.Binding
         GHC.Syntax.Declaration
         GHC.Syntax.Documentation
@@ -452,7 +452,7 @@ Library
         TcSplice
         GHC.Data.Class
         GHC.Data.Coercion
-        GHC.Desugar.Splices
+        GHC.Compilers.SyntaxToCore.Splices
         THNames
         GHC.TypeSystem.FamilyInstance
         FunDeps

@@ -8,13 +8,13 @@ Desugaring arrow commands
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Arrow ( dsProcExpr ) where
+module GHC.Compilers.SyntaxToCore.Arrow ( dsProcExpr ) where
 
 #include "HsVersions.h"
 
-import GHC.Desugar.Match
-import GHC.Desugar.Utils
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Match
+import GHC.Compilers.SyntaxToCore.Utils
+import GHC.Compilers.SyntaxToCore.Monad
 
 import GHC.Syntax    hiding (collectPatBinders, collectPatsBinders, collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
 import TcHsSyn
@@ -25,7 +25,7 @@ import qualified GHC.Syntax.Utils
 --     So WATCH OUT; check each use of split*Ty functions.
 -- Sigh.  This is a pain.
 
-import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
 import TcType
 import GHC.Data.Type ( splitPiTy )
@@ -34,7 +34,7 @@ import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import GHC.Core.Utils
 import GHC.Core.Syntax.Make
-import GHC.Desugar.Binding (dsHsWrapper)
+import GHC.Compilers.SyntaxToCore.Binding (dsHsWrapper)
 
 import GHC.Data.Name
 import GHC.Data.Var

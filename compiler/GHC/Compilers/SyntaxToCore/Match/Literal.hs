@@ -8,7 +8,7 @@ Pattern-matching literal patterns
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module GHC.Desugar.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
+module GHC.Compilers.SyntaxToCore.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
                 , tidyLitPat, tidyNPat
                 , matchLiterals, matchNPlusKPats, matchNPats
                 , warnAboutIdentities, warnAboutOverflowedLiterals
@@ -17,11 +17,11 @@ module GHC.Desugar.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Desugar.Match  ( match )
-import {-# SOURCE #-} GHC.Desugar.Expression ( dsExpr, dsSyntaxExpr )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match  ( match )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsSyntaxExpr )
 
-import GHC.Desugar.Monad
-import GHC.Desugar.Utils
+import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.SyntaxToCore.Utils
 
 import GHC.Syntax
 
@@ -55,7 +55,7 @@ import Data.Proxy
 ************************************************************************
 *                                                                      *
                 Desugaring literals
-        [used to be in GHC.Desugar.Expression, but GHC.Desugar.Splices needs it,
+        [used to be in GHC.Compilers.SyntaxToCore.Expression, but GHC.Compilers.SyntaxToCore.Splices needs it,
          and it's nice to avoid a loop]
 *                                                                      *
 ************************************************************************

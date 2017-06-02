@@ -90,8 +90,8 @@ import GHC.Data.DataConstructor as DataCon
 import TcEvidence( TcEvBinds(..) )
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import GHC.Desugar.Expression
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Expression
+import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Serialized
 import GHC.Utils.Error
 import GHC.Utils
@@ -112,8 +112,8 @@ import qualified Language.Haskell.TH as TH
 -- THSyntax gives access to internal functions and data types
 import qualified Language.Haskell.TH.Syntax as TH
 
--- Because GHC.Desugar might not be in the base library of the bootstrapping compiler
-import GHC.Desugar      ( AnnotationWrapper(..) )
+-- Because GHC.Compilers.SyntaxToCore might not be in the base library of the bootstrapping compiler
+import GHC.Compilers.SyntaxToCore      ( AnnotationWrapper(..) )
 
 import Control.Exception
 import Data.Binary
@@ -300,7 +300,7 @@ The life cycle of a un-typed bracket:
 
 
 In both cases, desugaring happens like this:
-  * HsTcBracketOut is desugared by GHC.Desugar.Splices.dsBracket.  It
+  * HsTcBracketOut is desugared by GHC.Compilers.SyntaxToCore.Splices.dsBracket.  It
 
       a) Extends the ds_meta environment with the PendingSplices
          attached to the bracket
@@ -315,10 +315,10 @@ In both cases, desugaring happens like this:
     ${n}(e).  The name is initialised to an (Unqual "splice") when the
     splice is created; the renamer gives it a unique.
 
-  * When GHC.Desugar.Splices (used to desugar the body of the bracket) comes across
+  * When GHC.Compilers.SyntaxToCore.Splices (used to desugar the body of the bracket) comes across
     a splice, it looks up the splice's Name, n, in the ds_meta envt,
     to find an (HsExpr Id) that should be substituted for the splice;
-    it just desugars it to get a CoreExpr (GHC.Desugar.Splices.repSplice).
+    it just desugars it to get a CoreExpr (GHC.Compilers.SyntaxToCore.Splices.repSplice).
 
 Example:
     Source:       f = [| Just $(g 3) |]

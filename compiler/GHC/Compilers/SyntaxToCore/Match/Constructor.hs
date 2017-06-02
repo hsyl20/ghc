@@ -8,7 +8,7 @@ Pattern-matching constructors
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Match.Constructor
+module GHC.Compilers.SyntaxToCore.Match.Constructor
    ( matchConFamily
    , matchPatSyn
    )
@@ -16,14 +16,14 @@ where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Desugar.Match     ( match )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match     ( match )
 
 import GHC.Syntax
-import GHC.Desugar.Binding
+import GHC.Compilers.SyntaxToCore.Binding
 import GHC.Data.ConstructorLike
 import TcType
-import GHC.Desugar.Monad
-import GHC.Desugar.Utils
+import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.SyntaxToCore.Utils
 import GHC.Core.Syntax.Make   ( mkCoreLets )
 import GHC.Utils
 import GHC.Data.Id

@@ -155,7 +155,7 @@ import TcType
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
-import GHC.Desugar.Match.Expr
+import GHC.Compilers.SyntaxToCore.Match.Expr
 import GHC.Utils.Monad.IOEnv
 import GHC.Data.RdrName
 import GHC.Data.Name

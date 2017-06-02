@@ -64,7 +64,7 @@ import LoadIface
 import ToIface
 import GHC.Config.Flags.Fingerprint
 
-import GHC.Desugar.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
+import GHC.Compilers.SyntaxToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
 import GHC.Data.Annotation
 import GHC.Core.Syntax

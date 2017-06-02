@@ -655,7 +655,7 @@ mkLHsWrap :: HsWrapper -> LHsExpr id -> LHsExpr id
 mkLHsWrap co_fn (L loc e) = L loc (mkHsWrap co_fn e)
 
 -- Avoid (HsWrap co (HsWrap co' _)).
--- See Note [Detecting forced eta expansion] in GHC.Desugar.Expression
+-- See Note [Detecting forced eta expansion] in GHC.Compilers.SyntaxToCore.Expression
 mkHsWrap :: HsWrapper -> HsExpr id -> HsExpr id
 mkHsWrap co_fn e | isIdHsWrapper co_fn = e
 mkHsWrap co_fn (HsWrap co_fn' e)       = mkHsWrap (co_fn <.> co_fn') e
@@ -839,7 +839,7 @@ is a lifted function type, with no trouble at all.
 -- | Should we treat this as an unlifted bind? This will be true for any
 -- bind that binds an unlifted variable, but we must be careful around
 -- AbsBinds. See Note [Unlifted id check in isUnliftedHsBind]. For usage
--- information, see Note [Strict binds check] is GHC.Desugar.Binding.
+-- information, see Note [Strict binds check] is GHC.Compilers.SyntaxToCore.Binding.
 isUnliftedHsBind :: HsBind Id -> Bool  -- works only over typechecked binds
 isUnliftedHsBind (AbsBindsSig { abs_sig_export = id })
   = isUnliftedType (idType id)
@@ -972,17 +972,17 @@ collect_lpat (L _ pat) bndrs
     go (CoPat _ pat _)            = go pat
 
 {-
-Note [Dictionary binders in ConPatOut] See also same Note in GHC.Desugar.Arrow
+Note [Dictionary binders in ConPatOut] See also same Note in GHC.Compilers.SyntaxToCore.Arrow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Do *not* gather (a) dictionary and (b) dictionary bindings as binders
 of a ConPatOut pattern.  For most calls it doesn't matter, because
 it's pre-typechecker and there are no ConPatOuts.  But it does matter
-more in the desugarer; for example, GHC.Desugar.Utils.mkSelectorBinds uses
+more in the desugarer; for example, GHC.Compilers.SyntaxToCore.Utils.mkSelectorBinds uses
 collectPatBinders.  In a lazy pattern, for example f ~(C x y) = ...,
 we want to generate bindings for x,y but not for dictionaries bound by
 C.  (The type checker ensures they would not be used.)
 
-Desugaring of arrow case expressions needs these bindings (see GHC.Desugar.Arrow
+Desugaring of arrow case expressions needs these bindings (see GHC.Compilers.SyntaxToCore.Arrow
 and arrowcase1), but SPJ (Jan 2007) says it's safer for it to use its
 own pat-binder-collector:
 
@@ -996,7 +996,7 @@ f ~(C (n+1) m) = (n,m)
 Here, the pattern (C (n+1)) binds a hidden dictionary (d::Num a),
 and *also* uses that dictionary to match the (n+1) pattern.  Yet, the
 variables bound by the lazy pattern are n,m, *not* the dictionary d.
-So in mkSelectorBinds in GHC.Desugar.Utils, we want just m,n as the variables bound.
+So in mkSelectorBinds in GHC.Compilers.SyntaxToCore.Utils, we want just m,n as the variables bound.
 -}
 
 hsGroupBinders :: HsGroup Name -> [Name]

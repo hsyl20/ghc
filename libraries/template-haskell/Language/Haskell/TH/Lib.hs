@@ -152,7 +152,7 @@ type TySynEqnQ           = Q TySynEqn
 type PatSynDirQ          = Q PatSynDir
 type PatSynArgsQ         = Q PatSynArgs
 
--- must be defined here for GHC.Desugar.Splices to find it
+-- must be defined here for GHC.Compilers.SyntaxToCore.Splices to find it
 type Role                = TH.Role
 type InjectivityAnn      = TH.InjectivityAnn
 
@@ -607,7 +607,7 @@ closedTypeFamilyD tc tvs result injectivity eqns =
 --   2. remove CPP language extension from top of this module
 --   3. remove the FamFlavour data type from Syntax module
 --   4. make sure that all references to FamFlavour are gone from
---   GHC.Desugar.Splices, Convert, TcSplice (follows from 3)
+--   GHC.Compilers.SyntaxToCore.Splices, Convert, TcSplice (follows from 3)
 #if __GLASGOW_HASKELL__ >= 804
 #error Remove deprecated familyNoKindD, familyKindD, closedTypeFamilyNoKindD and closedTypeFamilyKindD
 #endif

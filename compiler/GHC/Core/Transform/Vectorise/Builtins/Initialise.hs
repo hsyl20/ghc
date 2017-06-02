@@ -9,7 +9,7 @@ import GHC.Core.Transform.Vectorise.Builtins.Base
 
 import GHC.Data.BasicTypes
 import TysPrim
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Monad
 import TysWiredIn
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor

@@ -113,7 +113,7 @@ import GHC.Data.Name.Cache        ( initNameCache )
 import LoadIface        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
-import GHC.Desugar.Main
+import GHC.Compilers.SyntaxToCore.Main
 import GHC.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Core.Prepare

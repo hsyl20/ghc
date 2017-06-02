@@ -6,7 +6,7 @@ Haskell expressions (as used by the pattern matching checker) and utilities.
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Match.Expr (
+module GHC.Compilers.SyntaxToCore.Match.Expr (
         PmExpr(..), PmLit(..), SimpleEq, ComplexEq, toComplex, eqPmLit,
         truePmExpr, falsePmExpr, isTruePmExpr, isFalsePmExpr, isNotPmExprOther,
         lhsExprToPmExpr, hsExprToPmExpr, substComplexEq, filterComplex,
@@ -264,7 +264,7 @@ hsExprToPmExpr (ExplicitPArr _elem_ty elems)
 
 
 -- we want this but we would have to make everything monadic :/
--- ./compiler/deSugar/GHC.Desugar.Monad.hs:397:dsLookupDataCon :: Name -> DsM DataCon
+-- ./compiler/deSugar/GHC.Compilers.SyntaxToCore.Monad.hs:397:dsLookupDataCon :: Name -> DsM DataCon
 --
 -- hsExprToPmExpr (RecordCon   c _ binds) = do
 --   con  <- dsLookupDataCon (unLoc c)

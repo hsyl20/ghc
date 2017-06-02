@@ -7,7 +7,7 @@ Pattern Matching Coverage Checking.
 {-# LANGUAGE CPP, GADTs, DataKinds, KindSignatures #-}
 {-# LANGUAGE TupleSections #-}
 
-module GHC.Desugar.Match.Check (
+module GHC.Compilers.SyntaxToCore.Match.Check (
         -- Checking and printing
         checkSingle, checkMatches, isAnyPmCheckEnabled,
 
@@ -17,7 +17,7 @@ module GHC.Desugar.Match.Check (
 
 #include "HsVersions.h"
 
-import GHC.Desugar.Match.TermEqOracle
+import GHC.Compilers.SyntaxToCore.Match.TermEqOracle
 
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
@@ -36,7 +36,7 @@ import GHC.Data.FastString
 import GHC.Data.DataConstructor
 import GHC.Types (CompleteMatch(..))
 
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Monad
 import TcSimplify    (tcCheckSatisfiability)
 import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
 import GHC.Data.Bag
@@ -44,7 +44,7 @@ import GHC.Utils.Error
 import GHC.Data.Var           (EvVar)
 import GHC.Data.Type
 import GHC.Data.Unique.Supply
-import GHC.Desugar.GuardedRHS       (isTrueLHsExpr)
+import GHC.Compilers.SyntaxToCore.GuardedRHS       (isTrueLHsExpr)
 
 import Data.List     (find)
 import Data.Maybe    (isJust, fromMaybe)
@@ -663,7 +663,7 @@ translatePat fam_insts pat = case pat of
   SplicePat {} -> panic "Check.translatePat: SplicePat"
   SigPatIn  {} -> panic "Check.translatePat: SigPatIn"
 
--- | Translate an overloaded literal (see `tidyNPat' in deSugar/GHC.Desugar.Match.Literal.hs)
+-- | Translate an overloaded literal (see `tidyNPat' in deSugar/GHC.Compilers.SyntaxToCore.Match.Literal.hs)
 translateNPat :: FamInstEnvs
               -> HsOverLit Id -> Maybe (SyntaxExpr Id) -> Type -> DsM PatVec
 translateNPat fam_insts (OverLit val False _ ty) mb_neg outer_ty
@@ -897,7 +897,7 @@ The case with literals is a bit different. a literal @l@ should be translated
 to @x (True <- x == from l)@. Since we want to have better warnings for
 overloaded literals as it is a very common feature, we treat them differently.
 They are mainly covered in Note [Undecidable Equality on Overloaded Literals]
-in GHC.Desugar.Match.Expr.
+in GHC.Compilers.SyntaxToCore.Match.Expr.
 
 4. N+K Patterns & Pattern Synonyms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1798,7 +1798,7 @@ with each other):
      we get twice as many constraints. Also note that half of them are just the
      substitution [x |-> False].
 
-2. The term oracle (`tmOracle` in GHC.Desugar.Match.TermEqOracle) uses
+2. The term oracle (`tmOracle` in GHC.Compilers.SyntaxToCore.Match.TermEqOracle) uses
    equalities of the form (x ~ e) as substitutions [x |-> e].
    More specifically, function `extendSubstAndSolve` applies such substitutions
    in the residual constraints and partitions them in the affected and

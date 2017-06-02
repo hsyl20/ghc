@@ -8,7 +8,7 @@ The @match@ function
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Match
+module GHC.Compilers.SyntaxToCore.Match
    ( match
    , matchEquations
    , matchWrapper
@@ -19,28 +19,28 @@ where
 
 #include "HsVersions.h"
 
-import {-#SOURCE#-} GHC.Desugar.Expression (dsLExpr, dsSyntaxExpr)
+import {-#SOURCE#-} GHC.Compilers.SyntaxToCore.Expression (dsLExpr, dsSyntaxExpr)
 
 import GHC.Config.Flags
 import GHC.Syntax
 import TcHsSyn
 import TcEvidence
 import TcRnMonad
-import GHC.Desugar.Match.Check
+import GHC.Compilers.SyntaxToCore.Match.Check
 import GHC.Core.Syntax
 import GHC.Data.Literal
 import GHC.Core.Utils
 import GHC.Core.Syntax.Make
-import GHC.Desugar.Monad
-import GHC.Desugar.Binding
-import GHC.Desugar.GuardedRHS
-import GHC.Desugar.Utils
+import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.SyntaxToCore.Binding
+import GHC.Compilers.SyntaxToCore.GuardedRHS
+import GHC.Compilers.SyntaxToCore.Utils
 import GHC.Data.Id
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
-import GHC.Desugar.Match.Constructor
-import GHC.Desugar.Match.Literal
+import GHC.Compilers.SyntaxToCore.Match.Constructor
+import GHC.Compilers.SyntaxToCore.Match.Literal
 import GHC.Data.Type
 import GHC.Data.Coercion ( eqCoercion )
 import TcType ( toTcTypeBag )
@@ -100,7 +100,7 @@ is an embryonic @CoreExpr@ with a ``hole'' at the end for the
 final ``else expression''.
 \end{itemize}
 
-There is a data type, @EquationInfo@, defined in module @GHC.Desugar.Monad@.
+There is a data type, @EquationInfo@, defined in module @GHC.Compilers.SyntaxToCore.Monad@.
 
 An experiment with re-ordering this information about equations (in
 particular, having the patterns available in column-major order)
@@ -719,7 +719,7 @@ matchWrapper :: HsMatchContext Name         -- For shadowing warning messages
 \begin{itemize}
 \item @do@ patterns, but if the @do@ can fail
       it creates another equation if the match can fail
-      (see @GHC.Desugar.Expression.doDo@ function)
+      (see @GHC.Compilers.SyntaxToCore.Expression.doDo@ function)
 \item @let@ patterns, are treated by @matchSimply@
    List Comprension Patterns, are treated by @matchSimply@ also
 \end{itemize}

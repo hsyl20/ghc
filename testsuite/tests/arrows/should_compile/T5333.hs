@@ -11,7 +11,7 @@ cc1 = undefined
 --
 -- ghc: panic! (the 'impossible' happened)
 --  (GHC version 7.8.4 for x86_64-unknown-linux):
---  mkCmdEnv Not found: base:GHC.Desugar.>>>{v 02V}
+--  mkCmdEnv Not found: base:GHC.Compilers.SyntaxToCore.>>>{v 02V}
 
 -- 'g' fails to compile.
 g = proc (x, y, z) ->

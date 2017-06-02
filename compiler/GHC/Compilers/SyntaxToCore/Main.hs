@@ -8,14 +8,14 @@ The Desugarer: turning GHC.Syntax into Core.
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.Main (
+module GHC.Compilers.SyntaxToCore.Main (
     -- * Desugaring operations
     deSugar, deSugarExpr
     ) where
 
 #include "HsVersions.h"
 
-import GHC.Desugar.Usage
+import GHC.Compilers.SyntaxToCore.Usage
 import GHC.Config.Flags
 import GHC.Types
 import GHC.Syntax
@@ -32,10 +32,10 @@ import GHC.Core.Syntax
 import GHC.Core.FreeVars     ( exprsSomeFreeVarsList )
 import GHC.Core.Transform.Simple    ( simpleOptPgm, simpleOptExpr )
 import GHC.Core.PrettyPrint
-import GHC.Desugar.Monad
-import GHC.Desugar.Expression
-import GHC.Desugar.Binding
-import GHC.Desugar.Foreign.Declaration
+import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.SyntaxToCore.Expression
+import GHC.Compilers.SyntaxToCore.Binding
+import GHC.Compilers.SyntaxToCore.Foreign.Declaration
 import PrelNames   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
@@ -55,7 +55,7 @@ import GHC.Data.FastString
 import GHC.Utils.Error
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import GHC.Desugar.Coverage
+import GHC.Compilers.SyntaxToCore.Coverage
 import GHC.Utils
 import GHC.Utils.Monad
 import GHC.Data.Tree.OrdList
@@ -475,7 +475,7 @@ For the LHS of a RULE we do *not* want to desugar
     [x]   to    build (\cn. x `c` n)
 We want to leave explicit lists simply as chains
 of cons's. We can achieve that slightly indirectly by
-switching off EnableRewriteRules.  See GHC.Desugar.Expression.dsExplicitList.
+switching off EnableRewriteRules.  See GHC.Compilers.SyntaxToCore.Expression.dsExplicitList.
 
 That keeps the desugaring of list comprehensions simple too.
 

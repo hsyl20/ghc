@@ -147,7 +147,7 @@ found to have.
 -}
 
 -- Comparison operations are needed when grouping literals
--- for compiling pattern-matching (module GHC.Desugar.Match.Literal)
+-- for compiling pattern-matching (module GHC.Compilers.SyntaxToCore.Match.Literal)
 instance Eq (HsOverLit id) where
   (OverLit {ol_val = val1}) == (OverLit {ol_val=val2}) = val1 == val2
 

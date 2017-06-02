@@ -3107,7 +3107,7 @@ for the same TyCon:
 
 And looking up the values in the CompleteMatchMap associated with Boolean
 would give you [CompleteMatch [F, T1] Boolean, CompleteMatch [F, T2] Boolean].
-dsGetCompleteMatches in GHC.Desugar.Splices accomplishes this lookup.
+dsGetCompleteMatches in GHC.Compilers.SyntaxToCore.Splices accomplishes this lookup.
 
 Also see Note [Typechecking Complete Matches] in TcBinds for a more detailed
 explanation for how GHC ensures that all the conlikes in a COMPLETE set are

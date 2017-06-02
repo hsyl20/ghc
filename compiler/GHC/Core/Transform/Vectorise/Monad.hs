@@ -28,7 +28,7 @@ import GHC.Core.Transform.Vectorise.Env
 
 import GHC.Core.Syntax
 import TcRnMonad
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Types hiding ( MonadThings(..) )
 import GHC.Config.Flags
 import GHC.TypeSystem.ClassInstance

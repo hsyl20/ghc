@@ -15,21 +15,21 @@
 -- a Royal Pain (triggers other recompilation).
 -----------------------------------------------------------------------------
 
-module GHC.Desugar.Splices ( dsBracket ) where
+module GHC.Compilers.SyntaxToCore.Splices ( dsBracket ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   GHC.Desugar.Expression ( dsExpr )
+import {-# SOURCE #-}   GHC.Compilers.SyntaxToCore.Expression ( dsExpr )
 
-import GHC.Desugar.Match.Literal
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Match.Literal
+import GHC.Compilers.SyntaxToCore.Monad
 
 import qualified Language.Haskell.TH as TH
 
 import GHC.Syntax
 import GHC.Data.Class
 import PrelNames
--- To avoid clashes with GHC.Desugar.Splices.varName we must make a local alias for
+-- To avoid clashes with GHC.Compilers.SyntaxToCore.Splices.varName we must make a local alias for
 -- OccName.varName we do this by removing varName from the import of
 -- OccName above, making a qualified instance of OccName and using
 -- OccNameAlias.varName where varName was previously used in this file.
@@ -1767,7 +1767,7 @@ globalVar name
               | OccName.isVarOcc  name_occ = mkNameG_vName
               | OccName.isTcOcc   name_occ = mkNameG_tcName
               | otherwise                  =
-                  pprPanic "GHC.Desugar.Splices.globalVar" (ppr name)
+                  pprPanic "GHC.Compilers.SyntaxToCore.Splices.globalVar" (ppr name)
 
 lookupType :: Name      -- Name of type constructor (e.g. TH.ExpQ)
            -> DsM Type  -- The type

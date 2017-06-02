@@ -42,7 +42,7 @@ import TcPatSyn( tcPatSynBuilderOcc, nonBidirectionalErr )
 import TcPat
 import TcMType
 import TcType
-import GHC.Desugar.Monad
+import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.ConstructorLike

@@ -31,7 +31,7 @@ import Prelude           hiding (mod)
 import System.Directory
 
 import qualified GHC.Core.Utils
-import GHC.Desugar.Main
+import GHC.Compilers.SyntaxToCore.Main
 import GHC.Config.Flags (HasDynFlags(..))
 import GHC.Data.FastString
 import GHC

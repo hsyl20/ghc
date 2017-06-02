@@ -8,20 +8,20 @@ Matching guarded right-hand-sides (GRHSs)
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Desugar.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) where
+module GHC.Compilers.SyntaxToCore.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Desugar.Expression  ( dsLExpr, dsLocalBinds )
-import {-# SOURCE #-} GHC.Desugar.Match   ( matchSinglePat )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression  ( dsLExpr, dsLocalBinds )
+import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match   ( matchSinglePat )
 
 import GHC.Syntax
 import GHC.Core.Syntax.Make
 import GHC.Core.Syntax
 import GHC.Data.Var
 
-import GHC.Desugar.Monad
-import GHC.Desugar.Utils
+import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.SyntaxToCore.Utils
 import TysWiredIn
 import PrelNames
 import GHC.Data.Type   ( Type )

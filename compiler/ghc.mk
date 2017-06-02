@@ -490,7 +490,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Syntax.ImportExport \
 	GHC.Syntax.Literal \
 	GHC.Syntax.PlaceHolder \
-	GHC.Desugar.Match.Expr \
+	GHC.Compilers.SyntaxToCore.Match.Expr \
 	GHC.Syntax.Pattern \
 	GHC.Syntax \
 	GHC.Syntax.Type \
