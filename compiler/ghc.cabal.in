@@ -370,7 +370,7 @@ Library
         GHC.Rename.Environment
         GHC.Rename.Expression
         GHC.Rename.Documentation
-        RnNames
+        GHC.Rename.ImportExport
         GHC.Rename.Pattern
         RnSource
         RnSplice

@@ -1,12 +1,12 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[RnNames]{Extracting imported and top-level names in scope}
+\section[GHC.Rename.ImportExport]{Extracting imported and top-level names in scope}
 -}
 
 {-# LANGUAGE CPP, NondecreasingIndentation, MultiWayIf, NamedFieldPuns #-}
 
-module RnNames (
+module GHC.Rename.ImportExport (
         rnImports, getLocalNonValBinders, newRecordSelector,
         extendGlobalRdrEnvRn,
         gresFromAvails,

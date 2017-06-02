@@ -26,7 +26,7 @@ import RnUtils          ( HsDocContext(..), mapFvRn, bindLocalNames
                         , checkShadowedRdrNames, warnUnusedTypePatterns
                         , extendTyVarEnvFVRn, newLocalBndrsRn )
 import RnUnbound        ( mkUnboundName )
-import RnNames
+import GHC.Rename.ImportExport
 import GHC.Rename.Documentation          ( rnHsDoc, rnMbLHsDoc )
 import TcAnnotations    ( annCtxt )
 import TcRnMonad
@@ -1704,7 +1704,7 @@ rnTyClDecl (ClassDecl { tcdCtxt = context, tcdLName = lcls,
         ; (at_defs', fv_at_defs) <- rnList (rnTyFamDefltEqn cls') at_defs
 
         -- No need to check for duplicate associated type decls
-        -- since that is done by RnNames.extendGlobalRdrEnvRn
+        -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
 
         -- Check the signatures
         -- First process the class op sigs (op_sigs), then the fixity sigs (non_op_sigs).
@@ -1727,7 +1727,7 @@ rnTyClDecl (ClassDecl { tcdCtxt = context, tcdLName = lcls,
         ; (mbinds', sigs', meth_fvs)
             <- rnMethodBinds True cls' (hsAllLTyVarNames tyvars') mbinds sigs
                 -- No need to check for duplicate method signatures
-                -- since that is done by RnNames.extendGlobalRdrEnvRn
+                -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
                 -- and the methods are already in scope
 
   -- Haddock docs
@@ -1771,7 +1771,7 @@ rnDataDefn doc (HsDataDefn { dd_ND = new_or_data, dd_cType = cType
                             | otherwise = setLocalRdrEnv emptyLocalRdrEnv }
         ; (condecls', con_fvs) <- zap_lcl_env $ rnConDecls condecls
            -- No need to check for duplicate constructor decls
-           -- since that is done by RnNames.extendGlobalRdrEnvRn
+           -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
 
         ; let all_fvs = fvs1 `plusFV` fvs3 `plusFV`
                         con_fvs `plusFV` sig_fvs
@@ -2091,7 +2091,7 @@ rnConDeclDetails con doc (RecCon (L l fields))
   = do  { fls <- lookupConstructorFields con
         ; (new_fields, fvs) <- rnConDeclFields doc fls fields
                 -- No need to check for duplicate fields
-                -- since that is done by RnNames.extendGlobalRdrEnvRn
+                -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
         ; return (RecCon (L l new_fields), fvs) }
 
 -------------------------------------------------

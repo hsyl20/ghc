@@ -94,7 +94,7 @@ import TcTyClsDecls
 import TcTypeable ( mkTypeableBinds )
 import TcBackpack
 import LoadIface
-import RnNames
+import GHC.Rename.ImportExport
 import GHC.Rename.Environment
 import RnSource
 import GHC.Utils.Error

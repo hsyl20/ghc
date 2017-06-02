@@ -10,7 +10,7 @@ import TcRnMonad
 import TcEnv
 import TcMType
 import TcType
-import RnNames
+import GHC.Rename.ImportExport
 import GHC.Rename.Environment
 import RnUnbound ( reportUnboundName )
 import GHC.Utils.Error

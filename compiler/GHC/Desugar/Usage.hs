@@ -50,7 +50,7 @@ mkDependencies
                | otherwise = imp_dep_pkgs imports
 
           -- Set the packages required to be Safe according to Safe Haskell.
-          -- See Note [RnNames . Tracking Trust Transitively]
+          -- See Note [GHC.Rename.ImportExport . Tracking Trust Transitively]
           sorted_pkgs = sort (Set.toList pkgs)
           trust_pkgs  = imp_trust_pkgs imports
           dep_pkgs'   = map (\x -> (x, x `Set.member` trust_pkgs)) sorted_pkgs

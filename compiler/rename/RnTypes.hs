@@ -1093,7 +1093,7 @@ collectAnonWildCardsBndrs ltvs = concatMap (go . unLoc) ltvs
 When renaming a ConDeclField, we have to find the FieldLabel
 associated with each field.  But we already have all the FieldLabels
 available (since they were brought into scope by
-RnNames.getLocalNonValBinders), so we just take the list as an
+GHC.Rename.ImportExport.getLocalNonValBinders), so we just take the list as an
 argument, build a map and look them up.
 -}
 

@@ -934,7 +934,7 @@ data ModIface
                 -- module is Safe (so doesn't require the package be trusted
                 -- itself) but imports some trustworthy modules from its own
                 -- package (which does require its own package be trusted).
-                -- See Note [RnNames . Trust Own Package]
+                -- See Note [GHC.Rename.ImportExport . Trust Own Package]
         mi_complete_sigs :: [IfaceCompleteMatch]
      }
 
@@ -1265,7 +1265,7 @@ data ModGuts
         mg_safe_haskell :: SafeHaskellMode,     -- ^ Safe Haskell mode
         mg_trust_pkg    :: Bool                 -- ^ Do we need to trust our
                                                 -- own package for Safe Haskell?
-                                                -- See Note [RnNames . Trust Own Package]
+                                                -- See Note [GHC.Rename.ImportExport . Trust Own Package]
     }
 
 -- The ModGuts takes on several slightly different forms:
@@ -2290,7 +2290,7 @@ data Dependencies
                         --      or that are in the dep_pkgs of those modules
                         -- The bool indicates if the package is required to be
                         -- trusted when the module is imported as a safe import
-                        -- (Safe Haskell). See Note [RnNames . Tracking Trust Transitively]
+                        -- (Safe Haskell). See Note [GHC.Rename.ImportExport . Tracking Trust Transitively]
 
          , dep_orphs  :: [Module]
                         -- ^ Transitive closure of orphan modules (whether

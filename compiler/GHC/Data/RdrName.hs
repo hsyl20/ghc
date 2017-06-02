@@ -443,7 +443,7 @@ type GlobalRdrEnv = OccEnv [GlobalRdrElt]
 -- INVARIANT 2: Imported provenance => Name is an ExternalName
 --              However LocalDefs can have an InternalName.  This
 --              happens only when type-checking a [d| ... |] Template
---              Haskell quotation; see this note in RnNames
+--              Haskell quotation; see this note in GHC.Rename.ImportExport
 --              Note [Top-level Names in Template Haskell decl quotes]
 --
 -- INVARIANT 3: If the GlobalRdrEnv maps [occ -> gre], then
@@ -931,7 +931,7 @@ pickGREsModExp :: ModuleName -> [GlobalRdrElt] -> [(GlobalRdrElt,GlobalRdrElt)]
 -- it is in scope qualified an unqualified respectively
 --
 -- Used only for the 'module M' item in export list;
---   see RnNames.exports_from_avail
+--   see GHC.Rename.ImportExport.exports_from_avail
 pickGREsModExp mod gres = mapMaybe (pickBothGRE mod) gres
 
 pickBothGRE :: ModuleName -> GlobalRdrElt -> Maybe (GlobalRdrElt, GlobalRdrElt)
@@ -1013,7 +1013,7 @@ There are two reasons for shadowing:
     'T' to mean the newly-declared 'T', not an old one.
 
 * Nested Template Haskell declaration brackets
-  See Note [Top-level Names in Template Haskell decl quotes] in RnNames
+  See Note [Top-level Names in Template Haskell decl quotes] in GHC.Rename.ImportExport
 
   Consider a TH decl quote:
       module M where

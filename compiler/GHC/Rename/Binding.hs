@@ -32,7 +32,7 @@ import TcRnMonad
 import TcEvidence     ( emptyTcEvBinds )
 import RnTypes
 import GHC.Rename.Pattern
-import RnNames
+import GHC.Rename.ImportExport
 import GHC.Rename.Environment
 import GHC.Rename.Fixity
 import RnUtils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn

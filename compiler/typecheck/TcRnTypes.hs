@@ -472,7 +472,7 @@ data FrontendResult
 --        should never be loaded into the EPS).  However, if a
 --        hole module <A> is requested, we look for A.hi
 --        in the home library we are compiling.  (See LoadIface.)
---        Similarly, in RnNames we check for self-imports using
+--        Similarly, in GHC.Rename.ImportExport we check for self-imports using
 --        identity modules, to allow signatures to import their implementor.
 --
 --      - For recompilation avoidance, you want the identity module,
@@ -758,7 +758,7 @@ We gather two sorts of usage information
           and *used*    Names (local or imported)
 
       Used (a) to report "defined but not used"
-               (see RnNames.reportUnusedNames)
+               (see GHC.Rename.ImportExport.reportUnusedNames)
            (b) to generate version-tracking usage info in interface
                files (see MkIface.mkUsedNames)
    This usage info is mainly gathered by the renamer's
@@ -1265,13 +1265,13 @@ data ImportAvails
           -- where True for the bool indicates the package is required to be
           -- trusted is the more logical  design, doing so complicates a lot
           -- of code not concerned with Safe Haskell.
-          -- See Note [RnNames . Tracking Trust Transitively]
+          -- See Note [GHC.Rename.ImportExport . Tracking Trust Transitively]
 
         imp_trust_own_pkg :: Bool,
           -- ^ Do we require that our own package is trusted?
           -- This is to handle efficiently the case where a Safe module imports
           -- a Trustworthy module that resides in the same package as it.
-          -- See Note [RnNames . Trust Own Package]
+          -- See Note [GHC.Rename.ImportExport . Trust Own Package]
 
         imp_orphs :: [Module],
           -- ^ Orphan modules below us in the import tree (and maybe including

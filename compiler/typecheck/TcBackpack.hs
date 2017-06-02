@@ -32,7 +32,7 @@ import TcMType
 import TcType
 import TcSimplify
 import LoadIface
-import RnNames
+import GHC.Rename.ImportExport
 import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Module

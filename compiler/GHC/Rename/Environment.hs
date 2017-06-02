@@ -197,7 +197,7 @@ newTopSrcBinder (L loc rdr_name)
         ; stage <- getStage
         ; if isBrackStage stage then
                 -- We are inside a TH bracket, so make an *Internal* name
-                -- See Note [Top-level Names in Template Haskell decl quotes] in RnNames
+                -- See Note [Top-level Names in Template Haskell decl quotes] in GHC.Rename.ImportExport
              do { uniq <- newUnique
                 ; return (mkInternalName uniq (rdrNameOcc rdr_name) loc) }
           else

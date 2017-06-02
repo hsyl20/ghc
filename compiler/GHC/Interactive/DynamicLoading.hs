@@ -35,7 +35,7 @@ import GHC.Data.RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
                         , ImpItemSpec(..), mkGlobalRdrEnv, lookupGRE_RdrName
                         , gre_name, mkRdrQual )
 import GHC.Data.OccName          ( OccName, mkVarOcc )
-import RnNames          ( gresFromAvails )
+import GHC.Rename.ImportExport          ( gresFromAvails )
 import GHC.Config.Flags
 import GHC.Plugins.Types          ( Plugin, FrontendPlugin, CommandLineOption )
 import PrelNames        ( pluginTyConName, frontendPluginTyConName )

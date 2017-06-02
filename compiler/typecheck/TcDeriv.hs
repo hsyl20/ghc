@@ -29,7 +29,7 @@ import GHC.TypeSystem.FamilyInstance
 import TcHsType
 import TcMType
 
-import RnNames( extendGlobalRdrEnvRn )
+import GHC.Rename.ImportExport( extendGlobalRdrEnvRn )
 import GHC.Rename.Binding
 import GHC.Rename.Environment
 import RnUtils    ( bindLocalNamesFV )

@@ -93,7 +93,7 @@ lookupFixity is a bit strange.
 * Top-level fixity decls in this module may be for Names that are
     either  Global         (constructors, class operations)
     or      Local/Exported (everything else)
-  (See notes with RnNames.getLocalDeclBinders for why we have this split.)
+  (See notes with GHC.Rename.ImportExport.getLocalDeclBinders for why we have this split.)
   We put them all in the local fixity environment
 -}
 
