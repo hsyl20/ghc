@@ -17,7 +17,7 @@ import SPARC.Instr
 import SPARC.Ppr()
 import NCGMonad
 import Instruction
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import Reg
 
 import GHC.IR.Cmm.Syntax

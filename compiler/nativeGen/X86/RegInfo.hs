@@ -9,7 +9,7 @@ where
 #include "nativeGen/NCG.h"
 #include "HsVersions.h"
 
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import Reg
 
 import GHC.Utils.Outputable

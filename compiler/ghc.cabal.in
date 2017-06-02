@@ -535,7 +535,7 @@ Library
             TargetReg
             NCGMonad
             Instruction
-            Format
+            GHC.Compilers.CmmToAsm.Format
             Reg
             RegClass
             PIC

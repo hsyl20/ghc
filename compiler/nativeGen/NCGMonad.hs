@@ -38,7 +38,7 @@ where
 #include "HsVersions.h"
 
 import Reg
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import TargetReg
 
 import GHC.IR.Cmm.BlockId

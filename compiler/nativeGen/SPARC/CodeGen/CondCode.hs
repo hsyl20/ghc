@@ -14,7 +14,7 @@ import SPARC.Cond
 import SPARC.Imm
 import SPARC.Base
 import NCGMonad
-import Format
+import GHC.Compilers.CmmToAsm.Format
 
 import GHC.IR.Cmm.Syntax
 

@@ -33,7 +33,7 @@ import GHC.Utils.CodeGen.Primitive
 import NCGMonad
 import Instruction
 import PIC
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import RegClass
 import Reg
 import TargetReg

@@ -43,7 +43,7 @@ import GHC.IR.Cmm.DebugBlock           ( DebugBlock(..), UnwindPoint(..), Unwind
 import Instruction
 import PIC
 import NCGMonad
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import Reg
 import GHC.Platform
 

@@ -14,7 +14,7 @@ import PPC.Instr
 import PPC.Cond
 import PprBase
 import Instruction
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import Reg
 import RegClass
 import TargetReg

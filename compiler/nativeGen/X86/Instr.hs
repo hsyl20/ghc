@@ -20,7 +20,7 @@ where
 import X86.Cond
 import X86.Regs
 import Instruction
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import RegClass
 import Reg
 import TargetReg

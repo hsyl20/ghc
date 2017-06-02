@@ -52,7 +52,7 @@ where
 
 import Reg
 import RegClass
-import Format
+import GHC.Compilers.CmmToAsm.Format
 
 import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel           ( CLabel )

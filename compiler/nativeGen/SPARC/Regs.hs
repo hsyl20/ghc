@@ -35,7 +35,7 @@ where
 import GHC.Utils.CodeGen.Platform.SPARC
 import Reg
 import RegClass
-import Format
+import GHC.Compilers.CmmToAsm.Format
 
 import GHC.Data.Unique
 import GHC.Utils.Outputable

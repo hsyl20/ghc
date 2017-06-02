@@ -35,7 +35,7 @@ import TargetReg
 import Instruction
 import RegClass
 import Reg
-import Format
+import GHC.Compilers.CmmToAsm.Format
 
 import GHC.Data.CLabel
 import GHC.Utils.CodeGen.Platform

@@ -33,7 +33,7 @@ import SPARC.AddrMode
 import SPARC.Base
 import Instruction
 import Reg
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import PprBase
 
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)

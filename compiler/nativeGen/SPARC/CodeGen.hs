@@ -36,7 +36,7 @@ import SPARC.AddrMode
 import SPARC.Regs
 import SPARC.Stack
 import Instruction
-import Format
+import GHC.Compilers.CmmToAsm.Format
 import NCGMonad
 
 -- Our intermediate code:

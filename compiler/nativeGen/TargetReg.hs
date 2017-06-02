@@ -23,7 +23,7 @@ where
 
 import Reg
 import RegClass
-import Format
+import GHC.Compilers.CmmToAsm.Format
 
 import GHC.Utils.Outputable
 import GHC.Data.Unique

@@ -12,7 +12,7 @@ import SPARC.Instr
 import SPARC.Regs
 import SPARC.Base
 import NCGMonad
-import Format
+import GHC.Compilers.CmmToAsm.Format
 
 import GHC.IR.Cmm.Syntax
 
