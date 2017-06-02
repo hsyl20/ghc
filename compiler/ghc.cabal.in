@@ -398,7 +398,7 @@ Library
         GHC.Core.Transform.Rules
         GHC.Core.Transform.Specialise.Constructor
         GHC.Core.Transform.Specialise
-        GHC.IR.Stg.CoreToStg
+        GHC.Compilers.CoreToStg
         GHC.IR.Stg.Analyse.Lint
         GHC.IR.Stg.Syntax
         GHC.Core.Analyse.CallArity

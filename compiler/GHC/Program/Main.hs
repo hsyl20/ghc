@@ -117,7 +117,7 @@ import GHC.Compilers.SyntaxToCore.Main
 import GHC.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Core.Prepare
-import GHC.IR.Stg.CoreToStg ( coreToStg )
+import GHC.Compilers.CoreToStg ( coreToStg )
 import qualified StgCmm ( codeGen )
 import GHC.IR.Stg.Syntax
 import CostCentre
