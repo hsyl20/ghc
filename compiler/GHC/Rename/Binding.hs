@@ -3,7 +3,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[RnBinds]{Renaming and dependency analysis of bindings}
+\section[GHC.Rename.Binding]{Renaming and dependency analysis of bindings}
 
 This module does renaming and dependency analysis on value bindings in
 the abstract syntax.  It does {\em not} do cycle-checks on class or
@@ -11,7 +11,7 @@ type-synonym declarations; those cannot be done at this stage because
 they may be affected by renaming (which isn't fully worked out yet).
 -}
 
-module RnBinds (
+module GHC.Rename.Binding (
    -- Renaming top-level bindings
    rnTopBindsLHS, rnTopBindsBoot, rnValBindsRHS,
 

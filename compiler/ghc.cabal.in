@@ -366,7 +366,7 @@ Library
         CostCentre
         ProfInit
         SCCfinal
-        RnBinds
+        GHC.Rename.Binding
         RnEnv
         RnExpr
         RnHsDoc

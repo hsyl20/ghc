@@ -20,7 +20,7 @@ module RnExpr (
 
 #include "HsVersions.h"
 
-import RnBinds   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
+import GHC.Rename.Binding   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
                    rnMatchGroup, rnGRHS, makeMiniFixityEnv)
 import GHC.Syntax
 import TcRnMonad
