@@ -31,7 +31,7 @@ import StgCmmClosure
 import StgCmmForeign    (emitPrimCall)
 
 import GHC.IR.Cmm.Graph
-import GHC.Core.Syntax          ( AltCon(..), tickishIsCode )
+import GHC.IR.Core.Syntax          ( AltCon(..), tickishIsCode )
 import GHC.IR.Cmm.BlockId
 import GHC.RTS.Storage
 import GHC.IR.Cmm

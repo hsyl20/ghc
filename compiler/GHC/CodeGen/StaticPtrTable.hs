@@ -28,7 +28,7 @@
 --
 -- The linker must find the definitions matching the @extern StgPtr <name>@
 -- declarations. For this to work, the identifiers of static pointers need to be
--- exported. This is done in GHC.Core.Transform.LevelSetting.newLvlVar.
+-- exported. This is done in GHC.IR.Core.Transform.LevelSetting.newLvlVar.
 --
 -- There is also a finalization function for the time when the module is
 -- unloaded.
@@ -129,13 +129,13 @@ Here is a running example:
 -}
 
 import GHC.Data.CLabel
-import GHC.Core.Syntax
-import GHC.Core.Utils (collectMakeStaticArgs)
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Utils (collectMakeStaticArgs)
 import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Types
 import GHC.Data.Id
-import GHC.Core.Syntax.Make (mkStringExprFSWith)
+import GHC.IR.Core.Syntax.Make (mkStringExprFSWith)
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils.Outputable as Outputable

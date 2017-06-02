@@ -215,7 +215,7 @@ import StgCmmClosure
 import StgCmmLayout     hiding (ArgRep(..))
 import StgCmmTicky
 import StgCmmBind       ( emitBlackHoleCode, emitUpdateFrame )
-import GHC.Core.Syntax          ( Tickish(SourceNote) )
+import GHC.IR.Core.Syntax          ( Tickish(SourceNote) )
 
 import GHC.IR.Cmm.Transform.ConstantFolding
 import GHC.IR.Cmm.Graph

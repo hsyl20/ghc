@@ -44,9 +44,9 @@ import GHC.Data.Name.Set
 import TcType
 import GHC.Data.Type.Constructor
 import TysWiredIn
-import GHC.Core.Syntax
-import GHC.Core.Syntax.Make
-import GHC.Core.Utils
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Syntax.Make
+import GHC.IR.Core.Utils
 import GHC.Data.SrcLoc
 import GHC.Data.Unique
 import GHC.Data.BasicTypes

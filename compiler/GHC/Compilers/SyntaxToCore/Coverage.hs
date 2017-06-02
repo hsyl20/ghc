@@ -29,7 +29,7 @@ import GHC.Data.Name.Set hiding (FreeVars)
 import GHC.Data.Name
 import GHC.Data.Bag
 import CostCentre
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.Id
 import GHC.Data.Var.Set
 import Data.List

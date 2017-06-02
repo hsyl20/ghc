@@ -18,11 +18,11 @@ module GHC.Compilers.SyntaxToCore.Foreign.Call
 #include "HsVersions.h"
 
 
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 
 import GHC.Compilers.SyntaxToCore.Monad
-import GHC.Core.Utils
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Syntax.Make
 import GHC.Data.Id.Make
 import ForeignCall
 import GHC.Data.DataConstructor

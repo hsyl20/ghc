@@ -3,7 +3,7 @@ module ShouldCompile where
 --              Killed GHC 6.0 in isCrossDllArg
 --
 -- ghc-6.0: panic! (the `impossible' happened, GHC version 6.0):
---      coreSyn/GHC.Core.Utils.lhs:1188: Non-exhaustive patterns in function isCrossDllArg
+--      coreSyn/GHC.IR.Core.Utils.lhs:1188: Non-exhaustive patterns in function isCrossDllArg
 --
 -- The reason was that newST had the form
 --   newST = \ @ v -> GHC.Base.:

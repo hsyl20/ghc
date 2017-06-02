@@ -24,8 +24,8 @@ import {-# SOURCE #-} GHC.Syntax.Pattern  ( LPat )
 
 import GHC.Syntax.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 import GHC.Syntax.Type
-import GHC.Core.PrettyPrint ()
-import GHC.Core.Syntax
+import GHC.IR.Core.PrettyPrint ()
+import GHC.IR.Core.Syntax
 import TcEvidence
 import GHC.Data.Type
 import GHC.Data.Name

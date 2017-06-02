@@ -452,16 +452,16 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Coercion \
 	Config \
 	GHC.Config.Constants \
-	GHC.Core.Arity \
-	GHC.Core.FreeVars \
-	GHC.Core.Substitution \
-	GHC.Core.Transform.Simple\
-	GHC.Core.Syntax \
-	GHC.Core.Tidy \
-	GHC.Core.Transform.Unfolding \
-	GHC.Core.Utils \
-	GHC.Core.Force \
-	GHC.Core.Analyse.Stats \
+	GHC.IR.Core.Arity \
+	GHC.IR.Core.FreeVars \
+	GHC.IR.Core.Substitution \
+	GHC.IR.Core.Transform.Simple\
+	GHC.IR.Core.Syntax \
+	GHC.IR.Core.Tidy \
+	GHC.IR.Core.Transform.Unfolding \
+	GHC.IR.Core.Utils \
+	GHC.IR.Core.Force \
+	GHC.IR.Core.Analyse.Stats \
 	CostCentre \
 	GHC.Data.DataConstructor \
 	GHC.Data.Demand \
@@ -512,7 +512,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.List.SetOps \
 	GHC.Data.Literal \
 	GHC.Data.Maybe \
-	GHC.Core.Syntax.Make \
+	GHC.IR.Core.Syntax.Make \
 	GHC.Data.Id.Make \
 	GHC.Data.Module \
 	GHC.Utils.Monad \
@@ -520,7 +520,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Name.Environment \
 	GHC.Data.Name.Set \
 	GHC.Data.OccName \
-	GHC.Core.Analyse.Occurence \
+	GHC.IR.Core.Analyse.Occurence \
 	GHC.Data.Coercion.Optimise \
 	GHC.Data.Tree.OrdList \
 	GHC.Utils.Outputable \
@@ -533,14 +533,14 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Platform \
 	GHC.Config.Platform.Constants \
 	GHC.Utils.PrettyPrint.Colour \
-	GHC.Core.PrettyPrint \
+	GHC.IR.Core.PrettyPrint \
 	PrelNames \
 	PrelRules \
 	GHC.Utils.PrettyPrint \
 	PrimOp \
 	GHC.Data.RepType \
 	GHC.Data.RdrName \
-	GHC.Core.Transform.Rules \
+	GHC.IR.Core.Transform.Rules \
 	GHC.Data.SrcLoc \
 	GHC.Data.StringBuffer \
 	GHC.Utils.SysTools.Terminal \

@@ -199,8 +199,8 @@ We hope that one of the two measure kick in:
      all calls and determine that the arity is large.
    * The oneShot annotation gives a hint to the regular arity analysis that
      it may assume that the lambda is called at most once.
-     See [One-shot lambdas] in GHC.Core.Arity and especially [Eta expanding thunks]
-     in GHC.Core.Arity.
+     See [One-shot lambdas] in GHC.IR.Core.Arity and especially [Eta expanding thunks]
+     in GHC.IR.Core.Arity.
 
 The oneShot annotations used in this module are correct, as we only use them in
 arguments to foldr, where we know how the arguments are called.

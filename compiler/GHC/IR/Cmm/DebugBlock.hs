@@ -26,11 +26,11 @@ import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.IR.Cmm
 import GHC.IR.Cmm.Utils
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.FastString      ( nilFS, mkFastString )
 import GHC.Data.Module
 import GHC.Utils.Outputable
-import GHC.Core.PrettyPrint         ()
+import GHC.IR.Core.PrettyPrint         ()
 import GHC.IR.Cmm.PrettyPrint.Expression      ( pprExpr )
 import GHC.Data.SrcLoc
 import GHC.Utils

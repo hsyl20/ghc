@@ -50,7 +50,7 @@ import PrelInfo
 import PrimOp   ( allThePrimOps, primOpFixity, primOpOcc )
 import GHC.Data.Id.Make     ( seqId )
 import TysPrim  ( funTyConName )
-import GHC.Core.Transform.Rules
+import GHC.IR.Core.Transform.Rules
 import GHC.Data.Type.Constructor
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance

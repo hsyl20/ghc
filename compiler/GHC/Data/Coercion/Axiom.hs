@@ -200,7 +200,7 @@ of the branches.
 -- | A 'CoAxiom' is a \"coercion constructor\", i.e. a named equality axiom.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
 data CoAxiom br
   = CoAxiom                   -- Type equality axiom.
     { co_ax_unique   :: Unique        -- Unique identifier

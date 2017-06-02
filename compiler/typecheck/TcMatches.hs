@@ -43,7 +43,7 @@ import PrelNames (monadFailClassName)
 import qualified GHC.LanguageExtensions as LangExt
 
 -- Create chunkified tuple tybes for monad comprehensions
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Syntax.Make
 
 import Control.Monad
 import Control.Arrow ( second )

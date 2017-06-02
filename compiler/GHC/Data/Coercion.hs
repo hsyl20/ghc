@@ -5,7 +5,7 @@
 {-# LANGUAGE RankNTypes, CPP, MultiWayIf, FlexibleContexts #-}
 
 -- | Module for (a) type kinds and (b) type coercions,
--- as used in System FC. See 'GHC.Core.Syntax.Expr' for
+-- as used in System FC. See 'GHC.IR.Core.Syntax.Expr' for
 -- more on System FC and how coercions fit into it.
 --
 module GHC.Data.Coercion (

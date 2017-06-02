@@ -248,7 +248,7 @@ type KindOrType = Type -- See Note [Arguments to type constructors]
 type Kind = Type
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
 data Type
   -- See Note [Non-trivial definitional equality]
   = TyVarTy Var -- ^ Vanilla type or kind variable (*never* a coercion variable)
@@ -439,7 +439,7 @@ A ForAllTy contains a TyVarBinder.  But a type can be decomposed
 to a telescope consisting of a [TyBinder]
 
 A TyBinder represents the type of binders -- that is, the type of an
-argument to a Pi-type. GHC Core currently supports two different
+argument to a Pi-type. GHC.IR.Core currently supports two different
 Pi-types:
 
  * A non-dependent function type,
@@ -752,7 +752,7 @@ dropRuntimeRepArgs = dropWhile isRuntimeRepKindedTy
 -- of two types.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
 data Coercion
   -- Each constructor has a "role signature", indicating the way roles are
   -- propagated through coercions.

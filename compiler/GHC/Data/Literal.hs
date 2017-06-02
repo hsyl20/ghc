@@ -470,7 +470,7 @@ nullAddrLit = MachNullAddr
 -- structured, ensuring that the compiler can't inline in ways that will break
 -- user code. One approach to this is described in #8472.
 litIsTrivial :: Literal -> Bool
---      c.f. GHC.Core.Utils.exprIsTrivial
+--      c.f. GHC.IR.Core.Utils.exprIsTrivial
 litIsTrivial (MachStr _)      = False
 litIsTrivial (LitInteger {})  = False
 litIsTrivial _                = True
@@ -478,7 +478,7 @@ litIsTrivial _                = True
 -- | True if code space does not go bad if we duplicate this literal
 -- Currently we treat it just like 'litIsTrivial'
 litIsDupable :: DynFlags -> Literal -> Bool
---      c.f. GHC.Core.Utils.exprIsDupable
+--      c.f. GHC.IR.Core.Utils.exprIsDupable
 litIsDupable _      (MachStr _)      = False
 litIsDupable dflags (LitInteger i _) = inIntRange dflags i
 litIsDupable _      _                = True

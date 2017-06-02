@@ -43,7 +43,7 @@ import TcEnv
 import TcEvidence
 import GHC.TypeSystem.ClassInstance
 import TysWiredIn  ( heqDataCon, coercibleDataCon )
-import GHC.Core.Syntax     ( isOrphan )
+import GHC.IR.Core.Syntax     ( isOrphan )
 import FunDeps
 import TcMType
 import GHC.Data.Type

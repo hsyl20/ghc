@@ -82,7 +82,7 @@ module GHC.Data.Id.Info (
 
 #include "HsVersions.h"
 
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 
 import GHC.Data.Class
 import {-# SOURCE #-} PrimOp (PrimOp)
@@ -159,7 +159,7 @@ data IdDetails
                -- This only covers /un-lifted/ coercions, of type
                -- (t1 ~# t2) or (t1 ~R# t2), not their lifted variants
   | JoinId JoinArity           -- ^ An 'Id' for a join point taking n arguments
-       -- Note [Join points] in GHC.Core.Syntax
+       -- Note [Join points] in GHC.IR.Core.Syntax
 
 -- | Recursive Selector Parent
 data RecSelParent = RecSelData TyCon | RecSelPatSyn PatSyn deriving Eq
@@ -587,7 +587,7 @@ Ids store whether or not they can be levity-polymorphic at any amount
 of saturation. This is helpful in optimizing the levity-polymorphism check
 done in the desugarer, where we can usually learn that something is not
 levity-polymorphic without actually figuring out its type. See
-isExprLevPoly in GHC.Core.Utils for where this info is used. Storing
+isExprLevPoly in GHC.IR.Core.Utils for where this info is used. Storing
 this is required to prevent perf/compiler/T5631 from blowing up.
 
 -}

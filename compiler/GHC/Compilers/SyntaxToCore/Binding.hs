@@ -26,15 +26,15 @@ import GHC.Compilers.SyntaxToCore.GuardedRHS
 import GHC.Compilers.SyntaxToCore.Utils
 
 import GHC.Syntax            -- lots of things
-import GHC.Core.Syntax          -- lots of things
+import GHC.IR.Core.Syntax          -- lots of things
 import GHC.Data.Literal          ( Literal(MachStr) )
-import GHC.Core.Transform.Simple         ( simpleOptExpr )
-import GHC.Core.Analyse.Occurence        ( occurAnalyseExpr )
-import GHC.Core.Syntax.Make
-import GHC.Core.Utils
-import GHC.Core.Arity ( etaExpand )
-import GHC.Core.Transform.Unfolding
-import GHC.Core.FreeVars
+import GHC.IR.Core.Transform.Simple         ( simpleOptExpr )
+import GHC.IR.Core.Analyse.Occurence        ( occurAnalyseExpr )
+import GHC.IR.Core.Syntax.Make
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Arity ( etaExpand )
+import GHC.IR.Core.Transform.Unfolding
+import GHC.IR.Core.FreeVars
 import GHC.Data.Graph.Directed
 
 import PrelNames
@@ -49,7 +49,7 @@ import GHC.Data.Id.Make(proxyHashId)
 import GHC.Data.Class
 import GHC.Data.Name
 import GHC.Data.Var.Set
-import GHC.Core.Transform.Rules
+import GHC.IR.Core.Transform.Rules
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
 import GHC.Data.Module
@@ -431,7 +431,7 @@ thereby be completely lost.  Bad, bad, bad.
 Instead we want to generate
         M.f = ...f_lcl...
         f_lcl = M.f
-Now all is cool. The RULES are attached to M.f (by GHC.Core.Transform.Pipeline),
+Now all is cool. The RULES are attached to M.f (by GHC.IR.Core.Transform.Pipeline),
 and f_lcl is rapidly inlined away.
 
 This does not happen in the same way to polymorphic binds,

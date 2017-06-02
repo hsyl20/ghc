@@ -54,9 +54,9 @@ module GHC.Compilers.SyntaxToCore.Monad (
 
 import TcRnMonad
 import GHC.TypeSystem.FamilyInstance
-import GHC.Core.Syntax
-import GHC.Core.Syntax.Make    ( unitExpr )
-import GHC.Core.Utils ( exprType, isExprLevPoly )
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Syntax.Make    ( unitExpr )
+import GHC.IR.Core.Utils ( exprType, isExprLevPoly )
 import GHC.Syntax
 import TcIface
 import TcMType ( checkForLevPolyX, formatLevPolyErr )

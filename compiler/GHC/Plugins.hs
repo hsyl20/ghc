@@ -6,7 +6,7 @@
 -- with saying "import GHC.Plugins".
 --
 -- Particularly interesting modules for plugin writers include
--- "GHC.Core.Syntax" and "GHC.Core.Monad".
+-- "GHC.IR.Core.Syntax" and "GHC.IR.Core.Monad".
 module GHC.Plugins
    ( module GHC.Plugins.Types
    , module GHC.Data.RdrName
@@ -15,15 +15,15 @@ module GHC.Plugins
    , module GHC.Data.Var
    , module GHC.Data.Id
    , module GHC.Data.Id.Info
-   , module GHC.Core.Monad
-   , module GHC.Core.Syntax
+   , module GHC.IR.Core.Monad
+   , module GHC.IR.Core.Syntax
    , module GHC.Data.Literal
    , module GHC.Data.DataConstructor
-   , module GHC.Core.Utils
-   , module GHC.Core.Syntax.Make
-   , module GHC.Core.FreeVars
-   , module GHC.Core.Substitution
-   , module GHC.Core.Transform.Rules
+   , module GHC.IR.Core.Utils
+   , module GHC.IR.Core.Syntax.Make
+   , module GHC.IR.Core.FreeVars
+   , module GHC.IR.Core.Substitution
+   , module GHC.IR.Core.Transform.Rules
    , module GHC.Data.Annotation
    , module GHC.Config.Flags
    , module GHC.Packages
@@ -63,18 +63,18 @@ import GHC.Data.Id       hiding  ( lazySetIdInfo, setIdExported, setIdNotExporte
 import GHC.Data.Id.Info
 
 -- Core
-import GHC.Core.Monad
-import GHC.Core.Syntax
+import GHC.IR.Core.Monad
+import GHC.IR.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
-import GHC.Core.Utils
-import GHC.Core.Syntax.Make
-import GHC.Core.FreeVars
-import GHC.Core.Substitution hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Syntax.Make
+import GHC.IR.Core.FreeVars
+import GHC.IR.Core.Substitution hiding( substTyVarBndr, substCoVarBndr, extendCvSubst )
        -- These names are also exported by Type
 
 -- Core "extras"
-import GHC.Core.Transform.Rules
+import GHC.IR.Core.Transform.Rules
 import GHC.Data.Annotation
 
 -- Pipeline-related stuff
@@ -83,9 +83,9 @@ import GHC.Packages
 
 -- Important GHC types
 import GHC.Data.Module
-import GHC.Data.Type     hiding {- conflict with GHC.Core.Substitution -}
+import GHC.Data.Type     hiding {- conflict with GHC.IR.Core.Substitution -}
                 ( substTy, extendTvSubst, extendTvSubstList, isInScope )
-import GHC.Data.Coercion hiding {- conflict with GHC.Core.Substitution -}
+import GHC.Data.Coercion hiding {- conflict with GHC.IR.Core.Substitution -}
                 ( substCo )
 import GHC.Data.Type.Constructor
 import TysWiredIn

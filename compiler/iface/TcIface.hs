@@ -37,11 +37,11 @@ import GHC.Types
 import GHC.Data.Annotation
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
-import GHC.Core.Syntax
-import GHC.Core.Utils
-import GHC.Core.Transform.Unfolding
-import GHC.Core.Analyse.Lint
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Transform.Unfolding
+import GHC.IR.Core.Analyse.Lint
+import GHC.IR.Core.Syntax.Make
 import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Id.Info
@@ -58,7 +58,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import GHC.Core.Analyse.Occurence        ( occurAnalyseExpr )
+import GHC.IR.Core.Analyse.Occurence        ( occurAnalyseExpr )
 import GHC.Data.Demand
 import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap

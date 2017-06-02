@@ -34,9 +34,9 @@ import TcDeriv
 import TcEnv
 import TcHsType
 import TcUnify
-import GHC.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
-import GHC.Core.Syntax.Make     ( nO_METHOD_BINDING_ERROR_ID )
-import GHC.Core.Transform.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
+import GHC.IR.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
+import GHC.IR.Core.Syntax.Make     ( nO_METHOD_BINDING_ERROR_ID )
+import GHC.IR.Core.Transform.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import GHC.Data.Type
 import TcEvidence
 import GHC.Data.Type.Constructor
@@ -154,7 +154,7 @@ Note [Instances and loop breakers]
   loop-breaker because df_i isn't), op1_i will ironically never be
   inlined.  But this is OK: the recursion breaking happens by way of
   a RULE (the magic ClassOp rule above), and RULES work inside InlineRule
-  unfoldings. See Note [RULEs enabled in SimplGently] in GHC.Core.Transform.Simplify.Utils
+  unfoldings. See Note [RULEs enabled in SimplGently] in GHC.IR.Core.Transform.Simplify.Utils
 
 Note [ClassOp/DFun selection]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -180,7 +180,7 @@ Instead we use a cunning trick.
  * We give 'df' a magical unfolding (DFunUnfolding [$cop1, $cop2, ..])
    that lists its methods.
 
- * We make GHC.Core.Transform.Unfolding.exprIsConApp_maybe spot a DFunUnfolding and return
+ * We make GHC.IR.Core.Transform.Unfolding.exprIsConApp_maybe spot a DFunUnfolding and return
    a suitable constructor application -- inlining df "on the fly" as it
    were.
 

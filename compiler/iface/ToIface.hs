@@ -48,7 +48,7 @@ import IfaceSyn
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.Type.Constructor hiding ( pprPromotionQuote )
 import GHC.Data.Coercion.Axiom
 import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )

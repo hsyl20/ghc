@@ -1,10 +1,10 @@
 {-# LANGUAGE TupleSections #-}
-import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
-import GHC.Core.Syntax.Make
-import GHC.Core.Analyse.CallArity (callArityRHS)
+import GHC.IR.Core.Syntax.Make
+import GHC.IR.Core.Analyse.CallArity (callArityRHS)
 import GHC.Data.Id.Make
 import GHC.Utils.SysTools
 import GHC.Config.Flags
@@ -17,10 +17,10 @@ import Control.Monad
 import Control.Monad.IO.Class
 import System.Environment( getArgs )
 import GHC.Data.Var.Set
-import GHC.Core.PrettyPrint
+import GHC.IR.Core.PrettyPrint
 import GHC.Data.Unique
 import GHC.Data.Unique.Set
-import GHC.Core.Analyse.Lint
+import GHC.IR.Core.Analyse.Lint
 import GHC.Data.FastString
 
 -- Build IDs. use mkTemplateLocal, more predictable than proper uniques

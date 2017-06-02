@@ -34,9 +34,9 @@ import TcEvidence
 import TcRnMonad
 import TcHsSyn
 import GHC.Data.Type
-import GHC.Core.Syntax
-import GHC.Core.Utils
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Syntax.Make
 
 import GHC.Config.Flags
 import CostCentre
@@ -243,7 +243,7 @@ dsLExpr (L loc e)
 -- polymorphic. This should be used when the resulting expression will
 -- be an argument to some other function.
 -- See Note [Levity polymorphism checking] in GHC.Compilers.SyntaxToCore.Monad
--- See Note [Levity polymorphism invariants] in GHC.Core.Syntax
+-- See Note [Levity polymorphism invariants] in GHC.IR.Core.Syntax
 dsLExprNoLP :: LHsExpr Id -> DsM CoreExpr
 dsLExprNoLP (L loc e)
   = putSrcSpanDs loc $
@@ -1098,7 +1098,7 @@ badMonadBind rhs elt_ty
 Note [Detecting forced eta expansion]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We cannot have levity polymorphic function arguments. See
-Note [Levity polymorphism invariants] in GHC.Core.Syntax. But we *can* have
+Note [Levity polymorphism invariants] in GHC.IR.Core.Syntax. But we *can* have
 functions that take levity polymorphism arguments, as long as these
 functions are eta-reduced. (See #12708 for an example.)
 

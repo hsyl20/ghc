@@ -16,14 +16,14 @@ import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsLExpr, d
 
 import GHC.Syntax
 import TcHsSyn
-import GHC.Core.Syntax
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Syntax.Make
 
 import GHC.Compilers.SyntaxToCore.Monad          -- the monadery used in the desugarer
 import GHC.Compilers.SyntaxToCore.Utils
 
 import GHC.Config.Flags
-import GHC.Core.Utils
+import GHC.IR.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
 import TysWiredIn

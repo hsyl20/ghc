@@ -67,7 +67,7 @@ import GHC.Config.Flags.Fingerprint
 import GHC.Compilers.SyntaxToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
 import GHC.Data.Annotation
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

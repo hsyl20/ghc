@@ -459,7 +459,7 @@ data GeneralFlag
    | Opt_CmmSink
    | Opt_CmmElimCommonBlocks
    | Opt_OmitYields
-   | Opt_FunToThunk               -- allow GHC.Core.Transform.WorkerWrapper.Utils.mkWorkerArgs to remove all value lambdas
+   | Opt_FunToThunk               -- allow GHC.IR.Core.Transform.WorkerWrapper.Utils.mkWorkerArgs to remove all value lambdas
    | Opt_DictsStrict                     -- be strict in argument dictionaries
    | Opt_DmdTxDictSel              -- use a special demand transformer for dictionary selectors
    | Opt_Loopification                  -- See Note [Self-recursive tail calls]
@@ -720,7 +720,7 @@ data DynFlags = DynFlags {
                                         --   Not optional; otherwise ForceSpecConstr can diverge.
   liberateCaseThreshold :: Maybe Int,   -- ^ Threshold for LiberateCase
   floatLamArgs          :: Maybe Int,   -- ^ Arg count for lambda floating
-                                        --   See GHC.Core.Monad.FloatOutSwitches
+                                        --   See GHC.IR.Core.Monad.FloatOutSwitches
 
   historySize           :: Int,         -- ^ Simplification history size
 
@@ -882,7 +882,7 @@ data DynFlags = DynFlags {
   extensionFlags        :: EnumSet LangExt.Extension,
 
   -- Unfolding control
-  -- See Note [Discounts and thresholds] in GHC.Core.Transform.Unfolding
+  -- See Note [Discounts and thresholds] in GHC.IR.Core.Transform.Unfolding
   ufCreationThreshold   :: Int,
   ufUseThreshold        :: Int,
   ufFunAppDiscount      :: Int,

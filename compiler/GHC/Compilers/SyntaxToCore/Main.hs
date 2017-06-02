@@ -28,10 +28,10 @@ import GHC.Data.Type
 import GHC.TypeSystem.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Available
-import GHC.Core.Syntax
-import GHC.Core.FreeVars     ( exprsSomeFreeVarsList )
-import GHC.Core.Transform.Simple    ( simpleOptPgm, simpleOptExpr )
-import GHC.Core.PrettyPrint
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.FreeVars     ( exprsSomeFreeVarsList )
+import GHC.IR.Core.Transform.Simple    ( simpleOptPgm, simpleOptExpr )
+import GHC.IR.Core.PrettyPrint
 import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Compilers.SyntaxToCore.Expression
 import GHC.Compilers.SyntaxToCore.Binding
@@ -42,14 +42,14 @@ import GHC.Data.Unique      ( hasKey )
 import GHC.Data.Coercion    ( mkCoVarCo )
 import TysWiredIn  ( coercibleDataCon )
 import GHC.Data.DataConstructor     ( dataConWrapId )
-import GHC.Core.Syntax.Make      ( mkCoreLet )
+import GHC.IR.Core.Syntax.Make      ( mkCoreLet )
 import GHC.Data.Module
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
-import GHC.Core.Transform.Rules
+import GHC.IR.Core.Transform.Rules
 import GHC.Data.BasicTypes       ( Activation(.. ), competesWith, pprRuleName )
-import GHC.Core.Monad        ( CoreToDo(..) )
-import GHC.Core.Analyse.Lint         ( endPassIO )
+import GHC.IR.Core.Monad        ( CoreToDo(..) )
+import GHC.IR.Core.Analyse.Lint         ( endPassIO )
 import GHC.Data.Var.Set
 import GHC.Data.FastString
 import GHC.Utils.Error
@@ -496,7 +496,7 @@ For that we replace any forall'ed `c :: Coercible a b` value in a RULE by
 corresponding `co :: a ~#R b` and wrap the LHS and the RHS in
 `let c = MkCoercible co in ...`. This is later simplified to the desired form
 by simpleOptExpr (for the LHS) resp. the simplifiers (for the RHS).
-See also Note [Getting the map/coerce RULE to work] in GHC.Core.Substitution.
+See also Note [Getting the map/coerce RULE to work] in GHC.IR.Core.Substitution.
 
 Note [Rules and inlining/other rules]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

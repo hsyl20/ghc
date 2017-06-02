@@ -25,12 +25,12 @@ import GHC.Data.Id.Make
 import GHC.Data.Id as Id
 import ForeignCall
 import GHC.Types
-import GHC.Core.Utils
-import GHC.Core.Syntax
-import GHC.Core.PrettyPrint
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.PrettyPrint
 import GHC.Data.Literal
 import PrimOp
-import GHC.Core.FreeVars
+import GHC.IR.Core.FreeVars
 import GHC.Data.Type
 import GHC.Data.RepType
 import GHC.Data.Kind            ( isLiftedTypeKind )
@@ -1353,8 +1353,8 @@ pushAtom d p e
 pushAtom _ _ (AnnCoercion {})   -- Coercions are zero-width things,
    = return (nilOL, 0)          -- treated just like a variable V
 
--- See Note [Empty case alternatives] in coreSyn/GHC.Core.Syntax.hs
--- and Note [Bottoming expressions] in coreSyn/GHC.Core.Utils.hs:
+-- See Note [Empty case alternatives] in coreSyn/GHC.IR.Core.Syntax.hs
+-- and Note [Bottoming expressions] in coreSyn/GHC.IR.Core.Utils.hs:
 -- The scrutinee of an empty case evaluates to bottom
 pushAtom d p (AnnCase (_, a) _ _ []) -- trac #12128
    = pushAtom d p a
@@ -1661,7 +1661,7 @@ atomPrimRep (AnnLit l)              = typePrimRep1 (literalType l)
 
 -- Trac #12128:
 -- A case expression can be an atom because empty cases evaluate to bottom.
--- See Note [Empty case alternatives] in coreSyn/GHC.Core.Syntax.hs
+-- See Note [Empty case alternatives] in coreSyn/GHC.IR.Core.Syntax.hs
 atomPrimRep (AnnCase _ _ ty _)      = ASSERT(typePrimRep ty == [LiftedRep]) LiftedRep
 atomPrimRep (AnnCoercion {})        = VoidRep
 atomPrimRep other = pprPanic "atomPrimRep" (ppr (deAnnotate' other))

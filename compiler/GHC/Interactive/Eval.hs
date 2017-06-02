@@ -52,7 +52,7 @@ import GHC.Types
 import GHC.TypeSystem.ClassInstance
 import IfaceEnv   ( newInteractiveBinder )
 import GHC.TypeSystem.FamilyInstance ( FamInst )
-import GHC.Core.FreeVars    ( orphNamesOfFamInst )
+import GHC.IR.Core.FreeVars    ( orphNamesOfFamInst )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             hiding( typeKind )
 import GHC.Data.RepType

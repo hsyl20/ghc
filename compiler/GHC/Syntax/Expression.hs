@@ -28,7 +28,7 @@ import GHC.Syntax.Binding
 
 -- others:
 import TcEvidence
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.Var
 import GHC.Config.Flags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )
 import GHC.Data.Name

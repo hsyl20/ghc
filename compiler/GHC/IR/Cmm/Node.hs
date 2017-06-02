@@ -30,7 +30,7 @@ import GHC.Data.FastString
 import ForeignCall
 import GHC.Utils.Outputable
 import GHC.RTS.Storage
-import GHC.Core.Syntax (Tickish)
+import GHC.IR.Core.Syntax (Tickish)
 import qualified GHC.Data.Unique as U
 
 import Compiler.Hoopl

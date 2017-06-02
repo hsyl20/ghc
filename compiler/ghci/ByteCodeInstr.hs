@@ -16,13 +16,13 @@ import ByteCodeTypes
 import GHCi.RemoteTypes
 import GHCi.FFI (C_ffi_cif)
 import StgCmmLayout     ( ArgRep(..) )
-import GHC.Core.PrettyPrint
+import GHC.IR.Core.PrettyPrint
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Data.Name
 import GHC.Data.Unique
 import GHC.Data.Id
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import GHC.Data.Var.Set

@@ -88,9 +88,9 @@ import GHCi             ( addSptEntry )
 import GHCi.RemoteTypes ( ForeignHValue )
 import ByteCodeGen      ( byteCodeGen, coreExprToBCOs )
 import Linker
-import GHC.Core.Tidy         ( tidyExpr )
+import GHC.IR.Core.Tidy         ( tidyExpr )
 import GHC.Data.Type    ( Type, Kind )
-import GHC.Core.Analyse.Lint         ( lintInteractiveExpr )
+import GHC.IR.Core.Analyse.Lint         ( lintInteractiveExpr )
 import GHC.Data.Var.Environment           ( emptyTidyEnv )
 import GHC.Utils.Panic
 import GHC.Data.ConstructorLike
@@ -101,7 +101,7 @@ import GHC.Packages
 import GHC.Data.RdrName
 import GHC.Syntax
 import GHC.Syntax.PrettyPrint.Dump
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.StringBuffer
 import Parser
 import Lexer
@@ -114,9 +114,9 @@ import LoadIface        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
 import GHC.Compilers.SyntaxToCore.Main
-import GHC.Core.Transform.Pipeline
+import GHC.IR.Core.Transform.Pipeline
 import GHC.Interface.Tidy
-import GHC.Core.Prepare
+import GHC.IR.Core.Prepare
 import GHC.Compilers.CoreToStg ( coreToStg )
 import qualified StgCmm ( codeGen )
 import GHC.IR.Stg.Syntax

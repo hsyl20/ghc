@@ -43,8 +43,8 @@ module IfaceSyn (
 
 import IfaceType
 import BinFingerprint
-import GHC.Core.Syntax( IsOrphan, isOrphan )
-import GHC.Core.PrettyPrint()            -- Printing DFunArgs
+import GHC.IR.Core.Syntax( IsOrphan, isOrphan )
+import GHC.IR.Core.PrettyPrint()            -- Printing DFunArgs
 import GHC.Data.Demand
 import GHC.Data.Class
 import GHC.Data.FieldLabel
@@ -514,7 +514,7 @@ Note [Empty case alternatives]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In IfaceSyn an IfaceCase does not record the types of the alternatives,
 unlike CorSyn Case.  But we need this type if the alternatives are empty.
-Hence IfaceECase.  See Note [Empty case alternatives] in GHC.Core.Syntax.
+Hence IfaceECase.  See Note [Empty case alternatives] in GHC.IR.Core.Syntax.
 
 Note [Expose recursive functions]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

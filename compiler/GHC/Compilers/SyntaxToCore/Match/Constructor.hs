@@ -24,7 +24,7 @@ import GHC.Data.ConstructorLike
 import TcType
 import GHC.Compilers.SyntaxToCore.Monad
 import GHC.Compilers.SyntaxToCore.Utils
-import GHC.Core.Syntax.Make   ( mkCoreLets )
+import GHC.IR.Core.Syntax.Make   ( mkCoreLets )
 import GHC.Utils
 import GHC.Data.Id
 import GHC.Data.Name.Environment

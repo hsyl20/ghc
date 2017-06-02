@@ -30,10 +30,10 @@ import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsLExpr, d
 import TcType
 import GHC.Data.Type ( splitPiTy )
 import TcEvidence
-import GHC.Core.Syntax
-import GHC.Core.FreeVars
-import GHC.Core.Utils
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.FreeVars
+import GHC.IR.Core.Utils
+import GHC.IR.Core.Syntax.Make
 import GHC.Compilers.SyntaxToCore.Binding (dsHsWrapper)
 
 import GHC.Data.Name

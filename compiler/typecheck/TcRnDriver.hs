@@ -74,7 +74,7 @@ import qualified GHC.Data.Bool.Formula as BF
 import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
 import MkIface( tyThingToIfaceDecl )
 import GHC.Data.Coercion( pprCoAxiom )
-import GHC.Core.FreeVars( orphNamesOfFamInst )
+import GHC.IR.Core.FreeVars( orphNamesOfFamInst )
 import FamInst
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance

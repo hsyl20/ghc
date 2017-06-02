@@ -16,8 +16,8 @@ import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression  ( dsLExpr, dsLocalB
 import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Match   ( matchSinglePat )
 
 import GHC.Syntax
-import GHC.Core.Syntax.Make
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax.Make
+import GHC.IR.Core.Syntax
 import GHC.Data.Var
 
 import GHC.Compilers.SyntaxToCore.Monad

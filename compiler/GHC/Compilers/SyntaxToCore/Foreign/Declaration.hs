@@ -13,14 +13,14 @@ module GHC.Compilers.SyntaxToCore.Foreign.Declaration ( dsForeigns ) where
 #include "HsVersions.h"
 import TcRnMonad        -- temp
 
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 
 import GHC.Compilers.SyntaxToCore.Foreign.Call
 import GHC.Compilers.SyntaxToCore.Monad
 
 import GHC.Syntax
 import GHC.Data.DataConstructor
-import GHC.Core.Transform.Unfolding
+import GHC.IR.Core.Transform.Unfolding
 import GHC.Data.Id
 import GHC.Data.Literal
 import GHC.Data.Module

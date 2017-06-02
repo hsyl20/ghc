@@ -197,12 +197,12 @@ module GHC.IR.Stg.Transform.Unarise (unarise) where
 #include "HsVersions.h"
 
 import GHC.Data.BasicTypes
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.DataConstructor
 import GHC.Data.FastString (FastString, mkFastString)
 import GHC.Data.Id
 import GHC.Data.Literal (Literal (..))
-import GHC.Core.Syntax.Make (aBSENT_ERROR_ID)
+import GHC.IR.Core.Syntax.Make (aBSENT_ERROR_ID)
 import GHC.Data.Id.Make (voidPrimId, voidArgId)
 import GHC.Utils.Monad (mapAccumLM)
 import GHC.Utils.Outputable

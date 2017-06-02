@@ -14,7 +14,7 @@ import GHC.Data.Bag              ( Bag, emptyBag, isEmptyBag, snocBag, bagToList
 import GHC.Data.Id               ( Id, idType, isLocalId )
 import GHC.Data.Var.Set
 import GHC.Data.DataConstructor
-import GHC.Core.Syntax          ( AltCon(..) )
+import GHC.IR.Core.Syntax          ( AltCon(..) )
 import PrimOp           ( primOpType )
 import GHC.Data.Literal          ( literalType )
 import GHC.Data.Maybe

@@ -206,7 +206,7 @@ import GHC.Data.Type.Constructor
 
 -- others:
 import GHC.Config.Flags
-import GHC.Core.FreeVars
+import GHC.IR.Core.FreeVars
 import GHC.Data.Name as Name -- hiding (varName)
             -- We use this to make dictionaries for type literals.
             -- Perhaps there's a better way to do this?

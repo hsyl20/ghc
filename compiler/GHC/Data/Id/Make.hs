@@ -39,7 +39,7 @@ module GHC.Data.Id.Make (
 
 #include "HsVersions.h"
 
-import GHC.Core.Transform.Rules
+import GHC.IR.Core.Transform.Rules
 import TysPrim
 import TysWiredIn
 import PrelRules
@@ -47,9 +47,9 @@ import GHC.Data.Type
 import GHC.TypeSystem.FamilyInstance
 import GHC.Data.Coercion
 import TcType
-import GHC.Core.Syntax.Make
-import GHC.Core.Utils        ( exprType, mkCast )
-import GHC.Core.Transform.Unfolding
+import GHC.IR.Core.Syntax.Make
+import GHC.IR.Core.Utils        ( exprType, mkCast )
+import GHC.IR.Core.Transform.Unfolding
 import GHC.Data.Literal
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
@@ -62,7 +62,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Demand
-import GHC.Core.Syntax
+import GHC.IR.Core.Syntax
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import PrelNames
@@ -123,7 +123,7 @@ is right here.
 wiredInIds :: [Id]
 wiredInIds
   =  [lazyId, dollarId, oneShotId, runRWId, noinlineId]
-  ++ errorIds           -- Defined in GHC.Core.Syntax.Make
+  ++ errorIds           -- Defined in GHC.IR.Core.Syntax.Make
   ++ ghcPrimIds
 
 -- These Ids are exported from GHC.Prim
@@ -1195,7 +1195,7 @@ seqId = pcMiscPrelId seqName ty info
          = alwaysInlinePragma `setInlinePragmaActivation` ActiveAfter
                  NoSourceText 0
                   -- Make 'seq' not inline-always, so that simpleOptExpr
-                  -- (see GHC.Core.Substitution.simple_app) won't inline 'seq' on the
+                  -- (see GHC.IR.Core.Substitution.simple_app) won't inline 'seq' on the
                   -- LHS of rules.  That way we can have rules for 'seq';
                   -- see Note [seqId magic]
 

@@ -516,7 +516,7 @@ instance Binary TyConBndrVis where
 -- such as those for function and tuple types.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
 data TyCon
   = -- | The function type constructor, @(->)@
     FunTyCon {

@@ -26,8 +26,8 @@ import GHC.Compilers.SyntaxToCore.Utils
 import GHC.Syntax
 
 import GHC.Data.Id
-import GHC.Core.Syntax
-import GHC.Core.Syntax.Make
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Syntax.Make
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import TcHsSyn ( shortCutLit )

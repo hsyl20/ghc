@@ -117,7 +117,7 @@ module GHC.Data.Id (
 #include "HsVersions.h"
 
 import GHC.Config.Flags
-import GHC.Core.Syntax ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
+import GHC.IR.Core.Syntax ( CoreRule, evaldUnfolding, Unfolding( NoUnfolding ) )
 
 import GHC.Data.Id.Info
 import GHC.Data.BasicTypes
@@ -375,7 +375,7 @@ It's very important that they are *LocalIds*, not GlobalIds, for lots
 of reasons:
 
  * We want to treat them as free variables for the purpose of
-   dependency analysis (e.g. GHC.Core.FreeVars.exprFreeVars).
+   dependency analysis (e.g. GHC.IR.Core.FreeVars.exprFreeVars).
 
  * Look them up in the current substitution when we come across
    occurrences of them (in Subst.lookupIdSubst). Lacking this we
@@ -478,7 +478,7 @@ isDataConId_maybe id = case Var.idDetails id of
                          _                 -> Nothing
 
 isJoinId :: Var -> Bool
--- It is convenient in GHC.Core.Transform.LevelSetting.lvlMFE to apply isJoinId
+-- It is convenient in GHC.IR.Core.Transform.LevelSetting.lvlMFE to apply isJoinId
 -- to the free vars of an expression, so it's convenient
 -- if it returns False for type variables
 isJoinId id
@@ -762,7 +762,7 @@ idOneShotInfo :: Id -> OneShotInfo
 idOneShotInfo id = oneShotInfo (idInfo id)
 
 -- | Like 'idOneShotInfo', but taking the Horrible State Hack in to account
--- See Note [The state-transformer hack] in GHC.Core.Arity
+-- See Note [The state-transformer hack] in GHC.IR.Core.Arity
 idStateHackOneShotInfo :: Id -> OneShotInfo
 idStateHackOneShotInfo id
     | isStateHackType (idType id) = stateHackOneShot
@@ -772,7 +772,7 @@ idStateHackOneShotInfo id
 -- This one is the "business end", called externally.
 -- It works on type variables as well as Ids, returning True
 -- Its main purpose is to encapsulate the Horrible State Hack
--- See Note [The state-transformer hack] in GHC.Core.Arity
+-- See Note [The state-transformer hack] in GHC.IR.Core.Arity
 isOneShotBndr :: Var -> Bool
 isOneShotBndr var
   | isTyVar var                              = True
@@ -872,7 +872,7 @@ Note [transferPolyIdInfo]
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 This transfer is used in two places:
         FloatOut (long-distance let-floating)
-        GHC.Core.Transform.Simplify.Utils.abstractFloats (short-distance let-floating)
+        GHC.IR.Core.Transform.Simplify.Utils.abstractFloats (short-distance let-floating)
 
 Consider the short-distance let-floating:
 

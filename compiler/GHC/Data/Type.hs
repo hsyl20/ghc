@@ -981,7 +981,7 @@ piResultTy_maybe ty arg
 -- there are more type args than foralls in 'undefined's type.
 
 -- If you edit this function, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
 
 -- This is a heavily used function (e.g. from typeKind),
 -- so we pay attention to efficiency, especially in the special case
@@ -1192,7 +1192,7 @@ Unforunately, that's not the end of the story. Consider comparing
   (T a b c)      =?       (T a b |> (co -> <Type>)) (c |> sym co)
 These two types have the same kind (Type), but the left type is a TyConApp
 while the right type is not. To handle this case, we will have to implement
-some variant of the dreaded KPush algorithm (c.f. GHC.Core.Transform.pushCoDataCon).
+some variant of the dreaded KPush algorithm (c.f. GHC.IR.Core.Transform.pushCoDataCon).
 This stone is left unturned for now, meaning that we don't yet uphold (*).
 
 The other place where (*) will be hard to guarantee is in splitAppTy, because
@@ -2065,7 +2065,7 @@ isPrimitiveType ty = case splitTyConApp_maybe ty of
 -- in its return type, since given
 --   join j @a @b x y z = e1 in e2,
 -- the types of e1 and e2 must be the same, and a and b are not in scope for e2.
--- (See Note [The polymorphism rule of join points] in GHC.Core.Syntax.) Returns False
+-- (See Note [The polymorphism rule of join points] in GHC.IR.Core.Syntax.) Returns False
 -- also if the type simply doesn't have enough arguments.
 --
 -- Note that we need to know how many arguments (type *and* value) the putative

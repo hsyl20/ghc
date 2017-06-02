@@ -15,9 +15,9 @@ module GHC.Compilers.CoreToStg ( coreToStg, coreExprToStg ) where
 
 #include "HsVersions.h"
 
-import GHC.Core.Syntax
-import GHC.Core.Utils        ( exprType, findDefault, isJoinBind )
-import GHC.Core.Arity        ( manifestArity )
+import GHC.IR.Core.Syntax
+import GHC.IR.Core.Utils        ( exprType, findDefault, isJoinBind )
+import GHC.IR.Core.Arity        ( manifestArity )
 import GHC.IR.Stg.Syntax
 
 import GHC.Data.Type
@@ -396,7 +396,7 @@ coreToStgExpr (Cast expr _)
 
 coreToStgExpr (Case scrut _ _ [])
   = coreToStgExpr scrut
-    -- See Note [Empty case alternatives] in GHC.Core.Syntax If the case
+    -- See Note [Empty case alternatives] in GHC.IR.Core.Syntax If the case
     -- alternatives are empty, the scrutinee must diverge or raise an
     -- exception, so we can just dive into it.
     --
@@ -956,7 +956,7 @@ minusFVBinders vs fv = foldr minusFVBinder fv vs
 minusFVBinder :: Id -> FreeVarsInfo -> FreeVarsInfo
 minusFVBinder v fv = fv `delVarEnv` v
         -- When removing a binder, remember to add its type variables
-        -- c.f. GHC.Core.FreeVars.delBinderFV
+        -- c.f. GHC.IR.Core.FreeVars.delBinderFV
 
 elementOfFVInfo :: Id -> FreeVarsInfo -> Bool
 elementOfFVInfo id fvs = isJust (lookupVarEnv fvs id)

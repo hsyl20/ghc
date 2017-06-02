@@ -75,7 +75,7 @@ import GHC.Data.Id
 import GHC.IR.Stg.Syntax
 import GHC.Utils.Outputable
 import GHC.Data.Var.Environment
-import GHC.Core.Syntax (AltCon(..))
+import GHC.IR.Core.Syntax (AltCon(..))
 import Data.List (mapAccumL)
 import Data.Maybe (fromMaybe)
 import GHC.Data.TrieMap
@@ -217,7 +217,7 @@ substVar env id = fromMaybe id $ lookupVarEnv (ce_subst env) id
 
 -- Functions to enter binders
 
--- This is much simpler than the requivalent code in GHC.Core.Substitution:
+-- This is much simpler than the requivalent code in GHC.IR.Core.Substitution:
 --  * We do not substitute type variables, and
 --  * There is nothing relevant in IdInfo at this stage
 --    that needs substitutions.

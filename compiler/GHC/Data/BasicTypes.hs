@@ -146,7 +146,7 @@ instance Outputable LeftOrRight where
 -- "real work". So:
 --  fib 100     has arity 0
 --  \x -> fib x has arity 1
--- See also Note [Definition of arity] in GHC.Core.Arity
+-- See also Note [Definition of arity] in GHC.IR.Core.Arity
 type Arity = Int
 
 -- | Representation Arity

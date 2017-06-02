@@ -57,7 +57,7 @@ import GHC.IR.Cmm.Switch
 import GHC.IR.Cmm
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.CLabel
-import GHC.Core.Syntax          ( Tickish(..) )
+import GHC.IR.Core.Syntax          ( Tickish(..) )
 import GHC.Data.SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 
 -- The rest:

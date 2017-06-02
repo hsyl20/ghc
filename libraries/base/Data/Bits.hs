@@ -655,7 +655,7 @@ own to enable constant folding; for example 'shift':
 -- >
 -- > i16_to_w16 = toIntegralSized :: Int16 -> Maybe Word16
 --
--- are translated into the following (simplified) /GHC Core/ language:
+-- are translated into the following (simplified) /GHC.IR.Core/ language:
 --
 -- > w16_to_i32 = \x -> Just (case x of _ { W16# x# -> I32# (word2Int# x#) })
 -- >

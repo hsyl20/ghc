@@ -894,7 +894,7 @@ Bottom line: we really don't want to have a binder whose demand is more
 deeply-nested than its type.  There are various ways to tackle this.
 When processing (x |> g1), we could "trim" the incoming demand U(U,U)
 to match x's type.  But I'm currently doing so just at the moment when
-we pin a demand on a binder, in GHC.Core.Analyse.Demand.findBndrDmd.
+we pin a demand on a binder, in GHC.IR.Core.Analyse.Demand.findBndrDmd.
 
 
 Note [Threshold demands]
@@ -1246,7 +1246,7 @@ We
 3 and 4 are implementd in bothDmdResult.
 -}
 
--- Equality needed for fixpoints in GHC.Core.Analyse.Demand
+-- Equality needed for fixpoints in GHC.IR.Core.Analyse.Demand
 instance Eq DmdType where
   (==) (DmdType fv1 ds1 res1)
        (DmdType fv2 ds2 res2) = nonDetUFMToList fv1 == nonDetUFMToList fv2
@@ -1377,7 +1377,7 @@ splitDmdTy ty@(DmdType _ [] res_ty)       = (resTypeArgDmd res_ty, ty)
 -- * We can keep usage information (i.e. lub with an absent demand)
 -- * We have to kill definite divergence
 -- * We can keep CPR information.
--- See Note [IO hack in the demand analyser] in GHC.Core.Analyse.Demand
+-- See Note [IO hack in the demand analyser] in GHC.IR.Core.Analyse.Demand
 deferAfterIO :: DmdType -> DmdType
 deferAfterIO d@(DmdType _ _ res) =
     case d `lubDmdType` nopDmdType of

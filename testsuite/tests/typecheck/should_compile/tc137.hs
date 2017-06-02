@@ -8,7 +8,7 @@ The problem is that in rather obscure cases (involving functional
 dependencies) it is possible to get an AbsBinds [] [] (no tyvars, no
 dicts) which nevertheless has some "dictionary bindings".  These come
 out of the typechecker in non-dependency order, so we need to Rec them
-just in case.   Otherwise we get a GHC.Core.Analyse.Lint out-of-scope error.
+just in case.   Otherwise we get a GHC.IR.Core.Analyse.Lint out-of-scope error.
 
 Reported by Armin Groesslinger
 
