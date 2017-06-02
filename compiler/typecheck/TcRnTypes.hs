@@ -923,7 +923,7 @@ data ThStage    -- See Note [Template Haskell state diagram] in TcSplice
       --
       -- 'addModFinalizer' inserts finalizers here, and from here they are taken
       -- to construct an @HsSpliced@ annotation for untyped splices. See Note
-      -- [Delaying modFinalizers in untyped splices] in "RnSplice".
+      -- [Delaying modFinalizers in untyped splices] in "GHC.Rename.Splice".
       --
       -- For typed splices, the typechecker takes finalizers from here and
       -- inserts them in the list of finalizers in the global environment.

@@ -479,7 +479,7 @@ tc_infer_hs_type mode (HsKindSig ty sig)
   = do { sig' <- tc_lhs_kind (kindLevel mode) sig
        ; ty' <- tc_lhs_type mode ty sig'
        ; return (ty', sig') }
--- HsSpliced is an annotation produced by 'RnSplice.rnSpliceType' to communicate
+-- HsSpliced is an annotation produced by 'GHC.Rename.Splice.rnSpliceType' to communicate
 -- the splice location to the typechecker. Here we skip over it in order to have
 -- the same kind inferred for a given expression whether it was produced from
 -- splices or not.
@@ -530,7 +530,7 @@ tc_hs_type _ ty@(HsRecTy _)      _
       -- signatures) should have been removed by now
     = failWithTc (text "Record syntax is illegal here:" <+> ppr ty)
 
--- HsSpliced is an annotation produced by 'RnSplice.rnSpliceType'.
+-- HsSpliced is an annotation produced by 'GHC.Rename.Splice.rnSpliceType'.
 -- Here we get rid of it and add the finalizers to the global environment
 -- while capturing the local environment.
 --

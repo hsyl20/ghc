@@ -41,7 +41,7 @@ module TcRnDriver (
     ) where
 
 import {-# SOURCE #-} TcSplice ( finishTH )
-import RnSplice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
+import GHC.Rename.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
 import IfaceEnv( externaliseName )
 import TcHsType
 import TcMatches

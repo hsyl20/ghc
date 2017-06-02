@@ -36,7 +36,7 @@ module GHC.Rename.Pattern (-- main entry points
 -- ENH: thin imports to only what is necessary for patterns
 
 import {-# SOURCE #-} GHC.Rename.Expression ( rnLExpr )
-import {-# SOURCE #-} RnSplice ( rnSplicePat )
+import {-# SOURCE #-} GHC.Rename.Splice ( rnSplicePat )
 
 #include "HsVersions.h"
 
@@ -493,7 +493,7 @@ rnPatAndThen mk (SplicePat (HsSpliced mfs (HsSplicedPat pat)))
 
 rnPatAndThen mk (SplicePat splice)
   = do { eith <- liftCpsFV $ rnSplicePat splice
-       ; case eith of   -- See Note [rnSplicePat] in RnSplice
+       ; case eith of   -- See Note [rnSplicePat] in GHC.Rename.Splice
            Left  not_yet_renamed -> rnPatAndThen mk not_yet_renamed
            Right already_renamed -> return already_renamed }
 

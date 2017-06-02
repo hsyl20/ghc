@@ -373,7 +373,7 @@ Library
         GHC.Rename.ImportExport
         GHC.Rename.Pattern
         GHC.Rename.Main
-        RnSplice
+        GHC.Rename.Splice
         RnTypes
         GHC.Rename.Fixity
         RnUtils

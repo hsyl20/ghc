@@ -13,7 +13,7 @@ module GHC.Rename.Main (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr )
-import {-# SOURCE #-} RnSplice ( rnSpliceDecl, rnTopSpliceDecls )
+import {-# SOURCE #-} GHC.Rename.Splice ( rnSpliceDecl, rnTopSpliceDecls )
 
 import GHC.Syntax
 import GHC.Data.FieldLabel

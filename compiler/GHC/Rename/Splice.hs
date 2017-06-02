@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module RnSplice (
+module GHC.Rename.Splice (
         rnTopSpliceDecls,
         rnSpliceType, rnSpliceExpr, rnSplicePat, rnSpliceDecl,
         rnBracket,

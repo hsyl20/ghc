@@ -51,7 +51,7 @@ import GHCi
 import GHC.Program.Main
         -- These imports are the reason that TcSplice
         -- is very high up the module hierarchy
-import RnSplice( traceSplice, SpliceInfo(..) )
+import GHC.Rename.Splice( traceSplice, SpliceInfo(..) )
 import GHC.Data.RdrName
 import GHC.Types
 import GHC.Syntax.TemplateHaskell.Convert
@@ -447,7 +447,7 @@ tcSpliceExpr splice _
 
 'qAddModFinalizer' of the @Quasi TcM@ instance adds finalizers in the local
 environment (see Note [Delaying modFinalizers in untyped splices] in
-"RnSplice"). Thus after executing the splice, we move the finalizers to the
+"GHC.Rename.Splice"). Thus after executing the splice, we move the finalizers to the
 finalizer list in the global environment and set them to use the current local
 environment (with 'addModFinalizersWithLclEnv').
 
@@ -939,7 +939,7 @@ addModFinalizerRef finRef = do
       RunSplice th_modfinalizers_var -> updTcRef th_modfinalizers_var (finRef :)
       -- This case happens only if a splice is executed and the caller does
       -- not set the 'ThStage' to 'RunSplice' to collect finalizers.
-      -- See Note [Delaying modFinalizers in untyped splices] in RnSplice.
+      -- See Note [Delaying modFinalizers in untyped splices] in GHC.Rename.Splice.
       _ ->
         pprPanic "addModFinalizer was called when no finalizers were collected"
                  (ppr th_stage)

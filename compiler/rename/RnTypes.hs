@@ -32,7 +32,7 @@ module RnTypes (
         freeKiTyVarsAllVars, freeKiTyVarsKindVars, freeKiTyVarsTypeVars
   ) where
 
-import {-# SOURCE #-} RnSplice( rnSpliceType )
+import {-# SOURCE #-} GHC.Rename.Splice( rnSpliceType )
 
 import GHC.Config.Flags
 import GHC.Syntax
