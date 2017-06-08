@@ -359,7 +359,7 @@ Library
         TysPrim
         TysWiredIn
         GHC.Data.CostCentre
-        ProfInit
+        GHC.Data.CostCentre.Initialise
         SCCfinal
         GHC.Rename.Binding
         GHC.Rename.Environment

@@ -121,7 +121,7 @@ import GHC.Compilers.CoreToStg ( coreToStg )
 import qualified GHC.Compilers.StgToCmm as StgToCmm
 import GHC.IR.Stg.Syntax
 import GHC.Data.CostCentre
-import ProfInit
+import GHC.Data.CostCentre.Initialise
 import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.IR.Stg.Transform.Pipeline         ( stg2stg )

@@ -6,7 +6,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module ProfInit (profilingInitCode) where
+module GHC.Data.CostCentre.Initialise (profilingInitCode) where
 
 import GHC.Data.CLabel
 import GHC.Data.CostCentre
