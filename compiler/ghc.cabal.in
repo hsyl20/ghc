@@ -175,7 +175,7 @@ Library
         LlvmCodeGen.Data
         LlvmCodeGen.Ppr
         LlvmCodeGen.Regs
-        LlvmMangler
+        GHC.Compilers.CmmToLlvm.Fixup
         GHC.Data.Id.Make
         GHC.Data.Module
         GHC.Data.Name

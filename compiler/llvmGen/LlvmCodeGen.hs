@@ -13,7 +13,7 @@ import LlvmCodeGen.CodeGen
 import LlvmCodeGen.Data
 import LlvmCodeGen.Ppr
 import LlvmCodeGen.Regs
-import LlvmMangler
+import GHC.Compilers.CmmToLlvm.Fixup
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Stg.Register ( fixStgRegisters )

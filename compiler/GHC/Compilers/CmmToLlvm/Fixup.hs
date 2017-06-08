@@ -9,7 +9,7 @@
 -- instructions require 32-byte alignment.
 --
 
-module LlvmMangler ( llvmFixupAsm ) where
+module GHC.Compilers.CmmToLlvm.Fixup ( llvmFixupAsm ) where
 
 import GHC.Config.Flags ( DynFlags, targetPlatform )
 import GHC.Platform ( platformArch, Arch(..) )
