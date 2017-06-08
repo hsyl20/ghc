@@ -29,7 +29,7 @@ import X86.Cond
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register
-import PprBase
+import GHC.Compilers.CmmToAsm.PrettyPrint
 
 
 import GHC.IR.Cmm.Transform.Dataflow

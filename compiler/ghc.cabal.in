@@ -219,7 +219,7 @@ Library
         GHC.IR.Cmm.LayoutStack
         GHC.Data.EnumSet
         GHC.IR.Cmm.Graph
-        PprBase
+        GHC.Compilers.CmmToAsm.PrettyPrint
         GHC.Compilers.CmmToC
         GHC.IR.Cmm.PrettyPrint
         GHC.IR.Cmm.PrettyPrint.Declaration

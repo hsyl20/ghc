@@ -18,7 +18,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Unique
 
 -- from NCG
-import PprBase
+import GHC.Compilers.CmmToAsm.PrettyPrint
 
 import GHC.Float
 

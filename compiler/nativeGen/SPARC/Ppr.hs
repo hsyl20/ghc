@@ -34,7 +34,7 @@ import SPARC.Base
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Format
-import PprBase
+import GHC.Compilers.CmmToAsm.PrettyPrint
 
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.IR.Cmm.PrettyPrint()

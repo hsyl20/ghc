@@ -6,7 +6,7 @@
 --
 -----------------------------------------------------------------------------
 
-module PprBase (
+module GHC.Compilers.CmmToAsm.PrettyPrint (
         castFloatToWord8Array,
         castDoubleToWord8Array,
         floatToBytes,
@@ -117,7 +117,7 @@ pprGNUSectionHeader t suffix = sdocWithDynFlags $ \dflags ->
           -> sLit ".rdata"
         | otherwise -> sLit ".rodata.str"
       OtherSection _ ->
-        panic "PprBase.pprGNUSectionHeader: unknown section type"
+        panic "GHC.Compilers.CmmToAsm.PrettyPrint.pprGNUSectionHeader: unknown section type"
     flags dflags = case t of
       CString
         | OSMinGW32 <- platformOS (targetPlatform dflags)
@@ -137,7 +137,7 @@ pprXcoffSectionHeader t = text $ case t of
      CString                 -> ".csect .text[PR] # CString"
      UninitialisedData       -> ".csect .data[BS]"
      OtherSection _          ->
-       panic "PprBase.pprXcoffSectionHeader: unknown section type"
+       panic "GHC.Compilers.CmmToAsm.PrettyPrint.pprXcoffSectionHeader: unknown section type"
 
 pprDarwinSectionHeader :: SectionType -> SDoc
 pprDarwinSectionHeader t =
@@ -150,4 +150,4 @@ pprDarwinSectionHeader t =
      ReadOnlyData16 -> sLit ".const"
      CString -> sLit ".section\t__TEXT,__cstring,cstring_literals"
      OtherSection _ ->
-       panic "PprBase.pprDarwinSectionHeader: unknown section type"
+       panic "GHC.Compilers.CmmToAsm.PrettyPrint.pprDarwinSectionHeader: unknown section type"

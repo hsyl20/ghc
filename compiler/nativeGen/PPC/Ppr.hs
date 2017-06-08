@@ -12,7 +12,7 @@ module PPC.Ppr (pprNatCmmDecl) where
 import PPC.Regs
 import PPC.Instr
 import PPC.Cond
-import PprBase
+import GHC.Compilers.CmmToAsm.PrettyPrint
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register
