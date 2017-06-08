@@ -51,7 +51,7 @@ import GHC.Data.FieldLabel
 import GHC.Data.Name.Set
 import GHC.Data.Coercion.Axiom ( BranchIndex )
 import GHC.Data.Name
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Literal
 import ForeignCall
 import GHC.Data.Annotation( AnnPayload, AnnTarget )

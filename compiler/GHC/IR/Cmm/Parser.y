@@ -230,7 +230,7 @@ import GHC.RTS.Storage
 import GHC.IR.Haskell.Lexer
 import GHC.IR.Cmm.Parser.Monad
 
-import CostCentre
+import GHC.Data.CostCentre
 import ForeignCall
 import GHC.Data.Module
 import GHC.Platform

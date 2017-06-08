@@ -19,7 +19,7 @@ import {-# SOURCE #-} TcExpr  ( tcMonoExpr )
 import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
                                , tcPatSynBuilderBind )
 import GHC.IR.Core.Syntax (Tickish (..))
-import CostCentre (mkUserCC)
+import GHC.Data.CostCentre (mkUserCC)
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.IR.Haskell.Syntax

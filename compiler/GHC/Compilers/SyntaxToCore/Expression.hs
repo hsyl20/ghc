@@ -39,7 +39,7 @@ import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax.Make
 
 import GHC.Config.Flags
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Make
 import GHC.Data.Module

@@ -123,7 +123,7 @@ import GHC.Data.Name
 import GHC.Data.Unique
 import PrimOp
 import Config
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags

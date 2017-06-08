@@ -358,7 +358,7 @@ Library
         PrimOp
         TysPrim
         TysWiredIn
-        CostCentre
+        GHC.Data.CostCentre
         ProfInit
         SCCfinal
         GHC.Rename.Binding

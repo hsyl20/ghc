@@ -23,7 +23,7 @@ module SCCfinal ( stgMassageForProfiling ) where
 
 import GHC.IR.Stg.Syntax
 
-import CostCentre       -- lots of things
+import GHC.Data.CostCentre       -- lots of things
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Module

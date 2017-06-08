@@ -41,7 +41,7 @@ import PrimOp
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             ( isUnliftedType )
 import GHC.Data.RepType          ( isVoidTy, countConRepArgs, primRepSlot )
-import CostCentre       ( CostCentreStack, currentCCS )
+import GHC.Data.CostCentre       ( CostCentreStack, currentCCS )
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Data.FastString

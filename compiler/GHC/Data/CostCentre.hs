@@ -1,5 +1,5 @@
 {-# LANGUAGE DeriveDataTypeable #-}
-module CostCentre (
+module GHC.Data.CostCentre (
         CostCentre(..), CcName, IsCafCC(..),
                 -- All abstract except to friend: ParseIface.y
 

@@ -38,7 +38,7 @@ import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 
 import qualified GHC.Data.Module as Module
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Module

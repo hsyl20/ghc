@@ -31,7 +31,7 @@ import GHC.IR.Stg.Syntax
 import GHC.Config.Flags
 
 import GHC.Types
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.RepType

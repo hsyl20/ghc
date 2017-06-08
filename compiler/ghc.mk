@@ -462,7 +462,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.IR.Core.Utils \
 	GHC.IR.Core.Force \
 	GHC.IR.Core.Analyse.Stats \
-	CostCentre \
+	GHC.Data.CostCentre \
 	GHC.Data.DataConstructor \
 	GHC.Data.Demand \
 	GHC.Data.Graph.Directed \

@@ -41,7 +41,7 @@ import GHC.RTS.Storage
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Id.Info( CafInfo(..), mayHaveCafRefs )
 import GHC.Data.Id ( Id )
 import GHC.Data.Module

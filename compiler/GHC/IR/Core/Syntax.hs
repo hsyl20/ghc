@@ -99,7 +99,7 @@ module GHC.IR.Core.Syntax (
 
 #include "HsVersions.h"
 
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Var.Environment( InScopeSet )
 import GHC.Data.Var
 import GHC.Data.Type

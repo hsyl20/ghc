@@ -32,7 +32,7 @@ import GHC.IR.Cmm.Expr
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Graph
 import GHC.RTS.Storage
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Module
 import GHC.Data.DataConstructor
 import GHC.Config.Flags

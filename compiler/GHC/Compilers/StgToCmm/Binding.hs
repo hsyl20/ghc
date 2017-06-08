@@ -39,7 +39,7 @@ import GHC.RTS.InfoTable
 import GHC.IR.Cmm.Utils
 import GHC.Data.CLabel
 import GHC.IR.Stg.Syntax
-import CostCentre
+import GHC.Data.CostCentre
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Name

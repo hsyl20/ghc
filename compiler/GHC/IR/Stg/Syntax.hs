@@ -46,7 +46,7 @@ module GHC.IR.Stg.Syntax (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Syntax     ( AltCon, Tickish )
-import CostCentre  ( CostCentreStack )
+import GHC.Data.CostCentre  ( CostCentreStack )
 import Data.ByteString ( ByteString )
 import Data.List   ( intersperse )
 import GHC.Data.DataConstructor
