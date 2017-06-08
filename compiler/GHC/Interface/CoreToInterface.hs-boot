@@ -1,4 +1,4 @@
-module ToIface where
+module GHC.Interface.CoreToInterface where
 
 import {-# SOURCE #-} GHC.Data.Types
 import {-# SOURCE #-} IfaceType

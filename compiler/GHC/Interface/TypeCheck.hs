@@ -26,7 +26,7 @@ import TcTypeNats(typeNatCoAxiomRules)
 import GHC.Interface.Syntax
 import GHC.Interface.Load
 import GHC.Interface.Environment
-import BuildTyCl
+import GHC.Interface.BuildTypeAndClass
 import TcRnMonad
 import TcType
 import GHC.Data.Type

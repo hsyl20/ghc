@@ -1299,7 +1299,7 @@ splitDataProductType_maybe ty
 ************************************************************************
 
 buildAlgTyCon is here because it is called from TysWiredIn, which can
-depend on this module, but not on BuildTyCl.
+depend on this module, but not on GHC.Interface.BuildTypeAndClass.
 -}
 
 buildAlgTyCon :: Name

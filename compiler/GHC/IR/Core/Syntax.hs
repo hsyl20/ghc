@@ -1302,7 +1302,7 @@ data Unfolding
 
   | BootUnfolding      -- ^ We have no information about the unfolding, because
                        -- this 'Id' came from an @hi-boot@ file.
-                       -- See Note [Inlining and hs-boot files] in ToIface
+                       -- See Note [Inlining and hs-boot files] in GHC.Interface.CoreToInterface
                        -- for what this is used for.
 
   | OtherCon [AltCon]  -- ^ It ain't one of these constructors.

@@ -61,7 +61,7 @@ Basic idea:
 import GHC.Interface.Syntax
 import GHC.Utils.Binary.Fingerprint
 import GHC.Interface.Load
-import ToIface
+import GHC.Interface.CoreToInterface
 import GHC.Config.Flags.Fingerprint
 
 import GHC.Compilers.SyntaxToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )

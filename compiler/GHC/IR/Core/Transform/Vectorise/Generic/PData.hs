@@ -15,7 +15,7 @@ import GHC.IR.Core.Transform.Vectorise.Utils
 import GHC.IR.Core.Transform.Vectorise.Env( GlobalEnv( global_fam_inst_env ) )
 
 import GHC.Data.BasicTypes ( SourceText(..) )
-import BuildTyCl
+import GHC.Interface.BuildTypeAndClass
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Type

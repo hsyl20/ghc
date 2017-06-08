@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 
 -- | Functions for converting Core things to interface file things.
-module ToIface
+module GHC.Interface.CoreToInterface
     ( -- * Binders
       toIfaceTvBndr
     , toIfaceTvBndrs

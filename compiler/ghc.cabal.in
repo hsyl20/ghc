@@ -140,7 +140,6 @@ Library
     hs-source-dirs:
         ./
         backpack
-        iface
         llvmGen
         nativeGen
         prelude
@@ -302,11 +301,11 @@ Library
         GHC.IR.Haskell.PrettyPrint.Dump
         GHC.Interface.Binary
         GHC.Utils.Binary.Fingerprint
-        BuildTyCl
+        GHC.Interface.BuildTypeAndClass
         GHC.Interface.Environment
         GHC.Interface.Syntax
         GHC.Interface.Types
-        ToIface
+        GHC.Interface.CoreToInterface
         GHC.Interface.Load
         GHC.Interface.Utils
         GHC.Interface.TypeCheck

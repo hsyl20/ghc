@@ -30,7 +30,7 @@ import GHC.Data.Type     ( getClassPredTys_maybe, piResultTys )
 import TcType
 import TcRnMonad
 import GHC.Program.Driver.Phases (HscSource(..))
-import BuildTyCl( TcMethInfo )
+import GHC.Interface.BuildTypeAndClass( TcMethInfo )
 import GHC.Data.Class
 import GHC.Data.Coercion ( pprCoAxiom )
 import GHC.Config.Flags

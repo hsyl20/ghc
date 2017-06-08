@@ -504,7 +504,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Interface.Types \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \
-	ToIface \
+	GHC.Interface.CoreToInterface \
 	GHC.TypeSystem.ClassInstance \
 	GHC.Data.Kind \
 	KnownUniques \

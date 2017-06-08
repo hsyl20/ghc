@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module BuildTyCl (
+module GHC.Interface.BuildTypeAndClass (
         buildDataCon, mkDataConUnivTyVarBinders,
         buildPatSyn,
         TcMethInfo, buildClass,
@@ -444,7 +444,7 @@ are boxed.
 newImplicitBinder :: Name                       -- Base name
                   -> (OccName -> OccName)       -- Occurrence name modifier
                   -> TcRnIf m n Name            -- Implicit name
--- Called in BuildTyCl to allocate the implicit binders of type/class decls
+-- Called in GHC.Interface.BuildTypeAndClass to allocate the implicit binders of type/class decls
 -- For source type/class decls, this is the first occurrence
 -- For iface ones, the GHC.Interface.Load has already allocated a suitable name in the cache
 newImplicitBinder base_name mk_sys_occ

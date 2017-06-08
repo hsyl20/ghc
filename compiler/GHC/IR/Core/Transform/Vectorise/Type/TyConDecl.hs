@@ -6,7 +6,7 @@ module GHC.IR.Core.Transform.Vectorise.Type.TyConDecl (
 import GHC.IR.Core.Transform.Vectorise.Type.Type
 import GHC.IR.Core.Transform.Vectorise.Monad
 import GHC.IR.Core.Transform.Vectorise.Env( GlobalEnv( global_fam_inst_env ) )
-import BuildTyCl( TcMethInfo, buildClass, buildDataCon, newTyConRepName )
+import GHC.Interface.BuildTypeAndClass( TcMethInfo, buildClass, buildDataCon, newTyConRepName )
 import GHC.Data.OccName
 import GHC.Data.Class
 import GHC.Data.Type
