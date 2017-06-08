@@ -112,7 +112,7 @@ import TcRnMonad
 import GHC.Data.Name.Cache        ( initNameCache )
 import GHC.Interface.Load        ( ifaceStats, initExternalPackageState )
 import PrelInfo
-import MkIface
+import GHC.Interface.Utils
 import GHC.Compilers.SyntaxToCore.Main
 import GHC.IR.Core.Transform.Pipeline
 import GHC.Interface.Tidy

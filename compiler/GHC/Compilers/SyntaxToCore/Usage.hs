@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 
 module GHC.Compilers.SyntaxToCore.Usage (
-    -- * Dependency/fingerprinting code (used by MkIface)
+    -- * Dependency/fingerprinting code (used by GHC.Interface.Utils)
     mkUsageInfo, mkUsedNames, mkDependencies
     ) where
 

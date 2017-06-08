@@ -24,7 +24,7 @@ import GHC.Interface.Syntax ( ShowSub(..), ShowHowMuch(..), AltPpr(..)
   , showToHeader, pprIfaceDecl )
 import GHC.Data.Coercion.Axiom ( coAxiomTyCon )
 import GHC.Types( tyThingParent_maybe )
-import MkIface ( tyThingToIfaceDecl )
+import GHC.Interface.Utils ( tyThingToIfaceDecl )
 import GHC.Data.Type ( tidyOpenType )
 import GHC.TypeSystem.FamilyInstance( FamInst(..), FamFlavor(..) )
 import GHC.Data.Type( Type, pprTypeApp, pprSigmaType )
@@ -59,7 +59,7 @@ Here is why:
   extra requirement that it generates only "pretty" types and kinds.
 
 *  One place the non-pretty names can show up is in GHCi. But another
-   is in interface files. Look at MkIface.tyThingToIfaceDecl which
+   is in interface files. Look at GHC.Interface.Utils.tyThingToIfaceDecl which
    converts a TyThing (i.e. TyCon, Class etc) to an IfaceDecl. And it
    already does tidying as part of that conversion!  Why? Because
    interface files contains fast-strings, not uniques, so the names

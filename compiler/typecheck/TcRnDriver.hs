@@ -72,7 +72,7 @@ import TcRnExports
 import TcEvidence
 import qualified GHC.Data.Bool.Formula as BF
 import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
-import MkIface( tyThingToIfaceDecl )
+import GHC.Interface.Utils( tyThingToIfaceDecl )
 import GHC.Data.Coercion( pprCoAxiom )
 import GHC.IR.Core.FreeVars( orphNamesOfFamInst )
 import FamInst
@@ -1749,7 +1749,7 @@ being called "Main.main".  That's why root_main_id has a fixed module
 ":Main".)
 
 This is unusual: it's a LocalId whose Name has a Module from another
-module.  Tiresomely, we must filter it out again in MkIface, les we
+module.  Tiresomely, we must filter it out again in GHC.Interface.Utils, les we
 get two defns for 'main' in the interface file!
 
 

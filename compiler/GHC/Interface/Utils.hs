@@ -8,7 +8,7 @@
 -- | Module for constructing @ModIface@ values (interface files),
 -- writing them to disk and comparing two versions to see if
 -- recompilation is required.
-module MkIface (
+module GHC.Interface.Utils (
         mkIface,        -- Build a ModIface from a ModGuts,
                         -- including computing version information
 

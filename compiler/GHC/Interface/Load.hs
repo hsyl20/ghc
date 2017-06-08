@@ -409,7 +409,7 @@ loadInterface doc_str mod from
                             -- Stoutly warn against an EPS-updating import
                             -- of one's own boot file! (one-shot only)
                             --See Note [Do not update EPS with your own hi-boot]
-                            -- in MkIface.
+                            -- in GHC.Interface.Utils.
                             WARN( hi_boot_file &&
                                   fmap fst (if_rec_types gbl_env) == Just mod,
                                   ppr mod )

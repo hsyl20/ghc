@@ -2310,7 +2310,7 @@ data Dependencies
                         -- [The type family instance consistency story].
          }
   deriving( Eq )
-        -- Equality used only for old/new comparison in MkIface.addFingerprints
+        -- Equality used only for old/new comparison in GHC.Interface.Utils.addFingerprints
         -- See 'TcRnTypes.ImportAvails' for details on dependencies.
 
 instance Binary Dependencies where

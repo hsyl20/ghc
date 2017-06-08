@@ -1116,7 +1116,7 @@ has two major consequences
    In contrast, orphans are all fingerprinted together in the
    mi_orph_hash field of the ModIface.
 
-   See MkIface.addFingerprints.
+   See GHC.Interface.Utils.addFingerprints.
 
 Orphan-hood is computed
   * For class instances:
@@ -1124,8 +1124,8 @@ Orphan-hood is computed
     (because it is needed during instance lookup)
 
   * For rules and family instances:
-       when we generate an IfaceRule (MkIface.coreRuleToIfaceRule)
-                     or IfaceFamInst (MkIface.instanceToIfaceInst)
+       when we generate an IfaceRule (GHC.Interface.Utils.coreRuleToIfaceRule)
+                     or IfaceFamInst (GHC.Interface.Utils.instanceToIfaceInst)
 -}
 
 {-

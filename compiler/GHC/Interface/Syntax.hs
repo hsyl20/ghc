@@ -1252,7 +1252,7 @@ instance Outputable IfaceUnfolding where
 *                                                                      *
 ************************************************************************
 
-This is used for dependency analysis in MkIface, so that we
+This is used for dependency analysis in GHC.Interface.Utils, so that we
 fingerprint a declaration before the things that depend on it.  It
 is specific to interface-file fingerprinting in the sense that we
 don't collect *all* Names: for example, the DFun of an instance is

@@ -41,7 +41,7 @@ import GHC.Data.Unique.DeterFiniteMap
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import GHC.IR.Haskell.Parser.HeaderInfo
-import MkIface
+import GHC.Interface.Utils
 import GHC.Program.Make
 import GHC.Data.Unique.DeterSet
 import PrelNames

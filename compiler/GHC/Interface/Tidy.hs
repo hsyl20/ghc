@@ -516,7 +516,7 @@ tidyVectInfo (_, var_env) info@(VectInfo { vectInfoVar          = vars
     lookup_var var = lookupWithDefaultVarEnv var_env var var
 
     -- We need to make sure that all names getting into the iface version of 'VectInfo' are
-    -- external; otherwise, 'MkIface' will bomb out.
+    -- external; otherwise, 'GHC.Interface.Utils' will bomb out.
     isExternalId = isExternalName . idName
 
 {-
