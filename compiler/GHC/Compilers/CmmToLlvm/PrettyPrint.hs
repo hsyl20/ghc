@@ -4,7 +4,7 @@
 -- | Pretty print LLVM IR Code.
 --
 
-module Llvm.PpLlvm (
+module GHC.Compilers.CmmToLlvm.PrettyPrint (
 
     -- * Top level LLVM objects.
     ppLlvmModule,
@@ -25,9 +25,9 @@ module Llvm.PpLlvm (
 
 #include "HsVersions.h"
 
-import Llvm.AbsSyn
-import Llvm.MetaData
-import Llvm.Types
+import GHC.Compilers.CmmToLlvm.Syntax
+import GHC.Compilers.CmmToLlvm.MetaData
+import GHC.Compilers.CmmToLlvm.Types
 
 import Data.List ( intersperse )
 import GHC.Utils.Outputable

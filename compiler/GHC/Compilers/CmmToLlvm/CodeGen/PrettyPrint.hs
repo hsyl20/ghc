@@ -3,7 +3,7 @@
 -- ----------------------------------------------------------------------------
 -- | Pretty print helpers for the LLVM Code generator.
 --
-module GHC.Compilers.CmmToLlvm.CodeGen.Ppr (
+module GHC.Compilers.CmmToLlvm.CodeGen.PrettyPrint (
         pprLlvmHeader, pprLlvmCmmDecl, pprLlvmData, infoSection
     ) where
 
@@ -77,7 +77,7 @@ moduleLayout = sdocWithPlatform $ \platform ->
         $+$ text "target triple = \"aarch64-unknown-linux-gnu\""
     _ ->
         if platformIsCrossCompiling platform
-            then panic "GHC.Compilers.CmmToLlvm.CodeGen.Ppr: Cross compiling without valid target info."
+            then panic "GHC.Compilers.CmmToLlvm.CodeGen.PrettyPrint: Cross compiling without valid target info."
             else empty
         -- If you see the above panic, GHC is missing the required target datalayout
         -- and triple information. You can obtain this info by compiling a simple

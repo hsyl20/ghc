@@ -2,7 +2,7 @@
 
 module Llvm.MetaData where
 
-import Llvm.Types
+import GHC.Compilers.CmmToLlvm.Types
 import GHC.Utils.Outputable
 
 -- The LLVM Metadata System.

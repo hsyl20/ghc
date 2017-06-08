@@ -9,9 +9,9 @@ module GHC.Compilers.CmmToLlvm.CodeGen ( llvmCodeGen, llvmFixupAsm ) where
 
 import GHC.Compilers.CmmToLlvm
 import GHC.Compilers.CmmToLlvm.CodeGen.Base
-import GHC.Compilers.CmmToLlvm.CodeGen.CodeGen
+import GHC.Compilers.CmmToLlvm.CodeGen.Proc
 import GHC.Compilers.CmmToLlvm.CodeGen.Data
-import GHC.Compilers.CmmToLlvm.CodeGen.Ppr
+import GHC.Compilers.CmmToLlvm.CodeGen.PrettyPrint
 import GHC.Compilers.CmmToLlvm.CodeGen.Regs
 import GHC.Compilers.CmmToLlvm.Fixup
 

@@ -57,8 +57,8 @@ module Llvm (
 
     ) where
 
-import Llvm.AbsSyn
-import Llvm.MetaData
-import Llvm.PpLlvm
-import Llvm.Types
+import GHC.Compilers.CmmToLlvm.Syntax
+import GHC.Compilers.CmmToLlvm.MetaData
+import GHC.Compilers.CmmToLlvm.PrettyPrint
+import GHC.Compilers.CmmToLlvm.Types
 

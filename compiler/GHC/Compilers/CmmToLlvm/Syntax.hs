@@ -2,10 +2,10 @@
 -- | The LLVM abstract syntax.
 --
 
-module Llvm.AbsSyn where
+module GHC.Compilers.CmmToLlvm.Syntax where
 
-import Llvm.MetaData
-import Llvm.Types
+import GHC.Compilers.CmmToLlvm.MetaData
+import GHC.Compilers.CmmToLlvm.Types
 
 import GHC.Data.Unique
 

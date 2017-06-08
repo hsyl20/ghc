@@ -140,7 +140,6 @@ Library
     hs-source-dirs:
         ./
         backpack
-        llvmGen
         prelude
         typecheck
 
@@ -167,13 +166,13 @@ Library
         GHC.Compilers.CmmToLlvm
         GHC.Compilers.CmmToLlvm.AbsSyn
         GHC.Compilers.CmmToLlvm.MetaData
-        GHC.Compilers.CmmToLlvm.PpLlvm
+        GHC.Compilers.CmmToLlvm.PrettyPrint
         GHC.Compilers.CmmToLlvm.Types
         GHC.Compilers.CmmToLlvm.CodeGen
         GHC.Compilers.CmmToLlvm.CodeGen.Base
-        GHC.Compilers.CmmToLlvm.CodeGen.CodeGen
+        GHC.Compilers.CmmToLlvm.CodeGen.Proc
         GHC.Compilers.CmmToLlvm.CodeGen.Data
-        GHC.Compilers.CmmToLlvm.CodeGen.Ppr
+        GHC.Compilers.CmmToLlvm.CodeGen.PrettyPrint
         GHC.Compilers.CmmToLlvm.CodeGen.Regs
         GHC.Compilers.CmmToLlvm.Fixup
         GHC.Data.Id.Make
