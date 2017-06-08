@@ -24,7 +24,7 @@
 
 module GHC.Data.RdrName (
         -- * The main type
-        RdrName(..),    -- Constructors exported only to BinIface
+        RdrName(..),    -- Constructors exported only to GHC.Interface.Binary
 
         -- ** Construction
         mkRdrUnqual, mkRdrQual,

@@ -9,7 +9,7 @@
 -- compiler is severely affected
 
 -- | Binary interface file support.
-module BinIface (
+module GHC.Interface.Binary (
         writeBinIface,
         readBinIface,
         getSymtabName,

@@ -91,7 +91,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Module
-import BinIface
+import GHC.Interface.Binary
 import GHC.Utils.Error
 import GHC.Data.Graph.Directed
 import GHC.Data.SrcLoc

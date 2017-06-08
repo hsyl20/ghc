@@ -300,7 +300,7 @@ Library
         GHC.IR.Haskell.Type
         GHC.IR.Haskell.Utils
         GHC.IR.Haskell.PrettyPrint.Dump
-        BinIface
+        GHC.Interface.Binary
         BinFingerprint
         BuildTyCl
         GHC.Interface.Environment

@@ -65,7 +65,7 @@ import GHC.Finder
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
-import BinIface
+import GHC.Interface.Binary
 import GHC.Utils.Panic
 import GHC.Utils
 import GHC.Data.FastString

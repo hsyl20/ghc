@@ -96,9 +96,9 @@ things,
      looked up in the orig-name cache)
 
   b) The known infinite families of names are specially serialised by
-     BinIface.putName, with that special treatment detected when we read back to
+     GHC.Interface.Binary.putName, with that special treatment detected when we read back to
      ensure that we get back to the correct uniques. See Note [Symbol table
-     representation of names] in BinIface and Note [How tuples work] in
+     representation of names] in GHC.Interface.Binary and Note [How tuples work] in
      TysWiredIn.
 
 Most of the infinite families cannot occur in source code, so mechanisms (a) and (b)
