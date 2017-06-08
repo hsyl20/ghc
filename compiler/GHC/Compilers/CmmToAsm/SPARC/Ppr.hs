@@ -23,7 +23,7 @@ module GHC.Compilers.CmmToAsm.SPARC.Ppr (
 where
 
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 import GHC.Compilers.CmmToAsm.SPARC.Regs
 import GHC.Compilers.CmmToAsm.SPARC.Instr

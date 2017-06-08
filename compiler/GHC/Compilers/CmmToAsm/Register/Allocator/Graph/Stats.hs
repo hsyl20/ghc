@@ -14,7 +14,7 @@ module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats (
         countSRMs, addSRM
 ) where
 
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 import qualified GHC.Data.Graph.Color as Color
 import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness

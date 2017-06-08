@@ -22,7 +22,7 @@ module GHC.Compilers.CmmToAsm (
                   ) where
 
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 
 import qualified X86.CodeGen

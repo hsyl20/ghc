@@ -21,7 +21,7 @@ module GHC.Compilers.CmmToAsm.X86.Ppr (
 where
 
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 import GHC.Compilers.CmmToAsm.X86.Regs
 import GHC.Compilers.CmmToAsm.X86.Instr

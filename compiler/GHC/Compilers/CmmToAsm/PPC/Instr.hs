@@ -9,7 +9,7 @@
 -----------------------------------------------------------------------------
 
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 module GHC.Compilers.CmmToAsm.PPC.Instr (
     archWordFormat,

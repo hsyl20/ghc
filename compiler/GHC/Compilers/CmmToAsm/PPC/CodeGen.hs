@@ -21,7 +21,7 @@ module GHC.Compilers.CmmToAsm.PPC.CodeGen (
 where
 
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 #include "../includes/MachDeps.h"
 
 -- NCG stuff:

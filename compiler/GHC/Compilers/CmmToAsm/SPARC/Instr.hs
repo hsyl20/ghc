@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 module GHC.Compilers.CmmToAsm.SPARC.Instr (
         RI(..),

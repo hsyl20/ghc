@@ -15,7 +15,7 @@ module GHC.Compilers.CmmToAsm.X86.Instr (Instr(..), Operand(..), PrefetchVariant
 where
 
 #include "HsVersions.h"
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 
 import GHC.Compilers.CmmToAsm.X86.Cond
 import GHC.Compilers.CmmToAsm.X86.Regs

@@ -17,7 +17,7 @@ module GHC.Compilers.CmmToAsm.PPC.RegInfo (
 
 where
 
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 #include "HsVersions.h"
 
 import GHC.Compilers.CmmToAsm.PPC.Instr

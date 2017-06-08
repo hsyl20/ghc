@@ -45,7 +45,7 @@ module GHC.Compilers.CmmToAsm.X86.Regs (
 
 where
 
-#include "nativeGen/NCG.h"
+#include "cbits/CmmToAsm.h"
 #include "HsVersions.h"
 
 import GHC.Utils.CodeGen.Platform

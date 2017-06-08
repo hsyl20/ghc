@@ -141,7 +141,6 @@ Library
         ./
         backpack
         llvmGen
-        nativeGen
         prelude
         typecheck
 
