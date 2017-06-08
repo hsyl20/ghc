@@ -8,7 +8,7 @@ import GHC.Platform
 import GHC.Utils.Outputable
 
 import GHC.Compilers.CmmToAsm.Register
-import X86.Regs
+import GHC.Compilers.CmmToAsm.X86.Regs
 
 import Data.Word
 

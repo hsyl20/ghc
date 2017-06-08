@@ -3,7 +3,7 @@
 module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
 where
 
-import SPARC.Regs
+import GHC.Compilers.CmmToAsm.SPARC.Regs
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
 

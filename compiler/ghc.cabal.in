@@ -539,35 +539,35 @@ Library
             GHC.Compilers.CmmToAsm.PIC
             GHC.Platform
             GHC.Utils.CodeGen.Primitive
-            X86.Regs
-            X86.RegInfo
-            X86.Instr
-            X86.Cond
-            X86.Ppr
-            X86.CodeGen
-            PPC.Regs
-            PPC.RegInfo
-            PPC.Instr
-            PPC.Cond
-            PPC.Ppr
-            PPC.CodeGen
-            SPARC.Base
-            SPARC.Regs
-            SPARC.Imm
-            SPARC.AddrMode
-            SPARC.Cond
-            SPARC.Instr
-            SPARC.Stack
-            SPARC.ShortcutJump
-            SPARC.Ppr
-            SPARC.CodeGen
-            SPARC.CodeGen.Amode
-            SPARC.CodeGen.Base
-            SPARC.CodeGen.CondCode
-            SPARC.CodeGen.Gen32
-            SPARC.CodeGen.Gen64
-            SPARC.CodeGen.Sanity
-            SPARC.CodeGen.Expand
+            GHC.Compilers.CmmToAsm.X86.Regs
+            GHC.Compilers.CmmToAsm.X86.RegInfo
+            GHC.Compilers.CmmToAsm.X86.Instr
+            GHC.Compilers.CmmToAsm.X86.Cond
+            GHC.Compilers.CmmToAsm.X86.Ppr
+            GHC.Compilers.CmmToAsm.X86.CodeGen
+            GHC.Compilers.CmmToAsm.PPC.Regs
+            GHC.Compilers.CmmToAsm.PPC.RegInfo
+            GHC.Compilers.CmmToAsm.PPC.Instr
+            GHC.Compilers.CmmToAsm.PPC.Cond
+            GHC.Compilers.CmmToAsm.PPC.Ppr
+            GHC.Compilers.CmmToAsm.PPC.CodeGen
+            GHC.Compilers.CmmToAsm.SPARC.Base
+            GHC.Compilers.CmmToAsm.SPARC.Regs
+            GHC.Compilers.CmmToAsm.SPARC.Imm
+            GHC.Compilers.CmmToAsm.SPARC.AddrMode
+            GHC.Compilers.CmmToAsm.SPARC.Cond
+            GHC.Compilers.CmmToAsm.SPARC.Instr
+            GHC.Compilers.CmmToAsm.SPARC.Stack
+            GHC.Compilers.CmmToAsm.SPARC.ShortcutJump
+            GHC.Compilers.CmmToAsm.SPARC.Ppr
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.CondCode
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Sanity
+            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand
             GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
             GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main
             GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats
