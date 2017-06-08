@@ -158,7 +158,7 @@ Notes about the NameSorts:
 
 2.  In any invocation of GHC, an External Name for "M.x" has one and only one
     unique.  This unique association is ensured via the Name Cache;
-    see Note [The Name Cache] in IfaceEnv.
+    see Note [The Name Cache] in GHC.Interface.Environment.
 
 3.  Things with a External name are given C static labels, so they finally
     appear in the .o file's symbol table.  They appear in the symbol table
@@ -358,7 +358,7 @@ mkDerivedInternalName derive_occ uniq (Name { n_occ = occ, n_loc = loc })
 -- | Create a name which definitely originates in the given module
 mkExternalName :: Unique -> Module -> OccName -> SrcSpan -> Name
 -- WATCH OUT! External Names should be in the Name Cache
--- (see Note [The Name Cache] in IfaceEnv), so don't just call mkExternalName
+-- (see Note [The Name Cache] in GHC.Interface.Environment), so don't just call mkExternalName
 -- with some fresh unique without populating the Name Cache
 mkExternalName uniq mod occ loc
   = Name { n_uniq = getKey uniq, n_sort = External mod,

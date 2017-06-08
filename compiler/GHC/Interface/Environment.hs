@@ -2,7 +2,7 @@
 
 {-# LANGUAGE CPP, RankNTypes #-}
 
-module IfaceEnv (
+module GHC.Interface.Environment (
         newGlobalBinder, newInteractiveBinder,
         externaliseName,
         lookupIfaceTop,

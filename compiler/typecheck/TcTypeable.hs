@@ -11,7 +11,7 @@ module TcTypeable(mkTypeableBinds) where
 
 import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
 import TcBinds( addTypecheckedBinds )
-import IfaceEnv( newGlobalBinder )
+import GHC.Interface.Environment( newGlobalBinder )
 import GHC.Data.Types( Type(..), TyLit(..) )
 import TcEnv
 import TcEvidence ( mkWpTyApps )
@@ -339,7 +339,7 @@ mkPrimTypeableTodos
 -- The majority of the types we need here are contained in 'primTyCons'.
 -- However, not all of them: in particular unboxed tuples are absent since we
 -- don't want to include them in the original name cache. See
--- Note [Built-in syntax and the OrigNameCache] in IfaceEnv for more.
+-- Note [Built-in syntax and the OrigNameCache] in GHC.Interface.Environment for more.
 ghcPrimTypeableTyCons :: [TyCon]
 ghcPrimTypeableTyCons = concat
     [ [ runtimeRepTyCon, vecCountTyCon, vecElemTyCon

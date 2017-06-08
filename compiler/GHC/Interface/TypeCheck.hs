@@ -25,7 +25,7 @@ module GHC.Interface.TypeCheck (
 import TcTypeNats(typeNatCoAxiomRules)
 import IfaceSyn
 import GHC.Interface.Load
-import IfaceEnv
+import GHC.Interface.Environment
 import BuildTyCl
 import TcRnMonad
 import TcType

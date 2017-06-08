@@ -464,7 +464,7 @@ data FrontendResult
 --            then moduleUnitId this_mod == thisPackage dflags
 --
 --      - For any code involving Names, we want semantic modules.
---        See lookupIfaceTop in IfaceEnv, mkIface and addFingerprints
+--        See lookupIfaceTop in GHC.Interface.Environment, mkIface and addFingerprints
 --        in MkIface, and tcLookupGlobal in TcEnv
 --
 --      - When reading interfaces, we want the identity module to

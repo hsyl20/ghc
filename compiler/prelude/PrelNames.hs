@@ -64,8 +64,8 @@ This is accomplished through a combination of mechanisms:
   2. The knownKeyNames (which consist of the basicKnownKeyNames from
      the module, and those names reachable via the wired-in stuff from
      TysWiredIn) are used to initialise the "OrigNameCache" in
-     IfaceEnv.  This initialization ensures that when the type checker
-     or renamer (both of which use IfaceEnv) look up an original name
+     GHC.Interface.Environment.  This initialization ensures that when the type checker
+     or renamer (both of which use GHC.Interface.Environment) look up an original name
      (i.e. a pair of a Module and an OccName) for a known-key name
      they get the correct Unique.
 
@@ -106,7 +106,7 @@ suffice to ensure that they always have the right Unique. In particular,
 implicit param TyCon names, constraint tuples and Any TyCons cannot be mentioned
 by the user. For those things that *can* appear in source programs,
 
-  c) IfaceEnv.lookupOrigNameCache uses isBuiltInOcc_maybe to map built-in syntax
+  c) GHC.Interface.Environment.lookupOrigNameCache uses isBuiltInOcc_maybe to map built-in syntax
      directly onto the corresponding name, rather than trying to find it in the
      original-name cache.
 

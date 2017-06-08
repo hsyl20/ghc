@@ -46,7 +46,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Cache
 import GHC.Data.Available
-import IfaceEnv
+import GHC.Interface.Environment
 import TcEnv
 import TcRnMonad
 import GHC.Data.DataConstructor

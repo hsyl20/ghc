@@ -41,7 +41,7 @@ import qualified Data.Traversable as T
 import GHC.Data.Bag
 import Data.IORef
 import NameShape
-import IfaceEnv
+import GHC.Interface.Environment
 
 tcRnMsgMaybe :: IO (Either ErrorMessages a) -> TcM a
 tcRnMsgMaybe do_this = do

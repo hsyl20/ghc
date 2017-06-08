@@ -38,7 +38,7 @@ import {-# SOURCE #-}   GHC.Interface.TypeCheck( tcIfaceDecl, tcIfaceRules, tcIf
 
 import GHC.Config.Flags
 import IfaceSyn
-import IfaceEnv
+import GHC.Interface.Environment
 import GHC.Types
 
 import GHC.Data.BasicTypes hiding (SuccessFlag(..))

@@ -24,7 +24,7 @@ import GHC.TypeSystem.FamilyInstance       ( FamInst, FamFlavor(..), mkSingleCoA
 import FamInst
 import GHC.Data.Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )
-import IfaceEnv         ( newGlobalBinder )
+import GHC.Interface.Environment         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )
 import GHC.Data.RdrName
 import GHC.Data.BasicTypes

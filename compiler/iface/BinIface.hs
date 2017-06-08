@@ -22,7 +22,7 @@ module BinIface (
 
 import TcRnMonad
 import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
-import IfaceEnv
+import GHC.Interface.Environment
 import GHC.Types
 import GHC.Data.Module
 import GHC.Data.Name

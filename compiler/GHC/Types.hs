@@ -1442,7 +1442,7 @@ Where do interactively-bound Ids come from?
     TcRnDriver.externaliseAndTidyId, so they get Names like Ghic4.foo.
 
   - Ids bound by the debugger etc have Names constructed by
-    IfaceEnv.newInteractiveBinder; at the call sites it is followed by
+    GHC.Interface.Environment.newInteractiveBinder; at the call sites it is followed by
     mkVanillaGlobal or mkVanillaGlobalWithInfo.  So again, they are
     all Global, External.
 

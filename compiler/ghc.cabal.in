@@ -303,7 +303,7 @@ Library
         BinIface
         BinFingerprint
         BuildTyCl
-        IfaceEnv
+        GHC.Interface.Environment
         IfaceSyn
         IfaceType
         ToIface

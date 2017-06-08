@@ -58,7 +58,7 @@ import qualified TcSMonad  as TcS
 import qualified TcEnv     as TcM
 import qualified TcMType   as TcM
 import qualified FamInst   as TcM
-import qualified IfaceEnv
+import qualified GHC.Interface.Environment
 import qualified GHC.Finder
 
 import GHC.TypeSystem.FamilyInstance ( FamInstEnv )
@@ -101,7 +101,7 @@ findImportedModule mod_name mb_pkg = do
     tcPluginIO $ GHC.Finder.findImportedModule hsc_env mod_name mb_pkg
 
 lookupOrig :: Module -> OccName -> TcPluginM Name
-lookupOrig mod = unsafeTcPluginTcM . IfaceEnv.lookupOrig mod
+lookupOrig mod = unsafeTcPluginTcM . GHC.Interface.Environment.lookupOrig mod
 
 
 tcLookupGlobal :: Name -> TcPluginM TyThing
