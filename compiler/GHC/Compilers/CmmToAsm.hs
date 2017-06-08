@@ -58,7 +58,7 @@ import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.PIC
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Monad
-import Dwarf
+import GHC.Compilers.CmmToAsm.Dwarf
 import GHC.IR.Cmm.DebugBlock
 
 import GHC.IR.Cmm.BlockId

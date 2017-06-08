@@ -1,4 +1,4 @@
-module Dwarf (
+module GHC.Compilers.CmmToAsm.Dwarf (
   dwarfGen
   ) where
 
@@ -14,8 +14,8 @@ import GHC.Platform
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 
-import Dwarf.Constants
-import Dwarf.Types
+import GHC.Compilers.CmmToAsm.Dwarf.Constants
+import GHC.Compilers.CmmToAsm.Dwarf.Types
 
 import Control.Arrow    ( first )
 import Control.Monad    ( mfilter )

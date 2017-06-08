@@ -1,7 +1,7 @@
 -- | Constants describing the DWARF format. Most of this simply
 -- mirrors /usr/include/dwarf.h.
 
-module Dwarf.Constants where
+module GHC.Compilers.CmmToAsm.Dwarf.Constants where
 
 import GHC.Data.FastString
 import GHC.Platform

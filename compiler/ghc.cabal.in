@@ -589,9 +589,9 @@ Library
             GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
             GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
             GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
-            Dwarf
-            Dwarf.Types
-            Dwarf.Constants
+            GHC.Compilers.CmmToAsm.Dwarf
+            GHC.Compilers.CmmToAsm.Dwarf.Types
+            GHC.Compilers.CmmToAsm.Dwarf.Constants
             GHC.IR.Haskell.TemplateHaskell.Convert
             GHC.IR.ByteCode.Types
             GHC.IR.ByteCode.Assembler
