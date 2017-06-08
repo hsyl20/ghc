@@ -1,7 +1,7 @@
 module GHC.Interface.CoreToInterface where
 
 import {-# SOURCE #-} GHC.Data.Types
-import {-# SOURCE #-} IfaceType
+import {-# SOURCE #-} GHC.Interface.Types
 import GHC.Data.Var ( TyVar, TyVarBinder )
 import GHC.Data.Type.Constructor ( TyCon )
 import GHC.Data.Var.Set( VarSet )
