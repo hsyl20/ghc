@@ -10,7 +10,7 @@ This module defines interface types and binders
 {-# LANGUAGE MultiWayIf #-}
     -- FlexibleInstances for Binary (DefMethSpec IfaceType)
 
-module IfaceType (
+module GHC.Interface.Types (
         IfExtName, IfLclName,
 
         IfaceType(..), IfacePredType, IfaceKind, IfaceCoercion(..),

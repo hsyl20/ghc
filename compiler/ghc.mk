@@ -501,7 +501,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Id \
 	GHC.Data.Id.Info \
 	GHC.Interface.Syntax \
-	IfaceType \
+	GHC.Interface.Types \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \
 	ToIface \

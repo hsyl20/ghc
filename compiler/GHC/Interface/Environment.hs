@@ -31,7 +31,7 @@ import GHC.Data.Available
 import GHC.Data.Module
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
-import IfaceType
+import GHC.Interface.Types
 import GHC.Data.Name.Cache
 import GHC.Data.Unique.Supply
 import GHC.Data.SrcLoc

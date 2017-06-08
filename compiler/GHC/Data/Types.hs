@@ -147,7 +147,7 @@ import {-# SOURCE #-} ToIface( toIfaceTypeX, toIfaceTyLit, toIfaceForAllBndr
                              , toIfaceTyCon, toIfaceTcArgs, toIfaceCoercion )
 
 -- friends:
-import IfaceType
+import GHC.Interface.Types
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

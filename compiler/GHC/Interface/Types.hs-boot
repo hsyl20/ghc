@@ -1,5 +1,5 @@
 -- Exists to allow GHC.Data.Types to import pretty-printers
-module IfaceType where
+module GHC.Interface.Types where
 
 import GHC.Data.Var (TyVarBndr, ArgFlag)
 import GHC.Data.Type.Constructor (TyConBndrVis)

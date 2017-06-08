@@ -305,7 +305,7 @@ Library
         BuildTyCl
         GHC.Interface.Environment
         GHC.Interface.Syntax
-        IfaceType
+        GHC.Interface.Types
         ToIface
         GHC.Interface.Load
         GHC.Interface.Utils

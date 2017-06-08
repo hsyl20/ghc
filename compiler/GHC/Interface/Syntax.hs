@@ -6,7 +6,7 @@
 {-# LANGUAGE CPP #-}
 
 module GHC.Interface.Syntax (
-        module IfaceType,
+        module GHC.Interface.Types,
 
         IfaceDecl(..), IfaceFamTyConFlav(..), IfaceClassOp(..), IfaceAT(..),
         IfaceConDecl(..), IfaceConDecls(..), IfaceEqSpec,
@@ -41,7 +41,7 @@ module GHC.Interface.Syntax (
 
 #include "HsVersions.h"
 
-import IfaceType
+import GHC.Interface.Types
 import GHC.Utils.Binary.Fingerprint
 import GHC.IR.Core.Syntax( IsOrphan, isOrphan )
 import GHC.IR.Core.PrettyPrint()            -- Printing DFunArgs
