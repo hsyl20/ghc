@@ -7,7 +7,7 @@ module LlvmCodeGen.CodeGen ( genLlvmProc ) where
 
 #include "HsVersions.h"
 
-import Llvm
+import GHC.Compilers.CmmToLlvm
 import LlvmCodeGen.Base
 import LlvmCodeGen.Regs
 

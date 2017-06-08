@@ -11,7 +11,7 @@ module LlvmCodeGen.Regs (
 
 #include "HsVersions.h"
 
-import Llvm
+import GHC.Compilers.CmmToLlvm
 
 import GHC.IR.Cmm.Expr
 import GHC.Config.Flags

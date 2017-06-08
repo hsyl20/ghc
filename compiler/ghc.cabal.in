@@ -164,11 +164,11 @@ Library
         GHC.Data.Id.Info
         GHC.Utils.Identifier
         GHC.Data.Literal
-        Llvm
-        Llvm.AbsSyn
-        Llvm.MetaData
-        Llvm.PpLlvm
-        Llvm.Types
+        GHC.Compilers.CmmToLlvm
+        GHC.Compilers.CmmToLlvm.AbsSyn
+        GHC.Compilers.CmmToLlvm.MetaData
+        GHC.Compilers.CmmToLlvm.PpLlvm
+        GHC.Compilers.CmmToLlvm.Types
         LlvmCodeGen
         LlvmCodeGen.Base
         LlvmCodeGen.CodeGen

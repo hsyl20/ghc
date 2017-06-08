@@ -9,7 +9,7 @@ module LlvmCodeGen.Ppr (
 
 #include "HsVersions.h"
 
-import Llvm
+import GHC.Compilers.CmmToLlvm
 import LlvmCodeGen.Base
 import LlvmCodeGen.Data
 

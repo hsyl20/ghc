@@ -7,7 +7,7 @@ module LlvmCodeGen ( llvmCodeGen, llvmFixupAsm ) where
 
 #include "HsVersions.h"
 
-import Llvm
+import GHC.Compilers.CmmToLlvm
 import LlvmCodeGen.Base
 import LlvmCodeGen.CodeGen
 import LlvmCodeGen.Data

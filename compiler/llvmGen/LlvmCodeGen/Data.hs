@@ -9,7 +9,7 @@ module LlvmCodeGen.Data (
 
 #include "HsVersions.h"
 
-import Llvm
+import GHC.Compilers.CmmToLlvm
 import LlvmCodeGen.Base
 
 import GHC.IR.Cmm.BlockId

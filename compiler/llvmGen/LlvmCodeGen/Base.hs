@@ -37,7 +37,7 @@ module LlvmCodeGen.Base (
 #include "HsVersions.h"
 #include "ghcautoconf.h"
 
-import Llvm
+import GHC.Compilers.CmmToLlvm
 import LlvmCodeGen.Regs
 
 import GHC.Data.CLabel
