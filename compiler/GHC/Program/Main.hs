@@ -110,7 +110,7 @@ import TcRnDriver
 import TcIface          ( typecheckIface )
 import TcRnMonad
 import GHC.Data.Name.Cache        ( initNameCache )
-import LoadIface        ( ifaceStats, initExternalPackageState )
+import GHC.Interface.Load        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import MkIface
 import GHC.Compilers.SyntaxToCore.Main

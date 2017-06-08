@@ -80,7 +80,7 @@ import GHC.Data.OccName as OccName
 import GHC.Config.Hooks
 import GHC.Data.Var
 import GHC.Data.Module
-import LoadIface
+import GHC.Interface.Load
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

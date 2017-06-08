@@ -45,7 +45,7 @@ module GHC.Rename.Environment (
 
 #include "HsVersions.h"
 
-import LoadIface        ( loadInterfaceForName, loadSrcInterface_maybe )
+import GHC.Interface.Load        ( loadInterfaceForName, loadSrcInterface_maybe )
 import IfaceEnv
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName

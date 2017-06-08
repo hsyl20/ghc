@@ -60,7 +60,7 @@ Basic idea:
 
 import IfaceSyn
 import BinFingerprint
-import LoadIface
+import GHC.Interface.Load
 import ToIface
 import GHC.Config.Flags.Fingerprint
 

@@ -307,7 +307,7 @@ Library
         IfaceSyn
         IfaceType
         ToIface
-        LoadIface
+        GHC.Interface.Load
         MkIface
         TcIface
         GHC.Config.Flags.Fingerprint

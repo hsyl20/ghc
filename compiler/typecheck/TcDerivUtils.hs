@@ -31,7 +31,7 @@ import GHC.Types (lookupFixity, mi_fix)
 import GHC.IR.Haskell.Syntax
 import Inst
 import GHC.TypeSystem.ClassInstance
-import LoadIface (loadInterfaceForName)
+import GHC.Interface.Load (loadInterfaceForName)
 import GHC.Data.Module (getModule)
 import GHC.Data.Name
 import GHC.Utils.Outputable

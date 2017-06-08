@@ -389,7 +389,7 @@ ifaceDeclImplicitBndrs :: IfaceDecl -> [OccName]
 -- N.B. the set of names returned here *must* match the set of
 -- TyThings returned by GHC.Types.implicitTyThings, in the sense that
 -- TyThing.getOccName should define a bijection between the two lists.
--- This invariant is used in LoadIface.loadDecl (see note [Tricky iface loop])
+-- This invariant is used in GHC.Interface.Load.loadDecl (see note [Tricky iface loop])
 -- The order of the list does not matter.
 
 ifaceDeclImplicitBndrs (IfaceData {ifName = tc_name, ifCons = cons })
@@ -1744,7 +1744,7 @@ knot in the type checker. It saved ~1% of the total build time of GHC.
 When we read an interface file, we extend the PTE, a mapping of Names
 to TyThings, with the declarations we have read. The extension of the
 PTE is strict in the Names, but not in the TyThings themselves.
-LoadIface.loadDecl calculates the list of (Name, TyThing) bindings to
+GHC.Interface.Load.loadDecl calculates the list of (Name, TyThing) bindings to
 add to the PTE. For an IfaceId, there's just one binding to add; and
 the ty, details, and idinfo fields of an IfaceId are used only in the
 TyThing. So by reading those fields lazily we may be able to save the

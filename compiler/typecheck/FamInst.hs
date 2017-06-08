@@ -19,7 +19,7 @@ import GHC.TypeSystem.FamilyInstance
 import GHC.TypeSystem.ClassInstance( roughMatchTcs )
 import GHC.Data.Coercion
 import TcEvidence
-import LoadIface
+import GHC.Interface.Load
 import TcRnMonad
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor

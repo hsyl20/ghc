@@ -33,7 +33,7 @@ import GHC.Utils.Fingerprint
 import GHC.Data.BasicTypes
 
 -- a bit vexing
-import {-# SOURCE #-} LoadIface
+import {-# SOURCE #-} GHC.Interface.Load
 import GHC.Config.Flags
 
 import qualified Data.Traversable as T

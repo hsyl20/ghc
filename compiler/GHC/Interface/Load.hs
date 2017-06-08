@@ -8,7 +8,7 @@ Loading interface files
 
 {-# LANGUAGE CPP #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module LoadIface (
+module GHC.Interface.Load (
         -- Importing one thing
         tcLookupImported_maybe, importDecl,
         checkWiredInTyCon, ifCheckWiredInThing,
@@ -182,7 +182,7 @@ for any module with an instance decl or RULE that we might want.
 
 * BUT, if the TyCon is a wired-in TyCon, we don't really need its interface;
   but we must make sure we read its interface in case it has instances or
-  rules.  That is what LoadIface.loadWiredInHomeIface does.  It's called
+  rules.  That is what GHC.Interface.Load.loadWiredInHomeIface does.  It's called
   from TcIface.{tcImportDecl, checkWiredInTyCon, ifCheckWiredInThing}
 
 * HOWEVER, only do this for TyCons.  There are no wired-in Classes.  There

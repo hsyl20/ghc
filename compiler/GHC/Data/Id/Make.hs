@@ -1326,7 +1326,7 @@ a) In source Haskell its second arg can have an unboxed type
          seq :: forall a b. a -> b -> b
    and treat it as a language construct from a typing point of view.
 
-b) Its fixity is set in LoadIface.ghcPrimIface
+b) Its fixity is set in GHC.Interface.Load.ghcPrimIface
 
 c) It has quite a bit of desugaring magic.
    See GHC.Compilers.SyntaxToCore.Utils.hs Note [Desugaring seq (1)] and (2) and (3)

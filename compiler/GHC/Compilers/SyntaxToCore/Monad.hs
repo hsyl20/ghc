@@ -60,7 +60,7 @@ import GHC.IR.Core.Utils ( exprType, isExprLevPoly )
 import GHC.IR.Haskell.Syntax
 import TcIface
 import TcMType ( checkForLevPolyX, formatLevPolyErr )
-import LoadIface
+import GHC.Interface.Load
 import GHC.Finder
 import PrelNames
 import GHC.Data.RdrName

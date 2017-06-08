@@ -24,7 +24,7 @@ module TcIface (
 
 import TcTypeNats(typeNatCoAxiomRules)
 import IfaceSyn
-import LoadIface
+import GHC.Interface.Load
 import IfaceEnv
 import BuildTyCl
 import TcRnMonad

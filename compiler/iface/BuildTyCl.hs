@@ -83,7 +83,7 @@ mkNewTyConRhs tycon_name tycon con
 
     etad_tvs   :: [TyVar]  -- Matched lazily, so that mkNewTypeCo can
     etad_roles :: [Role]   -- return a TyCon without pulling on rhs_ty
-    etad_rhs   :: Type     -- See Note [Tricky iface loop] in LoadIface
+    etad_rhs   :: Type     -- See Note [Tricky iface loop] in GHC.Interface.Load
     (etad_tvs, etad_roles, etad_rhs) = eta_reduce (reverse tvs) (reverse roles) rhs_ty
 
     eta_reduce :: [TyVar]       -- Reversed
@@ -446,7 +446,7 @@ newImplicitBinder :: Name                       -- Base name
                   -> TcRnIf m n Name            -- Implicit name
 -- Called in BuildTyCl to allocate the implicit binders of type/class decls
 -- For source type/class decls, this is the first occurrence
--- For iface ones, the LoadIface has already allocated a suitable name in the cache
+-- For iface ones, the GHC.Interface.Load has already allocated a suitable name in the cache
 newImplicitBinder base_name mk_sys_occ
   = newImplicitBinderLoc base_name mk_sys_occ (nameSrcSpan base_name)
 

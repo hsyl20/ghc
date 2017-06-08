@@ -471,7 +471,7 @@ data FrontendResult
 --        identify the specific interface we want (such interfaces
 --        should never be loaded into the EPS).  However, if a
 --        hole module <A> is requested, we look for A.hi
---        in the home library we are compiling.  (See LoadIface.)
+--        in the home library we are compiling.  (See GHC.Interface.Load.)
 --        Similarly, in GHC.Rename.ImportExport we check for self-imports using
 --        identity modules, to allow signatures to import their implementor.
 --
@@ -1346,7 +1346,7 @@ data WhereFrom
   = ImportByUser IsBootInterface        -- Ordinary user import (perhaps {-# SOURCE #-})
   | ImportBySystem                      -- Non user import.
   | ImportByPlugin                      -- Importing a plugin;
-                                        -- See Note [Care with plugin imports] in LoadIface
+                                        -- See Note [Care with plugin imports] in GHC.Interface.Load
 
 instance Outputable WhereFrom where
   ppr (ImportByUser is_boot) | is_boot     = text "{- SOURCE -}"

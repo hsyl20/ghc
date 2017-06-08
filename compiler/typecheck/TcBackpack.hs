@@ -31,7 +31,7 @@ import TcIface
 import TcMType
 import TcType
 import TcSimplify
-import LoadIface
+import GHC.Interface.Load
 import GHC.Rename.ImportExport
 import GHC.Utils.Error
 import GHC.Data.Id

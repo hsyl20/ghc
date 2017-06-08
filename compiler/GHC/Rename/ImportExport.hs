@@ -26,7 +26,7 @@ import TcEnv
 import GHC.Rename.Environment
 import GHC.Rename.Fixity
 import GHC.Rename.Utils          ( warnUnusedTopBinds, mkFieldEnv )
-import LoadIface        ( loadSrcInterface )
+import GHC.Interface.Load        ( loadSrcInterface )
 import TcRnMonad
 import PrelNames
 import GHC.Data.Module
@@ -384,7 +384,7 @@ calculateAvails dflags iface mod_safe' want_boot imported_by =
             -- finished dealing with the direct imports we want to
             -- know if any of them depended on CM.hi-boot, in
             -- which case we should do the hi-boot consistency
-            -- check.  See LoadIface.loadHiBootInterface
+            -- check.  See GHC.Interface.Load.loadHiBootInterface
             ((moduleName imp_mod,want_boot):dep_mods deps,dep_pkgs deps,ptrust)
 
          | otherwise =

@@ -73,7 +73,7 @@ import IfaceEnv
 import TcRnMonad
 import TcMType
 import TcType
-import LoadIface
+import GHC.Interface.Load
 import PrelNames
 import TysWiredIn
 import GHC.Data.Id

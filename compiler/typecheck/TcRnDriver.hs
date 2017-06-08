@@ -93,7 +93,7 @@ import TcSimplify
 import TcTyClsDecls
 import TcTypeable ( mkTypeableBinds )
 import TcBackpack
-import LoadIface
+import GHC.Interface.Load
 import GHC.Rename.ImportExport
 import GHC.Rename.Environment
 import GHC.Rename.Main

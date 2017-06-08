@@ -20,7 +20,7 @@ import GHC              ( -- DynFlags(..), HscTarget(..),
 import GHC.Program.CmdLineParser
 
 -- Implementations of the various modes (--show-iface, mkdependHS. etc.)
-import LoadIface        ( showIface )
+import GHC.Interface.Load        ( showIface )
 import GHC.Program.Main          ( newHscEnv )
 import GHC.Program.Driver.Pipeline   ( oneShot, compileFile )
 import GHC.Program.MakeDepend   ( doMkDependHS )
@@ -57,7 +57,7 @@ import GHC.Data.Unique.Supply
 import GHC.Utils.Monad       ( liftIO )
 
 -- Imports for --abi-hash
-import LoadIface           ( loadUserInterface )
+import GHC.Interface.Load           ( loadUserInterface )
 import GHC.Data.Module              ( mkModuleName )
 import GHC.Finder              ( findImportedModule, cannotFindModule )
 import TcRnMonad           ( initIfaceCheck )
