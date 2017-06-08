@@ -42,7 +42,7 @@ module GHC.Interface.Syntax (
 #include "HsVersions.h"
 
 import IfaceType
-import BinFingerprint
+import GHC.Utils.Binary.Fingerprint
 import GHC.IR.Core.Syntax( IsOrphan, isOrphan )
 import GHC.IR.Core.PrettyPrint()            -- Printing DFunArgs
 import GHC.Data.Demand

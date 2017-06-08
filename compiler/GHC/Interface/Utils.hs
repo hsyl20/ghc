@@ -59,7 +59,7 @@ Basic idea:
 #include "HsVersions.h"
 
 import GHC.Interface.Syntax
-import BinFingerprint
+import GHC.Utils.Binary.Fingerprint
 import GHC.Interface.Load
 import ToIface
 import GHC.Config.Flags.Fingerprint

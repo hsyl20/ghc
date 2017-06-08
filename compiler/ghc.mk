@@ -440,7 +440,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Bag \
 	GHC.Data.BasicTypes \
 	GHC.Utils.Binary \
-	BinFingerprint \
+	GHC.Utils.Binary.Fingerprint \
 	GHC.Data.Bool.Formula \
 	GHC.Utils.Handle.BufferedWrite \
 	GHC.IR.ByteCode.Types \

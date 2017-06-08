@@ -62,7 +62,7 @@ import GHC.Data.Module              ( mkModuleName )
 import GHC.Finder              ( findImportedModule, cannotFindModule )
 import TcRnMonad           ( initIfaceCheck )
 import GHC.Utils.Binary              ( openBinMem, put_ )
-import BinFingerprint      ( fingerprintBinMem )
+import GHC.Utils.Binary.Fingerprint      ( fingerprintBinMem )
 
 -- Standard Haskell libraries
 import System.IO

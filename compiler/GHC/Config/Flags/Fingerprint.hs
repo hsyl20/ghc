@@ -13,7 +13,7 @@ import GHC.Types
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils.Fingerprint
-import BinFingerprint
+import GHC.Utils.Binary.Fingerprint
 -- import GHC.Utils.Outputable
 
 import qualified GHC.Data.EnumSet as EnumSet
