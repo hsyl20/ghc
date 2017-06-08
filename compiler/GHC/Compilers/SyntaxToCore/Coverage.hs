@@ -398,9 +398,9 @@ bindTick density name pos fvs = do
 -- Note [inline sccs]
 --
 -- It should be reasonable to add ticks to INLINE functions; however
--- currently this tickles a bug later on because the SCCfinal pass
+-- currently this tickles a bug later on because the GHC.IR.Stg.Transform.CostCentreCollect pass
 -- does not look inside unfoldings to find CostCentres.  It would be
--- difficult to fix that, because SCCfinal currently works on STG and
+-- difficult to fix that, because GHC.IR.Stg.Transform.CostCentreCollect currently works on STG and
 -- not Core (and since it also generates CostCentres for CAFs,
 -- changing this would be difficult too).
 --

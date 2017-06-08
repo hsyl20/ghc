@@ -17,7 +17,7 @@
     cost-centres.
 -}
 
-module SCCfinal ( stgMassageForProfiling ) where
+module GHC.IR.Stg.Transform.CostCentreCollect ( stgMassageForProfiling ) where
 
 #include "HsVersions.h"
 
@@ -176,7 +176,7 @@ stgMassageForProfiling dflags mod_name _us stg_binds
           (b,e) <- do_let b e
           return (StgLetNoEscape b e)
 
-    do_expr other = pprPanic "SCCfinal.do_expr" (ppr other)
+    do_expr other = pprPanic "GHC.IR.Stg.Transform.CostCentreCollect.do_expr" (ppr other)
 
     ----------------------------------
 

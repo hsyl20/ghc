@@ -143,7 +143,6 @@ Library
         llvmGen
         nativeGen
         prelude
-        profiling
         typecheck
 
     Exposed-Modules:
@@ -360,7 +359,7 @@ Library
         TysWiredIn
         GHC.Data.CostCentre
         GHC.Data.CostCentre.Initialise
-        SCCfinal
+        GHC.IR.Stg.Transform.CostCentreCollect
         GHC.Rename.Binding
         GHC.Rename.Environment
         GHC.Rename.Expression

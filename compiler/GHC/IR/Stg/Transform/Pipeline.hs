@@ -13,7 +13,7 @@ module GHC.IR.Stg.Transform.Pipeline ( stg2stg ) where
 import GHC.IR.Stg.Syntax
 
 import GHC.Data.CostCentre       ( CollectedCCs )
-import SCCfinal         ( stgMassageForProfiling )
+import GHC.IR.Stg.Transform.CostCentreCollect         ( stgMassageForProfiling )
 import GHC.IR.Stg.Analyse.Lint  ( lintStgTopBindings )
 import GHC.IR.Stg.Analyse.Stats ( showStgStats )
 import GHC.IR.Stg.Transform.Unarise       ( unarise )
