@@ -3,14 +3,14 @@
 -- | Handle conversion of CmmData to LLVM code.
 --
 
-module LlvmCodeGen.Data (
+module GHC.Compilers.CmmToLlvm.CodeGen.Data (
         genLlvmData, genData
     ) where
 
 #include "HsVersions.h"
 
 import GHC.Compilers.CmmToLlvm
-import LlvmCodeGen.Base
+import GHC.Compilers.CmmToLlvm.CodeGen.Base
 
 import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel

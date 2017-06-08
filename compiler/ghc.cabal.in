@@ -169,12 +169,12 @@ Library
         GHC.Compilers.CmmToLlvm.MetaData
         GHC.Compilers.CmmToLlvm.PpLlvm
         GHC.Compilers.CmmToLlvm.Types
-        LlvmCodeGen
-        LlvmCodeGen.Base
-        LlvmCodeGen.CodeGen
-        LlvmCodeGen.Data
-        LlvmCodeGen.Ppr
-        LlvmCodeGen.Regs
+        GHC.Compilers.CmmToLlvm.CodeGen
+        GHC.Compilers.CmmToLlvm.CodeGen.Base
+        GHC.Compilers.CmmToLlvm.CodeGen.CodeGen
+        GHC.Compilers.CmmToLlvm.CodeGen.Data
+        GHC.Compilers.CmmToLlvm.CodeGen.Ppr
+        GHC.Compilers.CmmToLlvm.CodeGen.Regs
         GHC.Compilers.CmmToLlvm.Fixup
         GHC.Data.Id.Make
         GHC.Data.Module

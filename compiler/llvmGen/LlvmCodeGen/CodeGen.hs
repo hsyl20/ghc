@@ -3,13 +3,13 @@
 -- ----------------------------------------------------------------------------
 -- | Handle conversion of CmmProc to LLVM code.
 --
-module LlvmCodeGen.CodeGen ( genLlvmProc ) where
+module GHC.Compilers.CmmToLlvm.CodeGen.CodeGen ( genLlvmProc ) where
 
 #include "HsVersions.h"
 
 import GHC.Compilers.CmmToLlvm
-import LlvmCodeGen.Base
-import LlvmCodeGen.Regs
+import GHC.Compilers.CmmToLlvm.CodeGen.Base
+import GHC.Compilers.CmmToLlvm.CodeGen.Regs
 
 import GHC.IR.Cmm.BlockId
 import GHC.Utils.CodeGen.Platform ( activeStgRegs, callerSaves )
@@ -398,8 +398,8 @@ genCall target res args = runStmtsDecls $ do
                                  _          -> CC_Ccc
                  CCallConv    -> CC_Ccc
                  CApiConv     -> CC_Ccc
-                 PrimCallConv -> panic "LlvmCodeGen.CodeGen.genCall: PrimCallConv"
-                 JavaScriptCallConv -> panic "LlvmCodeGen.CodeGen.genCall: JavaScriptCallConv"
+                 PrimCallConv -> panic "GHC.Compilers.CmmToLlvm.CodeGen.CodeGen.genCall: PrimCallConv"
+                 JavaScriptCallConv -> panic "GHC.Compilers.CmmToLlvm.CodeGen.CodeGen.genCall: JavaScriptCallConv"
 
             PrimTarget   _ -> CC_Ccc
 
@@ -1841,10 +1841,10 @@ toIWord dflags = mkIntLit (llvmWord dflags)
 
 -- | Error functions
 panic :: String -> a
-panic s = Outputable.panic $ "LlvmCodeGen.CodeGen." ++ s
+panic s = Outputable.panic $ "GHC.Compilers.CmmToLlvm.CodeGen.CodeGen." ++ s
 
 pprPanic :: String -> SDoc -> a
-pprPanic s d = Outputable.pprPanic ("LlvmCodeGen.CodeGen." ++ s) d
+pprPanic s d = Outputable.pprPanic ("GHC.Compilers.CmmToLlvm.CodeGen.CodeGen." ++ s) d
 
 
 -- | Returns TBAA meta data by unique

@@ -4,7 +4,7 @@
 -- | Deal with Cmm registers
 --
 
-module LlvmCodeGen.Regs (
+module GHC.Compilers.CmmToLlvm.CodeGen.Regs (
         lmGlobalRegArg, lmGlobalRegVar, alwaysLive,
         stgTBAA, baseN, stackN, heapN, rxN, topN, tbaa, getTBAA
     ) where
@@ -77,7 +77,7 @@ lmGlobalReg dflags suf reg
         ZmmReg 5       -> zmmGlobal $ "ZMM5" ++ suf
         ZmmReg 6       -> zmmGlobal $ "ZMM6" ++ suf
         MachSp         -> wordGlobal $ "MachSp" ++ suf
-        _other         -> panic $ "LlvmCodeGen.Reg: GlobalReg (" ++ (show reg)
+        _other         -> panic $ "GHC.Compilers.CmmToLlvm.CodeGen.Reg: GlobalReg (" ++ (show reg)
                                 ++ ") not supported!"
         -- LongReg, HpLim, CCSS, CurrentTSO, CurrentNusery, HpAlloc
         -- EagerBlackholeInfo, GCEnter1, GCFun, BaseReg, PicBaseReg
@@ -114,12 +114,12 @@ stgTBAA
 -- hierarchy and as of LLVM 4.0 should *only* be referenced by other nodes. It
 -- should never occur in any LLVM instruction statement.
 rootN, topN, stackN, heapN, rxN, baseN :: Unique
-rootN  = getUnique (fsLit "LlvmCodeGen.Regs.rootN")
-topN   = getUnique (fsLit "LlvmCodeGen.Regs.topN")
-stackN = getUnique (fsLit "LlvmCodeGen.Regs.stackN")
-heapN  = getUnique (fsLit "LlvmCodeGen.Regs.heapN")
-rxN    = getUnique (fsLit "LlvmCodeGen.Regs.rxN")
-baseN  = getUnique (fsLit "LlvmCodeGen.Regs.baseN")
+rootN  = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.rootN")
+topN   = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.topN")
+stackN = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.stackN")
+heapN  = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.heapN")
+rxN    = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.rxN")
+baseN  = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.baseN")
 
 -- | The TBAA metadata identifier
 tbaa :: LMString

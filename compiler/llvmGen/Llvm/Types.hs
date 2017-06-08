@@ -364,7 +364,7 @@ llvmWidthInBits _      (LMStructU _)   =
     -- It's not trivial to calculate the bit width of the unpacked structs,
     -- since they will be aligned depending on the specified datalayout (
     -- http://llvm.org/docs/LangRef.html#data-layout ). One way we could support
-    -- this could be to make the LlvmCodeGen.Ppr.moduleLayout be a data type
+    -- this could be to make the GHC.Compilers.CmmToLlvm.CodeGen.Ppr.moduleLayout be a data type
     -- that exposes the alignment information. However, currently the only place
     -- we use unpacked structs is LLVM intrinsics that return them (e.g.,
     -- llvm.sadd.with.overflow.*), so we don't actually need to compute their

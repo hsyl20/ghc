@@ -3,16 +3,16 @@
 -- -----------------------------------------------------------------------------
 -- | This is the top-level module in the LLVM code generator.
 --
-module LlvmCodeGen ( llvmCodeGen, llvmFixupAsm ) where
+module GHC.Compilers.CmmToLlvm.CodeGen ( llvmCodeGen, llvmFixupAsm ) where
 
 #include "HsVersions.h"
 
 import GHC.Compilers.CmmToLlvm
-import LlvmCodeGen.Base
-import LlvmCodeGen.CodeGen
-import LlvmCodeGen.Data
-import LlvmCodeGen.Ppr
-import LlvmCodeGen.Regs
+import GHC.Compilers.CmmToLlvm.CodeGen.Base
+import GHC.Compilers.CmmToLlvm.CodeGen.CodeGen
+import GHC.Compilers.CmmToLlvm.CodeGen.Data
+import GHC.Compilers.CmmToLlvm.CodeGen.Ppr
+import GHC.Compilers.CmmToLlvm.CodeGen.Regs
 import GHC.Compilers.CmmToLlvm.Fixup
 
 import GHC.IR.Cmm.BlockId

@@ -3,15 +3,15 @@
 -- ----------------------------------------------------------------------------
 -- | Pretty print helpers for the LLVM Code generator.
 --
-module LlvmCodeGen.Ppr (
+module GHC.Compilers.CmmToLlvm.CodeGen.Ppr (
         pprLlvmHeader, pprLlvmCmmDecl, pprLlvmData, infoSection
     ) where
 
 #include "HsVersions.h"
 
 import GHC.Compilers.CmmToLlvm
-import LlvmCodeGen.Base
-import LlvmCodeGen.Data
+import GHC.Compilers.CmmToLlvm.CodeGen.Base
+import GHC.Compilers.CmmToLlvm.CodeGen.Data
 
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Syntax
@@ -77,7 +77,7 @@ moduleLayout = sdocWithPlatform $ \platform ->
         $+$ text "target triple = \"aarch64-unknown-linux-gnu\""
     _ ->
         if platformIsCrossCompiling platform
-            then panic "LlvmCodeGen.Ppr: Cross compiling without valid target info."
+            then panic "GHC.Compilers.CmmToLlvm.CodeGen.Ppr: Cross compiling without valid target info."
             else empty
         -- If you see the above panic, GHC is missing the required target datalayout
         -- and triple information. You can obtain this info by compiling a simple
