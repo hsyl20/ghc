@@ -33,7 +33,7 @@
       that wasn't in the original Cmm code (e.g. floating point literals).
 -}
 
-module PIC (
+module GHC.Compilers.CmmToAsm.PIC (
         cmmMakeDynamicReference,
         CmmMakeDynamicReferenceM(..),
         ReferenceKind(..),

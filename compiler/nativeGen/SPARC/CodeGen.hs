@@ -45,7 +45,7 @@ import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch
 import GHC.IR.Cmm.Transform.Dataflow
-import PIC
+import GHC.Compilers.CmmToAsm.PIC
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Data.CLabel
 import GHC.Utils.CodeGen.Primitive

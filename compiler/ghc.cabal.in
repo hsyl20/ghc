@@ -536,7 +536,7 @@ Library
             GHC.Compilers.CmmToAsm.Format
             GHC.Compilers.CmmToAsm.Register
             GHC.Compilers.CmmToAsm.Register.Class
-            PIC
+            GHC.Compilers.CmmToAsm.PIC
             GHC.Platform
             GHC.Utils.CodeGen.Primitive
             X86.Regs

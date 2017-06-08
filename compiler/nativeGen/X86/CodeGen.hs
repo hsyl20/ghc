@@ -41,7 +41,7 @@ import GHC.Utils.CodeGen.Primitive
 import GHC.IR.Cmm.DebugBlock           ( DebugBlock(..), UnwindPoint(..), UnwindTable
                         , UnwindExpr(UwReg), toUnwindExpr )
 import GHC.Compilers.CmmToAsm.Instruction
-import PIC
+import GHC.Compilers.CmmToAsm.PIC
 import GHC.Compilers.CmmToAsm.Monad
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register
