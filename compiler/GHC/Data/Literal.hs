@@ -142,7 +142,7 @@ When we initally build an Integer literal, notably when
 deserialising it from an interface file (see the Binary instance
 below), we don't have convenient access to the mkInteger Id.  So we
 just use an error thunk, and fill in the real Id when we do tcIfaceLit
-in TcIface.
+in GHC.Interface.TypeCheck.
 
 
 Binary instance

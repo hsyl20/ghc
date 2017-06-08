@@ -22,7 +22,7 @@ module GHC.Interface.Load (
         loadInterface,
         loadSysInterface, loadUserInterface, loadPluginInterface,
         findAndReadIface, readIface,    -- Used when reading the module's old interface
-        loadDecls,      -- Should move to TcIface and be renamed
+        loadDecls,      -- Should move to GHC.Interface.TypeCheck and be renamed
         initExternalPackageState,
         moduleFreeHolesPrecise,
 
@@ -32,7 +32,7 @@ module GHC.Interface.Load (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   TcIface( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
+import {-# SOURCE #-}   GHC.Interface.TypeCheck( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
                                  tcIfaceFamInst, tcIfaceVectInfo,
                                  tcIfaceAnnotations, tcIfaceCompleteSigs )
 
@@ -183,7 +183,7 @@ for any module with an instance decl or RULE that we might want.
 * BUT, if the TyCon is a wired-in TyCon, we don't really need its interface;
   but we must make sure we read its interface in case it has instances or
   rules.  That is what GHC.Interface.Load.loadWiredInHomeIface does.  It's called
-  from TcIface.{tcImportDecl, checkWiredInTyCon, ifCheckWiredInThing}
+  from GHC.Interface.TypeCheck.{tcImportDecl, checkWiredInTyCon, ifCheckWiredInThing}
 
 * HOWEVER, only do this for TyCons.  There are no wired-in Classes.  There
   are some wired-in Ids, but we don't want to load their interfaces. For

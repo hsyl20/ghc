@@ -309,7 +309,7 @@ Library
         ToIface
         GHC.Interface.Load
         MkIface
-        TcIface
+        GHC.Interface.TypeCheck
         GHC.Config.Flags.Fingerprint
         GHC.Data.Annotation
         GHC.Program.CmdLineParser

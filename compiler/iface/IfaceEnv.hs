@@ -152,7 +152,7 @@ lookupOrig mod occ
                 --      we read the name-cache
                 --      then pull on mod (say)
                 --      which does some stuff that modifies the name cache
-                -- This did happen, with tycon_mod in TcIface.tcIfaceAlt (DataAlt..)
+                -- This did happen, with tycon_mod in GHC.Interface.TypeCheck.tcIfaceAlt (DataAlt..)
           mod `seq` occ `seq` return ()
         ; traceIf (text "lookup_orig" <+> ppr mod <+> ppr occ)
 

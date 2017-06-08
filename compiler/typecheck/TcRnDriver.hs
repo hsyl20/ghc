@@ -86,7 +86,7 @@ import TcEnv
 import TcRules
 import TcForeign
 import TcInstDcls
-import TcIface
+import GHC.Interface.TypeCheck
 import TcMType
 import TcType
 import TcSimplify

@@ -374,7 +374,7 @@ toIfaceIdInfo id_info
        []    -> NoInfo
        infos -> HasInfo infos
                -- NB: strictness and arity must appear in the list before unfolding
-               -- See TcIface.tcUnfolding
+               -- See GHC.Interface.TypeCheck.tcUnfolding
   where
     ------------  Arity  --------------
     arity_info = arityInfo id_info

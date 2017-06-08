@@ -216,9 +216,9 @@ rnImportDecl this_mod
 
     -- Check for self-import, which confuses the typechecker (Trac #9032)
     -- ghc --make rejects self-import cycles already, but batch-mode may not
-    -- at least not until TcIface.tcHiBootIface, which is too late to avoid
+    -- at least not until GHC.Interface.TypeCheck.tcHiBootIface, which is too late to avoid
     -- typechecker crashes.  (Indirect self imports are not caught until
-    -- TcIface, see #10337 tracking how to make this error better.)
+    -- GHC.Interface.TypeCheck, see #10337 tracking how to make this error better.)
     --
     -- Originally, we also allowed 'import {-# SOURCE #-} M', but this
     -- caused bug #10182: in one-shot mode, we should never load an hs-boot

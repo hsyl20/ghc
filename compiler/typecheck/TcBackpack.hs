@@ -27,7 +27,7 @@ import TcTyDecls
 import GHC.TypeSystem.ClassInstance
 import GHC.TypeSystem.FamilyInstance
 import Inst
-import TcIface
+import GHC.Interface.TypeCheck
 import TcMType
 import TcType
 import TcSimplify
@@ -457,7 +457,7 @@ inheritedSigPvpWarning =
 --    to 'Name's, so this case needs to be handled specially.
 --
 --    The details are in the documentation for 'typecheckIfacesForMerging'.
---    and the Note [Resolving never-exported Names in TcIface].
+--    and the Note [Resolving never-exported Names in GHC.Interface.TypeCheck].
 --
 --  * When we rename modules and signatures, we use the export lists to
 --    decide how the declarations should be renamed.  However, this

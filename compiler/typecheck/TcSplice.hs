@@ -67,7 +67,7 @@ import GHC.Data.Kind
 import GHC.Data.Name.Set
 import TcMType
 import TcHsType
-import TcIface
+import GHC.Interface.TypeCheck
 import GHC.Data.Types
 import FamInst
 import GHC.TypeSystem.FamilyInstance

@@ -52,7 +52,7 @@ import TcEnv
 import TcMType
 import TcValidity
 import TcUnify
-import TcIface
+import GHC.Interface.TypeCheck
 import TcSimplify ( solveEqualities )
 import TcType
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkSigType )

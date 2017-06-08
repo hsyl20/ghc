@@ -301,7 +301,7 @@ data IfGblEnv
         -- was originally a hi-boot file.
         -- We need the module name so we can test when it's appropriate
         -- to look in this env.
-        -- See Note [Tying the knot] in TcIface
+        -- See Note [Tying the knot] in GHC.Interface.TypeCheck
         if_rec_types :: Maybe (Module, IfG TypeEnv)
                 -- Allows a read effect, so it can be in a mutable
                 -- variable; c.f. handling the external package type env
@@ -334,8 +334,8 @@ data IfLclEnv
         -- This field is used to make sure "implicit" declarations
         -- (anything that cannot be exported in mi_exports) get
         -- wired up correctly in typecheckIfacesForMerging.  Most
-        -- of the time it's @Nothing@.  See Note [Resolving never-exported Names in TcIface]
-        -- in TcIface.
+        -- of the time it's @Nothing@.  See Note [Resolving never-exported Names in GHC.Interface.TypeCheck]
+        -- in GHC.Interface.TypeCheck.
         if_implicits_env :: Maybe TypeEnv,
 
         if_tv_env  :: FastStringEnv TyVar,     -- Nested tyvar bindings

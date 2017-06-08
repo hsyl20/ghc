@@ -1,4 +1,4 @@
-module TcIface where
+module GHC.Interface.TypeCheck where
 
 import IfaceSyn    ( IfaceDecl, IfaceClsInst, IfaceFamInst, IfaceRule,
                      IfaceAnnotation, IfaceCompleteMatch )

@@ -107,7 +107,7 @@ import GHC.IR.Haskell.Parser
 import GHC.IR.Haskell.Lexer as Lexer
 import GHC.Data.SrcLoc
 import TcRnDriver
-import TcIface          ( typecheckIface )
+import GHC.Interface.TypeCheck          ( typecheckIface )
 import TcRnMonad
 import GHC.Data.Name.Cache        ( initNameCache )
 import GHC.Interface.Load        ( ifaceStats, initExternalPackageState )

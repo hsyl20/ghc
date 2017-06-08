@@ -9,7 +9,7 @@ Type checking of type signatures in interface files
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE NondecreasingIndentation #-}
 
-module TcIface (
+module GHC.Interface.TypeCheck (
         tcLookupImported_maybe,
         importDecl, checkWiredInTyCon, tcHiBootIface, typecheckIface,
         typecheckIfacesForMerging,
@@ -119,7 +119,7 @@ Suppose we are typechecking an interface A.hi, and we come across
 a Name for another entity defined in A.hi.  How do we get the
 'TyCon', in this case?  There are three cases:
 
-    1) tcHiBootIface in TcIface: We're typechecking an hi-boot file in
+    1) tcHiBootIface in GHC.Interface.TypeCheck: We're typechecking an hi-boot file in
     preparation of checking if the hs file we're building
     is compatible.  In this case, we want all of the internal
     TyCons to MATCH the ones that we just constructed during
@@ -379,7 +379,7 @@ typecheckIfacesForMerging mod ifaces tc_env_var =
 
     -- OK, now typecheck each ModIface using this environment
     details <- forM ifaces $ \iface -> do
-        -- See Note [Resolving never-exported Names in TcIface]
+        -- See Note [Resolving never-exported Names in GHC.Interface.TypeCheck]
         type_env <- fixM $ \type_env -> do
             setImplicitEnvM type_env $ do
                 decls <- loadDecls ignore_prags (mi_decls iface)
@@ -421,7 +421,7 @@ typecheckIfaceForInstantiate nsubst iface =
                         (text "typecheckIfaceForInstantiate")
                         (mi_boot iface) nsubst $ do
     ignore_prags <- goptM Opt_IgnoreInterfacePragmas
-    -- See Note [Resolving never-exported Names in TcIface]
+    -- See Note [Resolving never-exported Names in GHC.Interface.TypeCheck]
     type_env <- fixM $ \type_env -> do
         setImplicitEnvM type_env $ do
             decls     <- loadDecls ignore_prags (mi_decls iface)
@@ -445,7 +445,7 @@ typecheckIfaceForInstantiate nsubst iface =
                         , md_complete_sigs = complete_sigs
                         }
 
--- Note [Resolving never-exported Names in TcIface]
+-- Note [Resolving never-exported Names in GHC.Interface.TypeCheck]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- For the high-level overview, see
 -- Note [Handling never-exported TyThings under Backpack]
@@ -1159,7 +1159,7 @@ tcIfaceVectInfo mod typeEnv (IfaceVectInfo
       --              Nothing        -> tcIfaceExtId name
       --          }
       --
-      --   notAnIdErr = pprPanic "TcIface.tcIfaceVectInfo: not an id" (ppr name)
+      --   notAnIdErr = pprPanic "GHC.Interface.TypeCheck.tcIfaceVectInfo: not an id" (ppr name)
 
     vectVar name
       = forkM (text "vect scalar var"  <+> ppr name)  $
@@ -1224,7 +1224,7 @@ tcIfaceVectInfo mod typeEnv (IfaceVectInfo
                    Nothing             -> tcIfaceTyConByName name
                }
 
-        notATyConErr = pprPanic "TcIface.tcIfaceVectInfo: not a tycon" (ppr name)
+        notATyConErr = pprPanic "GHC.Interface.TypeCheck.tcIfaceVectInfo: not a tycon" (ppr name)
 
 {-
 ************************************************************************
@@ -1764,7 +1764,7 @@ tcIfaceExtId name = do { thing <- tcIfaceGlobal name
                           AnId id -> return id
                           _       -> pprPanic "tcIfaceExtId" (ppr name$$ ppr thing) }
 
--- See Note [Resolving never-exported Names in TcIface]
+-- See Note [Resolving never-exported Names in GHC.Interface.TypeCheck]
 tcIfaceImplicit :: Name -> IfL TyThing
 tcIfaceImplicit n = do
     lcl_env <- getLclEnv
