@@ -61,7 +61,7 @@ import GHC.Plugins.Types ( tcPlugin )
 
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
-import IfaceSyn ( ShowSub(..), showToHeader )
+import GHC.Interface.Syntax ( ShowSub(..), showToHeader )
 import IfaceType( ShowForAllFlag(..) )
 import PrelNames
 import GHC.Data.RdrName

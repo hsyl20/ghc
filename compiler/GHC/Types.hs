@@ -181,7 +181,7 @@ import GHC.Packages hiding  ( Version(..) )
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
 import GHC.Data.BasicTypes
-import IfaceSyn
+import GHC.Interface.Syntax
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc

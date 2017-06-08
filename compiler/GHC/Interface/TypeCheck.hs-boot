@@ -1,6 +1,6 @@
 module GHC.Interface.TypeCheck where
 
-import IfaceSyn    ( IfaceDecl, IfaceClsInst, IfaceFamInst, IfaceRule,
+import GHC.Interface.Syntax    ( IfaceDecl, IfaceClsInst, IfaceFamInst, IfaceRule,
                      IfaceAnnotation, IfaceCompleteMatch )
 import GHC.Data.Types     ( TyThing )
 import TcRnTypes   ( IfL )

@@ -44,7 +44,7 @@ module ToIface
 
 #include "HsVersions.h"
 
-import IfaceSyn
+import GHC.Interface.Syntax
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
@@ -350,7 +350,7 @@ toIfaceLetBndr id  = IfLetBndr (occNameFS (getOccName id))
                                (toIfaceIdInfo (idInfo id))
                                (toIfaceJoinInfo (isJoinId_maybe id))
   -- Put into the interface file any IdInfo that CoreTidy.tidyLetBndr
-  -- has left on the Id.  See Note [IdInfo on nested let-bindings] in IfaceSyn
+  -- has left on the Id.  See Note [IdInfo on nested let-bindings] in GHC.Interface.Syntax
 
 toIfaceIdDetails :: IdDetails -> IfaceIdDetails
 toIfaceIdDetails VanillaId                      = IfVanillaId

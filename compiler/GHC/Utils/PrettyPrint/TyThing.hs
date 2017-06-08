@@ -20,7 +20,7 @@ module GHC.Utils.PrettyPrint.TyThing (
 #include "HsVersions.h"
 
 import GHC.Data.Type    ( TyThing(..) )
-import IfaceSyn ( ShowSub(..), ShowHowMuch(..), AltPpr(..)
+import GHC.Interface.Syntax ( ShowSub(..), ShowHowMuch(..), AltPpr(..)
   , showToHeader, pprIfaceDecl )
 import GHC.Data.Coercion.Axiom ( coAxiomTyCon )
 import GHC.Types( tyThingParent_maybe )

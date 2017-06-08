@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module IfaceSyn (
+module GHC.Interface.Syntax (
         module IfaceType,
 
         IfaceDecl(..), IfaceFamTyConFlav(..), IfaceClassOp(..), IfaceAT(..),
@@ -85,7 +85,7 @@ infixl 3 &&&
 -- | A binding top-level 'Name' in an interface file (e.g. the name of an
 -- 'IfaceDecl').
 type IfaceTopBndr = Name
-  -- It's convenient to have an Name in the IfaceSyn, although in each
+  -- It's convenient to have an Name in the GHC.Interface.Syntax, although in each
   -- case the namespace is implied by the context. However, having an
   -- Name makes things like ifaceDeclImplicitBndrs and ifaceDeclFingerprints
   -- very convenient. Moreover, having the key of the binder means that
@@ -512,7 +512,7 @@ data IfaceJoinInfo = IfaceNotJoinPoint
 {-
 Note [Empty case alternatives]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In IfaceSyn an IfaceCase does not record the types of the alternatives,
+In GHC.Interface.Syntax an IfaceCase does not record the types of the alternatives,
 unlike CorSyn Case.  But we need this type if the alternatives are empty.
 Hence IfaceECase.  See Note [Empty case alternatives] in GHC.IR.Core.Syntax.
 
@@ -1096,7 +1096,7 @@ To reconstruct the result types for T1 and T2 that we
 want to pretty print, we substitute the eq-spec
 [p->Int, q->Maybe c] in the arg pattern (p,q) to give
    T (Int, Maybe c)
-Remember that in IfaceSyn, the TyCon and DataCon share the same
+Remember that in GHC.Interface.Syntax, the TyCon and DataCon share the same
 universal type variables.
 
 ----------------------------- Printing IfaceExpr ------------------------------------
@@ -1248,7 +1248,7 @@ instance Outputable IfaceUnfolding where
 {-
 ************************************************************************
 *                                                                      *
-              Finding the Names in IfaceSyn
+              Finding the Names in GHC.Interface.Syntax
 *                                                                      *
 ************************************************************************
 

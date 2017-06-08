@@ -497,7 +497,7 @@ instance Data Name where
 -}
 
 -- | Assumes that the 'Name' is a non-binding one. See
--- 'IfaceSyn.putIfaceTopBndr' and 'IfaceSyn.getIfaceTopBndr' for serializing
+-- 'GHC.Interface.Syntax.putIfaceTopBndr' and 'GHC.Interface.Syntax.getIfaceTopBndr' for serializing
 -- binding 'Name's. See 'UserData' for the rationale for this distinction.
 instance Binary Name where
    put_ bh name =

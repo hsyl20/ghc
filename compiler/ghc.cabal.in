@@ -304,7 +304,7 @@ Library
         BinFingerprint
         BuildTyCl
         GHC.Interface.Environment
-        IfaceSyn
+        GHC.Interface.Syntax
         IfaceType
         ToIface
         GHC.Interface.Load

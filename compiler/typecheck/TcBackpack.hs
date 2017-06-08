@@ -49,7 +49,7 @@ import GHC.Rename.Fixity ( lookupFixityRn )
 import GHC.Data.Maybe
 import TcEnv
 import GHC.Data.Var
-import IfaceSyn
+import GHC.Interface.Syntax
 import PrelNames
 import qualified Data.Map as Map
 

@@ -22,7 +22,7 @@ import GHCi.RemoteTypes
 import GHC.Monad
 import GHC.Types
 import GHC.Data.Id
-import IfaceSyn ( showToHeader )
+import GHC.Interface.Syntax ( showToHeader )
 import GHC.Interface.Environment( newInteractiveBinder )
 import GHC.Data.Name
 import GHC.Data.Var hiding ( varName )

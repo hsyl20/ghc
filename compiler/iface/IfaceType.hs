@@ -77,7 +77,7 @@ import Data.List (foldl')
 
 type IfLclName = FastString     -- A local name in iface syntax
 
-type IfExtName = Name   -- An External or WiredIn Name can appear in IfaceSyn
+type IfExtName = Name   -- An External or WiredIn Name can appear in GHC.Interface.Syntax
                         -- (However Internal or System Names never should)
 
 data IfaceBndr          -- Local (non-top-level) binders

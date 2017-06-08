@@ -500,7 +500,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Name.Cache \
 	GHC.Data.Id \
 	GHC.Data.Id.Info \
-	IfaceSyn \
+	GHC.Interface.Syntax \
 	IfaceType \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \

@@ -37,7 +37,7 @@ import {-# SOURCE #-}   GHC.Interface.TypeCheck( tcIfaceDecl, tcIfaceRules, tcIf
                                  tcIfaceAnnotations, tcIfaceCompleteSigs )
 
 import GHC.Config.Flags
-import IfaceSyn
+import GHC.Interface.Syntax
 import GHC.Interface.Environment
 import GHC.Types
 

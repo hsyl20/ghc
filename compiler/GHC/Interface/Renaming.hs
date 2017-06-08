@@ -21,7 +21,7 @@ import GHC.Types
 import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Available
-import IfaceSyn
+import GHC.Interface.Syntax
 import GHC.Data.FieldLabel
 import GHC.Data.Var
 import GHC.Utils.Error

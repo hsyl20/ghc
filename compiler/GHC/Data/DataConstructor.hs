@@ -316,7 +316,7 @@ data DataCon
         dcExTyVars     :: [TyVarBinder],
 
         -- INVARIANT: the UnivTyVars and ExTyVars all have distinct OccNames
-        -- Reason: less confusing, and easier to generate IfaceSyn
+        -- Reason: less confusing, and easier to generate GHC.Interface.Syntax
 
         dcEqSpec :: [EqSpec],   -- Equalities derived from the result type,
                                 -- _as written by the programmer_

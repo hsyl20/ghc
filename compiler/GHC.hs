@@ -1268,7 +1268,7 @@ pprParenSymName a = parenSymOcc (getOccName a) (ppr (getName a))
 -- ToDo: check for small transformations that happen to the syntax in
 -- the typechecker (eg. -e ==> negate e, perhaps for fromIntegral)
 
--- ToDo: maybe use TH syntax instead of IfaceSyn?  There's already a way
+-- ToDo: maybe use TH syntax instead of GHC.Interface.Syntax?  There's already a way
 -- to get from TyCons, Ids etc. to TH syntax (reify).
 
 -- :browse will use either lm_toplev or inspect lm_interface, depending
