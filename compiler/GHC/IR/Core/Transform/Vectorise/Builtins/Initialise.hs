@@ -8,9 +8,9 @@ module GHC.IR.Core.Transform.Vectorise.Builtins.Initialise (
 import GHC.IR.Core.Transform.Vectorise.Builtins.Base
 
 import GHC.Data.BasicTypes
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Primitive.Types
 import GHC.Compilers.HaskellToCore.Monad
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Class

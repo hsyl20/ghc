@@ -33,7 +33,7 @@ import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Set
 import GHC.Data.Id.Make (coerceId)
-import GHC.Builtin.Typess (true_RDR, false_RDR)
+import GHC.Builtin.Types (true_RDR, false_RDR)
 
 import Data.Maybe (catMaybes, isJust)
 

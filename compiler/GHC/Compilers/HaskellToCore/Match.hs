@@ -45,7 +45,7 @@ import GHC.Data.Type
 import GHC.Data.Coercion ( eqCoercion )
 import GHC.IR.Haskell.TypeSystem.Type ( toTcTypeBag )
 import GHC.Data.Type.Constructor( isNewTyCon )
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.SrcLoc
 import GHC.Data.Maybe
 import GHC.Utils

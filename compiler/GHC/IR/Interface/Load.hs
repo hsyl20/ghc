@@ -47,9 +47,9 @@ import GHC.IR.Haskell.TypeSystem
 import GHC.Config.Constants
 import GHC.Builtin.Names
 import GHC.Builtin.Utils
-import GHC.Builtin.Primitive.Operationss   ( allThePrimOps, primOpFixity, primOpOcc )
+import GHC.Builtin.Primitive.Operations   ( allThePrimOps, primOpFixity, primOpOcc )
 import GHC.Data.Id.Make     ( seqId )
-import GHC.Builtin.Primitive.Typess  ( funTyConName )
+import GHC.Builtin.Primitive.Types  ( funTyConName )
 import GHC.IR.Core.Transform.Rules
 import GHC.Data.Type.Constructor
 import GHC.Data.Annotation

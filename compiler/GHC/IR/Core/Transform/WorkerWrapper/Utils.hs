@@ -27,8 +27,8 @@ import GHC.Data.Demand
 import GHC.IR.Core.Syntax.Make           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, mkCoreUbxTup
                         , mkCoreApp, mkCoreLet )
 import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
-import GHC.Builtin.Primitive.Typess          ( voidPrimTy )
-import GHC.Builtin.Typess       ( tupleDataCon )
+import GHC.Builtin.Primitive.Types          ( voidPrimTy )
+import GHC.Builtin.Types       ( tupleDataCon )
 import GHC.Data.Var.Environment           ( mkInScopeSet )
 import GHC.Data.Var.Set           ( VarSet )
 import GHC.Data.Type

@@ -41,7 +41,7 @@ import GHC.IR.Core.PrettyPrint          ( pprRules )
 import GHC.Data.Type             ( Type, substTy, mkTCvSubst )
 import qualified GHC.Data.Type as Type
 import GHC.IR.Haskell.TypeSystem.Type           ( tcSplitTyConApp_maybe )
-import GHC.Builtin.Typess       ( anyTypeOfKind )
+import GHC.Builtin.Types       ( anyTypeOfKind )
 import GHC.Data.Coercion
 import GHC.IR.Core.Tidy         ( tidyRules )
 import GHC.Data.Id

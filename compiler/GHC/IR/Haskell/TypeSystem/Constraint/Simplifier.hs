@@ -39,7 +39,7 @@ import GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.TrieMap       () -- DV: for now
 import GHC.Data.Type
-import GHC.Builtin.Typess    ( liftedRepTy )
+import GHC.Builtin.Types    ( liftedRepTy )
 import GHC.Utils.Unify         ( tcMatchTyKi )
 import GHC.Utils
 import GHC.Data.Var
@@ -511,7 +511,7 @@ tcCheckSatisfiability given_ids
 Expand superclasses before starting, because (Int ~ Bool), has
 (Int ~~ Bool) as a superclass, which in turn has (Int ~N# Bool)
 as a superclass, and it's the latter that is insoluble.  See
-Note [The equality types story] in GHC.Builtin.Primitive.Typess.
+Note [The equality types story] in GHC.Builtin.Primitive.Types.
 
 If we fail to prove unsatisfiability we (arbitrarily) try just once to
 find superclasses, using try_harder.  Reason: we might have a type

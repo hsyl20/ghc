@@ -79,7 +79,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence       ( idHsWrapper )
 import GHC.IR.Haskell.Lexer
 import GHC.Utils.Identifier           ( isLexCon )
 import GHC.Data.Type             ( TyThing(..) )
-import GHC.Builtin.Typess       ( cTupleTyConName, tupleTyCon, tupleDataCon,
+import GHC.Builtin.Types       ( cTupleTyConName, tupleTyCon, tupleDataCon,
                           nilDataConName, nilDataConKey,
                           listTyConName, listTyConKey,
                           starKindTyConName, unicodeStarKindTyConName )

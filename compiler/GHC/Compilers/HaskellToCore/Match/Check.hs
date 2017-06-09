@@ -27,7 +27,7 @@ import GHC.Data.Id
 import GHC.Data.ConstructorLike
 import GHC.Data.Name
 import GHC.Data.FamilyInstance
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc
 import GHC.Utils

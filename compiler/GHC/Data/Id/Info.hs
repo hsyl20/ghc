@@ -85,7 +85,7 @@ module GHC.Data.Id.Info (
 import GHC.IR.Core.Syntax
 
 import GHC.Data.Class
-import {-# SOURCE #-} PrimOp (PrimOp)
+import {-# SOURCE #-} GHC.Builtin.Primitive.Operations (PrimOp)
 import GHC.Data.Name
 import GHC.Data.Var.Set
 import GHC.Data.BasicTypes

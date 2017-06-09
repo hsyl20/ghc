@@ -235,8 +235,8 @@ compiler/stage3/$(PLATFORM_H) : compiler/stage2/$(PLATFORM_H)
 	"$(CP)" $< $@
 
 # ----------------------------------------------------------------------------
-#		Generate supporting stuff for prelude/PrimOp.hs
-#		from prelude/primops.txt
+#		Generate supporting stuff for GHC.Builtin.Primitive.Operations
+#		from GHC/Builtin/Primitive/primops.txt
 
 PRIMOP_BITS_NAMES = primop-data-decl.hs-incl        \
                     primop-tag.hs-incl              \
@@ -268,7 +268,7 @@ compiler_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 
 define preprocessCompilerFiles
 # $0 = stage
-compiler/stage$1/build/primops.txt: compiler/prelude/GHC/Builtin/Primitive/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
+compiler/stage$1/build/primops.txt: compiler/GHC/Builtin/Primitive/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
 	$$(HS_CPP) -P $$(compiler_CPP_OPTS) -Icompiler/stage$1 -x c $$< | grep -v '^#pragma GCC' > $$@
 
 compiler/stage$1/build/primop-data-decl.hs-incl: compiler/stage$1/build/primops.txt $$$$(genprimopcode_INPLACE)
@@ -657,7 +657,7 @@ $(foreach way,$(compiler_stage3_WAYS),\
 
 # GHC itself doesn't know about the above dependencies, so we have to
 # switch off the recompilation checker for that module:
-compiler/prelude/PrimOp_HC_OPTS  += -fforce-recomp
+compiler/GHC/Builtin/Primitive/Operations_HC_OPTS  += -fforce-recomp
 
 ifeq "$(DYNAMIC_GHC_PROGRAMS)" "YES"
 compiler/GHC/Utils_HC_OPTS += -DDYNAMIC_GHC_PROGRAMS

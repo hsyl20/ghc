@@ -22,8 +22,8 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkTyVarBindersX, zonkTcTypeToTypes
               , zonkTcTypeToType, emptyZonkEnv )
-import GHC.Builtin.Primitive.Typess
-import GHC.Builtin.Typess  ( runtimeRepTy )
+import GHC.Builtin.Primitive.Types
+import GHC.Builtin.Types  ( runtimeRepTy )
 import GHC.Data.Name
 import GHC.Data.SrcLoc
 import GHC.Data.PatternSynonym

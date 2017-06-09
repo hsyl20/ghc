@@ -59,14 +59,14 @@ import GHC.IR.Core.Utils        ( exprType, needsCaseBinding, bindNonRec )
 import GHC.Data.Literal
 import GHC.Types
 
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Builtin.Names
 
 import GHC.IR.Haskell.Utils          ( mkChunkified, chunkify )
 import GHC.IR.Haskell.TypeSystem.Type           ( mkSpecSigmaTy )
 import GHC.Data.Type
 import GHC.Data.Coercion         ( isCoVar )
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Primitive.Types
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId )
 import GHC.Data.Id.Info           ( vanillaIdInfo, setStrictnessInfo,
                           setArityInfo )
@@ -328,7 +328,7 @@ We could do one of two things:
 * Flatten it out, so that
     mkCoreTup [e1] = e1
 
-* Built a one-tuple (see Note [One-tuples] in GHC.Builtin.Typess)
+* Built a one-tuple (see Note [One-tuples] in GHC.Builtin.Types)
     mkCoreTup1 [e1] = Unit e1
   We use a suffix "1" to indicate this.
 

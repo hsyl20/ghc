@@ -209,8 +209,8 @@ import GHC.Utils.Outputable
 import GHC.Data.RepType
 import GHC.IR.Stg.Syntax
 import GHC.Data.Type
-import GHC.Builtin.Primitive.Typess (intPrimTy)
-import GHC.Builtin.Typess
+import GHC.Builtin.Primitive.Types (intPrimTy)
+import GHC.Builtin.Types
 import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Data.Var.Environment

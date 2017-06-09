@@ -21,7 +21,7 @@ import GHC.IR.Core.Utils
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Id.Make
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.BasicTypes( Boxity(..) )
 import GHC.Data.FastString
 

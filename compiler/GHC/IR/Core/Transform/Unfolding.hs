@@ -53,12 +53,12 @@ import GHC.Data.Id
 import GHC.Data.Demand          ( isBottomingSig )
 import GHC.Data.DataConstructor
 import GHC.Data.Literal
-import GHC.Builtin.Primitive.Operationss
+import GHC.Builtin.Primitive.Operations
 import GHC.Data.Id.Info
 import GHC.Data.BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
 import GHC.Data.Type
 import GHC.Builtin.Names
-import GHC.Builtin.Primitive.Typess          ( realWorldStatePrimTy )
+import GHC.Builtin.Primitive.Types          ( realWorldStatePrimTy )
 import GHC.Data.Bag
 import GHC.Utils
 import GHC.Utils.Outputable

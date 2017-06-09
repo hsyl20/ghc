@@ -50,7 +50,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.BasicTypes
 -- others:
 import GHC.IR.Core.PrettyPrint          ( {- instance OutputableBndr TyVar -} )
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.Var
 import GHC.Data.RdrName ( RdrName )
 import GHC.Data.ConstructorLike

@@ -38,9 +38,9 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.DataConstructor
-import GHC.Builtin.Primitive.Operationss
+import GHC.Builtin.Primitive.Operations
 import GHC.Data.BasicTypes
 import GHC.Data.Module
 import GHC.Data.Unique.Supply

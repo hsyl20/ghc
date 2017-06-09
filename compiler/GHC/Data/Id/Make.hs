@@ -40,8 +40,8 @@ module GHC.Data.Id.Make (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Transform.Rules
-import GHC.Builtin.Primitive.Typess
-import GHC.Builtin.Typess
+import GHC.Builtin.Primitive.Types
+import GHC.Builtin.Types
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Type
 import GHC.Data.FamilyInstance
@@ -56,7 +56,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import GHC.Data.Name.Set
 import GHC.Data.Name
-import GHC.Builtin.Primitive.Operationss
+import GHC.Builtin.Primitive.Operations
 import GHC.Data.ForeignCall
 import GHC.Data.DataConstructor
 import GHC.Data.Id
@@ -1525,7 +1525,7 @@ cannot be instantiated with a forall.  The field of `WrapC` contains
 a `Proxy` parameter which is used to link the type of the constraint,
 `C a`, with the type of the `Wrap` value being made.
 
-Next, we add a built-in Prelude rule (see prelude/GHC.IR.Core.Transform.ConstantFolding.hs),
+Next, we add a built-in rule (see GHC.IR.Core.Transform.ConstantFolding),
 which will replace the RHS of this definition with the appropriate
 definition in Core.  The rewrite rule works as follows:
 

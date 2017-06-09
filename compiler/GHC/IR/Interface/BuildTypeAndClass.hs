@@ -17,8 +17,8 @@ module GHC.IR.Interface.BuildTypeAndClass (
 
 import GHC.IR.Interface.Environment
 import GHC.Data.FamilyInstance( FamInstEnvs, mkNewTypeCoAxiom )
-import GHC.Builtin.Typess( isCTupleTyConName )
-import GHC.Builtin.Primitive.Typess ( voidPrimTy )
+import GHC.Builtin.Types( isCTupleTyConName )
+import GHC.Builtin.Primitive.Types ( voidPrimTy )
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Var

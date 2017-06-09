@@ -1,3 +1,3 @@
-module GHC.Builtin.Primitive.Operationss where
+module GHC.Builtin.Primitive.Operations where
 
 data PrimOp

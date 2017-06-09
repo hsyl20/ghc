@@ -29,8 +29,8 @@ import GHC.IR.Core.Pipeline
 import GHC.Data.Bag
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
-import GHC.Builtin.Typess
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Types
+import GHC.Builtin.Primitive.Types
 import GHC.IR.Haskell.TypeSystem.Type ( isFloatingTy )
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment

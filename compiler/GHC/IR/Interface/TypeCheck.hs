@@ -22,7 +22,7 @@ module GHC.IR.Interface.TypeCheck (
 
 #include "HsVersions.h"
 
-import GHC.Builtin.TypessNats(typeNatCoAxiomRules)
+import GHC.Builtin.TypeNats(typeNatCoAxiomRules)
 import GHC.IR.Interface.Syntax
 import GHC.IR.Interface.Load
 import GHC.IR.Interface.Environment
@@ -50,7 +50,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Builtin.Names
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.Literal
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment

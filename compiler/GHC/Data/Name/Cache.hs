@@ -13,7 +13,7 @@ module GHC.Data.Name.Cache
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Unique.Supply
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Builtin.Names

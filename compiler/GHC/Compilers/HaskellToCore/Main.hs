@@ -37,10 +37,10 @@ import GHC.Compilers.HaskellToCore.Expression
 import GHC.Compilers.HaskellToCore.Binding
 import GHC.Compilers.HaskellToCore.Foreign.Declaration
 import GHC.Builtin.Names   ( coercibleTyConKey )
-import GHC.Builtin.Primitive.Typess     ( eqReprPrimTyCon )
+import GHC.Builtin.Primitive.Types     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
 import GHC.Data.Coercion    ( mkCoVarCo )
-import GHC.Builtin.Typess  ( coercibleDataCon )
+import GHC.Builtin.Types  ( coercibleDataCon )
 import GHC.Data.DataConstructor     ( dataConWrapId )
 import GHC.IR.Core.Syntax.Make      ( mkCoreLet )
 import GHC.Data.Module

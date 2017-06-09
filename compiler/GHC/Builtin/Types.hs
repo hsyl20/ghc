@@ -1,17 +1,17 @@
 {-
 (c) The GRASP Project, Glasgow University, 1994-1998
 
-\section[GHC.Builtin.Typess]{Wired-in knowledge about {\em non-primitive} types}
+\section[GHC.Builtin.Types]{Wired-in knowledge about {\em non-primitive} types}
 -}
 
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 -- | This module is about types that can be defined in Haskell, but which
---   must be wired into the compiler nonetheless.  C.f module GHC.Builtin.Primitive.Typess
-module GHC.Builtin.Typess (
+--   must be wired into the compiler nonetheless.  C.f module GHC.Builtin.Primitive.Types
+module GHC.Builtin.Types (
         -- * Helper functions defined here
-        mkWiredInTyConName, -- This is used in GHC.Builtin.TypessNats to define the
+        mkWiredInTyConName, -- This is used in GHC.Builtin.TypeNats to define the
                             -- built-in functions for evaluation.
 
         mkWiredInIdName,    -- used in MkId
@@ -132,7 +132,7 @@ import {-# SOURCE #-} GHC.Data.Id.Make( mkDataConWorkId, mkDictSelId )
 
 -- friends:
 import GHC.Builtin.Names
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Primitive.Types
 import {-# SOURCE #-} GHC.Builtin.Uniques
 
 -- others:
@@ -343,7 +343,7 @@ It has these properties:
 
   * If (Any k) is the type of a value, it must be a /lifted/ value. So
     if we have (Any @(TYPE rr)) then rr must be 'LiftedRep.  See
-    Note [TYPE and RuntimeRep] in GHC.Builtin.Primitive.Typess.  This is a convenient
+    Note [TYPE and RuntimeRep] in GHC.Builtin.Primitive.Types.  This is a convenient
     invariant, and makes isUnliftedTyCon well-defined; otherwise what
     would (isUnliftedTyCon Any) be?
 
@@ -1014,7 +1014,7 @@ mk_sum arity = (tycon, sum_cons)
 *                                                                      *
 ********************************************************************* -}
 
--- See Note [The equality types story] in GHC.Builtin.Primitive.Typess
+-- See Note [The equality types story] in GHC.Builtin.Primitive.Types
 -- (:~~: :: forall k1 k2 (a :: k1) (b :: k2). a -> b -> Constraint)
 --
 -- It's tempting to put functional dependencies on (~~), but it's not
@@ -1074,13 +1074,13 @@ mk_class tycon sc_pred sc_sel_id
 ********************************************************************* -}
 
 -- For information about the usage of the following type,
--- see Note [TYPE and RuntimeRep] in module GHC.Builtin.Primitive.Typess
+-- see Note [TYPE and RuntimeRep] in module GHC.Builtin.Primitive.Types
 runtimeRepTy :: Type
 runtimeRepTy = mkTyConTy runtimeRepTyCon
 
 liftedTypeKindTyCon, starKindTyCon, unicodeStarKindTyCon :: TyCon
 
--- Type syononyms; see Note [TYPE and RuntimeRep] in GHC.Builtin.Primitive.Typess
+-- Type syononyms; see Note [TYPE and RuntimeRep] in GHC.Builtin.Primitive.Types
 -- type Type = tYPE 'LiftedRep
 -- type *    = tYPE 'LiftedRep
 -- type *    = tYPE 'LiftedRep  -- Unicode variant

@@ -36,16 +36,13 @@ import Data.Char
 import Control.Monad    ( mplus )
 import Control.Applicative ((<$))
 
--- compiler/hsSyn
 import GHC.IR.Haskell.Syntax
 
--- compiler/main
 import GHC.Types         ( IsBootInterface, WarningTxt(..) )
 import GHC.Config.Flags
 import GHC.Program.BackPack.Syntax
 import GHC.Packages.PackageConfig
 
--- compiler/utils
 import GHC.Data.Tree.OrdList
 import GHC.Data.Bool.Formula   ( BooleanFormula(..), LBooleanFormula(..), mkTrue )
 import GHC.Data.FastString
@@ -59,21 +56,17 @@ import GHC.Data.SrcLoc
 import GHC.Data.Module
 import GHC.Data.BasicTypes
 
--- compiler/types
 import GHC.Data.Type             ( funTyCon )
 import GHC.Data.Kind             ( Kind )
 import GHC.Data.Class            ( FunDep )
 
--- compiler/parser
 import GHC.IR.Haskell.Parser.Syntax
 import GHC.IR.Haskell.Lexer
 import GHC.IR.Haskell.Parser.Utils
 import GHC.IR.Haskell.Annotation
 
--- compiler/typecheck
 import GHC.IR.Haskell.TypeSystem.Evidence       ( emptyTcEvBinds )
 
--- compiler/prelude
 import GHC.Data.ForeignCall
 import GHC.Builtin.Primitive.Types          ( eqPrimTyCon )
 import GHC.Builtin.Names        ( eqTyCon_RDR )
@@ -81,7 +74,6 @@ import GHC.Builtin.Types       ( unitTyCon, unitDataCon, tupleTyCon, tupleDataCo
                           unboxedUnitTyCon, unboxedUnitDataCon,
                           listTyCon_RDR, parrTyCon_RDR, consDataCon_RDR )
 
--- compiler/utils
 import GHC.Utils             ( looksLikePackageName )
 import Prelude
 

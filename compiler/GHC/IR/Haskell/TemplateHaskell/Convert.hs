@@ -28,8 +28,8 @@ import GHC.Data.OccName
 import GHC.Data.SrcLoc
 import GHC.Data.Type
 import qualified GHC.Data.Coercion as Coercion
-import GHC.Builtin.Typess
-import GHC.Builtin.Primitive.Typess (eqPrimTyCon)
+import GHC.Builtin.Types
+import GHC.Builtin.Primitive.Types (eqPrimTyCon)
 import GHC.Data.BasicTypes as Hs
 import GHC.Data.ForeignCall
 import GHC.Data.Unique

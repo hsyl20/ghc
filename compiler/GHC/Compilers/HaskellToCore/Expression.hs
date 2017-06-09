@@ -45,7 +45,7 @@ import GHC.Data.Id.Make
 import GHC.Data.Module
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Builtin.Names
 import GHC.Data.BasicTypes
 import GHC.Data.Maybe

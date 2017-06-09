@@ -105,8 +105,8 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id as Id
 import GHC.Data.Name
 import GHC.Data.Var.Set
-import GHC.Builtin.Typess
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Types
+import GHC.Builtin.Primitive.Types
 import GHC.Data.Var.Environment
 import GHC.Data.Name.Environment
 import GHC.Builtin.Names

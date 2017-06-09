@@ -132,13 +132,13 @@ import qualified GHC.Data.Var as Var
 
 import GHC.Data.Type
 import GHC.Data.RepType
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Primitive.Types
 import GHC.Data.DataConstructor
 import GHC.Data.Demand
 import GHC.Data.Name
 import GHC.Data.Module
 import GHC.Data.Class
-import {-# SOURCE #-} PrimOp (PrimOp)
+import {-# SOURCE #-} GHC.Builtin.Primitive.Operations (PrimOp)
 import GHC.Data.ForeignCall
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc
@@ -540,8 +540,8 @@ Note [Primop wrappers]
 ~~~~~~~~~~~~~~~~~~~~~~
 Currently hasNoBinding claims that PrimOpIds don't have a curried
 function definition.  But actually they do, in GHC.PrimopWrappers,
-which is auto-generated from prelude/GHC/Builtin/Primitive/GHC/Builtin/Primitive/primops.txt.pp.  So actually, hasNoBinding
-could return 'False' for PrimOpIds.
+which is auto-generated from GHC/Builtin/Primitive/primops.txt.pp.
+So actually, hasNoBinding could return 'False' for PrimOpIds.
 
 But we'd need to add something in CoreToStg to swizzle any unsaturated
 applications of GHC.Prim.plusInt# to GHC.PrimopWrappers.plusInt#.

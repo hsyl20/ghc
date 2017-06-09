@@ -3,7 +3,7 @@
 (c) The AQUA Project, Glasgow University, 1996-1998
 
 
-GHC.IR.Haskell.TypeSystem.Syntax: Specialisations of the @GHC.IR.Haskell@ syntax for the typechecker
+Specialisations of the @GHC.IR.Haskell@ syntax for the typechecker
 
 This module is an extension of @GHC.IR.Haskell@ syntax, for use in the type
 checker.
@@ -46,9 +46,9 @@ import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Evidence
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Primitive.Types
 import GHC.Data.Type.Constructor   ( isUnboxedTupleTyCon )
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.ConstructorLike

@@ -26,7 +26,7 @@ import GHC.Config.Flags
 import GHC.IR.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Compilers.HaskellToCore.Match
 import GHC.Builtin.Names
 import GHC.Data.SrcLoc

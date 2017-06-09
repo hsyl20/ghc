@@ -1298,7 +1298,7 @@ splitDataProductType_maybe ty
 *                                                                      *
 ************************************************************************
 
-buildAlgTyCon is here because it is called from GHC.Builtin.Typess, which can
+buildAlgTyCon is here because it is called from GHC.Builtin.Types, which can
 depend on this module, but not on GHC.IR.Interface.BuildTypeAndClass.
 -}
 

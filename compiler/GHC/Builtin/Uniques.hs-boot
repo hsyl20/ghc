@@ -4,7 +4,7 @@ import GHC.Data.Unique
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 
--- Needed by GHC.Builtin.Typess
+-- Needed by GHC.Builtin.Types
 knownUniqueName :: Unique -> Maybe Name
 
 mkSumTyConUnique :: Arity -> Unique

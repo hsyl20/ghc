@@ -438,7 +438,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser
         GHC.IR.Haskell.TypeSystem.Flatten
         GHC.IR.Haskell.TypeSystem.Constraint.Solver
-        GHC.Builtin.TypesNats
+        GHC.Builtin.TypeNats
         GHC.IR.Haskell.TypeSystem.Splice
         GHC.Data.Class
         GHC.Data.Coercion

@@ -29,7 +29,7 @@ import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.PrettyPrint
 import GHC.Data.Literal
-import GHC.Builtin.Primitive.Operationss
+import GHC.Builtin.Primitive.Operations
 import GHC.IR.Core.FreeVars
 import GHC.Data.Type
 import GHC.Data.RepType
@@ -38,7 +38,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Utils
 import GHC.Data.Var.Set
-import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Primitive.Types
 import GHC.Utils.Error
 import GHC.Data.Unique
 import GHC.Data.FastString

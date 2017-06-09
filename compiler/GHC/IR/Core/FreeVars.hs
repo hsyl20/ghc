@@ -74,7 +74,7 @@ import GHC.Data.Types
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.FamilyInstance
-import GHC.Builtin.Primitive.Typess( funTyConName )
+import GHC.Builtin.Primitive.Types( funTyConName )
 import GHC.Data.Maybe( orElse )
 import GHC.Utils
 import GHC.Data.BasicTypes( Activation )

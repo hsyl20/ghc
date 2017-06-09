@@ -500,7 +500,7 @@ Note [Equality superclasses]
 Suppose we have
   class (a ~ [b]) => C a b
 
-Remember from Note [The equality types story] in GHC.Builtin.Primitive.Typess, that
+Remember from Note [The equality types story] in GHC.Builtin.Primitive.Types, that
   * (a ~~ b) is a superclass of (a ~ b)
   * (a ~# b) is a superclass of (a ~~ b)
 

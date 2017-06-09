@@ -35,7 +35,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Name
 import GHC.Data.Type
 import GHC.Builtin.Names
-import GHC.Builtin.Typess
+import GHC.Builtin.Types
 import GHC.Data.Literal
 import GHC.Data.SrcLoc
 import Data.Ratio

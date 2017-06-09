@@ -42,7 +42,7 @@ import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.ClassInstance
-import GHC.Builtin.Typess  ( heqDataCon, coercibleDataCon )
+import GHC.Builtin.Types  ( heqDataCon, coercibleDataCon )
 import GHC.IR.Core.Syntax     ( isOrphan )
 import GHC.IR.Haskell.TypeSystem.FunctionalDependency
 import GHC.IR.Haskell.TypeSystem.MutableType

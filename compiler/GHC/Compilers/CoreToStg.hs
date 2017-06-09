@@ -33,7 +33,7 @@ import GHC.Data.Module
 import GHC.Data.Name             ( isExternalName, nameOccName )
 import GHC.Data.OccName          ( occNameFS )
 import GHC.Data.BasicTypes       ( Arity )
-import GHC.Builtin.Typess       ( unboxedUnitDataCon )
+import GHC.Builtin.Types       ( unboxedUnitDataCon )
 import GHC.Data.Literal
 import GHC.Utils.Outputable
 import GHC.Utils.Monad
@@ -42,7 +42,7 @@ import GHC.Utils
 import GHC.Config.Flags
 import GHC.Data.ForeignCall
 import GHC.Data.Demand           ( isUsedOnce )
-import GHC.Builtin.Primitive.Operationss           ( PrimCall(..) )
+import GHC.Builtin.Primitive.Operations           ( PrimCall(..) )
 import GHC.Data.Unique.FiniteMap
 
 import Data.Maybe    (isJust, fromMaybe)

@@ -1,4 +1,4 @@
-module GHC.Builtin.Typess where
+module GHC.Builtin.Types where
 
 import GHC.Data.Var( TyVar, ArgFlag )
 import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )
