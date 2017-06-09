@@ -6,7 +6,7 @@
 
 {-# LANGUAGE DeriveDataTypeable #-}
 
-module ForeignCall (
+module GHC.Data.ForeignCall (
         ForeignCall(..), isSafeForeignCall,
         Safety(..), playSafe, playInterruptible,
 

@@ -8,7 +8,7 @@ The @Inst@ type: dictionaries or method instances
 
 {-# LANGUAGE CPP, MultiWayIf, TupleSections #-}
 
-module Inst (
+module GHC.IR.Haskell.TypeSystem.Instantiation (
        deeplySkolemise,
        topInstantiate, topInstantiateInferred, deeplyInstantiate,
        instCall, instDFunType, instStupidTheta,
