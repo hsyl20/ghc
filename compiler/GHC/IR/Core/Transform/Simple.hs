@@ -688,7 +688,7 @@ from making it a join point.
 If it is recursive, and uselessly marked INLINE, this will stop us
 making it a join point, which is annoying.  But occasionally
 (notably in class methods; see Note [Instances and loop breakers] in
-TcInstDcls) we mark recursive things as INLINE but the recursion
+GHC.IR.Haskell.TypeSystem.Instance) we mark recursive things as INLINE but the recursion
 unravels; so ignoring INLINE pragmas on recursive things isn't good
 either.
 

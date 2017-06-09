@@ -416,7 +416,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Deriving.Generic
         GHC.IR.Haskell.TypeSystem.Syntax
         TcHsType
-        TcInstDcls
+        GHC.IR.Haskell.TypeSystem.Instance
         TcMType
         GHC.IR.Haskell.TypeSystem.Validity
         GHC.IR.Haskell.TypeSystem.Matches

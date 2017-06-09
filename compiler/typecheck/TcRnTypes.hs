@@ -2939,7 +2939,7 @@ data SkolemInfo
                         -- If (C ty1 .. tyn) is the largest class from
                         --    which we made a superclass selection in the chain,
                         --    then TypeSize = sizeTypes [ty1, .., tyn]
-                        -- See Note [Solving superclass constraints] in TcInstDcls
+                        -- See Note [Solving superclass constraints] in GHC.IR.Haskell.TypeSystem.Instance
 
   | DataSkol            -- Bound at a data type declaration
   | FamInstSkol         -- Bound at a family instance decl
@@ -3117,7 +3117,7 @@ data CtOrigin
   | ScOrigin TypeSize   -- Typechecking superclasses of an instance declaration
                         -- If the instance head is C ty1 .. tyn
                         --    then TypeSize = sizeTypes [ty1, .., tyn]
-                        -- See Note [Solving superclass constraints] in TcInstDcls
+                        -- See Note [Solving superclass constraints] in GHC.IR.Haskell.TypeSystem.Instance
 
   | DerivOrigin         -- Typechecking deriving
   | DerivOriginDC DataCon Int

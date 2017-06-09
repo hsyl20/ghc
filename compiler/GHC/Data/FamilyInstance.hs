@@ -150,7 +150,7 @@ Now
 
 This eta reduction happens for data instances as well as newtype
 instances. Here we want to eta-reduce the data family axiom.
-All this is done in TcInstDcls.tcDataFamInstDecl.
+All this is done in GHC.IR.Haskell.TypeSystem.Instance.tcDataFamInstDecl.
 
 See also Note [Newtype eta] in TyCon.
 

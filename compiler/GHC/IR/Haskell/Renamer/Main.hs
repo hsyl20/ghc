@@ -650,7 +650,7 @@ checkCanonicalInstances cls poly_ty mbinds = do
                          quotes (text (lhs ++ " = " ++ rhs))
                        ]
 
-    -- stolen from TcInstDcls
+    -- stolen from GHC.IR.Haskell.TypeSystem.Instance
     instDeclCtxt1 :: LHsSigType Name -> SDoc
     instDeclCtxt1 hs_inst_ty
       = inst_decl_ctxt (ppr (getLHsInstDeclHead hs_inst_ty))
@@ -862,7 +862,7 @@ rnATInstDecls :: (Maybe (Name, [Name]) ->    -- The function that renames
 -- and the family instance declarations in an instance
 --
 -- NB: We allow duplicate associated-type decls;
---     See Note [Associated type instances] in TcInstDcls
+--     See Note [Associated type instances] in GHC.IR.Haskell.TypeSystem.Instance
 rnATInstDecls rnFun cls tv_ns at_insts
   = rnList (rnFun (Just (cls, tv_ns))) at_insts
     -- See Note [Renaming associated types]

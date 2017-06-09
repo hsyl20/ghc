@@ -11,7 +11,7 @@ GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration: Typecheck type and class decl
 module GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration (
         tcTyAndClassDecls, tcAddImplicits,
 
-        -- Functions used by TcInstDcls to check
+        -- Functions used by GHC.IR.Haskell.TypeSystem.Instance to check
         -- data/type family instance declarations
         kcDataDefn, tcConDecls, dataDeclChecks, checkValidTyCon,
         tcFamTyPats, tcTyFamInstEqn, famTyConShape,
@@ -30,7 +30,7 @@ import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Haskell.TypeSystem.TypeDeclaration
 import GHC.IR.Haskell.TypeSystem.ClassDeclaration
-import {-# SOURCE #-} TcInstDcls( tcInstDecls1 )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Instance( tcInstDecls1 )
 import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
@@ -1131,7 +1131,7 @@ kcTyFamInstEqn fam_tc_shape@(fam_tc_name,_,_,_)
                         pats (discardResult . (tcCheckLHsType hs_ty)) }
 
 tcTyFamInstEqn :: FamTyConShape -> Maybe ClsInstInfo -> LTyFamInstEqn Name -> TcM CoAxBranch
--- Needs to be here, not in TcInstDcls, because closed families
+-- Needs to be here, not in GHC.IR.Haskell.TypeSystem.Instance, because closed families
 -- (typechecked here) have TyFamInstEqns
 tcTyFamInstEqn fam_tc_shape@(fam_tc_name,_,_,_) mb_clsinfo
     (L loc (TyFamEqn { tfe_tycon = L _ eqn_tc_name
@@ -2662,7 +2662,7 @@ As noted in #12918, there are several reasons to do this:
    confusing error messages.
 
 2. Internally, GHC uses TypeApplications to instantiate the default method in
-   an instance. See Note [Default methods in instances] in TcInstDcls.
+   an instance. See Note [Default methods in instances] in GHC.IR.Haskell.TypeSystem.Instance.
    Thus, GHC needs to know exactly what the universally quantified type
    variables are, and when instantiated that way, the default method's type
    must match the expected type.

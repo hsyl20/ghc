@@ -175,7 +175,7 @@ not just use the Num one.  The instance we want is something like:
         (+) = ((+)@a)
         ...etc...
 There may be a coercion needed which we get from the tycon for the newtype
-when the dict is constructed in TcInstDcls.tcInstDecl2
+when the dict is constructed in GHC.IR.Haskell.TypeSystem.Instance.tcInstDecl2
 
 
 Note [Unused constructors and deriving clauses]
@@ -550,7 +550,7 @@ deriveStandalone (L loc (DerivDecl deriv_ty deriv_strat' overlap_mode))
               , text "theta:" <+> ppr theta
               , text "cls:" <+> ppr cls
               , text "tys:" <+> ppr inst_tys ]
-                -- C.f. TcInstDcls.tcLocalInstDecl1
+                -- C.f. GHC.IR.Haskell.TypeSystem.Instance.tcLocalInstDecl1
        ; checkTc (not (null inst_tys)) derivingNullaryErr
 
        ; let cls_tys = take (length inst_tys - 1) inst_tys
@@ -1685,7 +1685,7 @@ is used:
 In the latter case, we must take care to check if C has any associated type
 families with default instances, because -XDeriveAnyClass will never provide
 an implementation for them. We "fill in" the default instances using the
-tcATDefault function from TcClsDcl (which is also used in TcInstDcls to handle
+tcATDefault function from TcClsDcl (which is also used in GHC.IR.Haskell.TypeSystem.Instance to handle
 the empty instance declaration case).
 
 Note [Deriving strategies]

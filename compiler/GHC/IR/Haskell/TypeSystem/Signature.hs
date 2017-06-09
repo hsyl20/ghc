@@ -664,7 +664,7 @@ Some wrinkles
        forall ab. (Eq a, Ix b) => XXX
    regardless of XXX.  It's sort of polymorphic in XXX.  This is
    useful: we use the same wrapper to transform each of the class ops, as
-   well as the dict.  That's what goes on in TcInstDcls.mk_meth_spec_prags
+   well as the dict.  That's what goes on in GHC.IR.Haskell.TypeSystem.Instance.mk_meth_spec_prags
 -}
 
 tcSpecPrags :: Id -> [LSig Name]

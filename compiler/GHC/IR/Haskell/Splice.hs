@@ -1644,7 +1644,7 @@ reifyFamilyInstance is_poly_tvs inst@(FamInst { fi_flavor = flavor
                    -- eta-expand lhs types, because sometimes data/newtype
                    -- instances are eta-reduced; See Trac #9692
                    -- See Note [Eta reduction for data family axioms]
-                   -- in TcInstDcls
+                   -- in GHC.IR.Haskell.TypeSystem.Instance
                  (_rep_tc, rep_tc_args) = splitTyConApp rhs
                  etad_tyvars            = dropList rep_tc_args rep_tvs
                  etad_tys               = mkTyVarTys etad_tyvars

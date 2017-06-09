@@ -294,14 +294,14 @@ mkDictSelId name clas
          = base_info `setInlinePragInfo` alwaysInlinePragma
                      `setUnfoldingInfo`  mkInlineUnfoldingWithArity 1
                                            (mkDictSelRhs clas val_index)
-                   -- See Note [Single-method classes] in TcInstDcls
+                   -- See Note [Single-method classes] in GHC.IR.Haskell.TypeSystem.Instance
                    -- for why alwaysInlinePragma
 
          | otherwise
          = base_info `setRuleInfo` mkRuleInfo [rule]
                    -- Add a magic BuiltinRule, but no unfolding
                    -- so that the rule is always available to fire.
-                   -- See Note [ClassOp/DFun selection] in TcInstDcls
+                   -- See Note [ClassOp/DFun selection] in GHC.IR.Haskell.TypeSystem.Instance
 
     -- This is the built-in rule that goes
     --      op (dfT d1 d2) --->  opT d1 d2
@@ -1069,7 +1069,7 @@ mkDictFunId :: Name      -- Name to use for the dict fun;
             -> Class
             -> [Type]
             -> Id
--- Implements the DFun Superclass Invariant (see TcInstDcls)
+-- Implements the DFun Superclass Invariant (see GHC.IR.Haskell.TypeSystem.Instance)
 -- See Note [Dict funs and default methods]
 
 mkDictFunId dfun_name tvs theta clas tys

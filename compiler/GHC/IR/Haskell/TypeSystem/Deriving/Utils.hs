@@ -588,7 +588,7 @@ newDerivClsInst theta (DS { ds_name = dfun_name, ds_overlap = overlap_mode
 
 extendLocalInstEnv :: [ClsInst] -> TcM a -> TcM a
 -- Add new locally-defined instances; don't bother to check
--- for functional dependency errors -- that'll happen in TcInstDcls
+-- for functional dependency errors -- that'll happen in GHC.IR.Haskell.TypeSystem.Instance
 extendLocalInstEnv dfuns thing_inside
  = do { env <- getGblEnv
       ; let  inst_env' = extendInstEnvList (tcg_inst_env env) dfuns

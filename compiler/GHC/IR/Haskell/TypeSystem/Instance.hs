@@ -8,7 +8,7 @@ TcInstDecls: Typechecking instance declarations
 
 {-# LANGUAGE CPP #-}
 
-module TcInstDcls ( tcInstDecls1, tcInstDeclsDeriv, tcInstDecls2 ) where
+module GHC.IR.Haskell.TypeSystem.Instance ( tcInstDecls1, tcInstDeclsDeriv, tcInstDecls2 ) where
 
 #include "HsVersions.h"
 

@@ -85,7 +85,7 @@ import TcDefaults
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Rule
 import GHC.IR.Haskell.TypeSystem.Foreign
-import TcInstDcls
+import GHC.IR.Haskell.TypeSystem.Instance
 import GHC.IR.Interface.TypeCheck
 import TcMType
 import import GHC.IR.Haskell.TypeSystem.Type

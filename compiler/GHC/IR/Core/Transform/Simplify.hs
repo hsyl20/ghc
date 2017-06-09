@@ -3402,7 +3402,7 @@ simplUnfolding env top_lvl mb_cont id unf
                         -- Refresh the boring-ok flag, in case expr'
                         -- has got small. This happens, notably in the inlinings
                         -- for dfuns for single-method classes; see
-                        -- Note [Single-method classes] in TcInstDcls.
+                        -- Note [Single-method classes] in GHC.IR.Haskell.TypeSystem.Instance.
                         -- A test case is Trac #4138
                         in return (mkCoreUnfolding src is_top_lvl expr' guide')
                             -- See Note [Top-level flag on inline rules] in GHC.IR.Core.Transform.Unfolding

@@ -219,7 +219,7 @@ See also Note [Wrappers for data instance tycons] in GHC.Data.Id.Make
         DataFamInstTyCon T [Int] ax_ti
 
 * The axiom ax_ti may be eta-reduced; see
-  Note [Eta reduction for data family axioms] in TcInstDcls
+  Note [Eta reduction for data family axioms] in GHC.IR.Haskell.TypeSystem.Instance
 
 * The data constructor T2 has a wrapper (which is what the
   source-level "T2" invokes):
@@ -863,7 +863,7 @@ data AlgTyConFlav
                -- and R:T is the representation TyCon (ie this one)
                -- and a,b,c are the tyConTyVars of this TyCon
                --
-               -- BUT may be eta-reduced; see TcInstDcls
+               -- BUT may be eta-reduced; see GHC.IR.Haskell.TypeSystem.Instance
                --     Note [Eta reduction for data family axioms]
 
           -- Cached fields of the CoAxiom, but adjusted to

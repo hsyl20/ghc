@@ -227,7 +227,7 @@ data HsBindLR idL idR
         abs_exports :: [ABExport idL],
 
         -- | Evidence bindings
-        -- Why a list? See TcInstDcls
+        -- Why a list? See GHC.IR.Haskell.TypeSystem.Instance
         -- Note [Typechecking plan for instance declarations]
         abs_ev_binds :: [TcEvBinds],
 

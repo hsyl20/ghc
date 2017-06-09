@@ -606,7 +606,7 @@ we keep?  More subtle than you might think!
        - Always get rid of InstSC ones if possible, since they are less
          useful for solving.  If both are InstSC, choose the one with
          the smallest TypeSize
-         See Note [Solving superclass constraints] in TcInstDcls
+         See Note [Solving superclass constraints] in GHC.IR.Haskell.TypeSystem.Instance
 
        - Keep the one that has a non-trivial evidence binding.
             Example:  f :: (Eq a, Ord a) => blah

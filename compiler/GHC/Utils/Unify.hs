@@ -315,7 +315,7 @@ Note [Lists of different lengths are MaybeApart]
 It is unusual to call tcUnifyTys or tcUnifyTysFG with lists of different
 lengths. The place where we know this can happen is from compatibleBranches in
 FamInstEnv, when checking data family instances. Data family instances may be
-eta-reduced; see Note [Eta reduction for data family axioms] in TcInstDcls.
+eta-reduced; see Note [Eta reduction for data family axioms] in GHC.IR.Haskell.TypeSystem.Instance.
 
 We wish to say that
 

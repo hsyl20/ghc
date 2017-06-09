@@ -409,7 +409,7 @@ Each instance declaration gives rise to one dictionary function binding.
 
 The type checker makes up new source-code instance declarations
 (e.g. from 'deriving' or generic default methods --- see
-TcInstDcls.tcInstDecls1).  So we can't generate the names for
+GHC.IR.Haskell.TypeSystem.Instance.tcInstDecls1).  So we can't generate the names for
 dictionary functions in advance (we don't know how many we need).
 
 On the other hand for interface-file instance declarations, the decl

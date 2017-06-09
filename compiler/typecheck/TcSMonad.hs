@@ -1879,7 +1879,7 @@ matchableGivens loc_w pred (IS { inert_cans = inert_cans })
                     | otherwise      = Skolem
 
 prohibitedSuperClassSolve :: CtLoc -> CtLoc -> Bool
--- See Note [Solving superclass constraints] in TcInstDcls
+-- See Note [Solving superclass constraints] in GHC.IR.Haskell.TypeSystem.Instance
 prohibitedSuperClassSolve from_loc solve_loc
   | GivenOrigin (InstSC given_size) <- ctLocOrigin from_loc
   , ScOrigin wanted_size <- ctLocOrigin solve_loc

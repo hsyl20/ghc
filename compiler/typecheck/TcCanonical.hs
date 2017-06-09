@@ -427,7 +427,7 @@ mk_strict_superclasses rec_clss ev cls tys
                -- Trac #10335
 
        | GivenOrigin skol_info <- ctLocOrigin loc
-         -- See Note [Solving superclass constraints] in TcInstDcls
+         -- See Note [Solving superclass constraints] in GHC.IR.Haskell.TypeSystem.Instance
          -- for explantation of this transformation for givens
        = case skol_info of
             InstSkol -> loc { ctl_origin = GivenOrigin (InstSC size) }

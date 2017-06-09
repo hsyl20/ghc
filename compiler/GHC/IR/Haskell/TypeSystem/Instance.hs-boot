@@ -3,7 +3,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 -}
 
-module TcInstDcls ( tcInstDecls1 ) where
+module GHC.IR.Haskell.TypeSystem.Instance ( tcInstDecls1 ) where
 
 import GHC.IR.Haskell.Syntax
 import TcRnTypes
@@ -12,5 +12,5 @@ import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.Data.Name
 
 -- We need this because of the mutual recursion
--- between GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration and TcInstDcls
+-- between GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration and GHC.IR.Haskell.TypeSystem.Instance
 tcInstDecls1 :: [LInstDecl Name] -> TcM (TcGblEnv, [InstInfo Name], [DerivInfo])
