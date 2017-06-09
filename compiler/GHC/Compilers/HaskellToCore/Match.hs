@@ -8,7 +8,7 @@ The @match@ function
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.SyntaxToCore.Match
+module GHC.Compilers.HaskellToCore.Match
    ( match
    , matchEquations
    , matchWrapper
@@ -19,28 +19,28 @@ where
 
 #include "HsVersions.h"
 
-import {-#SOURCE#-} GHC.Compilers.SyntaxToCore.Expression (dsLExpr, dsSyntaxExpr)
+import {-#SOURCE#-} GHC.Compilers.HaskellToCore.Expression (dsLExpr, dsSyntaxExpr)
 
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcEvidence
 import TcRnMonad
-import GHC.Compilers.SyntaxToCore.Match.Check
+import GHC.Compilers.HaskellToCore.Match.Check
 import GHC.IR.Core.Syntax
 import GHC.Data.Literal
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax.Make
-import GHC.Compilers.SyntaxToCore.Monad
-import GHC.Compilers.SyntaxToCore.Binding
-import GHC.Compilers.SyntaxToCore.GuardedRHS
-import GHC.Compilers.SyntaxToCore.Utils
+import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compilers.HaskellToCore.Binding
+import GHC.Compilers.HaskellToCore.GuardedRHS
+import GHC.Compilers.HaskellToCore.Utils
 import GHC.Data.Id
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
-import GHC.Compilers.SyntaxToCore.Match.Constructor
-import GHC.Compilers.SyntaxToCore.Match.Literal
+import GHC.Compilers.HaskellToCore.Match.Constructor
+import GHC.Compilers.HaskellToCore.Match.Literal
 import GHC.Data.Type
 import GHC.Data.Coercion ( eqCoercion )
 import TcType ( toTcTypeBag )
@@ -100,7 +100,7 @@ is an embryonic @CoreExpr@ with a ``hole'' at the end for the
 final ``else expression''.
 \end{itemize}
 
-There is a data type, @EquationInfo@, defined in module @GHC.Compilers.SyntaxToCore.Monad@.
+There is a data type, @EquationInfo@, defined in module @GHC.Compilers.HaskellToCore.Monad@.
 
 An experiment with re-ordering this information about equations (in
 particular, having the patterns available in column-major order)
@@ -719,7 +719,7 @@ matchWrapper :: HsMatchContext Name         -- For shadowing warning messages
 \begin{itemize}
 \item @do@ patterns, but if the @do@ can fail
       it creates another equation if the match can fail
-      (see @GHC.Compilers.SyntaxToCore.Expression.doDo@ function)
+      (see @GHC.Compilers.HaskellToCore.Expression.doDo@ function)
 \item @let@ patterns, are treated by @matchSimply@
    List Comprension Patterns, are treated by @matchSimply@ also
 \end{itemize}

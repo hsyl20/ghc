@@ -29,7 +29,7 @@ module GHC.IR.Core.Transform.Vectorise.Monad.Base (
 import GHC.IR.Core.Transform.Vectorise.Builtins
 import GHC.IR.Core.Transform.Vectorise.Env
 
-import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.HaskellToCore.Monad
 import TcRnMonad
 import GHC.Utils.Error
 import GHC.Utils.Outputable

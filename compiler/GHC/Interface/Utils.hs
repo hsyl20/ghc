@@ -64,7 +64,7 @@ import GHC.Interface.Load
 import GHC.Interface.CoreToInterface
 import GHC.Config.Flags.Fingerprint
 
-import GHC.Compilers.SyntaxToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
+import GHC.Compilers.HaskellToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
 import GHC.Data.Annotation
 import GHC.IR.Core.Syntax

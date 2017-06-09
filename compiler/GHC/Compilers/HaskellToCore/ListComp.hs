@@ -8,26 +8,26 @@ Desugaring list comprehensions, monad comprehensions and array comprehensions
 
 {-# LANGUAGE CPP, NamedFieldPuns #-}
 
-module GHC.Compilers.SyntaxToCore.ListComp ( dsListComp, dsPArrComp, dsMonadComp ) where
+module GHC.Compilers.HaskellToCore.ListComp ( dsListComp, dsPArrComp, dsMonadComp ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Compilers.SyntaxToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
+import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Syntax.Make
 
-import GHC.Compilers.SyntaxToCore.Monad          -- the monadery used in the desugarer
-import GHC.Compilers.SyntaxToCore.Utils
+import GHC.Compilers.HaskellToCore.Monad          -- the monadery used in the desugarer
+import GHC.Compilers.HaskellToCore.Utils
 
 import GHC.Config.Flags
 import GHC.IR.Core.Utils
 import GHC.Data.Id
 import GHC.Data.Type
 import TysWiredIn
-import GHC.Compilers.SyntaxToCore.Match
+import GHC.Compilers.HaskellToCore.Match
 import PrelNames
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
@@ -148,7 +148,7 @@ dsTransStmt _ = panic "dsTransStmt: Not given a TransStmt"
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Compilers.SyntaxToCore.ListComp-ordinary]{Ordinary desugaring of list comprehensions}
+\subsection[GHC.Compilers.HaskellToCore.ListComp-ordinary]{Ordinary desugaring of list comprehensions}
 *                                                                      *
 ************************************************************************
 
@@ -299,7 +299,7 @@ deBindComp pat core_list1 quals core_list2 = do
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Compilers.SyntaxToCore.ListComp-foldr-build]{Foldr/Build desugaring of list comprehensions}
+\subsection[GHC.Compilers.HaskellToCore.ListComp-foldr-build]{Foldr/Build desugaring of list comprehensions}
 *                                                                      *
 ************************************************************************
 
@@ -587,7 +587,7 @@ dePArrComp (LetStmt lds@(L _ ds) : qs) pa cea = do
     let projBody = mkCoreLet (NonRec let'v clet) $
                    mkCoreTup [Var v, Var let'v]
         errTy    = exprType projBody
-        errMsg   = text "GHC.Compilers.SyntaxToCore.ListComp.dePArrComp: internal error!"
+        errMsg   = text "GHC.Compilers.HaskellToCore.ListComp.dePArrComp: internal error!"
     cerr <- mkErrorAppDs pAT_ERROR_ID errTy errMsg
     ccase <- matchSimply (Var v) (StmtCtxt PArrComp) pa projBody cerr
     let pa'    = mkLHsPatTup [pa, mkLHsPatTup (map nlVarPat xs)]
@@ -600,11 +600,11 @@ dePArrComp (LetStmt lds@(L _ ds) : qs) pa cea = do
 -- So, encountering one here is a bug.
 --
 dePArrComp (ParStmt {} : _) _ _ =
-  panic "GHC.Compilers.SyntaxToCore.ListComp.dePArrComp: malformed comprehension AST: ParStmt"
-dePArrComp (TransStmt {} : _) _ _ = panic "GHC.Compilers.SyntaxToCore.ListComp.dePArrComp: TransStmt"
-dePArrComp (RecStmt   {} : _) _ _ = panic "GHC.Compilers.SyntaxToCore.ListComp.dePArrComp: RecStmt"
+  panic "GHC.Compilers.HaskellToCore.ListComp.dePArrComp: malformed comprehension AST: ParStmt"
+dePArrComp (TransStmt {} : _) _ _ = panic "GHC.Compilers.HaskellToCore.ListComp.dePArrComp: TransStmt"
+dePArrComp (RecStmt   {} : _) _ _ = panic "GHC.Compilers.HaskellToCore.ListComp.dePArrComp: RecStmt"
 dePArrComp (ApplicativeStmt   {} : _) _ _ =
-  panic "GHC.Compilers.SyntaxToCore.ListComp.dePArrComp: ApplicativeStmt"
+  panic "GHC.Compilers.HaskellToCore.ListComp.dePArrComp: ApplicativeStmt"
 
 --  <<[:e' | qs | qss:]>> pa ea =
 --    <<[:e' | qss:]>> (pa, (x_1, ..., x_n))
@@ -619,7 +619,7 @@ dePArrParComp qss quals = do
   where
     deParStmt []             =
       -- empty parallel statement lists have no source representation
-      panic "GHC.Compilers.SyntaxToCore.ListComp.dePArrComp: Empty parallel list comprehension"
+      panic "GHC.Compilers.HaskellToCore.ListComp.dePArrComp: Empty parallel list comprehension"
     deParStmt (ParStmtBlock qs xs _:qss) = do        -- first statement
       let res_expr = mkLHsVarTuple xs
       cqs <- dsPArrComp (map unLoc qs ++ [mkLastStmt res_expr])
@@ -653,7 +653,7 @@ mkLambda :: Type                        -- type of the argument (not levity-poly
          -> DsM (CoreExpr, Type)
 mkLambda ty p ce = do
     v <- newSysLocalDs ty
-    let errMsg = text "GHC.Compilers.SyntaxToCore.ListComp.deLambda: internal error!"
+    let errMsg = text "GHC.Compilers.HaskellToCore.ListComp.deLambda: internal error!"
         ce'ty  = exprType ce
     cerr <- mkErrorAppDs pAT_ERROR_ID ce'ty errMsg
     res <- matchSimply (Var v) (StmtCtxt PArrComp) p ce cerr
@@ -667,7 +667,7 @@ parrElemType e  =
   case splitTyConApp_maybe (exprType e) of
     Just (tycon, [ty]) | tycon == parrTyCon -> ty
     _                                                     -> panic
-      "GHC.Compilers.SyntaxToCore.ListComp.parrElemType: not a parallel array type"
+      "GHC.Compilers.HaskellToCore.ListComp.parrElemType: not a parallel array type"
 
 -- Translation for monad comprehensions
 

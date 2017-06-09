@@ -1690,11 +1690,11 @@ with the following parts:
 
 Due to the two forall quantifiers and constraint contexts (either of
 which might be empty), pattern synonym type signatures are treated
-specially in GHC.Compilers.SyntaxToCore.Splices, `hsSyn/Convert.hs`, and
+specially in GHC.Compilers.HaskellToCore.Splices, `hsSyn/Convert.hs`, and
 `typecheck/TcSplice.hs`:
 
    (a) When desugaring a pattern synonym from GHC.IR.Haskell to TH.Dec in
-       GHC.Compilers.SyntaxToCore.Splices, we represent its *full* type signature in TH, i.e.:
+       GHC.Compilers.HaskellToCore.Splices, we represent its *full* type signature in TH, i.e.:
 
            ForallT univs reqs (ForallT exis provs ty)
               (where ty is the AST representation of t1 -> t2 -> ... -> tn -> t)

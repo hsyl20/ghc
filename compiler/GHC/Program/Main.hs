@@ -113,7 +113,7 @@ import GHC.Data.Name.Cache        ( initNameCache )
 import GHC.Interface.Load        ( ifaceStats, initExternalPackageState )
 import PrelInfo
 import GHC.Interface.Utils
-import GHC.Compilers.SyntaxToCore.Main
+import GHC.Compilers.HaskellToCore.Main
 import GHC.IR.Core.Transform.Pipeline
 import GHC.Interface.Tidy
 import GHC.Compilers.CoreToStg.Prepare

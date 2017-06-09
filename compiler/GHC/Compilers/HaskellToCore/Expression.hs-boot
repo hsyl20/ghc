@@ -1,7 +1,7 @@
-module GHC.Compilers.SyntaxToCore.Expression where
+module GHC.Compilers.HaskellToCore.Expression where
 import GHC.IR.Haskell.Syntax    ( HsExpr, LHsExpr, LHsLocalBinds, SyntaxExpr )
 import GHC.Data.Var      ( Id )
-import GHC.Compilers.SyntaxToCore.Monad  ( DsM )
+import GHC.Compilers.HaskellToCore.Monad  ( DsM )
 import GHC.IR.Core.Syntax  ( CoreExpr )
 
 dsExpr  :: HsExpr  Id -> DsM CoreExpr

@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.SyntaxToCore.Usage (
+module GHC.Compilers.HaskellToCore.Usage (
     -- * Dependency/fingerprinting code (used by GHC.Interface.Utils)
     mkUsageInfo, mkUsedNames, mkDependencies
     ) where

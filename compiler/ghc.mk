@@ -490,7 +490,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.IR.Haskell.ImportExport \
 	GHC.IR.Haskell.Literal \
 	GHC.IR.Haskell.PlaceHolder \
-	GHC.Compilers.SyntaxToCore.Match.Expr \
+	GHC.Compilers.HaskellToCore.Match.Expr \
 	GHC.IR.Haskell.Pattern \
 	GHC.IR.Haskell.Syntax\
 	GHC.IR.Haskell.Type \

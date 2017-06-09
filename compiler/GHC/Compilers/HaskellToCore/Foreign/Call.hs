@@ -7,7 +7,7 @@ Desugaring foreign calls
 -}
 
 {-# LANGUAGE CPP #-}
-module GHC.Compilers.SyntaxToCore.Foreign.Call
+module GHC.Compilers.HaskellToCore.Foreign.Call
         ( dsCCall
         , mkFCall
         , unboxArg
@@ -20,13 +20,13 @@ module GHC.Compilers.SyntaxToCore.Foreign.Call
 
 import GHC.IR.Core.Syntax
 
-import GHC.Compilers.SyntaxToCore.Monad
+import GHC.Compilers.HaskellToCore.Monad
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax.Make
 import GHC.Data.Id.Make
 import ForeignCall
 import GHC.Data.DataConstructor
-import GHC.Compilers.SyntaxToCore.Utils
+import GHC.Compilers.HaskellToCore.Utils
 
 import TcType
 import GHC.Data.Type

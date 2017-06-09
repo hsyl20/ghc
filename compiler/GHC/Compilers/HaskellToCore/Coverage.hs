@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP, NondecreasingIndentation, RecordWildCards #-}
 
-module GHC.Compilers.SyntaxToCore.Coverage (addTicksToBinds, hpcInitCode) where
+module GHC.Compilers.HaskellToCore.Coverage (addTicksToBinds, hpcInitCode) where
 
 import qualified GHC.Interactive.Interpreter as GHCi
 import GHCi.RemoteTypes

@@ -22,7 +22,7 @@ import GHC.Data.FastString
 
 templateHaskellNames :: [Name]
 -- The names that are implicitly mentioned by ``bracket''
--- Should stay in sync with the import list of GHC.Compilers.SyntaxToCore.Splices
+-- Should stay in sync with the import list of GHC.Compilers.HaskellToCore.Splices
 
 templateHaskellNames = [
     returnQName, bindQName, sequenceQName, newNameName, liftName,
