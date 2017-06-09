@@ -445,7 +445,7 @@ classInstances (InstEnvs { ie_global = pkg_ie, ie_local = home_ie, ie_visible = 
                 Nothing            -> []
 
 -- | Checks for an exact match of ClsInst in the instance environment.
--- We use this when we do signature checking in TcRnDriver
+-- We use this when we do signature checking in GHC.IR.Haskell.TypeSystem.Module
 memberInstEnv :: InstEnv -> ClsInst -> Bool
 memberInstEnv inst_env ins_item@(ClsInst { is_cls_nm = cls_nm } ) =
     maybe False (\(ClsIE items) -> any (identicalDFunType ins_item) items)

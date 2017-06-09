@@ -213,7 +213,7 @@ Here again 'MkD' is used.
 
 So we really have wait until the type checker to decide what is used.
 That's why tcForeignImports and tecForeignExports return a (Bag GRE)
-for the newtype constructors they see. Then TcRnDriver can add them
+for the newtype constructors they see. Then GHC.IR.Haskell.TypeSystem.Module can add them
 to the module's usages.
 
 

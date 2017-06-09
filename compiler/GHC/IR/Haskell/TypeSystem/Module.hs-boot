@@ -1,4 +1,4 @@
-module TcRnDriver where
+module GHC.IR.Haskell.TypeSystem.Module where
 
 import GHC.Config.Flags (DynFlags)
 import GHC.Data.Type (TyThing)

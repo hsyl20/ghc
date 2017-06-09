@@ -1175,7 +1175,7 @@ This has the *side effect* of also zonking the `a' in the deferred equality
 constraint).
 
 Finally, the equality (with the zonked `a') will be handed back to the
-simplifier by TcRnDriver.tcRnSrcDecls calling GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.tcSimplifyTop.
+simplifier by GHC.IR.Haskell.TypeSystem.Module.tcRnSrcDecls calling GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.tcSimplifyTop.
 If we zonk `a' with a regular type variable, we will have this regular type
 variable now floating around in the simplifier, which in many places assumes to
 only see proper TcTyVars.

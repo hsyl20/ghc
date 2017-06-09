@@ -64,7 +64,7 @@ import GHC.Utils
 import Control.Monad
 import Data.List (find, foldl')
 
-import {-# SOURCE #-} TcRnDriver
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Module
 
 #include "HsVersions.h"
 
@@ -112,7 +112,7 @@ checkHsigIface tcg_env gr sig_iface
         [ ppr sig_type_env, ppr sig_insts, ppr sig_exports ]
     mapM_ check_export (map availName sig_exports)
     unless (null sig_fam_insts) $
-        panic ("TcRnDriver.checkHsigIface: Cannot handle family " ++
+        panic ("GHC.IR.Haskell.TypeSystem.Module.checkHsigIface: Cannot handle family " ++
                "instances in hsig files yet...")
     -- Delete instances so we don't look them up when
     -- checking instance satisfiability
@@ -266,7 +266,7 @@ findExtraSigImports' hsc_env HsigFile modname =
 findExtraSigImports' _ _ _ = return emptyUniqDSet
 
 -- | 'findExtraSigImports', but in a convenient form for "GHC.Program.Make" and
--- "TcRnDriver".
+-- "GHC.IR.Haskell.TypeSystem.Module".
 findExtraSigImports :: HscEnv -> HscSource -> ModuleName
                     -> IO [(Maybe FastString, Located ModuleName)]
 findExtraSigImports hsc_env hsc_src modname = do
@@ -275,7 +275,7 @@ findExtraSigImports hsc_env hsc_src modname = do
            | mod_name <- uniqDSetToList extra_requirements ]
 
 -- A version of 'implicitRequirements'' which is more friendly
--- for "GHC.Program.Make" and "TcRnDriver".
+-- for "GHC.Program.Make" and "GHC.IR.Haskell.TypeSystem.Module".
 implicitRequirements :: HscEnv
                      -> [(Maybe FastString, Located ModuleName)]
                      -> IO [(Maybe FastString, Located ModuleName)]

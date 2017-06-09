@@ -13,7 +13,7 @@ https://ghc.haskell.org/trac/ghc/wiki/Commentary/Compiler/TypeChecker
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module TcRnDriver (
+module GHC.IR.Haskell.TypeSystem.Module (
         tcRnStmt, tcRnExpr, TcRnExprMode(..), tcRnType,
         tcRnImportDecls,
         tcRnLookupRdrName,
@@ -740,7 +740,7 @@ checkHiBootIface'
 
                 -- Check for no family instances
         ; unless (null boot_fam_insts) $
-            panic ("TcRnDriver.checkHiBootIface: Cannot handle family " ++
+            panic ("GHC.IR.Haskell.TypeSystem.Module.checkHiBootIface: Cannot handle family " ++
                    "instances in boot files yet...")
             -- FIXME: Why?  The actual comparison is not hard, but what would
             --        be the equivalent to the dfun bindings returned for class
@@ -2082,7 +2082,7 @@ tcGhciStmts stmts
          } ;
 
         -- OK, we're ready to typecheck the stmts
-        traceTc "TcRnDriver.tcGhciStmts: tc stmts" empty ;
+        traceTc "GHC.IR.Haskell.TypeSystem.Module.tcGhciStmts: tc stmts" empty ;
         ((tc_stmts, ids), lie) <- captureTopConstraints $
                                   tc_io_stmts $ \ _ ->
                                   mapM tcLookupId names  ;
@@ -2090,11 +2090,11 @@ tcGhciStmts stmts
                         -- where they will all be in scope
 
         -- Simplify the context
-        traceTc "TcRnDriver.tcGhciStmts: simplify ctxt" empty ;
+        traceTc "GHC.IR.Haskell.TypeSystem.Module.tcGhciStmts: simplify ctxt" empty ;
         const_binds <- checkNoErrs (simplifyInteractive lie) ;
                 -- checkNoErrs ensures that the plan fails if context redn fails
 
-        traceTc "TcRnDriver.tcGhciStmts: done" empty ;
+        traceTc "GHC.IR.Haskell.TypeSystem.Module.tcGhciStmts: done" empty ;
         let {   -- mk_return builds the expression
                 --      returnIO @ [()] [coerce () x, ..,  coerce () z]
                 --

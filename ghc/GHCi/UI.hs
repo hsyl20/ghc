@@ -1841,7 +1841,7 @@ exceptT :: Applicative m => Either e a -> ExceptT e m a
 exceptT = ExceptT . pure
 
 -----------------------------------------------------------------------------
--- | @:type@ command. See also Note [TcRnExprMode] in TcRnDriver.
+-- | @:type@ command. See also Note [TcRnExprMode] in GHC.IR.Haskell.TypeSystem.Module.
 
 typeOfExpr :: String -> InputT GHCi ()
 typeOfExpr str = handleSourceError GHC.printException $ do

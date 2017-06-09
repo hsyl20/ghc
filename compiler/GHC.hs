@@ -282,7 +282,7 @@ module GHC (
 import GHC.IR.ByteCode.Types
 import GHC.Interactive.Eval
 import GHC.Interactive.Types
-import TcRnDriver       ( runTcInteractive )
+import GHC.IR.Haskell.TypeSystem.Module       ( runTcInteractive )
 import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 

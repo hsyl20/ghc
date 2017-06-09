@@ -28,7 +28,7 @@ import GHC.IR.Haskell.Lexer
 import GHC.Monad
 import GHC.Config.Flags
 import GHC.IR.Haskell.TypeSystem
-import TcRnDriver
+import GHC.IR.Haskell.TypeSystem.Module
 import GHC.Data.Module
 import GHC.Types
 import GHC.Data.StringBuffer

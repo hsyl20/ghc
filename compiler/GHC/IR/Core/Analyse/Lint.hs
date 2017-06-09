@@ -375,7 +375,7 @@ interactiveInScope :: HscEnv -> [Var]
 interactiveInScope hsc_env
   = tyvars ++ ids
   where
-    -- C.f. TcRnDriver.setInteractiveContext, Desugar.deSugarExpr
+    -- C.f. GHC.IR.Haskell.TypeSystem.Module.setInteractiveContext, Desugar.deSugarExpr
     ictxt                   = hsc_IC hsc_env
     (cls_insts, _fam_insts) = ic_instances ictxt
     te1    = mkTypeEnvWithImplicits (ic_tythings ictxt)

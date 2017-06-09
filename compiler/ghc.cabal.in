@@ -422,7 +422,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Matches
         GHC.IR.Haskell.TypeSystem.Pattern
         GHC.IR.Haskell.TypeSystem.PatternSynonym
-        TcRnDriver
+        GHC.IR.Haskell.TypeSystem.Module
         GHC.IR.Haskell.TypeSystem.ModuleSignature
         GHC.IR.Haskell.TypeSystem.Export
         GHC.IR.Haskell.TypeSystem

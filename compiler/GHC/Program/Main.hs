@@ -106,7 +106,7 @@ import GHC.Data.StringBuffer
 import GHC.IR.Haskell.Parser
 import GHC.IR.Haskell.Lexer as Lexer
 import GHC.Data.SrcLoc
-import TcRnDriver
+import GHC.IR.Haskell.TypeSystem.Module
 import GHC.IR.Interface.TypeCheck          ( typecheckIface )
 import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Name.Cache        ( initNameCache )
@@ -1597,7 +1597,7 @@ hscDeclsWithLocation hsc_env0 str source linenumber =
             -- that might later be looked up by name.  But we can exclude
             --    - DFunIds, which are in 'cls_insts' (see Note [ic_tythings] in GHC.Types
             --    - Implicit Ids, which are implicit in tcs
-            -- c.f. TcRnDriver.runTcInteractive, which reconstructs the TypeEnv
+            -- c.f. GHC.IR.Haskell.TypeSystem.Module.runTcInteractive, which reconstructs the TypeEnv
 
         new_tythings = map AnId ext_ids ++ map ATyCon tcs ++ map (AConLike . PatSynCon) patsyns
         ictxt        = hsc_IC hsc_env
@@ -1624,7 +1624,7 @@ hscAddSptEntries hsc_env entries = do
 
   To support fixity declarations on types defined within GHCi (as requested
   in #10018) we record the fixity environment in InteractiveContext.
-  When we want to evaluate something TcRnDriver.runTcInteractive pulls out this
+  When we want to evaluate something GHC.IR.Haskell.TypeSystem.Module.runTcInteractive pulls out this
   fixity environment and uses it to initialize the global typechecker environment.
   After the typechecker has finished its business, an updated fixity environment
   (reflecting whatever fixity declarations were present in the statements we

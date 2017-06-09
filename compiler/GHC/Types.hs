@@ -1439,7 +1439,7 @@ Where do interactively-bound Ids come from?
     These start with an Internal Name because a Stmt is a local
     construct, so the renamer naturally builds an Internal name for
     each of its binders.  Then in tcRnStmt they are externalised via
-    TcRnDriver.externaliseAndTidyId, so they get Names like Ghic4.foo.
+    GHC.IR.Haskell.TypeSystem.Module.externaliseAndTidyId, so they get Names like Ghic4.foo.
 
   - Ids bound by the debugger etc have Names constructed by
     GHC.IR.Interface.Environment.newInteractiveBinder; at the call sites it is followed by
