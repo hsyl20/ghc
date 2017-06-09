@@ -56,7 +56,7 @@ import GHC.IR.Interface.TypeCheck
 import TcSimplify ( solveEqualities )
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkSigType )
-import Inst   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
+import GHC.IR.Haskell.TypeSystem.Instantiation   ( tcInstBinders, tcInstBindersX, tcInstBinderX )
 import GHC.Data.Type
 import GHC.Data.Kind
 import GHC.Data.RdrName( lookupLocalRdrOcc )

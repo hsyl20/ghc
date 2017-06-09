@@ -32,7 +32,7 @@ import import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidType )
 import GHC.IR.Haskell.TypeSystem.Unify( tcSkolemise, unifyType, noThing )
-import Inst( topInstantiate )
+import GHC.IR.Haskell.TypeSystem.Instantiation( topInstantiate )
 import GHC.IR.Haskell.TypeSystem.Environment( tcLookupId )
 import GHC.IR.Haskell.TypeSystem.Evidence( HsWrapper, (<.>) )
 import GHC.Data.Type( mkTyVarBinders )

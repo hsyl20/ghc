@@ -72,7 +72,7 @@ import GHC.Data.Types
 import FamInst
 import GHC.Data.FamilyInstance
 import GHC.Data.ClassInstance
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Name.Environment
 import PrelNames
 import TysWiredIn

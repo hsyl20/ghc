@@ -26,7 +26,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.TypeDeclaration
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.IR.Interface.TypeCheck
 import TcMType
 import import GHC.IR.Haskell.TypeSystem.Type

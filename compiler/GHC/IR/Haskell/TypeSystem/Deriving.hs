@@ -24,7 +24,7 @@ import GHC.IR.Haskell.TypeSystem.ClassDeclaration( tcATDefault, tcMkDeclCtxt )
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses                       -- Deriv stuff
 import GHC.Data.ClassInstance
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.FamilyInstance
 import TcHsType
 import TcMType

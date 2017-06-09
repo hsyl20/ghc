@@ -23,7 +23,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id( mkLocalId )
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Var.Set

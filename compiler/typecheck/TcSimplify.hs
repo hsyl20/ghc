@@ -22,7 +22,7 @@ import GHC.Data.Class         ( Class, classKey, classTyCon )
 import GHC.Config.Flags      ( WarningFlag ( Opt_WarnMonomorphism )
                      , WarnReason ( Reason )
                      , DynFlags( solverIterations ) )
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.Data.Name

@@ -18,7 +18,7 @@ import GHC.Data.Class
 import GHC.Data.DataConstructor
 -- import GHC.Config.Flags
 import GHC.Utils.Error
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Utils.Outputable
 import PrelNames
 import GHC.IR.Haskell.TypeSystem.Deriving.Utils

@@ -45,7 +45,7 @@ import GHC.IR.Haskell.Renamer.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo
 import GHC.IR.Interface.Environment( externaliseName )
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Matches
-import Inst( deeplyInstantiate )
+import GHC.IR.Haskell.TypeSystem.Instantiation( deeplyInstantiate )
 import GHC.IR.Haskell.TypeSystem.Unify( checkConstraints )
 import GHC.IR.Haskell.Renamer.Type
 import GHC.IR.Haskell.Renamer.Expression
@@ -124,7 +124,7 @@ import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Data.Bag
-import Inst (tcGetInsts)
+import GHC.IR.Haskell.TypeSystem.Instantiation (tcGetInsts)
 import qualified GHC.LanguageExtensions as LangExt
 import Data.Data ( Data )
 import GHC.IR.Haskell.PrettyPrint.Dump

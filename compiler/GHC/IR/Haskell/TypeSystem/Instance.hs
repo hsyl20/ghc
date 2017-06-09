@@ -26,7 +26,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax    ( zonkTyBndrsX, emptyZonkEnv
 import TcMType
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Interface.BuildTypeAndClass
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.ClassInstance
 import FamInst
 import GHC.Data.FamilyInstance

@@ -21,7 +21,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Haskell.TypeSystem.Signature( TcPragEnv, lookupPragEnv, addInlinePrags )
 import TcRnMonad
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Name

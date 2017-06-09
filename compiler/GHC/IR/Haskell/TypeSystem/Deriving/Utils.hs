@@ -29,7 +29,7 @@ import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Types (lookupFixity, mi_fix)
 import GHC.IR.Haskell.Syntax
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.ClassInstance
 import GHC.IR.Interface.Load (loadInterfaceForName)
 import GHC.Data.Module (getModule)

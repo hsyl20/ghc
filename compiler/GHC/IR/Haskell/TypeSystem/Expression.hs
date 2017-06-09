@@ -26,7 +26,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.BasicTypes
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.IR.Haskell.TypeSystem.Binding          ( chooseInferredQuantifiers, tcLocalBinds )
 import GHC.IR.Haskell.TypeSystem.Signature           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )

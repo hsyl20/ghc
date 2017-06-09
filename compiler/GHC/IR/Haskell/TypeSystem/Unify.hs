@@ -49,7 +49,7 @@ import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Name ( isSystemName )
-import Inst
+import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Type.Constructor
 import TysWiredIn
 import TysPrim( tYPE )
