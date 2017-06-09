@@ -2,7 +2,7 @@
 (c) The University of Glasgow 2006
 (c) The AQUA Project, Glasgow University, 1998
 
-\section[TcForeign]{Typechecking \tr{foreign} declarations}
+\section[GHC.IR.Haskell.TypeSystem.Foreign]{Typechecking \tr{foreign} declarations}
 
 A foreign declaration is used to either give an externally
 implemented function a Haskell type (and calling interface) or
@@ -14,7 +14,7 @@ module checks to see if a foreign declaration has got a legal type.
 
 {-# LANGUAGE CPP #-}
 
-module TcForeign
+module GHC.IR.Haskell.TypeSystem.Foreign
         ( tcForeignImports
         , tcForeignExports
 

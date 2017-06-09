@@ -84,7 +84,7 @@ import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )
 import TcDefaults
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Rule
-import TcForeign
+import GHC.IR.Haskell.TypeSystem.Foreign
 import TcInstDcls
 import GHC.IR.Interface.TypeCheck
 import TcMType

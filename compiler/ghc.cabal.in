@@ -410,7 +410,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Deriving.Utils
         GHC.IR.Haskell.TypeSystem.Environment
         GHC.IR.Haskell.TypeSystem.Expression
-        TcForeign
+        GHC.IR.Haskell.TypeSystem.Foreign
         TcGenDeriv
         TcGenFunctor
         TcGenGenerics
