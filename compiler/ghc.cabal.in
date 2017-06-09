@@ -139,7 +139,6 @@ Library
 
     hs-source-dirs:
         ./
-        prelude
 
     Exposed-Modules:
         GHC.Program.BackPack.Main

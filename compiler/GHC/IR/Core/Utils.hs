@@ -1484,7 +1484,7 @@ case) so all is well.  Now the FloatOut pass does a binder-swap (for
 very good reasons), changing to
    case x of y -> let v = dataToTag# x in ...
 
-See also Note [dataToTag#] in primops.txt.pp.
+See also Note [dataToTag#] in GHC/Builtin/Primitive/GHC/Builtin/Primitive/primops.txt.pp.
 
 Bottom line:
   * in exprOkForSpeculation we simply ignore all lifted arguments.

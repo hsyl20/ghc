@@ -92,7 +92,7 @@ There are several reasons why an Id might appear in the wiredInIds:
     Haskell at all, although the can be defined in Core.  They have
     compulsory unfoldings, so they are always inlined and they  have
     no definition site.  Their home module is GHC.Prim, so they
-    also have a description in primops.txt.pp, where they are called
+    also have a description in GHC/Builtin/Primitive/GHC/Builtin/Primitive/primops.txt.pp, where they are called
     'pseudoops'.
 
 (2) The 'error' function, eRROR_ID, is wired in because we don't yet have

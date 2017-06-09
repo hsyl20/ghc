@@ -540,7 +540,7 @@ Note [Primop wrappers]
 ~~~~~~~~~~~~~~~~~~~~~~
 Currently hasNoBinding claims that PrimOpIds don't have a curried
 function definition.  But actually they do, in GHC.PrimopWrappers,
-which is auto-generated from prelude/primops.txt.pp.  So actually, hasNoBinding
+which is auto-generated from prelude/GHC/Builtin/Primitive/GHC/Builtin/Primitive/primops.txt.pp.  So actually, hasNoBinding
 could return 'False' for PrimOpIds.
 
 But we'd need to add something in CoreToStg to swizzle any unsaturated
