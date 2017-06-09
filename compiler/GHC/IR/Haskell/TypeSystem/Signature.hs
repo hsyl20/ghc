@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module TcSigs(
+module GHC.IR.Haskell.TypeSystem.Signature(
        TcSigInfo(..),
        TcIdSigInfo(..), TcIdSigInst,
        TcPatSynInfo(..),

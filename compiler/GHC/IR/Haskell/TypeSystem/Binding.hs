@@ -24,7 +24,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.IR.Haskell.Syntax
 import GHC.Types( isHsBootOrSig )
-import TcSigs
+import GHC.IR.Haskell.TypeSystem.Signature
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify

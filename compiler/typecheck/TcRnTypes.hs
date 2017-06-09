@@ -1418,7 +1418,7 @@ data TcIdSigInst
                --   the type and hence have a different unique.
                -- No need to keep track of whether they are truly lexically
                --   scoped because the renamer has named them uniquely
-               -- See Note [Binding scoped type variables] in TcSigs
+               -- See Note [Binding scoped type variables] in GHC.IR.Haskell.TypeSystem.Signature
 
          , sig_inst_theta  :: TcThetaType
                -- Instantiated theta.  In the case of a

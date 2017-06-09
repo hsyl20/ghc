@@ -19,7 +19,7 @@ import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcSyntaxOp, tcSynt
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcSigs( TcPragEnv, lookupPragEnv, addInlinePrags )
+import GHC.IR.Haskell.TypeSystem.Signature( TcPragEnv, lookupPragEnv, addInlinePrags )
 import TcRnMonad
 import Inst
 import GHC.Data.Id

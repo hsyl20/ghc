@@ -28,7 +28,7 @@ import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.BasicTypes
 import Inst
 import GHC.IR.Haskell.TypeSystem.Binding          ( chooseInferredQuantifiers, tcLocalBinds )
-import TcSigs           ( tcUserTypeSig, tcInstSig )
+import GHC.IR.Haskell.TypeSystem.Signature           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )
 import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
 import GHC.Data.FamilyInstance       ( FamInstEnvs )

@@ -402,7 +402,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Annotation
         GHC.IR.Haskell.TypeSystem.Arrow
         GHC.IR.Haskell.TypeSystem.Binding
-        TcSigs
+        GHC.IR.Haskell.TypeSystem.Signature
         TcClassDcl
         TcDefaults
         GHC.IR.Haskell.TypeSystem.Deriving
