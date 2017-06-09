@@ -1,6 +1,6 @@
 module HomePackagePlugin where
 
-import GHC.Plugins
+import GHC.Plugin
 
 plugin :: Plugin
 plugin = defaultPlugin {

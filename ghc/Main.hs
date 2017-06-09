@@ -32,7 +32,7 @@ import GHCi.UI          ( interactiveUI, ghciWelcomeMsg, defaultGhciSettings )
 -- Frontend plugins
 #if defined(GHCI)
 import GHC.Interactive.DynamicLoading   ( loadFrontendPlugin )
-import GHC.Plugins.Types
+import GHC.Plugin.Types
 #else
 import GHC.Interactive.DynamicLoading   ( pluginError )
 #endif

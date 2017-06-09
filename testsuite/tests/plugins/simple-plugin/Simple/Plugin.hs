@@ -3,7 +3,7 @@
 module Simple.Plugin(plugin) where
 
 import GHC.Data.Unique.FiniteMap
-import GHC.Plugins
+import GHC.Plugin
 import qualified GHC.Utils.Error
 
 -- For annotation tests

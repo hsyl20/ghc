@@ -82,7 +82,9 @@ module GHC.Data.Var (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Data.Types( Type, Kind, pprKind )
-import {-# SOURCE #-} TcType( TcTyVarDetails, pprTcTyVarDetails, vanillaSkolemTv )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Type( TcTyVarDetails, 
+                                                      pprTcTyVarDetails,
+                                                      vanillaSkolemTv )
 import {-# SOURCE #-} GHC.Data.Id.Info ( IdDetails, IdInfo, coVarDetails,
                                          isCoVarDetails, vanillaIdInfo,
                                          pprIdDetails )

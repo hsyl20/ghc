@@ -1,6 +1,6 @@
 module FrontendPlugin where
 
-import GHC.Plugins
+import GHC.Plugin
 import qualified GHC
 import GHC              ( Ghc, LoadHowMuch(..) )
 

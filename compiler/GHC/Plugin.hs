@@ -3,12 +3,12 @@
 -- | This module is not used by GHC itself.  Rather, it exports all of
 -- the functions and types you are likely to need when writing a
 -- plugin for GHC. So authors of plugins can probably get away simply
--- with saying "import GHC.Plugins".
+-- with saying "import GHC.Plugin".
 --
 -- Particularly interesting modules for plugin writers include
 -- "GHC.IR.Core.Syntax" and "GHC.IR.Core.Monad".
-module GHC.Plugins
-   ( module GHC.Plugins.Types
+module GHC.Plugin
+   ( module GHC.Plugin.Types
    , module GHC.Data.RdrName
    , module GHC.Data.OccName
    , module GHC.Data.Name
@@ -52,7 +52,7 @@ module GHC.Plugins
 where
 
 -- Plugin stuff itself
-import GHC.Plugins.Types
+import GHC.Plugin.Types
 
 -- Variable naming
 import GHC.Data.RdrName

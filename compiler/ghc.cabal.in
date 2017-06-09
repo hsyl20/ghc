@@ -319,7 +319,7 @@ Library
         GHC.Utils.Finder
         GHC
         GHC.Program.Make
-        GHC.Plugins
+        GHC.Plugin
         GHC.Interactive.DynamicLoading
         GHC.IR.Haskell.Parser.HeaderInfo
         GHC.Program.Main
@@ -330,8 +330,8 @@ Library
         GHC.Packages.PackageConfig
         GHC.Packages
         GHC.Config.Platform.Constants
-        GHC.Plugins.Types
-        GHC.Plugins.TypeChecker
+        GHC.Plugin.Types
+        GHC.Plugin.TypeChecker
         GHC.Utils.PrettyPrint.TyThing
         GHC.Utils.CodeGen.StaticPtrTable
         GHC.Utils.SysTools

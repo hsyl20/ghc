@@ -58,7 +58,7 @@ import qualified GHC.LanguageExtensions as LangExt
 
 #if defined(GHCI)
 import GHC.Interactive.DynamicLoading   ( loadPlugins )
-import GHC.Plugins.Types          ( installCoreToDos )
+import GHC.Plugin.Types          ( installCoreToDos )
 #else
 import GHC.Interactive.DynamicLoading   ( pluginError )
 #endif

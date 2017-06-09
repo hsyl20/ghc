@@ -119,7 +119,7 @@ module GHC.IR.Haskell.TypeSystem.Constraint.Solver (
 
 import GHC.Types
 
-import qualified Inst as TcM
+import qualified GHC.IR.Haskell.TypeSystem.Instantiation as TcM
 import GHC.Data.ClassInstance
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance

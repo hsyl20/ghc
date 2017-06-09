@@ -1,7 +1,7 @@
 module T11462_Plugin(plugin) where
 
 import GHC.IR.Haskell.TypeSystem ( TcPlugin(..), TcPluginResult(..) )
-import GHC.Plugins.Types ( defaultPlugin, Plugin(..), CommandLineOption )
+import GHC.Plugin.Types ( defaultPlugin, Plugin(..), CommandLineOption )
 
 plugin :: Plugin
 plugin = defaultPlugin { tcPlugin = Just . thePlugin }
