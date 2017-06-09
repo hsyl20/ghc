@@ -4,7 +4,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveFunctor #-}
 
-module GHC.TypeSystem.Unify (
+module GHC.TypeSystem.Unify.Utils.Utils (
         tcMatchTy, tcMatchTyKi,
         tcMatchTys, tcMatchTyKis,
         tcMatchTyX, tcMatchTysX, tcMatchTyKisX,

@@ -454,7 +454,7 @@ Library
         GHC.Data.Kind
         GHC.Data.Type
         GHC.Data.Types
-        GHC.TypeSystem.Unify
+        GHC.TypeSystem.Unify.Utils
         GHC.Data.Bag
         GHC.Utils.Binary
         GHC.Data.Bool.Formula

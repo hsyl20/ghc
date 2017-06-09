@@ -36,7 +36,7 @@ import GHC.Rename.Utils    ( bindLocalNamesFV )
 import GHC.Rename.Main   ( addTcgDUs )
 import GHC.Data.Available
 
-import GHC.TypeSystem.Unify( tcUnifyTy )
+import GHC.TypeSystem.Unify.Utils.Utils( tcUnifyTy )
 import GHC.Data.BasicTypes ( DerivStrategy(..) )
 import GHC.Data.Class
 import GHC.Data.Type

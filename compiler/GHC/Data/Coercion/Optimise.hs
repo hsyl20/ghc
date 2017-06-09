@@ -27,7 +27,7 @@ import GHC.Data.FamilyInstance ( flattenTys )
 import GHC.Data.Pair
 import GHC.Data.List.SetOps ( getNth )
 import GHC.Utils
-import GHC.TypeSystem.Unify
+import GHC.TypeSystem.Unify.Utils.Utils
 import GHC.Data.ClassInstance
 import Control.Monad   ( zipWithM )
 
