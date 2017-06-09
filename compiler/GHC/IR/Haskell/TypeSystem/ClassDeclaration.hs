@@ -28,7 +28,7 @@ import GHC.IR.Haskell.TypeSystem.UserType
 import TcMType
 import GHC.Data.Type     ( getClassPredTys_maybe, piResultTys )
 import GHC.IR.Haskell.TypeSystem.Type
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Program.Driver.Phases (HscSource(..))
 import GHC.IR.Interface.BuildTypeAndClass( TcMethInfo )
 import GHC.Data.Class

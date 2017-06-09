@@ -16,7 +16,7 @@ module GHC.IR.Haskell.Renamer.Utils.Unbound ( mkUnboundName
 
 import GHC.Data.RdrName
 import GHC.Types
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Name
 import GHC.Data.Module
 import GHC.Data.SrcLoc

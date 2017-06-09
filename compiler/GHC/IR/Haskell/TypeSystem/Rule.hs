@@ -11,7 +11,7 @@ GHC.IR.Haskell.TypeSystem.Rule: Typechecking transformation rules
 module GHC.IR.Haskell.TypeSystem.Rule ( tcRules ) where
 
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type

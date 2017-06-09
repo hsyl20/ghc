@@ -291,7 +291,7 @@ import GHC.Program.Main
 import GHC.Program.Make
 import GHC.Program.Driver.Pipeline   ( compileOne' )
 import GHC.Monad
-import TcRnMonad        ( finalSafeMode, fixSafeInstances )
+import GHC.IR.Haskell.TypeSystem        ( finalSafeMode, fixSafeInstances )
 import GHC.IR.Haskell.TypeSystem.Types
 import GHC.Packages
 import GHC.Data.Name.Set

@@ -4,7 +4,7 @@ import GHC.Data.Name      ( Name )
 import GHC.Data.Id        ( Id )
 import GHC.IR.Haskell.Syntax ( PatSynBind, LHsBinds )
 import GHC.IR.Haskell.TypeSystem.Types ( TcM, TcPatSynInfo )
-import TcRnMonad ( TcGblEnv)
+import GHC.IR.Haskell.TypeSystem ( TcGblEnv)
 import GHC.Utils.Outputable ( Outputable )
 
 tcInferPatSynDecl :: PatSynBind Name Name

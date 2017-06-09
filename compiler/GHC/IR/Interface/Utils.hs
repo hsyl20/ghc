@@ -77,7 +77,7 @@ import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.Syntax
 import GHC.Types
 import GHC.Utils.Finder

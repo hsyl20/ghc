@@ -23,7 +23,7 @@ import THNames( liftStringName, liftName )
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.BasicTypes
 import GHC.IR.Haskell.TypeSystem.Instantiation

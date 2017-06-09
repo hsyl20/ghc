@@ -41,7 +41,7 @@ module GHC.IR.Haskell.TypeSystem.Syntax (
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import PrelNames
 import GHC.IR.Haskell.TypeSystem.Type
 import TcMType

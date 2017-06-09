@@ -19,7 +19,7 @@ import TcMType
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Pattern
 import GHC.IR.Haskell.TypeSystem.Unify
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id( mkLocalId )

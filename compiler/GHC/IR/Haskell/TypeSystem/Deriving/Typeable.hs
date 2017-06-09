@@ -15,7 +15,7 @@ import GHC.IR.Interface.Environment( newGlobalBinder )
 import GHC.Data.Types( Type(..), TyLit(..) )
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Evidence ( mkWpTyApps )
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Types ( lookupId )
 import PrelNames
 import TysPrim ( primTyCons )

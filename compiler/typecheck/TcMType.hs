@@ -100,7 +100,7 @@ import GHC.Data.Class
 import GHC.Data.Var
 
 -- others:
-import TcRnMonad        -- TcType, amongst others
+import GHC.IR.Haskell.TypeSystem        -- TcType, amongst others
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id as Id
 import GHC.Data.Name

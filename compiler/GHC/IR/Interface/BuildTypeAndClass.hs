@@ -34,7 +34,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 
 import GHC.Data.SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Config.Flags
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Utils.Outputable

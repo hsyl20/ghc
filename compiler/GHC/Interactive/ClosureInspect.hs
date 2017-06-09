@@ -37,7 +37,7 @@ import GHC.Data.Type
 import GHC.Data.RepType
 import qualified GHC.Utils.Unify as U
 import GHC.Data.Var
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
@@ -572,7 +572,7 @@ traceTR :: SDoc -> TR ()
 traceTR = liftTcM . traceOptTcRn Opt_D_dump_rtti
 
 
--- Semantically different to recoverM in TcRnMonad
+-- Semantically different to recoverM in GHC.IR.Haskell.TypeSystem
 -- recoverM retains the errors in the first action,
 --  whereas recoverTc here does not
 recoverTR :: TR a -> TR a -> TR a

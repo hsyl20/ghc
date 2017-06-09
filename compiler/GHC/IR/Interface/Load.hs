@@ -42,7 +42,7 @@ import GHC.IR.Interface.Environment
 import GHC.Types
 
 import GHC.Data.BasicTypes hiding (SuccessFlag(..))
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 
 import GHC.Config.Constants
 import PrelNames

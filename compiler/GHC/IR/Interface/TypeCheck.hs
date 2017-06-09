@@ -27,7 +27,7 @@ import GHC.IR.Interface.Syntax
 import GHC.IR.Interface.Load
 import GHC.IR.Interface.Environment
 import GHC.IR.Interface.BuildTypeAndClass
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion

@@ -41,7 +41,7 @@ import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Splice ( rnSplicePat )
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Syntax             ( hsOverLitName )
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Fixity

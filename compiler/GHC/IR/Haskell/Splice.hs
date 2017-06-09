@@ -33,7 +33,7 @@ module GHC.IR.Haskell.TypeSystem.Splice(
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Annotation
 import GHC.Data.Name
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
 
 import GHC.Utils.Outputable

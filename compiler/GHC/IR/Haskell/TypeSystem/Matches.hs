@@ -22,7 +22,7 @@ import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcSyntaxOp, tcInfe
                               , tcCheckId, tcMonoExpr, tcMonoExprNC, tcPolyExpr )
 
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType

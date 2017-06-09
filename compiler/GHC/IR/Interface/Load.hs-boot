@@ -1,6 +1,6 @@
 module GHC.IR.Interface.Load where
 import GHC.Data.Module (Module)
-import TcRnMonad (IfM)
+import GHC.IR.Haskell.TypeSystem (IfM)
 import GHC.Types (ModIface)
 import GHC.Utils.Outputable (SDoc)
 

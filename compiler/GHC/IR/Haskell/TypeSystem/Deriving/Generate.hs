@@ -36,7 +36,7 @@ module GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses (
 
 #include "HsVersions.h"
 
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Data.BasicTypes

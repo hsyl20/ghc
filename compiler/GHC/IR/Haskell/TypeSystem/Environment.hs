@@ -70,7 +70,7 @@ module GHC.IR.Haskell.TypeSystem.Environment(
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Interface.Environment
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Interface.Load

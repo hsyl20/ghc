@@ -20,7 +20,7 @@ import GHC.Data.ClassInstance( roughMatchTcs )
 import GHC.Data.Coercion
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Interface.Load
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Type

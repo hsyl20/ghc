@@ -54,7 +54,7 @@ module GHC.IR.Core.Monad (
   ) where
 
 import GHC.Data.Name( Name )
-import TcRnMonad        ( initTcForLookup )
+import GHC.IR.Haskell.TypeSystem        ( initTcForLookup )
 import GHC.IR.Core.Syntax
 import GHC.Types
 import GHC.Data.Module

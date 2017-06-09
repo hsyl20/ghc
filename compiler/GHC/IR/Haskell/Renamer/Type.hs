@@ -44,7 +44,7 @@ import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), withHsDocContex
                         , newLocalBndrRn, checkShadowedRdrNames )
 import GHC.IR.Haskell.Renamer.Fixity         ( lookupFieldFixityRn, lookupFixityRn
                         , lookupTyFixityRn )
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.RdrName
 import PrelNames
 import TysPrim          ( funTyConName )

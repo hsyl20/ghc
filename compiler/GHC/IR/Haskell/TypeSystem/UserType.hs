@@ -46,7 +46,7 @@ module GHC.IR.Haskell.TypeSystem.UserType (
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType

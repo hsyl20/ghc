@@ -44,7 +44,7 @@ import GHC.IR.Haskell.Parser.HeaderInfo
 import GHC.Types
 import GHC.Data.Module
 import GHC.IR.Interface.TypeCheck          ( typecheckIface )
-import TcRnMonad        ( initIfaceCheck )
+import GHC.IR.Haskell.TypeSystem        ( initIfaceCheck )
 import GHC.Program.Main
 
 import GHC.Data.Bag              ( listToBag )

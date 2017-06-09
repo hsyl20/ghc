@@ -124,7 +124,7 @@ import GHC.Data.ClassInstance
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 
-import qualified TcRnMonad as TcM
+import qualified GHC.IR.Haskell.TypeSystem as TcM
 import qualified TcMType as TcM
 import qualified GHC.IR.Haskell.TypeSystem.Environment as TcM
        ( checkWellStaged, topIdLvl, tcGetDefaultTys, tcLookupClass, tcLookupId )

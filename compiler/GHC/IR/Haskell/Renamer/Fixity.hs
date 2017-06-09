@@ -13,7 +13,7 @@ import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Types
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Module

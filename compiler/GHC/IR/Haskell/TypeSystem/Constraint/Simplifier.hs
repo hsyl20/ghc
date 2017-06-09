@@ -34,7 +34,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Constraint.Interact
 import GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser   ( makeSuperClasses )
 import TcMType   as TcM
-import TcRnMonad as TcM
+import GHC.IR.Haskell.TypeSystem as TcM
 import GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.TrieMap       () -- DV: for now
@@ -71,7 +71,7 @@ captureTopConstraints thing_inside
                           TcM.tryCaptureConstraints thing_inside
        ; stWC <- TcM.readTcRef static_wc_var
 
-       -- See TcRnMonad Note [Constraints and errors]
+       -- See GHC.IR.Haskell.TypeSystem Note [Constraints and errors]
        -- If the thing_inside threw an exception, but generated some insoluble
        -- constraints, report the latter before propagating the exception
        -- Otherwise they will be lost altogether
@@ -79,7 +79,7 @@ captureTopConstraints thing_inside
            Right res -> return (res, lie `andWC` stWC)
            Left {}   -> do { _ <- reportUnsolved lie; failM } }
                 -- This call to reportUnsolved is the reason
-                -- this function is here instead of TcRnMonad
+                -- this function is here instead of GHC.IR.Haskell.TypeSystem
 
 simplifyTopImplic :: Bag Implication -> TcM ()
 simplifyTopImplic implics
@@ -409,7 +409,7 @@ How is this implemented? It's complicated! So we'll step through it all:
 
        * In the case of `warnAllUnsolved` for resolved, but unsafe
          dictionary constraints, we collect the generated warning
-         message (pop it) and call `TcRnMonad.recordUnsafeInfer` to
+         message (pop it) and call `GHC.IR.Haskell.TypeSystem.recordUnsafeInfer` to
          mark the module we are compiling as unsafe, passing the
          warning message along as the reason.
 
@@ -420,7 +420,7 @@ How is this implemented? It's complicated! So we'll step through it all:
     available and how they overlap. So we once again call `lookupInstEnv` to
     figure that out so we can generate a helpful error message.
 
- 6) `TcRnMonad.recordUnsafeInfer` -- Save the unsafe result and reason in an
+ 6) `GHC.IR.Haskell.TypeSystem.recordUnsafeInfer` -- Save the unsafe result and reason in an
       IORef called `tcg_safeInfer`.
 
  7) `GHC.Program.Main.tcRnModule'` -- Reads `tcg_safeInfer` after type-checking, calling

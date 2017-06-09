@@ -21,7 +21,7 @@ import GHC.Data.FieldLabel
 
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Utils
 import GHC.IR.Interface.Environment
 

@@ -27,7 +27,7 @@ import GHC.IR.Core.Transform.Vectorise.Builtins
 import GHC.IR.Core.Transform.Vectorise.Env
 
 import GHC.IR.Core.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Compilers.HaskellToCore.Monad
 import GHC.Types hiding ( MonadThings(..) )
 import GHC.Config.Flags

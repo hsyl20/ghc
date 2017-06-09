@@ -22,7 +22,7 @@ module GHC.IR.Interface.Environment (
 
 #include "HsVersions.h"
 
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Types
 import GHC.Data.Type
 import GHC.Data.Var

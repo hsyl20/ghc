@@ -1,6 +1,6 @@
 module T11462_Plugin(plugin) where
 
-import TcRnMonad ( TcPlugin(..), TcPluginResult(..) )
+import GHC.IR.Haskell.TypeSystem ( TcPlugin(..), TcPluginResult(..) )
 import GHC.Plugins.Types ( defaultPlugin, Plugin(..), CommandLineOption )
 
 plugin :: Plugin

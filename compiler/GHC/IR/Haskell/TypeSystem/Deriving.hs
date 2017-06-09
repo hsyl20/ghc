@@ -15,7 +15,7 @@ module GHC.IR.Haskell.TypeSystem.Deriving ( tcDeriving, DerivInfo(..), mkDerivIn
 import GHC.IR.Haskell.Syntax
 import GHC.Config.Flags
 
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.IR.Haskell.TypeSystem.Deriving.Constraints
 import GHC.IR.Haskell.TypeSystem.Deriving.Utils

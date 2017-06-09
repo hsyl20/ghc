@@ -38,7 +38,7 @@ import GHC.Data.Type.Constructor
 
 -- others:
 import GHC.IR.Haskell.Syntax            -- HsType
-import TcRnMonad        -- TcType, amongst others
+import GHC.IR.Haskell.TypeSystem        -- TcType, amongst others
 import GHC.IR.Haskell.TypeSystem.Environment       ( tcGetInstEnvs )
 import GHC.IR.Haskell.TypeSystem.FunctionalDependency
 import GHC.Data.ClassInstance     ( InstMatch, lookupInstEnv )

@@ -10,7 +10,7 @@ module GHC.IR.Haskell.TypeSystem.Default ( tcDefaults ) where
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Name
 import GHC.Data.Class
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Syntax

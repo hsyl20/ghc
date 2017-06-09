@@ -19,7 +19,7 @@ import GHC.IR.Haskell.TypeSystem.ClassDeclaration( tcClassDecl2, tcATDefault,
                    HsSigFun, mkHsSigFun,
                    findMethodBind, instantiateMethod )
 import GHC.IR.Haskell.TypeSystem.Signature
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax    ( zonkTyBndrsX, emptyZonkEnv
                   , zonkTcTypeToTypes, zonkTcTypeToType )

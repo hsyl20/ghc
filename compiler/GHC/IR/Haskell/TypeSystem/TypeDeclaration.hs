@@ -26,7 +26,7 @@ module GHC.IR.Haskell.TypeSystem.TypeDeclaration(
 
 #include "HsVersions.h"
 
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Binding( tcRecSelBinds )
 import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )

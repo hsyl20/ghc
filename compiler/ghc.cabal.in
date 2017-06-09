@@ -425,7 +425,7 @@ Library
         TcRnDriver
         GHC.IR.Haskell.TypeSystem.ModuleSignature
         GHC.IR.Haskell.TypeSystem.Export
-        TcRnMonad
+        GHC.IR.Haskell.TypeSystem
         GHC.IR.Haskell.TypeSystem.Types
         GHC.IR.Haskell.TypeSystem.Rule
         GHC.IR.Haskell.TypeSystem.Constraint.Simplifier

@@ -30,7 +30,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Types
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Name.Environment

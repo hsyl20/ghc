@@ -11,7 +11,7 @@ Desugaring foreign declarations (see also GHC.Compilers.HaskellToCore.Foreign.Ca
 module GHC.Compilers.HaskellToCore.Foreign.Declaration ( dsForeigns ) where
 
 #include "HsVersions.h"
-import TcRnMonad        -- temp
+import GHC.IR.Haskell.TypeSystem        -- temp
 
 import GHC.IR.Core.Syntax
 

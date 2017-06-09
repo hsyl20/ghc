@@ -28,7 +28,7 @@ module GHC.IR.Haskell.Renamer.Binding (
 import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression( rnLExpr, rnStmts )
 
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Evidence     ( emptyTcEvBinds )
 import GHC.IR.Haskell.Renamer.Type
 import GHC.IR.Haskell.Renamer.Pattern

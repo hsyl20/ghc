@@ -8,7 +8,7 @@ Functions for working with the typechecker environment (setters, getters...).
 {-# LANGUAGE CPP, ExplicitForAll, FlexibleInstances #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-module TcRnMonad(
+module GHC.IR.Haskell.TypeSystem(
   -- * Initalisation
   initTc, initTcWithGbl, initTcInteractive, initTcForLookup, initTcRnIf,
 

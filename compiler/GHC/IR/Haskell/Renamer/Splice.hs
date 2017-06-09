@@ -14,7 +14,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Kind
 
 import GHC.IR.Haskell.Renamer.Environment

@@ -24,7 +24,7 @@ module GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration (
 import GHC.IR.Haskell.Syntax
 import GHC.Types
 import GHC.IR.Interface.BuildTypeAndClass
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax

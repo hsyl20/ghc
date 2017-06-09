@@ -43,7 +43,7 @@ module GHC.IR.Haskell.TypeSystem.Unify (
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Types
 import TcMType
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion

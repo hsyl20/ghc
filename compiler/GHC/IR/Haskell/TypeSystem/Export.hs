@@ -6,7 +6,7 @@ module GHC.IR.Haskell.TypeSystem.Export (tcRnExports, exports_from_avail) where
 import GHC.IR.Haskell.Syntax
 import PrelNames
 import GHC.Data.RdrName
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type

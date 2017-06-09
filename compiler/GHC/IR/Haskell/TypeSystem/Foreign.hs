@@ -34,7 +34,7 @@ module GHC.IR.Haskell.TypeSystem.Foreign
 
 import GHC.IR.Haskell.Syntax
 
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.IR.Haskell.TypeSystem.Environment

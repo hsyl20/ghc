@@ -9,7 +9,7 @@ import GHC.RTS.InfoTable ( stdInfoTableSizeB )
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.IR.Haskell.TypeSystem.Types
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Interface.Environment
 import GHC.Data.Module
 import GHC.Data.OccName as OccName

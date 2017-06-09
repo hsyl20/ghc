@@ -18,7 +18,7 @@ import Control.Monad ( when )
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Annotation
 import GHC.Data.Name
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 

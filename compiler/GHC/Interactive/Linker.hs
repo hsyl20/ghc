@@ -26,7 +26,7 @@ import GHC.IR.Interface.Load
 import GHC.IR.ByteCode.Linker
 import GHC.IR.ByteCode.Assembler
 import GHC.IR.ByteCode.Types
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Packages
 import GHC.Program.Driver.Phases
 import GHC.Utils.Finder

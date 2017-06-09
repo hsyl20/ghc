@@ -23,7 +23,7 @@ module GHC.IR.Haskell.Renamer.Expression (
 import GHC.IR.Haskell.Renamer.Binding   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
                    rnMatchGroup, rnGRHS, makeMiniFixityEnv)
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Module           ( getModule )
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Fixity

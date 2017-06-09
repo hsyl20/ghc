@@ -29,7 +29,7 @@ import GHC.IR.Haskell.Renamer.Utils.Unbound        ( mkUnboundName )
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.IR.Haskell.Renamer.Documentation          ( rnHsDoc, rnMbLHsDoc )
 import GHC.IR.Haskell.TypeSystem.Annotation    ( annCtxt )
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 
 import ForeignCall      ( CCallTarget(..) )
 import GHC.Data.Module

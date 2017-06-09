@@ -27,7 +27,7 @@ import GHC.Data.Var
 import GHC.Utils.Error
 
 import GHC.Data.Name
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Utils
 import GHC.Utils.Fingerprint
 import GHC.Data.BasicTypes

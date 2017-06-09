@@ -20,7 +20,7 @@ module GHC.IR.Interface.Binary (
 
 #include "HsVersions.h"
 
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
 import GHC.IR.Interface.Environment
 import GHC.Types

@@ -16,7 +16,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Pattern
 import GHC.Data.Type( mkTyVarBinders, mkEmptyTCvSubst
            , tidyTyVarBinders, tidyTypes, tidyType )
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Signature( emptyPragEnv, completeSigFromId )
 import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType

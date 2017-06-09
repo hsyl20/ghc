@@ -1,7 +1,7 @@
 module GHC.IR.Haskell.Renamer.Splice where
 
 import GHC.IR.Haskell.Syntax
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Set

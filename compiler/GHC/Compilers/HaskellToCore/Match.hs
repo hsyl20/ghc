@@ -25,7 +25,7 @@ import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Haskell.TypeSystem.Evidence
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Compilers.HaskellToCore.Match.Check
 import GHC.IR.Core.Syntax
 import GHC.Data.Literal

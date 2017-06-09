@@ -3,7 +3,7 @@
 (c) The GRASP Project, Glasgow University, 1992-2002
 
 
-Various types used during typechecking, please see TcRnMonad as well for
+Various types used during typechecking, please see GHC.IR.Haskell.TypeSystem as well for
 operations on these types. You probably want to import it, instead of this
 module.
 
@@ -231,7 +231,7 @@ data NameShape = NameShape {
 ************************************************************************
 *                                                                      *
                Standard monad definition for TcRn
-    All the combinators for the monad can be found in TcRnMonad
+    All the combinators for the monad can be found in GHC.IR.Haskell.TypeSystem
 *                                                                      *
 ************************************************************************
 

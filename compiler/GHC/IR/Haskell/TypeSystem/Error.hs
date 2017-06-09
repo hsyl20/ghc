@@ -10,7 +10,7 @@ module GHC.IR.Haskell.TypeSystem.Error(
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.TypeSystem.Types
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Unify( occCheckForErrors, OccCheckResult(..) )
 import GHC.IR.Haskell.TypeSystem.Type

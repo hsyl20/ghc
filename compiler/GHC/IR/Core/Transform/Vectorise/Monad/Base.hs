@@ -30,7 +30,7 @@ import GHC.IR.Core.Transform.Vectorise.Builtins
 import GHC.IR.Core.Transform.Vectorise.Env
 
 import GHC.Compilers.HaskellToCore.Monad
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Utils.Error
 import GHC.Utils.Outputable
 import GHC.Config.Flags

@@ -53,7 +53,7 @@ module GHC.Plugins.TypeChecker (
     ) where
 
 #if defined(GHCI)
-import qualified TcRnMonad as TcM
+import qualified GHC.IR.Haskell.TypeSystem as TcM
 import qualified GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import qualified GHC.IR.Haskell.TypeSystem.Environment     as TcM
 import qualified TcMType   as TcM
@@ -62,7 +62,7 @@ import qualified GHC.IR.Interface.Environment
 import qualified GHC.Utils.Finder
 
 import GHC.Data.FamilyInstance ( FamInstEnv )
-import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
+import GHC.IR.Haskell.TypeSystem  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                   , unsafeTcPluginTcM, getEvBindsTcPluginM
                   , liftIO, traceTc )
 import TcMType    ( TcTyVar, TcType )

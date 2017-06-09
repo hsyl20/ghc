@@ -32,7 +32,7 @@ import TysPrim
 import TysWiredIn
 import PrelNames
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcRnMonad
+import GHC.IR.Haskell.TypeSystem
 import GHC.Types
 import GHC.Utils.Error( Validity(..), andValid )
 import GHC.Data.SrcLoc
