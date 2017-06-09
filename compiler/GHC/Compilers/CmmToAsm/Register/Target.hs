@@ -27,7 +27,7 @@ import GHC.Compilers.CmmToAsm.Format
 
 import GHC.Utils.Outputable
 import GHC.Data.Unique
-import GHC.Platform
+import GHC.Utils.Platform
 
 import qualified X86.Regs       as X86
 import qualified X86.RegInfo    as X86

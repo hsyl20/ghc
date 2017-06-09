@@ -530,7 +530,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Utils.Panic \
 	GHC.Data.PatternSynonym \
 	GHC.Program.Driver.Pipeline.Monad \
-	GHC.Platform \
+	GHC.Utils.Platform \
 	GHC.Config.Platform.Constants \
 	GHC.Utils.PrettyPrint.Colour \
 	GHC.IR.Core.PrettyPrint \

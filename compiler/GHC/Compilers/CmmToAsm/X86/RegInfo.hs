@@ -13,7 +13,7 @@ import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique
 
 import GHC.Data.Unique.FiniteMap

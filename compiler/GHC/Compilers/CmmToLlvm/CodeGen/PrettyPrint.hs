@@ -15,7 +15,7 @@ import GHC.Compilers.CmmToLlvm.CodeGen.Data
 
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Syntax
-import GHC.Platform
+import GHC.Utils.Platform
 
 import GHC.Data.FastString
 import GHC.Utils.Outputable

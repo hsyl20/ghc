@@ -40,7 +40,7 @@ import GHC.RTS.InfoTable
 import GHC.Data.FastString
 import GHC.Data.CLabel
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.FiniteMap (listToUFM, lookupUFM)
 import GHC.Data.Unique.Supply
 

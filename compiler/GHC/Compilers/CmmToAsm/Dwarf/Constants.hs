@@ -4,7 +4,7 @@
 module GHC.Compilers.CmmToAsm.Dwarf.Constants where
 
 import GHC.Data.FastString
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Utils.Outputable
 
 import GHC.Compilers.CmmToAsm.Register

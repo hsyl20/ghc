@@ -139,7 +139,7 @@ import GHC.IR.Core.Syntax.Make (mkStringExprFSWith)
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils.Outputable as Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import PrelNames
 import TcEnv (lookupGlobal)
 import GHC.Data.Type

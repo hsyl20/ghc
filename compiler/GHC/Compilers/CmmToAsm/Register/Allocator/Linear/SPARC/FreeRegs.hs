@@ -9,7 +9,7 @@ import GHC.Compilers.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 
 import Data.Word
 import Data.Bits

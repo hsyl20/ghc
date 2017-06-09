@@ -19,7 +19,7 @@ import GHCi.RemoteTypes
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Name
 import GHC.Data.Id.Make
 import GHC.Data.Id as Id

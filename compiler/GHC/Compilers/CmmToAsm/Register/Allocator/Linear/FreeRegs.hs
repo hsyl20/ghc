@@ -14,7 +14,7 @@ import GHC.Compilers.CmmToAsm.Register.Class
 
 import GHC.Config.Flags
 import GHC.Utils.Panic
-import GHC.Platform
+import GHC.Utils.Platform
 
 -- -----------------------------------------------------------------------------
 -- The free register set

@@ -23,7 +23,7 @@ import Data.List (sortBy)
 import GHC.Data.Maybe
 import Control.Monad
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.Supply
 import GHC.IR.Cmm.Transform.Dataflow
 

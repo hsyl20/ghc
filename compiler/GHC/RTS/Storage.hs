@@ -53,7 +53,7 @@ module GHC.RTS.Storage (
 import GHC.Data.BasicTypes( ConTagZ )
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.FastString
 
 import Data.Char( ord )

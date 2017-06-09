@@ -127,7 +127,7 @@ import GHC.Data.CostCentre
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.Set
 import GHC.Utils
 import GHC.IR.Core.PrettyPrint ( {- instances -} )

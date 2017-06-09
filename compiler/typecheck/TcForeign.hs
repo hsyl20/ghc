@@ -54,7 +54,7 @@ import TcType
 import PrelNames
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.SrcLoc
 import GHC.Data.Bag
 import GHC.Config.Hooks

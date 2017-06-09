@@ -24,7 +24,7 @@ import GHC.Utils.CodeGen.Platform
 import GHC.Config.Flags
 import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.PrettyPrint.Expression ()
-import GHC.Platform
+import GHC.Utils.Platform
 
 import GHC.Utils.Outputable
 import GHC.Data.Tree.OrdList

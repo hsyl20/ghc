@@ -42,7 +42,7 @@ import GHC.Data.RepType (countConRepArgs)
 import GHC.Data.Literal
 import PrelInfo
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Utils
 import GHC.Utils.Monad (mapMaybeM)
 

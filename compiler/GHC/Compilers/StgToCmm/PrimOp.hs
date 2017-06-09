@@ -27,7 +27,7 @@ import GHC.Compilers.StgToCmm.Heap
 import GHC.Compilers.StgToCmm.Profiling ( costCentreFrom, curCCS )
 
 import GHC.Config.Flags
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.BasicTypes
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Graph

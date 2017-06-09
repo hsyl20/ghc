@@ -233,7 +233,7 @@ import GHC.IR.Cmm.Parser.Monad
 import GHC.Data.CostCentre
 import ForeignCall
 import GHC.Data.Module
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Literal
 import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap

@@ -51,7 +51,7 @@ import GHC.Config.Flags
 import GHC.Utils
 import GHC.Data.Pair
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.FastString
 import Config
 import GHC.Data.Name             ( NamedThing(..), nameSrcSpan )

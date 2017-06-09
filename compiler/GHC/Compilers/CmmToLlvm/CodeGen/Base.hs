@@ -46,7 +46,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.IR.Cmm.Syntax              hiding ( succ )
 import GHC.Utils.Outputable as Outp
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique
 import GHC.Utils.Handle.BufferedWrite   ( BufHandle )

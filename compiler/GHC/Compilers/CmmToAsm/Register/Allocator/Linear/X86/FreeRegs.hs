@@ -7,7 +7,7 @@ import GHC.Compilers.CmmToAsm.X86.Regs
 import GHC.Compilers.CmmToAsm.Register.Class
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Utils.Panic
-import GHC.Platform
+import GHC.Utils.Platform
 
 import Data.Word
 import Data.Bits

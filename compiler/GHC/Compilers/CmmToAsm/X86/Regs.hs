@@ -56,7 +56,7 @@ import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel           ( CLabel )
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 
 -- | regSqueeze_class reg
 --      Calculuate the maximum number of register colors that could be

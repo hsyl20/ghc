@@ -10,7 +10,7 @@ import GHC.IR.Cmm.DebugBlock
 import GHC.Config.Flags
 import GHC.Data.Module
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 

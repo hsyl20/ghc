@@ -28,7 +28,7 @@ import GHC.IR.Cmm.Expr         ( GlobalReg(..) )
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Data.SrcLoc

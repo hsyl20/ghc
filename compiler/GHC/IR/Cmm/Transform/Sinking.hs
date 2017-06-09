@@ -9,7 +9,7 @@ import GHC.IR.Cmm.Analyse.Liveness
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Utils.CodeGen.Platform
-import GHC.Platform (isARM, platformArch)
+import GHC.Utils.Platform (isARM, platformArch)
 
 import GHC.Config.Flags
 import GHC.Data.Unique.FiniteMap

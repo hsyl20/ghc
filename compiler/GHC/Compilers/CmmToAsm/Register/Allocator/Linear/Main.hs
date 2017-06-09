@@ -128,7 +128,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 
 import Data.Maybe
 import Data.List

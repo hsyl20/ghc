@@ -195,7 +195,7 @@ import GHC.Data.Bag
 import GHC.Utils.Binary
 import GHC.Utils.Error
 import GHC.Data.Name.Cache
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Utils
 import GHC.Data.Unique.DeterSet
 import GHC.Serialized   ( Serialized )

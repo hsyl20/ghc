@@ -319,7 +319,7 @@ import GHC.Utils.SysTools
 import GHC.Data.Annotation
 import GHC.Data.Module
 import GHC.Utils.Panic
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Bag              ( listToBag, unitBag )
 import GHC.Utils.Error
 import GHC.Utils.Monad

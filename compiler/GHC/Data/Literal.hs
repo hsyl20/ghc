@@ -54,7 +54,7 @@ import GHC.Data.BasicTypes
 import GHC.Utils.Binary
 import GHC.Config.Constants
 import GHC.Config.Flags
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
 

@@ -29,7 +29,7 @@ import GHC.Config.Flags
 import GHC.Utils
 
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 
 import Data.Bits
 import Data.Maybe

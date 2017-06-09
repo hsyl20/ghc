@@ -61,7 +61,7 @@ import Config
 import GHC.Utils.Outputable
 import GHC.Utils.Error
 import GHC.Utils.Panic
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Utils
 import GHC.Config.Flags
 import GHC.Utils.Exception as Exception

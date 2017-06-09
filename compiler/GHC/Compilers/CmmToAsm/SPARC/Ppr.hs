@@ -43,7 +43,7 @@ import GHC.IR.Cmm.Transform.Dataflow
 
 import GHC.Data.Unique           ( Uniquable(..), pprUniqueAlways )
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.FastString
 import Data.Word
 

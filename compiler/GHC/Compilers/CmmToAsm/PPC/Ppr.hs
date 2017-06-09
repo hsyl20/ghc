@@ -25,7 +25,7 @@ import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.CLabel
 
 import GHC.Data.Unique                ( pprUniqueAlways, Uniquable(..) )
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Config.Flags

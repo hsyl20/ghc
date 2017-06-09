@@ -37,7 +37,7 @@ import GHC.Data.FastMutableInt
 import GHC.Data.Unique
 import GHC.Utils.Outputable
 import GHC.Data.Name.Cache
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.FastString
 import GHC.Config.Constants
 import GHC.Utils

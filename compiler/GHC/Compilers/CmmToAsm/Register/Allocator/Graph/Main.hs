@@ -19,7 +19,7 @@ import GHC.Compilers.CmmToAsm.Register
 import GHC.Data.Bag
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.Supply

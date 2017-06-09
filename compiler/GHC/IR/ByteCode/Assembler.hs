@@ -31,7 +31,7 @@ import GHC.Compilers.StgToCmm.Layout     ( ArgRep(..) )
 import GHC.RTS.Storage
 import GHC.Config.Flags
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Utils
 import GHC.Data.Unique
 import GHC.Data.Unique.DeterSet

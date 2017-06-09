@@ -45,7 +45,7 @@ import GHC.Compilers.CmmToAsm.PIC
 import GHC.Compilers.CmmToAsm.Monad
 import GHC.Compilers.CmmToAsm.Format
 import GHC.Compilers.CmmToAsm.Register
-import GHC.Platform
+import GHC.Utils.Platform
 
 -- Our intermediate code:
 import GHC.Data.BasicTypes

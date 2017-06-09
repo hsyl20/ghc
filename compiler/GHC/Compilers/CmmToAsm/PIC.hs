@@ -52,7 +52,7 @@ import qualified PPC.Regs       as PPC
 
 import qualified X86.Instr      as X86
 
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.Register
 import GHC.Compilers.CmmToAsm.Monad

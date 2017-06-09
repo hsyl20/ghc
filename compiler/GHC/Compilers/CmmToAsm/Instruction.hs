@@ -20,7 +20,7 @@ import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Config.Flags
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)
-import GHC.Platform
+import GHC.Utils.Platform
 
 -- | Holds a list of source and destination registers used by a
 --      particular instruction.

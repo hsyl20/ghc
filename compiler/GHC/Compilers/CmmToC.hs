@@ -40,7 +40,7 @@ import GHC.Utils.CodeGen.Primitive
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Outputable
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique

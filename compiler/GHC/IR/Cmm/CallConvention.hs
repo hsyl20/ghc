@@ -15,7 +15,7 @@ import GHC.IR.Cmm.Syntax (Convention(..))
 import GHC.IR.Cmm.PrettyPrint ()
 
 import GHC.Config.Flags
-import GHC.Platform
+import GHC.Utils.Platform
 import GHC.Utils.Outputable
 
 -- Calculate the 'GlobalReg' or stack locations for function call

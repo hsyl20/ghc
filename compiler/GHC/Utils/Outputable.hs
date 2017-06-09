@@ -96,7 +96,7 @@ import GHC.Utils.Handle.BufferedWrite (BufHandle)
 import GHC.Data.FastString
 import qualified GHC.Utils.PrettyPrint as Pretty
 import GHC.Utils
-import GHC.Platform
+import GHC.Utils.Platform
 import qualified GHC.Utils.PrettyPrint.Colour as Col
 import GHC.Utils.PrettyPrint           ( Doc, Mode(..) )
 import GHC.Utils.Panic
