@@ -11,7 +11,7 @@
 --   must be wired into the compiler nonetheless.  C.f module TysPrim
 module TysWiredIn (
         -- * Helper functions defined here
-        mkWiredInTyConName, -- This is used in TcTypeNats to define the
+        mkWiredInTyConName, -- This is used in GHC.Builtin.TypeNats to define the
                             -- built-in functions for evaluation.
 
         mkWiredInIdName,    -- used in MkId

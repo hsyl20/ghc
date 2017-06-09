@@ -440,7 +440,7 @@ Library
         TcCanonical
         GHC.IR.Haskell.TypeSystem.Flatten
         TcSMonad
-        TcTypeNats
+        GHC.Builtin.TypeNats
         GHC.IR.Haskell.TypeSystem.Splice
         GHC.Data.Class
         GHC.Data.Coercion

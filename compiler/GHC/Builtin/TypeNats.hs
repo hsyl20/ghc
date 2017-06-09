@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-module TcTypeNats
+module GHC.Builtin.TypeNats
   ( typeNatTyCons
   , typeNatCoAxiomRules
   , BuiltInSynFamily(..)

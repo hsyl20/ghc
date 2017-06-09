@@ -67,7 +67,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
 import GHC.Utils.Panic
-import {-# SOURCE #-} TcTypeNats ( typeNatTyCons )
+import {-# SOURCE #-} GHC.Builtin.TypeNats ( typeNatTyCons )
 
 import Control.Applicative ((<|>))
 import Data.List        ( intercalate )

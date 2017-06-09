@@ -1,4 +1,4 @@
-module TcTypeNats where
+module GHC.Builtin.TypeNats where
 
 import GHC.Data.Type.Constructor (TyCon)
 
