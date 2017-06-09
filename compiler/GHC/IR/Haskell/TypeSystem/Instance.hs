@@ -955,7 +955,7 @@ Notice that
    implication for the whole instance declaratation, with the expected
    skolems and givens.  We need this to get the correct "redundant
    constraint" warnings, gathering all the uses from all the methods
-   and superclasses.  See TcSimplify Note [Tracking redundant
+   and superclasses.  See GHC.IR.Haskell.TypeSystem.Constraint.Simplifier Note [Tracking redundant
    constraints]
 
  * The given constraints in the outer implication may generate

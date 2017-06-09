@@ -37,7 +37,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info( RecSelParent(..), setLevityInfoWithType )
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.Data.BasicTypes
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Evidence

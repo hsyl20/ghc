@@ -166,7 +166,7 @@ ds_val_bind (is_rec, binds) body
         -- mixed up, which is what happens in one rare case
         -- Namely, for an AbsBind with no tyvars and no dicts,
         --         but which does have dictionary bindings.
-        -- See notes with TcSimplify.inferLoop [NO TYVARS]
+        -- See notes with GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.inferLoop [NO TYVARS]
         -- It turned out that wrapping a Rec here was the easiest solution
         --
         -- NB The previous case dealt with unlifted bindings, so we

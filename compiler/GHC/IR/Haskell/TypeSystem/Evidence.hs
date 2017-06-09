@@ -380,7 +380,7 @@ data EvBindsVar
       -- because we plug them in-place (via a mutable
       -- variable); but we keep their free variables
       -- so that we can report unused given constraints
-      -- See Note [Tracking redundant constraints] in TcSimplify
+      -- See Note [Tracking redundant constraints] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
     }
 
 instance Data.Data TcEvBinds where
@@ -443,7 +443,7 @@ data EvBind
   = EvBind { eb_lhs      :: EvVar
            , eb_rhs      :: EvTerm
            , eb_is_given :: Bool  -- True <=> given
-                 -- See Note [Tracking redundant constraints] in TcSimplify
+                 -- See Note [Tracking redundant constraints] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
     }
 
 evBindVar :: EvBind -> EvVar
@@ -469,7 +469,7 @@ data EvTerm
 
   | EvDelayedError Type FastString  -- Used with Opt_DeferTypeErrors
                                -- See Note [Deferring coercion errors to runtime]
-                               -- in TcSimplify
+                               -- in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 
   | EvSuperClass EvTerm Int      -- n'th superclass. Used for both equalities and
                                  -- dictionaries, even though the former have no
@@ -697,7 +697,7 @@ important) are solved in three steps:
 
      EvCsEmpty
 
-   (see TcSimplify.simpl_top and TcSimplify.defaultCallStacks)
+   (see GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.simpl_top and GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.defaultCallStacks)
 
 This provides a lightweight mechanism for building up call-stacks
 explicitly, but is notably limited by the fact that the stack will

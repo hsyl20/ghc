@@ -1801,7 +1801,7 @@ checkValidClsArgs :: Bool -> Class -> [KindOrType] -> Bool
 -- Otherwise, check that the type (not kind) args are all headed by a tyvar
 --   E.g. (Eq a) accepted, (Eq (f a)) accepted, but (Eq Int) rejected
 -- This function is here rather than in GHC.IR.Haskell.TypeSystem.Validity because it is
--- called from TcSimplify, which itself is imported by GHC.IR.Haskell.TypeSystem.Validity
+-- called from GHC.IR.Haskell.TypeSystem.Constraint.Simplifier, which itself is imported by GHC.IR.Haskell.TypeSystem.Validity
 checkValidClsArgs flexible_contexts cls kts
   | flexible_contexts = True
   | otherwise         = all hasTyVarHead tys

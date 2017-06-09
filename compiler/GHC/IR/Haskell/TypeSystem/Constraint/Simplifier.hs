@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module TcSimplify(
+module GHC.IR.Haskell.TypeSystem.Constraint.Simplifier(
        simplifyInfer, InferMode(..),
        growThetaTyVars,
        simplifyAmbiguityCheck,
@@ -392,7 +392,7 @@ How is this implemented? It's complicated! So we'll step through it all:
      the unsafe (but resolved!) constraint to the `inert_safehask` field of
      `InertCans`.
 
- 4) `TcSimplify.simplifyTop`:
+ 4) `GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.simplifyTop`:
        * Call simpl_top, the top-level function for driving the simplifier for
          constraint resolution.
 
@@ -1603,7 +1603,7 @@ works:
 * GHC.IR.Haskell.TypeSystem.Error does the actual warning, in warnRedundantConstraints.
 
 * We don't report redundant givens for *every* implication; only
-  for those which reply True to TcSimplify.warnRedundantGivens:
+  for those which reply True to GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.warnRedundantGivens:
 
    - For example, in a class declaration, the default method *can*
      use the class constraint, but it certainly doesn't *have* to,
@@ -2004,7 +2004,7 @@ become touchable by being floated (perhaps by more than one level).
 
 We had a very complicated rule previously, but this is nice and
 simple.  (To see the notes, look at this Note in a version of
-TcSimplify prior to Oct 2014).
+GHC.IR.Haskell.TypeSystem.Constraint.Simplifier prior to Oct 2014).
 
 Note [Which equalities to float]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

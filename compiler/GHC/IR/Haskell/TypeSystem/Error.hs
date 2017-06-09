@@ -155,7 +155,7 @@ reportUnsolved wanted
 -- have any convenient place to put them.
 -- See Note [Deferring coercion errors to runtime]
 -- Used by solveEqualities for kind equalities
---      (see Note [Fail fast on kind errors] in TcSimplify]
+--      (see Note [Fail fast on kind errors] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier]
 -- and for simplifyDefault.
 reportAllUnsolved :: WantedConstraints -> TcM ()
 reportAllUnsolved wanted
@@ -165,7 +165,7 @@ reportAllUnsolved wanted
 
 -- | Report all unsolved goals as warnings (but without deferring any errors to
 -- run-time). See Note [Safe Haskell Overlapping Instances Implementation] in
--- TcSimplify
+-- GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 warnAllUnsolved :: WantedConstraints -> TcM ()
 warnAllUnsolved wanted
   = do { ev_binds <- newTcEvBinds
@@ -393,7 +393,7 @@ reportImplic ctxt implic@(Implic { ic_skols = tvs, ic_given = given
                     _                             -> []
 
 warnRedundantConstraints :: ReportErrCtxt -> TcLclEnv -> SkolemInfo -> [EvVar] -> TcM ()
--- See Note [Tracking redundant constraints] in TcSimplify
+-- See Note [Tracking redundant constraints] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 warnRedundantConstraints ctxt env info ev_vars
  | null redundant_evs
  = return ()
@@ -1278,9 +1278,9 @@ Currently the implementation only looks at exact type matches, as given by
 even though it fits in the hole. To determine that `ps2` fits in the hole,
 we would need to check ids for subsumption, i.e. that the type of the hole is
 a subtype of the id. This can be done using `tcSubType` from `GHC.IR.Haskell.TypeSystem.Unify` and
-`tcCheckSatisfiability` in `TcSimplify`.  Unfortunately, `TcSimplify` uses
+`tcCheckSatisfiability` in `GHC.IR.Haskell.TypeSystem.Constraint.Simplifier`.  Unfortunately, `GHC.IR.Haskell.TypeSystem.Constraint.Simplifier` uses
 `GHC.IR.Haskell.TypeSystem.Error` to report errors found during constraint checking, so checking for
-subsumption in holes would involve shuffling some code around in `TcSimplify`,
+subsumption in holes would involve shuffling some code around in `GHC.IR.Haskell.TypeSystem.Constraint.Simplifier`,
 to make a non-error reporting constraint satisfiability checker which could
 then be used for checking whether a given id satisfies the constraints imposed
 by the hole.

@@ -30,7 +30,7 @@ import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.IR.Interface.TypeCheck
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.Utils.Error

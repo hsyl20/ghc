@@ -31,7 +31,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.Validity (validDerivPred)
 import GHC.IR.Haskell.TypeSystem.Unify (buildImplicationFor)
 import GHC.Utils.Unify (tcUnifyTy)
@@ -511,7 +511,7 @@ simplifyInstanceContexts infer_specs
     iterate_deriv n current_solns
       | n > 20  -- Looks as if we are in an infinite loop
                 -- This can happen if we have -XUndecidableInstances
-                -- (See TcSimplify.tcSimplifyDeriv.)
+                -- (See GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.tcSimplifyDeriv.)
       = pprPanic "solveDerivEqns: probable loop"
                  (vcat (map pprDerivSpec infer_specs) $$ ppr current_solns)
       | otherwise

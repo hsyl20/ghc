@@ -428,7 +428,7 @@ Library
         TcRnMonad
         TcRnTypes
         GHC.IR.Haskell.TypeSystem.Rule
-        TcSimplify
+        GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
         GHC.IR.Haskell.TypeSystem.Error
         GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
         GHC.IR.Haskell.TypeSystem.TypeDeclaration

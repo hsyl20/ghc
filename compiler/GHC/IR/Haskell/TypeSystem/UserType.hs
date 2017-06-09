@@ -53,7 +53,7 @@ import TcMType
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Interface.TypeCheck
-import TcSimplify ( solveEqualities )
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier ( solveEqualities )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkSigType )
 import GHC.IR.Haskell.TypeSystem.Instantiation   ( tcInstBinders, tcInstBindersX, tcInstBinderX )

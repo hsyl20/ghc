@@ -1168,14 +1168,14 @@ It leads to the deferral of an equality (wrapped in an implication constraint)
 
   forall a. () => ((String -> String -> String) ~ a)
 
-which is propagated up to the toplevel (see TcSimplify.tcSimplifyInferCheck).
+which is propagated up to the toplevel (see GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.tcSimplifyInferCheck).
 In the meantime `a' is zonked and quantified to form `evalRHS's signature.
 This has the *side effect* of also zonking the `a' in the deferred equality
 (which at this point is being handed around wrapped in an implication
 constraint).
 
 Finally, the equality (with the zonked `a') will be handed back to the
-simplifier by TcRnDriver.tcRnSrcDecls calling TcSimplify.tcSimplifyTop.
+simplifier by TcRnDriver.tcRnSrcDecls calling GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.tcSimplifyTop.
 If we zonk `a' with a regular type variable, we will have this regular type
 variable now floating around in the simplifier, which in many places assumes to
 only see proper TcTyVars.
@@ -1356,7 +1356,7 @@ zonkCt tries to maintain the canonical form of a Ct.  For example,
   - a CHoleCan should stay a CHoleCan
 
 Why?, for example:
-- For CDictCan, the @TcSimplify.expandSuperClasses@ step, which runs after the
+- For CDictCan, the @GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.expandSuperClasses@ step, which runs after the
   simple wanted and plugin loop, looks for @CDictCan@s. If a plugin is in use,
   constraints are zonked before being passed to the plugin. This means if we
   don't preserve a canonical form, @expandSuperClasses@ fails to expand

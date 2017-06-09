@@ -223,10 +223,10 @@ So here's the plan:
    try harder: take both the Givens and Wanteds, and expand
    superclasses again.  This may succeed in generating (a finite
    number of) extra Givens, and extra Deriveds. Both may help the
-   proof.  This is done in TcSimplify.expandSuperClasses.
+   proof.  This is done in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.expandSuperClasses.
 
 4. Go round to (2) again.  This loop (2,3,4) is implemented
-   in TcSimplify.simpl_loop.
+   in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.simpl_loop.
 
 The cc_pend_sc flag in a CDictCan records whether the superclasses of
 this constraint have been expanded.  Specifically, in Step 3 we only
@@ -1248,7 +1248,7 @@ all the way down, so that it accurately reflects
  (b) any ty-binds in force at this point in solving
 See Note [Kick out insolubles] in GHC.IR.Haskell.TypeSystem.Constraint.Solver.
 And if we don't do this there is a bad danger that
-TcSimplify.applyTyVarDefaulting will find a variable
+GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.applyTyVarDefaulting will find a variable
 that has in fact been substituted.
 
 Note [Do not decompose Given polytype equalities]

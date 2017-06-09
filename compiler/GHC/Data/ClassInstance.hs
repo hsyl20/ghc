@@ -700,7 +700,7 @@ type ClsInstLookupResult
        , [ClsInst]       -- These don't match but do unify
        , [InstMatch] )   -- Unsafe overlapped instances under Safe Haskell
                          -- (see Note [Safe Haskell Overlapping Instances] in
-                         -- TcSimplify).
+                         -- GHC.IR.Haskell.TypeSystem.Constraint.Simplifier).
 
 {-
 Note [DFunInstType: instantiating types]
@@ -801,8 +801,8 @@ lookupInstEnv :: Bool              -- Check Safe Haskell overlap restrictions
               -> Class -> [Type]   -- What we are looking for
               -> ClsInstLookupResult
 -- ^ See Note [Rules for instance lookup]
--- ^ See Note [Safe Haskell Overlapping Instances] in TcSimplify
--- ^ See Note [Safe Haskell Overlapping Instances Implementation] in TcSimplify
+-- ^ See Note [Safe Haskell Overlapping Instances] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
+-- ^ See Note [Safe Haskell Overlapping Instances Implementation] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 lookupInstEnv check_overlap_safe
               (InstEnvs { ie_global = pkg_ie
                         , ie_local = home_ie

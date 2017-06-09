@@ -89,7 +89,7 @@ import GHC.IR.Haskell.TypeSystem.Instance
 import GHC.IR.Interface.TypeCheck
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
 import GHC.IR.Haskell.TypeSystem.Deriving.Typeable ( mkTypeableBinds )
 import GHC.IR.Haskell.TypeSystem.ModuleSignature

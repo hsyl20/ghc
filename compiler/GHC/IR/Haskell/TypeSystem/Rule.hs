@@ -12,7 +12,7 @@ module GHC.IR.Haskell.TypeSystem.Rule ( tcRules ) where
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.UserType
@@ -90,7 +90,7 @@ tcRule (HsRule name act hs_bndrs lhs fv_lhs rhs fv_rhs)
 
        -- SimplfyRule Plan, step 4
        -- Now figure out what to quantify over
-       -- c.f. TcSimplify.simplifyInfer
+       -- c.f. GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.simplifyInfer
        -- We quantify over any tyvars free in *either* the rule
        --  *or* the bound variables.  The latter is important.  Consider
        --      ss (x,(y,z)) = (x,z)

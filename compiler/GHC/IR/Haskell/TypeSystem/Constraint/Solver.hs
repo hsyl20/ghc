@@ -110,7 +110,7 @@ module GHC.IR.Haskell.TypeSystem.Constraint.Solver (
     checkWellStagedDFun,
     pprEq                                    -- Smaller utils, re-exported from TcM
                                              -- TODO (DV): these are only really used in the
-                                             -- instance matcher in TcSimplify. I am wondering
+                                             -- instance matcher in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier. I am wondering
                                              -- if the whole instance matcher simply belongs
                                              -- here
 ) where
@@ -617,7 +617,7 @@ data InertCans   -- See Note [Detailed InertCans Invariants] for more
               -- failure.
               --
               -- ^ See Note [Safe Haskell Overlapping Instances Implementation]
-              -- in TcSimplify
+              -- in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 
        , inert_irreds :: Cts
               -- Irreducible predicates
@@ -1612,12 +1612,12 @@ addInertSafehask _ item
   = pprPanic "addInertSafehask: can't happen! Inserting " $ ppr item
 
 insertSafeOverlapFailureTcS :: Ct -> TcS ()
--- See Note [Safe Haskell Overlapping Instances Implementation] in TcSimplify
+-- See Note [Safe Haskell Overlapping Instances Implementation] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 insertSafeOverlapFailureTcS item
   = updInertCans (\ics -> addInertSafehask ics item)
 
 getSafeOverlapFailures :: TcS Cts
--- See Note [Safe Haskell Overlapping Instances Implementation] in TcSimplify
+-- See Note [Safe Haskell Overlapping Instances Implementation] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 getSafeOverlapFailures
  = do { IC { inert_safehask = safehask } <- getInertCans
       ; return $ foldDicts consCts safehask emptyCts }
@@ -3102,7 +3102,7 @@ deferTcSForAllEq role loc kind_cos (bndrs1,body1) (bndrs2,body2)
       ; env <- getLclEnv
       ; ev_binds <- newTcEvBinds
            -- We have nowhere to put these bindings
-           -- but TcSimplify.setImplicationStatus
+           -- but GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.setImplicationStatus
            -- checks that we don't actually use them
       ; let new_tclvl = pushTcLevel (tcl_tclvl env)
             wc        = WC { wc_simple = singleCt (mkNonCanonical ctev)

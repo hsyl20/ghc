@@ -28,7 +28,7 @@ import GHC.IR.Haskell.TypeSystem.Signature
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Pattern

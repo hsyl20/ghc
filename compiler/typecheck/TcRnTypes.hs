@@ -1362,7 +1362,7 @@ instance Outputable WhereFrom where
 ********************************************************************* -}
 
 -- These data types need to be here only because
--- TcSimplify uses them, and TcSimplify is fairly
+-- GHC.IR.Haskell.TypeSystem.Constraint.Simplifier uses them, and GHC.IR.Haskell.TypeSystem.Constraint.Simplifier is fairly
 -- low down in the module hierarchy
 
 data TcSigInfo = TcIdSig     TcIdSigInfo
@@ -2279,7 +2279,7 @@ data ImplicStatus
        { ics_need :: VarSet     -- Evidence variables bound further out,
                                 -- but needed by this solved implication
        , ics_dead :: [EvVar] }  -- Subset of ic_given that are not needed
-         -- See Note [Tracking redundant constraints] in TcSimplify
+         -- See Note [Tracking redundant constraints] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 
   | IC_Insoluble  -- At least one insoluble constraint in the tree
 
@@ -2342,8 +2342,8 @@ untouchables, and therefore cannot be unified with anything at all,
 let alone the skolems.
 
 Instead, ic_skols is used only when considering floating a constraint
-outside the implication in TcSimplify.floatEqualities or
-TcSimplify.approximateImplications
+outside the implication in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.floatEqualities or
+GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.approximateImplications
 
 Note [Insoluble constraints]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

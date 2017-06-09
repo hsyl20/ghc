@@ -61,7 +61,7 @@ import GHC.IR.Haskell.Renamer.Utils ( HsDocContext(..) )
 import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn_help )
 import GHC.IR.Haskell.Renamer.Type
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcSimplify
+import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.Data.Type as Type
 import GHC.Data.Kind
 import GHC.Data.Name.Set

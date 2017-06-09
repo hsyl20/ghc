@@ -4,7 +4,7 @@ module TcInteract (
      solveSimpleGivens,   -- Solves [Ct]
      solveSimpleWanteds,  -- Solves Cts
 
-     solveCallStack,      -- for use in TcSimplify
+     solveCallStack,      -- for use in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
   ) where
 
 #include "HsVersions.h"
@@ -595,7 +595,7 @@ we keep?  More subtle than you might think!
       - For everything else, we want to keep the outermost one.  Reason: that
         makes it more likely that the inner one will turn out to be unused,
         and can be reported as redundant.  See Note [Tracking redundant constraints]
-        in TcSimplify.
+        in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier.
 
         It transpires that using the outermost one is reponsible for an
         8% performance improvement in nofib cryptarithm2, compared to
@@ -615,7 +615,7 @@ we keep?  More subtle than you might think!
               with bindings  d3 = sc_sel (d1::Ord a)
             We want to discard d2 in favour of the superclass selection from
             the Ord dictionary.
-         Why? See Note [Tracking redundant constraints] in TcSimplify again.
+         Why? See Note [Tracking redundant constraints] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier again.
 
   * Finally, when there is still a choice, use IRKeep rather than
     IRReplace, to avoid unnecessary munging of the inert set.
@@ -2147,8 +2147,8 @@ doTopReactDict _ w = pprPanic "doTopReactDict" (ppr w)
 -- | Indicates if Instance met the Safe Haskell overlapping instances safety
 -- check.
 --
--- See Note [Safe Haskell Overlapping Instances] in TcSimplify
--- See Note [Safe Haskell Overlapping Instances Implementation] in TcSimplify
+-- See Note [Safe Haskell Overlapping Instances] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
+-- See Note [Safe Haskell Overlapping Instances Implementation] in GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 type SafeOverlapping = Bool
 
 data LookupInstResult
