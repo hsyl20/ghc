@@ -8,7 +8,7 @@ Error-checking and other utilities for @deriving@ clauses or declarations.
 
 {-# LANGUAGE ImplicitParams #-}
 
-module TcDerivUtils (
+module GHC.IR.Haskell.TypeSystem.Deriving.Utils (
         DerivSpec(..), pprDerivSpec,
         DerivSpecMechanism(..), isDerivSpecStock,
         isDerivSpecNewtype, isDerivSpecAnyClass,

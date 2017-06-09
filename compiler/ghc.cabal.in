@@ -406,8 +406,8 @@ Library
         TcClassDcl
         TcDefaults
         GHC.IR.Haskell.TypeSystem.Deriving
-        TcDerivInfer
-        TcDerivUtils
+        GHC.IR.Haskell.TypeSystem.Deriving.Constraints
+        GHC.IR.Haskell.TypeSystem.Deriving.Utils
         GHC.IR.Haskell.TypeSystem.Environment
         GHC.IR.Haskell.TypeSystem.Expression
         TcForeign

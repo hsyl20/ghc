@@ -8,7 +8,7 @@ Functions for inferring (and simplifying) the context for derived instances.
 
 {-# LANGUAGE CPP #-}
 
-module TcDerivInfer (inferConstraints, simplifyInstanceContexts) where
+module GHC.IR.Haskell.TypeSystem.Deriving.Constraints (inferConstraints, simplifyInstanceContexts) where
 
 #include "HsVersions.h"
 
@@ -21,7 +21,7 @@ import GHC.Utils.Error
 import Inst
 import GHC.Utils.Outputable
 import PrelNames
-import TcDerivUtils
+import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Environment
 -- import TcErrors (reportAllUnsolved)
 import TcGenFunctor

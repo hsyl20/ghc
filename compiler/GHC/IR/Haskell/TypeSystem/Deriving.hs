@@ -17,8 +17,8 @@ import GHC.Config.Flags
 
 import TcRnMonad
 import FamInst
-import TcDerivInfer
-import TcDerivUtils
+import GHC.IR.Haskell.TypeSystem.Deriving.Constraints
+import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Validity( allDistinctTyVars )
 import TcClassDcl( tcATDefault, tcMkDeclCtxt )
 import GHC.IR.Haskell.TypeSystem.Environment
@@ -93,7 +93,7 @@ data EarlyDerivSpec = InferTheta (DerivSpec [ThetaOrigin])
         --
         -- GivenTheta ds => the exact context for the instance is supplied
         --                  by the programmer; it is ds_theta
-        -- See Note [Inferring the instance context] in TcDerivInfer
+        -- See Note [Inferring the instance context] in GHC.IR.Haskell.TypeSystem.Deriving.Constraints
 
 earlyDSLoc :: EarlyDerivSpec -> SrcSpan
 earlyDSLoc (InferTheta spec) = ds_loc spec
