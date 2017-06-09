@@ -50,7 +50,7 @@ import GHC.Data.Maybe
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.Data.Var
 import GHC.IR.Interface.Syntax
-import PrelNames
+import GHC.Builtin.Names
 import qualified Data.Map as Map
 
 import GHC.Utils.Finder

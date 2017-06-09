@@ -51,7 +51,7 @@ import GHC.IR.Haskell.TypeSystem.Type as TcType
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.SrcLoc
 import GHC.Utils
 import GHC.Utils.Outputable as Outputable

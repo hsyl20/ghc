@@ -17,7 +17,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Type
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.Data.FastString

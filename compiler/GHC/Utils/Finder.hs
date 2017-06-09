@@ -38,7 +38,7 @@ import GHC.Types
 import GHC.Packages
 import GHC.Data.FastString
 import GHC.Utils
-import PrelNames        ( gHC_PRIM )
+import GHC.Builtin.Names        ( gHC_PRIM )
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Maybe           ( expectJust )

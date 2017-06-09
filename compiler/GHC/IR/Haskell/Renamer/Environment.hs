@@ -62,7 +62,7 @@ import GHC.Data.Module
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
-import PrelNames        ( rOOT_MAIN )
+import GHC.Builtin.Names        ( rOOT_MAIN )
 import GHC.Utils.Error         ( MsgDoc, ErrMsg )
 import GHC.Data.BasicTypes       ( pprWarningTxtForMsg, TopLevelFlag(..))
 import GHC.Data.SrcLoc
@@ -1499,7 +1499,7 @@ We store the relevant Name in the GHC.IR.Haskell tree, in
   * NegApp
   * NPlusKPat
   * HsDo
-respectively.  Initially, we just store the "standard" name (PrelNames.fromIntegralName,
+respectively.  Initially, we just store the "standard" name (GHC.Builtin.Names.fromIntegralName,
 fromRationalName etc), but the renamer changes this to the appropriate user
 name if Opt_NoImplicitPrelude is on.  That is what lookupSyntaxName does.
 

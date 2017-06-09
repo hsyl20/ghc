@@ -20,7 +20,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.FastString
 import GHC.IR.Haskell.Syntax
 import GHC.Utils.Panic
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.Utils.Monad.State

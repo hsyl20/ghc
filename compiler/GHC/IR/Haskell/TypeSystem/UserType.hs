@@ -80,7 +80,7 @@ import GHC.Utils
 import GHC.Data.Unique.Supply
 import GHC.Utils.Outputable
 import GHC.Data.FastString
-import PrelNames hiding ( wildCardName )
+import GHC.Builtin.Names hiding ( wildCardName )
 import qualified GHC.LanguageExtensions as LangExt
 
 import GHC.Data.Maybe

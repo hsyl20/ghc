@@ -39,7 +39,7 @@ import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.SrcLoc
 import GHC.Config.Flags
-import PrelNames (monadFailClassName)
+import GHC.Builtin.Names (monadFailClassName)
 import qualified GHC.LanguageExtensions as LangExt
 
 -- Create chunkified tuple tybes for monad comprehensions

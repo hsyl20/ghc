@@ -50,7 +50,7 @@ import GHC.Utils
 import GHC.Data.Var.Set
 import GHC.Data.BasicTypes       ( Boxity(..) )
 import TysPrim
-import PrelNames
+import GHC.Builtin.Names
 import TysWiredIn
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Ppr

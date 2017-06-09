@@ -28,7 +28,7 @@ import GHC.Data.Id
 import GHC.Data.Type
 import TysWiredIn
 import GHC.Compilers.HaskellToCore.Match
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
 import GHC.IR.Haskell.TypeSystem.Type

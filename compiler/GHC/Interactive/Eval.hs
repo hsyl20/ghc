@@ -71,7 +71,7 @@ import GHC.Data.Unique
 import GHC.Data.Unique.Supply
 import GHC.Utils.Monad
 import GHC.Data.Module
-import PrelNames  ( toDynName, pretendNameIsInScope )
+import GHC.Builtin.Names  ( toDynName, pretendNameIsInScope )
 import GHC.Utils.Panic
 import GHC.Data.Maybe
 import GHC.Utils.Error

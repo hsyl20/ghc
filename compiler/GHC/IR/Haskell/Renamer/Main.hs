@@ -35,7 +35,7 @@ import GHC.Data.ForeignCall      ( CCallTarget(..) )
 import GHC.Data.Module
 import GHC.Types         ( Warnings(..), plusWarns )
 import GHC.Data.Class            ( FunDep )
-import PrelNames        ( applicativeClassName, pureAName, thenAName
+import GHC.Builtin.Names        ( applicativeClassName, pureAName, thenAName
                         , monadClassName, returnMName, thenMName
                         , monadFailClassName, failMName, failMName_preMFP
                         , semigroupClassName, sappendName

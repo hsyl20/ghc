@@ -55,7 +55,7 @@ import GHC.Config.Flags
 import GHC.Data.Type.Constructor hiding ( pprPromotionQuote )
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 import GHC.Utils.Binary

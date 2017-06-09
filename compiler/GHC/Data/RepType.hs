@@ -26,7 +26,7 @@ module GHC.Data.RepType
 import GHC.Data.BasicTypes (Arity, RepArity)
 import GHC.Data.DataConstructor
 import GHC.Utils.Outputable
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Coercion
 import GHC.Data.Type.Constructor
 import GHC.Data.Types

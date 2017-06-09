@@ -60,7 +60,7 @@ import GHC.Data.Literal
 import GHC.Types
 
 import TysWiredIn
-import PrelNames
+import GHC.Builtin.Names
 
 import GHC.IR.Haskell.Utils          ( mkChunkified, chunkify )
 import GHC.IR.Haskell.TypeSystem.Type           ( mkSpecSigmaTy )

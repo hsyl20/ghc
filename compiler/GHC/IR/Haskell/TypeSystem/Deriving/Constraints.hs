@@ -20,7 +20,7 @@ import GHC.Data.DataConstructor
 import GHC.Utils.Error
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Utils.Outputable
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Environment
 -- import GHC.IR.Haskell.TypeSystem.Error (reportAllUnsolved)

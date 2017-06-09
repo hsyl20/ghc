@@ -38,7 +38,7 @@ import GHC.Data.Type.Constructor
 import TysWiredIn
 import GHC.Data.BasicTypes
 import GHC.Data.Literal
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Config.Flags
 import GHC.Utils.Outputable
 import GHC.Utils

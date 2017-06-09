@@ -50,7 +50,7 @@ import GHC.IR.Haskell.Renamer.Utils             ( HsDocContext(..), newLocalBndr
                            , checkDupAndShadowedNames, checkTupSize
                            , unknownSubordinateErr )
 import GHC.IR.Haskell.Renamer.Type
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Type.Constructor               ( tyConName )
 import GHC.Data.ConstructorLike
 import GHC.Data.Type                ( TyThing(..) )

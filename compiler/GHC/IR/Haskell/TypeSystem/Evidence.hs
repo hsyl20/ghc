@@ -47,7 +47,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Class( Class )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Config.Flags   ( gopt, GeneralFlag(Opt_PrintTypecheckerElaboration) )
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

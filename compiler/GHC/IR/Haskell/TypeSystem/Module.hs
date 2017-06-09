@@ -63,7 +63,7 @@ import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Interface.Syntax ( ShowSub(..), showToHeader )
 import GHC.IR.Interface.Types( ShowForAllFlag(..) )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.RdrName
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Haskell.TypeSystem.Expression

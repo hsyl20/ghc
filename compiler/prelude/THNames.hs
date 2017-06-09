@@ -6,7 +6,7 @@
 
 module THNames where
 
-import PrelNames( mk_known_key_name )
+import GHC.Builtin.Names( mk_known_key_name )
 import GHC.Data.Module( Module, mkModuleNameFS, mkModule, thUnitId )
 import GHC.Data.Name( Name )
 import qualified GHC.Data.OccName as OccName
@@ -607,7 +607,7 @@ newtypeStrategyDataConName  = thCon (fsLit "NewtypeStrategy")  newtypeDataConKey
 ********************************************************************* -}
 
 -- ClassUniques available: 200-299
--- Check in PrelNames if you want to change this
+-- Check in GHC.Builtin.Names if you want to change this
 
 liftClassKey :: Unique
 liftClassKey = mkPreludeClassUnique 200
@@ -619,7 +619,7 @@ liftClassKey = mkPreludeClassUnique 200
 ********************************************************************* -}
 
 -- TyConUniques available: 200-299
--- Check in PrelNames if you want to change this
+-- Check in GHC.Builtin.Names if you want to change this
 
 expTyConKey, matchTyConKey, clauseTyConKey, qTyConKey, expQTyConKey,
     decQTyConKey, patTyConKey, matchQTyConKey, clauseQTyConKey,
@@ -674,7 +674,7 @@ derivStrategyTyConKey   = mkPreludeTyConUnique 235
 ********************************************************************* -}
 
 -- DataConUniques available: 100-150
--- If you want to change this, make sure you check in PrelNames
+-- If you want to change this, make sure you check in GHC.Builtin.Names
 
 -- data Inline = ...
 noInlineDataConKey, inlineDataConKey, inlinableDataConKey :: Unique
@@ -720,7 +720,7 @@ newtypeDataConKey  = mkPreludeDataConUnique 215
 ********************************************************************* -}
 
 -- IdUniques available: 200-499
--- If you want to change this, make sure you check in PrelNames
+-- If you want to change this, make sure you check in GHC.Builtin.Names
 
 returnQIdKey, bindQIdKey, sequenceQIdKey, liftIdKey, newNameIdKey,
     mkNameIdKey, mkNameG_vIdKey, mkNameG_dIdKey, mkNameG_tcIdKey,

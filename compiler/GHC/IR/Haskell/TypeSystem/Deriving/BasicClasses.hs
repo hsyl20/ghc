@@ -49,7 +49,7 @@ import GHC.Config.Flags
 import PrelInfo
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
-import PrelNames
+import GHC.Builtin.Names
 import THNames
 import GHC.Data.Module ( moduleName, moduleNameString
               , moduleUnitId, unitIdString )

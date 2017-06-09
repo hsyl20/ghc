@@ -27,7 +27,7 @@ import GHC.Data.Var
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Name
 import GHC.Data.RdrName ( lookupGRE_FieldLabel )
-import PrelNames ( knownNatClassName, knownSymbolClassName,
+import GHC.Builtin.Names ( knownNatClassName, knownSymbolClassName,
                    typeableClassName, coercibleTyConKey,
                    hasFieldClassName,
                    heqTyConKey, ipClassKey )

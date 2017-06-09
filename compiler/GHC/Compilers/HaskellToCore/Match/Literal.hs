@@ -34,7 +34,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax ( shortCutLit )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Name
 import GHC.Data.Type
-import PrelNames
+import GHC.Builtin.Names
 import TysWiredIn
 import GHC.Data.Literal
 import GHC.Data.SrcLoc

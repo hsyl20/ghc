@@ -37,7 +37,7 @@ import GHC.IR.Core.Transform.Unfolding
 import GHC.IR.Core.FreeVars
 import GHC.Data.Graph.Directed
 
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Type

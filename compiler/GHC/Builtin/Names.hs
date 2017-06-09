@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[PrelNames]{Definitions of prelude modules and names}
+\section[GHC.Builtin.Names]{Definitions of prelude modules and names}
 
 
 Nota Bene: all Names defined in here should come from the base package
@@ -115,11 +115,11 @@ by the user. For those things that *can* appear in source programs,
 
 {-# LANGUAGE CPP #-}
 
-module PrelNames (
+module GHC.Builtin.Names (
         Unique, Uniquable(..), hasKey,  -- Re-exported for convenience
 
         -----------------------------------------------------------
-        module PrelNames,       -- A huge bunch of (a) Names,  e.g. intTyConName
+        module GHC.Builtin.Names,       -- A huge bunch of (a) Names,  e.g. intTyConName
                                 --                 (b) Uniques e.g. intTyConKey
                                 --                 (c) Groups of classes and types
                                 --                 (d) miscellaneous things

@@ -50,7 +50,7 @@ import GHC.Data.Unique           ( isValidKnownKeyUnique )
 
 import GHC.Data.ConstructorLike          ( ConLike(..) )
 import THNames          ( templateHaskellNames )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Available
 import PrimOp
@@ -104,7 +104,7 @@ Note [About wired-in things]
 
 -- | This list is used to ensure that when you say "Prelude.map" in your source
 -- code, or in an interface file, you get a Name with the correct known key (See
--- Note [Known-key names] in PrelNames)
+-- Note [Known-key names] in GHC.Builtin.Names)
 knownKeyNames :: [Name]
 knownKeyNames
   | debugIsOn

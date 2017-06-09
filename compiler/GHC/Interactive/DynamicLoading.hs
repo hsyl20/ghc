@@ -38,7 +38,7 @@ import GHC.Data.OccName          ( OccName, mkVarOcc )
 import GHC.IR.Haskell.Renamer.ImportExport          ( gresFromAvails )
 import GHC.Config.Flags
 import GHC.Plugin.Types          ( Plugin, FrontendPlugin, CommandLineOption )
-import PrelNames        ( pluginTyConName, frontendPluginTyConName )
+import GHC.Builtin.Names        ( pluginTyConName, frontendPluginTyConName )
 
 import GHC.Types
 import GHCi.RemoteTypes ( HValue )

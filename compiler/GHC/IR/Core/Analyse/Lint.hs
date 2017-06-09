@@ -51,7 +51,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.BasicTypes
 import GHC.Utils.Error as Err
 import GHC.Data.List.SetOps
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Utils

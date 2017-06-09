@@ -26,7 +26,7 @@ import GHC.Data.Coercion.Axiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeE
 import GHC.Data.Name       ( Name, BuiltInSyntax(..) )
 import TysWiredIn
 import TysPrim    ( mkTemplateAnonTyConBinders )
-import PrelNames  ( gHC_TYPELITS
+import GHC.Builtin.Names  ( gHC_TYPELITS
                   , gHC_TYPENATS
                   , typeNatAddTyFamNameKey
                   , typeNatMulTyFamNameKey

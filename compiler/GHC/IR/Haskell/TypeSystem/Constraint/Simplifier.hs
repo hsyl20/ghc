@@ -28,7 +28,7 @@ import GHC.Data.Maybe
 import GHC.Data.Name
 import GHC.Utils.Outputable
 import PrelInfo
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Error
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Constraint.Interact

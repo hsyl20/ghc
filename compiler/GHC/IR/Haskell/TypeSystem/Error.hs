@@ -34,7 +34,7 @@ import GHC.Data.Name
 import GHC.Data.RdrName ( lookupGlobalRdrEnv, lookupGRE_Name, GlobalRdrEnv
                , mkRdrUnqual, isLocalGRE, greSrcSpan, pprNameProvenance
                , GlobalRdrElt (..), globalRdrEnvElts )
-import PrelNames ( typeableClassName, hasKey, liftedRepDataConKey )
+import GHC.Builtin.Names ( typeableClassName, hasKey, liftedRepDataConKey )
 import GHC.Data.Id
 import GHC.Data.Var
 import GHC.Data.Var.Set

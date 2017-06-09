@@ -99,7 +99,7 @@ import GHC.Data.Name
 import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc
 import GHC.Data.Unique
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Data.Types   -- Doesn't need special access, but this is easier to avoid
@@ -669,7 +669,7 @@ This is even more so an ordinary class than (~~), with the following exceptions:
 
  * It always terminates.
 
-Within GHC, ~ is called eqTyCon, and it is defined in PrelNames. Note that
+Within GHC, ~ is called eqTyCon, and it is defined in GHC.Builtin.Names. Note that
 it is *not* wired in.
 
 

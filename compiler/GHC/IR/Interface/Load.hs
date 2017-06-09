@@ -45,7 +45,7 @@ import GHC.Data.BasicTypes hiding (SuccessFlag(..))
 import GHC.IR.Haskell.TypeSystem
 
 import GHC.Config.Constants
-import PrelNames
+import GHC.Builtin.Names
 import PrelInfo
 import PrimOp   ( allThePrimOps, primOpFixity, primOpOcc )
 import GHC.Data.Id.Make     ( seqId )

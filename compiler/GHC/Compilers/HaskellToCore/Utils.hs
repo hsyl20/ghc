@@ -66,7 +66,7 @@ import GHC.Data.ConstructorLike
 import GHC.Data.Unique.Set
 import GHC.Data.Unique.Supply
 import GHC.Data.Module
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Name( isInternalName )
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc

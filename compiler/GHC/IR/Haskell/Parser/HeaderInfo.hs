@@ -29,7 +29,7 @@ import GHC.IR.Haskell.Lexer
 import GHC.Data.FastString
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Module
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.StringBuffer
 import GHC.Data.SrcLoc
 import GHC.Config.Flags

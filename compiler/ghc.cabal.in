@@ -348,7 +348,7 @@ Library
         GHC.Data.ForeignCall
         KnownUniques
         PrelInfo
-        PrelNames
+        GHC.Builtin.Names
         GHC.IR.Core.Transform.ConstantFolding
         PrimOp
         TysPrim

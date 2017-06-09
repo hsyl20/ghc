@@ -59,7 +59,7 @@ import GHC.Data.Var.Set
 import TysWiredIn
 import TysPrim( intPrimTy )
 import PrimOp( tagToEnumKey )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Config.Flags
 import GHC.Data.SrcLoc
 import GHC.Utils

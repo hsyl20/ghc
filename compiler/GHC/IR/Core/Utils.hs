@@ -58,7 +58,7 @@ module GHC.IR.Core.Utils (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Syntax
-import PrelNames ( makeStaticName )
+import GHC.Builtin.Names ( makeStaticName )
 import GHC.IR.Core.PrettyPrint
 import GHC.IR.Core.FreeVars( exprFreeVars )
 import GHC.Data.Var

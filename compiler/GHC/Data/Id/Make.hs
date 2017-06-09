@@ -65,7 +65,7 @@ import GHC.Data.Demand
 import GHC.IR.Core.Syntax
 import GHC.Data.Unique
 import GHC.Data.Unique.Supply
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.BasicTypes       hiding ( SuccessFlag(..) )
 import GHC.Utils
 import GHC.Data.Pair

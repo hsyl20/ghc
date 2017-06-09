@@ -49,7 +49,7 @@ import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
-import PrelNames
+import GHC.Builtin.Names
 import TysWiredIn
 import GHC.Data.Literal
 import GHC.Data.Var as Var

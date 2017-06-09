@@ -223,7 +223,7 @@ import GHC.Data.Type.Constructor
 import TysPrim
 import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Coercion.Axiom
 import {-# SOURCE #-} GHC.Data.Coercion
 

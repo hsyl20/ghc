@@ -148,7 +148,7 @@ import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
-import PrelNames
+import GHC.Builtin.Names
 
 import GHC.Data.Id
 import GHC.Data.Var.Set

@@ -25,7 +25,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Types
 import qualified GHC.Data.Type as Type
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Graph.Directed
 
 -- |From a list of type constructors, extract those that can be vectorised, returning them in two

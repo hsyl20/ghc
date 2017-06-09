@@ -42,7 +42,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.IR.Haskell.TypeSystem
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Evidence

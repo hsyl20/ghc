@@ -47,7 +47,7 @@ import GHC.Data.Class
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set
-import PrelNames  ( typeableClassName, genericClassNames
+import GHC.Builtin.Names  ( typeableClassName, genericClassNames
                   , knownNatClassName, knownSymbolClassName )
 import GHC.Data.Bag
 import GHC.Data.BasicTypes

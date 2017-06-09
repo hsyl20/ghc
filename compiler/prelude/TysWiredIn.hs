@@ -131,7 +131,7 @@ module TysWiredIn (
 import {-# SOURCE #-} GHC.Data.Id.Make( mkDataConWorkId, mkDictSelId )
 
 -- friends:
-import PrelNames
+import GHC.Builtin.Names
 import TysPrim
 import {-# SOURCE #-} KnownUniques
 
@@ -190,7 +190,7 @@ to this Note, so a search for this Note's name should find all the lists.
 ************************************************************************
 
 If you change which things are wired in, make sure you change their
-names in PrelNames, so they use wTcQual, wDataQual, etc
+names in GHC.Builtin.Names, so they use wTcQual, wDataQual, etc
 -}
 
 -- This list is used only to define PrelInfo.wiredInThings. That in turn
@@ -597,7 +597,7 @@ mkForAllKind = mkForAllTy
 *                                                                      *
 ************************************************************************
 
-Note [How tuples work]  See also Note [Known-key names] in PrelNames
+Note [How tuples work]  See also Note [Known-key names] in GHC.Builtin.Names
 ~~~~~~~~~~~~~~~~~~~~~~
 * There are three families of tuple TyCons and corresponding
   DataCons, expressed by the type BasicTypes.TupleSort:

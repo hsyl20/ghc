@@ -46,7 +46,7 @@ import GHC.Data.Module
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import TysWiredIn
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.BasicTypes
 import GHC.Data.Maybe
 import GHC.Data.Var.Environment

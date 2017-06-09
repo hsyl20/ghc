@@ -109,7 +109,7 @@ import TysWiredIn
 import TysPrim
 import GHC.Data.Var.Environment
 import GHC.Data.Name.Environment
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Utils
 import GHC.Utils.Outputable
 import GHC.Data.FastString

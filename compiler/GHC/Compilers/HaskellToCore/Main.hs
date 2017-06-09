@@ -36,7 +36,7 @@ import GHC.Compilers.HaskellToCore.Monad
 import GHC.Compilers.HaskellToCore.Expression
 import GHC.Compilers.HaskellToCore.Binding
 import GHC.Compilers.HaskellToCore.Foreign.Declaration
-import PrelNames   ( coercibleTyConKey )
+import GHC.Builtin.Names   ( coercibleTyConKey )
 import TysPrim     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
 import GHC.Data.Coercion    ( mkCoVarCo )

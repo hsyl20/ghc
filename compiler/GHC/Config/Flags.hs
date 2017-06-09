@@ -164,7 +164,7 @@ import GHC.Config.Platform.Constants
 import GHC.Data.Module
 import GHC.Packages.PackageConfig
 import {-# SOURCE #-} GHC.Config.Hooks
-import {-# SOURCE #-} PrelNames ( mAIN )
+import {-# SOURCE #-} GHC.Builtin.Names ( mAIN )
 import {-# SOURCE #-} GHC.Packages (PackageState, emptyPackageState)
 import GHC.Program.Driver.Phases     ( Phase(..), phaseInputExt )
 import Config

@@ -36,7 +36,7 @@ import GHC.IR.Haskell.Renamer.Splice         ( rnBracket, rnSpliceExpr, checkThL
 import GHC.IR.Haskell.Renamer.Type
 import GHC.IR.Haskell.Renamer.Pattern
 import GHC.Config.Flags
-import PrelNames
+import GHC.Builtin.Names
 
 import GHC.Data.BasicTypes
 import GHC.Data.Name

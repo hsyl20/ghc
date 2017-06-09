@@ -48,7 +48,7 @@ import GHC.Data.Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendT
                        , isInScope, substTyVarBndr, cloneTyVarBndr )
 import GHC.Data.Coercion hiding ( substCo, substCoVarBndr )
 
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Id

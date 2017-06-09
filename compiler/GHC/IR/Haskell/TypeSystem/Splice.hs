@@ -74,7 +74,7 @@ import GHC.Data.FamilyInstance
 import GHC.Data.ClassInstance
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Name.Environment
-import PrelNames
+import GHC.Builtin.Names
 import TysWiredIn
 import GHC.Data.OccName as OccName
 import GHC.Config.Hooks

@@ -120,7 +120,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Pair
 import GHC.Data.SrcLoc
-import PrelNames
+import GHC.Builtin.Names
 import TysPrim          ( eqPhantPrimTyCon )
 import GHC.Data.List.SetOps
 import GHC.Data.Maybe

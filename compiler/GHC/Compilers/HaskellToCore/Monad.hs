@@ -62,7 +62,7 @@ import GHC.IR.Interface.TypeCheck
 import GHC.IR.Haskell.TypeSystem.MutableType ( checkForLevPolyX, formatLevPolyErr )
 import GHC.IR.Interface.Load
 import GHC.Utils.Finder
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.RdrName
 import GHC.Types
 import GHC.Data.Bag

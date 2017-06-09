@@ -28,7 +28,7 @@ import GHC.IR.Haskell.Renamer.Fixity
 import GHC.IR.Haskell.Renamer.Utils          ( warnUnusedTopBinds, mkFieldEnv )
 import GHC.IR.Interface.Load        ( loadSrcInterface )
 import GHC.IR.Haskell.TypeSystem
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Name.Environment

@@ -534,7 +534,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Config.Platform.Constants \
 	GHC.Utils.PrettyPrint.Colour \
 	GHC.IR.Core.PrettyPrint \
-	PrelNames \
+	GHC.Builtin.Names \
 	GHC.IR.Core.Transform.ConstantFolding \
 	GHC.Utils.PrettyPrint \
 	PrimOp \

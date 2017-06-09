@@ -128,7 +128,7 @@ import qualified GHC.IR.Haskell.TypeSystem as TcM
 import qualified GHC.IR.Haskell.TypeSystem.MutableType as TcM
 import qualified GHC.IR.Haskell.TypeSystem.Environment as TcM
        ( checkWellStaged, topIdLvl, tcGetDefaultTys, tcLookupClass, tcLookupId )
-import PrelNames( heqTyConKey, eqTyConKey )
+import GHC.Builtin.Names( heqTyConKey, eqTyConKey )
 import GHC.Data.Kind
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Config.Flags

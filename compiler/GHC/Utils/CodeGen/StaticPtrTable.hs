@@ -140,7 +140,7 @@ import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils.Platform
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Environment (lookupGlobal)
 import GHC.Data.Type
 

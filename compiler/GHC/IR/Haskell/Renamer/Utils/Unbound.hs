@@ -21,7 +21,7 @@ import GHC.Data.Name
 import GHC.Data.Module
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
-import PrelNames ( mkUnboundName, forall_tv_RDR, isUnboundName )
+import GHC.Builtin.Names ( mkUnboundName, forall_tv_RDR, isUnboundName )
 import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Config.Flags

@@ -28,7 +28,7 @@ import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier ( simplifyAmbiguityCheck 
 import GHC.Data.Types
 import GHC.IR.Haskell.TypeSystem.Type hiding ( sizeType, sizeTypes )
 import GHC.IR.Haskell.TypeSystem.MutableType
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.Kind

@@ -30,7 +30,7 @@ import GHC.Data.RdrName
 import GHC.Data.BasicTypes
 import TysPrim
 import TysWiredIn
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem
 import GHC.Types

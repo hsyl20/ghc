@@ -16,7 +16,7 @@ import GHC.Data.Unique.Supply
 import TysWiredIn
 import GHC.Utils
 import GHC.Utils.Outputable
-import PrelNames
+import GHC.Builtin.Names
 
 #include "HsVersions.h"
 
@@ -77,7 +77,7 @@ lookupOrigNameCache :: OrigNameCache -> Module -> OccName -> Maybe Name
 lookupOrigNameCache nc mod occ
   | mod == gHC_TYPES || mod == gHC_PRIM || mod == gHC_TUPLE
   , Just name <- isBuiltInOcc_maybe occ
-  =     -- See Note [Known-key names], 3(c) in PrelNames
+  =     -- See Note [Known-key names], 3(c) in GHC.Builtin.Names
         -- Special case for tuples; there are too many
         -- of them to pre-populate the original-name cache
     Just name

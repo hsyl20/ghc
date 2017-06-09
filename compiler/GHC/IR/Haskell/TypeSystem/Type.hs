@@ -212,7 +212,7 @@ import GHC.Data.Name as Name -- hiding (varName)
             -- Perhaps there's a better way to do this?
 import GHC.Data.Name.Set
 import GHC.Data.Var.Environment
-import PrelNames
+import GHC.Builtin.Names
 import TysWiredIn( coercibleClass, unitTyCon, unitTyConKey
                  , listTyCon, constraintKind )
 import GHC.Data.BasicTypes

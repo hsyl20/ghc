@@ -40,7 +40,7 @@ import GHC.Data.Type( mkTyVarBinders )
 import GHC.Config.Flags
 import GHC.Data.Var      ( TyVar, tyVarName, tyVarKind )
 import GHC.Data.Id       ( Id, idName, idType, idInlinePragma, setInlinePragma, mkLocalId )
-import PrelNames( mkUnboundName )
+import GHC.Builtin.Names( mkUnboundName )
 import GHC.Data.BasicTypes
 import GHC.Data.Bag( foldrBag )
 import GHC.Data.Module( getModule )

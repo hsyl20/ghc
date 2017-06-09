@@ -1,4 +1,4 @@
-module PrelNames where
+module GHC.Builtin.Names where
 
 import GHC.Data.Module
 import GHC.Data.Unique

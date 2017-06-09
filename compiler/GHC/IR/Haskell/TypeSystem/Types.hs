@@ -180,7 +180,7 @@ import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Utils.Fingerprint
 import GHC.Utils
-import PrelNames ( isUnboundName )
+import GHC.Builtin.Names ( isUnboundName )
 
 import Control.Monad (ap, liftM, msum)
 #if __GLASGOW_HASKELL__ > 710

@@ -57,7 +57,7 @@ import GHC.Data.Maybe
 import GHC.Utils
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable as Outputable
-import PrelNames( ipClassName )
+import GHC.Builtin.Names( ipClassName )
 import GHC.IR.Haskell.TypeSystem.Validity (checkValidType)
 import GHC.Data.Unique (getUnique)
 import GHC.Data.Unique.FiniteMap

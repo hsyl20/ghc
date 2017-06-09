@@ -26,7 +26,7 @@ import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon )
 
 import GHC.Data.Types
 import GHC.Data.Type.Constructor
-import PrelNames
+import GHC.Builtin.Names
 
 import GHC.Utils.Outputable
 import GHC.Utils

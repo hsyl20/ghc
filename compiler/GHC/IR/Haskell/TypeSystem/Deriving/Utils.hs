@@ -35,7 +35,7 @@ import GHC.IR.Interface.Load (loadInterfaceForName)
 import GHC.Data.Module (getModule)
 import GHC.Data.Name
 import GHC.Utils.Outputable
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses

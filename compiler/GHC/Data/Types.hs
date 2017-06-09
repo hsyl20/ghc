@@ -159,7 +159,7 @@ import GHC.Data.Var.Free
 
 -- others
 import GHC.Data.BasicTypes ( LeftOrRight(..), TyPrec(..), maybeParen, pickLR )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Utils.Outputable
 import GHC.Config.Flags
 import GHC.Data.FastString

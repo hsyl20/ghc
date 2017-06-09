@@ -17,7 +17,7 @@ module GHC.Compilers.CoreToStg.Prepare (
 import GHC.IR.Core.Analyse.Occurence
 
 import GHC.Types
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Id.Make             ( realWorldPrimId )
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Arity

@@ -128,7 +128,7 @@ import GHC.Utils.Outputable
 import GHC.Config.Flags
 
 -- Turgid imports for showTypeCategory
-import PrelNames
+import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

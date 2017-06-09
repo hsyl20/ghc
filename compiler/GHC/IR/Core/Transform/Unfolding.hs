@@ -57,7 +57,7 @@ import PrimOp
 import GHC.Data.Id.Info
 import GHC.Data.BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
 import GHC.Data.Type
-import PrelNames
+import GHC.Builtin.Names
 import TysPrim          ( realWorldStatePrimTy )
 import GHC.Data.Bag
 import GHC.Utils

@@ -10,8 +10,8 @@
 -- CoreExpr's of the "smart constructors" of the Meta.Exp datatype.
 --
 -- It also defines a bunch of knownKeyNames, in the same way as is done
--- in prelude/PrelNames.  It's much more convenient to do it here, because
--- otherwise we have to recompile PrelNames whenever we add a Name, which is
+-- in prelude/GHC.Builtin.Names.  It's much more convenient to do it here, because
+-- otherwise we have to recompile GHC.Builtin.Names whenever we add a Name, which is
 -- a Royal Pain (triggers other recompilation).
 -----------------------------------------------------------------------------
 
@@ -28,7 +28,7 @@ import qualified Language.Haskell.TH as TH
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Class
-import PrelNames
+import GHC.Builtin.Names
 -- To avoid clashes with GHC.Compilers.HaskellToCore.Splices.varName we must make a local alias for
 -- OccName.varName we do this by removing varName from the import of
 -- OccName above, making a qualified instance of OccName and using

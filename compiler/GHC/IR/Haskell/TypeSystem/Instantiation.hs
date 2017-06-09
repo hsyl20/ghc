@@ -58,7 +58,7 @@ import GHC.Data.Var      ( EvVar, mkTyVar, tyVarName, TyVarBndr(..) )
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Var.Environment
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.SrcLoc
 import GHC.Config.Flags
 import GHC.Utils

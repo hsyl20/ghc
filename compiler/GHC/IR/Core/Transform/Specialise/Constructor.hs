@@ -55,7 +55,7 @@ import GHC.Data.Unique.FiniteMap
 import GHC.Utils.Monad
 import Control.Monad    ( zipWithM )
 import Data.List
-import PrelNames        ( specTyConName )
+import GHC.Builtin.Names        ( specTyConName )
 import GHC.Data.Module
 
 -- See Note [Forcing specialisation]

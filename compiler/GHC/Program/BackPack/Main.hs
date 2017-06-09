@@ -44,7 +44,7 @@ import GHC.IR.Haskell.Parser.HeaderInfo
 import GHC.IR.Interface.Utils
 import GHC.Program.Make
 import GHC.Data.Unique.DeterSet
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.BasicTypes hiding (SuccessFlag(..))
 import GHC.Utils.Finder
 import GHC.Utils

@@ -70,7 +70,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.FieldLabel
 import GHC.Data.Class
 import GHC.Data.Name
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Data.List.SetOps

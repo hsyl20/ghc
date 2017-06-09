@@ -78,7 +78,7 @@ module GHC.Data.Name (
     ) where
 
 import {-# SOURCE #-} GHC.Data.Types( TyThing )
-import {-# SOURCE #-} PrelNames( starKindTyConKey, unicodeStarKindTyConKey )
+import {-# SOURCE #-} GHC.Builtin.Names( starKindTyConKey, unicodeStarKindTyConKey )
 
 import GHC.Data.OccName
 import GHC.Data.Module

@@ -40,7 +40,7 @@ import GHC.Data.Type     hiding ( substTy, extendTvSubst, extendCvSubst, extendT
 import GHC.Data.Coercion hiding ( substCo, substCoVarBndr )
 import GHC.Data.Type.Constructor        ( tyConArity )
 import TysWiredIn
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.BasicTypes
 import GHC.Data.Module       ( Module )
 import GHC.Utils.Error

@@ -1082,7 +1082,7 @@ findWiredInPackages dflags prec_map pkgs vis_map = do
 -- Helper functions for rewiring Module and UnitId.  These
 -- rewrite UnitIds of modules in wired-in packages to the form known to the
 -- compiler. For instance, base-4.9.0.0 will be rewritten to just base, to match
--- what appears in PrelNames.
+-- what appears in GHC.Builtin.Names.
 
 upd_wired_in_mod :: WiredPackagesMap -> Module -> Module
 upd_wired_in_mod wiredInMap (Module uid m) = Module (upd_wired_in_uid wiredInMap uid) m

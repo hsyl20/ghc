@@ -51,7 +51,7 @@ import GHC.Data.RdrName
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Type
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils.Platform

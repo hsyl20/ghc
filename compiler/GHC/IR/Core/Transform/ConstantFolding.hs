@@ -42,7 +42,7 @@ import GHC.IR.Core.Utils   ( cheapEqExpr, exprIsHNF )
 import GHC.IR.Core.Transform.Unfolding  ( exprIsConApp_maybe )
 import GHC.Data.Type
 import GHC.Data.OccName     ( occNameFS )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Maybe      ( orElse )
 import GHC.Data.Name        ( Name, nameOccName )
 import GHC.Utils.Outputable

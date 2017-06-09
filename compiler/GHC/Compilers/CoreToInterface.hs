@@ -54,7 +54,7 @@ import GHC.Data.Coercion.Axiom
 import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )
 import TysWiredIn ( heqTyCon )
 import GHC.Data.Id.Make ( noinlineIdName )
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 import GHC.Data.Type

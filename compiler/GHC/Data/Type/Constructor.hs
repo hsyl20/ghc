@@ -137,7 +137,7 @@ import GHC.Data.ForeignCall
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Coercion.Axiom
-import PrelNames
+import GHC.Builtin.Names
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import GHC.Data.FastString.Environment
