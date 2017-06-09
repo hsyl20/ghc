@@ -3,7 +3,7 @@
 
 
 The deriving code for the Functor, Foldable, and Traversable classes
-(equivalent to the code in TcGenDeriv, for other classes)
+(equivalent to the code in GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses, for other classes)
 -}
 
 {-# LANGUAGE ScopedTypeVariables #-}
@@ -24,7 +24,7 @@ import PrelNames
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.Utils.Monad.State
-import TcGenDeriv
+import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Types

@@ -22,7 +22,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Validity( allDistinctTyVars )
 import GHC.IR.Haskell.TypeSystem.ClassDeclaration( tcATDefault, tcMkDeclCtxt )
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcGenDeriv                       -- Deriv stuff
+import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses                       -- Deriv stuff
 import GHC.Data.ClassInstance
 import Inst
 import GHC.Data.FamilyInstance
@@ -1558,7 +1558,7 @@ genInst spec@(DS { ds_tvs = tvs, ds_tc = rep_tycon
     extensions
       | isDerivSpecNewtype mechanism
         -- Both these flags are needed for higher-rank uses of coerce
-        -- See Note [Newtype-deriving instances] in TcGenDeriv
+        -- See Note [Newtype-deriving instances] in GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
       = [LangExt.ImpredicativeTypes, LangExt.RankNTypes]
       | otherwise
       = []

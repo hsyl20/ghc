@@ -176,7 +176,7 @@ rnExpr (OpApp e1 op  _ e2)
         -- Deal with fixity
         -- When renaming code synthesised from "deriving" declarations
         -- we used to avoid fixity stuff, but we can't easily tell any
-        -- more, so I've removed the test.  Adding HsPars in TcGenDeriv
+        -- more, so I've removed the test.  Adding HsPars in GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
         -- should prevent bad things happening.
         ; fixity <- case op' of
               L _ (HsVar (L _ n)) -> lookupFixityRn n

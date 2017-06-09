@@ -4,7 +4,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-TcGenDeriv: Generating derived instance declarations
+GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses: Generating derived instance declarations
 
 This module is nominally ``subordinate'' to @GHC.IR.Haskell.TypeSystem.Deriving@, which is the
 ``official'' interface to deriving-related things.
@@ -15,7 +15,7 @@ This is where we do all the grimy bindings' generation.
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcGenDeriv (
+module GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses (
         BagDerivStuff, DerivStuff(..),
 
         gen_Eq_binds,

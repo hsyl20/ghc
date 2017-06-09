@@ -51,7 +51,7 @@ data HsLit
       -- ^ Packed bytes
   | HsInt           IntegralLit
       -- ^ Genuinely an Int; arises from
-      -- @TcGenDeriv@, and from TRANSLATION
+      -- @GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses@, and from TRANSLATION
   | HsIntPrim       SourceText Integer
       -- ^ literal @Int#@
   | HsWordPrim      SourceText Integer

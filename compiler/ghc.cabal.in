@@ -411,7 +411,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Environment
         GHC.IR.Haskell.TypeSystem.Expression
         GHC.IR.Haskell.TypeSystem.Foreign
-        TcGenDeriv
+        GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
         TcGenFunctor
         TcGenGenerics
         GHC.IR.Haskell.TypeSystem.Syntax

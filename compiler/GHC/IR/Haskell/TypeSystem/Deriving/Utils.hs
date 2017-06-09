@@ -38,7 +38,7 @@ import GHC.Utils.Outputable
 import PrelNames
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
-import TcGenDeriv
+import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
 import TcGenFunctor
 import TcGenGenerics
 import TcRnMonad

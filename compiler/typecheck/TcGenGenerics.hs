@@ -3,7 +3,7 @@
 
 
 The deriving code for the Generic class
-(equivalent to the code in TcGenDeriv, for other classes)
+(equivalent to the code in GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses, for other classes)
 -}
 
 {-# LANGUAGE CPP, ScopedTypeVariables, TupleSections #-}
@@ -16,7 +16,7 @@ module TcGenGenerics (canDoGenerics, canDoGenerics1,
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Type
 import import GHC.IR.Haskell.TypeSystem.Type
-import TcGenDeriv
+import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
 import TcGenFunctor
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
