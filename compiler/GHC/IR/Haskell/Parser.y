@@ -74,7 +74,7 @@ import GHC.IR.Haskell.Annotation
 import GHC.IR.Haskell.TypeSystem.Evidence       ( emptyTcEvBinds )
 
 -- compiler/prelude
-import ForeignCall
+import GHC.Data.ForeignCall
 import TysPrim          ( eqPrimTyCon )
 import PrelNames        ( eqTyCon_RDR )
 import TysWiredIn       ( unitTyCon, unitDataCon, tupleTyCon, tupleDataCon, nilDataCon,

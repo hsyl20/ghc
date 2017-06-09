@@ -22,7 +22,7 @@ import GHC.IR.Cmm.Transform.Dataflow
 
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Utils.Outputable hiding (panic, pprPanic)
 import qualified GHC.Utils.Outputable as Outputable
 import GHC.Utils.Platform

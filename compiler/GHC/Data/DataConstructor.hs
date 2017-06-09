@@ -63,7 +63,7 @@ module GHC.Data.DataConstructor (
 
 import {-# SOURCE #-} GHC.Data.Id.Make ( DataConBoxer )
 import GHC.Data.Type as Type
-import ForeignCall ( CType )
+import GHC.Data.ForeignCall ( CType )
 import GHC.Data.Coercion
 import GHC.Utils.Unify
 import GHC.Data.Type.Constructor

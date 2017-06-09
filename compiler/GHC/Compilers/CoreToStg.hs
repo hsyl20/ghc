@@ -40,7 +40,7 @@ import GHC.Utils.Monad
 import GHC.Data.FastString
 import GHC.Utils
 import GHC.Config.Flags
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Demand           ( isUsedOnce )
 import PrimOp           ( PrimCall(..) )
 import GHC.Data.Unique.FiniteMap

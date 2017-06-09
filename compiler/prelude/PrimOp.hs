@@ -40,7 +40,7 @@ import GHC.Data.Type
 import GHC.Data.RepType          ( typePrimRep1, tyConPrimRep1 )
 import GHC.Data.BasicTypes       ( Arity, Fixity(..), FixityDirection(..), Boxity(..),
                           SourceText(..) )
-import ForeignCall      ( CLabelString )
+import GHC.Data.ForeignCall      ( CLabelString )
 import GHC.Data.Unique           ( Unique, mkPrimOpIdUnique )
 import GHC.Utils.Outputable
 import GHC.Data.FastString

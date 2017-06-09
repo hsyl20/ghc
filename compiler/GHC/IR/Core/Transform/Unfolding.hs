@@ -62,7 +62,7 @@ import TysPrim          ( realWorldStatePrimTy )
 import GHC.Data.Bag
 import GHC.Utils
 import GHC.Utils.Outputable
-import ForeignCall
+import GHC.Data.ForeignCall
 
 import qualified Data.ByteString as BS
 

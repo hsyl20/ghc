@@ -39,7 +39,7 @@ import GHC.Data.RepType
 import TysPrim
 import GHC.Data.CLabel
 import GHC.RTS.Storage
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Config.Flags
 import GHC.Data.Maybe
 import GHC.Utils.Outputable

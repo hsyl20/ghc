@@ -43,7 +43,7 @@ import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Name

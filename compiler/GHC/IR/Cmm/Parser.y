@@ -231,7 +231,7 @@ import GHC.IR.Haskell.Lexer
 import GHC.IR.Cmm.Parser.Monad
 
 import GHC.Data.CostCentre
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Module
 import GHC.Utils.Platform
 import GHC.Data.Literal

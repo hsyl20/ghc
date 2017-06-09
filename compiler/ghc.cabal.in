@@ -345,7 +345,7 @@ Library
         GHC.IR.Haskell.Parser
         GHC.IR.Haskell.Parser.Syntax
         GHC.IR.Haskell.Annotation
-        ForeignCall
+        GHC.Data.ForeignCall
         KnownUniques
         PrelInfo
         PrelNames

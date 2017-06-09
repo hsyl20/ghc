@@ -93,7 +93,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Type
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Utils.Outputable
 import GHC.Data.Module
 import GHC.Data.Demand

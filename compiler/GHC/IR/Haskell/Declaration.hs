@@ -97,7 +97,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Name
 import GHC.Data.BasicTypes
 import GHC.Data.Coercion
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, OutputableBndrId )
 import GHC.Data.Name.Set
 

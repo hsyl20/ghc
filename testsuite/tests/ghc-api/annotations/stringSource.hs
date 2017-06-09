@@ -14,7 +14,7 @@ import GHC
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.IR.Haskell.Declaration

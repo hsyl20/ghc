@@ -23,7 +23,7 @@ import GHC.Utils.Platform
 import GHC.Data.Name
 import GHC.Data.Id.Make
 import GHC.Data.Id as Id
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Types
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax

@@ -31,7 +31,7 @@ import GHC.IR.Haskell.Renamer.Documentation          ( rnHsDoc, rnMbLHsDoc )
 import GHC.IR.Haskell.TypeSystem.Annotation    ( annCtxt )
 import GHC.IR.Haskell.TypeSystem
 
-import ForeignCall      ( CCallTarget(..) )
+import GHC.Data.ForeignCall      ( CCallTarget(..) )
 import GHC.Data.Module
 import GHC.Types         ( Warnings(..), plusWarns )
 import GHC.Data.Class            ( FunDep )

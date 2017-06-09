@@ -35,7 +35,7 @@ import GHC.IR.Cmm.Syntax
 import GHC.RTS.InfoTable
 import GHC.IR.Core.Syntax
 import GHC.Data.DataConstructor
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Id
 import PrimOp
 import GHC.Data.Type.Constructor

@@ -53,7 +53,7 @@ import GHC.Data.CLabel
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch
 
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Id.Info
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

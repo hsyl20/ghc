@@ -52,7 +52,7 @@ import Data.List   ( intersperse )
 import GHC.Data.DataConstructor
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ForeignCall ( ForeignCall )
+import GHC.Data.ForeignCall ( ForeignCall )
 import GHC.Data.Id
 import GHC.Data.Id.Info      ( mayHaveCafRefs )
 import GHC.Data.Literal     ( Literal, literalType )

@@ -13,7 +13,7 @@ import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Graph
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.IR.Cmm.Analyse.Liveness
 import GHC.IR.Cmm.ProcPoint
 import GHC.RTS.Storage

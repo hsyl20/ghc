@@ -54,7 +54,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Bag
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Utils
 import GHC.Data.Maybe
 import GHC.Utils.Monad

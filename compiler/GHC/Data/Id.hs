@@ -139,7 +139,7 @@ import GHC.Data.Name
 import GHC.Data.Module
 import GHC.Data.Class
 import {-# SOURCE #-} PrimOp (PrimOp)
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Maybe
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable

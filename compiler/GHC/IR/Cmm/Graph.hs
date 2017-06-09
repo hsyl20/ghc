@@ -29,7 +29,7 @@ import GHC.IR.Cmm.Switch (SwitchTargets)
 import Compiler.Hoopl hiding (Unique, (<*>), mkFirst, mkMiddle, mkLast, mkLabel, mkBranch, Shape(..))
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Tree.OrdList
 import GHC.RTS.Storage (ByteOff)
 import GHC.Data.Unique.Supply

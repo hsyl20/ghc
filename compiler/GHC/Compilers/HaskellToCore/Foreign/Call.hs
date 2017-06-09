@@ -24,7 +24,7 @@ import GHC.Compilers.HaskellToCore.Monad
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax.Make
 import GHC.Data.Id.Make
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.DataConstructor
 import GHC.Compilers.HaskellToCore.Utils
 

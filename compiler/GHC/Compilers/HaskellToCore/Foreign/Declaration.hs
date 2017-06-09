@@ -35,7 +35,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Cmm.Expr
 import GHC.IR.Cmm.Utils
 import GHC.Types
-import ForeignCall
+import GHC.Data.ForeignCall
 import TysWiredIn
 import TysPrim
 import PrelNames

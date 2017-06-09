@@ -61,7 +61,7 @@ import GHC.IR.Core.Syntax          ( Tickish(..) )
 import GHC.Data.SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 
 -- The rest:
-import ForeignCall      ( CCallConv(..) )
+import GHC.Data.ForeignCall      ( CCallConv(..) )
 import GHC.Data.Tree.OrdList
 import GHC.Utils.Outputable
 import GHC.Data.Unique

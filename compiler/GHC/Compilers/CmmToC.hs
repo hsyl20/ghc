@@ -28,7 +28,7 @@ module GHC.Compilers.CmmToC (
 -- Cmm stuff
 import GHC.IR.Cmm.BlockId
 import GHC.Data.CLabel
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.IR.Cmm.Syntax hiding (pprBBlock)
 import GHC.IR.Cmm.PrettyPrint ()
 import GHC.IR.Cmm.Transform.Dataflow

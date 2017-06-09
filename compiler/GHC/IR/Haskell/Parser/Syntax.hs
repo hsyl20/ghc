@@ -83,7 +83,7 @@ import TysWiredIn       ( cTupleTyConName, tupleTyCon, tupleDataCon,
                           nilDataConName, nilDataConKey,
                           listTyConName, listTyConKey,
                           starKindTyConName, unicodeStarKindTyConName )
-import ForeignCall
+import GHC.Data.ForeignCall
 import PrelNames        ( forall_tv_RDR, eqTyCon_RDR, allNameStrings )
 import GHC.Data.SrcLoc
 import GHC.Data.Unique           ( hasKey )

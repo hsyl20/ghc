@@ -133,7 +133,7 @@ import GHC.Data.Var
 import GHC.Data.Class
 import GHC.Data.BasicTypes
 import GHC.Config.Flags
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Coercion.Axiom

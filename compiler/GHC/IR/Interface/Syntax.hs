@@ -53,7 +53,7 @@ import GHC.Data.Coercion.Axiom ( BranchIndex )
 import GHC.Data.Name
 import GHC.Data.CostCentre
 import GHC.Data.Literal
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Annotation( AnnPayload, AnnTarget )
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable as Outputable

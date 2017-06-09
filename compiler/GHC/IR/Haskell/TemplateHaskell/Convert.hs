@@ -31,7 +31,7 @@ import qualified GHC.Data.Coercion as Coercion
 import TysWiredIn
 import TysPrim (eqPrimTyCon)
 import GHC.Data.BasicTypes as Hs
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Data.Unique
 import GHC.Utils.Error
 import GHC.Data.Bag

@@ -27,7 +27,7 @@ import GHC.IR.Cmm.Expr
 import GHC.IR.Cmm.Switch
 import GHC.Config.Flags
 import GHC.Data.FastString
-import ForeignCall
+import GHC.Data.ForeignCall
 import GHC.Utils.Outputable
 import GHC.RTS.Storage
 import GHC.IR.Core.Syntax (Tickish)
