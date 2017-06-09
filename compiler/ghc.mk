@@ -450,7 +450,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Coercion.Axiom \
 	GHC.Data.ConstructorLike \
 	GHC.Data.Coercion \
-	Config \
+	GHC.Config.Build \
 	GHC.Config.Constants \
 	GHC.IR.Core.Arity \
 	GHC.IR.Core.FreeVars \
