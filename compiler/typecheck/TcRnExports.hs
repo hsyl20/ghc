@@ -7,7 +7,7 @@ import GHC.IR.Haskell.Syntax
 import PrelNames
 import GHC.Data.RdrName
 import TcRnMonad
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType
 import TcType
 import GHC.IR.Haskell.Renamer.ImportExport

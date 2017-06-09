@@ -18,7 +18,7 @@ import GHC.Data.Type( mkTyVarBinders, mkEmptyTCvSubst
            , tidyTyVarBinders, tidyTypes, tidyType )
 import TcRnMonad
 import TcSigs( emptyPragEnv, completeSigFromId )
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkTyVarBindersX, zonkTcTypeToTypes
               , zonkTcTypeToType, emptyZonkEnv )

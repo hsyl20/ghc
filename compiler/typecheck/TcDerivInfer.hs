@@ -22,7 +22,7 @@ import Inst
 import GHC.Utils.Outputable
 import PrelNames
 import TcDerivUtils
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 -- import TcErrors (reportAllUnsolved)
 import TcGenFunctor
 import TcGenGenerics

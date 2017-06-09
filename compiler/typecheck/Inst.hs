@@ -39,7 +39,7 @@ import GHC.Data.FastString
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcRnMonad
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcEvidence
 import GHC.Data.ClassInstance
 import TysWiredIn  ( heqDataCon, coercibleDataCon )
@@ -673,7 +673,7 @@ newClsInst overlap_mode dfun_name tvs theta clas tys
              -- The dfun uses the original 'tvs' because
              -- (a) they don't need to be fresh
              -- (b) they may be mentioned in the ib_binds field of
-             --     an InstInfo, and in TcEnv.pprInstInfoDetails it's
+             --     an InstInfo, and in GHC.IR.Haskell.TypeSystem.Environment.pprInstInfoDetails it's
              --     helpful to use the same names
 
        ; oflag <- getOverlapFlag overlap_mode

@@ -48,7 +48,7 @@ module TcHsType (
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import TcEvidence
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Unify

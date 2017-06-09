@@ -141,7 +141,7 @@ import GHC.Data.Name
 import GHC.Utils.Outputable as Outputable
 import GHC.Utils.Platform
 import PrelNames
-import TcEnv (lookupGlobal)
+import GHC.IR.Haskell.TypeSystem.Environment (lookupGlobal)
 import GHC.Data.Type
 
 import Control.Monad.Trans.Class (lift)

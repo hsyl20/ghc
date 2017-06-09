@@ -135,7 +135,7 @@ import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import GHC.Utils.Fingerprint      ( Fingerprint )
 import GHC.Config.Hooks
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 
 import GHC.Config.Flags
 import GHC.Utils.Error

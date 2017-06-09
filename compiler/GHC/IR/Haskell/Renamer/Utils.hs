@@ -29,7 +29,7 @@ where
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Types
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcRnMonad
 import GHC.Data.Name
 import GHC.Data.Name.Set

@@ -21,7 +21,7 @@ import TcDerivInfer
 import TcDerivUtils
 import GHC.IR.Haskell.TypeSystem.Validity( allDistinctTyVars )
 import TcClassDcl( tcATDefault, tcMkDeclCtxt )
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcGenDeriv                       -- Deriv stuff
 import GHC.Data.ClassInstance
 import Inst
@@ -223,7 +223,7 @@ tcDeriving  :: [DerivInfo]       -- All `deriving` clauses
 tcDeriving deriv_infos deriv_decls
   = recoverM (do { g <- getGblEnv
                  ; return (g, emptyBag, emptyValBindsOut)}) $
-    do  {       -- Fish the "deriving"-related information out of the TcEnv
+    do  {       -- Fish the "deriving"-related information out of the GHC.IR.Haskell.TypeSystem.Environment
                 -- And make the necessary "equations".
           is_boot <- tcIsHsBootOrSig
         ; traceTc "tcDeriving" (ppr is_boot)

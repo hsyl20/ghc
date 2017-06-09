@@ -22,7 +22,7 @@ module GHC.IR.Haskell.Renamer.ImportExport (
 
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Fixity
 import GHC.IR.Haskell.Renamer.Utils          ( warnUnusedTopBinds, mkFieldEnv )

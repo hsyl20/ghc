@@ -47,7 +47,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Name.Cache
 import GHC.Data.Available
 import GHC.IR.Interface.Environment
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcRnMonad
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor

@@ -34,7 +34,7 @@ import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
 import GHC.Data.FamilyInstance       ( FamInstEnvs )
 import GHC.IR.Haskell.Renamer.Environment            ( addUsedGRE )
 import GHC.IR.Haskell.Renamer.Utils          ( addNameClashErrRn, unknownSubordinateErr )
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Arrow
 import TcMatches
 import TcHsType

@@ -6,7 +6,7 @@
 {-# LANGUAGE UndecidableInstances #-} -- Note [Pass sensitive types]
                                       -- in module PlaceHolder
 
-module TcEnv(
+module GHC.IR.Haskell.TypeSystem.Environment(
         TyThing(..), TcTyThing(..), TcId,
 
         -- Instance environment, and InstInfo type

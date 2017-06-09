@@ -26,7 +26,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Types( isHsBootOrSig )
 import TcSigs
 import TcRnMonad
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcSimplify
 import TcEvidence
@@ -814,7 +814,7 @@ mkExport :: TcPragEnv
 -- the quantified type variables, so we can fix their final form
 -- right now.
 -- The latter is needed because the poly_ids are used to extend the
--- type environment; see the invariant on TcEnv.tcExtendIdEnv
+-- type environment; see the invariant on GHC.IR.Haskell.TypeSystem.Environment.tcExtendIdEnv
 
 -- Pre-condition: the qtvs and theta are already zonked
 

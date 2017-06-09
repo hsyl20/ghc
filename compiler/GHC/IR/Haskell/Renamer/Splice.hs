@@ -32,13 +32,13 @@ import Control.Monad    ( unless, when )
 
 import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression   ( rnLExpr )
 
-import TcEnv            ( checkWellStaged )
+import GHC.IR.Haskell.TypeSystem.Environment            ( checkWellStaged )
 import THNames          ( liftName )
 
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Utils.Error         ( dumpIfSet_dyn_printer )
-import TcEnv            ( tcMetaTy )
+import GHC.IR.Haskell.TypeSystem.Environment            ( tcMetaTy )
 import GHC.Config.Hooks
 import GHC.Data.Var              ( Id )
 import THNames          ( quoteExpName, quotePatName, quoteDecName, quoteTypeName

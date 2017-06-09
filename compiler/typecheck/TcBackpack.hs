@@ -47,7 +47,7 @@ import GHC.Data.Type
 import GHC.Data.FastString
 import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn )
 import GHC.Data.Maybe
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.Data.Var
 import GHC.IR.Interface.Syntax
 import PrelNames

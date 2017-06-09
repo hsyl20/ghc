@@ -13,7 +13,7 @@ import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
 import GHC.IR.Haskell.TypeSystem.Binding( addTypecheckedBinds )
 import GHC.IR.Interface.Environment( newGlobalBinder )
 import GHC.Data.Types( Type(..), TyLit(..) )
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcEvidence ( mkWpTyApps )
 import TcRnMonad
 import GHC.Types ( lookupId )

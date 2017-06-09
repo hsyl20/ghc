@@ -41,7 +41,7 @@ import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.Data.SrcLoc
 import THNames
 import GHC.IR.Haskell.TypeSystem.Unify
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 
 import Control.Monad
 
@@ -1250,7 +1250,7 @@ lookupThName_maybe th_name
                  Nothing   -> lookupGlobalOccRn_maybe rdr_name }
 
 tcLookupTh :: Name -> TcM TcTyThing
--- This is a specialised version of TcEnv.tcLookup; specialised mainly in that
+-- This is a specialised version of GHC.IR.Haskell.TypeSystem.Environment.tcLookup; specialised mainly in that
 -- it gives a reify-related error message on failure, whereas in the normal
 -- tcLookup, failure is a bug.
 tcLookupTh name

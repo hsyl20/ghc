@@ -199,7 +199,7 @@ The Class and its associated TyCon have the same Name.
 
 -- | A global typecheckable-thing, essentially anything that has a name.
 -- Not to be confused with a 'TcTyThing', which is also a typecheckable
--- thing but in the *local* context.  See 'TcEnv' for how to retrieve
+-- thing but in the *local* context.  See 'GHC.IR.Haskell.TypeSystem.Environment' for how to retrieve
 -- a 'TyThing' given a 'Name'.
 data TyThing
   = AnId     Id

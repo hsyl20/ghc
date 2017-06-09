@@ -7,7 +7,7 @@ module TcInstDcls ( tcInstDecls1 ) where
 
 import GHC.IR.Haskell.Syntax
 import TcRnTypes
-import TcEnv( InstInfo )
+import GHC.IR.Haskell.TypeSystem.Environment( InstInfo )
 import TcDeriv
 import GHC.Data.Name
 

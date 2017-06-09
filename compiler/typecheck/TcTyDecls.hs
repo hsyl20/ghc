@@ -27,7 +27,7 @@ module TcTyDecls(
 #include "HsVersions.h"
 
 import TcRnMonad
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Binding( tcRecSelBinds )
 import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import TcType

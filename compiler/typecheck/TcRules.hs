@@ -17,7 +17,7 @@ import TcMType
 import TcType
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Expression
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify( buildImplicationFor )
 import TcEvidence( mkTcCoVarCo )
 import GHC.Data.Type

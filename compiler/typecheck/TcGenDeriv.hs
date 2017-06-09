@@ -57,7 +57,7 @@ import GHC.Data.Id.Make ( coerceId )
 import PrimOp
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcType
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidTyFamEqn )
 import TysPrim

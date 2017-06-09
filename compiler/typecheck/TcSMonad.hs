@@ -126,7 +126,7 @@ import GHC.Data.FamilyInstance
 
 import qualified TcRnMonad as TcM
 import qualified TcMType as TcM
-import qualified TcEnv as TcM
+import qualified GHC.IR.Haskell.TypeSystem.Environment as TcM
        ( checkWellStaged, topIdLvl, tcGetDefaultTys, tcLookupClass, tcLookupId )
 import PrelNames( heqTyConKey, eqTyConKey )
 import GHC.Data.Kind
@@ -2518,7 +2518,7 @@ the inner implications, and it can make a signficant performance difference
 if you do so.
 -}
 
--- Getters and setters of TcEnv fields
+-- Getters and setters of GHC.IR.Haskell.TypeSystem.Environment fields
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -- Getter of inerts and worklist

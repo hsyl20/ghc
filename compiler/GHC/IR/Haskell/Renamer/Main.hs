@@ -1282,7 +1282,7 @@ with different dependency structure!)
 
 Ugh.  For now we simply don't allow promotion of data constructors for
 data instances.  See Note [AFamDataCon: not promoting data family
-constructors] in TcEnv
+constructors] in GHC.IR.Haskell.TypeSystem.Environment
 -}
 
 

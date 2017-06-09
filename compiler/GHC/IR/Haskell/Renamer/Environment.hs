@@ -50,7 +50,7 @@ import GHC.IR.Interface.Environment
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Types
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcRnMonad
 import GHC.IR.Haskell.Parser.Syntax         ( setRdrNameSpace )
 import TysWiredIn       ( starKindTyConName, unicodeStarKindTyConName )

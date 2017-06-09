@@ -82,7 +82,7 @@ import GHC.IR.Haskell.TypeSystem.Annotation
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )
 import TcDefaults
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcRules
 import TcForeign
 import TcInstDcls
@@ -266,7 +266,7 @@ tcRnModuleTcRnM hsc_env hsc_src
         tcg_env <- checkHiBootIface tcg_env boot_info ;
 
         -- The new type env is already available to stuff slurped from
-        -- interface files, via TcEnv.setGlobalTypeEnv
+        -- interface files, via GHC.IR.Haskell.TypeSystem.Environment.setGlobalTypeEnv
         -- It's important that this includes the stuff in checkHiBootIface,
         -- because the latter might add new bindings for boot_dfuns,
         -- which may be mentioned in imported unfoldings

@@ -11,7 +11,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Name
 import GHC.Data.Class
 import TcRnMonad
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcSimplify

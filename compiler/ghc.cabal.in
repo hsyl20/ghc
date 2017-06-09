@@ -408,7 +408,7 @@ Library
         TcDeriv
         TcDerivInfer
         TcDerivUtils
-        TcEnv
+        GHC.IR.Haskell.TypeSystem.Environment
         GHC.IR.Haskell.TypeSystem.Expression
         TcForeign
         TcGenDeriv

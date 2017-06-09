@@ -31,7 +31,7 @@ import GHC.Data.ClassInstance
 import FamInst
 import GHC.Data.FamilyInstance
 import TcDeriv
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )

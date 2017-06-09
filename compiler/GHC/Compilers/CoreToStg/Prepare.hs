@@ -30,7 +30,7 @@ import GHC.IR.Core.Syntax.Make hiding( FloatBind(..) )   -- We use our own Float
 import GHC.Data.Type
 import GHC.Data.Literal
 import GHC.Data.Coercion
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.Data.Type.Constructor
 import GHC.Data.Demand
 import GHC.Data.Var

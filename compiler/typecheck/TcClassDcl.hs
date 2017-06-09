@@ -19,7 +19,7 @@ module TcClassDcl ( tcClassSigs, tcClassDecl2,
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.Syntax
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcSigs
 import TcEvidence ( idHsWrapper )
 import GHC.IR.Haskell.TypeSystem.Binding

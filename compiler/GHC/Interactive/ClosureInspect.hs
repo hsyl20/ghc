@@ -42,7 +42,7 @@ import TcType
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
 import GHC.IR.Haskell.TypeSystem.Unify
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 
 import GHC.Data.Type.Constructor
 import GHC.Data.Name

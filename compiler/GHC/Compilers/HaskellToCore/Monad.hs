@@ -508,7 +508,7 @@ dsLoadModule doc mod
     name = moduleName mod
 
 dsLookupGlobal :: Name -> DsM TyThing
--- Very like TcEnv.tcLookupGlobal
+-- Very like GHC.IR.Haskell.TypeSystem.Environment.tcLookupGlobal
 dsLookupGlobal name
   = do  { env <- getGblEnv
         ; setEnvs (ds_if_env env)

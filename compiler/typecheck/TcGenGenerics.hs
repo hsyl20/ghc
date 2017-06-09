@@ -31,7 +31,7 @@ import GHC.Data.BasicTypes
 import TysPrim
 import TysWiredIn
 import PrelNames
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import TcRnMonad
 import GHC.Types
 import GHC.Utils.Error( Validity(..), andValid )

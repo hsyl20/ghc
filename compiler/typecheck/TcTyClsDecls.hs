@@ -25,7 +25,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Types
 import GHC.IR.Interface.BuildTypeAndClass
 import TcRnMonad
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcTyDecls

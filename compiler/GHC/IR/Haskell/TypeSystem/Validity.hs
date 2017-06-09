@@ -39,7 +39,7 @@ import GHC.Data.Type.Constructor
 -- others:
 import GHC.IR.Haskell.Syntax            -- HsType
 import TcRnMonad        -- TcType, amongst others
-import TcEnv       ( tcGetInstEnvs )
+import GHC.IR.Haskell.TypeSystem.Environment       ( tcGetInstEnvs )
 import FunDeps
 import GHC.Data.ClassInstance     ( InstMatch, lookupInstEnv )
 import GHC.Data.FamilyInstance  ( isDominatedBy, injectiveBranches,
@@ -397,7 +397,7 @@ expectedKindInCtxt (TySynCtxt _)   = AnythingKind
 expectedKindInCtxt ThBrackCtxt     = AnythingKind
 expectedKindInCtxt GhciCtxt        = AnythingKind
 -- The types in a 'default' decl can have varying kinds
--- See Note [Extended defaults]" in TcEnv
+-- See Note [Extended defaults]" in GHC.IR.Haskell.TypeSystem.Environment
 expectedKindInCtxt DefaultDeclCtxt = AnythingKind
 expectedKindInCtxt TypeAppCtxt     = AnythingKind
 expectedKindInCtxt (ForSigCtxt _)  = TheKind liftedTypeKind

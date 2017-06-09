@@ -10,7 +10,7 @@ import GHC
 import HscTypes
 import GHC.Interactive.Linker
 import GHC.Interactive.ClosureInspect
-import TcEnv
+import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.Data.Type
 import TcRnMonad
 import TcType

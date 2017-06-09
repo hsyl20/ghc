@@ -55,7 +55,7 @@ module TcPluginM (
 #if defined(GHCI)
 import qualified TcRnMonad as TcM
 import qualified TcSMonad  as TcS
-import qualified TcEnv     as TcM
+import qualified GHC.IR.Haskell.TypeSystem.Environment     as TcM
 import qualified TcMType   as TcM
 import qualified FamInst   as TcM
 import qualified GHC.IR.Interface.Environment
@@ -66,7 +66,7 @@ import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                   , unsafeTcPluginTcM, getEvBindsTcPluginM
                   , liftIO, traceTc )
 import TcMType    ( TcTyVar, TcType )
-import TcEnv      ( TcTyThing )
+import GHC.IR.Haskell.TypeSystem.Environment      ( TcTyThing )
 import TcEvidence ( TcCoercion, CoercionHole
                   , EvTerm, EvBind, mkGivenEvBind )
 import TcRnTypes  ( CtEvidence(..) )

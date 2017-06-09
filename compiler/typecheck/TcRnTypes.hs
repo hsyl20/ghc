@@ -465,7 +465,7 @@ data FrontendResult
 --
 --      - For any code involving Names, we want semantic modules.
 --        See lookupIfaceTop in GHC.IR.Interface.Environment, mkIface and addFingerprints
---        in GHC.IR.Interface.Utils, and tcLookupGlobal in TcEnv
+--        in GHC.IR.Interface.Utils, and tcLookupGlobal in GHC.IR.Haskell.TypeSystem.Environment
 --
 --      - When reading interfaces, we want the identity module to
 --        identify the specific interface we want (such interfaces
@@ -1038,7 +1038,7 @@ data ArrowCtxt   -- Note [Escaping the arrow scope]
 
 -- | A typecheckable thing available in a local context.  Could be
 -- 'AGlobal' 'TyThing', but also lexically scoped variables, etc.
--- See 'TcEnv' for how to retrieve a 'TyThing' given a 'Name'.
+-- See 'GHC.IR.Haskell.TypeSystem.Environment' for how to retrieve a 'TyThing' given a 'Name'.
 data TcTyThing
   = AGlobal TyThing             -- Used only in the return type of a lookup
 
@@ -1067,7 +1067,7 @@ data PromotionErr
   | FamDataConPE     -- Data constructor for a data family
                      -- See Note [AFamDataCon: not promoting data family constructors] in TcRnDriver
   | PatSynPE         -- Pattern synonyms
-                     -- See Note [Don't promote pattern synonyms] in TcEnv
+                     -- See Note [Don't promote pattern synonyms] in GHC.IR.Haskell.TypeSystem.Environment
 
   | RecDataConPE     -- Data constructor in a recursive loop
                      -- See Note [ARecDataCon: recusion and promoting data constructors] in TcTyClsDecls
