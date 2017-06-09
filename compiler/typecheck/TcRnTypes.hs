@@ -2643,7 +2643,7 @@ but we do not want to complain about Bool ~ Char!
 Note [Deriveds do rewrite Deriveds]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 However we DO allow Deriveds to rewrite Deriveds, because that's how
-improvement works; see Note [The improvement story] in TcInteract.
+improvement works; see Note [The improvement story] in GHC.IR.Haskell.TypeSystem.Constraint.Interact.
 
 However, for now at least I'm only letting (Derived,NomEq) rewrite
 (Derived,NomEq) and not doing anything for ReprEq.  If we have

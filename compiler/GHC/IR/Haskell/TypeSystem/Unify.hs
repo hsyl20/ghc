@@ -1690,7 +1690,7 @@ Hence, if the occurs check fails for a type synonym application, then (and *only
 the ok function expands the synonym to detect opportunities for occurs check success using
 the underlying definition of the type synonym.
 
-The same applies later on in the constraint interaction code; see TcInteract,
+The same applies later on in the constraint interaction code; see GHC.IR.Haskell.TypeSystem.Constraint.Interact,
 function @occ_check_ok@.
 
 Note [Non-TcTyVars in GHC.IR.Haskell.TypeSystem.Unify]

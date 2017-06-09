@@ -646,7 +646,7 @@ Here's what's unusual about it:
 On the other hand, this behaves just like any class w.r.t. eager superclass
 unpacking in the solver. So a lifted equality given quickly becomes an unlifted
 equality given. This is good, because the solver knows all about unlifted
-equalities. There is some special-casing in TcInteract.matchClassInst to
+equalities. There is some special-casing in GHC.IR.Haskell.TypeSystem.Constraint.Interact.matchClassInst to
 pretend that there is an instance of this class, as we can't write the instance
 in Haskell.
 

@@ -1840,7 +1840,7 @@ getNoGivenEqs tclvl skol_tvs
 -- | Returns Given constraints that might,
 -- potentially, match the given pred. This is used when checking to see if a
 -- Given might overlap with an instance. See Note [Instance and Given overlap]
--- in TcInteract.
+-- in GHC.IR.Haskell.TypeSystem.Constraint.Interact.
 matchableGivens :: CtLoc -> PredType -> InertSet -> Cts
 matchableGivens loc_w pred (IS { inert_cans = inert_cans })
   = filterBag matchable_given all_relevant_givens
@@ -3038,7 +3038,7 @@ newDerivedNC loc pred
   = do { -- checkReductionDepth loc pred
        ; return (CtDerived { ctev_pred = pred, ctev_loc = loc }) }
 
--- --------- Check done in TcInteract.selectNewWorkItem???? ---------
+-- --------- Check done in GHC.IR.Haskell.TypeSystem.Constraint.Interact.selectNewWorkItem???? ---------
 -- | Checks if the depth of the given location is too much. Fails if
 -- it's too big, with an appropriate error message.
 checkReductionDepth :: CtLoc -> TcType   -- ^ type being reduced

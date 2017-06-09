@@ -852,9 +852,9 @@ check_class_pred env dflags ctxt pred cls tys
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A type signature like
    f :: Eq [(a,b)] => a -> b
-is very fragile, for reasons described at length in TcInteract
+is very fragile, for reasons described at length in GHC.IR.Haskell.TypeSystem.Constraint.Interact
 Note [Instance and Given overlap].  As that Note discusses, for the
-most part the clever stuff in TcInteract means that we don't use a
+most part the clever stuff in GHC.IR.Haskell.TypeSystem.Constraint.Interact means that we don't use a
 top-level instance if a local Given might fire, so there is no
 fragility. But if we /infer/ the type of a local let-binding, things
 can go wrong (Trac #11948 is an example, discussed in the Note).
@@ -866,7 +866,7 @@ class constraints.
 The warning only fires if the constraint in the signature
 matches the top-level instances in only one way, and with no
 unifiers -- that is, under the same circumstances that
-TcInteract.matchInstEnv fires an interaction with the top
+GHC.IR.Haskell.TypeSystem.Constraint.Interact.matchInstEnv fires an interaction with the top
 level instances.  For example (Trac #13526), consider
 
   instance {-# OVERLAPPABLE #-} Eq (T a) where ...
@@ -1167,7 +1167,7 @@ the middle:
 Note [Validity checking of HasField instances]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The HasField class has magic constraint solving behaviour (see Note
-[HasField instances] in TcInteract).  However, we permit users to
+[HasField instances] in GHC.IR.Haskell.TypeSystem.Constraint.Interact).  However, we permit users to
 declare their own instances, provided they do not clash with the
 built-in behaviour.  In particular, we forbid:
 

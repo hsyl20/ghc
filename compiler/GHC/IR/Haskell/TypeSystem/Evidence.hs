@@ -603,7 +603,7 @@ Conceptually, this class has infinitely many instances:
   ...
 
 In practice, we solve `KnownNat` predicates in the type-checker
-(see typecheck/TcInteract.hs) because we can't have infinitely many instances.
+(see typecheck/GHC.IR.Haskell.TypeSystem.Constraint.Interact.hs) because we can't have infinitely many instances.
 The evidence (aka "dictionary") for `KnownNat` is of the form `EvLit (EvNum n)`.
 
 We make the following assumptions about dictionaries in GHC:
@@ -679,7 +679,7 @@ important) are solved in three steps:
    that we use to solve the call to `error`. The new wanted `d` will
    then be solved per rule (1), ie as a regular IP.
 
-   (see TcInteract.interactDict)
+   (see GHC.IR.Haskell.TypeSystem.Constraint.Interact.interactDict)
 
 3. We default any insoluble CallStacks to the empty CallStack. Suppose
    `undefined` did not request a CallStack, ie
@@ -749,7 +749,7 @@ Important Details:
 
 - When we emit a new wanted CallStack from rule (2) we set its origin to
   `IPOccOrigin ip_name` instead of the original `OccurrenceOf func`
-  (see TcInteract.interactDict).
+  (see GHC.IR.Haskell.TypeSystem.Constraint.Interact.interactDict).
 
   This is a bit shady, but is how we ensure that the new wanted is
   solved like a regular IP.

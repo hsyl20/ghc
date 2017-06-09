@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module TcInteract (
+module GHC.IR.Haskell.TypeSystem.Constraint.Interact (
      solveSimpleGivens,   -- Solves [Ct]
      solveSimpleWanteds,  -- Solves Cts
 
@@ -2424,7 +2424,7 @@ doFunTy clas ty arg_ty ret_ty
   = do { let preds = map (mk_typeable_pred clas) [arg_ty, ret_ty]
              build_ev [arg_ev, ret_ev] =
                  EvTypeable ty $ EvTypeableTrFun arg_ev ret_ev
-             build_ev _ = panic "TcInteract.doFunTy"
+             build_ev _ = panic "GHC.IR.Haskell.TypeSystem.Constraint.Interact.doFunTy"
        ; return $ GenInst preds build_ev True
        }
 

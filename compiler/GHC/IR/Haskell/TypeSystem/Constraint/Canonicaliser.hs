@@ -261,7 +261,7 @@ instance declaration; but then we are stuck with (Bad a).  Sigh.
 This is really a case of non-confluent proofs, but to stop our users
 complaining we expand one layer in advance.
 
-Note [Instance and Given overlap] in TcInteract.
+Note [Instance and Given overlap] in GHC.IR.Haskell.TypeSystem.Constraint.Interact.
 
 We also want to do this if we have
 
@@ -1126,7 +1126,7 @@ If we focus on (3) first, we'll substitute in (2), and now it's
 identical to the given (1), so we succeed.  But if we focus on (2)
 first, and decompose it, we'll get (alpha ~R b), which is not soluble.
 This is exactly like the question of overlapping Givens for class
-constraints: see Note [Instance and Given overlap] in TcInteract.
+constraints: see Note [Instance and Given overlap] in GHC.IR.Haskell.TypeSystem.Constraint.Interact.
 
 Conclusion:
   * Decompose [W] N s ~R N t  iff there no given constraint that could

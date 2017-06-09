@@ -369,7 +369,7 @@ See also:
  * [Injectivity annotation] in GHC.IR.Haskell.Declaration
  * [Renaming injectivity annotation] in GHC.IR.Haskell.Renamer.Main
  * [Verifying injectivity annotation] in FamInstEnv
- * [Type inference for type families with injectivity] in TcInteract
+ * [Type inference for type families with injectivity] in GHC.IR.Haskell.TypeSystem.Constraint.Interact
 
 ************************************************************************
 *                                                                      *

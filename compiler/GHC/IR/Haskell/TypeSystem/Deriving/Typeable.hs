@@ -90,7 +90,7 @@ The overall plan is this:
    interface file to find its type, value, etc
 
 4. Solve Typeable constraints.  This is done by a custom Typeable solver,
-   currently in TcInteract, that use M.$tcT so solve (Typeable T).
+   currently in GHC.IR.Haskell.TypeSystem.Constraint.Interact, that use M.$tcT so solve (Typeable T).
 
 There are many wrinkles:
 

@@ -436,7 +436,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Type
         GHC.IR.Haskell.TypeSystem.Evidence
         GHC.IR.Haskell.TypeSystem.Unify
-        TcInteract
+        GHC.IR.Haskell.TypeSystem.Constraint.Interact
         GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser
         GHC.IR.Haskell.TypeSystem.Flatten
         GHC.IR.Haskell.TypeSystem.Constraint.Solver

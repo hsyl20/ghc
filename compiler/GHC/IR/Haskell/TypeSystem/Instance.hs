@@ -1162,7 +1162,7 @@ Answer:
 
   * (sc2) ScOrigin wanted constraints can't be solved from a
     superclass selection, except at a smaller type.  This test is
-    implemented by TcInteract.prohibitedSuperClassSolve
+    implemented by GHC.IR.Haskell.TypeSystem.Constraint.Interact.prohibitedSuperClassSolve
 
   * The "given" constraints of an instance decl have CtOrigin
     GivenOrigin InstSkol.

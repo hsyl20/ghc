@@ -128,7 +128,7 @@ Note [The flattening story]
   Always solve given from wanted if poss.
 
 * For top-level reductions, see Note [Top-level reductions for type functions]
-  in TcInteract
+  in GHC.IR.Haskell.TypeSystem.Constraint.Interact
 
 
 Why given-fsks, alone, doesn't work
@@ -1409,7 +1409,7 @@ This means that flattening must be recursive, but it does allow
   [G] b ~ Maybe c
 
 This avoids "saturating" the Givens, which can save a modest amount of work.
-It is easy to implement, in TcInteract.kick_out, by only kicking out an inert
+It is easy to implement, in GHC.IR.Haskell.TypeSystem.Constraint.Interact.kick_out, by only kicking out an inert
 only if (a) the work item can rewrite the inert AND
         (b) the inert cannot rewrite the work item
 
@@ -1508,7 +1508,7 @@ unflatten tv_eqs funeqs
 
           -- Step 5: zonk the result
           -- Motivation: makes them nice and ready for the next step
-          --             (see TcInteract.solveSimpleWanteds)
+          --             (see GHC.IR.Haskell.TypeSystem.Constraint.Interact.solveSimpleWanteds)
       ; zonkSimples all_flat }
   where
     ----------------

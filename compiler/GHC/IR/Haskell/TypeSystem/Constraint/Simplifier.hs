@@ -31,7 +31,7 @@ import PrelInfo
 import PrelNames
 import GHC.IR.Haskell.TypeSystem.Error
 import GHC.IR.Haskell.TypeSystem.Evidence
-import TcInteract
+import GHC.IR.Haskell.TypeSystem.Constraint.Interact
 import GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser   ( makeSuperClasses )
 import TcMType   as TcM
 import TcRnMonad as TcM
@@ -373,12 +373,12 @@ How is this implemented? It's complicated! So we'll step through it all:
     list of instances that are unsafe to overlap. When the method call is safe,
     the list is null.
 
- 2) `TcInteract.matchClassInst` -- This module drives the instance resolution
+ 2) `GHC.IR.Haskell.TypeSystem.Constraint.Interact.matchClassInst` -- This module drives the instance resolution
     / dictionary generation. The return type is `LookupInstResult`, which either
     says no instance matched, or one found, and if it was a safe or unsafe
     overlap.
 
- 3) `TcInteract.doTopReactDict` -- Takes a dictionary / class constraint and
+ 3) `GHC.IR.Haskell.TypeSystem.Constraint.Interact.doTopReactDict` -- Takes a dictionary / class constraint and
      tries to resolve it by calling (in part) `matchClassInst`. The resolving
      mechanism has a work list (of constraints) that it process one at a time. If
      the constraint can't be resolved, it's added to an inert set. When compiling
@@ -1564,7 +1564,7 @@ works:
    then we may find [G] sc_sel (d1::Ord a) :: Eq a
                     [G] d2 :: Eq a
    We want to discard d2 in favour of the superclass selection from
-   the Ord dictionary.  This is done by TcInteract.solveOneFromTheOther
+   the Ord dictionary.  This is done by GHC.IR.Haskell.TypeSystem.Constraint.Interact.solveOneFromTheOther
    See Note [Replacement vs keeping].
 
 * To find (b) we need to know which evidence bindings are 'wanted';
