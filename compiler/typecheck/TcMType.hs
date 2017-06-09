@@ -350,7 +350,7 @@ Consider
 This is a classic untouchable-variable / ambiguous GADT return type
 scenario. But, with ExpTypes, we'll be inferring the type of the RHS.
 And, because there is only one branch of the case, we won't trigger
-Note [Case branches must never infer a non-tau type] of TcMatches.
+Note [Case branches must never infer a non-tau type] of GHC.IR.Haskell.TypeSystem.Matches.
 We thus must track a TcLevel in an Inferring ExpType. If we try to
 fill the ExpType and find that the TcLevels don't work out, we
 fill the ExpType with a tau-tv at the low TcLevel, hopefully to

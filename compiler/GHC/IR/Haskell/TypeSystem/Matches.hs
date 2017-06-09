@@ -3,7 +3,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-TcMatches: Typecheck some @Matches@
+GHC.IR.Haskell.TypeSystem.Matches: Typecheck some @Matches@
 -}
 
 {-# LANGUAGE CPP #-}
@@ -12,7 +12,7 @@ TcMatches: Typecheck some @Matches@
 {-# LANGUAGE TupleSections #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcMatches ( tcMatchesFun, tcGRHS, tcGRHSsPat, tcMatchesCase, tcMatchLambda,
+module GHC.IR.Haskell.TypeSystem.Matches ( tcMatchesFun, tcGRHS, tcGRHSsPat, tcMatchesCase, tcMatchLambda,
                    TcMatchCtxt(..), TcStmtChecker, TcExprStmtChecker, TcCmdStmtChecker,
                    tcStmts, tcStmtsAndThen, tcDoStmts, tcBody,
                    tcDoStmt, tcGuardStmt

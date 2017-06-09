@@ -419,7 +419,7 @@ Library
         TcInstDcls
         TcMType
         GHC.IR.Haskell.TypeSystem.Validity
-        TcMatches
+        GHC.IR.Haskell.TypeSystem.Matches
         GHC.IR.Haskell.TypeSystem.Pattern
         TcPatSyn
         TcRnDriver

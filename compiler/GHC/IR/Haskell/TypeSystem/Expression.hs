@@ -36,7 +36,7 @@ import GHC.IR.Haskell.Renamer.Environment            ( addUsedGRE )
 import GHC.IR.Haskell.Renamer.Utils          ( addNameClashErrRn, unknownSubordinateErr )
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Arrow
-import TcMatches
+import GHC.IR.Haskell.TypeSystem.Matches
 import TcHsType
 import TcPatSyn( tcPatSynBuilderOcc, nonBidirectionalErr )
 import GHC.IR.Haskell.TypeSystem.Pattern
@@ -569,7 +569,7 @@ tcExpr (HsIf Nothing pred b1 b2) res_ty    -- Ordinary 'if'
   = do { pred' <- tcMonoExpr pred (mkCheckExpType boolTy)
        ; res_ty <- tauifyExpType res_ty
            -- Just like Note [Case branches must never infer a non-tau type]
-           -- in TcMatches (See #10619)
+           -- in GHC.IR.Haskell.TypeSystem.Matches (See #10619)
 
        ; b1' <- tcMonoExpr b1 res_ty
        ; b2' <- tcMonoExpr b2 res_ty
@@ -589,7 +589,7 @@ tcExpr (HsMultiIf _ alts) res_ty
   = do { res_ty <- if isSingleton alts
                    then return res_ty
                    else tauifyExpType res_ty
-             -- Just like TcMatches
+             -- Just like GHC.IR.Haskell.TypeSystem.Matches
              -- Note [Case branches must never infer a non-tau type]
 
        ; alts' <- mapM (wrapLocM $ tcGRHS match_ctxt res_ty) alts

@@ -1,4 +1,4 @@
-module TcMatches where
+module GHC.IR.Haskell.TypeSystem.Matches where
 import GHC.IR.Haskell.Syntax ( GRHSs, MatchGroup, LHsExpr )
 import TcEvidence( HsWrapper )
 import GHC.Data.Name     ( Name )

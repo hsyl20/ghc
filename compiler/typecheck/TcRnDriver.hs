@@ -44,7 +44,7 @@ import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice ( finishTH )
 import GHC.IR.Haskell.Renamer.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
 import GHC.IR.Interface.Environment( externaliseName )
 import TcHsType
-import TcMatches
+import GHC.IR.Haskell.TypeSystem.Matches
 import Inst( deeplyInstantiate )
 import GHC.IR.Haskell.TypeSystem.Unify( checkConstraints )
 import GHC.IR.Haskell.Renamer.Type

@@ -12,7 +12,7 @@ module GHC.IR.Haskell.TypeSystem.Arrow ( tcProc ) where
 import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcMonoExpr, tcInferRho, tcSyntaxOp, tcCheckId, tcPolyExpr )
 
 import GHC.IR.Haskell.Syntax
-import TcMatches
+import GHC.IR.Haskell.TypeSystem.Matches
 import GHC.IR.Haskell.TypeSystem.Syntax( hsLPatType )
 import import GHC.IR.Haskell.TypeSystem.Type
 import TcMType

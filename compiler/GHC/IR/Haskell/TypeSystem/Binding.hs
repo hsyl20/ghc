@@ -14,7 +14,7 @@ module GHC.IR.Haskell.TypeSystem.Binding ( tcLocalBinds, tcTopBinds, tcRecSelBin
                  chooseInferredQuantifiers,
                  badBootDeclErr ) where
 
-import {-# SOURCE #-} TcMatches ( tcGRHSsPat, tcMatchesFun )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Matches ( tcGRHSsPat, tcMatchesFun )
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Expression  ( tcMonoExpr )
 import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
                                , tcPatSynBuilderBind )

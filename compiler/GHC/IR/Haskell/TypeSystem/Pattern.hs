@@ -557,7 +557,7 @@ var_ty is the type inferred for x, the variable in the pattern.
 
 If the pushed-down pattern type isn't a tau-type, the two pat_ty's above
 could conceivably be different specializations. But this is very much
-like the situation in Note [Case branches must be taus] in TcMatches.
+like the situation in Note [Case branches must be taus] in GHC.IR.Haskell.TypeSystem.Matches.
 So we tauify the pat_ty before proceeding.
 
 Note that we need to type-check the literal twice, because it is used
