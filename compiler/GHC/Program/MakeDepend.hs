@@ -23,7 +23,7 @@ import GHC.Utils.SysTools         ( newTempName )
 import qualified GHC.Utils.SysTools
 import GHC.Data.Module
 import GHC.Data.Graph.Directed          ( SCC(..) )
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Utils.Outputable
 import GHC.Utils.Panic
 import GHC.Data.SrcLoc

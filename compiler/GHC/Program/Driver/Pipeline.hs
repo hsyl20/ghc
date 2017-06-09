@@ -42,7 +42,7 @@ import GHC.Program.Driver.Phases
 import GHC.Utils.SysTools as SysTools
 import GHC.Utils.Elf
 import GHC.Program.Main
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Types hiding ( Hsc )
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.Module

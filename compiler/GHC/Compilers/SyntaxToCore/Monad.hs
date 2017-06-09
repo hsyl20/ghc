@@ -61,7 +61,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Interface.TypeCheck
 import TcMType ( checkForLevPolyX, formatLevPolyErr )
 import GHC.Interface.Load
-import GHC.Finder
+import GHC.Utils.Finder
 import PrelNames
 import GHC.Data.RdrName
 import GHC.Types

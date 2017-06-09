@@ -59,7 +59,7 @@ import qualified TcEnv     as TcM
 import qualified TcMType   as TcM
 import qualified FamInst   as TcM
 import qualified GHC.Interface.Environment
-import qualified GHC.Finder
+import qualified GHC.Utils.Finder
 
 import GHC.TypeSystem.FamilyInstance ( FamInstEnv )
 import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
@@ -98,7 +98,7 @@ tcPluginTrace a b = unsafeTcPluginTcM (traceTc a b)
 findImportedModule :: ModuleName -> Maybe FastString -> TcPluginM FindResult
 findImportedModule mod_name mb_pkg = do
     hsc_env <- getTopEnv
-    tcPluginIO $ GHC.Finder.findImportedModule hsc_env mod_name mb_pkg
+    tcPluginIO $ GHC.Utils.Finder.findImportedModule hsc_env mod_name mb_pkg
 
 lookupOrig :: Module -> OccName -> TcPluginM Name
 lookupOrig mod = unsafeTcPluginTcM . GHC.Interface.Environment.lookupOrig mod

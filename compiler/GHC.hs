@@ -312,7 +312,7 @@ import GHC.Data.SrcLoc
 import GHC.IR.Core.Syntax
 import GHC.Interface.Tidy
 import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Types
 import GHC.Config.Flags
 import GHC.Utils.SysTools

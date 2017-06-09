@@ -61,7 +61,7 @@ import GHC.Data.Available
 import GHC.Data.Module
 import GHC.Data.Maybe
 import GHC.Utils.Error
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable

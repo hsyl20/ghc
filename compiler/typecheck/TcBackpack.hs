@@ -53,7 +53,7 @@ import GHC.Interface.Syntax
 import PrelNames
 import qualified Data.Map as Map
 
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Data.Unique.DeterSet
 import GHC.Data.NameShape
 import TcErrors

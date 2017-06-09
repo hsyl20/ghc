@@ -15,7 +15,7 @@ import GHC.Compilers.CmmToLlvm.CodeGen ( llvmCodeGen )
 
 import GHC.Data.Unique.Supply       ( mkSplitUniqSupply )
 
-import GHC.Finder           ( mkStubPaths )
+import GHC.Utils.Finder           ( mkStubPaths )
 import GHC.Compilers.CmmToC ( writeCs )
 import GHC.IR.Cmm.Analyse.Lint          ( cmmLint )
 import GHC.Packages

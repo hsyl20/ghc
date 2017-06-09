@@ -38,7 +38,7 @@ import GHC.Program.Driver.Phases
 import GHC.Program.Driver.Pipeline
 import GHC.Config.Flags
 import GHC.Utils.Error
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Monad
 import GHC.IR.Haskell.Parser.HeaderInfo
 import GHC.Types

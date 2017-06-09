@@ -80,7 +80,7 @@ import GHC.TypeSystem.FamilyInstance
 import TcRnMonad
 import GHC.IR.Haskell.Syntax
 import GHC.Types
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Config.Flags
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

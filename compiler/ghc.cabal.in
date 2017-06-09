@@ -317,7 +317,7 @@ Library
         GHC.Program.Driver.Pipeline
         GHC.Config.Flags
         GHC.Utils.Error
-        GHC.Finder
+        GHC.Utils.Finder
         GHC
         GHC.Program.Make
         GHC.Plugins

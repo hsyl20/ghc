@@ -29,7 +29,7 @@ import GHC.IR.ByteCode.Types
 import TcRnMonad
 import GHC.Packages
 import GHC.Program.Driver.Phases
-import GHC.Finder
+import GHC.Utils.Finder
 import GHC.Types
 import GHC.Data.Name
 import GHC.Data.Name.Environment
