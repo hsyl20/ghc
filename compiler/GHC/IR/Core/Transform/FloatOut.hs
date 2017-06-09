@@ -15,7 +15,7 @@ import GHC.IR.Core.Syntax
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax.Make
 import GHC.IR.Core.Arity        ( etaExpand )
-import GHC.IR.Core.Monad        ( FloatOutSwitches(..) )
+import GHC.IR.Core.Pipeline        ( FloatOutSwitches(..) )
 
 import GHC.Config.Flags
 import GHC.Utils.Error         ( dumpIfSet_dyn )

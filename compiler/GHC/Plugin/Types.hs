@@ -4,7 +4,7 @@ module GHC.Plugin.Types (
     defaultPlugin
     ) where
 
-import GHC.IR.Core.Monad ( CoreToDo, CoreM )
+import GHC.IR.Core.Pipeline ( CoreToDo, CoreM )
 import GHC.IR.Haskell.TypeSystem.Types ( TcPlugin )
 import GHC.Monad
 import GHC.Program.Driver.Phases

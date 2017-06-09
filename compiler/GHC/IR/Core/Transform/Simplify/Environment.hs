@@ -43,7 +43,7 @@ module GHC.IR.Core.Transform.Simplify.Environment (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Transform.Simplify.Monad
-import GHC.IR.Core.Monad                ( SimplifierMode(..) )
+import GHC.IR.Core.Pipeline                ( SimplifierMode(..) )
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Utils
 import GHC.Data.Var as Var

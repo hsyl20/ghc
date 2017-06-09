@@ -33,7 +33,7 @@ import GHC.Data.Coercion.Optimise      ( optCoercion )
 import GHC.Data.FamilyInstance       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
 --import GHC.Data.Type.Constructor            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
-import GHC.IR.Core.Monad        ( Tick(..), SimplifierMode(..) )
+import GHC.IR.Core.Pipeline        ( Tick(..), SimplifierMode(..) )
 import GHC.IR.Core.Syntax
 import GHC.Data.Demand           ( StrictSig(..), dmdTypeDepth, isStrictDmd )
 import GHC.IR.Core.PrettyPrint          ( pprCoreExpr )

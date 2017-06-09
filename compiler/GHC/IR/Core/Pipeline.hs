@@ -1,12 +1,12 @@
 {-
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[GHC.IR.Core.Monad]{The core pipeline monad}
+\section[GHC.IR.Core.Pipeline]{The core pipeline monad}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module GHC.IR.Core.Monad (
+module GHC.IR.Core.Pipeline (
     -- * Configuration of the core-to-core passes
     CoreToDo(..), runWhen, runMaybe,
     SimplifierMode(..),

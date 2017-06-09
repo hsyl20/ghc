@@ -28,7 +28,7 @@ import GHC.Data.FamilyInstance       ( FamInstEnv )
 import GHC.IR.Core.Syntax          ( RuleEnv(..) )
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
-import GHC.IR.Core.Monad
+import GHC.IR.Core.Pipeline
 import GHC.Utils.Outputable
 import GHC.Data.FastString
 import GHC.Utils.Monad

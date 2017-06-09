@@ -36,7 +36,7 @@ module GHC.IR.Core.Transform.Simplify.Utils (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Transform.Simplify.Environment
-import GHC.IR.Core.Monad        ( SimplifierMode(..), Tick(..) )
+import GHC.IR.Core.Pipeline        ( SimplifierMode(..), Tick(..) )
 import GHC.Config.Flags
 import GHC.IR.Core.Syntax
 import qualified GHC.IR.Core.Substitution
@@ -699,7 +699,7 @@ interestingArg env e = go env 0 e
 ************************************************************************
 
 The SimplifierMode controls several switches; see its definition in
-GHC.IR.Core.Monad
+GHC.IR.Core.Pipeline
         sm_rules      :: Bool     -- Whether RULES are enabled
         sm_inline     :: Bool     -- Whether inlining is enabled
         sm_case_case  :: Bool     -- Whether case-of-case is enabled

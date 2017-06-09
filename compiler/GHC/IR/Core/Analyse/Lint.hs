@@ -25,7 +25,7 @@ import GHC.IR.Core.Syntax
 import GHC.IR.Core.FreeVars
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Analyse.Stats   ( coreBindsStats )
-import GHC.IR.Core.Monad
+import GHC.IR.Core.Pipeline
 import GHC.Data.Bag
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
@@ -2470,7 +2470,7 @@ lintAnnots pname pass guts = do
     let binds = flattenBinds $ mg_binds nguts
         binds' = flattenBinds $ mg_binds nguts'
         (diffs,_) = diffBinds True (mkRnEnv2 emptyInScopeSet) binds binds'
-    when (not (null diffs)) $ GHC.IR.Core.Monad.putMsg $ vcat
+    when (not (null diffs)) $ GHC.IR.Core.Pipeline.putMsg $ vcat
       [ lint_banner "warning" pname
       , text "Core changes with annotations:"
       , withPprStyle (defaultDumpStyle dflags) $ nest 2 $ vcat diffs

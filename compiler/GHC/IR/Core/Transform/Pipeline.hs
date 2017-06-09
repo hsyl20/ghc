@@ -27,7 +27,7 @@ import GHC.IR.Core.Transform.Simplify         ( simplTopBinds, simplExpr, simplR
 import GHC.IR.Core.Transform.Simplify.Utils       ( simplEnvForGHCi, activeRule )
 import GHC.IR.Core.Transform.Simplify.Environment
 import GHC.IR.Core.Transform.Simplify.Monad
-import GHC.IR.Core.Monad
+import GHC.IR.Core.Pipeline
 import qualified GHC.Utils.Error as Err
 import GHC.IR.Core.Transform.FloatIn          ( floatInwards )
 import GHC.IR.Core.Transform.FloatOut         ( floatOutwards )

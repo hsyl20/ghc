@@ -2,7 +2,7 @@
 module Main where
 
 import GHC.IR.ByteCode.Linker
-import GHC.IR.Core.Monad
+import GHC.IR.Core.Pipeline
 import Data.Array
 import GHC.Data.DataConstructor
 import GHC.Interactive.Debugger.Utils

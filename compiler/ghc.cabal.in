@@ -368,7 +368,7 @@ Library
         GHC.IR.Haskell.Renamer.Fixity
         GHC.IR.Haskell.Renamer.Utils
         GHC.IR.Haskell.Renamer.Utils.Unbound
-        GHC.IR.Core.Monad
+        GHC.IR.Core.Pipeline
         GHC.IR.Core.Transform.CommonSubExpr
         GHC.IR.Core.Transform.FloatIn
         GHC.IR.Core.Transform.FloatOut

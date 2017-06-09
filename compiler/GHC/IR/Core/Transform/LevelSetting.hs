@@ -63,7 +63,7 @@ module GHC.IR.Core.Transform.LevelSetting (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Syntax
-import GHC.IR.Core.Monad        ( FloatOutSwitches(..) )
+import GHC.IR.Core.Pipeline        ( FloatOutSwitches(..) )
 import GHC.IR.Core.Utils        ( exprType, exprIsHNF
                         , exprOkForSpeculation
                         , exprIsTopLevelBindable

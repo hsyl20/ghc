@@ -24,7 +24,7 @@ import GHC.IR.Core.Substitution
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Transform.Unfolding       ( couldBeSmallEnoughToInline )
 import GHC.IR.Core.FreeVars          ( exprsFreeVarsList )
-import GHC.IR.Core.Monad
+import GHC.IR.Core.Pipeline
 import GHC.Data.Literal          ( litIsLifted )
 import GHC.Types         ( ModGuts(..) )
 import GHC.IR.Core.Transform.WorkerWrapper.Utils            ( isWorkerSmallEnough, mkWorkerArgs )

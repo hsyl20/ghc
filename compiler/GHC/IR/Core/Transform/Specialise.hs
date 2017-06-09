@@ -14,7 +14,7 @@ import GHC.IR.Haskell.TypeSystem.Type hiding( substTy )
 import GHC.Data.Type   hiding( substTy, extendTvSubstList )
 import GHC.Data.Module( Module, HasModule(..) )
 import GHC.Data.Coercion( Coercion )
-import GHC.IR.Core.Monad
+import GHC.IR.Core.Pipeline
 import qualified GHC.IR.Core.Substitution
 import GHC.IR.Core.Transform.Unfolding
 import GHC.Data.Var.Set

@@ -720,7 +720,7 @@ data DynFlags = DynFlags {
                                         --   Not optional; otherwise ForceSpecConstr can diverge.
   liberateCaseThreshold :: Maybe Int,   -- ^ Threshold for LiberateCase
   floatLamArgs          :: Maybe Int,   -- ^ Arg count for lambda floating
-                                        --   See GHC.IR.Core.Monad.FloatOutSwitches
+                                        --   See GHC.IR.Core.Pipeline.FloatOutSwitches
 
   historySize           :: Int,         -- ^ Simplification history size
 
