@@ -121,7 +121,7 @@ import GHC.Types
 
 import qualified GHC.IR.Haskell.TypeSystem.Instantiation as TcM
 import GHC.Data.ClassInstance
-import GHC.IR.Haskell.TypeSystem.FamilyInstance
+import GHC.IR.Haskell.TypeSystem.FamilyInstance as FamInst
 import GHC.Data.FamilyInstance
 
 import qualified GHC.IR.Haskell.TypeSystem as TcM

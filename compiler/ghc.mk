@@ -480,7 +480,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.FieldLabel \
 	GHC.Utils.Fingerprint \
 	GHC.Data.FiniteMap \
-	ForeignCall \
+	GHC.Data.ForeignCall \
 	GHC.Data.Var.Free \
 	GHC.Config.Hooks \
 	GHC.IR.Haskell.Binding \

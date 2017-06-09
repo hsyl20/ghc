@@ -46,7 +46,7 @@ import PrelRules
 import GHC.Data.Type
 import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
-import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type as TcType
 import GHC.IR.Core.Syntax.Make
 import GHC.IR.Core.Utils        ( exprType, mkCast )
 import GHC.IR.Core.Transform.Unfolding

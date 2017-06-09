@@ -53,11 +53,11 @@ module GHC.Plugin.TypeChecker (
     ) where
 
 #if defined(GHCI)
-import qualified GHC.IR.Haskell.TypeSystem as TcM
+import qualified GHC.IR.Haskell.TypeSystem                    as TcM
 import qualified GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
-import qualified GHC.IR.Haskell.TypeSystem.Environment     as TcM
-import qualified GHC.IR.Haskell.TypeSystem.MutableType   as TcM
-import qualified FamInst   as TcM
+import qualified GHC.IR.Haskell.TypeSystem.Environment        as TcM
+import qualified GHC.IR.Haskell.TypeSystem.MutableType        as TcM
+import qualified GHC.IR.Haskell.TypeSystem.FamilyInstance     as TcM
 import qualified GHC.IR.Interface.Environment
 import qualified GHC.Utils.Finder
 
