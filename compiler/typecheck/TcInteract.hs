@@ -12,7 +12,7 @@ module TcInteract (
 import GHC.Data.BasicTypes ( SwapFlag(..), isSwapped,
                     infinity, IntWithInf, intGtLimit )
 import GHC.IR.Haskell.Type ( HsIPName(..) )
-import GHC.IR.Haskell.TypeSystem.Canonicaliser
+import GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser
 import GHC.IR.Haskell.TypeSystem.Flatten
 import GHC.IR.Haskell.TypeSystem.Unify( canSolveByUnification )
 import GHC.Data.Var.Set
@@ -442,7 +442,7 @@ React with (F Int ~ b) ==> IR Stop True []    -- after substituting we re-canoni
 -}
 
 thePipeline :: [(String,SimplifierStage)]
-thePipeline = [ ("canonicalization",        GHC.IR.Haskell.TypeSystem.Canonicaliser.canonicalize)
+thePipeline = [ ("canonicalization",        GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser.canonicalize)
               , ("interact with inerts",    interactWithInertsStage)
               , ("top-level reactions",     topReactionsStage) ]
 

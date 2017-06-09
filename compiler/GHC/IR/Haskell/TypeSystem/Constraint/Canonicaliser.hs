@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.IR.Haskell.TypeSystem.Canonicaliser(
+module GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser(
      canonicalize,
      unifyDerived,
      makeSuperClasses, maybeSym,

@@ -1521,7 +1521,7 @@ isPartialSig _                                       = False
 --      (ii) Note that xi types can contain unexpanded type synonyms;
 --           however, the (transitive) expansions of those type synonyms
 --           will not contain any type functions, unless we are under a ForAll.
--- We enforce the structure of Xi types when we flatten (GHC.IR.Haskell.TypeSystem.Canonicaliser)
+-- We enforce the structure of Xi types when we flatten (GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser)
 
 type Xi = Type       -- In many comments, "xi" ranges over Xi
 
@@ -1535,7 +1535,7 @@ data Ct
       cc_class  :: Class,
       cc_tyargs :: [Xi],   -- cc_tyargs are function-free, hence Xi
 
-      cc_pend_sc :: Bool   -- See Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Canonicaliser
+      cc_pend_sc :: Bool   -- See Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser
                            -- True <=> (a) cc_class has superclasses
                            --          (b) we have not (yet) added those
                            --              superclasses as Givens
@@ -1564,7 +1564,7 @@ data Ct
        --     but  a ~ F b    is not
        --   * If the equality is representational, rhs has no top-level newtype
        --     See Note [No top-level newtypes on RHS of representational
-       --     equalities] in GHC.IR.Haskell.TypeSystem.Canonicaliser
+       --     equalities] in GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser
        --   * If rhs (perhaps under the cast) is also a tv, then it is oriented
        --     to give best chance of
        --     unification happening; eg if rhs is touchable then lhs is too
@@ -1651,7 +1651,7 @@ If  ct :: Ct, then extra fields of 'ct' cache precisely the ctev_pred field
 of (cc_ev ct), and is fully rewritten wrt the substitution.   Eg for CDictCan,
    ctev_pred (cc_ev ct) = (cc_class ct) (cc_tyargs ct)
 This holds by construction; look at the unique place where CDictCan is
-built (in GHC.IR.Haskell.TypeSystem.Canonicaliser).
+built (in GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser).
 
 In contrast, the type of the evidence *term* (ctev_dest / ctev_evar) in
 the evidence may *not* be fully zonked; we are careful not to look at it
@@ -1828,7 +1828,7 @@ set the cc_pend_sc flag to True, so that if we re-process this
 CDictCan we will re-generate its derived superclasses. Otherwise
 we might miss some fundeps.  Trac #13662 showed this up.
 
-See Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Canonicaliser.
+See Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser.
 -}
 
 
@@ -2048,7 +2048,7 @@ superClassesMightHelp ct
 
 {- Note [When superclasses help]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-First read Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Canonicaliser.
+First read Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser.
 
 We expand superclasses and iterate only if there is at unsolved wanted
 for which expansion of superclasses (e.g. from given constraints)

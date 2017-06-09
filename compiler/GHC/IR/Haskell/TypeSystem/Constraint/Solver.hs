@@ -2311,7 +2311,7 @@ addErrTcS :: SDoc -> TcS ()
 failTcS      = wrapTcS . TcM.failWith
 warnTcS flag = wrapTcS . TcM.addWarn (Reason flag)
 addErrTcS    = wrapTcS . TcM.addErr
-panicTcS doc = pprPanic "GHC.IR.Haskell.TypeSystem.Canonicaliser" doc
+panicTcS doc = pprPanic "GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser" doc
 
 traceTcS :: String -> SDoc -> TcS ()
 traceTcS herald doc = wrapTcS (TcM.traceTc herald doc)

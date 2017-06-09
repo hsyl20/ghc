@@ -581,7 +581,7 @@ itself not purely syntactic; it accounts for CastTys;
 see Note [Non-trivial definitional equality] in GHC.Data.Types
 
 Unlike the "impure unifiers" in the typechecker (the eager unifier in
-GHC.IR.Haskell.TypeSystem.Unify, and the constraint solver itself in GHC.IR.Haskell.TypeSystem.Canonicaliser), the pure
+GHC.IR.Haskell.TypeSystem.Unify, and the constraint solver itself in GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser), the pure
 unifier It does /not/ work up to ~.
 
 The algorithm implemented here is rather delicate, and we depend on it
