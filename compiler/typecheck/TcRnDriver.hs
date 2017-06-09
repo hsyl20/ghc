@@ -92,7 +92,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
 import GHC.IR.Haskell.TypeSystem.Deriving.Typeable ( mkTypeableBinds )
-import TcBackpack
+import GHC.IR.Haskell.TypeSystem.ModuleSignature
 import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.IR.Haskell.Renamer.Environment

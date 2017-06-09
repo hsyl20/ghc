@@ -423,7 +423,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Pattern
         GHC.IR.Haskell.TypeSystem.PatternSynonym
         TcRnDriver
-        TcBackpack
+        GHC.IR.Haskell.TypeSystem.ModuleSignature
         TcRnExports
         TcRnMonad
         TcRnTypes

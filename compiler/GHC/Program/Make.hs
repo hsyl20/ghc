@@ -62,7 +62,7 @@ import GHC.Data.StringBuffer
 import GHC.Utils.SysTools
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.DeterSet
-import TcBackpack
+import GHC.IR.Haskell.TypeSystem.ModuleSignature
 import GHC.Packages
 import GHC.Data.Unique.Set
 import GHC.Utils

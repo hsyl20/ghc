@@ -3,7 +3,7 @@
 {-# LANGUAGE NondecreasingIndentation #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-module TcBackpack (
+module GHC.IR.Haskell.TypeSystem.ModuleSignature (
     findExtraSigImports',
     findExtraSigImports,
     implicitRequirements',
