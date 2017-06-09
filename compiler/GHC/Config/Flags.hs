@@ -167,7 +167,7 @@ import {-# SOURCE #-} GHC.Config.Hooks
 import {-# SOURCE #-} GHC.Builtin.Names ( mAIN )
 import {-# SOURCE #-} GHC.Packages (PackageState, emptyPackageState)
 import GHC.Program.Driver.Phases     ( Phase(..), phaseInputExt )
-import Config
+import GHC.Config.Build
 import GHC.Program.CmdLineParser
 import GHC.Config.Constants
 import GHC.Utils.Panic
@@ -2271,7 +2271,7 @@ parseDynLibLoaderMode f d =
 setDumpPrefixForce f d = d { dumpPrefixForce = f}
 
 -- XXX HACK: Prelude> words "'does not' work" ===> ["'does","not'","work"]
--- Config.hs should really use Option.
+-- GHC.Config.Build should really use Option.
 setPgmP   f = let (pgm:args) = words f in alterSettings (\s -> s { sPgm_P   = (pgm, map Option args)})
 addOptl   f = alterSettings (\s -> s { sOpt_l   = f : sOpt_l s})
 addOptc   f = alterSettings (\s -> s { sOpt_c   = f : sOpt_c s})

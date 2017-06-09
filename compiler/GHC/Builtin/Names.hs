@@ -135,7 +135,7 @@ import GHC.Data.Unique
 import GHC.Data.Name
 import GHC.Data.SrcLoc
 import GHC.Data.FastString
-import Config ( cIntegerLibraryType, IntegerLibrary(..) )
+import GHC.Config.Build ( cIntegerLibraryType, IntegerLibrary(..) )
 import GHC.Utils.Panic ( panic )
 
 {-

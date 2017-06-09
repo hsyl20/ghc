@@ -53,7 +53,7 @@ import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable  
 
 import GHC.Compilers.CmmToAsm.Register.Target
 import GHC.Utils.Platform
-import Config
+import GHC.Config.Build
 import GHC.Compilers.CmmToAsm.Instruction
 import GHC.Compilers.CmmToAsm.PIC
 import GHC.Compilers.CmmToAsm.Register

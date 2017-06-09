@@ -134,7 +134,7 @@ module GHC.Data.Module
         emptyModuleSet, mkModuleSet, moduleSetElts, extendModuleSet, elemModuleSet
     ) where
 
-import Config
+import GHC.Config.Build
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap

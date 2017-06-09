@@ -48,7 +48,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Data.Module
 import GHC.Utils.Error
 import GHC.Config.Flags
-import Config
+import GHC.Config.Build
 import GHC.Utils.Panic
 import GHC.Utils
 import GHC.Data.StringBuffer     ( hGetStringBuffer )

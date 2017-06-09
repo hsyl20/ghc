@@ -9,7 +9,7 @@ import Annotations ( AnnTarget(..), CoreAnnTarget )
 import GHC.Serialized  ( deserializeWithData )
 import GHC.Utils.Panic
 
-import Config
+import GHC.Config.Build
 import Annrun01_Help
 
 import qualified Language.Haskell.TH as TH

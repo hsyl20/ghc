@@ -307,7 +307,7 @@ Library
         GHC.Data.Annotation
         GHC.Program.CmdLineParser
         GHC.Program.Driver.CodeOutput
-        Config
+        GHC.Config.Build
         GHC.Config.Constants
         GHC.Program.MakeDepend
         GHC.Program.Driver.Phases

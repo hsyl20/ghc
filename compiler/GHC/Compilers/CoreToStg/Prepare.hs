@@ -53,7 +53,7 @@ import GHC.Data.Pair
 import GHC.Utils.Outputable
 import GHC.Utils.Platform
 import GHC.Data.FastString
-import Config
+import GHC.Config.Build
 import GHC.Data.Name             ( NamedThing(..), nameSrcSpan )
 import GHC.Data.SrcLoc           ( SrcSpan(..), realSrcLocSpan, mkRealSrcLoc )
 import Data.Bits

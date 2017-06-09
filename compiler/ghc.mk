@@ -14,7 +14,7 @@
 # Create compiler configuration
 #
 # The 'echo' commands simply spit the values of various make variables
-# into Config.hs, whence they can be compiled and used by GHC itself
+# into GHC/Config/Build.hs, whence they can be compiled and used by GHC itself
 
 # This is just to avoid generating a warning when generating deps
 # involving RtsFlags.h
@@ -22,7 +22,7 @@ compiler_stage1_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 compiler_stage2_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 compiler_stage3_MKDEPENDC_OPTS = -DMAKING_GHC_BUILD_SYSTEM_DEPENDENCIES
 
-compiler_stage1_C_FILES_NODEPS = compiler/parser/cutils.c
+compiler_stage1_C_FILES_NODEPS = compiler/cbits/cutils.c
 
 # This package doesn't pass the Cabal checks because include-dirs
 # points outside the source directory. This isn't a real problem, so
@@ -30,9 +30,9 @@ compiler_stage1_C_FILES_NODEPS = compiler/parser/cutils.c
 compiler_NO_CHECK = YES
 
 ifneq "$(BINDIST)" "YES"
-compiler/stage1/package-data.mk : compiler/stage1/build/Config.hs
-compiler/stage2/package-data.mk : compiler/stage2/build/Config.hs
-compiler/stage3/package-data.mk : compiler/stage3/build/Config.hs
+compiler/stage1/package-data.mk : compiler/stage1/build/GHC/Config/Build.hs
+compiler/stage2/package-data.mk : compiler/stage2/build/GHC/Config/Build.hs
+compiler/stage3/package-data.mk : compiler/stage3/build/GHC/Config/Build.hs
 
 compiler/stage1/build/GHC/Config/Platform/Constants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
 compiler/stage2/build/GHC/Config/Platform/Constants.o: $(includes_GHCCONSTANTS_HASKELL_TYPE)
@@ -45,11 +45,11 @@ compiler/stage2/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPE
 compiler/stage3/build/GHC/Config/Flags.o: $(includes_GHCCONSTANTS_HASKELL_WRAPPERS)
 endif
 
-compiler/stage%/build/Config.hs : mk/config.mk mk/project.mk | $$(dir $$@)/.
+compiler/stage%/build/GHC/Config/Build.hs : mk/config.mk mk/project.mk | $$(dir $$@)/.
 	$(call removeFiles,$@)
 	@echo 'Creating $@ ... '
 	@echo '{-# LANGUAGE CPP #-}'                                        >> $@
-	@echo 'module Config where'                                         >> $@
+	@echo 'module GHC.Config.Build where'                                         >> $@
 	@echo                                                               >> $@
 	@echo '#include "ghc_boot_platform.h"'                              >> $@
 	@echo                                                               >> $@
@@ -314,7 +314,7 @@ $(eval $(call preprocessCompilerFiles,2))
 $(eval $(call preprocessCompilerFiles,3))
 
 # -----------------------------------------------------------------------------
-# Configuration
+# GHC.Config.Builduration
 
 compiler_stage1_CONFIGURE_OPTS += --flags=stage1
 compiler_stage2_CONFIGURE_OPTS += --flags=stage2

@@ -69,7 +69,7 @@ import GHC.Utils.Outputable hiding ( printForUser, printForUserPartWay )
 
 -- Other random utilities
 import GHC.Data.BasicTypes hiding ( isTopLevel )
-import Config
+import GHC.Config.Build
 import GHC.Data.Graph.Directed
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString

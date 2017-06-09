@@ -6,7 +6,7 @@
 
 module GHC.Config.Constants (module GHC.Config.Constants) where
 
-import Config
+import GHC.Config.Build
 
 hiVersion :: Integer
 hiVersion = read (cProjectVersionInt ++ cProjectPatchLevel) :: Integer

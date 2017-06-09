@@ -29,7 +29,7 @@ module GHC.Utils.Panic (
 
 import {-# SOURCE #-} GHC.Utils.Outputable (SDoc, showSDocUnsafe)
 
-import Config
+import GHC.Config.Build
 import GHC.Utils.Exception as Exception
 
 import Control.Monad.IO.Class

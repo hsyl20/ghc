@@ -40,7 +40,7 @@ import GHC.Data.Module           ( ModuleName )
 
 
 -- Various other random stuff that we need
-import Config
+import GHC.Config.Build
 import GHC.Config.Constants
 import GHC.Types
 import GHC.Packages         ( pprPackages, pprPackagesSimple )

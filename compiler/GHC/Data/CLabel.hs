@@ -122,7 +122,7 @@ import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Unique
 import GHC.Builtin.Primitive.Operations
-import Config
+import GHC.Config.Build
 import GHC.Data.CostCentre
 import GHC.Utils.Outputable
 import GHC.Data.FastString

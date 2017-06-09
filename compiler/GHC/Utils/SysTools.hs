@@ -57,7 +57,7 @@ module GHC.Utils.SysTools (
 import GHC.Program.Driver.Phases
 import GHC.Data.Module
 import GHC.Packages
-import Config
+import GHC.Config.Build
 import GHC.Utils.Outputable
 import GHC.Utils.Error
 import GHC.Utils.Panic
@@ -137,10 +137,10 @@ from topdir we can find package.conf, ghc-asm, etc.
 
 SysTools.initSysProgs figures out exactly where all the auxiliary programs
 are, and initialises mutable variables to make it easy to call them.
-To to this, it makes use of definitions in Config.hs, which is a Haskell
+To do this, it makes use of definitions in GHC.Config.Build, which is a Haskell
 file containing variables whose value is figured out by the build system.
 
-Config.hs contains two sorts of things
+GHC.COnfig.Build contains two sorts of things
 
   cGCC,         The *names* of the programs
   cCPP            e.g.  cGCC = gcc
@@ -279,7 +279,8 @@ initSysTools mbMinusB
            ghci_usage_msg_path = installed "ghci-usage.txt"
 
              -- For all systems, unlit, split, mangle are GHC utilities
-             -- architecture-specific stuff is done when building Config.hs
+             -- architecture-specific stuff is done when building
+             -- GHC.Config.Build
            unlit_path = libexec cGHC_UNLIT_PGM
 
              -- split is a Perl script
@@ -306,7 +307,7 @@ initSysTools mbMinusB
 
        -- cpp is derived from gcc on all platforms
        -- HACK, see setPgmP below. We keep 'words' here to remember to fix
-       -- Config.hs one day.
+       -- GHC.Config.Build one day.
 
 
        -- Other things being equal, as and ld are simply gcc

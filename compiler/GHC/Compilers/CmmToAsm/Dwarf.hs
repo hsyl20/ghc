@@ -4,7 +4,7 @@ module GHC.Compilers.CmmToAsm.Dwarf (
 
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Expr         ( GlobalReg(..) )
-import Config          ( cProjectName, cProjectVersion )
+import GHC.Config.Build          ( cProjectName, cProjectVersion )
 import GHC.IR.Core.Syntax         ( Tickish(..) )
 import GHC.IR.Cmm.DebugBlock
 import GHC.Config.Flags

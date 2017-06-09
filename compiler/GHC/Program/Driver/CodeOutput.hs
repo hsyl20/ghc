@@ -22,7 +22,7 @@ import GHC.Packages
 import GHC.IR.Cmm.Syntax              ( RawCmmGroup )
 import GHC.Types
 import GHC.Config.Flags
-import Config
+import GHC.Config.Build
 import GHC.Utils.SysTools
 import GHC.Data.Stream           (Stream)
 import qualified GHC.Data.Stream as Stream

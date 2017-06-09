@@ -1,6 +1,6 @@
 {-# LANGUAGE ParallelListComp, BangPatterns #-}
 
-import Config
+import GHC.Config.Build
 import Dump
 import World
 import Body
