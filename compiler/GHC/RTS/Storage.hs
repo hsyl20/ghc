@@ -47,7 +47,7 @@ module GHC.RTS.Storage (
         pprWord8String, stringToWord8s
     ) where
 
-#include "../HsVersions.h"
+#include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
 import GHC.Data.BasicTypes( ConTagZ )
