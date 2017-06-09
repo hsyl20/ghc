@@ -1,12 +1,12 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Rename.ImportExport]{Extracting imported and top-level names in scope}
+\section[GHC.IR.Haskell.Renamer.ImportExport]{Extracting imported and top-level names in scope}
 -}
 
 {-# LANGUAGE CPP, NondecreasingIndentation, MultiWayIf, NamedFieldPuns #-}
 
-module GHC.Rename.ImportExport (
+module GHC.IR.Haskell.Renamer.ImportExport (
         rnImports, getLocalNonValBinders, newRecordSelector,
         extendGlobalRdrEnvRn,
         gresFromAvails,
@@ -23,9 +23,9 @@ module GHC.Rename.ImportExport (
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import TcEnv
-import GHC.Rename.Environment
-import GHC.Rename.Fixity
-import GHC.Rename.Utils          ( warnUnusedTopBinds, mkFieldEnv )
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Fixity
+import GHC.IR.Haskell.Renamer.Utils          ( warnUnusedTopBinds, mkFieldEnv )
 import GHC.Interface.Load        ( loadSrcInterface )
 import TcRnMonad
 import PrelNames
@@ -435,7 +435,7 @@ created by its bindings.
 Note [Top-level Names in Template Haskell decl quotes]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 See also: Note [Interactively-bound Ids in GHCi] in GHC.Types
-          Note [Looking up Exact RdrNames] in GHC.Rename.Environment
+          Note [Looking up Exact RdrNames] in GHC.IR.Haskell.Renamer.Environment
 
 Consider a Template Haskell declaration quotation like this:
       module M where
@@ -444,7 +444,7 @@ When renaming the declarations inside [d| ...|], we treat the
 top level binders specially in two ways
 
 1.  We give them an Internal Name, not (as usual) an External one.
-    This is done by GHC.Rename.Environment.newTopSrcBinder.
+    This is done by GHC.IR.Haskell.Renamer.Environment.newTopSrcBinder.
 
 2.  We make them *shadow* the outer bindings.
     See Note [GlobalRdrEnv shadowing]
@@ -711,7 +711,7 @@ newRecordSelector overload_ok (dc:_) (L loc (FieldOcc (L _ fld) _))
               -- sites. This is needed to correctly support record
               -- selectors in Template Haskell. See Note [Binders in
               -- Template Haskell] in Convert.hs and Note [Looking up
-              -- Exact RdrNames] in GHC.Rename.Environment.hs.
+              -- Exact RdrNames] in GHC.IR.Haskell.Renamer.Environment.hs.
           | otherwise   = mkRdrUnqual (flSelector qualFieldLbl)
 
 {-

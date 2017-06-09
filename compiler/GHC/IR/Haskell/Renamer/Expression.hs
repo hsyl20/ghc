@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Rename.Expression]{Renaming of expressions}
+\section[GHC.IR.Haskell.Renamer.Expression]{Renaming of expressions}
 
 Basically dependency analysis.
 
@@ -14,27 +14,27 @@ free variables.
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE MultiWayIf #-}
 
-module GHC.Rename.Expression (
+module GHC.IR.Haskell.Renamer.Expression (
         rnLExpr, rnExpr, rnStmts
    ) where
 
 #include "HsVersions.h"
 
-import GHC.Rename.Binding   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
+import GHC.IR.Haskell.Renamer.Binding   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS,
                    rnMatchGroup, rnGRHS, makeMiniFixityEnv)
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import GHC.Data.Module           ( getModule )
-import GHC.Rename.Environment
-import GHC.Rename.Fixity
-import GHC.Rename.Utils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Fixity
+import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), bindLocalNamesFV, checkDupNames
                         , bindLocalNames
                         , mapMaybeFvRn, mapFvRn
                         , warnUnusedLocalBinds )
-import GHC.Rename.Utils.Unbound        ( reportUnboundName )
-import GHC.Rename.Splice         ( rnBracket, rnSpliceExpr, checkThLocalName )
-import GHC.Rename.Type
-import GHC.Rename.Pattern
+import GHC.IR.Haskell.Renamer.Utils.Unbound        ( reportUnboundName )
+import GHC.IR.Haskell.Renamer.Splice         ( rnBracket, rnSpliceExpr, checkThLocalName )
+import GHC.IR.Haskell.Renamer.Type
+import GHC.IR.Haskell.Renamer.Pattern
 import GHC.Config.Flags
 import PrelNames
 

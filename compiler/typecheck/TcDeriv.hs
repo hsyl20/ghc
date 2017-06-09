@@ -29,11 +29,11 @@ import GHC.Data.FamilyInstance
 import TcHsType
 import TcMType
 
-import GHC.Rename.ImportExport( extendGlobalRdrEnvRn )
-import GHC.Rename.Binding
-import GHC.Rename.Environment
-import GHC.Rename.Utils    ( bindLocalNamesFV )
-import GHC.Rename.Main   ( addTcgDUs )
+import GHC.IR.Haskell.Renamer.ImportExport( extendGlobalRdrEnvRn )
+import GHC.IR.Haskell.Renamer.Binding
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Utils    ( bindLocalNamesFV )
+import GHC.IR.Haskell.Renamer.Main   ( addTcgDUs )
 import GHC.Data.Available
 
 import GHC.TypeSystem.Unify.Utils.Utils( tcUnifyTy )

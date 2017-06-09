@@ -217,7 +217,7 @@ nlParPat p = noLoc (ParPat p)
 
 -------------------------------
 -- These are the bits of syntax that contain rebindable names
--- See GHC.Rename.Environment.lookupSyntaxName
+-- See GHC.IR.Haskell.Renamer.Environment.lookupSyntaxName
 
 mkHsIntegral   :: IntegralLit -> PostTc RdrName Type
                -> HsOverLit RdrName

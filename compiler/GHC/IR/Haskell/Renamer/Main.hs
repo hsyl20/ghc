@@ -1,33 +1,33 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Rename.Main]{Main pass of renamer}
+\section[GHC.IR.Haskell.Renamer.Main]{Main pass of renamer}
 -}
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module GHC.Rename.Main (
+module GHC.IR.Haskell.Renamer.Main (
         rnSrcDecls, addTcgDUs, findSplice
     ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr )
-import {-# SOURCE #-} GHC.Rename.Splice ( rnSpliceDecl, rnTopSpliceDecls )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression( rnLExpr )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Splice ( rnSpliceDecl, rnTopSpliceDecls )
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.FieldLabel
 import GHC.Data.RdrName
-import GHC.Rename.Type
-import GHC.Rename.Binding
-import GHC.Rename.Environment
-import GHC.Rename.Utils          ( HsDocContext(..), mapFvRn, bindLocalNames
+import GHC.IR.Haskell.Renamer.Type
+import GHC.IR.Haskell.Renamer.Binding
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), mapFvRn, bindLocalNames
                         , checkDupRdrNames, inHsDocContext, bindLocalNamesFV
                         , checkShadowedRdrNames, warnUnusedTypePatterns
                         , extendTyVarEnvFVRn, newLocalBndrsRn )
-import GHC.Rename.Utils.Unbound        ( mkUnboundName )
-import GHC.Rename.ImportExport
-import GHC.Rename.Documentation          ( rnHsDoc, rnMbLHsDoc )
+import GHC.IR.Haskell.Renamer.Utils.Unbound        ( mkUnboundName )
+import GHC.IR.Haskell.Renamer.ImportExport
+import GHC.IR.Haskell.Renamer.Documentation          ( rnHsDoc, rnMbLHsDoc )
 import TcAnnotations    ( annCtxt )
 import TcRnMonad
 
@@ -1132,19 +1132,19 @@ rnHsVectDecl (HsVectTypeIn s isScalar tycon (Just rhs_tycon))
                 , mkFVs [unLoc tycon', unLoc rhs_tycon'])
        }
 rnHsVectDecl (HsVectTypeOut _ _ _)
-  = panic "GHC.Rename.Main.rnHsVectDecl: Unexpected 'HsVectTypeOut'"
+  = panic "GHC.IR.Haskell.Renamer.Main.rnHsVectDecl: Unexpected 'HsVectTypeOut'"
 rnHsVectDecl (HsVectClassIn s cls)
   = do { cls' <- lookupLocatedOccRn cls
        ; return (HsVectClassIn s cls', unitFV (unLoc cls'))
        }
 rnHsVectDecl (HsVectClassOut _)
-  = panic "GHC.Rename.Main.rnHsVectDecl: Unexpected 'HsVectClassOut'"
+  = panic "GHC.IR.Haskell.Renamer.Main.rnHsVectDecl: Unexpected 'HsVectClassOut'"
 rnHsVectDecl (HsVectInstIn instTy)
   = do { (instTy', fvs) <- rnLHsInstType (text "a VECTORISE pragma") instTy
        ; return (HsVectInstIn instTy', fvs)
        }
 rnHsVectDecl (HsVectInstOut _)
-  = panic "GHC.Rename.Main.rnHsVectDecl: Unexpected 'HsVectInstOut'"
+  = panic "GHC.IR.Haskell.Renamer.Main.rnHsVectDecl: Unexpected 'HsVectInstOut'"
 
 {- **************************************************************
          *                                                      *
@@ -1704,7 +1704,7 @@ rnTyClDecl (ClassDecl { tcdCtxt = context, tcdLName = lcls,
         ; (at_defs', fv_at_defs) <- rnList (rnTyFamDefltEqn cls') at_defs
 
         -- No need to check for duplicate associated type decls
-        -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
+        -- since that is done by GHC.IR.Haskell.Renamer.ImportExport.extendGlobalRdrEnvRn
 
         -- Check the signatures
         -- First process the class op sigs (op_sigs), then the fixity sigs (non_op_sigs).
@@ -1727,7 +1727,7 @@ rnTyClDecl (ClassDecl { tcdCtxt = context, tcdLName = lcls,
         ; (mbinds', sigs', meth_fvs)
             <- rnMethodBinds True cls' (hsAllLTyVarNames tyvars') mbinds sigs
                 -- No need to check for duplicate method signatures
-                -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
+                -- since that is done by GHC.IR.Haskell.Renamer.ImportExport.extendGlobalRdrEnvRn
                 -- and the methods are already in scope
 
   -- Haddock docs
@@ -1771,7 +1771,7 @@ rnDataDefn doc (HsDataDefn { dd_ND = new_or_data, dd_cType = cType
                             | otherwise = setLocalRdrEnv emptyLocalRdrEnv }
         ; (condecls', con_fvs) <- zap_lcl_env $ rnConDecls condecls
            -- No need to check for duplicate constructor decls
-           -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
+           -- since that is done by GHC.IR.Haskell.Renamer.ImportExport.extendGlobalRdrEnvRn
 
         ; let all_fvs = fvs1 `plusFV` fvs3 `plusFV`
                         con_fvs `plusFV` sig_fvs
@@ -2091,7 +2091,7 @@ rnConDeclDetails con doc (RecCon (L l fields))
   = do  { fls <- lookupConstructorFields con
         ; (new_fields, fvs) <- rnConDeclFields doc fls fields
                 -- No need to check for duplicate fields
-                -- since that is done by GHC.Rename.ImportExport.extendGlobalRdrEnvRn
+                -- since that is done by GHC.IR.Haskell.Renamer.ImportExport.extendGlobalRdrEnvRn
         ; return (RecCon (L l new_fields), fvs) }
 
 -------------------------------------------------

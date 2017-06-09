@@ -10,9 +10,9 @@ import TcRnMonad
 import TcEnv
 import TcMType
 import TcType
-import GHC.Rename.ImportExport
-import GHC.Rename.Environment
-import GHC.Rename.Utils.Unbound ( reportUnboundName )
+import GHC.IR.Haskell.Renamer.ImportExport
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Utils.Unbound ( reportUnboundName )
 import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Id.Info
@@ -35,7 +35,7 @@ import GHC.Utils (capitalise)
 
 import Control.Monad
 import GHC.Config.Flags
-import GHC.Rename.Documentation          ( rnHsDoc )
+import GHC.IR.Haskell.Renamer.Documentation          ( rnHsDoc )
 import GHC.IR.Haskell.Parser.Syntax        ( setRdrNameSpace )
 import Data.Either      ( partitionEithers )
 

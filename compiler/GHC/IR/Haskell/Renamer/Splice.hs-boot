@@ -1,4 +1,4 @@
-module GHC.Rename.Splice where
+module GHC.IR.Haskell.Renamer.Splice where
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad

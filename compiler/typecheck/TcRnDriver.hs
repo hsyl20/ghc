@@ -41,16 +41,16 @@ module TcRnDriver (
     ) where
 
 import {-# SOURCE #-} TcSplice ( finishTH )
-import GHC.Rename.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
+import GHC.IR.Haskell.Renamer.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
 import GHC.Interface.Environment( externaliseName )
 import TcHsType
 import TcMatches
 import Inst( deeplyInstantiate )
 import TcUnify( checkConstraints )
-import GHC.Rename.Type
-import GHC.Rename.Expression
-import GHC.Rename.Utils ( HsDocContext(..) )
-import GHC.Rename.Fixity ( lookupFixityRn )
+import GHC.IR.Haskell.Renamer.Type
+import GHC.IR.Haskell.Renamer.Expression
+import GHC.IR.Haskell.Renamer.Utils ( HsDocContext(..) )
+import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn )
 import GHC.Data.Id.Make
 import GHC.Interface.Tidy    ( globaliseAndTidyId )
 import TysWiredIn ( unitTy, mkListTy )
@@ -94,9 +94,9 @@ import TcTyClsDecls
 import TcTypeable ( mkTypeableBinds )
 import TcBackpack
 import GHC.Interface.Load
-import GHC.Rename.ImportExport
-import GHC.Rename.Environment
-import GHC.Rename.Main
+import GHC.IR.Haskell.Renamer.ImportExport
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Main
 import GHC.Utils.Error
 import GHC.Data.Id as Id
 import GHC.Data.Var.Environment
@@ -573,7 +573,7 @@ tcRnHsBootDecls hsc_src decls
                             , hs_valds  = ValBindsOut val_binds val_sigs })
               <- rnTopSrcDecls first_group
         -- The empty list is for extra dependencies coming from .hs-boot files
-        -- See Note [Extra dependencies from .hs-boot files] in GHC.Rename.Main
+        -- See Note [Extra dependencies from .hs-boot files] in GHC.IR.Haskell.Renamer.Main
         ; (gbl_env, lie) <- captureTopConstraints $ setGblEnv tcg_env $ do {
 
 

@@ -357,18 +357,18 @@ Library
         GHC.Data.CostCentre
         GHC.Data.CostCentre.Initialise
         GHC.IR.Stg.Transform.CostCentreCollect
-        GHC.Rename.Binding
-        GHC.Rename.Environment
-        GHC.Rename.Expression
-        GHC.Rename.Documentation
-        GHC.Rename.ImportExport
-        GHC.Rename.Pattern
-        GHC.Rename.Main
-        GHC.Rename.Splice
-        GHC.Rename.Type
-        GHC.Rename.Fixity
-        GHC.Rename.Utils
-        GHC.Rename.Utils.Unbound
+        GHC.IR.Haskell.Renamer.Binding
+        GHC.IR.Haskell.Renamer.Environment
+        GHC.IR.Haskell.Renamer.Expression
+        GHC.IR.Haskell.Renamer.Documentation
+        GHC.IR.Haskell.Renamer.ImportExport
+        GHC.IR.Haskell.Renamer.Pattern
+        GHC.IR.Haskell.Renamer.Main
+        GHC.IR.Haskell.Renamer.Splice
+        GHC.IR.Haskell.Renamer.Type
+        GHC.IR.Haskell.Renamer.Fixity
+        GHC.IR.Haskell.Renamer.Utils
+        GHC.IR.Haskell.Renamer.Utils.Unbound
         GHC.IR.Core.Monad
         GHC.IR.Core.Transform.CommonSubExpr
         GHC.IR.Core.Transform.FloatIn

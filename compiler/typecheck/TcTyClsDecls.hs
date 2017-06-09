@@ -37,7 +37,7 @@ import TcHsType
 import TcMType
 import TysWiredIn ( unitTy )
 import TcType
-import GHC.Rename.Environment( lookupConstructorFields )
+import GHC.IR.Haskell.Renamer.Environment( lookupConstructorFields )
 import FamInst
 import GHC.Data.FamilyInstance
 import GHC.Data.Coercion

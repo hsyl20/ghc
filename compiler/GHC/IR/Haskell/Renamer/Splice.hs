@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.Rename.Splice (
+module GHC.IR.Haskell.Renamer.Splice (
         rnTopSpliceDecls,
         rnSpliceType, rnSpliceExpr, rnSplicePat, rnSpliceDecl,
         rnBracket,
@@ -17,20 +17,20 @@ import GHC.Data.RdrName
 import TcRnMonad
 import GHC.Data.Kind
 
-import GHC.Rename.Environment
-import GHC.Rename.Utils          ( HsDocContext(..), newLocalBndrRn )
-import GHC.Rename.Utils.Unbound        ( isUnboundName )
-import GHC.Rename.Main         ( rnSrcDecls, findSplice )
-import GHC.Rename.Pattern            ( rnPat )
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), newLocalBndrRn )
+import GHC.IR.Haskell.Renamer.Utils.Unbound        ( isUnboundName )
+import GHC.IR.Haskell.Renamer.Main         ( rnSrcDecls, findSplice )
+import GHC.IR.Haskell.Renamer.Pattern            ( rnPat )
 import GHC.Data.BasicTypes       ( TopLevelFlag, isTopLevel, SourceText(..) )
 import GHC.Utils.Outputable
 import GHC.Data.Module
 import GHC.Data.SrcLoc
-import GHC.Rename.Type          ( rnLHsType )
+import GHC.IR.Haskell.Renamer.Type          ( rnLHsType )
 
 import Control.Monad    ( unless, when )
 
-import {-# SOURCE #-} GHC.Rename.Expression   ( rnLExpr )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression   ( rnLExpr )
 
 import TcEnv            ( checkWellStaged )
 import THNames          ( liftName )
@@ -567,7 +567,7 @@ are given names during renaming. These names are collected right after
 renaming. The names generated for anonymous wild cards in TH type splices will
 thus be collected as well.
 
-For more details about renaming wild cards, see GHC.Rename.Type.rnHsSigWcType
+For more details about renaming wild cards, see GHC.IR.Haskell.Renamer.Type.rnHsSigWcType
 
 Note that partial type signatures are fully supported in TH declaration
 splices, e.g.:
@@ -653,10 +653,10 @@ Note [rnSplicePat]
 Renaming a pattern splice is a bit tricky, because we need the variables
 bound in the pattern to be in scope in the RHS of the pattern. This scope
 management is effectively done by using continuation-passing style in
-GHC.Rename.Pattern, through the CpsRn monad. We don't wish to be in that monad here
+GHC.IR.Haskell.Renamer.Pattern, through the CpsRn monad. We don't wish to be in that monad here
 (it would create import cycles and generally conflict with renaming other
 splices), so we really want to return a (Pat RdrName) -- the result of
-running the splice -- which can then be further renamed in GHC.Rename.Pattern, in
+running the splice -- which can then be further renamed in GHC.IR.Haskell.Renamer.Pattern, in
 the CpsRn monad.
 
 The problem is that if we're renaming a splice within a bracket, we

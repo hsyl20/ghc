@@ -893,9 +893,9 @@ hscCheckSafeImports tcg_env = do
 --
 -- The code for this is quite tricky as the whole algorithm is done in a few
 -- distinct phases in different parts of the code base. See
--- GHC.Rename.ImportExport.rnImportDecl for where package trust dependencies for a module are
--- collected and unioned.  Specifically see the Note [GHC.Rename.ImportExport . Tracking Trust
--- Transitively] and the Note [GHC.Rename.ImportExport . Trust Own Package].
+-- GHC.IR.Haskell.Renamer.ImportExport.rnImportDecl for where package trust dependencies for a module are
+-- collected and unioned.  Specifically see the Note [GHC.IR.Haskell.Renamer.ImportExport . Tracking Trust
+-- Transitively] and the Note [GHC.IR.Haskell.Renamer.ImportExport . Trust Own Package].
 checkSafeImports :: DynFlags -> TcGblEnv -> Hsc TcGblEnv
 checkSafeImports dflags tcg_env
     = do

@@ -32,8 +32,8 @@ import TcSigs           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )
 import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
 import GHC.Data.FamilyInstance       ( FamInstEnvs )
-import GHC.Rename.Environment            ( addUsedGRE )
-import GHC.Rename.Utils          ( addNameClashErrRn, unknownSubordinateErr )
+import GHC.IR.Haskell.Renamer.Environment            ( addUsedGRE )
+import GHC.IR.Haskell.Renamer.Utils          ( addNameClashErrRn, unknownSubordinateErr )
 import TcEnv
 import TcArrows
 import TcMatches
@@ -1023,10 +1023,10 @@ tcExpr (PArrSeq _ _) _
 ************************************************************************
 -}
 
--- HsSpliced is an annotation produced by 'GHC.Rename.Splice.rnSpliceExpr'.
+-- HsSpliced is an annotation produced by 'GHC.IR.Haskell.Renamer.Splice.rnSpliceExpr'.
 -- Here we get rid of it and add the finalizers to the global environment.
 --
--- See Note [Delaying modFinalizers in untyped splices] in GHC.Rename.Splice.
+-- See Note [Delaying modFinalizers in untyped splices] in GHC.IR.Haskell.Renamer.Splice.
 tcExpr (HsSpliceE (HsSpliced mod_finalizers (HsSplicedExpr expr)))
        res_ty
   = do addModFinalizersWithLclEnv mod_finalizers
@@ -1889,7 +1889,7 @@ checkCrossStageLifting :: Id -> ThStage -> TcM ()
 --            [|| map ||]
 -- There is no error-checking to do, because the renamer did that
 --
--- This is similar to checkCrossStageLifting in GHC.Rename.Splice, but
+-- This is similar to checkCrossStageLifting in GHC.IR.Haskell.Renamer.Splice, but
 -- this code is applied to *typed* brackets.
 
 checkCrossStageLifting id (Brack _ (TcPending ps_var lie_var))

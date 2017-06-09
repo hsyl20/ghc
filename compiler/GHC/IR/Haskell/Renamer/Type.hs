@@ -1,13 +1,13 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Rename.Main]{Main pass of renamer}
+\section[GHC.IR.Haskell.Renamer.Main]{Main pass of renamer}
 -}
 
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE CPP #-}
 
-module GHC.Rename.Type (
+module GHC.IR.Haskell.Renamer.Type (
         -- Type related stuff
         rnHsType, rnLHsType, rnLHsTypes, rnContext,
         rnHsKind, rnLHsKind,
@@ -32,17 +32,17 @@ module GHC.Rename.Type (
         freeKiTyVarsAllVars, freeKiTyVarsKindVars, freeKiTyVarsTypeVars
   ) where
 
-import {-# SOURCE #-} GHC.Rename.Splice( rnSpliceType )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Splice( rnSpliceType )
 
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
-import GHC.Rename.Documentation          ( rnLHsDoc, rnMbLHsDoc )
-import GHC.Rename.Environment
-import GHC.Rename.Utils.Unbound        ( perhapsForallMsg )
-import GHC.Rename.Utils          ( HsDocContext(..), withHsDocContext, mapFvRn
+import GHC.IR.Haskell.Renamer.Documentation          ( rnLHsDoc, rnMbLHsDoc )
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Utils.Unbound        ( perhapsForallMsg )
+import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), withHsDocContext, mapFvRn
                         , pprHsDocContext, bindLocalNamesFV, dupNamesErr
                         , newLocalBndrRn, checkShadowedRdrNames )
-import GHC.Rename.Fixity         ( lookupFieldFixityRn, lookupFixityRn
+import GHC.IR.Haskell.Renamer.Fixity         ( lookupFieldFixityRn, lookupFixityRn
                         , lookupTyFixityRn )
 import TcRnMonad
 import GHC.Data.RdrName
@@ -68,7 +68,7 @@ import Control.Monad    ( unless, when )
 #include "HsVersions.h"
 
 {-
-These type renamers are in a separate module, rather than in (say) GHC.Rename.Main,
+These type renamers are in a separate module, rather than in (say) GHC.IR.Haskell.Renamer.Main,
 to break several loop.
 
 *********************************************************
@@ -1093,13 +1093,13 @@ collectAnonWildCardsBndrs ltvs = concatMap (go . unLoc) ltvs
 When renaming a ConDeclField, we have to find the FieldLabel
 associated with each field.  But we already have all the FieldLabels
 available (since they were brought into scope by
-GHC.Rename.ImportExport.getLocalNonValBinders), so we just take the list as an
+GHC.IR.Haskell.Renamer.ImportExport.getLocalNonValBinders), so we just take the list as an
 argument, build a map and look them up.
 -}
 
 rnConDeclFields :: HsDocContext -> [FieldLabel] -> [LConDeclField RdrName]
                 -> RnM ([LConDeclField Name], FreeVars)
--- Also called from GHC.Rename.Main
+-- Also called from GHC.IR.Haskell.Renamer.Main
 -- No wildcards can appear in record fields
 rnConDeclFields ctxt fls fields
    = mapFvRn (rnField fl_env env) fields
@@ -1252,7 +1252,7 @@ instance Outputable OpName where
 
 get_op :: LHsExpr Name -> OpName
 -- An unbound name could be either HsVar or HsUnboundVar
--- See GHC.Rename.Expression.rnUnboundVar
+-- See GHC.IR.Haskell.Renamer.Expression.rnUnboundVar
 get_op (L _ (HsVar (L _ n)))   = NormalOp n
 get_op (L _ (HsUnboundVar uv)) = UnboundOp uv
 get_op (L _ (HsRecFld fld))    = RecFldOp fld

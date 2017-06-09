@@ -173,7 +173,7 @@ This is Less Cool than what we normally do for rebindable syntax, which is to
 make fully-instantiated piece of evidence at every use site.  The Cmd way
 is Less Cool because
   * The renamer has to predict which methods are needed.
-    See the tedious GHC.Rename.Expression.methodNamesCmd.
+    See the tedious GHC.IR.Haskell.Renamer.Expression.methodNamesCmd.
 
   * The desugarer has to know the polymorphic type of the instantiated
     method. This is checked by Inst.tcSyntaxName, but is less flexible
@@ -232,7 +232,7 @@ then generates the associated error message, which specifies both the type of
         • ‘bar’ (line 13) is not in scope before the splice on line 11
           Perhaps you meant ‘bat’ (line 9)
 
-When it calls GHC.Rename.Environment.unknownNameSuggestions to identify these alternatives, the
+When it calls GHC.IR.Haskell.Renamer.Environment.unknownNameSuggestions to identify these alternatives, the
 typechecker must provide a GlobalRdrEnv.  If it provided the current one, which
 contains top-level declarations for the entire module, the error message would
 incorrectly suggest the out-of-scope `bar` and `bad` as possible alternatives
@@ -1660,7 +1660,7 @@ data StmtLR idL idR body -- body should always be (LHs**** idR)
   -- appropriate applicative expression by the desugarer, but it is intended
   -- to be invisible in error messages.
   --
-  -- For full details, see Note [ApplicativeDo] in GHC.Rename.Expression
+  -- For full details, see Note [ApplicativeDo] in GHC.IR.Haskell.Renamer.Expression
   --
   | ApplicativeStmt
              [ ( SyntaxExpr idR
@@ -2064,7 +2064,7 @@ data HsSplice id
         FastString       -- The enclosed string
 
    | HsSpliced  -- See Note [Delaying modFinalizers in untyped splices] in
-                -- GHC.Rename.Splice.
+                -- GHC.IR.Haskell.Renamer.Splice.
                 -- This is the result of splicing a splice. It is produced by
                 -- the renamer and consumed by the typechecker. It lives only
                 -- between the two.
@@ -2093,7 +2093,7 @@ isTypedSplice _                  = False   -- Quasi-quotes are untyped splices
 -- | Finalizers produced by a splice with
 -- 'Language.Haskell.TH.Syntax.addModFinalizer'
 --
--- See Note [Delaying modFinalizers in untyped splices] in GHC.Rename.Splice. For how
+-- See Note [Delaying modFinalizers in untyped splices] in GHC.IR.Haskell.Renamer.Splice. For how
 -- this is used.
 --
 newtype ThModFinalizers = ThModFinalizers [ForeignRef (TH.Q ())]
@@ -2171,11 +2171,11 @@ distinguished by their UntypedSpliceFlavour
    UntypedExpSplice is also used for
      * quasi-quotes, where the pending expression expands to
           $(quoter "...blah...")
-       (see GHC.Rename.Splice.makePending, HsQuasiQuote case)
+       (see GHC.IR.Haskell.Renamer.Splice.makePending, HsQuasiQuote case)
 
      * cross-stage lifting, where the pending expression expands to
           $(lift x)
-       (see GHC.Rename.Splice.checkCrossStageLifting)
+       (see GHC.IR.Haskell.Renamer.Splice.checkCrossStageLifting)
 
  * Pending pattern splices (UntypedPatSplice), e.g.,
        [| \$(f x) -> x |]

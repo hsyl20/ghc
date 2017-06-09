@@ -351,7 +351,7 @@ Plan of attack:
    (See RnHiFiles.getSysBinders)
 
  - When typechecking the decl, we build the implicit TyCons and Ids.
-   When doing so we look them up in the name cache (GHC.Rename.Environment.lookupSysName),
+   When doing so we look them up in the name cache (GHC.IR.Haskell.Renamer.Environment.lookupSysName),
    to ensure correct module and provenance is set
 
 These are the two places that we have to conjure up the magic derived
@@ -758,7 +758,7 @@ Invariants
    ones.
 
 See Note [Dependency analsis of type, class, and instance decls]
-in GHC.Rename.Main for more info.
+in GHC.IR.Haskell.Renamer.Main for more info.
 -}
 
 -- | Type or Class Group

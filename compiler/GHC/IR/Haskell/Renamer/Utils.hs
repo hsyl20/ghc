@@ -3,7 +3,7 @@
 This module contains miscellaneous functions related to renaming.
 
 -}
-module GHC.Rename.Utils (
+module GHC.IR.Haskell.Renamer.Utils (
         checkDupRdrNames, checkShadowedRdrNames,
         checkDupNames, checkDupAndShadowedNames, dupNamesErr,
         checkTupSize,

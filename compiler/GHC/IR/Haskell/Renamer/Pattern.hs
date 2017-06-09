@@ -1,7 +1,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Rename.Pattern]{Renaming of patterns}
+\section[GHC.IR.Haskell.Renamer.Pattern]{Renaming of patterns}
 
 Basically dependency analysis.
 
@@ -12,7 +12,7 @@ free variables.
 
 {-# LANGUAGE CPP, RankNTypes, ScopedTypeVariables #-}
 
-module GHC.Rename.Pattern (-- main entry points
+module GHC.IR.Haskell.Renamer.Pattern (-- main entry points
               rnPat, rnPats, rnBindPat, rnPatAndThen,
 
               NameMaker, applyNameMaker,     -- a utility for making names:
@@ -35,21 +35,21 @@ module GHC.Rename.Pattern (-- main entry points
 
 -- ENH: thin imports to only what is necessary for patterns
 
-import {-# SOURCE #-} GHC.Rename.Expression ( rnLExpr )
-import {-# SOURCE #-} GHC.Rename.Splice ( rnSplicePat )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression ( rnLExpr )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Splice ( rnSplicePat )
 
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Syntax             ( hsOverLitName )
-import GHC.Rename.Environment
-import GHC.Rename.Fixity
-import GHC.Rename.Utils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Fixity
+import GHC.IR.Haskell.Renamer.Utils             ( HsDocContext(..), newLocalBndrRn, bindLocalNames
                            , warnUnusedMatches, newLocalBndrRn
                            , checkDupAndShadowedNames, checkTupSize
                            , unknownSubordinateErr )
-import GHC.Rename.Type
+import GHC.IR.Haskell.Renamer.Type
 import PrelNames
 import GHC.Data.Type.Constructor               ( tyConName )
 import GHC.Data.ConstructorLike
@@ -241,7 +241,7 @@ newPatName (LetMk is_top fix_env) rdr_name
     --       however, this binding seems to work, and it only exists for
     --       the duration of the patterns and the continuation;
     --       then the top-level name is added to the global env
-    --       before going on to the RHSes (see GHC.Rename.Main.hs).
+    --       before going on to the RHSes (see GHC.IR.Haskell.Renamer.Main.hs).
 
 {-
 Note [View pattern usage]
@@ -493,7 +493,7 @@ rnPatAndThen mk (SplicePat (HsSpliced mfs (HsSplicedPat pat)))
 
 rnPatAndThen mk (SplicePat splice)
   = do { eith <- liftCpsFV $ rnSplicePat splice
-       ; case eith of   -- See Note [rnSplicePat] in GHC.Rename.Splice
+       ; case eith of   -- See Note [rnSplicePat] in GHC.IR.Haskell.Renamer.Splice
            Left  not_yet_renamed -> rnPatAndThen mk not_yet_renamed
            Right already_renamed -> return already_renamed }
 

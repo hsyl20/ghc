@@ -32,7 +32,7 @@ import TcMType
 import TcType
 import TcSimplify
 import GHC.Interface.Load
-import GHC.Rename.ImportExport
+import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.Utils.Error
 import GHC.Data.Id
 import GHC.Data.Module
@@ -45,7 +45,7 @@ import GHC.Types
 import GHC.Utils.Outputable
 import GHC.Data.Type
 import GHC.Data.FastString
-import GHC.Rename.Fixity ( lookupFixityRn )
+import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn )
 import GHC.Data.Maybe
 import TcEnv
 import GHC.Data.Var

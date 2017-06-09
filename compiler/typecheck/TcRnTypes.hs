@@ -472,7 +472,7 @@ data FrontendResult
 --        should never be loaded into the EPS).  However, if a
 --        hole module <A> is requested, we look for A.hi
 --        in the home library we are compiling.  (See GHC.Interface.Load.)
---        Similarly, in GHC.Rename.ImportExport we check for self-imports using
+--        Similarly, in GHC.IR.Haskell.Renamer.ImportExport we check for self-imports using
 --        identity modules, to allow signatures to import their implementor.
 --
 --      - For recompilation avoidance, you want the identity module,
@@ -746,7 +746,7 @@ data SelfBootInfo
        { sb_mds :: ModDetails   -- There was a hi-boot file,
        , sb_tcs :: NameSet }    -- defining these TyCons,
 -- What is sb_tcs used for?  See Note [Extra dependencies from .hs-boot files]
--- in GHC.Rename.Main
+-- in GHC.IR.Haskell.Renamer.Main
 
 
 {- Note [Tracking unused binding and imports]
@@ -758,7 +758,7 @@ We gather two sorts of usage information
           and *used*    Names (local or imported)
 
       Used (a) to report "defined but not used"
-               (see GHC.Rename.ImportExport.reportUnusedNames)
+               (see GHC.IR.Haskell.Renamer.ImportExport.reportUnusedNames)
            (b) to generate version-tracking usage info in interface
                files (see GHC.Interface.Utils.mkUsedNames)
    This usage info is mainly gathered by the renamer's
@@ -923,7 +923,7 @@ data ThStage    -- See Note [Template Haskell state diagram] in TcSplice
       --
       -- 'addModFinalizer' inserts finalizers here, and from here they are taken
       -- to construct an @HsSpliced@ annotation for untyped splices. See Note
-      -- [Delaying modFinalizers in untyped splices] in "GHC.Rename.Splice".
+      -- [Delaying modFinalizers in untyped splices] in "GHC.IR.Haskell.Renamer.Splice".
       --
       -- For typed splices, the typechecker takes finalizers from here and
       -- inserts them in the list of finalizers in the global environment.
@@ -1265,13 +1265,13 @@ data ImportAvails
           -- where True for the bool indicates the package is required to be
           -- trusted is the more logical  design, doing so complicates a lot
           -- of code not concerned with Safe Haskell.
-          -- See Note [GHC.Rename.ImportExport . Tracking Trust Transitively]
+          -- See Note [GHC.IR.Haskell.Renamer.ImportExport . Tracking Trust Transitively]
 
         imp_trust_own_pkg :: Bool,
           -- ^ Do we require that our own package is trusted?
           -- This is to handle efficiently the case where a Safe module imports
           -- a Trustworthy module that resides in the same package as it.
-          -- See Note [GHC.Rename.ImportExport . Trust Own Package]
+          -- See Note [GHC.IR.Haskell.Renamer.ImportExport . Trust Own Package]
 
         imp_orphs :: [Module],
           -- ^ Orphan modules below us in the import tree (and maybe including

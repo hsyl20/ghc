@@ -3,7 +3,7 @@
 {-
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[GHC.Rename.Binding]{Renaming and dependency analysis of bindings}
+\section[GHC.IR.Haskell.Renamer.Binding]{Renaming and dependency analysis of bindings}
 
 This module does renaming and dependency analysis on value bindings in
 the abstract syntax.  It does {\em not} do cycle-checks on class or
@@ -11,7 +11,7 @@ type-synonym declarations; those cannot be done at this stage because
 they may be affected by renaming (which isn't fully worked out yet).
 -}
 
-module GHC.Rename.Binding (
+module GHC.IR.Haskell.Renamer.Binding (
    -- Renaming top-level bindings
    rnTopBindsLHS, rnTopBindsBoot, rnValBindsRHS,
 
@@ -25,17 +25,17 @@ module GHC.Rename.Binding (
    HsSigCtxt(..)
    ) where
 
-import {-# SOURCE #-} GHC.Rename.Expression( rnLExpr, rnStmts )
+import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression( rnLExpr, rnStmts )
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import TcEvidence     ( emptyTcEvBinds )
-import GHC.Rename.Type
-import GHC.Rename.Pattern
-import GHC.Rename.ImportExport
-import GHC.Rename.Environment
-import GHC.Rename.Fixity
-import GHC.Rename.Utils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
+import GHC.IR.Haskell.Renamer.Type
+import GHC.IR.Haskell.Renamer.Pattern
+import GHC.IR.Haskell.Renamer.ImportExport
+import GHC.IR.Haskell.Renamer.Environment
+import GHC.IR.Haskell.Renamer.Fixity
+import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds
                         , checkDupAndShadowedNames, bindLocalNamesFV )
 import GHC.Config.Flags

@@ -343,7 +343,7 @@ instance Ord RdrName where
 -- (@let@, @where@, lambda, @case@).
 -- It is keyed by OccName, because we never use it for qualified names
 -- We keep the current mapping, *and* the set of all Names in scope
--- Reason: see Note [Splicing Exact names] in GHC.Rename.Environment
+-- Reason: see Note [Splicing Exact names] in GHC.IR.Haskell.Renamer.Environment
 data LocalRdrEnv = LRE { lre_env      :: OccEnv Name
                        , lre_in_scope :: NameSet }
 
@@ -443,7 +443,7 @@ type GlobalRdrEnv = OccEnv [GlobalRdrElt]
 -- INVARIANT 2: Imported provenance => Name is an ExternalName
 --              However LocalDefs can have an InternalName.  This
 --              happens only when type-checking a [d| ... |] Template
---              Haskell quotation; see this note in GHC.Rename.ImportExport
+--              Haskell quotation; see this note in GHC.IR.Haskell.Renamer.ImportExport
 --              Note [Top-level Names in Template Haskell decl quotes]
 --
 -- INVARIANT 3: If the GlobalRdrEnv maps [occ -> gre], then
@@ -931,7 +931,7 @@ pickGREsModExp :: ModuleName -> [GlobalRdrElt] -> [(GlobalRdrElt,GlobalRdrElt)]
 -- it is in scope qualified an unqualified respectively
 --
 -- Used only for the 'module M' item in export list;
---   see GHC.Rename.ImportExport.exports_from_avail
+--   see GHC.IR.Haskell.Renamer.ImportExport.exports_from_avail
 pickGREsModExp mod gres = mapMaybe (pickBothGRE mod) gres
 
 pickBothGRE :: ModuleName -> GlobalRdrElt -> Maybe (GlobalRdrElt, GlobalRdrElt)
@@ -1013,7 +1013,7 @@ There are two reasons for shadowing:
     'T' to mean the newly-declared 'T', not an old one.
 
 * Nested Template Haskell declaration brackets
-  See Note [Top-level Names in Template Haskell decl quotes] in GHC.Rename.ImportExport
+  See Note [Top-level Names in Template Haskell decl quotes] in GHC.IR.Haskell.Renamer.ImportExport
 
   Consider a TH decl quote:
       module M where

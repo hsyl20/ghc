@@ -4,7 +4,7 @@ This module contains code which maintains and manipulates the
 fixity environment during renaming.
 
 -}
-module GHC.Rename.Fixity ( MiniFixityEnv,
+module GHC.IR.Haskell.Renamer.Fixity ( MiniFixityEnv,
                   addLocalFixities,
   lookupFixityRn, lookupFixityRn_help,
   lookupFieldFixityRn, lookupTyFixityRn ) where
@@ -24,7 +24,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Maybe
 import Data.List
 import Data.Function    ( on )
-import GHC.Rename.Utils.Unbound
+import GHC.IR.Haskell.Renamer.Utils.Unbound
 
 {-
 *********************************************************
@@ -93,7 +93,7 @@ lookupFixity is a bit strange.
 * Top-level fixity decls in this module may be for Names that are
     either  Global         (constructors, class operations)
     or      Local/Exported (everything else)
-  (See notes with GHC.Rename.ImportExport.getLocalDeclBinders for why we have this split.)
+  (See notes with GHC.IR.Haskell.Renamer.ImportExport.getLocalDeclBinders for why we have this split.)
   We put them all in the local fixity environment
 -}
 

@@ -1,5 +1,5 @@
 
-module GHC.Rename.Documentation ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
+module GHC.IR.Haskell.Renamer.Documentation ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
 
 import TcRnTypes
 import GHC.IR.Haskell.Syntax

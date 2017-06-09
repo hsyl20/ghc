@@ -1,4 +1,4 @@
-module GHC.Rename.Expression where
+module GHC.IR.Haskell.Renamer.Expression where
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Name       ( Name )
 import GHC.Data.Name.Set    ( FreeVars )
