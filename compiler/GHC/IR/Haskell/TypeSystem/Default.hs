@@ -2,10 +2,10 @@
 (c) The University of Glasgow 2006
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[TcDefaults]{Typechecking \tr{default} declarations}
+\section[GHC.IR.Haskell.TypeSystem.Default]{Typechecking \tr{default} declarations}
 -}
 
-module TcDefaults ( tcDefaults ) where
+module GHC.IR.Haskell.TypeSystem.Default ( tcDefaults ) where
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Name

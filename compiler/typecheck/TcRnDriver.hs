@@ -81,7 +81,7 @@ import GHC.Data.FamilyInstance
 import GHC.IR.Haskell.TypeSystem.Annotation
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )
-import TcDefaults
+import GHC.IR.Haskell.TypeSystem.Default
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Rule
 import GHC.IR.Haskell.TypeSystem.Foreign
