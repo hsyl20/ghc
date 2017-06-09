@@ -140,7 +140,6 @@ Library
     hs-source-dirs:
         ./
         prelude
-        typecheck
 
     Exposed-Modules:
         GHC.Program.BackPack.Main
