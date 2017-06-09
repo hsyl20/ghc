@@ -1444,7 +1444,7 @@ Note that "sig_inst_tau" might actually be a polymorphic type,
 if the original function had a signature like
    forall a. Eq a => forall b. Ord b => ....
 But that's ok: tcMatchesFun (called by tcRhs) can deal with that
-It happens, too!  See Note [Polymorphic methods] in TcClassDcl.
+It happens, too!  See Note [Polymorphic methods] in GHC.IR.Haskell.TypeSystem.ClassDeclaration.
 
 Note [Wildcards in partial signatures]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

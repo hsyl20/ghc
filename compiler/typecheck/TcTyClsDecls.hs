@@ -29,7 +29,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcTyDecls
-import TcClassDcl
+import GHC.IR.Haskell.TypeSystem.ClassDeclaration
 import {-# SOURCE #-} TcInstDcls( tcInstDecls1 )
 import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
 import GHC.IR.Haskell.TypeSystem.Unify

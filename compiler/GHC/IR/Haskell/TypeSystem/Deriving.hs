@@ -20,7 +20,7 @@ import FamInst
 import GHC.IR.Haskell.TypeSystem.Deriving.Constraints
 import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Validity( allDistinctTyVars )
-import TcClassDcl( tcATDefault, tcMkDeclCtxt )
+import GHC.IR.Haskell.TypeSystem.ClassDeclaration( tcATDefault, tcMkDeclCtxt )
 import GHC.IR.Haskell.TypeSystem.Environment
 import TcGenDeriv                       -- Deriv stuff
 import GHC.Data.ClassInstance

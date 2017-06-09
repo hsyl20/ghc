@@ -8,7 +8,7 @@ Typechecking class declarations
 
 {-# LANGUAGE CPP #-}
 
-module TcClassDcl ( tcClassSigs, tcClassDecl2,
+module GHC.IR.Haskell.TypeSystem.ClassDeclaration ( tcClassSigs, tcClassDecl2,
                     findMethodBind, instantiateMethod,
                     tcClassMinimalDef,
                     HsSigFun, mkHsSigFun,

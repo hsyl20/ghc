@@ -759,7 +759,7 @@ We used to add a '$m' to indicate a method, but that gives rise to bad
 error messages from the type checker when we print the function name or pattern
 of an instance-decl binding.  Why? Because the binding is zapped
 to use the method name in place of the selector name.
-(See TcClassDcl.tcMethodBind)
+(See GHC.IR.Haskell.TypeSystem.ClassDeclaration.tcMethodBind)
 
 The way it is now, -ddump-xx output may look confusing, but
 you can always say -dppr-debug to get the uniques.
