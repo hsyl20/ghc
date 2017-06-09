@@ -57,8 +57,8 @@ module GHC.Compilers.CmmToLlvm (
 
     ) where
 
-import GHC.Compilers.CmmToLlvm.Syntax
-import GHC.Compilers.CmmToLlvm.MetaData
-import GHC.Compilers.CmmToLlvm.PrettyPrint
-import GHC.Compilers.CmmToLlvm.Types
+import GHC.IR.Llvm.Syntax
+import GHC.IR.Llvm.MetaData
+import GHC.IR.Llvm.PrettyPrint
+import GHC.IR.Llvm.Types
 

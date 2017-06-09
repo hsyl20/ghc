@@ -162,10 +162,10 @@ Library
         GHC.Utils.Identifier
         GHC.Data.Literal
         GHC.Compilers.CmmToLlvm
-        GHC.Compilers.CmmToLlvm.Syntax
-        GHC.Compilers.CmmToLlvm.MetaData
-        GHC.Compilers.CmmToLlvm.PrettyPrint
-        GHC.Compilers.CmmToLlvm.Types
+        GHC.IR.Llvm.Syntax
+        GHC.IR.Llvm.MetaData
+        GHC.IR.Llvm.PrettyPrint
+        GHC.IR.Llvm.Types
         GHC.Compilers.CmmToLlvm.CodeGen
         GHC.Compilers.CmmToLlvm.CodeGen.Base
         GHC.Compilers.CmmToLlvm.CodeGen.Proc

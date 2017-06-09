@@ -1,8 +1,8 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
-module GHC.Compilers.CmmToLlvm.MetaData where
+module GHC.IR.Llvm.MetaData where
 
-import GHC.Compilers.CmmToLlvm.Types
+import GHC.IR.Llvm.Types
 import GHC.Utils.Outputable
 
 -- The LLVM Metadata System.
