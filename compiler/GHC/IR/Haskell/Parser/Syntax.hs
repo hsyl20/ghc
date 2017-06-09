@@ -75,7 +75,7 @@ import GHC.Data.Coercion.Axiom          ( Role, fsFromRole )
 import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.BasicTypes
-import TcEvidence       ( idHsWrapper )
+import GHC.IR.Haskell.TypeSystem.Evidence       ( idHsWrapper )
 import GHC.IR.Haskell.Lexer
 import GHC.Utils.Identifier           ( isLexCon )
 import GHC.Data.Type             ( TyThing(..) )

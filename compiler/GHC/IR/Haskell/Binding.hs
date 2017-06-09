@@ -26,7 +26,7 @@ import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,DataId,OutputableBndrId )
 import GHC.IR.Haskell.Type
 import GHC.IR.Core.PrettyPrint ()
 import GHC.IR.Core.Syntax
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type
 import GHC.Data.Name
 import GHC.Data.Name.Set

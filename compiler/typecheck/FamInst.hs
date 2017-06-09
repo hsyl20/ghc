@@ -18,7 +18,7 @@ import GHC.Types
 import GHC.Data.FamilyInstance
 import GHC.Data.ClassInstance( roughMatchTcs )
 import GHC.Data.Coercion
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Interface.Load
 import TcRnMonad
 import GHC.Data.SrcLoc

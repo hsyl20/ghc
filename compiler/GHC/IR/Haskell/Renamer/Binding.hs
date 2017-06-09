@@ -29,7 +29,7 @@ import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression( rnLExpr, rnStmts )
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
-import TcEvidence     ( emptyTcEvBinds )
+import GHC.IR.Haskell.TypeSystem.Evidence     ( emptyTcEvBinds )
 import GHC.IR.Haskell.Renamer.Type
 import GHC.IR.Haskell.Renamer.Pattern
 import GHC.IR.Haskell.Renamer.ImportExport

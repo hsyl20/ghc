@@ -136,7 +136,7 @@ import GHC.Data.Type as Type
 import GHC.Data.Coercion
 import GHC.Utils.Unify
 
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import TcErrors   ( solverDepthErrorTcS )

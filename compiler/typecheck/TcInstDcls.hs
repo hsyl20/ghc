@@ -38,7 +38,7 @@ import GHC.IR.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
 import GHC.IR.Core.Syntax.Make     ( nO_METHOD_BINDING_ERROR_ID )
 import GHC.IR.Core.Transform.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
 import GHC.Data.Type
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.DataConstructor

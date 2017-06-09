@@ -27,7 +27,7 @@ import GHC.Data.ClassInstance
 import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.Expression  ( UnboundVar(..) )
 import GHC.IR.Haskell.Binding ( PatSynBind(..) )
 import GHC.Data.Name

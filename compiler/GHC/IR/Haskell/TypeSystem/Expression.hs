@@ -54,7 +54,7 @@ import GHC.Data.Name.Set
 import GHC.Data.RdrName
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Var.Set
 import TysWiredIn
 import TysPrim( intPrimTy )

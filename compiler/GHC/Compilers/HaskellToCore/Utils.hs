@@ -75,7 +75,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 
 import Control.Monad    ( zipWithM )
 

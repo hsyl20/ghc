@@ -100,7 +100,7 @@ import GHC.IR.Haskell.Type
 import GHC.IR.Haskell.Literal
 import GHC.IR.Haskell.PlaceHolder
 
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.RdrName
 import GHC.Data.Var
 import GHC.Data.Types

@@ -16,7 +16,7 @@ import GHC.Data.Coercion
 import GHC.Data.ConstructorLike (ConLike)
 import GHC.Data.FieldLabel
 import GHC.Data.SrcLoc (Located)
-import TcEvidence ( HsWrapper )
+import GHC.IR.Haskell.TypeSystem.Evidence ( HsWrapper )
 
 import Data.Data hiding ( Fixity )
 import GHC.Data.BasicTypes       (Fixity)

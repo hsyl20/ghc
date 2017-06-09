@@ -21,7 +21,7 @@ module TcClassDcl ( tcClassSigs, tcClassDecl2,
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Signature
-import TcEvidence ( idHsWrapper )
+import GHC.IR.Haskell.TypeSystem.Evidence ( idHsWrapper )
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType

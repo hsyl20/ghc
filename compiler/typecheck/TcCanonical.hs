@@ -15,7 +15,7 @@ import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import TcFlatten
 import TcSMonad
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Types   -- cleverly decomposes types, good for completeness checking

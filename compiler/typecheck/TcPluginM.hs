@@ -67,7 +67,7 @@ import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                   , liftIO, traceTc )
 import TcMType    ( TcTyVar, TcType )
 import GHC.IR.Haskell.TypeSystem.Environment      ( TcTyThing )
-import TcEvidence ( TcCoercion, CoercionHole
+import GHC.IR.Haskell.TypeSystem.Evidence ( TcCoercion, CoercionHole
                   , EvTerm, EvBind, mkGivenEvBind )
 import TcRnTypes  ( CtEvidence(..) )
 import GHC.Data.Var        ( EvVar )

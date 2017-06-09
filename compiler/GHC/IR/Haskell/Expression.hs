@@ -27,7 +27,7 @@ import GHC.IR.Haskell.Type
 import GHC.IR.Haskell.Binding
 
 -- others:
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Core.Syntax
 import GHC.Data.Var
 import GHC.Config.Flags ( gopt, GeneralFlag(Opt_PrintExplicitCoercions) )

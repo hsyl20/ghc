@@ -544,7 +544,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.SrcLoc \
 	GHC.Data.StringBuffer \
 	GHC.Utils.SysTools.Terminal \
-	TcEvidence \
+	GHC.IR.Haskell.TypeSystem.Evidence \
 	TcRnTypes \
 	GHC.IR.Haskell.TypeSystem.Type \
 	GHC.Data.TrieMap \

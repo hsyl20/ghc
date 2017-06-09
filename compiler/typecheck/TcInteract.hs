@@ -45,7 +45,7 @@ import FamInst
 import GHC.Data.FamilyInstance
 import GHC.Utils.Unify ( tcUnifyTyWithTFs )
 
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Outputable
 
 import TcRnTypes
@@ -2365,7 +2365,7 @@ matchKnownSymbol _ _       = return NoInstance
 makeLitDict :: Class -> Type -> EvLit -> TcS LookupInstResult
 -- makeLitDict adds a coercion that will convert the literal into a dictionary
 -- of the appropriate type.  See Note [KnownNat & KnownSymbol and EvLit]
--- in TcEvidence.  The coercion happens in 2 steps:
+-- in GHC.IR.Haskell.TypeSystem.Evidence.  The coercion happens in 2 steps:
 --
 --     Integer -> SNat n     -- representation of literal to singleton
 --     SNat n  -> KnownNat n -- singleton to dictionary

@@ -136,7 +136,7 @@ module TcRnMonad(
 
 import TcRnTypes        -- Re-export all
 import GHC.Utils.Monad.IOEnv            -- Re-export all
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 
 import GHC.IR.Haskell.Syntax hiding (LIE)
 import GHC.Types

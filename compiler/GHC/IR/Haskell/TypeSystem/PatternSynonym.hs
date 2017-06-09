@@ -40,7 +40,7 @@ import GHC.Data.BasicTypes
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.Unify
 import import GHC.IR.Haskell.TypeSystem.Type
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Interface.BuildTypeAndClass
 import GHC.Data.Var.Set
 import GHC.Data.Id.Make

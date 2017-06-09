@@ -47,7 +47,7 @@ import TcRnMonad
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Name ( isSystemName )
 import Inst
 import GHC.Data.Type.Constructor

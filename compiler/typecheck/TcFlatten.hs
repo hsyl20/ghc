@@ -13,7 +13,7 @@ import TcRnTypes
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Unify( occCheckExpand )
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type.Constructor
 import GHC.Data.Types   -- performs delicate algorithm on types
 import GHC.Data.Coercion
@@ -1085,7 +1085,7 @@ Suppose
 and we want to flatten the type (T (F a)).  Then we can safely flatten
 the (F a) to a skolem, and return (T fsk).  We don't need to expand the
 synonym.  This works because TcTyConAppCo can deal with synonyms
-(unlike TyConAppCo), see Note [TcCoercions] in TcEvidence.
+(unlike TyConAppCo), see Note [TcCoercions] in GHC.IR.Haskell.TypeSystem.Evidence.
 
 But (Trac #8979) for
    type T a = (F a, a)    where F is a type function

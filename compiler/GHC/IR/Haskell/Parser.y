@@ -71,7 +71,7 @@ import GHC.IR.Haskell.Parser.Utils
 import GHC.IR.Haskell.Annotation
 
 -- compiler/typecheck
-import TcEvidence       ( emptyTcEvBinds )
+import GHC.IR.Haskell.TypeSystem.Evidence       ( emptyTcEvBinds )
 
 -- compiler/prelude
 import ForeignCall

@@ -34,7 +34,7 @@ import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TysWiredIn
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym

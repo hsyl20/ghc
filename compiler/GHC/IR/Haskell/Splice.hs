@@ -87,7 +87,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.PatternSynonym
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor as DataCon
-import TcEvidence( TcEvBinds(..) )
+import GHC.IR.Haskell.TypeSystem.Evidence( TcEvBinds(..) )
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Compilers.HaskellToCore.Expression

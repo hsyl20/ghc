@@ -434,7 +434,7 @@ Library
         TcTyDecls
         TcTypeable
         GHC.IR.Haskell.TypeSystem.Type
-        TcEvidence
+        GHC.IR.Haskell.TypeSystem.Evidence
         GHC.IR.Haskell.TypeSystem.Unify
         TcInteract
         TcCanonical

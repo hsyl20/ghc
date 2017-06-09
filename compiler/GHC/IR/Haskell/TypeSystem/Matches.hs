@@ -34,7 +34,7 @@ import TysWiredIn
 import GHC.Data.Id
 import GHC.Data.Type.Constructor
 import TysPrim
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Outputable
 import GHC.Utils
 import GHC.Data.SrcLoc

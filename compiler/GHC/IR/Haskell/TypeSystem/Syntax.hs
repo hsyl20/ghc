@@ -45,7 +45,7 @@ import TcRnMonad
 import PrelNames
 import import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import TysPrim
 import GHC.Data.Type.Constructor   ( isUnboxedTupleTyCon )
 import TysWiredIn

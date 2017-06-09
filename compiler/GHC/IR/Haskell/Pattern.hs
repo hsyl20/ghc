@@ -46,7 +46,7 @@ import GHC.IR.Haskell.Binding
 import GHC.IR.Haskell.Literal
 import GHC.IR.Haskell.PlaceHolder
 import GHC.IR.Haskell.Type
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.BasicTypes
 -- others:
 import GHC.IR.Core.PrettyPrint          ( {- instance OutputableBndr TyVar -} )

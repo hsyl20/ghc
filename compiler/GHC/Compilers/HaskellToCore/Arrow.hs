@@ -30,7 +30,7 @@ import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression ( dsExpr, dsLExpr, 
 
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type ( splitPiTy )
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.FreeVars
 import GHC.IR.Core.Utils

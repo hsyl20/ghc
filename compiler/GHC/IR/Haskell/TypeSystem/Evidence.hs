@@ -2,7 +2,7 @@
 
 {-# LANGUAGE CPP, DeriveDataTypeable #-}
 
-module TcEvidence (
+module GHC.IR.Haskell.TypeSystem.Evidence (
 
   -- HsWrapper
   HsWrapper(..),

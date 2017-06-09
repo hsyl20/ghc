@@ -24,7 +24,7 @@ import {-#SOURCE#-} GHC.Compilers.HaskellToCore.Expression (dsLExpr, dsSyntaxExp
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import TcRnMonad
 import GHC.Compilers.HaskellToCore.Match.Check
 import GHC.IR.Core.Syntax

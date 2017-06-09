@@ -1601,11 +1601,11 @@ datatypeClassKey    = mkPreludeClassUnique 39
 constructorClassKey = mkPreludeClassUnique 40
 selectorClassKey    = mkPreludeClassUnique 41
 
--- KnownNat: see Note [KnowNat & KnownSymbol and EvLit] in TcEvidence
+-- KnownNat: see Note [KnowNat & KnownSymbol and EvLit] in GHC.IR.Haskell.TypeSystem.Evidence
 knownNatClassNameKey :: Unique
 knownNatClassNameKey = mkPreludeClassUnique 42
 
--- KnownSymbol: see Note [KnownNat & KnownSymbol and EvLit] in TcEvidence
+-- KnownSymbol: see Note [KnownNat & KnownSymbol and EvLit] in GHC.IR.Haskell.TypeSystem.Evidence
 knownSymbolClassNameKey :: Unique
 knownSymbolClassNameKey = mkPreludeClassUnique 43
 

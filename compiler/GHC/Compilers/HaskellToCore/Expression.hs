@@ -30,7 +30,7 @@ import GHC.IR.Haskell.Syntax
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
 --     needs to see source types
 import import GHC.IR.Haskell.TypeSystem.Type
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.Data.Type

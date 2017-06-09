@@ -19,7 +19,7 @@ import TcHsType
 import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify( buildImplicationFor )
-import TcEvidence( mkTcCoVarCo )
+import GHC.IR.Haskell.TypeSystem.Evidence( mkTcCoVarCo )
 import GHC.Data.Type
 import GHC.Data.Id
 import GHC.Data.Var( EvVar )

@@ -39,7 +39,7 @@ import GHC.Data.Graph.Directed
 
 import PrelNames
 import GHC.Data.Type.Constructor
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion
@@ -1128,7 +1128,7 @@ dsHsWrapper (WpLet ev_binds)  = do { bs <- dsTcEvBinds ev_binds
 dsHsWrapper (WpCompose c1 c2) = do { w1 <- dsHsWrapper c1
                                    ; w2 <- dsHsWrapper c2
                                    ; return (w1 . w2) }
- -- See comments on WpFun in TcEvidence for an explanation of what
+ -- See comments on WpFun in GHC.IR.Haskell.TypeSystem.Evidence for an explanation of what
  -- the specification of this clause is
 dsHsWrapper (WpFun c1 c2 t1 doc)
                               = do { x  <- newSysLocalDsNoLP t1
@@ -1341,7 +1341,7 @@ help GHC by manually keeping the 'rep' *outside* the lambda.
 **********************************************************************-}
 
 dsEvCallStack :: EvCallStack -> DsM CoreExpr
--- See Note [Overview of implicit CallStacks] in TcEvidence.hs
+-- See Note [Overview of implicit CallStacks] in GHC.IR.Haskell.TypeSystem.Evidence.hs
 dsEvCallStack cs = do
   df            <- getDynFlags
   m             <- getModule

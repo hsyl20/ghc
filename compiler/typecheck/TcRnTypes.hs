@@ -141,7 +141,7 @@ module TcRnTypes(
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Core.Syntax
 import GHC.Types
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type
 import GHC.Data.Class    ( Class )
 import GHC.Data.Type.Constructor    ( TyCon )

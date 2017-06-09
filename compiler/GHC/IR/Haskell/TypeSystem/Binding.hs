@@ -29,7 +29,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcSimplify
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType

@@ -50,7 +50,7 @@ import Data.List     (find)
 import Data.Maybe    (isJust, fromMaybe)
 import Control.Monad (forM, when, forM_)
 import GHC.Data.Coercion
-import TcEvidence
+import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Monad.IOEnv
 
 import GHC.Utils.Monad.ListT (ListT(..), fold, select)
