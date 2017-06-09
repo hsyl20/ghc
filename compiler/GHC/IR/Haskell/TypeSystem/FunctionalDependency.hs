@@ -3,14 +3,14 @@
 (c) The GRASP/AQUA Project, Glasgow University, 2000
 
 
-FunDeps - functional dependencies
+GHC.IR.Haskell.TypeSystem.FunctionalDependency - functional dependencies
 
 It's better to read it as: "if we know these, then we're going to know these"
 -}
 
 {-# LANGUAGE CPP #-}
 
-module FunDeps (
+module GHC.IR.Haskell.TypeSystem.FunctionalDependency (
         FunDepEqn(..), pprEquation,
         improveFromInstEnv, improveFromAnother,
         checkInstCoverage, checkFunDeps,

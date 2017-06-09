@@ -44,7 +44,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.ClassInstance
 import TysWiredIn  ( heqDataCon, coercibleDataCon )
 import GHC.IR.Core.Syntax     ( isOrphan )
-import FunDeps
+import GHC.IR.Haskell.TypeSystem.FunctionalDependency
 import TcMType
 import GHC.Data.Type
 import GHC.Data.Types     ( TyBinder(..) )

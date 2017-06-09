@@ -40,7 +40,7 @@ import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel
-import FunDeps
+import GHC.IR.Haskell.TypeSystem.FunctionalDependency
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Utils.Unify ( tcUnifyTyWithTFs )
@@ -1527,7 +1527,7 @@ constraint right away.  This avoids two dangers
            with the same thing later, and produce the same equality
            again --> termination worries.
 
-To achieve this required some refactoring of FunDeps.hs (nicer
+To achieve this required some refactoring of GHC.IR.Haskell.TypeSystem.FunctionalDependency.hs (nicer
 now!).
 
 Note [FunDep and implicit parameter reactions]

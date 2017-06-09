@@ -447,7 +447,7 @@ Library
         GHC.Compilers.HaskellToCore.Splices
         THNames
         GHC.Data.FamilyInstance
-        FunDeps
+        GHC.IR.Haskell.TypeSystem.FunctionalDependency
         GHC.Data.ClassInstance
         GHC.Data.Type.Constructor
         GHC.Data.Coercion.Axiom

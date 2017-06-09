@@ -374,7 +374,7 @@ tcUnifyTys :: (TyCoVar -> BindFlag)
                                 -- for 'tcUnifyTysFG'
 
 -- The two types may have common type variables, and indeed do so in the
--- second call to tcUnifyTys in FunDeps.checkClsFD
+-- second call to tcUnifyTys in GHC.IR.Haskell.TypeSystem.FunctionalDependency.checkClsFD
 tcUnifyTys bind_fn tys1 tys2
   = case tcUnifyTysFG bind_fn tys1 tys2 of
       Unifiable result -> Just result

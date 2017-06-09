@@ -40,7 +40,7 @@ import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.Syntax            -- HsType
 import TcRnMonad        -- TcType, amongst others
 import GHC.IR.Haskell.TypeSystem.Environment       ( tcGetInstEnvs )
-import FunDeps
+import GHC.IR.Haskell.TypeSystem.FunctionalDependency
 import GHC.Data.ClassInstance     ( InstMatch, lookupInstEnv )
 import GHC.Data.FamilyInstance  ( isDominatedBy, injectiveBranches,
                      InjectivityCheckResult(..) )
@@ -192,7 +192,7 @@ we might have
         let ?x = 5::Int in foo
 and all is well.  In effect, implicit parameters are, well, parameters,
 so we can take their type variables into account as part of the
-"tau-tvs" stuff.  This is done in the function 'FunDeps.grow'.
+"tau-tvs" stuff.  This is done in the function 'GHC.IR.Haskell.TypeSystem.FunctionalDependency.grow'.
 -}
 
 checkAmbiguity :: UserTypeCtxt -> Type -> TcM ()
