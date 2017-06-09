@@ -56,8 +56,8 @@ import Control.Monad
 
 
 
--- The 'NameShape' type is defined in TcRnTypes, because TcRnTypes
--- needs to refer to NameShape, and having TcRnTypes import
+-- The 'NameShape' type is defined in GHC.IR.Haskell.TypeSystem.Types, because GHC.IR.Haskell.TypeSystem.Types
+-- needs to refer to NameShape, and having GHC.IR.Haskell.TypeSystem.Types import
 -- NameShape (even by SOURCE) would cause a large number of
 -- modules to be pulled into the DynFlags cycle.
 {-

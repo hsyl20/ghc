@@ -4,13 +4,13 @@ module GHC.IR.Haskell.TypeSystem.Splice where
 import GHC.IR.Haskell.Syntax    ( HsSplice, HsBracket, HsExpr, LHsExpr )
 import GHC.IR.Haskell.Expression   ( PendingRnSplice )
 import GHC.Data.Name     ( Name )
-import TcRnTypes( TcM, TcId )
+import GHC.IR.Haskell.TypeSystem.Types( TcM, TcId )
 import GHC.IR.Haskell.TypeSystem.Type   ( ExpRhoType )
 import GHC.Data.Annotation ( Annotation, CoreAnnTarget )
 
 import GHC.IR.Haskell.Syntax      ( LHsType, LPat, LHsDecl, ThModFinalizers )
 import GHC.Data.RdrName    ( RdrName )
-import TcRnTypes  ( SpliceType )
+import GHC.IR.Haskell.TypeSystem.Types  ( SpliceType )
 import qualified Language.Haskell.TH as TH
 
 tcSpliceExpr :: HsSplice Name

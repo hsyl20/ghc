@@ -3,7 +3,7 @@ module GHC.IR.Haskell.TypeSystem.PatternSynonym where
 import GHC.Data.Name      ( Name )
 import GHC.Data.Id        ( Id )
 import GHC.IR.Haskell.Syntax ( PatSynBind, LHsBinds )
-import TcRnTypes ( TcM, TcPatSynInfo )
+import GHC.IR.Haskell.TypeSystem.Types ( TcM, TcPatSynInfo )
 import TcRnMonad ( TcGblEnv)
 import GHC.Utils.Outputable ( Outputable )
 

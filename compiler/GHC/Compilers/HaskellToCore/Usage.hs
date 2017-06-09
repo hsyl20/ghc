@@ -9,7 +9,7 @@ module GHC.Compilers.HaskellToCore.Usage (
 
 import GHC.Config.Flags
 import GHC.Types
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.Data.Name
 import GHC.Data.Name.Set
 import GHC.Data.Module

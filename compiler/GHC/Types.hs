@@ -403,8 +403,8 @@ data HscEnv
 
         hsc_type_env_var :: Maybe (Module, IORef TypeEnv)
                 -- ^ Used for one-shot compilation only, to initialise
-                -- the 'IfGblEnv'. See 'TcRnTypes.tcg_type_env_var' for
-                -- 'TcRnTypes.TcGblEnv'.  See also Note [hsc_type_env_var hack]
+                -- the 'IfGblEnv'. See 'GHC.IR.Haskell.TypeSystem.Types.tcg_type_env_var' for
+                -- 'GHC.IR.Haskell.TypeSystem.Types.TcGblEnv'.  See also Note [hsc_type_env_var hack]
 
         , hsc_iserv :: MVar (Maybe IServ)
                 -- ^ interactive server process.  Created the first
@@ -2311,7 +2311,7 @@ data Dependencies
          }
   deriving( Eq )
         -- Equality used only for old/new comparison in GHC.IR.Interface.Utils.addFingerprints
-        -- See 'TcRnTypes.ImportAvails' for details on dependencies.
+        -- See 'GHC.IR.Haskell.TypeSystem.Types.ImportAvails' for details on dependencies.
 
 instance Binary Dependencies where
     put_ bh deps = do put_ bh (dep_mods deps)
@@ -2476,7 +2476,7 @@ data ExternalPackageState
                 --
                 -- The 'ModuleName' part is not necessary, but it's useful for
                 -- debug prints, and it's convenient because this field comes
-                -- direct from 'TcRnTypes.imp_dep_mods'
+                -- direct from 'GHC.IR.Haskell.TypeSystem.Types.imp_dep_mods'
 
         eps_PIT :: !PackageIfaceTable,
                 -- ^ The 'ModIface's for modules in external packages

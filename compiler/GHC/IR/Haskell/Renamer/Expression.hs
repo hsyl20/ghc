@@ -477,7 +477,7 @@ rnCmd (HsCmdArrApp arrow arg _ ho rtl)
     select_arrow_scope tc = case ho of
         HsHigherOrderApp -> tc
         HsFirstOrderApp  -> escapeArrowScope tc
-        -- See Note [Escaping the arrow scope] in TcRnTypes
+        -- See Note [Escaping the arrow scope] in GHC.IR.Haskell.TypeSystem.Types
         -- Before renaming 'arrow', use the environment of the enclosing
         -- proc for the (-<) case.
         -- Local bindings, inside the enclosing proc, are not in scope

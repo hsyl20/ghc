@@ -36,7 +36,7 @@ import GHC.IR.Haskell.Binding
 import GHC.IR.Haskell.Expression
 import GHC.Data.Tree.OrdList
 import GHC.Data.Id
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.Data.Bag
 import GHC.Data.RdrName
 import GHC.IR.Core.Syntax

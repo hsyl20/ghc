@@ -3,7 +3,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Name       ( Name )
 import GHC.Data.Name.Set    ( FreeVars )
 import GHC.Data.RdrName    ( RdrName )
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.Data.SrcLoc     ( Located )
 import GHC.Utils.Outputable ( Outputable )
 

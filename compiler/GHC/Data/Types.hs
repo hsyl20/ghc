@@ -1254,7 +1254,7 @@ equality types story] in TysPrim for background on equality constraints.
 For unboxed equalities:
   - Generate a CoercionHole, a mutable variable just like a unification
     variable
-  - Wrap the CoercionHole in a Wanted constraint; see TcRnTypes.TcEvDest
+  - Wrap the CoercionHole in a Wanted constraint; see GHC.IR.Haskell.TypeSystem.Types.TcEvDest
   - Use the CoercionHole in a Coercion, via HoleProv
   - Solve the constraint later
   - When solved, fill in the CoercionHole by side effect, instead of

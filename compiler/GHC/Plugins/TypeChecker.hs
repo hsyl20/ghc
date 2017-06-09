@@ -69,7 +69,7 @@ import TcMType    ( TcTyVar, TcType )
 import GHC.IR.Haskell.TypeSystem.Environment      ( TcTyThing )
 import GHC.IR.Haskell.TypeSystem.Evidence ( TcCoercion, CoercionHole
                   , EvTerm, EvBind, mkGivenEvBind )
-import TcRnTypes  ( CtEvidence(..) )
+import GHC.IR.Haskell.TypeSystem.Types  ( CtEvidence(..) )
 import GHC.Data.Var        ( EvVar )
 
 import GHC.Data.Module

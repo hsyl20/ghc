@@ -1682,7 +1682,7 @@ isClosedBndrGroup binds = do
         -- ns are the Names referred to from the RHS of this bind
 
     is_closed_id :: TcTypeEnv -> Name -> Bool
-    -- See Note [Bindings with closed types] in TcRnTypes
+    -- See Note [Bindings with closed types] in GHC.IR.Haskell.TypeSystem.Types
     is_closed_id type_env name
       | Just thing <- lookupNameEnv type_env name
       = case thing of

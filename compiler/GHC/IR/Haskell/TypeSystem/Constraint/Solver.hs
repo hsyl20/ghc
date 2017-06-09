@@ -151,7 +151,7 @@ import GHC.Utils.Outputable
 import GHC.Data.Bag as Bag
 import GHC.Data.Unique.Supply
 import GHC.Utils
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 
 import GHC.Data.Unique
 import GHC.Data.Unique.FiniteMap
@@ -982,7 +982,7 @@ instance Outputable InertCans where
 Note [The improvement story and derived shadows]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Because Wanteds cannot rewrite Wanteds (see Note [Wanteds do not
-rewrite Wanteds] in TcRnTypes), we may miss some opportunities for
+rewrite Wanteds] in GHC.IR.Haskell.TypeSystem.Types), we may miss some opportunities for
 solving.  Here's a classic example (indexed-types/should_fail/T4093a)
 
     Ambiguity check for f: (Foo e ~ Maybe e) => Foo e
@@ -2933,7 +2933,7 @@ newGivenEvVar :: CtLoc -> (TcPredType, EvTerm) -> TcS CtEvidence
 -- Make a new variable of the given PredType,
 -- immediately bind it to the given term
 -- and return its CtEvidence
--- See Note [Bind new Givens immediately] in TcRnTypes
+-- See Note [Bind new Givens immediately] in GHC.IR.Haskell.TypeSystem.Types
 newGivenEvVar loc (pred, rhs)
   = do { new_ev <- newBoundEvVarId pred rhs
        ; return (CtGiven { ctev_pred = pred, ctev_evar = new_ev, ctev_loc = loc }) }

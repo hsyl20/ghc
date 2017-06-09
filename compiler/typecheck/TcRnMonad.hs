@@ -128,13 +128,13 @@ module TcRnMonad(
   withException,
 
   -- * Types etc.
-  module TcRnTypes,
+  module GHC.IR.Haskell.TypeSystem.Types,
   module GHC.Utils.Monad.IOEnv
   ) where
 
 #include "HsVersions.h"
 
-import TcRnTypes        -- Re-export all
+import GHC.IR.Haskell.TypeSystem.Types        -- Re-export all
 import GHC.Utils.Monad.IOEnv            -- Re-export all
 import GHC.IR.Haskell.TypeSystem.Evidence
 

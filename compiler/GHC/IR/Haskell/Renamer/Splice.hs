@@ -86,7 +86,7 @@ rnBracket e br_body
            ; Splice Untyped -> checkTc (not (isTypedBracket br_body))
                                        illegalTypedBracket
            ; RunSplice _    ->
-               -- See Note [RunSplice ThLevel] in "TcRnTypes".
+               -- See Note [RunSplice ThLevel] in "GHC.IR.Haskell.TypeSystem.Types".
                pprPanic "rnBracket: Renaming bracket when running a splice"
                         (ppr e)
            ; Comp           -> return ()

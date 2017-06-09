@@ -434,7 +434,7 @@ tcSpliceExpr splice@(HsTypedSplice _ name expr) res_ty
           Splice {}            -> tcTopSplice expr res_ty
           Brack pop_stage pend -> tcNestedSplice pop_stage pend name expr res_ty
           RunSplice _          ->
-            -- See Note [RunSplice ThLevel] in "TcRnTypes".
+            -- See Note [RunSplice ThLevel] in "GHC.IR.Haskell.TypeSystem.Types".
             pprPanic ("tcSpliceExpr: attempted to typecheck a splice when " ++
                       "running another splice") (ppr splice)
           Comp                 -> tcTopSplice expr res_ty

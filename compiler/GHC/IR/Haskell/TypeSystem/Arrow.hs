@@ -209,7 +209,7 @@ tc_cmd env cmd@(HsCmdArrApp fun arg _ ho_app lr) (_, res_ty)
        -- proc for the (-<) case.
        -- Local bindings, inside the enclosing proc, are not in scope
        -- inside f.  In the higher-order case (-<<), they are.
-       -- See Note [Escaping the arrow scope] in TcRnTypes
+       -- See Note [Escaping the arrow scope] in GHC.IR.Haskell.TypeSystem.Types
     select_arrow_scope tc = case ho_app of
         HsHigherOrderApp -> tc
         HsFirstOrderApp  -> escapeArrowScope tc

@@ -1,7 +1,7 @@
 
 module GHC.IR.Haskell.Renamer.Documentation ( rnHsDoc, rnLHsDoc, rnMbLHsDoc ) where
 
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.IR.Haskell.Syntax
 import GHC.Data.SrcLoc
 

@@ -3,7 +3,7 @@ module GHC.IR.Interface.TypeCheck where
 import GHC.IR.Interface.Syntax    ( IfaceDecl, IfaceClsInst, IfaceFamInst, IfaceRule,
                      IfaceAnnotation, IfaceCompleteMatch )
 import GHC.Data.Types     ( TyThing )
-import TcRnTypes   ( IfL )
+import GHC.IR.Haskell.TypeSystem.Types   ( IfL )
 import GHC.Data.ClassInstance     ( ClsInst )
 import GHC.Data.FamilyInstance  ( FamInst )
 import GHC.IR.Core.Syntax     ( CoreRule )

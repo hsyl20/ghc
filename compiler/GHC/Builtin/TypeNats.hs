@@ -21,7 +21,7 @@ import GHC.IR.Haskell.TypeSystem.Type     ( TcType, tcEqType )
 import GHC.Data.Type.Constructor      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                   , Injectivity(..) )
 import GHC.Data.Coercion   ( Role(..) )
-import TcRnTypes  ( Xi )
+import GHC.IR.Haskell.TypeSystem.Types  ( Xi )
 import GHC.Data.Coercion.Axiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeEqn )
 import GHC.Data.Name       ( Name, BuiltInSyntax(..) )
 import TysWiredIn

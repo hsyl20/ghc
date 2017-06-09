@@ -409,7 +409,7 @@ tcExtendTyVarEnv2 binds thing_inside
                   name'  = tidyNameOcc name occ'
 
 isTypeClosedLetBndr :: Id -> Bool
--- See Note [Bindings with closed types] in TcRnTypes
+-- See Note [Bindings with closed types] in GHC.IR.Haskell.TypeSystem.Types
 isTypeClosedLetBndr = noFreeVarsOfType . idType
 
 tcExtendLetEnv :: TopLevelFlag -> IsGroupClosed -> [TcId] -> TcM a -> TcM a

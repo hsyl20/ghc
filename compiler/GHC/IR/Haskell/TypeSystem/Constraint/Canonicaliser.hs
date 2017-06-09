@@ -9,7 +9,7 @@ module GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser(
 
 #include "HsVersions.h"
 
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.IR.Haskell.TypeSystem.Unify( swapOverTyVars, metaTyVarUpdateOK )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
@@ -61,7 +61,7 @@ about these constraints. So, first:
 
 Then proceed depending on the shape of the constraint. Generally speaking,
 each constraint gets flattened and then decomposed into one of several forms
-(see type Ct in TcRnTypes).
+(see type Ct in GHC.IR.Haskell.TypeSystem.Types).
 
 When an already-canonicalized constraint gets kicked out of the inert set,
 it must be recanonicalized. But we know a bit about its shape from the
@@ -219,7 +219,7 @@ So here's the plan:
    Note [Eagerly expand given superclasses].
 
 3. If we have any remaining unsolved wanteds
-        (see Note [When superclasses help] in TcRnTypes)
+        (see Note [When superclasses help] in GHC.IR.Haskell.TypeSystem.Types)
    try harder: take both the Givens and Wanteds, and expand
    superclasses again.  This may succeed in generating (a finite
    number of) extra Givens, and extra Deriveds. Both may help the

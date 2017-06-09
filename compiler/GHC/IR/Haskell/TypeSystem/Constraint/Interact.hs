@@ -48,7 +48,7 @@ import GHC.Utils.Unify ( tcUnifyTyWithTFs )
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Outputable
 
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.IR.Haskell.TypeSystem.Constraint.Solver
 import GHC.Data.Bag
 import GHC.Utils.Monad ( concatMapM )
@@ -1470,7 +1470,7 @@ solveByUnification :: CtEvidence -> TcTyVar -> Xi -> TcS ()
 -- NB: No need for an occurs check here, because solveByUnification always
 --     arises from a CTyEqCan, a *canonical* constraint.  Its invariants
 --     say that in (a ~ xi), the type variable a does not appear in xi.
---     See TcRnTypes.Ct invariants.
+--     See GHC.IR.Haskell.TypeSystem.Types.Ct invariants.
 --
 -- Post: tv is unified (by side effect) with xi;
 --       we often write tv := xi

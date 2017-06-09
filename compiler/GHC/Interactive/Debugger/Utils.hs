@@ -8,7 +8,7 @@ import GHCi.InfoTable
 import GHC.RTS.InfoTable ( stdInfoTableSizeB )
 import GHC.Config.Flags
 import GHC.Data.FastString
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import TcRnMonad
 import GHC.IR.Interface.Environment
 import GHC.Data.Module

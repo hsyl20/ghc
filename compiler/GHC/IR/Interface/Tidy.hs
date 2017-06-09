@@ -12,7 +12,7 @@ module GHC.IR.Interface.Tidy (
 
 #include "HsVersions.h"
 
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.Config.Flags
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Transform.Unfolding

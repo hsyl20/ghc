@@ -26,7 +26,7 @@ module GHC.IR.Haskell.TypeSystem.Signature(
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.UserType
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Type
 import TcMType

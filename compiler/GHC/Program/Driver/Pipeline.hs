@@ -58,7 +58,7 @@ import GHC.Data.SrcLoc
 import GHC.Compilers.CmmToLlvm.CodeGen      ( llvmFixupAsm )
 import GHC.Utils.Monad
 import GHC.Utils.Platform
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt
 

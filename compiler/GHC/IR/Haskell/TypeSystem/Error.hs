@@ -9,7 +9,7 @@ module GHC.IR.Haskell.TypeSystem.Error(
 
 #include "HsVersions.h"
 
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import TcRnMonad
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Unify( occCheckForErrors, OccCheckResult(..) )
@@ -475,7 +475,7 @@ reportWanteds ctxt tc_lvl (WC { wc_simple = simples, wc_insol = insols, wc_impl 
     -- report1: ones that should *not* be suppresed by
     --          an insoluble somewhere else in the tree
     -- It's crucial that anything that is considered insoluble
-    -- (see TcRnTypes.trulyInsoluble) is caught here, otherwise
+    -- (see GHC.IR.Haskell.TypeSystem.Types.trulyInsoluble) is caught here, otherwise
     -- we might suppress its error message, and proceed on past
     -- type checking to get a Lint error later
     report1 = [ ("custom_error", is_user_type_error,

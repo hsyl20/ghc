@@ -564,7 +564,7 @@ Instead we make a binding
     g1 :: a~Bool = g |> ax7 a
 and the constraint
     [G] g1 :: a~Bool
-See Trac [7238] and Note [Bind new Givens immediately] in TcRnTypes
+See Trac [7238] and Note [Bind new Givens immediately] in GHC.IR.Haskell.TypeSystem.Types
 
 Note [EvBinds/EvTerm]
 ~~~~~~~~~~~~~~~~~~~~~

@@ -6,7 +6,7 @@
 module GHC.IR.Haskell.TypeSystem.Instance ( tcInstDecls1 ) where
 
 import GHC.IR.Haskell.Syntax
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import GHC.IR.Haskell.TypeSystem.Environment( InstInfo )
 import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.Data.Name

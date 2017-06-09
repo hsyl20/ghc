@@ -642,7 +642,7 @@ hscIncrementalCompile always_do_basic_recompilation_check m_tc_result
     mHscMessage hsc_env' mod_summary source_modified mb_old_iface mod_index
   = do
     -- One-shot mode needs a knot-tying mutable variable for interface
-    -- files. See TcRnTypes.TcGblEnv.tcg_type_env_var.
+    -- files. See GHC.IR.Haskell.TypeSystem.Types.TcGblEnv.tcg_type_env_var.
     -- See also Note [hsc_type_env_var hack]
     type_env_var <- newIORef emptyNameEnv
     let mod = ms_mod mod_summary

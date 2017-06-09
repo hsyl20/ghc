@@ -19,7 +19,7 @@ of the stack mechanism), you should use an TcRef (= IORef) to store them.
 {-# LANGUAGE CPP, ExistentialQuantification, GeneralizedNewtypeDeriving,
              ViewPatterns #-}
 
-module TcRnTypes(
+module GHC.IR.Haskell.TypeSystem.Types(
         TcRnIf, TcRn, TcM, RnM, IfM, IfL, IfG, -- The monad is opaque outside this module
         TcRef,
 
@@ -2121,7 +2121,7 @@ pprCts cts = vcat (map ppr (bagToList cts))
 ************************************************************************
 *                                                                      *
                 Wanted constraints
-     These are forced to be in TcRnTypes because
+     These are forced to be in GHC.IR.Haskell.TypeSystem.Types because
            TcLclEnv mentions WantedConstraints
            WantedConstraint mentions CtLoc
            CtLoc mentions ErrCtxt

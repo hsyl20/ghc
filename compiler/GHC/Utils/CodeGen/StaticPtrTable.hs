@@ -65,7 +65,7 @@ Here is a running example:
 
 * The typechecker verifies that all free variables occurring in the
   static form are closed (see Note [Bindings with closed types] in
-  TcRnTypes).  In our example, 'k' is closed, even though it is bound
+  GHC.IR.Haskell.TypeSystem.Types).  In our example, 'k' is closed, even though it is bound
   in a nested let, we are fine.
 
   The typechecker also surrounds the static form with a call to

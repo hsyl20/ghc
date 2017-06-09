@@ -2,7 +2,7 @@ module TcRnDriver where
 
 import GHC.Config.Flags (DynFlags)
 import GHC.Data.Type (TyThing)
-import TcRnTypes (TcM)
+import GHC.IR.Haskell.TypeSystem.Types (TcM)
 import GHC.Utils.Outputable (SDoc)
 import GHC.Data.Name (Name)
 

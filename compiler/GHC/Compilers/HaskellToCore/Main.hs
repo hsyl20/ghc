@@ -19,7 +19,7 @@ import GHC.Compilers.HaskellToCore.Usage
 import GHC.Config.Flags
 import GHC.Types
 import GHC.IR.Haskell.Syntax
-import TcRnTypes
+import GHC.IR.Haskell.TypeSystem.Types
 import TcRnMonad  ( finalSafeMode, fixSafeInstances )
 import TcRnDriver ( runTcInteractive )
 import GHC.Data.Id

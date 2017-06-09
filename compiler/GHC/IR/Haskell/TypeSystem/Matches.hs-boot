@@ -3,7 +3,7 @@ import GHC.IR.Haskell.Syntax ( GRHSs, MatchGroup, LHsExpr )
 import GHC.IR.Haskell.TypeSystem.Evidence( HsWrapper )
 import GHC.Data.Name     ( Name )
 import GHC.IR.Haskell.TypeSystem.Type   ( ExpRhoType, TcRhoType )
-import TcRnTypes( TcM, TcId )
+import GHC.IR.Haskell.TypeSystem.Types( TcM, TcId )
 import GHC.Data.SrcLoc   ( Located )
 
 tcGRHSsPat    :: GRHSs Name (LHsExpr Name)
