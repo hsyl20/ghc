@@ -537,7 +537,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Builtin.Names \
 	GHC.IR.Core.Transform.ConstantFolding \
 	GHC.Utils.PrettyPrint \
-	PrimOp \
+	GHC.Builtin.Primitive.Operations \
 	GHC.Data.RepType \
 	GHC.Data.RdrName \
 	GHC.IR.Core.Transform.Rules \
