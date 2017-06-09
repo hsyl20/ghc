@@ -7,7 +7,7 @@
 -- names] for details.
 --
 
-module KnownUniques
+module GHC.Builtin.Uniques
     ( -- * Looking up known-key names
       knownUniqueName
 

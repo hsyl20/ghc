@@ -507,7 +507,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Compilers.CoreToInterface \
 	GHC.Data.ClassInstance \
 	GHC.Data.Kind \
-	KnownUniques \
+	GHC.Builtin.Uniques \
 	GHC.Utils.Identifier \
 	GHC.Data.List.SetOps \
 	GHC.Data.Literal \

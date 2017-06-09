@@ -45,7 +45,7 @@ module GHC.Builtin.Utils (
 
 #include "HsVersions.h"
 
-import KnownUniques
+import GHC.Builtin.Uniques
 import GHC.Data.Unique           ( isValidKnownKeyUnique )
 
 import GHC.Data.ConstructorLike          ( ConLike(..) )

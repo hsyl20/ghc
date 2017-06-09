@@ -1,4 +1,4 @@
-module KnownUniques where
+module GHC.Builtin.Uniques where
 
 import GHC.Data.Unique
 import GHC.Data.Name

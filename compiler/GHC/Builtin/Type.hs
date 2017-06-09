@@ -133,7 +133,7 @@ import {-# SOURCE #-} GHC.Data.Id.Make( mkDataConWorkId, mkDictSelId )
 -- friends:
 import GHC.Builtin.Names
 import GHC.Builtin.Primitive.Type
-import {-# SOURCE #-} KnownUniques
+import {-# SOURCE #-} GHC.Builtin.Uniques
 
 -- others:
 import GHC.Data.Coercion.Axiom
@@ -643,7 +643,7 @@ Note [How tuples work]  See also Note [Known-key names] in GHC.Builtin.Names
 * Serialization to interface files works via the usual mechanism for known-key
   things: instead of serializing the OccName we just serialize the key. During
   deserialization we lookup the Name associated with the unique with the logic
-  in KnownUniques. See Note [Symbol table representation of names] for details.
+  in GHC.Builtin.Uniques. See Note [Symbol table representation of names] for details.
 
 Note [One-tuples]
 ~~~~~~~~~~~~~~~~~
