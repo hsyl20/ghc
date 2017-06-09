@@ -1984,7 +1984,7 @@ Notice that
    as non-recursive (in some sense).  For now, we just make a special
    case for tuples.  Something better would be cool.
 
-See also TcTyDecls.checkClassCycles.
+See also GHC.IR.Haskell.TypeSystem.TypeDeclaration.checkClassCycles.
 
 Note [Inheriting implicit parameters]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -11,7 +11,7 @@ files for imported data types.
 
 {-# LANGUAGE CPP #-}
 
-module TcTyDecls(
+module GHC.IR.Haskell.TypeSystem.TypeDeclaration(
         RolesInfo,
         inferRoles,
         checkSynCycles,

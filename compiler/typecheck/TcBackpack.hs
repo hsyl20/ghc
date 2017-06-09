@@ -23,7 +23,7 @@ import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import TcRnMonad
-import TcTyDecls
+import GHC.IR.Haskell.TypeSystem.TypeDeclaration
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import Inst

@@ -751,7 +751,7 @@ tcInstDecls2 tycl_decls inst_decls
           -- (b) instance declarations
         ; let dm_ids = collectHsBindsBinders dm_binds
               -- Add the default method Ids (again)
-              -- (they were arready added in TcTyDecls.tcAddImplicits)
+              -- (they were arready added in GHC.IR.Haskell.TypeSystem.TypeDeclaration.tcAddImplicits)
               -- See Note [Default methods in the type environment]
         ; inst_binds_s <- tcExtendGlobalValEnv dm_ids $
                           mapM tcInstDecl2 inst_decls

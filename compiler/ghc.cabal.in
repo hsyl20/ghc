@@ -431,7 +431,7 @@ Library
         TcSimplify
         TcErrors
         GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
-        TcTyDecls
+        GHC.IR.Haskell.TypeSystem.TypeDeclaration
         TcTypeable
         GHC.IR.Haskell.TypeSystem.Type
         GHC.IR.Haskell.TypeSystem.Evidence

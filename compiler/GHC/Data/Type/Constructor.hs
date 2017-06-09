@@ -331,7 +331,7 @@ might happen, say, with the following declaration:
   data T a b c where
     MkT :: b -> T Int b c
 
-Data and class tycons have their roles inferred (see inferRoles in TcTyDecls),
+Data and class tycons have their roles inferred (see inferRoles in GHC.IR.Haskell.TypeSystem.TypeDeclaration),
 as do vanilla synonym tycons. Family tycons have all parameters at role N,
 though it is conceivable that we could relax this restriction. (->)'s and
 tuples' parameters are at role R. Each primitive tycon declares its roles;

@@ -28,7 +28,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcTyDecls
+import GHC.IR.Haskell.TypeSystem.TypeDeclaration
 import GHC.IR.Haskell.TypeSystem.ClassDeclaration
 import {-# SOURCE #-} TcInstDcls( tcInstDecls1 )
 import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
@@ -2193,7 +2193,7 @@ checkValidTyCon tc
     get_fields con = dataConFieldLabels con `zip` repeat con
         -- dataConFieldLabels may return the empty list, which is fine
 
-    -- See Note [GADT record selectors] in TcTyDecls
+    -- See Note [GADT record selectors] in GHC.IR.Haskell.TypeSystem.TypeDeclaration
     -- We must check (a) that the named field has the same
     --                   type in each constructor
     --               (b) that those constructors have the same result type
@@ -2805,7 +2805,7 @@ checkRoleAnnot tv (L _ (Just r1)) r2
     addErrTc $ badRoleAnnot (tyVarName tv) r1 r2
 
 -- This is a double-check on the role inference algorithm. It is only run when
--- -dcore-lint is enabled. See Note [Role inference] in TcTyDecls
+-- -dcore-lint is enabled. See Note [Role inference] in GHC.IR.Haskell.TypeSystem.TypeDeclaration
 checkValidRoles :: TyCon -> TcM ()
 -- If you edit this function, you may need to update the GHC formalism
 -- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
@@ -2822,7 +2822,7 @@ checkValidRoles tc
       = do { traceTc "check_dc_roles" (ppr datacon <+> ppr (tyConRoles tc))
            ; mapM_ (check_ty_roles role_env Representational) $
                     eqSpecPreds eq_spec ++ theta ++ arg_tys }
-                    -- See Note [Role-checking data constructor arguments] in TcTyDecls
+                    -- See Note [Role-checking data constructor arguments] in GHC.IR.Haskell.TypeSystem.TypeDeclaration
       where
         (univ_tvs, ex_tvs, eq_spec, theta, arg_tys, _res_ty)
           = dataConFullSig datacon

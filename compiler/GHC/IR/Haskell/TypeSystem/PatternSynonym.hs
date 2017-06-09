@@ -44,7 +44,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Interface.BuildTypeAndClass
 import GHC.Data.Var.Set
 import GHC.Data.Id.Make
-import TcTyDecls
+import GHC.IR.Haskell.TypeSystem.TypeDeclaration
 import GHC.Data.ConstructorLike
 import GHC.Data.FieldLabel
 import GHC.Data.Bag
