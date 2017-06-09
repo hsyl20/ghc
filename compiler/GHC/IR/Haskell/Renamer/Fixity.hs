@@ -9,7 +9,7 @@ module GHC.IR.Haskell.Renamer.Fixity ( MiniFixityEnv,
   lookupFixityRn, lookupFixityRn_help,
   lookupFieldFixityRn, lookupTyFixityRn ) where
 
-import GHC.Interface.Load
+import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Types

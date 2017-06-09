@@ -8,7 +8,7 @@
 -- | Module for constructing @ModIface@ values (interface files),
 -- writing them to disk and comparing two versions to see if
 -- recompilation is required.
-module GHC.Interface.Utils (
+module GHC.IR.Interface.Utils (
         mkIface,        -- Build a ModIface from a ModGuts,
                         -- including computing version information
 
@@ -58,10 +58,10 @@ Basic idea:
 
 #include "HsVersions.h"
 
-import GHC.Interface.Syntax
+import GHC.IR.Interface.Syntax
 import GHC.Utils.Binary.Fingerprint
-import GHC.Interface.Load
-import GHC.Interface.CoreToInterface
+import GHC.IR.Interface.Load
+import GHC.Compilers.CoreToInterface
 import GHC.Config.Flags.Fingerprint
 
 import GHC.Compilers.HaskellToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
@@ -91,7 +91,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.Data.Module
-import GHC.Interface.Binary
+import GHC.IR.Interface.Binary
 import GHC.Utils.Error
 import GHC.Data.Graph.Directed
 import GHC.Data.SrcLoc
@@ -1662,7 +1662,7 @@ tyConToIfaceDecl env tycon
           -- (b) when pretty-printing an Iface data declaration in H98-style syntax,
           --     we know that the type variables will line up
           -- The latter (b) is important because we pretty-print type constructors
-          -- by converting to GHC.Interface.Syntax and pretty-printing that
+          -- by converting to GHC.IR.Interface.Syntax and pretty-printing that
           con_env1 = (fst tc_env1, mkVarEnv (zipEqual "ifaceConDecl" univ_tvs tc_tyvars))
                      -- A bit grimy, perhaps, but it's simple!
 

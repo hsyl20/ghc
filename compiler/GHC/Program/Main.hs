@@ -107,15 +107,15 @@ import GHC.IR.Haskell.Parser
 import GHC.IR.Haskell.Lexer as Lexer
 import GHC.Data.SrcLoc
 import TcRnDriver
-import GHC.Interface.TypeCheck          ( typecheckIface )
+import GHC.IR.Interface.TypeCheck          ( typecheckIface )
 import TcRnMonad
 import GHC.Data.Name.Cache        ( initNameCache )
-import GHC.Interface.Load        ( ifaceStats, initExternalPackageState )
+import GHC.IR.Interface.Load        ( ifaceStats, initExternalPackageState )
 import PrelInfo
-import GHC.Interface.Utils
+import GHC.IR.Interface.Utils
 import GHC.Compilers.HaskellToCore.Main
 import GHC.IR.Core.Transform.Pipeline
-import GHC.Interface.Tidy
+import GHC.IR.Interface.Tidy
 import GHC.Compilers.CoreToStg.Prepare
 import GHC.Compilers.CoreToStg ( coreToStg )
 import qualified GHC.Compilers.StgToCmm as StgToCmm
@@ -1593,7 +1593,7 @@ hscDeclsWithLocation hsc_env0 str source linenumber =
                        , isExternalName (idName id)
                        , not (isDFunId id || isImplicitId id) ]
             -- We only need to keep around the external bindings
-            -- (as decided by GHC.Interface.Tidy), since those are the only ones
+            -- (as decided by GHC.IR.Interface.Tidy), since those are the only ones
             -- that might later be looked up by name.  But we can exclude
             --    - DFunIds, which are in 'cls_insts' (see Note [ic_tythings] in GHC.Types
             --    - Implicit Ids, which are implicit in tcs

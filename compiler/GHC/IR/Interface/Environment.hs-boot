@@ -1,4 +1,4 @@
-module GHC.Interface.Environment where
+module GHC.IR.Interface.Environment where
 
 import GHC.Data.Module
 import GHC.Data.OccName

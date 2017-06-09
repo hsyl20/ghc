@@ -30,7 +30,7 @@ import GHC.Interactive.Interpreter      ( wormhole )
 import GHC.Data.SrcLoc           ( noSrcSpan )
 import GHC.Utils.Finder           ( findPluginModule, cannotFindModule )
 import TcRnMonad        ( initTcInteractive, initIfaceTcRn )
-import GHC.Interface.Load        ( loadPluginInterface )
+import GHC.IR.Interface.Load        ( loadPluginInterface )
 import GHC.Data.RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
                         , ImpItemSpec(..), mkGlobalRdrEnv, lookupGRE_RdrName
                         , gre_name, mkRdrQual )

@@ -24,7 +24,7 @@ import GHC.Data.FamilyInstance       ( FamInst, FamFlavor(..), mkSingleCoAxiom )
 import FamInst
 import GHC.Data.Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )
-import GHC.Interface.Environment         ( newGlobalBinder )
+import GHC.IR.Interface.Environment         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )
 import GHC.Data.RdrName
 import GHC.Data.BasicTypes

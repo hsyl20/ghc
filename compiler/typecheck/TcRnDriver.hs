@@ -42,7 +42,7 @@ module TcRnDriver (
 
 import {-# SOURCE #-} TcSplice ( finishTH )
 import GHC.IR.Haskell.Renamer.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
-import GHC.Interface.Environment( externaliseName )
+import GHC.IR.Interface.Environment( externaliseName )
 import TcHsType
 import TcMatches
 import Inst( deeplyInstantiate )
@@ -52,7 +52,7 @@ import GHC.IR.Haskell.Renamer.Expression
 import GHC.IR.Haskell.Renamer.Utils ( HsDocContext(..) )
 import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn )
 import GHC.Data.Id.Make
-import GHC.Interface.Tidy    ( globaliseAndTidyId )
+import GHC.IR.Interface.Tidy    ( globaliseAndTidyId )
 import TysWiredIn ( unitTy, mkListTy )
 #if defined(GHCI)
 import GHC.Interactive.DynamicLoading ( loadPlugins )
@@ -61,8 +61,8 @@ import GHC.Plugins.Types ( tcPlugin )
 
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
-import GHC.Interface.Syntax ( ShowSub(..), showToHeader )
-import GHC.Interface.Types( ShowForAllFlag(..) )
+import GHC.IR.Interface.Syntax ( ShowSub(..), showToHeader )
+import GHC.IR.Interface.Types( ShowForAllFlag(..) )
 import PrelNames
 import GHC.Data.RdrName
 import GHC.IR.Haskell.TypeSystem.Syntax
@@ -72,7 +72,7 @@ import TcRnExports
 import TcEvidence
 import qualified GHC.Data.Bool.Formula as BF
 import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
-import GHC.Interface.Utils( tyThingToIfaceDecl )
+import GHC.IR.Interface.Utils( tyThingToIfaceDecl )
 import GHC.Data.Coercion( pprCoAxiom )
 import GHC.IR.Core.FreeVars( orphNamesOfFamInst )
 import FamInst
@@ -86,14 +86,14 @@ import TcEnv
 import TcRules
 import TcForeign
 import TcInstDcls
-import GHC.Interface.TypeCheck
+import GHC.IR.Interface.TypeCheck
 import TcMType
 import TcType
 import TcSimplify
 import TcTyClsDecls
 import TcTypeable ( mkTypeableBinds )
 import TcBackpack
-import GHC.Interface.Load
+import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Main
@@ -1749,7 +1749,7 @@ being called "Main.main".  That's why root_main_id has a fixed module
 ":Main".)
 
 This is unusual: it's a LocalId whose Name has a Module from another
-module.  Tiresomely, we must filter it out again in GHC.Interface.Utils, les we
+module.  Tiresomely, we must filter it out again in GHC.IR.Interface.Utils, les we
 get two defns for 'main' in the interface file!
 
 

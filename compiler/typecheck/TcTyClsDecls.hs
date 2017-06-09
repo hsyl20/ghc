@@ -23,7 +23,7 @@ module TcTyClsDecls (
 
 import GHC.IR.Haskell.Syntax
 import GHC.Types
-import GHC.Interface.BuildTypeAndClass
+import GHC.IR.Interface.BuildTypeAndClass
 import TcRnMonad
 import TcEnv
 import TcValidity

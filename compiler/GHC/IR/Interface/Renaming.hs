@@ -6,7 +6,7 @@
 -- are doing indefinite typechecking and need instantiations
 -- of modules which do not necessarily exist yet.
 
-module GHC.Interface.Renaming(
+module GHC.IR.Interface.Renaming(
     rnModIface,
     rnModExports,
     tcRnModIface,
@@ -21,7 +21,7 @@ import GHC.Types
 import GHC.Data.Module
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Available
-import GHC.Interface.Syntax
+import GHC.IR.Interface.Syntax
 import GHC.Data.FieldLabel
 import GHC.Data.Var
 import GHC.Utils.Error
@@ -33,7 +33,7 @@ import GHC.Utils.Fingerprint
 import GHC.Data.BasicTypes
 
 -- a bit vexing
-import {-# SOURCE #-} GHC.Interface.Load
+import {-# SOURCE #-} GHC.IR.Interface.Load
 import GHC.Config.Flags
 
 import qualified Data.Traversable as T
@@ -41,7 +41,7 @@ import qualified Data.Traversable as T
 import GHC.Data.Bag
 import Data.IORef
 import GHC.Data.NameShape
-import GHC.Interface.Environment
+import GHC.IR.Interface.Environment
 
 tcRnMsgMaybe :: IO (Either ErrorMessages a) -> TcM a
 tcRnMsgMaybe do_this = do

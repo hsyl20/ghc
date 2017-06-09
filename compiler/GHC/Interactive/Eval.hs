@@ -50,7 +50,7 @@ import GHC.Program.Main
 import GHC.IR.Haskell.Syntax
 import GHC.Types
 import GHC.Data.ClassInstance
-import GHC.Interface.Environment   ( newInteractiveBinder )
+import GHC.IR.Interface.Environment   ( newInteractiveBinder )
 import GHC.Data.FamilyInstance ( FamInst )
 import GHC.IR.Core.FreeVars    ( orphNamesOfFamInst )
 import GHC.Data.Type.Constructor

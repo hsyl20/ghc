@@ -10,7 +10,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import TcRnTypes
 import TcRnMonad
-import GHC.Interface.Environment
+import GHC.IR.Interface.Environment
 import GHC.Data.Module
 import GHC.Data.OccName as OccName
 import GHC.Data.Name

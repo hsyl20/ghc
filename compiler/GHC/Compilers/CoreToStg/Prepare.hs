@@ -214,7 +214,7 @@ corePrepTopBinds initialCorePrepEnv binds
 
 mkDataConWorkers :: DynFlags -> ModLocation -> [TyCon] -> [CoreBind]
 -- See Note [Data constructor workers]
--- c.f. Note [Injecting implicit bindings] in GHC.Interface.Tidy
+-- c.f. Note [Injecting implicit bindings] in GHC.IR.Interface.Tidy
 mkDataConWorkers dflags mod_loc data_tycons
   = [ NonRec id (tick_it (getName data_con) (Var id))
                                 -- The ice is thin here, but it works

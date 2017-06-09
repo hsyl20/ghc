@@ -10,7 +10,7 @@ This module defines interface types and binders
 {-# LANGUAGE MultiWayIf #-}
     -- FlexibleInstances for Binary (DefMethSpec IfaceType)
 
-module GHC.Interface.Types (
+module GHC.IR.Interface.Types (
         IfExtName, IfLclName,
 
         IfaceType(..), IfacePredType, IfaceKind, IfaceCoercion(..),
@@ -77,7 +77,7 @@ import Data.List (foldl')
 
 type IfLclName = FastString     -- A local name in iface syntax
 
-type IfExtName = Name   -- An External or WiredIn Name can appear in GHC.Interface.Syntax
+type IfExtName = Name   -- An External or WiredIn Name can appear in GHC.IR.Interface.Syntax
                         -- (However Internal or System Names never should)
 
 data IfaceBndr          -- Local (non-top-level) binders

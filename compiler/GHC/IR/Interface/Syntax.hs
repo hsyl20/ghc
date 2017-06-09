@@ -5,8 +5,8 @@
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Interface.Syntax (
-        module GHC.Interface.Types,
+module GHC.IR.Interface.Syntax (
+        module GHC.IR.Interface.Types,
 
         IfaceDecl(..), IfaceFamTyConFlav(..), IfaceClassOp(..), IfaceAT(..),
         IfaceConDecl(..), IfaceConDecls(..), IfaceEqSpec,
@@ -41,7 +41,7 @@ module GHC.Interface.Syntax (
 
 #include "HsVersions.h"
 
-import GHC.Interface.Types
+import GHC.IR.Interface.Types
 import GHC.Utils.Binary.Fingerprint
 import GHC.IR.Core.Syntax( IsOrphan, isOrphan )
 import GHC.IR.Core.PrettyPrint()            -- Printing DFunArgs
@@ -85,7 +85,7 @@ infixl 3 &&&
 -- | A binding top-level 'Name' in an interface file (e.g. the name of an
 -- 'IfaceDecl').
 type IfaceTopBndr = Name
-  -- It's convenient to have an Name in the GHC.Interface.Syntax, although in each
+  -- It's convenient to have an Name in the GHC.IR.Interface.Syntax, although in each
   -- case the namespace is implied by the context. However, having an
   -- Name makes things like ifaceDeclImplicitBndrs and ifaceDeclFingerprints
   -- very convenient. Moreover, having the key of the binder means that
@@ -389,7 +389,7 @@ ifaceDeclImplicitBndrs :: IfaceDecl -> [OccName]
 -- N.B. the set of names returned here *must* match the set of
 -- TyThings returned by GHC.Types.implicitTyThings, in the sense that
 -- TyThing.getOccName should define a bijection between the two lists.
--- This invariant is used in GHC.Interface.Load.loadDecl (see note [Tricky iface loop])
+-- This invariant is used in GHC.IR.Interface.Load.loadDecl (see note [Tricky iface loop])
 -- The order of the list does not matter.
 
 ifaceDeclImplicitBndrs (IfaceData {ifName = tc_name, ifCons = cons })
@@ -512,7 +512,7 @@ data IfaceJoinInfo = IfaceNotJoinPoint
 {-
 Note [Empty case alternatives]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In GHC.Interface.Syntax an IfaceCase does not record the types of the alternatives,
+In GHC.IR.Interface.Syntax an IfaceCase does not record the types of the alternatives,
 unlike CorSyn Case.  But we need this type if the alternatives are empty.
 Hence IfaceECase.  See Note [Empty case alternatives] in GHC.IR.Core.Syntax.
 
@@ -1096,7 +1096,7 @@ To reconstruct the result types for T1 and T2 that we
 want to pretty print, we substitute the eq-spec
 [p->Int, q->Maybe c] in the arg pattern (p,q) to give
    T (Int, Maybe c)
-Remember that in GHC.Interface.Syntax, the TyCon and DataCon share the same
+Remember that in GHC.IR.Interface.Syntax, the TyCon and DataCon share the same
 universal type variables.
 
 ----------------------------- Printing IfaceExpr ------------------------------------
@@ -1248,11 +1248,11 @@ instance Outputable IfaceUnfolding where
 {-
 ************************************************************************
 *                                                                      *
-              Finding the Names in GHC.Interface.Syntax
+              Finding the Names in GHC.IR.Interface.Syntax
 *                                                                      *
 ************************************************************************
 
-This is used for dependency analysis in GHC.Interface.Utils, so that we
+This is used for dependency analysis in GHC.IR.Interface.Utils, so that we
 fingerprint a declaration before the things that depend on it.  It
 is specific to interface-file fingerprinting in the sense that we
 don't collect *all* Names: for example, the DFun of an instance is
@@ -1744,7 +1744,7 @@ knot in the type checker. It saved ~1% of the total build time of GHC.
 When we read an interface file, we extend the PTE, a mapping of Names
 to TyThings, with the declarations we have read. The extension of the
 PTE is strict in the Names, but not in the TyThings themselves.
-GHC.Interface.Load.loadDecl calculates the list of (Name, TyThing) bindings to
+GHC.IR.Interface.Load.loadDecl calculates the list of (Name, TyThing) bindings to
 add to the PTE. For an IfaceId, there's just one binding to add; and
 the ty, details, and idinfo fields of an IfaceId are used only in the
 TyThing. So by reading those fields lazily we may be able to save the

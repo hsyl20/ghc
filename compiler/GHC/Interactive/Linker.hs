@@ -22,7 +22,7 @@ module GHC.Interactive.Linker ( getHValue, showLinkerState,
 
 import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
-import GHC.Interface.Load
+import GHC.IR.Interface.Load
 import GHC.IR.ByteCode.Linker
 import GHC.IR.ByteCode.Assembler
 import GHC.IR.ByteCode.Types

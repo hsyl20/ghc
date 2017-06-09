@@ -67,7 +67,7 @@ import GHC.Data.Kind
 import GHC.Data.Name.Set
 import TcMType
 import TcHsType
-import GHC.Interface.TypeCheck
+import GHC.IR.Interface.TypeCheck
 import GHC.Data.Types
 import FamInst
 import GHC.Data.FamilyInstance
@@ -80,7 +80,7 @@ import GHC.Data.OccName as OccName
 import GHC.Config.Hooks
 import GHC.Data.Var
 import GHC.Data.Module
-import GHC.Interface.Load
+import GHC.IR.Interface.Load
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

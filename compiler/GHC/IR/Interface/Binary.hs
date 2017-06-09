@@ -9,7 +9,7 @@
 -- compiler is severely affected
 
 -- | Binary interface file support.
-module GHC.Interface.Binary (
+module GHC.IR.Interface.Binary (
         writeBinIface,
         readBinIface,
         getSymtabName,
@@ -22,7 +22,7 @@ module GHC.Interface.Binary (
 
 import TcRnMonad
 import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
-import GHC.Interface.Environment
+import GHC.IR.Interface.Environment
 import GHC.Types
 import GHC.Data.Module
 import GHC.Data.Name

@@ -25,7 +25,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax    ( zonkTyBndrsX, emptyZonkEnv
                   , zonkTcTypeToTypes, zonkTcTypeToType )
 import TcMType
 import TcType
-import GHC.Interface.BuildTypeAndClass
+import GHC.IR.Interface.BuildTypeAndClass
 import Inst
 import GHC.Data.ClassInstance
 import FamInst

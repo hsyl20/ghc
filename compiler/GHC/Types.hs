@@ -181,7 +181,7 @@ import GHC.Packages hiding  ( Version(..) )
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
 import GHC.Data.BasicTypes
-import GHC.Interface.Syntax
+import GHC.IR.Interface.Syntax
 import GHC.Data.Maybe
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
@@ -1442,7 +1442,7 @@ Where do interactively-bound Ids come from?
     TcRnDriver.externaliseAndTidyId, so they get Names like Ghic4.foo.
 
   - Ids bound by the debugger etc have Names constructed by
-    GHC.Interface.Environment.newInteractiveBinder; at the call sites it is followed by
+    GHC.IR.Interface.Environment.newInteractiveBinder; at the call sites it is followed by
     mkVanillaGlobal or mkVanillaGlobalWithInfo.  So again, they are
     all Global, External.
 
@@ -1864,9 +1864,9 @@ Examples:
 -- scope, just for a start!
 
 -- N.B. the set of TyThings returned here *must* match the set of
--- names returned by GHC.Interface.Load.ifaceDeclImplicitBndrs, in the sense that
+-- names returned by GHC.IR.Interface.Load.ifaceDeclImplicitBndrs, in the sense that
 -- TyThing.getOccName should define a bijection between the two lists.
--- This invariant is used in GHC.Interface.Load.loadDecl (see note [Tricky iface loop])
+-- This invariant is used in GHC.IR.Interface.Load.loadDecl (see note [Tricky iface loop])
 -- The order of the list does not matter.
 implicitTyThings :: TyThing -> [TyThing]
 implicitTyThings (AnId _)       = []
@@ -2310,7 +2310,7 @@ data Dependencies
                         -- [The type family instance consistency story].
          }
   deriving( Eq )
-        -- Equality used only for old/new comparison in GHC.Interface.Utils.addFingerprints
+        -- Equality used only for old/new comparison in GHC.IR.Interface.Utils.addFingerprints
         -- See 'TcRnTypes.ImportAvails' for details on dependencies.
 
 instance Binary Dependencies where

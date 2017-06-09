@@ -41,7 +41,7 @@ import TcSimplify
 import TcUnify
 import TcType
 import TcEvidence
-import GHC.Interface.BuildTypeAndClass
+import GHC.IR.Interface.BuildTypeAndClass
 import GHC.Data.Var.Set
 import GHC.Data.Id.Make
 import TcTyDecls

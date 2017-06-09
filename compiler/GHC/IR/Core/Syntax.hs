@@ -1116,7 +1116,7 @@ has two major consequences
    In contrast, orphans are all fingerprinted together in the
    mi_orph_hash field of the ModIface.
 
-   See GHC.Interface.Utils.addFingerprints.
+   See GHC.IR.Interface.Utils.addFingerprints.
 
 Orphan-hood is computed
   * For class instances:
@@ -1124,8 +1124,8 @@ Orphan-hood is computed
     (because it is needed during instance lookup)
 
   * For rules and family instances:
-       when we generate an IfaceRule (GHC.Interface.Utils.coreRuleToIfaceRule)
-                     or IfaceFamInst (GHC.Interface.Utils.instanceToIfaceInst)
+       when we generate an IfaceRule (GHC.IR.Interface.Utils.coreRuleToIfaceRule)
+                     or IfaceFamInst (GHC.IR.Interface.Utils.instanceToIfaceInst)
 -}
 
 {-
@@ -1189,7 +1189,7 @@ data CoreRule
         ru_auto :: Bool,   -- ^ @True@  <=> this rule is auto-generated
                            --               (notably by Specialise or SpecConstr)
                            --   @False@ <=> generated at the user's behest
-                           -- See Note [Trimming auto-rules] in GHC.Interface.Tidy
+                           -- See Note [Trimming auto-rules] in GHC.IR.Interface.Tidy
                            -- for the sole purpose of this field.
 
         ru_origin :: !Module,   -- ^ 'Module' the rule was defined in, used
@@ -1302,7 +1302,7 @@ data Unfolding
 
   | BootUnfolding      -- ^ We have no information about the unfolding, because
                        -- this 'Id' came from an @hi-boot@ file.
-                       -- See Note [Inlining and hs-boot files] in GHC.Interface.CoreToInterface
+                       -- See Note [Inlining and hs-boot files] in GHC.Compilers.CoreToInterface
                        -- for what this is used for.
 
   | OtherCon [AltCon]  -- ^ It ain't one of these constructors.

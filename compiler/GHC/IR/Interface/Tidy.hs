@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP, ViewPatterns #-}
 
-module GHC.Interface.Tidy (
+module GHC.IR.Interface.Tidy (
        mkBootModDetailsTc, tidyProgram, globaliseAndTidyId
    ) where
 
@@ -46,7 +46,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Cache
 import GHC.Data.Available
-import GHC.Interface.Environment
+import GHC.IR.Interface.Environment
 import TcEnv
 import TcRnMonad
 import GHC.Data.DataConstructor
@@ -89,7 +89,7 @@ of TyThings.
 
 ************************************************************************
 *                                                                      *
-                Plan A: simpleGHC.Interface.Tidy
+                Plan A: simpleGHC.IR.Interface.Tidy
 *                                                                      *
 ************************************************************************
 
@@ -516,7 +516,7 @@ tidyVectInfo (_, var_env) info@(VectInfo { vectInfoVar          = vars
     lookup_var var = lookupWithDefaultVarEnv var_env var var
 
     -- We need to make sure that all names getting into the iface version of 'VectInfo' are
-    -- external; otherwise, 'GHC.Interface.Utils' will bomb out.
+    -- external; otherwise, 'GHC.IR.Interface.Utils' will bomb out.
     isExternalId = isExternalName . idName
 
 {-
@@ -583,7 +583,7 @@ It's much safer just to inject them right at the end, after tidying.
 
 Oh: two other reasons for injecting them late:
 
-  - If implicit Ids are already in the bindings when we start GHC.Interface.Tidy,
+  - If implicit Ids are already in the bindings when we start GHC.IR.Interface.Tidy,
     we'd have to be careful not to treat them as external Ids (in
     the sense of chooseExternalIds); else the Ids mentioned in *their*
     RHSs will be treated as external and you get an interface file
@@ -1329,7 +1329,7 @@ CAF list to keep track of non-collectable CAFs.
 Note [Disgusting computation of CafRefs]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We compute hasCafRefs here, because IdInfo is supposed to be finalised
-after GHC.Interface.Tidy.  But CorePrep does some transformations that affect CAF-hood.
+after GHC.IR.Interface.Tidy.  But CorePrep does some transformations that affect CAF-hood.
 So we have to *predict* the result here, which is revolting.
 
 In particular CorePrep expands Integer literals.  So in the prediction code

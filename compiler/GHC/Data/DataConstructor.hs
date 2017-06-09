@@ -316,7 +316,7 @@ data DataCon
         dcExTyVars     :: [TyVarBinder],
 
         -- INVARIANT: the UnivTyVars and ExTyVars all have distinct OccNames
-        -- Reason: less confusing, and easier to generate GHC.Interface.Syntax
+        -- Reason: less confusing, and easier to generate GHC.IR.Interface.Syntax
 
         dcEqSpec :: [EqSpec],   -- Equalities derived from the result type,
                                 -- _as written by the programmer_
@@ -1299,7 +1299,7 @@ splitDataProductType_maybe ty
 ************************************************************************
 
 buildAlgTyCon is here because it is called from TysWiredIn, which can
-depend on this module, but not on GHC.Interface.BuildTypeAndClass.
+depend on this module, but not on GHC.IR.Interface.BuildTypeAndClass.
 -}
 
 buildAlgTyCon :: Name

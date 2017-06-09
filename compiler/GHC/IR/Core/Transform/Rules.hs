@@ -75,7 +75,7 @@ Note [Overall plumbing for rules]
      the IdInfo for that Id.  See Note [Attach rules to local ids] in
      GHC.Compilers.HaskellToCore.Binding
 
-* GHC.Interface.Tidy strips off all the rules from local Ids and adds them to
+* GHC.IR.Interface.Tidy strips off all the rules from local Ids and adds them to
   mg_rules, so that the ModGuts has *all* the locally-declared rules.
 
 * The HomePackageTable contains a ModDetails for each home package

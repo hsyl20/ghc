@@ -310,7 +310,7 @@ import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance ( FamInst )
 import GHC.Data.SrcLoc
 import GHC.IR.Core.Syntax
-import GHC.Interface.Tidy
+import GHC.IR.Interface.Tidy
 import GHC.Program.Driver.Phases     ( Phase(..), isHaskellSrcFilename )
 import GHC.Utils.Finder
 import GHC.Types
@@ -1268,7 +1268,7 @@ pprParenSymName a = parenSymOcc (getOccName a) (ppr (getName a))
 -- ToDo: check for small transformations that happen to the syntax in
 -- the typechecker (eg. -e ==> negate e, perhaps for fromIntegral)
 
--- ToDo: maybe use TH syntax instead of GHC.Interface.Syntax?  There's already a way
+-- ToDo: maybe use TH syntax instead of GHC.IR.Interface.Syntax?  There's already a way
 -- to get from TyCons, Ids etc. to TH syntax (reify).
 
 -- :browse will use either lm_toplev or inspect lm_interface, depending

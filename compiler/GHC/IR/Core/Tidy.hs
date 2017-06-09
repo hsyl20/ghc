@@ -4,7 +4,7 @@
 
 
 This module contains "tidying" code for *nested* expressions, bindings, rules.
-The code for *top-level* bindings is in GHC.Interface.Tidy.
+The code for *top-level* bindings is in GHC.IR.Interface.Tidy.
 -}
 
 {-# LANGUAGE CPP #-}
@@ -227,7 +227,7 @@ tidyUnfolding tidy_env
   = seqIt $ unf { uf_tmpl = tidyExpr tidy_env unf_rhs }    -- Preserves OccInfo
     -- This seqIt avoids a space leak: otherwise the uf_is_value,
     -- uf_is_conlike, ... fields may retain a reference to the
-    -- pre-tidied expression forever (GHC.Interface.CoreToInterface doesn't look at them)
+    -- pre-tidied expression forever (GHC.Compilers.CoreToInterface doesn't look at them)
 
   | otherwise
   = unf_from_rhs

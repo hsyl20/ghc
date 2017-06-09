@@ -56,7 +56,7 @@ import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Packages ( trusted, getPackageDetails, getInstalledPackageDetails,
                   listVisibleModuleNames, pprFlag )
-import GHC.Interface.Syntax ( showToHeader )
+import GHC.IR.Interface.Syntax ( showToHeader )
 import GHC.Utils.PrettyPrint.TyThing
 import PrelNames
 import GHC.Data.RdrName ( RdrName, getRdrName )

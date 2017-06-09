@@ -828,7 +828,7 @@ lazyGet bh = do
 -- These two settings have different needs while serializing Names:
 --
 -- * Names in interface files are serialized via a symbol table (see Note
---   [Symbol table representation of names] in GHC.Interface.Binary).
+--   [Symbol table representation of names] in GHC.IR.Interface.Binary).
 --
 -- * During fingerprinting a binding Name is serialized as the OccName and a
 --   non-binding Name is serialized as the fingerprint of the thing they

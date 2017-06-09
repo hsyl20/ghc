@@ -31,7 +31,7 @@ module GHC.Data.Unique (
 
         mkUniqueGrimily,                -- Used in UniqSupply only!
         getKey,                         -- Used in Var, UniqFM, Name only!
-        mkUnique, unpkUnique,           -- Used in GHC.Interface.Binary only
+        mkUnique, unpkUnique,           -- Used in GHC.IR.Interface.Binary only
 
         deriveUnique,                   -- Ditto
         newTagUnique,                   -- Used in CgCase
@@ -166,7 +166,7 @@ unpkUnique (MkUnique u)
 -- | The interface file symbol-table encoding assumes that known-key uniques fit
 -- in 30-bits; verify this.
 --
--- See Note [Symbol table representation of names] in GHC.Interface.Binary for details.
+-- See Note [Symbol table representation of names] in GHC.IR.Interface.Binary for details.
 isValidKnownKeyUnique :: Unique -> Bool
 isValidKnownKeyUnique u =
     case unpkUnique u of

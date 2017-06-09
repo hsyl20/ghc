@@ -500,11 +500,11 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Name.Cache \
 	GHC.Data.Id \
 	GHC.Data.Id.Info \
-	GHC.Interface.Syntax \
-	GHC.Interface.Types \
+	GHC.IR.Interface.Syntax \
+	GHC.IR.Interface.Types \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \
-	GHC.Interface.CoreToInterface \
+	GHC.Compilers.CoreToInterface \
 	GHC.Data.ClassInstance \
 	GHC.Data.Kind \
 	KnownUniques \

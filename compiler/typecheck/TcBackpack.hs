@@ -27,11 +27,11 @@ import TcTyDecls
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import Inst
-import GHC.Interface.TypeCheck
+import GHC.IR.Interface.TypeCheck
 import TcMType
 import TcType
 import TcSimplify
-import GHC.Interface.Load
+import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.Utils.Error
 import GHC.Data.Id
@@ -49,7 +49,7 @@ import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn )
 import GHC.Data.Maybe
 import TcEnv
 import GHC.Data.Var
-import GHC.Interface.Syntax
+import GHC.IR.Interface.Syntax
 import PrelNames
 import qualified Data.Map as Map
 
@@ -58,7 +58,7 @@ import GHC.Data.Unique.DeterSet
 import GHC.Data.NameShape
 import TcErrors
 import TcUnify
-import GHC.Interface.Renaming
+import GHC.IR.Interface.Renaming
 import GHC.Utils
 
 import Control.Monad
@@ -457,7 +457,7 @@ inheritedSigPvpWarning =
 --    to 'Name's, so this case needs to be handled specially.
 --
 --    The details are in the documentation for 'typecheckIfacesForMerging'.
---    and the Note [Resolving never-exported Names in GHC.Interface.TypeCheck].
+--    and the Note [Resolving never-exported Names in GHC.IR.Interface.TypeCheck].
 --
 --  * When we rename modules and signatures, we use the export lists to
 --    decide how the declarations should be renamed.  However, this
@@ -466,7 +466,7 @@ inheritedSigPvpWarning =
 --    *consistently*, so that 'typecheckIfacesForMerging' can wire them
 --    up as needed.
 --
---    The details are in Note [rnIfaceNeverExported] in 'GHC.Interface.Renaming'.
+--    The details are in Note [rnIfaceNeverExported] in 'GHC.IR.Interface.Renaming'.
 --
 -- The root cause for all of these complications is the fact that these
 -- logically "implicit" entities are defined indirectly in an interface
@@ -855,7 +855,7 @@ mergeSignatures
     -- when we have a ClsInst, we can pull up the correct DFun to check if
     -- the types match.
     --
-    -- See also Note [rnIfaceNeverExported] in GHC.Interface.Renaming
+    -- See also Note [rnIfaceNeverExported] in GHC.IR.Interface.Renaming
     dfun_insts <- forM (tcg_insts tcg_env) $ \inst -> do
         n <- newDFunName (is_cls inst) (is_tys inst) (nameSrcSpan (is_dfun_name inst))
         let dfun = setVarName (is_dfun inst) n

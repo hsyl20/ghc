@@ -271,7 +271,7 @@ pprFamInsts finsts = vcat (map pprFamInst finsts)
 Note [Lazy axiom match]
 ~~~~~~~~~~~~~~~~~~~~~~~
 It is Vitally Important that mkImportedFamInst is *lazy* in its axiom
-parameter. The axiom is loaded lazily, via a forkM, in GHC.Interface.TypeCheck. Sometime
+parameter. The axiom is loaded lazily, via a forkM, in GHC.IR.Interface.TypeCheck. Sometime
 later, mkImportedFamInst is called using that axiom. However, the axiom
 may itself depend on entities which are not yet loaded as of the time
 of the mkImportedFamInst. Thus, if mkImportedFamInst eagerly looks at the

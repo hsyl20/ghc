@@ -11,7 +11,7 @@ module TcTypeable(mkTypeableBinds) where
 
 import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
 import TcBinds( addTypecheckedBinds )
-import GHC.Interface.Environment( newGlobalBinder )
+import GHC.IR.Interface.Environment( newGlobalBinder )
 import GHC.Data.Types( Type(..), TyLit(..) )
 import TcEnv
 import TcEvidence ( mkWpTyApps )
@@ -80,7 +80,7 @@ The overall plan is this:
    to use for these M.$tcT "tycon rep names". Note that these must be
    treated as "never exported" names by Backpack (see
    Note [Handling never-exported TyThings under Backpack]). Consequently
-   they get slightly special treatment in GHC.Interface.Renaming.rnIfaceDecl.
+   they get slightly special treatment in GHC.IR.Interface.Renaming.rnIfaceDecl.
 
 3. Record the TyConRepName in T's TyCon, including for promoted
    data and type constructors, and kinds like * and #.
@@ -339,7 +339,7 @@ mkPrimTypeableTodos
 -- The majority of the types we need here are contained in 'primTyCons'.
 -- However, not all of them: in particular unboxed tuples are absent since we
 -- don't want to include them in the original name cache. See
--- Note [Built-in syntax and the OrigNameCache] in GHC.Interface.Environment for more.
+-- Note [Built-in syntax and the OrigNameCache] in GHC.IR.Interface.Environment for more.
 ghcPrimTypeableTyCons :: [TyCon]
 ghcPrimTypeableTyCons = concat
     [ [ runtimeRepTyCon, vecCountTyCon, vecElemTyCon

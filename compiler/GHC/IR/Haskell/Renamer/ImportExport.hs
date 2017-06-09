@@ -26,7 +26,7 @@ import TcEnv
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Fixity
 import GHC.IR.Haskell.Renamer.Utils          ( warnUnusedTopBinds, mkFieldEnv )
-import GHC.Interface.Load        ( loadSrcInterface )
+import GHC.IR.Interface.Load        ( loadSrcInterface )
 import TcRnMonad
 import PrelNames
 import GHC.Data.Module
@@ -216,9 +216,9 @@ rnImportDecl this_mod
 
     -- Check for self-import, which confuses the typechecker (Trac #9032)
     -- ghc --make rejects self-import cycles already, but batch-mode may not
-    -- at least not until GHC.Interface.TypeCheck.tcHiBootIface, which is too late to avoid
+    -- at least not until GHC.IR.Interface.TypeCheck.tcHiBootIface, which is too late to avoid
     -- typechecker crashes.  (Indirect self imports are not caught until
-    -- GHC.Interface.TypeCheck, see #10337 tracking how to make this error better.)
+    -- GHC.IR.Interface.TypeCheck, see #10337 tracking how to make this error better.)
     --
     -- Originally, we also allowed 'import {-# SOURCE #-} M', but this
     -- caused bug #10182: in one-shot mode, we should never load an hs-boot
@@ -384,7 +384,7 @@ calculateAvails dflags iface mod_safe' want_boot imported_by =
             -- finished dealing with the direct imports we want to
             -- know if any of them depended on CM.hi-boot, in
             -- which case we should do the hi-boot consistency
-            -- check.  See GHC.Interface.Load.loadHiBootInterface
+            -- check.  See GHC.IR.Interface.Load.loadHiBootInterface
             ((moduleName imp_mod,want_boot):dep_mods deps,dep_pkgs deps,ptrust)
 
          | otherwise =

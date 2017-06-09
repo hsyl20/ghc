@@ -201,7 +201,7 @@ import qualified Language.Haskell.TH as TH
 
 -- | A 'NameShape' is a substitution on 'Name's that can be used
 -- to refine the identities of a hole while we are renaming interfaces
--- (see 'GHC.Interface.Renaming').  Specifically, a 'NameShape' for
+-- (see 'GHC.IR.Interface.Renaming').  Specifically, a 'NameShape' for
 -- 'ns_module_name' @A@, defines a mapping from @{A.T}@
 -- (for some 'OccName' @T@) to some arbitrary other 'Name'.
 --
@@ -301,7 +301,7 @@ data IfGblEnv
         -- was originally a hi-boot file.
         -- We need the module name so we can test when it's appropriate
         -- to look in this env.
-        -- See Note [Tying the knot] in GHC.Interface.TypeCheck
+        -- See Note [Tying the knot] in GHC.IR.Interface.TypeCheck
         if_rec_types :: Maybe (Module, IfG TypeEnv)
                 -- Allows a read effect, so it can be in a mutable
                 -- variable; c.f. handling the external package type env
@@ -334,8 +334,8 @@ data IfLclEnv
         -- This field is used to make sure "implicit" declarations
         -- (anything that cannot be exported in mi_exports) get
         -- wired up correctly in typecheckIfacesForMerging.  Most
-        -- of the time it's @Nothing@.  See Note [Resolving never-exported Names in GHC.Interface.TypeCheck]
-        -- in GHC.Interface.TypeCheck.
+        -- of the time it's @Nothing@.  See Note [Resolving never-exported Names in GHC.IR.Interface.TypeCheck]
+        -- in GHC.IR.Interface.TypeCheck.
         if_implicits_env :: Maybe TypeEnv,
 
         if_tv_env  :: FastStringEnv TyVar,     -- Nested tyvar bindings
@@ -464,14 +464,14 @@ data FrontendResult
 --            then moduleUnitId this_mod == thisPackage dflags
 --
 --      - For any code involving Names, we want semantic modules.
---        See lookupIfaceTop in GHC.Interface.Environment, mkIface and addFingerprints
---        in GHC.Interface.Utils, and tcLookupGlobal in TcEnv
+--        See lookupIfaceTop in GHC.IR.Interface.Environment, mkIface and addFingerprints
+--        in GHC.IR.Interface.Utils, and tcLookupGlobal in TcEnv
 --
 --      - When reading interfaces, we want the identity module to
 --        identify the specific interface we want (such interfaces
 --        should never be loaded into the EPS).  However, if a
 --        hole module <A> is requested, we look for A.hi
---        in the home library we are compiling.  (See GHC.Interface.Load.)
+--        in the home library we are compiling.  (See GHC.IR.Interface.Load.)
 --        Similarly, in GHC.IR.Haskell.Renamer.ImportExport we check for self-imports using
 --        identity modules, to allow signatures to import their implementor.
 --
@@ -760,7 +760,7 @@ We gather two sorts of usage information
       Used (a) to report "defined but not used"
                (see GHC.IR.Haskell.Renamer.ImportExport.reportUnusedNames)
            (b) to generate version-tracking usage info in interface
-               files (see GHC.Interface.Utils.mkUsedNames)
+               files (see GHC.IR.Interface.Utils.mkUsedNames)
    This usage info is mainly gathered by the renamer's
    gathering of free-variables
 
@@ -1346,7 +1346,7 @@ data WhereFrom
   = ImportByUser IsBootInterface        -- Ordinary user import (perhaps {-# SOURCE #-})
   | ImportBySystem                      -- Non user import.
   | ImportByPlugin                      -- Importing a plugin;
-                                        -- See Note [Care with plugin imports] in GHC.Interface.Load
+                                        -- See Note [Care with plugin imports] in GHC.IR.Interface.Load
 
 instance Outputable WhereFrom where
   ppr (ImportByUser is_boot) | is_boot     = text "{- SOURCE -}"

@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Interface.BuildTypeAndClass (
+module GHC.IR.Interface.BuildTypeAndClass (
         buildDataCon, mkDataConUnivTyVarBinders,
         buildPatSyn,
         TcMethInfo, buildClass,
@@ -15,7 +15,7 @@ module GHC.Interface.BuildTypeAndClass (
 
 #include "HsVersions.h"
 
-import GHC.Interface.Environment
+import GHC.IR.Interface.Environment
 import GHC.Data.FamilyInstance( FamInstEnvs, mkNewTypeCoAxiom )
 import TysWiredIn( isCTupleTyConName )
 import TysPrim ( voidPrimTy )
@@ -83,7 +83,7 @@ mkNewTyConRhs tycon_name tycon con
 
     etad_tvs   :: [TyVar]  -- Matched lazily, so that mkNewTypeCo can
     etad_roles :: [Role]   -- return a TyCon without pulling on rhs_ty
-    etad_rhs   :: Type     -- See Note [Tricky iface loop] in GHC.Interface.Load
+    etad_rhs   :: Type     -- See Note [Tricky iface loop] in GHC.IR.Interface.Load
     (etad_tvs, etad_roles, etad_rhs) = eta_reduce (reverse tvs) (reverse roles) rhs_ty
 
     eta_reduce :: [TyVar]       -- Reversed
@@ -444,9 +444,9 @@ are boxed.
 newImplicitBinder :: Name                       -- Base name
                   -> (OccName -> OccName)       -- Occurrence name modifier
                   -> TcRnIf m n Name            -- Implicit name
--- Called in GHC.Interface.BuildTypeAndClass to allocate the implicit binders of type/class decls
+-- Called in GHC.IR.Interface.BuildTypeAndClass to allocate the implicit binders of type/class decls
 -- For source type/class decls, this is the first occurrence
--- For iface ones, the GHC.Interface.Load has already allocated a suitable name in the cache
+-- For iface ones, the GHC.IR.Interface.Load has already allocated a suitable name in the cache
 newImplicitBinder base_name mk_sys_occ
   = newImplicitBinderLoc base_name mk_sys_occ (nameSrcSpan base_name)
 

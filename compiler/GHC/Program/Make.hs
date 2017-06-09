@@ -43,7 +43,7 @@ import GHC.Monad
 import GHC.IR.Haskell.Parser.HeaderInfo
 import GHC.Types
 import GHC.Data.Module
-import GHC.Interface.TypeCheck          ( typecheckIface )
+import GHC.IR.Interface.TypeCheck          ( typecheckIface )
 import TcRnMonad        ( initIfaceCheck )
 import GHC.Program.Main
 
@@ -1524,7 +1524,7 @@ file, we re-generate the ModDetails for each of the modules that
 depends on the .hs-boot file, so that everyone points to the proper
 TyCons, Ids etc. defined by the real module, not the boot module.
 Fortunately re-generating a ModDetails from a ModIface is easy: the
-function GHC.Interface.TypeCheck.typecheckIface does exactly that.
+function GHC.IR.Interface.TypeCheck.typecheckIface does exactly that.
 
 Picking the modules to re-typecheck is slightly tricky.  Starting from
 the module graph consisting of the modules that have already been

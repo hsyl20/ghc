@@ -8,7 +8,7 @@ Loading interface files
 
 {-# LANGUAGE CPP #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module GHC.Interface.Load (
+module GHC.IR.Interface.Load (
         -- Importing one thing
         tcLookupImported_maybe, importDecl,
         checkWiredInTyCon, ifCheckWiredInThing,
@@ -22,7 +22,7 @@ module GHC.Interface.Load (
         loadInterface,
         loadSysInterface, loadUserInterface, loadPluginInterface,
         findAndReadIface, readIface,    -- Used when reading the module's old interface
-        loadDecls,      -- Should move to GHC.Interface.TypeCheck and be renamed
+        loadDecls,      -- Should move to GHC.IR.Interface.TypeCheck and be renamed
         initExternalPackageState,
         moduleFreeHolesPrecise,
 
@@ -32,13 +32,13 @@ module GHC.Interface.Load (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   GHC.Interface.TypeCheck( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
+import {-# SOURCE #-}   GHC.IR.Interface.TypeCheck( tcIfaceDecl, tcIfaceRules, tcIfaceInst,
                                  tcIfaceFamInst, tcIfaceVectInfo,
                                  tcIfaceAnnotations, tcIfaceCompleteSigs )
 
 import GHC.Config.Flags
-import GHC.Interface.Syntax
-import GHC.Interface.Environment
+import GHC.IR.Interface.Syntax
+import GHC.IR.Interface.Environment
 import GHC.Types
 
 import GHC.Data.BasicTypes hiding (SuccessFlag(..))
@@ -65,14 +65,14 @@ import GHC.Utils.Finder
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable as Outputable
-import GHC.Interface.Binary
+import GHC.IR.Interface.Binary
 import GHC.Utils.Panic
 import GHC.Utils
 import GHC.Data.FastString
 import GHC.Utils.Fingerprint
 import GHC.Config.Hooks
 import GHC.Data.FieldLabel
-import GHC.Interface.Renaming
+import GHC.IR.Interface.Renaming
 import GHC.Data.Unique.DeterSet
 
 import Control.Monad
@@ -182,8 +182,8 @@ for any module with an instance decl or RULE that we might want.
 
 * BUT, if the TyCon is a wired-in TyCon, we don't really need its interface;
   but we must make sure we read its interface in case it has instances or
-  rules.  That is what GHC.Interface.Load.loadWiredInHomeIface does.  It's called
-  from GHC.Interface.TypeCheck.{tcImportDecl, checkWiredInTyCon, ifCheckWiredInThing}
+  rules.  That is what GHC.IR.Interface.Load.loadWiredInHomeIface does.  It's called
+  from GHC.IR.Interface.TypeCheck.{tcImportDecl, checkWiredInTyCon, ifCheckWiredInThing}
 
 * HOWEVER, only do this for TyCons.  There are no wired-in Classes.  There
   are some wired-in Ids, but we don't want to load their interfaces. For
@@ -409,7 +409,7 @@ loadInterface doc_str mod from
                             -- Stoutly warn against an EPS-updating import
                             -- of one's own boot file! (one-shot only)
                             --See Note [Do not update EPS with your own hi-boot]
-                            -- in GHC.Interface.Utils.
+                            -- in GHC.IR.Interface.Utils.
                             WARN( hi_boot_file &&
                                   fmap fst (if_rec_types gbl_env) == Just mod,
                                   ppr mod )

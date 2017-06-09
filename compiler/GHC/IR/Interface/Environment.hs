@@ -2,7 +2,7 @@
 
 {-# LANGUAGE CPP, RankNTypes #-}
 
-module GHC.Interface.Environment (
+module GHC.IR.Interface.Environment (
         newGlobalBinder, newInteractiveBinder,
         externaliseName,
         lookupIfaceTop,
@@ -31,7 +31,7 @@ import GHC.Data.Available
 import GHC.Data.Module
 import GHC.Data.FastString
 import GHC.Data.FastString.Environment
-import GHC.Interface.Types
+import GHC.IR.Interface.Types
 import GHC.Data.Name.Cache
 import GHC.Data.Unique.Supply
 import GHC.Data.SrcLoc
@@ -152,7 +152,7 @@ lookupOrig mod occ
                 --      we read the name-cache
                 --      then pull on mod (say)
                 --      which does some stuff that modifies the name cache
-                -- This did happen, with tycon_mod in GHC.Interface.TypeCheck.tcIfaceAlt (DataAlt..)
+                -- This did happen, with tycon_mod in GHC.IR.Interface.TypeCheck.tcIfaceAlt (DataAlt..)
           mod `seq` occ `seq` return ()
         ; traceIf (text "lookup_orig" <+> ppr mod <+> ppr occ)
 

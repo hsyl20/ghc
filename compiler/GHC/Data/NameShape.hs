@@ -23,7 +23,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import TcRnMonad
 import GHC.Utils
-import GHC.Interface.Environment
+import GHC.IR.Interface.Environment
 
 import Control.Monad
 

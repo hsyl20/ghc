@@ -7,7 +7,7 @@ module GHC.Config.Flags.Fingerprint (
     ) where
 
 import GHC.Utils.Binary
-import GHC.Interface.Binary ()
+import GHC.IR.Interface.Binary ()
 import GHC.Config.Flags
 import GHC.Types
 import GHC.Data.Module

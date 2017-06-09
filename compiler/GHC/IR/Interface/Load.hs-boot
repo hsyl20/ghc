@@ -1,4 +1,4 @@
-module GHC.Interface.Load where
+module GHC.IR.Interface.Load where
 import GHC.Data.Module (Module)
 import TcRnMonad (IfM)
 import GHC.Types (ModIface)

@@ -97,7 +97,7 @@ Note [About wired-in things]
   checker sees if the Name is wired in before looking up the name in
   the type environment.
 
-* GHC.Interface.Utils prunes out wired-in things before putting them in an interface file.
+* GHC.IR.Interface.Utils prunes out wired-in things before putting them in an interface file.
   So interface files never contain wired-in things.
 -}
 

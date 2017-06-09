@@ -146,7 +146,7 @@ Library
         GHC.Program.BackPack.Main
         GHC.Program.BackPack.Syntax
         GHC.Data.NameShape
-        GHC.Interface.Renaming
+        GHC.IR.Interface.Renaming
         GHC.Data.Available
         GHC.Data.BasicTypes
         GHC.Data.ConstructorLike
@@ -295,16 +295,16 @@ Library
         GHC.IR.Haskell.Type
         GHC.IR.Haskell.Utils
         GHC.IR.Haskell.PrettyPrint.Dump
-        GHC.Interface.Binary
+        GHC.IR.Interface.Binary
         GHC.Utils.Binary.Fingerprint
-        GHC.Interface.BuildTypeAndClass
-        GHC.Interface.Environment
-        GHC.Interface.Syntax
-        GHC.Interface.Types
-        GHC.Interface.CoreToInterface
-        GHC.Interface.Load
-        GHC.Interface.Utils
-        GHC.Interface.TypeCheck
+        GHC.IR.Interface.BuildTypeAndClass
+        GHC.IR.Interface.Environment
+        GHC.IR.Interface.Syntax
+        GHC.IR.Interface.Types
+        GHC.Compilers.CoreToInterface
+        GHC.IR.Interface.Load
+        GHC.IR.Interface.Utils
+        GHC.IR.Interface.TypeCheck
         GHC.Config.Flags.Fingerprint
         GHC.Data.Annotation
         GHC.Program.CmdLineParser
@@ -338,7 +338,7 @@ Library
         GHC.Utils.SysTools
         GHC.Utils.SysTools.Terminal
         GHC.Utils.Elf
-        GHC.Interface.Tidy
+        GHC.IR.Interface.Tidy
         GHC.Utils.CharType
         GHC.IR.Haskell.Parser.Utils
         GHC.IR.Haskell.Lexer

@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 
 -- | Functions for converting Core things to interface file things.
-module GHC.Interface.CoreToInterface
+module GHC.Compilers.CoreToInterface
     ( -- * Binders
       toIfaceTvBndr
     , toIfaceTvBndrs
@@ -44,7 +44,7 @@ module GHC.Interface.CoreToInterface
 
 #include "HsVersions.h"
 
-import GHC.Interface.Syntax
+import GHC.IR.Interface.Syntax
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Id.Info
@@ -350,7 +350,7 @@ toIfaceLetBndr id  = IfLetBndr (occNameFS (getOccName id))
                                (toIfaceIdInfo (idInfo id))
                                (toIfaceJoinInfo (isJoinId_maybe id))
   -- Put into the interface file any IdInfo that CoreTidy.tidyLetBndr
-  -- has left on the Id.  See Note [IdInfo on nested let-bindings] in GHC.Interface.Syntax
+  -- has left on the Id.  See Note [IdInfo on nested let-bindings] in GHC.IR.Interface.Syntax
 
 toIfaceIdDetails :: IdDetails -> IfaceIdDetails
 toIfaceIdDetails VanillaId                      = IfVanillaId
@@ -374,7 +374,7 @@ toIfaceIdInfo id_info
        []    -> NoInfo
        infos -> HasInfo infos
                -- NB: strictness and arity must appear in the list before unfolding
-               -- See GHC.Interface.TypeCheck.tcUnfolding
+               -- See GHC.IR.Interface.TypeCheck.tcUnfolding
   where
     ------------  Arity  --------------
     arity_info = arityInfo id_info
@@ -425,7 +425,7 @@ toIfUnfolding lb (CoreUnfolding { uf_tmpl = rhs
         InlineCompulsory -> IfCompulsory if_rhs
         InlineRhs        -> IfCoreUnfold False if_rhs
         -- Yes, even if guidance is UnfNever, expose the unfolding
-        -- If we didn't want to expose the unfolding, GHC.Interface.Tidy would
+        -- If we didn't want to expose the unfolding, GHC.IR.Interface.Tidy would
         -- have stuck in NoUnfolding.  For supercompilation we want
         -- to see that unfolding!
   where

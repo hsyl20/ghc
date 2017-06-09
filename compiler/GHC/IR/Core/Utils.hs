@@ -2165,9 +2165,9 @@ rhsIsStatic :: Platform
             -> (Name -> Bool)         -- Which names are dynamic
             -> (Integer -> CoreExpr)  -- Desugaring for integer literals (disgusting)
                                       -- C.f. Note [Disgusting computation of CafRefs]
-                                      --      in GHC.Interface.Tidy
+                                      --      in GHC.IR.Interface.Tidy
             -> CoreExpr -> Bool
--- It's called (i) in GHC.Interface.Tidy.hasCafRefs to decide if the rhs is, or
+-- It's called (i) in GHC.IR.Interface.Tidy.hasCafRefs to decide if the rhs is, or
 -- refers to, CAFs; (ii) in CoreToStg to decide whether to put an
 -- update flag on it and (iii) in GHC.Compilers.HaskellToCore.Expression to decide how to expand
 -- list literals

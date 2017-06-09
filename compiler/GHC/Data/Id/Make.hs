@@ -521,7 +521,7 @@ mkDataConRep dflags fam_envs wrap_name mb_bangs data_con
                          `setInlinePragInfo`    wrap_prag
                          `setUnfoldingInfo`     wrap_unf
                          `setStrictnessInfo`    wrap_sig
-                             -- We need to get the CAF info right here because GHC.Interface.Tidy
+                             -- We need to get the CAF info right here because GHC.IR.Interface.Tidy
                              -- does not tidy the IdInfo of implicit bindings (like the wrapper)
                              -- so it not make sure that the CAF info is sane
                          `setNeverLevPoly`      wrap_ty
@@ -1326,7 +1326,7 @@ a) In source Haskell its second arg can have an unboxed type
          seq :: forall a b. a -> b -> b
    and treat it as a language construct from a typing point of view.
 
-b) Its fixity is set in GHC.Interface.Load.ghcPrimIface
+b) Its fixity is set in GHC.IR.Interface.Load.ghcPrimIface
 
 c) It has quite a bit of desugaring magic.
    See GHC.Compilers.HaskellToCore.Utils.hs Note [Desugaring seq (1)] and (2) and (3)
