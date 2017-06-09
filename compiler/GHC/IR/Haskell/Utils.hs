@@ -8,9 +8,9 @@ which deal with the instantiated versions are located elsewhere:
 
    Parameterised by     Module
    ----------------     -------------
-   RdrName              parser/GHC.IR.Haskell.Parser.Syntax
+   RdrName              GHC.IR.Haskell.Parser.Syntax
    Name                 rename/RnHsSyn
-   Id                   typecheck/GHC.IR.Haskell.TypeSystem.Syntax
+   Id                   GHC.IR.Haskell.TypeSystem.Syntax
 -}
 
 {-# LANGUAGE CPP #-}
