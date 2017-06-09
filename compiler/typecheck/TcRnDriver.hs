@@ -76,8 +76,8 @@ import GHC.Interface.Utils( tyThingToIfaceDecl )
 import GHC.Data.Coercion( pprCoAxiom )
 import GHC.IR.Core.FreeVars( orphNamesOfFamInst )
 import FamInst
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import TcAnnotations
 import TcBinds
 import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )

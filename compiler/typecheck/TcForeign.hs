@@ -40,7 +40,7 @@ import TcExpr
 import TcEnv
 
 import FamInst
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
 import ForeignCall

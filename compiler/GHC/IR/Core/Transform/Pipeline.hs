@@ -31,7 +31,7 @@ import GHC.IR.Core.Monad
 import qualified GHC.Utils.Error as Err
 import GHC.IR.Core.Transform.FloatIn          ( floatInwards )
 import GHC.IR.Core.Transform.FloatOut         ( floatOutwards )
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.Data.Id
 import GHC.Utils.Error         ( withTiming )
 import GHC.Data.BasicTypes       ( CompilerPhase(..), isDefaultInlinePragma )

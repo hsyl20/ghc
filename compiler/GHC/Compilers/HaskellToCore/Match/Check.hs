@@ -26,7 +26,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.Data.Id
 import GHC.Data.ConstructorLike
 import GHC.Data.Name
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import TysWiredIn
 import GHC.Data.Type.Constructor
 import GHC.Data.SrcLoc

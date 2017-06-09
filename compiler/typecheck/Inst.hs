@@ -41,7 +41,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax
 import TcRnMonad
 import TcEnv
 import TcEvidence
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import TysWiredIn  ( heqDataCon, coercibleDataCon )
 import GHC.IR.Core.Syntax     ( isOrphan )
 import FunDeps

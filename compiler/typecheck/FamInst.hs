@@ -15,8 +15,8 @@ module FamInst (
     ) where
 
 import GHC.Types
-import GHC.TypeSystem.FamilyInstance
-import GHC.TypeSystem.ClassInstance( roughMatchTcs )
+import GHC.Data.FamilyInstance
+import GHC.Data.ClassInstance( roughMatchTcs )
 import GHC.Data.Coercion
 import TcEvidence
 import GHC.Interface.Load

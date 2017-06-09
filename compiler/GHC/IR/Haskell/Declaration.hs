@@ -102,7 +102,7 @@ import GHC.IR.Haskell.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId, Output
 import GHC.Data.Name.Set
 
 -- others:
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import GHC.Data.Class
 import GHC.Utils.Outputable
 import GHC.Utils

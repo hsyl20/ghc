@@ -446,9 +446,9 @@ Library
         GHC.Data.Coercion
         GHC.Compilers.HaskellToCore.Splices
         THNames
-        GHC.TypeSystem.FamilyInstance
+        GHC.Data.FamilyInstance
         FunDeps
-        GHC.TypeSystem.ClassInstance
+        GHC.Data.ClassInstance
         GHC.Data.Type.Constructor
         GHC.Data.Coercion.Axiom
         GHC.Data.Kind

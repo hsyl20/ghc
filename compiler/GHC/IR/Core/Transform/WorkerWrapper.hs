@@ -22,7 +22,7 @@ import GHC.Data.Demand
 import GHC.IR.Core.Transform.WorkerWrapper.Utils
 import GHC.Utils
 import GHC.Utils.Outputable
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.Utils.Monad
 
 #include "HsVersions.h"

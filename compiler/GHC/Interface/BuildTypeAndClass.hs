@@ -16,7 +16,7 @@ module GHC.Interface.BuildTypeAndClass (
 #include "HsVersions.h"
 
 import GHC.Interface.Environment
-import GHC.TypeSystem.FamilyInstance( FamInstEnvs, mkNewTypeCoAxiom )
+import GHC.Data.FamilyInstance( FamInstEnvs, mkNewTypeCoAxiom )
 import TysWiredIn( isCTupleTyConName )
 import TysPrim ( voidPrimTy )
 import GHC.Data.DataConstructor

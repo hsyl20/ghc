@@ -146,8 +146,8 @@ import GHC.Data.Name
 import GHC.Data.Type
 
 import TcType
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import PrelNames
 
 import GHC.Data.Id

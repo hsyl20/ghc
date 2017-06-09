@@ -23,9 +23,9 @@ import TcValidity( allDistinctTyVars )
 import TcClassDcl( tcATDefault, tcMkDeclCtxt )
 import TcEnv
 import TcGenDeriv                       -- Deriv stuff
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import Inst
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import TcHsType
 import TcMType
 

@@ -472,7 +472,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.EnumSet \
 	GHC.Utils.Error \
 	GHC.Utils.Exception \
-	GHC.TypeSystem.FamilyInstance \
+	GHC.Data.FamilyInstance \
 	GHC.Utils.IO.Unsafe \
 	GHC.Data.FastMutableInt \
 	GHC.Data.FastString \
@@ -505,7 +505,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \
 	GHC.Interface.CoreToInterface \
-	GHC.TypeSystem.ClassInstance \
+	GHC.Data.ClassInstance \
 	GHC.Data.Kind \
 	KnownUniques \
 	GHC.Utils.Identifier \

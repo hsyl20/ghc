@@ -18,7 +18,7 @@ import TcUnify( canSolveByUnification )
 import GHC.Data.Var.Set
 import GHC.Data.Type as Type
 import GHC.Data.Kind( isConstraintKind )
-import GHC.TypeSystem.ClassInstance( DFunInstType, lookupInstEnv, instanceDFunId )
+import GHC.Data.ClassInstance( DFunInstType, lookupInstEnv, instanceDFunId )
 import GHC.Data.Coercion.Axiom( sfInteractTop, sfInteractInert )
 
 import TcMType (newMetaTyVars)
@@ -42,7 +42,7 @@ import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel
 import FunDeps
 import FamInst
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.TypeSystem.Unify ( tcUnifyTyWithTFs )
 
 import TcEvidence

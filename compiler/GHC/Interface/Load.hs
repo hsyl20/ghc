@@ -53,8 +53,8 @@ import TysPrim  ( funTyConName )
 import GHC.IR.Core.Transform.Rules
 import GHC.Data.Type.Constructor
 import GHC.Data.Annotation
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Available

@@ -120,9 +120,9 @@ module TcSMonad (
 import GHC.Types
 
 import qualified Inst as TcM
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import FamInst
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 
 import qualified TcRnMonad as TcM
 import qualified TcMType as TcM

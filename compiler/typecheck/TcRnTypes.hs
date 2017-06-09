@@ -153,8 +153,8 @@ import GHC.Data.Id       ( idType, idName )
 import GHC.Data.FieldLabel ( FieldLabel )
 import TcType
 import GHC.Data.Annotation
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import GHC.Compilers.HaskellToCore.Match.Expr
 import GHC.Utils.Monad.IOEnv
 import GHC.Data.RdrName

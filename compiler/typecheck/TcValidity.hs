@@ -41,8 +41,8 @@ import GHC.IR.Haskell.Syntax            -- HsType
 import TcRnMonad        -- TcType, amongst others
 import TcEnv       ( tcGetInstEnvs )
 import FunDeps
-import GHC.TypeSystem.ClassInstance     ( InstMatch, lookupInstEnv )
-import GHC.TypeSystem.FamilyInstance  ( isDominatedBy, injectiveBranches,
+import GHC.Data.ClassInstance     ( InstMatch, lookupInstEnv )
+import GHC.Data.FamilyInstance  ( isDominatedBy, injectiveBranches,
                      InjectivityCheckResult(..) )
 import FamInst     ( makeInjectivityErrors )
 import GHC.Data.Name

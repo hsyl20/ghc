@@ -15,7 +15,7 @@ import GHC.IR.Core.Transform.Vectorise.Builtins
 import GHC.IR.Core.Transform.Vectorise.Generic.Description
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Utils
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.IR.Core.Syntax.Make            ( mkWildCase, mkCoreLet )
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom

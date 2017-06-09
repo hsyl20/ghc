@@ -23,7 +23,7 @@ import GHC.Compilers.HaskellToCore.Arrow
 import GHC.Compilers.HaskellToCore.Monad
 import GHC.Data.Name
 import GHC.Data.Name.Environment
-import GHC.TypeSystem.FamilyInstance( topNormaliseType )
+import GHC.Data.FamilyInstance( topNormaliseType )
 import GHC.Compilers.HaskellToCore.Splices
 import GHC.IR.Haskell.Syntax
 

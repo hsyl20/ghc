@@ -12,8 +12,8 @@ import GHC.IR.Core.Transform.Vectorise.Monad.Base
 import GHC.IR.Core.Transform.Vectorise.Env
 
 import GHC.Config.Flags
-import GHC.TypeSystem.FamilyInstance
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.FamilyInstance
+import GHC.Data.ClassInstance
 import GHC.Data.Class
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

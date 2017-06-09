@@ -49,9 +49,9 @@ import GHC.Monad
 import GHC.Program.Main
 import GHC.IR.Haskell.Syntax
 import GHC.Types
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import GHC.Interface.Environment   ( newInteractiveBinder )
-import GHC.TypeSystem.FamilyInstance ( FamInst )
+import GHC.Data.FamilyInstance ( FamInst )
 import GHC.IR.Core.FreeVars    ( orphNamesOfFamInst )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             hiding( typeKind )

@@ -70,8 +70,8 @@ import TcHsType
 import GHC.Interface.TypeCheck
 import GHC.Data.Types
 import FamInst
-import GHC.TypeSystem.FamilyInstance
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.FamilyInstance
+import GHC.Data.ClassInstance
 import Inst
 import GHC.Data.Name.Environment
 import PrelNames

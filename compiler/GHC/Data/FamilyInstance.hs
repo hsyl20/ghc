@@ -4,7 +4,7 @@
 
 {-# LANGUAGE CPP, GADTs, ScopedTypeVariables #-}
 
-module GHC.TypeSystem.FamilyInstance (
+module GHC.Data.FamilyInstance (
         FamInst(..), FamFlavor(..), famInstAxiom, famInstTyCon, famInstRHS,
         famInstsRepTyCons, famInstRepTyCon_maybe, dataFamInstRepTyCon,
         pprFamInst, pprFamInsts,

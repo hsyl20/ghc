@@ -24,8 +24,8 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import TcRnMonad
 import TcTyDecls
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import Inst
 import GHC.Interface.TypeCheck
 import TcMType

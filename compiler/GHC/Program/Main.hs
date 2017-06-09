@@ -131,8 +131,8 @@ import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Pipeline
 import GHC.RTS.InfoTable
 import GHC.Program.Driver.CodeOutput
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import GHC.Utils.Fingerprint      ( Fingerprint )
 import GHC.Config.Hooks
 import TcEnv

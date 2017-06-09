@@ -53,7 +53,7 @@ module GHC.Compilers.HaskellToCore.Monad (
     ) where
 
 import TcRnMonad
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Syntax.Make    ( unitExpr )
 import GHC.IR.Core.Utils ( exprType, isExprLevPoly )

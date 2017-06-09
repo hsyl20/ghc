@@ -21,7 +21,7 @@ import GHC.Data.Type hiding      ( substTy, substTyVar, extendTvSubst, extendCvS
 import GHC.IR.Core.Transform.Simplify.Environment
 import GHC.IR.Core.Transform.Simplify.Utils
 import GHC.IR.Core.Analyse.Occurence        ( occurAnalyseExpr )
-import GHC.TypeSystem.FamilyInstance       ( FamInstEnv )
+import GHC.Data.FamilyInstance       ( FamInstEnv )
 import GHC.Data.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
 import GHC.Data.Id
 import GHC.Data.Id.Make             ( seqId )
@@ -30,7 +30,7 @@ import GHC.Data.Id.Info
 import GHC.Data.Name             ( Name, mkSystemVarName, isExternalName, getOccFS )
 import GHC.Data.Coercion hiding  ( substCo, substCoVar )
 import GHC.Data.Coercion.Optimise      ( optCoercion )
-import GHC.TypeSystem.FamilyInstance       ( topNormaliseType_maybe )
+import GHC.Data.FamilyInstance       ( topNormaliseType_maybe )
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId, dataConRepStrictness, dataConRepArgTys )
 --import GHC.Data.Type.Constructor            ( isEnumerationTyCon ) -- temporalily commented out. See #8326
 import GHC.IR.Core.Monad        ( Tick(..), SimplifierMode(..) )

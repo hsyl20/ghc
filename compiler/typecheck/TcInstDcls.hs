@@ -27,9 +27,9 @@ import TcMType
 import TcType
 import GHC.Interface.BuildTypeAndClass
 import Inst
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import FamInst
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import TcDeriv
 import TcEnv
 import TcHsType

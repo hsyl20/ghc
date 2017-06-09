@@ -39,7 +39,7 @@ import TysWiredIn ( unitTy )
 import TcType
 import GHC.Rename.Environment( lookupConstructorFields )
 import FamInst
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
 import GHC.Data.Types   -- for checkValidRoles

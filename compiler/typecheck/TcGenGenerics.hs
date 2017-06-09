@@ -20,7 +20,7 @@ import TcGenDeriv
 import TcGenFunctor
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
-import GHC.TypeSystem.FamilyInstance       ( FamInst, FamFlavor(..), mkSingleCoAxiom )
+import GHC.Data.FamilyInstance       ( FamInst, FamFlavor(..), mkSingleCoAxiom )
 import FamInst
 import GHC.Data.Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )

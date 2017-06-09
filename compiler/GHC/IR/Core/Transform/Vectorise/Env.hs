@@ -16,8 +16,8 @@ module GHC.IR.Core.Transform.Vectorise.Env (
 ) where
 
 import GHC.Types
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import GHC.IR.Core.Syntax
 import GHC.Data.Type
 import GHC.Data.Class

@@ -28,7 +28,7 @@ import GHC.IR.Core.Utils        ( exprIsHNF, exprType, exprIsTrivial )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.Data.Coercion         ( Coercion, coVarsOfCo )
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.Utils
 import GHC.Data.Maybe           ( isJust )
 import TysWiredIn

@@ -21,9 +21,9 @@ import GHC.Data.Kind
 import GHC.TypeSystem.Unify            ( tcMatchTys )
 import GHC.Data.Module
 import FamInst
-import GHC.TypeSystem.FamilyInstance       ( flattenTys )
+import GHC.Data.FamilyInstance       ( flattenTys )
 import Inst
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor

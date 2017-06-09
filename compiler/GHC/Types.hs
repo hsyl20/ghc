@@ -153,8 +153,8 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName
 import GHC.Data.Available
 import GHC.Data.Module
-import GHC.TypeSystem.ClassInstance          ( InstEnv, ClsInst, identicalClsInstHead )
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance          ( InstEnv, ClsInst, identicalClsInstHead )
+import GHC.Data.FamilyInstance
 import GHC.IR.Core.Syntax          ( CoreProgram, RuleBase, CoreRule, CoreVect )
 import GHC.Data.Name
 import GHC.Data.Name.Environment

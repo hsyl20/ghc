@@ -61,7 +61,7 @@ import qualified FamInst   as TcM
 import qualified GHC.Interface.Environment
 import qualified GHC.Utils.Finder
 
-import GHC.TypeSystem.FamilyInstance ( FamInstEnv )
+import GHC.Data.FamilyInstance ( FamInstEnv )
 import TcRnMonad  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                   , unsafeTcPluginTcM, getEvBindsTcPluginM
                   , liftIO, traceTc )
@@ -81,7 +81,7 @@ import GHC.Types
 import GHC.Utils.Outputable
 import GHC.Data.Type
 import GHC.Data.Id
-import GHC.TypeSystem.ClassInstance
+import GHC.Data.ClassInstance
 import GHC.Data.FastString
 import GHC.Data.Unique
 

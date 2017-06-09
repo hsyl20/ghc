@@ -12,7 +12,7 @@ import GHC.IR.Core.Transform.Vectorise.Utils.Base
 
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Utils
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type
 import GHC.Data.Types

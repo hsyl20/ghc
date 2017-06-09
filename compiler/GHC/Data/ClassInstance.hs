@@ -9,7 +9,7 @@ The bits common to TcInstDcls and TcDeriv.
 
 {-# LANGUAGE CPP, DeriveDataTypeable #-}
 
-module GHC.TypeSystem.ClassInstance (
+module GHC.Data.ClassInstance (
         DFunId, InstMatch, ClsInstLookupResult,
         OverlapFlag(..), OverlapMode(..), setOverlapModeMaybe,
         ClsInst(..), DFunInstType, pprInstance, pprInstanceHdr, pprInstances,

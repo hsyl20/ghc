@@ -75,8 +75,8 @@ import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.Type
 import TcType
-import GHC.TypeSystem.ClassInstance
-import GHC.TypeSystem.FamilyInstance
+import GHC.Data.ClassInstance
+import GHC.Data.FamilyInstance
 import TcRnMonad
 import GHC.IR.Haskell.Syntax
 import GHC.Types
