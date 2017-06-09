@@ -25,7 +25,7 @@ import GHC.Data.Class
 import GHC.Data.Type
 import TcType( transSuperClasses )
 import GHC.Data.Coercion.Axiom( TypeEqn )
-import GHC.TypeSystem.Unify.Utils.Utils
+import GHC.TypeSystem.Unify.Utils
 import FamInst( injTyVarsOfTypes )
 import GHC.Data.ClassInstance
 import GHC.Data.Var.Set

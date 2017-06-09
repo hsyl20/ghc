@@ -58,7 +58,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
-import GHC.TypeSystem.Unify.Utils.Utils
+import GHC.TypeSystem.Unify.Utils
 import GHC.Utils
 import GHC.Data.SrcLoc
 import GHC.Data.List.SetOps

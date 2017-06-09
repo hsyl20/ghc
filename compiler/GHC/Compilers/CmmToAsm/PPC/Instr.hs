@@ -96,8 +96,8 @@ ppc_mkStackAllocInstr' platform amount
 allocMoreStack
   :: Platform
   -> Int
-  -> NatCmmDecl statics PPC.Instr.Instr
-  -> UniqSM (NatCmmDecl statics PPC.Instr.Instr)
+  -> NatCmmDecl statics Instr
+  -> UniqSM (NatCmmDecl statics Instr)
 
 allocMoreStack _ _ top@(CmmData _ _) = return top
 allocMoreStack platform slots (CmmProc info lbl live (ListGraph code)) = do

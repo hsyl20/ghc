@@ -25,23 +25,23 @@ module GHC.Compilers.CmmToAsm (
 #include "cbits/CmmToAsm.h"
 
 
-import qualified GHC.Compilers.CmmToAsm.X86.CodeGen
-import qualified GHC.Compilers.CmmToAsm.X86.Regs
-import qualified GHC.Compilers.CmmToAsm.X86.Instr
-import qualified GHC.Compilers.CmmToAsm.X86.Ppr
+import qualified GHC.Compilers.CmmToAsm.X86.CodeGen as X86
+import qualified GHC.Compilers.CmmToAsm.X86.Regs    as X86
+import qualified GHC.Compilers.CmmToAsm.X86.Instr   as X86
+import qualified GHC.Compilers.CmmToAsm.X86.Ppr     as X86
 
-import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen
-import qualified GHC.Compilers.CmmToAsm.SPARC.Regs
-import qualified GHC.Compilers.CmmToAsm.SPARC.Instr
-import qualified GHC.Compilers.CmmToAsm.SPARC.Ppr
-import qualified GHC.Compilers.CmmToAsm.SPARC.ShortcutJump
-import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand
+import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen as SPARC
+import qualified GHC.Compilers.CmmToAsm.SPARC.Regs    as SPARC
+import qualified GHC.Compilers.CmmToAsm.SPARC.Instr   as SPARC
+import qualified GHC.Compilers.CmmToAsm.SPARC.Ppr     as SPARC
+import qualified GHC.Compilers.CmmToAsm.SPARC.ShortcutJump as SPARC
+import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand as SPARC
 
-import qualified GHC.Compilers.CmmToAsm.PPC.CodeGen
-import qualified GHC.Compilers.CmmToAsm.PPC.Regs
-import qualified GHC.Compilers.CmmToAsm.PPC.RegInfo
-import qualified GHC.Compilers.CmmToAsm.PPC.Instr
-import qualified GHC.Compilers.CmmToAsm.PPC.Ppr
+import qualified GHC.Compilers.CmmToAsm.PPC.CodeGen as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.Regs    as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.RegInfo as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.Instr   as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.Ppr     as PPC
 
 import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main           as Linear
@@ -195,65 +195,65 @@ nativeCodeGen dflags this_mod modLoc h us cmms
       ArchUnknown   -> panic "nativeCodeGen: No NCG for unknown arch"
       ArchJavaScript-> panic "nativeCodeGen: No NCG for JavaScript"
 
-x86NcgImpl :: DynFlags -> NcgImpl (Alignment, CmmStatics) X86.Instr.Instr X86.Instr.JumpDest
+x86NcgImpl :: DynFlags -> NcgImpl (Alignment, CmmStatics) X86.Instr X86.JumpDest
 x86NcgImpl dflags
  = (x86_64NcgImpl dflags) { ncg_x86fp_kludge = map x86fp_kludge }
 
-x86_64NcgImpl :: DynFlags -> NcgImpl (Alignment, CmmStatics) X86.Instr.Instr X86.Instr.JumpDest
+x86_64NcgImpl :: DynFlags -> NcgImpl (Alignment, CmmStatics) X86.Instr X86.JumpDest
 x86_64NcgImpl dflags
  = NcgImpl {
-        cmmTopCodeGen             = X86.CodeGen.cmmTopCodeGen
-       ,generateJumpTableForInstr = X86.CodeGen.generateJumpTableForInstr dflags
-       ,getJumpDestBlockId        = X86.Instr.getJumpDestBlockId
-       ,canShortcut               = X86.Instr.canShortcut
-       ,shortcutStatics           = X86.Instr.shortcutStatics
-       ,shortcutJump              = X86.Instr.shortcutJump
-       ,pprNatCmmDecl             = X86.Ppr.pprNatCmmDecl
-       ,maxSpillSlots             = X86.Instr.maxSpillSlots dflags
-       ,allocatableRegs           = X86.Regs.allocatableRegs platform
+        cmmTopCodeGen             = X86.cmmTopCodeGen
+       ,generateJumpTableForInstr = X86.generateJumpTableForInstr dflags
+       ,getJumpDestBlockId        = X86.getJumpDestBlockId
+       ,canShortcut               = X86.canShortcut
+       ,shortcutStatics           = X86.shortcutStatics
+       ,shortcutJump              = X86.shortcutJump
+       ,pprNatCmmDecl             = X86.pprNatCmmDecl
+       ,maxSpillSlots             = X86.maxSpillSlots dflags
+       ,allocatableRegs           = X86.allocatableRegs platform
        ,ncg_x86fp_kludge          = id
-       ,ncgAllocMoreStack         = X86.Instr.allocMoreStack platform
+       ,ncgAllocMoreStack         = X86.allocMoreStack platform
        ,ncgExpandTop              = id
        ,ncgMakeFarBranches        = const id
-       ,extractUnwindPoints       = X86.CodeGen.extractUnwindPoints
+       ,extractUnwindPoints       = X86.extractUnwindPoints
    }
     where platform = targetPlatform dflags
 
-ppcNcgImpl :: DynFlags -> NcgImpl CmmStatics PPC.Instr.Instr PPC.RegInfo.JumpDest
+ppcNcgImpl :: DynFlags -> NcgImpl CmmStatics PPC.Instr PPC.JumpDest
 ppcNcgImpl dflags
  = NcgImpl {
-        cmmTopCodeGen             = PPC.CodeGen.cmmTopCodeGen
-       ,generateJumpTableForInstr = PPC.CodeGen.generateJumpTableForInstr dflags
-       ,getJumpDestBlockId        = PPC.RegInfo.getJumpDestBlockId
-       ,canShortcut               = PPC.RegInfo.canShortcut
-       ,shortcutStatics           = PPC.RegInfo.shortcutStatics
-       ,shortcutJump              = PPC.RegInfo.shortcutJump
-       ,pprNatCmmDecl             = PPC.Ppr.pprNatCmmDecl
-       ,maxSpillSlots             = PPC.Instr.maxSpillSlots dflags
-       ,allocatableRegs           = PPC.Regs.allocatableRegs platform
+        cmmTopCodeGen             = PPC.cmmTopCodeGen
+       ,generateJumpTableForInstr = PPC.generateJumpTableForInstr dflags
+       ,getJumpDestBlockId        = PPC.getJumpDestBlockId
+       ,canShortcut               = PPC.canShortcut
+       ,shortcutStatics           = PPC.shortcutStatics
+       ,shortcutJump              = PPC.shortcutJump
+       ,pprNatCmmDecl             = PPC.pprNatCmmDecl
+       ,maxSpillSlots             = PPC.maxSpillSlots dflags
+       ,allocatableRegs           = PPC.allocatableRegs platform
        ,ncg_x86fp_kludge          = id
-       ,ncgAllocMoreStack         = PPC.Instr.allocMoreStack platform
+       ,ncgAllocMoreStack         = PPC.allocMoreStack platform
        ,ncgExpandTop              = id
-       ,ncgMakeFarBranches        = PPC.Instr.makeFarBranches
+       ,ncgMakeFarBranches        = PPC.makeFarBranches
        ,extractUnwindPoints       = const []
    }
     where platform = targetPlatform dflags
 
-sparcNcgImpl :: DynFlags -> NcgImpl CmmStatics SPARC.Instr.Instr SPARC.ShortcutJump.JumpDest
+sparcNcgImpl :: DynFlags -> NcgImpl CmmStatics SPARC.Instr SPARC.JumpDest
 sparcNcgImpl dflags
  = NcgImpl {
-        cmmTopCodeGen             = SPARC.CodeGen.cmmTopCodeGen
-       ,generateJumpTableForInstr = SPARC.CodeGen.generateJumpTableForInstr dflags
-       ,getJumpDestBlockId        = SPARC.ShortcutJump.getJumpDestBlockId
-       ,canShortcut               = SPARC.ShortcutJump.canShortcut
-       ,shortcutStatics           = SPARC.ShortcutJump.shortcutStatics
-       ,shortcutJump              = SPARC.ShortcutJump.shortcutJump
-       ,pprNatCmmDecl             = SPARC.Ppr.pprNatCmmDecl
-       ,maxSpillSlots             = SPARC.Instr.maxSpillSlots dflags
-       ,allocatableRegs           = SPARC.Regs.allocatableRegs
+        cmmTopCodeGen             = SPARC.cmmTopCodeGen
+       ,generateJumpTableForInstr = SPARC.generateJumpTableForInstr dflags
+       ,getJumpDestBlockId        = SPARC.getJumpDestBlockId
+       ,canShortcut               = SPARC.canShortcut
+       ,shortcutStatics           = SPARC.shortcutStatics
+       ,shortcutJump              = SPARC.shortcutJump
+       ,pprNatCmmDecl             = SPARC.pprNatCmmDecl
+       ,maxSpillSlots             = SPARC.maxSpillSlots dflags
+       ,allocatableRegs           = SPARC.allocatableRegs
        ,ncg_x86fp_kludge          = id
        ,ncgAllocMoreStack         = noAllocMoreStack
-       ,ncgExpandTop              = map SPARC.CodeGen.Expand.expandTop
+       ,ncgExpandTop              = map SPARC.expandTop
        ,ncgMakeFarBranches        = const id
        ,extractUnwindPoints       = const []
    }
@@ -720,10 +720,10 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                 , unwinds )
 
 
-x86fp_kludge :: NatCmmDecl (Alignment, CmmStatics) X86.Instr.Instr -> NatCmmDecl (Alignment, CmmStatics) X86.Instr.Instr
+x86fp_kludge :: NatCmmDecl (Alignment, CmmStatics) X86.Instr -> NatCmmDecl (Alignment, CmmStatics) X86.Instr
 x86fp_kludge top@(CmmData _ _) = top
 x86fp_kludge (CmmProc info lbl live (ListGraph code)) =
-        CmmProc info lbl live (ListGraph $ X86.Instr.i386_insert_ffrees code)
+        CmmProc info lbl live (ListGraph $ X86.i386_insert_ffrees code)
 
 -- | Compute unwinding tables for the blocks of a procedure
 computeUnwinding :: Instruction instr

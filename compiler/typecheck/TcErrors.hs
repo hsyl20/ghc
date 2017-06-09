@@ -18,7 +18,7 @@ import GHC.IR.Haskell.Renamer.Utils.Unbound ( unknownNameSuggestions )
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Kind
-import GHC.TypeSystem.Unify.Utils.Utils            ( tcMatchTys )
+import GHC.TypeSystem.Unify.Utils            ( tcMatchTys )
 import GHC.Data.Module
 import FamInst
 import GHC.Data.FamilyInstance       ( flattenTys )

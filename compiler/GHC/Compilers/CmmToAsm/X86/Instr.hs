@@ -959,8 +959,8 @@ is_G_instr instr
 allocMoreStack
   :: Platform
   -> Int
-  -> NatCmmDecl statics X86.Instr.Instr
-  -> UniqSM (NatCmmDecl statics X86.Instr.Instr)
+  -> NatCmmDecl statics Instr
+  -> UniqSM (NatCmmDecl statics Instr)
 
 allocMoreStack _ _ top@(CmmData _ _) = return top
 allocMoreStack platform slots proc@(CmmProc info lbl live (ListGraph code)) = do
