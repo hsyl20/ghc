@@ -4,7 +4,7 @@ module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode (
 
 where
 
-import {-# SOURCE #-} SPARC.CodeGen.Gen32
+import {-# SOURCE #-} GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
 import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
 import GHC.Compilers.CmmToAsm.SPARC.AddrMode
 import GHC.Compilers.CmmToAsm.SPARC.Imm

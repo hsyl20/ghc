@@ -9,7 +9,7 @@
 -- (EHC) project (<http://www.cs.uu.nl/wiki/Ehc/WebHome>).
 --
 
-module Llvm (
+module GHC.Compilers.CmmToLlvm (
 
         -- * Modules, Functions and Blocks
         LlvmModule(..),

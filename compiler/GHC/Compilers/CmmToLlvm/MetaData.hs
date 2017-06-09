@@ -1,6 +1,6 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
-module Llvm.MetaData where
+module GHC.Compilers.CmmToLlvm.MetaData where
 
 import GHC.Compilers.CmmToLlvm.Types
 import GHC.Utils.Outputable

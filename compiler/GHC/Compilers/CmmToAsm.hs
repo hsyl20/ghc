@@ -25,23 +25,23 @@ module GHC.Compilers.CmmToAsm (
 #include "cbits/CmmToAsm.h"
 
 
-import qualified X86.CodeGen
-import qualified X86.Regs
-import qualified X86.Instr
-import qualified X86.Ppr
+import qualified GHC.Compilers.CmmToAsm.X86.CodeGen
+import qualified GHC.Compilers.CmmToAsm.X86.Regs
+import qualified GHC.Compilers.CmmToAsm.X86.Instr
+import qualified GHC.Compilers.CmmToAsm.X86.Ppr
 
-import qualified SPARC.CodeGen
-import qualified SPARC.Regs
-import qualified SPARC.Instr
-import qualified SPARC.Ppr
-import qualified SPARC.ShortcutJump
-import qualified SPARC.CodeGen.Expand
+import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen
+import qualified GHC.Compilers.CmmToAsm.SPARC.Regs
+import qualified GHC.Compilers.CmmToAsm.SPARC.Instr
+import qualified GHC.Compilers.CmmToAsm.SPARC.Ppr
+import qualified GHC.Compilers.CmmToAsm.SPARC.ShortcutJump
+import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand
 
-import qualified PPC.CodeGen
-import qualified PPC.Regs
-import qualified PPC.RegInfo
-import qualified PPC.Instr
-import qualified PPC.Ppr
+import qualified GHC.Compilers.CmmToAsm.PPC.CodeGen
+import qualified GHC.Compilers.CmmToAsm.PPC.Regs
+import qualified GHC.Compilers.CmmToAsm.PPC.RegInfo
+import qualified GHC.Compilers.CmmToAsm.PPC.Instr
+import qualified GHC.Compilers.CmmToAsm.PPC.Ppr
 
 import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
 import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main           as Linear

@@ -29,12 +29,12 @@ import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils.Platform
 
-import qualified X86.Regs       as X86
-import qualified X86.RegInfo    as X86
+import qualified GHC.Compilers.CmmToAsm.X86.Regs       as X86
+import qualified GHC.Compilers.CmmToAsm.X86.RegInfo    as X86
 
-import qualified PPC.Regs       as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.Regs       as PPC
 
-import qualified SPARC.Regs     as SPARC
+import qualified GHC.Compilers.CmmToAsm.SPARC.Regs     as SPARC
 
 targetVirtualRegSqueeze :: Platform -> RegClass -> VirtualReg -> Int
 targetVirtualRegSqueeze platform

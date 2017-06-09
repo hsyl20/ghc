@@ -33,9 +33,9 @@ import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
 import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
 import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
 
-import qualified PPC.Instr
-import qualified SPARC.Instr
-import qualified X86.Instr
+import qualified GHC.Compilers.CmmToAsm.PPC.Instr
+import qualified GHC.Compilers.CmmToAsm.SPARC.Instr
+import qualified GHC.Compilers.CmmToAsm.X86.Instr
 
 class Show freeRegs => FR freeRegs where
     frAllocateReg :: Platform -> RealReg -> freeRegs -> freeRegs

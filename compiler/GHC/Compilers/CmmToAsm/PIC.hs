@@ -47,10 +47,10 @@ module GHC.Compilers.CmmToAsm.PIC (
 
 where
 
-import qualified PPC.Instr      as PPC
-import qualified PPC.Regs       as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.Instr      as PPC
+import qualified GHC.Compilers.CmmToAsm.PPC.Regs       as PPC
 
-import qualified X86.Instr      as X86
+import qualified GHC.Compilers.CmmToAsm.X86.Instr      as X86
 
 import GHC.Utils.Platform
 import GHC.Compilers.CmmToAsm.Instruction

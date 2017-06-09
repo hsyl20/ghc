@@ -163,7 +163,7 @@ Library
         GHC.Utils.Identifier
         GHC.Data.Literal
         GHC.Compilers.CmmToLlvm
-        GHC.Compilers.CmmToLlvm.AbsSyn
+        GHC.Compilers.CmmToLlvm.Syntax
         GHC.Compilers.CmmToLlvm.MetaData
         GHC.Compilers.CmmToLlvm.PrettyPrint
         GHC.Compilers.CmmToLlvm.Types

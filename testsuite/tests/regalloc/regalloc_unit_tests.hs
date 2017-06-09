@@ -22,7 +22,7 @@ module Main where
 
 import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats as Color
 import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base as Linear
-import qualified X86.Instr
+import qualified GHC.Compilers.CmmToAsm.X86.Instr
 import HscMain
 import GHC.IR.Stg.Register
 import GHC.Compilers.CmmToAsm

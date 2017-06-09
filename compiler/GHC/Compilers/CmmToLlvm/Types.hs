@@ -4,7 +4,7 @@
 -- | The LLVM Type System.
 --
 
-module Llvm.Types where
+module GHC.Compilers.CmmToLlvm.Types where
 
 #include "HsVersions.h"
 

@@ -7,7 +7,7 @@ module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64 (
 
 where
 
-import {-# SOURCE #-} SPARC.CodeGen.Gen32
+import {-# SOURCE #-} GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
 import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
 import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode
 import GHC.Compilers.CmmToAsm.SPARC.Regs
