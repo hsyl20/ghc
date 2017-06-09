@@ -1,4 +1,4 @@
-module TcPatSyn where
+module GHC.IR.Haskell.TypeSystem.PatternSynonym where
 
 import GHC.Data.Name      ( Name )
 import GHC.Data.Id        ( Id )

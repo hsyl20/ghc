@@ -2,13 +2,13 @@
 (c) The University of Glasgow 2006
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[TcPatSyn]{Typechecking pattern synonym declarations}
+\section[GHC.IR.Haskell.TypeSystem.PatternSynonym]{Typechecking pattern synonym declarations}
 -}
 
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
+module GHC.IR.Haskell.TypeSystem.PatternSynonym ( tcInferPatSynDecl, tcCheckPatSynDecl
                 , tcPatSynBuilderBind, tcPatSynBuilderOcc, nonBidirectionalErr
   ) where
 

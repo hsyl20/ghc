@@ -421,7 +421,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Validity
         GHC.IR.Haskell.TypeSystem.Matches
         GHC.IR.Haskell.TypeSystem.Pattern
-        TcPatSyn
+        GHC.IR.Haskell.TypeSystem.PatternSynonym
         TcRnDriver
         TcBackpack
         TcRnExports

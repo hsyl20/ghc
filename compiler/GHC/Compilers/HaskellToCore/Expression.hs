@@ -672,7 +672,7 @@ ds_expr _ expr@(RecordUpd { rupd_expr = record_expr, rupd_flds = fields
 
                  inst_con = noLoc $ mkHsWrap wrap (HsConLikeOut con)
                         -- Reconstruct with the WrapId so that unpacking happens
-                 -- The order here is because of the order in `TcPatSyn`.
+                 -- The order here is because of the order in `GHC.IR.Haskell.TypeSystem.PatternSynonym`.
                  wrap = mkWpEvVarApps theta_vars                                <.>
                         dict_req_wrap                                           <.>
                         mkWpTyApps    (mkTyVarTys ex_tvs)                       <.>

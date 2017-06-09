@@ -16,7 +16,7 @@ module GHC.IR.Haskell.TypeSystem.Binding ( tcLocalBinds, tcTopBinds, tcRecSelBin
 
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Matches ( tcGRHSsPat, tcMatchesFun )
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Expression  ( tcMonoExpr )
-import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.PatternSynonym ( tcInferPatSynDecl, tcCheckPatSynDecl
                                , tcPatSynBuilderBind )
 import GHC.IR.Core.Syntax (Tickish (..))
 import GHC.Data.CostCentre (mkUserCC)

@@ -38,7 +38,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Arrow
 import GHC.IR.Haskell.TypeSystem.Matches
 import TcHsType
-import TcPatSyn( tcPatSynBuilderOcc, nonBidirectionalErr )
+import GHC.IR.Haskell.TypeSystem.PatternSynonym( tcPatSynBuilderOcc, nonBidirectionalErr )
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import import GHC.IR.Haskell.TypeSystem.Type

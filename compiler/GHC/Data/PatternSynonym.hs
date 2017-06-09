@@ -240,7 +240,7 @@ would be a top-level declaration with an unboxed type.
 
 This means that when typechecking an occurrence of P in an expression,
 we must remember that the builder has this void argument. This is
-done by TcPatSyn.patSynBuilderOcc.
+done by GHC.IR.Haskell.TypeSystem.PatternSynonym.patSynBuilderOcc.
 
 Note [Pattern synonyms and the data type Type]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
