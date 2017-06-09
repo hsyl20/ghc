@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP, TypeFamilies #-}
 
 -- Type definitions for the constraint solver
-module TcSMonad (
+module GHC.IR.Haskell.TypeSystem.Constraint.Solver (
 
     -- The work list
     WorkList(..), isEmptyWorkList, emptyWorkList,
@@ -800,7 +800,7 @@ Theorem [Stability under extension]
    is an inert generalised substitution.
 
 Conditions (T1-T3) are established by the canonicaliser
-Conditions (K1-K3) are established by TcSMonad.kickOutRewritable
+Conditions (K1-K3) are established by GHC.IR.Haskell.TypeSystem.Constraint.Solver.kickOutRewritable
 
 The idea is that
 * (T1-2) are guaranteed by exhaustively rewriting the work-item
@@ -3077,7 +3077,7 @@ current worklist.  Specifically, when canonicalising
    (forall a. t1 ~ forall a. t2)
 from which we get the implication
    (forall a. t1 ~ t2)
-See TcSMonad.deferTcSForAllEq
+See GHC.IR.Haskell.TypeSystem.Constraint.Solver.deferTcSForAllEq
 -}
 
 -- Deferring forall equalities as implications

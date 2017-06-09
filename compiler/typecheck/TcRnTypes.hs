@@ -1594,7 +1594,7 @@ data Ct
         -- See Note [The flattening story] in GHC.IR.Haskell.TypeSystem.Flatten
     }
 
-  | CNonCanonical {        -- See Note [NonCanonical Semantics] in TcSMonad
+  | CNonCanonical {        -- See Note [NonCanonical Semantics] in GHC.IR.Haskell.TypeSystem.Constraint.Solver
       cc_ev  :: CtEvidence
     }
 
@@ -2570,9 +2570,9 @@ Constraints come in four flavours:
 The ctev_nosh field of a Wanted distinguishes between [W] and [WD]
 
 Wanted constraints are born as [WD], but are split into [W] and its
-"shadow" [D] in TcSMonad.maybeEmitShadow.
+"shadow" [D] in GHC.IR.Haskell.TypeSystem.Constraint.Solver.maybeEmitShadow.
 
-See Note [The improvement story and derived shadows] in TcSMonad
+See Note [The improvement story and derived shadows] in GHC.IR.Haskell.TypeSystem.Constraint.Solver
 -}
 
 data CtFlavour  -- See Note [Constraint flavours]
@@ -2606,7 +2606,7 @@ ctEvFlavour (CtDerived {})                  = Derived
 
 -- | Whether or not one 'Ct' can rewrite another is determined by its
 -- flavour and its equality relation. See also
--- Note [Flavours with roles] in TcSMonad
+-- Note [Flavours with roles] in GHC.IR.Haskell.TypeSystem.Constraint.Solver
 type CtFlavourRole = (CtFlavour, EqRel)
 
 -- | Extract the flavour, role, and boxity from a 'CtEvidence'
@@ -2622,7 +2622,7 @@ ctFlavourRole = ctEvFlavourRole . cc_ev
 (eqCanRewrite ct1 ct2) holds if the constraint ct1 (a CTyEqCan of form
 tv ~ ty) can be used to rewrite ct2.  It must satisfy the properties of
 a can-rewrite relation, see Definition [Can-rewrite relation] in
-TcSMonad.
+GHC.IR.Haskell.TypeSystem.Constraint.Solver.
 
 With the solver handling Coercible constraints like equality constraints,
 the rewrite conditions must take role into account, never allowing
@@ -2649,7 +2649,7 @@ However, for now at least I'm only letting (Derived,NomEq) rewrite
 (Derived,NomEq) and not doing anything for ReprEq.  If we have
     eqCanRewriteFR (Derived, NomEq) (Derived, _)  = True
 then we lose property R2 of Definition [Can-rewrite relation]
-in TcSMonad
+in GHC.IR.Haskell.TypeSystem.Constraint.Solver
   R2.  If f1 >= f, and f2 >= f,
        then either f1 >= f2 or f2 >= f1
 Consider f1 = (Given, ReprEq)
@@ -2733,7 +2733,7 @@ other Deriveds in the model whereas the Wanted cannot.
 
 However a Wanted can certainly discharge an identical Wanted.  So
 eqCanDischarge does /not/ define a can-rewrite relation in the
-sense of Definition [Can-rewrite relation] in TcSMonad.
+sense of Definition [Can-rewrite relation] in GHC.IR.Haskell.TypeSystem.Constraint.Solver.
 
 We /do/ say that a [W] can discharge a [WD].  In evidence terms it
 certainly can, and the /caller/ arranges that the otherwise-lost [D]

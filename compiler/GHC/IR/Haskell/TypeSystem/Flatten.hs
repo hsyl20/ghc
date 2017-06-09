@@ -20,7 +20,7 @@ import GHC.Data.Coercion
 import GHC.Data.Var
 import GHC.Data.Var.Environment
 import GHC.Utils.Outputable
-import TcSMonad as TcS
+import GHC.IR.Haskell.TypeSystem.Constraint.Solver as TcS
 import GHC.Data.BasicTypes( SwapFlag(..) )
 
 import GHC.Utils
@@ -1183,7 +1183,7 @@ flatten_exact_fam_app_fully tc tys
        ; case mb_ct of
            Just (co, rhs_ty, flav)  -- co :: F xis ~ fsk
                 -- flav is [G] or [WD]
-                -- See Note [Type family equations] in TcSMonad
+                -- See Note [Type family equations] in GHC.IR.Haskell.TypeSystem.Constraint.Solver
              | (NotSwapped, _) <- flav `funEqCanDischargeF` cur_flav
              ->  -- Usable hit in the flat-cache
                 do { traceFlat "flatten/flat-cache hit" $ (ppr tc <+> ppr xis $$ ppr rhs_ty)
@@ -1363,8 +1363,8 @@ flatten_tyvar1 tv
 flatten_tyvar2 :: TcTyVar -> CtFlavourRole -> FlatM FlattenTvResult
 -- The tyvar is not a filled-in meta-tyvar
 -- Try in the inert equalities
--- See Definition [Applying a generalised substitution] in TcSMonad
--- See Note [Stability of flattening] in TcSMonad
+-- See Definition [Applying a generalised substitution] in GHC.IR.Haskell.TypeSystem.Constraint.Solver
+-- See Note [Stability of flattening] in GHC.IR.Haskell.TypeSystem.Constraint.Solver
 
 flatten_tyvar2 tv fr@(_, eq_rel)
   = do { ieqs <- liftTcS $ getInertEqs

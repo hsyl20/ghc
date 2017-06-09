@@ -54,7 +54,7 @@ module GHC.Plugins.TypeChecker (
 
 #if defined(GHCI)
 import qualified TcRnMonad as TcM
-import qualified TcSMonad  as TcS
+import qualified GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import qualified GHC.IR.Haskell.TypeSystem.Environment     as TcM
 import qualified TcMType   as TcM
 import qualified FamInst   as TcM

@@ -49,7 +49,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Outputable
 
 import TcRnTypes
-import TcSMonad
+import GHC.IR.Haskell.TypeSystem.Constraint.Solver
 import GHC.Data.Bag
 import GHC.Utils.Monad ( concatMapM )
 
@@ -1503,7 +1503,7 @@ We avoid this problem by orienting the resulting given so that the unification
 variable is on the left.  [Note that alternatively we could attempt to
 enforce this at canonicalization]
 
-See also Note [No touchables as FunEq RHS] in TcSMonad; avoiding
+See also Note [No touchables as FunEq RHS] in GHC.IR.Haskell.TypeSystem.Constraint.Solver; avoiding
 double unifications is the main reason we disallow touchable
 unification variables as RHS of type family equations: F xis ~ alpha.
 

@@ -14,7 +14,7 @@ import GHC.IR.Haskell.TypeSystem.Unify( swapOverTyVars, metaTyVarUpdateOK )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Flatten
-import TcSMonad
+import GHC.IR.Haskell.TypeSystem.Constraint.Solver
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
@@ -1246,7 +1246,7 @@ When an equality fails, we still want to rewrite the equality
 all the way down, so that it accurately reflects
  (a) the mutable reference substitution in force at start of solving
  (b) any ty-binds in force at this point in solving
-See Note [Kick out insolubles] in TcSMonad.
+See Note [Kick out insolubles] in GHC.IR.Haskell.TypeSystem.Constraint.Solver.
 And if we don't do this there is a bad danger that
 TcSimplify.applyTyVarDefaulting will find a variable
 that has in fact been substituted.

@@ -439,7 +439,7 @@ Library
         TcInteract
         GHC.IR.Haskell.TypeSystem.Canonicaliser
         GHC.IR.Haskell.TypeSystem.Flatten
-        TcSMonad
+        GHC.IR.Haskell.TypeSystem.Constraint.Solver
         GHC.Builtin.TypeNats
         GHC.IR.Haskell.TypeSystem.Splice
         GHC.Data.Class

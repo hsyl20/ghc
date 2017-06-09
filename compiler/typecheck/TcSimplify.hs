@@ -35,7 +35,7 @@ import TcInteract
 import GHC.IR.Haskell.TypeSystem.Canonicaliser   ( makeSuperClasses )
 import TcMType   as TcM
 import TcRnMonad as TcM
-import TcSMonad  as TcS
+import GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.TrieMap       () -- DV: for now
 import GHC.Data.Type
