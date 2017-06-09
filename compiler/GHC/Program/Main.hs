@@ -111,7 +111,7 @@ import GHC.IR.Interface.TypeCheck          ( typecheckIface )
 import GHC.IR.Haskell.TypeSystem
 import GHC.Data.Name.Cache        ( initNameCache )
 import GHC.IR.Interface.Load        ( ifaceStats, initExternalPackageState )
-import PrelInfo
+import GHC.Builtin.Utils
 import GHC.IR.Interface.Utils
 import GHC.Compilers.HaskellToCore.Main
 import GHC.IR.Core.Transform.Pipeline

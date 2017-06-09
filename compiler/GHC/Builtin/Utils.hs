@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
--- | The @PrelInfo@ interface to the compiler's prelude knowledge.
+-- | The @GHC.Builtin.Utils@ interface to the compiler's prelude knowledge.
 --
 -- This module serves as the central gathering point for names which the
 -- compiler knows something about. This includes functions for,
@@ -17,7 +17,7 @@
 -- See Note [Known-key names] and Note [About wired-in things] for information
 -- about the two types of prelude things in GHC.
 --
-module PrelInfo (
+module GHC.Builtin.Utils (
         -- * Known-key names
         isKnownKeyName,
         lookupKnownKeyName,

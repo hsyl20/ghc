@@ -40,7 +40,7 @@ import GHC.Data.FastString
 import GHC.Data.Id
 import GHC.Data.RepType (countConRepArgs)
 import GHC.Data.Literal
-import PrelInfo
+import GHC.Builtin.Utils
 import GHC.Utils.Outputable
 import GHC.Utils.Platform
 import GHC.Utils

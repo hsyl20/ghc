@@ -46,7 +46,7 @@ import GHC.Utils.Fingerprint
 import GHC.Data.Char.Encoding
 
 import GHC.Config.Flags
-import PrelInfo
+import GHC.Builtin.Utils
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Builtin.Names

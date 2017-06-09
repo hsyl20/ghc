@@ -347,7 +347,7 @@ Library
         GHC.IR.Haskell.Annotation
         GHC.Data.ForeignCall
         KnownUniques
-        PrelInfo
+        GHC.Builtin.Utils
         GHC.Builtin.Names
         GHC.IR.Core.Transform.ConstantFolding
         PrimOp

@@ -27,7 +27,7 @@ import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.Data.Name
 import GHC.Utils.Outputable
-import PrelInfo
+import GHC.Builtin.Utils
 import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Error
 import GHC.IR.Haskell.TypeSystem.Evidence

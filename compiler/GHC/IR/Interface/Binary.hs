@@ -21,7 +21,7 @@ module GHC.IR.Interface.Binary (
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.TypeSystem
-import PrelInfo   ( isKnownKeyName, lookupKnownKeyName )
+import GHC.Builtin.Utils   ( isKnownKeyName, lookupKnownKeyName )
 import GHC.IR.Interface.Environment
 import GHC.Types
 import GHC.Data.Module
@@ -294,7 +294,7 @@ serialiseName bh name _ = do
 --  10xxxxxx xxyyyyyy yyyyyyyy yyyyyyyy
 --   A known-key name. x is the Unique's Char, y is the int part. We assume that
 --   all known-key uniques fit in this space. This is asserted by
---   PrelInfo.knownKeyNamesOkay.
+--   GHC.Builtin.Utils.knownKeyNamesOkay.
 --
 -- During serialization we check for known-key things using isKnownKeyName.
 -- During deserialization we use lookupKnownKeyName to get from the unique back

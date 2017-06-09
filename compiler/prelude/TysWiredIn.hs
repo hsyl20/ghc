@@ -193,7 +193,7 @@ If you change which things are wired in, make sure you change their
 names in GHC.Builtin.Names, so they use wTcQual, wDataQual, etc
 -}
 
--- This list is used only to define PrelInfo.wiredInThings. That in turn
+-- This list is used only to define GHC.Builtin.Utils.wiredInThings. That in turn
 -- is used to initialise the name environment carried around by the renamer.
 -- This means that if we look up the name of a TyCon (or its implicit binders)
 -- that occurs in this list that name will be assigned the wired-in key we
