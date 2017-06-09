@@ -7,7 +7,7 @@
 
 {-# LANGUAGE CPP, TupleSections, MultiWayIf, RankNTypes #-}
 
-module TcHsType (
+module GHC.IR.Haskell.TypeSystem.UserType (
         -- Type signatures
         kcHsSigType, tcClassSigType,
         tcHsSigType, tcHsSigWcType,

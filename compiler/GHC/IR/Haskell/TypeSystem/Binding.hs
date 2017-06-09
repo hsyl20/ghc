@@ -30,7 +30,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.Evidence
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import GHC.Data.FamilyInstance( normaliseType )

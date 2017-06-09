@@ -1064,7 +1064,7 @@ skolemise_tv tv details
         ; kind <- zonkTcType (tyVarKind tv)
         ; let uniq        = getUnique tv
                 -- NB: Use same Unique as original tyvar. This is
-                -- important for TcHsType.splitTelescopeTvs to work properly
+                -- important for GHC.IR.Haskell.TypeSystem.UserType.splitTelescopeTvs to work properly
 
               tv_name     = getOccName tv
               final_name  = mkInternalName uniq tv_name span
@@ -1254,7 +1254,7 @@ zonkTcTypeAndFV :: TcType -> TcM DTyCoVarSet
 -- where k2:=k1 is in the substitution.  We don't want
 -- k2 to look free in this type!
 -- NB: This might be called from within the knot, so don't use
--- smart constructors. See Note [Zonking within the knot] in TcHsType
+-- smart constructors. See Note [Zonking within the knot] in GHC.IR.Haskell.TypeSystem.UserType
 zonkTcTypeAndFV ty
   = tyCoVarsOfTypeDSet <$> zonkTcTypeInKnot ty
 
@@ -1276,7 +1276,7 @@ zonkTyCoVar tv | isTcTyVar tv = zonkTcTyVar tv
                                 mkCoercionTy . mkCoVarCo <$> zonkTyCoVarKind tv
    -- Hackily, when typechecking type and class decls
    -- we have TyVars in scopeadded (only) in
-   -- TcHsType.tcTyClTyVars, but it seems
+   -- GHC.IR.Haskell.TypeSystem.UserType.tcTyClTyVars, but it seems
    -- painful to make them into TcTyVars there
 
 zonkTyCoVarsAndFV :: TyCoVarSet -> TcM TyCoVarSet

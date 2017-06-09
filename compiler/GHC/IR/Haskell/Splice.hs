@@ -66,7 +66,7 @@ import GHC.Data.Type as Type
 import GHC.Data.Kind
 import GHC.Data.Name.Set
 import TcMType
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Interface.TypeCheck
 import GHC.Data.Types
 import GHC.IR.Haskell.TypeSystem.FamilyInstance

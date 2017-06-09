@@ -12,7 +12,7 @@ import GHC.Data.Name
 import GHC.Data.Class
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.Validity

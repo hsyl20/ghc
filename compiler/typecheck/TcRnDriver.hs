@@ -43,7 +43,7 @@ module TcRnDriver (
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice ( finishTH )
 import GHC.IR.Haskell.Renamer.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
 import GHC.IR.Interface.Environment( externaliseName )
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Matches
 import GHC.IR.Haskell.TypeSystem.Instantiation( deeplyInstantiate )
 import GHC.IR.Haskell.TypeSystem.Unify( checkConstraints )

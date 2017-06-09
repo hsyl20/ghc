@@ -33,7 +33,7 @@ import GHC.IR.Haskell.TypeSystem.ClassDeclaration
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Instance( tcInstDecls1 )
 import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
 import GHC.IR.Haskell.TypeSystem.Unify
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import TcMType
 import TysWiredIn ( unitTy )
 import GHC.IR.Haskell.TypeSystem.Type
@@ -674,10 +674,10 @@ without looking at T?  Delicate answer: during tcTyClDecl, we extend
 
 Then:
 
-  * During TcHsType.kcTyVar we look in the *local* env, to get the
+  * During GHC.IR.Haskell.TypeSystem.UserType.kcTyVar we look in the *local* env, to get the
     known kind for T.
 
-  * But in TcHsType.ds_type (and ds_var_app in particular) we look in
+  * But in GHC.IR.Haskell.TypeSystem.UserType.ds_type (and ds_var_app in particular) we look in
     the *global* env to get the TyCon. But we must be careful not to
     force the TyCon or we'll get a loop.
 
@@ -854,7 +854,7 @@ tcFamDecl1 parent (FamilyDecl { fdInfo = fam_info, fdLName = tc_lname@(L _ tc_na
          -- the knot and we will die if we look at them. This is OK here
          -- because there will only be one axiom, so we don't need to
          -- differentiate names.
-         -- See [Zonking inside the knot] in TcHsType
+         -- See [Zonking inside the knot] in GHC.IR.Haskell.TypeSystem.UserType
        ; co_ax_name <- newFamInstAxiomName tc_lname []
 
        ; let mb_co_ax
@@ -2265,7 +2265,7 @@ checkValidTyConTyVars tc
        ; checkValidTelescope (pprTyVars vis_tvs) stripped_tvs extra
          `and_if_that_doesn't_error`
            -- This triggers on test case dependent/should_fail/InferDependency
-           -- It reports errors around Note [Dependent LHsQTyVars] in TcHsType
+           -- It reports errors around Note [Dependent LHsQTyVars] in GHC.IR.Haskell.TypeSystem.UserType
          when duplicate_vars (
           addErr (vcat [ text "Invalid declaration for" <+>
                          quotes (ppr tc) <> semi <+> text "you must explicitly"

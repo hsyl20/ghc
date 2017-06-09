@@ -32,7 +32,7 @@ import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
 import GHC.IR.Core.Syntax.Make     ( nO_METHOD_BINDING_ERROR_ID )

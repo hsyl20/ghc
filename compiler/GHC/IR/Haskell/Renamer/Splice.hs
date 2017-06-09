@@ -510,7 +510,7 @@ References:
 [2] 'rnSpliceExpr'
 [3] 'GHC.IR.Haskell.TypeSystem.Splice.qAddModFinalizer'
 [4] 'GHC.IR.Haskell.TypeSystem.Expression.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
-[5] 'TcHsType.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
+[5] 'GHC.IR.Haskell.TypeSystem.UserType.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
 [6] 'GHC.IR.Haskell.TypeSystem.Pattern.tc_pat' ('SplicePat' ('HsSpliced' ...))
 
 -}

@@ -1083,10 +1083,10 @@ TcTyCons are used for tow distinct purposes
     with the variables in the tycon's inferred kind. Because the tycon might
     not have a CUSK, this matching up is, in general, quite hard to do.
     (Look through the git history between Dec 2015 and Apr 2016 for
-    TcHsType.splitTelescopeTvs!) Instead of trying, we just store the list
+    GHC.IR.Haskell.TypeSystem.UserType.splitTelescopeTvs!) Instead of trying, we just store the list
     of type variables to bring into scope in the later passes when we create
     a TcTyCon in getInitialKinds. Much easier this way! These tyvars are
-    brought into scope in kcTyClTyVars and tcTyClTyVars, both in TcHsType.
+    brought into scope in kcTyClTyVars and tcTyClTyVars, both in GHC.IR.Haskell.TypeSystem.UserType.
 
     It is important that the scoped type variables not be zonked, as some
     scoped type variables come into existence as SigTvs. If we zonk, the

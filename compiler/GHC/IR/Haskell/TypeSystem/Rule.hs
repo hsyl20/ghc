@@ -15,7 +15,7 @@ import TcRnMonad
 import TcSimplify
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Type
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Unify( buildImplicationFor )
@@ -145,7 +145,7 @@ tcRuleBndrs (L _ (RuleBndrSig (L _ name) rn_ty) : rule_bndrs)
   = do  { let ctxt = RuleSigCtxt name
         ; (_ , tvs, id_ty) <- tcHsPatSigType ctxt rn_ty
         ; let id  = mkLocalIdOrCoVar name id_ty
-                    -- See Note [Pattern signature binders] in TcHsType
+                    -- See Note [Pattern signature binders] in GHC.IR.Haskell.TypeSystem.UserType
 
               -- The type variables scope over subsequent bindings; yuk
         ; vars <- tcExtendTyVarEnv tvs $

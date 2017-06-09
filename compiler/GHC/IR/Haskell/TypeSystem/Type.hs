@@ -937,7 +937,7 @@ is among them, we instead pass in a predicate; this is just efficiency.
 ********************************************************************* -}
 
 -- | Find all variables bound anywhere in a type.
--- See also Note [Scope-check inferred kinds] in TcHsType
+-- See also Note [Scope-check inferred kinds] in GHC.IR.Haskell.TypeSystem.UserType
 allBoundVariables :: Type -> TyVarSet
 allBoundVariables ty = fvVarSet $ go ty
   where
@@ -1317,17 +1317,17 @@ mkNakedTyConApp :: TyCon -> [Type] -> Type
 --   * without being strict in TyCon,
 --   * without satisfying the invariants of TyConApp
 -- A subsequent zonking will establish the invariants
--- See Note [Type-checking inside the knot] in TcHsType
+-- See Note [Type-checking inside the knot] in GHC.IR.Haskell.TypeSystem.UserType
 mkNakedTyConApp tc tys = TyConApp tc tys
 
 mkNakedAppTys :: Type -> [Type] -> Type
--- See Note [Type-checking inside the knot] in TcHsType
+-- See Note [Type-checking inside the knot] in GHC.IR.Haskell.TypeSystem.UserType
 mkNakedAppTys ty1                []   = ty1
 mkNakedAppTys (TyConApp tc tys1) tys2 = mkNakedTyConApp tc (tys1 ++ tys2)
 mkNakedAppTys ty1                tys2 = foldl AppTy ty1 tys2
 
 mkNakedAppTy :: Type -> Type -> Type
--- See Note [Type-checking inside the knot] in TcHsType
+-- See Note [Type-checking inside the knot] in GHC.IR.Haskell.TypeSystem.UserType
 mkNakedAppTy ty1 ty2 = mkNakedAppTys ty1 [ty2]
 
 mkNakedCastTy :: Type -> Coercion -> Type

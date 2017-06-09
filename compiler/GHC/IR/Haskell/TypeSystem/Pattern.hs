@@ -32,7 +32,7 @@ import GHC.IR.Haskell.TypeSystem.Validity( arityErr )
 import GHC.Data.Type ( pprTyVars )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Unify
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import TysWiredIn
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type.Constructor

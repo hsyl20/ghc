@@ -639,7 +639,7 @@ in the kind environment when kind-checking the signature for B.
 
 Hence tcAddPatSynPlaceholers adds a binding
     A -> APromotionErr PatSynPE
-to the environment. Then TcHsType.tcTyVar will find A in the kind
+to the environment. Then GHC.IR.Haskell.TypeSystem.UserType.tcTyVar will find A in the kind
 environment, and will give a 'wrongThingErr' as a result.  But the
 lookup of A won't fail.
 

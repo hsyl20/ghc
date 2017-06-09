@@ -868,7 +868,7 @@ bindLHsTyVarBndrs :: forall a b.
                       -> [LHsTyVarBndr Name]
                       -> NameSet -- which names, from the preceding list,
                                  -- are used dependently within that list
-                                 -- See Note [Dependent LHsQTyVars] in TcHsType
+                                 -- See Note [Dependent LHsQTyVars] in GHC.IR.Haskell.TypeSystem.UserType
                       -> NameSet -- all names used in kind signatures
                       -> RnM (b, FreeVars))
                   -> RnM (b, FreeVars)

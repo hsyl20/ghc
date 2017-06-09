@@ -415,7 +415,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Deriving.Functor
         GHC.IR.Haskell.TypeSystem.Deriving.Generic
         GHC.IR.Haskell.TypeSystem.Syntax
-        TcHsType
+        GHC.IR.Haskell.TypeSystem.UserType
         GHC.IR.Haskell.TypeSystem.Instance
         TcMType
         GHC.IR.Haskell.TypeSystem.Validity

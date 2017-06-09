@@ -258,7 +258,7 @@ data LHsQTyVars name   -- See Note [HsType binders]
              -- See Note [HsForAllTy tyvar binders]
            , hsq_dependent :: PostRn name NameSet
                -- which explicit vars are dependent
-               -- See Note [Dependent LHsQTyVars] in TcHsType
+               -- See Note [Dependent LHsQTyVars] in GHC.IR.Haskell.TypeSystem.UserType
     }
 
 deriving instance (DataId name) => Data (LHsQTyVars name)
@@ -292,7 +292,7 @@ data HsImplicitBndrs name thing   -- See Note [HsType binders]
          , hsib_body :: thing              -- Main payload (type or list of types)
          , hsib_closed :: PostRn name Bool -- Taking the hsib_vars into account,
                                            -- is the payload closed? Used in
-                                           -- TcHsType.decideKindGeneralisationPlan
+                                           -- GHC.IR.Haskell.TypeSystem.UserType.decideKindGeneralisationPlan
     }
 
 -- | Haskell Wildcard Binders

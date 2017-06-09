@@ -26,7 +26,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses                       -- 
 import GHC.Data.ClassInstance
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.FamilyInstance
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import TcMType
 
 import GHC.IR.Haskell.Renamer.ImportExport( extendGlobalRdrEnvRn )

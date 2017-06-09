@@ -37,7 +37,7 @@ import GHC.IR.Haskell.Renamer.Utils          ( addNameClashErrRn, unknownSubordi
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Arrow
 import GHC.IR.Haskell.TypeSystem.Matches
-import TcHsType
+import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.PatternSynonym( tcPatSynBuilderOcc, nonBidirectionalErr )
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
