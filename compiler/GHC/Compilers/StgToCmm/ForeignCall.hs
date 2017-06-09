@@ -36,7 +36,7 @@ import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Graph
 import GHC.Data.Type
 import GHC.Data.RepType
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.CLabel
 import GHC.RTS.Storage
 import GHC.Data.ForeignCall

@@ -59,7 +59,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import GHC.Data.Type
 import GHC.Data.Coercion
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 import GHC.Data.BasicTypes
 import GHC.Data.ConstructorLike

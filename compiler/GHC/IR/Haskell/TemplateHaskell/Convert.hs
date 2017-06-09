@@ -29,7 +29,7 @@ import GHC.Data.SrcLoc
 import GHC.Data.Type
 import qualified GHC.Data.Coercion as Coercion
 import TysWiredIn
-import TysPrim (eqPrimTyCon)
+import GHC.Builtin.Primitive.Type (eqPrimTyCon)
 import GHC.Data.BasicTypes as Hs
 import GHC.Data.ForeignCall
 import GHC.Data.Unique

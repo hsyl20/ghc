@@ -8,7 +8,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 -- | This module is about types that can be defined in Haskell, but which
---   must be wired into the compiler nonetheless.  C.f module TysPrim
+--   must be wired into the compiler nonetheless.  C.f module GHC.Builtin.Primitive.Type
 module TysWiredIn (
         -- * Helper functions defined here
         mkWiredInTyConName, -- This is used in GHC.Builtin.TypeNats to define the
@@ -132,7 +132,7 @@ import {-# SOURCE #-} GHC.Data.Id.Make( mkDataConWorkId, mkDictSelId )
 
 -- friends:
 import GHC.Builtin.Names
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import {-# SOURCE #-} KnownUniques
 
 -- others:
@@ -343,7 +343,7 @@ It has these properties:
 
   * If (Any k) is the type of a value, it must be a /lifted/ value. So
     if we have (Any @(TYPE rr)) then rr must be 'LiftedRep.  See
-    Note [TYPE and RuntimeRep] in TysPrim.  This is a convenient
+    Note [TYPE and RuntimeRep] in GHC.Builtin.Primitive.Type.  This is a convenient
     invariant, and makes isUnliftedTyCon well-defined; otherwise what
     would (isUnliftedTyCon Any) be?
 
@@ -1014,7 +1014,7 @@ mk_sum arity = (tycon, sum_cons)
 *                                                                      *
 ********************************************************************* -}
 
--- See Note [The equality types story] in TysPrim
+-- See Note [The equality types story] in GHC.Builtin.Primitive.Type
 -- (:~~: :: forall k1 k2 (a :: k1) (b :: k2). a -> b -> Constraint)
 --
 -- It's tempting to put functional dependencies on (~~), but it's not
@@ -1074,13 +1074,13 @@ mk_class tycon sc_pred sc_sel_id
 ********************************************************************* -}
 
 -- For information about the usage of the following type,
--- see Note [TYPE and RuntimeRep] in module TysPrim
+-- see Note [TYPE and RuntimeRep] in module GHC.Builtin.Primitive.Type
 runtimeRepTy :: Type
 runtimeRepTy = mkTyConTy runtimeRepTyCon
 
 liftedTypeKindTyCon, starKindTyCon, unicodeStarKindTyCon :: TyCon
 
--- Type syononyms; see Note [TYPE and RuntimeRep] in TysPrim
+-- Type syononyms; see Note [TYPE and RuntimeRep] in GHC.Builtin.Primitive.Type
 -- type Type = tYPE 'LiftedRep
 -- type *    = tYPE 'LiftedRep
 -- type *    = tYPE 'LiftedRep  -- Unicode variant

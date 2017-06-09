@@ -38,7 +38,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Utils
 import GHC.Data.Var.Set
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Utils.Error
 import GHC.Data.Unique
 import GHC.Data.FastString

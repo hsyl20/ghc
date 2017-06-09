@@ -32,7 +32,7 @@ import GHC.Data.FamilyInstance
 import GHC.Utils
 import GHC.Data.Maybe           ( isJust )
 import TysWiredIn
-import TysPrim          ( realWorldStatePrimTy )
+import GHC.Builtin.Primitive.Type          ( realWorldStatePrimTy )
 import GHC.Utils.Error         ( dumpIfSet_dyn )
 import GHC.Data.Name             ( getName, stableNameCmp )
 import Data.Function    ( on )

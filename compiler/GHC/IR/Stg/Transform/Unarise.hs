@@ -209,7 +209,7 @@ import GHC.Utils.Outputable
 import GHC.Data.RepType
 import GHC.IR.Stg.Syntax
 import GHC.Data.Type
-import TysPrim (intPrimTy)
+import GHC.Builtin.Primitive.Type (intPrimTy)
 import TysWiredIn
 import GHC.Data.Unique.Supply
 import GHC.Utils

@@ -351,7 +351,7 @@ Library
         GHC.Builtin.Names
         GHC.IR.Core.Transform.ConstantFolding
         GHC.Builtin.Primitive.Operation
-        TysPrim
+        GHC.Builtin.Primitive.Type
         TysWiredIn
         GHC.Data.CostCentre
         GHC.Data.CostCentre.Initialise

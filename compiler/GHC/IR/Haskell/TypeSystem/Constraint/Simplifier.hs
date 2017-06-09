@@ -511,7 +511,7 @@ tcCheckSatisfiability given_ids
 Expand superclasses before starting, because (Int ~ Bool), has
 (Int ~~ Bool) as a superclass, which in turn has (Int ~N# Bool)
 as a superclass, and it's the latter that is insoluble.  See
-Note [The equality types story] in TysPrim.
+Note [The equality types story] in GHC.Builtin.Primitive.Type.
 
 If we fail to prove unsatisfiability we (arbitrarily) try just once to
 find superclasses, using try_harder.  Reason: we might have a type

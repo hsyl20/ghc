@@ -37,7 +37,7 @@ import GHC.IR.Cmm.Utils
 import GHC.Types
 import GHC.Data.ForeignCall
 import TysWiredIn
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Builtin.Names
 import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc

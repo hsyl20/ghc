@@ -59,7 +59,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Id.Make
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 import GHC.Types
 import GHC.Data.Class

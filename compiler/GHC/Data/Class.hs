@@ -310,7 +310,7 @@ isAbstractClass _ = False
 -- | If a class is "naturally coherent", then we needn't worry at all, in any
 -- way, about overlapping/incoherent instances. Just solve the thing!
 naturallyCoherentClass :: Class -> Bool
--- See also Note [The equality class story] in TysPrim.
+-- See also Note [The equality class story] in GHC.Builtin.Primitive.Type.
 naturallyCoherentClass cls
   = cls `hasKey` heqTyConKey ||
     cls `hasKey` eqTyConKey ||

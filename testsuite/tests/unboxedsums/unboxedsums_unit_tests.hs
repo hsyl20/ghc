@@ -5,7 +5,7 @@ import GHC
 import GhcMonad
 import GHC.Utils.Outputable
 import GHC.Data.RepType
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 import GHC.Data.Unique.Set
 import GHC.Data.Unique

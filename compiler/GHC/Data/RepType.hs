@@ -32,7 +32,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Types
 import GHC.Data.Type
 import GHC.Utils
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import {-# SOURCE #-} TysWiredIn ( anyTypeOfKind )
 
 import Data.List (foldl', sort)

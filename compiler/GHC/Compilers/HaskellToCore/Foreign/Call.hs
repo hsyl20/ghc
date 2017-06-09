@@ -33,7 +33,7 @@ import GHC.Data.Type
 import GHC.Data.Id   ( Id )
 import GHC.Data.Coercion
 import GHC.Builtin.Primitive.Operation
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.Type.Constructor
 import TysWiredIn
 import GHC.Data.BasicTypes

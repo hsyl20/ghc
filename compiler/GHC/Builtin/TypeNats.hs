@@ -25,7 +25,7 @@ import GHC.IR.Haskell.TypeSystem.Types  ( Xi )
 import GHC.Data.Coercion.Axiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeEqn )
 import GHC.Data.Name       ( Name, BuiltInSyntax(..) )
 import TysWiredIn
-import TysPrim    ( mkTemplateAnonTyConBinders )
+import GHC.Builtin.Primitive.Type    ( mkTemplateAnonTyConBinders )
 import GHC.Builtin.Names  ( gHC_TYPELITS
                   , gHC_TYPENATS
                   , typeNatAddTyFamNameKey

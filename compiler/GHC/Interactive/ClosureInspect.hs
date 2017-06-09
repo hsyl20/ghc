@@ -49,7 +49,7 @@ import GHC.Data.Name
 import GHC.Utils
 import GHC.Data.Var.Set
 import GHC.Data.BasicTypes       ( Boxity(..) )
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Builtin.Names
 import TysWiredIn
 import GHC.Config.Flags

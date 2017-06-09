@@ -51,7 +51,7 @@ import GHC.Data.Id.Info
 import GHC.IR.Core.Syntax
 import GHC.Data.Type.Constructor hiding ( pprPromotionQuote )
 import GHC.Data.Coercion.Axiom
-import TysPrim ( eqPrimTyCon, eqReprPrimTyCon )
+import GHC.Builtin.Primitive.Type ( eqPrimTyCon, eqReprPrimTyCon )
 import TysWiredIn ( heqTyCon )
 import GHC.Data.Id.Make ( noinlineIdName )
 import GHC.Builtin.Names

@@ -24,7 +24,7 @@ import GHC.Data.OccName
 import GHC.Data.Coercion
 import GHC.Data.Id.Make
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
-import TysPrim( intPrimTy )
+import GHC.Builtin.Primitive.Type( intPrimTy )
 
 import GHC.Config.Flags
 import GHC.Data.FastString

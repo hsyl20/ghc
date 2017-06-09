@@ -22,7 +22,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkTyVarBindersX, zonkTcTypeToTypes
               , zonkTcTypeToType, emptyZonkEnv )
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn  ( runtimeRepTy )
 import GHC.Data.Name
 import GHC.Data.SrcLoc

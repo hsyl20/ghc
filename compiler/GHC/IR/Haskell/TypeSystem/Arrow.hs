@@ -27,7 +27,7 @@ import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Var.Set
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.BasicTypes( Arity )
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable

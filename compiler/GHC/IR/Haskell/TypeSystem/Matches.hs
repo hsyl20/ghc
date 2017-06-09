@@ -33,7 +33,7 @@ import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Id
 import GHC.Data.Type.Constructor
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Outputable
 import GHC.Utils

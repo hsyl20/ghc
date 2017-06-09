@@ -1505,7 +1505,7 @@ fingerprintDataConName :: Name
 fingerprintDataConName =
     dcQual gHC_FINGERPRINT_TYPE (fsLit "Fingerprint") fingerprintDataConKey
 
--- homogeneous equality. See Note [The equality types story] in TysPrim
+-- homogeneous equality. See Note [The equality types story] in GHC.Builtin.Primitive.Type
 eqTyConName :: Name
 eqTyConName        = tcQual dATA_TYPE_EQUALITY (fsLit "~")         eqTyConKey
 

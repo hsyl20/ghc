@@ -18,7 +18,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence ( mkWpTyApps )
 import GHC.IR.Haskell.TypeSystem
 import GHC.Types ( lookupId )
 import GHC.Builtin.Names
-import TysPrim ( primTyCons )
+import GHC.Builtin.Primitive.Type ( primTyCons )
 import TysWiredIn ( tupleTyCon, sumTyCon, runtimeRepTyCon
                   , vecCountTyCon, vecElemTyCon
                   , nilDataCon, consDataCon )

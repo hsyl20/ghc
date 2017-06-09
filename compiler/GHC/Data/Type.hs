@@ -220,7 +220,7 @@ import GHC.Data.Unique.Set
 
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )
 import GHC.Builtin.Names

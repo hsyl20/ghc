@@ -33,7 +33,7 @@ import GHC.Builtin.Names ( knownNatClassName, knownSymbolClassName,
                    heqTyConKey, ipClassKey )
 import TysWiredIn ( typeNatKind, typeSymbolKind, heqDataCon,
                     coercibleDataCon, constraintKindTyCon )
-import TysPrim    ( eqPrimTyCon, eqReprPrimTyCon )
+import GHC.Builtin.Primitive.Type    ( eqPrimTyCon, eqReprPrimTyCon )
 import GHC.Data.Id( idType, isNaughtyRecordSelector )
 import GHC.Data.Coercion.Axiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import GHC.Data.Class
@@ -2531,14 +2531,14 @@ solveCallStack ev ev_cs = do
 *                                                                     *
 ***********************************************************************-}
 
--- See also Note [The equality types story] in TysPrim
+-- See also Note [The equality types story] in GHC.Builtin.Primitive.Type
 matchLiftedEquality :: [Type] -> TcS LookupInstResult
 matchLiftedEquality args
   = return (GenInst { lir_new_theta = [ mkTyConApp eqPrimTyCon args ]
                     , lir_mk_ev     = EvDFunApp (dataConWrapId heqDataCon) args
                     , lir_safe_over = True })
 
--- See also Note [The equality types story] in TysPrim
+-- See also Note [The equality types story] in GHC.Builtin.Primitive.Type
 matchLiftedCoercible :: [Type] -> TcS LookupInstResult
 matchLiftedCoercible args@[k, t1, t2]
   = return (GenInst { lir_new_theta = [ mkTyConApp eqReprPrimTyCon args' ]

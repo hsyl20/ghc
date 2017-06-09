@@ -30,7 +30,7 @@ module GHC.IR.Core.Transform.Vectorise.Builtins.Base (
   closureCtrFun
 ) where
 
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.BasicTypes
 import GHC.Data.Class
 import GHC.IR.Core.Syntax

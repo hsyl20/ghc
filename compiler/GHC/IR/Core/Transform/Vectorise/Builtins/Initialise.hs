@@ -8,7 +8,7 @@ module GHC.IR.Core.Transform.Vectorise.Builtins.Initialise (
 import GHC.IR.Core.Transform.Vectorise.Builtins.Base
 
 import GHC.Data.BasicTypes
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Compilers.HaskellToCore.Monad
 import TysWiredIn
 import GHC.Data.DataConstructor

@@ -46,7 +46,7 @@ import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Evidence
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.Type.Constructor   ( isUnboxedTupleTyCon )
 import TysWiredIn
 import GHC.Data.Type

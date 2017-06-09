@@ -40,7 +40,7 @@ module GHC.Data.Id.Make (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Transform.Rules
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Type

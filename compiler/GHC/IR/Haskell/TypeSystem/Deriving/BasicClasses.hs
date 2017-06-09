@@ -60,7 +60,7 @@ import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidTyFamEqn )
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 import GHC.Data.Type
 import GHC.Data.Class

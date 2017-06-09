@@ -208,7 +208,7 @@ Note that:
 Note [Equality predicates in IfaceType]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 GHC has several varieties of type equality (see Note [The equality types story]
-in TysPrim for details) which all must be rendered with different surface syntax
+in GHC.Builtin.Primitive.Type for details) which all must be rendered with different surface syntax
 during pretty-printing. Which syntax we use depends upon,
 
  1. Which predicate tycon was used

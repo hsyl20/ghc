@@ -44,7 +44,7 @@ module GHC.Data.Literal
 
 #include "HsVersions.h"
 
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Builtin.Names
 import GHC.Data.Type
 import GHC.Data.Type.Constructor

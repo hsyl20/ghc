@@ -66,7 +66,7 @@ import GHC.IR.Haskell.Utils          ( mkChunkified, chunkify )
 import GHC.IR.Haskell.TypeSystem.Type           ( mkSpecSigmaTy )
 import GHC.Data.Type
 import GHC.Data.Coercion         ( isCoVar )
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.DataConstructor          ( DataCon, dataConWorkId )
 import GHC.Data.Id.Info           ( vanillaIdInfo, setStrictnessInfo,
                           setArityInfo )

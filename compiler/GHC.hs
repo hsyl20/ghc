@@ -300,7 +300,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Type     hiding( typeKind )
 import GHC.IR.Haskell.TypeSystem.Type           hiding( typeKind )
 import GHC.Data.Id
-import TysPrim          ( alphaTyVars )
+import GHC.Builtin.Primitive.Type          ( alphaTyVars )
 import GHC.Data.Type.Constructor
 import GHC.Data.Class
 import GHC.Data.DataConstructor

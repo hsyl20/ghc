@@ -106,7 +106,7 @@ import GHC.Data.Id as Id
 import GHC.Data.Name
 import GHC.Data.Var.Set
 import TysWiredIn
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import GHC.Data.Var.Environment
 import GHC.Data.Name.Environment
 import GHC.Builtin.Names

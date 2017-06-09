@@ -28,7 +28,7 @@ import GHC.IR.Interface.Environment         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )
 import GHC.Data.RdrName
 import GHC.Data.BasicTypes
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Environment

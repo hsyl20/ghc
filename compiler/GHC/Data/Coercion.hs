@@ -121,7 +121,7 @@ import GHC.Data.Unique
 import GHC.Data.Pair
 import GHC.Data.SrcLoc
 import GHC.Builtin.Names
-import TysPrim          ( eqPhantPrimTyCon )
+import GHC.Builtin.Primitive.Type          ( eqPhantPrimTyCon )
 import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.Data.Unique.FiniteMap

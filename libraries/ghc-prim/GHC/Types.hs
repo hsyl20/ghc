@@ -215,7 +215,7 @@ inside GHC, to change the kind and type.
 -- homogeneous equality @~@, this is printed as @~@ unless
 -- @-fprint-equality-relations@ is set.
 class a ~~ b
-  -- See also Note [The equality types story] in TysPrim
+  -- See also Note [The equality types story] in GHC.Builtin.Primitive.Type
 
 -- | @Coercible@ is a two-parameter class that has instances for types @a@ and @b@ if
 --      the compiler can infer that they have the same representation. This class
@@ -265,7 +265,7 @@ class a ~~ b
 --
 --      @since 4.7.0.0
 class Coercible a b
-  -- See also Note [The equality types story] in TysPrim
+  -- See also Note [The equality types story] in GHC.Builtin.Primitive.Type
 
 {- *********************************************************************
 *                                                                      *

@@ -29,7 +29,7 @@ module GHC.Builtin.Primitive.Operation (
 
 #include "HsVersions.h"
 
-import TysPrim
+import GHC.Builtin.Primitive.Type
 import TysWiredIn
 
 import GHC.IR.Cmm.Type
