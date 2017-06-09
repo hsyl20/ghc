@@ -287,7 +287,7 @@ See also Note [Wrappers for data instance tycons] in GHC.Data.Id.Make
   data type with some axioms that connect it to other data types.
 
 * The tyConTyVars of the representation tycon are the tyvars that the
-  user wrote in the patterns. This is important in TcDeriv, where we
+  user wrote in the patterns. This is important in GHC.IR.Haskell.TypeSystem.Deriving, where we
   bring these tyvars into scope before type-checking the deriving
   clause. This fact is arranged for in TcInstDecls.tcDataFamInstDecl.
 

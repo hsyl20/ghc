@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -XDeriveDataTypeable #-}
 
 -- Trac #1935
--- See Note [Superclasses of derived instance] in TcDeriv
+-- See Note [Superclasses of derived instance] in GHC.IR.Haskell.TypeSystem.Deriving
 
 {-# OPTIONS -fno-warn-redundant-constraints #-}
 

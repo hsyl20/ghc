@@ -542,7 +542,7 @@ simplifyInstanceContexts infer_specs
                 -- checkValidInstance tyvars theta clas inst_tys
                 -- Not necessary; see Note [Exotic derived instance contexts]
 
-           ; traceTc "TcDeriv" (ppr deriv_rhs $$ ppr theta)
+           ; traceTc "GHC.IR.Haskell.TypeSystem.Deriving" (ppr deriv_rhs $$ ppr theta)
                 -- Claim: the result instance declaration is guaranteed valid
                 -- Hence no need to call:
                 --   checkValidInstance tyvars theta clas inst_tys

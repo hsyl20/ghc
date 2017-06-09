@@ -4,7 +4,7 @@
 
 \section[InstEnv]{Utilities for typechecking instance declarations}
 
-The bits common to TcInstDcls and TcDeriv.
+The bits common to TcInstDcls and GHC.IR.Haskell.TypeSystem.Deriving.
 -}
 
 {-# LANGUAGE CPP, DeriveDataTypeable #-}

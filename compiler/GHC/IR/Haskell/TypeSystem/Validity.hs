@@ -1187,7 +1187,7 @@ The usual functional dependency checks also apply.
 Note [Valid 'deriving' predicate]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 validDerivPred checks for OK 'deriving' context.  See Note [Exotic
-derived instance contexts] in TcDeriv.  However the predicate is
+derived instance contexts] in GHC.IR.Haskell.TypeSystem.Deriving.  However the predicate is
 here because it uses sizeTypes, fvTypes.
 
 It checks for three things

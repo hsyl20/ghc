@@ -2419,7 +2419,7 @@ standardClassKeys = derivableClassKeys ++ numericClassKeys
 
 {-
 @derivableClassKeys@ is also used in checking \tr{deriving} constructs
-(@TcDeriv@).
+(@GHC.IR.Haskell.TypeSystem.Deriving@).
 -}
 
 derivableClassKeys :: [Unique]

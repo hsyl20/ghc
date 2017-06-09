@@ -1060,7 +1060,7 @@ type LHsDerivingClause name = Located (HsDerivingClause name)
 --       'ApiAnnotation.AnnAnyClass', 'Api.AnnNewtype',
 --       'ApiAnnotation.AnnOpen','ApiAnnotation.AnnClose'
 data HsDerivingClause name
-  -- See Note [Deriving strategies] in TcDeriv
+  -- See Note [Deriving strategies] in GHC.IR.Haskell.TypeSystem.Deriving
   = HsDerivingClause
     { deriv_clause_strategy :: Maybe (Located DerivStrategy)
       -- ^ The user-specified strategy (if any) to use when deriving

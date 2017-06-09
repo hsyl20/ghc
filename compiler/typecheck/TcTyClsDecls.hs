@@ -31,7 +31,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax
 import TcTyDecls
 import TcClassDcl
 import {-# SOURCE #-} TcInstDcls( tcInstDecls1 )
-import TcDeriv (DerivInfo)
+import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TcMType

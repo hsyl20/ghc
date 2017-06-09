@@ -74,7 +74,7 @@ data DerivSpec theta = DS { ds_loc       :: SrcSpan
         -- or the not-yet-simplified list of constraints together with their origin
 
         -- ds_mechanism specifies the means by which GHC derives the instance.
-        -- See Note [Deriving strategies] in TcDeriv
+        -- See Note [Deriving strategies] in GHC.IR.Haskell.TypeSystem.Deriving
 
 {-
 Example:
@@ -104,7 +104,7 @@ instance Outputable theta => Outputable (DerivSpec theta) where
   ppr = pprDerivSpec
 
 -- What action to take in order to derive a class instance.
--- See Note [Deriving strategies] in TcDeriv
+-- See Note [Deriving strategies] in GHC.IR.Haskell.TypeSystem.Deriving
 -- NB: DerivSpecMechanism is purely local to this module
 data DerivSpecMechanism
   = DerivSpecStock   -- "Standard" classes

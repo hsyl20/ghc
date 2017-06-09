@@ -8,7 +8,7 @@ module TcInstDcls ( tcInstDecls1 ) where
 import GHC.IR.Haskell.Syntax
 import TcRnTypes
 import GHC.IR.Haskell.TypeSystem.Environment( InstInfo )
-import TcDeriv
+import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.Data.Name
 
 -- We need this because of the mutual recursion

@@ -8,7 +8,7 @@ Handles @deriving@ clauses on @data@ declarations.
 
 {-# LANGUAGE CPP #-}
 
-module TcDeriv ( tcDeriving, DerivInfo(..), mkDerivInfos ) where
+module GHC.IR.Haskell.TypeSystem.Deriving ( tcDeriving, DerivInfo(..), mkDerivInfos ) where
 
 #include "HsVersions.h"
 
@@ -212,7 +212,7 @@ mkDerivInfos decls = concatMapM (mk_deriv . unLoc) decls
 
 ************************************************************************
 *                                                                      *
-\subsection[TcDeriv-driver]{Top-level function for \tr{derivings}}
+\subsection[GHC.IR.Haskell.TypeSystem.Deriving-driver]{Top-level function for \tr{derivings}}
 *                                                                      *
 ************************************************************************
 -}
@@ -1454,7 +1454,7 @@ However, we must watch out for three things:
 
 ************************************************************************
 *                                                                      *
-\subsection[TcDeriv-normal-binds]{Bindings for the various classes}
+\subsection[GHC.IR.Haskell.TypeSystem.Deriving-normal-binds]{Bindings for the various classes}
 *                                                                      *
 ************************************************************************
 
@@ -1738,7 +1738,7 @@ ask for a particular DerivStrategy (using the algorithm linked to above).
 
 Note [Deriving instances for classes themselves]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Much of the code in TcDeriv assumes that deriving only works on data types.
+Much of the code in GHC.IR.Haskell.TypeSystem.Deriving assumes that deriving only works on data types.
 But this assumption doesn't hold true for DeriveAnyClass, since it's perfectly
 reasonable to do something like this:
 
@@ -1757,7 +1757,7 @@ derivable class, and C2 isn't a newtype).
 
 ************************************************************************
 *                                                                      *
-\subsection[TcDeriv-taggery-Names]{What con2tag/tag2con functions are available?}
+\subsection[GHC.IR.Haskell.TypeSystem.Deriving-taggery-Names]{What con2tag/tag2con functions are available?}
 *                                                                      *
 ************************************************************************
 -}

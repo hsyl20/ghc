@@ -30,7 +30,7 @@ import Inst
 import GHC.Data.ClassInstance
 import FamInst
 import GHC.Data.FamilyInstance
-import TcDeriv
+import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.IR.Haskell.TypeSystem.Environment
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Unify

@@ -405,7 +405,7 @@ Library
         TcSigs
         TcClassDcl
         TcDefaults
-        TcDeriv
+        GHC.IR.Haskell.TypeSystem.Deriving
         TcDerivInfer
         TcDerivUtils
         GHC.IR.Haskell.TypeSystem.Environment

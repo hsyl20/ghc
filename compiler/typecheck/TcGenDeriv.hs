@@ -6,7 +6,7 @@
 
 TcGenDeriv: Generating derived instance declarations
 
-This module is nominally ``subordinate'' to @TcDeriv@, which is the
+This module is nominally ``subordinate'' to @GHC.IR.Haskell.TypeSystem.Deriving@, which is the
 ``official'' interface to deriving-related things.
 
 This is where we do all the grimy bindings' generation.
@@ -1175,7 +1175,7 @@ gen_Show_binds get_fixity loc tycon
              show_arg :: RdrName -> Type -> LHsExpr RdrName
              show_arg b arg_ty
                | isUnliftedType arg_ty
-               -- See Note [Deriving and unboxed types] in TcDeriv
+               -- See Note [Deriving and unboxed types] in GHC.IR.Haskell.TypeSystem.Deriving
                = nlHsApps compose_RDR [mk_shows_app boxed_arg,
                                        mk_showString_app postfixMod]
                | otherwise
@@ -1604,7 +1604,7 @@ a polytype.  E.g.
 
 The type checker checks this code, and it currently requires
 -XImpredicativeTypes to permit that polymorphic type instantiation,
-so we have to switch that flag on locally in TcDeriv.genInst.
+so we have to switch that flag on locally in GHC.IR.Haskell.TypeSystem.Deriving.genInst.
 
 See #8503 for more discussion.
 
@@ -1673,7 +1673,7 @@ gen_Newtype_binds loc cls inst_tvs inst_tys rhs_ty
                                            rep_lhs_tys
         let axiom = mkSingleCoAxiom Nominal rep_tc_name rep_tvs' rep_cvs'
                                     fam_tc rep_lhs_tys rep_rhs_ty
-        -- Check (c) from Note [GND and associated type families] in TcDeriv
+        -- Check (c) from Note [GND and associated type families] in GHC.IR.Haskell.TypeSystem.Deriving
         checkValidTyFamEqn (Just (cls, cls_tvs, lhs_env)) fam_tc rep_tvs'
                            rep_cvs' rep_lhs_tys rep_rhs_ty loc
         newFamInst SynFamilyInst axiom
@@ -1906,7 +1906,7 @@ box ::         String           -- The class involved
             -> LHsExpr RdrName  -- The argument
             -> Type             -- The argument type
             -> LHsExpr RdrName  -- Boxed version of the arg
--- See Note [Deriving and unboxed types] in TcDeriv
+-- See Note [Deriving and unboxed types] in GHC.IR.Haskell.TypeSystem.Deriving
 box cls_str tycon arg arg_ty = nlHsApp (nlHsVar box_con) arg
   where
     box_con = assoc_ty_id cls_str tycon boxConTbl arg_ty
@@ -1916,7 +1916,7 @@ primOrdOps :: String    -- The class involved
            -> TyCon     -- The tycon involved
            -> Type      -- The type
            -> (RdrName, RdrName, RdrName, RdrName, RdrName)  -- (lt,le,eq,ge,gt)
--- See Note [Deriving and unboxed types] in TcDeriv
+-- See Note [Deriving and unboxed types] in GHC.IR.Haskell.TypeSystem.Deriving
 primOrdOps str tycon ty = assoc_ty_id str tycon ordOpTbl ty
 
 primLitOps :: String -- The class involved

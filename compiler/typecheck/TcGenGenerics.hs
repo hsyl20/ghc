@@ -79,7 +79,7 @@ gen_Generic_binds gk tc inst_tys = do
 -}
 
 get_gen1_constrained_tys :: TyVar -> Type -> [Type]
--- called by TcDeriv.inferConstraints; generates a list of types, each of which
+-- called by GHC.IR.Haskell.TypeSystem.Deriving.inferConstraints; generates a list of types, each of which
 -- must be a Functor in order for the Generic1 instance to work.
 get_gen1_constrained_tys argVar
   = argTyFold argVar $ ArgTyAlg { ata_rec0 = const []
@@ -911,7 +911,7 @@ kind binder, e.g.,
    instance Generic1 (P *) where
      type Rep1 (P *) = (... (Rec0 k)) -- wrong!
 
-See Note [Unify kinds in deriving] in TcDeriv.
+See Note [Unify kinds in deriving] in GHC.IR.Haskell.TypeSystem.Deriving.
 
 In any such scenario, we must prevent a discrepancy between the LHS and RHS of
 a Rep(1) instance. To do so, we create a type variable substitution that maps
