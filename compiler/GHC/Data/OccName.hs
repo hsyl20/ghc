@@ -601,7 +601,7 @@ isDefaultMethodOcc occ =
 
 -- | Is an 'OccName' one of a Typeable @TyCon@ or @Module@ binding?
 -- This is needed as these bindings are renamed differently.
--- See Note [Grand plan for Typeable] in TcTypeable.
+-- See Note [Grand plan for Typeable] in GHC.IR.Haskell.TypeSystem.Deriving.Typeable.
 isTypeableBindOcc :: OccName -> Bool
 isTypeableBindOcc occ =
    case occNameString occ of
@@ -643,7 +643,7 @@ mkCon2TagOcc        = mk_simple_deriv varName  "$con2tag_"
 mkTag2ConOcc        = mk_simple_deriv varName  "$tag2con_"
 mkMaxTagOcc         = mk_simple_deriv varName  "$maxtag_"
 
--- TyConRepName stuff; see Note [Grand plan for Typeable] in TcTypeable
+-- TyConRepName stuff; see Note [Grand plan for Typeable] in GHC.IR.Haskell.TypeSystem.Deriving.Typeable
 mkTyConRepOcc occ = mk_simple_deriv varName prefix occ
   where
     prefix | isDataOcc occ = "$tc'"

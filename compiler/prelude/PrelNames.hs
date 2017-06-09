@@ -1270,7 +1270,7 @@ mkTrFunName           = varQual tYPEABLE_INTERNAL (fsLit "mkTrFun")        mkTrF
 typeNatTypeRepName    = varQual tYPEABLE_INTERNAL (fsLit "typeNatTypeRep") typeNatTypeRepKey
 typeSymbolTypeRepName = varQual tYPEABLE_INTERNAL (fsLit "typeSymbolTypeRep") typeSymbolTypeRepKey
 -- this is the Typeable 'Module' for GHC.Prim (which has no code, so we place in GHC.Types)
--- See Note [Grand plan for Typeable] in TcTypeable.
+-- See Note [Grand plan for Typeable] in GHC.IR.Haskell.TypeSystem.Deriving.Typeable.
 trGhcPrimModuleName   = varQual gHC_TYPES         (fsLit "tr$ModuleGHCPrim")  trGhcPrimModuleKey
 
 -- Typeable KindReps for some common cases

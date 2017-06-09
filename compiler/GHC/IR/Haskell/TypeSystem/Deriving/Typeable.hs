@@ -6,7 +6,7 @@
 {-# LANGUAGE RecordWildCards #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
-module TcTypeable(mkTypeableBinds) where
+module GHC.IR.Haskell.TypeSystem.Deriving.Typeable(mkTypeableBinds) where
 
 
 import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
@@ -50,7 +50,7 @@ import Data.Word( Word64 )
 The overall plan is this:
 
 1. Generate a binding for each module p:M
-   (done in TcTypeable by mkModIdBindings)
+   (done in GHC.IR.Haskell.TypeSystem.Deriving.Typeable by mkModIdBindings)
        M.$trModule :: GHC.Types.Module
        M.$trModule = Module "p" "M"
    ("tr" is short for "type representation"; see GHC.Types)
@@ -101,7 +101,7 @@ There are many wrinkles:
 
 * GHC.Prim doesn't have any associated object code, so we need to put the
   representations for types defined in this module elsewhere. We chose this
-  place to be GHC.Types. TcTypeable.mkPrimTypeableBinds is responsible for
+  place to be GHC.Types. GHC.IR.Haskell.TypeSystem.Deriving.Typeable.mkPrimTypeableBinds is responsible for
   injecting the bindings for the GHC.Prim representions when compiling
   GHC.Types.
 
@@ -142,7 +142,7 @@ There are many wrinkles:
 -- entry-point of this module and is invoked by the typechecker driver in
 -- 'tcRnSrcDecls'.
 --
--- See Note [Grand plan for Typeable] in TcTypeable.
+-- See Note [Grand plan for Typeable] in GHC.IR.Haskell.TypeSystem.Deriving.Typeable.
 mkTypeableBinds :: TcM TcGblEnv
 mkTypeableBinds
   = do { -- Create a binding for $trModule.

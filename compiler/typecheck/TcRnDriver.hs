@@ -91,7 +91,7 @@ import TcMType
 import import GHC.IR.Haskell.TypeSystem.Type
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
-import TcTypeable ( mkTypeableBinds )
+import GHC.IR.Haskell.TypeSystem.Deriving.Typeable ( mkTypeableBinds )
 import TcBackpack
 import GHC.IR.Interface.Load
 import GHC.IR.Haskell.Renamer.ImportExport

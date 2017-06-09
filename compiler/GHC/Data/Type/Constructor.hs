@@ -1123,7 +1123,7 @@ tyConRepName_maybe _ = Nothing
 
 -- | Make a 'Name' for the 'Typeable' representation of the given wired-in type
 mkPrelTyConRepName :: Name -> TyConRepName
--- See Note [Grand plan for Typeable] in 'TcTypeable' in TcTypeable.
+-- See Note [Grand plan for Typeable] in 'GHC.IR.Haskell.TypeSystem.Deriving.Typeable'
 mkPrelTyConRepName tc_name  -- Prelude tc_name is always External,
                             -- so nameModule will work
   = mkExternalName rep_uniq rep_mod rep_occ (nameSrcSpan tc_name)
@@ -1138,7 +1138,7 @@ mkPrelTyConRepName tc_name  -- Prelude tc_name is always External,
 -- | The name (and defining module) for the Typeable representation (TyCon) of a
 -- type constructor.
 --
--- See Note [Grand plan for Typeable] in 'TcTypeable' in TcTypeable.
+-- See Note [Grand plan for Typeable] in 'GHC.IR.Haskell.TypeSystem.Deriving.Typeable'.
 tyConRepModOcc :: Module -> OccName -> (Module, OccName)
 tyConRepModOcc tc_module tc_occ = (rep_module, mkTyConRepOcc tc_occ)
   where
