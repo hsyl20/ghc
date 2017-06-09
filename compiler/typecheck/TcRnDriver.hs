@@ -68,7 +68,7 @@ import GHC.Data.RdrName
 import GHC.IR.Haskell.TypeSystem.Syntax
 import GHC.IR.Haskell.TypeSystem.Expression
 import TcRnMonad
-import TcRnExports
+import GHC.IR.Haskell.TypeSystem.Export
 import GHC.IR.Haskell.TypeSystem.Evidence
 import qualified GHC.Data.Bool.Formula as BF
 import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )

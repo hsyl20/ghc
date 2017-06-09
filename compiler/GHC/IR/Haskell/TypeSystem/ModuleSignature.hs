@@ -18,7 +18,7 @@ module GHC.IR.Haskell.TypeSystem.ModuleSignature (
 
 import GHC.Data.BasicTypes (defaultFixity)
 import GHC.Packages
-import TcRnExports
+import GHC.IR.Haskell.TypeSystem.Export
 import GHC.Config.Flags
 import GHC.IR.Haskell.Syntax
 import GHC.Data.RdrName

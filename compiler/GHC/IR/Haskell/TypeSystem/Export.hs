@@ -1,7 +1,7 @@
 {-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE OverloadedStrings #-}
-module TcRnExports (tcRnExports, exports_from_avail) where
+module GHC.IR.Haskell.TypeSystem.Export (tcRnExports, exports_from_avail) where
 
 import GHC.IR.Haskell.Syntax
 import PrelNames
