@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module NameShape(
+module GHC.Data.NameShape(
     NameShape(..),
     emptyNameShape,
     mkNameShape,

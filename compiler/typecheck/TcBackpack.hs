@@ -55,7 +55,7 @@ import qualified Data.Map as Map
 
 import GHC.Finder
 import GHC.Data.Unique.DeterSet
-import NameShape
+import GHC.Data.NameShape
 import TcErrors
 import TcUnify
 import GHC.Interface.Renaming
