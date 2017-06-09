@@ -137,7 +137,8 @@ data PmPat :: PatTy -> * where
             , pm_con_tvs     :: [TyVar]
             , pm_con_dicts   :: [EvVar]
             , pm_con_args    :: [PmPat t] } -> PmPat t
-            -- For PmCon arguments' meaning see @ConPatOut@ in hsSyn/HsPat.hs
+            -- For PmCon arguments' meaning see @ConPatOut@ in
+            -- GHC.IR.Haskell.Pattern
   PmVar  :: { pm_var_id   :: Id    } -> PmPat t
   PmLit  :: { pm_lit_lit  :: PmLit } -> PmPat t -- See Note [Literals in PmPat]
   PmNLit :: { pm_lit_id   :: Id
