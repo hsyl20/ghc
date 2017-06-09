@@ -17,7 +17,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Type
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
-import TcGenFunctor
+import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.FamilyInstance       ( FamInst, FamFlavor(..), mkSingleCoAxiom )

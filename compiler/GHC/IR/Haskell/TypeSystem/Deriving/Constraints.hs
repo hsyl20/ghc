@@ -24,7 +24,7 @@ import PrelNames
 import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Environment
 -- import TcErrors (reportAllUnsolved)
-import TcGenFunctor
+import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import TcGenGenerics
 import TcMType
 import TcRnMonad

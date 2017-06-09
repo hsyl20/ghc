@@ -39,7 +39,7 @@ import PrelNames
 import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
-import TcGenFunctor
+import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import TcGenGenerics
 import TcRnMonad
 import import GHC.IR.Haskell.TypeSystem.Type
@@ -521,7 +521,7 @@ cond_functorOK allowFunctions allowExQuantifiedLastTyVar _ rep_tc
     check_universal con
       | allowExQuantifiedLastTyVar
       = IsValid -- See Note [DeriveFoldable with ExistentialQuantification]
-                -- in TcGenFunctor
+                -- in GHC.IR.Haskell.TypeSystem.Deriving.Functor
       | Just tv <- getTyVar_maybe (last (tyConAppArgs (dataConOrigResTy con)))
       , tv `elem` dataConUnivTyVars con
       , not (tv `elemVarSet` tyCoVarsOfTypes (dataConTheta con))
@@ -665,5 +665,5 @@ As a result, T can have a derived Foldable instance:
     foldr f z (T5 x)   = f x z
     foldr _ z T6       = z
 
-See Note [DeriveFoldable with ExistentialQuantification] in TcGenFunctor.
+See Note [DeriveFoldable with ExistentialQuantification] in GHC.IR.Haskell.TypeSystem.Deriving.Functor.
 -}

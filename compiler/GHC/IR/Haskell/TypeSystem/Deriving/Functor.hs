@@ -8,7 +8,7 @@ The deriving code for the Functor, Foldable, and Traversable classes
 
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module TcGenFunctor (
+module GHC.IR.Haskell.TypeSystem.Deriving.Functor (
         FFoldType(..), functorLikeTraverse,
         deepSubtypesContaining, foldDataConArgs,
 
