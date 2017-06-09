@@ -1,7 +1,7 @@
 -- | This is the syntax for bkp files which are parsed in 'ghc --backpack'
 -- mode.  This syntax is used purely for testing purposes.
 
-module BkpSyn (
+module GHC.Program.BackPack.Syntax (
     -- * Backpack abstract syntax
     HsUnitId(..),
     LHsUnitId,

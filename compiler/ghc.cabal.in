@@ -145,7 +145,7 @@ Library
 
     Exposed-Modules:
         DriverBkp
-        BkpSyn
+        GHC.Program.BackPack.Syntax
         GHC.Data.NameShape
         GHC.Interface.Renaming
         GHC.Data.Available

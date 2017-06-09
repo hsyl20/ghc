@@ -42,7 +42,7 @@ import GHC.IR.Haskell.Syntax
 -- compiler/main
 import GHC.Types         ( IsBootInterface, WarningTxt(..) )
 import GHC.Config.Flags
-import BkpSyn
+import GHC.Program.BackPack.Syntax
 import GHC.Packages.PackageConfig
 
 -- compiler/utils

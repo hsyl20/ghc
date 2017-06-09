@@ -19,7 +19,7 @@ module DriverBkp (doBackpack) where
 #include "HsVersions.h"
 
 -- In a separate module because it hooks into the parser.
-import BkpSyn
+import GHC.Program.BackPack.Syntax
 
 import GHC hiding (Failed, Succeeded)
 import GHC.Packages
