@@ -14,7 +14,7 @@ import GHC.Data.BasicTypes ( SwapFlag(..), isSwapped,
 import GHC.IR.Haskell.Type ( HsIPName(..) )
 import TcCanonical
 import TcFlatten
-import TcUnify( canSolveByUnification )
+import GHC.IR.Haskell.TypeSystem.Unify( canSolveByUnification )
 import GHC.Data.Var.Set
 import GHC.Data.Type as Type
 import GHC.Data.Kind( isConstraintKind )
@@ -43,7 +43,7 @@ import GHC.Data.FieldLabel
 import FunDeps
 import FamInst
 import GHC.Data.FamilyInstance
-import GHC.TypeSystem.Unify.Utils ( tcUnifyTyWithTFs )
+import GHC.Utils.Unify ( tcUnifyTyWithTFs )
 
 import TcEvidence
 import GHC.Utils.Outputable
@@ -2275,7 +2275,7 @@ Other notes:
 
 All of this is disgustingly delicate, so to discourage people from writing
 simplifiable class givens, we warn about signatures that contain them;#
-see TcValidity Note [Simplifiable given constraints].
+see GHC.IR.Haskell.TypeSystem.Validity Note [Simplifiable given constraints].
 -}
 
 

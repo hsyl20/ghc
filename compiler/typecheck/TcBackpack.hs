@@ -57,7 +57,7 @@ import GHC.Utils.Finder
 import GHC.Data.Unique.DeterSet
 import GHC.Data.NameShape
 import TcErrors
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Interface.Renaming
 import GHC.Utils
 

@@ -23,7 +23,7 @@ import TcEnv
 import TcSigs
 import TcEvidence ( idHsWrapper )
 import TcBinds
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TcMType
 import GHC.Data.Type     ( getClassPredTys_maybe, piResultTys )

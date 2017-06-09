@@ -32,9 +32,9 @@ import TcType
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import TcSimplify
-import TcValidity (validDerivPred)
-import TcUnify (buildImplicationFor)
-import GHC.TypeSystem.Unify.Utils (tcUnifyTy)
+import GHC.IR.Haskell.TypeSystem.Validity (validDerivPred)
+import GHC.IR.Haskell.TypeSystem.Unify (buildImplicationFor)
+import GHC.Utils.Unify (tcUnifyTy)
 import GHC.Utils
 import GHC.Data.Var
 import GHC.Data.Var.Environment

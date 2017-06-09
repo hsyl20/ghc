@@ -27,7 +27,7 @@ import GHC.Types( isHsBootOrSig )
 import TcSigs
 import TcRnMonad
 import TcEnv
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcSimplify
 import TcEvidence
 import TcHsType
@@ -58,7 +58,7 @@ import GHC.Utils
 import GHC.Data.BasicTypes
 import GHC.Utils.Outputable as Outputable
 import PrelNames( ipClassName )
-import TcValidity (checkValidType)
+import GHC.IR.Haskell.TypeSystem.Validity (checkValidType)
 import GHC.Data.Unique (getUnique)
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Set
@@ -1260,7 +1260,7 @@ tcMonoBinds is_rec sig_fn no_gen
     setSrcSpan b_loc    $
     do  { ((co_fn, matches'), rhs_ty)
             <- tcInferInst $ \ exp_ty ->
-                  -- tcInferInst: see TcUnify,
+                  -- tcInferInst: see GHC.IR.Haskell.TypeSystem.Unify,
                   -- Note [Deep instantiation of InferResult]
                tcExtendIdBndrs [TcIdBndr_ExpType name exp_ty NotTopLevel] $
                   -- We extend the error context even for a non-recursive

@@ -18,7 +18,7 @@ import TcType
 import TcHsType
 import TcExpr
 import TcEnv
-import TcUnify( buildImplicationFor )
+import GHC.IR.Haskell.TypeSystem.Unify( buildImplicationFor )
 import TcEvidence( mkTcCoVarCo )
 import GHC.Data.Type
 import GHC.Data.Id

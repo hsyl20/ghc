@@ -30,8 +30,8 @@ import TcRnTypes
 import TcRnMonad
 import TcType
 import TcMType
-import TcValidity ( checkValidType )
-import TcUnify( tcSkolemise, unifyType, noThing )
+import GHC.IR.Haskell.TypeSystem.Validity ( checkValidType )
+import GHC.IR.Haskell.TypeSystem.Unify( tcSkolemise, unifyType, noThing )
 import Inst( topInstantiate )
 import TcEnv( tcLookupId )
 import TcEvidence( HsWrapper, (<.>) )

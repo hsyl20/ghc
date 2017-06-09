@@ -59,7 +59,7 @@ import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
 import TcEnv
 import TcType
-import TcValidity ( checkValidTyFamEqn )
+import GHC.IR.Haskell.TypeSystem.Validity ( checkValidTyFamEqn )
 import TysPrim
 import TysWiredIn
 import GHC.Data.Type

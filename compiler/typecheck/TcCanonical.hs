@@ -10,7 +10,7 @@ module TcCanonical(
 #include "HsVersions.h"
 
 import TcRnTypes
-import TcUnify( swapOverTyVars, metaTyVarUpdateOK )
+import GHC.IR.Haskell.TypeSystem.Unify( swapOverTyVars, metaTyVarUpdateOK )
 import TcType
 import GHC.Data.Type
 import TcFlatten

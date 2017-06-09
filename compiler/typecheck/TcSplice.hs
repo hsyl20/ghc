@@ -40,7 +40,7 @@ import GHC.Utils.Outputable
 import TcExpr
 import GHC.Data.SrcLoc
 import THNames
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcEnv
 
 import Control.Monad

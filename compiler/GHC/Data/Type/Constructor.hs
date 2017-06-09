@@ -652,7 +652,7 @@ data TyCon
         tyConKind    :: Kind,             -- ^ Kind of this TyCon
         tyConArity   :: Arity,            -- ^ Arity
             -- tyConTyVars connect an associated family TyCon
-            -- with its parent class; see TcValidity.checkConsistentFamInst
+            -- with its parent class; see GHC.IR.Haskell.TypeSystem.Validity.checkConsistentFamInst
 
         famTcResVar  :: Maybe Name,   -- ^ Name of result type variable, used
                                       -- for pretty-printing with --show-iface

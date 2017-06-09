@@ -32,7 +32,7 @@ module Inst (
 #include "HsVersions.h"
 
 import {-# SOURCE #-}   TcExpr( tcPolyExpr, tcSyntaxOp )
-import {-# SOURCE #-}   TcUnify( unifyType, unifyKind, noThing )
+import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Unify( unifyType, unifyKind, noThing )
 
 import GHC.Data.BasicTypes ( IntegralLit(..), SourceText(..) )
 import GHC.Data.FastString
@@ -526,7 +526,7 @@ newOverloadedLit
     orig = LiteralOrigin lit
 
 -- Does not handle things that 'shortCutLit' can handle. See also
--- newOverloadedLit in TcUnify
+-- newOverloadedLit in GHC.IR.Haskell.TypeSystem.Unify
 newNonTrivialOverloadedLit :: CtOrigin
                            -> HsOverLit Name
                            -> ExpRhoType

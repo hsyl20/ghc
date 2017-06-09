@@ -12,13 +12,13 @@ module TcErrors(
 import TcRnTypes
 import TcRnMonad
 import TcMType
-import TcUnify( occCheckForErrors, OccCheckResult(..) )
+import GHC.IR.Haskell.TypeSystem.Unify( occCheckForErrors, OccCheckResult(..) )
 import TcType
 import GHC.IR.Haskell.Renamer.Utils.Unbound ( unknownNameSuggestions )
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Kind
-import GHC.TypeSystem.Unify.Utils            ( tcMatchTys )
+import GHC.Utils.Unify            ( tcMatchTys )
 import GHC.Data.Module
 import FamInst
 import GHC.Data.FamilyInstance       ( flattenTys )
@@ -93,7 +93,7 @@ Even though `a` is ill-typed, it is not used in the end, so if all that we're
 interested in is `main` it is handy to be able to ignore the problems in `a`.
 
 Since we treat type equalities as evidence, this is relatively simple. Whenever
-we run into a type mismatch in TcUnify, we normally just emit an error. But it
+we run into a type mismatch in GHC.IR.Haskell.TypeSystem.Unify, we normally just emit an error. But it
 is always safe to defer the mismatch to the main constraint solver. If we do
 that, `a` will get transformed into
 
@@ -1277,7 +1277,7 @@ Currently the implementation only looks at exact type matches, as given by
 `tcEqType`, so we DO NOT report `ps2` as a valid substitution in the example,
 even though it fits in the hole. To determine that `ps2` fits in the hole,
 we would need to check ids for subsumption, i.e. that the type of the hole is
-a subtype of the id. This can be done using `tcSubType` from `TcUnify` and
+a subtype of the id. This can be done using `tcSubType` from `GHC.IR.Haskell.TypeSystem.Unify` and
 `tcCheckSatisfiability` in `TcSimplify`.  Unfortunately, `TcSimplify` uses
 `TcErrors` to report errors found during constraint checking, so checking for
 subsumption in holes would involve shuffling some code around in `TcSimplify`,

@@ -418,7 +418,7 @@ Library
         TcHsType
         TcInstDcls
         TcMType
-        TcValidity
+        GHC.IR.Haskell.TypeSystem.Validity
         TcMatches
         TcPat
         TcPatSyn
@@ -435,7 +435,7 @@ Library
         TcTypeable
         TcType
         TcEvidence
-        TcUnify
+        GHC.IR.Haskell.TypeSystem.Unify
         TcInteract
         TcCanonical
         TcFlatten
@@ -454,7 +454,7 @@ Library
         GHC.Data.Kind
         GHC.Data.Type
         GHC.Data.Types
-        GHC.TypeSystem.Unify.Utils
+        GHC.Utils.Unify
         GHC.Data.Bag
         GHC.Utils.Binary
         GHC.Data.Bool.Formula

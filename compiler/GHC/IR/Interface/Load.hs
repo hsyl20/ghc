@@ -198,7 +198,7 @@ All of this is done by the type checker. The renamer plays no role.
 checkWiredInTyCon :: TyCon -> TcM ()
 -- Ensure that the home module of the TyCon (and hence its instances)
 -- are loaded. See Note [Loading instances for wired-in things]
--- It might not be a wired-in tycon (see the calls in TcUnify),
+-- It might not be a wired-in tycon (see the calls in GHC.IR.Haskell.TypeSystem.Unify),
 -- in which case this is a no-op.
 checkWiredInTyCon tc
   | not (isWiredInName tc_name)

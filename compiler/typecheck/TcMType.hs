@@ -578,7 +578,7 @@ instead of the buggous
 
 mkMetaTyVarName :: Unique -> FastString -> Name
 -- Makes a /System/ Name, which is eagerly eliminated by
--- the unifier; see TcUnify.nicer_to_update_tv1, and
+-- the unifier; see GHC.IR.Haskell.TypeSystem.Unify.nicer_to_update_tv1, and
 -- TcCanonical.canEqTyVarTyVar (nicer_to_update_tv2)
 mkMetaTyVarName uniq str = mkSysTvName uniq str
 

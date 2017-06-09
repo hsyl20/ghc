@@ -8,7 +8,7 @@ Type subsumption and unification
 
 {-# LANGUAGE CPP, MultiWayIf, TupleSections, ScopedTypeVariables #-}
 
-module TcUnify (
+module GHC.IR.Haskell.TypeSystem.Unify (
   -- Full-blown subsumption
   tcWrapResult, tcWrapResultO, tcSkolemise, tcSkolemiseET,
   tcSubTypeHR, tcSubTypeO, tcSubType_NC, tcSubTypeDS,
@@ -1693,7 +1693,7 @@ the underlying definition of the type synonym.
 The same applies later on in the constraint interaction code; see TcInteract,
 function @occ_check_ok@.
 
-Note [Non-TcTyVars in TcUnify]
+Note [Non-TcTyVars in GHC.IR.Haskell.TypeSystem.Unify]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Because the same code is now shared between unifying types and unifying
 kinds, we sometimes will see proper TyVars floating around the unifier.
@@ -1824,9 +1824,9 @@ We have
   occCheckExpand b (F (G b)) = Just (F Char)
 even though we could also expand F to get rid of b.
 
-The two variants of the function are to support TcUnify.checkTauTvUpdate,
+The two variants of the function are to support GHC.IR.Haskell.TypeSystem.Unify.checkTauTvUpdate,
 which wants to prevent unification with type families. For more on this
-point, see Note [Prevent unification with type families] in TcUnify.
+point, see Note [Prevent unification with type families] in GHC.IR.Haskell.TypeSystem.Unify.
 
 Note [Occurrence checking: look inside kinds]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

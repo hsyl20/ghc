@@ -4,7 +4,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveFunctor #-}
 
-module GHC.TypeSystem.Unify.Utils (
+module GHC.Utils.Unify (
         tcMatchTy, tcMatchTyKi,
         tcMatchTys, tcMatchTyKis,
         tcMatchTyX, tcMatchTysX, tcMatchTyKisX,
@@ -581,7 +581,7 @@ itself not purely syntactic; it accounts for CastTys;
 see Note [Non-trivial definitional equality] in GHC.Data.Types
 
 Unlike the "impure unifiers" in the typechecker (the eager unifier in
-TcUnify, and the constraint solver itself in TcCanonical), the pure
+GHC.IR.Haskell.TypeSystem.Unify, and the constraint solver itself in TcCanonical), the pure
 unifier It does /not/ work up to ~.
 
 The algorithm implemented here is rather delicate, and we depend on it

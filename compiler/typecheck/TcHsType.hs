@@ -50,8 +50,8 @@ import TcRnMonad
 import TcEvidence
 import TcEnv
 import TcMType
-import TcValidity
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Validity
+import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Interface.TypeCheck
 import TcSimplify ( solveEqualities )
 import TcType
@@ -107,7 +107,7 @@ will repair this for us. Note that zonkTcType *is* safe within a knot, and
 can be done repeatedly with no ill effect: it just squeezes out metavariables.
 
 Generally, after type-checking, you will want to do validity checking, say
-with TcValidity.checkValidType.
+with GHC.IR.Haskell.TypeSystem.Validity.checkValidType.
 
 Validity checking
 ~~~~~~~~~~~~~~~~~
@@ -1504,7 +1504,7 @@ tcExplicitTKBndrsX new_tv orig_hs_tvs thing_inside
     do { (result, bound_tvs) <- thing_inside tvs
 
          -- Issue an error if the ordering is bogus.
-         -- See Note [Bad telescopes] in TcValidity.
+         -- See Note [Bad telescopes] in GHC.IR.Haskell.TypeSystem.Validity.
        ; tvs <- checkZonkValidTelescope (interppSP orig_hs_tvs) tvs empty
        ; checkValidInferredKinds tvs bound_tvs empty
 

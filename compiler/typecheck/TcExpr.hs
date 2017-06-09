@@ -24,7 +24,7 @@ import THNames( liftStringName, liftName )
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcRnMonad
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.BasicTypes
 import Inst
 import TcBinds          ( chooseInferredQuantifiers, tcLocalBinds )
@@ -1210,7 +1210,7 @@ tcInferFun (L loc (HsRecFld f))
 
 tcInferFun fun
   = tcInferSigma fun
-      -- NB: tcInferSigma; see TcUnify
+      -- NB: tcInferSigma; see GHC.IR.Haskell.TypeSystem.Unify
       -- Note [Deep instantiation of InferResult]
 
 

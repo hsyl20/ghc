@@ -19,7 +19,7 @@ import TcRnMonad
 import FamInst
 import TcDerivInfer
 import TcDerivUtils
-import TcValidity( allDistinctTyVars )
+import GHC.IR.Haskell.TypeSystem.Validity( allDistinctTyVars )
 import TcClassDcl( tcATDefault, tcMkDeclCtxt )
 import TcEnv
 import TcGenDeriv                       -- Deriv stuff
@@ -36,7 +36,7 @@ import GHC.IR.Haskell.Renamer.Utils    ( bindLocalNamesFV )
 import GHC.IR.Haskell.Renamer.Main   ( addTcgDUs )
 import GHC.Data.Available
 
-import GHC.TypeSystem.Unify.Utils( tcUnifyTy )
+import GHC.Utils.Unify( tcUnifyTy )
 import GHC.Data.BasicTypes ( DerivStrategy(..) )
 import GHC.Data.Class
 import GHC.Data.Type

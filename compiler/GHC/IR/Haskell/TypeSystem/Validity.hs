@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP, TupleSections, ViewPatterns #-}
 
-module TcValidity (
+module GHC.IR.Haskell.TypeSystem.Validity (
   Rank, UserTypeCtxt(..), checkValidType, checkValidMonoType,
   ContextKind(..), expectedKindInCtxt,
   checkValidTheta, checkValidFamPats,
@@ -23,7 +23,7 @@ module TcValidity (
 import GHC.Data.Maybe
 
 -- friends:
-import TcUnify    ( tcSubType_NC )
+import GHC.IR.Haskell.TypeSystem.Unify    ( tcSubType_NC )
 import TcSimplify ( simplifyAmbiguityCheck )
 import GHC.Data.Types
 import TcType hiding ( sizeType, sizeTypes )

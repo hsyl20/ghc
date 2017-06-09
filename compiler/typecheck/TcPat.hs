@@ -28,10 +28,10 @@ import GHC.Data.Name
 import GHC.Data.RdrName
 import TcEnv
 import TcMType
-import TcValidity( arityErr )
+import GHC.IR.Haskell.TypeSystem.Validity( arityErr )
 import GHC.Data.Type ( pprTyVars )
 import TcType
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TysWiredIn
 import TcEvidence

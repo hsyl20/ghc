@@ -46,7 +46,7 @@ import GHC.IR.Interface.Environment( externaliseName )
 import TcHsType
 import TcMatches
 import Inst( deeplyInstantiate )
-import TcUnify( checkConstraints )
+import GHC.IR.Haskell.TypeSystem.Unify( checkConstraints )
 import GHC.IR.Haskell.Renamer.Type
 import GHC.IR.Haskell.Renamer.Expression
 import GHC.IR.Haskell.Renamer.Utils ( HsDocContext(..) )

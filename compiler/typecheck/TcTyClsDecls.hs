@@ -26,13 +26,13 @@ import GHC.Types
 import GHC.IR.Interface.BuildTypeAndClass
 import TcRnMonad
 import TcEnv
-import TcValidity
+import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcTyDecls
 import TcClassDcl
 import {-# SOURCE #-} TcInstDcls( tcInstDecls1 )
 import TcDeriv (DerivInfo)
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TcMType
 import TysWiredIn ( unitTy )
@@ -58,7 +58,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
 import GHC.Data.Maybe
-import GHC.TypeSystem.Unify.Utils
+import GHC.Utils.Unify
 import GHC.Utils
 import GHC.Data.SrcLoc
 import GHC.Data.List.SetOps
@@ -845,7 +845,7 @@ tcFamDecl1 parent (FamilyDecl { fdInfo = fam_info, fdLName = tc_lname@(L _ tc_na
          -- Do not attempt to drop equations dominated by earlier
          -- ones here; in the case of mutual recursion with a data
          -- type, we get a knot-tying failure.  Instead we check
-         -- for this afterwards, in TcValidity.checkValidCoAxiom
+         -- for this afterwards, in GHC.IR.Haskell.TypeSystem.Validity.checkValidCoAxiom
          -- Example: tc265
 
          -- Create a CoAxiom, with the correct src location. It is Vitally
@@ -1251,7 +1251,7 @@ tc_fam_ty_pats (name, _, binders, res_kind) mb_clsinfo
             ; case leftovers of
                 hs_ty:_ -> addErrTc $ too_many_args hs_ty n
                 _       -> return ()
-              -- don't worry about leftover_binders; TcValidity catches them
+              -- don't worry about leftover_binders; GHC.IR.Haskell.TypeSystem.Validity catches them
 
             ; let insted_res_kind = substTyUnchecked insting_subst res_kind
             ; kind_checker insted_res_kind

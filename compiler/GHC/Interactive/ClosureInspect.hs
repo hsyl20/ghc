@@ -35,13 +35,13 @@ import GHC.Types
 import GHC.Data.DataConstructor
 import GHC.Data.Type
 import GHC.Data.RepType
-import qualified GHC.TypeSystem.Unify.Utils as U
+import qualified GHC.Utils.Unify as U
 import GHC.Data.Var
 import TcRnMonad
 import TcType
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcEnv
 
 import GHC.Data.Type.Constructor

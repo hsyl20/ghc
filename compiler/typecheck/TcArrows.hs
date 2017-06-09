@@ -18,7 +18,7 @@ import TcType
 import TcMType
 import TcBinds
 import TcPat
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import TcRnMonad
 import TcEnv
 import TcEvidence

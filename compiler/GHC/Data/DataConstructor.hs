@@ -65,7 +65,7 @@ import {-# SOURCE #-} GHC.Data.Id.Make ( DataConBoxer )
 import GHC.Data.Type as Type
 import ForeignCall ( CType )
 import GHC.Data.Coercion
-import GHC.TypeSystem.Unify.Utils
+import GHC.Utils.Unify
 import GHC.Data.Type.Constructor
 import GHC.Data.FieldLabel
 import GHC.Data.Class

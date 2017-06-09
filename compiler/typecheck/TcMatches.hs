@@ -28,7 +28,7 @@ import TcPat
 import TcMType
 import TcType
 import TcBinds
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.Name
 import TysWiredIn
 import GHC.Data.Id
@@ -116,7 +116,7 @@ tcMatchesCase :: (Outputable (body Name)) =>
 tcMatchesCase ctxt scrut_ty matches res_ty
   = tcMatches ctxt [mkCheckExpType scrut_ty] res_ty matches
 
-tcMatchLambda :: SDoc -- see Note [Herald for matchExpectedFunTys] in TcUnify
+tcMatchLambda :: SDoc -- see Note [Herald for matchExpectedFunTys] in GHC.IR.Haskell.TypeSystem.Unify
               -> TcMatchCtxt HsExpr
               -> MatchGroup Name (LHsExpr Name)
               -> ExpRhoType   -- deeply skolemised

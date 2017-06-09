@@ -20,7 +20,7 @@ import TcClassDcl( tcClassDecl2, tcATDefault,
                    findMethodBind, instantiateMethod )
 import TcSigs
 import TcRnMonad
-import TcValidity
+import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax    ( zonkTyBndrsX, emptyZonkEnv
                   , zonkTcTypeToTypes, zonkTcTypeToType )
 import TcMType
@@ -33,7 +33,7 @@ import GHC.Data.FamilyInstance
 import TcDeriv
 import TcEnv
 import TcHsType
-import TcUnify
+import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Core.Syntax    ( Expr(..), mkApps, mkVarApps, mkLams )
 import GHC.IR.Core.Syntax.Make     ( nO_METHOD_BINDING_ERROR_ID )
 import GHC.IR.Core.Transform.Unfolding ( mkInlineUnfoldingWithArity, mkDFunUnfolding )
@@ -1101,7 +1101,7 @@ generate a guaranteed-non-bottom superclass witness from:
   (sc3) a call of a dfun (always returns a dictionary constructor)
 
 The tricky case is (sc2).  We proceed by induction on the size of
-the (type of) the dictionary, defined by TcValidity.sizeTypes.
+the (type of) the dictionary, defined by GHC.IR.Haskell.TypeSystem.Validity.sizeTypes.
 Let's suppose we are building a dictionary of size 3, and
 suppose the Superclass Invariant holds of smaller dictionaries.
 Then if we have a smaller dictionary, its immediate superclasses

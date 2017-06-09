@@ -12,7 +12,7 @@ module TcFlatten(
 import TcRnTypes
 import TcType
 import GHC.Data.Type
-import TcUnify( occCheckExpand )
+import GHC.IR.Haskell.TypeSystem.Unify( occCheckExpand )
 import TcEvidence
 import GHC.Data.Type.Constructor
 import GHC.Data.Types   -- performs delicate algorithm on types
@@ -687,7 +687,7 @@ goals.  But to be honest I'm not absolutely certain, so I am leaving
 FM_Avoid in the code base.  What I'm removing is the unique place
 where it is *used*, namely in TcCanonical.canEqTyVar.
 
-See also Note [Conservative unification check] in TcUnify, which gives
+See also Note [Conservative unification check] in GHC.IR.Haskell.TypeSystem.Unify, which gives
 other examples where lazy flattening caused problems.
 
 Bottom line: FM_Avoid is unused for now (Nov 14).
