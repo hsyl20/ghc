@@ -3,12 +3,12 @@
 (c) The AQUA Project, Glasgow University, 1993-1998
 
 
-TcRules: Typechecking transformation rules
+GHC.IR.Haskell.TypeSystem.Rule: Typechecking transformation rules
 -}
 
 {-# LANGUAGE ViewPatterns #-}
 
-module TcRules ( tcRules ) where
+module GHC.IR.Haskell.TypeSystem.Rule ( tcRules ) where
 
 import GHC.IR.Haskell.Syntax
 import TcRnMonad

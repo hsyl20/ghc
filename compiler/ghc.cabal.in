@@ -427,7 +427,7 @@ Library
         TcRnExports
         TcRnMonad
         TcRnTypes
-        TcRules
+        GHC.IR.Haskell.TypeSystem.Rule
         TcSimplify
         TcErrors
         TcTyClsDecls
