@@ -1353,8 +1353,8 @@ pushAtom d p e
 pushAtom _ _ (AnnCoercion {})   -- Coercions are zero-width things,
    = return (nilOL, 0)          -- treated just like a variable V
 
--- See Note [Empty case alternatives] in coreSyn/GHC.IR.Core.Syntax.hs
--- and Note [Bottoming expressions] in coreSyn/GHC.IR.Core.Utils.hs:
+-- See Note [Empty case alternatives] in GHC.IR.Core.Syntax
+-- and Note [Bottoming expressions] in GHC.IR.Core.Utils:
 -- The scrutinee of an empty case evaluates to bottom
 pushAtom d p (AnnCase (_, a) _ _ []) -- trac #12128
    = pushAtom d p a
@@ -1661,7 +1661,7 @@ atomPrimRep (AnnLit l)              = typePrimRep1 (literalType l)
 
 -- Trac #12128:
 -- A case expression can be an atom because empty cases evaluate to bottom.
--- See Note [Empty case alternatives] in coreSyn/GHC.IR.Core.Syntax.hs
+-- See Note [Empty case alternatives] in GHC.IR.Core.Syntax
 atomPrimRep (AnnCase _ _ ty _)      = ASSERT(typePrimRep ty == [LiftedRep]) LiftedRep
 atomPrimRep (AnnCoercion {})        = VoidRep
 atomPrimRep other = pprPanic "atomPrimRep" (ppr (deAnnotate' other))

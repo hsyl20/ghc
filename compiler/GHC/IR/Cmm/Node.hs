@@ -220,7 +220,8 @@ code generation in callerSaveVolatileRegs in GHC.Compilers.StgToCmm.Utils.
 However, one result of doing this is that the contents of these registers
 may mysteriously change if referenced inside the arguments.  This
 is dangerous, so you'll need to disable inlining much in the same
-way is done in cmm/CmmOpt.hs currently.  We should fix this!
+way is done in GHC.IR.Cmm.Transform.ConstantFolding currently. We should fix
+this!
 -}
 
 ---------------------------------------------

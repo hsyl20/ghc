@@ -444,7 +444,7 @@ tYPETyCon = mkKindTyCon tYPETyConName
 -- ... and now their names
 
 -- If you edit these, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 tYPETyConName             = mkPrimTyConName (fsLit "TYPE") tYPETyConKey tYPETyCon
 
 mkPrimTyConName :: FastString -> Unique -> TyCon -> Name

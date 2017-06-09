@@ -267,7 +267,7 @@ These data types are the heart of the compiler
 -- *  A coercion
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 data Expr b
   = Var   Id
   | Lit   Literal
@@ -290,13 +290,13 @@ type Arg b = Expr b
 -- The default alternative is @(DEFAULT, [], rhs)@
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 type Alt b = (AltCon, [b], Expr b)
 
 -- | A case alternative constructor (i.e. pattern match)
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 data AltCon
   = DataAlt DataCon   --  ^ A plain data constructor: @case e of { Foo x -> ... }@.
                       -- Invariant: the 'DataCon' is always from a @data@ type, and never from a @newtype@
@@ -325,7 +325,7 @@ instance Ord AltCon where
 -- | Binding, used for top level bindings in a module and local bindings in a @let@.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 data Bind b = NonRec b (Expr b)
             | Rec [(b, (Expr b))]
   deriving Data
@@ -449,7 +449,7 @@ alternatively use 'GHC.IR.Core.Syntax.Make.mkCoreLet' rather than this construct
 which will generate a @case@ if necessary
 
 The let/app invariant is initially enforced by mkCoreLet and mkCoreApp in
-coreSyn/GHC.IR.Core.Syntax.Make.
+GHC.IR.Core.Syntax.Make.
 
 Note [GHC.IR.Core.Syntax case invariants]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -771,7 +771,7 @@ type OutArg      = CoreArg
 -- | Allows attaching extra information to points in expressions
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 data Tickish id =
     -- | An @{-# SCC #-}@ profiling annotation, either automatically
     -- added by the desugarer as a result of -auto-all, or added by
@@ -1726,7 +1726,7 @@ a list of CoreBind
 -}
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 type CoreProgram = [CoreBind]   -- See Note [CoreProgram]
 
 -- | The common case for the type of binders and variables when
@@ -1957,7 +1957,7 @@ exprToCoercion_maybe _             = Nothing
 -- | Extract every variable by this group
 bindersOf  :: Bind b -> [b]
 -- If you edit this function, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 bindersOf (NonRec binder _) = [binder]
 bindersOf (Rec pairs)       = [binder | (binder, _) <- pairs]
 

@@ -516,7 +516,7 @@ instance Binary TyConBndrVis where
 -- such as those for function and tuple types.
 
 -- If you edit this type, you may need to update the GHC formalism
--- See Note [GHC Formalism] in coreSyn/GHC.IR.Core.Analyse.Lint.hs
+-- See Note [GHC Formalism] in GHC.IR.Core.Analyse.Lint
 data TyCon
   = -- | The function type constructor, @(->)@
     FunTyCon {
@@ -1162,7 +1162,7 @@ although it's probably true that we could merge some of these.
 
 Roughly in order of "includes more information":
 
- - A Width (cmm/CmmType) is simply a binary value with the specified
+ - A Width (GHC.IR.Cmm.Type) is simply a binary value with the specified
    number of bits.  It may represent a signed or unsigned integer, a
    floating-point value, or an address.
 

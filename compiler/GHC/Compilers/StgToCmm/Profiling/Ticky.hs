@@ -23,9 +23,9 @@ Some of the relevant source files:
 
   * some codeGen/ modules import this one
 
-  * this module imports cmm/CLabel.hs to manage labels
+  * this module imports GHC.Data.CLabel to manage labels
 
-  * cmm/CmmParse.y expands some macros using generators defined in
+  * GHC.IR.Cmm.Parser expands some macros using generators defined in
     this module
 
   * includes/stg/Ticky.h declares all of the global counters
