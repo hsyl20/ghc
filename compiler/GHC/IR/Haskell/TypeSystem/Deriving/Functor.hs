@@ -1114,7 +1114,7 @@ a method-specific fashion to form the final generated expression).
 
 Deriving Generic1 also does validity checking by looking for the last type
 variable in certain positions of a constructor's argument types, so it also
-uses foldDataConArgs. See Note [degenerate use of FFoldType] in TcGenGenerics.
+uses foldDataConArgs. See Note [degenerate use of FFoldType] in GHC.IR.Haskell.TypeSystem.Deriving.Generic.
 
 Note [Generated code for DeriveFoldable and DeriveTraversable]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

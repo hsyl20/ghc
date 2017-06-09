@@ -25,7 +25,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Environment
 -- import TcErrors (reportAllUnsolved)
 import GHC.IR.Haskell.TypeSystem.Deriving.Functor
-import TcGenGenerics
+import GHC.IR.Haskell.TypeSystem.Deriving.Generic
 import TcMType
 import TcRnMonad
 import import GHC.IR.Haskell.TypeSystem.Type

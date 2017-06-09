@@ -9,7 +9,7 @@ The deriving code for the Generic class
 {-# LANGUAGE CPP, ScopedTypeVariables, TupleSections #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcGenGenerics (canDoGenerics, canDoGenerics1,
+module GHC.IR.Haskell.TypeSystem.Deriving.Generic (canDoGenerics, canDoGenerics1,
                       GenericKind(..),
                       gen_Generic_binds, get_gen1_constrained_tys) where
 

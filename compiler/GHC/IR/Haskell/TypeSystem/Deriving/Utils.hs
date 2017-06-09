@@ -40,7 +40,7 @@ import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
 import GHC.IR.Haskell.TypeSystem.Deriving.Functor
-import TcGenGenerics
+import GHC.IR.Haskell.TypeSystem.Deriving.Generic
 import TcRnMonad
 import import GHC.IR.Haskell.TypeSystem.Type
 import THNames (liftClassKey)

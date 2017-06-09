@@ -413,7 +413,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Foreign
         GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
         GHC.IR.Haskell.TypeSystem.Deriving.Functor
-        TcGenGenerics
+        GHC.IR.Haskell.TypeSystem.Deriving.Generic
         GHC.IR.Haskell.TypeSystem.Syntax
         TcHsType
         TcInstDcls
