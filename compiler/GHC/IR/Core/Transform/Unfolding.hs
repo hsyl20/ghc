@@ -53,7 +53,7 @@ import GHC.Data.Id
 import GHC.Data.Demand          ( isBottomingSig )
 import GHC.Data.DataConstructor
 import GHC.Data.Literal
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.Id.Info
 import GHC.Data.BasicTypes       ( Arity, InlineSpec(..), inlinePragmaSpec )
 import GHC.Data.Type

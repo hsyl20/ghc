@@ -29,7 +29,7 @@ import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.PrettyPrint
 import GHC.Data.Literal
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.IR.Core.FreeVars
 import GHC.Data.Type
 import GHC.Data.RepType

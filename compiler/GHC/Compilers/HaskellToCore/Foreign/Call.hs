@@ -32,7 +32,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Id   ( Id )
 import GHC.Data.Coercion
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import TysPrim
 import GHC.Data.Type.Constructor
 import TysWiredIn

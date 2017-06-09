@@ -68,7 +68,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Type as Type

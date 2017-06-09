@@ -58,7 +58,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Var.Set
 import TysWiredIn
 import TysPrim( intPrimTy )
-import PrimOp( tagToEnumKey )
+import GHC.Builtin.Primitive.Operation( tagToEnumKey )
 import GHC.Builtin.Names
 import GHC.Config.Flags
 import GHC.Data.SrcLoc

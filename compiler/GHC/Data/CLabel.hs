@@ -121,7 +121,7 @@ import GHC.Packages
 import GHC.Data.Module
 import GHC.Data.Name
 import GHC.Data.Unique
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import Config
 import GHC.Data.CostCentre
 import GHC.Utils.Outputable

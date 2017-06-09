@@ -53,7 +53,7 @@ import THNames          ( templateHaskellNames )
 import GHC.Builtin.Names
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Available
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Name

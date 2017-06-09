@@ -54,7 +54,7 @@ import THNames
 import GHC.Data.Module ( moduleName, moduleNameString
               , moduleUnitId, unitIdString )
 import GHC.Data.Id.Make ( coerceId )
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Environment

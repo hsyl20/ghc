@@ -37,7 +37,7 @@ import GHC.IR.Core.Syntax
 import GHC.Data.DataConstructor
 import GHC.Data.ForeignCall
 import GHC.Data.Id
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             ( isUnliftedType )
 import GHC.Data.RepType          ( isVoidTy, countConRepArgs, primRepSlot )

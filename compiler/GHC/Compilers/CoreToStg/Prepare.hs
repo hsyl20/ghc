@@ -40,7 +40,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import TysWiredIn
 import GHC.Data.DataConstructor
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.BasicTypes
 import GHC.Data.Module
 import GHC.Data.Unique.Supply

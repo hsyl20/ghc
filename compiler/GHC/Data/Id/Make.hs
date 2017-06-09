@@ -56,7 +56,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import GHC.Data.Name.Set
 import GHC.Data.Name
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import GHC.Data.ForeignCall
 import GHC.Data.DataConstructor
 import GHC.Data.Id

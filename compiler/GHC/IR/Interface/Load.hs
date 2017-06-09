@@ -47,7 +47,7 @@ import GHC.IR.Haskell.TypeSystem
 import GHC.Config.Constants
 import GHC.Builtin.Names
 import GHC.Builtin.Utils
-import PrimOp   ( allThePrimOps, primOpFixity, primOpOcc )
+import GHC.Builtin.Primitive.Operation   ( allThePrimOps, primOpFixity, primOpOcc )
 import GHC.Data.Id.Make     ( seqId )
 import TysPrim  ( funTyConName )
 import GHC.IR.Core.Transform.Rules

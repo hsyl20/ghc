@@ -11,7 +11,7 @@
 {-# OPTIONS_GHC -fmax-pmcheck-iterations=10000000 #-}
 #endif
 
-module PrimOp (
+module GHC.Builtin.Primitive.Operation (
         PrimOp(..), PrimOpVecCat(..), allThePrimOps,
         primOpType, primOpSig,
         primOpTag, maxPrimOpTag, primOpOcc,

@@ -42,7 +42,7 @@ import GHC.Utils
 import GHC.Config.Flags
 import GHC.Data.ForeignCall
 import GHC.Data.Demand           ( isUsedOnce )
-import PrimOp           ( PrimCall(..) )
+import GHC.Builtin.Primitive.Operation           ( PrimCall(..) )
 import GHC.Data.Unique.FiniteMap
 
 import Data.Maybe    (isJust, fromMaybe)

@@ -18,7 +18,7 @@ import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Utils.Outputable
-import PrimOp
+import GHC.Builtin.Primitive.Operation
 import SizedSeq
 import GHC.Data.Type
 import GHC.Data.SrcLoc
