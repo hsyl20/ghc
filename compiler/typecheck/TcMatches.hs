@@ -24,7 +24,7 @@ import {-# SOURCE #-}   TcExpr( tcSyntaxOp, tcInferSigmaNC, tcInferSigma
 import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import TcEnv
-import TcPat
+import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import TcType
 import TcBinds
@@ -66,7 +66,7 @@ Note [Polymorphic expected type for tcMatchesFun]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tcMatchesFun may be given a *sigma* (polymorphic) type
 so it must be prepared to use tcSkolemise to skolemise it.
-See Note [sig_tau may be polymorphic] in TcPat.
+See Note [sig_tau may be polymorphic] in GHC.IR.Haskell.TypeSystem.Pattern.
 -}
 
 tcMatchesFun :: Located Name

@@ -230,7 +230,7 @@ data Pat id
   -- For details on above see note [Api annotations] in ApiAnnotation
   | NPlusKPat       (Located id)        -- n+k pattern
                     (Located (HsOverLit id)) -- It'll always be an HsIntegral
-                    (HsOverLit id)      -- See Note [NPlusK patterns] in TcPat
+                    (HsOverLit id)      -- See Note [NPlusK patterns] in GHC.IR.Haskell.TypeSystem.Pattern
                      -- NB: This could be (PostTc ...), but that induced a
                      -- a new hs-boot file. Not worth it.
 

@@ -3,13 +3,13 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-TcPat: Typechecking patterns
+GHC.IR.Haskell.TypeSystem.Pattern: Typechecking patterns
 -}
 
 {-# LANGUAGE CPP, RankNTypes, TupleSections #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcPat ( tcLetPat, newLetBndr, LetBndrSpec(..)
+module GHC.IR.Haskell.TypeSystem.Pattern ( tcLetPat, newLetBndr, LetBndrSpec(..)
              , tcPat, tcPat_O, tcPats
              , addDataConStupidTheta, badFieldCon, polyPatSig ) where
 

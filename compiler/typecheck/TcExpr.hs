@@ -39,7 +39,7 @@ import TcArrows
 import TcMatches
 import TcHsType
 import TcPatSyn( tcPatSynBuilderOcc, nonBidirectionalErr )
-import TcPat
+import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import TcType
 import GHC.Compilers.HaskellToCore.Monad

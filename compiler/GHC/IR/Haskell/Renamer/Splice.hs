@@ -511,7 +511,7 @@ References:
 [3] 'TcSplice.qAddModFinalizer'
 [4] 'TcExpr.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
 [5] 'TcHsType.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
-[6] 'TcPat.tc_pat' ('SplicePat' ('HsSpliced' ...))
+[6] 'GHC.IR.Haskell.TypeSystem.Pattern.tc_pat' ('SplicePat' ('HsSpliced' ...))
 
 -}
 

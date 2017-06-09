@@ -31,7 +31,7 @@ import GHC.IR.Haskell.TypeSystem.Unify
 import TcSimplify
 import TcEvidence
 import TcHsType
-import TcPat
+import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import GHC.Data.FamilyInstance( normaliseType )
 import FamInst( tcGetFamInstEnvs )
@@ -1525,14 +1525,14 @@ We typecheck pattern bindings as follows.  First tcLhs does this:
   3. Invoke tcLetPat to typecheck the pattern.
 
      - We pass in the current TcLevel.  This is captured by
-       TcPat.tcLetPat, and put into the pc_lvl field of PatCtxt, in
+       GHC.IR.Haskell.TypeSystem.Pattern.tcLetPat, and put into the pc_lvl field of PatCtxt, in
        PatEnv.
 
      - When tcPat finds an existential constructor, it binds fresh
        type variables and dictionaries as usual, increments the TcLevel,
        and emits an implication constraint.
 
-     - When we come to a binder (TcPat.tcPatBndr), it looks it up
+     - When we come to a binder (GHC.IR.Haskell.TypeSystem.Pattern.tcPatBndr), it looks it up
        in the little environment (the pc_sig_fn field of PatCtxt).
 
          Success => There was a type signature, so just use it,

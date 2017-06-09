@@ -420,7 +420,7 @@ Library
         TcMType
         GHC.IR.Haskell.TypeSystem.Validity
         TcMatches
-        TcPat
+        GHC.IR.Haskell.TypeSystem.Pattern
         TcPatSyn
         TcRnDriver
         TcBackpack

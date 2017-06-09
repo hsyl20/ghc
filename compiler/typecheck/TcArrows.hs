@@ -17,7 +17,7 @@ import GHC.IR.Haskell.TypeSystem.Syntax( hsLPatType )
 import TcType
 import TcMType
 import TcBinds
-import TcPat
+import GHC.IR.Haskell.TypeSystem.Pattern
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcRnMonad
 import TcEnv

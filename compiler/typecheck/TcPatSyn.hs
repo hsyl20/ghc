@@ -13,7 +13,7 @@ module TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
   ) where
 
 import GHC.IR.Haskell.Syntax
-import TcPat
+import GHC.IR.Haskell.TypeSystem.Pattern
 import GHC.Data.Type( mkTyVarBinders, mkEmptyTCvSubst
            , tidyTyVarBinders, tidyTypes, tidyType )
 import TcRnMonad
