@@ -7,7 +7,7 @@ Typecheck arrow notation
 
 {-# LANGUAGE RankNTypes, TupleSections #-}
 
-module TcArrows ( tcProc ) where
+module GHC.IR.Haskell.TypeSystem.Arrow ( tcProc ) where
 
 import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcMonoExpr, tcInferRho, tcSyntaxOp, tcCheckId, tcPolyExpr )
 

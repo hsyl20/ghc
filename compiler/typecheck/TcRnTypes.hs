@@ -2951,7 +2951,7 @@ data SkolemInfo
              -- The pattern MkT x will allocate an existential type
              -- variable for 'a'.
 
-  | ArrowSkol           -- An arrow form (see TcArrows)
+  | ArrowSkol           -- An arrow form (see GHC.IR.Haskell.TypeSystem.Arrow)
 
   | IPSkol [HsIPName]   -- Binding site of an implicit parameter
 
