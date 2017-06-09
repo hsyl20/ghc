@@ -28,7 +28,7 @@ import GHC.Data.OccName
 import GHC.Data.SrcLoc
 import GHC.Data.Type
 import qualified GHC.Data.Coercion as Coercion
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type (eqPrimTyCon)
 import GHC.Data.BasicTypes as Hs
 import GHC.Data.ForeignCall

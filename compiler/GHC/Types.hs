@@ -176,7 +176,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym
 import GHC.Builtin.Names        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule
                         , eqTyConName )
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Packages hiding  ( Version(..) )
 import GHC.Config.Flags
 import GHC.Program.Driver.Phases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )

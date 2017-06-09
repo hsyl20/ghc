@@ -35,7 +35,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.MutableType
-import TysWiredIn ( unitTy )
+import GHC.Builtin.Type ( unitTy )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.Environment( lookupConstructorFields )
 import GHC.IR.Haskell.TypeSystem.FamilyInstance

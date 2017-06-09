@@ -38,7 +38,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Var.Environment
 import GHC.Data.Id
 import GHC.Data.Id.Info
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.DataConstructor
 import GHC.Builtin.Primitive.Operation
 import GHC.Data.BasicTypes

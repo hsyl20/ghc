@@ -33,7 +33,7 @@ import GHC.Data.Id
 import GHC.Data.Literal
 import GHC.IR.Core.Transform.Simple    ( exprIsLiteral_maybe )
 import GHC.Builtin.Primitive.Operation      ( PrimOp(..), tagToEnumKey )
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type
 import GHC.Data.Type.Constructor       ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
                    , unwrapNewTyCon_maybe, tyConDataCons )

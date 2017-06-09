@@ -30,7 +30,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.Name
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.Id
 import GHC.Data.Type.Constructor
 import GHC.Builtin.Primitive.Type

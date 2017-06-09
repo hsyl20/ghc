@@ -35,7 +35,7 @@ import GHC.Data.Coercion
 import GHC.Builtin.Primitive.Operation
 import GHC.Builtin.Primitive.Type
 import GHC.Data.Type.Constructor
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.BasicTypes
 import GHC.Data.Literal
 import GHC.Builtin.Names

@@ -43,7 +43,7 @@ import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.IR.Core.Syntax
 import GHC.IR.Core.Syntax.Make
 import GHC.IR.Core.Utils

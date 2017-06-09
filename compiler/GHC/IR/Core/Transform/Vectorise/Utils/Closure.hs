@@ -21,7 +21,7 @@ import GHC.IR.Core.Utils
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Id.Make
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.BasicTypes( Boxity(..) )
 import GHC.Data.FastString
 

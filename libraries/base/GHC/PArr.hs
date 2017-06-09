@@ -30,7 +30,7 @@ import GHC.Base
 -- Vanilla representation of parallel Haskell based on standard GHC arrays that is used if the
 -- vectorised is /not/ used.
 --
--- NB: This definition *must* be kept in sync with `TysWiredIn.parrTyCon'!
+-- NB: This definition *must* be kept in sync with `GHC.Builtin.Type.parrTyCon'!
 --
 data [::] e = PArr !Int (Array# e)
 

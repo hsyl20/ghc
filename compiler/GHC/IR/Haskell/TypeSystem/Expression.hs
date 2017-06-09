@@ -56,7 +56,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Var.Set
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type( intPrimTy )
 import GHC.Builtin.Primitive.Operation( tagToEnumKey )
 import GHC.Builtin.Names

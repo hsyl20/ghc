@@ -51,7 +51,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Name ( isSystemName )
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Type.Constructor
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type( tYPE )
 import GHC.Data.Var as Var
 import GHC.Data.Var.Set

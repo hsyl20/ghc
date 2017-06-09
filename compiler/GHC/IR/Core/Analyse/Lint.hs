@@ -29,7 +29,7 @@ import GHC.IR.Core.Pipeline
 import GHC.Data.Bag
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type
 import GHC.IR.Haskell.TypeSystem.Type ( isFloatingTy )
 import GHC.Data.Var as Var

@@ -28,7 +28,7 @@ import GHC.IR.Core.Syntax.Make           ( mkRuntimeErrorApp, aBSENT_ERROR_ID, m
                         , mkCoreApp, mkCoreLet )
 import GHC.Data.Id.Make             ( voidArgId, voidPrimId )
 import GHC.Builtin.Primitive.Type          ( voidPrimTy )
-import TysWiredIn       ( tupleDataCon )
+import GHC.Builtin.Type       ( tupleDataCon )
 import GHC.Data.Var.Environment           ( mkInScopeSet )
 import GHC.Data.Var.Set           ( VarSet )
 import GHC.Data.Type

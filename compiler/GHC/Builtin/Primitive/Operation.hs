@@ -30,7 +30,7 @@ module GHC.Builtin.Primitive.Operation (
 #include "HsVersions.h"
 
 import GHC.Builtin.Primitive.Type
-import TysWiredIn
+import GHC.Builtin.Type
 
 import GHC.IR.Cmm.Type
 import GHC.Data.Demand

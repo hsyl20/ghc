@@ -60,7 +60,7 @@ import GHC.Data.PatternSynonym
 import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Builtin.Primitive.Type
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.BasicTypes
 import GHC.Data.ConstructorLike
 import GHC.Data.Unique.Set
@@ -639,7 +639,7 @@ There are two cases.
        let { t = case e of Just (Just v) -> Unit v
            ; v = case t of Unit v -> v }
        in t `seq` body
-    The 'Unit' is a one-tuple; see Note [One-tuples] in TysWiredIn
+    The 'Unit' is a one-tuple; see Note [One-tuples] in GHC.Builtin.Type
     Note that forcing 't' makes the pattern match happen,
     but does not force 'v'.
 
@@ -660,7 +660,7 @@ There are two cases.
      - Forcing 't' will force the pattern to match fully;
        e.g. will diverge if (snd e) is bottom
      - But 'a' itself is not forced; it is wrapped in a one-tuple
-       (see Note [One-tuples] in TysWiredIn)
+       (see Note [One-tuples] in GHC.Builtin.Type)
 
   *   !(Just x) = e
     ==>

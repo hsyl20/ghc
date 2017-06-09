@@ -25,7 +25,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id( mkLocalId )
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Name
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.Var.Set
 import GHC.Builtin.Primitive.Type
 import GHC.Data.BasicTypes( Arity )

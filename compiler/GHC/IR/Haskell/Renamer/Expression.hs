@@ -51,7 +51,7 @@ import GHC.Utils.Outputable as Outputable
 import GHC.Data.SrcLoc
 import GHC.Data.FastString
 import Control.Monad
-import TysWiredIn       ( nilDataConName )
+import GHC.Builtin.Type       ( nilDataConName )
 import qualified GHC.LanguageExtensions as LangExt
 
 import Data.Ord

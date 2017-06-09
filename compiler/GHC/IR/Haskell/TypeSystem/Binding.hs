@@ -39,7 +39,7 @@ import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type( mkStrLitTy, tidyOpenType, mkTyVarBinder, splitTyConApp_maybe)
 import GHC.Builtin.Primitive.Type
-import TysWiredIn( cTupleTyConName )
+import GHC.Builtin.Type( cTupleTyConName )
 import GHC.Data.Id
 import GHC.Data.Var as Var
 import GHC.Data.Var.Set

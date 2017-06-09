@@ -1222,7 +1222,7 @@ mk_unboxed_tup_name :: Int -> NameSpace -> Name
 mk_unboxed_tup_name n space
   = Name (mkOccName tup_occ) (NameG space (mkPkgName "ghc-prim") tup_mod)
   where
-    tup_occ | n == 1    = "Unit#" -- See Note [One-tuples] in TysWiredIn
+    tup_occ | n == 1    = "Unit#" -- See Note [One-tuples] in GHC.Builtin.Type
             | otherwise = "(#" ++ replicate n_commas ',' ++ "#)"
     n_commas = n - 1
     tup_mod  = mkModName "GHC.Tuple"
@@ -1251,7 +1251,7 @@ unboxedSumDataName alt arity
     prefix     = "unboxedSumDataName: "
     debug_info = " (alt: " ++ show alt ++ ", arity: " ++ show arity ++ ")"
 
-    -- Synced with the definition of mkSumDataConOcc in TysWiredIn
+    -- Synced with the definition of mkSumDataConOcc in GHC.Builtin.Type
     sum_occ = '(' : '#' : bars nbars_before ++ '_' : bars nbars_after ++ "#)"
     bars i = replicate i '|'
     nbars_before = alt - 1
@@ -1267,7 +1267,7 @@ unboxedSumTypeName arity
          (NameG TcClsName (mkPkgName "ghc-prim") (mkModName "GHC.Prim"))
 
   where
-    -- Synced with the definition of mkSumTyConOcc in TysWiredIn
+    -- Synced with the definition of mkSumTyConOcc in GHC.Builtin.Type
     sum_occ = '(' : '#' : replicate (arity - 1) '|' ++ "#)"
 
 -----------------------------------------------------

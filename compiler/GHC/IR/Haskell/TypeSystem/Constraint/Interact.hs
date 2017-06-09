@@ -31,7 +31,7 @@ import GHC.Builtin.Names ( knownNatClassName, knownSymbolClassName,
                    typeableClassName, coercibleTyConKey,
                    hasFieldClassName,
                    heqTyConKey, ipClassKey )
-import TysWiredIn ( typeNatKind, typeSymbolKind, heqDataCon,
+import GHC.Builtin.Type ( typeNatKind, typeSymbolKind, heqDataCon,
                     coercibleDataCon, constraintKindTyCon )
 import GHC.Builtin.Primitive.Type    ( eqPrimTyCon, eqReprPrimTyCon )
 import GHC.Data.Id( idType, isNaughtyRecordSelector )

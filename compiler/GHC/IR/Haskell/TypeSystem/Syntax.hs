@@ -48,7 +48,7 @@ import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Builtin.Primitive.Type
 import GHC.Data.Type.Constructor   ( isUnboxedTupleTyCon )
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.Data.ConstructorLike

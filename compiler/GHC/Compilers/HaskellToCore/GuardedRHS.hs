@@ -22,7 +22,7 @@ import GHC.Data.Var
 
 import GHC.Compilers.HaskellToCore.Monad
 import GHC.Compilers.HaskellToCore.Utils
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Names
 import GHC.Data.Type   ( Type )
 import GHC.Data.Module

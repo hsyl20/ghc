@@ -105,7 +105,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id as Id
 import GHC.Data.Name
 import GHC.Data.Var.Set
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type
 import GHC.Data.Var.Environment
 import GHC.Data.Name.Environment

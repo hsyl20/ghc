@@ -31,7 +31,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Binding( tcRecSelBinds )
 import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import GHC.IR.Haskell.TypeSystem.Type
-import TysWiredIn( unitTy )
+import GHC.Builtin.Type( unitTy )
 import GHC.IR.Core.Syntax.Make( rEC_SEL_ERROR_ID )
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Class

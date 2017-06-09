@@ -33,7 +33,7 @@ import GHC.Data.Type ( pprTyVars )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.UserType
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor

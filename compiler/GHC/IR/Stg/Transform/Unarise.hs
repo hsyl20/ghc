@@ -210,7 +210,7 @@ import GHC.Data.RepType
 import GHC.IR.Stg.Syntax
 import GHC.Data.Type
 import GHC.Builtin.Primitive.Type (intPrimTy)
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.Unique.Supply
 import GHC.Utils
 import GHC.Data.Var.Environment

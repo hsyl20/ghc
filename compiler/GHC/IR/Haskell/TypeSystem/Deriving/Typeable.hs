@@ -19,7 +19,7 @@ import GHC.IR.Haskell.TypeSystem
 import GHC.Types ( lookupId )
 import GHC.Builtin.Names
 import GHC.Builtin.Primitive.Type ( primTyCons )
-import TysWiredIn ( tupleTyCon, sumTyCon, runtimeRepTyCon
+import GHC.Builtin.Type ( tupleTyCon, sumTyCon, runtimeRepTyCon
                   , vecCountTyCon, vecElemTyCon
                   , nilDataCon, consDataCon )
 import GHC.Data.Id

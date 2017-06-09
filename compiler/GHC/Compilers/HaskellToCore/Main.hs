@@ -40,7 +40,7 @@ import GHC.Builtin.Names   ( coercibleTyConKey )
 import GHC.Builtin.Primitive.Type     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
 import GHC.Data.Coercion    ( mkCoVarCo )
-import TysWiredIn  ( coercibleDataCon )
+import GHC.Builtin.Type  ( coercibleDataCon )
 import GHC.Data.DataConstructor     ( dataConWrapId )
 import GHC.IR.Core.Syntax.Make      ( mkCoreLet )
 import GHC.Data.Module

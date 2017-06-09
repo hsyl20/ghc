@@ -43,7 +43,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion
-import TysWiredIn ( typeNatKind, typeSymbolKind )
+import GHC.Builtin.Type ( typeNatKind, typeSymbolKind )
 import GHC.Data.Id
 import GHC.Data.Id.Make(proxyHashId)
 import GHC.Data.Class

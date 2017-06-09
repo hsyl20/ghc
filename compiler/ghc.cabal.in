@@ -352,7 +352,7 @@ Library
         GHC.IR.Core.Transform.ConstantFolding
         GHC.Builtin.Primitive.Operation
         GHC.Builtin.Primitive.Type
-        TysWiredIn
+        GHC.Builtin.Type
         GHC.Data.CostCentre
         GHC.Data.CostCentre.Initialise
         GHC.IR.Stg.Transform.CostCentreCollect

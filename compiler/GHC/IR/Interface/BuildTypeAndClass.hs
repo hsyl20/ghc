@@ -17,7 +17,7 @@ module GHC.IR.Interface.BuildTypeAndClass (
 
 import GHC.IR.Interface.Environment
 import GHC.Data.FamilyInstance( FamInstEnvs, mkNewTypeCoAxiom )
-import TysWiredIn( isCTupleTyConName )
+import GHC.Builtin.Type( isCTupleTyConName )
 import GHC.Builtin.Primitive.Type ( voidPrimTy )
 import GHC.Data.DataConstructor
 import GHC.Data.PatternSynonym

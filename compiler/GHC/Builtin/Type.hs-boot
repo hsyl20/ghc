@@ -1,4 +1,4 @@
-module TysWiredIn where
+module GHC.Builtin.Type where
 
 import GHC.Data.Var( TyVar, ArgFlag )
 import {-# SOURCE #-} GHC.Data.Type.Constructor ( TyCon )

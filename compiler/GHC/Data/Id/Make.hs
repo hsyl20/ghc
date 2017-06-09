@@ -41,7 +41,7 @@ module GHC.Data.Id.Make (
 
 import GHC.IR.Core.Transform.Rules
 import GHC.Builtin.Primitive.Type
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Type
 import GHC.Data.FamilyInstance

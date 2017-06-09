@@ -8,9 +8,9 @@
 {-# LANGUAGE CPP #-}
 
 -- | This module defines TyCons that can't be expressed in Haskell.
---   They are all, therefore, wired-in TyCons.  C.f module TysWiredIn
+--   They are all, therefore, wired-in TyCons.  C.f module GHC.Builtin.Type
 module GHC.Builtin.Primitive.Type(
-        mkPrimTyConName, -- For implicit parameters in TysWiredIn only
+        mkPrimTyConName, -- For implicit parameters in GHC.Builtin.Type only
 
         mkTemplateKindVars, mkTemplateTyVars, mkTemplateTyVarsFrom,
         mkTemplateKiTyVars,
@@ -80,7 +80,7 @@ module GHC.Builtin.Primitive.Type(
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} TysWiredIn
+import {-# SOURCE #-} GHC.Builtin.Type
   ( runtimeRepTy, unboxedTupleKind, liftedTypeKind
   , vecRepDataConTyCon, tupleRepDataConTyCon
   , liftedRepDataConTy, unliftedRepDataConTy, intRepDataConTy
@@ -400,7 +400,7 @@ generator never has to manipulate a value of type 'a :: TYPE rr'.
                              (a :: TYPE r1) (b :: TYPE r2).
                              a -> b
 
-* Unboxed tuples, and unboxed sums, defined in TysWiredIn
+* Unboxed tuples, and unboxed sums, defined in GHC.Builtin.Type
   Always inlined, and hence specialised to the call site
      (#,#) :: forall (r1 :: RuntimeRep) (r2 :: RuntimeRep)
                      (a :: TYPE r1) (b :: TYPE r2).
@@ -650,7 +650,7 @@ equalities. There is some special-casing in GHC.IR.Haskell.TypeSystem.Constraint
 pretend that there is an instance of this class, as we can't write the instance
 in Haskell.
 
-Within GHC, ~~ is called heqTyCon, and it is defined in TysWiredIn.
+Within GHC, ~~ is called heqTyCon, and it is defined in GHC.Builtin.Type.
 
 
     --------------------------
@@ -705,7 +705,7 @@ split required that both types be fully wired-in. Instead of doing this,
 I just got rid of HCoercible, as I'm not sure who would use it, anyway.
 
 Within GHC, Coercible is called coercibleTyCon, and it is defined in
-TysWiredIn.
+GHC.Builtin.Type.
 
 
     --------------------------
@@ -767,7 +767,7 @@ realWorldStatePrimTy :: Type
 realWorldStatePrimTy = mkStatePrimTy realWorldTy        -- State# RealWorld
 
 -- Note: the ``state-pairing'' types are not truly primitive,
--- so they are defined in \tr{TysWiredIn.hs}, not here.
+-- so they are defined in \tr{GHC.Builtin.Type.hs}, not here.
 
 
 voidPrimTy :: Type

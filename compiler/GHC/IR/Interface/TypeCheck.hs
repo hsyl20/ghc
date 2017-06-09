@@ -50,7 +50,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Builtin.Names
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.Literal
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment

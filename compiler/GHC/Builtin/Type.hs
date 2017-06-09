@@ -1,7 +1,7 @@
 {-
 (c) The GRASP Project, Glasgow University, 1994-1998
 
-\section[TysWiredIn]{Wired-in knowledge about {\em non-primitive} types}
+\section[GHC.Builtin.Type]{Wired-in knowledge about {\em non-primitive} types}
 -}
 
 {-# LANGUAGE CPP #-}
@@ -9,7 +9,7 @@
 
 -- | This module is about types that can be defined in Haskell, but which
 --   must be wired into the compiler nonetheless.  C.f module GHC.Builtin.Primitive.Type
-module TysWiredIn (
+module GHC.Builtin.Type (
         -- * Helper functions defined here
         mkWiredInTyConName, -- This is used in GHC.Builtin.TypeNats to define the
                             -- built-in functions for evaluation.

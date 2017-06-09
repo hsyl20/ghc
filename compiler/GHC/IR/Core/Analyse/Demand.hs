@@ -31,7 +31,7 @@ import GHC.Data.Coercion         ( Coercion, coVarsOfCo )
 import GHC.Data.FamilyInstance
 import GHC.Utils
 import GHC.Data.Maybe           ( isJust )
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Primitive.Type          ( realWorldStatePrimTy )
 import GHC.Utils.Error         ( dumpIfSet_dyn )
 import GHC.Data.Name             ( getName, stableNameCmp )

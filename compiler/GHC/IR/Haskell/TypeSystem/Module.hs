@@ -53,7 +53,7 @@ import GHC.IR.Haskell.Renamer.Utils ( HsDocContext(..) )
 import GHC.IR.Haskell.Renamer.Fixity ( lookupFixityRn )
 import GHC.Data.Id.Make
 import GHC.IR.Interface.Tidy    ( globaliseAndTidyId )
-import TysWiredIn ( unitTy, mkListTy )
+import GHC.Builtin.Type ( unitTy, mkListTy )
 #if defined(GHCI)
 import GHC.Interactive.DynamicLoading ( loadPlugins )
 import GHC.Plugin.Types ( tcPlugin )

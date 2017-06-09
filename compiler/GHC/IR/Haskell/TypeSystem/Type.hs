@@ -213,7 +213,7 @@ import GHC.Data.Name as Name -- hiding (varName)
 import GHC.Data.Name.Set
 import GHC.Data.Var.Environment
 import GHC.Builtin.Names
-import TysWiredIn( coercibleClass, unitTyCon, unitTyConKey
+import GHC.Builtin.Type( coercibleClass, unitTyCon, unitTyConKey
                  , listTyCon, constraintKind )
 import GHC.Data.BasicTypes
 import GHC.Utils
@@ -2286,7 +2286,7 @@ end of the compiler.
 {-
 ************************************************************************
 *                                                                      *
-\subsection[TysWiredIn-ext-type]{External types}
+\subsection[GHC.Builtin.Type-ext-type]{External types}
 *                                                                      *
 ************************************************************************
 

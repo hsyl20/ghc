@@ -33,7 +33,7 @@ import GHC.Data.Module
 import GHC.Data.Name             ( isExternalName, nameOccName )
 import GHC.Data.OccName          ( occNameFS )
 import GHC.Data.BasicTypes       ( Arity )
-import TysWiredIn       ( unboxedUnitDataCon )
+import GHC.Builtin.Type       ( unboxedUnitDataCon )
 import GHC.Data.Literal
 import GHC.Utils.Outputable
 import GHC.Utils.Monad

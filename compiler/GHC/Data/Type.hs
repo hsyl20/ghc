@@ -221,7 +221,7 @@ import GHC.Data.Unique.Set
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Builtin.Primitive.Type
-import {-# SOURCE #-} TysWiredIn ( listTyCon, typeNatKind
+import {-# SOURCE #-} GHC.Builtin.Type ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )
 import GHC.Builtin.Names
 import GHC.Data.Coercion.Axiom

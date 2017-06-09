@@ -49,7 +49,7 @@ module GHC.IR.Interface.Types (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} TysWiredIn ( liftedRepDataConTyCon )
+import {-# SOURCE #-} GHC.Builtin.Type ( liftedRepDataConTyCon )
 
 import GHC.Config.Flags
 import GHC.Data.Type.Constructor hiding ( pprPromotionQuote )

@@ -33,7 +33,7 @@ import GHC.Data.Types
 import GHC.Data.Type
 import GHC.Utils
 import GHC.Builtin.Primitive.Type
-import {-# SOURCE #-} TysWiredIn ( anyTypeOfKind )
+import {-# SOURCE #-} GHC.Builtin.Type ( anyTypeOfKind )
 
 import Data.List (foldl', sort)
 import qualified Data.IntSet as IS

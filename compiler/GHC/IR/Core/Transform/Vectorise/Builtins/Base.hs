@@ -34,7 +34,7 @@ import GHC.Builtin.Primitive.Type
 import GHC.Data.BasicTypes
 import GHC.Data.Class
 import GHC.IR.Core.Syntax
-import TysWiredIn hiding (sumTyCon)
+import GHC.Builtin.Type hiding (sumTyCon)
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor

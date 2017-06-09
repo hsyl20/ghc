@@ -90,7 +90,7 @@ data Symbol
 -- to @x@.
 --
 type family Any :: k where { }
--- See Note [Any types] in TysWiredIn. Also, for a bit of history on Any see
+-- See Note [Any types] in GHC.Builtin.Type. Also, for a bit of history on Any see
 -- #10886. Note that this must be a *closed* type family: we need to ensure
 -- that this can't reduce to a `data` type for the results discussed in
 -- Note [Any types].
@@ -202,7 +202,7 @@ for them, e.g. to compile the constructor's info table.
 Furthermore the type of MkCoercible cannot be written in Haskell
 (no syntax for ~#R).
 
-So we define them as regular data types in GHC.Types, and do magic in TysWiredIn,
+So we define them as regular data types in GHC.Types, and do magic in GHC.Builtin.Type,
 inside GHC, to change the kind and type.
 -}
 
@@ -383,7 +383,7 @@ data RuntimeRep = VecRep VecCount VecElem   -- ^ a SIMD vector type
                 | FloatRep        -- ^ a 32-bit floating point number
                 | DoubleRep       -- ^ a 64-bit floating point number
 
--- See also Note [Wiring in RuntimeRep] in TysWiredIn
+-- See also Note [Wiring in RuntimeRep] in GHC.Builtin.Type
 
 -- | Length of a SIMD vector type
 data VecCount = Vec2

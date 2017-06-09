@@ -60,7 +60,7 @@ import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Id.Make
 import GHC.Builtin.Primitive.Type
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Types
 import GHC.Data.Class
 import GHC.Data.Type.Constructor

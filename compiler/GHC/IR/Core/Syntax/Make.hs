@@ -59,7 +59,7 @@ import GHC.IR.Core.Utils        ( exprType, needsCaseBinding, bindNonRec )
 import GHC.Data.Literal
 import GHC.Types
 
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Builtin.Names
 
 import GHC.IR.Haskell.Utils          ( mkChunkified, chunkify )
@@ -328,7 +328,7 @@ We could do one of two things:
 * Flatten it out, so that
     mkCoreTup [e1] = e1
 
-* Built a one-tuple (see Note [One-tuples] in TysWiredIn)
+* Built a one-tuple (see Note [One-tuples] in GHC.Builtin.Type)
     mkCoreTup1 [e1] = Unit e1
   We use a suffix "1" to indicate this.
 

@@ -39,7 +39,7 @@ import GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.TrieMap       () -- DV: for now
 import GHC.Data.Type
-import TysWiredIn    ( liftedRepTy )
+import GHC.Builtin.Type    ( liftedRepTy )
 import GHC.Utils.Unify         ( tcMatchTyKi )
 import GHC.Utils
 import GHC.Data.Var

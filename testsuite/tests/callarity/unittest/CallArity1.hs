@@ -10,7 +10,7 @@ import GHC.Utils.SysTools
 import GHC.Config.Flags
 import GHC.Utils.Error
 import GHC.Utils.Outputable
-import TysWiredIn
+import GHC.Builtin.Type
 import GHC.Data.Literal
 import GHC
 import Control.Monad
