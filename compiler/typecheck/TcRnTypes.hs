@@ -1090,7 +1090,7 @@ instance Outputable TcTyThing where     -- Debugging only
 --
 -- It is used for the following purposes:
 --
--- a) for static forms in TcExpr.checkClosedInStaticForm and
+-- a) for static forms in GHC.IR.Haskell.TypeSystem.Expression.checkClosedInStaticForm and
 -- b) to figure out when a nested binding can be generalised (in
 --    TcBinds.decideGeneralisationPlan).
 --

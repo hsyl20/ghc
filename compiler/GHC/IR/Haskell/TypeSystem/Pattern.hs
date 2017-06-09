@@ -15,7 +15,7 @@ module GHC.IR.Haskell.TypeSystem.Pattern ( tcLetPat, newLetBndr, LetBndrSpec(..)
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   TcExpr( tcSyntaxOp, tcSyntaxOpGen, tcInferSigma )
+import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcSyntaxOp, tcSyntaxOpGen, tcInferSigma )
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax

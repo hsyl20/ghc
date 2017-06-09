@@ -44,7 +44,7 @@ import GHC.Data.Var              ( Id )
 import THNames          ( quoteExpName, quotePatName, quoteDecName, quoteTypeName
                         , decsQTyConName, expQTyConName, patQTyConName, typeQTyConName, )
 
-import {-# SOURCE #-} TcExpr   ( tcPolyExpr )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Expression   ( tcPolyExpr )
 import {-# SOURCE #-} TcSplice
     ( runMetaD
     , runMetaE
@@ -509,7 +509,7 @@ References:
 [1] https://ghc.haskell.org/trac/ghc/wiki/TemplateHaskell/Reify
 [2] 'rnSpliceExpr'
 [3] 'TcSplice.qAddModFinalizer'
-[4] 'TcExpr.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
+[4] 'GHC.IR.Haskell.TypeSystem.Expression.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
 [5] 'TcHsType.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
 [6] 'GHC.IR.Haskell.TypeSystem.Pattern.tc_pat' ('SplicePat' ('HsSpliced' ...))
 
@@ -762,7 +762,7 @@ checkCrossStageLifting :: TopLevelFlag -> ThLevel -> ThStage -> ThLevel
 -- Examples   \x -> [| x |]
 --            [| map |]
 --
--- This code is similar to checkCrossStageLifting in TcExpr, but
+-- This code is similar to checkCrossStageLifting in GHC.IR.Haskell.TypeSystem.Expression, but
 -- this is only run on *untyped* brackets.
 
 checkCrossStageLifting top_lvl bind_lvl use_stage use_lvl name
@@ -841,7 +841,7 @@ them in the keep-alive set.
 Note [Quoting names]
 ~~~~~~~~~~~~~~~~~~~~
 A quoted name 'n is a bit like a quoted expression [| n |], except that we
-have no cross-stage lifting (c.f. TcExpr.thBrackId).  So, after incrementing
+have no cross-stage lifting (c.f. GHC.IR.Haskell.TypeSystem.Expression.thBrackId).  So, after incrementing
 the use-level to account for the brackets, the cases are:
 
         bind > use                      Error

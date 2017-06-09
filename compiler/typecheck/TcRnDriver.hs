@@ -66,7 +66,7 @@ import GHC.IR.Interface.Types( ShowForAllFlag(..) )
 import PrelNames
 import GHC.Data.RdrName
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcExpr
+import GHC.IR.Haskell.TypeSystem.Expression
 import TcRnMonad
 import TcRnExports
 import TcEvidence

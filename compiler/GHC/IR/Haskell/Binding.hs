@@ -428,7 +428,7 @@ b) Deciding whether we can do generalisation of the binding
     (see TcBinds.decideGeneralisationPlan)
 
 c) Deciding whether the binding can be used in static forms
-    (see TcExpr.checkClosedInStaticForm for the HsStatic case and
+    (see GHC.IR.Haskell.TypeSystem.Expression.checkClosedInStaticForm for the HsStatic case and
      TcBinds.isClosedBndrGroup).
 
 Specifically,

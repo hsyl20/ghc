@@ -377,7 +377,7 @@ data HsRecField' id arg = HsRecField {
 --
 --     hsRecFieldLbl = Unambiguous "x" $sel:x:MkS  :: AmbiguousFieldOcc Id
 --
--- See also Note [Disambiguating record fields] in TcExpr.
+-- See also Note [Disambiguating record fields] in GHC.IR.Haskell.TypeSystem.Expression.
 
 hsRecFields :: HsRecFields id arg -> [PostRn id id]
 hsRecFields rbinds = map (unLoc . hsRecFieldSel . unLoc) (rec_flds rbinds)

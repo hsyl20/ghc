@@ -15,7 +15,7 @@ module TcBinds ( tcLocalBinds, tcTopBinds, tcRecSelBinds,
                  badBootDeclErr ) where
 
 import {-# SOURCE #-} TcMatches ( tcGRHSsPat, tcMatchesFun )
-import {-# SOURCE #-} TcExpr  ( tcMonoExpr )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Expression  ( tcMonoExpr )
 import {-# SOURCE #-} TcPatSyn ( tcInferPatSynDecl, tcCheckPatSynDecl
                                , tcPatSynBuilderBind )
 import GHC.IR.Core.Syntax (Tickish (..))

@@ -397,7 +397,7 @@ mkCheckExpType = Check
 -- for the 'SynType', because you've said positively that it should be an
 -- Int, and so it shall be.
 --
--- This is defined here to avoid defining it in TcExpr.hs-boot.
+-- This is defined here to avoid defining it in GHC.IR.Haskell.TypeSystem.Expression.hs-boot.
 data SyntaxOpType
   = SynAny     -- ^ Any type
   | SynRho     -- ^ A rho type, deeply skolemised or instantiated as appropriate
@@ -837,7 +837,7 @@ it appears to mention a.  Pretty silly, but it was useful to him.
 
 exactTyCoVarsOfType is used by the type checker to figure out exactly
 which type variables are mentioned in a type.  It's also used in the
-smart-app checking code --- see TcExpr.tcIdApp
+smart-app checking code --- see GHC.IR.Haskell.TypeSystem.Expression.tcIdApp
 
 On the other hand, consider a *top-level* definition
   f = (\x -> x) :: T a -> T a

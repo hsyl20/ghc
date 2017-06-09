@@ -1,4 +1,4 @@
-module TcExpr where
+module GHC.IR.Haskell.TypeSystem.Expression where
 import GHC.IR.Haskell.Syntax    ( HsExpr, LHsExpr, SyntaxExpr )
 import GHC.Data.Name     ( Name )
 import TcType   ( TcRhoType, TcSigmaType, SyntaxOpType, ExpType, ExpRhoType )

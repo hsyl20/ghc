@@ -31,7 +31,7 @@ module Inst (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   TcExpr( tcPolyExpr, tcSyntaxOp )
+import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcPolyExpr, tcSyntaxOp )
 import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Unify( unifyType, unifyKind, noThing )
 
 import GHC.Data.BasicTypes ( IntegralLit(..), SourceText(..) )

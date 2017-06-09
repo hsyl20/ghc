@@ -409,7 +409,7 @@ Library
         TcDerivInfer
         TcDerivUtils
         TcEnv
-        TcExpr
+        GHC.IR.Haskell.TypeSystem.Expression
         TcForeign
         TcGenDeriv
         TcGenFunctor

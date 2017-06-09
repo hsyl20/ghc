@@ -237,7 +237,7 @@ matchActualFunTysPart herald ct_orig mb_thing arity orig_ty
 
 -- (*) Sometimes it's necessary to call matchActualFunTys with only part
 -- (that is, to the right of some arrows) of the type of the function in
--- question. (See TcExpr.tcArgs.) This argument is the reversed list of
+-- question. (See GHC.IR.Haskell.TypeSystem.Expression.tcArgs.) This argument is the reversed list of
 -- arguments already seen (that is, not part of the TcSigmaType passed
 -- in elsewhere).
 
@@ -899,7 +899,7 @@ has the ir_inst flag.
 
     (let { f :: forall a. a -> a; f x = x } in f) @Int
 
-  We'll call TcExpr.tcInferFun to infer the type of the (let .. in f)
+  We'll call GHC.IR.Haskell.TypeSystem.Expression.tcInferFun to infer the type of the (let .. in f)
   And we don't want to instantite the type of 'f' when we reach it,
   else the outer visible type application won't work
 -}

@@ -36,7 +36,7 @@ import GHC.IR.Haskell.Syntax
 
 import TcRnMonad
 import TcHsType
-import TcExpr
+import GHC.IR.Haskell.TypeSystem.Expression
 import TcEnv
 
 import FamInst

@@ -3,13 +3,13 @@
 (c) The University of Glasgow 2006
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[TcExpr]{Typecheck an expression}
+\section[GHC.IR.Haskell.TypeSystem.Expression]{Typecheck an expression}
 -}
 
 {-# LANGUAGE CPP, TupleSections, ScopedTypeVariables #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcExpr ( tcPolyExpr, tcMonoExpr, tcMonoExprNC,
+module GHC.IR.Haskell.TypeSystem.Expression ( tcPolyExpr, tcMonoExpr, tcMonoExprNC,
                 tcInferSigma, tcInferSigmaNC, tcInferRho, tcInferRhoNC,
                 tcSyntaxOp, tcSyntaxOpGen, SyntaxOpType(..), synKnownType,
                 tcCheckId,
@@ -1011,7 +1011,7 @@ tcExpr (PArrSeq _ seq@(FromThenTo expr1 expr2 expr3)) res_ty
           PArrSeq eft (FromThenTo expr1' expr2' expr3') }
 
 tcExpr (PArrSeq _ _) _
-  = panic "TcExpr.tcExpr: Infinite parallel array!"
+  = panic "GHC.IR.Haskell.TypeSystem.Expression.tcExpr: Infinite parallel array!"
     -- the parser shouldn't have generated it and the renamer shouldn't have
     -- let it through
 
@@ -2541,7 +2541,7 @@ mixedSelectors data_sels@(dc_rep_id:_) pat_syn_sels@(ps_rep_id:_)
   where
     RecSelPatSyn rep_ps = recordSelectorTyCon ps_rep_id
     RecSelData rep_dc = recordSelectorTyCon dc_rep_id
-mixedSelectors _ _ = panic "TcExpr: mixedSelectors emptylists"
+mixedSelectors _ _ = panic "GHC.IR.Haskell.TypeSystem.Expression: mixedSelectors emptylists"
 
 
 missingStrictFields :: ConLike -> [FieldLabelString] -> SDoc

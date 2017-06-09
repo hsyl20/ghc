@@ -42,7 +42,7 @@
 -- optional id for the 'fromLabel' function to use (if
 -- RebindableSyntax is enabled) .  The type-checker transforms it into
 -- a call to 'fromLabel'.  See Note [Type-checking overloaded labels]
--- in TcExpr for more details in how type-checking works.
+-- in GHC.IR.Haskell.TypeSystem.Expression for more details in how type-checking works.
 
 module GHC.OverloadedLabels
        ( IsLabel(..)

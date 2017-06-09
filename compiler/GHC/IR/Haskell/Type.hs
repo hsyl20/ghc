@@ -1111,7 +1111,7 @@ mkFieldOcc rdr = FieldOcc rdr PlaceHolder
 -- occurrences).
 --
 -- See Note [HsRecField and HsRecUpdField] in HsPat and
--- Note [Disambiguating record fields] in TcExpr.
+-- Note [Disambiguating record fields] in GHC.IR.Haskell.TypeSystem.Expression.
 -- See Note [Located RdrNames] in HsExpr
 data AmbiguousFieldOcc name
   = Unambiguous (Located RdrName) (PostRn name name)

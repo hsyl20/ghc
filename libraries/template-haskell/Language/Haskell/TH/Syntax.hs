@@ -646,7 +646,7 @@ instance Lift a => Lift [a] where
   lift xs = do { xs' <- mapM lift xs; return (ListE xs') }
 
 liftString :: String -> Q Exp
--- Used in TcExpr to short-circuit the lifting for strings
+-- Used in GHC.IR.Haskell.TypeSystem.Expression to short-circuit the lifting for strings
 liftString s = return (LitE (StringL s))
 
 instance Lift () where

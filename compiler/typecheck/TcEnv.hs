@@ -344,7 +344,7 @@ tcLookupId :: Name -> TcM Id
 -- Used when we aren't interested in the binding level, nor refinement.
 -- The "no refinement" part means that we return the un-refined Id regardless
 --
--- The Id is never a DataCon. (Why does that matter? see TcExpr.tcId)
+-- The Id is never a DataCon. (Why does that matter? see GHC.IR.Haskell.TypeSystem.Expression.tcId)
 tcLookupId name = do
     thing <- tcLookup name
     case thing of

@@ -37,7 +37,7 @@ import TcRnMonad
 import TcType
 
 import GHC.Utils.Outputable
-import TcExpr
+import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.Data.SrcLoc
 import THNames
 import GHC.IR.Haskell.TypeSystem.Unify

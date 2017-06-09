@@ -1294,7 +1294,7 @@ That is, the return type can be unboxed.  E.g. this is OK
 because ($) doesn't inspect or move the result of the call to foo.
 See Trac #8739.
 
-There is a special typing rule for ($) in TcExpr, so the type of ($)
+There is a special typing rule for ($) in GHC.IR.Haskell.TypeSystem.Expression, so the type of ($)
 isn't looked at there, BUT Lint subsequently (and rightly) complains
 if sees ($) applied to Int# (say), unless we give it a wired-in type
 as we do here.
@@ -1321,7 +1321,7 @@ Note [seqId magic]
 
 a) In source Haskell its second arg can have an unboxed type
       x `seq` (v +# w)
-   But see Note [Typing rule for seq] in TcExpr, which
+   But see Note [Typing rule for seq] in GHC.IR.Haskell.TypeSystem.Expression, which
    explains why we give seq itself an ordinary type
          seq :: forall a b. a -> b -> b
    and treat it as a language construct from a typing point of view.

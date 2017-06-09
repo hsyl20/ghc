@@ -9,7 +9,7 @@ Typecheck arrow notation
 
 module TcArrows ( tcProc ) where
 
-import {-# SOURCE #-}   TcExpr( tcMonoExpr, tcInferRho, tcSyntaxOp, tcCheckId, tcPolyExpr )
+import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcMonoExpr, tcInferRho, tcSyntaxOp, tcCheckId, tcPolyExpr )
 
 import GHC.IR.Haskell.Syntax
 import TcMatches
