@@ -28,7 +28,7 @@ import GHC.IR.Haskell.Renamer.Utils          ( HsDocContext(..), mapFvRn, bindLo
 import GHC.IR.Haskell.Renamer.Utils.Unbound        ( mkUnboundName )
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.IR.Haskell.Renamer.Documentation          ( rnHsDoc, rnMbLHsDoc )
-import TcAnnotations    ( annCtxt )
+import GHC.IR.Haskell.TypeSystem.Annotation    ( annCtxt )
 import TcRnMonad
 
 import ForeignCall      ( CCallTarget(..) )

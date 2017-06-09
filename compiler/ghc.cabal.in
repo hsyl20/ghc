@@ -399,7 +399,7 @@ Library
         GHC.IR.Core.Transform.WorkerWrapper.Utils
         FamInst
         Inst
-        TcAnnotations
+        GHC.IR.Haskell.TypeSystem.Annotation
         GHC.IR.Haskell.TypeSystem.Arrow
         TcBinds
         TcSigs

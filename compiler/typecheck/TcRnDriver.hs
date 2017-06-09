@@ -78,7 +78,7 @@ import GHC.IR.Core.FreeVars( orphNamesOfFamInst )
 import FamInst
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
-import TcAnnotations
+import GHC.IR.Haskell.TypeSystem.Annotation
 import TcBinds
 import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )
 import TcDefaults

@@ -2,13 +2,13 @@
 (c) The University of Glasgow 2006
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[TcAnnotations]{Typechecking annotations}
+\section[GHC.IR.Haskell.TypeSystem.Annotation]{Typechecking annotations}
 -}
 
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcAnnotations ( tcAnnotations, annCtxt ) where
+module GHC.IR.Haskell.TypeSystem.Annotation ( tcAnnotations, annCtxt ) where
 
 import {-# SOURCE #-} TcSplice ( runAnnotation )
 import GHC.Data.Module
