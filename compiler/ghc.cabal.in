@@ -332,7 +332,7 @@ Library
         GHC.Packages
         GHC.Config.Platform.Constants
         GHC.Plugins.Types
-        TcPluginM
+        GHC.Plugins.TypeChecker
         GHC.Utils.PrettyPrint.TyThing
         GHC.Utils.CodeGen.StaticPtrTable
         GHC.Utils.SysTools

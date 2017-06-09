@@ -2,7 +2,7 @@
 -- | This module provides an interface for typechecker plugins to
 -- access select functions of the 'TcM', principally those to do with
 -- reading parts of the state.
-module TcPluginM (
+module GHC.Plugins.TypeChecker (
 #if defined(GHCI)
         -- * Basic TcPluginM functionality
         TcPluginM,
