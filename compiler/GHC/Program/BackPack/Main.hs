@@ -14,7 +14,7 @@
 -- it builds and doesn't serialize out the database contents.
 -- But it's still handy for constructing tests.
 
-module DriverBkp (doBackpack) where
+module GHC.Program.BackPack.Main (doBackpack) where
 
 #include "HsVersions.h"
 

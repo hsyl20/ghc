@@ -24,7 +24,7 @@ import GHC.Interface.Load        ( showIface )
 import GHC.Program.Main          ( newHscEnv )
 import GHC.Program.Driver.Pipeline   ( oneShot, compileFile )
 import GHC.Program.MakeDepend   ( doMkDependHS )
-import DriverBkp   ( doBackpack )
+import GHC.Program.BackPack.Main   ( doBackpack )
 #if defined(GHCI)
 import GHCi.UI          ( interactiveUI, ghciWelcomeMsg, defaultGhciSettings )
 #endif
