@@ -39,7 +39,7 @@ import qualified GHC.Utils.Unify as U
 import GHC.Data.Var
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.Environment

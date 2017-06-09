@@ -34,7 +34,7 @@ import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Instance( tcInstDecls1 )
 import GHC.IR.Haskell.TypeSystem.Deriving (DerivInfo)
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.UserType
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import TysWiredIn ( unitTy )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.Environment( lookupConstructorFields )

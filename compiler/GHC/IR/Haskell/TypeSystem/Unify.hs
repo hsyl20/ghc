@@ -42,7 +42,7 @@ module GHC.IR.Haskell.TypeSystem.Unify (
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Types
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
@@ -809,7 +809,7 @@ wrapFunResCoercion arg_tys co_fn_res
 %********************************************************************* -}
 
 -- | Infer a type using a fresh ExpType
--- See also Note [ExpType] in TcMType
+-- See also Note [ExpType] in GHC.IR.Haskell.TypeSystem.MutableType
 -- Does not attempt to instantiate the inferred type
 tcInferNoInst :: (ExpSigmaType -> TcM a) -> TcM (a, TcSigmaType)
 tcInferNoInst = tcInfer False

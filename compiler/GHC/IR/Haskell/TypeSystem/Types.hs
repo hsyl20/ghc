@@ -3054,7 +3054,7 @@ in the right place.  So we proceed as follows:
     - the original signature forall a. a -> forall b. b -> a
     - the instantiation mapping [a :-> a', b :-> b']
 
-* Then when tidying in TcMType.tidySkolemInfo, we first tidy a' to
+* Then when tidying in GHC.IR.Haskell.TypeSystem.MutableType.tidySkolemInfo, we first tidy a' to
   whatever it tidies to, say a''; and then we walk over the type
   replacing the binder a by the tidied version a'', to give
        forall a''. a'' -> forall b''. b'' -> a''

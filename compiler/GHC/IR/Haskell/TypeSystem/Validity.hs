@@ -27,7 +27,7 @@ import GHC.IR.Haskell.TypeSystem.Unify    ( tcSubType_NC )
 import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier ( simplifyAmbiguityCheck )
 import GHC.Data.Types
 import GHC.IR.Haskell.TypeSystem.Type hiding ( sizeType, sizeTypes )
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import PrelNames
 import GHC.Data.Type
 import GHC.Data.Coercion

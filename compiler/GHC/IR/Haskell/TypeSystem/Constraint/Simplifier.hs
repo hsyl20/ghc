@@ -33,7 +33,7 @@ import GHC.IR.Haskell.TypeSystem.Error
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Constraint.Interact
 import GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser   ( makeSuperClasses )
-import TcMType   as TcM
+import GHC.IR.Haskell.TypeSystem.MutableType   as TcM
 import GHC.IR.Haskell.TypeSystem as TcM
 import GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import GHC.IR.Haskell.TypeSystem.Type

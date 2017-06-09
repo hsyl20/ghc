@@ -49,7 +49,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Interface.TypeCheck

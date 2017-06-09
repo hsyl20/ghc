@@ -469,7 +469,7 @@ mkTyVar name kind = TyVar { varName    = name
 
 mkTcTyVar :: Name -> Kind -> TcTyVarDetails -> TyVar
 mkTcTyVar name kind details
-  = -- NB: 'kind' may be a coercion kind; cf, 'TcMType.newMetaCoVar'
+  = -- NB: 'kind' may be a coercion kind; cf, 'GHC.IR.Haskell.TypeSystem.MutableType.newMetaCoVar'
     TcTyVar {   varName    = name,
                 realUnique = getKey (nameUnique name),
                 varType  = kind,

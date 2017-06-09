@@ -19,7 +19,7 @@ import GHC.Data.Type( mkTyVarBinders, mkEmptyTCvSubst
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Signature( emptyPragEnv, completeSigFromId )
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Syntax( zonkTyVarBindersX, zonkTcTypeToTypes
               , zonkTcTypeToType, emptyZonkEnv )
 import TysPrim

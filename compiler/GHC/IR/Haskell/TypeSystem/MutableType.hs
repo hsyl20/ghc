@@ -11,7 +11,7 @@ mutable type variables
 
 {-# LANGUAGE CPP, TupleSections, MultiWayIf #-}
 
-module TcMType (
+module GHC.IR.Haskell.TypeSystem.MutableType (
   TcTyVar, TcKind, TcType, TcTauType, TcThetaType, TcTyVarSet,
 
   --------------------------------

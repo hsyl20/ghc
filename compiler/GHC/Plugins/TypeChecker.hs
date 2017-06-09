@@ -56,7 +56,7 @@ module GHC.Plugins.TypeChecker (
 import qualified GHC.IR.Haskell.TypeSystem as TcM
 import qualified GHC.IR.Haskell.TypeSystem.Constraint.Solver  as TcS
 import qualified GHC.IR.Haskell.TypeSystem.Environment     as TcM
-import qualified TcMType   as TcM
+import qualified GHC.IR.Haskell.TypeSystem.MutableType   as TcM
 import qualified FamInst   as TcM
 import qualified GHC.IR.Interface.Environment
 import qualified GHC.Utils.Finder
@@ -65,7 +65,7 @@ import GHC.Data.FamilyInstance ( FamInstEnv )
 import GHC.IR.Haskell.TypeSystem  ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                   , unsafeTcPluginTcM, getEvBindsTcPluginM
                   , liftIO, traceTc )
-import TcMType    ( TcTyVar, TcType )
+import GHC.IR.Haskell.TypeSystem.MutableType    ( TcTyVar, TcType )
 import GHC.IR.Haskell.TypeSystem.Environment      ( TcTyThing )
 import GHC.IR.Haskell.TypeSystem.Evidence ( TcCoercion, CoercionHole
                   , EvTerm, EvBind, mkGivenEvBind )
@@ -148,7 +148,7 @@ newFlexiTyVar = unsafeTcPluginTcM . TcM.newFlexiTyVar
 isTouchableTcPluginM :: TcTyVar -> TcPluginM Bool
 isTouchableTcPluginM = unsafeTcPluginTcM . TcM.isTouchableTcM
 
--- Confused by zonking? See Note [What is zonking?] in TcMType.
+-- Confused by zonking? See Note [What is zonking?] in GHC.IR.Haskell.TypeSystem.MutableType.
 zonkTcType :: TcType -> TcPluginM TcType
 zonkTcType = unsafeTcPluginTcM . TcM.zonkTcType
 

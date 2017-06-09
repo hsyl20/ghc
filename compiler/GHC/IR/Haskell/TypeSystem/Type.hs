@@ -346,13 +346,13 @@ type TcDTyCoVarSet  = DTyCoVarSet
 ********************************************************************* -}
 
 -- | An expected type to check against during type-checking.
--- See Note [ExpType] in TcMType, where you'll also find manipulators.
+-- See Note [ExpType] in GHC.IR.Haskell.TypeSystem.MutableType, where you'll also find manipulators.
 data ExpType = Check TcType
              | Infer !InferResult
 
 data InferResult
   = IR { ir_uniq :: Unique  -- For debugging only
-       , ir_lvl  :: TcLevel -- See Note [TcLevel of ExpType] in TcMType
+       , ir_lvl  :: TcLevel -- See Note [TcLevel of ExpType] in GHC.IR.Haskell.TypeSystem.MutableType
        , ir_inst :: Bool    -- True <=> deeply instantiate before returning
                             --           i.e. return a RhoType
                             -- False <=> do not instantiate before returning

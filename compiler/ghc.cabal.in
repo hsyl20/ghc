@@ -417,7 +417,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Syntax
         GHC.IR.Haskell.TypeSystem.UserType
         GHC.IR.Haskell.TypeSystem.Instance
-        TcMType
+        GHC.IR.Haskell.TypeSystem.MutableType
         GHC.IR.Haskell.TypeSystem.Validity
         GHC.IR.Haskell.TypeSystem.Matches
         GHC.IR.Haskell.TypeSystem.Pattern

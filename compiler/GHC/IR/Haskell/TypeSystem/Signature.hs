@@ -29,7 +29,7 @@ import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Types
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidType )
 import GHC.IR.Haskell.TypeSystem.Unify( tcSkolemise, unifyType, noThing )
 import GHC.IR.Haskell.TypeSystem.Instantiation( topInstantiate )

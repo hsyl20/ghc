@@ -71,7 +71,7 @@ module GHC.IR.Haskell.TypeSystem.Environment(
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Interface.Environment
 import GHC.IR.Haskell.TypeSystem
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Interface.Load
 import PrelNames

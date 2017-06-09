@@ -15,7 +15,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Matches
 import GHC.IR.Haskell.TypeSystem.Syntax( hsLPatType )
 import GHC.IR.Haskell.TypeSystem.Type
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Pattern
 import GHC.IR.Haskell.TypeSystem.Unify

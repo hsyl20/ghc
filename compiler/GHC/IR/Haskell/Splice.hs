@@ -65,7 +65,7 @@ import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.Data.Type as Type
 import GHC.Data.Kind
 import GHC.Data.Name.Set
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Interface.TypeCheck
 import GHC.Data.Types

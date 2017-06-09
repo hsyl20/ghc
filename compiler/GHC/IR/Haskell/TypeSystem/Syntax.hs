@@ -26,7 +26,7 @@ module GHC.IR.Haskell.TypeSystem.Syntax (
 
         -- * Zonking
         -- | For a description of "zonking", see Note [What is zonking?]
-        -- in TcMType
+        -- in GHC.IR.Haskell.TypeSystem.MutableType
         zonkTopDecls, zonkTopExpr, zonkTopLExpr,
         zonkTopBndrs, zonkTyBndrsX,
         zonkTyVarBindersX, zonkTyVarBinderX,
@@ -44,7 +44,7 @@ import GHC.Data.Id.Info
 import GHC.IR.Haskell.TypeSystem
 import PrelNames
 import GHC.IR.Haskell.TypeSystem.Type
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Evidence
 import TysPrim
 import GHC.Data.Type.Constructor   ( isUnboxedTupleTyCon )
@@ -179,7 +179,7 @@ It's all pretty boring stuff, because GHC.IR.Haskell is such a large type, and
 the environment manipulation is tiresome.
 -}
 
--- Confused by zonking? See Note [What is zonking?] in TcMType.
+-- Confused by zonking? See Note [What is zonking?] in GHC.IR.Haskell.TypeSystem.MutableType.
 type UnboundTyVarZonker = TcTyVar -> TcM Type
         -- How to zonk an unbound type variable
         -- The TcTyVar is
@@ -204,7 +204,7 @@ type UnboundTyVarZonker = TcTyVar -> TcM Type
 -- can appear in types, and we sometimes inspect a zonked type in this
 -- module.
 --
--- Confused by zonking? See Note [What is zonking?] in TcMType.
+-- Confused by zonking? See Note [What is zonking?] in GHC.IR.Haskell.TypeSystem.MutableType.
 data ZonkEnv
   = ZonkEnv
       UnboundTyVarZonker
@@ -838,7 +838,7 @@ carry around different environments to use for the different arguments.
 However, this becomes a logistical nightmare, especially in dealing with
 the more exotic Stmt forms. So, we simplify by making the critical
 assumption that the uniques of the skolems are different. (This assumption
-is justified by the use of newUnique in TcMType.instSkolTyCoVarX.)
+is justified by the use of newUnique in GHC.IR.Haskell.TypeSystem.MutableType.instSkolTyCoVarX.)
 Now, we can safely just extend one environment.
 -}
 
@@ -1617,7 +1617,7 @@ zonk_tycomapper = TyCoMapper
   , tcm_hole  = zonkCoHole
   , tcm_tybinder = \env tv _vis -> zonkTyBndrX env tv }
 
--- Confused by zonking? See Note [What is zonking?] in TcMType.
+-- Confused by zonking? See Note [What is zonking?] in GHC.IR.Haskell.TypeSystem.MutableType.
 zonkTcTypeToType :: ZonkEnv -> TcType -> TcM Type
 zonkTcTypeToType = mapType zonk_tycomapper
 

@@ -27,7 +27,7 @@ import GHC.Data.Var
 import GHC.Data.Name
 import GHC.Data.RdrName
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Validity( arityErr )
 import GHC.Data.Type ( pprTyVars )
 import GHC.IR.Haskell.TypeSystem.Type

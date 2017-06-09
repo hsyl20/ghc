@@ -34,7 +34,7 @@ import GHC.Data.DataConstructor ( dataConName )
 import GHC.Data.Maybe
 import GHC.Data.Type
 import GHC.Data.Types
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.Data.Name
 import GHC.Data.Pair
 import GHC.Utils.Panic

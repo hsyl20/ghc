@@ -21,7 +21,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.Data.Name
 import GHC.Utils
 import GHC.Utils.Monad

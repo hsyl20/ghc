@@ -59,7 +59,7 @@ import GHC.IR.Core.Syntax.Make    ( unitExpr )
 import GHC.IR.Core.Utils ( exprType, isExprLevPoly )
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Interface.TypeCheck
-import TcMType ( checkForLevPolyX, formatLevPolyErr )
+import GHC.IR.Haskell.TypeSystem.MutableType ( checkForLevPolyX, formatLevPolyErr )
 import GHC.IR.Interface.Load
 import GHC.Utils.Finder
 import PrelNames

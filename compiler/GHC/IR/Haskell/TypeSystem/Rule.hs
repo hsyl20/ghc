@@ -13,7 +13,7 @@ module GHC.IR.Haskell.TypeSystem.Rule ( tcRules ) where
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Expression

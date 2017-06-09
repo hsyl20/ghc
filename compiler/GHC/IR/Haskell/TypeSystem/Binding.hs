@@ -32,7 +32,7 @@ import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.Pattern
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.Data.FamilyInstance( normaliseType )
 import GHC.IR.Haskell.TypeSystem.FamilyInstance( tcGetFamInstEnvs )
 import GHC.Data.Type.Constructor

@@ -26,7 +26,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 -- import GHC.IR.Haskell.TypeSystem.Error (reportAllUnsolved)
 import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import GHC.IR.Haskell.TypeSystem.Deriving.Generic
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor

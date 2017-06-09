@@ -87,7 +87,7 @@ import GHC.IR.Haskell.TypeSystem.Rule
 import GHC.IR.Haskell.TypeSystem.Foreign
 import GHC.IR.Haskell.TypeSystem.Instance
 import GHC.IR.Interface.TypeCheck
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Constraint.Simplifier
 import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration

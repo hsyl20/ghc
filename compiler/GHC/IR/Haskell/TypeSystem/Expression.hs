@@ -40,7 +40,7 @@ import GHC.IR.Haskell.TypeSystem.Matches
 import GHC.IR.Haskell.TypeSystem.UserType
 import GHC.IR.Haskell.TypeSystem.PatternSynonym( tcPatSynBuilderOcc, nonBidirectionalErr )
 import GHC.IR.Haskell.TypeSystem.Pattern
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Compilers.HaskellToCore.Monad
 import GHC.Data.Id
@@ -913,7 +913,7 @@ tcExpr expr@(RecordUpd { rupd_expr = record_expr, rupd_flds = rbnds }) res_ty
 
               mk_inst_ty :: TCvSubst -> (TyVar, TcType) -> TcM (TCvSubst, TcType)
               -- Deals with instantiation of kind variables
-              --   c.f. TcMType.newMetaTyVars
+              --   c.f. GHC.IR.Haskell.TypeSystem.MutableType.newMetaTyVars
               mk_inst_ty subst (tv, result_inst_ty)
                 | is_fixed_tv tv   -- Same as result type
                 = return (extendTvSubst subst tv result_inst_ty, result_inst_ty)

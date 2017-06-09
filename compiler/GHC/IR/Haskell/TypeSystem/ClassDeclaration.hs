@@ -25,7 +25,7 @@ import GHC.IR.Haskell.TypeSystem.Evidence ( idHsWrapper )
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.UserType
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.Data.Type     ( getClassPredTys_maybe, piResultTys )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem

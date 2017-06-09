@@ -11,7 +11,7 @@ module GHC.IR.Haskell.TypeSystem.Error(
 
 import GHC.IR.Haskell.TypeSystem.Types
 import GHC.IR.Haskell.TypeSystem
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Unify( occCheckForErrors, OccCheckResult(..) )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.Utils.Unbound ( unknownNameSuggestions )

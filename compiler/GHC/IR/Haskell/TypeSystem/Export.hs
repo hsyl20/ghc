@@ -8,7 +8,7 @@ import PrelNames
 import GHC.Data.RdrName
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcMType
+import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.IR.Haskell.Renamer.Environment

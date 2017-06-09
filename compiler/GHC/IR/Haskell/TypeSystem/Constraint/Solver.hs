@@ -125,7 +125,7 @@ import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 
 import qualified GHC.IR.Haskell.TypeSystem as TcM
-import qualified TcMType as TcM
+import qualified GHC.IR.Haskell.TypeSystem.MutableType as TcM
 import qualified GHC.IR.Haskell.TypeSystem.Environment as TcM
        ( checkWellStaged, topIdLvl, tcGetDefaultTys, tcLookupClass, tcLookupId )
 import PrelNames( heqTyConKey, eqTyConKey )

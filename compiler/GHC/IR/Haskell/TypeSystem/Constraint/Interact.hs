@@ -21,7 +21,7 @@ import GHC.Data.Kind( isConstraintKind )
 import GHC.Data.ClassInstance( DFunInstType, lookupInstEnv, instanceDFunId )
 import GHC.Data.Coercion.Axiom( sfInteractTop, sfInteractInert )
 
-import TcMType (newMetaTyVars)
+import GHC.IR.Haskell.TypeSystem.MutableType (newMetaTyVars)
 
 import GHC.Data.Var
 import GHC.IR.Haskell.TypeSystem.Type
