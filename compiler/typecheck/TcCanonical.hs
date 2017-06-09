@@ -11,7 +11,7 @@ module TcCanonical(
 
 import TcRnTypes
 import GHC.IR.Haskell.TypeSystem.Unify( swapOverTyVars, metaTyVarUpdateOK )
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Flatten
 import TcSMonad

@@ -88,7 +88,7 @@ import GHC.IR.Haskell.TypeSystem.Foreign
 import GHC.IR.Haskell.TypeSystem.Instance
 import GHC.IR.Interface.TypeCheck
 import TcMType
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
 import GHC.IR.Haskell.TypeSystem.Deriving.Typeable ( mkTypeableBinds )

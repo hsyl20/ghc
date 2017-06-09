@@ -9,7 +9,7 @@ import GHC.Data.RdrName
 import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.ImportExport
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Utils.Unbound ( reportUnboundName )

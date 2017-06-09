@@ -28,7 +28,7 @@ import GHC.IR.Haskell.Syntax
 import TcHsType
 import TcRnTypes
 import TcRnMonad
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidType )
 import GHC.IR.Haskell.TypeSystem.Unify( tcSkolemise, unifyType, noThing )

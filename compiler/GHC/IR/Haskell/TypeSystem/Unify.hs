@@ -44,7 +44,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Types
 import TcMType
 import TcRnMonad
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion
 import GHC.IR.Haskell.TypeSystem.Evidence

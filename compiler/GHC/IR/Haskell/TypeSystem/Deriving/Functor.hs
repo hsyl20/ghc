@@ -25,7 +25,7 @@ import GHC.Data.RdrName
 import GHC.Data.SrcLoc
 import GHC.Utils.Monad.State
 import GHC.IR.Haskell.TypeSystem.Deriving.BasicClasses
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Types
 import GHC.Data.Type

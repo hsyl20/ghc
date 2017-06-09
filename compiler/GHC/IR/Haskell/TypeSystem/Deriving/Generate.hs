@@ -58,7 +58,7 @@ import PrimOp
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Environment
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidTyFamEqn )
 import TysPrim
 import TysWiredIn

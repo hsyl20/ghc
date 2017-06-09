@@ -36,7 +36,7 @@ import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TcMType
 import TysWiredIn ( unitTy )
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.Environment( lookupConstructorFields )
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance

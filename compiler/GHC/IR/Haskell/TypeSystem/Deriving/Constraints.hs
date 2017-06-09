@@ -28,7 +28,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import GHC.IR.Haskell.TypeSystem.Deriving.Generic
 import TcMType
 import TcRnMonad
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import TcSimplify

@@ -79,7 +79,7 @@ import GHC.Data.DataConstructor
 import GHC.Data.Name
 import GHC.Data.Type
 import GHC.Data.Types
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.RepType
 import GHC.Data.BasicTypes

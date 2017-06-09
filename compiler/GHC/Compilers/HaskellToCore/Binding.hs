@@ -40,7 +40,7 @@ import GHC.Data.Graph.Directed
 import PrelNames
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Evidence
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Coercion
 import TysWiredIn ( typeNatKind, typeSymbolKind )

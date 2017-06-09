@@ -28,7 +28,7 @@ module GHC.Data.ClassInstance (
 
 #include "HsVersions.h"
 
-import import GHC.IR.Haskell.TypeSystem.Type -- InstEnv is really part of the type checker,
+import GHC.IR.Haskell.TypeSystem.Type -- InstEnv is really part of the type checker,
               -- and depends on TcType in many ways
 import GHC.IR.Core.Syntax ( IsOrphan(..), isOrphan, chooseOrphanAnchor )
 import GHC.Data.Module

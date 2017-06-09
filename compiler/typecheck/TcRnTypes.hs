@@ -151,7 +151,7 @@ import GHC.Data.DataConstructor  ( DataCon, dataConUserType, dataConOrigArgTys )
 import GHC.Data.PatternSynonym   ( PatSyn, pprPatSynType )
 import GHC.Data.Id       ( idType, idName )
 import GHC.Data.FieldLabel ( FieldLabel )
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Annotation
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance

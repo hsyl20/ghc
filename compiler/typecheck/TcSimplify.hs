@@ -36,7 +36,7 @@ import TcCanonical   ( makeSuperClasses )
 import TcMType   as TcM
 import TcRnMonad as TcM
 import TcSMonad  as TcS
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.TrieMap       () -- DV: for now
 import GHC.Data.Type
 import TysWiredIn    ( liftedRepTy )

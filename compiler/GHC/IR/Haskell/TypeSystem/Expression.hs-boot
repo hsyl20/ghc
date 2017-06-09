@@ -1,7 +1,7 @@
 module GHC.IR.Haskell.TypeSystem.Expression where
 import GHC.IR.Haskell.Syntax    ( HsExpr, LHsExpr, SyntaxExpr )
 import GHC.Data.Name     ( Name )
-import import GHC.IR.Haskell.TypeSystem.Type   ( TcRhoType, TcSigmaType, SyntaxOpType, ExpType, ExpRhoType )
+import GHC.IR.Haskell.TypeSystem.Type   ( TcRhoType, TcSigmaType, SyntaxOpType, ExpType, ExpRhoType )
 import TcRnTypes( TcM, TcId, CtOrigin )
 
 tcPolyExpr ::

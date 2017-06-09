@@ -130,7 +130,7 @@ import qualified GHC.IR.Haskell.TypeSystem.Environment as TcM
        ( checkWellStaged, topIdLvl, tcGetDefaultTys, tcLookupClass, tcLookupId )
 import PrelNames( heqTyConKey, eqTyConKey )
 import GHC.Data.Kind
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Config.Flags
 import GHC.Data.Type as Type
 import GHC.Data.Coercion

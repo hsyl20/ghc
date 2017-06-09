@@ -41,7 +41,7 @@ import GHC.Data.Name hiding( isVarOcc, isTcOcc, varName, tcName )
 import THNames
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import TysWiredIn
 import GHC.IR.Core.Syntax

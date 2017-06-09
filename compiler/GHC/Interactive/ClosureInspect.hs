@@ -38,7 +38,7 @@ import GHC.Data.RepType
 import qualified GHC.Utils.Unify as U
 import GHC.Data.Var
 import TcRnMonad
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
 import GHC.IR.Haskell.TypeSystem.Unify

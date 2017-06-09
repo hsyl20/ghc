@@ -29,7 +29,7 @@ import GHC.IR.Core.FreeVars
 import GHC.Data.Class
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Var

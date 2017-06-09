@@ -48,7 +48,7 @@ import GHC.IR.Haskell.TypeSystem.FunctionalDependency
 import TcMType
 import GHC.Data.Type
 import GHC.Data.Types     ( TyBinder(..) )
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Types
 import GHC.Data.Class( Class )
 import GHC.Data.Id.Make( mkDictFunId )

@@ -10,7 +10,7 @@ where
 import GHC.IR.Core.Transform.Vectorise.Utils
 import GHC.IR.Core.Transform.Vectorise.Monad
 import GHC.IR.Core.Transform.Vectorise.Builtins
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Types
 import GHC.Data.Type.Constructor

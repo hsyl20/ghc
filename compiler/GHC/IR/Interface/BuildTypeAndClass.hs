@@ -30,7 +30,7 @@ import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.Data.Id
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 
 import GHC.Data.SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Config.Flags

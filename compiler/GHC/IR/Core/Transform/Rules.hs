@@ -40,7 +40,7 @@ import GHC.IR.Core.Utils        ( exprType, eqExpr, mkTick, mkTicks,
 import GHC.IR.Core.PrettyPrint          ( pprRules )
 import GHC.Data.Type             ( Type, substTy, mkTCvSubst )
 import qualified GHC.Data.Type as Type
-import import GHC.IR.Haskell.TypeSystem.Type           ( tcSplitTyConApp_maybe )
+import GHC.IR.Haskell.TypeSystem.Type           ( tcSplitTyConApp_maybe )
 import TysWiredIn       ( anyTypeOfKind )
 import GHC.Data.Coercion
 import GHC.IR.Core.Tidy         ( tidyRules )

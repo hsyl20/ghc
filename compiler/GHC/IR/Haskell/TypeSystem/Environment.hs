@@ -72,7 +72,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.IR.Interface.Environment
 import TcRnMonad
 import TcMType
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Interface.Load
 import PrelNames
 import TysWiredIn

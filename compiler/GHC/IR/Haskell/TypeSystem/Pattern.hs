@@ -30,7 +30,7 @@ import GHC.IR.Haskell.TypeSystem.Environment
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Validity( arityErr )
 import GHC.Data.Type ( pprTyVars )
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TysWiredIn

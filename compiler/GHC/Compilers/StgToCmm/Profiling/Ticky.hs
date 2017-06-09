@@ -129,7 +129,7 @@ import GHC.Config.Flags
 
 -- Turgid imports for showTypeCategory
 import PrelNames
-import import GHC.IR.Haskell.TypeSystem.Type
+import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
 
