@@ -1184,7 +1184,7 @@ reasons:
   is jolly confusing.  See Trac #4875
 
 
-* Increase kind polymorphism.  See TcTyClsDecls
+* Increase kind polymorphism.  See GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
   Note [Grouping of type and class declarations]
 
 Why do the instance declarations participate?  At least two reasons

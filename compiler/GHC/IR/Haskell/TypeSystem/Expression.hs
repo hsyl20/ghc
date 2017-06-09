@@ -746,7 +746,7 @@ The criterion we use is this:
   of the data constructor
 
 NB: this is not (quite) the same as being a "naughty" record selector
-(See Note [Naughty record selectors]) in TcTyClsDecls), at least
+(See Note [Naughty record selectors]) in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration), at least
 in the case of GADTs. Consider
    data T a where { MkT :: { f :: a } :: T [a] }
 Then f is not "naughty" because it has a well-typed record selector.

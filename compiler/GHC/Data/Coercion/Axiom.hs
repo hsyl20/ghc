@@ -223,7 +223,7 @@ data CoAxBranch
     , cab_cvs      :: [CoVar]       -- Bound coercion variables
                                     -- Always empty, for now.
                                     -- See Note [Constraints in patterns]
-                                    -- in TcTyClsDecls
+                                    -- in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
     , cab_roles    :: [Role]        -- See Note [CoAxBranch roles]
     , cab_lhs      :: [Type]        -- Type patterns to match against
                                     -- See Note [CoAxiom saturation]

@@ -3,12 +3,12 @@
 (c) The AQUA Project, Glasgow University, 1996-1998
 
 
-TcTyClsDecls: Typecheck type and class declarations
+GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration: Typecheck type and class declarations
 -}
 
 {-# LANGUAGE CPP, TupleSections, MultiWayIf #-}
 
-module TcTyClsDecls (
+module GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration (
         tcTyAndClassDecls, tcAddImplicits,
 
         -- Functions used by TcInstDcls to check

@@ -1467,7 +1467,7 @@ reifyDataCon isGadtDataCon tys dc
                                       dcdBangs r_arg_tys) res_ty }
                 -- We need to check not isGadtDataCon here because GADT
                 -- constructors can be declared infix.
-                -- See Note [Infix GADT constructors] in TcTyClsDecls.
+                -- See Note [Infix GADT constructors] in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration.
               | dataConIsInfix dc && not isGadtDataCon ->
                   ASSERT( length arg_tys == 2 ) do
                   { let [r_a1, r_a2] = r_arg_tys

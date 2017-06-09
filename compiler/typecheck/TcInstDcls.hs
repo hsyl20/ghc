@@ -14,7 +14,7 @@ module TcInstDcls ( tcInstDecls1, tcInstDeclsDeriv, tcInstDecls2 ) where
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Binding
-import TcTyClsDecls
+import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
 import GHC.IR.Haskell.TypeSystem.ClassDeclaration( tcClassDecl2, tcATDefault,
                    HsSigFun, mkHsSigFun,
                    findMethodBind, instantiateMethod )

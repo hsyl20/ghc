@@ -951,7 +951,7 @@ tc_lhs_pred mode pred = tc_lhs_type mode pred constraintKind
 ---------------------------
 tcTyVar :: TcTyMode -> Name -> TcM (TcType, TcKind)
 -- See Note [Type checking recursive type and class declarations]
--- in TcTyClsDecls
+-- in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
 tcTyVar mode name         -- Could be a tyvar, a tycon, or a datacon
   = do { traceTc "lk1" (ppr name)
        ; thing <- tcLookup name
@@ -1691,7 +1691,7 @@ kcLookupTcTyCon nm
 
 -----------------------
 -- | Bring tycon tyvars into scope. This is used during the "kind-checking"
--- pass in TcTyClsDecls. (Never in getInitialKind, never in the
+-- pass in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration. (Never in getInitialKind, never in the
 -- "type-checking"/desugaring pass.)
 -- Never emits constraints, though the thing_inside might.
 kcTyClTyVars :: Name -> TcM a -> TcM a

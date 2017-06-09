@@ -90,7 +90,7 @@ import GHC.IR.Interface.TypeCheck
 import TcMType
 import import GHC.IR.Haskell.TypeSystem.Type
 import TcSimplify
-import TcTyClsDecls
+import GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
 import TcTypeable ( mkTypeableBinds )
 import TcBackpack
 import GHC.IR.Interface.Load

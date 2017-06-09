@@ -430,7 +430,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Rule
         TcSimplify
         TcErrors
-        TcTyClsDecls
+        GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
         TcTyDecls
         TcTypeable
         GHC.IR.Haskell.TypeSystem.Type

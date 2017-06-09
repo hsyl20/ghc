@@ -12,5 +12,5 @@ import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.Data.Name
 
 -- We need this because of the mutual recursion
--- between TcTyClsDecls and TcInstDcls
+-- between GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration and TcInstDcls
 tcInstDecls1 :: [LInstDecl Name] -> TcM (TcGblEnv, [InstInfo Name], [DerivInfo])

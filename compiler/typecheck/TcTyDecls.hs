@@ -950,7 +950,7 @@ sel_naughty field.
 Note [GADT record selectors]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For GADTs, we require that all constructors with a common field 'f' have the same
-result type (modulo alpha conversion).  [Checked in TcTyClsDecls.checkValidTyCon]
+result type (modulo alpha conversion).  [Checked in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration.checkValidTyCon]
 E.g.
         data T where
           T1 { f :: Maybe a } :: T [a]

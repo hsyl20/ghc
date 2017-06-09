@@ -1709,7 +1709,7 @@ and RHS, discovering that the instance really should be
 
 During this kind-checking, all the tyvars will be TcTyVars. Then, however,
 as a second pass, we desugar the RHS (which is done in functions prefixed
-with "tc" in TcTyClsDecls"). By this time, all the kind-vars are proper
+with "tc" in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration"). By this time, all the kind-vars are proper
 TyVars, not TcTyVars, get some kind unification must happen.
 
 Thus, we always check if a TyVar is a TcTyVar before asking if it's a

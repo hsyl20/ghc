@@ -1070,7 +1070,7 @@ data PromotionErr
                      -- See Note [Don't promote pattern synonyms] in GHC.IR.Haskell.TypeSystem.Environment
 
   | RecDataConPE     -- Data constructor in a recursive loop
-                     -- See Note [ARecDataCon: recusion and promoting data constructors] in TcTyClsDecls
+                     -- See Note [ARecDataCon: recusion and promoting data constructors] in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration
   | NoDataKindsTC    -- -XDataKinds not enabled (for a tycon)
   | NoDataKindsDC    -- -XDataKinds not enabled (for a datacon)
   | NoTypeInTypeTC   -- -XTypeInType not enabled (for a tycon)

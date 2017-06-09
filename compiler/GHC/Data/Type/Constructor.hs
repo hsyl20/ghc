@@ -1059,7 +1059,7 @@ TcTyCons are used for tow distinct purposes
     way that won't lead to more errors.  We use a TcTyCon for this;
     see makeRecoveryTyCon.
 
-2.  When checking a type/class declaration (in module TcTyClsDecls), we come
+2.  When checking a type/class declaration (in module GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration), we come
     upon knowledge of the eventual tycon in bits and pieces. First, we use
     getInitialKinds to look over the user-provided kind signature of a tycon
     (including, for example, the number of parameters written to the tycon)
@@ -1072,7 +1072,7 @@ TcTyCons are used for tow distinct purposes
 
     For convenience, we store partially-known tycons in TcTyCons, which
     might store meta-variables. These TcTyCons are stored in the local
-    environment in TcTyClsDecls, until the real full TyCons can be created
+    environment in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration, until the real full TyCons can be created
     during desugaring. A desugared program should never have a TcTyCon.
 
     A challenging piece in all of this is that we end up taking three separate
@@ -1452,7 +1452,7 @@ mkSumTyCon name binders res_kind arity tyvars cons parent
 -- a recursive type/class type-checking knot. It has a kind because
 -- TcErrors sometimes calls typeKind.
 -- See also Note [Kind checking recursive type and class declarations]
--- in TcTyClsDecls.
+-- in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration.
 mkTcTyCon :: Name
           -> [TyConBinder]
           -> Kind                -- ^ /result/ kind only
