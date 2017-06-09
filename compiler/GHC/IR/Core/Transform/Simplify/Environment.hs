@@ -52,7 +52,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Tree.OrdList
 import GHC.Data.Id as Id
 import GHC.IR.Core.Syntax.Make                   ( mkWildValBinder )
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import qualified GHC.Data.Type as Type
 import GHC.Data.Type hiding              ( substTy, substTyVar, substTyVarBndr )
 import qualified GHC.Data.Coercion as Coercion

@@ -75,9 +75,9 @@ import GHC.IR.Haskell.TypeSystem.Evidence       ( emptyTcEvBinds )
 
 -- compiler/prelude
 import GHC.Data.ForeignCall
-import GHC.Builtin.Primitive.Type          ( eqPrimTyCon )
+import GHC.Builtin.Primitive.Types          ( eqPrimTyCon )
 import GHC.Builtin.Names        ( eqTyCon_RDR )
-import GHC.Builtin.Type       ( unitTyCon, unitDataCon, tupleTyCon, tupleDataCon, nilDataCon,
+import GHC.Builtin.Types       ( unitTyCon, unitDataCon, tupleTyCon, tupleDataCon, nilDataCon,
                           unboxedUnitTyCon, unboxedUnitDataCon,
                           listTyCon_RDR, parrTyCon_RDR, consDataCon_RDR )
 

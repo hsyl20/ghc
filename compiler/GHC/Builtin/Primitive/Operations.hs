@@ -11,7 +11,7 @@
 {-# OPTIONS_GHC -fmax-pmcheck-iterations=10000000 #-}
 #endif
 
-module GHC.Builtin.Primitive.Operation (
+module GHC.Builtin.Primitive.Operationss (
         PrimOp(..), PrimOpVecCat(..), allThePrimOps,
         primOpType, primOpSig,
         primOpTag, maxPrimOpTag, primOpOcc,
@@ -29,8 +29,8 @@ module GHC.Builtin.Primitive.Operation (
 
 #include "HsVersions.h"
 
-import GHC.Builtin.Primitive.Type
-import GHC.Builtin.Type
+import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Typess
 
 import GHC.IR.Cmm.Type
 import GHC.Data.Demand

@@ -38,7 +38,7 @@ import GHC.Data.Type     ( Type, tyConAppTyCon )
 import GHC.Data.Type.Constructor
 import GHC.Data.CLabel
 import GHC.IR.Cmm.Utils
-import GHC.Builtin.Primitive.Operation
+import GHC.Builtin.Primitive.Operationss
 import GHC.RTS.Storage
 import GHC.Data.FastString
 import GHC.Utils.Outputable

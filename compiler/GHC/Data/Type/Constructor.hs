@@ -122,7 +122,7 @@ module GHC.Data.Type.Constructor (
 #include "HsVersions.h"
 
 import {-# SOURCE #-} GHC.Data.Types    ( Kind, Type, PredType, pprType )
-import {-# SOURCE #-} GHC.Builtin.Type ( runtimeRepTyCon, constraintKind
+import {-# SOURCE #-} GHC.Builtin.Typess ( runtimeRepTyCon, constraintKind
                                  , vecCountTyCon, vecElemTyCon, liftedTypeKind
                                  , mkFunKind, mkForAllKind )
 import {-# SOURCE #-} GHC.Data.DataConstructor ( DataCon, dataConExTyVars

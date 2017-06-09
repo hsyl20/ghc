@@ -132,7 +132,7 @@ import qualified GHC.Data.Var as Var
 
 import GHC.Data.Type
 import GHC.Data.RepType
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.Data.DataConstructor
 import GHC.Data.Demand
 import GHC.Data.Name

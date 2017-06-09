@@ -49,9 +49,9 @@ import GHC.Data.Name
 import GHC.Utils
 import GHC.Data.Var.Set
 import GHC.Data.BasicTypes       ( Boxity(..) )
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.Builtin.Names
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Ppr
 import GHC.Arr          ( Array(..) )

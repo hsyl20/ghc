@@ -32,10 +32,10 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Id   ( Id )
 import GHC.Data.Coercion
-import GHC.Builtin.Primitive.Operation
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Operationss
+import GHC.Builtin.Primitive.Typess
 import GHC.Data.Type.Constructor
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import GHC.Data.BasicTypes
 import GHC.Data.Literal
 import GHC.Builtin.Names

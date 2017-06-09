@@ -105,7 +105,7 @@ import GHC.Data.RdrName
 import GHC.Data.Var
 import GHC.Data.Types
 import GHC.Data.Type   ( filterOutInvisibleTypes )
-import GHC.Builtin.Type ( unitTy )
+import GHC.Builtin.Typess ( unitTy )
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.DataConstructor
 import GHC.Data.ConstructorLike

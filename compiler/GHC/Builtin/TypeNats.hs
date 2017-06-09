@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-module GHC.Builtin.TypeNats
+module GHC.Builtin.TypessNats
   ( typeNatTyCons
   , typeNatCoAxiomRules
   , BuiltInSynFamily(..)
@@ -24,8 +24,8 @@ import GHC.Data.Coercion   ( Role(..) )
 import GHC.IR.Haskell.TypeSystem.Types  ( Xi )
 import GHC.Data.Coercion.Axiom    ( CoAxiomRule(..), BuiltInSynFamily(..), TypeEqn )
 import GHC.Data.Name       ( Name, BuiltInSyntax(..) )
-import GHC.Builtin.Type
-import GHC.Builtin.Primitive.Type    ( mkTemplateAnonTyConBinders )
+import GHC.Builtin.Typess
+import GHC.Builtin.Primitive.Typess    ( mkTemplateAnonTyConBinders )
 import GHC.Builtin.Names  ( gHC_TYPELITS
                   , gHC_TYPENATS
                   , typeNatAddTyFamNameKey

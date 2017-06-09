@@ -30,10 +30,10 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.Name
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import GHC.Data.Id
 import GHC.Data.Type.Constructor
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Utils.Outputable
 import GHC.Utils

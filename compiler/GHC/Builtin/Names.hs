@@ -63,7 +63,7 @@ This is accomplished through a combination of mechanisms:
 
   2. The knownKeyNames (which consist of the basicKnownKeyNames from
      the module, and those names reachable via the wired-in stuff from
-     GHC.Builtin.Type) are used to initialise the "OrigNameCache" in
+     GHC.Builtin.Typess) are used to initialise the "OrigNameCache" in
      GHC.IR.Interface.Environment.  This initialization ensures that when the type checker
      or renamer (both of which use GHC.IR.Interface.Environment) look up an original name
      (i.e. a pair of a Module and an OccName) for a known-key name
@@ -99,7 +99,7 @@ things,
      GHC.IR.Interface.Binary.putName, with that special treatment detected when we read back to
      ensure that we get back to the correct uniques. See Note [Symbol table
      representation of names] in GHC.IR.Interface.Binary and Note [How tuples work] in
-     GHC.Builtin.Type.
+     GHC.Builtin.Typess.
 
 Most of the infinite families cannot occur in source code, so mechanisms (a) and (b)
 suffice to ensure that they always have the right Unique. In particular,
@@ -180,7 +180,7 @@ isUnboundName name = name `hasKey` unboundKey
 
 This section tells what the compiler knows about the association of
 names with uniques.  These ones are the *non* wired-in ones.  The
-wired in ones are defined in GHC.Builtin.Type etc.
+wired in ones are defined in GHC.Builtin.Typess etc.
 -}
 
 basicKnownKeyNames :: [Name]
@@ -1505,7 +1505,7 @@ fingerprintDataConName :: Name
 fingerprintDataConName =
     dcQual gHC_FINGERPRINT_TYPE (fsLit "Fingerprint") fingerprintDataConKey
 
--- homogeneous equality. See Note [The equality types story] in GHC.Builtin.Primitive.Type
+-- homogeneous equality. See Note [The equality types story] in GHC.Builtin.Primitive.Typess
 eqTyConName :: Name
 eqTyConName        = tcQual dATA_TYPE_EQUALITY (fsLit "~")         eqTyConKey
 
@@ -2002,19 +2002,19 @@ vecRepDataConKey                        = mkPreludeDataConUnique 71
 tupleRepDataConKey                      = mkPreludeDataConUnique 72
 sumRepDataConKey                        = mkPreludeDataConUnique 73
 
--- See Note [Wiring in RuntimeRep] in GHC.Builtin.Type
+-- See Note [Wiring in RuntimeRep] in GHC.Builtin.Typess
 runtimeRepSimpleDataConKeys :: [Unique]
 liftedRepDataConKey :: Unique
 runtimeRepSimpleDataConKeys@(
   liftedRepDataConKey : _)
   = map mkPreludeDataConUnique [74..82]
 
--- See Note [Wiring in RuntimeRep] in GHC.Builtin.Type
+-- See Note [Wiring in RuntimeRep] in GHC.Builtin.Typess
 -- VecCount
 vecCountDataConKeys :: [Unique]
 vecCountDataConKeys = map mkPreludeDataConUnique [83..88]
 
--- See Note [Wiring in RuntimeRep] in GHC.Builtin.Type
+-- See Note [Wiring in RuntimeRep] in GHC.Builtin.Typess
 -- VecElem
 vecElemDataConKeys :: [Unique]
 vecElemDataConKeys = map mkPreludeDataConUnique [89..98]

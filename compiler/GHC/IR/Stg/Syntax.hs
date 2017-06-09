@@ -61,7 +61,7 @@ import GHC.Utils.Outputable
 import GHC.Packages    ( isDllName )
 import GHC.Utils.Platform
 import GHC.IR.Core.PrettyPrint     ( {- instances -} )
-import GHC.Builtin.Primitive.Operation      ( PrimOp, PrimCall )
+import GHC.Builtin.Primitive.Operationss      ( PrimOp, PrimCall )
 import GHC.Data.Type.Constructor       ( PrimRep(..), TyCon )
 import GHC.Data.Type        ( Type )
 import GHC.Data.RepType     ( typePrimRep1 )

@@ -53,21 +53,21 @@ import GHC.Builtin.Names.TemplateHaskell          ( templateHaskellNames )
 import GHC.Builtin.Names
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Available
-import GHC.Builtin.Primitive.Operation
+import GHC.Builtin.Primitive.Operationss
 import GHC.Data.DataConstructor
 import GHC.Data.Id
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.Id.Make
-import GHC.Builtin.Primitive.Type
-import GHC.Builtin.Type
+import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Typess
 import GHC.Types
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
 import GHC.Utils.Panic
-import {-# SOURCE #-} GHC.Builtin.TypeNats ( typeNatTyCons )
+import {-# SOURCE #-} GHC.Builtin.TypessNats ( typeNatTyCons )
 
 import Control.Applicative ((<|>))
 import Data.List        ( intercalate )

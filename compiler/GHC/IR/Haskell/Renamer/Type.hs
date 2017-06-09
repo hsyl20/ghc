@@ -47,8 +47,8 @@ import GHC.IR.Haskell.Renamer.Fixity         ( lookupFieldFixityRn, lookupFixity
 import GHC.IR.Haskell.TypeSystem
 import GHC.Data.RdrName
 import GHC.Builtin.Names
-import GHC.Builtin.Primitive.Type          ( funTyConName )
-import GHC.Builtin.Type       ( starKindTyConName, unicodeStarKindTyConName )
+import GHC.Builtin.Primitive.Typess          ( funTyConName )
+import GHC.Builtin.Typess       ( starKindTyConName, unicodeStarKindTyConName )
 import GHC.Data.Name
 import GHC.Data.SrcLoc
 import GHC.Data.Name.Set

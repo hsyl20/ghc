@@ -54,14 +54,14 @@ import GHC.Builtin.Names.TemplateHaskell
 import GHC.Data.Module ( moduleName, moduleNameString
               , moduleUnitId, unitIdString )
 import GHC.Data.Id.Make ( coerceId )
-import GHC.Builtin.Primitive.Operation
+import GHC.Builtin.Primitive.Operationss
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Validity ( checkValidTyFamEqn )
-import GHC.Builtin.Primitive.Type
-import GHC.Builtin.Type
+import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Typess
 import GHC.Data.Type
 import GHC.Data.Class
 import GHC.Data.Var.Set

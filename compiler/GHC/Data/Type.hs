@@ -220,8 +220,8 @@ import GHC.Data.Unique.Set
 
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
-import GHC.Builtin.Primitive.Type
-import {-# SOURCE #-} GHC.Builtin.Type ( listTyCon, typeNatKind
+import GHC.Builtin.Primitive.Typess
+import {-# SOURCE #-} GHC.Builtin.Typess ( listTyCon, typeNatKind
                                  , typeSymbolKind, liftedTypeKind )
 import GHC.Builtin.Names
 import GHC.Data.Coercion.Axiom

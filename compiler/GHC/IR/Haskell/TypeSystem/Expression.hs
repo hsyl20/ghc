@@ -56,9 +56,9 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Var.Set
-import GHC.Builtin.Type
-import GHC.Builtin.Primitive.Type( intPrimTy )
-import GHC.Builtin.Primitive.Operation( tagToEnumKey )
+import GHC.Builtin.Typess
+import GHC.Builtin.Primitive.Typess( intPrimTy )
+import GHC.Builtin.Primitive.Operationss( tagToEnumKey )
 import GHC.Builtin.Names
 import GHC.Config.Flags
 import GHC.Data.SrcLoc

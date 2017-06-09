@@ -9,8 +9,8 @@ Note [The Type-related module hierarchy]
   CoAxiom
   TyCon    imports Class, CoAxiom
   GHC.Data.Types  imports Class, CoAxiom, TyCon
-  GHC.Builtin.Primitive.Type  imports GHC.Data.Types ( including mkTyConTy )
-  Kind     imports GHC.Builtin.Primitive.Type ( mainly for primitive kinds )
+  GHC.Builtin.Primitive.Typess  imports GHC.Data.Types ( including mkTyConTy )
+  Kind     imports GHC.Builtin.Primitive.Typess ( mainly for primitive kinds )
   Type     imports Kind
   Coercion imports Type
 -}
@@ -183,7 +183,7 @@ import Data.IORef ( IORef )   -- for CoercionHole
 
 Despite the fact that DataCon has to be imported via a hi-boot route,
 this module seems the right place for TyThing, because it's needed for
-funTyCon and all the types in GHC.Builtin.Primitive.Type.
+funTyCon and all the types in GHC.Builtin.Primitive.Typess.
 
 It is also SOURCE-imported into Name.hs
 
@@ -634,7 +634,7 @@ represented by evidence of type p.
 %*                                                                      *
 %************************************************************************
 
-These functions are here so that they can be used by GHC.Builtin.Primitive.Type,
+These functions are here so that they can be used by GHC.Builtin.Primitive.Typess,
 which in turn is imported by Type
 -}
 
@@ -1245,7 +1245,7 @@ During typechecking, constraint solving for type classes works by
     which actually binds d7 to the (Num a) evidence
 
 For equality constraints we use a different strategy.  See Note [The
-equality types story] in GHC.Builtin.Primitive.Type for background on equality constraints.
+equality types story] in GHC.Builtin.Primitive.Typess for background on equality constraints.
   - For boxed equality constraints, (t1 ~N t2) and (t1 ~R t2), it's just
     like type classes above. (Indeed, boxed equality constraints *are* classes.)
   - But for /unboxed/ equality constraints (t1 ~R# t2) and (t1 ~N# t2)

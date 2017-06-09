@@ -36,8 +36,8 @@ import GHC.IR.Cmm.Expr
 import GHC.IR.Cmm.Utils
 import GHC.Types
 import GHC.Data.ForeignCall
-import GHC.Builtin.Type
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Typess
+import GHC.Builtin.Primitive.Typess
 import GHC.Builtin.Names
 import GHC.Data.BasicTypes
 import GHC.Data.SrcLoc

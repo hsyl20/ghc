@@ -32,8 +32,8 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Types
 import GHC.Data.Type
 import GHC.Utils
-import GHC.Builtin.Primitive.Type
-import {-# SOURCE #-} GHC.Builtin.Type ( anyTypeOfKind )
+import GHC.Builtin.Primitive.Typess
+import {-# SOURCE #-} GHC.Builtin.Typess ( anyTypeOfKind )
 
 import Data.List (foldl', sort)
 import qualified Data.IntSet as IS

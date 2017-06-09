@@ -350,9 +350,9 @@ Library
         GHC.Builtin.Utils
         GHC.Builtin.Names
         GHC.IR.Core.Transform.ConstantFolding
-        GHC.Builtin.Primitive.Operation
-        GHC.Builtin.Primitive.Type
-        GHC.Builtin.Type
+        GHC.Builtin.Primitive.Operations
+        GHC.Builtin.Primitive.Types
+        GHC.Builtin.Types
         GHC.Data.CostCentre
         GHC.Data.CostCentre.Initialise
         GHC.IR.Stg.Transform.CostCentreCollect
@@ -439,7 +439,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Constraint.Canonicaliser
         GHC.IR.Haskell.TypeSystem.Flatten
         GHC.IR.Haskell.TypeSystem.Constraint.Solver
-        GHC.Builtin.TypeNats
+        GHC.Builtin.TypesNats
         GHC.IR.Haskell.TypeSystem.Splice
         GHC.Data.Class
         GHC.Data.Coercion

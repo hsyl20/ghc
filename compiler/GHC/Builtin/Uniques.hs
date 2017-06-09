@@ -26,7 +26,7 @@ module GHC.Builtin.Uniques
 
 #include "HsVersions.h"
 
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.Data.Id

@@ -41,7 +41,7 @@ import GHC.Data.Name
 import GHC.Utils.Outputable
 import GHC.IR.Stg.Syntax
 import GHC.Data.Type
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.Data.Unique.FiniteMap
 import GHC.Utils
 import GHC.Data.Var.Environment

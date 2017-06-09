@@ -68,7 +68,7 @@ import GHC.Data.Var.Set
 import GHC.Data.Name
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
-import GHC.Builtin.Primitive.Operation
+import GHC.Builtin.Primitive.Operationss
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.Type as Type
@@ -77,7 +77,7 @@ import GHC.Data.Coercion
 import GHC.Data.Type.Constructor
 import GHC.Data.Unique
 import GHC.Utils.Outputable
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Data.Maybe

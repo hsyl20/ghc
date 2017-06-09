@@ -25,9 +25,9 @@ import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Id( mkLocalId )
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.Name
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import GHC.Data.Var.Set
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.Data.BasicTypes( Arity )
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable

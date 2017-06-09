@@ -40,8 +40,8 @@ module GHC.Data.Id.Make (
 #include "HsVersions.h"
 
 import GHC.IR.Core.Transform.Rules
-import GHC.Builtin.Primitive.Type
-import GHC.Builtin.Type
+import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Typess
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Type
 import GHC.Data.FamilyInstance
@@ -56,7 +56,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.Class
 import GHC.Data.Name.Set
 import GHC.Data.Name
-import GHC.Builtin.Primitive.Operation
+import GHC.Builtin.Primitive.Operationss
 import GHC.Data.ForeignCall
 import GHC.Data.DataConstructor
 import GHC.Data.Id

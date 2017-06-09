@@ -32,9 +32,9 @@ import GHC.IR.Core.Syntax.Make
 import GHC.Data.Id
 import GHC.Data.Literal
 import GHC.IR.Core.Transform.Simple    ( exprIsLiteral_maybe )
-import GHC.Builtin.Primitive.Operation      ( PrimOp(..), tagToEnumKey )
-import GHC.Builtin.Type
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Operationss      ( PrimOp(..), tagToEnumKey )
+import GHC.Builtin.Typess
+import GHC.Builtin.Primitive.Typess
 import GHC.Data.Type.Constructor       ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
                    , unwrapNewTyCon_maybe, tyConDataCons )
 import GHC.Data.DataConstructor     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )

@@ -28,8 +28,8 @@ import GHC.IR.Interface.Environment         ( newGlobalBinder )
 import GHC.Data.Name      hiding ( varName )
 import GHC.Data.RdrName
 import GHC.Data.BasicTypes
-import GHC.Builtin.Primitive.Type
-import GHC.Builtin.Type
+import GHC.Builtin.Primitive.Typess
+import GHC.Builtin.Typess
 import GHC.Builtin.Names
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem

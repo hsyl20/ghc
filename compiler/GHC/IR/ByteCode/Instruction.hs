@@ -26,7 +26,7 @@ import GHC.IR.Core.Syntax
 import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import GHC.Data.Var.Set
-import GHC.Builtin.Primitive.Operation
+import GHC.Builtin.Primitive.Operationss
 import GHC.RTS.Storage
 
 import Data.Word

@@ -31,7 +31,7 @@ module GHC.Plugin
    , module GHC.Data.Type
    , module GHC.Data.Type.Constructor
    , module GHC.Data.Coercion
-   , module GHC.Builtin.Type
+   , module GHC.Builtin.Typess
    , module GHC.Types
    , module GHC.Data.BasicTypes
    , module GHC.Data.Var.Set
@@ -88,7 +88,7 @@ import GHC.Data.Type     hiding {- conflict with GHC.IR.Core.Substitution -}
 import GHC.Data.Coercion hiding {- conflict with GHC.IR.Core.Substitution -}
                 ( substCo )
 import GHC.Data.Type.Constructor
-import GHC.Builtin.Type
+import GHC.Builtin.Typess
 import GHC.Types
 import GHC.Data.BasicTypes hiding ( Version {- conflicts with Packages.Version -} )
 

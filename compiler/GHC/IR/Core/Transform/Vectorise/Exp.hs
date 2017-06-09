@@ -39,7 +39,7 @@ import GHC.Data.Name.Set
 import GHC.Data.Id
 import GHC.Data.BasicTypes( isStrongLoopBreaker )
 import GHC.Data.Literal
-import GHC.Builtin.Primitive.Type
+import GHC.Builtin.Primitive.Typess
 import GHC.Utils.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Config.Flags

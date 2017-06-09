@@ -5,8 +5,8 @@ import GHC
 import GhcMonad
 import GHC.Utils.Outputable
 import GHC.Data.RepType
-import GHC.Builtin.Primitive.Type
-import GHC.Builtin.Type
+import GHC.Builtin.Primitive.Types
+import GHC.Builtin.Types
 import GHC.Data.Unique.Set
 import GHC.Data.Unique
 

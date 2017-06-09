@@ -15,7 +15,7 @@ import GHC.Data.Id               ( Id, idType, isLocalId )
 import GHC.Data.Var.Set
 import GHC.Data.DataConstructor
 import GHC.IR.Core.Syntax          ( AltCon(..) )
-import GHC.Builtin.Primitive.Operation           ( primOpType )
+import GHC.Builtin.Primitive.Operationss           ( primOpType )
 import GHC.Data.Literal          ( literalType )
 import GHC.Data.Maybe
 import GHC.Data.Name             ( getSrcLoc )

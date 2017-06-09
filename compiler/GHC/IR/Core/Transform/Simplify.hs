@@ -42,9 +42,9 @@ import GHC.IR.Core.Utils
 import GHC.IR.Core.Arity
 import GHC.IR.Core.Transform.Simple         ( pushCoTyArg, pushCoValArg
                         , joinPointBinding_maybe, joinPointBindings_maybe )
---import GHC.Builtin.Primitive.Operation           ( tagToEnumKey ) -- temporalily commented out. See #8326
+--import GHC.Builtin.Primitive.Operationss           ( tagToEnumKey ) -- temporalily commented out. See #8326
 import GHC.IR.Core.Transform.Rules            ( mkRuleInfo, lookupRule, getRules )
---import GHC.Builtin.Primitive.Type          ( intPrimTy ) -- temporalily commented out. See #8326
+--import GHC.Builtin.Primitive.Typess          ( intPrimTy ) -- temporalily commented out. See #8326
 import GHC.Data.BasicTypes       ( TopLevelFlag(..), isNotTopLevel, isTopLevel,
                           RecFlag(..) )
 import GHC.Utils.Monad       ( foldlM, mapAccumLM, liftIO )

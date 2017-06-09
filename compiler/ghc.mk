@@ -551,8 +551,8 @@ compiler_stage2_dll0_MODULES = \
 	GHC.Data.Type.Constructor \
 	GHC.Data.Type \
 	GHC.Data.Types \
-	GHC.Builtin.Primitive.Type \
-	GHC.Builtin.Type \
+	GHC.Builtin.Primitive.Types \
+	GHC.Builtin.Types \
 	GHC.Utils.Unify \
 	GHC.Data.Unique.DeterFiniteMap \
 	GHC.Data.Unique.DeterSet \

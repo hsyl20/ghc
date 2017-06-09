@@ -49,7 +49,7 @@ module GHC.IR.Interface.Types (
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Builtin.Type ( liftedRepDataConTyCon )
+import {-# SOURCE #-} GHC.Builtin.Typess ( liftedRepDataConTyCon )
 
 import GHC.Config.Flags
 import GHC.Data.Type.Constructor hiding ( pprPromotionQuote )
@@ -208,7 +208,7 @@ Note that:
 Note [Equality predicates in IfaceType]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 GHC has several varieties of type equality (see Note [The equality types story]
-in GHC.Builtin.Primitive.Type for details) which all must be rendered with different surface syntax
+in GHC.Builtin.Primitive.Typess for details) which all must be rendered with different surface syntax
 during pretty-printing. Which syntax we use depends upon,
 
  1. Which predicate tycon was used

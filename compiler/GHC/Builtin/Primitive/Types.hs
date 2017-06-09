@@ -2,15 +2,15 @@
 (c) The AQUA Project, Glasgow University, 1994-1998
 
 
-\section[GHC.Builtin.Primitive.Type]{Wired-in knowledge about primitive types}
+\section[GHC.Builtin.Primitive.Typess]{Wired-in knowledge about primitive types}
 -}
 
 {-# LANGUAGE CPP #-}
 
 -- | This module defines TyCons that can't be expressed in Haskell.
---   They are all, therefore, wired-in TyCons.  C.f module GHC.Builtin.Type
-module GHC.Builtin.Primitive.Type(
-        mkPrimTyConName, -- For implicit parameters in GHC.Builtin.Type only
+--   They are all, therefore, wired-in TyCons.  C.f module GHC.Builtin.Typess
+module GHC.Builtin.Primitive.Typess(
+        mkPrimTyConName, -- For implicit parameters in GHC.Builtin.Typess only
 
         mkTemplateKindVars, mkTemplateTyVars, mkTemplateTyVarsFrom,
         mkTemplateKiTyVars,
@@ -80,7 +80,7 @@ module GHC.Builtin.Primitive.Type(
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Builtin.Type
+import {-# SOURCE #-} GHC.Builtin.Typess
   ( runtimeRepTy, unboxedTupleKind, liftedTypeKind
   , vecRepDataConTyCon, tupleRepDataConTyCon
   , liftedRepDataConTy, unliftedRepDataConTy, intRepDataConTy
@@ -400,7 +400,7 @@ generator never has to manipulate a value of type 'a :: TYPE rr'.
                              (a :: TYPE r1) (b :: TYPE r2).
                              a -> b
 
-* Unboxed tuples, and unboxed sums, defined in GHC.Builtin.Type
+* Unboxed tuples, and unboxed sums, defined in GHC.Builtin.Typess
   Always inlined, and hence specialised to the call site
      (#,#) :: forall (r1 :: RuntimeRep) (r2 :: RuntimeRep)
                      (a :: TYPE r1) (b :: TYPE r2).
@@ -465,7 +465,7 @@ tYPE rr = TyConApp tYPETyCon [rr]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-basic]{Basic primitive types (@Char#@, @Int#@, etc.)}
+\subsection[GHC.Builtin.Primitive.Typess-basic]{Basic primitive types (@Char#@, @Int#@, etc.)}
 *                                                                      *
 ************************************************************************
 -}
@@ -572,7 +572,7 @@ doublePrimTyCon = pcPrimTyCon0 doublePrimTyConName DoubleRep
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-state]{The @State#@ type (and @_RealWorld@ types)}
+\subsection[GHC.Builtin.Primitive.Typess-state]{The @State#@ type (and @_RealWorld@ types)}
 *                                                                      *
 ************************************************************************
 
@@ -617,7 +617,7 @@ All wanted constraints of this type are built with coercion holes.
 Note [Deferred errors for coercion holes] in GHC.IR.Haskell.TypeSystem.Error to see how
 equality constraints are deferred.
 
-Within GHC, ~# is called eqPrimTyCon, and it is defined in GHC.Builtin.Primitive.Type.
+Within GHC, ~# is called eqPrimTyCon, and it is defined in GHC.Builtin.Primitive.Typess.
 
 
     --------------------------
@@ -650,7 +650,7 @@ equalities. There is some special-casing in GHC.IR.Haskell.TypeSystem.Constraint
 pretend that there is an instance of this class, as we can't write the instance
 in Haskell.
 
-Within GHC, ~~ is called heqTyCon, and it is defined in GHC.Builtin.Type.
+Within GHC, ~~ is called heqTyCon, and it is defined in GHC.Builtin.Typess.
 
 
     --------------------------
@@ -687,7 +687,7 @@ The is the representational analogue of ~#. This is the type of representational
 equalities that the solver works on. All wanted constraints of this type are
 built with coercion holes.
 
-Within GHC, ~R# is called eqReprPrimTyCon, and it is defined in GHC.Builtin.Primitive.Type.
+Within GHC, ~R# is called eqReprPrimTyCon, and it is defined in GHC.Builtin.Primitive.Typess.
 
 
     --------------------------
@@ -705,7 +705,7 @@ split required that both types be fully wired-in. Instead of doing this,
 I just got rid of HCoercible, as I'm not sure who would use it, anyway.
 
 Within GHC, Coercible is called coercibleTyCon, and it is defined in
-GHC.Builtin.Type.
+GHC.Builtin.Typess.
 
 
     --------------------------
@@ -767,7 +767,7 @@ realWorldStatePrimTy :: Type
 realWorldStatePrimTy = mkStatePrimTy realWorldTy        -- State# RealWorld
 
 -- Note: the ``state-pairing'' types are not truly primitive,
--- so they are defined in \tr{GHC.Builtin.Type.hs}, not here.
+-- so they are defined in \tr{GHC.Builtin.Typess.hs}, not here.
 
 
 voidPrimTy :: Type
@@ -876,7 +876,7 @@ mkMutVarPrimTy s elt        = TyConApp mutVarPrimTyCon [s, elt]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-synch-var]{The synchronizing variable type}
+\subsection[GHC.Builtin.Primitive.Typess-synch-var]{The synchronizing variable type}
 *                                                                      *
 ************************************************************************
 -}
@@ -890,7 +890,7 @@ mkMVarPrimTy s elt          = TyConApp mVarPrimTyCon [s, elt]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-stm-var]{The transactional variable type}
+\subsection[GHC.Builtin.Primitive.Typess-stm-var]{The transactional variable type}
 *                                                                      *
 ************************************************************************
 -}
@@ -904,7 +904,7 @@ mkTVarPrimTy s elt = TyConApp tVarPrimTyCon [s, elt]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-stable-ptrs]{The stable-pointer type}
+\subsection[GHC.Builtin.Primitive.Typess-stable-ptrs]{The stable-pointer type}
 *                                                                      *
 ************************************************************************
 -}
@@ -918,7 +918,7 @@ mkStablePtrPrimTy ty = TyConApp stablePtrPrimTyCon [ty]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-stable-names]{The stable-name type}
+\subsection[GHC.Builtin.Primitive.Typess-stable-names]{The stable-name type}
 *                                                                      *
 ************************************************************************
 -}
@@ -932,7 +932,7 @@ mkStableNamePrimTy ty = TyConApp stableNamePrimTyCon [ty]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-compact-nfdata]{The Compact NFData (CNF) type}
+\subsection[GHC.Builtin.Primitive.Typess-compact-nfdata]{The Compact NFData (CNF) type}
 *                                                                      *
 ************************************************************************
 -}
@@ -946,7 +946,7 @@ compactPrimTy = mkTyConTy compactPrimTyCon
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-BCOs]{The ``bytecode object'' type}
+\subsection[GHC.Builtin.Primitive.Typess-BCOs]{The ``bytecode object'' type}
 *                                                                      *
 ************************************************************************
 -}
@@ -959,7 +959,7 @@ bcoPrimTyCon = pcPrimTyCon0 bcoPrimTyConName UnliftedRep
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-Weak]{The ``weak pointer'' type}
+\subsection[GHC.Builtin.Primitive.Typess-Weak]{The ``weak pointer'' type}
 *                                                                      *
 ************************************************************************
 -}
@@ -973,7 +973,7 @@ mkWeakPrimTy v = TyConApp weakPrimTyCon [v]
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Builtin.Primitive.Type-thread-ids]{The ``thread id'' type}
+\subsection[GHC.Builtin.Primitive.Typess-thread-ids]{The ``thread id'' type}
 *                                                                      *
 ************************************************************************
 

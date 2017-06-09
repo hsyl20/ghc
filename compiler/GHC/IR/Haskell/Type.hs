@@ -79,7 +79,7 @@ import GHC.Data.RdrName ( RdrName )
 import GHC.Data.Name.Set ( NameSet, emptyNameSet )
 import GHC.Data.DataConstructor( HsSrcBang(..), HsImplBang(..),
                 SrcStrictness(..), SrcUnpackedness(..) )
-import GHC.Builtin.Primitive.Type( funTyConName )
+import GHC.Builtin.Primitive.Typess( funTyConName )
 import GHC.Data.Type
 import GHC.IR.Haskell.Documentation
 import GHC.Data.BasicTypes

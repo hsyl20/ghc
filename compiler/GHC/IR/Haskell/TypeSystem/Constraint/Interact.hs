@@ -31,9 +31,9 @@ import GHC.Builtin.Names ( knownNatClassName, knownSymbolClassName,
                    typeableClassName, coercibleTyConKey,
                    hasFieldClassName,
                    heqTyConKey, ipClassKey )
-import GHC.Builtin.Type ( typeNatKind, typeSymbolKind, heqDataCon,
+import GHC.Builtin.Typess ( typeNatKind, typeSymbolKind, heqDataCon,
                     coercibleDataCon, constraintKindTyCon )
-import GHC.Builtin.Primitive.Type    ( eqPrimTyCon, eqReprPrimTyCon )
+import GHC.Builtin.Primitive.Typess    ( eqPrimTyCon, eqReprPrimTyCon )
 import GHC.Data.Id( idType, isNaughtyRecordSelector )
 import GHC.Data.Coercion.Axiom ( TypeEqn, CoAxiom(..), CoAxBranch(..), fromBranches )
 import GHC.Data.Class
@@ -2531,14 +2531,14 @@ solveCallStack ev ev_cs = do
 *                                                                     *
 ***********************************************************************-}
 
--- See also Note [The equality types story] in GHC.Builtin.Primitive.Type
+-- See also Note [The equality types story] in GHC.Builtin.Primitive.Typess
 matchLiftedEquality :: [Type] -> TcS LookupInstResult
 matchLiftedEquality args
   = return (GenInst { lir_new_theta = [ mkTyConApp eqPrimTyCon args ]
                     , lir_mk_ev     = EvDFunApp (dataConWrapId heqDataCon) args
                     , lir_safe_over = True })
 
--- See also Note [The equality types story] in GHC.Builtin.Primitive.Type
+-- See also Note [The equality types story] in GHC.Builtin.Primitive.Typess
 matchLiftedCoercible :: [Type] -> TcS LookupInstResult
 matchLiftedCoercible args@[k, t1, t2]
   = return (GenInst { lir_new_theta = [ mkTyConApp eqReprPrimTyCon args' ]
