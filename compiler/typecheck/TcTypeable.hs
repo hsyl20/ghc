@@ -10,7 +10,7 @@ module TcTypeable(mkTypeableBinds) where
 
 
 import GHC.Data.BasicTypes ( SourceText(..), Boxity(..), neverInlinePragma )
-import TcBinds( addTypecheckedBinds )
+import GHC.IR.Haskell.TypeSystem.Binding( addTypecheckedBinds )
 import GHC.IR.Interface.Environment( newGlobalBinder )
 import GHC.Data.Types( Type(..), TyLit(..) )
 import TcEnv

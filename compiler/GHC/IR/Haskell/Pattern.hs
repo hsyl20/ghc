@@ -465,7 +465,7 @@ pprPat (ConPatIn con details) = pprUserCon (unLoc con) details
 pprPat (ConPatOut { pat_con = con, pat_tvs = tvs, pat_dicts = dicts,
                     pat_binds = binds, pat_args = details })
   = sdocWithDynFlags $ \dflags ->
-       -- Tiresome; in TcBinds.tcRhs we print out a
+       -- Tiresome; in GHC.IR.Haskell.TypeSystem.Binding.tcRhs we print out a
        -- typechecked Pat in an error message,
        -- and we want to make sure it prints nicely
     if gopt Opt_PrintTypecheckerElaboration dflags then

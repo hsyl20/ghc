@@ -13,7 +13,7 @@ module TcInstDcls ( tcInstDecls1, tcInstDeclsDeriv, tcInstDecls2 ) where
 #include "HsVersions.h"
 
 import GHC.IR.Haskell.Syntax
-import TcBinds
+import GHC.IR.Haskell.TypeSystem.Binding
 import TcTyClsDecls
 import TcClassDcl( tcClassDecl2, tcATDefault,
                    HsSigFun, mkHsSigFun,
@@ -1528,7 +1528,7 @@ mk_meth_spec_prags :: Id -> [LTcSpecPrag] -> [LTcSpecPrag] -> TcSpecPrags
         --   * spec_prags_from_inst: derived from {-# SPECIALISE instance :: <blah> #-}
         --     These ones have the dfun inside, but [perhaps surprisingly]
         --     the correct wrapper.
-        -- See Note [Handling SPECIALISE pragmas] in TcBinds
+        -- See Note [Handling SPECIALISE pragmas] in GHC.IR.Haskell.TypeSystem.Binding
 mk_meth_spec_prags meth_id spec_inst_prags spec_prags_for_me
   = SpecPrags (spec_prags_for_me ++ spec_prags_from_inst)
   where

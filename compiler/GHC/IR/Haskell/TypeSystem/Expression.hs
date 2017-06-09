@@ -27,7 +27,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.BasicTypes
 import Inst
-import TcBinds          ( chooseInferredQuantifiers, tcLocalBinds )
+import GHC.IR.Haskell.TypeSystem.Binding          ( chooseInferredQuantifiers, tcLocalBinds )
 import TcSigs           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )
 import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
@@ -1563,7 +1563,7 @@ should behave like
 So for partial signatures we apply the MR if no context is given.  So
    e :: IO _          apply the MR
    e :: _ => IO _     do not apply the MR
-just like in TcBinds.decideGeneralisationPlan
+just like in GHC.IR.Haskell.TypeSystem.Binding.decideGeneralisationPlan
 
 This makes a difference (Trac #11670):
    peek :: Ptr a -> IO CLong

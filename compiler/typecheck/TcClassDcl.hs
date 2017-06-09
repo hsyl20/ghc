@@ -22,7 +22,7 @@ import GHC.IR.Haskell.Syntax
 import TcEnv
 import TcSigs
 import TcEvidence ( idHsWrapper )
-import TcBinds
+import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TcMType
@@ -389,7 +389,7 @@ whose type is
       op :: forall c. Foo c => forall b. Ord b => [c] -> b -> b -> b
 
 So tcPolyBinds must be capable of dealing with nested polytypes;
-and so it is. See TcBinds.tcMonoBinds (with type-sig case).
+and so it is. See GHC.IR.Haskell.TypeSystem.Binding.tcMonoBinds (with type-sig case).
 
 Note [Silly default-method bind]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

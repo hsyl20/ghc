@@ -981,7 +981,7 @@ notFound name
 wrongThingErr :: String -> TcTyThing -> Name -> TcM a
 -- It's important that this only calls pprTcTyThingCategory, which in
 -- turn does not look at the details of the TcTyThing.
--- See Note [Placeholder PatSyn kinds] in TcBinds
+-- See Note [Placeholder PatSyn kinds] in GHC.IR.Haskell.TypeSystem.Binding
 wrongThingErr expected thing name
   = failWithTc (pprTcTyThingCategory thing <+> quotes (ppr name) <+>
                 text "used as a" <+> text expected)

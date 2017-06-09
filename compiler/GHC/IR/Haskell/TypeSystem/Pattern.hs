@@ -181,7 +181,7 @@ tcPatBndr penv@(PE { pe_ctxt = LetPat { pc_lvl    = bind_lvl
                                       , pc_new    = no_gen } })
           bndr_name exp_pat_ty
   -- For the LetPat cases, see
-  -- Note [Typechecking pattern bindings] in TcBinds
+  -- Note [Typechecking pattern bindings] in GHC.IR.Haskell.TypeSystem.Binding
 
   | Just bndr_id <- sig_fn bndr_name   -- There is a signature
   = do { wrap <- tcSubTypePat penv exp_pat_ty (idType bndr_id)
@@ -212,7 +212,7 @@ tcPatBndr _ bndr_name pat_ty
 
 newLetBndr :: LetBndrSpec -> Name -> TcType -> TcM TcId
 -- Make up a suitable Id for the pattern-binder.
--- See Note [Typechecking pattern bindings], item (4) in TcBinds
+-- See Note [Typechecking pattern bindings], item (4) in GHC.IR.Haskell.TypeSystem.Binding
 --
 -- In the polymorphic case when we are going to generalise
 --    (plan InferGen, no_gen = LetLclBndr), generate a "monomorphic version"
@@ -1126,7 +1126,7 @@ Lazy patterns can't bind existentials.  They arise in two ways:
 The pe_lazy field of PatEnv says whether we are inside a lazy
 pattern (perhaps deeply)
 
-See also Note [Typechecking pattern bindings] in TcBinds
+See also Note [Typechecking pattern bindings] in GHC.IR.Haskell.TypeSystem.Binding
 -}
 
 maybeWrapPatCtxt :: Pat Name -> (TcM a -> TcM b) -> TcM a -> TcM b

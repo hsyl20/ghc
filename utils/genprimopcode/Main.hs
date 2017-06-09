@@ -361,7 +361,7 @@ needs.  Our main plan is to say
         foo :: <type>
         foo = foo
 We have to silence GHC's complaints about unboxed-top-level declarations
-with an ad-hoc fix in TcBinds: see Note [Compiling GHC.Prim] in TcBinds.
+with an ad-hoc fix in GHC.IR.Haskell.TypeSystem.Binding: see Note [Compiling GHC.Prim] in GHC.IR.Haskell.TypeSystem.Binding.
 
 That works for all the primitive functions except tagToEnum#.
 If we generate the binding

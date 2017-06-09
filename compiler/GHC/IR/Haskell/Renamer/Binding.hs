@@ -454,7 +454,7 @@ rnBind _ bind@(PatBind { pat_lhs = pat
               fvs'    = filterNameSet (nameIsLocalOrFrom mod) all_fvs
                 -- Keep locally-defined Names
                 -- As well as dependency analysis, we need these for the
-                -- MonoLocalBinds test in TcBinds.decideGeneralisationPlan
+                -- MonoLocalBinds test in GHC.IR.Haskell.TypeSystem.Binding.decideGeneralisationPlan
               bndrs = collectPatBinders pat
               bind' = bind { pat_rhs  = grhss'
                            , pat_rhs_ty = placeHolderType, bind_fvs = fvs' }
@@ -492,7 +492,7 @@ rnBind sig_fn bind@(FunBind { fun_id = name
         ; let fvs' = filterNameSet (nameIsLocalOrFrom mod) rhs_fvs
                 -- Keep locally-defined Names
                 -- As well as dependency analysis, we need these for the
-                -- MonoLocalBinds test in TcBinds.decideGeneralisationPlan
+                -- MonoLocalBinds test in GHC.IR.Haskell.TypeSystem.Binding.decideGeneralisationPlan
 
         ; fvs' `seq` -- See Note [Free-variable space leak]
           return (bind { fun_matches = matches'
@@ -694,7 +694,7 @@ rnPatSynBind sig_fn bind@(PSB { psb_id = L l name
               fvs' = filterNameSet (nameIsLocalOrFrom mod) fvs
                 -- Keep locally-defined Names
                 -- As well as dependency analysis, we need these for the
-                -- MonoLocalBinds test in TcBinds.decideGeneralisationPlan
+                -- MonoLocalBinds test in GHC.IR.Haskell.TypeSystem.Binding.decideGeneralisationPlan
 
               bind' = bind{ psb_args = details'
                           , psb_def = pat'
@@ -769,7 +769,7 @@ In this case, 'P' needs to be typechecked in two passes:
 
 2. Typecheck the builder definition, which needs the typechecked
    definition of 'f' to be in scope; done by calls oo tcPatSynBuilderBind
-   in TcBinds.tcValBinds.
+   in GHC.IR.Haskell.TypeSystem.Binding.tcValBinds.
 
 This behaviour is implemented in 'tcValBinds', but it crucially
 depends on 'P' not being put in a recursive group with 'f' (which

@@ -79,7 +79,7 @@ import FamInst
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import GHC.IR.Haskell.TypeSystem.Annotation
-import TcBinds
+import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.Parser.HeaderInfo       ( mkPrelImports )
 import TcDefaults
 import TcEnv
@@ -2197,7 +2197,7 @@ tcRnExpr hsc_env mode rdr_expr
     ty <- zonkTcType all_expr_ty ;
 
     -- We normalise type families, so that the type of an expression is the
-    -- same as of a bound expression (TcBinds.mkInferredPolyId). See Trac
+    -- same as of a bound expression (GHC.IR.Haskell.TypeSystem.Binding.mkInferredPolyId). See Trac
     -- #10321 for further discussion.
     fam_envs <- tcGetFamInstEnvs ;
     -- normaliseType returns a coercion which we discard, so the Role is

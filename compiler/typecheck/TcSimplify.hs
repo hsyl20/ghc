@@ -542,7 +542,7 @@ To infer f's type we do the following:
  * Gather the constraints for the RHS with ambient level *one more than*
    the current one.  This is done by the call
         pushLevelAndCaptureConstraints (tcMonoBinds...)
-   in TcBinds.tcPolyInfer
+   in GHC.IR.Haskell.TypeSystem.Binding.tcPolyInfer
 
  * Call simplifyInfer to simplify the constraints and decide what to
    quantify over. We pass in the level used for the RHS constraints,
@@ -1619,8 +1619,8 @@ works:
      disable it for the ambiguity check.  Hence using two different
      FunSigCtxts, one with the warn-redundant field set True, and the
      other set False in
-        - TcBinds.tcSpecPrag
-        - TcBinds.tcTySig
+        - GHC.IR.Haskell.TypeSystem.Binding.tcSpecPrag
+        - GHC.IR.Haskell.TypeSystem.Binding.tcTySig
 
   This decision is taken in setImplicationStatus, rather than TcErrors
   so that we can discard implication constraints that we don't need.

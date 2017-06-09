@@ -2,13 +2,13 @@
 (c) The University of Glasgow 2006
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
-\section[TcBinds]{TcBinds}
+\section[GHC.IR.Haskell.TypeSystem.Binding]{GHC.IR.Haskell.TypeSystem.Binding}
 -}
 
 {-# LANGUAGE CPP, RankNTypes, ScopedTypeVariables #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module TcBinds ( tcLocalBinds, tcTopBinds, tcRecSelBinds,
+module GHC.IR.Haskell.TypeSystem.Binding ( tcLocalBinds, tcTopBinds, tcRecSelBinds,
                  tcHsBootSigs, tcPolyCheck,
                  tcVectDecls, addTypecheckedBinds,
                  chooseInferredQuantifiers,
@@ -1179,14 +1179,14 @@ tcVect (HsVectTypeIn _ isScalar lname rhs_name)
        ; return $ HsVectTypeOut isScalar tycon rhs_tycon
        }
 tcVect (HsVectTypeOut _ _ _)
-  = panic "TcBinds.tcVect: Unexpected 'HsVectTypeOut'"
+  = panic "GHC.IR.Haskell.TypeSystem.Binding.tcVect: Unexpected 'HsVectTypeOut'"
 tcVect (HsVectClassIn _ lname)
   = addErrCtxt (vectCtxt lname) $
     do { cls <- tcLookupLocatedClass lname
        ; return $ HsVectClassOut cls
        }
 tcVect (HsVectClassOut _)
-  = panic "TcBinds.tcVect: Unexpected 'HsVectClassOut'"
+  = panic "GHC.IR.Haskell.TypeSystem.Binding.tcVect: Unexpected 'HsVectClassOut'"
 tcVect (HsVectInstIn linstTy)
   = addErrCtxt (vectCtxt linstTy) $
     do { (cls, tys) <- tcHsVectInst linstTy
@@ -1194,7 +1194,7 @@ tcVect (HsVectInstIn linstTy)
        ; return $ HsVectInstOut inst
        }
 tcVect (HsVectInstOut _)
-  = panic "TcBinds.tcVect: Unexpected 'HsVectInstOut'"
+  = panic "GHC.IR.Haskell.TypeSystem.Binding.tcVect: Unexpected 'HsVectInstOut'"
 
 vectCtxt :: Outputable thing => thing -> SDoc
 vectCtxt thing = text "When checking the vectorisation declaration for" <+> ppr thing

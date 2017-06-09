@@ -28,7 +28,7 @@ module TcTyDecls(
 
 import TcRnMonad
 import TcEnv
-import TcBinds( tcRecSelBinds )
+import GHC.IR.Haskell.TypeSystem.Binding( tcRecSelBinds )
 import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
 import TcType
 import TysWiredIn( unitTy )

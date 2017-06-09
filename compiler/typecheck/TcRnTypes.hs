@@ -1092,7 +1092,7 @@ instance Outputable TcTyThing where     -- Debugging only
 --
 -- a) for static forms in GHC.IR.Haskell.TypeSystem.Expression.checkClosedInStaticForm and
 -- b) to figure out when a nested binding can be generalised (in
---    TcBinds.decideGeneralisationPlan).
+--    GHC.IR.Haskell.TypeSystem.Binding.decideGeneralisationPlan).
 --
 -- See Note [Meaning of IdBindingInfo].
 data IdBindingInfo

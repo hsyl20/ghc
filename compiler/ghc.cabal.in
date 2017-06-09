@@ -401,7 +401,7 @@ Library
         Inst
         GHC.IR.Haskell.TypeSystem.Annotation
         GHC.IR.Haskell.TypeSystem.Arrow
-        TcBinds
+        GHC.IR.Haskell.TypeSystem.Binding
         TcSigs
         TcClassDcl
         TcDefaults

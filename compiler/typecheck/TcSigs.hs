@@ -86,7 +86,7 @@ especially on value bindings.  Here's an overview.
   In tcMonoBinds, when looking at an individual binding, we use
   tcInstSig to instantiate the signature forall's in the signature,
   and attribute that instantiated (monomorphic) type to the
-  binder.  You can see this in TcBinds.tcLhsId.
+  binder.  You can see this in GHC.IR.Haskell.TypeSystem.Binding.tcLhsId.
 
   The instantiation does the obvious thing for complete signatures,
   but for /partial/ signatures it starts from the GHC.IR.Haskell, so it
@@ -470,12 +470,12 @@ the signature types for f and g, we'll end up unifying 'a' and 'b'
 So we instantiate f and g's signature with SigTv skolems
 (newMetaSigTyVars) that can unify with each other.  If too much
 unification takes place, we'll find out when we do the final
-impedance-matching check in TcBinds.mkExport
+impedance-matching check in GHC.IR.Haskell.TypeSystem.Binding.mkExport
 
 See Note [Signature skolems] in TcType
 
 None of this applies to a function binding with a complete
-signature, which doesn't use tcInstSig.  See TcBinds.tcPolyCheck.
+signature, which doesn't use tcInstSig.  See GHC.IR.Haskell.TypeSystem.Binding.tcPolyCheck.
 -}
 
 {- *********************************************************************

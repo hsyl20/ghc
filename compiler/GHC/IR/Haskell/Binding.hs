@@ -139,7 +139,7 @@ data HsBindLR idL idR
     -- FunBind is used for both functions     @f x = e@
     -- and variables                          @f = \x -> e@
     --
-    -- Reason 1: Special case for type inference: see 'TcBinds.tcMonoBinds'.
+    -- Reason 1: Special case for type inference: see 'GHC.IR.Haskell.TypeSystem.Binding.tcMonoBinds'.
     --
     -- Reason 2: Instance decls can only have FunBinds, which is convenient.
     --           If you change this, you'll need to change e.g. rnMethodBinds
@@ -414,7 +414,7 @@ This ultimately desugars to something like this:
 The abe_wrap field deals with impedance-matching between
     (/\a b. case tup a b of { (f,g) -> f })
 and the thing we really want, which may have fewer type
-variables.  The action happens in TcBinds.mkExport.
+variables.  The action happens in GHC.IR.Haskell.TypeSystem.Binding.mkExport.
 
 Note [Bind free vars]
 ~~~~~~~~~~~~~~~~~~~~~
@@ -422,14 +422,14 @@ The bind_fvs field of FunBind and PatBind records the free variables
 of the definition.  It is used for the following purposes
 
 a) Dependency analysis prior to type checking
-    (see TcBinds.tc_group)
+    (see GHC.IR.Haskell.TypeSystem.Binding.tc_group)
 
 b) Deciding whether we can do generalisation of the binding
-    (see TcBinds.decideGeneralisationPlan)
+    (see GHC.IR.Haskell.TypeSystem.Binding.decideGeneralisationPlan)
 
 c) Deciding whether the binding can be used in static forms
     (see GHC.IR.Haskell.TypeSystem.Expression.checkClosedInStaticForm for the HsStatic case and
-     TcBinds.isClosedBndrGroup).
+     GHC.IR.Haskell.TypeSystem.Binding.isClosedBndrGroup).
 
 Specifically,
 

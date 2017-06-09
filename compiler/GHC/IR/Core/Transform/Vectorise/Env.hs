@@ -167,7 +167,7 @@ initGlobalEnv vectAvoid info vectDecls instEnvs famInstEnvs
                                            , let ty = varType rhs_var] ++
                                         -- FIXME: we currently only allow RHSes consisting of a
                                         --   single variable to be able to obtain the type without
-                                        --   inference — see also 'TcBinds.tcVect'
+                                        --   inference — see also 'GHC.IR.Haskell.TypeSystem.Binding.tcVect'
                     [(var, Nothing)        | NoVect var                     <- vectDecls]
 
 

@@ -27,7 +27,7 @@ import TcEnv
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import TcType
-import TcBinds
+import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.Name
 import TysWiredIn
