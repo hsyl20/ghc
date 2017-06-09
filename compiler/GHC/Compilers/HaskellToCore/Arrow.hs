@@ -28,7 +28,7 @@ import qualified GHC.IR.Haskell.Utils
 
 import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type ( splitPiTy )
 import TcEvidence
 import GHC.IR.Core.Syntax

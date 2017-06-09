@@ -5,7 +5,7 @@ import GHC.IR.Haskell.Syntax    ( HsSplice, HsBracket, HsExpr, LHsExpr )
 import GHC.IR.Haskell.Expression   ( PendingRnSplice )
 import GHC.Data.Name     ( Name )
 import TcRnTypes( TcM, TcId )
-import TcType   ( ExpRhoType )
+import import GHC.IR.Haskell.TypeSystem.Type   ( ExpRhoType )
 import GHC.Data.Annotation ( Annotation, CoreAnnTarget )
 
 import GHC.IR.Haskell.Syntax      ( LHsType, LPat, LHsDecl, ThModFinalizers )

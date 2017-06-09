@@ -30,7 +30,7 @@ import GHC.Data.RepType
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion
 import GHC.IR.Haskell.TypeSystem.Environment
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 
 import GHC.IR.Cmm.Expr
 import GHC.IR.Cmm.Utils

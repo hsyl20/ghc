@@ -13,7 +13,7 @@ import GHC.Interactive.ClosureInspect
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.Data.Type
 import TcRnMonad
-import TcType
+import GHC.IR.Haskell.TypeSystem.Type
 import Control.Applicative
 import GHC.Data.Name (getOccString)
 import Unsafe.Coerce

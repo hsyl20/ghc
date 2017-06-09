@@ -43,7 +43,7 @@ import GHC.Data.Var
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Coercion
 import GHC.IR.Core.PrettyPrint ()   -- Instance OutputableBndr TyVar
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Class( Class )

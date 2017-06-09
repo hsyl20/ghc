@@ -28,7 +28,7 @@ import ForeignCall
 import GHC.Data.DataConstructor
 import GHC.Compilers.HaskellToCore.Utils
 
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Id   ( Id )
 import GHC.Data.Coercion

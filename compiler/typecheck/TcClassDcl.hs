@@ -27,7 +27,7 @@ import GHC.IR.Haskell.TypeSystem.Unify
 import TcHsType
 import TcMType
 import GHC.Data.Type     ( getClassPredTys_maybe, piResultTys )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TcRnMonad
 import GHC.Program.Driver.Phases (HscSource(..))
 import GHC.IR.Interface.BuildTypeAndClass( TcMethInfo )

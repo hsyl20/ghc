@@ -10,7 +10,7 @@ module TcFlatten(
 #include "HsVersions.h"
 
 import TcRnTypes
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.IR.Haskell.TypeSystem.Unify( occCheckExpand )
 import TcEvidence

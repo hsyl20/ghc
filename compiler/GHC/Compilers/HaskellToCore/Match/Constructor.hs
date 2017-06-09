@@ -21,7 +21,7 @@ import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Match     ( match )
 import GHC.IR.Haskell.Syntax
 import GHC.Compilers.HaskellToCore.Binding
 import GHC.Data.ConstructorLike
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Compilers.HaskellToCore.Monad
 import GHC.Compilers.HaskellToCore.Utils
 import GHC.IR.Core.Syntax.Make   ( mkCoreLets )

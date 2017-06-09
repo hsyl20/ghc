@@ -15,7 +15,7 @@ module TcGenGenerics (canDoGenerics, canDoGenerics1,
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Type
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TcGenDeriv
 import TcGenFunctor
 import GHC.Data.DataConstructor

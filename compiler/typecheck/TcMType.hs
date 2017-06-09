@@ -92,7 +92,7 @@ module TcMType (
 
 -- friends:
 import GHC.Data.Types
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Kind
 import GHC.Data.Coercion

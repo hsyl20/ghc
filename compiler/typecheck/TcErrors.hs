@@ -13,7 +13,7 @@ import TcRnTypes
 import TcRnMonad
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Unify( occCheckForErrors, OccCheckResult(..) )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.Renamer.Utils.Unbound ( unknownNameSuggestions )
 import GHC.Data.Type
 import GHC.Data.Types

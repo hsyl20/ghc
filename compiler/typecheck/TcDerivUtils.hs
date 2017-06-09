@@ -42,7 +42,7 @@ import TcGenDeriv
 import TcGenFunctor
 import TcGenGenerics
 import TcRnMonad
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import THNames (liftClassKey)
 import GHC.Data.Type.Constructor
 import GHC.Data.Type

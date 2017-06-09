@@ -17,7 +17,7 @@ module TcTypeNats
 
 import GHC.Data.Type
 import GHC.Data.Pair
-import TcType     ( TcType, tcEqType )
+import import GHC.IR.Haskell.TypeSystem.Type     ( TcType, tcEqType )
 import GHC.Data.Type.Constructor      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                   , Injectivity(..) )
 import GHC.Data.Coercion   ( Role(..) )

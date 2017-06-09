@@ -16,7 +16,7 @@ import TcHsType
 import GHC.IR.Haskell.TypeSystem.Syntax
 import TcSimplify
 import GHC.IR.Haskell.TypeSystem.Validity
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import PrelNames
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable

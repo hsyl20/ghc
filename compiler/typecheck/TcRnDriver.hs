@@ -88,7 +88,7 @@ import TcForeign
 import TcInstDcls
 import GHC.IR.Interface.TypeCheck
 import TcMType
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TcSimplify
 import TcTyClsDecls
 import TcTypeable ( mkTypeableBinds )

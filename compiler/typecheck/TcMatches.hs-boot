@@ -2,7 +2,7 @@ module TcMatches where
 import GHC.IR.Haskell.Syntax ( GRHSs, MatchGroup, LHsExpr )
 import TcEvidence( HsWrapper )
 import GHC.Data.Name     ( Name )
-import TcType   ( ExpRhoType, TcRhoType )
+import import GHC.IR.Haskell.TypeSystem.Type   ( ExpRhoType, TcRhoType )
 import TcRnTypes( TcM, TcId )
 import GHC.Data.SrcLoc   ( Located )
 

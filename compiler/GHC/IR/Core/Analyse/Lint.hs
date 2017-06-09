@@ -31,7 +31,7 @@ import GHC.Data.Literal
 import GHC.Data.DataConstructor
 import TysWiredIn
 import TysPrim
-import TcType ( isFloatingTy )
+import import GHC.IR.Haskell.TypeSystem.Type ( isFloatingTy )
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

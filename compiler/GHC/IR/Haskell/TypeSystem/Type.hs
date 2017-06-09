@@ -17,7 +17,7 @@ is the principal client.
 
 {-# LANGUAGE CPP, MultiWayIf, FlexibleContexts #-}
 
-module TcType (
+module GHC.IR.Haskell.TypeSystem.Type (
   --------------------------------
   -- Types
   TcType, TcSigmaType, TcRhoType, TcTauType, TcPredType, TcThetaType,

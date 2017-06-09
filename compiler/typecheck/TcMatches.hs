@@ -26,7 +26,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.Data.Name

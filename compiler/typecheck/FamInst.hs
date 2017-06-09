@@ -23,7 +23,7 @@ import GHC.IR.Interface.Load
 import TcRnMonad
 import GHC.Data.SrcLoc
 import GHC.Data.Type.Constructor
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Coercion.Axiom
 import GHC.Config.Flags
 import GHC.Data.Module

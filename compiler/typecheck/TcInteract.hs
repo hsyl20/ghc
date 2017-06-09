@@ -24,7 +24,7 @@ import GHC.Data.Coercion.Axiom( sfInteractTop, sfInteractInert )
 import TcMType (newMetaTyVars)
 
 import GHC.Data.Var
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Name
 import GHC.Data.RdrName ( lookupGRE_FieldLabel )
 import PrelNames ( knownNatClassName, knownSymbolClassName,

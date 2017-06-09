@@ -63,7 +63,7 @@ import TysWiredIn
 import PrelNames
 
 import GHC.IR.Haskell.Utils          ( mkChunkified, chunkify )
-import TcType           ( mkSpecSigmaTy )
+import import GHC.IR.Haskell.TypeSystem.Type           ( mkSpecSigmaTy )
 import GHC.Data.Type
 import GHC.Data.Coercion         ( isCoVar )
 import TysPrim

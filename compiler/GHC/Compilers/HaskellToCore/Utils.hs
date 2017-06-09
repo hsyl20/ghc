@@ -45,7 +45,7 @@ import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression ( dsLExpr )
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
-import TcType( tcSplitTyConApp )
+import import GHC.IR.Haskell.TypeSystem.Type( tcSplitTyConApp )
 import GHC.IR.Core.Syntax
 import GHC.Compilers.HaskellToCore.Monad
 

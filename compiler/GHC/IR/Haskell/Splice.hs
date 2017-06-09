@@ -34,7 +34,7 @@ import GHC.IR.Haskell.Syntax
 import GHC.Data.Annotation
 import GHC.Data.Name
 import TcRnMonad
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 
 import GHC.Utils.Outputable
 import GHC.IR.Haskell.TypeSystem.Expression

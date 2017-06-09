@@ -43,7 +43,7 @@ import GHC.Data.Id
 import GHC.Data.Id.Info
 import TcRnMonad
 import PrelNames
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
 import TcEvidence
 import TysPrim

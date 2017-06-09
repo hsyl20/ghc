@@ -30,7 +30,7 @@ import TcRnMonad
 import GHC.IR.Haskell.TypeSystem.Environment
 import GHC.IR.Haskell.TypeSystem.Binding( tcRecSelBinds )
 import GHC.Data.Types( Type(..), Coercion(..), UnivCoProvenance(..) )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TysWiredIn( unitTy )
 import GHC.IR.Core.Syntax.Make( rEC_SEL_ERROR_ID )
 import GHC.IR.Haskell.Syntax

@@ -14,7 +14,7 @@ import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Expression( tcMonoExpr, tcInfe
 import GHC.IR.Haskell.Syntax
 import TcMatches
 import GHC.IR.Haskell.TypeSystem.Syntax( hsLPatType )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TcMType
 import GHC.IR.Haskell.TypeSystem.Binding
 import GHC.IR.Haskell.TypeSystem.Pattern

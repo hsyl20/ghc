@@ -31,7 +31,7 @@ import GHC.IR.Core.Syntax.Make
 import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor
 import GHC.IR.Haskell.TypeSystem.Syntax ( shortCutLit )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Name
 import GHC.Data.Type
 import PrelNames

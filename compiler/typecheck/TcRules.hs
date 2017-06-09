@@ -14,7 +14,7 @@ import GHC.IR.Haskell.Syntax
 import TcRnMonad
 import TcSimplify
 import TcMType
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import TcHsType
 import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.IR.Haskell.TypeSystem.Environment

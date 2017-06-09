@@ -24,7 +24,7 @@ import GHC.IR.Haskell.TypeSystem.Validity
 import GHC.IR.Haskell.TypeSystem.Syntax    ( zonkTyBndrsX, emptyZonkEnv
                   , zonkTcTypeToTypes, zonkTcTypeToType )
 import TcMType
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Interface.BuildTypeAndClass
 import Inst
 import GHC.Data.ClassInstance

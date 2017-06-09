@@ -56,7 +56,7 @@ import GHC.IR.Core.FreeVars    ( orphNamesOfFamInst )
 import GHC.Data.Type.Constructor
 import GHC.Data.Type             hiding( typeKind )
 import GHC.Data.RepType
-import TcType           hiding( typeKind )
+import import GHC.IR.Haskell.TypeSystem.Type           hiding( typeKind )
 import GHC.Data.Var
 import GHC.Data.Id as Id
 import GHC.Data.Name             hiding ( varName )

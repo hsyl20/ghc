@@ -10,7 +10,7 @@ module GHC.IR.Core.Transform.Specialise ( specProgram, specUnfolding ) where
 #include "HsVersions.h"
 
 import GHC.Data.Id
-import TcType hiding( substTy )
+import import GHC.IR.Haskell.TypeSystem.Type hiding( substTy )
 import GHC.Data.Type   hiding( substTy, extendTvSubstList )
 import GHC.Data.Module( Module, HasModule(..) )
 import GHC.Data.Coercion( Coercion )

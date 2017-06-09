@@ -433,7 +433,7 @@ Library
         TcTyClsDecls
         TcTyDecls
         TcTypeable
-        TcType
+        GHC.IR.Haskell.TypeSystem.Type
         TcEvidence
         GHC.IR.Haskell.TypeSystem.Unify
         TcInteract

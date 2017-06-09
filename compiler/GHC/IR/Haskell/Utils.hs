@@ -106,7 +106,7 @@ import GHC.Data.Var
 import GHC.Data.Types
 import GHC.Data.Type   ( filterOutInvisibleTypes )
 import TysWiredIn ( unitTy )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.DataConstructor
 import GHC.Data.ConstructorLike
 import GHC.Data.Id

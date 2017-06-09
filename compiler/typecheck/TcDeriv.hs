@@ -47,7 +47,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Name.Set as NameSet
 import GHC.Data.Type.Constructor
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Var as Var
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

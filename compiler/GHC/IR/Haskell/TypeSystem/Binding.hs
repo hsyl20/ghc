@@ -36,7 +36,7 @@ import TcMType
 import GHC.Data.FamilyInstance( normaliseType )
 import FamInst( tcGetFamInstEnvs )
 import GHC.Data.Type.Constructor
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type( mkStrLitTy, tidyOpenType, mkTyVarBinder, splitTyConApp_maybe)
 import TysPrim
 import TysWiredIn( cTupleTyConName )

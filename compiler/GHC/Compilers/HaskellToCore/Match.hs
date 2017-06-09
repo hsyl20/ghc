@@ -43,7 +43,7 @@ import GHC.Compilers.HaskellToCore.Match.Constructor
 import GHC.Compilers.HaskellToCore.Match.Literal
 import GHC.Data.Type
 import GHC.Data.Coercion ( eqCoercion )
-import TcType ( toTcTypeBag )
+import import GHC.IR.Haskell.TypeSystem.Type ( toTcTypeBag )
 import GHC.Data.Type.Constructor( isNewTyCon )
 import TysWiredIn
 import GHC.Data.SrcLoc

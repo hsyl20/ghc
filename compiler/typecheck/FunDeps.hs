@@ -23,7 +23,7 @@ import GHC.Data.Name
 import GHC.Data.Var
 import GHC.Data.Class
 import GHC.Data.Type
-import TcType( transSuperClasses )
+import import GHC.IR.Haskell.TypeSystem.Type( transSuperClasses )
 import GHC.Data.Coercion.Axiom( TypeEqn )
 import GHC.Utils.Unify
 import FamInst( injTyVarsOfTypes )

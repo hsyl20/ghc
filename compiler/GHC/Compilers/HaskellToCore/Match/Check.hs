@@ -38,7 +38,7 @@ import GHC.Types (CompleteMatch(..))
 
 import GHC.Compilers.HaskellToCore.Monad
 import TcSimplify    (tcCheckSatisfiability)
-import TcType        (toTcType, isStringTy, isIntTy, isWordTy)
+import import GHC.IR.Haskell.TypeSystem.Type        (toTcType, isStringTy, isIntTy, isWordTy)
 import GHC.Data.Bag
 import GHC.Utils.Error
 import GHC.Data.Var           (EvVar)

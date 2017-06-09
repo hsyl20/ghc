@@ -26,7 +26,7 @@ import GHC.Data.Maybe
 import GHC.IR.Haskell.TypeSystem.Unify    ( tcSubType_NC )
 import TcSimplify ( simplifyAmbiguityCheck )
 import GHC.Data.Types
-import TcType hiding ( sizeType, sizeTypes )
+import import GHC.IR.Haskell.TypeSystem.Type hiding ( sizeType, sizeTypes )
 import TcMType
 import PrelNames
 import GHC.Data.Type

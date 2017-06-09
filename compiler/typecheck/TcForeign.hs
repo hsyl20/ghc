@@ -50,7 +50,7 @@ import GHC.Data.Name
 import GHC.Data.RdrName
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import PrelNames
 import GHC.Config.Flags
 import GHC.Utils.Outputable as Outputable

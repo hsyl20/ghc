@@ -74,7 +74,7 @@ import GHC.Data.Coercion.Axiom
 import GHC.Data.ConstructorLike
 import GHC.Data.DataConstructor
 import GHC.Data.Type
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import TcRnMonad

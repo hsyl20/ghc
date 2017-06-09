@@ -31,7 +31,7 @@ import GHC.Compilers.HaskellToCore.Match
 import PrelNames
 import GHC.Data.SrcLoc
 import GHC.Utils.Outputable
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.List.SetOps( getNth )
 import GHC.Utils
 

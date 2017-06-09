@@ -1,5 +1,5 @@
 module GHC.IR.Haskell.TypeSystem.Unify where
-import TcType     ( TcTauType )
+import import GHC.IR.Haskell.TypeSystem.Type     ( TcTauType )
 import TcRnTypes  ( TcM )
 import TcEvidence ( TcCoercion )
 import GHC.Utils.Outputable ( Outputable )

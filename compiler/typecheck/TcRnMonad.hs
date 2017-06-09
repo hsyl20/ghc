@@ -145,7 +145,7 @@ import GHC.Data.RdrName
 import GHC.Data.Name
 import GHC.Data.Type
 
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import PrelNames

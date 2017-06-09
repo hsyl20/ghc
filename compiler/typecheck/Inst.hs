@@ -48,7 +48,7 @@ import FunDeps
 import TcMType
 import GHC.Data.Type
 import GHC.Data.Types     ( TyBinder(..) )
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Types
 import GHC.Data.Class( Class )
 import GHC.Data.Id.Make( mkDictFunId )

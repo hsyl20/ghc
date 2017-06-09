@@ -41,7 +41,7 @@ import TcHsType
 import TcPatSyn( tcPatSynBuilderOcc, nonBidirectionalErr )
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Compilers.HaskellToCore.Monad
 import GHC.Data.Id
 import GHC.Data.Id.Info

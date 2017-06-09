@@ -6,7 +6,7 @@ module T11195 where
 import GHC.Data.Types
 import GHC.Data.Coercion
 import GHC.Data.Type hiding( substTyVarBndr, substTy, extendTCvSubst )
-import TcType       ( exactTyCoVarsOfType )
+import GHC.IR.Haskell.TypeSystem.Type       ( exactTyCoVarsOfType )
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

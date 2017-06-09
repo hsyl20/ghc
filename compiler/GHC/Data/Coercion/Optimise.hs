@@ -17,7 +17,7 @@ import GHC.Data.Types
 import GHC.Data.Coercion
 import GHC.Data.Type hiding( substTyVarBndr, substTy )
 import qualified GHC.Data.Type as Type
-import TcType       ( exactTyCoVarsOfType )
+import import GHC.IR.Haskell.TypeSystem.Type       ( exactTyCoVarsOfType )
 import GHC.Data.Type.Constructor
 import GHC.Data.Coercion.Axiom
 import GHC.Data.Var.Set

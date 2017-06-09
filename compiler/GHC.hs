@@ -298,7 +298,7 @@ import GHC.Data.Name.Set
 import GHC.Data.RdrName
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Type     hiding( typeKind )
-import TcType           hiding( typeKind )
+import import GHC.IR.Haskell.TypeSystem.Type           hiding( typeKind )
 import GHC.Data.Id
 import TysPrim          ( alphaTyVars )
 import GHC.Data.Type.Constructor

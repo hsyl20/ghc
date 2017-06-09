@@ -28,7 +28,7 @@ import TcGenFunctor
 import TcGenGenerics
 import TcMType
 import TcRnMonad
-import TcType
+import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import TcSimplify
