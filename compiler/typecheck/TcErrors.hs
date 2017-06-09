@@ -1610,7 +1610,7 @@ mkTyVarEqErr :: DynFlags -> ReportErrCtxt -> Report -> Ct
 mkTyVarEqErr dflags ctxt report ct oriented tv1 ty2
   | isUserSkolem ctxt tv1   -- ty2 won't be a meta-tyvar, or else the thing would
                             -- be oriented the other way round;
-                            -- see TcCanonical.canEqTyVarTyVar
+                            -- see GHC.IR.Haskell.TypeSystem.Canonicaliser.canEqTyVarTyVar
   || isSigTyVar tv1 && not (isTyVarTy ty2)
   || ctEqRel ct == ReprEq && not insoluble_occurs_check
      -- the cases below don't really apply to ReprEq (except occurs check)
@@ -1624,7 +1624,7 @@ mkTyVarEqErr dflags ctxt report ct oriented tv1 ty2
     -- We report an "occurs check" even for  a ~ F t a, where F is a type
     -- function; it's not insoluble (because in principle F could reduce)
     -- but we have certainly been unable to solve it
-    -- See Note [Occurs check error] in TcCanonical
+    -- See Note [Occurs check error] in GHC.IR.Haskell.TypeSystem.Canonicaliser
   = do { let main_msg = addArising (ctOrigin ct) $
                         hang (text "Occurs check: cannot construct the infinite" <+> what <> colon)
                               2 (sep [ppr ty1, char '~', ppr ty2])
@@ -2723,7 +2723,7 @@ up in the instance environment, lest we only report one matching
 instance when in fact there are two.
 
 Re-flattening is pretty easy, because we don't need to keep track of
-evidence.  We don't re-use the code in TcCanonical because that's in
+evidence.  We don't re-use the code in GHC.IR.Haskell.TypeSystem.Canonicaliser because that's in
 the TcS monad, and we are in TcM here.
 
 Note [Suggest -fprint-explicit-kinds]

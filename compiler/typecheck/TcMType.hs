@@ -579,7 +579,7 @@ instead of the buggous
 mkMetaTyVarName :: Unique -> FastString -> Name
 -- Makes a /System/ Name, which is eagerly eliminated by
 -- the unifier; see GHC.IR.Haskell.TypeSystem.Unify.nicer_to_update_tv1, and
--- TcCanonical.canEqTyVarTyVar (nicer_to_update_tv2)
+-- GHC.IR.Haskell.TypeSystem.Canonicaliser.canEqTyVarTyVar (nicer_to_update_tv2)
 mkMetaTyVarName uniq str = mkSysTvName uniq str
 
 newSigTyVar :: Name -> Kind -> TcM TcTyVar
@@ -1367,7 +1367,7 @@ Why?, for example:
 NB: we do not expect to see any CFunEqCans, because zonkCt is only
 called on unflattened constraints.
 NB: Constraints are always re-flattened etc by the canonicaliser in
-@TcCanonical@ even if they come in as CDictCan. Only canonical constraints that
+@GHC.IR.Haskell.TypeSystem.Canonicaliser@ even if they come in as CDictCan. Only canonical constraints that
 are actually in the inert set carry all the guarantees. So it is okay if zonkCt
 creates e.g. a CDictCan where the cc_tyars are /not/ function free.
 -}

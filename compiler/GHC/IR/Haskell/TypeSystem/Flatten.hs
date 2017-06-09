@@ -575,7 +575,7 @@ setMode new_mode thing_inside
     else runFlatM thing_inside (env { fe_mode = new_mode })
 
 -- | Use when flattening kinds/kind coercions. See
--- Note [No derived kind equalities] in TcCanonical
+-- Note [No derived kind equalities] in GHC.IR.Haskell.TypeSystem.Canonicaliser
 flattenKinds :: FlatM a -> FlatM a
 flattenKinds thing_inside
   = FlatM $ \env ->
@@ -685,7 +685,7 @@ floating the types out means we normalise them, and that often makes
 them smaller and perhaps allows more re-use of previously solved
 goals.  But to be honest I'm not absolutely certain, so I am leaving
 FM_Avoid in the code base.  What I'm removing is the unique place
-where it is *used*, namely in TcCanonical.canEqTyVar.
+where it is *used*, namely in GHC.IR.Haskell.TypeSystem.Canonicaliser.canEqTyVar.
 
 See also Note [Conservative unification check] in GHC.IR.Haskell.TypeSystem.Unify, which gives
 other examples where lazy flattening caused problems.
@@ -778,7 +778,7 @@ case in flattenTyVar.
 Why have these invariants on flattening? Really, they're both to ensure
 invariant (F1), which is a Good Thing because we sometimes use typeKind
 during canonicalisation, and we want this kind to be zonked (e.g., see
-TcCanonical.homogeniseRhsKind). Invariant (F2) is needed solely to support
+GHC.IR.Haskell.TypeSystem.Canonicaliser.homogeniseRhsKind). Invariant (F2) is needed solely to support
 (F1). It is relied on in one place:
 
  - The FTRNotFollowed case in flattenTyVar. Here, we have a tyvar

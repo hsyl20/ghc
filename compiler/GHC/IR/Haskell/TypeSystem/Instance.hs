@@ -1171,7 +1171,7 @@ Answer:
     a SkolemInfo of (InstSC size), where 'size' is the size of
     the constraint whose superclass we are taking.  An similarly
     when taking the superclass of an InstSC.  This is implemented
-    in TcCanonical.newSCWorkFromFlavored
+    in GHC.IR.Haskell.TypeSystem.Canonicaliser.newSCWorkFromFlavored
 
 Note [Silent superclass arguments] (historical interest only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

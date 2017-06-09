@@ -32,7 +32,7 @@ import PrelNames
 import TcErrors
 import GHC.IR.Haskell.TypeSystem.Evidence
 import TcInteract
-import TcCanonical   ( makeSuperClasses )
+import GHC.IR.Haskell.TypeSystem.Canonicaliser   ( makeSuperClasses )
 import TcMType   as TcM
 import TcRnMonad as TcM
 import TcSMonad  as TcS
@@ -1281,7 +1281,7 @@ expandSuperClasses :: Cts -> TcS (Bool, Cts)
 -- If there are any unsolved wanteds, expand one step of
 -- superclasses for deriveds
 -- Returned Bool is True <=> no new superclass constraints added
--- See Note [The superclass story] in TcCanonical
+-- See Note [The superclass story] in GHC.IR.Haskell.TypeSystem.Canonicaliser
 expandSuperClasses unsolved
   | not (anyBag superClassesMightHelp unsolved)
   = return (True, unsolved)

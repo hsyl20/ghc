@@ -1489,7 +1489,7 @@ tcSplitTyConApp ty = case tcSplitTyConApp_maybe ty of
 -- By contrast 'tcRepSplitTyConApp_maybe' panics in the second case.
 --
 -- The behavior here is needed during canonicalization; see Note [FunTy and
--- decomposing tycon applications] in TcCanonical for details.
+-- decomposing tycon applications] in GHC.IR.Haskell.TypeSystem.Canonicaliser for details.
 tcRepSplitTyConApp_maybe' :: HasCallStack => Type -> Maybe (TyCon, [Type])
 tcRepSplitTyConApp_maybe' (TyConApp tc tys)          = Just (tc, tys)
 tcRepSplitTyConApp_maybe' (FunTy arg res)
@@ -2135,7 +2135,7 @@ isTyVarExposed _  (CoercionTy {}) = False
 --      a ~R ...(N a)...  -- Not definitely insoluble
 --                        -- Perhaps newtype N a = MkN Int
 -- See Note [Occurs check error] in
--- TcCanonical for the motivation for this function.
+-- GHC.IR.Haskell.TypeSystem.Canonicaliser for the motivation for this function.
 isInsolubleOccursCheck :: EqRel -> TcTyVar -> TcType -> Bool
 isInsolubleOccursCheck eq_rel tv ty
   = go ty
