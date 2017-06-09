@@ -30,7 +30,7 @@ import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.IR.Haskell.TypeSystem.Binding          ( chooseInferredQuantifiers, tcLocalBinds )
 import GHC.IR.Haskell.TypeSystem.Signature           ( tcUserTypeSig, tcInstSig )
 import TcSimplify       ( simplifyInfer, InferMode(..) )
-import FamInst          ( tcGetFamInstEnvs, tcLookupDataFamInst )
+import GHC.IR.Haskell.TypeSystem.FamilyInstance          ( tcGetFamInstEnvs, tcLookupDataFamInst )
 import GHC.Data.FamilyInstance       ( FamInstEnvs )
 import GHC.IR.Haskell.Renamer.Environment            ( addUsedGRE )
 import GHC.IR.Haskell.Renamer.Utils          ( addNameClashErrRn, unknownSubordinateErr )

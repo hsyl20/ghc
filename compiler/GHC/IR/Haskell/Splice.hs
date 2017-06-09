@@ -69,7 +69,7 @@ import TcMType
 import TcHsType
 import GHC.IR.Interface.TypeCheck
 import GHC.Data.Types
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Data.ClassInstance
 import GHC.IR.Haskell.TypeSystem.Instantiation

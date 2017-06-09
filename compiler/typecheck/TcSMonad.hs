@@ -121,7 +121,7 @@ import GHC.Types
 
 import qualified Inst as TcM
 import GHC.Data.ClassInstance
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 
 import qualified TcRnMonad as TcM

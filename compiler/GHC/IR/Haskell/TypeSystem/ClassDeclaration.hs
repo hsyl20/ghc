@@ -34,7 +34,7 @@ import GHC.IR.Interface.BuildTypeAndClass( TcMethInfo )
 import GHC.Data.Class
 import GHC.Data.Coercion ( pprCoAxiom )
 import GHC.Config.Flags
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Data.Id
 import GHC.Data.Name

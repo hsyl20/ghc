@@ -41,7 +41,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.DataConstructor( dataConWrapId )
 import GHC.Data.FieldLabel
 import FunDeps
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Utils.Unify ( tcUnifyTyWithTFs )
 

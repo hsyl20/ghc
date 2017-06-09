@@ -21,7 +21,7 @@ import GHC.Data.Type.Constructor
 import GHC.Data.Types   -- cleverly decomposes types, good for completeness checking
 import GHC.Data.Coercion
 import GHC.Data.FamilyInstance ( FamInstEnvs )
-import FamInst ( tcTopNormaliseNewTypeTF_maybe )
+import GHC.IR.Haskell.TypeSystem.FamilyInstance ( tcTopNormaliseNewTypeTF_maybe )
 import GHC.Data.Var
 import GHC.Utils.Outputable
 import GHC.Config.Flags( DynFlags )

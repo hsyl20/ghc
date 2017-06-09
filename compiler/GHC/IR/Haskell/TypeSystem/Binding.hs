@@ -34,7 +34,7 @@ import TcHsType
 import GHC.IR.Haskell.TypeSystem.Pattern
 import TcMType
 import GHC.Data.FamilyInstance( normaliseType )
-import FamInst( tcGetFamInstEnvs )
+import GHC.IR.Haskell.TypeSystem.FamilyInstance( tcGetFamInstEnvs )
 import GHC.Data.Type.Constructor
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type( mkStrLitTy, tidyOpenType, mkTyVarBinder, splitTyConApp_maybe)

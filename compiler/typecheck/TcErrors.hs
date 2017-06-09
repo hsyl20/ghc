@@ -20,7 +20,7 @@ import GHC.Data.Types
 import GHC.Data.Kind
 import GHC.Utils.Unify            ( tcMatchTys )
 import GHC.Data.Module
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance       ( flattenTys )
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.ClassInstance

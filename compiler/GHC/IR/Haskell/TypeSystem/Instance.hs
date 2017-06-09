@@ -28,7 +28,7 @@ import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.IR.Interface.BuildTypeAndClass
 import GHC.IR.Haskell.TypeSystem.Instantiation
 import GHC.Data.ClassInstance
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.IR.Haskell.TypeSystem.Deriving
 import GHC.IR.Haskell.TypeSystem.Environment

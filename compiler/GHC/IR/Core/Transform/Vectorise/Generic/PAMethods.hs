@@ -23,7 +23,7 @@ import GHC.Data.Type
 import GHC.Data.OccName
 import GHC.Data.Coercion
 import GHC.Data.Id.Make
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import TysPrim( intPrimTy )
 
 import GHC.Config.Flags

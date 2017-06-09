@@ -44,7 +44,7 @@ import FunDeps
 import GHC.Data.ClassInstance     ( InstMatch, lookupInstEnv )
 import GHC.Data.FamilyInstance  ( isDominatedBy, injectiveBranches,
                      InjectivityCheckResult(..) )
-import FamInst     ( makeInjectivityErrors )
+import GHC.IR.Haskell.TypeSystem.FamilyInstance     ( makeInjectivityErrors )
 import GHC.Data.Name
 import GHC.Data.Var.Environment
 import GHC.Data.Var.Set

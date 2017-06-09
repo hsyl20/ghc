@@ -39,7 +39,7 @@ import TcHsType
 import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.IR.Haskell.TypeSystem.Environment
 
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
 import GHC.Data.Type

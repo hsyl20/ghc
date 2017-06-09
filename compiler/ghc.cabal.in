@@ -397,7 +397,7 @@ Library
         GHC.IR.Core.Analyse.Demand
         GHC.IR.Core.Transform.WorkerWrapper
         GHC.IR.Core.Transform.WorkerWrapper.Utils
-        FamInst
+        GHC.IR.Haskell.TypeSystem.FamilyInstance
         GHC.IR.Haskell.TypeSystem.Instantiation
         GHC.IR.Haskell.TypeSystem.Annotation
         GHC.IR.Haskell.TypeSystem.Arrow

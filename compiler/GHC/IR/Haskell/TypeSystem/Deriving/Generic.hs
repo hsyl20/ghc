@@ -21,7 +21,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.FamilyInstance       ( FamInst, FamFlavor(..), mkSingleCoAxiom )
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.Module           ( moduleName, moduleNameFS
                         , moduleUnitId, unitIdFS, getModule )
 import GHC.IR.Interface.Environment         ( newGlobalBinder )

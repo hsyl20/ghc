@@ -26,7 +26,7 @@ import GHC.Data.Type
 import import GHC.IR.Haskell.TypeSystem.Type( transSuperClasses )
 import GHC.Data.Coercion.Axiom( TypeEqn )
 import GHC.Utils.Unify
-import FamInst( injTyVarsOfTypes )
+import GHC.IR.Haskell.TypeSystem.FamilyInstance( injTyVarsOfTypes )
 import GHC.Data.ClassInstance
 import GHC.Data.Var.Set
 import GHC.Data.Var.Environment

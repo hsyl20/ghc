@@ -2,7 +2,7 @@
 
 {-# LANGUAGE CPP, GADTs #-}
 
-module FamInst (
+module GHC.IR.Haskell.TypeSystem.FamilyInstance (
         FamInstEnvs, tcGetFamInstEnvs,
         checkFamInstConsistency, tcExtendLocalFamInstEnv,
         tcLookupDataFamInst, tcLookupDataFamInst_maybe,

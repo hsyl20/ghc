@@ -19,7 +19,7 @@ import GHC.IR.Interface.BuildTypeAndClass
 import GHC.Data.DataConstructor
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import TcMType
 import GHC.Data.Name

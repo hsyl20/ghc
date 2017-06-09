@@ -75,7 +75,7 @@ import GHC.Utils.PrettyPrint.TyThing( pprTyThingInContext )
 import GHC.IR.Interface.Utils( tyThingToIfaceDecl )
 import GHC.Data.Coercion( pprCoAxiom )
 import GHC.IR.Core.FreeVars( orphNamesOfFamInst )
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
 import GHC.IR.Haskell.TypeSystem.Annotation

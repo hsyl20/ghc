@@ -47,7 +47,7 @@ import GHC.Data.Char.Encoding
 
 import GHC.Config.Flags
 import PrelInfo
-import FamInst
+import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import PrelNames
 import THNames
