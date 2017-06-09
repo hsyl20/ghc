@@ -54,7 +54,7 @@ import GHC.Program.Main
 import GHC.IR.Haskell.Renamer.Splice( traceSplice, SpliceInfo(..) )
 import GHC.Data.RdrName
 import GHC.Types
-import GHC.IR.Haskell.TemplateHaskell.Convert
+import GHC.IR.Haskell.Template.Convert
 import GHC.IR.Haskell.Renamer.Expression
 import GHC.IR.Haskell.Renamer.Environment
 import GHC.IR.Haskell.Renamer.Utils ( HsDocContext(..) )

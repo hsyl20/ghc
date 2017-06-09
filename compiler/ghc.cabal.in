@@ -587,7 +587,7 @@ Library
             GHC.Compilers.CmmToAsm.Dwarf
             GHC.Compilers.CmmToAsm.Dwarf.Types
             GHC.Compilers.CmmToAsm.Dwarf.Constants
-            GHC.IR.Haskell.TemplateHaskell.Convert
+            GHC.IR.Haskell.Template.Convert
             GHC.IR.ByteCode.Types
             GHC.IR.ByteCode.Assembler
             GHC.Compilers.CoreToByteCode

@@ -8,7 +8,7 @@ This module converts Template Haskell syntax into GHC.IR.Haskell
 
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module GHC.IR.Haskell.TemplateHaskell.Convert
+module GHC.IR.Haskell.Template.Convert
    ( convertToHsExpr
    , convertToPat
    , convertToHsDecls
@@ -1691,7 +1691,7 @@ with the following parts:
 Due to the two forall quantifiers and constraint contexts (either of
 which might be empty), pattern synonym type signatures are treated
 specially in GHC.Compilers.HaskellToCore.Splices,
-GHC.IR.Haskell.TemplateHaskell.Convert, and GHC.IR.Haskell.TypeSystem.Splice:
+GHC.IR.Haskell.Template.Convert, and GHC.IR.Haskell.TypeSystem.Splice:
 
    (a) When desugaring a pattern synonym from GHC.IR.Haskell to TH.Dec in
        GHC.Compilers.HaskellToCore.Splices, we represent its *full* type signature in TH, i.e.:
@@ -1700,7 +1700,7 @@ GHC.IR.Haskell.TemplateHaskell.Convert, and GHC.IR.Haskell.TypeSystem.Splice:
               (where ty is the AST representation of t1 -> t2 -> ... -> tn -> t)
 
    (b) When converting pattern synonyms from TH.Dec to GHC.IR.Haskell in
-       GHC.IR.Haskell.TemplateHaskell.Convert, we convert their TH type
+       GHC.IR.Haskell.Template.Convert, we convert their TH type
        signatures back to an appropriate Haskell pattern synonym type of the
        form
 
