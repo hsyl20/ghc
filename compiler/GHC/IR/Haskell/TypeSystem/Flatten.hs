@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP, ViewPatterns #-}
 
-module TcFlatten(
+module GHC.IR.Haskell.TypeSystem.Flatten(
    FlattenMode(..),
    flatten, flattenManyNom,
 

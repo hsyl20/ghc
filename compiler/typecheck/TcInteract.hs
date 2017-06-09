@@ -13,7 +13,7 @@ import GHC.Data.BasicTypes ( SwapFlag(..), isSwapped,
                     infinity, IntWithInf, intGtLimit )
 import GHC.IR.Haskell.Type ( HsIPName(..) )
 import TcCanonical
-import TcFlatten
+import GHC.IR.Haskell.TypeSystem.Flatten
 import GHC.IR.Haskell.TypeSystem.Unify( canSolveByUnification )
 import GHC.Data.Var.Set
 import GHC.Data.Type as Type
@@ -222,7 +222,7 @@ Solving a bunch of simple constraints is done in a loop,
      wants to run again, go back to step 1
 
 Non-obviously, improvement can also take place during
-the unflattening that takes place in step (1). See TcFlatten,
+the unflattening that takes place in step (1). See GHC.IR.Haskell.TypeSystem.Flatten,
 See Note [Unflattening can force the solver to iterate]
 -}
 
@@ -1860,7 +1860,7 @@ dischargeFmv ev _ _ _ = pprPanic "dischargeFmv" (ppr ev)
 
 {- Note [Top-level reductions for type functions]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-c.f. Note [The flattening story] in TcFlatten
+c.f. Note [The flattening story] in GHC.IR.Haskell.TypeSystem.Flatten
 
 Suppose we have a CFunEqCan  F tys ~ fmv/fsk, and a matching axiom.
 Here is what we do, in four cases:
@@ -2002,7 +2002,7 @@ We don't do improvements (injectivity etc) for Givens. Why?
   e.g.  (a < b), (b < c) ==> a < c If we generate a Derived for this,
   we'll generate a Derived/Wanted CFunEqCan; and, since the same
   InertCans (after solving Givens) are used for each iteration, that
-  massively confused the unflattening step (TcFlatten.unflatten).
+  massively confused the unflattening step (GHC.IR.Haskell.TypeSystem.Flatten.unflatten).
 
   In fact it led to some infinite loops:
      indexed-types/should_compile/T10806

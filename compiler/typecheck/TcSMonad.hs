@@ -656,7 +656,7 @@ The InertCans represents a collection of constraints with the following properti
     eg a wanted cannot rewrite a given)
 
   * CTyEqCan equalities: see Note [Applying the inert substitution]
-                         in TcFlatten
+                         in GHC.IR.Haskell.TypeSystem.Flatten
 
 Note [EqualCtList invariants]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

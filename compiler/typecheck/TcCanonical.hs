@@ -13,7 +13,7 @@ import TcRnTypes
 import GHC.IR.Haskell.TypeSystem.Unify( swapOverTyVars, metaTyVarUpdateOK )
 import import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
-import TcFlatten
+import GHC.IR.Haskell.TypeSystem.Flatten
 import TcSMonad
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Class
@@ -1353,7 +1353,7 @@ canEqTyVar ev eq_rel swapped tv1 ps_ty1 (TyVarTy tv2) _
 
   | swapOverTyVars tv1 tv2
   = do { traceTcS "canEqTyVar" (ppr tv1 $$ ppr tv2 $$ ppr swapped)
-         -- FM_Avoid commented out: see Note [Lazy flattening] in TcFlatten
+         -- FM_Avoid commented out: see Note [Lazy flattening] in GHC.IR.Haskell.TypeSystem.Flatten
          -- let fmode = FE { fe_ev = ev, fe_mode = FM_Avoid tv1' True }
          -- Flatten the RHS less vigorously, to avoid gratuitous flattening
          -- True <=> xi2 should not itself be a type-function application

@@ -438,7 +438,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Unify
         TcInteract
         TcCanonical
-        TcFlatten
+        GHC.IR.Haskell.TypeSystem.Flatten
         TcSMonad
         TcTypeNats
         GHC.IR.Haskell.TypeSystem.Splice

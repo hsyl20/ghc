@@ -498,7 +498,7 @@ data TcTyVarDetails
 
   | FlatSkol      -- A flatten-skolem.  It stands for the TcType, and zonking
        TcType     -- will replace it by that type.
-                  -- See Note [The flattening story] in TcFlatten
+                  -- See Note [The flattening story] in GHC.IR.Haskell.TypeSystem.Flatten
 
   | RuntimeUnk    -- Stands for an as-yet-unknown type in the GHCi
                   -- interactive context
@@ -528,7 +528,7 @@ data MetaInfo
 
    | FlatMetaTv    -- A flatten meta-tyvar
                    -- It is a meta-tyvar, but it is always untouchable, with level 0
-                   -- See Note [The flattening story] in TcFlatten
+                   -- See Note [The flattening story] in GHC.IR.Haskell.TypeSystem.Flatten
 
 instance Outputable MetaDetails where
   ppr Flexi         = text "Flexi"

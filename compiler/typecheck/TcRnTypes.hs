@@ -1552,7 +1552,7 @@ data Ct
 
   | CTyEqCan {  -- tv ~ rhs
        -- Invariants:
-       --   * See Note [Applying the inert substitution] in TcFlatten
+       --   * See Note [Applying the inert substitution] in GHC.IR.Haskell.TypeSystem.Flatten
        --   * tv not in tvs(rhs)   (occurs check)
        --   * If tv is a TauTv, then rhs has no foralls
        --       (this avoids substituting a forall for the tyvar in other types)
@@ -1591,7 +1591,7 @@ data Ct
 
       cc_fsk    :: TcTyVar  -- [Given]  always a FlatSkol skolem
                             -- [Wanted] always a FlatMetaTv unification variable
-        -- See Note [The flattening story] in TcFlatten
+        -- See Note [The flattening story] in GHC.IR.Haskell.TypeSystem.Flatten
     }
 
   | CNonCanonical {        -- See Note [NonCanonical Semantics] in TcSMonad
@@ -2433,7 +2433,7 @@ Note [Given in ctEvCoercion]
 When retrieving the evidence from a Given equality, we update the type of the EvVar
 from the ctev_pred field. In Note [Evidence field of CtEvidence], we claim that
 the type of the evidence is never looked at -- but this isn't true in the case of
-a coercion that is used in a type. (See the comments in Note [Flattening] in TcFlatten
+a coercion that is used in a type. (See the comments in Note [Flattening] in GHC.IR.Haskell.TypeSystem.Flatten
 about the FTRNotFollowed case of flattenTyVar.) So, right here where we are retrieving
 the coercion from a Given, we update the type to make sure it's zonked.
 

@@ -1118,7 +1118,7 @@ findBranch branches target_tys
 apartnessCheck :: [Type]     -- ^ /flattened/ target arguments. Make sure
                              -- they're flattened! See Note [Flattening].
                              -- (NB: This "flat" is a different
-                             -- "flat" than is used in TcFlatten.)
+                             -- "flat" than is used in GHC.IR.Haskell.TypeSystem.Flatten.)
                -> CoAxBranch -- ^ the candidate equation we wish to use
                              -- Precondition: this matches the target
                -> Bool       -- ^ True <=> equation can fire
