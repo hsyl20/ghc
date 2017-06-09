@@ -23,7 +23,7 @@ import GHC.Utils.Outputable
 import PrelNames
 import GHC.IR.Haskell.TypeSystem.Deriving.Utils
 import GHC.IR.Haskell.TypeSystem.Environment
--- import TcErrors (reportAllUnsolved)
+-- import GHC.IR.Haskell.TypeSystem.Error (reportAllUnsolved)
 import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import GHC.IR.Haskell.TypeSystem.Deriving.Generic
 import TcMType

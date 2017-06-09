@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module TcErrors(
+module GHC.IR.Haskell.TypeSystem.Error(
        reportUnsolved, reportAllUnsolved, warnAllUnsolved,
        warnDefaulting,
 
@@ -110,7 +110,7 @@ to compile, and it will run fine unless we evaluate `a`. This is what
 `deferErrorsToRuntime` does.
 
 It does this by keeping track of which errors correspond to which coercion
-in TcErrors. TcErrors.reportTidyWanteds does not print the errors
+in GHC.IR.Haskell.TypeSystem.Error. GHC.IR.Haskell.TypeSystem.Error.reportTidyWanteds does not print the errors
 and does not fail if -fdefer-type-errors is on, so that we can continue
 compilation. The errors are turned into warnings in `reportUnsolved`.
 -}
@@ -1279,7 +1279,7 @@ even though it fits in the hole. To determine that `ps2` fits in the hole,
 we would need to check ids for subsumption, i.e. that the type of the hole is
 a subtype of the id. This can be done using `tcSubType` from `GHC.IR.Haskell.TypeSystem.Unify` and
 `tcCheckSatisfiability` in `TcSimplify`.  Unfortunately, `TcSimplify` uses
-`TcErrors` to report errors found during constraint checking, so checking for
+`GHC.IR.Haskell.TypeSystem.Error` to report errors found during constraint checking, so checking for
 subsumption in holes would involve shuffling some code around in `TcSimplify`,
 to make a non-error reporting constraint satisfiability checker which could
 then be used for checking whether a given id satisfies the constraints imposed

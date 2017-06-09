@@ -139,7 +139,7 @@ import GHC.Utils.Unify
 import GHC.IR.Haskell.TypeSystem.Evidence
 import GHC.Data.Class
 import GHC.Data.Type.Constructor
-import TcErrors   ( solverDepthErrorTcS )
+import GHC.IR.Haskell.TypeSystem.Error   ( solverDepthErrorTcS )
 
 import GHC.Data.Name
 import GHC.Data.RdrName ( GlobalRdrEnv, GlobalRdrElt )

@@ -29,7 +29,7 @@ import GHC.Data.Name
 import GHC.Utils.Outputable
 import PrelInfo
 import PrelNames
-import TcErrors
+import GHC.IR.Haskell.TypeSystem.Error
 import GHC.IR.Haskell.TypeSystem.Evidence
 import TcInteract
 import GHC.IR.Haskell.TypeSystem.Canonicaliser   ( makeSuperClasses )
@@ -402,9 +402,9 @@ How is this implemented? It's complicated! So we'll step through it all:
          (`-Wunsafe`) or inferring a module unsafe. `-XSafe` and `-XTrustworthy`
          cause compilation failure by not resolving the unsafe constraint at all.
 
-       * For unresolved constraints (all types), call `TcErrors.reportUnsolved`,
+       * For unresolved constraints (all types), call `GHC.IR.Haskell.TypeSystem.Error.reportUnsolved`,
          while for resolved but unsafe overlapping dictionary constraints, call
-         `TcErrors.warnAllUnsolved`. Both functions convert constraints into a
+         `GHC.IR.Haskell.TypeSystem.Error.warnAllUnsolved`. Both functions convert constraints into a
          warning message for the user.
 
        * In the case of `warnAllUnsolved` for resolved, but unsafe
@@ -413,7 +413,7 @@ How is this implemented? It's complicated! So we'll step through it all:
          mark the module we are compiling as unsafe, passing the
          warning message along as the reason.
 
- 5) `TcErrors.*Unsolved` -- Generates error messages for constraints by
+ 5) `GHC.IR.Haskell.TypeSystem.Error.*Unsolved` -- Generates error messages for constraints by
     actually calling `InstEnv.lookupInstEnv` again! Yes, confusing, but all we
     know is the constraint that is unresolved or unsafe. For dictionary, all we
     know is that we need a dictionary of type C, but not what instances are
@@ -1600,7 +1600,7 @@ works:
 
 ----- Reporting redundant constraints
 
-* TcErrors does the actual warning, in warnRedundantConstraints.
+* GHC.IR.Haskell.TypeSystem.Error does the actual warning, in warnRedundantConstraints.
 
 * We don't report redundant givens for *every* implication; only
   for those which reply True to TcSimplify.warnRedundantGivens:
@@ -1622,7 +1622,7 @@ works:
         - GHC.IR.Haskell.TypeSystem.Binding.tcSpecPrag
         - GHC.IR.Haskell.TypeSystem.Binding.tcTySig
 
-  This decision is taken in setImplicationStatus, rather than TcErrors
+  This decision is taken in setImplicationStatus, rather than GHC.IR.Haskell.TypeSystem.Error
   so that we can discard implication constraints that we don't need.
   So ics_dead consists only of the *reportable* redundant givens.
 

@@ -1265,7 +1265,7 @@ isIndirect (Indirect _) = True
 isIndirect _            = False
 
 isRuntimeUnkSkol :: TyVar -> Bool
--- Called only in TcErrors; see Note [Runtime skolems] there
+-- Called only in GHC.IR.Haskell.TypeSystem.Error; see Note [Runtime skolems] there
 isRuntimeUnkSkol x
   | RuntimeUnk <- tcTyVarDetails x = True
   | otherwise                      = False

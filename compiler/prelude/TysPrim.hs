@@ -614,7 +614,7 @@ Type.classifyPredType.
 
 All wanted constraints of this type are built with coercion holes.
 (See Note [Coercion holes] in GHC.Data.Types.) But see also
-Note [Deferred errors for coercion holes] in TcErrors to see how
+Note [Deferred errors for coercion holes] in GHC.IR.Haskell.TypeSystem.Error to see how
 equality constraints are deferred.
 
 Within GHC, ~# is called eqPrimTyCon, and it is defined in TysPrim.

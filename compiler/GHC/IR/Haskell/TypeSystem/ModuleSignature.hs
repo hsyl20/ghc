@@ -56,7 +56,7 @@ import qualified Data.Map as Map
 import GHC.Utils.Finder
 import GHC.Data.Unique.DeterSet
 import GHC.Data.NameShape
-import TcErrors
+import GHC.IR.Haskell.TypeSystem.Error
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Interface.Renaming
 import GHC.Utils

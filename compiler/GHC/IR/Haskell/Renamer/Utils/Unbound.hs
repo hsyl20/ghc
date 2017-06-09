@@ -84,7 +84,7 @@ type HowInScope = Either SrcSpan ImpDeclSpec
      -- Right ispec =>  imported as specified by ispec
 
 
--- | Called from the typechecker (TcErrors) when we find an unbound variable
+-- | Called from the typechecker (GHC.IR.Haskell.TypeSystem.Error) when we find an unbound variable
 unknownNameSuggestions :: DynFlags
                        -> GlobalRdrEnv -> LocalRdrEnv -> ImportAvails
                        -> RdrName -> SDoc

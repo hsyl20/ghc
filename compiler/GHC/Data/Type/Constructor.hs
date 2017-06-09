@@ -1450,7 +1450,7 @@ mkSumTyCon name binders res_kind arity tyvars cons parent
 -- | Makes a tycon suitable for use during type-checking.
 -- The only real need for this is for printing error messages during
 -- a recursive type/class type-checking knot. It has a kind because
--- TcErrors sometimes calls typeKind.
+-- GHC.IR.Haskell.TypeSystem.Error sometimes calls typeKind.
 -- See also Note [Kind checking recursive type and class declarations]
 -- in GHC.IR.Haskell.TypeSystem.TypeAndClassDeclaration.
 mkTcTyCon :: Name
