@@ -441,7 +441,7 @@ Library
         TcFlatten
         TcSMonad
         TcTypeNats
-        TcSplice
+        GHC.IR.Haskell.TypeSystem.Splice
         GHC.Data.Class
         GHC.Data.Coercion
         GHC.Compilers.HaskellToCore.Splices

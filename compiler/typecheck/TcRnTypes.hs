@@ -849,7 +849,7 @@ type ThBindEnv = NameEnv (TopLevelFlag, ThLevel)
    -- cross-stage at arbitrary types if the Id is bound at top level.
    --
    -- Nota bene: a ThLevel of 'outerLevel' is *not* the same as being
-   -- bound at top level!  See Note [Template Haskell levels] in TcSplice
+   -- bound at top level!  See Note [Template Haskell levels] in GHC.IR.Haskell.TypeSystem.Splice
 
 {- Note [Given Insts]
    ~~~~~~~~~~~~~~~~~~
@@ -909,7 +909,7 @@ instance HasOccName TcIdBinder where
 
 data SpliceType = Typed | Untyped
 
-data ThStage    -- See Note [Template Haskell state diagram] in TcSplice
+data ThStage    -- See Note [Template Haskell state diagram] in GHC.IR.Haskell.TypeSystem.Splice
   = Splice SpliceType -- Inside a top-level splice
                       -- This code will be run *at compile time*;
                       --   the result replaces the splice
@@ -928,7 +928,7 @@ data ThStage    -- See Note [Template Haskell state diagram] in TcSplice
       -- For typed splices, the typechecker takes finalizers from here and
       -- inserts them in the list of finalizers in the global environment.
       --
-      -- See Note [Collecting modFinalizers in typed splices] in "TcSplice".
+      -- See Note [Collecting modFinalizers in typed splices] in "GHC.IR.Haskell.TypeSystem.Splice".
 
   | Comp        -- Ordinary Haskell code
                 -- Binding level = 1
@@ -959,7 +959,7 @@ instance Outputable ThStage where
    ppr (Brack s _)   = text "Brack" <> parens (ppr s)
 
 type ThLevel = Int
-    -- NB: see Note [Template Haskell levels] in TcSplice
+    -- NB: see Note [Template Haskell levels] in GHC.IR.Haskell.TypeSystem.Splice
     -- Incremented when going inside a bracket,
     -- decremented when going inside a splice
     -- NB: ThLevel is one greater than the 'n' in Fig 2 of the

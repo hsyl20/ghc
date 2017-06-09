@@ -3,7 +3,7 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-TcSplice: Template Haskell splices
+GHC.IR.Haskell.TypeSystem.Splice: Template Haskell splices
 -}
 
 {-# LANGUAGE CPP #-}
@@ -16,7 +16,7 @@ TcSplice: Template Haskell splices
 {-# LANGUAGE MultiWayIf #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-module TcSplice(
+module GHC.IR.Haskell.TypeSystem.Splice(
      tcSpliceExpr, tcTypedBracket, tcUntypedBracket,
 --     runQuasiQuoteExpr, runQuasiQuotePat,
 --     runQuasiQuoteDecl, runQuasiQuoteType,
@@ -49,7 +49,7 @@ import GHCi.Message
 import GHCi.RemoteTypes
 import GHC.Interactive.Interpreter
 import GHC.Program.Main
-        -- These imports are the reason that TcSplice
+        -- These imports are the reason that GHC.IR.Haskell.TypeSystem.Splice
         -- is very high up the module hierarchy
 import GHC.IR.Haskell.Renamer.Splice( traceSplice, SpliceInfo(..) )
 import GHC.Data.RdrName
@@ -793,7 +793,7 @@ like that.  Here's how it's processed:
     where 'qReport' comes from the Quasi class and fail from its monad
     superclass.
 
-  * The TcM monad is an instance of Quasi (see TcSplice), and it implements
+  * The TcM monad is an instance of Quasi (see GHC.IR.Haskell.TypeSystem.Splice), and it implements
     (qReport True s) by using addErr to add an error message to the bag of errors.
     The 'fail' in TcM raises an IOEnvFailure exception
 

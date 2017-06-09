@@ -45,7 +45,7 @@ import THNames          ( quoteExpName, quotePatName, quoteDecName, quoteTypeNam
                         , decsQTyConName, expQTyConName, patQTyConName, typeQTyConName, )
 
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Expression   ( tcPolyExpr )
-import {-# SOURCE #-} TcSplice
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice
     ( runMetaD
     , runMetaE
     , runMetaP
@@ -508,7 +508,7 @@ References:
 
 [1] https://ghc.haskell.org/trac/ghc/wiki/TemplateHaskell/Reify
 [2] 'rnSpliceExpr'
-[3] 'TcSplice.qAddModFinalizer'
+[3] 'GHC.IR.Haskell.TypeSystem.Splice.qAddModFinalizer'
 [4] 'GHC.IR.Haskell.TypeSystem.Expression.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
 [5] 'TcHsType.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
 [6] 'GHC.IR.Haskell.TypeSystem.Pattern.tc_pat' ('SplicePat' ('HsSpliced' ...))

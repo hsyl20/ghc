@@ -40,7 +40,7 @@ module TcRnDriver (
         missingBootThing,
     ) where
 
-import {-# SOURCE #-} TcSplice ( finishTH )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice ( finishTH )
 import GHC.IR.Haskell.Renamer.Splice ( rnTopSpliceDecls, traceSplice, SpliceInfo(..) )
 import GHC.IR.Interface.Environment( externaliseName )
 import TcHsType

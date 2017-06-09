@@ -18,7 +18,7 @@ module GHC.IR.Haskell.TypeSystem.Expression ( tcPolyExpr, tcMonoExpr, tcMonoExpr
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   TcSplice( tcSpliceExpr, tcTypedBracket, tcUntypedBracket )
+import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Splice( tcSpliceExpr, tcTypedBracket, tcUntypedBracket )
 import THNames( liftStringName, liftName )
 
 import GHC.IR.Haskell.Syntax

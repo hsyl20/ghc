@@ -10,7 +10,7 @@
 
 module GHC.IR.Haskell.TypeSystem.Annotation ( tcAnnotations, annCtxt ) where
 
-import {-# SOURCE #-} TcSplice ( runAnnotation )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice ( runAnnotation )
 import GHC.Data.Module
 import GHC.Config.Flags
 import Control.Monad ( when )

@@ -176,7 +176,7 @@ import Control.Monad
 import Data.Set ( Set )
 import qualified Data.Set as Set
 
-import {-# SOURCE #-} TcSplice ( runRemoteModFinalizers )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice ( runRemoteModFinalizers )
 import qualified Data.Map as Map
 
 {-

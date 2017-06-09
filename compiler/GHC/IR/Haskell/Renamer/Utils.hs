@@ -398,7 +398,7 @@ pprHsDocContext TypBrCtx              = text "a Template-Haskell quoted type"
 pprHsDocContext HsTypeCtx             = text "a type argument"
 pprHsDocContext GHCiCtx               = text "GHCi input"
 pprHsDocContext (SpliceTypeCtx hs_ty) = text "the spliced type" <+> quotes (ppr hs_ty)
-pprHsDocContext ClassInstanceCtx      = text "TcSplice.reifyInstances"
+pprHsDocContext ClassInstanceCtx      = text "GHC.IR.Haskell.TypeSystem.Splice.reifyInstances"
 
 pprHsDocContext (ForeignDeclCtx name)
    = text "the foreign declaration for" <+> quotes (ppr name)

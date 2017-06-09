@@ -1119,7 +1119,7 @@ repRole (L _ Nothing)                 = rep2 inferRName []
 -----------------------------------------------------------------------------
 
 repSplice :: HsSplice Name -> DsM (Core a)
--- See Note [How brackets and nested splices are handled] in TcSplice
+-- See Note [How brackets and nested splices are handled] in GHC.IR.Haskell.TypeSystem.Splice
 -- We return a CoreExpr of any old type; the context should know
 repSplice (HsTypedSplice   _ n _) = rep_splice n
 repSplice (HsUntypedSplice _ n _) = rep_splice n

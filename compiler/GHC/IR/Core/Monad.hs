@@ -89,7 +89,7 @@ import Control.Applicative ( Alternative(..) )
 
 import Prelude hiding   ( read )
 
-import {-# SOURCE #-} TcSplice ( lookupThName_maybe )
+import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Splice ( lookupThName_maybe )
 import qualified Language.Haskell.TH as TH
 
 {-

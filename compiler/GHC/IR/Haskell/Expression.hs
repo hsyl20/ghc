@@ -2057,7 +2057,7 @@ data HsSplice id
         id               -- A unique name to identify this splice point
         (LHsExpr id)     -- See Note [Pending Splices]
 
-   | HsQuasiQuote        -- See Note [Quasi-quote overview] in TcSplice
+   | HsQuasiQuote        -- See Note [Quasi-quote overview] in GHC.IR.Haskell.TypeSystem.Splice
         id               -- Splice point
         id               -- Quoter
         SrcSpan          -- The span of the enclosed string

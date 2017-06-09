@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module TcSplice where
+module GHC.IR.Haskell.TypeSystem.Splice where
 import GHC.IR.Haskell.Syntax    ( HsSplice, HsBracket, HsExpr, LHsExpr )
 import GHC.IR.Haskell.Expression   ( PendingRnSplice )
 import GHC.Data.Name     ( Name )
