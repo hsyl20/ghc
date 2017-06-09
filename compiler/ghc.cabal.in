@@ -349,7 +349,7 @@ Library
         KnownUniques
         PrelInfo
         PrelNames
-        PrelRules
+        GHC.IR.Core.Transform.ConstantFolding
         PrimOp
         TysPrim
         TysWiredIn

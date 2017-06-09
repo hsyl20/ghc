@@ -60,7 +60,7 @@ import GHC.Utils
 import GHC.Utils.Monad
 import GHC.Utils.Outputable
 import GHC.Data.Pair
-import PrelRules
+import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.FastString       ( fsLit )
 
 import Control.Monad    ( when )
@@ -1883,7 +1883,7 @@ There are some wrinkles
   But NB: we use b'; we do not duplicate 'e'.
 
 * In dataToTag we might need to make up some fake binders;
-  see Note [caseRules for dataToTag] in PrelRules
+  see Note [caseRules for dataToTag] in GHC.IR.Core.Transform.ConstantFolding
 -}
 
 mkCase, mkCase1, mkCase2, mkCase3
@@ -2018,7 +2018,7 @@ mkCase2 dflags scrut bndr alts_ty alts
     tx_alt tx_con mk_orig new_bndr (con, bs, rhs)
       | DataAlt dc <- con', not (isNullaryRepDataCon dc)
       = -- For non-nullary data cons we must invent some fake binders
-        -- See Note [caseRules for dataToTag] in PrelRules
+        -- See Note [caseRules for dataToTag] in GHC.IR.Core.Transform.ConstantFolding
         do { us <- getUniquesM
            ; let (ex_tvs, arg_ids) = dataConRepInstPat us dc
                                          (tyConAppArgs (idType new_bndr))

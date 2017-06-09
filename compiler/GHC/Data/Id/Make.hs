@@ -34,7 +34,7 @@ module GHC.Data.Id.Make (
         proxyHashId, noinlineId, noinlineIdName,
 
         -- Re-export error Ids
-        module PrelRules
+        module GHC.IR.Core.Transform.ConstantFolding
     ) where
 
 #include "HsVersions.h"
@@ -42,7 +42,7 @@ module GHC.Data.Id.Make (
 import GHC.IR.Core.Transform.Rules
 import TysPrim
 import TysWiredIn
-import PrelRules
+import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Type
 import GHC.Data.FamilyInstance
 import GHC.Data.Coercion
@@ -1525,7 +1525,7 @@ cannot be instantiated with a forall.  The field of `WrapC` contains
 a `Proxy` parameter which is used to link the type of the constraint,
 `C a`, with the type of the `Wrap` value being made.
 
-Next, we add a built-in Prelude rule (see prelude/PrelRules.hs),
+Next, we add a built-in Prelude rule (see prelude/GHC.IR.Core.Transform.ConstantFolding.hs),
 which will replace the RHS of this definition with the appropriate
 definition in Core.  The rewrite rule works as follows:
 

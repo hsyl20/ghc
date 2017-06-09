@@ -51,7 +51,7 @@ import GHC.Data.Unique           ( isValidKnownKeyUnique )
 import GHC.Data.ConstructorLike          ( ConLike(..) )
 import THNames          ( templateHaskellNames )
 import PrelNames
-import PrelRules
+import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Available
 import PrimOp
 import GHC.Data.DataConstructor

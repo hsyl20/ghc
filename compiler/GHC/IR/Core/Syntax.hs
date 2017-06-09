@@ -253,7 +253,7 @@ These data types are the heart of the compiler
 --
 --    5. Floating-point values must not be scrutinised against literals.
 --       See Trac #9238 and Note [Rules for floating-point comparisons]
---       in PrelRules for rationale.
+--       in GHC.IR.Core.Transform.ConstantFolding for rationale.
 --
 -- *  Cast an expression to a particular type.
 --    This is used to implement @newtype@s (a @newtype@ constructor or
@@ -367,7 +367,7 @@ an unlifted literal, like all the others.
 
 Also, we do not permit case analysis with literal patterns on floating-point
 types. See Trac #9238 and Note [Rules for floating-point comparisons] in
-PrelRules for the rationale for this restriction.
+GHC.IR.Core.Transform.ConstantFolding for the rationale for this restriction.
 
 -------------------------- GHC.IR.Core.Syntax INVARIANTS ---------------------------
 

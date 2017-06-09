@@ -327,7 +327,7 @@ but that isn't quite right:
      - PrimOps and ClassOps are born with a bunch of rules inside the Id,
        even when they are imported
 
-     - The rules in PrelRules.builtinRules should be active even
+     - The rules in GHC.IR.Core.Transform.ConstantFolding.builtinRules should be active even
        in the module defining the Id (when it's a LocalId), but
        the rules are kept in the global RuleBase
 

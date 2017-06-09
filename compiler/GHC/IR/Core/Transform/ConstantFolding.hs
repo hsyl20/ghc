@@ -15,7 +15,7 @@ ToDo:
 {-# LANGUAGE CPP, RankNTypes #-}
 {-# OPTIONS_GHC -optc-DNON_POSIX_SOURCE #-}
 
-module PrelRules
+module GHC.IR.Core.Transform.ConstantFolding
    ( primOpRules
    , builtinRules
    , caseRules
