@@ -33,7 +33,7 @@ import Control.Monad    ( unless, when )
 import {-# SOURCE #-} GHC.IR.Haskell.Renamer.Expression   ( rnLExpr )
 
 import GHC.IR.Haskell.TypeSystem.Environment            ( checkWellStaged )
-import THNames          ( liftName )
+import GHC.Builtin.Names.TemplateHaskell          ( liftName )
 
 import GHC.Config.Flags
 import GHC.Data.FastString
@@ -41,7 +41,7 @@ import GHC.Utils.Error         ( dumpIfSet_dyn_printer )
 import GHC.IR.Haskell.TypeSystem.Environment            ( tcMetaTy )
 import GHC.Config.Hooks
 import GHC.Data.Var              ( Id )
-import THNames          ( quoteExpName, quotePatName, quoteDecName, quoteTypeName
+import GHC.Builtin.Names.TemplateHaskell          ( quoteExpName, quotePatName, quoteDecName, quoteTypeName
                         , decsQTyConName, expQTyConName, patQTyConName, typeQTyConName, )
 
 import {-# SOURCE #-} GHC.IR.Haskell.TypeSystem.Expression   ( tcPolyExpr )

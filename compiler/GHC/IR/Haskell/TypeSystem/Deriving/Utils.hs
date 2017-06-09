@@ -43,7 +43,7 @@ import GHC.IR.Haskell.TypeSystem.Deriving.Functor
 import GHC.IR.Haskell.TypeSystem.Deriving.Generic
 import GHC.IR.Haskell.TypeSystem
 import GHC.IR.Haskell.TypeSystem.Type
-import THNames (liftClassKey)
+import GHC.Builtin.Names.TemplateHaskell (liftClassKey)
 import GHC.Data.Type.Constructor
 import GHC.Data.Type
 import GHC.Utils

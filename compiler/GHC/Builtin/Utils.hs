@@ -49,7 +49,7 @@ import KnownUniques
 import GHC.Data.Unique           ( isValidKnownKeyUnique )
 
 import GHC.Data.ConstructorLike          ( ConLike(..) )
-import THNames          ( templateHaskellNames )
+import GHC.Builtin.Names.TemplateHaskell          ( templateHaskellNames )
 import GHC.Builtin.Names
 import GHC.IR.Core.Transform.ConstantFolding
 import GHC.Data.Available

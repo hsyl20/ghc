@@ -50,7 +50,7 @@ import GHC.Builtin.Utils
 import GHC.IR.Haskell.TypeSystem.FamilyInstance
 import GHC.Data.FamilyInstance
 import GHC.Builtin.Names
-import THNames
+import GHC.Builtin.Names.TemplateHaskell
 import GHC.Data.Module ( moduleName, moduleNameString
               , moduleUnitId, unitIdString )
 import GHC.Data.Id.Make ( coerceId )

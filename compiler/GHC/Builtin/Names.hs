@@ -1629,7 +1629,7 @@ hasFieldClassNameKey = mkPreludeClassUnique 49
 
 
 ---------------- Template Haskell -------------------
---      THNames.hs: USES ClassUniques 200-299
+--      GHC.Builtin.Names.TemplateHaskell.hs: USES ClassUniques 200-299
 -----------------------------------------------------
 
 {-
@@ -1870,7 +1870,7 @@ typeSymbolAppendFamNameKey :: Unique
 typeSymbolAppendFamNameKey = mkPreludeTyConUnique 187
 
 ---------------- Template Haskell -------------------
---      THNames.hs: USES TyConUniques 200-299
+--      GHC.Builtin.Names.TemplateHaskell.hs: USES TyConUniques 200-299
 -----------------------------------------------------
 
 ----------------------- SIMD ------------------------
@@ -2038,7 +2038,7 @@ typeLitNatDataConKey      = mkPreludeDataConUnique 108
 
 
 ---------------- Template Haskell -------------------
---      THNames.hs: USES DataUniques 200-250
+--      GHC.Builtin.Names.TemplateHaskell.hs: USES DataUniques 200-250
 -----------------------------------------------------
 
 
@@ -2306,7 +2306,7 @@ proxyHashKey :: Unique
 proxyHashKey = mkPreludeMiscIdUnique 502
 
 ---------------- Template Haskell -------------------
---      THNames.hs: USES IdUniques 200-499
+--      GHC.Builtin.Names.TemplateHaskell.hs: USES IdUniques 200-499
 -----------------------------------------------------
 
 -- Used to make `Typeable` dictionaries

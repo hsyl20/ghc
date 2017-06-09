@@ -444,7 +444,7 @@ Library
         GHC.Data.Class
         GHC.Data.Coercion
         GHC.Compilers.HaskellToCore.Splices
-        THNames
+        GHC.Builtin.Names.TemplateHaskell
         GHC.Data.FamilyInstance
         GHC.IR.Haskell.TypeSystem.FunctionalDependency
         GHC.Data.ClassInstance

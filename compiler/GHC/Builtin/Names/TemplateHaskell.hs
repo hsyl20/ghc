@@ -4,7 +4,7 @@
 -- %*                                                                   *
 -- %************************************************************************
 
-module THNames where
+module GHC.Builtin.Names.TemplateHaskell where
 
 import GHC.Builtin.Names( mk_known_key_name )
 import GHC.Data.Module( Module, mkModuleNameFS, mkModule, thUnitId )

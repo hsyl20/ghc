@@ -19,7 +19,7 @@ module GHC.IR.Haskell.TypeSystem.Expression ( tcPolyExpr, tcMonoExpr, tcMonoExpr
 #include "HsVersions.h"
 
 import {-# SOURCE #-}   GHC.IR.Haskell.TypeSystem.Splice( tcSpliceExpr, tcTypedBracket, tcUntypedBracket )
-import THNames( liftStringName, liftName )
+import GHC.Builtin.Names.TemplateHaskell( liftStringName, liftName )
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Haskell.TypeSystem.Syntax
@@ -1911,14 +1911,14 @@ checkCrossStageLifting id (Brack _ (TcPending ps_var lie_var))
                -- just going to flag an error for now
 
         ; lift <- if isStringTy id_ty then
-                     do { sid <- tcLookupId THNames.liftStringName
+                     do { sid <- tcLookupId GHC.Builtin.Names.TemplateHaskell.liftStringName
                                      -- See Note [Lifting strings]
                         ; return (HsVar (noLoc sid)) }
                   else
                      setConstraintVar lie_var   $
                           -- Put the 'lift' constraint into the right LIE
                      newMethodFromName (OccurrenceOf (idName id))
-                                       THNames.liftName id_ty
+                                       GHC.Builtin.Names.TemplateHaskell.liftName id_ty
 
                    -- Update the pending splices
         ; ps <- readMutVar ps_var

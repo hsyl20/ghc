@@ -39,7 +39,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Utils.Outputable
 import GHC.IR.Haskell.TypeSystem.Expression
 import GHC.Data.SrcLoc
-import THNames
+import GHC.Builtin.Names.TemplateHaskell
 import GHC.IR.Haskell.TypeSystem.Unify
 import GHC.IR.Haskell.TypeSystem.Environment
 

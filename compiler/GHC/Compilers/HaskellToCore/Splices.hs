@@ -38,7 +38,7 @@ import qualified GHC.Data.OccName as OccName
 import GHC.Data.Module
 import GHC.Data.Id
 import GHC.Data.Name hiding( isVarOcc, isTcOcc, varName, tcName )
-import THNames
+import GHC.Builtin.Names.TemplateHaskell
 import GHC.Data.Name.Environment
 import GHC.Data.Name.Set
 import GHC.IR.Haskell.TypeSystem.Type
