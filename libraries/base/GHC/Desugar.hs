@@ -7,7 +7,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      :  GHC.Compiler.HaskellToCore
+-- Module      :  GHC.Desugar
 -- Copyright   :  (c) The University of Glasgow, 2007
 -- License     :  see libraries/base/LICENSE
 -- 

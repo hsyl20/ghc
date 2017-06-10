@@ -69,7 +69,7 @@ your notation to LaTeX. Three different homs are used:
   it if necessary to disambiguate other parses.
 
 The file CoreLint.ott contains inductively defined judgements for many of the
-functions in compiler/coreSyn/CoreLint.lhs. Each judgement is labeled with an
+functions in GHC.IR.Core.Analyse.Lint. Each judgement is labeled with an
 abbreviation to distinguish it from the others. These abbreviations appear in
 the source code right after a turnstile |-. The declaration for each judgment
 contains a reference to the function it represents. Each rule is labeled with

@@ -372,15 +372,15 @@ GHC.IR.Core.Transform.ConstantFolding for the rationale for this restriction.
 -------------------------- GHC.IR.Core.Syntax INVARIANTS ---------------------------
 
 Note [GHC.IR.Core.Syntax top-level invariant]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 See #toplevel_invariant#
 
 Note [GHC.IR.Core.Syntax letrec invariant]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 See #letrec_invariant#
 
 Note [GHC.IR.Core.Syntax top-level string literals]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As an exception to the usual rule that top-level binders must be lifted,
 we allow binding primitive string literals (of type Addr#) of type Addr# at the
 top level. This allows us to share string literals earlier in the pipeline and
@@ -425,7 +425,7 @@ parts of the compilation pipeline.
   the _bytes suffix.
 
 Note [GHC.IR.Core.Syntax let/app invariant]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The let/app invariant
      the right hand side of a non-recursive 'Let', and
      the argument of an 'App',
