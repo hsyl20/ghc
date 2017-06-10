@@ -38,7 +38,7 @@ import GHC.IR.Core.Utils        ( exprType, eqExpr, mkTick, mkTicks,
                           stripTicksTopT, stripTicksTopE,
                           isJoinBind )
 import GHC.IR.Core.PrettyPrint          ( pprRules )
-import GHC.Data.Type             ( Type, substTy, mkTCvSubst )
+import GHC.Data.Type             ( Type, mkTCvSubst )
 import qualified GHC.Data.Type as Type
 import GHC.IR.Haskell.TypeSystem.Type           ( tcSplitTyConApp_maybe )
 import GHC.Builtin.Types       ( anyTypeOfKind )
