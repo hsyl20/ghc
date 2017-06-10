@@ -1,14 +1,14 @@
 
-module GHC.Compilers.CmmToAsm.SPARC.AddrMode (
+module GHC.Compiler.CmmToAsm.SPARC.AddrMode (
         AddrMode(..),
         addrOffset
 )
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.Register
 
 -- addressing modes ------------------------------------------------------------
 

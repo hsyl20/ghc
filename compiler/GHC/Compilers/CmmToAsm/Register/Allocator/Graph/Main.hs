@@ -1,20 +1,20 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 -- | Graph coloring register allocator.
-module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Main (
         regAlloc
 ) where
 import qualified GHC.Data.Graph.Color as Color
-import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill
-import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillClean
-import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillCost
-import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats
-import GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register.Target
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Spill
+import GHC.Compiler.CmmToAsm.Register.Allocator.Graph.SpillClean
+import GHC.Compiler.CmmToAsm.Register.Allocator.Graph.SpillCost
+import GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Stats
+import GHC.Compiler.CmmToAsm.Register.Allocator.Graph.TrivColorable
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.Data.Bag
 import GHC.Config.Flags

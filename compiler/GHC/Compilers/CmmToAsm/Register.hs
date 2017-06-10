@@ -1,9 +1,9 @@
 -- | An architecture independent description of a register.
 --      This needs to stay architecture independent because it is used
---      by GHC.Compilers.CmmToAsm.Monad and the register allocators, which are shared
+--      by GHC.Compiler.CmmToAsm.Monad and the register allocators, which are shared
 --      by all architectures.
 --
-module GHC.Compilers.CmmToAsm.Register (
+module GHC.Compiler.CmmToAsm.Register (
         RegNo,
         Reg(..),
         regPair,
@@ -28,7 +28,7 @@ where
 
 import GHC.Utils.Outputable
 import GHC.Data.Unique
-import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register.Class
 import Data.List
 
 -- | An identifier for a primitive real machine register.

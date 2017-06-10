@@ -8,20 +8,20 @@ Matching guarded right-hand-sides (GRHSs)
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.HaskellToCore.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) where
+module GHC.Compiler.HaskellToCore.GuardedRHS ( dsGuarded, dsGRHSs, dsGRHS, isTrueLHsExpr ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression  ( dsLExpr, dsLocalBinds )
-import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Match   ( matchSinglePat )
+import {-# SOURCE #-} GHC.Compiler.HaskellToCore.Expression  ( dsLExpr, dsLocalBinds )
+import {-# SOURCE #-} GHC.Compiler.HaskellToCore.Match   ( matchSinglePat )
 
 import GHC.IR.Haskell.Syntax
 import GHC.IR.Core.Syntax.Make
 import GHC.IR.Core.Syntax
 import GHC.Data.Var
 
-import GHC.Compilers.HaskellToCore.Monad
-import GHC.Compilers.HaskellToCore.Utils
+import GHC.Compiler.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Utils
 import GHC.Builtin.Types
 import GHC.Builtin.Names
 import GHC.Data.Type   ( Type )

@@ -8,7 +8,7 @@ Pattern-matching constructors
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.HaskellToCore.Match.Constructor
+module GHC.Compiler.HaskellToCore.Match.Constructor
    ( matchConFamily
    , matchPatSyn
    )
@@ -16,14 +16,14 @@ where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Match     ( match )
+import {-# SOURCE #-} GHC.Compiler.HaskellToCore.Match     ( match )
 
 import GHC.IR.Haskell.Syntax
-import GHC.Compilers.HaskellToCore.Binding
+import GHC.Compiler.HaskellToCore.Binding
 import GHC.Data.ConstructorLike
 import GHC.IR.Haskell.TypeSystem.Type
-import GHC.Compilers.HaskellToCore.Monad
-import GHC.Compilers.HaskellToCore.Utils
+import GHC.Compiler.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Utils
 import GHC.IR.Core.Syntax.Make   ( mkCoreLets )
 import GHC.Utils
 import GHC.Data.Id

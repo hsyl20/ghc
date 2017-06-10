@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.CondCode (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.CondCode (
         getCondCode,
         condIntCode,
         condFltCode
@@ -6,15 +6,15 @@ module GHC.Compilers.CmmToAsm.SPARC.CodeGen.CondCode (
 
 where
 
-import {-# SOURCE #-} GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Cond
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Format
+import {-# SOURCE #-} GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen32
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Cond
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Format
 
 import GHC.IR.Cmm.Syntax
 

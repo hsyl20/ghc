@@ -18,7 +18,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.CmmToC (
+module GHC.Compiler.CmmToC (
         writeCs,
         pprStringInCStyle
   ) where
@@ -131,7 +131,7 @@ pprTop (CmmData section (Statics lbl lits)) =
 -- --------------------------------------------------------------------------
 -- BasicBlocks are self-contained entities: they always end in a jump.
 --
--- Like GHC.Compilers.CmmToAsm, we could probably reorder blocks to turn as many
+-- Like GHC.Compiler.CmmToAsm, we could probably reorder blocks to turn as many
 -- jumps as possible into fall throughs.
 --
 

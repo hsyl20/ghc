@@ -86,7 +86,7 @@ import Data.Data hiding (Fixity, TyCon)
 import GHC.Data.Id
 import GHC.Interactive.Interpreter       ( addSptEntry )
 import GHCi.RemoteTypes ( ForeignHValue )
-import GHC.Compilers.CoreToByteCode      ( byteCodeGen, coreExprToBCOs )
+import GHC.Compiler.CoreToByteCode      ( byteCodeGen, coreExprToBCOs )
 import GHC.Interactive.Linker
 import GHC.IR.Core.Tidy         ( tidyExpr )
 import GHC.Data.Type    ( Type, Kind )
@@ -113,12 +113,12 @@ import GHC.Data.Name.Cache        ( initNameCache )
 import GHC.IR.Interface.Load        ( ifaceStats, initExternalPackageState )
 import GHC.Builtin.Utils
 import GHC.IR.Interface.Utils
-import GHC.Compilers.HaskellToCore.Main
+import GHC.Compiler.HaskellToCore
 import GHC.IR.Core.Transform.Pipeline
 import GHC.IR.Interface.Tidy
-import GHC.Compilers.CoreToStg.Prepare
-import GHC.Compilers.CoreToStg ( coreToStg )
-import qualified GHC.Compilers.StgToCmm as StgToCmm
+import GHC.Compiler.CoreToStg.Prepare
+import GHC.Compiler.CoreToStg ( coreToStg )
+import qualified GHC.Compiler.StgToCmm as StgToCmm
 import GHC.IR.Stg.Syntax
 import GHC.Data.CostCentre
 import GHC.Data.CostCentre.Initialise

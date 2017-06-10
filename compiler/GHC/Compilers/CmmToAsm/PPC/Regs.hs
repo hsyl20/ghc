@@ -6,7 +6,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module GHC.Compilers.CmmToAsm.PPC.Regs (
+module GHC.Compiler.CmmToAsm.PPC.Regs (
         -- squeeze functions
         virtualRegSqueeze,
         realRegSqueeze,
@@ -50,9 +50,9 @@ where
 #include "cbits/CmmToAsm.h"
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Format
 
 import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel           ( CLabel )

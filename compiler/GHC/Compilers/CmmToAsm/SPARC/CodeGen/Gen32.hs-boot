@@ -1,14 +1,14 @@
 
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32 (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen32 (
         getSomeReg,
         getRegister
 )
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 

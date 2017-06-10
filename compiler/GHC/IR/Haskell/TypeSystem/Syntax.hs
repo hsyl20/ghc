@@ -1666,7 +1666,7 @@ zonkTypeZapping tv
 ---------------------------------------
 {- Note [Zonking the LHS of a RULE]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-See also GHC.Compilers.HaskellToCore.Binding Note [Free tyvars on rule LHS]
+See also GHC.Compiler.HaskellToCore.Binding Note [Free tyvars on rule LHS]
 
 We need to gather the type variables mentioned on the LHS so we can
 quantify over them.  Example:
@@ -1689,7 +1689,7 @@ We do this in two stages.
   ZonkEnv.  (This is in fact the whole reason that the ZonkEnv has a
   UnboundTyVarZonker.)
 
-* In GHC.Compilers.HaskellToCore.Binding, we quantify over it.  See GHC.Compilers.HaskellToCore.Binding
+* In GHC.Compiler.HaskellToCore.Binding, we quantify over it.  See GHC.Compiler.HaskellToCore.Binding
   Note [Free tyvars on rule LHS]
 
 Quantifying here is awkward because (a) the data type is big and (b)

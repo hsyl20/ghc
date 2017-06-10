@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.SPARC.ShortcutJump (
+module GHC.Compiler.CmmToAsm.SPARC.ShortcutJump (
         JumpDest(..), getJumpDestBlockId,
         canShortcut,
         shortcutJump,
@@ -8,8 +8,8 @@ module GHC.Compilers.CmmToAsm.SPARC.ShortcutJump (
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Imm
 
 import GHC.Data.CLabel
 import GHC.IR.Cmm.BlockId

@@ -12,7 +12,7 @@
 -- (a) the sectioning, and (b) the type signatures,
 -- the structure should not be too overwhelming.
 
-module GHC.Compilers.CmmToAsm.PPC.CodeGen (
+module GHC.Compiler.CmmToAsm.PPC.CodeGen (
         cmmTopCodeGen,
         generateJumpTableForInstr,
         InstrBlock
@@ -26,17 +26,17 @@ where
 
 -- NCG stuff:
 import GHC.Utils.CodeGen.Platform
-import GHC.Compilers.CmmToAsm.PPC.Instr
-import GHC.Compilers.CmmToAsm.PPC.Cond
-import GHC.Compilers.CmmToAsm.PPC.Regs
+import GHC.Compiler.CmmToAsm.PPC.Instr
+import GHC.Compiler.CmmToAsm.PPC.Cond
+import GHC.Compiler.CmmToAsm.PPC.Regs
 import GHC.Utils.CodeGen.Primitive
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.PIC
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.PIC
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Target
 import GHC.Utils.Platform
 
 -- Our intermediate code:

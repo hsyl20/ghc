@@ -155,7 +155,7 @@ import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Annotation
 import GHC.Data.ClassInstance
 import GHC.Data.FamilyInstance
-import GHC.Compilers.HaskellToCore.Match.Expr
+import GHC.Compiler.HaskellToCore.Match.Expr
 import GHC.Utils.Monad.IOEnv
 import GHC.Data.RdrName
 import GHC.Data.Name

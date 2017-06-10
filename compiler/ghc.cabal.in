@@ -160,18 +160,18 @@ Library
         GHC.Data.Id.Info
         GHC.Utils.Identifier
         GHC.Data.Literal
-        GHC.Compilers.CmmToLlvm
+        GHC.Compiler.CmmToLlvm
         GHC.IR.Llvm.Syntax
         GHC.IR.Llvm.MetaData
         GHC.IR.Llvm.PrettyPrint
         GHC.IR.Llvm.Types
-        GHC.Compilers.CmmToLlvm.CodeGen
-        GHC.Compilers.CmmToLlvm.CodeGen.Base
-        GHC.Compilers.CmmToLlvm.CodeGen.Proc
-        GHC.Compilers.CmmToLlvm.CodeGen.Data
-        GHC.Compilers.CmmToLlvm.CodeGen.PrettyPrint
-        GHC.Compilers.CmmToLlvm.CodeGen.Regs
-        GHC.Compilers.CmmToLlvm.Fixup
+        GHC.Compiler.CmmToLlvm.CodeGen
+        GHC.Compiler.CmmToLlvm.CodeGen.Base
+        GHC.Compiler.CmmToLlvm.CodeGen.Proc
+        GHC.Compiler.CmmToLlvm.CodeGen.Data
+        GHC.Compiler.CmmToLlvm.CodeGen.PrettyPrint
+        GHC.Compiler.CmmToLlvm.CodeGen.Regs
+        GHC.Compiler.CmmToLlvm.Fixup
         GHC.Data.Id.Make
         GHC.Data.Module
         GHC.Data.Name
@@ -214,8 +214,8 @@ Library
         GHC.IR.Cmm.LayoutStack
         GHC.Data.EnumSet
         GHC.IR.Cmm.Graph
-        GHC.Compilers.CmmToAsm.PrettyPrint
-        GHC.Compilers.CmmToC
+        GHC.Compiler.CmmToAsm.PrettyPrint
+        GHC.Compiler.CmmToC
         GHC.IR.Cmm.PrettyPrint
         GHC.IR.Cmm.PrettyPrint.Declaration
         GHC.IR.Cmm.PrettyPrint.Expression
@@ -230,28 +230,28 @@ Library
         GHC.Utils.CodeGen.Platform.X86
         GHC.Utils.CodeGen.Platform.X86_64
         GHC.IR.Stg.Register
-        GHC.Compilers.StgToCmm
-        GHC.Compilers.StgToCmm.Binding
-        GHC.Compilers.StgToCmm.Closure
-        GHC.Compilers.StgToCmm.Constructor
-        GHC.Compilers.StgToCmm.Environment
-        GHC.Compilers.StgToCmm.Expression
-        GHC.Compilers.StgToCmm.ForeignCall
-        GHC.Compilers.StgToCmm.Heap
-        GHC.Compilers.StgToCmm.Coverage
-        GHC.Compilers.StgToCmm.ArgRep
-        GHC.Compilers.StgToCmm.Layout
-        GHC.Compilers.StgToCmm.Monad
-        GHC.Compilers.StgToCmm.PrimOp
-        GHC.Compilers.StgToCmm.Profiling
-        GHC.Compilers.StgToCmm.Profiling.Ticky
-        GHC.Compilers.StgToCmm.Utils
-        GHC.Compilers.StgToCmm.Monad.Extended
+        GHC.Compiler.StgToCmm
+        GHC.Compiler.StgToCmm.Binding
+        GHC.Compiler.StgToCmm.Closure
+        GHC.Compiler.StgToCmm.Constructor
+        GHC.Compiler.StgToCmm.Environment
+        GHC.Compiler.StgToCmm.Expression
+        GHC.Compiler.StgToCmm.ForeignCall
+        GHC.Compiler.StgToCmm.Heap
+        GHC.Compiler.StgToCmm.Coverage
+        GHC.Compiler.StgToCmm.ArgRep
+        GHC.Compiler.StgToCmm.Layout
+        GHC.Compiler.StgToCmm.Monad
+        GHC.Compiler.StgToCmm.PrimOp
+        GHC.Compiler.StgToCmm.Profiling
+        GHC.Compiler.StgToCmm.Profiling.Ticky
+        GHC.Compiler.StgToCmm.Utils
+        GHC.Compiler.StgToCmm.Monad.Extended
         GHC.RTS.Storage
         GHC.IR.Core.Arity
         GHC.IR.Core.FreeVars
         GHC.IR.Core.Analyse.Lint
-        GHC.Compilers.CoreToStg.Prepare
+        GHC.Compiler.CoreToStg.Prepare
         GHC.IR.Core.Substitution
         GHC.IR.Core.Transform.Simple
         GHC.IR.Core.Syntax
@@ -263,24 +263,24 @@ Library
         GHC.IR.Core.Analyse.Stats
         GHC.IR.Core.Syntax.Make
         GHC.IR.Core.PrettyPrint
-        GHC.Compilers.HaskellToCore.Match.Expr
-        GHC.Compilers.HaskellToCore.Match.TermEqOracle
-        GHC.Compilers.HaskellToCore.Match.Check
-        GHC.Compilers.HaskellToCore.Coverage
-        GHC.Compilers.HaskellToCore.Main
-        GHC.Compilers.HaskellToCore.Arrow
-        GHC.Compilers.HaskellToCore.Binding
-        GHC.Compilers.HaskellToCore.Foreign.Call
-        GHC.Compilers.HaskellToCore.Expression
-        GHC.Compilers.HaskellToCore.Foreign.Declaration
-        GHC.Compilers.HaskellToCore.GuardedRHS
-        GHC.Compilers.HaskellToCore.ListComp
-        GHC.Compilers.HaskellToCore.Monad
-        GHC.Compilers.HaskellToCore.Usage
-        GHC.Compilers.HaskellToCore.Utils
-        GHC.Compilers.HaskellToCore.Match
-        GHC.Compilers.HaskellToCore.Match.Constructor
-        GHC.Compilers.HaskellToCore.Match.Literal
+        GHC.Compiler.HaskellToCore.Match.Expr
+        GHC.Compiler.HaskellToCore.Match.TermEqOracle
+        GHC.Compiler.HaskellToCore.Match.Check
+        GHC.Compiler.HaskellToCore.Coverage
+        GHC.Compiler.HaskellToCore
+        GHC.Compiler.HaskellToCore.Arrow
+        GHC.Compiler.HaskellToCore.Binding
+        GHC.Compiler.HaskellToCore.Foreign.Call
+        GHC.Compiler.HaskellToCore.Expression
+        GHC.Compiler.HaskellToCore.Foreign.Declaration
+        GHC.Compiler.HaskellToCore.GuardedRHS
+        GHC.Compiler.HaskellToCore.ListComp
+        GHC.Compiler.HaskellToCore.Monad
+        GHC.Compiler.HaskellToCore.Usage
+        GHC.Compiler.HaskellToCore.Utils
+        GHC.Compiler.HaskellToCore.Match
+        GHC.Compiler.HaskellToCore.Match.Constructor
+        GHC.Compiler.HaskellToCore.Match.Literal
         GHC.IR.Haskell.Binding
         GHC.IR.Haskell.Declaration
         GHC.IR.Haskell.Documentation
@@ -299,7 +299,7 @@ Library
         GHC.IR.Interface.Environment
         GHC.IR.Interface.Syntax
         GHC.IR.Interface.Types
-        GHC.Compilers.CoreToInterface
+        GHC.Compiler.CoreToInterface
         GHC.IR.Interface.Load
         GHC.IR.Interface.Utils
         GHC.IR.Interface.TypeCheck
@@ -388,7 +388,7 @@ Library
         GHC.IR.Core.Transform.Rules
         GHC.IR.Core.Transform.Specialise.Constructor
         GHC.IR.Core.Transform.Specialise
-        GHC.Compilers.CoreToStg
+        GHC.Compiler.CoreToStg
         GHC.IR.Stg.Analyse.Lint
         GHC.IR.Stg.Syntax
         GHC.IR.Core.Analyse.CallArity
@@ -442,7 +442,7 @@ Library
         GHC.IR.Haskell.TypeSystem.Splice
         GHC.Data.Class
         GHC.Data.Coercion
-        GHC.Compilers.HaskellToCore.Splices
+        GHC.Compiler.HaskellToCore.Splices
         GHC.Builtin.Names.TemplateHaskell
         GHC.Data.FamilyInstance
         GHC.IR.Haskell.TypeSystem.FunctionalDependency
@@ -524,73 +524,73 @@ Library
         GHC.IR.Cmm.Transform.Dataflow
 
     Exposed-Modules:
-            GHC.Compilers.CmmToAsm
-            GHC.Compilers.CmmToAsm.Register.Target
-            GHC.Compilers.CmmToAsm.Monad
-            GHC.Compilers.CmmToAsm.Instruction
-            GHC.Compilers.CmmToAsm.Format
-            GHC.Compilers.CmmToAsm.Register
-            GHC.Compilers.CmmToAsm.Register.Class
-            GHC.Compilers.CmmToAsm.PIC
+            GHC.Compiler.CmmToAsm
+            GHC.Compiler.CmmToAsm.Register.Target
+            GHC.Compiler.CmmToAsm.Monad
+            GHC.Compiler.CmmToAsm.Instruction
+            GHC.Compiler.CmmToAsm.Format
+            GHC.Compiler.CmmToAsm.Register
+            GHC.Compiler.CmmToAsm.Register.Class
+            GHC.Compiler.CmmToAsm.PIC
             GHC.Utils.Platform
             GHC.Utils.CodeGen.Primitive
-            GHC.Compilers.CmmToAsm.X86.Regs
-            GHC.Compilers.CmmToAsm.X86.RegInfo
-            GHC.Compilers.CmmToAsm.X86.Instr
-            GHC.Compilers.CmmToAsm.X86.Cond
-            GHC.Compilers.CmmToAsm.X86.Ppr
-            GHC.Compilers.CmmToAsm.X86.CodeGen
-            GHC.Compilers.CmmToAsm.PPC.Regs
-            GHC.Compilers.CmmToAsm.PPC.RegInfo
-            GHC.Compilers.CmmToAsm.PPC.Instr
-            GHC.Compilers.CmmToAsm.PPC.Cond
-            GHC.Compilers.CmmToAsm.PPC.Ppr
-            GHC.Compilers.CmmToAsm.PPC.CodeGen
-            GHC.Compilers.CmmToAsm.SPARC.Base
-            GHC.Compilers.CmmToAsm.SPARC.Regs
-            GHC.Compilers.CmmToAsm.SPARC.Imm
-            GHC.Compilers.CmmToAsm.SPARC.AddrMode
-            GHC.Compilers.CmmToAsm.SPARC.Cond
-            GHC.Compilers.CmmToAsm.SPARC.Instr
-            GHC.Compilers.CmmToAsm.SPARC.Stack
-            GHC.Compilers.CmmToAsm.SPARC.ShortcutJump
-            GHC.Compilers.CmmToAsm.SPARC.Ppr
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.CondCode
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Sanity
-            GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand
-            GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchBase
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.ArchX86
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Coalesce
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Spill
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillClean
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillCost
-            GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.JoinToTargets
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.State
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Stats
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.StackMap
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
-            GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
-            GHC.Compilers.CmmToAsm.Dwarf
-            GHC.Compilers.CmmToAsm.Dwarf.Types
-            GHC.Compilers.CmmToAsm.Dwarf.Constants
+            GHC.Compiler.CmmToAsm.X86.Regs
+            GHC.Compiler.CmmToAsm.X86.RegInfo
+            GHC.Compiler.CmmToAsm.X86.Instr
+            GHC.Compiler.CmmToAsm.X86.Cond
+            GHC.Compiler.CmmToAsm.X86.Ppr
+            GHC.Compiler.CmmToAsm.X86.CodeGen
+            GHC.Compiler.CmmToAsm.PPC.Regs
+            GHC.Compiler.CmmToAsm.PPC.RegInfo
+            GHC.Compiler.CmmToAsm.PPC.Instr
+            GHC.Compiler.CmmToAsm.PPC.Cond
+            GHC.Compiler.CmmToAsm.PPC.Ppr
+            GHC.Compiler.CmmToAsm.PPC.CodeGen
+            GHC.Compiler.CmmToAsm.SPARC.Base
+            GHC.Compiler.CmmToAsm.SPARC.Regs
+            GHC.Compiler.CmmToAsm.SPARC.Imm
+            GHC.Compiler.CmmToAsm.SPARC.AddrMode
+            GHC.Compiler.CmmToAsm.SPARC.Cond
+            GHC.Compiler.CmmToAsm.SPARC.Instr
+            GHC.Compiler.CmmToAsm.SPARC.Stack
+            GHC.Compiler.CmmToAsm.SPARC.ShortcutJump
+            GHC.Compiler.CmmToAsm.SPARC.Ppr
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.Amode
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.CondCode
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen32
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen64
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.Sanity
+            GHC.Compiler.CmmToAsm.SPARC.CodeGen.Expand
+            GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Main
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Stats
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.ArchBase
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.ArchX86
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Coalesce
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Spill
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.SpillClean
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.SpillCost
+            GHC.Compiler.CmmToAsm.Register.Allocator.Graph.TrivColorable
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Main
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.JoinToTargets
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.State
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Stats
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.FreeRegs
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.StackMap
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Base
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
+            GHC.Compiler.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
+            GHC.Compiler.CmmToAsm.Dwarf
+            GHC.Compiler.CmmToAsm.Dwarf.Types
+            GHC.Compiler.CmmToAsm.Dwarf.Constants
             GHC.IR.Haskell.Template.Convert
             GHC.IR.ByteCode.Types
             GHC.IR.ByteCode.Assembler
-            GHC.Compilers.CoreToByteCode
+            GHC.Compiler.CoreToByteCode
             GHC.IR.ByteCode.Instruction
             GHC.IR.ByteCode.InfoTable
             GHC.IR.ByteCode.Linker

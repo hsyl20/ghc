@@ -7,7 +7,7 @@
 -- (c) The University of Glasgow 2004-2006
 --
 -----------------------------------------------------------------------------
-module GHC.Compilers.StgToCmm.Environment (
+module GHC.Compiler.StgToCmm.Environment (
         CgIdInfo,
 
         litIdInfo, lneIdInfo, rhsIdInfo, mkRhsInit,
@@ -25,9 +25,9 @@ module GHC.Compilers.StgToCmm.Environment (
 #include "HsVersions.h"
 
 import GHC.Data.Type.Constructor
-import GHC.Compilers.StgToCmm.Monad
-import GHC.Compilers.StgToCmm.Utils
-import GHC.Compilers.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Closure
 
 import GHC.Data.CLabel
 
@@ -144,7 +144,7 @@ getCgIdInfo id
 cgLookupPanic :: Id -> FCode a
 cgLookupPanic id
   = do  local_binds <- getBinds
-        pprPanic "GHC.Compilers.StgToCmm.Environment: variable not found"
+        pprPanic "GHC.Compiler.StgToCmm.Environment: variable not found"
                 (vcat [ppr id,
                 text "local binds for:",
                 pprUFM local_binds $ \infos ->

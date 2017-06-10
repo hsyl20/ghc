@@ -7,7 +7,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      :  GHC.Compilers.HaskellToCore
+-- Module      :  GHC.Compiler.HaskellToCore
 -- Copyright   :  (c) The University of Glasgow, 2007
 -- License     :  see libraries/base/LICENSE
 -- 

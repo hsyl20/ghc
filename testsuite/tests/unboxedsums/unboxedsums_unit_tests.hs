@@ -2,7 +2,7 @@ module Main where
 
 import GHC.Data.BasicTypes
 import GHC
-import GhcMonad
+import GHC.Monad
 import GHC.Utils.Outputable
 import GHC.Data.RepType
 import GHC.Builtin.Primitive.Types

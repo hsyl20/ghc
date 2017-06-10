@@ -1,11 +1,11 @@
 
 -- | Free regs map for SPARC
-module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
+module GHC.Compiler.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.Utils.Outputable

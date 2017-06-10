@@ -10,7 +10,7 @@
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-module GHC.Compilers.CmmToAsm.SPARC.Instr (
+module GHC.Compiler.CmmToAsm.SPARC.Instr (
         RI(..),
         riZero,
 
@@ -25,17 +25,17 @@ module GHC.Compilers.CmmToAsm.SPARC.Instr (
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Stack
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Cond
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.Register.Target
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.SPARC.Stack
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Cond
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Format
 
 import GHC.Data.CLabel
 import GHC.Utils.CodeGen.Platform

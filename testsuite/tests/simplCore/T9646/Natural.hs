@@ -5,7 +5,7 @@ module Natural where
 import Prelude hiding (Integer, abs, sum)
 
 import StrictPrim
-import GHC.Data.Type
+import Type
 
 
 {-# NOINLINE timesNatural #-}

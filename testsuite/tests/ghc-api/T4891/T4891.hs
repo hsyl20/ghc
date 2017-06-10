@@ -21,7 +21,7 @@ import Control.Monad
 import Data.Maybe
 import GHC.Data.Bag
 import GHC.Utils.Outputable
-import GhcMonad
+import GHC.Monad
 import X
 
 import System.Environment

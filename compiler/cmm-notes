@@ -43,12 +43,12 @@ Things to do:
 
    EZY: We should use Label, since that's the terminology Hoopl uses.
 
- - GHC.Compilers.CmmToAsm has a generic Cmm optimiser; move this into new pipeline
+ - GHC.Compiler.CmmToAsm has a generic Cmm optimiser; move this into new pipeline
    EZY (2011-04-16): The mini-inliner has been generalized and ported,
    but the constant folding and other optimizations need to still be
    ported.
 
- - GHC.Compilers.CmmToAsm has post-native-cg branch eliminator (shortCutBranches);
+ - GHC.Compiler.CmmToAsm has post-native-cg branch eliminator (shortCutBranches);
    we ultimately want to share this with the Cmm branch eliminator.
 
  - At the moment, references to global registers like Hp are "lowered" 
@@ -69,11 +69,11 @@ Things to do:
    moving good stuff into 
    http://ghc.haskell.org/trac/ghc/wiki/Commentary/Compiler/NewCodeGenPipeline
 
- - Currently GHC.Compilers.CmmToAsm top level calls GHC.Compilers.CmmToAsm.cmmToCmm, which is a small
-   C-- optimiser.  It has quite a lot of boilerplate folding code in GHC.Compilers.CmmToAsm
+ - Currently GHC.Compiler.CmmToAsm top level calls GHC.Compiler.CmmToAsm.cmmToCmm, which is a small
+   C-- optimiser.  It has quite a lot of boilerplate folding code in GHC.Compiler.CmmToAsm
    (cmmBlockConFold, cmmStmtConFold, cmmExprConFold), before calling out to
    CmmOpt.  ToDo: see what optimisations are being done; and do them before
-   GHC.Compilers.CmmToAsm.
+   GHC.Compiler.CmmToAsm.
 
  - If we stick CAF and stack liveness info on a LastCall node (not LastRet/Jump)
    then all CAF and stack liveness stuff be completed before we split
@@ -104,20 +104,20 @@ CgExtCode.hs   used in CmmParse.y
 ------- New codegen ---------
 
 StgCmm.hs
-GHC.Compilers.StgToCmm.Binding.hs
-GHC.Compilers.StgToCmm.Closure.hs     (corresponds to old ClosureInfo)
-GHC.Compilers.StgToCmm.Constructor.hs
-GHC.Compilers.StgToCmm.Environment.hs
-GHC.Compilers.StgToCmm.Expression.hs
-GHC.Compilers.StgToCmm.ForeignCall.hs
-GHC.Compilers.StgToCmm.Heap.hs
-GHC.Compilers.StgToCmm.Coverage.hs
-GHC.Compilers.StgToCmm.Layout.hs
-GHC.Compilers.StgToCmm.Monad.hs
-GHC.Compilers.StgToCmm.PrimOp.hs
-GHC.Compilers.StgToCmm.Profiling.hs
-GHC.Compilers.StgToCmm.Profiling.Ticky.hs
-GHC.Compilers.StgToCmm.Utils.hs
+GHC.Compiler.StgToCmm.Binding.hs
+GHC.Compiler.StgToCmm.Closure.hs     (corresponds to old ClosureInfo)
+GHC.Compiler.StgToCmm.Constructor.hs
+GHC.Compiler.StgToCmm.Environment.hs
+GHC.Compiler.StgToCmm.Expression.hs
+GHC.Compiler.StgToCmm.ForeignCall.hs
+GHC.Compiler.StgToCmm.Heap.hs
+GHC.Compiler.StgToCmm.Coverage.hs
+GHC.Compiler.StgToCmm.Layout.hs
+GHC.Compiler.StgToCmm.Monad.hs
+GHC.Compiler.StgToCmm.PrimOp.hs
+GHC.Compiler.StgToCmm.Profiling.hs
+GHC.Compiler.StgToCmm.Profiling.Ticky.hs
+GHC.Compiler.StgToCmm.Utils.hs
 
 ------- Old codegen (moribund) ---------
 CodeGen.lhs

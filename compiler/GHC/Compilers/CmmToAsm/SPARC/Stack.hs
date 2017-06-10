@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.SPARC.Stack (
+module GHC.Compiler.CmmToAsm.SPARC.Stack (
         spRel,
         fpRel,
         spillSlotToOffset,
@@ -7,10 +7,10 @@ module GHC.Compilers.CmmToAsm.SPARC.Stack (
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.SPARC.Imm
 
 import GHC.Config.Flags
 import GHC.Utils.Outputable

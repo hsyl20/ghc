@@ -5,7 +5,7 @@
 --      In the interests of cross-compilation, we want to free ourselves
 --      from the autoconf generated modules like main/Constants
 
-module GHC.Compilers.CmmToAsm.SPARC.Base (
+module GHC.Compiler.CmmToAsm.SPARC.Base (
         wordLength,
         wordLengthInBits,
         spillAreaLength,

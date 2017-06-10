@@ -18,7 +18,7 @@
 -- (a) the sectioning, and (b) the type signatures, the
 -- structure should not be too overwhelming.
 
-module GHC.Compilers.CmmToAsm.X86.CodeGen (
+module GHC.Compiler.CmmToAsm.X86.CodeGen (
         cmmTopCodeGen,
         generateJumpTableForInstr,
         extractUnwindPoints,
@@ -32,19 +32,19 @@ where
 #include "../includes/MachDeps.h"
 
 -- NCG stuff:
-import GHC.Compilers.CmmToAsm.X86.Instr
-import GHC.Compilers.CmmToAsm.X86.Cond
-import GHC.Compilers.CmmToAsm.X86.Regs
-import GHC.Compilers.CmmToAsm.X86.RegInfo
+import GHC.Compiler.CmmToAsm.X86.Instr
+import GHC.Compiler.CmmToAsm.X86.Cond
+import GHC.Compiler.CmmToAsm.X86.Regs
+import GHC.Compiler.CmmToAsm.X86.RegInfo
 import GHC.Utils.CodeGen.Platform
 import GHC.Utils.CodeGen.Primitive
 import GHC.IR.Cmm.DebugBlock           ( DebugBlock(..), UnwindPoint(..), UnwindTable
                         , UnwindExpr(UwReg), toUnwindExpr )
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.PIC
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.PIC
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
 import GHC.Utils.Platform
 
 -- Our intermediate code:

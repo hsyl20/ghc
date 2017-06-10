@@ -55,7 +55,7 @@ import GHC.Data.StringBuffer     ( hGetStringBuffer )
 import GHC.Data.BasicTypes       ( SuccessFlag(..) )
 import GHC.Data.Maybe           ( expectJust )
 import GHC.Data.SrcLoc
-import GHC.Compilers.CmmToLlvm.CodeGen      ( llvmFixupAsm )
+import GHC.Compiler.CmmToLlvm.CodeGen      ( llvmFixupAsm )
 import GHC.Utils.Monad
 import GHC.Utils.Platform
 import GHC.IR.Haskell.TypeSystem.Types
@@ -1695,7 +1695,7 @@ mkNoteObjsToLinkIntoBinary dflags dep_packages = do
       makeElfNote dflags ghcLinkInfoSectionName ghcLinkInfoNoteName 0 info,
 
       -- ALL generated assembly must have this section to disable executable
-      -- stacks.  See also GHC.Compilers.CmmToAsm for another instance where we
+      -- stacks.  See also GHC.Compiler.CmmToAsm for another instance where we
       -- need to do this.
       if platformHasGnuNonexecStack (targetPlatform dflags)
         then text ".section .note.GNU-stack,\"\",@progbits\n"

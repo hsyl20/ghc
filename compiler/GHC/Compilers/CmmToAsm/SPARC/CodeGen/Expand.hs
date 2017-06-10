@@ -1,18 +1,18 @@
 -- | Expand out synthetic instructions into single machine instrs.
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.Expand (
         expandTop
 )
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Ppr        ()
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Ppr        ()
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Format
 import GHC.IR.Cmm.Syntax
 
 

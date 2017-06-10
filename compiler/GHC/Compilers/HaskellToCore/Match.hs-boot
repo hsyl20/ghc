@@ -1,7 +1,7 @@
-module GHC.Compilers.HaskellToCore.Match where
+module GHC.Compiler.HaskellToCore.Match where
 import GHC.Data.Var      ( Id )
 import GHC.IR.Haskell.TypeSystem.Type   ( Type )
-import GHC.Compilers.HaskellToCore.Monad  ( DsM, EquationInfo, MatchResult )
+import GHC.Compiler.HaskellToCore.Monad  ( DsM, EquationInfo, MatchResult )
 import GHC.IR.Core.Syntax  ( CoreExpr )
 import GHC.IR.Haskell.Syntax ( LPat, HsMatchContext, MatchGroup, LHsExpr )
 import GHC.Data.Name     ( Name )

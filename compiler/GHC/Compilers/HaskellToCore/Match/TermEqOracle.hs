@@ -6,9 +6,9 @@ The term equality oracle. The main export of the module is function `tmOracle'.
 
 {-# LANGUAGE CPP, MultiWayIf #-}
 
-module GHC.Compilers.HaskellToCore.Match.TermEqOracle (
+module GHC.Compiler.HaskellToCore.Match.TermEqOracle (
 
-        -- re-exported from GHC.Compilers.HaskellToCore.Match.Expr
+        -- re-exported from GHC.Compiler.HaskellToCore.Match.Expr
         PmExpr(..), PmLit(..), SimpleEq, ComplexEq, PmVarEnv, falsePmExpr,
         eqPmLit, filterComplex, isNotPmExprOther, runPmPprM, lhsExprToPmExpr,
         hsExprToPmExpr, pprPmExprWithParens,
@@ -22,7 +22,7 @@ module GHC.Compilers.HaskellToCore.Match.TermEqOracle (
 
 #include "HsVersions.h"
 
-import GHC.Compilers.HaskellToCore.Match.Expr
+import GHC.Compiler.HaskellToCore.Match.Expr
 
 import GHC.Data.Id
 import GHC.Data.Name

@@ -66,7 +66,7 @@ import GHC.Utils
 import GHC.Config.Flags
 import GHC.Utils.Exception as Exception
 
-import GHC.Compilers.CmmToLlvm.CodeGen.Base (llvmVersionStr, supportedLlvmVersion)
+import GHC.Compiler.CmmToLlvm.CodeGen.Base (llvmVersionStr, supportedLlvmVersion)
 
 import Data.IORef
 import Control.Monad

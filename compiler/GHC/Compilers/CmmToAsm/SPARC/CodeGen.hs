@@ -9,7 +9,7 @@
 -----------------------------------------------------------------------------
 
 {-# LANGUAGE GADTs #-}
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen (
         cmmTopCodeGen,
         generateJumpTableForInstr,
         InstrBlock
@@ -22,22 +22,22 @@ where
 #include "../includes/MachDeps.h"
 
 -- NCG stuff:
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Sanity
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.CondCode
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
-import GHC.Compilers.CmmToAsm.SPARC.Ppr        ()
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Stack
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Sanity
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Amode
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.CondCode
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen64
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen32
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base
+import GHC.Compiler.CmmToAsm.SPARC.Ppr        ()
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Stack
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Monad
 
 -- Our intermediate code:
 import GHC.IR.Cmm.BlockId
@@ -45,8 +45,8 @@ import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
 import GHC.IR.Cmm.Switch
 import GHC.IR.Cmm.Transform.Dataflow
-import GHC.Compilers.CmmToAsm.PIC
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.PIC
+import GHC.Compiler.CmmToAsm.Register
 import GHC.Data.CLabel
 import GHC.Utils.CodeGen.Primitive
 

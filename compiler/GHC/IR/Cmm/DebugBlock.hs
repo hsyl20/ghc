@@ -389,7 +389,7 @@ The flow of unwinding information through the compiler is a bit convoluted:
  * These DebugBlcosk are then converted to, e.g., DWARF unwinding tables
    (by the Dwarf module) and emitted in the final object.
 
-See also: Note [Unwinding information in the NCG] in GHC.Compilers.CmmToAsm.
+See also: Note [Unwinding information in the NCG] in GHC.Compiler.CmmToAsm.
 -}
 
 -- | A label associated with an 'UnwindTable'

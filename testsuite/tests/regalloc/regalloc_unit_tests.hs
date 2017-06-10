@@ -20,12 +20,12 @@ module Main where
 -- Also note: "on x86" means "as if we were compiling for x86"--this test
 -- doesn't actually have to run on any particular architecture.
 
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats as Color
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base as Linear
-import qualified GHC.Compilers.CmmToAsm.X86.Instr
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Stats as Color
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Base as Linear
+import qualified GHC.Compiler.CmmToAsm.X86.Instr
 import HscMain
 import GHC.IR.Stg.Register
-import GHC.Compilers.CmmToAsm
+import GHC.Compiler.CmmToAsm
 import GHC.IR.Cmm.BuildInfoTables
 import GHC.IR.Cmm.Pipeline
 import GHC.IR.Cmm.Parser
@@ -34,7 +34,7 @@ import GHC.IR.Cmm.Syntax
 import GHC.Data.Module
 import Debug
 import GHC
-import GhcMonad
+import GHC.Monad
 import GHC.Data.Unique.FiniteMap
 import GHC.Data.Unique.Supply
 import GHC.Config.Flags
@@ -131,7 +131,7 @@ compileCmmForRegAllocStats dflags' cmmFile ncgImplF us = do
     where
           --the register allocator's intermediate data
           --structures are usually discarded
-          --(in GHC.Compilers.CmmToAsm.cmmNativeGen) for performance
+          --(in GHC.Compiler.CmmToAsm.cmmNativeGen) for performance
           --reasons.  To prevent this we need to tell
           --cmmNativeGen we want them printed out even
           --though we ignore stderr in the test configuration.

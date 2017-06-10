@@ -143,7 +143,7 @@ import {-# SOURCE #-} GHC.Data.Type( isPredTy, isCoercionTy, mkAppTy, mkCastTy
 
 import {-# SOURCE #-} GHC.Data.Coercion
 import {-# SOURCE #-} GHC.Data.ConstructorLike ( ConLike(..), conLikeName )
-import {-# SOURCE #-} GHC.Compilers.CoreToInterface( toIfaceTypeX, toIfaceTyLit, toIfaceForAllBndr
+import {-# SOURCE #-} GHC.Compiler.CoreToInterface( toIfaceTypeX, toIfaceTyLit, toIfaceForAllBndr
                              , toIfaceTyCon, toIfaceTcArgs, toIfaceCoercion )
 
 -- friends:

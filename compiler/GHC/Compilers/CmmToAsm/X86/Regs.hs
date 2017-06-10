@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.CmmToAsm.X86.Regs (
+module GHC.Compiler.CmmToAsm.X86.Regs (
         -- squeese functions for the graph allocator
         virtualRegSqueeze,
         realRegSqueeze,
@@ -49,8 +49,8 @@ where
 #include "HsVersions.h"
 
 import GHC.Utils.CodeGen.Platform
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
 
 import GHC.IR.Cmm.Syntax
 import GHC.Data.CLabel           ( CLabel )

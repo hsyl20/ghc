@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.Dwarf.Types
+module GHC.Compiler.CmmToAsm.Dwarf.Types
   ( -- * Dwarf information
     DwarfInfo(..)
   , pprDwarfInfo
@@ -30,10 +30,10 @@ import GHC.Data.FastString
 import GHC.Utils.Outputable
 import GHC.Utils.Platform
 import GHC.Data.Unique
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register
 import GHC.Data.SrcLoc
 
-import GHC.Compilers.CmmToAsm.Dwarf.Constants
+import GHC.Compiler.CmmToAsm.Dwarf.Constants
 
 import qualified Control.Monad.Trans.State.Strict as S
 import Control.Monad (zipWithM, join)

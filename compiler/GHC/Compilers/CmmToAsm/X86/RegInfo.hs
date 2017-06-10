@@ -1,5 +1,5 @@
 {-# LANGUAGE CPP #-}
-module GHC.Compilers.CmmToAsm.X86.RegInfo (
+module GHC.Compiler.CmmToAsm.X86.RegInfo (
         mkVirtualReg,
         regDotColor
 )
@@ -9,15 +9,15 @@ where
 #include "cbits/CmmToAsm.h"
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.Utils.Outputable
 import GHC.Utils.Platform
 import GHC.Data.Unique
 
 import GHC.Data.Unique.FiniteMap
-import GHC.Compilers.CmmToAsm.X86.Regs
+import GHC.Compiler.CmmToAsm.X86.Regs
 
 
 mkVirtualReg :: Unique -> Format -> VirtualReg

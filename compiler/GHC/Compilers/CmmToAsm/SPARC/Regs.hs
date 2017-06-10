@@ -4,7 +4,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module GHC.Compilers.CmmToAsm.SPARC.Regs (
+module GHC.Compiler.CmmToAsm.SPARC.Regs (
         -- registers
         showReg,
         virtualRegSqueeze,
@@ -33,9 +33,9 @@ where
 
 
 import GHC.Utils.CodeGen.Platform.SPARC
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Format
 
 import GHC.Data.Unique
 import GHC.Utils.Outputable

@@ -8,7 +8,7 @@ Pattern-matching literal patterns
 
 {-# LANGUAGE CPP, ScopedTypeVariables #-}
 
-module GHC.Compilers.HaskellToCore.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
+module GHC.Compiler.HaskellToCore.Match.Literal ( dsLit, dsOverLit, dsOverLit', hsLitKey
                 , tidyLitPat, tidyNPat
                 , matchLiterals, matchNPlusKPats, matchNPats
                 , warnAboutIdentities, warnAboutOverflowedLiterals
@@ -17,11 +17,11 @@ module GHC.Compilers.HaskellToCore.Match.Literal ( dsLit, dsOverLit, dsOverLit',
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Match  ( match )
-import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression ( dsExpr, dsSyntaxExpr )
+import {-# SOURCE #-} GHC.Compiler.HaskellToCore.Match  ( match )
+import {-# SOURCE #-} GHC.Compiler.HaskellToCore.Expression ( dsExpr, dsSyntaxExpr )
 
-import GHC.Compilers.HaskellToCore.Monad
-import GHC.Compilers.HaskellToCore.Utils
+import GHC.Compiler.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Utils
 
 import GHC.IR.Haskell.Syntax
 
@@ -55,7 +55,7 @@ import Data.Proxy
 ************************************************************************
 *                                                                      *
                 Desugaring literals
-        [used to be in GHC.Compilers.HaskellToCore.Expression, but GHC.Compilers.HaskellToCore.Splices needs it,
+        [used to be in GHC.Compiler.HaskellToCore.Expression, but GHC.Compiler.HaskellToCore.Splices needs it,
          and it's nice to avoid a loop]
 *                                                                      *
 ************************************************************************

@@ -1,11 +1,11 @@
 
 -- | Free regs map for x86_64
-module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
+module GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
 where
 
-import GHC.Compilers.CmmToAsm.X86.Regs
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.X86.Regs
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
 import GHC.Utils.Panic
 import GHC.Utils.Platform
 
@@ -24,7 +24,7 @@ releaseReg (RealRegSingle n) (FreeRegs f)
         = FreeRegs (f .|. (1 `shiftL` n))
 
 releaseReg _ _
-        = panic "GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs.releaseReg: no reg"
+        = panic "GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs.releaseReg: no reg"
 
 initFreeRegs :: Platform -> FreeRegs
 initFreeRegs platform
@@ -48,6 +48,6 @@ allocateReg (RealRegSingle r) (FreeRegs f)
         = FreeRegs (f .&. complement (1 `shiftL` r))
 
 allocateReg _ _
-        = panic "GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs.allocateReg: no reg"
+        = panic "GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs.allocateReg: no reg"
 
 

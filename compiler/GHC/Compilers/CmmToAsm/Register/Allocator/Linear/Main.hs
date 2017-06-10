@@ -93,29 +93,29 @@ The algorithm is roughly:
 
 -}
 
-module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Main (
         regAlloc,
-        module  GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base,
-        module  GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Stats
+        module  GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Base,
+        module  GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Stats
   ) where
 
 #include "HsVersions.h"
 
 
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.State
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.StackMap
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Stats
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.JoinToTargets
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
-import GHC.Compilers.CmmToAsm.Register.Target
-import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.State
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Base
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.StackMap
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.FreeRegs
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Stats
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.JoinToTargets
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
+import GHC.Compiler.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
@@ -291,7 +291,7 @@ process entry_ids block_live [] next_round accum madeProgress
         | not madeProgress
 
           {- BUGS: There are so many unreachable blocks in the code the warnings are overwhelming.
-             pprTrace "GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main.process: no progress made, bailing out."
+             pprTrace "GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Main.process: no progress made, bailing out."
                 (  text "Unreachable blocks:"
                 $$ vcat (map ppr next_round)) -}
         = return $ reverse accum

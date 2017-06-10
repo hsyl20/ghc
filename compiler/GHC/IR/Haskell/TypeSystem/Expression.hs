@@ -42,7 +42,7 @@ import GHC.IR.Haskell.TypeSystem.PatternSynonym( tcPatSynBuilderOcc, nonBidirect
 import GHC.IR.Haskell.TypeSystem.Pattern
 import GHC.IR.Haskell.TypeSystem.MutableType
 import GHC.IR.Haskell.TypeSystem.Type as TcType
-import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Monad
 import GHC.Data.Id
 import GHC.Data.Id.Info
 import GHC.Data.ConstructorLike

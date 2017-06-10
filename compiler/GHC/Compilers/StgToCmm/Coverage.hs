@@ -6,16 +6,16 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm.Coverage ( initHpc, mkTickBox ) where
+module GHC.Compiler.StgToCmm.Coverage ( initHpc, mkTickBox ) where
 
-import GHC.Compilers.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.Monad
 
 import GHC.IR.Cmm.Graph
 import GHC.IR.Cmm.Expr
 import GHC.Data.CLabel
 import GHC.Data.Module
 import GHC.IR.Cmm.Utils
-import GHC.Compilers.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Utils
 import GHC.Types
 import GHC.Config.Flags
 

@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Graph.TrivColorable (
         trivColorable,
 )
 
@@ -8,8 +8,8 @@ where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.Data.Graph.Base
 

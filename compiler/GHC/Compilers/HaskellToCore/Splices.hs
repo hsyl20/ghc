@@ -15,21 +15,21 @@
 -- a Royal Pain (triggers other recompilation).
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.HaskellToCore.Splices ( dsBracket ) where
+module GHC.Compiler.HaskellToCore.Splices ( dsBracket ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   GHC.Compilers.HaskellToCore.Expression ( dsExpr )
+import {-# SOURCE #-}   GHC.Compiler.HaskellToCore.Expression ( dsExpr )
 
-import GHC.Compilers.HaskellToCore.Match.Literal
-import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Match.Literal
+import GHC.Compiler.HaskellToCore.Monad
 
 import qualified Language.Haskell.TH as TH
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.Class
 import GHC.Builtin.Names
--- To avoid clashes with GHC.Compilers.HaskellToCore.Splices.varName we must
+-- To avoid clashes with GHC.Compiler.HaskellToCore.Splices.varName we must
 -- make a local alias for OccName.varName. We do this by removing varName from
 -- the import of GHC.Data.Name below and by using a qualified import of OccName.
 import qualified GHC.Data.OccName as OccName
@@ -1766,7 +1766,7 @@ globalVar name
               | OccName.isVarOcc  name_occ = mkNameG_vName
               | OccName.isTcOcc   name_occ = mkNameG_tcName
               | otherwise                  =
-                  pprPanic "GHC.Compilers.HaskellToCore.Splices.globalVar" (ppr name)
+                  pprPanic "GHC.Compiler.HaskellToCore.Splices.globalVar" (ppr name)
 
 lookupType :: Name      -- Name of type constructor (e.g. TH.ExpQ)
            -> DsM Type  -- The type

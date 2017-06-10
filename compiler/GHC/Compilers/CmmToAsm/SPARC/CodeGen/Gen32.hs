@@ -1,25 +1,25 @@
 -- | Evaluation of 32 bit values.
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32 (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen32 (
         getSomeReg,
         getRegister
 )
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.CondCode
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
-import GHC.Compilers.CmmToAsm.SPARC.Stack
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Cond
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.CondCode
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Amode
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen64
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base
+import GHC.Compiler.CmmToAsm.SPARC.Stack
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Cond
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 

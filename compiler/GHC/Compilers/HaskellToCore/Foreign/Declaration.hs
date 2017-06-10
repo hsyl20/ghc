@@ -3,20 +3,20 @@
 (c) The AQUA Project, Glasgow University, 1998
 
 
-Desugaring foreign declarations (see also GHC.Compilers.HaskellToCore.Foreign.Call).
+Desugaring foreign declarations (see also GHC.Compiler.HaskellToCore.Foreign.Call).
 -}
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.HaskellToCore.Foreign.Declaration ( dsForeigns ) where
+module GHC.Compiler.HaskellToCore.Foreign.Declaration ( dsForeigns ) where
 
 #include "HsVersions.h"
 import GHC.IR.Haskell.TypeSystem        -- temp
 
 import GHC.IR.Core.Syntax
 
-import GHC.Compilers.HaskellToCore.Foreign.Call
-import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Foreign.Call
+import GHC.Compiler.HaskellToCore.Monad
 
 import GHC.IR.Haskell.Syntax
 import GHC.Data.DataConstructor
@@ -66,7 +66,7 @@ is the same as
   f :: prim_args -> IO prim_res
   f a1 ... an = _ccall_ nm cc a1 ... an
 \end{verbatim}
-so we reuse the desugaring code in @GHC.Compilers.HaskellToCore.Foreign.Call@ to deal with these.
+so we reuse the desugaring code in @GHC.Compiler.HaskellToCore.Foreign.Call@ to deal with these.
 -}
 
 type Binding = (Id, CoreExpr)   -- No rec/nonrec structure;
@@ -727,7 +727,7 @@ typeTyCon ty
   | Just (tc, _) <- tcSplitTyConApp_maybe (unwrapType ty)
   = tc
   | otherwise
-  = pprPanic "GHC.Compilers.HaskellToCore.Foreign.Declaration.typeTyCon" (ppr ty)
+  = pprPanic "GHC.Compiler.HaskellToCore.Foreign.Declaration.typeTyCon" (ppr ty)
 
 insertRetAddr :: DynFlags -> CCallConv
               -> [(SDoc, SDoc, Type, CmmType)]
@@ -781,7 +781,7 @@ getPrimTyOf ty
         ASSERT(dataConSourceArity data_con == 1)
         ASSERT2(isUnliftedType prim_ty, ppr prim_ty)
         prim_ty
-     _other -> pprPanic "GHC.Compilers.HaskellToCore.Foreign.Declaration.getPrimTyOf" (ppr ty)
+     _other -> pprPanic "GHC.Compiler.HaskellToCore.Foreign.Declaration.getPrimTyOf" (ppr ty)
   where
         rep_ty = unwrapType ty
 

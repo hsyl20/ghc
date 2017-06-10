@@ -8,7 +8,7 @@
 
 {-# LANGUAGE BangPatterns, CPP, GADTs, ScopedTypeVariables, UnboxedTuples #-}
 
-module GHC.Compilers.CmmToAsm (
+module GHC.Compiler.CmmToAsm (
                     -- * Module entry point
                     nativeCodeGen
 
@@ -25,40 +25,40 @@ module GHC.Compilers.CmmToAsm (
 #include "cbits/CmmToAsm.h"
 
 
-import qualified GHC.Compilers.CmmToAsm.X86.CodeGen as X86
-import qualified GHC.Compilers.CmmToAsm.X86.Regs    as X86
-import qualified GHC.Compilers.CmmToAsm.X86.Instr   as X86
-import qualified GHC.Compilers.CmmToAsm.X86.Ppr     as X86
+import qualified GHC.Compiler.CmmToAsm.X86.CodeGen as X86
+import qualified GHC.Compiler.CmmToAsm.X86.Regs    as X86
+import qualified GHC.Compiler.CmmToAsm.X86.Instr   as X86
+import qualified GHC.Compiler.CmmToAsm.X86.Ppr     as X86
 
-import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen as SPARC
-import qualified GHC.Compilers.CmmToAsm.SPARC.Regs    as SPARC
-import qualified GHC.Compilers.CmmToAsm.SPARC.Instr   as SPARC
-import qualified GHC.Compilers.CmmToAsm.SPARC.Ppr     as SPARC
-import qualified GHC.Compilers.CmmToAsm.SPARC.ShortcutJump as SPARC
-import qualified GHC.Compilers.CmmToAsm.SPARC.CodeGen.Expand as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.CodeGen as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.Regs    as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.Instr   as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.Ppr     as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.ShortcutJump as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.CodeGen.Expand as SPARC
 
-import qualified GHC.Compilers.CmmToAsm.PPC.CodeGen as PPC
-import qualified GHC.Compilers.CmmToAsm.PPC.Regs    as PPC
-import qualified GHC.Compilers.CmmToAsm.PPC.RegInfo as PPC
-import qualified GHC.Compilers.CmmToAsm.PPC.Instr   as PPC
-import qualified GHC.Compilers.CmmToAsm.PPC.Ppr     as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.CodeGen as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.Regs    as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.RegInfo as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.Instr   as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.Ppr     as PPC
 
-import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Main           as Linear
+import GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Main           as Linear
 
 import qualified GHC.Data.Graph.Color                     as Color
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Main            as Color
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Stats           as Color
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable   as Color
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Main            as Color
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Stats           as Color
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Graph.TrivColorable   as Color
 
-import GHC.Compilers.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Register.Target
 import GHC.Utils.Platform
 import GHC.Config.Build
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.PIC
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Dwarf
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.PIC
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Dwarf
 import GHC.IR.Cmm.DebugBlock
 
 import GHC.IR.Cmm.BlockId
@@ -102,7 +102,7 @@ import System.IO
 The native-code generator has machine-independent and
 machine-dependent modules.
 
-This module ("GHC.Compilers.CmmToAsm") is the top-level machine-independent
+This module ("GHC.Compiler.CmmToAsm") is the top-level machine-independent
 module.  Before entering machine-dependent land, we do some
 machine-independent optimisations (defined below) on the
 'CmmStmts's.
@@ -605,7 +605,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
 
                 -- do the graph coloring register allocation
                 let ((alloced, regAllocStats), usAlloc)
-                        = {-# SCC "GHC.Compilers.CmmToAsm.Register.Allocator-color" #-}
+                        = {-# SCC "GHC.Compiler.CmmToAsm.Register.Allocator-color" #-}
                           initUs usLive
                           $ Color.regAlloc
                                 dflags
@@ -649,7 +649,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                            return (alloced', ra_stats )
 
                 let ((alloced, regAllocStats), usAlloc)
-                        = {-# SCC "GHC.Compilers.CmmToAsm.Register.Allocator-linear" #-}
+                        = {-# SCC "GHC.Compiler.CmmToAsm.Register.Allocator-linear" #-}
                           initUs usLive
                           $ liftM unzip
                           $ mapM reg_alloc withLiveness

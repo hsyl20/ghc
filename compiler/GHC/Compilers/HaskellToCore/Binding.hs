@@ -12,18 +12,18 @@ lower levels it is preserved with @let@/@letrec@s).
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.HaskellToCore.Binding ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
+module GHC.Compiler.HaskellToCore.Binding ( dsTopLHsBinds, dsLHsBinds, decomposeRuleLhs, dsSpec,
                  dsHsWrapper, dsTcEvBinds, dsTcEvBinds_s, dsEvBinds, dsMkUserRule
   ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-}   GHC.Compilers.HaskellToCore.Expression( dsLExpr )
-import {-# SOURCE #-}   GHC.Compilers.HaskellToCore.Match( matchWrapper )
+import {-# SOURCE #-}   GHC.Compiler.HaskellToCore.Expression( dsLExpr )
+import {-# SOURCE #-}   GHC.Compiler.HaskellToCore.Match( matchWrapper )
 
-import GHC.Compilers.HaskellToCore.Monad
-import GHC.Compilers.HaskellToCore.GuardedRHS
-import GHC.Compilers.HaskellToCore.Utils
+import GHC.Compiler.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.GuardedRHS
+import GHC.Compiler.HaskellToCore.Utils
 
 import GHC.IR.Haskell.Syntax            -- lots of things
 import GHC.IR.Core.Syntax          -- lots of things
@@ -564,7 +564,7 @@ if there is no variable in the pattern desugaring looks like
   in x `seq` body
 
 In order to force the Ids in the binding group they are passed around
-in the dsHsBind family of functions, and later seq'ed in GHC.Compilers.HaskellToCore.Expression.ds_val_bind.
+in the dsHsBind family of functions, and later seq'ed in GHC.Compiler.HaskellToCore.Expression.ds_val_bind.
 
 Consider a recursive group like this
 
@@ -631,11 +631,11 @@ The restrictions are:
   2. Unlifted binds must also be banged. (There is no trouble to compile an unbanged
      unlifted bind, but an unbanged bind looks lazy, and we don't want users to be
      surprised by the strictness of an unlifted bind.) Checked in first clause
-     of GHC.Compilers.HaskellToCore.Expression.ds_val_bind.
+     of GHC.Compiler.HaskellToCore.Expression.ds_val_bind.
 
   3. Unlifted binds may not have polymorphism (#6078). (That is, no quantified type
      variables or constraints.) Checked in first clause
-     of GHC.Compilers.HaskellToCore.Expression.ds_val_bind.
+     of GHC.Compiler.HaskellToCore.Expression.ds_val_bind.
 
   4. Unlifted binds may not be recursive. Checked in second clause of ds_val_bind.
 

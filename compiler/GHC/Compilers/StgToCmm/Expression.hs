@@ -9,23 +9,23 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm.Expression ( cgExpr ) where
+module GHC.Compiler.StgToCmm.Expression ( cgExpr ) where
 
 #include "HsVersions.h"
 
-import {-# SOURCE #-} GHC.Compilers.StgToCmm.Binding ( cgBind )
+import {-# SOURCE #-} GHC.Compiler.StgToCmm.Binding ( cgBind )
 
-import GHC.Compilers.StgToCmm.Monad
-import GHC.Compilers.StgToCmm.Heap
-import GHC.Compilers.StgToCmm.Environment
-import GHC.Compilers.StgToCmm.Constructor
-import GHC.Compilers.StgToCmm.Profiling (saveCurrentCostCentre, restoreCurrentCostCentre, emitSetCCC)
-import GHC.Compilers.StgToCmm.Layout
-import GHC.Compilers.StgToCmm.PrimOp
-import GHC.Compilers.StgToCmm.Coverage
-import GHC.Compilers.StgToCmm.Profiling.Ticky
-import GHC.Compilers.StgToCmm.Utils
-import GHC.Compilers.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.Heap
+import GHC.Compiler.StgToCmm.Environment
+import GHC.Compiler.StgToCmm.Constructor
+import GHC.Compiler.StgToCmm.Profiling (saveCurrentCostCentre, restoreCurrentCostCentre, emitSetCCC)
+import GHC.Compiler.StgToCmm.Layout
+import GHC.Compiler.StgToCmm.PrimOp
+import GHC.Compiler.StgToCmm.Coverage
+import GHC.Compiler.StgToCmm.Profiling.Ticky
+import GHC.Compiler.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Closure
 
 import GHC.IR.Stg.Syntax
 
@@ -520,9 +520,9 @@ check will reset the heap usage. Slop in the heap breaks LDV profiling
 
 Note [Inlining out-of-line primops and heap checks]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If shouldInlinePrimOp returns True when called from GHC.Compilers.StgToCmm.Expression for the
+If shouldInlinePrimOp returns True when called from GHC.Compiler.StgToCmm.Expression for the
 purpose of heap check placement, we *must* inline the primop later in
-GHC.Compilers.StgToCmm.PrimOp. If we don't things will go wrong.
+GHC.Compiler.StgToCmm.PrimOp. If we don't things will go wrong.
 -}
 
 -----------------
@@ -728,7 +728,7 @@ cgIdApp fun_id args = do
     let cg_fun_id   = cg_id fun_info
            -- NB: use (cg_id fun_info) instead of fun_id, because
            -- the former may be externalised for -split-objs.
-           -- See Note [Externalise when splitting] in GHC.Compilers.StgToCmm.Monad
+           -- See Note [Externalise when splitting] in GHC.Compiler.StgToCmm.Monad
 
         fun_arg     = StgVarArg cg_fun_id
         fun_name    = idName    cg_fun_id
@@ -772,7 +772,7 @@ cgIdApp fun_id args = do
 --
 -- Self-recursive tail calls can be optimized into a local jump in the same
 -- way as let-no-escape bindings (see Note [What is a non-escaping let] in
--- GHC.Compilers.CoreToStg). Consider this:
+-- GHC.Compiler.CoreToStg). Consider this:
 --
 -- foo.info:
 --     a = R1  // calling convention
@@ -823,18 +823,18 @@ cgIdApp fun_id args = do
 --
 --   * Whenever we are compiling a function, we set that information to reflect
 --     the fact that function currently being compiled can be jumped to, instead
---     of called. This is done in closureCodyBody in GHC.Compilers.StgToCmm.Binding.
+--     of called. This is done in closureCodyBody in GHC.Compiler.StgToCmm.Binding.
 --
 --   * We also have to emit a label to which we will be jumping. We make sure
 --     that the label is placed after a stack check but before the heap
 --     check. The reason is that making a recursive tail-call does not increase
 --     the stack so we only need to check once. But it may grow the heap, so we
 --     have to repeat the heap check in every self-call. This is done in
---     do_checks in GHC.Compilers.StgToCmm.Heap.
+--     do_checks in GHC.Compiler.StgToCmm.Heap.
 --
 --   * When we begin compilation of another closure we remove the additional
 --     information from the environment. This is done by forkClosureBody
---     in GHC.Compilers.StgToCmm.Monad. Other functions that duplicate the environment -
+--     in GHC.Compiler.StgToCmm.Monad. Other functions that duplicate the environment -
 --     forkLneBody, forkAlts, codeOnly - duplicate that information. In other
 --     words, we only need to clean the environment of the self-loop information
 --     when compiling right hand side of a closure (binding).

@@ -1,14 +1,14 @@
 -- | One ounce of sanity checking is worth 10000000000000000 ounces
 -- of staring blindly at assembly code trying to find the problem..
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Sanity (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.Sanity (
         checkBlock
 )
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Ppr        ()
-import GHC.Compilers.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Ppr        ()
+import GHC.Compiler.CmmToAsm.Instruction
 
 import GHC.IR.Cmm.Syntax
 

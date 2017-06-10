@@ -4,14 +4,14 @@
 -- | Deal with Cmm registers
 --
 
-module GHC.Compilers.CmmToLlvm.CodeGen.Regs (
+module GHC.Compiler.CmmToLlvm.CodeGen.Regs (
         lmGlobalRegArg, lmGlobalRegVar, alwaysLive,
         stgTBAA, baseN, stackN, heapN, rxN, topN, tbaa, getTBAA
     ) where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToLlvm
+import GHC.Compiler.CmmToLlvm
 
 import GHC.IR.Cmm.Expr
 import GHC.Config.Flags
@@ -77,7 +77,7 @@ lmGlobalReg dflags suf reg
         ZmmReg 5       -> zmmGlobal $ "ZMM5" ++ suf
         ZmmReg 6       -> zmmGlobal $ "ZMM6" ++ suf
         MachSp         -> wordGlobal $ "MachSp" ++ suf
-        _other         -> panic $ "GHC.Compilers.CmmToLlvm.CodeGen.Reg: GlobalReg (" ++ (show reg)
+        _other         -> panic $ "GHC.Compiler.CmmToLlvm.CodeGen.Reg: GlobalReg (" ++ (show reg)
                                 ++ ") not supported!"
         -- LongReg, HpLim, CCSS, CurrentTSO, CurrentNusery, HpAlloc
         -- EagerBlackholeInfo, GCEnter1, GCFun, BaseReg, PicBaseReg
@@ -114,12 +114,12 @@ stgTBAA
 -- hierarchy and as of LLVM 4.0 should *only* be referenced by other nodes. It
 -- should never occur in any LLVM instruction statement.
 rootN, topN, stackN, heapN, rxN, baseN :: Unique
-rootN  = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.rootN")
-topN   = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.topN")
-stackN = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.stackN")
-heapN  = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.heapN")
-rxN    = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.rxN")
-baseN  = getUnique (fsLit "GHC.Compilers.CmmToLlvm.CodeGen.Regs.baseN")
+rootN  = getUnique (fsLit "GHC.Compiler.CmmToLlvm.CodeGen.Regs.rootN")
+topN   = getUnique (fsLit "GHC.Compiler.CmmToLlvm.CodeGen.Regs.topN")
+stackN = getUnique (fsLit "GHC.Compiler.CmmToLlvm.CodeGen.Regs.stackN")
+heapN  = getUnique (fsLit "GHC.Compiler.CmmToLlvm.CodeGen.Regs.heapN")
+rxN    = getUnique (fsLit "GHC.Compiler.CmmToLlvm.CodeGen.Regs.rxN")
+baseN  = getUnique (fsLit "GHC.Compiler.CmmToLlvm.CodeGen.Regs.baseN")
 
 -- | The TBAA metadata identifier
 tbaa :: LMString

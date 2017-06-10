@@ -690,7 +690,7 @@ data HsExpr id
   ---------------------------------------
   -- Finally, HsWrap appears only in typechecker output
   -- The contained Expr is *NOT* itself an HsWrap.
-  -- See Note [Detecting forced eta expansion] in GHC.Compilers.HaskellToCore.Expression. This invariant
+  -- See Note [Detecting forced eta expansion] in GHC.Compiler.HaskellToCore.Expression. This invariant
   -- is maintained by GHC.IR.Haskell.Utils.mkHsWrap.
 
   |  HsWrap     HsWrapper    -- TRANSLATION
@@ -2342,7 +2342,7 @@ data HsMatchContext id
   | ProcExpr                    -- ^Patterns of a proc
   | PatBindRhs                  -- ^A pattern binding  eg [y] <- e = e
 
-  | RecUpd                      -- ^Record update [used only in GHC.Compilers.HaskellToCore.Expression to
+  | RecUpd                      -- ^Record update [used only in GHC.Compiler.HaskellToCore.Expression to
                                 --    tell matchWrapper what sort of
                                 --    runtime error message to generate]
 

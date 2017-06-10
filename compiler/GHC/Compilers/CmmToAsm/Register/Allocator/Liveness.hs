@@ -11,7 +11,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.CmmToAsm.Register.Allocator.Liveness (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Liveness (
         RegSet,
         RegMap, emptyRegMap,
         BlockMap, mapEmpty,
@@ -35,8 +35,8 @@ module GHC.Compilers.CmmToAsm.Register.Allocator.Liveness (
         regLiveness,
         natCmmTopToLive
   ) where
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Instruction
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow
@@ -506,7 +506,7 @@ stripLive dflags live
 
         -- If the proc has blocks but we don't know what the first one was, then we're dead.
         stripCmm proc
-                 = pprPanic "GHC.Compilers.CmmToAsm.Register.Allocator.Liveness.stripLive: no first_id on proc" (ppr proc)
+                 = pprPanic "GHC.Compiler.CmmToAsm.Register.Allocator.Liveness.stripLive: no first_id on proc" (ppr proc)
 
 -- | Strip away liveness information from a basic block,
 --   and make real spill instructions out of SPILL, RELOAD pseudos along the way.
@@ -583,7 +583,7 @@ patchEraseLive patchF cmm
            in   CmmProc info' label live $ map patchSCC sccs
 
          | otherwise
-         = panic "GHC.Compilers.CmmToAsm.Register.Allocator.Liveness.patchEraseLive: no blockMap"
+         = panic "GHC.Compiler.CmmToAsm.Register.Allocator.Liveness.patchEraseLive: no blockMap"
 
         patchSCC (AcyclicSCC b)  = AcyclicSCC (patchBlock b)
         patchSCC (CyclicSCC  bs) = CyclicSCC  (map patchBlock bs)
@@ -811,7 +811,7 @@ computeLiveness
 computeLiveness platform sccs
  = case checkIsReverseDependent sccs of
         Nothing         -> livenessSCCs platform mapEmpty [] sccs
-        Just bad        -> pprPanic "GHC.Compilers.CmmToAsm.Register.Allocator.Liveness.computeLivenss"
+        Just bad        -> pprPanic "GHC.Compiler.CmmToAsm.Register.Allocator.Liveness.computeLivenss"
                                 (vcat   [ text "SCCs aren't in reverse dependent order"
                                         , text "bad blockId" <+> ppr bad
                                         , ppr sccs])

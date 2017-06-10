@@ -9,7 +9,7 @@
 -----------------------------------------------------------------------------
 
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module GHC.Compilers.CmmToAsm.X86.Ppr (
+module GHC.Compiler.CmmToAsm.X86.Ppr (
         pprNatCmmDecl,
         pprData,
         pprInstr,
@@ -23,13 +23,13 @@ where
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-import GHC.Compilers.CmmToAsm.X86.Regs
-import GHC.Compilers.CmmToAsm.X86.Instr
-import GHC.Compilers.CmmToAsm.X86.Cond
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.PrettyPrint
+import GHC.Compiler.CmmToAsm.X86.Regs
+import GHC.Compiler.CmmToAsm.X86.Instr
+import GHC.Compiler.CmmToAsm.X86.Cond
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.PrettyPrint
 
 
 import GHC.IR.Cmm.Transform.Dataflow

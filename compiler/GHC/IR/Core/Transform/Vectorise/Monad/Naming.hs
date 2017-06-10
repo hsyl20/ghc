@@ -16,7 +16,7 @@ where
 
 import GHC.IR.Core.Transform.Vectorise.Monad.Base
 
-import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Monad
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type
 import GHC.Data.Var

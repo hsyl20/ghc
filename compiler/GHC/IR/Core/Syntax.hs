@@ -472,7 +472,7 @@ For example
   \(r::RuntimeRep). \(a::TYPE r). \(x::a). e
 is illegal because x's type has kind (TYPE r), which has 'r' free.
 
-See Note [Levity polymorphism checking] in GHC.Compilers.HaskellToCore.Monad to see where these
+See Note [Levity polymorphism checking] in GHC.Compiler.HaskellToCore.Monad to see where these
 invariants are established for user-written code.
 
 Note [GHC.IR.Core.Syntax let goal]
@@ -1302,7 +1302,7 @@ data Unfolding
 
   | BootUnfolding      -- ^ We have no information about the unfolding, because
                        -- this 'Id' came from an @hi-boot@ file.
-                       -- See Note [Inlining and hs-boot files] in GHC.Compilers.CoreToInterface
+                       -- See Note [Inlining and hs-boot files] in GHC.Compiler.CoreToInterface
                        -- for what this is used for.
 
   | OtherCon [AltCon]  -- ^ It ain't one of these constructors.

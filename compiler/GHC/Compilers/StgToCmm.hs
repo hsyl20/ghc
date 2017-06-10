@@ -8,20 +8,20 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm ( codeGen ) where
+module GHC.Compiler.StgToCmm ( codeGen ) where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.StgToCmm.Profiling (initCostCentres, ldvEnter)
-import GHC.Compilers.StgToCmm.Monad
-import GHC.Compilers.StgToCmm.Environment
-import GHC.Compilers.StgToCmm.Binding
-import GHC.Compilers.StgToCmm.Constructor
-import GHC.Compilers.StgToCmm.Layout
-import GHC.Compilers.StgToCmm.Utils
-import GHC.Compilers.StgToCmm.Closure
-import GHC.Compilers.StgToCmm.Coverage
-import GHC.Compilers.StgToCmm.Profiling.Ticky
+import GHC.Compiler.StgToCmm.Profiling (initCostCentres, ldvEnter)
+import GHC.Compiler.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.Environment
+import GHC.Compiler.StgToCmm.Binding
+import GHC.Compiler.StgToCmm.Constructor
+import GHC.Compiler.StgToCmm.Layout
+import GHC.Compiler.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.Coverage
+import GHC.Compiler.StgToCmm.Profiling.Ticky
 
 import GHC.IR.Cmm.Syntax
 import GHC.IR.Cmm.Utils
@@ -231,7 +231,7 @@ cgDataCon data_con
 maybeExternaliseId :: DynFlags -> Id -> FCode Id
 maybeExternaliseId dflags id
   | gopt Opt_SplitObjs dflags,  -- See Note [Externalise when splitting]
-                                -- in GHC.Compilers.StgToCmm.Monad
+                                -- in GHC.Compiler.StgToCmm.Monad
     isInternalName name = do { mod <- getModuleName
                              ; returnFC (setIdName id (externalise mod)) }
   | otherwise           = returnFC id

@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.X86.Cond (
+module GHC.Compiler.CmmToAsm.X86.Cond (
         Cond(..),
         condUnsigned,
         condToSigned,

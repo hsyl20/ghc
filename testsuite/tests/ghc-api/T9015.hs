@@ -3,7 +3,7 @@ module Main where
 import GHC
 import GHC.Config.Flags
 import System.Environment
-import GhcMonad
+import GHC.Monad
 
 testStrings = [
     "import Data.Maybe"

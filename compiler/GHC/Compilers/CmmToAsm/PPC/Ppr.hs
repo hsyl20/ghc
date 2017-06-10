@@ -7,17 +7,17 @@
 -----------------------------------------------------------------------------
 
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module GHC.Compilers.CmmToAsm.PPC.Ppr (pprNatCmmDecl) where
+module GHC.Compiler.CmmToAsm.PPC.Ppr (pprNatCmmDecl) where
 
-import GHC.Compilers.CmmToAsm.PPC.Regs
-import GHC.Compilers.CmmToAsm.PPC.Instr
-import GHC.Compilers.CmmToAsm.PPC.Cond
-import GHC.Compilers.CmmToAsm.PrettyPrint
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.PPC.Regs
+import GHC.Compiler.CmmToAsm.PPC.Instr
+import GHC.Compiler.CmmToAsm.PPC.Cond
+import GHC.Compiler.CmmToAsm.PrettyPrint
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.IR.Cmm.Transform.Dataflow

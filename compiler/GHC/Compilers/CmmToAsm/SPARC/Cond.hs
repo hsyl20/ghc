@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.SPARC.Cond (
+module GHC.Compiler.CmmToAsm.SPARC.Cond (
         Cond(..),
         condUnsigned,
         condToSigned,

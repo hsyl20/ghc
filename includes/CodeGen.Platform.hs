@@ -4,7 +4,7 @@ import GHC.IR.Cmm.Expr
     || defined(MACHREGS_sparc) || defined(MACHREGS_powerpc))
 import GHC.Utils.Panic
 #endif
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register
 
 #include "ghcautoconf.h"
 #include "stg/MachRegs.h"

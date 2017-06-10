@@ -8,13 +8,13 @@ Desugaring arrow commands
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.HaskellToCore.Arrow ( dsProcExpr ) where
+module GHC.Compiler.HaskellToCore.Arrow ( dsProcExpr ) where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.HaskellToCore.Match
-import GHC.Compilers.HaskellToCore.Utils
-import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Match
+import GHC.Compiler.HaskellToCore.Utils
+import GHC.Compiler.HaskellToCore.Monad
 
 import GHC.IR.Haskell.Syntax hiding (collectPatBinders, collectPatsBinders,
             collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
@@ -26,7 +26,7 @@ import qualified GHC.IR.Haskell.Utils
 --     So WATCH OUT; check each use of split*Ty functions.
 -- Sigh.  This is a pain.
 
-import {-# SOURCE #-} GHC.Compilers.HaskellToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
+import {-# SOURCE #-} GHC.Compiler.HaskellToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
 import GHC.IR.Haskell.TypeSystem.Type
 import GHC.Data.Type ( splitPiTy )
@@ -35,7 +35,7 @@ import GHC.IR.Core.Syntax
 import GHC.IR.Core.FreeVars
 import GHC.IR.Core.Utils
 import GHC.IR.Core.Syntax.Make
-import GHC.Compilers.HaskellToCore.Binding (dsHsWrapper)
+import GHC.Compiler.HaskellToCore.Binding (dsHsWrapper)
 
 import GHC.Data.Name
 import GHC.Data.Var

@@ -490,7 +490,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.IR.Haskell.ImportExport \
 	GHC.IR.Haskell.Literal \
 	GHC.IR.Haskell.PlaceHolder \
-	GHC.Compilers.HaskellToCore.Match.Expr \
+	GHC.Compiler.HaskellToCore.Match.Expr \
 	GHC.IR.Haskell.Pattern \
 	GHC.IR.Haskell.Syntax\
 	GHC.IR.Haskell.Type \
@@ -504,7 +504,7 @@ compiler_stage2_dll0_MODULES = \
 	GHC.IR.Interface.Types \
 	GHC.Interactive.Types \
 	GHC.Utils.Json \
-	GHC.Compilers.CoreToInterface \
+	GHC.Compiler.CoreToInterface \
 	GHC.Data.ClassInstance \
 	GHC.Data.Kind \
 	GHC.Builtin.Uniques \

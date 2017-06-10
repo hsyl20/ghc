@@ -11,7 +11,7 @@
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-module GHC.Compilers.CmmToAsm.PPC.Instr (
+module GHC.Compiler.CmmToAsm.PPC.Instr (
     archWordFormat,
     RI(..),
     Instr(..),
@@ -23,13 +23,13 @@ module GHC.Compilers.CmmToAsm.PPC.Instr (
 
 where
 
-import GHC.Compilers.CmmToAsm.PPC.Regs
-import GHC.Compilers.CmmToAsm.PPC.Cond
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register.Target
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.PPC.Regs
+import GHC.Compiler.CmmToAsm.PPC.Cond
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.IR.Cmm.BlockId

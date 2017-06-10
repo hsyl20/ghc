@@ -8,7 +8,7 @@ import System.Environment
 import GHC
 import qualified Config as GHC
 import qualified Outputable as GHC
-import GhcMonad (liftIO)
+import GHC.Monad (liftIO)
 import GHC.Utils.Outputable (PprStyle, queryQual)
 
 compileInGhc :: [FilePath]          -- ^ Targets

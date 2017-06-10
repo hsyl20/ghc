@@ -1,5 +1,5 @@
 
-module GHC.Compilers.CmmToAsm.Instruction (
+module GHC.Compiler.CmmToAsm.Instruction (
         RegUsage(..),
         noUsage,
         GenBasicBlock(..), blockId,
@@ -14,7 +14,7 @@ module GHC.Compilers.CmmToAsm.Instruction (
 
 where
 
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.SPARC.Imm (
+module GHC.Compiler.CmmToAsm.SPARC.Imm (
         -- immediate values
         Imm(..),
         strImmLit,

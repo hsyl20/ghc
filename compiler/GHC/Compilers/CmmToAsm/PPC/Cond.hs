@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.PPC.Cond (
+module GHC.Compiler.CmmToAsm.PPC.Cond (
         Cond(..),
         condNegate,
         condUnsigned,

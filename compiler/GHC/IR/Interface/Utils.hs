@@ -61,10 +61,10 @@ Basic idea:
 import GHC.IR.Interface.Syntax
 import GHC.Utils.Binary.Fingerprint
 import GHC.IR.Interface.Load
-import GHC.Compilers.CoreToInterface
+import GHC.Compiler.CoreToInterface
 import GHC.Config.Flags.Fingerprint
 
-import GHC.Compilers.HaskellToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
+import GHC.Compiler.HaskellToCore.Usage ( mkUsageInfo, mkUsedNames, mkDependencies )
 import GHC.Data.Id
 import GHC.Data.Annotation
 import GHC.IR.Core.Syntax

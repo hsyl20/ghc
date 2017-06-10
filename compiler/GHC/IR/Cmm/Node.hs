@@ -193,7 +193,7 @@ sequence.
 
 A foreign call is defined to clobber any GlobalRegs that are mapped to
 caller-saves machine registers (according to the prevailing C ABI).
-GHC.Compilers.StgToCmm.Utils.callerSaves tells you which GlobalRegs are
+GHC.Compiler.StgToCmm.Utils.callerSaves tells you which GlobalRegs are
 caller-saves.
 
 This is a design choice that makes it easier to generate code later.
@@ -216,7 +216,7 @@ convention, rdi, rsi, rdx and rcx (as well as r8 and r9) may be used for
 argument passing.  These are registers R3-R6, which our generated
 code may also be using; as a result, it's necessary to save these
 values before doing a foreign call.  This is done during initial
-code generation in callerSaveVolatileRegs in GHC.Compilers.StgToCmm.Utils.
+code generation in callerSaveVolatileRegs in GHC.Compiler.StgToCmm.Utils.
 However, one result of doing this is that the contents of these registers
 may mysteriously change if referenced inside the arguments.  This
 is dangerous, so you'll need to disable inlining much in the same

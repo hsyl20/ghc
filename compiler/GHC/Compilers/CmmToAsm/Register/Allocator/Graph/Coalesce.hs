@@ -1,11 +1,11 @@
 -- | Register coalescing.
-module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.Coalesce (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Graph.Coalesce (
         regCoalesce,
         slurpJoinMovs
 ) where
-import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 import GHC.Data.Bag

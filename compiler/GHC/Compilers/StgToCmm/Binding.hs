@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm.Binding (
+module GHC.Compiler.StgToCmm.Binding (
         cgTopRhsClosure,
         cgBind,
         emitBlackHoleCode,
@@ -17,18 +17,18 @@ module GHC.Compilers.StgToCmm.Binding (
 
 #include "HsVersions.h"
 
-import GHC.Compilers.StgToCmm.Expression
-import GHC.Compilers.StgToCmm.Monad
-import GHC.Compilers.StgToCmm.Environment
-import GHC.Compilers.StgToCmm.Constructor
-import GHC.Compilers.StgToCmm.Heap
-import GHC.Compilers.StgToCmm.Profiling (curCCS, ldvEnterClosure, enterCostCentreFun, enterCostCentreThunk,
+import GHC.Compiler.StgToCmm.Expression
+import GHC.Compiler.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.Environment
+import GHC.Compiler.StgToCmm.Constructor
+import GHC.Compiler.StgToCmm.Heap
+import GHC.Compiler.StgToCmm.Profiling (curCCS, ldvEnterClosure, enterCostCentreFun, enterCostCentreThunk,
                    initUpdFrameProf)
-import GHC.Compilers.StgToCmm.Profiling.Ticky
-import GHC.Compilers.StgToCmm.Layout
-import GHC.Compilers.StgToCmm.Utils
-import GHC.Compilers.StgToCmm.Closure
-import GHC.Compilers.StgToCmm.ForeignCall    (emitPrimCall)
+import GHC.Compiler.StgToCmm.Profiling.Ticky
+import GHC.Compiler.StgToCmm.Layout
+import GHC.Compiler.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.ForeignCall    (emitPrimCall)
 
 import GHC.IR.Cmm.Graph
 import GHC.IR.Core.Syntax          ( AltCon(..), tickishIsCode )
@@ -211,7 +211,7 @@ cgRhs id (StgRhsCon cc con args)
       -- con args are always non-void,
       -- see Note [Post-unarisation invariants] in GHC.IR.Stg.Transform.Unarise
 
-{- See Note [GC recovery] in GHC.Compilers.StgToCmm.Closure -}
+{- See Note [GC recovery] in GHC.Compiler.StgToCmm.Closure -}
 cgRhs id (StgRhsClosure cc bi fvs upd_flag args body)
   = do dflags <- getDynFlags
        mkRhsClosure dflags id cc bi (nonVoidIds fvs) upd_flag args body
@@ -489,7 +489,7 @@ closureCodeBody top_lvl bndr cl_info cc args arity body fv_details
                 ; loop_header_id <- newBlockId
                 -- Extend reader monad with information that
                 -- self-recursive tail calls can be optimized into local
-                -- jumps. See Note [Self-recursive tail calls] in GHC.Compilers.StgToCmm.Expression.
+                -- jumps. See Note [Self-recursive tail calls] in GHC.Compiler.StgToCmm.Expression.
                 ; withSelfLoop (bndr, loop_header_id, arg_regs) $ do
                 {
                 -- Main payload

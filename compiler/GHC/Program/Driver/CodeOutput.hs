@@ -10,13 +10,13 @@ module GHC.Program.Driver.CodeOutput( codeOutput, outputForeignStubs ) where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm ( nativeCodeGen )
-import GHC.Compilers.CmmToLlvm.CodeGen ( llvmCodeGen )
+import GHC.Compiler.CmmToAsm ( nativeCodeGen )
+import GHC.Compiler.CmmToLlvm.CodeGen ( llvmCodeGen )
 
 import GHC.Data.Unique.Supply       ( mkSplitUniqSupply )
 
 import GHC.Utils.Finder           ( mkStubPaths )
-import GHC.Compilers.CmmToC ( writeCs )
+import GHC.Compiler.CmmToC ( writeCs )
 import GHC.IR.Cmm.Analyse.Lint          ( cmmLint )
 import GHC.Packages
 import GHC.IR.Cmm.Syntax              ( RawCmmGroup )

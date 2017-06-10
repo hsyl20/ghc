@@ -7,7 +7,7 @@
 -- (c) The University of Glasgow 1996-2004
 --
 -----------------------------------------------------------------------------
-module GHC.Compilers.CmmToAsm.PPC.RegInfo (
+module GHC.Compiler.CmmToAsm.PPC.RegInfo (
         JumpDest( DestBlockId ), getJumpDestBlockId,
         canShortcut,
         shortcutJump,
@@ -20,7 +20,7 @@ where
 #include "cbits/CmmToAsm.h"
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm.PPC.Instr
+import GHC.Compiler.CmmToAsm.PPC.Instr
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Syntax

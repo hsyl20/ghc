@@ -25,12 +25,12 @@
 --   This also works if the reloads in B1\/B2 were spills instead, because
 --   spilling %r1 to a slot makes that slot have the same value as %r1.
 --
-module GHC.Compilers.CmmToAsm.Register.Allocator.Graph.SpillClean (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Graph.SpillClean (
         cleanSpills
 ) where
-import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

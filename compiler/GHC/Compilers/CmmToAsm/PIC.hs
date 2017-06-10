@@ -22,7 +22,7 @@
       because Win32 doesn't support external references in data sections.
       TODO: make sure this still works, it might be bitrotted
   + NCG
-    - The cmmToCmm pass in GHC.Compilers.CmmToAsm calls cmmMakeDynamicReference for all
+    - The cmmToCmm pass in GHC.Compiler.CmmToAsm calls cmmMakeDynamicReference for all
       labels.
     - nativeCodeGen calls pprImportedSymbol and pprGotDeclaration to output
       all the necessary stuff for imported symbols.
@@ -33,7 +33,7 @@
       that wasn't in the original Cmm code (e.g. floating point literals).
 -}
 
-module GHC.Compilers.CmmToAsm.PIC (
+module GHC.Compiler.CmmToAsm.PIC (
         cmmMakeDynamicReference,
         CmmMakeDynamicReferenceM(..),
         ReferenceKind(..),
@@ -47,15 +47,15 @@ module GHC.Compilers.CmmToAsm.PIC (
 
 where
 
-import qualified GHC.Compilers.CmmToAsm.PPC.Instr      as PPC
-import qualified GHC.Compilers.CmmToAsm.PPC.Regs       as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.Instr      as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.Regs       as PPC
 
-import qualified GHC.Compilers.CmmToAsm.X86.Instr      as X86
+import qualified GHC.Compiler.CmmToAsm.X86.Instr      as X86
 
 import GHC.Utils.Platform
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Monad
 
 
 import GHC.IR.Cmm.Transform.Dataflow

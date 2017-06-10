@@ -1,5 +1,5 @@
 -- | Evaluation of 64 bit values on 32 bit platforms.
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64 (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen64 (
         assignMem_I64Code,
         assignReg_I64Code,
         iselExpr64
@@ -7,18 +7,18 @@ module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen64 (
 
 where
 
-import {-# SOURCE #-} GHC.Compilers.CmmToAsm.SPARC.CodeGen.Gen32
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base
-import GHC.Compilers.CmmToAsm.SPARC.CodeGen.Amode
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Ppr()
-import GHC.Compilers.CmmToAsm.Monad
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
+import {-# SOURCE #-} GHC.Compiler.CmmToAsm.SPARC.CodeGen.Gen32
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base
+import GHC.Compiler.CmmToAsm.SPARC.CodeGen.Amode
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Ppr()
+import GHC.Compiler.CmmToAsm.Monad
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.Syntax
 

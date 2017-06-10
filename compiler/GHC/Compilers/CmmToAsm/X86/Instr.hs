@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.CmmToAsm.X86.Instr (Instr(..), Operand(..), PrefetchVariant(..), JumpDest,
+module GHC.Compiler.CmmToAsm.X86.Instr (Instr(..), Operand(..), PrefetchVariant(..), JumpDest,
                   getJumpDestBlockId, canShortcut, shortcutStatics,
                   shortcutJump, i386_insert_ffrees, allocMoreStack,
                   maxSpillSlots, archWordFormat)
@@ -17,13 +17,13 @@ where
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-import GHC.Compilers.CmmToAsm.X86.Cond
-import GHC.Compilers.CmmToAsm.X86.Regs
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.X86.Cond
+import GHC.Compiler.CmmToAsm.X86.Regs
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

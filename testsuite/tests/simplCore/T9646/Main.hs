@@ -7,7 +7,7 @@ import GHC.Types
 #endif
 
 import StrictPrim
-import GHC.Data.Type
+import Type
 import Natural
 
 

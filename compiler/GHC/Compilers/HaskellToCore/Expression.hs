@@ -8,23 +8,23 @@ Desugaring exporessions.
 
 {-# LANGUAGE CPP, MultiWayIf #-}
 
-module GHC.Compilers.HaskellToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
+module GHC.Compiler.HaskellToCore.Expression ( dsExpr, dsLExpr, dsLExprNoLP, dsLocalBinds
               , dsValBinds, dsLit, dsSyntaxExpr ) where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.HaskellToCore.Match
-import GHC.Compilers.HaskellToCore.Match.Literal
-import GHC.Compilers.HaskellToCore.Binding
-import GHC.Compilers.HaskellToCore.GuardedRHS
-import GHC.Compilers.HaskellToCore.ListComp
-import GHC.Compilers.HaskellToCore.Utils
-import GHC.Compilers.HaskellToCore.Arrow
-import GHC.Compilers.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Match
+import GHC.Compiler.HaskellToCore.Match.Literal
+import GHC.Compiler.HaskellToCore.Binding
+import GHC.Compiler.HaskellToCore.GuardedRHS
+import GHC.Compiler.HaskellToCore.ListComp
+import GHC.Compiler.HaskellToCore.Utils
+import GHC.Compiler.HaskellToCore.Arrow
+import GHC.Compiler.HaskellToCore.Monad
 import GHC.Data.Name
 import GHC.Data.Name.Environment
 import GHC.Data.FamilyInstance( topNormaliseType )
-import GHC.Compilers.HaskellToCore.Splices
+import GHC.Compiler.HaskellToCore.Splices
 import GHC.IR.Haskell.Syntax
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
@@ -106,7 +106,7 @@ ds_val_bind (NonRecursive, hsbinds) body
         --       below.  Then pattern-match would fail.  Urk.)
   , isUnliftedHsBind bind
   = putSrcSpanDs loc $
-     -- see Note [Strict binds checks] in GHC.Compilers.HaskellToCore.Binding
+     -- see Note [Strict binds checks] in GHC.Compiler.HaskellToCore.Binding
     if is_polymorphic bind
     then errDsCoreExpr (poly_bind_err bind)
             -- data Ptr a = Ptr Addr#
@@ -144,7 +144,7 @@ ds_val_bind (NonRecursive, hsbinds) body
         text "Probable fix: add a type signature"
 
 ds_val_bind (is_rec, binds) _body
-  | anyBag (isUnliftedHsBind . unLoc) binds  -- see Note [Strict binds checks] in GHC.Compilers.HaskellToCore.Binding
+  | anyBag (isUnliftedHsBind . unLoc) binds  -- see Note [Strict binds checks] in GHC.Compiler.HaskellToCore.Binding
   = ASSERT( isRec is_rec )
     errDsCoreExpr $
     hang (text "Recursive bindings for unlifted types aren't allowed:")
@@ -223,7 +223,7 @@ dsUnliftedBind bind body = pprPanic "dsLet: unlifted" (ppr bind $$ ppr body)
 {-
 ************************************************************************
 *                                                                      *
-\subsection[GHC.Compilers.HaskellToCore.Expression-vars-and-cons]{Variables, constructors, literals}
+\subsection[GHC.Compiler.HaskellToCore.Expression-vars-and-cons]{Variables, constructors, literals}
 *                                                                      *
 ************************************************************************
 -}
@@ -242,7 +242,7 @@ dsLExpr (L loc e)
 -- | Variant of 'dsLExpr' that ensures that the result is not levity
 -- polymorphic. This should be used when the resulting expression will
 -- be an argument to some other function.
--- See Note [Levity polymorphism checking] in GHC.Compilers.HaskellToCore.Monad
+-- See Note [Levity polymorphism checking] in GHC.Compiler.HaskellToCore.Monad
 -- See Note [Levity polymorphism invariants] in GHC.IR.Core.Syntax
 dsLExprNoLP :: LHsExpr Id -> DsM CoreExpr
 dsLExprNoLP (L loc e)
@@ -487,7 +487,7 @@ ds_expr _ (PArrSeq expr (FromThenTo from thn to))
   = mkApps <$> dsExpr expr <*> mapM dsLExprNoLP [from, thn, to]
 
 ds_expr _ (PArrSeq _ _)
-  = panic "GHC.Compilers.HaskellToCore.Expression.dsExpr: Infinite parallel array!"
+  = panic "GHC.Compiler.HaskellToCore.Expression.dsExpr: Infinite parallel array!"
     -- the parser shouldn't have generated it and the renamer and typechecker
     -- shouldn't have let it through
 
@@ -894,7 +894,7 @@ dsArithSeq expr (FromThenTo from thn to)
 
 {-
 Desugar 'do' and 'mdo' expressions (NOT list comprehensions, they're
-handled in GHC.Compilers.HaskellToCore.ListComp).  Basically does the translation given in the
+handled in GHC.Compiler.HaskellToCore.ListComp).  Basically does the translation given in the
 Haskell 98 report:
 -}
 

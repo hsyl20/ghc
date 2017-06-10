@@ -6,7 +6,7 @@
 -- Contains functions useful through out the code generator.
 --
 
-module GHC.Compilers.CmmToLlvm.CodeGen.Base (
+module GHC.Compiler.CmmToLlvm.CodeGen.Base (
 
         LlvmCmmDecl, LlvmBasicBlock,
         LiveGlobalRegs,
@@ -37,8 +37,8 @@ module GHC.Compilers.CmmToLlvm.CodeGen.Base (
 #include "HsVersions.h"
 #include "ghcautoconf.h"
 
-import GHC.Compilers.CmmToLlvm
-import GHC.Compilers.CmmToLlvm.CodeGen.Regs
+import GHC.Compiler.CmmToLlvm
+import GHC.Compiler.CmmToLlvm.CodeGen.Regs
 
 import GHC.Data.CLabel
 import GHC.Utils.CodeGen.Platform ( activeStgRegs )

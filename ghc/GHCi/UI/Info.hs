@@ -31,7 +31,7 @@ import Prelude           hiding (mod)
 import System.Directory
 
 import qualified GHC.IR.Core.Utils
-import GHC.Compilers.HaskellToCore.Main
+import GHC.Compiler.HaskellToCore
 import GHC.Config.Flags (HasDynFlags(..))
 import GHC.Data.FastString
 import GHC

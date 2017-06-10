@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm.Layout (
+module GHC.Compiler.StgToCmm.Layout (
         mkArgDescr,
         emitCall, emitReturn, adjustHpBackwards,
 
@@ -19,7 +19,7 @@ module GHC.Compilers.StgToCmm.Layout (
 
         mkVirtHeapOffsets, mkVirtConstrOffsets, mkVirtConstrSizes, getHpRelOffset,
 
-        ArgRep(..), toArgRep, argRepSizeW -- re-exported from GHC.Compilers.StgToCmm.ArgRep
+        ArgRep(..), toArgRep, argRepSizeW -- re-exported from GHC.Compiler.StgToCmm.ArgRep
   ) where
 
 
@@ -27,13 +27,13 @@ module GHC.Compilers.StgToCmm.Layout (
 
 import Prelude hiding ((<*>))
 
-import GHC.Compilers.StgToCmm.Closure
-import GHC.Compilers.StgToCmm.Environment
-import GHC.Compilers.StgToCmm.ArgRep -- notably: ( slowCallPattern )
-import GHC.Compilers.StgToCmm.Profiling.Ticky
-import GHC.Compilers.StgToCmm.Monad
-import GHC.Compilers.StgToCmm.Utils
-import GHC.Compilers.StgToCmm.Profiling (curCCS)
+import GHC.Compiler.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.Environment
+import GHC.Compiler.StgToCmm.ArgRep -- notably: ( slowCallPattern )
+import GHC.Compiler.StgToCmm.Profiling.Ticky
+import GHC.Compiler.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Profiling (curCCS)
 
 import GHC.IR.Cmm.Graph
 import GHC.RTS.Storage
@@ -381,7 +381,7 @@ hpRel :: VirtualHpOffset         -- virtual offset of Hp
 hpRel hp off = off - hp
 
 getHpRelOffset :: VirtualHpOffset -> FCode CmmExpr
--- See Note [Virtual and real heap pointers] in GHC.Compilers.StgToCmm.Monad
+-- See Note [Virtual and real heap pointers] in GHC.Compiler.StgToCmm.Monad
 getHpRelOffset virtual_offset
   = do dflags <- getDynFlags
        hp_usg <- getHpUsage

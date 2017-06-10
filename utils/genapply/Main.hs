@@ -994,7 +994,7 @@ applyTypes = [
 --
 --  NOTE: other places to change if you change stackApplyTypes:
 --       - includes/rts/storage/FunTypes.h
---       - compiler/codeGen/GHC.Compilers.StgToCmm.Layout.hs: stdPattern
+--       - compiler/codeGen/GHC.Compiler.StgToCmm.Layout.hs: stdPattern
 stackApplyTypes = [
         [],
         [N],

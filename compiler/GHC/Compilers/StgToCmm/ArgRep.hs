@@ -1,12 +1,12 @@
 -----------------------------------------------------------------------------
 --
--- Argument representations used in GHC.Compilers.StgToCmm.Layout.
+-- Argument representations used in GHC.Compiler.StgToCmm.Layout.
 --
 -- (c) The University of Glasgow 2013
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm.ArgRep (
+module GHC.Compiler.StgToCmm.ArgRep (
         ArgRep(..), toArgRep, argRepSizeW,
 
         argRepString, isNonV, idArgRep,
@@ -15,7 +15,7 @@ module GHC.Compilers.StgToCmm.ArgRep (
 
         ) where
 
-import GHC.Compilers.StgToCmm.Closure    ( idPrimRep )
+import GHC.Compiler.StgToCmm.Closure    ( idPrimRep )
 
 import GHC.RTS.Storage            ( WordOff )
 import GHC.Data.Id               ( Id )
@@ -28,7 +28,7 @@ import GHC.Utils.Outputable
 import GHC.Data.FastString
 
 -- I extricated this code as this new module in order to avoid a
--- cyclic dependency between GHC.Compilers.StgToCmm.Layout and GHC.Compilers.StgToCmm.Profiling.Ticky.
+-- cyclic dependency between GHC.Compiler.StgToCmm.Layout and GHC.Compiler.StgToCmm.Profiling.Ticky.
 --
 -- NSF 18 Feb 2013
 
@@ -36,7 +36,7 @@ import GHC.Data.FastString
 --      Classifying arguments: ArgRep
 -------------------------------------------------------------------------
 
--- ArgRep is re-exported by GHC.Compilers.StgToCmm.Layout, but only for use in the
+-- ArgRep is re-exported by GHC.Compiler.StgToCmm.Layout, but only for use in the
 -- byte-code generator which also needs to know about the
 -- classification of arguments.
 
@@ -100,7 +100,7 @@ idArgRep = toArgRep . idPrimRep
 -- This list of argument patterns should be kept in sync with at least
 -- the following:
 --
---  * GHC.Compilers.StgToCmm.Layout.stdPattern maybe to some degree?
+--  * GHC.Compiler.StgToCmm.Layout.stdPattern maybe to some degree?
 --
 --  * the RTS_RET(stg_ap_*) and RTS_FUN_DECL(stg_ap_*_fast)
 --  declarations in includes/stg/MiscClosures.h

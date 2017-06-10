@@ -65,7 +65,7 @@ the code generator as well as the RTS because:
 
 -}
 
-module GHC.Compilers.StgToCmm.Profiling.Ticky (
+module GHC.Compiler.StgToCmm.Profiling.Ticky (
   withNewTickyCounterFun,
   withNewTickyCounterLNE,
   withNewTickyCounterThunk,
@@ -106,10 +106,10 @@ module GHC.Compilers.StgToCmm.Profiling.Ticky (
 
 #include "HsVersions.h"
 
-import GHC.Compilers.StgToCmm.ArgRep    ( slowCallPattern , toArgRep , argRepString )
-import GHC.Compilers.StgToCmm.Closure
-import GHC.Compilers.StgToCmm.Utils
-import GHC.Compilers.StgToCmm.Monad
+import GHC.Compiler.StgToCmm.ArgRep    ( slowCallPattern , toArgRep , argRepString )
+import GHC.Compiler.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.Utils
+import GHC.Compiler.StgToCmm.Monad
 
 import GHC.IR.Stg.Syntax
 import GHC.IR.Cmm.Expr
@@ -426,7 +426,7 @@ calls.
 
 Nowadays, though (ie as of the eval/apply paper), the significantly
 slower calls are actually just a subset of these: the ones with no
-built-in argument pattern (cf GHC.Compilers.StgToCmm.ArgRep.slowCallPattern)
+built-in argument pattern (cf GHC.Compiler.StgToCmm.ArgRep.slowCallPattern)
 
 So for ticky profiling, we split slow calls into
 "SLOW_CALL_fast_<pattern>_ctr" (those matching a built-in pattern) and
@@ -479,7 +479,7 @@ tickyDynAlloc mb_id rep lf = ifTicky $ getDynFlags >>= \dflags ->
 
 tickyAllocHeap ::
   Bool -> -- is this a genuine allocation? As opposed to
-          -- GHC.Compilers.StgToCmm.Layout.adjustHpBackwards
+          -- GHC.Compiler.StgToCmm.Layout.adjustHpBackwards
   VirtualHpOffset -> FCode ()
 -- Called when doing a heap check [TICK_ALLOC_HEAP]
 -- Must be lazy in the amount of allocation!
@@ -490,7 +490,7 @@ tickyAllocHeap genuine hp
         ; emit $ catAGraphs $
             -- only test hp from within the emit so that the monadic
             -- computation itself is not strict in hp (cf knot in
-            -- GHC.Compilers.StgToCmm.Monad.getHeapUsage)
+            -- GHC.Compiler.StgToCmm.Monad.getHeapUsage)
           if hp == 0 then []
           else let !bytes = wORD_SIZE dflags * hp in [
             -- Bump the allocation total in the closure's StgEntCounter

@@ -1187,7 +1187,7 @@ if an Id has defaultInlinePragma it means the user didn't specify anything.
 
 If inl_inline = Inline or Inlineable, then the Id should have an InlineRule unfolding.
 
-If you want to know where InlinePragmas take effect: Look in GHC.Compilers.HaskellToCore.Binding.makeCorePair
+If you want to know where InlinePragmas take effect: Look in GHC.Compiler.HaskellToCore.Binding.makeCorePair
 
 Note [inl_inline and inl_act]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1463,7 +1463,7 @@ integralFractionalLit neg i = FL { fl_text = SourceText (show i),
                                    fl_value = fromInteger i }
 
 -- Comparison operations are needed when grouping literals
--- for compiling pattern-matching (module GHC.Compilers.HaskellToCore.Match.Literal)
+-- for compiling pattern-matching (module GHC.Compiler.HaskellToCore.Match.Literal)
 
 instance Eq IntegralLit where
   (==) = (==) `on` il_value

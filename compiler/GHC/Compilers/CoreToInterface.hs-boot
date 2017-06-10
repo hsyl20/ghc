@@ -1,4 +1,4 @@
-module GHC.Compilers.CoreToInterface where
+module GHC.Compiler.CoreToInterface where
 
 import {-# SOURCE #-} GHC.Data.Types
 import {-# SOURCE #-} GHC.IR.Interface.Types

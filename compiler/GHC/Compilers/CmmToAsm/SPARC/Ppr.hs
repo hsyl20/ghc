@@ -10,7 +10,7 @@
 
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-module GHC.Compilers.CmmToAsm.SPARC.Ppr (
+module GHC.Compiler.CmmToAsm.SPARC.Ppr (
         pprNatCmmDecl,
         pprBasicBlock,
         pprData,
@@ -25,16 +25,16 @@ where
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Cond
-import GHC.Compilers.CmmToAsm.SPARC.Imm
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Base
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.PrettyPrint
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Cond
+import GHC.Compiler.CmmToAsm.SPARC.Imm
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Base
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.PrettyPrint
 
 import GHC.IR.Cmm.Syntax hiding (topInfoTable)
 import GHC.IR.Cmm.PrettyPrint()

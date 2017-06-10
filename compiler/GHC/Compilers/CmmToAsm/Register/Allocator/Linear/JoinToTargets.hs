@@ -7,14 +7,14 @@
 --      stored one.  They might be different if spilling has occurred in one
 --      branch; so some fixup code will be required to match up the assignments.
 --
-module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.JoinToTargets (joinToTargets) where
+module GHC.Compiler.CmmToAsm.Register.Allocator.Linear.JoinToTargets (joinToTargets) where
 
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.State
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.Base
-import GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs
-import GHC.Compilers.CmmToAsm.Register.Allocator.Liveness
-import GHC.Compilers.CmmToAsm.Instruction
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.State
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.Base
+import GHC.Compiler.CmmToAsm.Register.Allocator.Linear.FreeRegs
+import GHC.Compiler.CmmToAsm.Register.Allocator.Liveness
+import GHC.Compiler.CmmToAsm.Instruction
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

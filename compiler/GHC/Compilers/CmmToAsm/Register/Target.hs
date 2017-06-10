@@ -7,8 +7,8 @@
 --      We'd probably do better with a Register type class, and hook this to
 --      Instruction somehow.
 --
---      TODO: We should also make arch specific versions of GHC.Compilers.CmmToAsm.Register.Allocator.Graph.TrivColorable
-module GHC.Compilers.CmmToAsm.Register.Target (
+--      TODO: We should also make arch specific versions of GHC.Compiler.CmmToAsm.Register.Allocator.Graph.TrivColorable
+module GHC.Compiler.CmmToAsm.Register.Target (
         targetVirtualRegSqueeze,
         targetRealRegSqueeze,
         targetClassOfRealReg,
@@ -21,20 +21,20 @@ where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Class
-import GHC.Compilers.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Format
 
 import GHC.Utils.Outputable
 import GHC.Data.Unique
 import GHC.Utils.Platform
 
-import qualified GHC.Compilers.CmmToAsm.X86.Regs       as X86
-import qualified GHC.Compilers.CmmToAsm.X86.RegInfo    as X86
+import qualified GHC.Compiler.CmmToAsm.X86.Regs       as X86
+import qualified GHC.Compiler.CmmToAsm.X86.RegInfo    as X86
 
-import qualified GHC.Compilers.CmmToAsm.PPC.Regs       as PPC
+import qualified GHC.Compiler.CmmToAsm.PPC.Regs       as PPC
 
-import qualified GHC.Compilers.CmmToAsm.SPARC.Regs     as SPARC
+import qualified GHC.Compiler.CmmToAsm.SPARC.Regs     as SPARC
 
 targetVirtualRegSqueeze :: Platform -> RegClass -> VirtualReg -> Int
 targetVirtualRegSqueeze platform

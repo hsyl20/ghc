@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Compilers.StgToCmm.Monad (
+module GHC.Compiler.StgToCmm.Monad (
         FCode,        -- type
 
         initC, runC, thenC, thenFC, listCs,
@@ -62,7 +62,7 @@ module GHC.Compilers.StgToCmm.Monad (
 #include "HsVersions.h"
 
 import GHC.IR.Cmm.Syntax
-import GHC.Compilers.StgToCmm.Closure
+import GHC.Compiler.StgToCmm.Closure
 import GHC.Config.Flags
 import GHC.IR.Cmm.Transform.Dataflow
 import GHC.Data.Maybe
@@ -192,7 +192,7 @@ data CgInfoDownwards        -- information only passed *downwards* by the monad
         cgd_self_loop :: Maybe SelfLoopInfo,-- Which tail calls can be compiled
                                             -- as local jumps? See Note
                                             -- [Self-recursive tail calls] in
-                                            -- GHC.Compilers.StgToCmm.Expression
+                                            -- GHC.Compiler.StgToCmm.Expression
         cgd_tick_scope:: CmmTickScope       -- Tick scope for new blocks & ticks
   }
 

@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs (
+module GHC.Compiler.CmmToAsm.Register.Allocator.Linear.FreeRegs (
     FR(..),
     maxSpillSlots
 )
@@ -9,8 +9,8 @@ module GHC.Compilers.CmmToAsm.Register.Allocator.Linear.FreeRegs (
 
 where
 
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Register.Class
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Register.Class
 
 import GHC.Config.Flags
 import GHC.Utils.Panic
@@ -28,14 +28,14 @@ import GHC.Utils.Platform
 --      getFreeRegs cls f = filter ( (==cls) . regClass . RealReg ) f
 --      allocateReg f r = filter (/= r) f
 
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
-import qualified GHC.Compilers.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
+import qualified GHC.Compiler.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
 
-import qualified GHC.Compilers.CmmToAsm.PPC.Instr as PPC.Instr
-import qualified GHC.Compilers.CmmToAsm.SPARC.Instr as SPARC.Instr
-import qualified GHC.Compilers.CmmToAsm.X86.Instr as X86.Instr
+import qualified GHC.Compiler.CmmToAsm.PPC.Instr as PPC.Instr
+import qualified GHC.Compiler.CmmToAsm.SPARC.Instr as SPARC.Instr
+import qualified GHC.Compiler.CmmToAsm.X86.Instr as X86.Instr
 
 class Show freeRegs => FR freeRegs where
     frAllocateReg :: Platform -> RealReg -> freeRegs -> freeRegs

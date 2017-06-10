@@ -8,7 +8,7 @@
 --
 -- -----------------------------------------------------------------------------
 
-module GHC.Compilers.CmmToAsm.Monad (
+module GHC.Compiler.CmmToAsm.Monad (
         NatM_State(..), mkNatM_State,
 
         NatM, -- instance Monad
@@ -37,9 +37,9 @@ where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.CmmToAsm.Register
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register.Target
+import GHC.Compiler.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register.Target
 
 import GHC.IR.Cmm.BlockId
 import GHC.IR.Cmm.Transform.Dataflow

@@ -1,4 +1,4 @@
-module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base (
+module GHC.Compiler.CmmToAsm.SPARC.CodeGen.Base (
         InstrBlock,
         CondCode(..),
         ChildCode64(..),
@@ -13,12 +13,12 @@ module GHC.Compilers.CmmToAsm.SPARC.CodeGen.Base (
 
 where
 
-import GHC.Compilers.CmmToAsm.SPARC.Instr
-import GHC.Compilers.CmmToAsm.SPARC.Cond
-import GHC.Compilers.CmmToAsm.SPARC.AddrMode
-import GHC.Compilers.CmmToAsm.SPARC.Regs
-import GHC.Compilers.CmmToAsm.Format
-import GHC.Compilers.CmmToAsm.Register
+import GHC.Compiler.CmmToAsm.SPARC.Instr
+import GHC.Compiler.CmmToAsm.SPARC.Cond
+import GHC.Compiler.CmmToAsm.SPARC.AddrMode
+import GHC.Compiler.CmmToAsm.SPARC.Regs
+import GHC.Compiler.CmmToAsm.Format
+import GHC.Compiler.CmmToAsm.Register
 
 import GHC.Utils.CodeGen.Platform
 import GHC.Config.Flags

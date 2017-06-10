@@ -8,14 +8,14 @@ The Desugarer: turning GHC.IR.Haskell into Core.
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Compilers.HaskellToCore.Main (
+module GHC.Compiler.HaskellToCore (
     -- * Desugaring operations
     deSugar, deSugarExpr
     ) where
 
 #include "HsVersions.h"
 
-import GHC.Compilers.HaskellToCore.Usage
+import GHC.Compiler.HaskellToCore.Usage
 import GHC.Config.Flags
 import GHC.Types
 import GHC.IR.Haskell.Syntax
@@ -32,10 +32,10 @@ import GHC.IR.Core.Syntax
 import GHC.IR.Core.FreeVars     ( exprsSomeFreeVarsList )
 import GHC.IR.Core.Transform.Simple    ( simpleOptPgm, simpleOptExpr )
 import GHC.IR.Core.PrettyPrint
-import GHC.Compilers.HaskellToCore.Monad
-import GHC.Compilers.HaskellToCore.Expression
-import GHC.Compilers.HaskellToCore.Binding
-import GHC.Compilers.HaskellToCore.Foreign.Declaration
+import GHC.Compiler.HaskellToCore.Monad
+import GHC.Compiler.HaskellToCore.Expression
+import GHC.Compiler.HaskellToCore.Binding
+import GHC.Compiler.HaskellToCore.Foreign.Declaration
 import GHC.Builtin.Names   ( coercibleTyConKey )
 import GHC.Builtin.Primitive.Types     ( eqReprPrimTyCon )
 import GHC.Data.Unique      ( hasKey )
@@ -55,7 +55,7 @@ import GHC.Data.FastString
 import GHC.Utils.Error
 import GHC.Utils.Outputable
 import GHC.Data.SrcLoc
-import GHC.Compilers.HaskellToCore.Coverage
+import GHC.Compiler.HaskellToCore.Coverage
 import GHC.Utils
 import GHC.Utils.Monad
 import GHC.Data.Tree.OrdList
@@ -475,7 +475,7 @@ For the LHS of a RULE we do *not* want to desugar
     [x]   to    build (\cn. x `c` n)
 We want to leave explicit lists simply as chains
 of cons's. We can achieve that slightly indirectly by
-switching off EnableRewriteRules.  See GHC.Compilers.HaskellToCore.Expression.dsExplicitList.
+switching off EnableRewriteRules.  See GHC.Compiler.HaskellToCore.Expression.dsExplicitList.
 
 That keeps the desugaring of list comprehensions simple too.
 
