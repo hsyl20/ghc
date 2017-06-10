@@ -55,7 +55,7 @@ vars :: 'Vars_' ::= {{ com List of variables }}
   | vars1 \inter vars2       :: M :: intersection
     {{ tex [[vars1]] \cap [[vars2]] }}
 
-e, u :: 'Expr_' ::= {{ com Expressions, \coderef{coreSyn/CoreSyn.lhs}{Expr} }}
+e, u :: 'Expr_' ::= {{ com Expressions, \coderef{GHC/IR/Core/Syntax.hs}{Expr} }}
   | n                                            ::   :: Var  {{ com \ctor{Var}: Variable }}
   | lit                                          ::   :: Lit  {{ com \ctor{Lit}: Literal }}
   | e1 e2                                        ::   :: App  {{ com \ctor{App}: Application }}
@@ -74,21 +74,21 @@ e, u :: 'Expr_' ::= {{ com Expressions, \coderef{coreSyn/CoreSyn.lhs}{Expr} }}
   | \\ e                                         :: M :: Newline
     {{ tex \qquad \\ \multicolumn{1}{r}{[[e]]} }}
 
-binding :: 'Bind_' ::= {{ com Let-bindings, \coderef{coreSyn/CoreSyn.lhs}{Bind} }}
+binding :: 'Bind_' ::= {{ com Let-bindings, \coderef{GHC/IR/Core/Syntax.hs}{Bind} }}
   | n = e                         ::   :: NonRec  {{ com \ctor{NonRec}: Non-recursive binding }}
   | rec </ ni = ei // ;; // i /> ::   :: Rec     {{ com \ctor{Rec}: Recursive binding }}
 
-alt :: 'Alt_' ::= {{ com Case alternative, \coderef{coreSyn/CoreSyn.lhs}{Alt} }}
+alt :: 'Alt_' ::= {{ com Case alternative, \coderef{GHC/IR/Core/Syntax.hs}{Alt} }}
   | Kp </ ni // i /> -> e    ::   :: Alt  {{ com Constructor applied to fresh names }}
 
-tick :: 'Tickish_' ::= {{ com Internal notes, \coderef{coreSyn/CoreSyn.lhs}{Tickish} }}
+tick :: 'Tickish_' ::= {{ com Internal notes, \coderef{GHC/IR/Core/Syntax.hs}{Tickish} }}
 
-Kp {{ tex \mathbb{K} }} :: 'AltCon_' ::= {{ com Constructors used in patterns, \coderef{coreSyn/CoreSyn.lhs}{AltCon} }}
+Kp {{ tex \mathbb{K} }} :: 'AltCon_' ::= {{ com Constructors used in patterns, \coderef{GHC/IR/Core/Syntax.hs}{AltCon} }}
   | K        ::   :: DataAlt         {{ com \ctor{DataAlt}: Data constructor }}
   | lit      ::   :: LitAlt          {{ com \ctor{LitAlt}: Literal (such as an integer or character) }}
   | _        ::   :: DEFAULT         {{ com \ctor{DEFAULT}: Wildcard }}
 
-program :: 'CoreProgram_' ::= {{ com A System FC program, \coderef{coreSyn/CoreSyn.lhs}{CoreProgram} }}
+program :: 'CoreProgram_' ::= {{ com A System FC program, \coderef{GHC/IR/Core/Syntax.hs}{CoreProgram} }}
   | </ bindingi // i />  ::   :: CoreProgram  {{ com List of bindings }}
 
 %% TYPES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,10 +209,10 @@ K :: 'DataCon_' ::= {{ com Data constructors, \coderef{basicTypes/DataCon.lhs}{D
 
 %% CONTEXTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-G {{ tex \Gamma }} :: 'LintM_Bindings_' ::= {{ com List of bindings, \coderef{coreSyn/CoreLint.lhs}{LintM} }}
+G {{ tex \Gamma }} :: 'LintM_Bindings_' ::= {{ com List of bindings, \coderef{GHC/IR/Core/Analyse/Lint.hs}{LintM} }}
   | n                        ::   :: Binding   {{ com Single binding }}
   | </ Gi // , // i />       ::   :: Concat    {{ com Context concatenation }}
-  | vars_of binding          :: M :: VarsOf    {{ com \coderef{coreSyn/CoreSyn.lhs}{bindersOf} }}
+  | vars_of binding          :: M :: VarsOf    {{ com \coderef{GHC/IR/Core/Syntax.hs}{bindersOf} }}
 
 O {{ tex \Omega }} :: 'VarEnv_Role_' ::= {{ com Mapping from type variables to roles }}
   | </ ni : Ri // i />       ::   :: List      {{ com List of bindings }}

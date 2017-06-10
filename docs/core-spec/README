@@ -30,8 +30,8 @@ into LaTeX math-mode code. Thus, the file core-spec.mng is the source for
 core-spec.tex, which gets processed into core-spec.pdf.
 
 The file CoreSyn.ott contains the grammar of System FC, mostly extracted from
-compiler/coreSyn/CoreSyn.lhs. Here are a few pointers to help those of you
-unfamiliar with Ott:
+GHC.IR.Core.Syntax. Here are a few pointers to help those of you unfamiliar with
+Ott:
 
 - The {{ ... }} snippets are called "homs", and they assist ott in translating
 your notation to LaTeX. Three different homs are used:
