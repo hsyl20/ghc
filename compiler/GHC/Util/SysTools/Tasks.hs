@@ -8,7 +8,7 @@
 -----------------------------------------------------------------------------
 module GHC.Util.SysTools.Tasks where
 
-import GHC.Util.Exception
+import GHC.Util.Exception as Exception
 import GHC.Util.Error
 import GHC.Config.Flags
 import GHC.Util.Outputable

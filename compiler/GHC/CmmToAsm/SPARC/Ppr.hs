@@ -39,12 +39,13 @@ import GHC.CmmToAsm.Format
 import GHC.CmmToAsm.PrettyPrint
 
 import GHC.Cmm.Syntax hiding (topInfoTable)
+import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Printer()
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Dataflow.Label
 import GHC.Cmm.Dataflow.Collections
 
-import GHC.CoreTypes.Unique           ( Uniquable(..), pprUniqueAlways )
+import GHC.CoreTypes.Unique           ( pprUniqueAlways )
 import GHC.Util.Outputable
 import GHC.Util.Platform
 import GHC.Data.FastString

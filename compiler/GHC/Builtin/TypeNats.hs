@@ -37,6 +37,9 @@ import GHC.Builtin.Names               ( gHC_TYPELITS
                                        , typeNatLeqTyFamNameKey
                                        , typeNatSubTyFamNameKey
                                        , typeNatCmpTyFamNameKey
+                                       , typeNatLogTyFamNameKey
+                                       , typeNatModTyFamNameKey
+                                       , typeNatDivTyFamNameKey
                                        , typeSymbolCmpTyFamNameKey
                                        , typeSymbolAppendFamNameKey
                                        )

@@ -63,10 +63,10 @@ import GHC.CoreTypes.Module
 import GHC.CoreTypes.SrcLoc
 import GHC.Util.Fingerprint
 import GHC.Util.Binary
-import GHC.Data.BoolFormula      ( BooleanFormula, pprBooleanFormula, isTrue )
-import GHC.CoreTypes.Var             ( TyVarBndr(..) )
-import GHC.CoreTypes.TyCon ( Role (..), Injectivity(..) )
-import GHC.Util                  ( filterOut, filterByList )
+import GHC.Data.BoolFormula  ( BooleanFormula, pprBooleanFormula, isTrue )
+import GHC.CoreTypes.Var     ( TyVarBndr(..) )
+import GHC.CoreTypes.TyCon   ( Role (..), Injectivity(..) )
+import GHC.Util              ( filterOut, filterByList, dropList )
 import GHC.CoreTypes.DataCon (SrcStrictness(..), SrcUnpackedness(..))
 import GHC.Util.Lexeme       (isLexSym)
 import GHC.Config.Flags

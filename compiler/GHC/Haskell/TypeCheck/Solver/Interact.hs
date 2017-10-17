@@ -11,7 +11,6 @@ import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes ( SwapFlag(..), isSwapped
                              , infinity, IntWithInf, intGtLimit )
-import GHC.Haskell.Syntax.Type   ( HsIPName(..) )
 import GHC.Haskell.TypeCheck.Solver.Canonicalise as Canonicaliser
 import GHC.Haskell.TypeCheck.Solver.Flatten
 import GHC.Haskell.TypeCheck.Unify( canSolveByUnification )
@@ -30,7 +29,7 @@ import GHC.CoreTypes.Name
 import GHC.CoreTypes.RdrName ( lookupGRE_FieldLabel )
 import GHC.Builtin.Names  ( knownNatClassName, knownSymbolClassName,
                             typeableClassName, coercibleTyConKey,
-                            hasFieldClassName,
+                            hasFieldClassName, eqTyConKey,
                             heqTyConKey, ipClassKey )
 import GHC.Builtin.Types  ( typeNatKind, typeSymbolKind, heqDataCon,
                             coercibleDataCon, constraintKindTyCon )

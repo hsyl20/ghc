@@ -141,8 +141,8 @@ import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.DataCon 
                              ( dataConFullSig
-                             , dataConUnivTyVarBinders, dataConExTyVarBinders
-                             , DataCon, filterEqSpec )
+                             , dataConUserTyVarBinders
+                             , DataCon )
 import {-# SOURCE #-} GHC.CoreTypes.Type
                           ( isPredTy, isCoercionTy, mkAppTy, mkCastTy
                           , tyCoVarsOfTypeWellScoped

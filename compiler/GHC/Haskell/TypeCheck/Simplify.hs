@@ -36,11 +36,13 @@ import GHC.Builtin.Names
 import GHC.Haskell.TypeCheck.Error
 import GHC.Haskell.TypeCheck.Evidence
 import GHC.Haskell.TypeCheck.Solver.Interact
-import GHC.Haskell.TypeCheck.Solver.Canonicalise   ( makeSuperClasses )
-import GHC.Haskell.TypeCheck.Util.Monadic   as TcM
-import GHC.Haskell.TypeCheck.Monad as TcM
+import GHC.Haskell.TypeCheck.Solver.Canonicalise   ( makeSuperClasses
+                                                   , solveCallStack )
+import GHC.Haskell.TypeCheck.Util.Monadic  as TcM
+import GHC.Haskell.TypeCheck.Monad         as TcM
 import GHC.Haskell.TypeCheck.Solver.Monad  as TcS
 import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.Haskell.TypeCheck.Unify                 ( tcSubType_NC )
 import GHC.Data.TrieMap       () -- DV: for now
 import GHC.CoreTypes.Type
 import GHC.Builtin.Types      ( liftedRepTy )

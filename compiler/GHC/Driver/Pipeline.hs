@@ -41,7 +41,7 @@ import GHC.Packages
 import GHC.Haskell.Parser.HeaderInfo
 import GHC.Driver.Phases
 import GHC.Util.SysTools as SysTools
-import GHC.Util.Elf
+import GHC.Util.SysTools.ExtraObj
 import GHC.Driver.Main
 import GHC.Driver.Finder
 import GHC.CoreTypes.Base hiding ( Hsc )

@@ -97,7 +97,7 @@ module GHC.Data.FastString
 
 #include "HsVersions.h"
 
-import GHC.Prelude
+import GHC.Prelude as Prelude
 
 import GHC.Data.Char.Encoding
 import GHC.Util.IO.Unsafe

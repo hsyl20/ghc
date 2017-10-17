@@ -129,6 +129,7 @@ module GHC.Builtin.Types (
 #include "HsVersions.h"
 #include "MachDeps.h"
 
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Id.Make( mkDataConWorkId, mkDictSelId )
 

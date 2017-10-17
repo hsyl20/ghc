@@ -66,16 +66,16 @@ import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Monad               ( FloatOutSwitches(..) )
-import GHC.Core.Utils                  ( exprType, exprIsHNF
-                                          , exprOkForSpeculation
-                                          , exprIsTopLevelBindable
-                                          , isExprLevPoly
-                                          , collectMakeStaticArgs
-                                          )
-import GHC.Core.Arity         ( exprBotStrictness_maybe )
-import GHC.Core.FreeVars      -- all of it
+import GHC.Core.Utils               ( exprType, exprIsHNF
+                                    , exprOkForSpeculation
+                                    , exprIsTopLevelBindable
+                                    , isExprLevPoly
+                                    , collectMakeStaticArgs
+                                    )
+import GHC.Core.Arity               ( exprBotStrictness_maybe )
+import GHC.Core.FreeVars            -- all of it
 import GHC.Core.Subst as CoreSubst
-import GHC.Core.Syntax.Make            ( sortQuantVars )
+import GHC.Core.Syntax.Make         ( sortQuantVars )
 
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Id.Info
@@ -86,11 +86,12 @@ import GHC.CoreTypes.Literal          ( litIsTrivial )
 import GHC.CoreTypes.Demand           ( StrictSig, Demand, isStrictDmd, splitStrictSig, increaseStrictSigArity )
 import GHC.CoreTypes.Name             ( getOccName, mkSystemVarName )
 import GHC.CoreTypes.OccName          ( occNameString )
-import GHC.CoreTypes.Type             ( Type, mkLamTypes, splitTyConApp_maybe )
+import GHC.CoreTypes.Type             ( Type, mkLamTypes, splitTyConApp_maybe, tyCoVarsOfType )
 import GHC.CoreTypes.BasicTypes       ( Arity, RecFlag(..), isRec )
-import GHC.CoreTypes.DataCon  ( dataConOrigResTy )
+import GHC.CoreTypes.DataCon          ( dataConOrigResTy )
 import GHC.Builtin.Types
 import GHC.Data.UniqueSupply
+import GHC.Data.UniqueSet
 import GHC.Util
 import GHC.Util.Outputable
 import GHC.Data.FastString

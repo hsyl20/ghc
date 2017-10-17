@@ -61,7 +61,7 @@ module GHC.Core.Utils (
 import GHC.Prelude
 
 import GHC.Core.Syntax
-import GHC.Builtin.Names ( makeStaticName )
+import GHC.Builtin.Names ( makeStaticName,  absentErrorIdKey )
 import GHC.Core.Printer
 import GHC.Core.FreeVars ( exprFreeVars )
 import GHC.CoreTypes.Var

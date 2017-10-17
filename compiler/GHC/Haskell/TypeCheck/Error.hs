@@ -49,7 +49,7 @@ import GHC.Util.Error              ( ErrMsg, errDoc, pprLocErrMsg )
 import GHC.CoreTypes.BasicTypes
 import GHC.CoreTypes.ConLike            ( ConLike(..) )
 import GHC.Util
-import GHC.Haskell.TypeCheck.Environment ( tcLookupIdMaybe )
+import GHC.Haskell.TypeCheck.Environment ( tcLookupIdMaybe, tcInitTidyEnv )
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Simplify  ( tcSubsumes )
 import GHC.Data.FastString
 import GHC.Util.Outputable

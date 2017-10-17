@@ -98,7 +98,6 @@ import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Util
 import GHC.Haskell.Syntax.Annotation
->>>>>>> Introduce module hierarchy:compiler/GHC/Haskell/Parser/Syntax.hs
 import Data.List
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Util.Monad

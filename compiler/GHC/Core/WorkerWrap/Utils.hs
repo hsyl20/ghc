@@ -23,22 +23,23 @@ import GHC.Prelude
 import GHC.Core.Syntax
 import GHC.Core.Utils            ( exprType, mkCast )
 import GHC.CoreTypes.Id
-import GHC.CoreTypes.Id.Info           ( JoinArity, vanillaIdInfo )
+import GHC.CoreTypes.Id.Info     ( JoinArity, vanillaIdInfo )
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Demand
 import GHC.Core.Syntax.Make      ( mkRuntimeErrorApp, aBSENT_ERROR_ID
-                                    , mkCoreUbxTup , mkCoreApp, mkCoreLet )
-import GHC.CoreTypes.Id.Make           ( voidArgId, voidPrimId )
+                                 , mkCoreUbxTup , mkCoreApp, mkCoreLet
+                                 , mkAbsentErrorApp )
+import GHC.CoreTypes.Id.Make        ( voidArgId, voidPrimId )
 import GHC.Builtin.Primitive.Types  ( voidPrimTy )
 import GHC.Builtin.Types            ( tupleDataCon )
-import GHC.CoreTypes.Var.Environment   ( mkInScopeSet )
-import GHC.CoreTypes.Var.Set           ( VarSet )
+import GHC.CoreTypes.Var.Environment( mkInScopeSet )
+import GHC.CoreTypes.Var.Set        ( VarSet )
 import GHC.CoreTypes.Type
-import GHC.CoreTypes.RepType           ( isVoidTy )
+import GHC.CoreTypes.RepType        ( isVoidTy )
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.FamilyInstance
-import GHC.CoreTypes.BasicTypes        ( Boxity(..) )
-import GHC.CoreTypes.Literal           ( absentLiteralOf )
+import GHC.CoreTypes.BasicTypes     ( Boxity(..) )
+import GHC.CoreTypes.Literal        ( absentLiteralOf )
 import GHC.CoreTypes.TyCon
 import GHC.Data.UniqueSupply
 import GHC.CoreTypes.Unique

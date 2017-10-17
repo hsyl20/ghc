@@ -12,8 +12,9 @@ module GHC.Haskell.TypeCheck.Solver.Canonicalise(
 
 import GHC.Prelude
 
+import GHC.Haskell.Syntax.Type      (HsIPName (..))
 import GHC.Haskell.TypeCheck.Util
-import GHC.Haskell.TypeCheck.Unify( swapOverTyVars, metaTyVarUpdateOK )
+import GHC.Haskell.TypeCheck.Unify  ( swapOverTyVars, metaTyVarUpdateOK )
 import GHC.Haskell.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.Haskell.TypeCheck.Solver.Flatten

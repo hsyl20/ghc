@@ -39,8 +39,9 @@ import GHC.Cmm.Dataflow.Label
 import GHC.CoreTypes.BasicTypes       (Alignment)
 import GHC.Config.Flags
 import GHC.Cmm.Syntax              hiding (topInfoTable)
+import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel
-import GHC.CoreTypes.Unique           ( pprUniqueAlways, Uniquable(..) )
+import GHC.CoreTypes.Unique           ( pprUniqueAlways )
 import GHC.Util.Platform
 import GHC.Data.FastString
 import GHC.Util.Outputable

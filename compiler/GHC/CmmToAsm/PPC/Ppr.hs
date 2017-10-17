@@ -22,6 +22,7 @@ import GHC.CmmToAsm.Register.Class
 import GHC.CmmToAsm.Register.Target
 
 import GHC.Cmm.Syntax hiding (topInfoTable)
+import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Dataflow.Collections
 import GHC.Cmm.Dataflow.Label
 

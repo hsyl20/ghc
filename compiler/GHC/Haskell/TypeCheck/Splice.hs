@@ -52,6 +52,7 @@ import GHCi.Message
 import GHCi.RemoteTypes
 import GHC.Interactive.Interpreter
 import GHC.Driver.Main
+import GHC.Driver.Finder
         -- These imports are the reason that GHC.Haskell.TypeCheck.Splice
         -- is very high up the module hierarchy
 import GHC.CoreTypes.Var.Free as FV

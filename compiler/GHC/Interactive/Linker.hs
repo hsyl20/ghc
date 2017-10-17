@@ -50,6 +50,7 @@ import GHC.Data.FastString
 import GHC.Util.Platform
 import GHC.Util.SysTools
 import GHC.Util.FileCleanup
+import GHC.Packages
 
 -- Standard libraries
 import Control.Monad

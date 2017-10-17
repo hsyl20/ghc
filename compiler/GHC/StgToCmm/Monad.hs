@@ -66,7 +66,6 @@ import GHC.Cmm.Syntax
 import GHC.StgToCmm.Closure
 import GHC.Config.Flags
 import GHC.Cmm.Dataflow.Collections
-import GHC.Data.Maybe
 import GHC.Cmm.Syntax.Graph as MkGraph
 import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel

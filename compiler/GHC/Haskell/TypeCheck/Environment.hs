@@ -97,6 +97,7 @@ import GHC.CoreTypes.Name.Set
 import GHC.CoreTypes.Name.Environment
 import GHC.CoreTypes.Var.Environment
 import GHC.CoreTypes.Base
+import GHC.CoreTypes.Type.Internal
 import GHC.Config.Flags
 import GHC.CoreTypes.SrcLoc
 import GHC.CoreTypes.BasicTypes hiding( SuccessFlag(..) )

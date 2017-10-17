@@ -42,14 +42,14 @@ import GHC.Haskell.TypeCheck.Evidence
 import GHC.Haskell.TypeCheck.Type
 import GHC.Haskell.TypeCheck.Pattern
 import GHC.Haskell.TypeCheck.Util.Monadic
-import GHC.CoreTypes.FamilyInstance                   ( normaliseType )
+import GHC.CoreTypes.FamilyInstance               ( normaliseType )
 import GHC.Haskell.TypeCheck.FamilyInstance       ( tcGetFamInstEnvs )
 import GHC.CoreTypes.TyCon
 import GHC.Haskell.TypeCheck.Util.CoreType
-import GHC.CoreTypes.Type                             ( mkStrLitTy, tidyOpenType
+import GHC.CoreTypes.Type                         ( mkStrLitTy, tidyOpenType
                                                   , splitTyConApp_maybe)
 import GHC.Builtin.Primitive.Types
-import GHC.Builtin.Types                          ( cTupleTyConName )
+import GHC.Builtin.Types                          ( mkBoxedTupleTy )
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Var as Var
 import GHC.CoreTypes.Var.Set

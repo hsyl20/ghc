@@ -18,7 +18,7 @@ import GHC.Util.Error
 import GHC.Config.Flags
 import GHC.Packages
 import GHC.Util.Platform
-import GHC.Util.Outputable
+import GHC.Util.Outputable as Outputable
 import GHC.CoreTypes.SrcLoc           ( noSrcSpan )
 import GHC.CoreTypes.Module
 import GHC.Util.Elf
