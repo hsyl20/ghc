@@ -100,7 +100,7 @@ module GHC.Core.Syntax (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.CostCentre
 import GHC.CoreTypes.Var.Environment   ( InScopeSet )

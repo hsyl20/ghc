@@ -25,7 +25,7 @@ where
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Regs
 import GHC.CmmToAsm.SPARC.Instr

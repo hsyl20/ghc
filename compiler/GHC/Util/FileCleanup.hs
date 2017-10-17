@@ -7,7 +7,7 @@ module GHC.Util.FileCleanup
   , withSystemTempDirectory, withTempDirectory
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Util.Error

@@ -23,7 +23,7 @@ module GHC.Data.Maybe (
         MaybeT(..), liftMaybeT, tryMaybeT
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Control.Monad
 import Control.Monad.Trans.Maybe

@@ -18,7 +18,7 @@ module GHC.Core.Vectorise.Monad (
   addGlobalParallelTyCon,
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad.Base
 import GHC.Core.Vectorise.Monad.Naming

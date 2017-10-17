@@ -26,7 +26,7 @@ module GHC.Core.Vectorise.Monad.Base (
   fixV,
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Env

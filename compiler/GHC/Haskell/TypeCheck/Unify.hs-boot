@@ -1,6 +1,6 @@
 module GHC.Haskell.TypeCheck.Unify where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.Haskell.TypeCheck.Util.CoreType ( TcTauType )
 import GHC.Haskell.TypeCheck.Util          ( TcM )
 import GHC.Haskell.TypeCheck.Evidence      ( TcCoercion )

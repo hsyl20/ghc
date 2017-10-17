@@ -22,7 +22,7 @@ module GHC.Cmm.Syntax.Node (
      CmmTickScope(..), isTickSubScope, combineTickScopes,
   ) where
 
-import GhcPrelude hiding (succ)
+import GHC.Prelude hiding (succ)
 
 import GHC.Util.CodeGen.Platform
 import GHC.Cmm.Syntax.Expression

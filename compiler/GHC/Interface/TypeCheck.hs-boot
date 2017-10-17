@@ -1,6 +1,6 @@
 module GHC.Interface.TypeCheck where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.Interface.Syntax         ( IfaceDecl, IfaceClsInst, IfaceFamInst
                                     , IfaceRule, IfaceAnnotation
                                     , IfaceCompleteMatch )

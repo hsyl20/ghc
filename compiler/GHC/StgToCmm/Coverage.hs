@@ -8,7 +8,7 @@
 
 module GHC.StgToCmm.Coverage ( initHpc, mkTickBox ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.StgToCmm.Monad
 

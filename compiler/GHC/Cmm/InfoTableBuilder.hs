@@ -7,7 +7,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding (succ)
+import GHC.Prelude hiding (succ)
 
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Graph
@@ -219,7 +219,7 @@ procpointSRT dflags top_srt top_table entries =
     sorted_ints = sort ints
     offset = head sorted_ints
     bitmap_entries = map (subtract offset) sorted_ints
-    len = GhcPrelude.last bitmap_entries + 1
+    len = GHC.Prelude.last bitmap_entries + 1
     bitmap = intsToBitmap dflags len bitmap_entries
 
 maxBmpSize :: DynFlags -> Int

@@ -7,7 +7,7 @@
 {-# LANGUAGE CPP #-}
 module GHC.Core.WorkerWrap ( wwTopBinds ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Inliner ( certainlyWillInline, mkWwInlineRule

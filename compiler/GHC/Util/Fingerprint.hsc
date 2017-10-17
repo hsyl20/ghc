@@ -24,7 +24,7 @@ module GHC.Util.Fingerprint (
 #include "md5.h"
 ##include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import Foreign
 import GHC.IO

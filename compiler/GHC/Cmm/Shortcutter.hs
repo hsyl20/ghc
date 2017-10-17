@@ -9,7 +9,7 @@ module GHC.Cmm.Shortcutter
     )
 where
 
-import GhcPrelude hiding (succ, unzip, zip)
+import GHC.Prelude hiding (succ, unzip, zip)
 
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Collections

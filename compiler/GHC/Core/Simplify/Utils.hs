@@ -35,7 +35,7 @@ module GHC.Core.Simplify.Utils (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Simplify.Environment
 import GHC.Core.Monad       ( SimplMode(..), Tick(..) )

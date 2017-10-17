@@ -27,7 +27,7 @@ module GHC.Util.Lexeme (
 
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.FastString
 

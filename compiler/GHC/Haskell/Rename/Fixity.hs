@@ -12,7 +12,7 @@ module GHC.Haskell.Rename.Fixity
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interface.Load
 import GHC.Haskell.Syntax

@@ -20,7 +20,7 @@ module GHC.Haskell.Derive.Generic
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.Type

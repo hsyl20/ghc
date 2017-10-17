@@ -1,6 +1,6 @@
 module GHC.Config.Hooks where
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 data Hooks
 

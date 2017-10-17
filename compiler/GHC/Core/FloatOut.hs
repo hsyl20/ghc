@@ -11,7 +11,7 @@
 
 module GHC.Core.FloatOut ( floatOutwards ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Utils

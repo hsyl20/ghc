@@ -21,7 +21,7 @@ module GHC.Cmm.ConstantFolder (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Utils
 import GHC.Cmm.Syntax

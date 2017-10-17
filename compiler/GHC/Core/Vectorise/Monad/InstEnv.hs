@@ -7,7 +7,7 @@ module GHC.Core.Vectorise.Monad.InstEnv
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad.Global
 import GHC.Core.Vectorise.Monad.Base

@@ -25,7 +25,7 @@ module GHC.Haskell.TypeCheck.Signature(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.Haskell.TypeCheck.Type

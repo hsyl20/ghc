@@ -3,7 +3,7 @@ module GHC.Cmm.Sinker (
      cmmSink
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax
 import GHC.Cmm.ConstantFolder

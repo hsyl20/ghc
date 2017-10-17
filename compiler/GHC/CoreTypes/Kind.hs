@@ -20,7 +20,7 @@ module GHC.CoreTypes.Kind (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type ( coreView, tcView , splitTyConApp_maybe )
 import {-# SOURCE #-} GHC.CoreTypes.DataCon ( DataCon )

@@ -23,7 +23,7 @@ module GHC.CoreTypes.Class (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.TyCon ( TyCon )
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal ( Type, PredType, pprType )

@@ -11,7 +11,7 @@
 
 module GHC.CmmToLlvm.Fixup ( llvmFixupAsm ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags ( DynFlags, targetPlatform )
 import GHC.Util.Platform ( platformArch, Arch(..) )

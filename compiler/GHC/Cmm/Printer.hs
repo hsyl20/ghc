@@ -38,7 +38,7 @@ module GHC.Cmm.Printer
   )
 where
 
-import GhcPrelude hiding (succ)
+import GHC.Prelude hiding (succ)
 
 import GHC.Cmm.Syntax.BlockId ()
 import GHC.CoreTypes.CLabel

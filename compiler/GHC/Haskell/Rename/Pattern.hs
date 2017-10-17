@@ -35,7 +35,7 @@ module GHC.Haskell.Rename.Pattern (-- main entry points
 
 -- ENH: thin imports to only what is necessary for patterns
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Rename.Expression ( rnLExpr )
 import {-# SOURCE #-} GHC.Haskell.Rename.Splice ( rnSplicePat )

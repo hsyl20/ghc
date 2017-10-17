@@ -15,7 +15,7 @@ module GHC.Haskell.Printer.Dump (
         BlankSrcSpan(..),
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.Data hiding (Fixity)
 import GHC.Data.Bag

@@ -1,6 +1,6 @@
 module GHC.Packages where
 
-import GhcPrelude
+import GHC.Prelude
 import {-# SOURCE #-} GHC.Config.Flags (DynFlags)
 import {-# SOURCE #-} GHC.CoreTypes.Module (ComponentId, UnitId, InstalledUnitId)
 data PackageState

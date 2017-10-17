@@ -26,7 +26,7 @@ module GHC.CmmToC (
 #include "HsVersions.h"
 
 -- Cmm stuff
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel

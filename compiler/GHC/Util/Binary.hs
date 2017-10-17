@@ -59,7 +59,7 @@ module GHC.Util.Binary
 -- The *host* architecture version:
 #include "../includes/MachDeps.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Name (Name)
 import GHC.Data.FastString

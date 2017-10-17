@@ -106,7 +106,7 @@ module GHC.StgToCmm.Profiling.Ticky (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.StgToCmm.ArgRep ( slowCallPattern, toArgRep, argRepString )
 import GHC.StgToCmm.Closure

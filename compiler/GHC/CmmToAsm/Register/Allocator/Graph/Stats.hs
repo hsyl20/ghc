@@ -16,7 +16,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.Stats (
 
 #include "cbits/CmmToAsm.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.Data.Graph.Color as Color
 import GHC.CmmToAsm.Register.Allocator.Liveness

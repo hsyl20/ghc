@@ -10,7 +10,7 @@ module GHC.CoreTypes.Name.Cache
     , NameCache(..), OrigNameCache
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.Name

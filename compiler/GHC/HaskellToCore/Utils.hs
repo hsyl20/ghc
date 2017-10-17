@@ -40,7 +40,7 @@ module GHC.HaskellToCore.Utils (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.HaskellToCore.Match      ( matchSimply )
 import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsLExpr )

@@ -36,7 +36,7 @@ module GHC.StgToCmm.Monad.Extended (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.StgToCmm.Monad as F
 import GHC.StgToCmm.Monad (FCode, newUnique)

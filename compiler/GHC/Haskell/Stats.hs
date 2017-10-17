@@ -8,7 +8,7 @@
 
 module GHC.Haskell.Stats ( ppSourceStats ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Bag
 import GHC.Haskell.Syntax

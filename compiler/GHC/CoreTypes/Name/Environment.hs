@@ -33,7 +33,7 @@ module GHC.CoreTypes.Name.Environment (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Graph.Directed
 import GHC.CoreTypes.Name

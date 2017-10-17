@@ -31,7 +31,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Data.FastString

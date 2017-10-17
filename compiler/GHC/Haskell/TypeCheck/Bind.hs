@@ -18,7 +18,7 @@ module GHC.Haskell.TypeCheck.Bind
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Match
                            ( tcGRHSsPat , tcMatchesFun )

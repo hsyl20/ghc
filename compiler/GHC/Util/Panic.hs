@@ -27,7 +27,7 @@ module GHC.Util.Panic (
 ) where
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Util.Outputable (SDoc, showSDocUnsafe)
 

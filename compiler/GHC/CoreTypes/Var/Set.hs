@@ -45,7 +45,7 @@ module GHC.CoreTypes.Var.Set (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var      ( Var, TyVar, CoVar, TyCoVar, Id )
 import GHC.CoreTypes.Unique

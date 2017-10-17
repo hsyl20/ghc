@@ -31,7 +31,7 @@ module GHC.Data.TrieMap(
    (>.>), (|>), (|>>),
  ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.CoreTypes.Coercion

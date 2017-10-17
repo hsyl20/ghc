@@ -12,7 +12,7 @@ module GHC.Cmm.Parser.Monad (
   , liftP
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Control.Monad
 import qualified Control.Monad.Fail as MonadFail

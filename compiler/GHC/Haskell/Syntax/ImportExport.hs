@@ -14,7 +14,7 @@ Abstract syntax: imports, exports, interfaces
 
 module GHC.Haskell.Syntax.ImportExport where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Module           ( ModuleName )
 import GHC.Haskell.Syntax.Documentation  ( HsDocString )

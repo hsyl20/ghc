@@ -24,7 +24,7 @@ where
 #include "cbits/CmmToAsm.h"
 #include "../includes/MachDeps.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 -- CmmToAsm compiler stuff:
 import GHC.Util.CodeGen.Platform

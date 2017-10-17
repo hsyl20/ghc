@@ -33,7 +33,7 @@ module GHC.Cmm.Dataflow
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax
 import GHC.Data.UniqueSupply

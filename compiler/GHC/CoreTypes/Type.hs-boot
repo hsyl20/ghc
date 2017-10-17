@@ -2,7 +2,7 @@
 
 module GHC.CoreTypes.Type where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Var ( TyCoVar )
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal( Type, Coercion )

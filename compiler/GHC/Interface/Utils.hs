@@ -58,7 +58,7 @@ Basic idea:
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interface.Syntax
 import GHC.Util.Binary.Fingerprint

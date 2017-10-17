@@ -107,7 +107,7 @@ module GHC.CoreTypes.Coercion (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Type

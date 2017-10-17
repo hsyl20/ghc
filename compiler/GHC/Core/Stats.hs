@@ -11,7 +11,7 @@ module GHC.Core.Stats (
         CoreStats(..), coreBindsStats, exprStats,
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes
 import GHC.Core.Syntax

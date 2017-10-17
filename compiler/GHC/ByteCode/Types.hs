@@ -13,7 +13,7 @@ module GHC.ByteCode.Types
   , CCostCentre
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.FastString
 import GHC.CoreTypes.Id

@@ -26,7 +26,7 @@ module GHC.Haskell.Rename.Utils (
 where
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.RdrName

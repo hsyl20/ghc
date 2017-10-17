@@ -27,7 +27,7 @@ module GHC.Data.FastString.Environment (
         mkDFsEnv, emptyDFsEnv, dFsEnvElts, lookupDFsEnv
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.UniqueFM
 import GHC.Data.UniqueDFM

@@ -12,7 +12,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.JoinToTargets
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Linear.State
 import GHC.CmmToAsm.Register.Allocator.Linear.Base

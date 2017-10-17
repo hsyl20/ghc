@@ -14,7 +14,7 @@ module GHC.Util.Elf (
     makeElfNote
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Assembler
 import GHC.Util.Exception

@@ -33,7 +33,7 @@ module GHC.CoreTypes.Name.Set (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Name
 import GHC.Data.UniqueSet

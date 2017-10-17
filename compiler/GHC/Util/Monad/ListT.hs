@@ -29,7 +29,7 @@ module GHC.Util.Monad.ListT (
     fold
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Control.Applicative
 

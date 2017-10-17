@@ -34,7 +34,7 @@ module GHC.Driver.Pipeline (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Driver.Pipeline.Monad
 import GHC.Packages

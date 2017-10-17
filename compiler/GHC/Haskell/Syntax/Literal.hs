@@ -19,7 +19,7 @@ module GHC.Haskell.Syntax.Literal where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Syntax.Expression ( HsExpr, pprExpr )
 import GHC.CoreTypes.BasicTypes ( IntegralLit(..),FractionalLit(..)

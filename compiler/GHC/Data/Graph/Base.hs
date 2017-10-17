@@ -12,7 +12,7 @@ module GHC.Data.Graph.Base (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.UniqueSet
 import GHC.Data.UniqueFM

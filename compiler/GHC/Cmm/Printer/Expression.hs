@@ -36,7 +36,7 @@ module GHC.Cmm.Printer.Expression
     )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.Expression
 

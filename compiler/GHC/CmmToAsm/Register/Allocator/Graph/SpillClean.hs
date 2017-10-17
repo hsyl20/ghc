@@ -29,7 +29,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.SpillClean (
         cleanSpills
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Liveness
 import GHC.CmmToAsm.Instruction

@@ -12,7 +12,7 @@ module GHC.Interactive.Types (
         BreakInfo(..)
         ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHCi.RemoteTypes
 import GHCi.Message (EvalExpr, ResumeContext)

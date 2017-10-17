@@ -1,6 +1,6 @@
 module GHC.Builtin.Uniques where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.CoreTypes.Unique
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.BasicTypes

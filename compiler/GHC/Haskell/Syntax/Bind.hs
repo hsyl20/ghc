@@ -17,7 +17,7 @@ Datatype for: @BindGroup@, @Bind@, @Sig@, @Bind@.
 
 module GHC.Haskell.Syntax.Bind where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Syntax.Expression ( pprExpr, LHsExpr,
                                MatchGroup, pprFunBind,

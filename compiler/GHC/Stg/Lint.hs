@@ -8,7 +8,7 @@
 
 module GHC.Stg.Lint ( lintStgTopBindings ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Stg.Syntax
 

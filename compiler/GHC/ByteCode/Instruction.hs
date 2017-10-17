@@ -12,7 +12,7 @@ module GHC.ByteCode.Instruction (
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.ByteCode.Types
 import GHCi.RemoteTypes

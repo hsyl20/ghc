@@ -8,7 +8,7 @@ Typechecking default declarations
 
 module GHC.Haskell.TypeCheck.Default ( tcDefaults ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.Class

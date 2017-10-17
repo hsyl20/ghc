@@ -22,7 +22,7 @@ module GHC.CmmToAsm.Dwarf.Types
   )
   where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.DebugBlock
 import GHC.CoreTypes.CLabel

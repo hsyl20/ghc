@@ -16,7 +16,7 @@ module GHC.Data.BoolFormula (
         pprBooleanFormula, pprBooleanFormulaNice
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.List ( nub, intersperse )
 import Data.Data

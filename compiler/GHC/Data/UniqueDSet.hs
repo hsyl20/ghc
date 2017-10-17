@@ -33,7 +33,7 @@ module GHC.Data.UniqueDSet (
         partitionUniqDSet
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.UniqueDFM
 import GHC.Data.UniqueSet

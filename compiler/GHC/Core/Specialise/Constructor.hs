@@ -19,7 +19,7 @@ module GHC.Core.Specialise.Constructor (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Subst

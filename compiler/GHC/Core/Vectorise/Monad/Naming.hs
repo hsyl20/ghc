@@ -14,7 +14,7 @@ module GHC.Core.Vectorise.Monad.Naming
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad.Base
 

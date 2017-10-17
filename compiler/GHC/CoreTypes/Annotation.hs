@@ -18,7 +18,7 @@ module GHC.CoreTypes.Annotation (
         deserializeAnns
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Binary
 import GHC.CoreTypes.Module           ( Module )

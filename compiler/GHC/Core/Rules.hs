@@ -28,7 +28,7 @@ module GHC.Core.Rules (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax              -- All of it
 import GHC.CoreTypes.Module               ( Module, ModuleSet, elemModuleSet )

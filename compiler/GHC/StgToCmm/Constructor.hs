@@ -17,7 +17,7 @@ module GHC.StgToCmm.Constructor (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Stg.Syntax
 import GHC.Core.Syntax  ( AltCon(..) )

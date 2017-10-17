@@ -1,6 +1,6 @@
 module GHC.CoreTypes.TyCon where
 
-import GhcPrelude
+import GHC.Prelude
 
 data TyCon
 

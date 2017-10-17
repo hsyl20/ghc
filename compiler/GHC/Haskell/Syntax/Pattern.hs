@@ -38,7 +38,7 @@ module GHC.Haskell.Syntax.Pattern (
         pprParendLPat, pprConArgs
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Syntax.Expression
                           (SyntaxExpr, LHsExpr , HsSplice, pprLExpr, pprSplice)

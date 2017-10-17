@@ -18,7 +18,7 @@ module GHC.Haskell.TypeCheck.ModuleSignature (
     instantiateSignature,
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes (defaultFixity)
 import GHC.Packages

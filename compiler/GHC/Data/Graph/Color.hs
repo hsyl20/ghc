@@ -12,7 +12,7 @@ module GHC.Data.Graph.Color (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Graph.Base
 import GHC.Data.Graph.Operations

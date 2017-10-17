@@ -26,7 +26,7 @@ module GHC.StgToCmm.Layout (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding ((<*>))
+import GHC.Prelude hiding ((<*>))
 
 import GHC.StgToCmm.Closure
 import GHC.StgToCmm.Environment

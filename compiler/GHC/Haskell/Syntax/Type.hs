@@ -69,7 +69,7 @@ module GHC.Haskell.Syntax.Type (
         isCompoundHsType
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Syntax.Expression ( HsSplice, pprSplice )
 

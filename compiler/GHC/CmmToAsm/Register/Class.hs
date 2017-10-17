@@ -4,7 +4,7 @@ module GHC.CmmToAsm.Register.Class
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable as Outputable
 import GHC.CoreTypes.Unique

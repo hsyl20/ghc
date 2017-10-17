@@ -43,7 +43,7 @@ module GHC.StgToCmm.Utils (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.StgToCmm.Monad
 import GHC.StgToCmm.Closure

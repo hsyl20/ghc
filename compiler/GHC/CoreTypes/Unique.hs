@@ -68,7 +68,7 @@ module GHC.CoreTypes.Unique (
 #include "HsVersions.h"
 #include "Unique.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes
 import GHC.Data.FastString

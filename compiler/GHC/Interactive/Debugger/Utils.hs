@@ -4,7 +4,7 @@ module GHC.Interactive.Debugger.Utils (
        dataConInfoPtrToName,
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHCi.InfoTable
 import GHC.RTS.InfoTable ( stdInfoTableSizeB )

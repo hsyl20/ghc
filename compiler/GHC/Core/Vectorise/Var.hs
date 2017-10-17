@@ -13,7 +13,7 @@ module GHC.Core.Vectorise.Var
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Utils
 import GHC.Core.Vectorise.Monad

@@ -46,7 +46,7 @@ module GHC.Data.UniqueSet (
         nonDetFoldUniqSet_Directly
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.UniqueFM
 import GHC.CoreTypes.Unique

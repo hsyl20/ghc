@@ -1,5 +1,5 @@
 module GHC.CoreTypes.Module where
-import GhcPrelude
+import GHC.Prelude
 import GHC.Data.FastString
 
 data Module

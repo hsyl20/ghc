@@ -39,7 +39,7 @@ module GHC.CoreTypes.Id.Make (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Rules
 import GHC.Builtin.Primitive.Types

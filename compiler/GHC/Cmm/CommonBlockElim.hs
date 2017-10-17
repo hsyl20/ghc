@@ -5,7 +5,7 @@ module GHC.Cmm.CommonBlockElim
 where
 
 
-import GhcPrelude hiding (iterate, succ, unzip, zip)
+import GHC.Prelude hiding (iterate, succ, unzip, zip)
 
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax

@@ -15,7 +15,7 @@ module GHC.Haskell.TypeCheck.PatternSynonym
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.Haskell.TypeCheck.Pattern

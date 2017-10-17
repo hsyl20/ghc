@@ -18,7 +18,7 @@ module GHC.Data.Graph.Operations (
 )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Graph.Base
 

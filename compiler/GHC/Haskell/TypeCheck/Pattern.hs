@@ -19,7 +19,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Expression
                         ( tcSyntaxOp, tcSyntaxOpGen, tcInferSigma )

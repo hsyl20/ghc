@@ -1,7 +1,7 @@
 
 module GHC.Haskell.Parser.Utils where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.SrcLoc

@@ -3,7 +3,7 @@
 
 module GHC.Haskell.TypeCheck.Splice where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.CoreTypes.Name
 import GHC.Haskell.Syntax.Expression   ( PendingRnSplice )
 import GHC.Haskell.TypeCheck.Util   ( TcM, SpliceType )

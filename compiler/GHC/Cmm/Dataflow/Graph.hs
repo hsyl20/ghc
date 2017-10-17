@@ -18,7 +18,7 @@ module GHC.Cmm.Dataflow.Graph
     ) where
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Dataflow.Label
 import GHC.Cmm.Dataflow.Block

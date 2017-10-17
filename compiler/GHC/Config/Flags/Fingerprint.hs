@@ -6,7 +6,7 @@ module GHC.Config.Flags.Fingerprint (
         fingerprintDynFlags
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Binary
 import GHC.Interface.Binary ()

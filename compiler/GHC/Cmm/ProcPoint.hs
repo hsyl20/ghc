@@ -8,7 +8,7 @@ module GHC.Cmm.ProcPoint
     )
 where
 
-import GhcPrelude hiding (last, unzip, succ, zip)
+import GHC.Prelude hiding (last, unzip, succ, zip)
 
 import GHC.Config.Flags
 import GHC.Cmm.Syntax.BlockId

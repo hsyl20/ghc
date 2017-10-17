@@ -32,7 +32,7 @@ module GHC.Haskell.TypeCheck.Instantiation (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Expression( tcPolyExpr, tcSyntaxOp )
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Unify     ( unifyType, unifyKind )

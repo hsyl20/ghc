@@ -50,7 +50,7 @@ module GHC.Interface.Type (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Builtin.Types ( liftedRepDataConTyCon )
 

@@ -22,7 +22,7 @@ module GHC.Cmm.Syntax.DebugBlock (
   UnwindExpr(..), toUnwindExpr
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel

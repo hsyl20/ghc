@@ -42,7 +42,7 @@ module GHC.Haskell.TypeCheck.Module (
         missingBootThing,
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Splice ( finishTH )
 import GHC.Haskell.Rename.Splice      ( rnTopSpliceDecls, traceSplice

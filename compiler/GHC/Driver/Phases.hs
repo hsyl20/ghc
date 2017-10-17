@@ -39,7 +39,7 @@ module GHC.Driver.Phases (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Config.Flags
 import GHC.Util.Outputable

@@ -10,7 +10,7 @@ module GHC.Core.Pipeline ( core2core, simplifyExpr ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Core.Syntax

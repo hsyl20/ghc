@@ -14,7 +14,7 @@ module GHC.Core.Prepare (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Occurence
 

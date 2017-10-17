@@ -20,7 +20,7 @@ module GHC.Core.SimpleOpt (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Arity     ( joinRhsArity, etaExpandToJoinPoint )
 

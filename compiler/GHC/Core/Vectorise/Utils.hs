@@ -23,7 +23,7 @@ module GHC.Core.Vectorise.Utils (
   newLocalVar
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Utils.Base
 import GHC.Core.Vectorise.Utils.Closure

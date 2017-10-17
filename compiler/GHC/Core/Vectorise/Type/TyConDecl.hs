@@ -3,7 +3,7 @@ module GHC.Core.Vectorise.Type.TyConDecl (
   vectTyConDecls
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Type.Type
 import GHC.Core.Vectorise.Monad

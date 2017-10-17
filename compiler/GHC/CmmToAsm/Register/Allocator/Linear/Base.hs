@@ -17,7 +17,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.Base (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Linear.StackMap
 import GHC.CmmToAsm.Register.Allocator.Liveness

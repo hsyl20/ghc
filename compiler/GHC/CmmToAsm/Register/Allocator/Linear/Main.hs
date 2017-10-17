@@ -102,7 +102,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.Main (
 #include "HsVersions.h"
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Linear.State
 import GHC.CmmToAsm.Register.Allocator.Linear.Base

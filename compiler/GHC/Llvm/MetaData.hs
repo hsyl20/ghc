@@ -2,7 +2,7 @@
 
 module GHC.Llvm.MetaData where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Llvm.Types
 import GHC.Util.Outputable

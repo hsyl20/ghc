@@ -26,7 +26,7 @@ module GHC.Haskell.Rename.Bind (
    HsSigCtxt(..)
    ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Rename.Expression( rnLExpr, rnStmts )
 

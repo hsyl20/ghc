@@ -13,7 +13,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Type.Type
 import GHC.Core.Vectorise.Var

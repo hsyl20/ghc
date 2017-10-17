@@ -30,7 +30,7 @@ where
 #include "../includes/MachDeps.h"
 
 -- NCG stuff:
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.X86.Instr
 import GHC.CmmToAsm.X86.Cond

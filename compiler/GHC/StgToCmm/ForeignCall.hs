@@ -22,7 +22,7 @@ module GHC.StgToCmm.ForeignCall (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding (succ, (<*>) )
+import GHC.Prelude hiding (succ, (<*>) )
 
 import GHC.Stg.Syntax
 import GHC.StgToCmm.Profiling (storeCurCCS, ccsType, curCCS)

@@ -25,7 +25,7 @@ module GHC.CmmToAsm (
 #include "cbits/CmmToAsm.h"
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.CmmToAsm.X86.CodeGen          as X86
 import qualified GHC.CmmToAsm.X86.Regs             as X86

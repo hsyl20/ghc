@@ -17,7 +17,7 @@ where
 #include "HsVersions.h"
 #include "cbits/CmmToAsm.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.X86.Cond
 import GHC.CmmToAsm.X86.Regs

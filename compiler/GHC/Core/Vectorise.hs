@@ -8,7 +8,7 @@
 module GHC.Core.Vectorise ( vectorise )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Type.Env
 import GHC.Core.Vectorise.Type.Type

@@ -79,7 +79,7 @@ import GHC.Builtin.Types       ( unitTyCon, unitDataCon, tupleTyCon
                                , consDataCon_RDR )
 
 import GHC.Util               ( looksLikePackageName )
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.LanguageExtensions as LangExt
 }

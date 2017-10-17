@@ -6,7 +6,7 @@ module GHC.Haskell.Rename.Documentation
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Util
 import GHC.Haskell.Syntax

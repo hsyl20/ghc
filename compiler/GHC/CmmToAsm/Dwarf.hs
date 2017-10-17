@@ -2,7 +2,7 @@ module GHC.CmmToAsm.Dwarf (
   dwarfGen
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Syntax.Expression ( GlobalReg(..) )

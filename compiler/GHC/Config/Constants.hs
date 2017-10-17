@@ -6,7 +6,7 @@
 
 module GHC.Config.Constants (module GHC.Config.Constants) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Build
 

@@ -25,7 +25,7 @@ module GHC.Driver.CmdLineParser
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util
 import GHC.Util.Outputable

@@ -20,7 +20,7 @@ module GHC.Interactive.Linker ( getHValue, showLinkerState,
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes

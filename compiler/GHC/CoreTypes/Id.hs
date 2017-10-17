@@ -117,7 +117,7 @@ module GHC.CoreTypes.Id (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Core.Syntax ( CoreRule, isStableUnfolding, evaldUnfolding

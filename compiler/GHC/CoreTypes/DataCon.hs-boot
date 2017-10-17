@@ -1,6 +1,6 @@
 module GHC.CoreTypes.DataCon where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.CoreTypes.Var( TyVar, TyVarBinder )
 import GHC.CoreTypes.Name( Name, NamedThing )
 import {-# SOURCE #-} GHC.CoreTypes.TyCon ( TyCon )

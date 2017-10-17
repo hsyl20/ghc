@@ -19,7 +19,7 @@ module GHC.Haskell.TypeCheck.FunctionalDependency (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Var

@@ -31,7 +31,7 @@ module GHC.Haskell.TypeCheck.Splice(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.Annotation

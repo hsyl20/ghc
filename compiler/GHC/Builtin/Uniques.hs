@@ -26,7 +26,7 @@ module GHC.Builtin.Uniques
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Builtin.Types
 import GHC.CoreTypes.TyCon

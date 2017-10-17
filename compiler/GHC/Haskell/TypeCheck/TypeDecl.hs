@@ -22,7 +22,7 @@ module GHC.Haskell.TypeCheck.TypeDecl (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.Base

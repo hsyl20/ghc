@@ -15,7 +15,7 @@ module GHC.Data.FastMutableInt(
         readFastMutPtr, writeFastMutPtr
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.Bits
 import GHC.Base

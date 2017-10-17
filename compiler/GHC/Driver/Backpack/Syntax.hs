@@ -17,7 +17,7 @@ module GHC.Driver.Backpack.Syntax (
     LRenaming, Renaming(..),
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.SrcLoc

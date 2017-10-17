@@ -30,7 +30,7 @@ module GHC.Core.Vectorise.Builtins.Base (
   closureCtrFun
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Builtin.Primitive.Types
 import GHC.CoreTypes.BasicTypes

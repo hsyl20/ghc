@@ -6,7 +6,7 @@
 -- (c) The GHC Team 2017
 --
 -----------------------------------------------------------------------------
-module SysTools.Process where
+module GHC.Util.SysTools.Process where
 
 #include "HsVersions.h"
 
@@ -16,7 +16,7 @@ import DynFlags
 import FastString
 import Outputable
 import Panic
-import GhcPrelude
+import GHC.Prelude
 import Util
 import SrcLoc           ( SrcLoc, mkSrcLoc, noSrcSpan, mkSrcSpan )
 

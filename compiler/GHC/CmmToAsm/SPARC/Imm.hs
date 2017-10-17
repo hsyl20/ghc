@@ -7,7 +7,7 @@ module GHC.CmmToAsm.SPARC.Imm (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax
 import GHC.CoreTypes.CLabel

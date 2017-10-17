@@ -11,7 +11,7 @@ module GHC.CmmToLlvm.CodeGen.Regs (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToLlvm
 

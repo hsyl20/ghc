@@ -9,7 +9,7 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 module GHC.CmmToAsm.PPC.Ppr (pprNatCmmDecl) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.PPC.Regs
 import GHC.CmmToAsm.PPC.Instr

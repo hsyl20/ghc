@@ -14,7 +14,7 @@ module GHC.Haskell.Rename.Utils.Unbound ( mkUnboundName
                  , unboundNameX
                  , perhapsForallMsg ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Base

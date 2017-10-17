@@ -39,7 +39,7 @@ module GHC.Haskell.TypeCheck.Evidence (
   ) where
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Coercion.Axiom

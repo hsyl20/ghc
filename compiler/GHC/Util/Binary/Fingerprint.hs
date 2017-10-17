@@ -10,7 +10,7 @@ module GHC.Util.Binary.Fingerprint
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Fingerprint
 import GHC.Util.Binary

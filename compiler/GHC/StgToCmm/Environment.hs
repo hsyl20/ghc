@@ -24,7 +24,7 @@ module GHC.StgToCmm.Environment (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.TyCon
 import GHC.StgToCmm.Monad

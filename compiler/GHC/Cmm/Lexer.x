@@ -22,7 +22,7 @@ module GHC.Cmm.Lexer (
    CmmToken(..), cmmlex,
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.Expression
 

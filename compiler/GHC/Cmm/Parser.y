@@ -200,7 +200,7 @@ necessary to the stack to accommodate it (e.g. 2).
 {
 module GHC.Cmm.Parser ( parseCmmFile ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.StgToCmm.Monad.Extended
 import GHC.Cmm.Syntax.CallConvention

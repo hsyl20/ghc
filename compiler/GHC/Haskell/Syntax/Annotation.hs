@@ -13,7 +13,7 @@ module GHC.Haskell.Syntax.Annotation (
   LRdrName -- Exists for haddocks only
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.RdrName
 import GHC.Util.Outputable

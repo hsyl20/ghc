@@ -19,7 +19,7 @@ module GHC.ByteCode.Linker (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHCi.RemoteTypes
 import GHCi.ResolvedBCO

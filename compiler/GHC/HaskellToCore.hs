@@ -16,7 +16,7 @@ module GHC.HaskellToCore (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.HaskellToCore.Usage
 import GHC.Config.Flags

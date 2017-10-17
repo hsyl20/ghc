@@ -46,7 +46,7 @@ module GHC.Builtin.Utils (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Builtin.Uniques
 import GHC.CoreTypes.Unique           ( isValidKnownKeyUnique )

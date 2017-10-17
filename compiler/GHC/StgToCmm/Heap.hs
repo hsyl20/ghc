@@ -24,7 +24,7 @@ module GHC.StgToCmm.Heap (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding ((<*>))
+import GHC.Prelude hiding ((<*>))
 
 import GHC.Stg.Syntax
 import GHC.CoreTypes.CLabel

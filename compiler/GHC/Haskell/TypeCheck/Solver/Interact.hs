@@ -7,7 +7,7 @@ module GHC.Haskell.TypeCheck.Solver.Interact (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes ( SwapFlag(..), isSwapped
                              , infinity, IntWithInf, intGtLimit )

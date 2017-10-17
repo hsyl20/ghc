@@ -18,7 +18,7 @@ module GHC.Core.Vectorise.Type.Classify
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Name.Set
 import GHC.Data.UniqueSet

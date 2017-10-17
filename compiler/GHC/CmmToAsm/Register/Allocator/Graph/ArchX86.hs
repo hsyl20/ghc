@@ -16,7 +16,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.ArchX86 (
         squeese,
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Graph.ArchBase ( Reg(..), RegSub(..),
                                                         RegClass(..))

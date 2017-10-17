@@ -9,7 +9,7 @@ module GHC.CmmToLlvm.CodeGen.Data (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToLlvm
 import GHC.CmmToLlvm.CodeGen.Base

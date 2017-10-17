@@ -77,7 +77,7 @@ module GHC.CoreTypes.Name (
         module GHC.CoreTypes.OccName
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal( TyThing )
 import {-# SOURCE #-} GHC.Builtin.Names( starKindTyConKey

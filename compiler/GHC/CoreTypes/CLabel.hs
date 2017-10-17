@@ -115,7 +115,7 @@ module GHC.CoreTypes.CLabel (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Id.Info
 import GHC.CoreTypes.BasicTypes

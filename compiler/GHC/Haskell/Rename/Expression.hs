@@ -21,7 +21,7 @@ module GHC.Haskell.Rename.Expression (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Rename.Bind
                   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS

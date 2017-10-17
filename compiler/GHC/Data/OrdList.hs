@@ -15,7 +15,7 @@ module GHC.Data.OrdList (
         mapOL, fromOL, toOL, foldrOL, foldlOL
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable
 

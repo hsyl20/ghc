@@ -24,7 +24,7 @@ module GHC.Interactive.DynamicLoading (
 #endif
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 #if defined(GHCI)
 import GHC.Interactive.Linker      ( linkModule, getHValue )

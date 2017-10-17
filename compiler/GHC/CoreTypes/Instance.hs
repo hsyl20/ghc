@@ -29,7 +29,7 @@ module GHC.CoreTypes.Instance (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 -- this module is really part of the type checker, and depends on
 -- GHC.Haskell.TypeCheck.Util.CoreType in many ways

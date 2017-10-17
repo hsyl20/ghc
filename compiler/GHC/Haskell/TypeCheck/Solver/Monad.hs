@@ -117,7 +117,7 @@ module GHC.Haskell.TypeCheck.Solver.Monad (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Base
 

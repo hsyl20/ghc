@@ -48,7 +48,7 @@ where
 #include "cbits/CmmToAsm.h"
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.CodeGen.Platform
 import GHC.CmmToAsm.Register

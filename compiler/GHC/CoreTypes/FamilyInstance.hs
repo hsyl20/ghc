@@ -38,7 +38,7 @@ module GHC.CoreTypes.FamilyInstance (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Type.Unify
 import GHC.CoreTypes.Type as Type

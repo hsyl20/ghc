@@ -109,7 +109,7 @@ module GHC.CoreTypes.BasicTypes(
         SpliceExplicitFlag(..)
    ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.FastString
 import GHC.Util.Outputable

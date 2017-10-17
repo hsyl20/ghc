@@ -3,7 +3,7 @@
 module GHC.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Regs
 import GHC.CmmToAsm.Register.Class

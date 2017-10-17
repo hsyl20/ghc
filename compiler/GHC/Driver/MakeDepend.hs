@@ -14,7 +14,7 @@ module GHC.Driver.MakeDepend (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC
 import GHC.Monad

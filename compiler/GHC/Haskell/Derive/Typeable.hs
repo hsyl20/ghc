@@ -10,7 +10,7 @@
 module GHC.Haskell.Derive.Typeable (mkTypeableBinds) where
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes        ( Boxity(..), neverInlinePragma )
 import GHC.Haskell.TypeCheck.Bind( addTypecheckedBinds )

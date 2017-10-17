@@ -11,7 +11,7 @@ module GHC.Haskell.Rename.Splice (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Set

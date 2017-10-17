@@ -34,7 +34,7 @@ module GHC.Haskell.Syntax (
 ) where
 
 -- friends:
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax.Declaration
 import GHC.Haskell.Syntax.Bind

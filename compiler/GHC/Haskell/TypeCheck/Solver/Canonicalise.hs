@@ -10,7 +10,7 @@ module GHC.Haskell.TypeCheck.Solver.Canonicalise(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Util
 import GHC.Haskell.TypeCheck.Unify( swapOverTyVars, metaTyVarUpdateOK )

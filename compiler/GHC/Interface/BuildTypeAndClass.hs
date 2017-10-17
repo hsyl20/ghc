@@ -15,7 +15,7 @@ module GHC.Interface.BuildTypeAndClass (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interface.Environment
 import GHC.CoreTypes.FamilyInstance   ( FamInstEnvs, mkNewTypeCoAxiom )

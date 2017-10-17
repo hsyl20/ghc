@@ -10,7 +10,7 @@ module GHC.CoreToByteCode ( UnlinkedBCO, byteCodeGen, coreExprToBCOs ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.ByteCode.Instruction
 import GHC.ByteCode.Assembler

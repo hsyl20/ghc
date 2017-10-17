@@ -26,7 +26,7 @@ module GHC.Interactive.ClosureInspect(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interactive.Debugger.Utils
 import GHCi.RemoteTypes ( HValue )

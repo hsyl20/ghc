@@ -10,7 +10,7 @@ Typecheck arrow notation
 
 module GHC.Haskell.TypeCheck.Arrow ( tcProc ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Expression
                         ( tcMonoExpr, tcInferRho, tcSyntaxOp

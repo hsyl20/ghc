@@ -28,7 +28,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-}   GHC.HaskellToCore.Expression( dsLExpr )
 import {-# SOURCE #-}   GHC.HaskellToCore.Match( matchWrapper )

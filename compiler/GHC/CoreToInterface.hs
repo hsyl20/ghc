@@ -44,7 +44,7 @@ module GHC.CoreToInterface
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interface.Syntax
 import GHC.CoreTypes.DataCon

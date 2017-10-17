@@ -3,7 +3,7 @@ module GHC.Cmm.LayoutStack (
        cmmLayoutStack, setInfoTableStackMap
   ) where
 
-import GhcPrelude hiding ((<*>))
+import GHC.Prelude hiding ((<*>))
 
 -- XXX layering violations
 import GHC.StgToCmm.Utils       ( callerSaveVolatileRegs )

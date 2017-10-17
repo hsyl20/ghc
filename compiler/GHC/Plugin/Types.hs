@@ -4,7 +4,7 @@ module GHC.Plugin.Types (
     defaultPlugin
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Monad             ( CoreToDo, CoreM )
 import GHC.Haskell.TypeCheck.Util ( TcPlugin )

@@ -42,7 +42,7 @@ module GHC.Core.Inliner (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Core.Syntax

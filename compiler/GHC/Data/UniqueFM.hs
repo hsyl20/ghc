@@ -71,7 +71,7 @@ module GHC.Data.UniqueFM (
         pprUniqFM, pprUFM, pprUFMWithKeys, pluralUFM
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Unique           ( Uniquable(..), Unique, getKey )
 import GHC.Util.Outputable

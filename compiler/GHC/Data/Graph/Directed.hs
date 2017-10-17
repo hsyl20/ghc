@@ -41,7 +41,7 @@ module GHC.Data.Graph.Directed(
 ------------------------------------------------------------------------------
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util        ( minWith, count )
 import GHC.Util.Outputable

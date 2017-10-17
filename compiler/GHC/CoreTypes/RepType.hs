@@ -23,7 +23,7 @@ module GHC.CoreTypes.RepType
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes (Arity, RepArity)
 import GHC.CoreTypes.DataCon

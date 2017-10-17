@@ -15,7 +15,7 @@ module GHC.StgToCmm.ArgRep (
 
         ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.StgToCmm.Closure ( idPrimRep )
 

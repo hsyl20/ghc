@@ -13,7 +13,7 @@ module GHC.StgToCmm.Expression ( cgExpr ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding ((<*>))
+import GHC.Prelude hiding ((<*>))
 
 import {-# SOURCE #-} GHC.StgToCmm.Bind ( cgBind )
 

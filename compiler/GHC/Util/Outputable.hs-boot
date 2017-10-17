@@ -1,6 +1,6 @@
 module GHC.Util.Outputable where
 
-import GhcPrelude
+import GHC.Prelude
 
 data SDoc
 

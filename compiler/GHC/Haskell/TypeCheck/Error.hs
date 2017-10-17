@@ -9,7 +9,7 @@ module GHC.Haskell.TypeCheck.Error(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Util
 import GHC.Haskell.TypeCheck.Monad

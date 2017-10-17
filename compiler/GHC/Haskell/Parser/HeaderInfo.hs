@@ -22,7 +22,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Base
 import GHC.Haskell.Parser           ( parseHeader )

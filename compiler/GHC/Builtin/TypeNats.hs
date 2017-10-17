@@ -15,7 +15,7 @@ module GHC.Builtin.TypeNats
   , typeSymbolAppendTyCon
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Type
 import GHC.Data.Pair

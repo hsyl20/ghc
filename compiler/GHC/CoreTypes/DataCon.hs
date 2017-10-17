@@ -61,7 +61,7 @@ module GHC.CoreTypes.DataCon (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Id.Make ( DataConBoxer )
 import GHC.CoreTypes.Type as Type

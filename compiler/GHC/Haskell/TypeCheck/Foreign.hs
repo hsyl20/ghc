@@ -33,7 +33,7 @@ module GHC.Haskell.TypeCheck.Foreign
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 

@@ -85,7 +85,7 @@ module GHC.Util.Outputable (
         pprDebugAndThen, callStackDoc
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Config.Flags
                                   ( DynFlags, hasPprDebug, hasNoDebugOutput,

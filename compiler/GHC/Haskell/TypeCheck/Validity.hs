@@ -20,7 +20,7 @@ module GHC.Haskell.TypeCheck.Validity (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Maybe
 

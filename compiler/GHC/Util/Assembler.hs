@@ -6,7 +6,7 @@ module GHC.Util.Assembler
     ( sectionType
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Platform
 import GHC.Util.Outputable

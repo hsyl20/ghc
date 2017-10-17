@@ -34,7 +34,7 @@ module GHC.Haskell.Rename.Type (
         elemRdr
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Rename.Splice( rnSpliceType )
 

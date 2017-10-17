@@ -128,7 +128,7 @@ module GHC.Builtin.Names (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.OccName

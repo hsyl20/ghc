@@ -1,5 +1,5 @@
 module GHC.Builtin.Primitive.Operations where
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 data PrimOp

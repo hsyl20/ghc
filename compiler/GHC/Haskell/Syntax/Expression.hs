@@ -18,7 +18,7 @@ module GHC.Haskell.Syntax.Expression where
 #include "HsVersions.h"
 
 -- friends:
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax.Declaration
 import GHC.Haskell.Syntax.Pattern

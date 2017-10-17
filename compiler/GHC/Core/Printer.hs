@@ -15,7 +15,7 @@ module GHC.Core.Printer (
         pprRules, pprOptCo
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Stats (exprStats)

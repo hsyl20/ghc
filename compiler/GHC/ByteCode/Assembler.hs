@@ -15,7 +15,7 @@ module GHC.ByteCode.Assembler (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.ByteCode.Instruction
 import GHC.ByteCode.InfoTable

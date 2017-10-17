@@ -37,7 +37,7 @@ module GHC.CmmToLlvm.CodeGen.Base (
 #include "HsVersions.h"
 #include "ghcautoconf.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToLlvm
 import GHC.CmmToLlvm.CodeGen.Regs

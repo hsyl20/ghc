@@ -196,7 +196,7 @@ module GHC.Stg.Unarise (unarise) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes
 import GHC.Core.Syntax

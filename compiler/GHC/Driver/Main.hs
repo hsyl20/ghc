@@ -82,7 +82,7 @@ module GHC.Driver.Main
     , hscAddSptEntries
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.Data hiding (Fixity, TyCon)
 import GHC.Config.Flags                (addPluginModuleName)

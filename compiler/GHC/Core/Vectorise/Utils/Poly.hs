@@ -8,7 +8,7 @@ module GHC.Core.Vectorise.Utils.Poly
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Vect
 import GHC.Core.Vectorise.Monad

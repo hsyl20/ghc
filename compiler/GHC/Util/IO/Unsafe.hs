@@ -10,7 +10,7 @@ module GHC.Util.IO.Unsafe (
 
 #include "HsVersions.h"
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 import GHC.Exts
 import GHC.IO   (IO(..))

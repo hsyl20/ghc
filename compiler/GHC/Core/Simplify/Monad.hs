@@ -19,7 +19,7 @@ module GHC.Core.Simplify.Monad (
         plusSimplCount, isZeroSimplCount
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var             ( Var, isTyVar, mkLocalVar )
 import GHC.CoreTypes.Name            ( mkSystemVarName )

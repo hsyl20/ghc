@@ -32,7 +32,7 @@ module GHC.CmmToAsm.SPARC.Regs (
 where
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.CodeGen.Platform.SPARC
 import GHC.CmmToAsm.Register

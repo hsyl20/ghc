@@ -124,7 +124,7 @@ module GHC.CoreTypes.TyCon (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal 
                                  ( Kind, Type, PredType, pprType )

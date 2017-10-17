@@ -1,6 +1,6 @@
-module TcSimplify where
+module GHC.Haskell.TypeCheck.Simplify where
 
-import GhcPrelude
+import GHC.Prelude
 import TcRnTypes  ( TcM )
 import TcType ( TcSigmaType )
 

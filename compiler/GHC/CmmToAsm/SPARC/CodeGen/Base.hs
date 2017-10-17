@@ -13,7 +13,7 @@ module GHC.CmmToAsm.SPARC.CodeGen.Base (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Instr
 import GHC.CmmToAsm.SPARC.Cond

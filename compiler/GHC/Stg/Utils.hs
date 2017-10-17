@@ -12,7 +12,7 @@ module GHC.Stg.Utils ( fixStgRegisters ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.CodeGen.Platform
 import GHC.Cmm.Syntax

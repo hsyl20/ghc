@@ -27,7 +27,7 @@ module GHC.StgToCmm.Profiling (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.StgToCmm.Closure
 import GHC.StgToCmm.Utils

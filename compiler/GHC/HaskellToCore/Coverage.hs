@@ -7,7 +7,7 @@
 
 module GHC.HaskellToCore.Coverage (addTicksToBinds, hpcInitCode) where
 
-import GhcPrelude as Prelude
+import GHC.Prelude as Prelude
 
 import qualified GHC.Interactive.Interpreter as GHCi
 import GHCi.RemoteTypes

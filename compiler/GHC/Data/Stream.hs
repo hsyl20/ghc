@@ -11,7 +11,7 @@ module GHC.Data.Stream (
     GHC.Data.Stream.map, GHC.Data.Stream.mapM, GHC.Data.Stream.mapAccumL
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Control.Monad
 

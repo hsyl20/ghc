@@ -284,7 +284,7 @@ module GHC (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding (init)
+import GHC.Prelude hiding (init)
 
 import GHC.ByteCode.Types
 import GHC.Interactive.Eval as InteractiveEval

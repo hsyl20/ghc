@@ -7,7 +7,7 @@ module GHC.CmmToAsm.SPARC.Stack (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.AddrMode
 import GHC.CmmToAsm.SPARC.Regs

@@ -22,7 +22,7 @@ where
 #include "../includes/MachDeps.h"
 
 -- NCG stuff:
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Base
 import GHC.CmmToAsm.SPARC.CodeGen.Sanity

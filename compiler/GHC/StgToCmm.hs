@@ -12,7 +12,7 @@ module GHC.StgToCmm ( codeGen ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude as Prelude
+import GHC.Prelude as Prelude
 
 import GHC.StgToCmm.Profiling (initCostCentres, ldvEnter)
 import GHC.StgToCmm.Monad

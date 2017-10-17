@@ -27,7 +27,7 @@ module GHC.Builtin.Primitive.Operations (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Builtin.Primitive.Types
 import GHC.Builtin.Types

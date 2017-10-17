@@ -90,7 +90,7 @@ module GHC.Haskell.TypeCheck.Util.Monadic (
 #include "HsVersions.h"
 
 -- friends:
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Type.Internal
 import GHC.Haskell.TypeCheck.Util.CoreType

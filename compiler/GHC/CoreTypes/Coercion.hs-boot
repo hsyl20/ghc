@@ -2,7 +2,7 @@
 
 module GHC.CoreTypes.Coercion where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal
 import {-# SOURCE #-} GHC.CoreTypes.TyCon

@@ -51,7 +51,7 @@ compiler/stage%/build/GHC/Config/Build.hs : mk/config.mk mk/project.mk | $$(dir 
 	@echo '{-# LANGUAGE CPP #-}'                                        >> $@
 	@echo 'module GHC.Config.Build where'                               >> $@
 	@echo                                                               >> $@
-	@echo 'import GhcPrelude'                                           >> $@
+	@echo 'import GHC.Prelude'                                           >> $@
 	@echo                                                               >> $@
 	@echo '#include "ghc_boot_platform.h"'                              >> $@
 	@echo                                                               >> $@

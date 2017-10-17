@@ -25,7 +25,7 @@ module GHC.Haskell.Rename.ImportExport (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Haskell.Syntax

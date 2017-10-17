@@ -23,7 +23,7 @@ module GHC.CmmToAsm.PPC.Instr (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.PPC.Regs
 import GHC.CmmToAsm.PPC.Cond

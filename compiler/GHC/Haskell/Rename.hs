@@ -14,7 +14,7 @@ module GHC.Haskell.Rename (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Rename.Expression( rnLExpr )
 import {-# SOURCE #-} GHC.Haskell.Rename.Splice ( rnSpliceDecl

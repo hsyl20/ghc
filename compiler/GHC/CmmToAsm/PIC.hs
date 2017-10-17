@@ -47,7 +47,7 @@ module GHC.CmmToAsm.PIC (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.CmmToAsm.PPC.Instr      as PPC
 import qualified GHC.CmmToAsm.PPC.Regs       as PPC

@@ -25,7 +25,7 @@ module GHC.Config.Hooks
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Driver.Pipeline.Monad

@@ -50,7 +50,7 @@ module GHC.Haskell.TypeCheck.Type (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.Haskell.TypeCheck.Monad

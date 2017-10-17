@@ -3,7 +3,7 @@
 
 module GHC.CmmToAsm.Dwarf.Constants where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Assembler
 import GHC.Data.FastString

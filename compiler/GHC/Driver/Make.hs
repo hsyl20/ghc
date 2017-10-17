@@ -33,7 +33,7 @@ module GHC.Driver.Make(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.Interactive.Linker as Linker
 

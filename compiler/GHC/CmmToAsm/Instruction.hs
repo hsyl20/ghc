@@ -14,7 +14,7 @@ module GHC.CmmToAsm.Instruction (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register
 

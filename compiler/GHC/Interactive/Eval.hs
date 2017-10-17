@@ -40,7 +40,7 @@ module GHC.Interactive.Eval (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interactive.Types
 import GHC.Interactive.Interpreter as GHCi

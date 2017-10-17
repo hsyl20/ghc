@@ -1,6 +1,6 @@
 module GHC.HaskellToCore.Match where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.CoreTypes.Var                   ( Id )
 import GHC.Haskell.TypeCheck.Util.CoreType  ( Type )
 import GHC.HaskellToCore.Monad ( DsM, EquationInfo, MatchResult )

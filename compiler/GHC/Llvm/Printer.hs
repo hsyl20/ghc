@@ -25,7 +25,7 @@ module GHC.Llvm.Printer (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Llvm.Syntax
 import GHC.Llvm.MetaData

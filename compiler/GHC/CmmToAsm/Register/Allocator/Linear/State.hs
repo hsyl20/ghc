@@ -31,7 +31,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.State (
 )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Linear.Stats
 import GHC.CmmToAsm.Register.Allocator.Linear.StackMap

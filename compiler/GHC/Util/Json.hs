@@ -1,7 +1,7 @@
 {-# LANGUAGE GADTs #-}
 module GHC.Util.Json where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable
 import Data.Char

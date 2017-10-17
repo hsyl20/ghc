@@ -10,7 +10,7 @@ module GHC.Data.EnumSet
     , empty
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified Data.IntSet as IntSet
 

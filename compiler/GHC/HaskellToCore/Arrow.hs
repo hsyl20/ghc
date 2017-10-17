@@ -13,7 +13,7 @@ module GHC.HaskellToCore.Arrow ( dsProcExpr ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.HaskellToCore.Match
 import GHC.HaskellToCore.Utils

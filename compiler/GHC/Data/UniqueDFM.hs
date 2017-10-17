@@ -59,7 +59,7 @@ module GHC.Data.UniqueDFM (
         alwaysUnsafeUfmToUdfm,
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Unique           ( Uniquable(..), Unique, getKey )
 import GHC.Util.Outputable

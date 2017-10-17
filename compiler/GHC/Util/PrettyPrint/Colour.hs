@@ -1,6 +1,6 @@
 <<<<<<< HEAD:compiler/utils/PprColour.hs
 module PprColour where
-import GhcPrelude
+import GHC.Prelude
 
 ||||||| merged common ancestors
 module PprColour where

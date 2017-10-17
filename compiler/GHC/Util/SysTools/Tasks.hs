@@ -6,7 +6,7 @@
 -- (c) The GHC Team 2017
 --
 -----------------------------------------------------------------------------
-module SysTools.Tasks where
+module GHC.Util.SysTools.Tasks where
 
 import Exception
 import ErrUtils
@@ -20,12 +20,12 @@ import Data.List
 
 import System.IO
 import System.Process
-import GhcPrelude
+import GHC.Prelude
 
 import LlvmCodeGen.Base (llvmVersionStr, supportedLlvmVersion)
 
-import SysTools.Process
-import SysTools.Info
+import GHC.Util.SysTools.Process
+import GHC.Util.SysTools.Info
 
 {-
 ************************************************************************

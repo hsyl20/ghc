@@ -45,7 +45,7 @@ module GHC.Data.StringBuffer
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Char.Encoding
 import GHC.Data.FastString

@@ -32,7 +32,7 @@ module GHC.Util.Ar
   )
    where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.Semigroup (Semigroup)
 import Data.List (mapAccumL, isPrefixOf)

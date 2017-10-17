@@ -7,7 +7,7 @@ module GHC.Data.FiniteMap (
         foldRight, foldRightWithKey
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.Map (Map)
 import qualified Data.Map as Map

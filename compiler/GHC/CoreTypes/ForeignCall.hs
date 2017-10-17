@@ -18,7 +18,7 @@ module GHC.CoreTypes.ForeignCall (
         Header(..), CType(..),
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.FastString
 import GHC.Util.Binary

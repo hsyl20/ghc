@@ -6,7 +6,7 @@ module GHC.Cmm.Dataflow.Collections
     , mapInsertList, mapDeleteList, mapUnions
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.List (foldl', foldl1')
 

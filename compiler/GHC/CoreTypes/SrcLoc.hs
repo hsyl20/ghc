@@ -77,7 +77,7 @@ module GHC.CoreTypes.SrcLoc (
         spans, isSubspanOf, sortLocated
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util
 import GHC.Util.Json

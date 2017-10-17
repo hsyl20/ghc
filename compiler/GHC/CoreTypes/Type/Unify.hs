@@ -26,7 +26,7 @@ module GHC.CoreTypes.Type.Unify (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Var.Environment

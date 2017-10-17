@@ -20,7 +20,7 @@ module GHC.HaskellToCore.Match.Check (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.HaskellToCore.Match.TermEqOracle
 import GHC.CoreTypes.Type.Unify( tcMatchTy )

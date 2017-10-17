@@ -41,7 +41,7 @@ module GHC.Interface.Syntax (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interface.Type
 import GHC.Util.Binary.Fingerprint

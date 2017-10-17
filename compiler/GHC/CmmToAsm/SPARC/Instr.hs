@@ -25,7 +25,7 @@ module GHC.CmmToAsm.SPARC.Instr (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Stack
 import GHC.CmmToAsm.SPARC.Imm

@@ -205,7 +205,7 @@ module GHC.CoreTypes.Type (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes
 

@@ -10,7 +10,7 @@ module GHC.Core.Syntax.Force (
         megaSeqIdInfo, seqRuleInfo, seqBinds,
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.CoreTypes.Id.Info

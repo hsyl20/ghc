@@ -27,7 +27,7 @@ module GHC.Stg.Stats ( showStgStats ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Stg.Syntax
 

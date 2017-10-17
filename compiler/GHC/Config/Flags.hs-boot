@@ -1,6 +1,6 @@
 module GHC.Config.Flags where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.Util.Platform
 
 data DynFlags

@@ -26,7 +26,7 @@ module GHC.CoreTypes.Available (
 
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Environment

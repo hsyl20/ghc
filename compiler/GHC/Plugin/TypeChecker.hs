@@ -53,7 +53,7 @@ module GHC.Plugin.TypeChecker (
     ) where
 
 #if defined(GHCI)
-import GhcPrelude
+import GHC.Prelude
 
 import qualified GHC.Haskell.TypeCheck.Monad           as TcM
 import qualified GHC.Haskell.TypeCheck.Solver.Monad    as TcS
@@ -194,5 +194,5 @@ setEvBind ev_bind = do
     unsafeTcPluginTcM $ TcM.addTcEvBind tc_evbinds ev_bind
 #else
 -- this dummy import is needed as a consequence of NoImplicitPrelude
-import GhcPrelude ()
+import GHC.Prelude ()
 #endif

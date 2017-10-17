@@ -60,7 +60,7 @@ module GHC.Core.FreeVars (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.CoreTypes.Id

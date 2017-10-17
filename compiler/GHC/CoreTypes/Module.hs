@@ -137,7 +137,7 @@ module GHC.CoreTypes.Module
         unitModuleSet
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Build
 import GHC.Util.Outputable

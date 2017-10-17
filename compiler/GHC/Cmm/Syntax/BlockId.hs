@@ -8,7 +8,7 @@ module GHC.Cmm.Syntax.BlockId
   , blockLbl, infoTblLbl
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.CLabel
 import GHC.CoreTypes.Id.Info

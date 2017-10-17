@@ -9,7 +9,7 @@ module GHC.Driver.Pipeline.Monad (
   , getPipeEnv, getPipeState, setDynFlags, setModLocation, setForeignOs
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Monad
 import GHC.Util.Outputable

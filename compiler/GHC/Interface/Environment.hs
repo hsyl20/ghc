@@ -22,7 +22,7 @@ module GHC.Interface.Environment (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.Base

@@ -87,7 +87,7 @@ module GHC.Haskell.Syntax.Declaration (
     ) where
 
 -- friends:
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Syntax.Expression
                         ( LHsExpr, HsExpr, HsSplice, pprExpr, pprSpliceDecl )

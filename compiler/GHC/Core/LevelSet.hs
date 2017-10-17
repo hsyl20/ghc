@@ -62,7 +62,7 @@ module GHC.Core.LevelSet (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Monad               ( FloatOutSwitches(..) )

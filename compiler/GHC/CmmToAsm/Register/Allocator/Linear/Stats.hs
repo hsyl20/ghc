@@ -6,7 +6,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.Stats (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Linear.Base
 import GHC.CmmToAsm.Register.Allocator.Liveness

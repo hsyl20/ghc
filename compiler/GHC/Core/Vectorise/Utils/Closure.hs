@@ -7,7 +7,7 @@ module GHC.Core.Vectorise.Utils.Closure
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Vect

@@ -8,7 +8,7 @@ module GHC.Haskell.Syntax.Documentation (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable
 import GHC.CoreTypes.SrcLoc

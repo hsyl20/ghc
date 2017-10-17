@@ -6,7 +6,7 @@
 
 module GHC.Builtin.Names.TemplateHaskell where
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 import GHC.Builtin.Names( mk_known_key_name )
 import GHC.CoreTypes.Module( Module, mkModuleNameFS, mkModule, thUnitId )

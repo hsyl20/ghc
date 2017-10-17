@@ -10,7 +10,7 @@
 
 module GHC.Haskell.TypeCheck.Annotation ( tcAnnotations, annCtxt ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Splice ( runAnnotation )
 import GHC.CoreTypes.Module

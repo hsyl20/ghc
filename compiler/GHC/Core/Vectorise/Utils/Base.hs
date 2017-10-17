@@ -27,7 +27,7 @@ module GHC.Core.Vectorise.Utils.Base
   , preprFamInst
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Vect

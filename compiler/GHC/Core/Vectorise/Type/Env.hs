@@ -11,7 +11,7 @@ module GHC.Core.Vectorise.Type.Env (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Env
 import GHC.Core.Vectorise.Vect

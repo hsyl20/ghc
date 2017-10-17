@@ -3,7 +3,7 @@ module GHC.Util.CodeGen.Platform
        (callerSaves, activeStgRegs, haveRegBase, globalRegMaybe, freeReg)
        where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.Expression
 import GHC.Util.Platform

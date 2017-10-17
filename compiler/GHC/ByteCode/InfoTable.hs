@@ -9,7 +9,7 @@ module GHC.ByteCode.InfoTable ( mkITbls ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.ByteCode.Types
 import GHC.Interactive.Interpreter

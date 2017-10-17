@@ -26,7 +26,7 @@ module GHC.Cmm.Syntax (
      module GHC.Cmm.Syntax.Expression,
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Syntax.BlockId

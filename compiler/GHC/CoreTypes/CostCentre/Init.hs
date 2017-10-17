@@ -8,7 +8,7 @@
 
 module GHC.CoreTypes.CostCentre.Init (profilingInitCode) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.CLabel
 import GHC.CoreTypes.CostCentre

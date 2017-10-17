@@ -29,7 +29,7 @@ module GHC.Data.UniqueSupply (
         initUniqSupply
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Unique
 

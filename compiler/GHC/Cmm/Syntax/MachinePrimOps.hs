@@ -30,7 +30,7 @@ where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.Type
 import GHC.Util.Outputable

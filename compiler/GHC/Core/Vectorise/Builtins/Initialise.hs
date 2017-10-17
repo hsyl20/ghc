@@ -5,7 +5,7 @@ module GHC.Core.Vectorise.Builtins.Initialise (
   initBuiltins, initBuiltinVars
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Builtins.Base
 

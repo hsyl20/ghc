@@ -75,7 +75,7 @@ module GHC.Haskell.Lexer (
    moveAnnotations
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 -- base
 import Control.Monad

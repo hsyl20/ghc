@@ -21,7 +21,7 @@ module GHC.Cmm.Syntax.Graph
   )
 where
 
-import GhcPrelude (($),Int,Bool,Eq(..)) -- avoid importing (<*>)
+import GHC.Prelude (($),Int,Bool,Eq(..)) -- avoid importing (<*>)
 
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax

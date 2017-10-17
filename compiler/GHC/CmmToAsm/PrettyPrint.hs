@@ -16,7 +16,7 @@ module GHC.CmmToAsm.PrettyPrint (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Assembler
 import GHC.CoreTypes.CLabel

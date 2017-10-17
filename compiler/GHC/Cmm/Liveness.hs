@@ -12,7 +12,7 @@ module GHC.Cmm.Liveness
     )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Cmm.Syntax.BlockId

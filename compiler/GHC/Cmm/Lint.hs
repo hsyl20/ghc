@@ -10,7 +10,7 @@ module GHC.Cmm.Lint (
     cmmLint, cmmLintGraph
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Collections

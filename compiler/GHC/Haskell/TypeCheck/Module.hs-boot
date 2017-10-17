@@ -1,6 +1,6 @@
 module GHC.Haskell.TypeCheck.Module where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.Config.Flags             (DynFlags)
 import GHC.CoreTypes.Type           (TyThing)
 import GHC.Haskell.TypeCheck.Util   (TcM)

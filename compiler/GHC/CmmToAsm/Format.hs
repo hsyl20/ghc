@@ -21,7 +21,7 @@ module GHC.CmmToAsm.Format (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax
 import GHC.Util.Outputable

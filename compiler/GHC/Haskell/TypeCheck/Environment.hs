@@ -71,7 +71,7 @@ module GHC.Haskell.TypeCheck.Environment(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.Interface.Environment

@@ -18,7 +18,7 @@ module GHC.HaskellToCore.Foreign.Call
 #include "HsVersions.h"
 
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 

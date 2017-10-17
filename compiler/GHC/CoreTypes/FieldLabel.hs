@@ -71,7 +71,7 @@ module GHC.CoreTypes.FieldLabel
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.OccName
 import GHC.CoreTypes.Name

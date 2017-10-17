@@ -92,7 +92,7 @@ module GHC.Haskell.Utils(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax.Declaration
 import GHC.Haskell.Syntax.Bind

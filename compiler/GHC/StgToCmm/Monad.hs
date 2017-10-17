@@ -60,7 +60,7 @@ module GHC.StgToCmm.Monad (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding( sequence, succ )
+import GHC.Prelude hiding( sequence, succ )
 
 import GHC.Cmm.Syntax
 import GHC.StgToCmm.Closure

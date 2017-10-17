@@ -47,7 +47,7 @@ module GHC.Core.Simplify.Environment (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Simplify.Monad
 import GHC.Core.Monad                ( SimplMode(..) )

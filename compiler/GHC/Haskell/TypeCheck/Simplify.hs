@@ -18,7 +18,7 @@ module GHC.Haskell.TypeCheck.Simplify(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Bag
 import GHC.CoreTypes.Class      ( Class, classKey, classTyCon )

@@ -29,7 +29,7 @@ module GHC.CoreTypes.Coercion.Axiom (
        BuiltInSynFamily(..), trivialBuiltInFamily
        ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal ( Type, pprType )
 import {-# SOURCE #-} GHC.CoreTypes.TyCon ( TyCon )

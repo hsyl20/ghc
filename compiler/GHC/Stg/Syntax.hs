@@ -45,7 +45,7 @@ module GHC.Stg.Syntax (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax     ( AltCon, Tickish )
 import GHC.CoreTypes.CostCentre  ( CostCentreStack )

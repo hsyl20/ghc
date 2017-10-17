@@ -25,7 +25,7 @@ where
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Id.Make ( mkPrimOpId, magicDictId )
 

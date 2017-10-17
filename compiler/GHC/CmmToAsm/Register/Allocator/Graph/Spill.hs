@@ -8,7 +8,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.Spill (
         accSpillSL
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register.Allocator.Liveness
 import GHC.CmmToAsm.Instruction

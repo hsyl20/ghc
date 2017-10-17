@@ -23,7 +23,7 @@ module GHC.Util.Handle.BufferedWrite (
         bFlush,
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.FastString
 import GHC.Data.FastMutableInt

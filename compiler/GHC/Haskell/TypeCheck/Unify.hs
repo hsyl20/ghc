@@ -38,7 +38,7 @@ module GHC.Haskell.TypeCheck.Unify (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.CoreTypes.Type.Internal

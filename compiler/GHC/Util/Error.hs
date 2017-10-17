@@ -57,7 +57,7 @@ module GHC.Util.Error (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Bag
 import GHC.Util.Exception

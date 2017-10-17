@@ -20,7 +20,7 @@ module GHC.Util.Platform (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 -- | Contains enough information for the native code generator to emit
 --      code for this platform.

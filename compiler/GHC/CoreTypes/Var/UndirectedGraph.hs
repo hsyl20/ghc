@@ -27,7 +27,7 @@ module GHC.CoreTypes.Var.UndirectedGraph
     , delNode
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Var.Environment

@@ -21,7 +21,7 @@ module GHC.Haskell.TypeCheck.Match
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Expression
                         ( tcSyntaxOp, tcInferSigmaNC, tcInferSigma

@@ -36,7 +36,7 @@ module GHC.CmmToAsm.Register.Allocator.Liveness (
         natCmmTopToLive
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register
 import GHC.CmmToAsm.Instruction

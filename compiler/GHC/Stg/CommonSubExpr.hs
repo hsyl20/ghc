@@ -70,7 +70,7 @@ and nothing stops us from transforming that to
 -}
 module GHC.Stg.CommonSubExpr (stgCse) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Id

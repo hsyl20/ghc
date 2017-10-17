@@ -142,7 +142,7 @@ Library
         NoImplicitPrelude
 
     Other-Modules:
-        GhcPrelude
+        GHC.Prelude
 
     Exposed-Modules:
         GHC.Util.Ar
@@ -343,6 +343,10 @@ Library
         GHC.Util.CodeGen.StaticPtrTable
         GHC.Util.SysTools
         GHC.Util.SysTools.Terminal
+        GHC.Util.SysTools.ExtraObj
+        GHC.Util.SysTools.Info
+        GHC.Util.SysTools.Process
+        GHC.Util.SysTools.Tasks
         GHC.Util.Elf
         GHC.Interface.Tidy
         GHC.Data.Char.Classification

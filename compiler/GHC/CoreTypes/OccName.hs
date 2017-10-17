@@ -105,7 +105,7 @@ module GHC.CoreTypes.OccName (
         FastStringEnv, emptyFsEnv, lookupFsEnv, extendFsEnv, mkFsEnv
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util
 import GHC.CoreTypes.Unique

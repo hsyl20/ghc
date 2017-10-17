@@ -22,7 +22,7 @@ module GHC.HaskellToCore.Match.TermEqOracle (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.HaskellToCore.Match.Expression
 

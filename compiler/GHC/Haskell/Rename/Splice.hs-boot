@@ -1,6 +1,6 @@
 module GHC.Haskell.Rename.Splice where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.Haskell.Syntax
 import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.Name.Set

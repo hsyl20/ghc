@@ -8,7 +8,7 @@ module GHC.Core.Vectorise.Generic.PData
   , buildPDatasTyCon )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Builtins

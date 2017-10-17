@@ -122,7 +122,7 @@ Here is a running example:
   in upsweep after we have compiled the module (see GHC.Driver.Make.upsweep').
 -}
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.CLabel
 import GHC.Core.Syntax

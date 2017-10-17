@@ -52,7 +52,7 @@ module GHC.HaskellToCore.Monad (
         dsNoLevPoly, dsNoLevPolyExpr, dsWhenNoErrs
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.FamilyInstance

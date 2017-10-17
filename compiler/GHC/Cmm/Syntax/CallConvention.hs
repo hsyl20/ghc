@@ -9,7 +9,7 @@ module GHC.Cmm.Syntax.CallConvention (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax.Expression
 import GHC.RTS.Storage

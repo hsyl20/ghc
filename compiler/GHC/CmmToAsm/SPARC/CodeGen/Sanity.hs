@@ -6,7 +6,7 @@ module GHC.CmmToAsm.SPARC.CodeGen.Sanity (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Instr
 import GHC.CmmToAsm.SPARC.Ppr        ()

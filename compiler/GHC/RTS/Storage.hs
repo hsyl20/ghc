@@ -50,7 +50,7 @@ module GHC.RTS.Storage (
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes( ConTagZ )
 import GHC.Config.Flags

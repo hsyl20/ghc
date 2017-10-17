@@ -73,7 +73,7 @@ module GHC.CoreTypes.Var.Environment (
         emptyTidyEnv
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.OccName
 import GHC.CoreTypes.Var

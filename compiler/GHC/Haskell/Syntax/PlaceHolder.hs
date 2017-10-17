@@ -6,7 +6,7 @@
 
 module GHC.Haskell.Syntax.PlaceHolder where
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 import GHC.CoreTypes.Type       ( Type )
 import GHC.Util.Outputable

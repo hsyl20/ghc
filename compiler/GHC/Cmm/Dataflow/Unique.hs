@@ -9,7 +9,7 @@ module GHC.Cmm.Dataflow.Unique
     , intToUnique
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import qualified Data.IntMap as M
 import qualified Data.IntSet as S

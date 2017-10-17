@@ -166,7 +166,7 @@ module GHC.Config.Flags (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Platform
 import GHC.Config.HostPlatform

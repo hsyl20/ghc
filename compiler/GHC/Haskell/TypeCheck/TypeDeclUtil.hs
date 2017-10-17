@@ -27,7 +27,7 @@ module GHC.Haskell.TypeCheck.TypeDeclUtil(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Monad
 import GHC.Haskell.TypeCheck.Environment

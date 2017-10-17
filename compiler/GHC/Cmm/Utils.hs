@@ -64,7 +64,7 @@ module GHC.Cmm.Utils(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.TyCon    ( PrimRep(..), PrimElemRep(..) )
 import GHC.CoreTypes.RepType  ( UnaryType, SlotTy (..), typePrimRep1 )

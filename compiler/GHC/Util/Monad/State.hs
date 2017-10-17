@@ -2,7 +2,7 @@
 
 module GHC.Util.Monad.State where
 
-import GhcPrelude
+import GHC.Prelude
 
 newtype State s a = State { runState' :: s -> (# a, s #) }
 

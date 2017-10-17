@@ -198,7 +198,7 @@ module GHC.Haskell.TypeCheck.Util.CoreType (
 #include "HsVersions.h"
 
 -- friends:
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Kind
 import GHC.CoreTypes.Type.Internal

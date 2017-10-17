@@ -53,7 +53,7 @@ module GHC.Core.Monad (
     thNameToGhcName
   ) where
 
-import GhcPrelude hiding ( read )
+import GHC.Prelude hiding ( read )
 
 import GHC.CoreTypes.Name              ( Name )
 import GHC.Haskell.TypeCheck.Monad   ( initTcForLookup )

@@ -27,7 +27,7 @@ module GHC.Util.Monad
 -- Imports
 -------------------------------------------------------------------------------
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Maybe
 

@@ -17,7 +17,7 @@ module GHC.StgToCmm.PrimOp (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding ((<*>))
+import GHC.Prelude hiding ((<*>))
 
 import GHC.StgToCmm.Layout
 import GHC.StgToCmm.ForeignCall

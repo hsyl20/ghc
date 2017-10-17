@@ -11,7 +11,7 @@ module GHC.Core.Vectorise.Utils.Hoisting
   )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Env

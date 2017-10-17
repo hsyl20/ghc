@@ -11,7 +11,7 @@ module GHC.Cmm.Switch (
      createSwitchPlan,
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable
 import GHC.Config.Flags

@@ -16,8 +16,8 @@ module GHC.Util.SysTools (
         initLlvmTargets,
 
         -- Interface to system tools
-        module SysTools.Tasks,
-        module SysTools.Info,
+        module GHC.Util.SysTools.Tasks,
+        module GHC.Util.SysTools.Info,
 
         linkDynLib,
 
@@ -36,7 +36,7 @@ module GHC.Util.SysTools (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Module
 import GHC.Packages
@@ -56,9 +56,9 @@ import GHC.CmmToLlvm.CodeGen.Base (llvmVersionStr
 import System.FilePath
 import System.IO
 import System.Directory
-import SysTools.ExtraObj
-import SysTools.Info
-import SysTools.Tasks
+import GHC.Util.SysTools.ExtraObj
+import GHC.Util.SysTools.Info
+import GHC.Util.SysTools.Tasks
 import Data.List
 
 #if defined(mingw32_HOST_OS)

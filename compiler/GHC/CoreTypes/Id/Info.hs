@@ -82,7 +82,7 @@ module GHC.CoreTypes.Id.Info (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 

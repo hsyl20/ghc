@@ -137,7 +137,7 @@ module GHC.CoreTypes.Type.Internal (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.DataCon 
                              ( dataConFullSig

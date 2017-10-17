@@ -12,7 +12,7 @@ module GHC.Interface.Tidy (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Util
 import GHC.Config.Flags

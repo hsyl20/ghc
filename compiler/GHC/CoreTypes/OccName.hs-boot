@@ -1,5 +1,5 @@
 module GHC.CoreTypes.OccName where
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 data OccName

@@ -10,7 +10,7 @@
 
 module GHC.Config.HostPlatform (PlatformConstants(..)) where
 
-import GhcPrelude
+import GHC.Prelude
 
 -- Produced by deriveConstants
 #include "GHCConstantsHaskellType.hs"

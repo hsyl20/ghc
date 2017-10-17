@@ -20,7 +20,7 @@ module GHC.Interface.Binary (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Monad
 import GHC.Builtin.Utils   ( isKnownKeyName, lookupKnownKeyName )

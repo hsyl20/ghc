@@ -17,7 +17,7 @@ module GHC.StgToCmm.Bind (
 
 #include "HsVersions.h"
 
-import GhcPrelude hiding ((<*>))
+import GHC.Prelude hiding ((<*>))
 
 import GHC.StgToCmm.Expression
 import GHC.StgToCmm.Monad

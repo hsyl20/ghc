@@ -22,7 +22,7 @@ module GHC.Haskell.Derive.Utils (
         newDerivClsInst, extendLocalInstEnv
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Bag
 import GHC.CoreTypes.BasicTypes

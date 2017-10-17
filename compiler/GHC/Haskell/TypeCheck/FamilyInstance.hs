@@ -14,7 +14,7 @@ module GHC.Haskell.TypeCheck.FamilyInstance (
         makeInjectivityErrors, injTyVarsOfType, injTyVarsOfTypes
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.FamilyInstance

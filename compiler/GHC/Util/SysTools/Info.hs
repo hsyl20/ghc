@@ -6,7 +6,7 @@
 -- (c) The GHC Team 2017
 --
 -----------------------------------------------------------------------------
-module SysTools.Info where
+module GHC.Util.SysTools.Info where
 
 import Exception
 import ErrUtils
@@ -20,9 +20,9 @@ import Data.IORef
 import System.IO
 
 import Platform
-import GhcPrelude
+import GHC.Prelude
 
-import SysTools.Process
+import GHC.Util.SysTools.Process
 
 {- Note [Run-time linker info]
 

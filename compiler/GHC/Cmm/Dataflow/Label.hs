@@ -11,7 +11,7 @@ module GHC.Cmm.Dataflow.Label
     , uniqueToLbl
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable
 

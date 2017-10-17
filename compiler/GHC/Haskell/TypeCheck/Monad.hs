@@ -135,7 +135,7 @@ module GHC.Haskell.TypeCheck.Monad(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Util      -- Re-export all
 import GHC.Util.Monad.IOEnv            -- Re-export all

@@ -67,7 +67,7 @@ module GHC.Haskell.Parser.Syntax (
 
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax             -- Lots of it
 import GHC.CoreTypes.Class            ( FunDep )

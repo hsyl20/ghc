@@ -9,7 +9,7 @@ module GHC.Core.Specialise ( specProgram, specUnfolding ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Id
 import GHC.Haskell.TypeCheck.Util.CoreType hiding( substTy )

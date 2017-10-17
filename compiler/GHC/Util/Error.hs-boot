@@ -1,6 +1,6 @@
 module GHC.Util.Error where
 
-import GhcPrelude
+import GHC.Prelude
 import GHC.Util.Outputable (SDoc, PrintUnqualified )
 import GHC.CoreTypes.SrcLoc    (SrcSpan)
 import GHC.Util.Json

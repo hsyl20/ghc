@@ -20,7 +20,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.StackMap (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Data.UniqueFM

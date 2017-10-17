@@ -19,7 +19,7 @@ module GHC.Interactive.Debugger
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Interactive.Linker
 import GHC.Interactive.ClosureInspect

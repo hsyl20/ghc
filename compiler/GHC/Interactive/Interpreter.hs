@@ -46,7 +46,7 @@ module GHC.Interactive.Interpreter
   , fromEvalResult
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHCi.Message
 #if defined(GHCI)

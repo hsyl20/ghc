@@ -13,7 +13,7 @@ Desugaring foreign declarations (see also GHC.HaskellToCore.Foreign.Call).
 module GHC.HaskellToCore.Foreign.Declaration ( dsForeigns ) where
 
 #include "HsVersions.h"
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Monad        -- temp
 

@@ -20,7 +20,7 @@ module GHC.HaskellToCore.Splice ( dsBracket ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-}   GHC.HaskellToCore.Expression ( dsExpr )
 

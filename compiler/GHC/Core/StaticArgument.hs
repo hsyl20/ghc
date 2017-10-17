@@ -51,7 +51,7 @@ essential to make this work well!
 {-# LANGUAGE CPP #-}
 module GHC.Core.StaticArgument ( doStaticArgs ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var
 import GHC.Core.Syntax

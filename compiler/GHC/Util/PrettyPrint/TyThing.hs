@@ -19,7 +19,7 @@ module GHC.Util.PrettyPrint.TyThing (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Type           ( TyThing(..) )
 import GHC.Interface.Syntax   ( ShowSub(..), ShowHowMuch(..), AltPpr(..)

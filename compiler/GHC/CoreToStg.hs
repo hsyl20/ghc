@@ -15,7 +15,7 @@ module GHC.CoreToStg ( coreToStg, coreExprToStg ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Utils          ( exprType, findDefault, isJoinBind )

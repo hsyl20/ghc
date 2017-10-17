@@ -26,7 +26,7 @@ module GHC.CoreTypes.ConLike (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.PatternSynonym

@@ -22,7 +22,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.ArchBase (
         squeese
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.UniqueSet
 import GHC.Data.UniqueFM

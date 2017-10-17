@@ -7,7 +7,7 @@ module GHC.Cmm.Pipeline (
   cmmPipeline
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Cmm.Syntax
 import GHC.Cmm.Lint

@@ -82,7 +82,7 @@ module GHC.CoreTypes.Var (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal( Type, Kind, pprKind )
 import {-# SOURCE #-} GHC.Haskell.TypeCheck.Util.CoreType( TcTyVarDetails, 

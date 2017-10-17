@@ -44,7 +44,7 @@ module GHC.Data.UniqueMap (
     -- Non-deterministic functions omitted
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.UniqueFM
 

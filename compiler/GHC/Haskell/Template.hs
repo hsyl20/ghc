@@ -18,7 +18,7 @@ module GHC.Haskell.Template
    )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax as Hs
 import qualified GHC.CoreTypes.Class as Class

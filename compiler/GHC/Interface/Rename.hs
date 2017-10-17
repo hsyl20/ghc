@@ -15,7 +15,7 @@ module GHC.Interface.Rename(
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.SrcLoc
 import GHC.Util.Outputable

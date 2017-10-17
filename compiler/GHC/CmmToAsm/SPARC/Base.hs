@@ -18,7 +18,7 @@ module GHC.CmmToAsm.SPARC.Base (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.Util.Panic

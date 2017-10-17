@@ -111,7 +111,7 @@ module GHC.Util.PrettyPrint (
 
   ) where
 
-import GhcPrelude hiding (error)
+import GHC.Prelude hiding (error)
 
 import GHC.Util.Handle.BufferedWrite
 import GHC.Data.FastString

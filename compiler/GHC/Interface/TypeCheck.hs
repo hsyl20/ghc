@@ -22,7 +22,7 @@ module GHC.Interface.TypeCheck (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Builtin.TypeNats(typeNatCoAxiomRules)
 import GHC.Interface.Syntax

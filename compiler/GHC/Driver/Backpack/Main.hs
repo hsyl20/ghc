@@ -18,7 +18,7 @@ module GHC.Driver.Backpack.Main (doBackpack) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 -- In a separate module because it hooks into the parser.
 import GHC.Driver.Backpack.Syntax

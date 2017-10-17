@@ -33,7 +33,7 @@ module GHC.Data.Char.Encoding (
         toBase62Padded
   ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import Foreign
 import Foreign.ForeignPtr.Unsafe

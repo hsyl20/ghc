@@ -7,7 +7,7 @@ module GHC.Data.Graph.PrettyPrint (
 )
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Graph.Base
 

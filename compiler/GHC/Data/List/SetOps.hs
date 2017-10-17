@@ -23,7 +23,7 @@ module GHC.Data.List.SetOps (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Util.Outputable
 import GHC.Util

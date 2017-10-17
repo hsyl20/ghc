@@ -1,5 +1,5 @@
 module GHC.CoreTypes.Name where
 
-import GhcPrelude ()
+import GHC.Prelude ()
 
 data Name

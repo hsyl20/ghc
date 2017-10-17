@@ -6,7 +6,7 @@ module GHC.CmmToAsm.SPARC.CodeGen.Gen32 (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.CodeGen.CondCode
 import GHC.CmmToAsm.SPARC.CodeGen.Amode

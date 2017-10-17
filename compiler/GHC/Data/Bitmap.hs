@@ -18,7 +18,7 @@ module GHC.Data.Bitmap (
 #include "HsVersions.h"
 #include "../includes/MachDeps.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.RTS.Storage
 import GHC.Config.Flags

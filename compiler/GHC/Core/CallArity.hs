@@ -7,7 +7,7 @@ module GHC.Core.CallArity
     , callArityRHS -- for testing
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var.Set
 import GHC.CoreTypes.Var.Environment

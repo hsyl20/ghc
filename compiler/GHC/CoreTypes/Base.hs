@@ -146,7 +146,7 @@ module GHC.CoreTypes.Base (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.ByteCode.Types
 import GHC.Interactive.Types ( Resume )

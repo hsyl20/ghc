@@ -7,7 +7,7 @@ module GHC.CmmToLlvm.CodeGen.Proc ( genLlvmProc ) where
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToLlvm
 import GHC.CmmToLlvm.CodeGen.Base

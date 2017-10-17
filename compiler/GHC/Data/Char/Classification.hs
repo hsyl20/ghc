@@ -16,7 +16,7 @@ module GHC.Data.Char.Classification
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import Data.Int         ( Int32 )
 import Data.Bits        ( Bits((.&.)) )

@@ -51,7 +51,7 @@ module GHC.Core.Syntax.Make (
 
 #include "HsVersions.h"
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Var          ( EvVar, setTyVarUnique )

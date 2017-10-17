@@ -17,7 +17,7 @@ module GHC.Haskell.Derive.Functor (
         gen_Functor_binds, gen_Foldable_binds, gen_Traversable_binds
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Data.Bag
 import GHC.CoreTypes.DataCon

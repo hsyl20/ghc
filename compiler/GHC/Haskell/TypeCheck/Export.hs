@@ -6,7 +6,7 @@
 
 module GHC.Haskell.TypeCheck.Export (tcRnExports, exports_from_avail) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.Haskell.Syntax
 import GHC.Builtin.Names

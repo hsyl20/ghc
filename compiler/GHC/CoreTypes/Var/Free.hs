@@ -26,7 +26,7 @@ module GHC.CoreTypes.Var.Free (
         mapUnionFV,
     ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Var.Set

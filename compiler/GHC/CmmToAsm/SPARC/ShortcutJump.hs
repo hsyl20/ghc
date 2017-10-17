@@ -8,7 +8,7 @@ module GHC.CmmToAsm.SPARC.ShortcutJump (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.SPARC.Instr
 import GHC.CmmToAsm.SPARC.Imm

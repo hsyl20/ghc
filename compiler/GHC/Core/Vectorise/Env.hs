@@ -15,7 +15,7 @@ module GHC.Core.Vectorise.Env (
   modVectInfo
 ) where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.Instance

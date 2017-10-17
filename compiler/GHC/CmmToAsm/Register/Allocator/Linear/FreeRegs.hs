@@ -9,7 +9,7 @@ module GHC.CmmToAsm.Register.Allocator.Linear.FreeRegs (
 
 where
 
-import GhcPrelude
+import GHC.Prelude
 
 import GHC.CmmToAsm.Register
 import GHC.CmmToAsm.Register.Class
