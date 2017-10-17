@@ -8,18 +8,18 @@
 -----------------------------------------------------------------------------
 module GHC.Util.SysTools.Info where
 
-import Exception
-import ErrUtils
-import DynFlags
-import Outputable
-import Util
+import GHC.Util.Exception
+import GHC.Util.Error
+import GHC.Config.Flags
+import GHC.Util.Outputable
+import GHC.Util
 
 import Data.List
 import Data.IORef
 
 import System.IO
 
-import Platform
+import GHC.Util.Platform
 import GHC.Prelude
 
 import GHC.Util.SysTools.Process

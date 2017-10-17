@@ -8,12 +8,12 @@
 -----------------------------------------------------------------------------
 module GHC.Util.SysTools.Tasks where
 
-import Exception
-import ErrUtils
-import DynFlags
-import Outputable
-import Platform
-import Util
+import GHC.Util.Exception
+import GHC.Util.Error
+import GHC.Config.Flags
+import GHC.Util.Outputable
+import GHC.Util.Platform
+import GHC.Util
 
 import Data.Char
 import Data.List
@@ -22,7 +22,7 @@ import System.IO
 import System.Process
 import GHC.Prelude
 
-import LlvmCodeGen.Base (llvmVersionStr, supportedLlvmVersion)
+import GHC.CmmToLlvm.CodeGen.Base (llvmVersionStr, supportedLlvmVersion)
 
 import GHC.Util.SysTools.Process
 import GHC.Util.SysTools.Info

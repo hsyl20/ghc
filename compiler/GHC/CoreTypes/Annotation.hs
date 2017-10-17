@@ -1,4 +1,3 @@
->>>>>>> Introduce module hierarchy:compiler/GHC/Core/WorkerWrap/Utils.h2
 -- |
 -- Support for source code annotation feature of GHC. That is the ANN pragma.
 --

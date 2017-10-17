@@ -1,13 +1,7 @@
-<<<<<<< HEAD:compiler/utils/PprColour.hs
-module PprColour where
-import GHC.Prelude
-
-||||||| merged common ancestors
-module PprColour where
-=======
 module GHC.Util.PrettyPrint.Colour where
 
->>>>>>> Introduce module hierarchy:compiler/GHC/Util/PrettyPrint/Colour.hs
+import GHC.Prelude
+
 import Data.Maybe (fromMaybe)
 import GHC.Util (OverridingBool(..), split)
 import Data.Semigroup as Semi

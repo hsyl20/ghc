@@ -538,7 +538,6 @@ Library
         GHC.Cmm.Dataflow.Graph
         GHC.Cmm.Dataflow.Label
         GHC.Cmm.Dataflow.Unique
->>>>>>> Introduce module hierarchy
 --        CgInfoTbls used in ghci/DebuggerUtils
 --        CgHeapery  mkVirtHeapOffsets used in ghci
 

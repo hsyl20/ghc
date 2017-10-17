@@ -13,16 +13,16 @@ module GHC.Util.SysTools.ExtraObj (
   haveRtsOptsFlags
 ) where
 
-import AsmUtils
-import ErrUtils
-import DynFlags
-import Packages
-import Platform
-import Outputable
-import SrcLoc           ( noSrcSpan )
-import Module
-import Elf
-import Util
+import GHC.Util.Assembler
+import GHC.Util.Error
+import GHC.Config.Flags
+import GHC.Packages
+import GHC.Util.Platform
+import GHC.Util.Outputable
+import GHC.CoreTypes.SrcLoc           ( noSrcSpan )
+import GHC.CoreTypes.Module
+import GHC.Util.Elf
+import GHC.Util
 import GHC.Prelude
 
 import Control.Monad
@@ -30,7 +30,7 @@ import Data.Maybe
 
 import Control.Monad.IO.Class
 
-import FileCleanup
+import GHC.Util.FileCleanup
 import GHC.Util.SysTools.Tasks
 import GHC.Util.SysTools.Info
 

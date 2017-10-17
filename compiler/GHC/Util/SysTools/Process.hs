@@ -10,15 +10,15 @@ module GHC.Util.SysTools.Process where
 
 #include "HsVersions.h"
 
-import Exception
-import ErrUtils
-import DynFlags
-import FastString
-import Outputable
-import Panic
+import GHC.Util.Exception
+import GHC.Util.Error
+import GHC.Config.Flags
+import GHC.Data.FastString
+import GHC.Util.Outputable
+import GHC.Util.Panic
 import GHC.Prelude
-import Util
-import SrcLoc           ( SrcLoc, mkSrcLoc, noSrcSpan, mkSrcSpan )
+import GHC.Util
+import GHC.CoreTypes.SrcLoc   ( SrcLoc, mkSrcLoc, noSrcSpan, mkSrcSpan )
 
 import Control.Concurrent
 import Data.Char
@@ -30,7 +30,7 @@ import System.IO
 import System.IO.Error as IO
 import System.Process
 
-import FileCleanup
+import GHC.Util.FileCleanup
 
 -- Similar to System.Process.readCreateProcessWithExitCode, but stderr is
 -- inherited from the parent process, and output to stderr is not captured.
