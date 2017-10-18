@@ -25,22 +25,22 @@ import GHC.CoreTypes.Class
 import GHC.CoreTypes.DataCon
 -- import GHC.Config.Flags
 import GHC.Util.Error
-import GHC.Haskell.TypeCheck.Instantiation
+import GHC.TypeCheck.Instantiation
 import GHC.Util.Outputable
 import GHC.Builtin.Names
 import GHC.Haskell.Derive.Util
-import GHC.Haskell.TypeCheck.Environment
--- import GHC.Haskell.TypeCheck.Error (reportAllUnsolved)
+import GHC.TypeCheck.Environment
+-- import GHC.TypeCheck.Error (reportAllUnsolved)
 import GHC.Haskell.Derive.Functor
 import GHC.Haskell.Derive.Generic
-import GHC.Haskell.TypeCheck.Util.Monadic
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.Monadic
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type
-import GHC.Haskell.TypeCheck.Simplify
-import GHC.Haskell.TypeCheck.Validity (validDerivPred)
-import GHC.Haskell.TypeCheck.Unify    (buildImplicationFor)
+import GHC.TypeCheck.Simplify
+import GHC.TypeCheck.Validity (validDerivPred)
+import GHC.TypeCheck.Unify    (buildImplicationFor)
 import GHC.CoreTypes.Type.Unify                     (tcUnifyTy)
 import GHC.Util
 import GHC.CoreTypes.Var
@@ -570,7 +570,7 @@ simplifyInstanceContexts infer_specs
       | n > 20
       -- Looks as if we are in an infinite loop
       -- This can happen if we have -XUndecidableInstances
-      -- (See GHC.Haskell.TypeCheck.Simplify.tcSimplifyDeriv.)
+      -- (See GHC.TypeCheck.Simplify.tcSimplifyDeriv.)
       = pprPanic "solveDerivEqns: probable loop"
                  (vcat (map pprDerivSpec infer_specs) $$ ppr current_solns)
       | otherwise
@@ -601,7 +601,7 @@ simplifyInstanceContexts infer_specs
                 -- checkValidInstance tyvars theta clas inst_tys
                 -- Not necessary; see Note [Exotic derived instance contexts]
 
-           ; traceTc "GHC.Haskell.TypeCheck.Deriving"
+           ; traceTc "GHC.TypeCheck.Deriving"
                      (ppr deriv_rhs $$ ppr theta)
                 -- Claim: the result instance declaration is guaranteed valid
                 -- Hence no need to call:

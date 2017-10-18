@@ -19,7 +19,7 @@ module GHC.Driver.Backpack.Syntax (
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.SrcLoc
 import GHC.Util.Outputable
 import GHC.CoreTypes.Module

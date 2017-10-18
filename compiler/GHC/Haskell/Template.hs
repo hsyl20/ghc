@@ -20,7 +20,7 @@ where
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax as Hs
+import GHC.Syntax as Hs
 import qualified GHC.CoreTypes.Class as Class
 import GHC.CoreTypes.RdrName
 import qualified GHC.CoreTypes.Name as Name
@@ -846,7 +846,7 @@ cvtl e = wrapL (cvt e)
                                           ; wrapParL HsPar $ SectionR s' y' }
                                             -- See Note [Sections in Haskell
                                             -- syntax] in
-                                            -- GHC.Haskell.Syntax.Expression
+                                            -- GHC.Syntax.Expression
     cvt (InfixE (Just x) s Nothing ) = do { x' <- cvtl x; s' <- cvtl s
                                           ; wrapParL HsPar $ SectionL x' s' }
 
@@ -1733,7 +1733,7 @@ with the following parts:
 Due to the two forall quantifiers and constraint contexts (either of
 which might be empty), pattern synonym type signatures are treated
 specially in GHC.HaskellToCore.Splice,
-GHC.Haskell.Template, and GHC.Haskell.TypeCheck.Splice:
+GHC.Haskell.Template, and GHC.TypeCheck.Splice:
 
    (a) When desugaring a pattern synonym from GHC.Haskell to TH.Dec in
        GHC.HaskellToCore.Splice, we represent its *full* type
@@ -1752,7 +1752,7 @@ GHC.Haskell.Template, and GHC.Haskell.TypeCheck.Splice:
        where initial empty `univs` type variables or an empty `reqs`
        constraint context are represented *explicitly* as `() =>`.
 
-   (c) When reifying a pattern synonym in `GHC.Haskell.TypeCheck.Splice`,
+   (c) When reifying a pattern synonym in `GHC.TypeCheck.Splice`,
        we always return its *full* type, i.e.:
 
            ForallT univs reqs (ForallT exis provs ty)

@@ -44,7 +44,7 @@ import GHC.Interface.Environment
 import GHC.CoreTypes.Base
 
 import GHC.CoreTypes.BasicTypes hiding (SuccessFlag(..))
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 
 import GHC.Config.Constants
 import GHC.Builtin.Names
@@ -202,7 +202,7 @@ checkWiredInTyCon :: TyCon -> TcM ()
 -- Ensure that the home module of the TyCon (and hence its instances)
 -- are loaded. See Note [Loading instances for wired-in things]
 -- It might not be a wired-in tycon (see the calls in
--- GHC.Haskell.TypeCheck.Unify), in which case this is a no-op.
+-- GHC.TypeCheck.Unify), in which case this is a no-op.
 checkWiredInTyCon tc
   | not (isWiredInName tc_name)
   = return ()

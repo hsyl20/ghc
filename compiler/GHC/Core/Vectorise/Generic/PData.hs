@@ -21,9 +21,9 @@ import GHC.Interface.BuildTypeAndClass
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type
-import GHC.Haskell.TypeCheck.FamilyInstance
+import GHC.TypeCheck.FamilyInstance
 import GHC.CoreTypes.FamilyInstance
-import GHC.Haskell.TypeCheck.Util.Monadic
+import GHC.TypeCheck.Util.Monadic
 import GHC.CoreTypes.Name
 import GHC.Util
 import GHC.Util.Monad

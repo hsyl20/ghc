@@ -3,9 +3,9 @@
 (c) The GRASP/AQUA Project, Glasgow University, 1992-1998
 
 
-Pattern-matching bindings (GHC.Haskell.Syntax.Bind and MonoBinds)
+Pattern-matching bindings (GHC.Syntax.Bind and MonoBinds)
 
-Handles @GHC.Haskell.Syntax.Bind@; those at the top level require different handling,
+Handles @GHC.Syntax.Bind@; those at the top level require different handling,
 in that the @Rec@/@NonRec@/etc structure is thrown away (whereas at
 lower levels it is preserved with @let@/@letrec@s).
 -}
@@ -37,7 +37,7 @@ import GHC.HaskellToCore.Monad
 import GHC.HaskellToCore.GuardedRHS
 import GHC.HaskellToCore.Util
 
-import GHC.Haskell.Syntax          -- lots of things
+import GHC.Syntax          -- lots of things
 import GHC.Core.Syntax             -- lots of things
 import GHC.CoreTypes.Literal             ( Literal(MachStr) )
 import GHC.Core.SimpleOpt ( simpleOptExpr )
@@ -51,8 +51,8 @@ import GHC.Data.Graph.Directed
 
 import GHC.Builtin.Names
 import GHC.CoreTypes.TyCon
-import GHC.Haskell.TypeCheck.Evidence
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Evidence
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion
 import GHC.Builtin.Types ( typeNatKind, typeSymbolKind )
@@ -291,7 +291,7 @@ dsAbsBinds dflags tyvars dicts exports
                           , abe_poly = global
                           , abe_mono = local, abe_prags = spec_prags })
                           -- See Note [AbsBinds wrappers] in
-                          -- GHC.Haskell.Syntax.Bind
+                          -- GHC.Syntax.Bind
                 = do { tup_id  <- newSysLocalDs tup_ty
                      ; core_wrap <- dsHsWrapper wrap
                      ; let rhs = core_wrap $ mkLams tyvars $ mkLams dicts $
@@ -642,7 +642,7 @@ dsSpecs :: CoreExpr     -- Its rhs
         -> TcSpecPrags
         -> DsM ( OrdList (Id,CoreExpr)  -- Binding for specialised Ids
                , [CoreRule] )           -- Rules for the Global Ids
--- See Note [Handling SPECIALISE pragmas] in GHC.Haskell.TypeCheck.Bind
+-- See Note [Handling SPECIALISE pragmas] in GHC.TypeCheck.Bind
 dsSpecs _ IsDefaultMethod = return (nilOL, [])
 dsSpecs poly_rhs (SpecPrags sps)
   = do { pairs <- mapMaybeM (dsSpec (Just poly_rhs)) sps
@@ -954,9 +954,9 @@ Consider
   {-# RULES "myrule"  foo C = 1 #-}
 
 After type checking the LHS becomes (foo alpha (C alpha)), where alpha
-is an unbound meta-tyvar.  The zonker in GHC.Haskell.TypeCheck.Syntax is careful not to
+is an unbound meta-tyvar.  The zonker in GHC.TypeCheck.Syntax is careful not to
 turn the free alpha into Any (as it usually does).  Instead it turns it
-into a TyVar 'a'.  See GHC.Haskell.TypeCheck.Syntax Note [Zonking the LHS of a RULE].
+into a TyVar 'a'.  See GHC.TypeCheck.Syntax Note [Zonking the LHS of a RULE].
 
 Now we must quantify over that 'a'.  It's /really/ inconvenient to do that
 in the zonker, because the HsExpr data type is very large.  But it's /easy/
@@ -1124,7 +1124,7 @@ dsHsWrapper (WpLet ev_binds)  = do { bs <- dsTcEvBinds ev_binds
 dsHsWrapper (WpCompose c1 c2) = do { w1 <- dsHsWrapper c1
                                    ; w2 <- dsHsWrapper c2
                                    ; return (w1 . w2) }
- -- See comments on WpFun in GHC.Haskell.TypeCheck.Evidence for an explanation of what
+ -- See comments on WpFun in GHC.TypeCheck.Evidence for an explanation of what
  -- the specification of this clause is
 dsHsWrapper (WpFun c1 c2 t1 doc)
                               = do { x  <- newSysLocalDsNoLP t1
@@ -1338,7 +1338,7 @@ help GHC by manually keeping the 'rep' *outside* the lambda.
 
 dsEvCallStack :: EvCallStack -> DsM CoreExpr
 -- See Note [Overview of implicit CallStacks] in
--- GHC.Haskell.TypeCheck.Evidence
+-- GHC.TypeCheck.Evidence
 dsEvCallStack cs = do
   df            <- getDynFlags
   m             <- getModule

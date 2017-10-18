@@ -31,7 +31,7 @@ import GHC.Core.FreeVars
 import GHC.CoreTypes.Class
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.TyCon
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Var

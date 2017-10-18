@@ -33,7 +33,7 @@ import GHC.Core.Syntax.Make hiding ( FloatBind(..) )
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Literal
 import GHC.CoreTypes.Coercion
-import GHC.Haskell.TypeCheck.Environment
+import GHC.TypeCheck.Environment
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Demand
 import GHC.CoreTypes.Var

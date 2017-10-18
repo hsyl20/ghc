@@ -69,7 +69,7 @@ module GHC.Haskell.Parser.Syntax (
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax             -- Lots of it
+import GHC.Syntax             -- Lots of it
 import GHC.CoreTypes.Class            ( FunDep )
 import GHC.CoreTypes.TyCon            ( TyCon, isTupleTyCon
                                       , tyConSingleDataCon_maybe )
@@ -79,7 +79,7 @@ import GHC.CoreTypes.Coercion.Axiom   ( Role, fsFromRole )
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.BasicTypes
-import GHC.Haskell.TypeCheck.Evidence ( idHsWrapper )
+import GHC.TypeCheck.Evidence ( idHsWrapper )
 import GHC.Haskell.Lexer
 import GHC.Util.Lexeme                ( isLexCon )
 import GHC.CoreTypes.Type             ( TyThing(..) )
@@ -97,7 +97,7 @@ import GHC.Util.Outputable as Outputable
 import GHC.Data.FastString
 import GHC.Data.Maybe
 import GHC.Util
-import GHC.Haskell.Syntax.Annotation
+import GHC.Syntax.Annotation
 import Data.List
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Util.Monad
@@ -125,7 +125,7 @@ import Data.Data       ( dataTypeOf, fromConstr, dataTypeConstrs )
 
 -- Similarly for mkConDecl, mkClassOpSig and default-method names.
 
--- *** See Note [The Naming story] in GHC.Haskell.Syntax.Declaration ****
+-- *** See Note [The Naming story] in GHC.Syntax.Declaration ****
 
 mkTyClD :: LTyClDecl n -> LHsDecl n
 mkTyClD (L loc d) = L loc (TyClD d)
@@ -326,7 +326,7 @@ mkRoleAnnotDecl loc tycon roles
 
 {- **********************************************************************
 
-  #cvBinds-etc# Converting to @GHC.Haskell.Syntax.Bind@, etc.
+  #cvBinds-etc# Converting to @GHC.Syntax.Bind@, etc.
 
   ********************************************************************* -}
 
@@ -775,7 +775,7 @@ checkTyClHdr is_cls ty
         arity = length ts
         tup_name | is_cls    = cTupleTyConName arity
                  | otherwise = getName (tupleTyCon Boxed arity)
-                 -- See Note [Unit tuples] in GHC.Haskell.Syntax.Type
+                 -- See Note [Unit tuples] in GHC.Syntax.Type
                  -- (TODO: is this still relevant?)
     go l _ _ _ _
       = parseErrorSDoc l (text "Malformed head of type or class declaration:"

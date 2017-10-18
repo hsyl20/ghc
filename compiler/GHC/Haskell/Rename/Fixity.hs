@@ -15,10 +15,10 @@ where
 import GHC.Prelude
 
 import GHC.Interface.Load
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Base
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Environment
 import GHC.CoreTypes.Module

@@ -179,7 +179,7 @@ type role IO representational
 because this role is significant in the normalisation of FFI
 types. Specifically, if this role were to become nominal (which would
 be very strange, indeed!), changes elsewhere in GHC would be
-necessary. See [FFI type roles] in GHC.Haskell.TypeCheck.Foreign.  -}
+necessary. See [FFI type roles] in GHC.TypeCheck.Foreign.  -}
 
 
 {- *********************************************************************

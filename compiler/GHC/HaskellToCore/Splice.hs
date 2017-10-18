@@ -29,7 +29,7 @@ import GHC.HaskellToCore.Monad
 
 import qualified Language.Haskell.TH as TH
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Class
 import GHC.Builtin.Names
 -- To avoid clashes with GHC.HaskellToCore.Splice.varName we must
@@ -43,7 +43,7 @@ import GHC.CoreTypes.Name hiding( isVarOcc, isTcOcc, varName, tcName )
 import GHC.Builtin.Names.TemplateHaskell
 import GHC.CoreTypes.Name.Environment
 import GHC.CoreTypes.Name.Set
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.TyCon
 import GHC.Builtin.Types
 import GHC.Core.Syntax
@@ -1096,7 +1096,7 @@ repRole (L _ Nothing)                 = rep2 inferRName []
 
 repSplice :: HsSplice GhcRn -> DsM (Core a)
 -- See Note [How brackets and nested splices are handled] in
--- GHC.Haskell.TypeCheck.Splice
+-- GHC.TypeCheck.Splice
 -- We return a CoreExpr of any old type; the context should know
 repSplice (HsTypedSplice   _ n _) = rep_splice n
 repSplice (HsUntypedSplice _ n _) = rep_splice n

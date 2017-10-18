@@ -80,7 +80,7 @@ data Class
 --  - 'ApiAnnotation.AnnKeywordId' : 'ApiAnnotation.AnnRarrow'',
 
 -- For details on above see Note [Api annotations] in
--- GHC.Haskell.Syntax.Annotation
+-- GHC.Syntax.Annotation
 type FunDep a = ([a],[a])
 
 type ClassOpItem = (Id, DefMethInfo)
@@ -223,7 +223,7 @@ we should make sure that the first and third args match the instance
 header.
 
 Having the same variables for class and tycon is also used in checkValidRoles
-(in GHC.Haskell.TypeCheck.TypeDecl) when checking a class's
+(in GHC.TypeCheck.TypeDecl) when checking a class's
 roles.
 
 

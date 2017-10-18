@@ -155,7 +155,7 @@ import GHCi.RemoteTypes
 import GHC.ForeignSrcLang
 
 import GHC.Data.UniqueFM
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Available
 import GHC.CoreTypes.Module
@@ -172,7 +172,7 @@ import GHC.CoreTypes.Id
 import GHC.CoreTypes.Id.Info         ( IdDetails(..), RecSelParent(..))
 import GHC.CoreTypes.Type
 
-import GHC.Haskell.Syntax.Annotation    ( ApiAnns )
+import GHC.Syntax.Annotation    ( ApiAnns )
 import GHC.CoreTypes.Annotation      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
 import GHC.CoreTypes.Class
 import GHC.CoreTypes.TyCon
@@ -432,8 +432,8 @@ data HscEnv
 
         hsc_type_env_var :: Maybe (Module, IORef TypeEnv)
                 -- ^ Used for one-shot compilation only, to initialise
-                -- the 'IfGblEnv'. See 'GHC.Haskell.TypeCheck.Util.tcg_type_env_var' for
-                -- 'GHC.Haskell.TypeCheck.Util.TcGblEnv'.  See also Note [hsc_type_env_var hack]
+                -- the 'IfGblEnv'. See 'GHC.TypeCheck.Util.tcg_type_env_var' for
+                -- 'GHC.TypeCheck.Util.TcGblEnv'.  See also Note [hsc_type_env_var hack]
 
         , hsc_iserv :: MVar (Maybe IServ)
                 -- ^ interactive server process.  Created the first
@@ -1469,7 +1469,7 @@ Where do interactively-bound Ids come from?
     These start with an Internal Name because a Stmt is a local
     construct, so the renamer naturally builds an Internal name for
     each of its binders.  Then in tcRnStmt they are externalised via
-    GHC.Haskell.TypeCheck.Module.externaliseAndTidyId, so they get Names
+    GHC.TypeCheck.Module.externaliseAndTidyId, so they get Names
     like Ghic4.foo.
 
   - Ids bound by the debugger etc have Names constructed by
@@ -2342,7 +2342,7 @@ data Dependencies
          }
   deriving( Eq )
         -- Equality used only for old/new comparison in GHC.Interface.Util.addFingerprints
-        -- See 'GHC.Haskell.TypeCheck.Util.ImportAvails' for details on dependencies.
+        -- See 'GHC.TypeCheck.Util.ImportAvails' for details on dependencies.
 
 instance Binary Dependencies where
     put_ bh deps = do put_ bh (dep_mods deps)
@@ -2507,7 +2507,7 @@ data ExternalPackageState
                 --
                 -- The 'ModuleName' part is not necessary, but it's useful for
                 -- debug prints, and it's convenient because this field comes
-                -- direct from 'GHC.Haskell.TypeCheck.Util.imp_dep_mods'
+                -- direct from 'GHC.TypeCheck.Util.imp_dep_mods'
 
         eps_PIT :: !PackageIfaceTable,
                 -- ^ The 'ModIface's for modules in external packages
@@ -3036,7 +3036,7 @@ data HsParsedModule = HsParsedModule {
        -- the .hi file, so that we can force recompilation if any of
        -- them change (#3589)
     hpm_annotations :: ApiAnns
-    -- See Note [Api annotations] in GHC.Haskell.Syntax.Annotation
+    -- See Note [Api annotations] in GHC.Syntax.Annotation
   }
 
 {-
@@ -3202,6 +3202,6 @@ would give you [CompleteMatch [F, T1] Boolean, CompleteMatch [F, T2] Boolean].
 dsGetCompleteMatches in GHC.HaskellToCore.Splice accomplishes this lookup.
 
 Also see Note [Typechecking Complete Matches] in
-GHC.Haskell.TypeCheck.Bind for a more detailed explanation for how GHC
+GHC.TypeCheck.Bind for a more detailed explanation for how GHC
 ensures that all the conlikes in a COMPLETE set are consistent.
 -}

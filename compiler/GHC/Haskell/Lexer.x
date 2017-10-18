@@ -117,7 +117,7 @@ import GHC.CoreTypes.BasicTypes ( InlineSpec(..), RuleMatchInfo(..),
 
 import GHC.Data.Char.Classification
 
-import GHC.Haskell.Syntax.Annotation
+import GHC.Syntax.Annotation
 }
 
 -- -----------------------------------------------------------------------------
@@ -853,7 +853,7 @@ varids whenever -XTypeFamilies and -XRoleAnnotations are off, respectively.
 But, there is no need to do so. These pseudo-keywords are not stolen syntax:
 they are only used after the keyword 'type' at the top-level, where varids are
 not allowed. Furthermore, checks further downstream
-(GHC.Haskell.TypeCheck.TypeDecl) ensure that type families
+(GHC.TypeCheck.TypeDecl) ensure that type families
 and role annotations are never declared without their extensions on. In fact, by
 unconditionally lexing these pseudo-keywords as special, we can get better error
 messages.
@@ -1860,7 +1860,7 @@ data PState = PState {
         -- The next three are used to implement Annotations giving the
         -- locations of 'noise' tokens in the source, so that users of
         -- the GHC API can do source to source conversions.
-        -- See note [Api annotations] in GHC.Haskell.Syntax.Annotation
+        -- See note [Api annotations] in GHC.Syntax.Annotation
         annotations :: [(ApiAnnKey,[SrcSpan])],
         comment_q :: [Located AnnotationComment],
         annotations_comments :: [(SrcSpan,[Located AnnotationComment])]

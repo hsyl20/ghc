@@ -651,7 +651,7 @@ instance Lift a => Lift [a] where
   lift xs = do { xs' <- mapM lift xs; return (ListE xs') }
 
 liftString :: String -> Q Exp
--- Used in GHC.Haskell.TypeCheck.Expression to short-circuit the lifting
+-- Used in GHC.TypeCheck.Expression to short-circuit the lifting
 -- for strings
 liftString s = return (LitE (StringL s))
 

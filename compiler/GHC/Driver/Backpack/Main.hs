@@ -29,8 +29,8 @@ import GHC.Haskell.Parser
 import GHC.Haskell.Lexer
 import GHC.Monad
 import GHC.Config.Flags
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Module
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Module
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.Base
 import GHC.Data.StringBuffer

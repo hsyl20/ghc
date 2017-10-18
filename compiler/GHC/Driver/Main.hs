@@ -103,16 +103,16 @@ import GHC.CoreTypes.Available ( Avails )
 import GHC.CoreTypes.Module
 import GHC.Packages
 import GHC.CoreTypes.RdrName
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.Haskell.Printer.Dump
 import GHC.Core.Syntax
 import GHC.Data.StringBuffer
 import GHC.Haskell.Parser
 import GHC.Haskell.Lexer as Lexer
 import GHC.CoreTypes.SrcLoc
-import GHC.Haskell.TypeCheck.Module
+import GHC.TypeCheck.Module
 import GHC.Interface.TypeCheck    ( typecheckIface )
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Name.Cache       ( initNameCache )
 import GHC.Interface.Load         ( ifaceStats, initExternalPackageState )
 import GHC.Builtin.Util
@@ -139,7 +139,7 @@ import GHC.CoreTypes.Instance
 import GHC.CoreTypes.FamilyInstance
 import GHC.Util.Fingerprint           ( Fingerprint )
 import GHC.Config.Hooks
-import GHC.Haskell.TypeCheck.Environment
+import GHC.TypeCheck.Environment
 import GHC.Builtin.Names
 
 import GHC.Config.Flags
@@ -671,7 +671,7 @@ hscIncrementalCompile always_do_basic_recompilation_check m_tc_result
     mHscMessage hsc_env' mod_summary source_modified mb_old_iface mod_index
   = do
     -- One-shot mode needs a knot-tying mutable variable for interface
-    -- files. See GHC.Haskell.TypeCheck.Util.TcGblEnv.tcg_type_env_var.
+    -- files. See GHC.TypeCheck.Util.TcGblEnv.tcg_type_env_var.
     -- See also Note [hsc_type_env_var hack]
     type_env_var <- newIORef emptyNameEnv
     let mod = ms_mod mod_summary
@@ -1639,7 +1639,7 @@ hscDeclsWithLocation hsc_env0 str source linenumber =
             --    - DFunIds, which are in 'cls_insts' (see Note [ic_tythings] in
             --      GHC.CoreTypes.Base)
             --    - Implicit Ids, which are implicit in tcs
-            -- c.f. GHC.Haskell.TypeCheck.Module.runTcInteractive, which
+            -- c.f. GHC.TypeCheck.Module.runTcInteractive, which
             -- reconstructs the TypeEnv
 
         new_tythings = map AnId ext_ids ++ map ATyCon tcs ++ map (AConLike . PatSynCon) patsyns
@@ -1667,7 +1667,7 @@ hscAddSptEntries hsc_env entries = do
   To support fixity declarations on types defined within GHCi (as requested
   in #10018) we record the fixity environment in InteractiveContext.
   When we want to evaluate something
-  GHC.Haskell.TypeCheck.Module.runTcInteractive pulls out this fixity
+  GHC.TypeCheck.Module.runTcInteractive pulls out this fixity
   environment and uses it to initialize the global typechecker environment.
   After the typechecker has finished its business, an updated fixity environment
   (reflecting whatever fixity declarations were present in the statements we

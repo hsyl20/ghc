@@ -28,7 +28,7 @@ import GHC.CoreTypes.Base
 import GHC.Haskell.Parser           ( parseHeader )
 import GHC.Haskell.Lexer
 import GHC.Data.FastString
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Module
 import GHC.Builtin.Names
 import GHC.Data.StringBuffer

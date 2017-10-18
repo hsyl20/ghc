@@ -1603,12 +1603,12 @@ constructorClassKey = mkPreludeClassUnique 40
 selectorClassKey    = mkPreludeClassUnique 41
 
 -- KnownNat: see Note [KnowNat & KnownSymbol and EvLit] in
--- GHC.Haskell.TypeCheck.Evidence
+-- GHC.TypeCheck.Evidence
 knownNatClassNameKey :: Unique
 knownNatClassNameKey = mkPreludeClassUnique 42
 
 -- KnownSymbol: see Note [KnownNat & KnownSymbol and EvLit] in
--- GHC.Haskell.TypeCheck.Evidence
+-- GHC.TypeCheck.Evidence
 knownSymbolClassNameKey :: Unique
 knownSymbolClassNameKey = mkPreludeClassUnique 43
 
@@ -2428,7 +2428,7 @@ standardClassKeys = derivableClassKeys ++ numericClassKeys
 
 {-
 @derivableClassKeys@ is also used in checking \tr{deriving} constructs
-(@GHC.Haskell.TypeCheck.Deriving@).
+(@GHC.TypeCheck.Deriving@).
 -}
 
 derivableClassKeys :: [Unique]

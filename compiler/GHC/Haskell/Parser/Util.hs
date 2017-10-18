@@ -3,7 +3,7 @@ module GHC.Haskell.Parser.Util where
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.SrcLoc
 
 import Control.Monad

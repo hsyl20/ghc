@@ -137,7 +137,7 @@ import GHC.CoreTypes.Name
 import GHC.Util.Outputable as Outputable
 import GHC.Util.Platform
 import GHC.Builtin.Names
-import GHC.Haskell.TypeCheck.Environment (lookupGlobal)
+import GHC.TypeCheck.Environment (lookupGlobal)
 import GHC.CoreTypes.Type
 
 import Control.Monad.Trans.Class (lift)

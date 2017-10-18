@@ -7,7 +7,7 @@
 Generating derived instance declarations
 
 This module is nominally ``subordinate'' to
-@GHC.Haskell.TypeCheck.Deriving@, which is the ``official'' interface to
+@GHC.TypeCheck.Deriving@, which is the ``official'' interface to
 deriving-related things.
 
 This is where we do all the grimy bindings' generation.
@@ -40,8 +40,8 @@ module GHC.Haskell.Derive.BasicClasses (
 
 import GHC.Prelude
 
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.Syntax
+import GHC.TypeCheck.Monad
+import GHC.Syntax
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.BasicTypes
 import GHC.CoreTypes.DataCon
@@ -51,7 +51,7 @@ import GHC.Data.Char.Encoding
 
 import GHC.Config.Flags
 import GHC.Builtin.Util
-import GHC.Haskell.TypeCheck.FamilyInstance
+import GHC.TypeCheck.FamilyInstance
 import GHC.CoreTypes.FamilyInstance
 import GHC.Builtin.Names
 import GHC.Builtin.Names.TemplateHaskell
@@ -61,9 +61,9 @@ import GHC.CoreTypes.Id.Make                  ( coerceId )
 import GHC.Builtin.Primitive.Operations
 import GHC.CoreTypes.SrcLoc
 import GHC.CoreTypes.TyCon
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Util.CoreType
-import GHC.Haskell.TypeCheck.Validity ( checkValidTyFamEqn )
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Validity ( checkValidTyFamEqn )
 import GHC.Builtin.Primitive.Types
 import GHC.Builtin.Types
 import GHC.CoreTypes.Type
@@ -1183,7 +1183,7 @@ gen_Show_binds get_fixity loc tycon
              show_arg b arg_ty
                | isUnliftedType arg_ty
                -- See Note [Deriving and unboxed types] in
-               -- GHC.Haskell.TypeCheck.Deriving
+               -- GHC.TypeCheck.Deriving
                = nlHsApps compose_RDR [mk_shows_app boxed_arg,
                                        mk_showString_app postfixMod]
                | otherwise
@@ -1682,7 +1682,7 @@ gen_Newtype_binds loc cls inst_tvs inst_tys rhs_ty
         let axiom = mkSingleCoAxiom Nominal rep_tc_name rep_tvs' rep_cvs'
                                     fam_tc rep_lhs_tys rep_rhs_ty
         -- Check (c) from Note [GND and associated type families] in
-        -- GHC.Haskell.TypeCheck.Deriving
+        -- GHC.TypeCheck.Deriving
         checkValidTyFamEqn (Just (cls, cls_tvs, lhs_env)) fam_tc rep_tvs'
                            rep_cvs' rep_lhs_tys rep_rhs_ty pp_lhs loc
         newFamInst SynFamilyInst axiom
@@ -1917,7 +1917,7 @@ box ::         String           -- The class involved
             -> LHsExpr GhcPs    -- The argument
             -> Type             -- The argument type
             -> LHsExpr GhcPs    -- Boxed version of the arg
--- See Note [Deriving and unboxed types] in GHC.Haskell.TypeCheck.Deriving
+-- See Note [Deriving and unboxed types] in GHC.TypeCheck.Deriving
 box cls_str tycon arg arg_ty = nlHsApp (nlHsVar box_con) arg
   where
     box_con = assoc_ty_id cls_str tycon boxConTbl arg_ty
@@ -1927,7 +1927,7 @@ primOrdOps :: String    -- The class involved
            -> TyCon     -- The tycon involved
            -> Type      -- The type
            -> (RdrName, RdrName, RdrName, RdrName, RdrName)  -- (lt,le,eq,ge,gt)
--- See Note [Deriving and unboxed types] in GHC.Haskell.TypeCheck.Deriving
+-- See Note [Deriving and unboxed types] in GHC.TypeCheck.Deriving
 primOrdOps str tycon ty = assoc_ty_id str tycon ordOpTbl ty
 
 primLitOps :: String -- The class involved

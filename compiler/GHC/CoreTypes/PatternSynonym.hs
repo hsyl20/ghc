@@ -280,7 +280,7 @@ would be a top-level declaration with an unboxed type.
 
 This means that when typechecking an occurrence of P in an expression,
 we must remember that the builder has this void argument. This is
-done by GHC.Haskell.TypeCheck.PatternSynonym.patSynBuilderOcc.
+done by GHC.TypeCheck.PatternSynonym.patSynBuilderOcc.
 
 Note [Pattern synonyms and the data type Type]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

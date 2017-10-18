@@ -12,7 +12,7 @@ module GHC.Core.Specialise ( specProgram, specUnfolding ) where
 import GHC.Prelude
 
 import GHC.CoreTypes.Id
-import GHC.Haskell.TypeCheck.Util.CoreType hiding( substTy )
+import GHC.TypeCheck.Util.CoreType hiding( substTy )
 import GHC.CoreTypes.Type                 hiding( substTy, extendTvSubstList )
 import GHC.CoreTypes.Module              ( Module, HasModule(..) )
 import GHC.CoreTypes.Coercion            ( Coercion )

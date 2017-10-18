@@ -134,7 +134,7 @@ data IdDetails
     { sel_tycon   :: RecSelParent
     , sel_naughty :: Bool       -- True <=> a "naughty" selector which can't actually exist, for example @x@ in:
                                 --    data T = forall a. MkT { x :: a }
-    }                           -- See Note [Naughty record selectors] in GHC.Haskell.TypeCheck.TypeDecl
+    }                           -- See Note [Naughty record selectors] in GHC.TypeCheck.TypeDecl
 
   | DataConWorkId DataCon       -- ^ The 'Id' is for a data constructor /worker/
   | DataConWrapId DataCon       -- ^ The 'Id' is for a data constructor /wrapper/

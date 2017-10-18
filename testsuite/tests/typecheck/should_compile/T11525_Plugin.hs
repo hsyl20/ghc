@@ -1,6 +1,6 @@
 module T11525_Plugin(plugin) where
 
-import GHC.Haskell.TypeCheck.Monad ( TcPlugin(..), TcPluginResult(..) )
+import GHC.TypeCheck.Monad ( TcPlugin(..), TcPluginResult(..) )
 import GHC.Plugin.Types ( defaultPlugin, Plugin(..), CommandLineOption )
 
 plugin :: Plugin

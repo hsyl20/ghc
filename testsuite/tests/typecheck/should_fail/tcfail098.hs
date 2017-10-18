@@ -7,7 +7,7 @@ module ShouldFail where
 -- it could conceivably be ok (we'd need OverlappingInstances
 -- too in this case).  So we allow it.
 -- See Note [The ambiguity check for type signatures] in
--- GHC.Haskell.TypeCheck.Util.Monadic
+-- GHC.TypeCheck.Util.Monadic
 
 class Bar a
 instance Bar a => Bar Bool

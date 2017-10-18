@@ -30,9 +30,9 @@ import GHC.Prelude
 
 import {-# SOURCE #-} GHC.Haskell.Rename.Expression( rnLExpr, rnStmts )
 
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Evidence   ( emptyTcEvBinds )
+import GHC.Syntax
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Evidence   ( emptyTcEvBinds )
 import GHC.Haskell.Rename.Type
 import GHC.Haskell.Rename.Pattern
 import GHC.Haskell.Rename.ImportExport
@@ -102,7 +102,7 @@ within one @MonoBinds@, so that unique-Int plumbing is done explicitly
 
 The basic algorithm involves walking over the tree and returning a tuple
 containing the new tree plus its free variables. Some functions, such as those
-walking polymorphic bindings (GHC.Haskell.Syntax.Bind) and qualifier lists
+walking polymorphic bindings (GHC.Syntax.Bind) and qualifier lists
 in list comprehensions (@Quals@), return the variables bound in local
 environments. These are then used to calculate the free variables of the
 expression evaluated in these environments.
@@ -125,7 +125,7 @@ a set of variables free in @Exp@ is written @fvExp@
 *                                                                      *
 ************************************************************************
 
-\subsubsection[dep-GHC.Haskell.Syntax.Bind]{Polymorphic bindings}
+\subsubsection[dep-GHC.Syntax.Bind]{Polymorphic bindings}
 
 Non-recursive expressions are reconstructed without any changes at top
 level, although their component expressions may have to be altered.
@@ -461,7 +461,7 @@ rnBind _ bind@(PatBind { pat_lhs = pat
                 -- Keep locally-defined Names
                 -- As well as dependency analysis, we need these for the
                 -- MonoLocalBinds test in
-                -- GHC.Haskell.TypeCheck.Bind.decideGeneralisationPlan
+                -- GHC.TypeCheck.Bind.decideGeneralisationPlan
               bndrs = collectPatBinders pat
               bind' = bind { pat_rhs  = grhss'
                            , pat_rhs_ty = placeHolderType, bind_fvs = fvs' }
@@ -500,7 +500,7 @@ rnBind sig_fn bind@(FunBind { fun_id = name
                 -- Keep locally-defined Names
                 -- As well as dependency analysis, we need these for the
                 -- MonoLocalBinds test in
-                -- GHC.Haskell.TypeCheck.Bind.decideGeneralisationPlan
+                -- GHC.TypeCheck.Bind.decideGeneralisationPlan
 
         ; fvs' `seq` -- See Note [Free-variable space leak]
           return (bind { fun_matches = matches'
@@ -703,7 +703,7 @@ rnPatSynBind sig_fn bind@(PSB { psb_id = L l name
                 -- Keep locally-defined Names
                 -- As well as dependency analysis, we need these for the
                 -- MonoLocalBinds test in
-                -- GHC.Haskell.TypeCheck.Bind.decideGeneralisationPlan
+                -- GHC.TypeCheck.Bind.decideGeneralisationPlan
 
               bind' = bind{ psb_args = details'
                           , psb_def = pat'
@@ -778,7 +778,7 @@ In this case, 'P' needs to be typechecked in two passes:
 
 2. Typecheck the builder definition, which needs the typechecked
    definition of 'f' to be in scope; done by calls oo tcPatSynBuilderBind
-   in GHC.Haskell.TypeCheck.Bind.tcValBinds.
+   in GHC.TypeCheck.Bind.tcValBinds.
 
 This behaviour is implemented in 'tcValBinds', but it crucially
 depends on 'P' not being put in a recursive group with 'f' (which

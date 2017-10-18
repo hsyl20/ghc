@@ -42,9 +42,9 @@ import {-# SOURCE #-} GHC.Haskell.Rename.Splice ( rnSplicePat )
 
 #include "HsVersions.h"
 
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Syntax  ( hsOverLitName )
+import GHC.Syntax
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Syntax  ( hsOverLitName )
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
 import GHC.Haskell.Rename.Util
@@ -618,7 +618,7 @@ rnHsRecFields ctxt mk_arg (HsRecFields { rec_flds = flds, rec_dotdot = dotdot })
                                      , hsRecPun      = pun })) }
 
     rn_dotdot :: Maybe Int      -- See Note [DotDot fields] in
-                                -- GHC.Haskell.Syntax.Pattern
+                                -- GHC.Syntax.Pattern
               -> Maybe Name     -- The constructor (Nothing for an
                                 -- out of scope constructor)
               -> [LHsRecField GhcRn (Located arg)] -- Explicit fields
@@ -754,7 +754,7 @@ rnHsRecUpdFields flds
            ; sel <- setSrcSpan loc $
                       -- Defer renaming of overloaded fields to the typechecker
                       -- See Note [Disambiguating record fields] in
-                      -- GHC.Haskell.TypeCheck.Expression
+                      -- GHC.TypeCheck.Expression
                       if overload_ok
                           then do { mb <- lookupGlobalOccRn_overloaded overload_ok lbl
                                   ; case mb of

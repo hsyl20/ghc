@@ -10,8 +10,8 @@ import GHCi.InfoTable
 import GHC.RTS.InfoTable ( stdInfoTableSizeB )
 import GHC.Config.Flags
 import GHC.Data.FastString
-import GHC.Haskell.TypeCheck.Util
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Util
+import GHC.TypeCheck.Monad
 import GHC.Interface.Environment
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.OccName as OccName

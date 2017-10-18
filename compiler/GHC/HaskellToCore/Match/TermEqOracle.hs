@@ -29,8 +29,8 @@ import GHC.HaskellToCore.Match.Expression
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Type
-import GHC.Haskell.Syntax.Literal
-import GHC.Haskell.TypeCheck.Syntax
+import GHC.Syntax.Literal
+import GHC.TypeCheck.Syntax
 import GHC.Util.Monad
 import GHC.Util
 

@@ -14,7 +14,7 @@ module T5776 where
 --
 -- Note the *two* forall'd dEq parameters. This is important.
 -- See Note [Simplifying RULE lhs constraints] in
--- GHC.Haskell.TypeCheck.Simplify
+-- GHC.TypeCheck.Simplify
 
 {-# RULES "foo" forall x y z.
       f (g x y) (g y z) = True

@@ -27,8 +27,8 @@ import GHC.CoreTypes.Type.Unify( tcMatchTy )
 
 import GHC.CoreTypes.BasicTypes
 import GHC.Config.Flags
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Syntax
+import GHC.Syntax
+import GHC.TypeCheck.Syntax
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.ConLike
 import GHC.CoreTypes.Name
@@ -44,8 +44,8 @@ import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Base (CompleteMatch(..))
 
 import GHC.HaskellToCore.Monad
-import GHC.Haskell.TypeCheck.Simplify (tcCheckSatisfiability)
-import GHC.Haskell.TypeCheck.Util.CoreType (toTcType, isStringTy, isIntTy, isWordTy)
+import GHC.TypeCheck.Simplify (tcCheckSatisfiability)
+import GHC.TypeCheck.Util.CoreType (toTcType, isStringTy, isIntTy, isWordTy)
 import GHC.Data.Bag
 import GHC.Util.Error
 import GHC.CoreTypes.Var                  (EvVar)
@@ -59,7 +59,7 @@ import Data.List     (find)
 import Data.Maybe    (isJust, fromMaybe)
 import Control.Monad (forM, when, forM_)
 import GHC.CoreTypes.Coercion
-import GHC.Haskell.TypeCheck.Evidence
+import GHC.TypeCheck.Evidence
 import GHC.Util.Monad.IOEnv
 import qualified Data.Semigroup as Semi
 
@@ -149,7 +149,7 @@ data PmPat :: PatTy -> * where
             , pm_con_dicts   :: [EvVar]
             , pm_con_args    :: [PmPat t] } -> PmPat t
             -- For PmCon arguments' meaning see @ConPatOut@ in
-            -- GHC.Haskell.Syntax.Pattern
+            -- GHC.Syntax.Pattern
   PmVar  :: { pm_var_id   :: Id } -> PmPat t
   PmLit  :: { pm_lit_lit  :: PmLit } -> PmPat t -- See Note [Literals in PmPat]
   PmNLit :: { pm_lit_id   :: Id
@@ -1656,7 +1656,7 @@ available so we can get more precise results. For this reason we have functions
 term constraints (respectively) as we go deeper.
 
 The type constraints we propagate inwards are collected by `collectEvVarsPats'
-in GHC.Haskell.Syntax.Pattern. This handles bug #4139 ( see example
+in GHC.Syntax.Pattern. This handles bug #4139 ( see example
   https://ghc.haskell.org/trac/ghc/attachment/ticket/4139/GADTbug.hs )
 where this is needed.
 

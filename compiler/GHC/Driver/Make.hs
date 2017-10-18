@@ -47,7 +47,7 @@ import GHC.Haskell.Parser.HeaderInfo
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.Module
 import GHC.Interface.TypeCheck ( typecheckIface )
-import GHC.Haskell.TypeCheck.Monad   ( initIfaceCheck )
+import GHC.TypeCheck.Monad   ( initIfaceCheck )
 import GHC.Driver.Main
 
 import GHC.Data.Bag                 ( listToBag )
@@ -64,7 +64,7 @@ import GHC.CoreTypes.SrcLoc
 import GHC.Data.StringBuffer
 import GHC.Data.UniqueFM
 import GHC.Data.UniqueDSet
-import GHC.Haskell.TypeCheck.ModuleSignature
+import GHC.TypeCheck.ModuleSignature
 import GHC.Packages
 import GHC.Data.UniqueSet
 import GHC.Util

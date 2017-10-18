@@ -14,7 +14,7 @@ module GHC.Interface.Tidy (
 
 import GHC.Prelude
 
-import GHC.Haskell.TypeCheck.Util
+import GHC.TypeCheck.Util
 import GHC.Config.Flags
 import GHC.Core.Syntax
 import GHC.Core.Inliner
@@ -49,8 +49,8 @@ import GHC.CoreTypes.Name.Environment
 import GHC.CoreTypes.Name.Cache
 import GHC.CoreTypes.Available
 import GHC.Interface.Environment
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Class

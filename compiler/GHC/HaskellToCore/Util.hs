@@ -45,9 +45,9 @@ import GHC.Prelude
 import {-# SOURCE #-} GHC.HaskellToCore.Match      ( matchSimply )
 import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsLExpr )
 
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Syntax
-import GHC.Haskell.TypeCheck.Util.CoreType( tcSplitTyConApp )
+import GHC.Syntax
+import GHC.TypeCheck.Syntax
+import GHC.TypeCheck.Util.CoreType( tcSplitTyConApp )
 import GHC.Core.Syntax
 import GHC.HaskellToCore.Monad
 
@@ -77,7 +77,7 @@ import GHC.Config.Flags
 import GHC.Data.FastString
 import qualified GHC.LanguageExtensions as LangExt
 
-import GHC.Haskell.TypeCheck.Evidence
+import GHC.TypeCheck.Evidence
 
 import Control.Monad    ( zipWithM )
 

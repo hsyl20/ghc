@@ -28,7 +28,7 @@ import GHC.Interface.Load
 import GHC.ByteCode.Linker
 import GHC.ByteCode.Assembler
 import GHC.ByteCode.Types
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Packages as Packages
 import GHC.Driver.Phases
 import GHC.Driver.Finder

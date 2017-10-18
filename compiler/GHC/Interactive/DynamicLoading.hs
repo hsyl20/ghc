@@ -31,7 +31,7 @@ import GHC.Interactive.Linker      ( linkModule, getHValue )
 import GHC.Interactive.Interpreter ( wormhole )
 import GHC.CoreTypes.SrcLoc           ( noSrcSpan )
 import GHC.Driver.Finder            ( findPluginModule, cannotFindModule )
-import GHC.Haskell.TypeCheck.Monad  ( initTcInteractive, initIfaceTcRn )
+import GHC.TypeCheck.Monad  ( initTcInteractive, initIfaceTcRn )
 import GHC.Interface.Load     ( loadPluginInterface )
 import GHC.CoreTypes.RdrName          ( RdrName, ImportSpec(..), ImpDeclSpec(..)
                                    , ImpItemSpec(..), mkGlobalRdrEnv

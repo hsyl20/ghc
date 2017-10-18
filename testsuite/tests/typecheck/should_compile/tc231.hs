@@ -9,7 +9,7 @@
 
 -- Note the quantification over 'b', which was previously
 -- omitted; see Note [Important subtlety in oclose] in
--- GHC.Haskell.TypeCheck.FunctionalDependency
+-- GHC.TypeCheck.FunctionalDependency
 
 
 module ShouldCompile where

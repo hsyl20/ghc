@@ -6,7 +6,7 @@ module T11195 where
 import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Type hiding( substTyVarBndr, substTy, extendTCvSubst )
-import GHC.Haskell.TypeCheck.Util.CoreType       ( exactTyCoVarsOfType )
+import GHC.TypeCheck.Util.CoreType       ( exactTyCoVarsOfType )
 import GHC.CoreTypes.Coercion.Axiom
 import GHC.CoreTypes.Var.Set
 import GHC.CoreTypes.Var.Environment

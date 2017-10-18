@@ -26,8 +26,7 @@ import GHC.CoreTypes.Id
 import GHC.CoreTypes.Id.Info     ( JoinArity, vanillaIdInfo )
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Demand
-import GHC.Core.Syntax.Make      ( mkRuntimeErrorApp, aBSENT_ERROR_ID
-                                 , mkCoreUbxTup , mkCoreApp, mkCoreLet
+import GHC.Core.Syntax.Make      ( mkCoreUbxTup , mkCoreApp, mkCoreLet
                                  , mkAbsentErrorApp )
 import GHC.CoreTypes.Id.Make        ( voidArgId, voidPrimId )
 import GHC.Builtin.Primitive.Types  ( voidPrimTy )

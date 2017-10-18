@@ -25,7 +25,7 @@ import GHC.CoreTypes.Type
 import GHC.CoreTypes.OccName
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Id.Make
-import GHC.Haskell.TypeCheck.FamilyInstance
+import GHC.TypeCheck.FamilyInstance
 import GHC.Builtin.Primitive.Types  ( intPrimTy )
 
 import GHC.Config.Flags

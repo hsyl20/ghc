@@ -39,12 +39,12 @@ import GHC.CoreTypes.Type
 import GHC.CoreTypes.RepType
 import qualified GHC.CoreTypes.Type.Unify as U
 import GHC.CoreTypes.Var
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Util.CoreType
-import GHC.Haskell.TypeCheck.Util.Monadic
-import GHC.Haskell.TypeCheck.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
-import GHC.Haskell.TypeCheck.Unify
-import GHC.Haskell.TypeCheck.Environment
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.Monadic
+import GHC.TypeCheck.Syntax ( zonkTcTypeToType, mkEmptyZonkEnv )
+import GHC.TypeCheck.Unify
+import GHC.TypeCheck.Environment
 
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Name
@@ -577,7 +577,7 @@ traceTR :: SDoc -> TR ()
 traceTR = liftTcM . traceOptTcRn Opt_D_dump_rtti
 
 
--- Semantically different to recoverM in GHC.Haskell.TypeCheck.Monad
+-- Semantically different to recoverM in GHC.TypeCheck.Monad
 -- recoverM retains the errors in the first action,
 --  whereas recoverTc here does not
 recoverTR :: TR a -> TR a -> TR a

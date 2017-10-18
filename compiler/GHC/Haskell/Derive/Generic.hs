@@ -22,15 +22,15 @@ where
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Type
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.Haskell.Derive.BasicClasses
 import GHC.Haskell.Derive.Functor
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.FamilyInstance     ( FamInst, FamFlavor(..), mkSingleCoAxiom )
-import GHC.Haskell.TypeCheck.FamilyInstance
+import GHC.TypeCheck.FamilyInstance
 import GHC.CoreTypes.Module             ( moduleName, moduleNameFS
                                      , moduleUnitId, unitIdFS, getModule )
 import GHC.Interface.Environment  ( newGlobalBinder )
@@ -40,8 +40,8 @@ import GHC.CoreTypes.BasicTypes
 import GHC.Builtin.Primitive.Types
 import GHC.Builtin.Types
 import GHC.Builtin.Names
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Base
 import GHC.Util.Error     ( Validity(..), andValid )
 import GHC.CoreTypes.SrcLoc

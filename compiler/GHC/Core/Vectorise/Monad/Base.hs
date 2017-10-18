@@ -32,7 +32,7 @@ import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Env
 
 import GHC.HaskellToCore.Monad
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Util.Error
 import GHC.Util.Outputable
 import GHC.Config.Flags

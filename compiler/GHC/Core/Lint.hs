@@ -33,7 +33,7 @@ import GHC.CoreTypes.Literal
 import GHC.CoreTypes.DataCon
 import GHC.Builtin.Types
 import GHC.Builtin.Primitive.Types
-import GHC.Haskell.TypeCheck.Util.CoreType ( isFloatingTy )
+import GHC.TypeCheck.Util.CoreType ( isFloatingTy )
 import GHC.CoreTypes.Var as Var
 import GHC.CoreTypes.Var.Environment
 import GHC.CoreTypes.Var.Set
@@ -379,7 +379,7 @@ interactiveInScope :: HscEnv -> [Var]
 interactiveInScope hsc_env
   = tyvars ++ ids
   where
-    -- C.f. GHC.Haskell.TypeCheck.Module.setInteractiveContext,
+    -- C.f. GHC.TypeCheck.Module.setInteractiveContext,
     -- GHC.HaskellToCore.deSugarExpr
     ictxt                   = hsc_IC hsc_env
     (cls_insts, _fam_insts) = ic_instances ictxt

@@ -3299,7 +3299,7 @@ simplStableUnfolding env top_lvl mb_cont id unf
                         -- has got small. This happens, notably in the inlinings
                         -- for dfuns for single-method classes; see
                         -- Note [Single-method classes] in
-                        -- GHC.Haskell.TypeCheck.Instance.
+                        -- GHC.TypeCheck.Instance.
                         -- A test case is Trac #4138
                         in return (mkCoreUnfolding src is_top_lvl expr' guide')
                             -- See Note [Top-level flag on inline rules] in

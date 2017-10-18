@@ -2,7 +2,7 @@
              MultiParamTypeClasses, FunctionalDependencies, DatatypeContexts #-}
 
 -- This one crashed GHC 6.3 due to an error in
--- GHC.Haskell.TypeCheck.Simplify.add_ors
+-- GHC.TypeCheck.Simplify.add_ors
 
 module Foo where
 

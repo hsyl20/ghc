@@ -30,7 +30,7 @@ import GHC.CoreTypes.ForeignCall
 import GHC.CoreTypes.DataCon
 import GHC.HaskellToCore.Util
 
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Id   ( Id )
 import GHC.CoreTypes.Coercion

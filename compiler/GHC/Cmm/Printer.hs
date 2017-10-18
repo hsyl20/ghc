@@ -56,8 +56,6 @@ import GHC.Core.Printer ()
 import GHC.CoreTypes.BasicTypes
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Graph
-import Data.List
-import Prelude hiding (succ)
 
 -------------------------------------------------
 -- Outputable instances

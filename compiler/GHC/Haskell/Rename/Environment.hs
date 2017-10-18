@@ -48,11 +48,11 @@ import GHC.Prelude
 
 import GHC.Interface.Load ( loadInterfaceForName, loadSrcInterface_maybe )
 import GHC.Interface.Environment
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Base
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Monad
 import GHC.Haskell.Parser.Syntax ( setRdrNameSpace )
 import GHC.Builtin.Types
 import GHC.CoreTypes.Name
@@ -63,8 +63,8 @@ import GHC.CoreTypes.Module
 import GHC.CoreTypes.ConLike
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.TyCon
-import GHC.Builtin.Names       ( rOOT_MAIN )
-import GHC.Util.Error         ( MsgDoc, ErrMsg )
+import GHC.Builtin.Names          ( rOOT_MAIN )
+import GHC.Util.Error             ( MsgDoc )
 import GHC.CoreTypes.BasicTypes   ( pprWarningTxtForMsg, TopLevelFlag(..))
 import GHC.CoreTypes.SrcLoc
 import GHC.Util.Outputable as Outputable
@@ -1508,7 +1508,7 @@ At the moment this just happens for
   * minus  (arising from n+k patterns)
   * "do" notation
 
-We store the relevant Name in the GHC.Haskell.Syntax tree, in
+We store the relevant Name in the GHC.Syntax tree, in
   * HsIntegral/HsFractional/HsIsString
   * NegApp
   * NPlusKPat

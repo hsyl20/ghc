@@ -4,7 +4,7 @@
 
 \section[InstEnv]{Utilities for typechecking instance declarations}
 
-The bits common to GHC.Haskell.TypeCheck.Instance and
+The bits common to GHC.TypeCheck.Instance and
 GHC.Haskell.Derive.
 -}
 
@@ -32,8 +32,8 @@ module GHC.CoreTypes.Instance (
 import GHC.Prelude
 
 -- this module is really part of the type checker, and depends on
--- GHC.Haskell.TypeCheck.Util.CoreType in many ways
-import GHC.Haskell.TypeCheck.Util.CoreType
+-- GHC.TypeCheck.Util.CoreType in many ways
+import GHC.TypeCheck.Util.CoreType
 
 import GHC.Core.Syntax ( IsOrphan(..), isOrphan, chooseOrphanAnchor )
 import GHC.CoreTypes.Module
@@ -450,7 +450,7 @@ classInstances (InstEnvs { ie_global = pkg_ie, ie_local = home_ie, ie_visible = 
                 Nothing            -> []
 
 -- | Checks for an exact match of ClsInst in the instance environment.
--- We use this when we do signature checking in GHC.Haskell.TypeCheck.Module
+-- We use this when we do signature checking in GHC.TypeCheck.Module
 memberInstEnv :: InstEnv -> ClsInst -> Bool
 memberInstEnv inst_env ins_item@(ClsInst { is_cls_nm = cls_nm } ) =
     maybe False (\(ClsIE items) -> any (identicalDFunType ins_item) items)
@@ -705,7 +705,7 @@ type ClsInstLookupResult
        , [ClsInst]       -- These don't match but do unify
        , [InstMatch] )   -- Unsafe overlapped instances under Safe Haskell
                          -- (see Note [Safe Haskell Overlapping Instances] in
-                         -- GHC.Haskell.TypeCheck.Simplify).
+                         -- GHC.TypeCheck.Simplify).
 
 {-
 Note [DFunInstType: instantiating types]
@@ -807,9 +807,9 @@ lookupInstEnv :: Bool              -- Check Safe Haskell overlap restrictions
               -> ClsInstLookupResult
 -- ^ See Note [Rules for instance lookup]
 -- ^ See Note [Safe Haskell Overlapping Instances] in
--- GHC.Haskell.TypeCheck.Simplify
+-- GHC.TypeCheck.Simplify
 -- ^ See Note [Safe Haskell Overlapping Instances Implementation] in
--- GHC.Haskell.TypeCheck.Simplify
+-- GHC.TypeCheck.Simplify
 lookupInstEnv check_overlap_safe
               (InstEnvs { ie_global = pkg_ie
                         , ie_local = home_ie

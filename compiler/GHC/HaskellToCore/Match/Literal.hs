@@ -28,15 +28,15 @@ import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsExpr
 import GHC.HaskellToCore.Monad
 import GHC.HaskellToCore.Util
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 
 import GHC.CoreTypes.Id
 import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.DataCon
-import GHC.Haskell.TypeCheck.Syntax ( shortCutLit )
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Syntax ( shortCutLit )
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Type
 import GHC.Builtin.Names

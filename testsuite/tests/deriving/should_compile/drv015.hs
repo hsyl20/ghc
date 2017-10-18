@@ -5,7 +5,7 @@
 -- and that is not Haskell 98.
 --
 -- See Note [Exotic derived instance contexts] in
--- GHC.Haskell.TypeCheck.Simplify.
+-- GHC.TypeCheck.Simplify.
 -- The rule is simple: the context of a derived instance decl must
 -- contain constraints of form (C tyvar) only, just as H98.
 

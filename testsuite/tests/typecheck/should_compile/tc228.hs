@@ -7,7 +7,7 @@
 -- when generalising unExTypeable.  We want to infer a context for the 
 -- whole thing of (Typeable b).
 -- See Note [Inference and implication constraints] in
--- GHC.Haskell.TypeCheck.Simplify
+-- GHC.TypeCheck.Simplify
 
 
 module Foo where

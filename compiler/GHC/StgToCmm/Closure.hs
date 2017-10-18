@@ -81,7 +81,7 @@ import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Type.Internal
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.RepType
 import GHC.CoreTypes.BasicTypes

@@ -25,10 +25,10 @@ import GHC.Prelude
 import {-#SOURCE#-} GHC.HaskellToCore.Expression (dsLExpr, dsSyntaxExpr)
 
 import GHC.Config.Flags
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Syntax
-import GHC.Haskell.TypeCheck.Evidence
-import GHC.Haskell.TypeCheck.Monad
+import GHC.Syntax
+import GHC.TypeCheck.Syntax
+import GHC.TypeCheck.Evidence
+import GHC.TypeCheck.Monad
 import GHC.HaskellToCore.Match.Check
 import GHC.Core.Syntax
 import GHC.CoreTypes.Literal
@@ -46,7 +46,7 @@ import GHC.HaskellToCore.Match.Constructor
 import GHC.HaskellToCore.Match.Literal
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion             ( eqCoercion )
-import GHC.Haskell.TypeCheck.Util.CoreType ( toTcTypeBag )
+import GHC.TypeCheck.Util.CoreType ( toTcTypeBag )
 import GHC.CoreTypes.TyCon      ( isNewTyCon )
 import GHC.Builtin.Types
 import GHC.CoreTypes.SrcLoc

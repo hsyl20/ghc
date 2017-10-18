@@ -17,7 +17,7 @@ import GHC.Data.FastString
 import GHC.CoreTypes.ForeignCall
 import GHC.Util.Monad
 import GHC.Util.Outputable
-import GHC.Haskell.Syntax.Declaration
+import GHC.Syntax.Declaration
 import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )

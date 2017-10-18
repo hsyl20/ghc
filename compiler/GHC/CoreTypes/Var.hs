@@ -85,7 +85,7 @@ module GHC.CoreTypes.Var (
 import GHC.Prelude
 
 import {-# SOURCE #-} GHC.CoreTypes.Type.Internal( Type, Kind, pprKind )
-import {-# SOURCE #-} GHC.Haskell.TypeCheck.Util.CoreType( TcTyVarDetails, 
+import {-# SOURCE #-} GHC.TypeCheck.Util.CoreType( TcTyVarDetails, 
                                                       pprTcTyVarDetails,
                                                       vanillaSkolemTv )
 import {-# SOURCE #-} GHC.CoreTypes.Id.Info ( IdDetails, IdInfo, coVarDetails,
@@ -485,7 +485,7 @@ mkTyVar name kind = TyVar { varName    = name
 mkTcTyVar :: Name -> Kind -> TcTyVarDetails -> TyVar
 mkTcTyVar name kind details
   = -- NB: 'kind' may be a coercion kind;
-    -- cf, 'GHC.Haskell.TypeCheck.Util.Monadic.newMetaCoVar'
+    -- cf, 'GHC.TypeCheck.Util.Monadic.newMetaCoVar'
     TcTyVar {   varName    = name,
                 realUnique = getKey (nameUnique name),
                 varType  = kind,
@@ -493,7 +493,7 @@ mkTcTyVar name kind details
         }
 
 tcTyVarDetails :: TyVar -> TcTyVarDetails
--- See Note [TcTyVars in the typechecker] in GHC.Haskell.TypeCheck.Util.CoreType
+-- See Note [TcTyVars in the typechecker] in GHC.TypeCheck.Util.CoreType
 tcTyVarDetails (TcTyVar { tc_tv_details = details }) = details
 tcTyVarDetails (TyVar {})                            = vanillaSkolemTv
 tcTyVarDetails var = pprPanic "tcTyVarDetails" (ppr var <+> dcolon <+> pprKind (tyVarKind var))

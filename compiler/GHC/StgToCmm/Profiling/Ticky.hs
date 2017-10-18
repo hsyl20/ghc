@@ -132,7 +132,7 @@ import GHC.Config.Flags
 
 -- Turgid imports for showTypeCategory
 import GHC.Builtin.Names
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.TyCon
 

@@ -88,7 +88,7 @@ minusPtr (Ptr a1) (Ptr a2) = I# (minusAddr# a1 a2)
 
 -- 'FunPtr' has a phantom role for similar reasons to 'Ptr'. Note
 -- that 'FunPtr's role cannot become nominal without changes elsewhere
--- in GHC. See Note [FFI type roles] in GHC.Haskell.TypeCheck.Foreign.
+-- in GHC. See Note [FFI type roles] in GHC.TypeCheck.Foreign.
 type role FunPtr phantom
 data FunPtr a = FunPtr Addr# deriving (Eq, Ord)
 -- ^ A value of type @'FunPtr' a@ is a pointer to a function callable

@@ -552,7 +552,7 @@ instance Outputable Origin where
 
 -- | Which technique the user explicitly requested when deriving an instance.
 data DerivStrategy
-  -- See Note [Deriving strategies] in GHC.Haskell.TypeCheck.Deriving
+  -- See Note [Deriving strategies] in GHC.TypeCheck.Deriving
   = StockStrategy    -- ^ GHC's \"standard\" strategy, which is to implement a
                      --   custom instance for the data type. This only works
                      --   for certain types that GHC knows about (e.g., 'Eq',
@@ -587,7 +587,7 @@ instance Outputable DerivStrategy where
 --      'ApiAnnotation.AnnClose' @`\#-\}`@,
 
 -- For details on above see Note [Api annotations] in
--- GHC.Haskell.Syntax.Annotation
+-- GHC.Syntax.Annotation
 data OverlapFlag = OverlapFlag
   { overlapMode   :: OverlapMode
   , isSafeOverlap :: Bool
@@ -1195,7 +1195,7 @@ data Activation = NeverActive
                 | ActiveAfter SourceText PhaseNum
                   -- Active in this phase and later
                 deriving( Eq, Data )
-                  -- Eq used in comparing rules in GHC.Haskell.Syntax.Declaration
+                  -- Eq used in comparing rules in GHC.Syntax.Declaration
 
 -- | Rule Match Information
 data RuleMatchInfo = ConLike                    -- See Note [CONLIKE pragma]

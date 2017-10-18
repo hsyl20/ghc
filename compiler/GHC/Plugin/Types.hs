@@ -7,7 +7,7 @@ module GHC.Plugin.Types (
 import GHC.Prelude
 
 import GHC.Core.Monad             ( CoreToDo, CoreM )
-import GHC.Haskell.TypeCheck.Util ( TcPlugin )
+import GHC.TypeCheck.Util ( TcPlugin )
 import GHC.Monad
 import GHC.Driver.Phases
 

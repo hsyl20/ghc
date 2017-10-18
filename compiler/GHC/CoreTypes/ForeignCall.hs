@@ -234,7 +234,7 @@ instance Outputable Header where
 --        'ApiAnnotation.AnnClose' @'\#-}'@,
 
 -- For details on above see Note [Api annotations] in
--- GHC.Haskell.Syntax.Annotation
+-- GHC.Syntax.Annotation
 data CType = CType SourceText -- Note [Pragma source text] 
                               -- in GHC.CoreTypes.BasicTypes
                    (Maybe Header) -- header to include for this type

@@ -19,9 +19,9 @@ import GHC.HaskellToCore.Match
 import GHC.HaskellToCore.Util
 import GHC.HaskellToCore.Monad
 
-import GHC.Haskell.Syntax hiding (collectPatBinders, collectPatsBinders,
+import GHC.Syntax hiding (collectPatBinders, collectPatsBinders,
             collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
-import GHC.Haskell.TypeCheck.Syntax
+import GHC.TypeCheck.Syntax
 import qualified GHC.Haskell.Util
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
@@ -32,9 +32,9 @@ import qualified GHC.Haskell.Util
 import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsExpr, dsLExpr,
                                       dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type ( splitPiTy )
-import GHC.Haskell.TypeCheck.Evidence
+import GHC.TypeCheck.Evidence
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import GHC.Core.Util
@@ -62,7 +62,7 @@ data DsCmdEnv = DsCmdEnv {
     }
 
 mkCmdEnv :: CmdSyntaxTable GhcTc -> DsM ([CoreBind], DsCmdEnv)
--- See Note [CmdSyntaxTable] in GHC.Haskell.Syntax.Expression
+-- See Note [CmdSyntaxTable] in GHC.Syntax.Expression
 mkCmdEnv tc_meths
   = do { (meth_binds, prs) <- mapAndUnzipM mk_bind tc_meths
 

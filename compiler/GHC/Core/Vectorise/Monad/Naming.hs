@@ -19,7 +19,7 @@ import GHC.Prelude
 import GHC.Core.Vectorise.Monad.Base
 
 import GHC.HaskellToCore.Monad
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Module

@@ -25,7 +25,7 @@ import GHC.CoreTypes.Name.Set
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.SrcLoc
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import qualified GHC.CoreTypes.OccName as OccName
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Module

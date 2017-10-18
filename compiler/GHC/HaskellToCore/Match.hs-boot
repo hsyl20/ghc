@@ -2,13 +2,13 @@ module GHC.HaskellToCore.Match where
 
 import GHC.Prelude
 import GHC.CoreTypes.Var                   ( Id )
-import GHC.Haskell.TypeCheck.Util.CoreType  ( Type )
+import GHC.TypeCheck.Util.CoreType  ( Type )
 import GHC.HaskellToCore.Monad ( DsM, EquationInfo, MatchResult )
 import GHC.Core.Syntax               ( CoreExpr )
-import GHC.Haskell.Syntax            ( LPat, HsMatchContext, MatchGroup
+import GHC.Syntax            ( LPat, HsMatchContext, MatchGroup
                                         , LHsExpr )
 import GHC.CoreTypes.Name                  ( Name )
-import GHC.Haskell.Syntax.Extension  ( GhcTc )
+import GHC.Syntax.Extension  ( GhcTc )
 
 match   :: [Id]
         -> Type

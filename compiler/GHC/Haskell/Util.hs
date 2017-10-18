@@ -10,7 +10,7 @@ which deal with the instantiated versions are located elsewhere:
    ----------------     -------------
    GhcPs/RdrName        GHC.Haskell.Parser.Syntax
    GhcRn/Name           GHC.Haskell.Rename.Environment
-   GhcTc/Id             GHC.Haskell.TypeCheck.Syntax
+   GhcTc/Id             GHC.TypeCheck.Syntax
 -}
 
 {-# LANGUAGE CPP #-}
@@ -94,22 +94,22 @@ module GHC.Haskell.Util(
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax.Declaration
-import GHC.Haskell.Syntax.Bind
-import GHC.Haskell.Syntax.Expression
-import GHC.Haskell.Syntax.Pattern
-import GHC.Haskell.Syntax.Type
-import GHC.Haskell.Syntax.Literal
-import GHC.Haskell.Syntax.PlaceHolder
-import GHC.Haskell.Syntax.Extension
+import GHC.Syntax.Declaration
+import GHC.Syntax.Bind
+import GHC.Syntax.Expression
+import GHC.Syntax.Pattern
+import GHC.Syntax.Type
+import GHC.Syntax.Literal
+import GHC.Syntax.PlaceHolder
+import GHC.Syntax.Extension
 
-import GHC.Haskell.TypeCheck.Evidence
+import GHC.TypeCheck.Evidence
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Type   ( filterOutInvisibleTypes )
 import GHC.Builtin.Types ( unitTy )
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.ConLike
 import GHC.CoreTypes.Id
@@ -907,7 +907,7 @@ collect_bind _ (AbsBinds { abs_exports = dbinds }) acc = map abe_poly dbinds ++ 
         -- I don't think we want the binders from the abe_binds
         -- The only time we collect binders from a typechecked
         -- binding (hence see AbsBinds) is in zonking in
-        -- GHC.Haskell.TypeCheck.Syntax
+        -- GHC.TypeCheck.Syntax
 collect_bind omitPatSyn (PatSynBind (PSB { psb_id = L _ ps })) acc
   | omitPatSyn                  = acc
   | otherwise                   = ps : acc

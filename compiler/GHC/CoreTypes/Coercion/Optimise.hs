@@ -17,7 +17,7 @@ import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Type hiding( substTyVarBndr, substTy )
 import qualified GHC.CoreTypes.Type as Type
-import GHC.Haskell.TypeCheck.Util.CoreType ( exactTyCoVarsOfType )
+import GHC.TypeCheck.Util.CoreType ( exactTyCoVarsOfType )
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Coercion.Axiom
 import GHC.CoreTypes.Var.Set

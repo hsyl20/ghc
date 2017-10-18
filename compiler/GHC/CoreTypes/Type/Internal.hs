@@ -211,7 +211,7 @@ The Class and its associated TyCon have the same Name.
 -- | A global typecheckable-thing, essentially anything that has a name.
 -- Not to be confused with a 'TcTyThing', which is also a typecheckable
 -- thing but in the *local* context.
--- See 'GHC.Haskell.TypeCheck.Environment' for how to retrieve a 'TyThing'
+-- See 'GHC.TypeCheck.Environment' for how to retrieve a 'TyThing'
 -- given a 'Name'.
 data TyThing
   = AnId     Id
@@ -1265,7 +1265,7 @@ For unboxed equalities:
   - Generate a CoercionHole, a mutable variable just like a unification
     variable
   - Wrap the CoercionHole in a Wanted constraint; see
-    GHC.Haskell.TypeCheck.Util.TcEvDest
+    GHC.TypeCheck.Util.TcEvDest
   - Use the CoercionHole in a Coercion, via HoleProv
   - Solve the constraint later
   - When solved, fill in the CoercionHole by side effect, instead of

@@ -28,11 +28,11 @@ where
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Base
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Set
 import GHC.CoreTypes.Name.Environment
@@ -405,7 +405,7 @@ pprHsDocContext TypBrCtx              = text "a Template-Haskell quoted type"
 pprHsDocContext HsTypeCtx             = text "a type argument"
 pprHsDocContext GHCiCtx               = text "GHCi input"
 pprHsDocContext (SpliceTypeCtx hs_ty) = text "the spliced type" <+> quotes (ppr hs_ty)
-pprHsDocContext ClassInstanceCtx      = text "GHC.Haskell.TypeCheck.Splice.reifyInstances"
+pprHsDocContext ClassInstanceCtx      = text "GHC.TypeCheck.Splice.reifyInstances"
 
 pprHsDocContext (ForeignDeclCtx name)
    = text "the foreign declaration for" <+> quotes (ppr name)

@@ -7,7 +7,7 @@
 --    In the application `GHC.Err.noMethodBindingError "Foo.hs:7|Foo.foo"#'
 --
 -- Fix is to give wild-card args to the default methods
--- See GHC.Haskell.TypeCheck.Class.mkDefMethRhs
+-- See GHC.TypeCheck.Class.mkDefMethRhs
 
 module ShouldCompile where
 

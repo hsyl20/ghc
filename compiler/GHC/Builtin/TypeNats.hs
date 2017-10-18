@@ -19,11 +19,11 @@ import GHC.Prelude
 
 import GHC.CoreTypes.Type
 import GHC.Data.Pair
-import GHC.Haskell.TypeCheck.Util.CoreType ( TcType, tcEqType )
+import GHC.TypeCheck.Util.CoreType ( TcType, tcEqType )
 import GHC.CoreTypes.TyCon      ( TyCon, FamTyConFlav(..), mkFamilyTyCon
                                        , Injectivity(..) )
 import GHC.CoreTypes.Coercion             ( Role(..) )
-import GHC.Haskell.TypeCheck.Util ( Xi )
+import GHC.TypeCheck.Util ( Xi )
 import GHC.CoreTypes.Coercion.Axiom       ( CoAxiomRule(..), BuiltInSynFamily(..)
                                        , TypeEqn )
 import GHC.CoreTypes.Name                 ( Name, BuiltInSyntax(..) )

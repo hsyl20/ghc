@@ -12,7 +12,7 @@ import GHC.CoreTypes.BasicTypes
 import GHC.Config.Flags
 import GHC.Util.Monad
 import GHC.Util.Outputable
-import GHC.Haskell.Syntax.Annotation
+import GHC.Syntax.Annotation
 import GHC.Data.Bag (filterBag,isEmptyBag)
 import System.Directory (removeFile)
 import System.Environment( getArgs )

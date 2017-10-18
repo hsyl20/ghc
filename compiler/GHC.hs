@@ -219,7 +219,7 @@ module GHC (
         TyThing(..),
 
         -- ** Syntax
-        module GHC.Haskell.Syntax, -- ToDo: remove extraneous bits
+        module GHC.Syntax, -- ToDo: remove extraneous bits
 
         -- ** Fixities
         FixityDirection(..),
@@ -289,7 +289,7 @@ import GHC.Prelude hiding (init)
 import GHC.ByteCode.Types
 import GHC.Interactive.Eval as InteractiveEval
 import GHC.Interactive.Types
-import GHC.Haskell.TypeCheck.Module   ( runTcInteractive )
+import GHC.TypeCheck.Module   ( runTcInteractive )
 import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
 
@@ -298,14 +298,14 @@ import GHC.Driver.Main
 import GHC.Driver.Make
 import GHC.Driver.Pipeline         ( compileOne' )
 import GHC.Monad
-import GHC.Haskell.TypeCheck.Monad          ( finalSafeMode, fixSafeInstances )
-import GHC.Haskell.TypeCheck.Util
+import GHC.TypeCheck.Monad          ( finalSafeMode, fixSafeInstances )
+import GHC.TypeCheck.Util
 import GHC.Packages
 import GHC.CoreTypes.Name.Set
 import GHC.CoreTypes.RdrName
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Type                 hiding( typeKind )
-import GHC.Haskell.TypeCheck.Util.CoreType hiding( typeKind )
+import GHC.TypeCheck.Util.CoreType hiding( typeKind )
 import GHC.CoreTypes.Id
 import GHC.Builtin.Primitive.Types         ( alphaTyVars )
 import GHC.CoreTypes.TyCon
@@ -339,14 +339,14 @@ import GHC.Data.Maybe                      ( expectJust )
 import GHC.Data.FastString
 import qualified GHC.Haskell.Parser as Parser
 import GHC.Haskell.Lexer
-import GHC.Haskell.Syntax.Annotation
+import GHC.Syntax.Annotation
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.CoreTypes.Name.Environment
 import GHC.Core.FreeVars       ( orphNamesOfFamInst )
 import GHC.CoreTypes.FamilyInstance           ( famInstEnvElts )
-import GHC.Haskell.TypeCheck.Module
-import GHC.Haskell.TypeCheck.Instantiation
-import GHC.Haskell.TypeCheck.FamilyInstance
+import GHC.TypeCheck.Module
+import GHC.TypeCheck.Instantiation
+import GHC.TypeCheck.FamilyInstance
 import GHC.Util.FileCleanup
 
 import Data.Foldable
@@ -803,7 +803,7 @@ data ParsedModule =
                , pm_extra_src_files :: [FilePath]
                , pm_annotations :: ApiAnns }
                -- See Note [Api annotations] in
-               -- GHC.Haskell.Syntax.Annotation
+               -- GHC.Syntax.Annotation
 
 instance ParsedMod ParsedModule where
   modSummary m    = pm_mod_summary m
@@ -898,7 +898,7 @@ parseModule ms = do
    return (ParsedModule ms (hpm_module hpm) (hpm_src_files hpm)
                            (hpm_annotations hpm))
                -- See Note [Api annotations] in 
-               -- GHC.Haskell.Syntax.Annotation
+               -- GHC.Syntax.Annotation
 
 -- | Typecheck and rename a parsed module.
 --

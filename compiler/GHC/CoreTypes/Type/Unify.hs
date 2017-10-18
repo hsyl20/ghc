@@ -316,7 +316,7 @@ It is unusual to call tcUnifyTys or tcUnifyTysFG with lists of different
 lengths. The place where we know this can happen is from compatibleBranches in
 FamInstEnv, when checking data family instances. Data family instances may be
 eta-reduced; see Note [Eta reduction for data family axioms] in
-GHC.Haskell.TypeCheck.Instance.
+GHC.TypeCheck.Instance.
 
 We wish to say that
 
@@ -376,7 +376,7 @@ tcUnifyTys :: (TyCoVar -> BindFlag)
 
 -- The two types may have common type variables, and indeed do so in the
 -- second call to tcUnifyTys in
--- GHC.Haskell.TypeCheck.FunctionalDependency.checkClsFD
+-- GHC.TypeCheck.FunctionalDependency.checkClsFD
 tcUnifyTys bind_fn tys1 tys2
   = case tcUnifyTysFG bind_fn tys1 tys2 of
       Unifiable result -> Just result
@@ -583,8 +583,8 @@ itself not purely syntactic; it accounts for CastTys;
 see Note [Non-trivial definitional equality] in GHC.CoreTypes.Type.Internal
 
 Unlike the "impure unifiers" in the typechecker (the eager unifier in
-GHC.Haskell.TypeCheck.Unify, and the constraint solver itself in
-GHC.Haskell.TypeCheck.Solver.Canonicalise), the pure unifier It does
+GHC.TypeCheck.Unify, and the constraint solver itself in
+GHC.TypeCheck.Solver.Canonicalise), the pure unifier It does
 /not/ work up to ~.
 
 The algorithm implemented here is rather delicate, and we depend on it

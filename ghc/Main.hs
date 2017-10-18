@@ -60,7 +60,7 @@ import GHC.Util.Monad             ( liftIO )
 import GHC.Interface.Load     ( loadUserInterface )
 import GHC.CoreTypes.Module           ( mkModuleName )
 import GHC.Driver.Finder           ( findImportedModule, cannotFindModule )
-import GHC.Haskell.TypeCheck.Monad  ( initIfaceCheck )
+import GHC.TypeCheck.Monad  ( initIfaceCheck )
 import GHC.Util.Binary            ( openBinMem, put_ )
 import GHC.Util.Binary.Fingerprint( fingerprintBinMem )
 

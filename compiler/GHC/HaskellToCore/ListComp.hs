@@ -23,8 +23,8 @@ import GHC.Prelude
 import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsExpr, dsLExpr
                                     , dsLExprNoLP, dsLocalBinds, dsSyntaxExpr )
 
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Syntax
+import GHC.Syntax
+import GHC.TypeCheck.Syntax
 import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
 
@@ -40,7 +40,7 @@ import GHC.HaskellToCore.Match
 import GHC.Builtin.Names
 import GHC.CoreTypes.SrcLoc
 import GHC.Util.Outputable
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.Data.List.SetOps( getNth )
 import GHC.Util
 

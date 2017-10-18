@@ -29,7 +29,7 @@ import GHC.CoreTypes.Var
 import GHC.Util.Error
 
 import GHC.CoreTypes.Name
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Util
 import GHC.Util.Fingerprint
 import GHC.CoreTypes.BasicTypes

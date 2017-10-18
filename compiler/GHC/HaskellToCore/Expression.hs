@@ -36,14 +36,14 @@ import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Environment
 import GHC.CoreTypes.FamilyInstance( topNormaliseType )
 import GHC.HaskellToCore.Splice
-import GHC.Haskell.Syntax
+import GHC.Syntax
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
 --     needs to see source types
-import GHC.Haskell.TypeCheck.Util.CoreType
-import GHC.Haskell.TypeCheck.Evidence
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Syntax
+import GHC.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Evidence
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Syntax
 import GHC.CoreTypes.Type
 import GHC.Core.Syntax
 import GHC.Core.Util
@@ -176,7 +176,7 @@ ds_val_bind (is_rec, binds) body
         -- mixed up, which is what happens in one rare case
         -- Namely, for an AbsBind with no tyvars and no dicts,
         --         but which does have dictionary bindings.
-        -- See notes with GHC.Haskell.TypeCheck.Simplify.inferLoop [NO TYVARS]
+        -- See notes with GHC.TypeCheck.Simplify.inferLoop [NO TYVARS]
         -- It turned out that wrapping a Rec here was the easiest solution
         --
         -- NB The previous case dealt with unlifted bindings, so we
@@ -235,7 +235,7 @@ dsLExpr (L loc e)
   = putSrcSpanDs loc $
     do { core_expr <- dsExpr e
    -- uncomment this check to test the hsExprType function in
-   -- GHC.Haskell.TypeCheck.Syntax
+   -- GHC.TypeCheck.Syntax
    --    ; MASSERT2( exprType core_expr `eqType` hsExprType e
    --              , ppr e <+> dcolon <+> ppr (hsExprType e) $$
    --                ppr core_expr <+> dcolon <+> ppr (exprType core_expr) )
@@ -675,7 +675,7 @@ ds_expr _ expr@(RecordUpd { rupd_expr = record_expr, rupd_flds = fields
                  inst_con = noLoc $ mkHsWrap wrap (HsConLikeOut con)
                         -- Reconstruct with the WrapId so that unpacking happens
                  -- The order here is because of the order in
-                 -- `GHC.Haskell.TypeCheck.PatternSynonym`.
+                 -- `GHC.TypeCheck.PatternSynonym`.
                  wrap = mkWpEvVarApps theta_vars                                <.>
                         dict_req_wrap                                           <.>
                         mkWpTyApps    (mkTyVarTys ex_tvs)                       <.>

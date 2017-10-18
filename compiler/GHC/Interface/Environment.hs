@@ -24,7 +24,7 @@ module GHC.Interface.Environment (
 
 import GHC.Prelude
 
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Var

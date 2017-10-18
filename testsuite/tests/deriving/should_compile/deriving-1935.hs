@@ -2,7 +2,7 @@
 
 -- Trac #1935
 -- See Note [Superclasses of derived instance] in
--- GHC.Haskell.TypeCheck.Deriving
+-- GHC.TypeCheck.Deriving
 
 {-# OPTIONS -fno-warn-redundant-constraints #-}
 

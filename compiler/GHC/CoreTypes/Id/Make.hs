@@ -48,7 +48,7 @@ import GHC.Core.ConstantFold
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.FamilyInstance
 import GHC.CoreTypes.Coercion
-import GHC.Haskell.TypeCheck.Util.CoreType as TcType
+import GHC.TypeCheck.Util.CoreType as TcType
 import GHC.Core.Syntax.Make
 import GHC.Core.Util        ( exprType, mkCast )
 import GHC.Core.Inliner
@@ -296,14 +296,14 @@ mkDictSelId name clas
          = base_info `setInlinePragInfo` alwaysInlinePragma
                      `setUnfoldingInfo`  mkInlineUnfoldingWithArity 1
                                            (mkDictSelRhs clas val_index)
-                   -- See Note [Single-method classes] in GHC.Haskell.TypeCheck.Instance
+                   -- See Note [Single-method classes] in GHC.TypeCheck.Instance
                    -- for why alwaysInlinePragma
 
          | otherwise
          = base_info `setRuleInfo` mkRuleInfo [rule]
                    -- Add a magic BuiltinRule, but no unfolding
                    -- so that the rule is always available to fire.
-                   -- See Note [ClassOp/DFun selection] in GHC.Haskell.TypeCheck.Instance
+                   -- See Note [ClassOp/DFun selection] in GHC.TypeCheck.Instance
 
     -- This is the built-in rule that goes
     --      op (dfT d1 d2) --->  opT d1 d2
@@ -987,7 +987,7 @@ wrapNewTypeBody tycon args result_expr
 -- When unwrapping, we do *not* apply any family coercion, because this will
 -- be done via a CoPat by the type checker.  We have to do it this way as
 -- computing the right type arguments for the coercion requires more than just
--- a spliting operation (cf, GHC.Haskell.TypeCheck.Pattern.tcConPat).
+-- a spliting operation (cf, GHC.TypeCheck.Pattern.tcConPat).
 
 unwrapNewTypeBody :: TyCon -> [Type] -> CoreExpr -> CoreExpr
 unwrapNewTypeBody tycon args result_expr
@@ -1120,7 +1120,7 @@ mkDictFunId :: Name      -- Name to use for the dict fun;
             -> Class
             -> [Type]
             -> Id
--- Implements the DFun Superclass Invariant (see GHC.Haskell.TypeCheck.Instance)
+-- Implements the DFun Superclass Invariant (see GHC.TypeCheck.Instance)
 -- See Note [Dict funs and default methods]
 
 mkDictFunId dfun_name tvs theta clas tys
@@ -1345,7 +1345,7 @@ That is, the return type can be unboxed.  E.g. this is OK
 because ($) doesn't inspect or move the result of the call to foo.
 See Trac #8739.
 
-There is a special typing rule for ($) in GHC.Haskell.TypeCheck.Expression, so the type of ($)
+There is a special typing rule for ($) in GHC.TypeCheck.Expression, so the type of ($)
 isn't looked at there, BUT Lint subsequently (and rightly) complains
 if sees ($) applied to Int# (say), unless we give it a wired-in type
 as we do here.
@@ -1372,7 +1372,7 @@ Note [seqId magic]
 
 a) In source Haskell its second arg can have an unboxed type
       x `seq` (v +# w)
-   But see Note [Typing rule for seq] in GHC.Haskell.TypeCheck.Expression, which
+   But see Note [Typing rule for seq] in GHC.TypeCheck.Expression, which
    explains why we give seq itself an ordinary type
          seq :: forall a b. a -> b -> b
    and treat it as a language construct from a typing point of view.

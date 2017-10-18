@@ -5,7 +5,7 @@
 
 -- The thing is to do with whether an implicit parameter
 -- constraint can be "inherited".  See notes in
--- GHC.Haskell.TypeCheck.Simplify
+-- GHC.TypeCheck.Simplify
 
 module ShouldCompile where
 

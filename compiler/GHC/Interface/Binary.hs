@@ -22,7 +22,7 @@ module GHC.Interface.Binary (
 
 import GHC.Prelude
 
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Builtin.Util   ( isKnownKeyName, lookupKnownKeyName )
 import GHC.Interface.Environment
 import GHC.CoreTypes.Base

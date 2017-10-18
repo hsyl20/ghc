@@ -30,11 +30,11 @@ import GHC.Prelude
 import GHC.Config.Flags
 import GHC.Driver.Pipeline.Monad
 import GHC.CoreTypes.Base
-import GHC.Haskell.Syntax.Declaration
-import GHC.Haskell.Syntax.Bind
-import GHC.Haskell.Syntax.Expression
+import GHC.Syntax.Declaration
+import GHC.Syntax.Bind
+import GHC.Syntax.Expression
 import GHC.Data.OrdList
-import GHC.Haskell.TypeCheck.Util
+import GHC.TypeCheck.Util
 import GHC.Data.Bag
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Name
@@ -45,7 +45,7 @@ import GHC.CoreTypes.SrcLoc
 import GHC.CoreTypes.Type
 import System.Process
 import GHC.CoreTypes.BasicTypes
-import GHC.Haskell.Syntax.Extension
+import GHC.Syntax.Extension
 
 import Data.Maybe
 

@@ -299,7 +299,7 @@ See also Note [Wrappers for data instance tycons] in GHC.CoreTypes.Id.Make
 
 * The tyConTyVars of the representation tycon are the tyvars that the
   user wrote in the patterns. This is important in
-  GHC.Haskell.TypeCheck.Deriving, where we bring these tyvars into scope
+  GHC.TypeCheck.Deriving, where we bring these tyvars into scope
   before type-checking the deriving clause. This fact is arranged for in
   TcInstDecls.tcDataFamInstDecl.
 
@@ -344,7 +344,7 @@ might happen, say, with the following declaration:
     MkT :: b -> T Int b c
 
 Data and class tycons have their roles inferred (see inferRoles in
-GHC.Haskell.TypeCheck.TypeDeclUtil), as do vanilla synonym tycons.
+GHC.TypeCheck.TypeDeclUtil), as do vanilla synonym tycons.
 Family tycons have all parameters at role N, though it is conceivable that we
 could relax this restriction. (->)'s and tuples' parameters are at role R. Each
 primitive tycon declares its roles; it's worth noting that (~#)'s parameters are
@@ -378,11 +378,11 @@ invariant that if `famTcInj` is a Just then at least one element in the list
 must be True.
 
 See also:
- * [Injectivity annotation] in GHC.Haskell.Syntax.Declaration
+ * [Injectivity annotation] in GHC.Syntax.Declaration
  * [Renaming injectivity annotation] in GHC.Haskell.Rename
  * [Verifying injectivity annotation] in FamInstEnv
  * [Type inference for type families with injectivity] in
-   GHC.Haskell.TypeCheck.Solver.Interact
+   GHC.TypeCheck.Solver.Interact
 
 ************************************************************************
 *                                                                      *
@@ -741,7 +741,7 @@ data TyCon
         tyConArity   :: Arity,            -- ^ Arity
             -- tyConTyVars connect an associated family TyCon
             -- with its parent class; see
-            -- GHC.Haskell.TypeCheck.Validity.checkConsistentFamInst
+            -- GHC.TypeCheck.Validity.checkConsistentFamInst
 
         famTcResVar  :: Maybe Name,   -- ^ Name of result type variable, used
                                       -- for pretty-printing with --show-iface
@@ -953,7 +953,7 @@ data AlgTyConFlav
                -- and R:T is the representation TyCon (ie this one)
                -- and a,b,c are the tyConTyVars of this TyCon
                --
-               -- BUT may be eta-reduced; see GHC.Haskell.TypeCheck.Instance
+               -- BUT may be eta-reduced; see GHC.TypeCheck.Instance
                --     Note [Eta reduction for data family axioms]
 
           -- Cached fields of the CoAxiom, but adjusted to
@@ -1151,7 +1151,7 @@ TcTyCons are used for two distinct purposes
     see makeRecoveryTyCon.
 
 2.  When checking a type/class declaration (in module
-    GHC.Haskell.TypeCheck.TypeDecl), we come upon knowledge
+    GHC.TypeCheck.TypeDecl), we come upon knowledge
     of the eventual tycon in bits and pieces. First, we use getInitialKinds to
     look over the user-provided kind signature of a tycon (including, for
     example, the number of parameters written to the tycon) to get an initial
@@ -1163,7 +1163,7 @@ TcTyCons are used for two distinct purposes
 
     For convenience, we store partially-known tycons in TcTyCons, which might
     store meta-variables. These TcTyCons are stored in the local environment in
-    GHC.Haskell.TypeCheck.TypeDecl, until the real full
+    GHC.TypeCheck.TypeDecl, until the real full
     TyCons can be created during desugaring. A desugared program should never
     have a TcTyCon.
 
@@ -1175,11 +1175,11 @@ TcTyCons are used for two distinct purposes
     with the variables in the tycon's inferred kind. Because the tycon might
     not have a CUSK, this matching up is, in general, quite hard to do.
     (Look through the git history between Dec 2015 and Apr 2016 for
-    GHC.Haskell.TypeCheck.Type.splitTelescopeTvs!) Instead of trying,
+    GHC.TypeCheck.Type.splitTelescopeTvs!) Instead of trying,
     we just store the list of type variables to bring into scope in the later
     passes when we create a TcTyCon in getInitialKinds. Much easier this way!
     These tyvars are brought into scope in kcTyClTyVars and tcTyClTyVars, both
-    in GHC.Haskell.TypeCheck.Type.
+    in GHC.TypeCheck.Type.
 
     It is important that the scoped type variables not be zonked, as some
     scoped type variables come into existence as SigTvs. If we zonk, the
@@ -1543,9 +1543,9 @@ mkSumTyCon name binders res_kind arity tyvars cons parent
 -- | Makes a tycon suitable for use during type-checking.
 -- The only real need for this is for printing error messages during
 -- a recursive type/class type-checking knot. It has a kind because
--- GHC.Haskell.TypeCheck.Error sometimes calls typeKind.
+-- GHC.TypeCheck.Error sometimes calls typeKind.
 -- See also Note [Kind checking recursive type and class declarations]
--- in GHC.Haskell.TypeCheck.TypeDecl.
+-- in GHC.TypeCheck.TypeDecl.
 mkTcTyCon :: Name
           -> [TyConBinder]
           -> Kind                -- ^ /result/ kind only
@@ -1740,7 +1740,7 @@ isDataTyCon _ = False
 --   If (T a1 b1 c1) ~X (T a2 b2 c2), then (a1 ~X1 a2), (b1 ~X2 b2), and (c1 ~X3 c2)
 -- (where X1, X2, and X3, are the roles given by tyConRolesX tc X)
 -- See also Note [Decomposing equality] in
--- GHC.Haskell.TypeCheck.Solver.Canonicalise
+-- GHC.TypeCheck.Solver.Canonicalise
 isInjectiveTyCon :: TyCon -> Role -> Bool
 isInjectiveTyCon _                             Phantom          = False
 isInjectiveTyCon (FunTyCon {})                 _                = True
@@ -1762,7 +1762,7 @@ isInjectiveTyCon (TcTyCon {})                  _                = True
 -- (where X is the role passed in):
 --   If (T tys ~X t), then (t's head ~X T).
 -- See also Note [Decomposing equality] in
--- GHC.Haskell.TypeCheck.Solver.Canonicalise
+-- GHC.TypeCheck.Solver.Canonicalise
 isGenerativeTyCon :: TyCon -> Role -> Bool
 isGenerativeTyCon (FamilyTyCon { famTcFlav = DataFamilyTyCon _ }) Nominal = True
 isGenerativeTyCon (FamilyTyCon {}) _ = False

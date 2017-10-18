@@ -191,7 +191,7 @@ Note [Newtype classes and eta expansion]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     NB: this nasty special case is no longer required, because
     for newtype classes we don't use the class-op rule mechanism at all. 
-    See Note [Single-method classes] in GHC.Haskell.TypeCheck.Instance.
+    See Note [Single-method classes] in GHC.TypeCheck.Instance.
                                                          SLPJ May 2013
 
 -------- Old out of date comments, just for interest -----------
@@ -628,7 +628,7 @@ The (foo DInt) is floated out, and makes ineffective a RULE
 One could go further and make exprIsCheap reply True to any
 dictionary-typed expression, but that's more work.
 
-See Note [Dictionary-like types] in GHC.Haskell.TypeCheck.Util.CoreType for why we
+See Note [Dictionary-like types] in GHC.TypeCheck.Util.CoreType for why we
 use isDictLikeTy here rather than isDictTy
 
 Note [Eta expanding thunks]

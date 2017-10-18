@@ -11,7 +11,7 @@ module ShouldFail where
 
 -- July 07: I'm changing this from "should fail" to "should succeed"
 -- See Note [Important subtlety in oclose] in
--- GHC.Haskell.TypeCheck.FunctionalDependency
+-- GHC.TypeCheck.FunctionalDependency
 
 
 primDup :: Int -> IO Int

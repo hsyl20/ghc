@@ -17,7 +17,7 @@ module GHC.HaskellToCore.Match.Expression (
 
 import GHC.Prelude
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Set

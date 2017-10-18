@@ -13,12 +13,12 @@ module GHC.Haskell.Derive.Typeable (mkTypeableBinds) where
 import GHC.Prelude
 
 import GHC.CoreTypes.BasicTypes        ( Boxity(..), neverInlinePragma )
-import GHC.Haskell.TypeCheck.Bind( addTypecheckedBinds )
+import GHC.TypeCheck.Bind( addTypecheckedBinds )
 import GHC.Interface.Environment ( newGlobalBinder )
 import GHC.CoreTypes.Type.Internal   ( Type(..), TyLit(..) )
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Evidence ( mkWpTyApps )
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Evidence ( mkWpTyApps )
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Base ( lookupId )
 import GHC.Builtin.Names
 import GHC.Builtin.Primitive.Types ( primTyCons )
@@ -32,7 +32,7 @@ import GHC.CoreTypes.Kind   ( isTYPEApp )
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Module
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.Config.Flags
 import GHC.Data.Bag
 import GHC.CoreTypes.Var         ( TyVarBndr(..) )
@@ -93,7 +93,7 @@ The overall plan is this:
    interface file to find its type, value, etc
 
 4. Solve Typeable constraints.  This is done by a custom Typeable solver,
-   currently in GHC.Haskell.TypeCheck.Solver.Interact, that use M.$tcT
+   currently in GHC.TypeCheck.Solver.Interact, that use M.$tcT
    so solve (Typeable T).
 
 There are many wrinkles:

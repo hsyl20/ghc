@@ -18,7 +18,7 @@ import GHC.Prelude
 
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.Base
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.SrcLoc
@@ -86,7 +86,7 @@ type HowInScope = Either SrcSpan ImpDeclSpec
      -- Right ispec =>  imported as specified by ispec
 
 
--- | Called from the typechecker (GHC.Haskell.TypeCheck.Error) when we find
+-- | Called from the typechecker (GHC.TypeCheck.Error) when we find
 -- an unbound variable
 unknownNameSuggestions :: DynFlags
                        -> GlobalRdrEnv -> LocalRdrEnv -> ImportAvails

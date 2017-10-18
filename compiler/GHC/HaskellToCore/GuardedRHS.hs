@@ -18,7 +18,7 @@ import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsLExpr
                                                             , dsLocalBinds )
 import {-# SOURCE #-} GHC.HaskellToCore.Match      ( matchSinglePat )
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.Core.Syntax.Make
 import GHC.Core.Syntax
 

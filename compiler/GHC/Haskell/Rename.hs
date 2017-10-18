@@ -20,7 +20,7 @@ import {-# SOURCE #-} GHC.Haskell.Rename.Expression( rnLExpr )
 import {-# SOURCE #-} GHC.Haskell.Rename.Splice ( rnSpliceDecl
                                                     , rnTopSpliceDecls )
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.FieldLabel
 import GHC.CoreTypes.RdrName
 import GHC.Haskell.Rename.Type
@@ -33,8 +33,8 @@ import GHC.Haskell.Rename.Util ( HsDocContext(..), mapFvRn, bindLocalNames
 import GHC.Haskell.Rename.Util.Unbound ( mkUnboundName )
 import GHC.Haskell.Rename.ImportExport
 import GHC.Haskell.Rename.Documentation ( rnHsDoc, rnMbLHsDoc )
-import GHC.Haskell.TypeCheck.Annotation ( annCtxt )
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Annotation ( annCtxt )
+import GHC.TypeCheck.Monad
 
 import GHC.CoreTypes.ForeignCall  ( CCallTarget(..) )
 import GHC.CoreTypes.Module
@@ -621,7 +621,7 @@ checkCanonicalInstances cls poly_ty mbinds = do
                          quotes (text (lhs ++ " = " ++ rhs))
                        ]
 
-    -- stolen from GHC.Haskell.TypeCheck.Instance
+    -- stolen from GHC.TypeCheck.Instance
     instDeclCtxt1 :: LHsSigType GhcRn -> SDoc
     instDeclCtxt1 hs_inst_ty
       = inst_decl_ctxt (ppr (getLHsInstDeclHead hs_inst_ty))
@@ -835,7 +835,7 @@ rnATInstDecls :: (Maybe (Name, [Name]) -> -- The function that renames
 -- and the family instance declarations in an instance
 --
 -- NB: We allow duplicate associated-type decls;
--- See Note [Associated type instances] in GHC.Haskell.TypeCheck.Instance
+-- See Note [Associated type instances] in GHC.TypeCheck.Instance
 rnATInstDecls rnFun cls tv_ns at_insts
   = rnList (rnFun (Just (cls, tv_ns))) at_insts
     -- See Note [Renaming associated types]
@@ -1171,7 +1171,7 @@ reasons:
 
 
 * Increase kind polymorphism.
-  See GHC.Haskell.TypeCheck.TypeDecl
+  See GHC.TypeCheck.TypeDecl
   Note [Grouping of type and class declarations]
 
 Why do the instance declarations participate?  At least two reasons
@@ -1269,7 +1269,7 @@ with different dependency structure!)
 
 Ugh.  For now we simply don't allow promotion of data constructors for
 data instances.  See Note [AFamDataCon: not promoting data family
-constructors] in GHC.Haskell.TypeCheck.Environment
+constructors] in GHC.TypeCheck.Environment
 -}
 
 
@@ -1655,7 +1655,7 @@ rnTyClDecl (DataDecl { tcdLName = tycon, tcdTyVars = tyvars,
        ; bindHsQTyVars doc Nothing Nothing kvs tyvars $ \ tyvars' no_rhs_kvs ->
     do { (defn', fvs) <- rnDataDefn doc defn
           -- See Note [Complete user-supplied kind signatures] in
-          -- GHC.Haskell.Syntax.Declaration
+          -- GHC.Syntax.Declaration
        ; typeintype <- xoptM LangExt.TypeInType
        ; let cusk = hsTvbAllKinded tyvars' &&
                     (not typeintype || no_rhs_kvs)

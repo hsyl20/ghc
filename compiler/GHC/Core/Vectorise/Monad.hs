@@ -29,7 +29,7 @@ import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Env
 
 import GHC.Core.Syntax
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.HaskellToCore.Monad
 import GHC.CoreTypes.Base hiding ( MonadThings(..) )
 import GHC.Config.Flags

@@ -288,17 +288,17 @@ Library
         GHC.HaskellToCore.Match
         GHC.HaskellToCore.Match.Constructor
         GHC.HaskellToCore.Match.Literal
-        GHC.Haskell.Syntax.Bind
-        GHC.Haskell.Syntax.Declaration
-        GHC.Haskell.Syntax.Documentation
-        GHC.Haskell.Syntax.Expression
-        GHC.Haskell.Syntax.ImportExport
-        GHC.Haskell.Syntax.Literal
-        GHC.Haskell.Syntax.PlaceHolder
-        GHC.Haskell.Syntax.Extension
-        GHC.Haskell.Syntax.Pattern
-        GHC.Haskell.Syntax
-        GHC.Haskell.Syntax.Type
+        GHC.Syntax.Bind
+        GHC.Syntax.Declaration
+        GHC.Syntax.Documentation
+        GHC.Syntax.Expression
+        GHC.Syntax.ImportExport
+        GHC.Syntax.Literal
+        GHC.Syntax.PlaceHolder
+        GHC.Syntax.Extension
+        GHC.Syntax.Pattern
+        GHC.Syntax
+        GHC.Syntax.Type
         GHC.Haskell.Util
         GHC.Haskell.Printer.Dump
         GHC.Interface.Binary
@@ -355,7 +355,7 @@ Library
         GHC.CoreTypes.Coercion.Optimise
         GHC.Haskell.Parser
         GHC.Haskell.Parser.Syntax
-        GHC.Haskell.Syntax.Annotation
+        GHC.Syntax.Annotation
         GHC.CoreTypes.ForeignCall
         GHC.Builtin.Uniques
         GHC.Builtin.Util
@@ -407,57 +407,57 @@ Library
         GHC.Core.Demand
         GHC.Core.WorkerWrap
         GHC.Core.WorkerWrap.Util
-        GHC.Haskell.TypeCheck.FamilyInstance
-        GHC.Haskell.TypeCheck.Instantiation
-        GHC.Haskell.TypeCheck.Annotation
-        GHC.Haskell.TypeCheck.Arrow
-        GHC.Haskell.TypeCheck.Bind
-        GHC.Haskell.TypeCheck.Signature
-        GHC.Haskell.TypeCheck.Class
-        GHC.Haskell.TypeCheck.Default
-        GHC.Haskell.TypeCheck.Deriving
+        GHC.TypeCheck.FamilyInstance
+        GHC.TypeCheck.Instantiation
+        GHC.TypeCheck.Annotation
+        GHC.TypeCheck.Arrow
+        GHC.TypeCheck.Bind
+        GHC.TypeCheck.Signature
+        GHC.TypeCheck.Class
+        GHC.TypeCheck.Default
+        GHC.TypeCheck.Deriving
         GHC.Haskell.Derive.Constraints
         GHC.Haskell.Derive.Util
-        GHC.Haskell.TypeCheck.Environment
-        GHC.Haskell.TypeCheck.Expression
-        GHC.Haskell.TypeCheck.Foreign
+        GHC.TypeCheck.Environment
+        GHC.TypeCheck.Expression
+        GHC.TypeCheck.Foreign
         GHC.Haskell.Derive.BasicClasses
         GHC.Haskell.Derive.Functor
         GHC.Haskell.Derive.Generic
-        GHC.Haskell.TypeCheck.Syntax
-        GHC.Haskell.TypeCheck.Type
-        GHC.Haskell.TypeCheck.Instance
-        GHC.Haskell.TypeCheck.Util.Monadic
-        GHC.Haskell.TypeCheck.Validity
-        GHC.Haskell.TypeCheck.Match
-        GHC.Haskell.TypeCheck.Pattern
-        GHC.Haskell.TypeCheck.PatternSynonym
-        GHC.Haskell.TypeCheck.Module
-        GHC.Haskell.TypeCheck.ModuleSignature
-        GHC.Haskell.TypeCheck.Export
-        GHC.Haskell.TypeCheck.Monad
-        GHC.Haskell.TypeCheck.Util
-        GHC.Haskell.TypeCheck.Rule
-        GHC.Haskell.TypeCheck.Simplify
-        GHC.Haskell.TypeCheck.Error
-        GHC.Haskell.TypeCheck.TypeDecl
-        GHC.Haskell.TypeCheck.TypeDeclUtil
+        GHC.TypeCheck.Syntax
+        GHC.TypeCheck.Type
+        GHC.TypeCheck.Instance
+        GHC.TypeCheck.Util.Monadic
+        GHC.TypeCheck.Validity
+        GHC.TypeCheck.Match
+        GHC.TypeCheck.Pattern
+        GHC.TypeCheck.PatternSynonym
+        GHC.TypeCheck.Module
+        GHC.TypeCheck.ModuleSignature
+        GHC.TypeCheck.Export
+        GHC.TypeCheck.Monad
+        GHC.TypeCheck.Util
+        GHC.TypeCheck.Rule
+        GHC.TypeCheck.Simplify
+        GHC.TypeCheck.Error
+        GHC.TypeCheck.TypeDecl
+        GHC.TypeCheck.TypeDeclUtil
         GHC.Haskell.Derive.Typeable
-        GHC.Haskell.TypeCheck.Util.CoreType
-        GHC.Haskell.TypeCheck.Evidence
-        GHC.Haskell.TypeCheck.Unify
-        GHC.Haskell.TypeCheck.Solver.Interact
-        GHC.Haskell.TypeCheck.Solver.Canonicalise
-        GHC.Haskell.TypeCheck.Solver.Flatten
-        GHC.Haskell.TypeCheck.Solver.Monad
+        GHC.TypeCheck.Util.CoreType
+        GHC.TypeCheck.Evidence
+        GHC.TypeCheck.Unify
+        GHC.TypeCheck.Solver.Interact
+        GHC.TypeCheck.Solver.Canonicalise
+        GHC.TypeCheck.Solver.Flatten
+        GHC.TypeCheck.Solver.Monad
         GHC.Builtin.TypeNats
-        GHC.Haskell.TypeCheck.Splice
+        GHC.TypeCheck.Splice
         GHC.CoreTypes.Class
         GHC.CoreTypes.Coercion
         GHC.HaskellToCore.Splice
         GHC.Builtin.Names.TemplateHaskell
         GHC.CoreTypes.FamilyInstance
-        GHC.Haskell.TypeCheck.FunctionalDependency
+        GHC.TypeCheck.FunctionalDependency
         GHC.CoreTypes.Instance
         GHC.CoreTypes.TyCon
         GHC.CoreTypes.Coercion.Axiom

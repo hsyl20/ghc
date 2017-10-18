@@ -20,7 +20,7 @@ Initialisation
 ~~~~~~~~~~~~~~
 
 GHC sends a StartTH message to the server (see
-GHC.Haskell.TypeCheck.Splice.getTHState):
+GHC.TypeCheck.Splice.getTHState):
 
    StartTH :: Message (RemoteRef (IORef QState))
 
@@ -81,7 +81,7 @@ After typechecking
 ~~~~~~~~~~~~~~~~~~
 
 GHC sends a FinishTH message to the server (see
-GHC.Haskell.TypeCheck.Splice.finishTH).
+GHC.TypeCheck.Splice.finishTH).
 The server runs any finalizers that were added by addModuleFinalizer.
 
 
@@ -90,7 +90,7 @@ Other Notes on TH / Remote GHCi
   * Note [Remote GHCi] in compiler/ghci/GHCi.hs
   * Note [External GHCi pointers] in compiler/ghci/GHCi.hs
   * Note [TH recover with -fexternal-interpreter] in
-    GHC.Haskell.TypeCheck.Splice
+    GHC.TypeCheck.Splice
 -}
 
 import GHCi.Message
@@ -171,7 +171,7 @@ instance TH.Quasi GHCiQ where
   qReport isError msg = ghcCmd (Report isError msg)
 
   -- See Note [TH recover with -fexternal-interpreter] in
-  -- GHC.Haskell.TypeCheck.Splice
+  -- GHC.TypeCheck.Splice
   qRecover (GHCiQ h) (GHCiQ a) = GHCiQ $ \s -> (do
     remoteTHCall (qsPipe s) StartRecover
     (r, s') <- a s

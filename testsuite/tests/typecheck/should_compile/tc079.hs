@@ -3,7 +3,7 @@
 -- !!! small class decl with local polymorphism;
 -- !!! "easy" to check default methods and such...
 -- !!! (this is the example given in
--- GHC.Haskell.TypeCheck.Class)
+-- GHC.TypeCheck.Class)
 --
 module ShouldSucceed where
 

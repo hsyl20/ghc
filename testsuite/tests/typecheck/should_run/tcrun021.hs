@@ -2,7 +2,7 @@
              TypeSynonymInstances, FlexibleInstances #-}
 
 -- This bizarre program failed because
--- GHC.Haskell.TypeCheck.Simplify built a loop of
+-- GHC.TypeCheck.Simplify built a loop of
 -- dictionaries, due to an obscure bug in the way in which superclasses were
 -- added
 

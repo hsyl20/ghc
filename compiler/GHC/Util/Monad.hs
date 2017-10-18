@@ -91,7 +91,7 @@ zipWith4M f (x:xs) (y:ys) (z:zs) (a:as)
 zipWithAndUnzipM :: Monad m
                  => (a -> b -> m (c, d)) -> [a] -> [b] -> m ([c], [d])
 {-# INLINABLE zipWithAndUnzipM #-}
--- See Note [flatten_many performance] in GHC.Haskell.TypeCheck.Solver.Flatten for
+-- See Note [flatten_many performance] in GHC.TypeCheck.Solver.Flatten for
 -- why this pragma is essential.
 zipWithAndUnzipM f (x:xs) (y:ys)
   = do { (c, d) <- f x y

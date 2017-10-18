@@ -76,11 +76,11 @@ import GHC.CoreTypes.Coercion.Axiom
 import GHC.CoreTypes.ConLike
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Type
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Instance
 import GHC.CoreTypes.FamilyInstance
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.Syntax
+import GHC.TypeCheck.Monad
+import GHC.Syntax
 import GHC.CoreTypes.Base
 import GHC.Driver.Finder
 import GHC.Config.Flags
@@ -231,7 +231,7 @@ mkIface_ hsc_env maybe_old_fingerprint
                       -- Nor wired-in things; the compiler knows about them anyhow
                    nameIsLocalOrFrom semantic_mod name  ]
                       -- Sigh: see Note [Root-main Id] in
-                      -- GHC.Haskell.TypeCheck.Module
+                      -- GHC.TypeCheck.Module
                       -- NB: ABSOLUTELY need to check against semantic_mod,
                       -- because all of the names in an hsig p[H=<H>]:H
                       -- are going to be for <H>, not the former id!
@@ -1638,7 +1638,7 @@ tyConToIfaceDecl env tycon
     ifaceConDecls AbstractTyCon                    = IfAbstractTyCon
         -- The AbstractTyCon case happens when a TyCon has been trimmed
         -- during tidying.
-        -- Furthermore, tyThingToIfaceDecl is also used in GHC.Haskell.TypeCheck.Module
+        -- Furthermore, tyThingToIfaceDecl is also used in GHC.TypeCheck.Module
         -- for GHCi, when browsing a module, in which case the
         -- AbstractTyCon and TupleTyCon cases are perfectly sensible.
         -- (Tuple declarations are not serialised into interface files.)

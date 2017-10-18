@@ -10,10 +10,10 @@ import GHC
 import GHC.Types
 import GHC.Interactive.Linker
 import GHC.Interactive.ClosureInspect
-import GHC.Haskell.TypeCheck.Environment
+import GHC.TypeCheck.Environment
 import GHC.CoreTypes.Type
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Util.CoreType
 import Control.Applicative
 import GHC.CoreTypes.Name (getOccString)
 import Unsafe.Coerce

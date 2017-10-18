@@ -1,11 +1,11 @@
 module GHC.Haskell.Rename.Expression where
 import GHC.CoreTypes.Name
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Name.Set             ( FreeVars )
-import GHC.Haskell.TypeCheck.Util
+import GHC.TypeCheck.Util
 import GHC.CoreTypes.SrcLoc               ( Located )
 import GHC.Util.Outputable            ( Outputable )
-import GHC.Haskell.Syntax.Extension ( GhcPs, GhcRn )
+import GHC.Syntax.Extension ( GhcPs, GhcRn )
 
 rnLExpr :: LHsExpr GhcPs
         -> RnM (LHsExpr GhcRn, FreeVars)

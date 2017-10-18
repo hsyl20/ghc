@@ -21,10 +21,10 @@ import GHC.Prelude
 
 import {-# SOURCE #-} GHC.HaskellToCore.Match     ( match )
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.HaskellToCore.Bind
 import GHC.CoreTypes.ConLike
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.HaskellToCore.Monad
 import GHC.HaskellToCore.Util
 import GHC.Core.Syntax.Make   ( mkCoreLets )

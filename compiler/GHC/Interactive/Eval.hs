@@ -48,7 +48,7 @@ import GHCi.Message
 import GHCi.RemoteTypes
 import GHC.Monad
 import GHC.Driver.Main
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.Instance
 import GHC.Interface.Environment  ( newInteractiveBinder )
@@ -57,7 +57,7 @@ import GHC.Core.FreeVars ( orphNamesOfFamInst )
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type                 hiding( typeKind )
 import GHC.CoreTypes.RepType
-import GHC.Haskell.TypeCheck.Util.CoreType hiding( typeKind )
+import GHC.TypeCheck.Util.CoreType hiding( typeKind )
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Id as Id
 import GHC.CoreTypes.Name                 hiding( varName )

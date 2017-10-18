@@ -21,10 +21,10 @@ import GHC.Prelude
 import GHC.HaskellToCore.Usage
 import GHC.Config.Flags
 import GHC.CoreTypes.Base
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Util
-import GHC.Haskell.TypeCheck.Monad  ( finalSafeMode, fixSafeInstances )
-import GHC.Haskell.TypeCheck.Module ( runTcInteractive )
+import GHC.Syntax
+import GHC.TypeCheck.Util
+import GHC.TypeCheck.Monad  ( finalSafeMode, fixSafeInstances )
+import GHC.TypeCheck.Module ( runTcInteractive )
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Type

@@ -11,7 +11,7 @@ import GHC.Prelude
 
 import GHC.Config.Flags
 import GHC.CoreTypes.Base
-import GHC.Haskell.TypeCheck.Util
+import GHC.TypeCheck.Util
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Set
 import GHC.CoreTypes.Module

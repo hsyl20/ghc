@@ -23,7 +23,7 @@ import GHC.CoreTypes.FieldLabel
 
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Environment
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Util
 import GHC.Interface.Environment
 
@@ -58,9 +58,9 @@ import Control.Monad
 
 
 
--- The 'NameShape' type is defined in GHC.Haskell.TypeCheck.Util, because
--- GHC.Haskell.TypeCheck.Util needs to refer to NameShape, and having
--- GHC.Haskell.TypeCheck.Util import NameShape (even by SOURCE) would
+-- The 'NameShape' type is defined in GHC.TypeCheck.Util, because
+-- GHC.TypeCheck.Util needs to refer to NameShape, and having
+-- GHC.TypeCheck.Util import NameShape (even by SOURCE) would
 -- cause a large number of modules to be pulled into the DynFlags cycle.
 {-
 data NameShape = NameShape {

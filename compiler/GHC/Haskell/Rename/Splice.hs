@@ -15,9 +15,9 @@ import GHC.Prelude
 
 import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Set
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.RdrName
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Kind
 
 import GHC.Haskell.Rename.Environment
@@ -36,21 +36,21 @@ import Control.Monad    ( unless, when )
 
 import {-# SOURCE #-} GHC.Haskell.Rename.Expression ( rnLExpr )
 
-import GHC.Haskell.TypeCheck.Environment           ( checkWellStaged )
+import GHC.TypeCheck.Environment           ( checkWellStaged )
 import GHC.Builtin.Names.TemplateHaskell                ( liftName )
 
 import GHC.Config.Flags
 import GHC.Data.FastString
 import GHC.Util.Error                        ( dumpIfSet_dyn_printer )
-import GHC.Haskell.TypeCheck.Environment ( tcMetaTy )
+import GHC.TypeCheck.Environment ( tcMetaTy )
 import GHC.Config.Hooks
 import GHC.Builtin.Names.TemplateHaskell ( quoteExpName, quotePatName
                                          , quoteDecName, quoteTypeName
                                          , decsQTyConName, expQTyConName
                                          , patQTyConName, typeQTyConName )
 
-import {-# SOURCE #-} GHC.Haskell.TypeCheck.Expression   ( tcPolyExpr )
-import {-# SOURCE #-} GHC.Haskell.TypeCheck.Splice
+import {-# SOURCE #-} GHC.TypeCheck.Expression   ( tcPolyExpr )
+import {-# SOURCE #-} GHC.TypeCheck.Splice
     ( runMetaD
     , runMetaE
     , runMetaP
@@ -92,7 +92,7 @@ rnBracket e br_body
                                        illegalTypedBracket
            ; RunSplice _    ->
                -- See Note [RunSplice ThLevel] in
-               -- GHC.Haskell.TypeCheck.Util
+               -- GHC.TypeCheck.Util
                pprPanic "rnBracket: Renaming bracket when running a splice"
                         (ppr e)
            ; Comp           -> return ()
@@ -517,10 +517,10 @@ References:
 
 [1] https://ghc.haskell.org/trac/ghc/wiki/TemplateHaskell/Reify
 [2] 'rnSpliceExpr'
-[3] 'GHC.Haskell.TypeCheck.Splice.qAddModFinalizer'
-[4] 'GHC.Haskell.TypeCheck.Expression.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
-[5] 'GHC.Haskell.TypeCheck.Type.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
-[6] 'GHC.Haskell.TypeCheck.Pattern.tc_pat' ('SplicePat' ('HsSpliced' ...))
+[3] 'GHC.TypeCheck.Splice.qAddModFinalizer'
+[4] 'GHC.TypeCheck.Expression.tcExpr' ('HsSpliceE' ('HsSpliced' ...))
+[5] 'GHC.TypeCheck.Type.tc_hs_type' ('HsSpliceTy' ('HsSpliced' ...))
+[6] 'GHC.TypeCheck.Pattern.tc_pat' ('SplicePat' ('HsSpliced' ...))
 
 -}
 
@@ -773,7 +773,7 @@ checkCrossStageLifting :: TopLevelFlag -> ThLevel -> ThStage -> ThLevel
 --            [| map |]
 --
 -- This code is similar to checkCrossStageLifting in
--- GHC.Haskell.TypeCheck.Expression, but this is only run on *untyped*
+-- GHC.TypeCheck.Expression, but this is only run on *untyped*
 -- brackets.
 
 checkCrossStageLifting top_lvl bind_lvl use_stage use_lvl name
@@ -853,7 +853,7 @@ Note [Quoting names]
 ~~~~~~~~~~~~~~~~~~~~
 A quoted name 'n is a bit like a quoted expression [| n |], except that we
 have no cross-stage lifting (c.f.
-GHC.Haskell.TypeCheck.Expression.thBrackId).  So, after incrementing the
+GHC.TypeCheck.Expression.thBrackId).  So, after incrementing the
 use-level to account for the brackets, the cases are:
 
         bind > use                      Error

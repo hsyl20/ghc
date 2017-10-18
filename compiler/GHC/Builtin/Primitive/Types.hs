@@ -617,7 +617,7 @@ Type.classifyPredType.
 
 All wanted constraints of this type are built with coercion holes.  (See Note
 [Coercion holes] in GHC.CoreTypes.Type.Internal.) But see also Note [Deferred
-errors for coercion holes] in GHC.Haskell.TypeCheck.Error to see how
+errors for coercion holes] in GHC.TypeCheck.Error to see how
 equality constraints are deferred.
 
 Within GHC, ~# is called eqPrimTyCon, and it is defined in
@@ -651,7 +651,7 @@ On the other hand, this behaves just like any class w.r.t. eager superclass
 unpacking in the solver. So a lifted equality given quickly becomes an unlifted
 equality given. This is good, because the solver knows all about unlifted
 equalities. There is some special-casing in
-GHC.Haskell.TypeCheck.Solver.Interact.matchClassInst to pretend that
+GHC.TypeCheck.Solver.Interact.matchClassInst to pretend that
 there is an instance of this class, as we can't write the instance in Haskell.
 
 Within GHC, ~~ is called heqTyCon, and it is defined in GHC.Builtin.Types.

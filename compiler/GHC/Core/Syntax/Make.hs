@@ -65,7 +65,6 @@ import GHC.Builtin.Types
 import GHC.Builtin.Names
 
 import GHC.Haskell.Util            ( mkChunkified, chunkify )
-import GHC.Haskell.TypeCheck.Util.CoreType ( mkSpecSigmaTy )
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion             ( isCoVar )
 import GHC.Builtin.Primitive.Types

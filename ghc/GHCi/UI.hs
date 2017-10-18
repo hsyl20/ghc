@@ -48,8 +48,8 @@ import qualified GHC
 import GHC ( LoadHowMuch(..), Target(..),  TargetId(..), InteractiveImport(..),
              TyThing(..), Phase, BreakIndex, Resume, SingleStep, Ghc,
              getModuleGraph, handleSourceError )
-import GHC.Haskell.Syntax.ImportExport
-import GHC.Haskell.Syntax
+import GHC.Syntax.ImportExport
+import GHC.Syntax
 import GHC.CoreTypes.Base ( tyThingParent_maybe, handleFlagWarnings, getSafeMode,
                         hsc_IC, setInteractivePrintName, hsc_dflags )
 import GHC.CoreTypes.Module
@@ -1839,7 +1839,7 @@ exceptT = ExceptT . pure
 
 -----------------------------------------------------------------------------
 -- | @:type@ command. See also Note [TcRnExprMode] in
--- GHC.Haskell.TypeCheck.Module
+-- GHC.TypeCheck.Module
 
 typeOfExpr :: String -> InputT GHCi ()
 typeOfExpr str = handleSourceError GHC.printException $ do

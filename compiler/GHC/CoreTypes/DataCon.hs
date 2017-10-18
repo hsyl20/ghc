@@ -268,7 +268,7 @@ Note that (Foo a) might not be an instance of Ord.
 --             'ApiAnnotation.AnnClose','ApiAnnotation.AnnComma'
 
 -- For details on above see Note [Api annotations] in
--- GHC.Haskell.Syntax.Annotation
+-- GHC.Syntax.Annotation
 data DataCon
   = MkData {
         dcName    :: Name,      -- This is the name of the *source data con*

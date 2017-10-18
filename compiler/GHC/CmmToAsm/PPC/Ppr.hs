@@ -28,7 +28,7 @@ import GHC.Cmm.Dataflow.Label
 
 import GHC.CoreTypes.CLabel
 
-import GHC.CoreTypes.Unique     ( pprUniqueAlways, Uniquable(..) )
+import GHC.CoreTypes.Unique     ( pprUniqueAlways )
 import GHC.Util.Platform
 import GHC.Data.FastString
 import GHC.Util.Outputable

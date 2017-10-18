@@ -8,8 +8,8 @@ where
 
 import GHC.Prelude
 
-import GHC.Haskell.TypeCheck.Util
-import GHC.Haskell.Syntax
+import GHC.TypeCheck.Util
+import GHC.Syntax
 import GHC.CoreTypes.SrcLoc
 
 

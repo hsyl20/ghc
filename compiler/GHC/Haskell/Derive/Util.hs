@@ -31,8 +31,8 @@ import GHC.CoreTypes.DataCon
 import GHC.Config.Flags
 import GHC.Util.Error
 import GHC.CoreTypes.Base (lookupFixity, mi_fix)
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Instantiation
+import GHC.Syntax
+import GHC.TypeCheck.Instantiation
 import GHC.CoreTypes.Instance
 import GHC.Interface.Load (loadInterfaceForName)
 import GHC.CoreTypes.Module (getModule)
@@ -43,8 +43,8 @@ import GHC.CoreTypes.SrcLoc
 import GHC.Haskell.Derive.BasicClasses
 import GHC.Haskell.Derive.Functor
 import GHC.Haskell.Derive.Generic
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Util.CoreType
 import GHC.Builtin.Names.TemplateHaskell (liftClassKey)
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type
@@ -135,7 +135,7 @@ data DerivSpec theta = DS { ds_loc       :: SrcSpan
         -- or the not-yet-simplified list of constraints together with their origin
 
         -- ds_mechanism specifies the means by which GHC derives the instance.
-        -- See Note [Deriving strategies] in GHC.Haskell.TypeCheck.Deriving
+        -- See Note [Deriving strategies] in GHC.TypeCheck.Deriving
 
 {-
 Example:
@@ -165,7 +165,7 @@ instance Outputable theta => Outputable (DerivSpec theta) where
   ppr = pprDerivSpec
 
 -- What action to take in order to derive a class instance.
--- See Note [Deriving strategies] in GHC.Haskell.TypeCheck.Deriving
+-- See Note [Deriving strategies] in GHC.TypeCheck.Deriving
 data DerivSpecMechanism
   = DerivSpecStock   -- "Standard" classes
       (SrcSpan -> TyCon
@@ -705,7 +705,7 @@ newDerivClsInst theta (DS { ds_name = dfun_name, ds_overlap = overlap_mode
 extendLocalInstEnv :: [ClsInst] -> TcM a -> TcM a
 -- Add new locally-defined instances; don't bother to check
 -- for functional dependency errors -- that'll happen in
--- GHC.Haskell.TypeCheck.Instance
+-- GHC.TypeCheck.Instance
 extendLocalInstEnv dfuns thing_inside
  = do { env <- getGblEnv
       ; let  inst_env' = extendInstEnvList (tcg_inst_env env) dfuns

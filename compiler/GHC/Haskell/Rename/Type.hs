@@ -39,7 +39,7 @@ import GHC.Prelude
 import {-# SOURCE #-} GHC.Haskell.Rename.Splice( rnSpliceType )
 
 import GHC.Config.Flags
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.Haskell.Rename.Documentation  ( rnLHsDoc, rnMbLHsDoc )
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Util.Unbound  ( perhapsForallMsg )
@@ -51,7 +51,7 @@ import GHC.Haskell.Rename.Util
 import GHC.Haskell.Rename.Fixity 
                         ( lookupFieldFixityRn, lookupFixityRn
                         , lookupTyFixityRn )
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.RdrName
 import GHC.Builtin.Names
 import GHC.Builtin.Primitive.Types          ( funTyConName )
@@ -248,7 +248,7 @@ partition_nwcs free_vars@(FKTV { fktv_tys = tys })
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Identifiers starting with an underscore are always parsed as type variables.
 It is only here in the renamer that we give the special treatment.
-See Note [The wildcard story for types] in GHC.Haskell.Syntax.Type.
+See Note [The wildcard story for types] in GHC.Syntax.Type.
 
 It's easy!  When we collect the implicitly bound type variables, ready
 to bring them into scope, and NamedWildCards is on, we partition the
@@ -887,7 +887,7 @@ bindHsQTyVars :: forall a b.
                   -- The Bool is True <=> all kind variables used in the
                   -- kind signature are bound on the left.  Reason:
                   -- the TypeInType clause of Note [Complete user-supplied
-                  -- kind signatures] in GHC.Haskell.Syntax.Declaration
+                  -- kind signatures] in GHC.Syntax.Declaration
               -> RnM (b, FreeVars)
 
 -- See Note [bindHsQTyVars examples]
@@ -1581,7 +1581,7 @@ In general we want to walk over a type, and find
   * The free kind variables of any kind signatures in the type
 
 Hence we return a pair (kind-vars, type vars)
-See also Note [HsBSig binder lists] in GHC.Haskell.Syntax.Types
+See also Note [HsBSig binder lists] in GHC.Syntax.Types
 
 Most clients of this code just want to know the kind/type vars, without
 duplicates. The function rmDupsInRdrTyVars removes duplicates. That function

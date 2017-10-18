@@ -26,8 +26,8 @@ import GHC.Prelude
 import GHC.Haskell.Rename.Bind
                   ( rnLocalBindsAndThen, rnLocalValBindsLHS, rnLocalValBindsRHS
                   , rnMatchGroup, rnGRHS, makeMiniFixityEnv)
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Monad
+import GHC.Syntax
+import GHC.TypeCheck.Monad
 import GHC.CoreTypes.Module           ( getModule )
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
@@ -494,7 +494,7 @@ rnCmd (HsCmdArrApp arrow arg _ ho rtl)
     select_arrow_scope tc = case ho of
         HsHigherOrderApp -> tc
         HsFirstOrderApp  -> escapeArrowScope tc
-        -- See Note [Escaping the arrow scope] in GHC.Haskell.TypeCheck.Util
+        -- See Note [Escaping the arrow scope] in GHC.TypeCheck.Util
         -- Before renaming 'arrow', use the environment of the enclosing
         -- proc for the (-<) case.
         -- Local bindings, inside the enclosing proc, are not in scope
@@ -944,7 +944,7 @@ rnStmt ctxt _ (L loc (TransStmt { trS_stmts = stmts, trS_by = by, trS_form = for
                              `plusFV` fvs4 `plusFV` fvs5
              bndr_map = used_bndrs `zip` used_bndrs
              -- See Note [TransStmt binder map] in
-             -- GHC.Haskell.Syntax.Expression
+             -- GHC.Syntax.Expression
 
        ; traceRn "rnStmt: implicitly rebound these used binders:" (ppr bndr_map)
        ; return (([(L loc (TransStmt { trS_stmts = stmts', trS_bndrs = bndr_map

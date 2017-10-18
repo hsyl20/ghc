@@ -29,8 +29,8 @@ import GHC.Interface.Syntax
 import GHC.Interface.Load
 import GHC.Interface.Environment
 import GHC.Interface.BuildTypeAndClass
-import GHC.Haskell.TypeCheck.Monad
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Monad
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Coercion.Axiom

@@ -56,7 +56,7 @@ module GHC.Core.Monad (
 import GHC.Prelude hiding ( read )
 
 import GHC.CoreTypes.Name              ( Name )
-import GHC.Haskell.TypeCheck.Monad   ( initTcForLookup )
+import GHC.TypeCheck.Monad   ( initTcForLookup )
 import GHC.Core.Syntax
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.Module
@@ -66,13 +66,12 @@ import GHC.CoreTypes.Annotation
 
 import GHC.Util.Monad.IOEnv hiding ( liftIO, failM, failWithM )
 import qualified GHC.Util.Monad.IOEnv as IOEnv
-import GHC.Haskell.TypeCheck.Environment ( lookupGlobal )
+import GHC.TypeCheck.Environment ( lookupGlobal )
 import GHC.CoreTypes.Var
 import GHC.Util.Outputable as Outputable
 import GHC.Data.FastString
 import qualified GHC.Util.Error as Err
 import GHC.Util.Error( Severity(..) )
-import GHC.Data.Maybe
 import GHC.Data.UniqueSupply
 import GHC.Data.UniqueFM            ( UniqFM, mapUFM, filterUFM )
 import GHC.Util.Monad
@@ -89,7 +88,7 @@ import Data.Word
 import Control.Monad
 import Control.Applicative ( Alternative(..) )
 
-import {-# SOURCE #-} GHC.Haskell.TypeCheck.Splice ( lookupThName_maybe )
+import {-# SOURCE #-} GHC.TypeCheck.Splice ( lookupThName_maybe )
 import qualified Language.Haskell.TH as TH
 
 {-

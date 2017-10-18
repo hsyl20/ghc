@@ -15,7 +15,7 @@ import Data.Array
 import GHC.ByteCode.Types
 import GHC.Stack.CCS
 import GHC.CoreTypes.Type
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.Module as Module
 import GHC.Util.Outputable as Outputable
 import GHC.Config.Flags

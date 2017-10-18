@@ -55,24 +55,24 @@ module GHC.Plugin.TypeChecker (
 #if defined(GHCI)
 import GHC.Prelude
 
-import qualified GHC.Haskell.TypeCheck.Monad           as TcM
-import qualified GHC.Haskell.TypeCheck.Solver.Monad    as TcS
-import qualified GHC.Haskell.TypeCheck.Environment     as TcM
-import qualified GHC.Haskell.TypeCheck.Util.Monadic    as TcM
-import qualified GHC.Haskell.TypeCheck.FamilyInstance  as TcM
+import qualified GHC.TypeCheck.Monad           as TcM
+import qualified GHC.TypeCheck.Solver.Monad    as TcS
+import qualified GHC.TypeCheck.Environment     as TcM
+import qualified GHC.TypeCheck.Util.Monadic    as TcM
+import qualified GHC.TypeCheck.FamilyInstance  as TcM
 import qualified GHC.Interface.Environment             as IfaceEnv
 import qualified GHC.Driver.Finder
 
 import GHC.CoreTypes.FamilyInstance       ( FamInstEnv )
-import GHC.Haskell.TypeCheck.Monad        ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
+import GHC.TypeCheck.Monad        ( TcGblEnv, TcLclEnv, Ct, CtLoc, TcPluginM
                                           , unsafeTcPluginTcM, getEvBindsTcPluginM
                                           , liftIO, traceTc )
-import GHC.Haskell.TypeCheck.Util.Monadic ( TcTyVar, TcType )
-import GHC.Haskell.TypeCheck.Environment  ( TcTyThing )
-import GHC.Haskell.TypeCheck.Evidence     ( TcCoercion, CoercionHole
+import GHC.TypeCheck.Util.Monadic ( TcTyVar, TcType )
+import GHC.TypeCheck.Environment  ( TcTyThing )
+import GHC.TypeCheck.Evidence     ( TcCoercion, CoercionHole
                                           , EvTerm, EvBind
                                           , mkGivenEvBind )
-import GHC.Haskell.TypeCheck.Util         ( CtEvidence(..) )
+import GHC.TypeCheck.Util         ( CtEvidence(..) )
 import GHC.CoreTypes.Var                  ( EvVar )
 
 import GHC.CoreTypes.Module
@@ -152,7 +152,7 @@ isTouchableTcPluginM :: TcTyVar -> TcPluginM Bool
 isTouchableTcPluginM = unsafeTcPluginTcM . TcM.isTouchableTcM
 
 -- Confused by zonking? See Note [What is zonking?] in
--- GHC.Haskell.TypeCheck.Util.Monadic.
+-- GHC.TypeCheck.Util.Monadic.
 zonkTcType :: TcType -> TcPluginM TcType
 zonkTcType = unsafeTcPluginTcM . TcM.zonkTcType
 

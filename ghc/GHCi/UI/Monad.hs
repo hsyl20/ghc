@@ -44,7 +44,7 @@ import GHC.CoreTypes.SrcLoc
 import GHC.CoreTypes.Module
 import GHC.Interactive.Interpreter
 import GHCi.RemoteTypes
-import GHC.Haskell.Syntax (ImportDecl,GhcPs)
+import GHC.Syntax (ImportDecl,GhcPs)
 import GHC.Util
 
 import GHC.Util.Exception

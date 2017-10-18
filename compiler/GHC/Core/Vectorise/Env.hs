@@ -170,7 +170,7 @@ initGlobalEnv vectAvoid info vectDecls instEnvs famInstEnvs
                                         -- FIXME: we currently only allow RHSes consisting of a
                                         --   single variable to be able to obtain the type without
                                         --   inference — see also
-                                        --   'GHC.Haskell.TypeCheck.Bind.tcVect'
+                                        --   'GHC.TypeCheck.Bind.tcVect'
                     [(var, Nothing)        | NoVect var                     <- vectDecls]
 
 

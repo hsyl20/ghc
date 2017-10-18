@@ -20,6 +20,6 @@ f x = const True (\y -> let w :: a -> a
      (iii) then try to resolve again
  
    See Note [Top-level Defaulting Plan] in
-   GHC.Haskell.TypeCheck.Simplify -}
+   GHC.TypeCheck.Simplify -}
 
 

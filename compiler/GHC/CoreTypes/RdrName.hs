@@ -115,7 +115,7 @@ import Data.List( sortBy, foldl', nub )
 --           'ApiAnnotation.AnnTilde',
 
 -- For details on above see Note [Api annotations] in
--- GHC.Haskell.Syntax.Annotation
+-- GHC.Syntax.Annotation
 data RdrName
   = Unqual OccName
         -- ^ Unqualified  name

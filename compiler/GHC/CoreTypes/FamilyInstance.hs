@@ -193,7 +193,7 @@ Now
 
 This eta reduction happens for data instances as well as newtype
 instances. Here we want to eta-reduce the data family axiom.
-All this is done in GHC.Haskell.TypeCheck.Instance.tcDataFamInstDecl.
+All this is done in GHC.TypeCheck.Instance.tcDataFamInstDecl.
 
 See also Note [Newtype eta] in GHC.CoreTypes.TyCon.
 
@@ -1162,7 +1162,7 @@ findBranch branches target_tys
 apartnessCheck :: [Type]     -- ^ /flattened/ target arguments. Make sure
                              -- they're flattened! See Note [Flattening].
                              -- (NB: This "flat" is a different
-                             -- "flat" than is used in GHC.Haskell.TypeCheck.Solver.Flatten.)
+                             -- "flat" than is used in GHC.TypeCheck.Solver.Flatten.)
                -> CoAxBranch -- ^ the candidate equation we wish to use
                              -- Precondition: this matches the target
                -> Bool       -- ^ True <=> equation can fire

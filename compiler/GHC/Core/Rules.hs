@@ -43,7 +43,7 @@ import GHC.Core.Util               ( exprType, eqExpr, mkTick, mkTicks
 import GHC.Core.Printer             ( pprRules )
 import GHC.CoreTypes.Type                 ( Type, mkTCvSubst )
 import qualified GHC.CoreTypes.Type as Type
-import GHC.Haskell.TypeCheck.Util.CoreType ( tcSplitTyConApp_maybe )
+import GHC.TypeCheck.Util.CoreType ( tcSplitTyConApp_maybe )
 import GHC.Builtin.Types               ( anyTypeOfKind )
 import GHC.CoreTypes.Coercion
 import GHC.Core.Tidy  ( tidyRules )

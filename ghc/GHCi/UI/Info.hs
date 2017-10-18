@@ -40,7 +40,7 @@ import GHC.CoreTypes.Name
 import GHC.CoreTypes.Name.Set
 import GHC.Util.Outputable
 import GHC.CoreTypes.SrcLoc
-import GHC.Haskell.TypeCheck.Syntax
+import GHC.TypeCheck.Syntax
 import GHC.CoreTypes.Var
 
 -- | Info about a module. This information is generated every time a

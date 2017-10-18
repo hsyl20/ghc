@@ -22,14 +22,14 @@ import GHC.Prelude
 import GHC.Data.Bag
 import GHC.CoreTypes.DataCon
 import GHC.Data.FastString
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.Util.Panic
 import GHC.Builtin.Names
 import GHC.CoreTypes.RdrName
 import GHC.CoreTypes.SrcLoc
 import GHC.Util.Monad.State
 import GHC.Haskell.Derive.BasicClasses
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Type

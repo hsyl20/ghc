@@ -1273,7 +1273,7 @@ we want
 not                                ([a], a -> a)
 
 The reason is that we then get better (shorter) type signatures in interfaces.
-Notably this plays a role in tcTySigs in GHC.Haskell.TypeCheck.Bind
+Notably this plays a role in tcTySigs in GHC.TypeCheck.Bind
 
 
 ---------------------------------------------------------------------

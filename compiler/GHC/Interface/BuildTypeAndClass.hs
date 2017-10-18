@@ -32,11 +32,11 @@ import GHC.CoreTypes.Class
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Id
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Util.CoreType
 
 import GHC.CoreTypes.SrcLoc( SrcSpan, noSrcSpan )
 import GHC.Config.Flags
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Data.UniqueSupply
 import GHC.Util
 import GHC.Util.Outputable

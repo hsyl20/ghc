@@ -11,7 +11,7 @@ module GHC.Haskell.Stats ( ppSourceStats ) where
 import GHC.Prelude
 
 import GHC.Data.Bag
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.Util.Outputable
 import GHC.CoreTypes.SrcLoc
 import GHC.Util

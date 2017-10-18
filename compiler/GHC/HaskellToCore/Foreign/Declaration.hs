@@ -15,14 +15,14 @@ module GHC.HaskellToCore.Foreign.Declaration ( dsForeigns ) where
 #include "HsVersions.h"
 import GHC.Prelude
 
-import GHC.Haskell.TypeCheck.Monad        -- temp
+import GHC.TypeCheck.Monad        -- temp
 
 import GHC.Core.Syntax
 
 import GHC.HaskellToCore.Foreign.Call
 import GHC.HaskellToCore.Monad
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 import GHC.CoreTypes.DataCon
 import GHC.Core.Inliner
 import GHC.CoreTypes.Id
@@ -33,8 +33,8 @@ import GHC.CoreTypes.Type
 import GHC.CoreTypes.RepType
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Coercion
-import GHC.Haskell.TypeCheck.Environment
-import GHC.Haskell.TypeCheck.Util.CoreType
+import GHC.TypeCheck.Environment
+import GHC.TypeCheck.Util.CoreType
 
 import GHC.Cmm.Syntax.Expression
 import GHC.Cmm.Util

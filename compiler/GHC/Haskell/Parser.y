@@ -36,7 +36,7 @@ import Data.Char
 import Control.Monad    ( mplus )
 import Control.Applicative ((<$))
 
-import GHC.Haskell.Syntax
+import GHC.Syntax
 
 import GHC.CoreTypes.Base         ( IsBootInterface, WarningTxt(..) )
 import GHC.Config.Flags
@@ -65,9 +65,9 @@ import GHC.CoreTypes.Class            ( FunDep )
 import GHC.Haskell.Parser.Syntax
 import GHC.Haskell.Lexer
 import GHC.Haskell.Parser.Util
-import GHC.Haskell.Syntax.Annotation
+import GHC.Syntax.Annotation
 
-import GHC.Haskell.TypeCheck.Evidence  ( emptyTcEvBinds )
+import GHC.TypeCheck.Evidence  ( emptyTcEvBinds )
 
 import GHC.CoreTypes.ForeignCall
 import GHC.Builtin.Primitive.Types          ( eqPrimTyCon )
@@ -3627,7 +3627,7 @@ hintExplicitForall' span = do
 %************************************************************************
 
 For the general principles of the following routines, see Note [Api annotations]
-in GHC.Haskell.Syntax.Annotation
+in GHC.Syntax.Annotation
 
 -}
 

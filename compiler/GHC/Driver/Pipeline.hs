@@ -59,7 +59,7 @@ import GHC.CoreTypes.SrcLoc
 import GHC.CmmToLlvm.CodeGen           ( llvmFixupAsm )
 import GHC.Util.Monad
 import GHC.Util.Platform
-import GHC.Haskell.TypeCheck.Util
+import GHC.TypeCheck.Util
 import GHC.Config.Hooks
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Util.FileCleanup

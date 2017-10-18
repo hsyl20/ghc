@@ -1,6 +1,6 @@
 {-      The purpose of this is to test that record update is
         sufficiently polymorphic.  See comments with
-        tcExpr (RecordUpd) in GHC.Haskell.TypeCheck.Expression.lhs
+        tcExpr (RecordUpd) in GHC.TypeCheck.Expression.lhs
 -}
 
 module Main where

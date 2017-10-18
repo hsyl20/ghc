@@ -28,13 +28,13 @@ module GHC.Haskell.Rename.ImportExport (
 import GHC.Prelude
 
 import GHC.Config.Flags
-import GHC.Haskell.Syntax
-import GHC.Haskell.TypeCheck.Environment
+import GHC.Syntax
+import GHC.TypeCheck.Environment
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
 import GHC.Haskell.Rename.Util   ( warnUnusedTopBinds, mkFieldEnv )
 import GHC.Interface.Load        ( loadSrcInterface )
-import GHC.Haskell.TypeCheck.Monad
+import GHC.TypeCheck.Monad
 import GHC.Builtin.Names
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.Name
@@ -546,7 +546,7 @@ extendGlobalRdrEnvRn avails new_fixities
     getLocalDeclBindersd@ returns the names for an HsDecl
              It's used for source code.
 
-*** See Note [The Naming story] in GHC.Haskell.Syntax.Declaration ****
+*** See Note [The Naming story] in GHC.Syntax.Declaration ****
 *                                                                      *
 ********************************************************************* -}
 

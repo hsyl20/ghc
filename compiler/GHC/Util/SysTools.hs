@@ -47,11 +47,6 @@ import GHC.Util.Panic
 import GHC.Util.Platform
 import GHC.Util
 import GHC.Config.Flags
-import GHC.Util.Exception as Exception
-import GHC.Util.FileCleanup
-
-import GHC.CmmToLlvm.CodeGen.Base (llvmVersionStr
-                                           , supportedLlvmVersion)
 
 import System.FilePath
 import System.IO
