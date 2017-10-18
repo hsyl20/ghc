@@ -5,7 +5,7 @@
 --      Here we keep all the state that the register allocator keeps track
 --      of as it walks the instructions in a basic block.
 
-module GHC.CmmToAsm.Register.Allocator.Linear.State (
+module GHC.CmmToAsm.RegAlloc.Linear.State (
         RA_State(..),
         RegM,
         runR,
@@ -33,10 +33,10 @@ where
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Linear.Stats
-import GHC.CmmToAsm.Register.Allocator.Linear.StackMap
-import GHC.CmmToAsm.Register.Allocator.Linear.Base
-import GHC.CmmToAsm.Register.Allocator.Liveness
+import GHC.CmmToAsm.RegAlloc.Linear.Stats
+import GHC.CmmToAsm.RegAlloc.Linear.StackMap
+import GHC.CmmToAsm.RegAlloc.Linear.Base
+import GHC.CmmToAsm.RegAlloc.Liveness
 import GHC.CmmToAsm.Instruction
 import GHC.CmmToAsm.Register
 

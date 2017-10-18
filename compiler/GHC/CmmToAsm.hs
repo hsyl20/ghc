@@ -45,13 +45,13 @@ import qualified GHC.CmmToAsm.PPC.RegInfo          as PPC
 import qualified GHC.CmmToAsm.PPC.Instr            as PPC
 import qualified GHC.CmmToAsm.PPC.Ppr              as PPC
 
-import GHC.CmmToAsm.Register.Allocator.Liveness
-import qualified GHC.CmmToAsm.Register.Allocator.Linear.Main as Linear
+import GHC.CmmToAsm.RegAlloc.Liveness
+import qualified GHC.CmmToAsm.RegAlloc.Linear.Main as Linear
 
 import qualified GHC.Data.Graph.Color                     as Color
-import qualified GHC.CmmToAsm.Register.Allocator.Graph.Main            as Color
-import qualified GHC.CmmToAsm.Register.Allocator.Graph.Stats           as Color
-import qualified GHC.CmmToAsm.Register.Allocator.Graph.TrivColorable   as Color
+import qualified GHC.CmmToAsm.RegAlloc.Graph.Main            as Color
+import qualified GHC.CmmToAsm.RegAlloc.Graph.Stats           as Color
+import qualified GHC.CmmToAsm.RegAlloc.Graph.TrivColorable   as Color
 
 import GHC.Util.Assembler
 import GHC.CmmToAsm.Register.Target
@@ -612,7 +612,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
 
                 -- do the graph coloring register allocation
                 let ((alloced, regAllocStats), usAlloc)
-                        = {-# SCC "GHC.CmmToAsm.Register.Allocator-color" #-}
+                        = {-# SCC "GHC.CmmToAsm.RegAlloc-color" #-}
                           initUs usLive
                           $ Color.regAlloc
                                 dflags
@@ -656,7 +656,7 @@ cmmNativeGen dflags this_mod modLoc ncgImpl us fileIds dbgMap cmm count
                            return (alloced', ra_stats )
 
                 let ((alloced, regAllocStats), usAlloc)
-                        = {-# SCC "GHC.CmmToAsm.Register.Allocator-linear" #-}
+                        = {-# SCC "GHC.CmmToAsm.RegAlloc-linear" #-}
                           initUs usLive
                           $ liftM unzip
                           $ mapM reg_alloc withLiveness

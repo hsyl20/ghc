@@ -1,6 +1,6 @@
 
 -- | Free regs map for SPARC
-module GHC.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
+module GHC.CmmToAsm.RegAlloc.Linear.SPARC.FreeRegs
 where
 
 import GHC.Prelude

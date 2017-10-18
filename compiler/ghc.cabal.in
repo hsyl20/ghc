@@ -581,27 +581,27 @@ Library
             GHC.CmmToAsm.SPARC.CodeGen.Gen64
             GHC.CmmToAsm.SPARC.CodeGen.Sanity
             GHC.CmmToAsm.SPARC.CodeGen.Expand
-            GHC.CmmToAsm.Register.Allocator.Liveness
-            GHC.CmmToAsm.Register.Allocator.Graph.Main
-            GHC.CmmToAsm.Register.Allocator.Graph.Stats
-            GHC.CmmToAsm.Register.Allocator.Graph.ArchBase
-            GHC.CmmToAsm.Register.Allocator.Graph.ArchX86
-            GHC.CmmToAsm.Register.Allocator.Graph.Coalesce
-            GHC.CmmToAsm.Register.Allocator.Graph.Spill
-            GHC.CmmToAsm.Register.Allocator.Graph.SpillClean
-            GHC.CmmToAsm.Register.Allocator.Graph.SpillCost
-            GHC.CmmToAsm.Register.Allocator.Graph.TrivColorable
-            GHC.CmmToAsm.Register.Allocator.Linear.Main
-            GHC.CmmToAsm.Register.Allocator.Linear.JoinToTargets
-            GHC.CmmToAsm.Register.Allocator.Linear.State
-            GHC.CmmToAsm.Register.Allocator.Linear.Stats
-            GHC.CmmToAsm.Register.Allocator.Linear.FreeRegs
-            GHC.CmmToAsm.Register.Allocator.Linear.StackMap
-            GHC.CmmToAsm.Register.Allocator.Linear.Base
-            GHC.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs
-            GHC.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs
-            GHC.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
-            GHC.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs
+            GHC.CmmToAsm.RegAlloc.Liveness
+            GHC.CmmToAsm.RegAlloc.Graph.Main
+            GHC.CmmToAsm.RegAlloc.Graph.Stats
+            GHC.CmmToAsm.RegAlloc.Graph.ArchBase
+            GHC.CmmToAsm.RegAlloc.Graph.ArchX86
+            GHC.CmmToAsm.RegAlloc.Graph.Coalesce
+            GHC.CmmToAsm.RegAlloc.Graph.Spill
+            GHC.CmmToAsm.RegAlloc.Graph.SpillClean
+            GHC.CmmToAsm.RegAlloc.Graph.SpillCost
+            GHC.CmmToAsm.RegAlloc.Graph.TrivColorable
+            GHC.CmmToAsm.RegAlloc.Linear.Main
+            GHC.CmmToAsm.RegAlloc.Linear.JoinToTargets
+            GHC.CmmToAsm.RegAlloc.Linear.State
+            GHC.CmmToAsm.RegAlloc.Linear.Stats
+            GHC.CmmToAsm.RegAlloc.Linear.FreeRegs
+            GHC.CmmToAsm.RegAlloc.Linear.StackMap
+            GHC.CmmToAsm.RegAlloc.Linear.Base
+            GHC.CmmToAsm.RegAlloc.Linear.X86.FreeRegs
+            GHC.CmmToAsm.RegAlloc.Linear.X86_64.FreeRegs
+            GHC.CmmToAsm.RegAlloc.Linear.PPC.FreeRegs
+            GHC.CmmToAsm.RegAlloc.Linear.SPARC.FreeRegs
             GHC.CmmToAsm.Dwarf
             GHC.CmmToAsm.Dwarf.Types
             GHC.CmmToAsm.Dwarf.Constants

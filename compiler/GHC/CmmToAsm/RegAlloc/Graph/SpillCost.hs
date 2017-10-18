@@ -1,5 +1,5 @@
 
-module GHC.CmmToAsm.Register.Allocator.Graph.SpillCost (
+module GHC.CmmToAsm.RegAlloc.Graph.SpillCost (
         SpillCostRecord,
         plusSpillCostRecord,
         pprSpillCostRecord,
@@ -16,7 +16,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.SpillCost (
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Liveness
+import GHC.CmmToAsm.RegAlloc.Liveness
 import GHC.CmmToAsm.Instruction
 import GHC.CmmToAsm.Register.Class
 import GHC.CmmToAsm.Register

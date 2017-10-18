@@ -4,10 +4,10 @@
 --   This isn't used directly in GHC proper.
 --
 --   See RegArchBase.hs for the reference.
---   See GHC.CmmToAsm.Register.Allocator.Graph.TrivColorable for the
+--   See GHC.CmmToAsm.RegAlloc.Graph.TrivColorable for the
 --   actual trivColorable function used in GHC.
 --
-module GHC.CmmToAsm.Register.Allocator.Graph.ArchX86 (
+module GHC.CmmToAsm.RegAlloc.Graph.ArchX86 (
         classOfReg,
         regsOfClass,
         regName,
@@ -18,7 +18,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.ArchX86 (
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Graph.ArchBase ( Reg(..), RegSub(..),
+import GHC.CmmToAsm.RegAlloc.Graph.ArchBase ( Reg(..), RegSub(..),
                                                         RegClass(..))
 import GHC.Data.UniqueSet
 

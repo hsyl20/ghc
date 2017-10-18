@@ -1,6 +1,6 @@
 
 -- | Free regs map for i386
-module GHC.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs
+module GHC.CmmToAsm.RegAlloc.Linear.X86.FreeRegs
 where
 
 import GHC.Prelude

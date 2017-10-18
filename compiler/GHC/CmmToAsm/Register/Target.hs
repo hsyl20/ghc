@@ -8,7 +8,7 @@
 --      Instruction somehow.
 --
 --      TODO: We should also make arch specific versions of
---      GHC.CmmToAsm.Register.Allocator.Graph.TrivColorable
+--      GHC.CmmToAsm.RegAlloc.Graph.TrivColorable
 module GHC.CmmToAsm.Register.Target (
         targetVirtualRegSqueeze,
         targetRealRegSqueeze,

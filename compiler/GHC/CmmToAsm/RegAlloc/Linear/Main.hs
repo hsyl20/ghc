@@ -93,10 +93,10 @@ The algorithm is roughly:
 
 -}
 
-module GHC.CmmToAsm.Register.Allocator.Linear.Main (
+module GHC.CmmToAsm.RegAlloc.Linear.Main (
         regAlloc,
-        module  GHC.CmmToAsm.Register.Allocator.Linear.Base,
-        module  GHC.CmmToAsm.Register.Allocator.Linear.Stats
+        module  GHC.CmmToAsm.RegAlloc.Linear.Base,
+        module  GHC.CmmToAsm.RegAlloc.Linear.Stats
   ) where
 
 #include "HsVersions.h"
@@ -104,18 +104,18 @@ module GHC.CmmToAsm.Register.Allocator.Linear.Main (
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Linear.State
-import GHC.CmmToAsm.Register.Allocator.Linear.Base
-import GHC.CmmToAsm.Register.Allocator.Linear.StackMap
-import GHC.CmmToAsm.Register.Allocator.Linear.FreeRegs
-import GHC.CmmToAsm.Register.Allocator.Linear.Stats
-import GHC.CmmToAsm.Register.Allocator.Linear.JoinToTargets
-import qualified GHC.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs    as PPC
-import qualified GHC.CmmToAsm.Register.Allocator.Linear.SPARC.FreeRegs  as SPARC
-import qualified GHC.CmmToAsm.Register.Allocator.Linear.X86.FreeRegs    as X86
-import qualified GHC.CmmToAsm.Register.Allocator.Linear.X86_64.FreeRegs as X86_64
+import GHC.CmmToAsm.RegAlloc.Linear.State
+import GHC.CmmToAsm.RegAlloc.Linear.Base
+import GHC.CmmToAsm.RegAlloc.Linear.StackMap
+import GHC.CmmToAsm.RegAlloc.Linear.FreeRegs
+import GHC.CmmToAsm.RegAlloc.Linear.Stats
+import GHC.CmmToAsm.RegAlloc.Linear.JoinToTargets
+import qualified GHC.CmmToAsm.RegAlloc.Linear.PPC.FreeRegs    as PPC
+import qualified GHC.CmmToAsm.RegAlloc.Linear.SPARC.FreeRegs  as SPARC
+import qualified GHC.CmmToAsm.RegAlloc.Linear.X86.FreeRegs    as X86
+import qualified GHC.CmmToAsm.RegAlloc.Linear.X86_64.FreeRegs as X86_64
 import GHC.CmmToAsm.Register.Target
-import GHC.CmmToAsm.Register.Allocator.Liveness
+import GHC.CmmToAsm.RegAlloc.Liveness
 import GHC.CmmToAsm.Instruction
 import GHC.CmmToAsm.Register
 

@@ -10,7 +10,7 @@
 --      associated, a stack slot is never "freed" or removed from the StackMap again,
 --      it remains associated until we are done with the current CmmProc.
 --
-module GHC.CmmToAsm.Register.Allocator.Linear.StackMap (
+module GHC.CmmToAsm.RegAlloc.Linear.StackMap (
         StackSlot,
         StackMap(..),
         emptyStackMap,

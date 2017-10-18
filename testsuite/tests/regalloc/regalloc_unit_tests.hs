@@ -20,8 +20,8 @@ module Main where
 -- Also note: "on x86" means "as if we were compiling for x86"--this test
 -- doesn't actually have to run on any particular architecture.
 
-import qualified GHC.CmmToAsm.Register.Allocator.Graph.Stats as Color
-import qualified GHC.CmmToAsm.Register.Allocator.Linear.Base as Linear
+import qualified GHC.CmmToAsm.RegAlloc.Graph.Stats as Color
+import qualified GHC.CmmToAsm.RegAlloc.Linear.Base as Linear
 import qualified GHC.CmmToAsm.X86.Instr as X86.Instr
 import GHC.Driver.Main
 import GHC.Stg.Util

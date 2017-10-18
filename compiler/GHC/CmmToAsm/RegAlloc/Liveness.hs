@@ -11,7 +11,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.CmmToAsm.Register.Allocator.Liveness (
+module GHC.CmmToAsm.RegAlloc.Liveness (
         RegSet,
         RegMap, emptyRegMap,
         BlockMap, mapEmpty,
@@ -510,7 +510,7 @@ stripLive dflags live
 
         -- If the proc has blocks but we don't know what the first one was, then we're dead.
         stripCmm proc
-                 = pprPanic "GHC.CmmToAsm.Register.Allocator.Liveness.stripLive: no first_id on proc" (ppr proc)
+                 = pprPanic "GHC.CmmToAsm.RegAlloc.Liveness.stripLive: no first_id on proc" (ppr proc)
 
 -- | Strip away liveness information from a basic block,
 --   and make real spill instructions out of SPILL, RELOAD pseudos along the way.
@@ -587,7 +587,7 @@ patchEraseLive patchF cmm
            in   CmmProc info' label live $ map patchSCC sccs
 
          | otherwise
-         = panic "GHC.CmmToAsm.Register.Allocator.Liveness.patchEraseLive: no blockMap"
+         = panic "GHC.CmmToAsm.RegAlloc.Liveness.patchEraseLive: no blockMap"
 
         patchSCC (AcyclicSCC b)  = AcyclicSCC (patchBlock b)
         patchSCC (CyclicSCC  bs) = CyclicSCC  (map patchBlock bs)
@@ -815,7 +815,7 @@ computeLiveness
 computeLiveness platform sccs
  = case checkIsReverseDependent sccs of
         Nothing         -> livenessSCCs platform mapEmpty [] sccs
-        Just bad        -> pprPanic "GHC.CmmToAsm.Register.Allocator.Liveness.computeLivenss"
+        Just bad        -> pprPanic "GHC.CmmToAsm.RegAlloc.Liveness.computeLivenss"
                                 (vcat   [ text "SCCs aren't in reverse dependent order"
                                         , text "bad blockId" <+> ppr bad
                                         , ppr sccs])

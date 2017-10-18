@@ -2,7 +2,7 @@
 
 -- | Carries interesting info for debugging / profiling of the
 --   graph coloring register allocator.
-module GHC.CmmToAsm.Register.Allocator.Graph.Stats (
+module GHC.CmmToAsm.RegAlloc.Graph.Stats (
         RegAllocStats (..),
 
         pprStats,
@@ -19,10 +19,10 @@ module GHC.CmmToAsm.Register.Allocator.Graph.Stats (
 import GHC.Prelude
 
 import qualified GHC.Data.Graph.Color as Color
-import GHC.CmmToAsm.Register.Allocator.Liveness
-import GHC.CmmToAsm.Register.Allocator.Graph.Spill
-import GHC.CmmToAsm.Register.Allocator.Graph.SpillCost
-import GHC.CmmToAsm.Register.Allocator.Graph.TrivColorable
+import GHC.CmmToAsm.RegAlloc.Liveness
+import GHC.CmmToAsm.RegAlloc.Graph.Spill
+import GHC.CmmToAsm.RegAlloc.Graph.SpillCost
+import GHC.CmmToAsm.RegAlloc.Graph.TrivColorable
 import GHC.CmmToAsm.Instruction
 import GHC.CmmToAsm.Register.Class
 import GHC.CmmToAsm.Register

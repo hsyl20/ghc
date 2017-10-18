@@ -1,4 +1,4 @@
-module GHC.CmmToAsm.Register.Allocator.Linear.Stats (
+module GHC.CmmToAsm.RegAlloc.Linear.Stats (
         binSpillReasons,
         countRegRegMovesNat,
         pprStats
@@ -8,8 +8,8 @@ where
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Linear.Base
-import GHC.CmmToAsm.Register.Allocator.Liveness
+import GHC.CmmToAsm.RegAlloc.Linear.Base
+import GHC.CmmToAsm.RegAlloc.Liveness
 import GHC.CmmToAsm.Instruction
 
 import GHC.Data.UniqueFM

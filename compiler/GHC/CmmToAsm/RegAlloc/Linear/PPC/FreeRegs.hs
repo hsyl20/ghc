@@ -1,5 +1,5 @@
 -- | Free regs map for PowerPC
-module GHC.CmmToAsm.Register.Allocator.Linear.PPC.FreeRegs
+module GHC.CmmToAsm.RegAlloc.Linear.PPC.FreeRegs
 where
 
 import GHC.Prelude

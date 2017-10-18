@@ -7,17 +7,17 @@
 --      stored one.  They might be different if spilling has occurred in one
 --      branch; so some fixup code will be required to match up the assignments.
 --
-module GHC.CmmToAsm.Register.Allocator.Linear.JoinToTargets
+module GHC.CmmToAsm.RegAlloc.Linear.JoinToTargets
    ( joinToTargets
    )
 where
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Linear.State
-import GHC.CmmToAsm.Register.Allocator.Linear.Base
-import GHC.CmmToAsm.Register.Allocator.Linear.FreeRegs
-import GHC.CmmToAsm.Register.Allocator.Liveness
+import GHC.CmmToAsm.RegAlloc.Linear.State
+import GHC.CmmToAsm.RegAlloc.Linear.Base
+import GHC.CmmToAsm.RegAlloc.Linear.FreeRegs
+import GHC.CmmToAsm.RegAlloc.Liveness
 import GHC.CmmToAsm.Instruction
 import GHC.CmmToAsm.Register
 

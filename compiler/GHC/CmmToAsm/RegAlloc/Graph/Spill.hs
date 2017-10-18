@@ -2,7 +2,7 @@
 -- | When there aren't enough registers to hold all the vregs we have to spill
 --   some of those vregs to slots on the stack. This module is used modify the
 --   code to use those slots.
-module GHC.CmmToAsm.Register.Allocator.Graph.Spill (
+module GHC.CmmToAsm.RegAlloc.Graph.Spill (
         regSpill,
         SpillStats(..),
         accSpillSL
@@ -10,7 +10,7 @@ module GHC.CmmToAsm.Register.Allocator.Graph.Spill (
 
 import GHC.Prelude
 
-import GHC.CmmToAsm.Register.Allocator.Liveness
+import GHC.CmmToAsm.RegAlloc.Liveness
 import GHC.CmmToAsm.Instruction
 import GHC.CmmToAsm.Register
 import GHC.Cmm.Syntax hiding (RegSet)
