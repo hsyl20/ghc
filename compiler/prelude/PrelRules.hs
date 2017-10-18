@@ -12,7 +12,7 @@ ToDo:
    (i1 + i2) only if it results in a valid Float.
 -}
 
-{-# LANGUAGE CPP, RankNTypes, PatternSynonyms, ViewPatterns #-}
+{-# LANGUAGE CPP, RankNTypes, PatternSynonyms, ViewPatterns, RecordWildCards #-}
 {-# OPTIONS_GHC -optc-DNON_POSIX_SOURCE #-}
 
 module PrelRules
@@ -91,17 +91,17 @@ primOpRules nm DataToTagOp = mkPrimOpRule nm 2 [ dataToTagRule ]
 -- Int operations
 primOpRules nm IntAddOp    = mkPrimOpRule nm 2 [ binaryLit (intOp2 (+))
                                                , identityDynFlags zeroi
-                                               , assocDistribInt IntAddOp
+                                               , assocCommuDistrib IntAddOp =<< (intPrimOps <$> getDynFlags)
                                                ]
 primOpRules nm IntSubOp    = mkPrimOpRule nm 2 [ binaryLit (intOp2 (-))
                                                , rightIdentityDynFlags zeroi
                                                , equalArgs >> retLit zeroi
-                                               , assocDistribInt IntSubOp
+                                               , assocCommuDistrib IntSubOp =<< (intPrimOps <$> getDynFlags)
                                                ]
 primOpRules nm IntMulOp    = mkPrimOpRule nm 2 [ binaryLit (intOp2 (*))
                                                , zeroElem zeroi
                                                , identityDynFlags onei
-                                               , assocDistribInt IntMulOp
+                                               , assocCommuDistrib IntMulOp =<< (intPrimOps <$> getDynFlags)
                                                ]
 primOpRules nm IntQuotOp   = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (intOp2 quot)
                                                , leftZero zeroi
@@ -138,16 +138,16 @@ primOpRules nm ISrlOp      = mkPrimOpRule nm 2 [ shiftRule shiftRightLogical
 -- Word operations
 primOpRules nm WordAddOp   = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (+))
                                                , identityDynFlags zerow
-                                               , assocDistribWord WordAddOp
+                                               , assocCommuDistrib WordAddOp =<< (wordPrimOps <$> getDynFlags)
                                                ]
 primOpRules nm WordSubOp   = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (-))
                                                , rightIdentityDynFlags zerow
                                                , equalArgs >> retLit zerow
-                                               , assocDistribWord WordSubOp
+                                               , assocCommuDistrib WordSubOp =<< (wordPrimOps <$> getDynFlags)
                                                ]
 primOpRules nm WordMulOp   = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (*))
                                                , identityDynFlags onew
-                                               , assocDistribWord WordMulOp
+                                               , assocCommuDistrib WordMulOp =<< (wordPrimOps <$> getDynFlags)
                                                ]
 primOpRules nm WordQuotOp  = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (wordOp2 quot)
                                                , rightIdentityDynFlags onew ]
@@ -560,12 +560,18 @@ isMaxBound _      _              = False
 -- | Create an Int literal expression while ensuring the given Integer is in the
 -- target Int range
 intResult :: DynFlags -> Integer -> Maybe CoreExpr
-intResult dflags result = Just (Lit (mkMachIntWrap dflags result))
+intResult dflags result = Just (intResult' dflags result)
+
+intResult' :: DynFlags -> Integer -> CoreExpr
+intResult' dflags result = Lit (mkMachIntWrap dflags result)
 
 -- | Create a Word literal expression while ensuring the given Integer is in the
 -- target Word range
 wordResult :: DynFlags -> Integer -> Maybe CoreExpr
-wordResult dflags result = Just (Lit (mkMachWordWrap dflags result))
+wordResult dflags result = Just (wordResult' dflags result)
+
+wordResult' :: DynFlags -> Integer -> CoreExpr
+wordResult' dflags result = Lit (mkMachWordWrap dflags result)
 
 inversePrimOp :: PrimOp -> RuleM CoreExpr
 inversePrimOp primop = do
@@ -1406,194 +1412,155 @@ match_smallIntegerTo primOp _ _ _ [App (Var x) y]
 match_smallIntegerTo _ _ _ _ _ = Nothing
 
 
-
-pattern AppLitR :: Arg CoreBndr -> PrimOp -> Integer      -> CoreExpr
-pattern AppLitL :: Integer      -> PrimOp -> Arg CoreBndr -> CoreExpr
 pattern AppOp2  :: Arg CoreBndr -> PrimOp -> Arg CoreBndr -> CoreExpr
-pattern AppOp1  ::                 PrimOp -> Arg CoreBndr -> CoreExpr
-pattern LitVal  :: Integer -> Arg CoreBndr
-pattern OpVal   :: PrimOp  -> Arg CoreBndr
-
-pattern AppLitR v op l <- AppOp2 v op (LitVal l)
-pattern AppLitL l op v <- AppOp2 (LitVal l) op v
 pattern AppOp2  x op y =  OpVal op `App` x `App` y
-pattern AppOp1  op x   =  App (OpVal op) x
+
+pattern OpVal   :: PrimOp  -> Arg CoreBndr
 pattern OpVal   op     <- Var (isPrimOpId_maybe -> Just op) where
    OpVal op = Var (mkPrimOpId op)
-pattern LitVal  l      <- Lit (isLitValue_maybe -> Just l)
 
------------------------------------------------------------------------------
--- Constant folding into expressions mixing constants and other expressions.
---
--- We use associativity and distributivity laws of +/-/x for Word# and Int#
--- primops to transform expressions containing constants into one of the
--- following forms:
---    e  =======> e' + x#
---           (or) e' - x#
---           (or) x# + e'
---           (or) x# - e'
---
--- This makes the expression more amenable to further constant folding and to
--- scrutinee constant folding.
---
------------------------------------------------------------------------------
 
-assocDistribInt :: PrimOp -> RuleM CoreExpr
-assocDistribInt op = do
+
+-- | Match a literal
+pattern L :: Integer -> Arg CoreBndr
+pattern L l <- Lit (isLitValue_maybe -> Just l)
+
+-- | Match an addition
+pattern (:+:) :: Arg CoreBndr -> Arg CoreBndr -> CoreExpr
+pattern x :+: y <- AppOp2 x AddOp y
+
+-- | Match an addition with a literal (handle commutativity)
+pattern (:++:) :: Integer -> Arg CoreBndr -> CoreExpr
+pattern l :++: x <- (isAdd -> Just (l,x))
+
+isAdd :: CoreExpr -> Maybe (Integer,CoreExpr)
+isAdd e = case e of
+   L l :+: x   -> Just (l,x)
+   x   :+: L l -> Just (l,x)
+   _           -> Nothing
+
+-- | Match a multiplication
+pattern (:*:) :: Arg CoreBndr -> Arg CoreBndr -> CoreExpr
+pattern x :*: y <- AppOp2 x MulOp y
+
+-- | Match a multiplication with a literal (handle commutativity)
+pattern (:**:) :: Integer -> Arg CoreBndr -> CoreExpr
+pattern l :**: x <- (isMul -> Just (l,x))
+
+isMul :: CoreExpr -> Maybe (Integer,CoreExpr)
+isMul e = case e of
+   L l :*: x   -> Just (l,x)
+   x   :*: L l -> Just (l,x)
+   _           -> Nothing
+
+
+-- | Match a multiplication with a literal (handle commutativity)
+pattern (:-:) :: Arg CoreBndr -> Arg CoreBndr -> CoreExpr
+pattern x :-: y <- AppOp2 x SubOp y
+
+pattern SubOp :: PrimOp
+pattern AddOp :: PrimOp
+pattern MulOp :: PrimOp
+
+pattern SubOp <- (isSubOp -> True)
+pattern AddOp <- (isAddOp -> True)
+pattern MulOp <- (isMulOp -> True)
+
+isSubOp :: PrimOp -> Bool
+isSubOp IntSubOp  = True
+isSubOp WordSubOp = True
+isSubOp _         = False
+
+isAddOp :: PrimOp -> Bool
+isAddOp IntAddOp  = True
+isAddOp WordAddOp = True
+isAddOp _         = False
+
+isMulOp :: PrimOp -> Bool
+isMulOp IntMulOp  = True
+isMulOp WordMulOp = True
+isMulOp _         = False
+
+-- | Explicit "type-class" dictionnary for numeric primops
+data PrimOps = PrimOps
+   { add :: CoreExpr -> CoreExpr -> CoreExpr -- ^ Add two numbers
+   , sub :: CoreExpr -> CoreExpr -> CoreExpr -- ^ Sub two numbers
+   , mul :: CoreExpr -> CoreExpr -> CoreExpr -- ^ Multiply two numbers
+   , mkL :: Integer -> CoreExpr              -- ^ Create a literal value (fix range)
+   }
+
+intPrimOps :: DynFlags -> PrimOps
+intPrimOps dflags = PrimOps
+   { add = \x y -> AppOp2 x IntAddOp y
+   , sub = \x y -> AppOp2 x IntSubOp y
+   , mul = \x y -> AppOp2 x IntMulOp y
+   , mkL = intResult' dflags
+   }
+
+wordPrimOps :: DynFlags -> PrimOps
+wordPrimOps dflags = PrimOps
+   { add = \x y -> AppOp2 x WordAddOp y
+   , sub = \x y -> AppOp2 x WordSubOp y
+   , mul = \x y -> AppOp2 x WordMulOp y
+   , mkL = wordResult' dflags
+   }
+
+
+assocCommuDistrib :: PrimOp -> PrimOps -> RuleM CoreExpr
+assocCommuDistrib op PrimOps{..} = do
   [e1,e2] <- getArgs
-  dflags  <- getDynFlags
-  let e          = AppOp2 e1 op e2
-      toLit      = intResult' dflags
-      ret x op y = return $ AppOp2 x op y
-  case e  of
-    AppLitL x IntAddOp v -> case v of
-      -- x# + (y# + v2) ===> (x# + y#) + v2
-      AppLitL y IntAddOp v2 -> ret (toLit (x+y)) IntAddOp v2
-      -- x# + (v2 + y#) ===> (x# + y#) + v2
-      AppLitR v2 IntAddOp y -> ret (toLit (x+y)) IntAddOp v2
-      -- x# + (y# - v2) ===> (x# + y#) - v2
-      AppLitL y IntSubOp v2 -> ret (toLit (x+y)) IntSubOp v2
-      -- x# + (v2 - y#) ===> (x# - y#) + v2
-      AppLitR v2 IntSubOp y -> ret (toLit (x-y)) IntAddOp v2
-      _                     -> mzero
-    AppLitR v IntAddOp x -> case v of
-      -- (y# + v2) + x# ===> (x# + y#) + v2
-      AppLitL y IntAddOp v2 -> ret (toLit (x+y)) IntAddOp v2
-      -- (v2 + y#) + x# ===> (x# + y#) + v2
-      AppLitR v2 IntAddOp y -> ret (toLit (x+y)) IntAddOp v2
-      -- (y# - v2) + x# ===> (x# + y#) - v2
-      AppLitL y IntSubOp v2 -> ret (toLit (x+y)) IntSubOp v2
-      -- (v2 - y#) + x# ===> (x# - y#) + v2
-      AppLitR v2 IntSubOp y -> ret (toLit (x-y)) IntAddOp v2
-      _                     -> mzero
-    AppLitL x IntSubOp v -> case v of
-      -- x# - (y# + v2) ===> (x# - y#) + v2
-      AppLitL y IntAddOp v2 -> ret (toLit (x-y)) IntSubOp v2
-      -- x# - (v2 + y#) ===> (x# - y#) - v2
-      AppLitR v2 IntAddOp y -> ret (toLit (x-y)) IntSubOp v2
-      -- x# - (y# - v2) ===> (x# - y#) + v2
-      AppLitL y IntSubOp v2 -> ret (toLit (x-y)) IntAddOp v2
-      -- x# - (v2 - y#) ===> (x# + y#) - v2
-      AppLitR v2 IntSubOp y -> ret (toLit (x+y)) IntSubOp v2
-      _                     -> mzero
-    AppLitR v IntSubOp x -> case v of
-      -- (y# + v2) - x# ===> (y# - x#) + v2
-      AppLitL y IntAddOp v2 -> ret (toLit (y-x)) IntAddOp v2
-      -- (v2 + y#) - x# ===> (y# - x#) + v2
-      AppLitR v2 IntAddOp y -> ret (toLit (y-x)) IntAddOp v2
-      -- (y# - v2) - x# ===> (y# + x#) - v2
-      AppLitL y IntSubOp v2 -> ret (toLit (y+x)) IntSubOp v2
-      -- (v2 - y#) - x# ===> (0 - x# - y#) + v2
-      AppLitR v2 IntSubOp y -> ret (toLit (0 - x-y)) IntAddOp v2
-      _                     -> mzero
-    AppLitL x IntMulOp v -> case v of
-      -- x# * (y# + v2) ===> (x# * y#) + x# * v2
-      AppLitL y IntAddOp v2 -> ret (toLit (x-y)) IntAddOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      -- x# * (v2 + y#) ===> (x# * y#) + x# * v2
-      AppLitR v2 IntAddOp y -> ret (toLit (x*y)) IntAddOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      -- x# * (y# - v2) ===> (x# * y#) - x# * v2
-      AppLitL y IntSubOp v2 -> ret (toLit (x*y)) IntSubOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      -- x# * (v2 - y#) ===> (0 - (x# * y#)) + x# * v2
-      AppLitR v2 IntSubOp y -> ret (toLit (0-(x*y))) IntAddOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      _                     -> mzero
-    AppLitR v IntMulOp x -> case v of
-      -- (y# + v2) * x# ===> (x# * y#) + x# * v2
-      AppLitL y IntAddOp v2 -> ret (toLit (x-y)) IntAddOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      -- (v2 + y#) * x# ===> (x# * y#) + x# * v2
-      AppLitR v2 IntAddOp y -> ret (toLit (x*y)) IntAddOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      -- (y# - v2) * x# ===> (x# * y#) - x# * v2
-      AppLitL y IntSubOp v2 -> ret (toLit (x*y)) IntSubOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      -- (v2 - y#) * x# ===> (0 - (x# * y#)) + x# * v2
-      AppLitR v2 IntSubOp y -> ret (toLit (0-(x*y))) IntAddOp
-                                   (AppOp2 (toLit x) IntMulOp v2)
-      _                     -> mzero
-    _                     -> mzero
+  case AppOp2 e1 op e2 of
+    -- (+)
+    x :++: (y :++: v)             -> return $ mkL (x+y)   `add` v
+    (x :++: w) :+: (y :++: v)     -> return $ mkL (x+y)   `add` (w `add` v)
+
+    -- (*)
+    x :**: (y :**: v)             -> return $ mkL (x*y)   `mul` v
+    (x :**: w) :*: (y :**: v)     -> return $ mkL (x*y)   `mul` (w `mul` v)
+
+    -- (-)
+    L x :-: (L y :-: v)           -> return $ mkL (x-y)   `add` v
+    L x :-: (v   :-: L y)         -> return $ mkL (x+y)   `sub` v
+    (L y :-: v)   :-: L x         -> return $ mkL (y-x)   `sub` v
+    (v   :-: L y) :-: L x         -> return $ mkL (0-y-x) `add` v
+
+    (v   :-: L y) :-: (w :-: L x) -> return $ mkL (x-y)   `add` (v `sub` w)
+    (v   :-: L y) :-: (L x :-: w) -> return $ mkL (0-x-y) `add` (v `add` w)
+    (L y :-:   v) :-: (w :-: L x) -> return $ mkL (x+y)   `sub` (v `add` w)
+    (L y :-:   v) :-: (L x :-: w) -> return $ mkL (y-x)   `add` (w `add` v)
+
+    -- (*) and (+)
+    x :**: (y :++: v)             -> return $ mkL (x*y)   `add` (mkL x `mul` v)
+
+    -- (+) and (-)
+    x :++: (L y :-: v)            -> return $ mkL (x+y)   `sub` v
+    x :++: (v   :-: L y)          -> return $ mkL (x-y)   `add` v
+
+    L x :-: (y :++: v)            -> return $ mkL (x-y)   `sub` v
+    (y :++: v) :-: L x            -> return $ mkL (y-x)   `add` v
+    (x :++: w) :-: (y :++: v)     -> return $ mkL (x-y)   `add` (w `sub` v)
+
+    (w :-: L x) :+: (L y :-: v)   -> return $ mkL (y-x)   `add` (w `sub` v)
+    (w :-: L x) :+: (v   :-: L y) -> return $ mkL (0-x-y) `add` (w `add` v)
+    (L x :-: w) :+: (L y :-: v)   -> return $ mkL (x+y)   `sub` (w `add` v)
+    (L x :-: w) :+: (v   :-: L y) -> return $ mkL (x-y)   `add` (v `sub` w)
+
+    (w :-: L x) :+: (y :++: v)    -> return $ mkL (y-x)   `add` (w `add` v)
+    (L x :-: w) :+: (y :++: v)    -> return $ mkL (x+y)   `add` (v `sub` w)
+    (y :++: v) :+: (w :-: L x)    -> return $ mkL (y-x)   `add` (w `add` v)
+    (y :++: v) :+: (L x :-: w)    -> return $ mkL (x+y)   `add` (v `sub` w)
+
+    (w :-: L x) :-: (y :++: v)    -> return $ mkL (0-y-x) `add` (w `sub` v)
+    (L x :-: w) :-: (y :++: v)    -> return $ mkL (x-y)   `sub` (v `add` w)
+    (y :++: v) :-: (w :-: L x)    -> return $ mkL (y+x)   `add` (v `sub` w)
+    (y :++: v) :-: (L x :-: w)    -> return $ mkL (y-x)   `add` (v `add` w)
 
 
-assocDistribWord :: PrimOp -> RuleM CoreExpr
-assocDistribWord op = do
-  [e1,e2] <- getArgs
-  dflags  <- getDynFlags
-  let e          = AppOp2 e1 op e2
-      toLit      = wordResult' dflags
-      ret x op y = return $ AppOp2 x op y
-  case e  of
-    AppLitL x WordAddOp v -> case v of
-      -- x# + (y# + v2) ===> (x# + y#) + v2
-      AppLitL y WordAddOp v2 -> ret (toLit (x+y)) WordAddOp v2
-      -- x# + (v2 + y#) ===> (x# + y#) + v2
-      AppLitR v2 WordAddOp y -> ret (toLit (x+y)) WordAddOp v2
-      -- x# + (y# - v2) ===> (x# + y#) - v2
-      AppLitL y WordSubOp v2 -> ret (toLit (x+y)) WordSubOp v2
-      -- x# + (v2 - y#) ===> (x# - y#) + v2
-      AppLitR v2 WordSubOp y -> ret (toLit (x-y)) WordAddOp v2
-      _                      -> mzero
-    AppLitR v WordAddOp x -> case v of
-      -- (y# + v2) + x# ===> (x# + y#) + v2
-      AppLitL y WordAddOp v2 -> ret (toLit (x+y)) WordAddOp v2
-      -- (v2 + y#) + x# ===> (x# + y#) + v2
-      AppLitR v2 WordAddOp y -> ret (toLit (x+y)) WordAddOp v2
-      -- (y# - v2) + x# ===> (x# + y#) - v2
-      AppLitL y WordSubOp v2 -> ret (toLit (x+y)) WordSubOp v2
-      -- (v2 - y#) + x# ===> (x# - y#) + v2
-      AppLitR v2 WordSubOp y -> ret (toLit (x-y)) WordAddOp v2
-      _                      -> mzero
-    AppLitL x WordSubOp v -> case v of
-      -- x# - (y# + v2) ===> (x# - y#) + v2
-      AppLitL y WordAddOp v2 -> ret (toLit (x-y)) WordSubOp v2
-      -- x# - (v2 + y#) ===> (x# - y#) - v2
-      AppLitR v2 WordAddOp y -> ret (toLit (x-y)) WordSubOp v2
-      -- x# - (y# - v2) ===> (x# - y#) + v2
-      AppLitL y WordSubOp v2 -> ret (toLit (x-y)) WordAddOp v2
-      -- x# - (v2 - y#) ===> (x# + y#) - v2
-      AppLitR v2 WordSubOp y -> ret (toLit (x+y)) WordSubOp v2
-      _                      -> mzero
-    AppLitR v WordSubOp x -> case v of
-      -- (y# + v2) - x# ===> (y# - x#) + v2
-      AppLitL y WordAddOp v2 -> ret (toLit (y-x)) WordAddOp v2
-      -- (v2 + y#) - x# ===> (y# - x#) + v2
-      AppLitR v2 WordAddOp y -> ret (toLit (y-x)) WordAddOp v2
-      -- (y# - v2) - x# ===> (y# + x#) - v2
-      AppLitL y WordSubOp v2 -> ret (toLit (y+x)) WordSubOp v2
-      -- (v2 - y#) - x# ===> (0 - x# - y#) + v2
-      AppLitR v2 WordSubOp y -> ret (toLit (0 - x-y)) WordAddOp v2
-      _                      -> mzero
-    AppLitL x WordMulOp v -> case v of
-      -- x# * (y# + v2) ===> (x# * y#) + x# * v2
-      AppLitL y WordAddOp v2 -> ret (toLit (x-y)) WordAddOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      -- x# * (v2 + y#) ===> (x# * y#) + x# * v2
-      AppLitR v2 WordAddOp y -> ret (toLit (x*y)) WordAddOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      -- x# * (y# - v2) ===> (x# * y#) - x# * v2
-      AppLitL y WordSubOp v2 -> ret (toLit (x*y)) WordSubOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      -- x# * (v2 - y#) ===> (0 - (x# * y#)) + x# * v2
-      AppLitR v2 WordSubOp y -> ret (toLit (0-(x*y))) WordAddOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      _                      -> mzero
-    AppLitR v WordMulOp x -> case v of
-      -- (y# + v2) * x# ===> (x# * y#) + x# * v2
-      AppLitL y WordAddOp v2 -> ret (toLit (x-y)) WordAddOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      -- (v2 + y#) * x# ===> (x# * y#) + x# * v2
-      AppLitR v2 WordAddOp y -> ret (toLit (x*y)) WordAddOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      -- (y# - v2) * x# ===> (x# * y#) - x# * v2
-      AppLitL y WordSubOp v2 -> ret (toLit (x*y)) WordSubOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      -- (v2 - y#) * x# ===> (0 - (x# * y#)) + x# * v2
-      AppLitR v2 WordSubOp y -> ret (toLit (0-(x*y))) WordAddOp
-                                   (AppOp2 (toLit x) WordMulOp v2)
-      _                      -> mzero
-    _                     -> mzero
+    -- (*) and (-)
+    x :**: (L y :-: v)            -> return $ mkL (x*y)   `sub` (mkL x `mul` v)
+    x :**: (v   :-: L y)          -> return $ (mkL x `mul` v) `sub` mkL (x*y)
+
+    _                             -> mzero
 
 
 
