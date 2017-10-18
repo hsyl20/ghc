@@ -18,7 +18,7 @@ import GHC.CoreTypes.Var.Environment ( elemInScopeSet, mkInScopeSet )
 import GHC.CoreTypes.Id              ( Id, idType, idInlineActivation, isDeadBinder
                                  , zapIdOccInfo, zapIdUsageInfo, idInlinePragma
                                  , isJoinId )
-import GHC.Core.Utils            ( mkAltExpr, eqExpr , exprIsLiteralString
+import GHC.Core.Util            ( mkAltExpr, eqExpr , exprIsLiteralString
                                  , stripTicksE, stripTicksT, mkTicks )
 import GHC.Core.FreeVars         ( exprFreeVars )
 import GHC.CoreTypes.Type            ( tyConAppArgs )
@@ -121,7 +121,7 @@ Notice also that in the SUBSTITUTE case we leave behind a binding
   x = y
 even though we /also/ carry a substitution x -> y.  Can we just drop
 the binding instead?  Well, not at top level! See
-GHC.Core.Simplify.Utils Note [Top level and
+GHC.Core.Simplify.Util Note [Top level and
 postInlineUnconditionally]; and in any case CSE applies only to the /bindings/
 of the program, and we leave it to the simplifier to propate effects to the
 RULES.  Finally, it doesn't seem worth the effort to discard the nested bindings
@@ -228,7 +228,7 @@ the Integer instance of Enum in GHC.Enum.)  Suppose moreover that foo's
 stable unfolding originates from an INLINE or INLINEABLE pragma on foo.
 Then we obviously do NOT want to extend the substitution with (foo->x),
 because we promised to inline foo as what the user wrote.  See similar
-GHC.Core.Simplify.Utils Note [Stable unfoldings and
+GHC.Core.Simplify.Util Note [Stable unfoldings and
 postInlineUnconditionally].
 
 Nor do we want to change the reverse mapping. Suppose we have
@@ -533,7 +533,7 @@ combineAlts _ alts = alts  -- Default case
 {- Note [Combine case alternatives]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 combineAlts is just a more heavyweight version of the use of
-combineIdenticalAlts in GHC.Core.Simplify.Utils.prepareAlts.
+combineIdenticalAlts in GHC.Core.Simplify.Util.prepareAlts.
 The basic idea is to transform
 
     DEFAULT -> e1

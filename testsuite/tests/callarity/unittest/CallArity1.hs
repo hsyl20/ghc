@@ -1,6 +1,6 @@
 {-# LANGUAGE TupleSections #-}
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Type
 import GHC.Core.Syntax.Make

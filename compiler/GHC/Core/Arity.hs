@@ -22,7 +22,7 @@ import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Subst as CoreSubst
 import GHC.CoreTypes.Demand
 import GHC.CoreTypes.Var

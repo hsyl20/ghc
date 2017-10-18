@@ -5,7 +5,7 @@ import GHC.ByteCode.Linker
 import GHC.Core.Monad
 import Data.Array
 import GHC.CoreTypes.DataCon
-import GHC.Interactive.Debugger.Utils
+import GHC.Interactive.Debugger.Util
 import GHC
 import GHC.Types
 import GHC.Interactive.Linker

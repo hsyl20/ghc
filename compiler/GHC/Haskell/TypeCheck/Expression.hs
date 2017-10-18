@@ -41,7 +41,7 @@ import GHC.Haskell.TypeCheck.FamilyInstance( tcGetFamInstEnvs
                                            , tcLookupDataFamInst )
 import GHC.CoreTypes.FamilyInstance            ( FamInstEnvs )
 import GHC.Haskell.Rename.Environment      ( addUsedGRE )
-import GHC.Haskell.Rename.Utils            ( addNameClashErrRn
+import GHC.Haskell.Rename.Util            ( addNameClashErrRn
                                            , unknownSubordinateErr )
 import GHC.Haskell.TypeCheck.Environment
 import GHC.Haskell.TypeCheck.Arrow

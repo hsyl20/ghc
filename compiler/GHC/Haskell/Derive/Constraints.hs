@@ -28,7 +28,7 @@ import GHC.Util.Error
 import GHC.Haskell.TypeCheck.Instantiation
 import GHC.Util.Outputable
 import GHC.Builtin.Names
-import GHC.Haskell.Derive.Utils
+import GHC.Haskell.Derive.Util
 import GHC.Haskell.TypeCheck.Environment
 -- import GHC.Haskell.TypeCheck.Error (reportAllUnsolved)
 import GHC.Haskell.Derive.Functor

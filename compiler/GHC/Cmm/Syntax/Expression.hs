@@ -388,7 +388,7 @@ There are no specific rules about which registers might overlap with
 which other registers, but presumably it's safe to assume that nothing
 will overlap with special registers like Sp or BaseReg.
 
-Use CmmUtils.regsOverlap to determine whether two GlobalRegs overlap
+Use GHC.Cmm.Util.regsOverlap to determine whether two GlobalRegs overlap
 on a particular platform. The instance Eq GlobalReg is syntactic
 equality of STG registers and does not take overlap into
 account. However it is still used in UserOfRegs/DefinerOfRegs and

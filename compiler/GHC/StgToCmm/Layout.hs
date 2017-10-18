@@ -33,14 +33,14 @@ import GHC.StgToCmm.Environment
 import GHC.StgToCmm.ArgRep -- notably: ( slowCallPattern )
 import GHC.StgToCmm.Profiling.Ticky
 import GHC.StgToCmm.Monad
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Profiling (curCCS)
 
 import GHC.Cmm.Syntax.Graph
 import GHC.RTS.Storage
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.RTS.InfoTable
 import GHC.CoreTypes.CLabel
 import GHC.Stg.Syntax

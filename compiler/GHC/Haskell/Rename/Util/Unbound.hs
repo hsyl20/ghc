@@ -4,7 +4,7 @@ This module contains helper functions for reporting and creating
 unbound variables.
 
 -}
-module GHC.Haskell.Rename.Utils.Unbound ( mkUnboundName
+module GHC.Haskell.Rename.Util.Unbound ( mkUnboundName
                  , mkUnboundNameRdr
                  , isUnboundName
                  , reportUnboundName

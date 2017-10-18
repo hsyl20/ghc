@@ -43,7 +43,7 @@ import GHC.Prelude hiding (succ)
 import GHC.Cmm.Syntax.BlockId ()
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 import GHC.Config.Flags
 import GHC.Data.FastString

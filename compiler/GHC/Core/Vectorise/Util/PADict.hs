@@ -1,4 +1,4 @@
-module GHC.Core.Vectorise.Utils.PADict (
+module GHC.Core.Vectorise.Util.PADict (
   paDictArgType,
   paDictOfType,
   paMethod,
@@ -10,10 +10,10 @@ import GHC.Prelude
 
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Builtins
-import GHC.Core.Vectorise.Utils.Base
+import GHC.Core.Vectorise.Util.Base
 
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.FamilyInstance
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Type

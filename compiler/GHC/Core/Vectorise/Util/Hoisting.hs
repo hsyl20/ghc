@@ -1,4 +1,4 @@
-module GHC.Core.Vectorise.Utils.Hoisting
+module GHC.Core.Vectorise.Util.Hoisting
   ( Inline(..)
   , addInlineArity
   , inlineMe
@@ -16,10 +16,10 @@ import GHC.Prelude
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Env
 import GHC.Core.Vectorise.Vect
-import GHC.Core.Vectorise.Utils.Poly
+import GHC.Core.Vectorise.Util.Poly
 
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Inliner
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Id

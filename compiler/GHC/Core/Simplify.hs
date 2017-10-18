@@ -22,7 +22,7 @@ import GHC.Core.Simplify.Monad
 import GHC.CoreTypes.Type hiding      ( substTy, substTyVar, extendTvSubst
                                   , extendCvSubst )
 import GHC.Core.Simplify.Environment
-import GHC.Core.Simplify.Utils
+import GHC.Core.Simplify.Util
 import GHC.Core.Occurence         ( occurAnalyseExpr )
 import GHC.CoreTypes.FamilyInstance   ( FamInstEnv )
 import GHC.CoreTypes.Literal          ( litIsLifted ) --, mkMachInt ) -- temporalily commented out. See #8326
@@ -42,7 +42,7 @@ import GHC.Core.Syntax
 import GHC.CoreTypes.Demand
 import GHC.Core.Printer           ( pprCoreExpr )
 import GHC.Core.Inliner
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.SimpleOpt         ( pushCoTyArg, pushCoValArg
                                   , joinPointBinding_maybe
                                   , joinPointBindings_maybe )
@@ -264,7 +264,7 @@ simplLazyBind env top_lvl is_rec bndr bndr1 rhs rhs_se
 
         ; (body_env, tvs') <- simplBinders rhs_env tvs
                 -- See Note [Floating and type abstraction] in
-                -- GHC.Core.Simplify.Utils
+                -- GHC.Core.Simplify.Util
 
         -- Simplify the RHS
         ; let rhs_cont = mkRhsStop (substTy body_env (exprType body))
@@ -654,7 +654,7 @@ completeBind env top_lvl mb_cont old_bndr new_bndr new_rhs
             occ_info = occInfo old_info
 
          -- Do eta-expansion on the RHS of the binding
-         -- See Note [Eta-expanding at let bindings] in GHC.Core.Simplify.Utils
+         -- See Note [Eta-expanding at let bindings] in GHC.Core.Simplify.Util
       ; (new_arity, is_bot, final_rhs) <- tryEtaExpandRhs (getMode env)
                                                           new_bndr new_rhs
 
@@ -1710,7 +1710,7 @@ rebuildCall :: SimplEnv
 rebuildCall env (ArgInfo { ai_fun = fun, ai_args = rev_args, ai_strs = [] }) cont
   -- When we run out of strictness args, it means
   -- that the call is definitely bottom; see
-  -- GHC.Core.Simplify.Utils.mkArgInfo
+  -- GHC.Core.Simplify.Util.mkArgInfo
   -- Then we want to discard the entire strict continuation.  E.g.
   --    * case (error "hello") of { ... }
   --    * (error "Hello") arg
@@ -2121,7 +2121,7 @@ Start with a simple situation:
 do this for algebraic cases, because we might turn bottom into
 non-bottom!
 
-The code in GHC.Core.Simplify.Utils.prepareAlts has the effect of generalise this
+The code in GHC.Core.Simplify.Util.prepareAlts has the effect of generalise this
 idea to look for a case where we're scrutinising a variable, and we
 know that only the default case can match.  For example:
 
@@ -2135,7 +2135,7 @@ Here the inner case is first trimmed to have only one alternative, the
 DEFAULT, after which it's an instance of the previous case.  This
 really only shows up in eliminating error-checking code.
 
-Note that GHC.Core.Simplify.Utils.mkCase combines identical RHSs.  So
+Note that GHC.Core.Simplify.Util.mkCase combines identical RHSs.  So
 
         case e of       ===> case e of DEFAULT -> r
            True  -> r
@@ -2227,7 +2227,7 @@ Just for reference, the original code (added Jan 13) looked like this:
     case_bndr_evald_next _               = False
 
 (This came up when fixing Trac #7542. See also Note [Eta reduction of
-an eval'd function] in GHC.Core.Utils.)
+an eval'd function] in GHC.Core.Util.)
 
 
 Further notes about case elimination
@@ -3318,7 +3318,7 @@ simplStableUnfolding env top_lvl mb_cont id unf
     act        = idInlineActivation id
     rule_env   = updMode (updModeForStableUnfoldings act) env
          -- See Note [Simplifying inside stable unfoldings] in
-         -- GHC.Core.Simplify.Utils
+         -- GHC.Core.Simplify.Util
 
 {-
 Note [Force bottoming field]

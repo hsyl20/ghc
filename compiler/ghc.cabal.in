@@ -217,7 +217,7 @@ Library
         GHC.Cmm.ProcPoint
         GHC.Cmm.Sinker
         GHC.Cmm.Syntax.Type
-        GHC.Cmm.Utils
+        GHC.Cmm.Util
         GHC.Cmm.LayoutStack
         GHC.Data.EnumSet
         GHC.Cmm.Syntax.Graph
@@ -236,7 +236,7 @@ Library
         GHC.Util.CodeGen.Platform.SPARC
         GHC.Util.CodeGen.Platform.X86
         GHC.Util.CodeGen.Platform.X86_64
-        GHC.Stg.Utils
+        GHC.Stg.Util
         GHC.StgToCmm
         GHC.StgToCmm.Bind
         GHC.StgToCmm.Closure
@@ -252,7 +252,7 @@ Library
         GHC.StgToCmm.PrimOp
         GHC.StgToCmm.Profiling
         GHC.StgToCmm.Profiling.Ticky
-        GHC.StgToCmm.Utils
+        GHC.StgToCmm.Util
         GHC.StgToCmm.Monad.Extended
         GHC.RTS.Storage
         GHC.Core.Arity
@@ -265,7 +265,7 @@ Library
         GHC.Data.TrieMap
         GHC.Core.Tidy
         GHC.Core.Inliner
-        GHC.Core.Utils
+        GHC.Core.Util
         GHC.Core.Syntax.Force
         GHC.Core.Stats
         GHC.Core.Syntax.Make
@@ -284,7 +284,7 @@ Library
         GHC.HaskellToCore.ListComp
         GHC.HaskellToCore.Monad
         GHC.HaskellToCore.Usage
-        GHC.HaskellToCore.Utils
+        GHC.HaskellToCore.Util
         GHC.HaskellToCore.Match
         GHC.HaskellToCore.Match.Constructor
         GHC.HaskellToCore.Match.Literal
@@ -299,7 +299,7 @@ Library
         GHC.Haskell.Syntax.Pattern
         GHC.Haskell.Syntax
         GHC.Haskell.Syntax.Type
-        GHC.Haskell.Utils
+        GHC.Haskell.Util
         GHC.Haskell.Printer.Dump
         GHC.Interface.Binary
         GHC.Util.Binary.Fingerprint
@@ -309,7 +309,7 @@ Library
         GHC.Interface.Type
         GHC.CoreToInterface
         GHC.Interface.Load
-        GHC.Interface.Utils
+        GHC.Interface.Util
         GHC.Interface.TypeCheck
         GHC.Config.Flags.Fingerprint
         GHC.CoreTypes.Annotation
@@ -350,7 +350,7 @@ Library
         GHC.Util.Elf
         GHC.Interface.Tidy
         GHC.Data.Char.Classification
-        GHC.Haskell.Parser.Utils
+        GHC.Haskell.Parser.Util
         GHC.Haskell.Lexer
         GHC.CoreTypes.Coercion.Optimise
         GHC.Haskell.Parser
@@ -358,7 +358,7 @@ Library
         GHC.Haskell.Syntax.Annotation
         GHC.CoreTypes.ForeignCall
         GHC.Builtin.Uniques
-        GHC.Builtin.Utils
+        GHC.Builtin.Util
         GHC.Builtin.Names
         GHC.Core.ConstantFold
         GHC.Builtin.Primitive.Operations
@@ -377,8 +377,8 @@ Library
         GHC.Haskell.Rename.Splice
         GHC.Haskell.Rename.Type
         GHC.Haskell.Rename.Fixity
-        GHC.Haskell.Rename.Utils
-        GHC.Haskell.Rename.Utils.Unbound
+        GHC.Haskell.Rename.Util
+        GHC.Haskell.Rename.Util.Unbound
         GHC.Core.Monad
         GHC.Core.CommonSubExpr
         GHC.Core.FloatIn
@@ -390,7 +390,7 @@ Library
         GHC.Core.Pipeline
         GHC.Core.Simplify.Environment
         GHC.Core.Simplify.Monad
-        GHC.Core.Simplify.Utils
+        GHC.Core.Simplify.Util
         GHC.Core.Simplify
         GHC.Stg.Pipeline
         GHC.Stg.Stats
@@ -406,7 +406,7 @@ Library
         GHC.Core.CallArity
         GHC.Core.Demand
         GHC.Core.WorkerWrap
-        GHC.Core.WorkerWrap.Utils
+        GHC.Core.WorkerWrap.Util
         GHC.Haskell.TypeCheck.FamilyInstance
         GHC.Haskell.TypeCheck.Instantiation
         GHC.Haskell.TypeCheck.Annotation
@@ -417,7 +417,7 @@ Library
         GHC.Haskell.TypeCheck.Default
         GHC.Haskell.TypeCheck.Deriving
         GHC.Haskell.Derive.Constraints
-        GHC.Haskell.Derive.Utils
+        GHC.Haskell.Derive.Util
         GHC.Haskell.TypeCheck.Environment
         GHC.Haskell.TypeCheck.Expression
         GHC.Haskell.TypeCheck.Foreign
@@ -512,12 +512,12 @@ Library
         GHC.Core.Vectorise.Monad.Global
         GHC.Core.Vectorise.Monad.InstEnv
         GHC.Core.Vectorise.Monad
-        GHC.Core.Vectorise.Utils.Base
-        GHC.Core.Vectorise.Utils.Closure
-        GHC.Core.Vectorise.Utils.Hoisting
-        GHC.Core.Vectorise.Utils.PADict
-        GHC.Core.Vectorise.Utils.Poly
-        GHC.Core.Vectorise.Utils
+        GHC.Core.Vectorise.Util.Base
+        GHC.Core.Vectorise.Util.Closure
+        GHC.Core.Vectorise.Util.Hoisting
+        GHC.Core.Vectorise.Util.PADict
+        GHC.Core.Vectorise.Util.Poly
+        GHC.Core.Vectorise.Util
         GHC.Core.Vectorise.Generic.Description
         GHC.Core.Vectorise.Generic.PAMethods
         GHC.Core.Vectorise.Generic.PADict
@@ -615,5 +615,5 @@ Library
             GHC.Interactive.Debugger
             GHC.Interactive.Linker
             GHC.Interactive.ClosureInspect
-            GHC.Interactive.Debugger.Utils
+            GHC.Interactive.Debugger.Util
             GHC.Interactive.Interpreter

@@ -37,7 +37,7 @@ module GHC.CoreTypes.Unique (
         newTagUnique,                   -- Used in CgCase
         initTyVarUnique,
         nonDetCmpUnique,
-        isValidKnownKeyUnique,          -- Used in GHC.Builtin.Utils.knownKeyNamesOkay
+        isValidKnownKeyUnique,          -- Used in GHC.Builtin.Util.knownKeyNamesOkay
 
         -- ** Making built-in uniques
 

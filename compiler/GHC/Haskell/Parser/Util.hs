@@ -1,5 +1,5 @@
 
-module GHC.Haskell.Parser.Utils where
+module GHC.Haskell.Parser.Util where
 
 import GHC.Prelude
 

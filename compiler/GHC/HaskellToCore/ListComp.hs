@@ -29,10 +29,10 @@ import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
 
 import GHC.HaskellToCore.Monad -- the monadery used in the desugarer
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 
 import GHC.Config.Flags
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Type
 import GHC.Builtin.Types

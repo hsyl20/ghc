@@ -735,7 +735,7 @@ data HsExpr p
   -- The contained Expr is *NOT* itself an HsWrap.
   -- See Note [Detecting forced eta expansion] in
   -- GHC.HaskellToCore.Expression. This invariant is maintained by
-  -- GHC.Haskell.Utils.mkHsWrap.
+  -- GHC.Haskell.Util.mkHsWrap.
 
   |  HsWrap     HsWrapper    -- TRANSLATION
                 (HsExpr p)

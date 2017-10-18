@@ -17,7 +17,7 @@ import GHC.CoreTypes.BasicTypes
 import GHC.Core.Syntax
 import GHC.CoreTypes.Id
 import GHC.Core.Arity ( typeArity )
-import GHC.Core.Utils          ( exprIsCheap, exprIsTrivial )
+import GHC.Core.Util          ( exprIsCheap, exprIsTrivial )
 import GHC.CoreTypes.Var.UndirectedGraph
 import GHC.CoreTypes.Demand
 import GHC.Util

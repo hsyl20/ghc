@@ -464,7 +464,7 @@ data GeneralFlag
    | Opt_CmmSink
    | Opt_CmmElimCommonBlocks
    | Opt_OmitYields
-   | Opt_FunToThunk                     -- allow GHC.Core.WorkerWrap.Utils.mkWorkerArgs to remove all value lambdas
+   | Opt_FunToThunk                     -- allow GHC.Core.WorkerWrap.Util.mkWorkerArgs to remove all value lambdas
    | Opt_DictsStrict                    -- be strict in argument dictionaries
    | Opt_DmdTxDictSel                   -- use a special demand transformer for dictionary selectors
    | Opt_Loopification                  -- See Note [Self-recursive tail calls]

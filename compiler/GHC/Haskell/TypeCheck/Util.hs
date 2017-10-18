@@ -470,7 +470,7 @@ data FrontendResult
 --
 --      - For any code involving Names, we want semantic modules.
 --        See lookupIfaceTop in GHC.Interface.Environment, mkIface and
---        addFingerprints in GHC.Interface.Utils, and tcLookupGlobal in
+--        addFingerprints in GHC.Interface.Util, and tcLookupGlobal in
 --        GHC.Haskell.TypeCheck.Environment
 --
 --      - When reading interfaces, we want the identity module to
@@ -773,7 +773,7 @@ We gather two sorts of usage information
       Used (a) to report "defined but not used"
                (see GHC.Haskell.Rename.ImportExport.reportUnusedNames)
            (b) to generate version-tracking usage info in interface
-               files (see GHC.Interface.Utils.mkUsedNames)
+               files (see GHC.Interface.Util.mkUsedNames)
    This usage info is mainly gathered by the renamer's
    gathering of free-variables
 

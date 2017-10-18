@@ -24,7 +24,7 @@ import GHC.Prelude
 import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
 import GHC.CoreTypes.Base      ( ModGuts(..) )
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.FreeVars
 import GHC.Core.Monad  ( CoreM )
 import GHC.CoreTypes.Id         ( isOneShotBndr, idType, isJoinId, isJoinId_maybe )

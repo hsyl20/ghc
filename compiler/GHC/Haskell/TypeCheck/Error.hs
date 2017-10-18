@@ -17,7 +17,7 @@ import GHC.Haskell.TypeCheck.Util.Monadic
 import GHC.Haskell.TypeCheck.Unify     ( occCheckForErrors
                                             , OccCheckResult(..) )
 import GHC.Haskell.TypeCheck.Util.CoreType
-import GHC.Haskell.Rename.Utils.Unbound ( unknownNameSuggestions )
+import GHC.Haskell.Rename.Util.Unbound ( unknownNameSuggestions )
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Type.Internal
 import GHC.CoreTypes.Kind

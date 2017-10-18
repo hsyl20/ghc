@@ -37,7 +37,7 @@ import GHC.Haskell.TypeCheck.Environment
 import GHC.Haskell.TypeCheck.Util.CoreType
 
 import GHC.Cmm.Syntax.Expression
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.ForeignCall
 import GHC.Builtin.Types

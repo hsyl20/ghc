@@ -30,7 +30,7 @@ import Data.Time
 import Prelude           hiding (mod,(<>))
 import System.Directory
 
-import qualified GHC.Core.Utils
+import qualified GHC.Core.Util
 import GHC.HaskellToCore
 import GHC.Config.Flags (HasDynFlags(..))
 import GHC.Data.FastString
@@ -319,7 +319,7 @@ processAllTypeCheckedModule tcm = do
         hs_env  <- getSession
         (_,mbe) <- liftIO $ deSugarExpr hs_env e
         return $ fmap (\expr ->
-          (mid, getLoc e, GHC.Core.Utils.exprType expr)) mbe
+          (mid, getLoc e, GHC.Core.Util.exprType expr)) mbe
       where
         mid :: Maybe Id
         mid | HsVar (L _ i) <- unwrapVar (unLoc e) = Just i

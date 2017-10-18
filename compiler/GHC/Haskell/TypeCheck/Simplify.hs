@@ -31,7 +31,7 @@ import GHC.Data.List.SetOps
 import GHC.Data.Maybe
 import GHC.CoreTypes.Name
 import GHC.Util.Outputable
-import GHC.Builtin.Utils
+import GHC.Builtin.Util
 import GHC.Builtin.Names
 import GHC.Haskell.TypeCheck.Error
 import GHC.Haskell.TypeCheck.Evidence

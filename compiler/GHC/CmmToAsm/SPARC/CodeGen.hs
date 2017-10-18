@@ -44,7 +44,7 @@ import GHC.CmmToAsm.Monad
 -- Our intermediate code:
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Graph

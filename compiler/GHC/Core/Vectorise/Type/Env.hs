@@ -23,10 +23,10 @@ import GHC.Core.Vectorise.Generic.PADict
 import GHC.Core.Vectorise.Generic.PAMethods
 import GHC.Core.Vectorise.Generic.PData
 import GHC.Core.Vectorise.Generic.Description
-import GHC.Core.Vectorise.Utils
+import GHC.Core.Vectorise.Util
 
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Inliner
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.TyCon

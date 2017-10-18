@@ -40,7 +40,7 @@ import GHC.CoreTypes.Annotation
 import GHC.CoreTypes.Instance
 import GHC.CoreTypes.FamilyInstance
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Inliner
 import GHC.Core.Lint
 import GHC.Core.Syntax.Make

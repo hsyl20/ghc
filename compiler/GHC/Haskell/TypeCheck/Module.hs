@@ -54,7 +54,7 @@ import GHC.Haskell.TypeCheck.Instantiation( deeplyInstantiate )
 import GHC.Haskell.TypeCheck.Unify   ( checkConstraints )
 import GHC.Haskell.Rename.Type
 import GHC.Haskell.Rename.Expression
-import GHC.Haskell.Rename.Utils       ( HsDocContext(..) )
+import GHC.Haskell.Rename.Util       ( HsDocContext(..) )
 import GHC.Haskell.Rename.Fixity      ( lookupFixityRn )
 import GHC.CoreTypes.Id.Make
 import GHC.Interface.Tidy( globaliseAndTidyId )
@@ -69,7 +69,7 @@ import GHC.Haskell.Syntax
 import GHC.Interface.Syntax            ( ShowSub(..), showToHeader )
 import GHC.Interface.Type             ( ShowForAllFlag(..) )
 import GHC.Builtin.Names
-import GHC.Builtin.Utils
+import GHC.Builtin.Util
 import GHC.CoreTypes.RdrName
 import GHC.Haskell.TypeCheck.Syntax
 import GHC.Haskell.TypeCheck.Expression
@@ -78,7 +78,7 @@ import GHC.Haskell.TypeCheck.Export
 import GHC.Haskell.TypeCheck.Evidence
 import qualified GHC.Data.BoolFormula as BF
 import GHC.Util.PrettyPrint.TyThing   ( pprTyThingInContext )
-import GHC.Interface.Utils             ( tyThingToIfaceDecl )
+import GHC.Interface.Util             ( tyThingToIfaceDecl )
 import GHC.CoreTypes.Coercion              ( pprCoAxiom )
 import GHC.Core.FreeVars               ( orphNamesOfFamInst )
 import GHC.Haskell.TypeCheck.FamilyInstance
@@ -1759,7 +1759,7 @@ being called "Main.main".  That's why root_main_id has a fixed module
 ":Main".)
 
 This is unusual: it's a LocalId whose Name has a Module from another
-module.  Tiresomely, we must filter it out again in GHC.Interface.Utils, les we
+module.  Tiresomely, we must filter it out again in GHC.Interface.Util, les we
 get two defns for 'main' in the interface file!
 
 

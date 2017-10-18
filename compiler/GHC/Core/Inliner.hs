@@ -50,7 +50,7 @@ import GHC.Core.Printer             ()      -- Instances
 import GHC.Core.Occurence  ( occurAnalyseExpr )
 import GHC.Core.SimpleOpt
 import GHC.Core.Arity      ( manifestArity )
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Demand               ( isBottomingSig )
 import GHC.CoreTypes.DataCon
@@ -486,7 +486,7 @@ Things to note:
 
     NB: you might think that PostInlineUnconditionally would do this
     but it doesn't fire for top-level things; see
-    GHC.Core.Simplify.Utils Note [Top level and
+    GHC.Core.Simplify.Util Note [Top level and
     postInlineUnconditionally]
 -}
 

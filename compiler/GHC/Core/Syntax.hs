@@ -448,7 +448,7 @@ expression is floated out:
    y::Int# = fac 4#
 
 In this situation you should use @case@ rather than a @let@. The function
-'GHC.Core.Utils.needsCaseBinding' can help you determine which to generate,
+'GHC.Core.Util.needsCaseBinding' can help you determine which to generate,
 or alternatively use 'GHC.Core.Syntax.Make.mkCoreLet' rather than this
 constructor directly, which will generate a @case@ if necessary
 
@@ -496,7 +496,7 @@ this exhaustive list can be empty!
 
 * A case expression can have empty alternatives if (and only if) the
   scrutinee is bound to raise an exception or diverge. When do we know
-  this?  See Note [Bottoming expressions] in GHC.Core.Utils.
+  this?  See Note [Bottoming expressions] in GHC.Core.Util.
 
 * The possiblity of empty alternatives is one reason we need a type on
   the case expression: if the alternatives are empty we can't get the
@@ -534,8 +534,8 @@ this exhaustive list can be empty!
   unboxed type.
 
 * We treat a case expression with empty alternatives as trivial iff
-  its scrutinee is (see GHC.Core.Utils.exprIsTrivial).  This is actually
-  important; see Note [Empty case is trivial] in GHC.Core.Utils
+  its scrutinee is (see GHC.Core.Util.exprIsTrivial).  This is actually
+  important; see Note [Empty case is trivial] in GHC.Core.Util
 
 * An empty case is replaced by its scrutinee during the CoreToStg
   conversion; remember STG is un-typed, so there is no need for
@@ -595,7 +595,7 @@ Join points must follow these invariants:
      "join arity" (to distinguish from regular arity, which only counts values).
 
   2. For join arity n, the right-hand side must begin with at least n lambdas.
-     No ticks, no casts, just lambdas!  C.f. GHC.Core.Utils.joinRhsArity.
+     No ticks, no casts, just lambdas!  C.f. GHC.Core.Util.joinRhsArity.
 
   2a. Moreover, this same constraint applies to any unfolding of the binder.
      Reason: if we want to push a continuation into the RHS we must push it
@@ -671,7 +671,7 @@ and join points] in Simplify):
 
 The body of the join point now returns a Bool, so the label `j` has to have its
 type updated accordingly. Inconvenient though this may be, it has the advantage
-that 'GHC.Core.Utils.exprType' can still return a type for any expression,
+that 'GHC.Core.Util.exprType' can still return a type for any expression,
 including a jump.
 
 This differs from the paper (see Note [Invariants on join points]). In the
@@ -1121,7 +1121,7 @@ has two major consequences
    In contrast, orphans are all fingerprinted together in the
    mi_orph_hash field of the ModIface.
 
-   See GHC.Interface.Utils.addFingerprints.
+   See GHC.Interface.Util.addFingerprints.
 
 Orphan-hood is computed
   * For class instances:
@@ -1129,8 +1129,8 @@ Orphan-hood is computed
     (because it is needed during instance lookup)
 
   * For rules and family instances:
-       when we generate an IfaceRule (GHC.Interface.Utils.coreRuleToIfaceRule)
-                     or IfaceFamInst (GHC.Interface.Utils.instanceToIfaceInst)
+       when we generate an IfaceRule (GHC.Interface.Util.coreRuleToIfaceRule)
+                     or IfaceFamInst (GHC.Interface.Util.instanceToIfaceInst)
 -}
 
 {-
@@ -1951,7 +1951,7 @@ varsToCoreExprs vs = map varToCoreExpr vs
 *                                                                      *
 ************************************************************************
 
-These are defined here to avoid a module loop between GHC.Core.Utils and
+These are defined here to avoid a module loop between GHC.Core.Util and
 GHC.Core.FreeVars
 
 -}

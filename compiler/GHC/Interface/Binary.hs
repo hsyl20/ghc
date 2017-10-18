@@ -23,7 +23,7 @@ module GHC.Interface.Binary (
 import GHC.Prelude
 
 import GHC.Haskell.TypeCheck.Monad
-import GHC.Builtin.Utils   ( isKnownKeyName, lookupKnownKeyName )
+import GHC.Builtin.Util   ( isKnownKeyName, lookupKnownKeyName )
 import GHC.Interface.Environment
 import GHC.CoreTypes.Base
 import GHC.CoreTypes.Module
@@ -296,7 +296,7 @@ serialiseName bh name _ = do
 --  10xxxxxx xxyyyyyy yyyyyyyy yyyyyyyy
 --   A known-key name. x is the Unique's Char, y is the int part. We assume that
 --   all known-key uniques fit in this space. This is asserted by
---   GHC.Builtin.Utils.knownKeyNamesOkay.
+--   GHC.Builtin.Util.knownKeyNamesOkay.
 --
 -- During serialization we check for known-key things using isKnownKeyName.
 -- During deserialization we use lookupKnownKeyName to get from the unique back

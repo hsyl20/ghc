@@ -47,12 +47,12 @@ import GHC.Haskell.TypeCheck.Monad
 import GHC.Haskell.TypeCheck.Syntax  ( hsOverLitName )
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
-import GHC.Haskell.Rename.Utils
+import GHC.Haskell.Rename.Util
                            ( HsDocContext(..), newLocalBndrRn, bindLocalNames
                            , warnUnusedMatches, newLocalBndrRn
                            , checkDupNames, checkDupAndShadowedNames
                            , checkTupSize , unknownSubordinateErr )
-import GHC.Haskell.Rename.Utils.Unbound ( mkUnboundName )
+import GHC.Haskell.Rename.Util.Unbound ( mkUnboundName )
 import GHC.Haskell.Rename.Type
 import GHC.Builtin.Names
 import GHC.CoreTypes.TyCon              ( tyConName )
@@ -318,7 +318,7 @@ rnPats ctxt pats thing_inside
         ; unCpsRn (rnLPatsAndThen (matchNameMaker ctxt) pats) $ \ pats' -> do
         { -- Check for duplicated and shadowed names
           -- Must do this *after* renaming the patterns
-          -- See Note [Collect binders only after renaming] in GHC.Haskell.Utils
+          -- See Note [Collect binders only after renaming] in GHC.Haskell.Util
           -- Because we don't bind the vars all at once, we can't
           --    check incrementally for duplicates;
           -- Nor can we check incrementally for shadowing, else we'll

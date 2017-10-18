@@ -36,7 +36,7 @@ import GHC.Cmm.Printer ()
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Collections
 import GHC.Cmm.Dataflow.Graph
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 
 -- Utils

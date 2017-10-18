@@ -6,7 +6,7 @@
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Core.WorkerWrap.Utils
+module GHC.Core.WorkerWrap.Util
    ( mkWwBodies
    , mkWWstr
    , mkWorkerArgs
@@ -21,7 +21,7 @@ where
 import GHC.Prelude
 
 import GHC.Core.Syntax
-import GHC.Core.Utils            ( exprType, mkCast )
+import GHC.Core.Util            ( exprType, mkCast )
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Id.Info     ( JoinArity, vanillaIdInfo )
 import GHC.CoreTypes.DataCon

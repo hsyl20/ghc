@@ -16,13 +16,13 @@ module GHC.HaskellToCore.Arrow ( dsProcExpr ) where
 import GHC.Prelude
 
 import GHC.HaskellToCore.Match
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 import GHC.HaskellToCore.Monad
 
 import GHC.Haskell.Syntax hiding (collectPatBinders, collectPatsBinders,
             collectLStmtsBinders, collectLStmtBinders, collectStmtBinders )
 import GHC.Haskell.TypeCheck.Syntax
-import qualified GHC.Haskell.Utils
+import qualified GHC.Haskell.Util
 
 -- NB: The desugarer, which straddles the source and Core worlds, sometimes
 --     needs to see source types (newtypes etc), and sometimes not
@@ -37,7 +37,7 @@ import GHC.CoreTypes.Type ( splitPiTy )
 import GHC.Haskell.TypeCheck.Evidence
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.HaskellToCore.Bind (dsHsWrapper)
 
@@ -1156,10 +1156,10 @@ foldb f xs = foldb f (fold_pairs xs)
     fold_pairs (x1:x2:xs) = f x1 x2:fold_pairs xs
 
 {-
-Note [Dictionary binders in ConPatOut] See also same Note in GHC.Haskell.Utils
+Note [Dictionary binders in ConPatOut] See also same Note in GHC.Haskell.Util
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The following functions to collect value variables from patterns are
-copied from GHC.Haskell.Utils, with one change: we also collect the dictionary
+copied from GHC.Haskell.Util, with one change: we also collect the dictionary
 bindings (pat_binds) from ConPatOut.  We need them for cases like
 
 h :: Arrow a => Int -> a (Int,Int) Int
@@ -1173,7 +1173,7 @@ The type checker turns the case into
 
 Here p77 is a local binding for the (+) operation.
 
-See comments in GHC.Haskell.Utils for why the other version does not include
+See comments in GHC.Haskell.Util for why the other version does not include
 these bindings.
 -}
 
@@ -1232,4 +1232,4 @@ collectLStmtBinders = collectStmtBinders . unLoc
 
 collectStmtBinders :: Stmt GhcTc body -> [Id]
 collectStmtBinders (RecStmt { recS_later_ids = later_ids }) = later_ids
-collectStmtBinders stmt = GHC.Haskell.Utils.collectStmtBinders stmt
+collectStmtBinders stmt = GHC.Haskell.Util.collectStmtBinders stmt

@@ -17,7 +17,7 @@ import GHC.Cmm.Dataflow.Graph
 import GHC.Cmm.Dataflow.Label
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch (mapSwitchTargets)
 import GHC.Data.Maybe
 import GHC.Util.Panic

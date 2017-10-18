@@ -19,7 +19,7 @@ import GHC.Data.Bitmap
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Printer.Declaration ()
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.RTS.InfoTable
 import Data.List
 import GHC.Config.Flags
@@ -225,7 +225,7 @@ procpointSRT dflags top_srt top_table entries =
 maxBmpSize :: DynFlags -> Int
 maxBmpSize dflags = widthInBits (wordWidth dflags) `div` 2
 
--- Adapted from GHC.StgToCmm.Utils, which converts from SRT to C_SRT.
+-- Adapted from GHC.StgToCmm.Util, which converts from SRT to C_SRT.
 to_SRT :: DynFlags -> CLabel -> Int -> Int -> Bitmap -> UniqSM (Maybe CmmDecl, C_SRT)
 to_SRT dflags top_srt off len bmp
   | len > maxBmpSize dflags || bmp == [toStgWord dflags (fromStgHalfWord (srtEscape dflags))]

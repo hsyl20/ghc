@@ -115,8 +115,8 @@ import GHC.Interface.TypeCheck    ( typecheckIface )
 import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.Name.Cache       ( initNameCache )
 import GHC.Interface.Load         ( ifaceStats, initExternalPackageState )
-import GHC.Builtin.Utils
-import GHC.Interface.Utils
+import GHC.Builtin.Util
+import GHC.Interface.Util
 import GHC.HaskellToCore
 import GHC.Core.Pipeline
 import GHC.Interface.Tidy

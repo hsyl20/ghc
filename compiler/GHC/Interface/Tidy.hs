@@ -22,7 +22,7 @@ import GHC.Core.FreeVars
 import GHC.Core.Tidy
 import GHC.Core.Monad
 import GHC.Core.Prepare
-import GHC.Core.Utils                 (rhsIsStatic)
+import GHC.Core.Util                 (rhsIsStatic)
 import GHC.Core.Stats        (coreBindsStats, CoreStats(..))
 import GHC.Core.Syntax.Force          (seqBinds)
 import GHC.Core.Lint
@@ -519,7 +519,7 @@ tidyVectInfo (_, var_env) info@(VectInfo { vectInfoVar          = vars
     lookup_var var = lookupWithDefaultVarEnv var_env var var
 
     -- We need to make sure that all names getting into the iface version of 'VectInfo' are
-    -- external; otherwise, 'GHC.Interface.Utils' will bomb out.
+    -- external; otherwise, 'GHC.Interface.Util' will bomb out.
     isExternalId = isExternalName . idName
 
 {-

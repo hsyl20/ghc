@@ -32,7 +32,7 @@ import GHC.Haskell.Syntax
 import GHC.Haskell.TypeCheck.Environment
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
-import GHC.Haskell.Rename.Utils   ( warnUnusedTopBinds, mkFieldEnv )
+import GHC.Haskell.Rename.Util   ( warnUnusedTopBinds, mkFieldEnv )
 import GHC.Interface.Load        ( loadSrcInterface )
 import GHC.Haskell.TypeCheck.Monad
 import GHC.Builtin.Names

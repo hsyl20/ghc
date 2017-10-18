@@ -28,7 +28,7 @@ module GHC.Interactive.ClosureInspect(
 
 import GHC.Prelude
 
-import GHC.Interactive.Debugger.Utils
+import GHC.Interactive.Debugger.Util
 import GHCi.RemoteTypes ( HValue )
 import qualified GHCi.InfoTable as InfoTable
 import GHCi.InfoTable   (StgInfoTable, peekItbl)

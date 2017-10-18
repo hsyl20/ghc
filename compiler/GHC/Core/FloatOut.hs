@@ -14,7 +14,7 @@ module GHC.Core.FloatOut ( floatOutwards ) where
 import GHC.Prelude
 
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.Core.Arity  ( etaExpand )
 import GHC.Core.Monad        ( FloatOutSwitches(..) )

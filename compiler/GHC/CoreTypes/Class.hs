@@ -33,8 +33,6 @@ import GHC.CoreTypes.BasicTypes
 import GHC.CoreTypes.Unique
 import GHC.Util
 import GHC.CoreTypes.SrcLoc
-import GHC.Builtin.Names ( eqTyConKey, coercibleTyConKey, typeableClassKey,
-                           heqTyConKey )
 import GHC.Util.Outputable
 import GHC.Data.BoolFormula (BooleanFormula, mkTrue)
 

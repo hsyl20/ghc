@@ -26,7 +26,7 @@ import {-# SOURCE #-} GHC.HaskellToCore.Expression ( dsExpr
                                                             , dsSyntaxExpr )
 
 import GHC.HaskellToCore.Monad
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 
 import GHC.Haskell.Syntax
 

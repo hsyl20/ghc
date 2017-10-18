@@ -22,9 +22,9 @@ import GHC.Core.Vectorise.Vect
 import GHC.Core.Vectorise.Env
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Builtins
-import GHC.Core.Vectorise.Utils
+import GHC.Core.Vectorise.Util
 
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.Core.Syntax
 import GHC.Core.FreeVars

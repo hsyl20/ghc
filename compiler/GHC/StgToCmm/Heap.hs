@@ -29,7 +29,7 @@ import GHC.Prelude hiding ((<*>))
 import GHC.Stg.Syntax
 import GHC.CoreTypes.CLabel
 import GHC.StgToCmm.Layout
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Monad
 import GHC.StgToCmm.Profiling (profDynAlloc, dynProfHdr, staticProfHdr)
 import GHC.StgToCmm.Profiling.Ticky
@@ -42,7 +42,7 @@ import GHC.Cmm.Dataflow.Label
 import GHC.RTS.Storage
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CostCentre
 import GHC.CoreTypes.Id.Info( CafInfo(..), mayHaveCafRefs )
 import GHC.CoreTypes.Id ( Id )

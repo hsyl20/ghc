@@ -192,7 +192,7 @@ If you change which things are wired in, make sure you change their
 names in GHC.Builtin.Names, so they use wTcQual, wDataQual, etc
 -}
 
--- This list is used only to define GHC.Builtin.Utils.wiredInThings. That in
+-- This list is used only to define GHC.Builtin.Util.wiredInThings. That in
 -- turn is used to initialise the name environment carried around by the
 -- renamer.  This means that if we look up the name of a TyCon (or its implicit
 -- binders) that occurs in this list that name will be assigned the wired-in key
@@ -656,7 +656,7 @@ GHC supports both boxed and unboxed one-tuples:
  - Unboxed one-tuples are sometimes useful when returning a
    single value after CPR analysis
  - A boxed one-tuple is used by
-   GHC.HaskellToCore.Utils.mkSelectorBinds, when
+   GHC.HaskellToCore.Util.mkSelectorBinds, when
    there is just one binder
 Basically it keeps everythig uniform.
 

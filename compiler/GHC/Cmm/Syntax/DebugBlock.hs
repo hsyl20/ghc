@@ -27,7 +27,7 @@ import GHC.Prelude
 import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Core.Syntax
 import GHC.Data.FastString           ( nilFS, mkFastString )
 import GHC.CoreTypes.Module

@@ -66,7 +66,7 @@ import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Monad               ( FloatOutSwitches(..) )
-import GHC.Core.Utils               ( exprType, exprIsHNF
+import GHC.Core.Util               ( exprType, exprIsHNF
                                     , exprOkForSpeculation
                                     , exprIsTopLevelBindable
                                     , isExprLevPoly

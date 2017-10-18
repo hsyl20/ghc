@@ -21,8 +21,8 @@ import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.Kind
 
 import GHC.Haskell.Rename.Environment
-import GHC.Haskell.Rename.Utils         ( HsDocContext(..), newLocalBndrRn )
-import GHC.Haskell.Rename.Utils.Unbound ( isUnboundName )
+import GHC.Haskell.Rename.Util         ( HsDocContext(..), newLocalBndrRn )
+import GHC.Haskell.Rename.Util.Unbound ( isUnboundName )
 import GHC.Haskell.Rename               ( rnSrcDecls, findSplice )
 import GHC.Haskell.Rename.Pattern       ( rnPat )
 import GHC.CoreTypes.BasicTypes                ( TopLevelFlag, isTopLevel

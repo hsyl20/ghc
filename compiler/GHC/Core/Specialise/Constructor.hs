@@ -23,13 +23,13 @@ import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.Subst
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Inliner  ( couldBeSmallEnoughToInline )
 import GHC.Core.FreeVars    ( exprsFreeVarsList )
 import GHC.Core.Monad
 import GHC.CoreTypes.Literal               ( litIsLifted )
 import GHC.CoreTypes.Base                 ( ModGuts(..) )
-import GHC.Core.WorkerWrap.Utils ( isWorkerSmallEnough
+import GHC.Core.WorkerWrap.Util ( isWorkerSmallEnough
                                                    , mkWorkerArgs )
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Coercion         hiding( substCo )
@@ -1952,7 +1952,7 @@ callsToNewPats env fn spec_info@(SI { si_specs = done_specs }) bndr_occs calls
                   -- We are about to construct w/w pair in 'spec_one'.
                   -- Omit specialisation leading to high arity workers.
                   -- See Note [Limit w/w arity] in
-                  -- GHC.Core.WorkerWrap.Utils
+                  -- GHC.Core.WorkerWrap.Util
 
                 -- Discard specialisations if there are too many of them
               trimmed_pats = trim_pats env fn spec_info small_pats

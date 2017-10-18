@@ -11,7 +11,7 @@ This module exports some utility functions of no great interest.
 {-# LANGUAGE CPP #-}
 
 -- | Utility functions for constructing Core syntax, principally for desugaring
-module GHC.HaskellToCore.Utils (
+module GHC.HaskellToCore.Util (
         EquationInfo(..),
         firstPat, shiftEqns,
 
@@ -51,7 +51,7 @@ import GHC.Haskell.TypeCheck.Util.CoreType( tcSplitTyConApp )
 import GHC.Core.Syntax
 import GHC.HaskellToCore.Monad
 
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.CoreTypes.Id.Make
 import GHC.CoreTypes.Id
@@ -563,14 +563,14 @@ mkCoreAppsDs :: SDoc -> CoreExpr -> [CoreExpr] -> CoreExpr
 mkCoreAppsDs s fun args = foldl (mkCoreAppDs s) fun args
 
 mkCastDs :: CoreExpr -> Coercion -> CoreExpr
--- We define a desugarer-specific version of GHC.Core.Utils.mkCast,
+-- We define a desugarer-specific version of GHC.Core.Util.mkCast,
 -- because in the immediate output of the desugarer, we can have
 -- apparently-mis-matched coercions:  E.g.
 --     let a = b
 --     in (x :: a) |> (co :: b ~ Int)
 -- Lint know about type-bindings for let and does not complain
 -- So here we do not make the assertion checks that we make in
--- GHC.Core.Utils.mkCast; and we do less peephole optimisation too
+-- GHC.Core.Util.mkCast; and we do less peephole optimisation too
 mkCastDs e co | isReflCo co = e
               | otherwise   = Cast e co
 
@@ -816,7 +816,7 @@ is_triv_pat _           = False
 *                                                                      *
   Creating big tuples and their types for full Haskell expressions.
   They work over *Ids*, and create tuples replete with their types,
-  which is whey they are not in GHC.Haskell.Utils.
+  which is whey they are not in GHC.Haskell.Util.
 *                                                                      *
 ********************************************************************* -}
 

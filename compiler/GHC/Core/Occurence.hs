@@ -23,7 +23,7 @@ import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
-import GHC.Core.Utils ( exprIsTrivial, isDefaultAlt, isExpandableApp,
+import GHC.Core.Util ( exprIsTrivial, isDefaultAlt, isExpandableApp,
                            stripTicksTopE, mkTicks )
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Id.Info
@@ -1673,7 +1673,7 @@ So, when analysing the RHS of x3 we notice that x3 will itself
 definitely inline the next time round, and so we analyse x3's rhs in
 an ordinary context, not rhsCtxt.  Hence the "certainly_inline" stuff.
 
-Annoyingly, we have to approximate GHC.Core.Simplify.Utils.preInlineUnconditionally.
+Annoyingly, we have to approximate GHC.Core.Simplify.Util.preInlineUnconditionally.
 If (a) the RHS is expandable (see isExpandableApp in occAnalApp), and
    (b) certainly_inline says "yes" when preInlineUnconditionally says "no"
 then the simplifier iterates indefinitely:

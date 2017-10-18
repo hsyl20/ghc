@@ -16,8 +16,8 @@ import GHC.Cmm.Syntax.Graph
 import GHC.Cmm.Syntax.Expression
 import GHC.CoreTypes.CLabel
 import GHC.CoreTypes.Module
-import GHC.Cmm.Utils
-import GHC.StgToCmm.Utils
+import GHC.Cmm.Util
+import GHC.StgToCmm.Util
 import GHC.CoreTypes.Base
 import GHC.Config.Flags
 

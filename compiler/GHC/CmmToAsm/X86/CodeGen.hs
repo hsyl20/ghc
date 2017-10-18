@@ -52,7 +52,7 @@ import GHC.CoreTypes.BasicTypes
 import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.Module      ( primUnitId )
 import GHC.Cmm.Printer           ()
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 import GHC.Cmm.Syntax
 import GHC.Cmm.Dataflow.Block

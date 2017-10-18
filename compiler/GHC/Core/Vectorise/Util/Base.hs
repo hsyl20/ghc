@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module GHC.Core.Vectorise.Utils.Base
+module GHC.Core.Vectorise.Util.Base
   ( voidType
   , newLocalVVar
 
@@ -34,7 +34,7 @@ import GHC.Core.Vectorise.Vect
 import GHC.Core.Vectorise.Builtins
 
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.FamilyInstance
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Type

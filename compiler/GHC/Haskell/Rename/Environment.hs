@@ -75,8 +75,8 @@ import GHC.Data.FastString
 import Control.Monad
 import GHC.Data.List.SetOps    ( minusList )
 import qualified GHC.LanguageExtensions as LangExt
-import GHC.Haskell.Rename.Utils.Unbound
-import GHC.Haskell.Rename.Utils
+import GHC.Haskell.Rename.Util.Unbound
+import GHC.Haskell.Rename.Util
 import Data.Maybe (isJust)
 import qualified Data.Semigroup as Semi
 

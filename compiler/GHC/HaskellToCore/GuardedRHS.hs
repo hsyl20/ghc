@@ -23,7 +23,7 @@ import GHC.Core.Syntax.Make
 import GHC.Core.Syntax
 
 import GHC.HaskellToCore.Monad
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 import GHC.Builtin.Types
 import GHC.Builtin.Names
 import GHC.CoreTypes.Type   ( Type )

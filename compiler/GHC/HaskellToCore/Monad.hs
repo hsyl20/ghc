@@ -58,7 +58,7 @@ import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.FamilyInstance
 import GHC.Core.Syntax
 import GHC.Core.Syntax.Make    ( unitExpr )
-import GHC.Core.Utils ( exprType, isExprLevPoly )
+import GHC.Core.Util ( exprType, isExprLevPoly )
 import GHC.Haskell.Syntax
 import GHC.Interface.TypeCheck
 import GHC.Haskell.TypeCheck.Util.Monadic ( checkForLevPolyX

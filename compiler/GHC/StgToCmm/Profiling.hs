@@ -30,13 +30,13 @@ module GHC.StgToCmm.Profiling (
 import GHC.Prelude
 
 import GHC.StgToCmm.Closure
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Monad
 import GHC.RTS.Storage
 
 import GHC.Cmm.Syntax.Graph
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CLabel
 
 import qualified GHC.CoreTypes.Module as Module

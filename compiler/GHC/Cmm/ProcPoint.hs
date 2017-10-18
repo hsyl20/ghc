@@ -15,7 +15,7 @@ import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Syntax
 import GHC.Cmm.Printer ()
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.RTS.InfoTable
 import GHC.Cmm.Liveness
 import GHC.Cmm.Switch

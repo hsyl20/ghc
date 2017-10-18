@@ -13,7 +13,7 @@ import GHC.Prelude
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Generic.Description
-import GHC.Core.Vectorise.Utils
+import GHC.Core.Vectorise.Util
 import GHC.Core.Vectorise.Env( GlobalEnv(global_fam_inst_env) )
 
 import GHC.CoreTypes.BasicTypes ( SourceText(..) )

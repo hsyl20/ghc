@@ -57,14 +57,14 @@ import GHC.CoreTypes.Id
 import GHC.CoreTypes.Var          ( EvVar, setTyVarUnique )
 
 import GHC.Core.Syntax
-import GHC.Core.Utils       ( exprType, needsCaseBinding, bindNonRec )
+import GHC.Core.Util       ( exprType, needsCaseBinding, bindNonRec )
 import GHC.CoreTypes.Literal
 import GHC.CoreTypes.Base
 
 import GHC.Builtin.Types
 import GHC.Builtin.Names
 
-import GHC.Haskell.Utils            ( mkChunkified, chunkify )
+import GHC.Haskell.Util            ( mkChunkified, chunkify )
 import GHC.Haskell.TypeCheck.Util.CoreType ( mkSpecSigmaTy )
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion             ( isCoVar )

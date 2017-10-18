@@ -8,7 +8,7 @@ import GHC.Prelude
 import GHC.Cmm.Syntax
 import GHC.Cmm.ConstantFolder
 import GHC.Cmm.Liveness
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Label
 import GHC.Cmm.Dataflow.Collections

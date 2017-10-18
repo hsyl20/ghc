@@ -23,11 +23,11 @@ import GHC.Core.Printer               ( pprCoreBindings, pprCoreExpr )
 import GHC.Core.Occurence    ( occurAnalysePgm, occurAnalyseExpr )
 import GHC.CoreTypes.Id.Info
 import GHC.Core.Stats        ( coreBindsSize, coreBindsStats, exprSize )
-import GHC.Core.Utils                 ( mkTicks, stripTicksTop )
+import GHC.Core.Util                 ( mkTicks, stripTicksTop )
 import GHC.Core.Lint         ( endPass, lintPassResult, dumpPassResult,
                                            lintAnnots )
 import GHC.Core.Simplify         ( simplTopBinds, simplExpr, simplRules )
-import GHC.Core.Simplify.Utils   ( simplEnvForGHCi, activeRule )
+import GHC.Core.Simplify.Util   ( simplEnvForGHCi, activeRule )
 import GHC.Core.Simplify.Environment
 import GHC.Core.Simplify.Monad
 import GHC.Core.Monad

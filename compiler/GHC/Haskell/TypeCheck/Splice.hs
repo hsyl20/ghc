@@ -62,7 +62,7 @@ import GHC.CoreTypes.Base
 import GHC.Haskell.Template
 import GHC.Haskell.Rename.Expression
 import GHC.Haskell.Rename.Environment
-import GHC.Haskell.Rename.Utils  ( HsDocContext(..) )
+import GHC.Haskell.Rename.Util  ( HsDocContext(..) )
 import GHC.Haskell.Rename.Fixity ( lookupFixityRn_help )
 import GHC.Haskell.Rename.Type
 import GHC.Haskell.TypeCheck.Syntax

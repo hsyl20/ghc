@@ -24,7 +24,7 @@ module GHC.Haskell.Syntax (
         module GHC.Haskell.Syntax.Literal,
         module GHC.Haskell.Syntax.Pattern,
         module GHC.Haskell.Syntax.Type,
-        module GHC.Haskell.Utils,
+        module GHC.Haskell.Util,
         module GHC.Haskell.Syntax.Documentation,
         module GHC.Haskell.Syntax.PlaceHolder,
         module GHC.Haskell.Syntax.Extension,
@@ -46,7 +46,7 @@ import GHC.Haskell.Syntax.Extension
 import GHC.Haskell.Syntax.Pattern
 import GHC.Haskell.Syntax.Type
 import GHC.CoreTypes.BasicTypes       ( Fixity, WarningTxt )
-import GHC.Haskell.Utils
+import GHC.Haskell.Util
 import GHC.Haskell.Syntax.Documentation
 
 -- others:

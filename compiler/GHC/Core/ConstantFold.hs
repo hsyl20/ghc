@@ -42,7 +42,7 @@ import GHC.CoreTypes.TyCon      ( tyConDataCons_maybe, isEnumerationTyCon
                                        , tyConDataCons )
 import GHC.CoreTypes.DataCon      ( DataCon, dataConTagZ, dataConTyCon
                                        , dataConWorkId )
-import GHC.Core.Utils               ( cheapEqExpr, exprIsHNF )
+import GHC.Core.Util               ( cheapEqExpr, exprIsHNF )
 import GHC.Core.Inliner ( exprIsConApp_maybe )
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.OccName              ( occNameFS )
@@ -1400,7 +1400,7 @@ match_smallIntegerTo _ _ _ _ _ = Nothing
 --------------------------------------------------------
 -- Constant folding through case-expressions
 --
--- cf Scrutinee Constant Folding in GHC.Core.Simplify.Utils
+-- cf Scrutinee Constant Folding in GHC.Core.Simplify.Util
 --------------------------------------------------------
 
 -- | Match the scrutinee of a case and potentially return a new scrutinee and a
@@ -1535,7 +1535,7 @@ we generate
     True  -> e1
 and it is nice to then get rid of the tagToEnum.
 
-NB: in GHC.Core.Simplify.Utils, where we invoke caseRules,
+NB: in GHC.Core.Simplify.Util, where we invoke caseRules,
     we convert that 0# to DEFAULT
 
 Note [caseRules for dataToTag]

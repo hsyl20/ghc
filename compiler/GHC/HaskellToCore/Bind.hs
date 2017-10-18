@@ -35,7 +35,7 @@ import {-# SOURCE #-}   GHC.HaskellToCore.Match( matchWrapper )
 
 import GHC.HaskellToCore.Monad
 import GHC.HaskellToCore.GuardedRHS
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 
 import GHC.Haskell.Syntax          -- lots of things
 import GHC.Core.Syntax             -- lots of things
@@ -43,7 +43,7 @@ import GHC.CoreTypes.Literal             ( Literal(MachStr) )
 import GHC.Core.SimpleOpt ( simpleOptExpr )
 import GHC.Core.Occurence ( occurAnalyseExpr )
 import GHC.Core.Syntax.Make
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Arity     ( etaExpand )
 import GHC.Core.Inliner
 import GHC.Core.FreeVars
@@ -616,7 +616,7 @@ We define an "unlifted bind" to be any bind that binds an unlifted id. Note that
   (# True, x #) = blah
 
 is *not* an unlifted bind. Unlifted binds are detected by
-GHC.Haskell.Utils.isUnliftedHsBind.
+GHC.Haskell.Util.isUnliftedHsBind.
 
 Define a "banged bind" to have a top-level bang. Detected by HsPat.isBangedHsBind.
 Define a "strict bind" to be either an unlifted bind or a banged bind.

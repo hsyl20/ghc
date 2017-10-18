@@ -29,7 +29,7 @@ import GHC.HaskellToCore.Match.Literal
 import GHC.HaskellToCore.Bind
 import GHC.HaskellToCore.GuardedRHS
 import GHC.HaskellToCore.ListComp
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 import GHC.HaskellToCore.Arrow
 import GHC.HaskellToCore.Monad
 import GHC.CoreTypes.Name
@@ -46,7 +46,7 @@ import GHC.Haskell.TypeCheck.Monad
 import GHC.Haskell.TypeCheck.Syntax
 import GHC.CoreTypes.Type
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 
 import GHC.Config.Flags

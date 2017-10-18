@@ -52,7 +52,7 @@ import GHC.Prelude
 import GHC.Core.Simplify.Monad
 import GHC.Core.Monad                ( SimplMode(..) )
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.Var as Var
 import GHC.CoreTypes.Var.Environment
 import GHC.CoreTypes.Var.Set

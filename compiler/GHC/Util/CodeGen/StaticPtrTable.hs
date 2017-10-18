@@ -126,7 +126,7 @@ import GHC.Prelude
 
 import GHC.CoreTypes.CLabel
 import GHC.Core.Syntax
-import GHC.Core.Utils         (collectMakeStaticArgs)
+import GHC.Core.Util         (collectMakeStaticArgs)
 import GHC.CoreTypes.DataCon
 import GHC.Config.Flags
 import GHC.CoreTypes.Base

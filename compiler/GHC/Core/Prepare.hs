@@ -21,7 +21,7 @@ import GHC.Core.Occurence
 import GHC.CoreTypes.Base
 import GHC.Builtin.Names
 import GHC.CoreTypes.Id.Make             ( realWorldPrimId )
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Arity
 import GHC.Core.FreeVars
 import GHC.Core.Monad           ( CoreToDo(..) )

@@ -37,7 +37,7 @@ import GHC.Core.SimpleOpt  ( exprIsLambda_maybe )
 import GHC.Core.FreeVars   ( exprFreeVars, exprsFreeVars
                                        , bindFreeVars , rulesFreeVarsDSet
                                        , exprsOrphNames , exprFreeVarsList )
-import GHC.Core.Utils               ( exprType, eqExpr, mkTick, mkTicks
+import GHC.Core.Util               ( exprType, eqExpr, mkTick, mkTicks
                                        , stripTicksTopT, stripTicksTopE
                                        , isJoinBind )
 import GHC.Core.Printer             ( pprRules )

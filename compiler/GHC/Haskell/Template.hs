@@ -1683,7 +1683,7 @@ thRdrName.  To achieve (b) we want the binders to be Exact RdrNames.
 Achieving (a) is a bit awkward, because
    - We must check for duplicate and shadowed names on Names,
      not RdrNames, *after* renaming.
-     See Note [Collect binders only after renaming] in GHC.Haskell.Utils
+     See Note [Collect binders only after renaming] in GHC.Haskell.Util
 
    - But to achieve (a) we must distinguish between the Exact
      RdrNames arising from TH and the Unqual RdrNames that would

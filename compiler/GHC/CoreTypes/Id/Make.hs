@@ -50,7 +50,7 @@ import GHC.CoreTypes.FamilyInstance
 import GHC.CoreTypes.Coercion
 import GHC.Haskell.TypeCheck.Util.CoreType as TcType
 import GHC.Core.Syntax.Make
-import GHC.Core.Utils        ( exprType, mkCast )
+import GHC.Core.Util        ( exprType, mkCast )
 import GHC.Core.Inliner
 import GHC.CoreTypes.Literal
 import GHC.CoreTypes.TyCon
@@ -1380,7 +1380,7 @@ a) In source Haskell its second arg can have an unboxed type
 b) Its fixity is set in GHC.Interface.Load.ghcPrimIface
 
 c) It has quite a bit of desugaring magic.
-   See GHC.HaskellToCore.Utils Note [Desugaring seq (1)] and (2) and (3)
+   See GHC.HaskellToCore.Util Note [Desugaring seq (1)] and (2) and (3)
 
 d) There is some special rule handing: Note [User-defined RULES for seq]
 

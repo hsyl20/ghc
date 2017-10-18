@@ -50,7 +50,7 @@ import GHC.Util.Fingerprint
 import GHC.Data.Char.Encoding
 
 import GHC.Config.Flags
-import GHC.Builtin.Utils
+import GHC.Builtin.Util
 import GHC.Haskell.TypeCheck.FamilyInstance
 import GHC.CoreTypes.FamilyInstance
 import GHC.Builtin.Names

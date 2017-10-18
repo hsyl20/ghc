@@ -42,8 +42,8 @@ import GHC.Config.Flags
 import GHC.Haskell.Syntax
 import GHC.Haskell.Rename.Documentation  ( rnLHsDoc, rnMbLHsDoc )
 import GHC.Haskell.Rename.Environment
-import GHC.Haskell.Rename.Utils.Unbound  ( perhapsForallMsg )
-import GHC.Haskell.Rename.Utils          
+import GHC.Haskell.Rename.Util.Unbound  ( perhapsForallMsg )
+import GHC.Haskell.Rename.Util          
                         ( HsDocContext(..), withHsDocContext, mapFvRn
                         , pprHsDocContext, bindLocalNamesFV
                         , newLocalBndrRn, checkDupRdrNames

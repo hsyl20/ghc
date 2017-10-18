@@ -28,14 +28,14 @@ import GHC.Prelude
 
 import GHC.CoreTypes.TyCon
 import GHC.StgToCmm.Monad
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Closure
 
 import GHC.CoreTypes.CLabel
 
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax.Expression
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Config.Flags
 import GHC.CoreTypes.Id
 import GHC.Cmm.Syntax.Graph

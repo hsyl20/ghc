@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.StgToCmm.Utils (
+module GHC.StgToCmm.Util (
         cgLit, mkSimpleLit,
         emitDataLits, mkDataLits,
         emitRODataLits, mkRODataLits,
@@ -52,7 +52,7 @@ import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Syntax.Graph as MkGraph
 import GHC.Util.CodeGen.Platform
 import GHC.CoreTypes.CLabel
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 
 import GHC.CoreTypes.ForeignCall
@@ -301,7 +301,7 @@ baseRegOffset dflags HpAlloc        = oFFSET_StgRegTable_rHpAlloc dflags
 baseRegOffset dflags GCEnter1       = oFFSET_stgGCEnter1 dflags
 baseRegOffset dflags GCFun          = oFFSET_stgGCFun dflags
 baseRegOffset _      reg            =
-   pprPanic "GHC.StgToCmm.Utils.baseRegOffset:" (ppr reg)
+   pprPanic "GHC.StgToCmm.Util.baseRegOffset:" (ppr reg)
 
 -------------------------------------------------------------------------
 --

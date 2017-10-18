@@ -26,7 +26,7 @@ import GHC.StgToCmm.Monad
 import GHC.StgToCmm.Environment
 import GHC.StgToCmm.Heap
 import GHC.StgToCmm.Layout
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Closure
 import GHC.StgToCmm.Profiling ( curCCS )
 
@@ -42,7 +42,7 @@ import GHC.Data.FastString
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.RepType (countConRepArgs)
 import GHC.CoreTypes.Literal
-import GHC.Builtin.Utils
+import GHC.Builtin.Util
 import GHC.Util.Outputable
 import GHC.Util.Platform
 import GHC.Util

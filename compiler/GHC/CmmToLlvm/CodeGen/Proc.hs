@@ -18,7 +18,7 @@ import GHC.Util.CodeGen.Platform ( activeStgRegs, callerSaves )
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Syntax
 import GHC.Cmm.Printer
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Graph

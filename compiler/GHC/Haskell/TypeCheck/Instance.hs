@@ -166,7 +166,7 @@ Note [Instances and loop breakers]
   inlined.  But this is OK: the recursion breaking happens by way of
   a RULE (the magic ClassOp rule above), and RULES work inside InlineRule
   unfoldings. See Note [RULEs enabled in SimplGently] in
-  GHC.Core.Simplify.Utils
+  GHC.Core.Simplify.Util
 
 Note [ClassOp/DFun selection]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

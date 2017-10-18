@@ -1,12 +1,12 @@
 {-
 (c) The AQUA Project, Glasgow University, 1993-1998
 
-\section[GHC.Core.Simplify.Utils]{The simplifier utilities}
+\section[GHC.Core.Simplify.Util]{The simplifier utilities}
 -}
 
 {-# LANGUAGE CPP #-}
 
-module GHC.Core.Simplify.Utils (
+module GHC.Core.Simplify.Util (
         -- Rebuilding
         mkLam, mkCase, prepareAlts, tryEtaExpandRhs,
 
@@ -44,7 +44,7 @@ import GHC.Core.Syntax
 import qualified GHC.Core.Subst as CoreSubst
 import GHC.Core.Printer
 import GHC.Core.FreeVars
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Arity
 import GHC.Core.Inliner
 import GHC.CoreTypes.Name
@@ -472,7 +472,7 @@ mkArgInfo fun rules n_val_args call_cont
                         -- top-level bindings for (say) strings into
                         -- calls to error.  But now we are more careful about
                         -- inlining lone variables, so its ok (see
-                        -- GHC.Core.Simplify.Utils.analyseCont)
+                        -- GHC.Core.Simplify.Util.analyseCont)
                    if isBotRes result_info then
                         map isStrictDmd demands         -- Finite => result is bottom
                    else
@@ -1603,7 +1603,7 @@ like
         /\ a1..an. body
 
 and treat them specially. The real work is done in
-GHC.Core.Simplify.Utils.abstractFloats, but there is quite a
+GHC.Core.Simplify.Util.abstractFloats, but there is quite a
 bit of plumbing in simplLazyBind as well.
 
 The same transformation is good when there are lets in the body:

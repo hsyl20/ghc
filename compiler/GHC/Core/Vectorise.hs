@@ -13,7 +13,7 @@ import GHC.Prelude
 import GHC.Core.Vectorise.Type.Env
 import GHC.Core.Vectorise.Type.Type
 import GHC.Core.Vectorise.Convert
-import GHC.Core.Vectorise.Utils.Hoisting
+import GHC.Core.Vectorise.Util.Hoisting
 import GHC.Core.Vectorise.Exp
 import GHC.Core.Vectorise.Env
 import GHC.Core.Vectorise.Monad

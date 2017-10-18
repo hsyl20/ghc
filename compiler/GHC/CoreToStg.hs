@@ -18,7 +18,7 @@ module GHC.CoreToStg ( coreToStg, coreExprToStg ) where
 import GHC.Prelude
 
 import GHC.Core.Syntax
-import GHC.Core.Utils          ( exprType, findDefault, isJoinBind )
+import GHC.Core.Util          ( exprType, findDefault, isJoinBind )
 import GHC.Core.Arity ( manifestArity )
 import GHC.Stg.Syntax
 

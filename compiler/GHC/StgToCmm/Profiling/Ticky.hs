@@ -110,13 +110,13 @@ import GHC.Prelude
 
 import GHC.StgToCmm.ArgRep ( slowCallPattern, toArgRep, argRepString )
 import GHC.StgToCmm.Closure
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Monad
 
 import GHC.Stg.Syntax
 import GHC.Cmm.Syntax.Expression
 import GHC.Cmm.Syntax.Graph
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CLabel
 import GHC.RTS.Storage
 

@@ -29,7 +29,7 @@ import GHC.Util.Outputable
 import GHC.Data.Maybe
 import Data.List
 import Data.Function    ( on )
-import GHC.Haskell.Rename.Utils.Unbound
+import GHC.Haskell.Rename.Util.Unbound
 
 {-
 *********************************************************

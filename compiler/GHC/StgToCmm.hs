@@ -20,13 +20,13 @@ import GHC.StgToCmm.Environment
 import GHC.StgToCmm.Bind
 import GHC.StgToCmm.Constructor
 import GHC.StgToCmm.Layout
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Closure
 import GHC.StgToCmm.Coverage
 import GHC.StgToCmm.Profiling.Ticky
 
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CLabel
 
 import GHC.Stg.Syntax

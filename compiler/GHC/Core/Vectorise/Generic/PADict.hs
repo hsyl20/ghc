@@ -9,11 +9,11 @@ import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Generic.Description
 import GHC.Core.Vectorise.Generic.PAMethods ( buildPAScAndMethods )
-import GHC.Core.Vectorise.Utils
+import GHC.Core.Vectorise.Util
 
 import GHC.CoreTypes.BasicTypes
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Inliner
 import GHC.CoreTypes.Module
 import GHC.CoreTypes.TyCon

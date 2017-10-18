@@ -26,7 +26,7 @@ import GHC.HaskellToCore.Bind
 import GHC.CoreTypes.ConLike
 import GHC.Haskell.TypeCheck.Util.CoreType
 import GHC.HaskellToCore.Monad
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 import GHC.Core.Syntax.Make   ( mkCoreLets )
 import GHC.Util
 import GHC.CoreTypes.Id

@@ -26,11 +26,11 @@ import GHC.CoreTypes.RdrName
 import GHC.Haskell.Rename.Type
 import GHC.Haskell.Rename.Bind
 import GHC.Haskell.Rename.Environment
-import GHC.Haskell.Rename.Utils ( HsDocContext(..), mapFvRn, bindLocalNames
+import GHC.Haskell.Rename.Util ( HsDocContext(..), mapFvRn, bindLocalNames
                         , checkDupRdrNames, inHsDocContext, bindLocalNamesFV
                         , checkShadowedRdrNames, warnUnusedTypePatterns
                         , extendTyVarEnvFVRn, newLocalBndrsRn )
-import GHC.Haskell.Rename.Utils.Unbound ( mkUnboundName )
+import GHC.Haskell.Rename.Util.Unbound ( mkUnboundName )
 import GHC.Haskell.Rename.ImportExport
 import GHC.Haskell.Rename.Documentation ( rnHsDoc, rnMbLHsDoc )
 import GHC.Haskell.TypeCheck.Annotation ( annCtxt )

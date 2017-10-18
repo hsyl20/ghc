@@ -48,7 +48,7 @@ import GHC.CoreTypes.TyCon
 import GHC.Builtin.Types
 import GHC.Core.Syntax
 import GHC.Core.Syntax.Make
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.SrcLoc
 import GHC.CoreTypes.Unique
 import GHC.CoreTypes.BasicTypes

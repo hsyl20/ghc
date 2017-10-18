@@ -8,7 +8,7 @@ Error-checking and other utilities for @deriving@ clauses or declarations.
 
 {-# LANGUAGE TypeFamilies #-}
 
-module GHC.Haskell.Derive.Utils (
+module GHC.Haskell.Derive.Util (
         DerivM, DerivEnv(..),
         DerivSpec(..), pprDerivSpec,
         DerivSpecMechanism(..), isDerivSpecStock,

@@ -32,12 +32,12 @@ import GHC.Haskell.TypeCheck.Monad
 import GHC.HaskellToCore.Match.Check
 import GHC.Core.Syntax
 import GHC.CoreTypes.Literal
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.HaskellToCore.Monad
 import GHC.HaskellToCore.Bind
 import GHC.HaskellToCore.GuardedRHS
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.ConLike
 import GHC.CoreTypes.DataCon

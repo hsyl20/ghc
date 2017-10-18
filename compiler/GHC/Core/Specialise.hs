@@ -25,7 +25,7 @@ import GHC.CoreTypes.Var.Environment
 import GHC.Core.Syntax
 import GHC.Core.Rules
 import GHC.Core.SimpleOpt ( collectBindersPushingCo )
-import GHC.Core.Utils              ( exprIsTrivial, applyTypeToArgs, mkCast )
+import GHC.Core.Util              ( exprIsTrivial, applyTypeToArgs, mkCast )
 import GHC.Core.FreeVars
 import GHC.CoreTypes.Var.Free            ( InterestingVarFun )
 import GHC.Core.Arity     ( etaExpandToJoinPointRule )
@@ -1284,7 +1284,7 @@ specCalls mb_mod env existing_rules calls_for_me fn rhs
            {    -- Figure out the type of the specialised function
              let body_ty = applyTypeToArgs rhs fn_type rule_args
                  -- Add a dummy argument if body_ty is unlifted. C.f.
-                 -- GHC.Core.WorkerWrap.Utils.mkWorkerArgs
+                 -- GHC.Core.WorkerWrap.Util.mkWorkerArgs
                  (lam_args, app_args)           
                    | isUnliftedType body_ty     
                    , not (isJoinId fn)
@@ -1382,7 +1382,7 @@ Consider
 
 In f's stable unfolding we have done some modest simplification which has pushed
 the cast to the outside.  (I wonder if this is the Right Thing, but it's what
-happens now; see GHC.Core.Simplify.Utils Note [Casts and
+happens now; see GHC.Core.Simplify.Util Note [Casts and
 lambdas].)  Now that stable unfolding must be specialised, so we want to push
 the cast back inside. It would be terrible if the cast defeated specialisation!
 Hence the use of collectBindersPushingCo.

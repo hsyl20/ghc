@@ -43,7 +43,7 @@ import GHC.Data.UniqueDFM
 import GHC.Util.Outputable
 import GHC.Data.Maybe
 import GHC.Haskell.Parser.HeaderInfo
-import GHC.Interface.Utils
+import GHC.Interface.Util
 import GHC.Driver.Make
 import GHC.Data.UniqueDSet
 import GHC.Builtin.Names

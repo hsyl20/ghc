@@ -23,7 +23,7 @@ module GHC.Cmm.ConstantFolder (
 
 import GHC.Prelude
 
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Syntax
 import GHC.Config.Flags
 import GHC.Util

@@ -64,7 +64,7 @@ import GHC.CoreTypes.Class            ( FunDep )
 
 import GHC.Haskell.Parser.Syntax
 import GHC.Haskell.Lexer
-import GHC.Haskell.Parser.Utils
+import GHC.Haskell.Parser.Util
 import GHC.Haskell.Syntax.Annotation
 
 import GHC.Haskell.TypeCheck.Evidence  ( emptyTcEvBinds )

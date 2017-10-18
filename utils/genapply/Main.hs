@@ -527,7 +527,7 @@ enterFastPath regstatus no_load_regs args_in_regs args
     = enterFastPathHelper tag regstatus no_load_regs args_in_regs args
 enterFastPath _ _ _ _ = empty
 
--- Copied from GHC.Config.Constants & GHC.Stg.Utils, i'd rather have this
+-- Copied from GHC.Config.Constants & GHC.Stg.Util, i'd rather have this
 -- imported: (arity,tag)
 tAG_BITS = (TAG_BITS :: Int)
 tAG_BITS_MAX = ((1 `shiftL` tAG_BITS) :: Int)

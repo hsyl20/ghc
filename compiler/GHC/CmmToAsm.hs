@@ -65,9 +65,9 @@ import GHC.CmmToAsm.Dwarf
 import GHC.Cmm.Syntax.DebugBlock
 
 import GHC.Cmm.Syntax.BlockId
-import GHC.Stg.Utils                      ( fixStgRegisters )
+import GHC.Stg.Util                      ( fixStgRegisters )
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Dataflow.Collections
 import GHC.Cmm.Dataflow.Label
 import GHC.Cmm.Dataflow.Block

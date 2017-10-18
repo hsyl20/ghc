@@ -41,7 +41,7 @@ import GHC.Prelude
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
 import GHC.Core.Syntax.Force
-import GHC.Core.Utils
+import GHC.Core.Util
 import qualified GHC.CoreTypes.Type as Type
 import qualified GHC.CoreTypes.Coercion as Coercion
 

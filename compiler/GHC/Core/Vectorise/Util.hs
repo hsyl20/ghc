@@ -1,9 +1,9 @@
-module GHC.Core.Vectorise.Utils (
-  module GHC.Core.Vectorise.Utils.Base,
-  module GHC.Core.Vectorise.Utils.Closure,
-  module GHC.Core.Vectorise.Utils.Hoisting,
-  module GHC.Core.Vectorise.Utils.PADict,
-  module GHC.Core.Vectorise.Utils.Poly,
+module GHC.Core.Vectorise.Util (
+  module GHC.Core.Vectorise.Util.Base,
+  module GHC.Core.Vectorise.Util.Closure,
+  module GHC.Core.Vectorise.Util.Hoisting,
+  module GHC.Core.Vectorise.Util.PADict,
+  module GHC.Core.Vectorise.Util.Poly,
 
   -- * Annotated Exprs
   collectAnnTypeArgs,
@@ -25,15 +25,15 @@ module GHC.Core.Vectorise.Utils (
 
 import GHC.Prelude
 
-import GHC.Core.Vectorise.Utils.Base
-import GHC.Core.Vectorise.Utils.Closure
-import GHC.Core.Vectorise.Utils.Hoisting
-import GHC.Core.Vectorise.Utils.PADict
-import GHC.Core.Vectorise.Utils.Poly
+import GHC.Core.Vectorise.Util.Base
+import GHC.Core.Vectorise.Util.Closure
+import GHC.Core.Vectorise.Util.Hoisting
+import GHC.Core.Vectorise.Util.PADict
+import GHC.Core.Vectorise.Util.Poly
 import GHC.Core.Vectorise.Monad
 import GHC.Core.Vectorise.Builtins
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Type
 import Control.Monad

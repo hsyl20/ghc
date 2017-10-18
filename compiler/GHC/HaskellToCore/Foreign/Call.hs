@@ -23,12 +23,12 @@ import GHC.Prelude
 import GHC.Core.Syntax
 
 import GHC.HaskellToCore.Monad
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.CoreTypes.Id.Make
 import GHC.CoreTypes.ForeignCall
 import GHC.CoreTypes.DataCon
-import GHC.HaskellToCore.Utils
+import GHC.HaskellToCore.Util
 
 import GHC.Haskell.TypeCheck.Util.CoreType
 import GHC.CoreTypes.Type

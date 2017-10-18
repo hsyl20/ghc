@@ -26,7 +26,7 @@ import GHC.Config.Flags
 import GHC.Haskell.TypeCheck.Monad
 import GHC.Haskell.TypeCheck.FamilyInstance
 import GHC.Haskell.Derive.Constraints
-import GHC.Haskell.Derive.Utils
+import GHC.Haskell.Derive.Util
 import GHC.Haskell.TypeCheck.Validity         ( allDistinctTyVars )
 import GHC.Haskell.TypeCheck.Class ( instDeclCtxt3, tcATDefault, tcMkDeclCtxt)
 import GHC.Haskell.TypeCheck.Environment
@@ -39,7 +39,7 @@ import GHC.Haskell.TypeCheck.Type
 import GHC.Haskell.Rename.ImportExport      ( extendGlobalRdrEnvRn )
 import GHC.Haskell.Rename.Bind
 import GHC.Haskell.Rename.Environment
-import GHC.Haskell.Rename.Utils             ( bindLocalNamesFV )
+import GHC.Haskell.Rename.Util             ( bindLocalNamesFV )
 import GHC.Haskell.Rename                   ( addTcgDUs )
 import GHC.CoreTypes.Available
 

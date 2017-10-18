@@ -461,7 +461,7 @@ primOpCanFail :: PrimOp -> Bool
 
 primOpOkForSpeculation :: PrimOp -> Bool
   -- See Note [PrimOp can_fail and has_side_effects]
-  -- See comments with GHC.Core.Utils.exprOkForSpeculation
+  -- See comments with GHC.Core.Util.exprOkForSpeculation
   -- primOpOkForSpeculation => primOpOkForSideEffects
 primOpOkForSpeculation op
   =  primOpOkForSideEffects op
@@ -476,7 +476,7 @@ primOpOkForSideEffects op
 {-
 Note [primOpIsCheap]
 ~~~~~~~~~~~~~~~~~~~~
-@primOpIsCheap@, as used in \tr{GHC.Core.Simplify.Utils}.
+@primOpIsCheap@, as used in \tr{GHC.Core.Simplify.Util}.
 For now (HACK WARNING), we just borrow some other predicates for a
 what-should-be-good-enough test.  "Cheap" means willing to call it more than
 once, and/or push it inside a lambda.  The latter could change the behaviour of

@@ -12,7 +12,7 @@ import GHC.Prelude
 import GHC.Core.Syntax
 import GHC.Core.Inliner ( certainlyWillInline, mkWwInlineRule
                                        , mkWorkerUnfolding )
-import GHC.Core.Utils               ( exprType, exprIsHNF )
+import GHC.Core.Util               ( exprType, exprIsHNF )
 import GHC.Core.FreeVars   ( exprFreeVars )
 import GHC.CoreTypes.Var
 import GHC.CoreTypes.Id
@@ -22,7 +22,7 @@ import GHC.Data.UniqueSupply
 import GHC.CoreTypes.BasicTypes
 import GHC.Config.Flags
 import GHC.CoreTypes.Demand
-import GHC.Core.WorkerWrap.Utils
+import GHC.Core.WorkerWrap.Util
 import GHC.Util
 import GHC.Util.Outputable
 import GHC.CoreTypes.FamilyInstance
@@ -250,7 +250,7 @@ Follows on from Note [Worker-wrapper for INLINABLE functions]
 It is *vital* that if the worker gets an INLINABLE pragma (from the
 original function), then the worker has the same phase activation as
 the wrapper (or later).  That is necessary to allow the wrapper to
-inline into the worker's unfolding: see GHC.Core.Simplify.Utils
+inline into the worker's unfolding: see GHC.Core.Simplify.Util
 Note [Simplifying inside stable unfoldings].
 
 If the original is NOINLINE, it's important that the work inherit the
@@ -605,7 +605,7 @@ Consider this rather common form of binding:
 
 Since x is not used it'll be marked as absent.  But there is no point
 in w/w-ing because we'll simply add (\y:Void#), see
-GHC.Core.WorkerWrap.Utils.mkWorkerArgs.
+GHC.Core.WorkerWrap.Util.mkWorkerArgs.
 
 If x has a more interesting type (eg Int, or Int#), there *is* a point
 in w/w so that we don't pass the argument at all.

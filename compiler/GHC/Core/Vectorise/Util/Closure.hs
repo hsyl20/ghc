@@ -1,6 +1,6 @@
 -- |Utils concerning closure construction and application.
 
-module GHC.Core.Vectorise.Utils.Closure
+module GHC.Core.Vectorise.Util.Closure
   ( mkClosure
   , mkClosureApp
   , buildClosures
@@ -12,14 +12,14 @@ import GHC.Prelude
 import GHC.Core.Vectorise.Builtins
 import GHC.Core.Vectorise.Vect
 import GHC.Core.Vectorise.Monad
-import GHC.Core.Vectorise.Utils.Base
-import GHC.Core.Vectorise.Utils.PADict
-import GHC.Core.Vectorise.Utils.Hoisting
+import GHC.Core.Vectorise.Util.Base
+import GHC.Core.Vectorise.Util.PADict
+import GHC.Core.Vectorise.Util.Hoisting
 
 import GHC.Core.Syntax
 import GHC.CoreTypes.Type
 import GHC.Core.Syntax.Make
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Id.Make

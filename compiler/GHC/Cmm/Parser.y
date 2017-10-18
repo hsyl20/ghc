@@ -211,7 +211,7 @@ import GHC.StgToCmm.Monad hiding
                  , emitAssign, emitOutOfLine, withUpdFrameOff
                  , getUpdFrameOff )
 import qualified GHC.StgToCmm.Monad as F
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.ForeignCall
 import GHC.StgToCmm.Expression
 import GHC.StgToCmm.Closure
@@ -223,7 +223,7 @@ import GHC.Core.Syntax             ( Tickish(SourceNote) )
 import GHC.Cmm.ConstantFolder
 import GHC.Cmm.Syntax.Graph
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch  ( mkSwitchTargets )
 import GHC.RTS.InfoTable
 import GHC.Cmm.Syntax.BlockId

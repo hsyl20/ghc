@@ -31,12 +31,12 @@ import GHC.Haskell.TypeCheck.Monad
 import GHC.CoreTypes.Module           ( getModule )
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
-import GHC.Haskell.Rename.Utils
+import GHC.Haskell.Rename.Util
                   ( HsDocContext(..), bindLocalNamesFV, checkDupNames
                   , bindLocalNames
                   , mapMaybeFvRn, mapFvRn
                   , warnUnusedLocalBinds )
-import GHC.Haskell.Rename.Utils.Unbound  ( reportUnboundName )
+import GHC.Haskell.Rename.Util.Unbound  ( reportUnboundName )
 import GHC.Haskell.Rename.Splice         ( rnBracket, rnSpliceExpr, checkThLocalName )
 import GHC.Haskell.Rename.Type
 import GHC.Haskell.Rename.Pattern

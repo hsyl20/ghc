@@ -2341,7 +2341,7 @@ data Dependencies
                         -- [The type family instance consistency story].
          }
   deriving( Eq )
-        -- Equality used only for old/new comparison in GHC.Interface.Utils.addFingerprints
+        -- Equality used only for old/new comparison in GHC.Interface.Util.addFingerprints
         -- See 'GHC.Haskell.TypeCheck.Util.ImportAvails' for details on dependencies.
 
 instance Binary Dependencies where

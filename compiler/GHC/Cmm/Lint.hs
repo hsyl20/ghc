@@ -17,7 +17,7 @@ import GHC.Cmm.Dataflow.Collections
 import GHC.Cmm.Dataflow.Graph
 import GHC.Cmm.Dataflow.Label
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Liveness
 import GHC.Cmm.Switch (switchTargetsToList)
 import GHC.Cmm.Printer ()

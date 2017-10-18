@@ -8,7 +8,7 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Stg.Utils ( fixStgRegisters ) where
+module GHC.Stg.Util ( fixStgRegisters ) where
 
 #include "HsVersions.h"
 
@@ -18,7 +18,7 @@ import GHC.Util.CodeGen.Platform
 import GHC.Cmm.Syntax
 import GHC.Cmm.Dataflow.Block
 import GHC.Cmm.Dataflow.Graph
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CLabel
 import GHC.Config.Flags
 import GHC.Util.Outputable

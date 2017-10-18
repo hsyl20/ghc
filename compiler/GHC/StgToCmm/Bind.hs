@@ -28,7 +28,7 @@ import GHC.StgToCmm.Profiling ( curCCS, ldvEnterClosure,
          enterCostCentreFun, enterCostCentreThunk, initUpdFrameProf)
 import GHC.StgToCmm.Profiling.Ticky
 import GHC.StgToCmm.Layout
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Closure
 import GHC.StgToCmm.ForeignCall  (emitPrimCall)
 
@@ -38,7 +38,7 @@ import GHC.Cmm.Syntax.BlockId
 import GHC.RTS.Storage
 import GHC.Cmm.Syntax
 import GHC.RTS.InfoTable
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CLabel
 import GHC.Stg.Syntax
 import GHC.CoreTypes.CostCentre

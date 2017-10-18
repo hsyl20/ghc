@@ -320,7 +320,7 @@ mkImportedInstance cls_nm mb_tcs dfun_name dfun oflag orphan
 {-
 Note [When exactly is an instance decl an orphan?]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  (see GHC.Interface.Utils.instanceToIfaceInst, which implements this)
+  (see GHC.Interface.Util.instanceToIfaceInst, which implements this)
 Roughly speaking, an instance is an orphan if its head (after the =>)
 mentions nothing defined in this module.
 

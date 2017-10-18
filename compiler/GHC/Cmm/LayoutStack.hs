@@ -6,7 +6,7 @@ module GHC.Cmm.LayoutStack (
 import GHC.Prelude hiding ((<*>))
 
 -- XXX layering violations
-import GHC.StgToCmm.Utils       ( callerSaveVolatileRegs )
+import GHC.StgToCmm.Util       ( callerSaveVolatileRegs )
 import GHC.StgToCmm.ForeignCall ( saveThreadState, loadThreadState )
 
 import GHC.CoreTypes.BasicTypes
@@ -14,7 +14,7 @@ import GHC.Cmm.Syntax
 import GHC.RTS.InfoTable
 import GHC.Cmm.Syntax.BlockId
 import GHC.CoreTypes.CLabel
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Syntax.Graph
 import GHC.CoreTypes.ForeignCall
 import GHC.Cmm.Liveness
@@ -26,7 +26,7 @@ import GHC.Cmm.Dataflow.Collections
 import GHC.Cmm.Dataflow.Graph
 import GHC.Cmm.Dataflow.Label
 import GHC.Data.UniqueSupply
-import GHC.StgToCmm.Utils ( newTemp )
+import GHC.StgToCmm.Util ( newTemp )
 import GHC.Data.Maybe
 import GHC.Data.UniqueFM
 import GHC.Util

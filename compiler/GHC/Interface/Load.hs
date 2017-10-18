@@ -48,7 +48,7 @@ import GHC.Haskell.TypeCheck.Monad
 
 import GHC.Config.Constants
 import GHC.Builtin.Names
-import GHC.Builtin.Utils
+import GHC.Builtin.Util
 import GHC.Builtin.Primitive.Operations (allThePrimOps, primOpFixity, primOpOcc)
 import GHC.CoreTypes.Id.Make               ( seqId )
 import GHC.Builtin.Primitive.Types      ( funTyConName )
@@ -412,7 +412,7 @@ loadInterface doc_str mod from
                             -- Stoutly warn against an EPS-updating import
                             -- of one's own boot file! (one-shot only)
                             --See Note [Do not update EPS with your own hi-boot]
-                            -- in GHC.Interface.Utils.
+                            -- in GHC.Interface.Util.
                             WARN( hi_boot_file &&
                                   fmap fst (if_rec_types gbl_env) == Just mod,
                                   ppr mod )

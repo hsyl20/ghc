@@ -28,13 +28,13 @@ import GHC.Stg.Syntax
 import GHC.StgToCmm.Profiling (storeCurCCS, ccsType, curCCS)
 import GHC.StgToCmm.Environment
 import GHC.StgToCmm.Monad
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Closure
 import GHC.StgToCmm.Layout
 
 import GHC.Cmm.Syntax.BlockId (newBlockId)
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Syntax.Graph
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.RepType

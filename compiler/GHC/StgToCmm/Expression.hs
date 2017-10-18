@@ -28,7 +28,7 @@ import GHC.StgToCmm.Layout
 import GHC.StgToCmm.PrimOp
 import GHC.StgToCmm.Coverage
 import GHC.StgToCmm.Profiling.Ticky
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Closure
 
 import GHC.Stg.Syntax

@@ -26,7 +26,7 @@ import GHC.Core.Arity     ( joinRhsArity, etaExpandToJoinPoint )
 
 import GHC.Core.Syntax
 import GHC.Core.Subst
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.FreeVars
 import GHC.Core.Printer            ( pprCoreBindings, pprRules )
 import GHC.Core.Occurence ( occurAnalyseExpr, occurAnalysePgm )
@@ -369,7 +369,7 @@ simple_bind_pair env@(SOE { soe_inl = inl_env, soe_subst = subst })
     pre_inline_unconditionally :: Bool
     pre_inline_unconditionally
          -- See Note [Do not inline CoVars unconditionally]
-         --     in GHC.Core.Simplify.Utils
+         --     in GHC.Core.Simplify.Util
        | isCoVar in_bndr          = False    
        | isExportedId in_bndr     = False    
        | stable_unf               = False
@@ -445,7 +445,7 @@ simple_out_bind_pair env in_bndr mb_out_bndr out_rhs
 {- Note [Exported Ids and trivial RHSs]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We obviously do not want to unconditionally inline an Id that is exported.
-In GHC.Core.Simplify.Utils, Note [Top level and postInlineUnconditionally], we
+In GHC.Core.Simplify.Util, Note [Top level and postInlineUnconditionally], we
 explain why we don't inline /any/ top-level things unconditionally, even
 trivial ones.  But we do here!  Why?  In the simple optimiser
 

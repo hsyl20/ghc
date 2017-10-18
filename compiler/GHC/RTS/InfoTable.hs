@@ -37,7 +37,7 @@ module GHC.RTS.InfoTable (
 import GHC.Prelude
 
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.CoreTypes.CLabel
 import GHC.RTS.Storage
 import GHC.Data.Bitmap

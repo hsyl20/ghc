@@ -1,6 +1,6 @@
 -- |Auxiliary functions to vectorise type abstractions.
 
-module GHC.Core.Vectorise.Utils.Poly
+module GHC.Core.Vectorise.Util.Poly
   ( polyAbstract
   , polyApply
   , polyVApply
@@ -12,7 +12,7 @@ import GHC.Prelude
 
 import GHC.Core.Vectorise.Vect
 import GHC.Core.Vectorise.Monad
-import GHC.Core.Vectorise.Utils.PADict
+import GHC.Core.Vectorise.Util.PADict
 import GHC.Core.Syntax
 import GHC.CoreTypes.Type
 import GHC.Data.FastString

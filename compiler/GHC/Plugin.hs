@@ -19,7 +19,7 @@ module GHC.Plugin
    , module GHC.Core.Syntax
    , module GHC.CoreTypes.Literal
    , module GHC.CoreTypes.DataCon
-   , module GHC.Core.Utils
+   , module GHC.Core.Util
    , module GHC.Core.Syntax.Make
    , module GHC.Core.FreeVars
    , module GHC.Core.Subst
@@ -70,7 +70,7 @@ import GHC.Core.Monad
 import GHC.Core.Syntax
 import GHC.CoreTypes.Literal
 import GHC.CoreTypes.DataCon
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Syntax.Make
 import GHC.Core.FreeVars
 import GHC.Core.Subst hiding

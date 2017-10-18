@@ -16,7 +16,7 @@ module GHC.Core.Demand ( dmdAnalProgram ) where
 import GHC.Prelude
 
 import GHC.Config.Flags
-import GHC.Core.WorkerWrap.Utils 
+import GHC.Core.WorkerWrap.Util 
                                    ( findTypeShape, deepSplitProductType_maybe )
 import GHC.CoreTypes.Demand   -- All of it
 import GHC.Core.Syntax
@@ -27,7 +27,7 @@ import GHC.CoreTypes.BasicTypes
 import Data.List
 import GHC.CoreTypes.DataCon
 import GHC.CoreTypes.Id
-import GHC.Core.Utils           ( exprIsHNF, exprType, exprIsTrivial )
+import GHC.Core.Util           ( exprIsHNF, exprType, exprIsTrivial )
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion         ( Coercion, coVarsOfCo )

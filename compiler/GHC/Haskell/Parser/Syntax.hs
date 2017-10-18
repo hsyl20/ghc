@@ -979,7 +979,7 @@ checkFunBind msg strictness ann lhs_loc fun is_infix pats (L rhs_span grhss)
 
 makeFunBind :: Located RdrName -> [LMatch GhcPs (LHsExpr GhcPs)]
             -> HsBind GhcPs
--- Like GHC.Haskell.Utils.mkFunBind, but we need to be able to set the fixity
+-- Like GHC.Haskell.Util.mkFunBind, but we need to be able to set the fixity
 -- too
 makeFunBind fn ms
   = FunBind { fun_id = fn,

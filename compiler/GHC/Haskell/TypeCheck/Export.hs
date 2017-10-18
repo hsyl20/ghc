@@ -17,7 +17,7 @@ import GHC.Haskell.TypeCheck.Util.Monadic
 import GHC.Haskell.TypeCheck.Util.CoreType
 import GHC.Haskell.Rename.ImportExport
 import GHC.Haskell.Rename.Environment
-import GHC.Haskell.Rename.Utils.Unbound ( reportUnboundName )
+import GHC.Haskell.Rename.Util.Unbound ( reportUnboundName )
 import GHC.Util.Error
 import GHC.CoreTypes.Id
 import GHC.CoreTypes.Id.Info

@@ -23,7 +23,7 @@ import GHC.StgToCmm.Layout
 import GHC.StgToCmm.ForeignCall
 import GHC.StgToCmm.Environment
 import GHC.StgToCmm.Monad
-import GHC.StgToCmm.Utils
+import GHC.StgToCmm.Util
 import GHC.StgToCmm.Profiling.Ticky
 import GHC.StgToCmm.Heap
 import GHC.StgToCmm.Profiling ( costCentreFrom, curCCS )
@@ -39,7 +39,7 @@ import GHC.RTS.InfoTable
 import GHC.CoreTypes.Type     ( Type, tyConAppTyCon )
 import GHC.CoreTypes.TyCon
 import GHC.CoreTypes.CLabel
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Builtin.Primitive.Operations
 import GHC.RTS.Storage
 import GHC.Data.FastString

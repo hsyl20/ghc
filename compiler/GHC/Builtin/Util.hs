@@ -5,7 +5,7 @@
 
 {-# LANGUAGE CPP #-}
 
--- | The @GHC.Builtin.Utils@ interface to the compiler's prelude knowledge.
+-- | The @GHC.Builtin.Util@ interface to the compiler's prelude knowledge.
 --
 -- This module serves as the central gathering point for names which the
 -- compiler knows something about. This includes functions for,
@@ -17,7 +17,7 @@
 -- See Note [Known-key names] and Note [About wired-in things] for information
 -- about the two types of prelude things in GHC.
 --
-module GHC.Builtin.Utils (
+module GHC.Builtin.Util (
         -- * Known-key names
         isKnownKeyName,
         lookupKnownKeyName,
@@ -100,7 +100,7 @@ Note [About wired-in things]
   checker sees if the Name is wired in before looking up the name in
   the type environment.
 
-* GHC.Interface.Utils prunes out wired-in things before putting them in an
+* GHC.Interface.Util prunes out wired-in things before putting them in an
   interface file.  So interface files never contain wired-in things.
 -}
 

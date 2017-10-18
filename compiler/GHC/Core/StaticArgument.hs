@@ -55,7 +55,7 @@ import GHC.Prelude
 
 import GHC.CoreTypes.Var
 import GHC.Core.Syntax
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.CoreTypes.Type
 import GHC.CoreTypes.Coercion
 import GHC.CoreTypes.Id

@@ -38,7 +38,7 @@ import GHC.Haskell.Rename.Pattern
 import GHC.Haskell.Rename.ImportExport
 import GHC.Haskell.Rename.Environment
 import GHC.Haskell.Rename.Fixity
-import GHC.Haskell.Rename.Utils
+import GHC.Haskell.Rename.Util
                         ( HsDocContext(..), mapFvRn, extendTyVarEnvFVRn
                         , checkDupRdrNames, warnUnusedLocalBinds
                         , checkDupAndShadowedNames, bindLocalNamesFV )
@@ -244,7 +244,7 @@ rnLocalValBindsLHS fix_env binds
 
          -- Check for duplicates and shadowing
          -- Must do this *after* renaming the patterns
-         -- See Note [Collect binders only after renaming] in GHC.Haskell.Utils
+         -- See Note [Collect binders only after renaming] in GHC.Haskell.Util
 
          -- We need to check for dups here because we
          -- don't don't bind all of the variables from the ValBinds at once

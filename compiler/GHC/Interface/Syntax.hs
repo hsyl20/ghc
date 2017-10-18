@@ -66,7 +66,7 @@ import GHC.Util.Binary
 import GHC.Data.BoolFormula  ( BooleanFormula, pprBooleanFormula, isTrue )
 import GHC.CoreTypes.Var     ( TyVarBndr(..) )
 import GHC.CoreTypes.TyCon   ( Role (..), Injectivity(..) )
-import GHC.Util              ( filterOut, filterByList, dropList )
+import GHC.Util              ( filterByList, dropList )
 import GHC.CoreTypes.DataCon (SrcStrictness(..), SrcUnpackedness(..))
 import GHC.Util.Lexeme       (isLexSym)
 import GHC.Config.Flags
@@ -1274,7 +1274,7 @@ instance Outputable IfaceUnfolding where
 *                                                                      *
 ************************************************************************
 
-This is used for dependency analysis in GHC.Interface.Utils, so that we
+This is used for dependency analysis in GHC.Interface.Util, so that we
 fingerprint a declaration before the things that depend on it.  It
 is specific to interface-file fingerprinting in the sense that we
 don't collect *all* Names: for example, the DFun of an instance is

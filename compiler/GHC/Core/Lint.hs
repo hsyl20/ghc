@@ -25,7 +25,7 @@ import GHC.Prelude
 
 import GHC.Core.Syntax
 import GHC.Core.FreeVars
-import GHC.Core.Utils
+import GHC.Core.Util
 import GHC.Core.Stats      ( coreBindsStats )
 import GHC.Core.Monad
 import GHC.Data.Bag

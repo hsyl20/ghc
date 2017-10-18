@@ -45,7 +45,7 @@ import GHC.Util.Platform
 import GHC.Cmm.Syntax.BlockId
 import GHC.Cmm.Printer ( pprExpr )
 import GHC.Cmm.Syntax
-import GHC.Cmm.Utils
+import GHC.Cmm.Util
 import GHC.Cmm.Switch
 import GHC.CoreTypes.CLabel
 import GHC.Cmm.Dataflow.Block
