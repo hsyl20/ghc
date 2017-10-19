@@ -1509,58 +1509,76 @@ wordPrimOps dflags = PrimOps
 assocCommuDistrib :: PrimOp -> PrimOps -> RuleM CoreExpr
 assocCommuDistrib op PrimOps{..} = do
   [e1,e2] <- getArgs
-  case AppOp2 e1 op e2 of
-    -- (+)
-    x :++: (y :++: v)             -> return $ mkL (x+y)   `add` v
-    (x :++: w) :+: (y :++: v)     -> return $ mkL (x+y)   `add` (w `add` v)
+  dflags <- getDynFlags
+  if not (gopt Opt_NumConstantFolding dflags)
+     then mzero
+     else case AppOp2 e1 op e2 of
+       -- (+)
+       x :++: (y :++: v)             -> return $ mkL (x+y)   `add` v
+       (x :++: w) :+: (y :++: v)     -> return $ mkL (x+y)   `add` (w `add` v)
 
-    -- (*)
-    x :**: (y :**: v)             -> return $ mkL (x*y)   `mul` v
-    (x :**: w) :*: (y :**: v)     -> return $ mkL (x*y)   `mul` (w `mul` v)
+       -- (*)
+       x :**: (y :**: v)             -> return $ mkL (x*y)   `mul` v
+       (x :**: w) :*: (y :**: v)     -> return $ mkL (x*y)   `mul` (w `mul` v)
 
-    -- (-)
-    L x :-: (L y :-: v)           -> return $ mkL (x-y)   `add` v
-    L x :-: (v   :-: L y)         -> return $ mkL (x+y)   `sub` v
-    (L y :-: v)   :-: L x         -> return $ mkL (y-x)   `sub` v
-    (v   :-: L y) :-: L x         -> return $ mkL (0-y-x) `add` v
+       -- (-)
+       L x  :-: (L y :-: v)          -> return $ mkL (x-y)   `add` v
+       L x  :-: (v   :-: L y)        -> return $ mkL (x+y)   `sub` v
+       (L y :-: v)   :-: L x         -> return $ mkL (y-x)   `sub` v
+       (v   :-: L y) :-: L x         -> return $ mkL (0-y-x) `add` v
 
-    (v   :-: L y) :-: (w :-: L x) -> return $ mkL (x-y)   `add` (v `sub` w)
-    (v   :-: L y) :-: (L x :-: w) -> return $ mkL (0-x-y) `add` (v `add` w)
-    (L y :-:   v) :-: (w :-: L x) -> return $ mkL (x+y)   `sub` (v `add` w)
-    (L y :-:   v) :-: (L x :-: w) -> return $ mkL (y-x)   `add` (w `add` v)
+       (v   :-: L y) :-: (w :-: L x) -> return $ mkL (x-y)   `add` (v `sub` w)
+       (v   :-: L y) :-: (L x :-: w) -> return $ mkL (0-x-y) `add` (v `add` w)
+       (L y :-:   v) :-: (w :-: L x) -> return $ mkL (x+y)   `sub` (v `add` w)
+       (L y :-:   v) :-: (L x :-: w) -> return $ mkL (y-x)   `add` (w `add` v)
 
-    -- (*) and (+)
-    x :**: (y :++: v)             -> return $ mkL (x*y)   `add` (mkL x `mul` v)
+       -- (*) and (+)
+       x :**: (y :++: v)             -> return $ mkL (x*y)   `add` (mkL x `mul` v)
 
-    -- (+) and (-)
-    x :++: (L y :-: v)            -> return $ mkL (x+y)   `sub` v
-    x :++: (v   :-: L y)          -> return $ mkL (x-y)   `add` v
+       -- (+) and (-)
+       x :++: (L y :-: v)            -> return $ mkL (x+y)   `sub` v
+       x :++: (v   :-: L y)          -> return $ mkL (x-y)   `add` v
 
-    L x :-: (y :++: v)            -> return $ mkL (x-y)   `sub` v
-    (y :++: v) :-: L x            -> return $ mkL (y-x)   `add` v
-    (x :++: w) :-: (y :++: v)     -> return $ mkL (x-y)   `add` (w `sub` v)
+       L x :-: (y :++: v)            -> return $ mkL (x-y)   `sub` v
+       (y :++: v) :-: L x            -> return $ mkL (y-x)   `add` v
+       (x :++: w) :-: (y :++: v)     -> return $ mkL (x-y)   `add` (w `sub` v)
 
-    (w :-: L x) :+: (L y :-: v)   -> return $ mkL (y-x)   `add` (w `sub` v)
-    (w :-: L x) :+: (v   :-: L y) -> return $ mkL (0-x-y) `add` (w `add` v)
-    (L x :-: w) :+: (L y :-: v)   -> return $ mkL (x+y)   `sub` (w `add` v)
-    (L x :-: w) :+: (v   :-: L y) -> return $ mkL (x-y)   `add` (v `sub` w)
+       (w :-: L x) :+: (L y :-: v)   -> return $ mkL (y-x)   `add` (w `sub` v)
+       (w :-: L x) :+: (v   :-: L y) -> return $ mkL (0-x-y) `add` (w `add` v)
+       (L x :-: w) :+: (L y :-: v)   -> return $ mkL (x+y)   `sub` (w `add` v)
+       (L x :-: w) :+: (v   :-: L y) -> return $ mkL (x-y)   `add` (v `sub` w)
 
-    (w :-: L x) :+: (y :++: v)    -> return $ mkL (y-x)   `add` (w `add` v)
-    (L x :-: w) :+: (y :++: v)    -> return $ mkL (x+y)   `add` (v `sub` w)
-    (y :++: v) :+: (w :-: L x)    -> return $ mkL (y-x)   `add` (w `add` v)
-    (y :++: v) :+: (L x :-: w)    -> return $ mkL (x+y)   `add` (v `sub` w)
+       (w :-: L x) :+: (y :++: v)    -> return $ mkL (y-x)   `add` (w `add` v)
+       (L x :-: w) :+: (y :++: v)    -> return $ mkL (x+y)   `add` (v `sub` w)
+       (y :++: v) :+: (w :-: L x)    -> return $ mkL (y-x)   `add` (w `add` v)
+       (y :++: v) :+: (L x :-: w)    -> return $ mkL (x+y)   `add` (v `sub` w)
 
-    (w :-: L x) :-: (y :++: v)    -> return $ mkL (0-y-x) `add` (w `sub` v)
-    (L x :-: w) :-: (y :++: v)    -> return $ mkL (x-y)   `sub` (v `add` w)
-    (y :++: v) :-: (w :-: L x)    -> return $ mkL (y+x)   `add` (v `sub` w)
-    (y :++: v) :-: (L x :-: w)    -> return $ mkL (y-x)   `add` (v `add` w)
+       (w :-: L x) :-: (y :++: v)    -> return $ mkL (0-y-x) `add` (w `sub` v)
+       (L x :-: w) :-: (y :++: v)    -> return $ mkL (x-y)   `sub` (v `add` w)
+       (y :++: v) :-: (w :-: L x)    -> return $ mkL (y+x)   `add` (v `sub` w)
+       (y :++: v) :-: (L x :-: w)    -> return $ mkL (y-x)   `add` (v `add` w)
+
+       -- (*) and (-)
+       x :**: (L y :-: v)            -> return $ mkL (x*y)   `sub` (mkL x `mul` v)
+       x :**: (v   :-: L y)          -> return $ (mkL x `mul` v) `sub` mkL (x*y)
+
+       -- extract the constant to the upper level
+       w  :+: (y :++: v)             -> return $ mkL y `add` (w `add` v)
+       (y :++: v) :+: w              -> return $ mkL y       `add` (w `add` v)
+
+       w  :-: (y :++: v)             -> return $ (w `sub` v) `sub` mkL y
+       (y :++: v) :-: w              -> return $ mkL y       `add` (v `sub` w)
+
+       w    :-: (L y :-: v)          -> return $ (w `add` v) `sub` mkL y
+       (L y :-: v) :-: w             -> return $ mkL y       `sub` (w `add` v)
+
+       w    :+: (L y :-: v)          -> return $ mkL y       `add` (w `sub` v)
+       w    :+: (v :-: L y)          -> return $ (w `add` v) `sub` mkL y
+       (L y :-: v) :+: w             -> return $ mkL y       `add` (w `sub` v)
+       (v :-: L y) :+: w             -> return $ (w `add` v) `sub` mkL y
 
 
-    -- (*) and (-)
-    x :**: (L y :-: v)            -> return $ mkL (x*y)   `sub` (mkL x `mul` v)
-    x :**: (v   :-: L y)          -> return $ (mkL x `mul` v) `sub` mkL (x*y)
-
-    _                             -> mzero
+       _                             -> mzero
 
 
 

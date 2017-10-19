@@ -472,6 +472,7 @@ data GeneralFlag
    | Opt_WorkerWrapper
    | Opt_SolveConstantDicts
    | Opt_CatchBottoms
+   | Opt_NumConstantFolding
 
    -- Interface files
    | Opt_IgnoreInterfacePragmas
@@ -3794,6 +3795,7 @@ fFlagsDeps = [
   flagSpec "worker-wrapper"                   Opt_WorkerWrapper,
   flagSpec "solve-constant-dicts"             Opt_SolveConstantDicts,
   flagSpec "catch-bottoms"                    Opt_CatchBottoms,
+  flagSpec "num-constant-folding"             Opt_NumConstantFolding,
   flagSpec "show-warning-groups"              Opt_ShowWarnGroups,
   flagSpec "hide-source-paths"                Opt_HideSourcePaths,
   flagSpec "show-hole-constraints"            Opt_ShowHoleConstraints,
@@ -4176,6 +4178,7 @@ optLevelFlags -- see Note [Documenting optimisation flags]
     , ([1,2],   Opt_CprAnal)
     , ([1,2],   Opt_WorkerWrapper)
     , ([1,2],   Opt_SolveConstantDicts)
+    , ([1,2],   Opt_NumConstantFolding)
 
     , ([2],     Opt_LiberateCase)
     , ([2],     Opt_SpecConstr)
