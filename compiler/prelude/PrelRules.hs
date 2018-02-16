@@ -1152,6 +1152,7 @@ builtinRules
         ]
      ]
  ++ builtinIntegerRules
+ ++ builtinNaturalRules
 {-# NOINLINE builtinRules #-}
 -- there is no benefit to inlining these yet, despite this, GHC produces
 -- unfoldings for this regardless since the floated list entries look small.
@@ -1162,10 +1163,12 @@ builtinIntegerRules =
   rule_WordToInteger  "wordToInteger"       wordToIntegerName,
   rule_Int64ToInteger  "int64ToInteger"     int64ToIntegerName,
   rule_Word64ToInteger "word64ToInteger"    word64ToIntegerName,
+  rule_NaturalToInteger "naturalToInteger"  naturalToIntegerName,
   rule_convert        "integerToWord"       integerToWordName       mkWordLitWord,
   rule_convert        "integerToInt"        integerToIntName        mkIntLitInt,
   rule_convert        "integerToWord64"     integerToWord64Name     (\_ -> mkWord64LitWord64),
   rule_convert        "integerToInt64"      integerToInt64Name      (\_ -> mkInt64LitInt64),
+  rule_partial_unop   "naturalFromInteger"  naturalFromIntegerName (\x -> if x >= 0 then Just x else Nothing),
   rule_binop          "plusInteger"         plusIntegerName         (+),
   rule_binop          "minusInteger"        minusIntegerName        (-),
   rule_binop          "timesInteger"        timesIntegerName        (*),
@@ -1228,9 +1231,15 @@ builtinIntegerRules =
           rule_Word64ToInteger str name
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_Word64ToInteger }
+          rule_NaturalToInteger str name
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
+                           ru_try = match_NaturalToInteger }
           rule_unop str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_Integer_unop op }
+          rule_partial_unop str name op
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
+                           ru_try = match_Integer_partial_unop op }
           rule_bitInteger str name
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_bitInteger }
@@ -1267,6 +1276,19 @@ builtinIntegerRules =
           rule_rationalTo str name mkLit
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
                            ru_try = match_rationalTo mkLit }
+
+builtinNaturalRules :: [CoreRule]
+builtinNaturalRules =
+ [rule_binop          "plusNatural"         plusNaturalName         (+),
+  rule_partial_binop  "minusNatural"        minusNaturalName        (\a b -> if a >= b then Just (a - b) else Nothing),
+  rule_binop          "timesNatural"        timesNaturalName        (*)
+  ]
+    where rule_binop str name op
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
+                           ru_try = match_Natural_binop op }
+          rule_partial_binop str name op
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
+                           ru_try = match_Natural_partial_binop op }
 
 ---------------------------------------------------
 -- The rule is this:
@@ -1387,6 +1409,16 @@ match_Word64ToInteger _ id_unf id [xl]
         panic "match_Word64ToInteger: Id has the wrong type"
 match_Word64ToInteger _ _ _ _ = Nothing
 
+match_NaturalToInteger :: RuleFun
+match_NaturalToInteger _ id_unf id [xl]
+  | Just (LitNatural x _) <- exprIsLiteral_maybe id_unf xl
+  = case splitFunTy_maybe (idType id) of
+    Just (_, naturalTy) ->
+        Just (Lit (LitInteger x naturalTy))
+    _ ->
+        panic "match_NaturalToInteger: Id has the wrong type"
+match_NaturalToInteger _ _ _ _ = Nothing
+
 -------------------------------------------------
 {- Note [Rewriting bitInteger]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1454,6 +1486,21 @@ match_Integer_binop binop _ id_unf _ [xl,yl]
   , Just (LitInteger y _) <- exprIsLiteral_maybe id_unf yl
   = Just (Lit (LitInteger (x `binop` y) i))
 match_Integer_binop _ _ _ _ _ = Nothing
+
+match_Natural_binop :: (Integer -> Integer -> Integer) -> RuleFun
+match_Natural_binop binop _ id_unf _ [xl,yl]
+  | Just (LitNatural x i) <- exprIsLiteral_maybe id_unf xl
+  , Just (LitNatural y _) <- exprIsLiteral_maybe id_unf yl
+  = Just (Lit (LitNatural (x `binop` y) i))
+match_Natural_binop _ _ _ _ _ = Nothing
+
+match_Natural_partial_binop :: (Integer -> Integer -> Maybe Integer) -> RuleFun
+match_Natural_partial_binop binop _ id_unf _ [xl,yl]
+  | Just (LitNatural x i) <- exprIsLiteral_maybe id_unf xl
+  , Just (LitNatural y _) <- exprIsLiteral_maybe id_unf yl
+  , Just z <- x `binop` y
+  = Just (Lit (LitNatural z i))
+match_Natural_partial_binop _ _ _ _ _ = Nothing
 
 -- This helper is used for the quotRem and divMod functions
 match_Integer_divop_both

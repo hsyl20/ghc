@@ -598,7 +598,7 @@ instance Bounded Word where
 #elif WORD_SIZE_IN_BITS == 64
     maxBound = W# (int2Word# 0xFFFFFFFFFFFFFFFF#)
 #else
-#error Unhandled value for WORD_SIZE_IN_BITS
+#error Unhandled value for W_SIZE_IN_BITS
 #endif
 
 -- | @since 2.01
@@ -876,6 +876,50 @@ dn_list x0 delta lim = go (x0 :: Integer)
                     where
                         go x | x < lim   = []
                              | otherwise = x : go (x+delta)
+
+------------------------------------------------------------------------
+-- Natural
+------------------------------------------------------------------------
+
+-- | @since 4.8.0.0
+instance Enum Natural where
+    succ n = n `plusNatural`  NatS# 1##
+    pred n = n `minusNatural` NatS# 1##
+
+    toEnum = intToNatural
+
+    fromEnum (NatS# w) | i >= 0 = i
+      where
+        i = I# (word2Int# w)
+    fromEnum _ = errorWithoutStackTrace "fromEnum: out of Int range"
+
+    enumFrom x        = enumDeltaNatural      x (NatS# 1##)
+    enumFromThen x y
+      | x <= y        = enumDeltaNatural      x (y-x)
+      | otherwise     = enumNegDeltaToNatural x (x-y) (NatS# 0##)
+
+    enumFromTo x lim  = enumDeltaToNatural    x (NatS# 1##) lim
+    enumFromThenTo x y lim
+      | x <= y        = enumDeltaToNatural    x (y-x) lim
+      | otherwise     = enumNegDeltaToNatural x (x-y) lim
+
+-- Helpers for 'Enum Natural'; TODO: optimise & make fusion work
+
+enumDeltaNatural :: Natural -> Natural -> [Natural]
+enumDeltaNatural !x d = x : enumDeltaNatural (x+d) d
+
+enumDeltaToNatural :: Natural -> Natural -> Natural -> [Natural]
+enumDeltaToNatural x0 delta lim = go x0
+  where
+    go x | x > lim   = []
+         | otherwise = x : go (x+delta)
+
+enumNegDeltaToNatural :: Natural -> Natural -> Natural -> [Natural]
+enumNegDeltaToNatural x0 ndelta lim = go x0
+  where
+    go x | x < lim     = []
+         | x >= ndelta = x : go (x-ndelta)
+         | otherwise   = [x]
 
 -- Instances from GHC.Types
 

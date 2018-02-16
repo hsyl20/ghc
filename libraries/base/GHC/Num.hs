@@ -16,10 +16,11 @@
 --
 -----------------------------------------------------------------------------
 
-module GHC.Num (module GHC.Num, module GHC.Integer) where
+module GHC.Num (module GHC.Num, module GHC.Integer, module GHC.Natural) where
 
 import GHC.Base
 import GHC.Integer
+import GHC.Natural
 
 infixl 7  *
 infixl 6  +, -
@@ -100,3 +101,14 @@ instance  Num Integer  where
 
     abs = absInteger
     signum = signumInteger
+
+-- | @since 4.8.0.0
+instance  Num Natural  where
+    (+) = plusNatural
+    (-) = minusNatural
+    (*) = timesNatural
+    negate      = negateNatural
+    fromInteger = naturalFromInteger
+
+    abs = id
+    signum = signumNatural

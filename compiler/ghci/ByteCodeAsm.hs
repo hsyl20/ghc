@@ -455,6 +455,7 @@ assembleI dflags i = case i of
     literal (MachStr bs)       = lit [BCONPtrStr bs]
        -- MachStr requires a zero-terminator when emitted
     literal LitInteger{}       = panic "ByteCodeAsm.literal: LitInteger"
+    literal LitNatural{}       = panic "ByteCodeAsm.literal: LitNatural"
 
     litlabel fs = lit [BCONPtrLbl fs]
     addr (RemotePtr a) = words [fromIntegral a]

@@ -1370,6 +1370,12 @@ tcIfaceLit :: Literal -> IfL Literal
 tcIfaceLit (LitInteger i _)
   = do t <- tcIfaceTyConByName integerTyConName
        return (mkLitInteger i (mkTyConTy t))
+-- Natural literals deserialise to (LitNatural i <error thunk>)
+-- so tcIfaceLit just fills in the type.
+-- See Note [Natural literals] in Literal
+tcIfaceLit (LitNatural i _)
+  = do t <- tcIfaceTyConByName naturalTyConName
+       return (mkLitNatural i (mkTyConTy t))
 tcIfaceLit lit = return lit
 
 -------------------------

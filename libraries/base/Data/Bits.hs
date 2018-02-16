@@ -536,6 +536,32 @@ instance Bits Integer where
    bitSize _  = errorWithoutStackTrace "Data.Bits.bitSize(Integer)"
    isSigned _ = True
 
+-- | @since 4.8.0
+instance Bits Natural where
+   (.&.) = andNatural
+   (.|.) = orNatural
+   xor = xorNatural
+   complement _ = errorWithoutStackTrace "Bits.complement: Natural complement undefined"
+   shift x i
+     | i >= 0    = shiftLNatural x i
+     | otherwise = shiftRNatural x (negate i)
+   testBit x i = testBitNatural x i
+   zeroBits   = 0
+
+#if defined(MIN_VERSION_integer_gmp)
+   bit i      = bitNatural i
+   popCount x = popCountNatural x
+#else
+   bit        = bitDefault
+   popCount   = popCountDefault
+#endif
+
+   rotate x i = shift x i   -- since an Natural never wraps around
+
+   bitSizeMaybe _ = Nothing
+   bitSize _  = errorWithoutStackTrace "Data.Bits.bitSize(Natural)"
+   isSigned _ = False
+
 -----------------------------------------------------------------------------
 
 -- | Attempt to convert an 'Integral' type @a@ to an 'Integral' type @b@ using
