@@ -1535,7 +1535,7 @@ lookupMkIntegerName dflags hsc_env
 
 lookupMkNaturalName :: DynFlags -> HscEnv -> IO Id
 lookupMkNaturalName dflags hsc_env
-    = guardIntegerUse dflags $ liftM tyThingId $
+    = guardNaturalUse dflags $ liftM tyThingId $
       lookupGlobal hsc_env mkNaturalName
 
 lookupIntegerSDataConName :: DynFlags -> HscEnv -> IO (Maybe DataCon)
@@ -1546,18 +1546,37 @@ lookupIntegerSDataConName dflags hsc_env = case cIntegerLibraryType of
 
 lookupNaturalSDataConName :: DynFlags -> HscEnv -> IO (Maybe DataCon)
 lookupNaturalSDataConName dflags hsc_env = case cIntegerLibraryType of
-    IntegerGMP -> guardIntegerUse dflags $ liftM (Just . tyThingDataCon) $
+    IntegerGMP -> guardNaturalUse dflags $ liftM (Just . tyThingDataCon) $
                   lookupGlobal hsc_env naturalSDataConName
     IntegerSimple -> return Nothing
 
 -- | Helper for 'lookupMkIntegerName', 'lookupIntegerSDataConName'
--- and 'lookupMkNaturalName', 'lookupNaturalSDataConName'
 guardIntegerUse :: DynFlags -> IO a -> IO a
 guardIntegerUse dflags act
   | thisPackage dflags == primUnitId
   = return $ panic "Can't use Integer in ghc-prim"
   | thisPackage dflags == integerUnitId
   = return $ panic "Can't use Integer in integer-*"
+  | otherwise = act
+
+-- | Helper for 'lookupMkNaturalName', 'lookupNaturalSDataConName'
+--
+-- Just like we can't use Integer literals in `integer-*`, we can't use Natural
+-- literals in `base`. If we do, we get interface loading error for GHC.Natural.
+--
+-- Instead of using Natural literals in base, we can use Natural constructors
+-- such as `NatS# 123##`. The only drawback is that they won't be considered as
+-- Natural literals in Core and rules won't apply to them. We could maybe add an
+-- initial step in the Simplifier to transform `NatS# XY##` constructor
+-- applications into Natural literals XY.
+guardNaturalUse :: DynFlags -> IO a -> IO a
+guardNaturalUse dflags act
+  | thisPackage dflags == primUnitId
+  = return $ panic "Can't use Natural in ghc-prim"
+  | thisPackage dflags == integerUnitId
+  = return $ panic "Can't use Natural in integer-*"
+  | thisPackage dflags == baseUnitId
+  = return $ panic "Can't use Natural in base"
   | otherwise = act
 
 mkInitialCorePrepEnv :: DynFlags -> HscEnv -> IO CorePrepEnv

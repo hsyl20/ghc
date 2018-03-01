@@ -1,12 +1,8 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE CPP #-}
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE MagicHash #-}
-{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnboxedTuples #-}
-{-# LANGUAGE Unsafe #-}
-
-{-# OPTIONS_HADDOCK not-home #-}
 
 -----------------------------------------------------------------------------
 -- |
@@ -40,6 +36,7 @@ module GHC.Natural
       -- * Arithmetic
     , plusNatural
     , minusNatural
+    , minusNaturalMaybe
     , timesNatural
     , negateNatural
     , signumNatural
@@ -64,11 +61,7 @@ module GHC.Natural
     , naturalFromInteger
     , wordToNatural
     , intToNatural
-      -- * Maybe
-    , Maybe(..)
     , naturalToWordMaybe
-      -- * Checked subtraction
-    , minusNaturalMaybe
       -- * Modular arithmetic
     , powModNatural
     ) where
@@ -76,11 +69,14 @@ module GHC.Natural
 #include "MachDeps.h"
 
 import GHC.Classes
+import GHC.Maybe
 import {-# SOURCE #-} GHC.Exception.Type (underflowException, divZeroException)
 #if defined(MIN_VERSION_integer_gmp)
 import GHC.Integer.GMP.Internals
 import GHC.Prim
 import GHC.Types
+#else
+import GHC.Integer ()
 #endif
 
 default ()
@@ -113,25 +109,6 @@ underflowError = raise# underflowException
 {-# NOINLINE divZeroError #-}
 divZeroError :: a
 divZeroError = raise# divZeroException
-
--------------------------------------------------------------------------------
--- Maybe type
--------------------------------------------------------------------------------
-
--- | The 'Maybe' type encapsulates an optional value.  A value of type
--- @'Maybe' a@ either contains a value of type @a@ (represented as @'Just' a@),
--- or it is empty (represented as 'Nothing').  Using 'Maybe' is a good way to
--- deal with errors or exceptional cases without resorting to drastic
--- measures such as 'error'.
---
--- The 'Maybe' type is also a monad.  It is a simple kind of error
--- monad, where all errors are represented by 'Nothing'.  A richer
--- error monad can be built using the 'Data.Either.Either' type.
---
-data  Maybe a  =  Nothing | Just a
-  deriving ( Eq  -- ^ @since 2.01
-           , Ord -- ^ @since 2.01
-           )
 
 -------------------------------------------------------------------------------
 -- Natural type

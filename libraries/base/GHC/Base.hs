@@ -128,11 +128,12 @@ import GHC.CString
 import GHC.Magic
 import GHC.Prim
 import GHC.Err
+import GHC.Maybe
 import {-# SOURCE #-} GHC.IO (failIO,mplusIO)
 
 import GHC.Tuple ()              -- Note [Depend on GHC.Tuple]
 import GHC.Integer ()            -- Note [Depend on GHC.Integer]
-import GHC.Natural (Maybe(..))   -- Note [Depend on GHC.Natural]
+import GHC.Natural ()            -- Note [Depend on GHC.Natural]
 
 -- for 'class Semigroup'
 import {-# SOURCE #-} GHC.Real (Integral)

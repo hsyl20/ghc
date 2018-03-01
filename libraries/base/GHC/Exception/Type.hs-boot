@@ -6,6 +6,8 @@ module GHC.Exception.Type
   , divZeroException, overflowException, ratioZeroDenomException, underflowException
   ) where
 
+import GHC.Types ()
+
 data SomeException
 divZeroException, overflowException, ratioZeroDenomException  :: SomeException
 underflowException :: SomeException

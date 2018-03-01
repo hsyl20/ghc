@@ -1168,7 +1168,7 @@ builtinIntegerRules =
   rule_convert        "integerToInt"        integerToIntName        mkIntLitInt,
   rule_convert        "integerToWord64"     integerToWord64Name     (\_ -> mkWord64LitWord64),
   rule_convert        "integerToInt64"      integerToInt64Name      (\_ -> mkInt64LitInt64),
-  rule_partial_unop   "naturalFromInteger"  naturalFromIntegerName (\x -> if x >= 0 then Just x else Nothing),
+  rule_NaturalFromInteger "naturalFromInteger" naturalFromIntegerName,
   rule_binop          "plusInteger"         plusIntegerName         (+),
   rule_binop          "minusInteger"        minusIntegerName        (-),
   rule_binop          "timesInteger"        timesIntegerName        (*),
@@ -1234,12 +1234,12 @@ builtinIntegerRules =
           rule_NaturalToInteger str name
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_NaturalToInteger }
+          rule_NaturalFromInteger str name
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
+                           ru_try = match_NaturalFromInteger }
           rule_unop str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_Integer_unop op }
-          rule_partial_unop str name op
-           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
-                           ru_try = match_Integer_partial_unop op }
           rule_bitInteger str name
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_bitInteger }
@@ -1418,6 +1418,17 @@ match_NaturalToInteger _ id_unf id [xl]
     _ ->
         panic "match_NaturalToInteger: Id has the wrong type"
 match_NaturalToInteger _ _ _ _ = Nothing
+
+match_NaturalFromInteger :: RuleFun
+match_NaturalFromInteger _ id_unf id [xl]
+  | Just (LitInteger x _) <- exprIsLiteral_maybe id_unf xl
+  , x >= 0
+  = case splitFunTy_maybe (idType id) of
+    Just (_, integerTy) ->
+        Just (Lit (LitNatural x integerTy))
+    _ ->
+        panic "match_NaturalFromInteger: Id has the wrong type"
+match_NaturalFromInteger _ _ _ _ = Nothing
 
 -------------------------------------------------
 {- Note [Rewriting bitInteger]

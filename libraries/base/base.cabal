@@ -259,6 +259,7 @@ Library
         GHC.IORef
         GHC.Int
         GHC.List
+        GHC.Maybe
         GHC.MVar
         GHC.Natural
         GHC.Num
