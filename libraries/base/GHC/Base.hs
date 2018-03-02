@@ -118,7 +118,7 @@ module GHC.Base
         module GHC.Prim,        -- Re-export GHC.Prim and [boot] GHC.Err,
                                 -- to avoid lots of people having to
         module GHC.Err,         -- import it explicitly
-        Maybe(..)
+        module GHC.Maybe
   )
         where
 

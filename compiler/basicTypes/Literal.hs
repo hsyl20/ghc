@@ -212,7 +212,7 @@ instance Binary Literal where
                     return $ mkLitInteger i (panic "Evaluated the place holder for mkInteger")
               _ -> do
                     i <- get bh
-                    -- See Note [Integer literals]
+                    -- See Note [Natural literals]
                     return $ mkLitNatural i (panic "Evaluated the place holder for mkNatural")
 
 instance Outputable Literal where
