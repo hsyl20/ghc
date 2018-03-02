@@ -2401,7 +2401,9 @@ makeStaticKey :: Unique
 makeStaticKey = mkPreludeMiscIdUnique 561
 
 -- Natural
-naturalFromIntegerIdKey, naturalToIntegerIdKey, plusNaturalIdKey, minusNaturalIdKey, timesNaturalIdKey, mkNaturalIdKey, naturalSDataConKey :: Unique
+naturalFromIntegerIdKey, naturalToIntegerIdKey, plusNaturalIdKey,
+   minusNaturalIdKey, timesNaturalIdKey, mkNaturalIdKey,
+   naturalSDataConKey :: Unique
 naturalFromIntegerIdKey = mkPreludeMiscIdUnique 562
 naturalToIntegerIdKey   = mkPreludeMiscIdUnique 563
 plusNaturalIdKey        = mkPreludeMiscIdUnique 564

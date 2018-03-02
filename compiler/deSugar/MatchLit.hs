@@ -181,7 +181,8 @@ warnAboutOverflowedLiterals dflags lit
       = when (i < 0) $ do
         warnDs (Reason Opt_WarnOverflowedLiterals)
                (vcat [ text "Literal" <+> integer i
-                       <+> text "is negative but" <+> ppr tc <+> ptext (sLit "only supports positive numbers")
+                       <+> text "is negative but" <+> ppr tc
+                       <+> ptext (sLit "only supports positive numbers")
                      ])
 
     check :: forall a. (Bounded a, Integral a) => Integer -> Name -> Proxy a -> DsM ()

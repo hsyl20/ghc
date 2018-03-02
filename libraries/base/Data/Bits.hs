@@ -541,7 +541,8 @@ instance Bits Natural where
    (.&.) = andNatural
    (.|.) = orNatural
    xor = xorNatural
-   complement _ = errorWithoutStackTrace "Bits.complement: Natural complement undefined"
+   complement _ = errorWithoutStackTrace
+                    "Bits.complement: Natural complement undefined"
    shift x i
      | i >= 0    = shiftLNatural x i
      | otherwise = shiftRNatural x (negate i)

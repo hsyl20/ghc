@@ -1533,8 +1533,8 @@ pushAtom _ _ (AnnLit lit) = do
         MachChar _    -> code N
         MachNullAddr  -> code N
         MachStr _     -> code N
-        -- No LitInteger's or LitNatural's should be left by the time this is called.
-        -- CorePrep should have converted them all to a real core
+        -- No LitInteger's or LitNatural's should be left by the time this is
+        -- called. CorePrep should have converted them all to a real core
         -- representation.
         LitInteger {} -> panic "pushAtom: LitInteger"
         LitNatural {} -> panic "pushAtom: LitNatural"

@@ -1128,7 +1128,8 @@ tidyTopBind dflags this_mod cvt_integer cvt_natural unfold_env
   = (tidy_env2,  NonRec bndr' rhs')
   where
     Just (name',show_unfold) = lookupVarEnv unfold_env bndr
-    caf_info      = hasCafRefs dflags this_mod (subst1, cvt_integer, cvt_natural)
+    caf_info      = hasCafRefs dflags this_mod
+                               (subst1, cvt_integer, cvt_natural)
                                (idArity bndr) rhs
     (bndr', rhs') = tidyTopPair dflags show_unfold tidy_env2 caf_info name'
                                 (bndr, rhs)
@@ -1300,13 +1301,15 @@ We compute hasCafRefs here, because IdInfo is supposed to be finalised
 after TidyPgm.  But CorePrep does some transformations that affect CAF-hood.
 So we have to *predict* the result here, which is revolting.
 
-In particular CorePrep expands Integer and Natural literals.  So in the prediction code
-here we resort to applying the same expansion (cvt_integer and cvt_natural). Ugh!
+In particular CorePrep expands Integer and Natural literals. So in the
+prediction code here we resort to applying the same expansion (cvt_integer and
+cvt_natural). Ugh!
 -}
 
 type CafRefEnv = (VarEnv Id, Integer -> CoreExpr, Integer -> CoreExpr)
   -- The env finds the Caf-ness of the Id
-  -- The Integer -> CoreExpr are the desugaring functions for Integer and Natural literals
+  -- The Integer -> CoreExpr are the desugaring functions for Integer and
+  -- Natural literals
   -- See Note [Disgusting computation of CafRefs]
 
 hasCafRefs :: DynFlags -> Module
@@ -1318,7 +1321,8 @@ hasCafRefs dflags this_mod p@(_, cvt_integer, cvt_natural) arity expr
  where
   mentions_cafs   = cafRefsE p expr
   is_dynamic_name = isDllName dflags this_mod
-  is_caf = not (arity > 0 || rhsIsStatic (targetPlatform dflags) is_dynamic_name cvt_integer cvt_natural expr)
+  is_caf = not (arity > 0 || rhsIsStatic (targetPlatform dflags) is_dynamic_name
+                                         cvt_integer cvt_natural expr)
 
   -- NB. we pass in the arity of the expression, which is expected
   -- to be calculated by exprArity.  This is because exprArity

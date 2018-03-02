@@ -209,11 +209,13 @@ instance Binary Literal where
               10 -> do
                     i <- get bh
                     -- See Note [Integer literals]
-                    return $ mkLitInteger i (panic "Evaluated the place holder for mkInteger")
+                    return $ mkLitInteger i
+                      (panic "Evaluated the place holder for mkInteger")
               _ -> do
                     i <- get bh
                     -- See Note [Natural literals]
-                    return $ mkLitNatural i (panic "Evaluated the place holder for mkNatural")
+                    return $ mkLitNatural i
+                      (panic "Evaluated the place holder for mkNatural")
 
 instance Outputable Literal where
     ppr lit = pprLiteral (\d -> d) lit
@@ -352,8 +354,8 @@ mkLitNatural x ty = ASSERT2( inNaturalRange x,  integer x )
                     LitNatural x ty
 
 inIntRange, inWordRange :: DynFlags -> Integer -> Bool
-inIntRange     dflags x = x >= tARGET_MIN_INT dflags && x <= tARGET_MAX_INT dflags
-inWordRange    dflags x = x >= 0                     && x <= tARGET_MAX_WORD dflags
+inIntRange  dflags x = x >= tARGET_MIN_INT dflags && x <= tARGET_MAX_INT dflags
+inWordRange dflags x = x >= 0                     && x <= tARGET_MAX_WORD dflags
 
 inNaturalRange :: Integer -> Bool
 inNaturalRange x = x >= 0
@@ -397,9 +399,9 @@ isLitValue_maybe (LitNatural i _) = Just i
 isLitValue_maybe _                = Nothing
 
 -- | Apply a function to the 'Integer' contained in the 'Literal', for when that
--- makes sense, e.g. for 'Char', 'Int', 'Word', 'LitInteger' and 'LitNatural'. For
--- fixed-size integral literals, the result will be wrapped in
--- accordance with the semantics of the target type.
+-- makes sense, e.g. for 'Char', 'Int', 'Word', 'LitInteger' and 'LitNatural'.
+-- For fixed-size integral literals, the result will be wrapped in accordance
+-- with the semantics of the target type.
 -- See Note [Word/Int underflow/overflow]
 mapLitValue  :: DynFlags -> (Integer -> Integer) -> Literal -> Literal
 mapLitValue _      f (MachChar   c)   = mkMachChar (fchar c)

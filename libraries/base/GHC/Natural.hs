@@ -256,10 +256,10 @@ bitNatural i#
 
 testBitNatural :: Natural -> Int -> Bool
 testBitNatural (NatS# w) (I# i#)
-  | isTrue# (i# <# WORD_SIZE_IN_BITS#) = isTrue# ((w `and#` (1## `uncheckedShiftL#` i#)) `neWord#` 0##)
+  | isTrue# (i# <# WORD_SIZE_IN_BITS#) =
+      isTrue# ((w `and#` (1## `uncheckedShiftL#` i#)) `neWord#` 0##)
   | True                               = False
-testBitNatural (NatJ# bn) (I# i#)
-  = testBitBigNat bn i#
+testBitNatural (NatJ# bn) (I# i#)      = testBitBigNat bn i#
 {-# CONSTANT_FOLDED testBitNatural #-}
 
 popCountNatural :: Natural -> Int

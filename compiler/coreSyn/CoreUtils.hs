@@ -2409,13 +2409,14 @@ and 'execute' it rather than allocating it statically.
 -- | This function is called only on *top-level* right-hand sides.
 -- Returns @True@ if the RHS can be allocated statically in the output,
 -- with no thunks involved at all.
-rhsIsStatic :: Platform
-            -> (Name -> Bool)         -- Which names are dynamic
-            -> (Integer -> CoreExpr)  -- Desugaring for integer literals (disgusting)
-            -> (Integer -> CoreExpr)  -- Desugaring for natural literals (disgusting)
-                                      -- C.f. Note [Disgusting computation of CafRefs]
-                                      --      in TidyPgm
-            -> CoreExpr -> Bool
+rhsIsStatic
+   :: Platform
+   -> (Name -> Bool)         -- Which names are dynamic
+   -> (Integer -> CoreExpr)  -- Desugaring for integer literals (disgusting)
+   -> (Integer -> CoreExpr)  -- Desugaring for natural literals (disgusting)
+                             -- C.f. Note [Disgusting computation of CafRefs]
+                             --      in TidyPgm
+   -> CoreExpr -> Bool
 -- It's called (i) in TidyPgm.hasCafRefs to decide if the rhs is, or
 -- refers to, CAFs; (ii) in CoreToStg to decide whether to put an
 -- update flag on it and (iii) in DsExpr to decide how to expand
