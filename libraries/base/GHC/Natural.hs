@@ -225,6 +225,7 @@ remNatural   (NatJ# n) (NatJ# d) = bigNatToNatural (remBigNat n d)
 naturalToInteger :: Natural -> Integer
 naturalToInteger (NatS# w)  = wordToInteger w
 naturalToInteger (NatJ# bn) = Jp# bn
+{-# CONSTANT_FOLDED naturalToInteger #-}
 
 andNatural :: Natural -> Natural -> Natural
 andNatural (NatS# n) (NatS# m) = NatS# (n `and#` m)
