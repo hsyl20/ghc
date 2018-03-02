@@ -161,20 +161,29 @@ warnAboutOverflowedLiterals :: DynFlags -> HsOverLit GhcTc -> DsM ()
 warnAboutOverflowedLiterals dflags lit
  | wopt Opt_WarnOverflowedLiterals dflags
  , Just (i, tc) <- getIntegralLit lit
-  = if      tc == intTyConName    then check i tc (Proxy :: Proxy Int)
-    else if tc == int8TyConName   then check i tc (Proxy :: Proxy Int8)
-    else if tc == int16TyConName  then check i tc (Proxy :: Proxy Int16)
-    else if tc == int32TyConName  then check i tc (Proxy :: Proxy Int32)
-    else if tc == int64TyConName  then check i tc (Proxy :: Proxy Int64)
-    else if tc == wordTyConName   then check i tc (Proxy :: Proxy Word)
-    else if tc == word8TyConName  then check i tc (Proxy :: Proxy Word8)
-    else if tc == word16TyConName then check i tc (Proxy :: Proxy Word16)
-    else if tc == word32TyConName then check i tc (Proxy :: Proxy Word32)
-    else if tc == word64TyConName then check i tc (Proxy :: Proxy Word64)
+  = if      tc == intTyConName     then check i tc (Proxy :: Proxy Int)
+    else if tc == int8TyConName    then check i tc (Proxy :: Proxy Int8)
+    else if tc == int16TyConName   then check i tc (Proxy :: Proxy Int16)
+    else if tc == int32TyConName   then check i tc (Proxy :: Proxy Int32)
+    else if tc == int64TyConName   then check i tc (Proxy :: Proxy Int64)
+    else if tc == wordTyConName    then check i tc (Proxy :: Proxy Word)
+    else if tc == word8TyConName   then check i tc (Proxy :: Proxy Word8)
+    else if tc == word16TyConName  then check i tc (Proxy :: Proxy Word16)
+    else if tc == word32TyConName  then check i tc (Proxy :: Proxy Word32)
+    else if tc == word64TyConName  then check i tc (Proxy :: Proxy Word64)
+    else if tc == naturalTyConName then checkPositive i tc
     else return ()
 
   | otherwise = return ()
   where
+    checkPositive :: Integer -> Name -> DsM ()
+    checkPositive i tc
+      = when (i < 0) $ do
+        warnDs (Reason Opt_WarnOverflowedLiterals)
+               (vcat [ text "Literal" <+> integer i
+                       <+> text "is negative but" <+> ppr tc <+> ptext (sLit "only supports positive numbers")
+                     ])
+
     check :: forall a. (Bounded a, Integral a) => Integer -> Name -> Proxy a -> DsM ()
     check i tc _proxy
       = when (i < minB || i > maxB) $ do
