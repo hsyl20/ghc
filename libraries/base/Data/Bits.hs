@@ -545,15 +545,16 @@ instance Bits Natural where
    shift x i
      | i >= 0    = shiftLNatural x i
      | otherwise = shiftRNatural x (negate i)
-   testBit x i = testBitNatural x i
-   zeroBits    = NatS# 0## -- we can't use Natural literals in base
+   testBit x i   = testBitNatural x i
+   zeroBits      = NatS# 0## -- we can't use Natural literals in base
+   clearBit x i  = x `xor` (bit i .&. x)
 
 #if defined(MIN_VERSION_integer_gmp)
-   bit i      = bitNatural i
-   popCount x = popCountNatural x
+   bit (I# i#) = bitNatural i#
+   popCount x  = popCountNatural x
 #else
-   bit        = bitDefault
-   popCount   = popCountDefault
+   bit         = bitDefault
+   popCount    = popCountDefault
 #endif
 
    rotate x i = shift x i   -- since an Natural never wraps around

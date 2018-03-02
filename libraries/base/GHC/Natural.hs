@@ -247,15 +247,16 @@ xorNatural (NatJ# n) (NatS# m) = NatJ# (xorBigNat n (wordToBigNat m))
 xorNatural (NatJ# n) (NatJ# m) = bigNatToNatural (xorBigNat n m)
 {-# CONSTANT_FOLDED xorNatural #-}
 
-bitNatural :: Int -> Natural
-bitNatural (I# i#)
+bitNatural :: Int# -> Natural
+bitNatural i#
   | isTrue# (i# <# WORD_SIZE_IN_BITS#) = NatS# (1## `uncheckedShiftL#` i#)
   | True                               = NatJ# (bitBigNat i#)
 {-# CONSTANT_FOLDED bitNatural #-}
 
 testBitNatural :: Natural -> Int -> Bool
 testBitNatural (NatS# w) (I# i#)
-  = isTrue# ((w `and#` (1## `uncheckedShiftL#` i#)) `neWord#` 0##)
+  | isTrue# (i# <# WORD_SIZE_IN_BITS#) = isTrue# ((w `and#` (1## `uncheckedShiftL#` i#)) `neWord#` 0##)
+  | True                               = False
 testBitNatural (NatJ# bn) (I# i#)
   = testBitBigNat bn i#
 {-# CONSTANT_FOLDED testBitNatural #-}
@@ -268,7 +269,7 @@ popCountNatural (NatJ# bn) = I# (popCountBigNat bn)
 shiftLNatural :: Natural -> Int -> Natural
 shiftLNatural n           (I# 0#) = n
 shiftLNatural (NatS# 0##) _       = NatS# 0##
-shiftLNatural (NatS# 1##) (I# i#) = NatS# (1## `uncheckedShiftL#` i#)
+shiftLNatural (NatS# 1##) (I# i#) = bitNatural i#
 shiftLNatural (NatS# w) (I# i#)
     = bigNatToNatural (shiftLBigNat (wordToBigNat w) i#)
 shiftLNatural (NatJ# bn) (I# i#)
@@ -277,7 +278,9 @@ shiftLNatural (NatJ# bn) (I# i#)
 
 shiftRNatural :: Natural -> Int -> Natural
 shiftRNatural n          (I# 0#) = n
-shiftRNatural (NatS# w)  (I# i#) = NatS# (w `uncheckedShiftRL#` i#)
+shiftRNatural (NatS# w)  (I# i#)
+      | isTrue# (i# >=# WORD_SIZE_IN_BITS#) = NatS# 0##
+      | True                                = NatS# (w `uncheckedShiftRL#` i#)
 shiftRNatural (NatJ# bn) (I# i#) = bigNatToNatural (shiftRBigNat bn i#)
 {-# CONSTANT_FOLDED shiftRNatural #-}
 
