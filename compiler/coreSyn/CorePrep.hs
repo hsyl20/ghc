@@ -1564,11 +1564,9 @@ guardIntegerUse dflags act
 -- Just like we can't use Integer literals in `integer-*`, we can't use Natural
 -- literals in `base`. If we do, we get interface loading error for GHC.Natural.
 --
--- Instead of using Natural literals in base, we can use Natural constructors
--- such as `NatS# 123##`. The only drawback is that they won't be considered as
--- Natural literals in Core and rules won't apply to them. We could maybe add an
--- initial step in the Simplifier to transform `NatS# XY##` constructor
--- applications into Natural literals XY.
+-- Instead of using Natural literals in base, we can use conversion functions
+-- such as `wordToNatural`. Built-in rules ensure that when they are applied to
+-- constants, these expressions are transformed into Natural literals.
 guardNaturalUse :: DynFlags -> IO a -> IO a
 guardNaturalUse dflags act
   | thisPackage dflags == primUnitId

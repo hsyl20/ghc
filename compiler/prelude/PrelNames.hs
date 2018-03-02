@@ -360,6 +360,7 @@ basicKnownKeyNames
         naturalTyConName,
         naturalFromIntegerName, naturalToIntegerName,
         plusNaturalName, minusNaturalName, timesNaturalName, mkNaturalName,
+        wordToNaturalName,
 
         -- Float/Double
         rationalToFloatName,
@@ -1181,12 +1182,14 @@ naturalSDataConName  = dcQual gHC_NATURAL (fsLit n)         naturalSDataConKey
 naturalFromIntegerName :: Name
 naturalFromIntegerName = varQual gHC_NATURAL (fsLit "naturalFromInteger") naturalFromIntegerIdKey
 
-naturalToIntegerName, plusNaturalName, minusNaturalName, timesNaturalName, mkNaturalName :: Name
+naturalToIntegerName, plusNaturalName, minusNaturalName, timesNaturalName,
+   mkNaturalName, wordToNaturalName :: Name
 naturalToIntegerName  = varQual gHC_NATURAL (fsLit "naturalToInteger")  naturalToIntegerIdKey
 plusNaturalName       = varQual gHC_NATURAL (fsLit "plusNatural")       plusNaturalIdKey
 minusNaturalName      = varQual gHC_NATURAL (fsLit "minusNatural")      minusNaturalIdKey
 timesNaturalName      = varQual gHC_NATURAL (fsLit "timesNatural")      timesNaturalIdKey
 mkNaturalName         = varQual gHC_NATURAL (fsLit "mkNatural")         mkNaturalIdKey
+wordToNaturalName     = varQual gHC_NATURAL (fsLit "wordToNatural#")    wordToNaturalIdKey
 
 -- GHC.Real types and classes
 rationalTyConName, ratioTyConName, ratioDataConName, realClassName,
@@ -2403,7 +2406,7 @@ makeStaticKey = mkPreludeMiscIdUnique 561
 -- Natural
 naturalFromIntegerIdKey, naturalToIntegerIdKey, plusNaturalIdKey,
    minusNaturalIdKey, timesNaturalIdKey, mkNaturalIdKey,
-   naturalSDataConKey :: Unique
+   naturalSDataConKey, wordToNaturalIdKey :: Unique
 naturalFromIntegerIdKey = mkPreludeMiscIdUnique 562
 naturalToIntegerIdKey   = mkPreludeMiscIdUnique 563
 plusNaturalIdKey        = mkPreludeMiscIdUnique 564
@@ -2411,6 +2414,7 @@ minusNaturalIdKey       = mkPreludeMiscIdUnique 565
 timesNaturalIdKey       = mkPreludeMiscIdUnique 566
 mkNaturalIdKey          = mkPreludeMiscIdUnique 567
 naturalSDataConKey      = mkPreludeMiscIdUnique 568
+wordToNaturalIdKey      = mkPreludeMiscIdUnique 569
 
 {-
 ************************************************************************

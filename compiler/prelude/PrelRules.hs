@@ -1163,12 +1163,10 @@ builtinIntegerRules =
   rule_WordToInteger  "wordToInteger"       wordToIntegerName,
   rule_Int64ToInteger  "int64ToInteger"     int64ToIntegerName,
   rule_Word64ToInteger "word64ToInteger"    word64ToIntegerName,
-  rule_NaturalToInteger "naturalToInteger"  naturalToIntegerName,
   rule_convert        "integerToWord"       integerToWordName       mkWordLitWord,
   rule_convert        "integerToInt"        integerToIntName        mkIntLitInt,
   rule_convert        "integerToWord64"     integerToWord64Name     (\_ -> mkWord64LitWord64),
   rule_convert        "integerToInt64"      integerToInt64Name      (\_ -> mkInt64LitInt64),
-  rule_NaturalFromInteger "naturalFromInteger" naturalFromIntegerName,
   rule_binop          "plusInteger"         plusIntegerName         (+),
   rule_binop          "minusInteger"        minusIntegerName        (-),
   rule_binop          "timesInteger"        timesIntegerName        (*),
@@ -1231,12 +1229,6 @@ builtinIntegerRules =
           rule_Word64ToInteger str name
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_Word64ToInteger }
-          rule_NaturalToInteger str name
-           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
-                           ru_try = match_NaturalToInteger }
-          rule_NaturalFromInteger str name
-           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
-                           ru_try = match_NaturalFromInteger }
           rule_unop str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_Integer_unop op }
@@ -1279,16 +1271,28 @@ builtinIntegerRules =
 
 builtinNaturalRules :: [CoreRule]
 builtinNaturalRules =
- [rule_binop          "plusNatural"         plusNaturalName         (+),
-  rule_partial_binop  "minusNatural"        minusNaturalName        (\a b -> if a >= b then Just (a - b) else Nothing),
-  rule_binop          "timesNatural"        timesNaturalName        (*)
-  ]
+ [rule_binop              "plusNatural"        plusNaturalName         (+)
+ ,rule_partial_binop      "minusNatural"       minusNaturalName        (\a b -> if a >= b then Just (a - b) else Nothing)
+ ,rule_binop              "timesNatural"       timesNaturalName        (*)
+ ,rule_NaturalFromInteger "naturalFromInteger" naturalFromIntegerName
+ ,rule_NaturalToInteger   "naturalToInteger"   naturalToIntegerName
+ ,rule_WordToNatural      "wordToNatural"      wordToNaturalName
+ ]
     where rule_binop str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
                            ru_try = match_Natural_binop op }
           rule_partial_binop str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
                            ru_try = match_Natural_partial_binop op }
+          rule_NaturalToInteger str name
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
+                           ru_try = match_NaturalToInteger }
+          rule_NaturalFromInteger str name
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
+                           ru_try = match_NaturalFromInteger }
+          rule_WordToNatural str name
+           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
+                           ru_try = match_WordToNatural }
 
 ---------------------------------------------------
 -- The rule is this:
@@ -1429,6 +1433,16 @@ match_NaturalFromInteger _ id_unf id [xl]
     _ ->
         panic "match_NaturalFromInteger: Id has the wrong type"
 match_NaturalFromInteger _ _ _ _ = Nothing
+
+match_WordToNatural :: RuleFun
+match_WordToNatural _ id_unf id [xl]
+  | Just (MachWord x) <- exprIsLiteral_maybe id_unf xl
+  = case splitFunTy_maybe (idType id) of
+    Just (_, naturalTy) ->
+        Just (Lit (LitNatural x naturalTy))
+    _ ->
+        panic "match_WordToNatural: Id has the wrong type"
+match_WordToNatural _ _ _ _ = Nothing
 
 -------------------------------------------------
 {- Note [Rewriting bitInteger]

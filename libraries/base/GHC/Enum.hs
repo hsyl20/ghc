@@ -883,22 +883,26 @@ dn_list x0 delta lim = go (x0 :: Integer)
 
 -- | @since 4.8.0.0
 instance Enum Natural where
-    succ n = n `plusNatural`  NatS# 1##
-    pred n = n `minusNatural` NatS# 1##
+    succ n = n `plusNatural`  wordToNatural# 1##
+    pred n = n `minusNatural` wordToNatural# 1##
 
     toEnum = intToNatural
 
-    fromEnum (NatS# w) | i >= 0 = i
+#if defined(MIN_VERSION_integer_gmp)
+    fromEnum (NatS# w)
+      | i >= 0    = i
+      | otherwise = errorWithoutStackTrace "fromEnum: out of Int range"
       where
         i = I# (word2Int# w)
-    fromEnum _ = errorWithoutStackTrace "fromEnum: out of Int range"
+#endif
+    fromEnum n = fromEnum (naturalToInteger n)
 
-    enumFrom x        = enumDeltaNatural      x (NatS# 1##)
+    enumFrom x        = enumDeltaNatural      x (wordToNatural# 1##)
     enumFromThen x y
       | x <= y        = enumDeltaNatural      x (y-x)
-      | otherwise     = enumNegDeltaToNatural x (x-y) (NatS# 0##)
+      | otherwise     = enumNegDeltaToNatural x (x-y) (wordToNatural# 0##)
 
-    enumFromTo x lim  = enumDeltaToNatural    x (NatS# 1##) lim
+    enumFromTo x lim  = enumDeltaToNatural    x (wordToNatural# 1##) lim
     enumFromThenTo x y lim
       | x <= y        = enumDeltaToNatural    x (y-x) lim
       | otherwise     = enumNegDeltaToNatural x (x-y) lim

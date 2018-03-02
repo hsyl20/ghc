@@ -481,7 +481,9 @@ instance Show Integer where
 
 -- | @since 4.8.0.0
 instance Show Natural where
+#if defined(MIN_VERSION_integer_gmp)
     showsPrec p (NatS# w#) = showsPrec p (W# w#)
+#endif
     showsPrec p bn         = showsPrec p (naturalToInteger bn)
 
 -- Divide and conquer implementation of string conversion

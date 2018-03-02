@@ -547,7 +547,7 @@ instance Bits Natural where
      | i >= 0    = shiftLNatural x i
      | otherwise = shiftRNatural x (negate i)
    testBit x i   = testBitNatural x i
-   zeroBits      = NatS# 0## -- we can't use Natural literals in base
+   zeroBits      = wordToNatural# 0## -- we can't use Natural literals in base
    clearBit x i  = x `xor` (bit i .&. x)
 
 #if defined(MIN_VERSION_integer_gmp)
