@@ -20,12 +20,16 @@
 
 module GHC.Real where
 
+#include "MachDeps.h"
+
 import GHC.Base
 import GHC.Num
 import GHC.List
 import GHC.Enum
 import GHC.Show
-import {-# SOURCE #-} GHC.Exception( divZeroException, overflowException, ratioZeroDenomException )
+import {-# SOURCE #-} GHC.Exception( divZeroException, overflowException
+                                   , underflowException
+                                   , ratioZeroDenomException )
 
 #if defined(OPTIMISE_INTEGER_GCD_LCM)
 # if defined(MIN_VERSION_integer_gmp)
@@ -60,6 +64,11 @@ ratioZeroDenominatorError = raise# ratioZeroDenomException
 {-# NOINLINE overflowError #-}
 overflowError :: a
 overflowError = raise# overflowException
+
+{-# NOINLINE underflowError #-}
+underflowError :: a
+underflowError = raise# underflowException
+
 
 --------------------------------------------------------------
 -- The Ratio and Rational types
@@ -376,10 +385,17 @@ instance Integral Word where
 instance  Real Integer  where
     toRational x        =  x :% 1
 
+#if defined(MIN_VERSION_integer_gmp)
 -- | @since 4.8.0.0
 instance Real Natural where
     toRational (NatS# w)  = toRational (W# w)
     toRational (NatJ# bn) = toRational (Jp# bn)
+#else
+-- | @since 4.8.0.0
+instance Real Natural where
+  toRational (Natural a) = toRational a
+  {-# INLINE toRational #-}
+#endif
 
 -- Note [Integer division constant folding]
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -423,6 +439,7 @@ instance  Integral Integer where
     n `quotRem` d = case n `quotRemInteger` d of
                       (# q, r #) -> (q, r)
 
+#if defined(MIN_VERSION_integer_gmp)
 -- | @since 4.8.0.0
 instance Integral Natural where
     toInteger = naturalToInteger
@@ -434,6 +451,26 @@ instance Integral Natural where
     quotRem = quotRemNatural
     quot    = quotNatural
     rem     = remNatural
+#else
+-- | @since 4.8.0.0
+instance Integral Natural where
+  quot (Natural a) (Natural b) = Natural (quot a b)
+  {-# INLINE quot #-}
+  rem (Natural a) (Natural b) = Natural (rem a b)
+  {-# INLINE rem #-}
+  div (Natural a) (Natural b) = Natural (div a b)
+  {-# INLINE div #-}
+  mod (Natural a) (Natural b) = Natural (mod a b)
+  {-# INLINE mod #-}
+  divMod (Natural a) (Natural b) = (Natural q, Natural r)
+    where (q,r) = divMod a b
+  {-# INLINE divMod #-}
+  quotRem (Natural a) (Natural b) = (Natural q, Natural r)
+    where (q,r) = quotRem a b
+  {-# INLINE quotRem #-}
+  toInteger (Natural a) = a
+  {-# INLINE toInteger #-}
+#endif
 
 --------------------------------------------------------------
 -- Instances for @Ratio@

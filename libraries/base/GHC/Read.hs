@@ -617,10 +617,18 @@ instance Read Integer where
   readListPrec = readListPrecDefault
   readList     = readListDefault
 
+
+#if defined(MIN_VERSION_integer_gmp)
 -- | @since 4.8.0.0
 instance Read Natural where
   readsPrec d = map (\(n, s) -> (fromInteger n, s))
                   . filter ((>= 0) . (\(x,_)->x)) . readsPrec d
+#else
+-- | @since 4.8.0.0
+instance Read Natural where
+    readsPrec d = map (\(n, s) -> (Natural n, s))
+                  . filter ((>= 0) . (\(x,_)->x)) . readsPrec d
+#endif
 
 -- | @since 2.01
 instance Read Float where
