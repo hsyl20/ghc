@@ -20,3 +20,7 @@ ten = wordToNatural 10
 -- test basic constant folding for Natural
 twoTimesTwo :: Natural
 twoTimesTwo = 2 * 2
+
+-- test the overflow warning
+minusOne :: Natural
+minusOne = -1
