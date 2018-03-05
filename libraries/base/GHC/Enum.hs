@@ -598,7 +598,7 @@ instance Bounded Word where
 #elif WORD_SIZE_IN_BITS == 64
     maxBound = W# (int2Word# 0xFFFFFFFFFFFFFFFF#)
 #else
-#error Unhandled value for W_SIZE_IN_BITS
+#error Unhandled value for WORD_SIZE_IN_BITS
 #endif
 
 -- | @since 2.01
