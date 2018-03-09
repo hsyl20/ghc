@@ -274,6 +274,24 @@ doesn't yield a warning. Instead we simply squash the value into the *target*
 Int/Word range.
 -}
 
+-- | Wrap a literal number according to its type
+wrapLitNumber :: DynFlags -> Literal -> Literal
+wrapLitNumber dflags v@(LitNumber nt i t) = case nt of
+  LitNumInt -> case platformWordSize (targetPlatform dflags) of
+    4 -> LitNumber nt (toInteger (fromIntegral i :: Int32)) t
+    8 -> LitNumber nt (toInteger (fromIntegral i :: Int64)) t
+    w -> panic ("wrapLitNumber: Unknown platformWordSize: " ++ show w)
+  LitNumWord -> case platformWordSize (targetPlatform dflags) of
+    4 -> LitNumber nt (toInteger (fromIntegral i :: Word32)) t
+    8 -> LitNumber nt (toInteger (fromIntegral i :: Word64)) t
+    w -> panic ("wrapLitNumber: Unknown platformWordSize: " ++ show w)
+  LitNumInt64   -> LitNumber nt (toInteger (fromIntegral i :: Int64)) t
+  LitNumWord64  -> LitNumber nt (toInteger (fromIntegral i :: Word64)) t
+  LitNumInteger -> v
+  LitNumNatural -> v
+wrapLitNumber _ x = x
+
+
 -- | Creates a 'Literal' of type @Int#@
 mkMachInt :: DynFlags -> Integer -> Literal
 mkMachInt dflags x   = ASSERT2( inIntRange dflags x,  integer x )
@@ -290,7 +308,7 @@ wrapInt dflags i
 --   If the argument is out of the (target-dependent) range, it is wrapped.
 --   See Note [Word/Int underflow/overflow]
 mkMachIntWrap :: DynFlags -> Integer -> Literal
-mkMachIntWrap dflags i = MachInt (wrapInt dflags i)
+mkMachIntWrap dflags i = wrapLitNumber dflags (MachInt i)
 
 -- | Creates a 'Literal' of type @Int#@, as well as a 'Bool'ean flag indicating
 --   overflow. That is, if the argument is out of the (target-dependent) range
@@ -299,7 +317,7 @@ mkMachIntWrap dflags i = MachInt (wrapInt dflags i)
 mkMachIntWrapC :: DynFlags -> Integer -> (Literal, Bool)
 mkMachIntWrapC dflags i = (MachInt i', i /= i')
   where
-    i' = wrapInt dflags i
+    MachInt i' = mkMachIntWrap dflags i
 
 -- | Creates a 'Literal' of type @Word#@
 mkMachWord :: DynFlags -> Integer -> Literal
@@ -317,7 +335,7 @@ wrapWord dflags i
 --   If the argument is out of the (target-dependent) range, it is wrapped.
 --   See Note [Word/Int underflow/overflow]
 mkMachWordWrap :: DynFlags -> Integer -> Literal
-mkMachWordWrap dflags i = MachWord (wrapWord dflags i)
+mkMachWordWrap dflags i = wrapLitNumber dflags (MachWord i)
 
 -- | Creates a 'Literal' of type @Word#@, as well as a 'Bool'ean flag indicating
 --   carry. That is, if the argument is out of the (target-dependent) range
@@ -326,7 +344,7 @@ mkMachWordWrap dflags i = MachWord (wrapWord dflags i)
 mkMachWordWrapC :: DynFlags -> Integer -> (Literal, Bool)
 mkMachWordWrapC dflags i = (MachWord i', i /= i')
   where
-    i' = wrapWord dflags i
+    MachWord i' = mkMachWordWrap dflags i
 
 -- | Creates a 'Literal' of type @Int64#@
 mkMachInt64 :: Integer -> Literal
@@ -335,8 +353,8 @@ mkMachInt64  x = ASSERT2( inInt64Range x, integer x )
 
 -- | Creates a 'Literal' of type @Int64#@.
 --   If the argument is out of the range, it is wrapped.
-mkMachInt64Wrap :: Integer -> Literal
-mkMachInt64Wrap  i = MachInt64 (toInteger (fromIntegral i :: Int64))
+mkMachInt64Wrap :: DynFlags -> Integer -> Literal
+mkMachInt64Wrap dflags i = wrapLitNumber dflags (MachInt64 i)
 
 -- | Creates a 'Literal' of type @Word64#@
 mkMachWord64 :: Integer -> Literal
@@ -345,8 +363,8 @@ mkMachWord64 x = ASSERT2( inWord64Range x, integer x )
 
 -- | Creates a 'Literal' of type @Word64#@.
 --   If the argument is out of the range, it is wrapped.
-mkMachWord64Wrap :: Integer -> Literal
-mkMachWord64Wrap i = MachWord64 (toInteger (fromIntegral i :: Word64))
+mkMachWord64Wrap :: DynFlags -> Integer -> Literal
+mkMachWord64Wrap dflags i = wrapLitNumber dflags (MachWord64 i)
 
 -- | Creates a 'Literal' of type @Float#@
 mkMachFloat :: Rational -> Literal
@@ -391,13 +409,10 @@ inCharRange c =  c >= '\0' && c <= chr tARGET_MAX_CHAR
 
 -- | Tests whether the literal represents a zero of whatever type it is
 isZeroLit :: Literal -> Bool
-isZeroLit (MachInt    0) = True
-isZeroLit (MachInt64  0) = True
-isZeroLit (MachWord   0) = True
-isZeroLit (MachWord64 0) = True
-isZeroLit (MachFloat  0) = True
-isZeroLit (MachDouble 0) = True
-isZeroLit _              = False
+isZeroLit (LitNumber _ 0 _) = True
+isZeroLit (MachFloat  0)    = True
+isZeroLit (MachDouble 0)    = True
+isZeroLit _                 = False
 
 -- | Returns the 'Integer' contained in the 'Literal', for when that makes
 -- sense, i.e. for 'Char', 'Int', 'Word', 'LitInteger' and 'LitNatural'.
@@ -407,32 +422,23 @@ litValue l = case isLitValue_maybe l of
    Nothing -> pprPanic "litValue" (ppr l)
 
 -- | Returns the 'Integer' contained in the 'Literal', for when that makes
--- sense, i.e. for 'Char', 'Int', 'Word', 'LitInteger' and 'LitNatural'.
+-- sense, i.e. for 'Char' and numbers.
 isLitValue_maybe  :: Literal -> Maybe Integer
-isLitValue_maybe (MachChar   c)   = Just $ toInteger $ ord c
-isLitValue_maybe (MachInt    i)   = Just i
-isLitValue_maybe (MachInt64  i)   = Just i
-isLitValue_maybe (MachWord   i)   = Just i
-isLitValue_maybe (MachWord64 i)   = Just i
-isLitValue_maybe (LitInteger i _) = Just i
-isLitValue_maybe (LitNatural i _) = Just i
-isLitValue_maybe _                = Nothing
+isLitValue_maybe (MachChar   c)    = Just $ toInteger $ ord c
+isLitValue_maybe (LitNumber _ i _) = Just i
+isLitValue_maybe _                 = Nothing
 
 -- | Apply a function to the 'Integer' contained in the 'Literal', for when that
--- makes sense, e.g. for 'Char', 'Int', 'Word', 'LitInteger' and 'LitNatural'.
+-- makes sense, e.g. for 'Char' and numbers.
 -- For fixed-size integral literals, the result will be wrapped in accordance
 -- with the semantics of the target type.
 -- See Note [Word/Int underflow/overflow]
 mapLitValue  :: DynFlags -> (Integer -> Integer) -> Literal -> Literal
-mapLitValue _      f (MachChar   c)   = mkMachChar (fchar c)
+mapLitValue _      f (MachChar   c)     = mkMachChar (fchar c)
    where fchar = chr . fromInteger . f . toInteger . ord
-mapLitValue dflags f (MachInt    i)   = mkMachIntWrap dflags (f i)
-mapLitValue _      f (MachInt64  i)   = mkMachInt64Wrap (f i)
-mapLitValue dflags f (MachWord   i)   = mkMachWordWrap dflags (f i)
-mapLitValue _      f (MachWord64 i)   = mkMachWord64Wrap (f i)
-mapLitValue _      f (LitInteger i t) = mkLitInteger (f i) t
-mapLitValue _      f (LitNatural i t) = mkLitNatural (f i) t
-mapLitValue _      _ l                = pprPanic "mapLitValue" (ppr l)
+mapLitValue dflags f (LitNumber nt i t) = wrapLitNumber dflags
+                                                        (LitNumber nt (f i) t)
+mapLitValue _      _ l                  = pprPanic "mapLitValue" (ppr l)
 
 -- | Indicate if the `Literal` contains an 'Integer' value, e.g. 'Char',
 -- 'Int', 'Word', 'LitInteger' and 'LitNatural'.
@@ -553,9 +559,9 @@ litIsDupable dflags (LitNatural i _) = inIntRange dflags i
 litIsDupable _      _                = True
 
 litFitsInChar :: Literal -> Bool
-litFitsInChar (MachInt i) = i >= toInteger (ord minBound)
-                         && i <= toInteger (ord maxBound)
-litFitsInChar _           = False
+litFitsInChar (LitNumber _ i _) = i >= toInteger (ord minBound)
+                                  && i <= toInteger (ord maxBound)
+litFitsInChar _                 = False
 
 litIsLifted :: Literal -> Bool
 litIsLifted (LitInteger {}) = True
@@ -605,8 +611,8 @@ cmpLit (MachFloat     a)     (MachFloat      b)     = a `compare` b
 cmpLit (MachDouble    a)     (MachDouble     b)     = a `compare` b
 cmpLit (MachLabel     a _ _) (MachLabel      b _ _) = a `compare` b
 cmpLit (LitNumber nt1 a _)   (LitNumber nt2  b _)
-  | nt1 == nt2 = a `compare` b
-  | otherwise  = nt1 `compare`  nt2  
+  | nt1 == nt2 = a   `compare` b
+  | otherwise  = nt1 `compare` nt2
 cmpLit lit1 lit2
   | litTag lit1 < litTag lit2 = LT
   | otherwise                 = GT

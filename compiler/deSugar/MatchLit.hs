@@ -399,8 +399,8 @@ hsLitKey :: DynFlags -> HsLit GhcTc -> Literal
 -- HsLit does not.
 hsLitKey dflags (HsIntPrim    _ i) = mkMachIntWrap  dflags i
 hsLitKey dflags (HsWordPrim   _ w) = mkMachWordWrap dflags w
-hsLitKey _      (HsInt64Prim  _ i) = mkMachInt64Wrap       i
-hsLitKey _      (HsWord64Prim _ w) = mkMachWord64Wrap      w
+hsLitKey dflags (HsInt64Prim  _ i) = mkMachInt64Wrap  dflags i
+hsLitKey dflags (HsWord64Prim _ w) = mkMachWord64Wrap dflags w
 hsLitKey _      (HsCharPrim   _ c) = mkMachChar            c
 hsLitKey _      (HsFloatPrim  _ f) = mkMachFloat           (fl_value f)
 hsLitKey _      (HsDoublePrim _ d) = mkMachDouble          (fl_value d)
