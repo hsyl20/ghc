@@ -1315,11 +1315,11 @@ type CafRefEnv = (VarEnv Id, Integer -> CoreExpr, Integer -> CoreExpr)
 hasCafRefs :: DynFlags -> Module
            -> CafRefEnv -> Arity -> CoreExpr
            -> CafInfo
-hasCafRefs dflags this_mod p@(_, cvt_integer, cvt_natural) arity expr
+hasCafRefs dflags this_mod (subst, cvt_integer, cvt_natural) arity expr
   | is_caf || mentions_cafs = MayHaveCafRefs
   | otherwise               = NoCafRefs
  where
-  mentions_cafs   = cafRefsE p expr
+  mentions_cafs   = cafRefsE expr
   is_dynamic_name = isDllName dflags this_mod
   is_caf = not (arity > 0 || rhsIsStatic (targetPlatform dflags) is_dynamic_name
                                          cvt_integer cvt_natural expr)
@@ -1330,35 +1330,35 @@ hasCafRefs dflags this_mod p@(_, cvt_integer, cvt_natural) arity expr
   -- CorePrep later on, and we don't want to duplicate that
   -- knowledge in rhsIsStatic below.
 
-cafRefsE :: CafRefEnv -> Expr a -> Bool
-cafRefsE p (Var id)            = cafRefsV p id
-cafRefsE p (Lit lit)           = cafRefsL p lit
-cafRefsE p (App f a)           = cafRefsE p f || cafRefsE p a
-cafRefsE p (Lam _ e)           = cafRefsE p e
-cafRefsE p (Let b e)           = cafRefsEs p (rhssOfBind b) || cafRefsE p e
-cafRefsE p (Case e _ _ alts)   = cafRefsE p e || cafRefsEs p (rhssOfAlts alts)
-cafRefsE p (Tick _n e)         = cafRefsE p e
-cafRefsE p (Cast e _co)        = cafRefsE p e
-cafRefsE _ (Type _)            = False
-cafRefsE _ (Coercion _)        = False
+  cafRefsE :: Expr a -> Bool
+  cafRefsE (Var id)            = cafRefsV id
+  cafRefsE (Lit lit)           = cafRefsL lit
+  cafRefsE (App f a)           = cafRefsE f || cafRefsE a
+  cafRefsE (Lam _ e)           = cafRefsE e
+  cafRefsE (Let b e)           = cafRefsEs (rhssOfBind b) || cafRefsE e
+  cafRefsE (Case e _ _ alts)   = cafRefsE e || cafRefsEs (rhssOfAlts alts)
+  cafRefsE (Tick _n e)         = cafRefsE e
+  cafRefsE (Cast e _co)        = cafRefsE e
+  cafRefsE (Type _)            = False
+  cafRefsE (Coercion _)        = False
 
-cafRefsEs :: CafRefEnv -> [Expr a] -> Bool
-cafRefsEs _ []     = False
-cafRefsEs p (e:es) = cafRefsE p e || cafRefsEs p es
+  cafRefsEs :: [Expr a] -> Bool
+  cafRefsEs []     = False
+  cafRefsEs (e:es) = cafRefsE e || cafRefsEs es
 
-cafRefsL :: CafRefEnv -> Literal -> Bool
--- Don't forget that mk_integer id might have Caf refs!
--- We first need to convert the Integer into its final form, to
--- see whether mkInteger is used. Same for LitNatural.
-cafRefsL p@(_, cvt_integer, _) (LitInteger i _) = cafRefsE p (cvt_integer i)
-cafRefsL p@(_, _, cvt_natural) (LitNatural i _) = cafRefsE p (cvt_natural i)
-cafRefsL _                     _                = False
+  cafRefsL :: Literal -> Bool
+  -- Don't forget that mk_integer id might have Caf refs!
+  -- We first need to convert the Integer into its final form, to
+  -- see whether mkInteger is used. Same for LitNatural.
+  cafRefsL (LitInteger i _) = cafRefsE (cvt_integer i)
+  cafRefsL (LitNatural i _) = cafRefsE (cvt_natural i)
+  cafRefsL _                = False
 
-cafRefsV :: CafRefEnv -> Id -> Bool
-cafRefsV (subst, _, _) id
-  | not (isLocalId id)                = mayHaveCafRefs (idCafInfo id)
-  | Just id' <- lookupVarEnv subst id = mayHaveCafRefs (idCafInfo id')
-  | otherwise                         = False
+  cafRefsV :: Id -> Bool
+  cafRefsV id
+    | not (isLocalId id)                = mayHaveCafRefs (idCafInfo id)
+    | Just id' <- lookupVarEnv subst id = mayHaveCafRefs (idCafInfo id')
+    | otherwise                         = False
 
 
 {-
