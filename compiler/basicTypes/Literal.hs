@@ -5,12 +5,19 @@
 \section[Literal]{@Literal@: Machine literals (unboxed, of course)}
 -}
 
-{-# LANGUAGE CPP, DeriveDataTypeable #-}
+{-# LANGUAGE CPP, DeriveDataTypeable, PatternSynonyms #-}
 
 module Literal
         (
         -- * Main data type
           Literal(..)           -- Exported to ParseIface
+        , LitNumType(..)
+        , pattern LitInteger
+        , pattern LitNatural
+        , pattern MachInt
+        , pattern MachInt64
+        , pattern MachWord
+        , pattern MachWord64
 
         -- ** Creating Literals
         , mkMachInt, mkMachIntWrap, mkMachIntWrapC
@@ -104,11 +111,6 @@ data Literal
                                 -- that can be represented as a Literal. Create
                                 -- with 'nullAddrLit'
 
-  | MachInt     Integer         -- ^ @Int#@ - according to target machine
-  | MachInt64   Integer         -- ^ @Int64#@ - exactly 64 bits
-  | MachWord    Integer         -- ^ @Word#@ - according to target machine
-  | MachWord64  Integer         -- ^ @Word64#@ - exactly 64 bits
-
   | MachFloat   Rational        -- ^ @Float#@. Create with 'mkMachFloat'
   | MachDouble  Rational        -- ^ @Double#@. Create with 'mkMachDouble'
 
@@ -124,11 +126,33 @@ data Literal
                 --    @stdcall@ labels. @Just x@ => @\<x\>@ will
                 --    be appended to label name when emitting assembly.
 
-  | LitInteger Integer Type --  ^ Integer literals
-                            -- See Note [Integer literals]
-  | LitNatural Integer Type --  ^ Natural literals
-                            -- See Note [Natural literals]
+  | LitNumber LitNumType Integer Type --  ^ Any numeric literal that can be
+                                      -- internally represented with an Integer.
   deriving Data
+
+-- | Numeric literal type
+data LitNumType
+  = LitNumInteger -- ^ @Integer@ (see Note [Integer literals])
+  | LitNumNatural -- ^ @Natural@ (see Note [Natural literals])
+  | LitNumInt     -- ^ @Int#@ - according to target machine
+  | LitNumInt64   -- ^ @Int64#@ - exactly 64 bits
+  | LitNumWord    -- ^ @Word#@ - according to target machine
+  | LitNumWord64  -- ^ @Word64#@ - exactly 64 bits
+  deriving (Data,Enum,Eq,Ord)
+
+pattern LitInteger, LitNatural :: Integer -> Type -> Literal
+pattern MachInt, MachInt64, MachWord, MachWord64 :: Integer -> Literal
+
+pattern LitInteger i t = LitNumber LitNumInteger i t
+pattern LitNatural i t = LitNumber LitNumNatural i t
+pattern MachInt i     <- LitNumber LitNumInt     i _
+   where MachInt i = LitNumber LitNumInt i intPrimTy
+pattern MachInt64 i   <- LitNumber LitNumInt64   i _
+   where MachInt64 i = LitNumber LitNumInt64 i int64PrimTy
+pattern MachWord i    <- LitNumber LitNumWord    i _
+   where MachWord i = LitNumber LitNumWord i wordPrimTy
+pattern MachWord64 i  <- LitNumber LitNumWord64  i _
+   where MachWord64 i = LitNumber LitNumWord64 i word64PrimTy
 
 {-
 Note [Integer literals]
@@ -152,26 +176,29 @@ Note [Natural literals]
 ~~~~~~~~~~~~~~~~~~~~~~~
 Similar to Integer literals.
 
-Binary instance
 -}
+
+instance Binary LitNumType where
+   put_ bh numTyp = putByte bh (fromIntegral (fromEnum numTyp))
+   get bh = do
+      h <- getByte bh
+      return (toEnum (fromIntegral h))
 
 instance Binary Literal where
     put_ bh (MachChar aa)     = do putByte bh 0; put_ bh aa
     put_ bh (MachStr ab)      = do putByte bh 1; put_ bh ab
     put_ bh (MachNullAddr)    = do putByte bh 2
-    put_ bh (MachInt ad)      = do putByte bh 3; put_ bh ad
-    put_ bh (MachInt64 ae)    = do putByte bh 4; put_ bh ae
-    put_ bh (MachWord af)     = do putByte bh 5; put_ bh af
-    put_ bh (MachWord64 ag)   = do putByte bh 6; put_ bh ag
-    put_ bh (MachFloat ah)    = do putByte bh 7; put_ bh ah
-    put_ bh (MachDouble ai)   = do putByte bh 8; put_ bh ai
+    put_ bh (MachFloat ah)    = do putByte bh 3; put_ bh ah
+    put_ bh (MachDouble ai)   = do putByte bh 4; put_ bh ai
     put_ bh (MachLabel aj mb fod)
-        = do putByte bh 9
+        = do putByte bh 5
              put_ bh aj
              put_ bh mb
              put_ bh fod
-    put_ bh (LitInteger i _) = do putByte bh 10; put_ bh i
-    put_ bh (LitNatural i _) = do putByte bh 11; put_ bh i
+    put_ bh (LitNumber nt i _)
+        = do putByte bh 6
+             put_ bh nt
+             put_ bh i
     get bh = do
             h <- getByte bh
             case h of
@@ -184,38 +211,31 @@ instance Binary Literal where
               2 -> do
                     return (MachNullAddr)
               3 -> do
-                    ad <- get bh
-                    return (MachInt ad)
-              4 -> do
-                    ae <- get bh
-                    return (MachInt64 ae)
-              5 -> do
-                    af <- get bh
-                    return (MachWord af)
-              6 -> do
-                    ag <- get bh
-                    return (MachWord64 ag)
-              7 -> do
                     ah <- get bh
                     return (MachFloat ah)
-              8 -> do
+              4 -> do
                     ai <- get bh
                     return (MachDouble ai)
-              9 -> do
+              5 -> do
                     aj <- get bh
                     mb <- get bh
                     fod <- get bh
                     return (MachLabel aj mb fod)
-              10 -> do
-                    i <- get bh
-                    -- See Note [Integer literals]
-                    return $ mkLitInteger i
-                      (panic "Evaluated the place holder for mkInteger")
               _ -> do
-                    i <- get bh
-                    -- See Note [Natural literals]
-                    return $ mkLitNatural i
-                      (panic "Evaluated the place holder for mkNatural")
+                    nt <- get bh
+                    i  <- get bh
+                    let t = case nt of
+                            LitNumInt     -> intPrimTy
+                            LitNumInt64   -> int64PrimTy
+                            LitNumWord    -> wordPrimTy
+                            LitNumWord64  -> word64PrimTy
+                            -- See Note [Integer literals]
+                            LitNumInteger ->
+                              panic "Evaluated the place holder for mkInteger"
+                            -- and Note [Natural literals]
+                            LitNumNatural ->
+                              panic "Evaluated the place holder for mkNatural"
+                    return (LitNumber nt i t)
 
 instance Outputable Literal where
     ppr lit = pprLiteral (\d -> d) lit
@@ -549,18 +569,13 @@ litIsLifted _               = False
 
 -- | Find the Haskell 'Type' the literal occupies
 literalType :: Literal -> Type
-literalType MachNullAddr    = addrPrimTy
-literalType (MachChar _)    = charPrimTy
-literalType (MachStr  _)    = addrPrimTy
-literalType (MachInt  _)    = intPrimTy
-literalType (MachWord  _)   = wordPrimTy
-literalType (MachInt64  _)  = int64PrimTy
-literalType (MachWord64  _) = word64PrimTy
-literalType (MachFloat _)   = floatPrimTy
-literalType (MachDouble _)  = doublePrimTy
+literalType MachNullAddr      = addrPrimTy
+literalType (MachChar _)      = charPrimTy
+literalType (MachStr  _)      = addrPrimTy
+literalType (MachFloat _)     = floatPrimTy
+literalType (MachDouble _)    = doublePrimTy
 literalType (MachLabel _ _ _) = addrPrimTy
-literalType (LitInteger _ t) = t
-literalType (LitNatural _ t) = t
+literalType (LitNumber _ _ t) = t
 
 absentLiteralOf :: TyCon -> Maybe Literal
 -- Return a literal of the appropriate primitive
@@ -583,34 +598,27 @@ absent_lits = listToUFM [ (addrPrimTyConKey,    MachNullAddr)
 -}
 
 cmpLit :: Literal -> Literal -> Ordering
-cmpLit (MachChar      a)   (MachChar       b)   = a `compare` b
-cmpLit (MachStr       a)   (MachStr        b)   = a `compare` b
-cmpLit (MachNullAddr)      (MachNullAddr)       = EQ
-cmpLit (MachInt       a)   (MachInt        b)   = a `compare` b
-cmpLit (MachWord      a)   (MachWord       b)   = a `compare` b
-cmpLit (MachInt64     a)   (MachInt64      b)   = a `compare` b
-cmpLit (MachWord64    a)   (MachWord64     b)   = a `compare` b
-cmpLit (MachFloat     a)   (MachFloat      b)   = a `compare` b
-cmpLit (MachDouble    a)   (MachDouble     b)   = a `compare` b
+cmpLit (MachChar      a)     (MachChar       b)     = a `compare` b
+cmpLit (MachStr       a)     (MachStr        b)     = a `compare` b
+cmpLit (MachNullAddr)        (MachNullAddr)         = EQ
+cmpLit (MachFloat     a)     (MachFloat      b)     = a `compare` b
+cmpLit (MachDouble    a)     (MachDouble     b)     = a `compare` b
 cmpLit (MachLabel     a _ _) (MachLabel      b _ _) = a `compare` b
-cmpLit (LitInteger    a _) (LitInteger     b _) = a `compare` b
-cmpLit (LitNatural    a _) (LitNatural     b _) = a `compare` b
-cmpLit lit1                lit2                 | litTag lit1 < litTag lit2 = LT
-                                                | otherwise                 = GT
+cmpLit (LitNumber nt1 a _)   (LitNumber nt2  b _)
+  | nt1 == nt2 = a `compare` b
+  | otherwise  = nt1 `compare`  nt2  
+cmpLit lit1 lit2
+  | litTag lit1 < litTag lit2 = LT
+  | otherwise                 = GT
 
 litTag :: Literal -> Int
 litTag (MachChar      _)   = 1
 litTag (MachStr       _)   = 2
 litTag (MachNullAddr)      = 3
-litTag (MachInt       _)   = 4
-litTag (MachWord      _)   = 5
-litTag (MachInt64     _)   = 6
-litTag (MachWord64    _)   = 7
-litTag (MachFloat     _)   = 8
-litTag (MachDouble    _)   = 9
-litTag (MachLabel _ _ _)   = 10
-litTag (LitInteger  {})    = 11
-litTag (LitNatural  {})    = 12
+litTag (MachFloat     _)   = 4
+litTag (MachDouble    _)   = 5
+litTag (MachLabel _ _ _)   = 6
+litTag (LitNumber  {})     = 7
 
 {-
         Printing
@@ -622,14 +630,16 @@ pprLiteral :: (SDoc -> SDoc) -> Literal -> SDoc
 pprLiteral _       (MachChar c)     = pprPrimChar c
 pprLiteral _       (MachStr s)      = pprHsBytes s
 pprLiteral _       (MachNullAddr)   = text "__NULL"
-pprLiteral _       (MachInt i)      = pprPrimInt i
-pprLiteral _       (MachInt64 i)    = pprPrimInt64 i
-pprLiteral _       (MachWord w)     = pprPrimWord w
-pprLiteral _       (MachWord64 w)   = pprPrimWord64 w
 pprLiteral _       (MachFloat f)    = float (fromRat f) <> primFloatSuffix
 pprLiteral _       (MachDouble d)   = double (fromRat d) <> primDoubleSuffix
-pprLiteral add_par (LitInteger i _) = pprIntegerVal add_par i
-pprLiteral add_par (LitNatural i _) = pprIntegerVal add_par i
+pprLiteral add_par (LitNumber nt i _)
+   = case nt of
+       LitNumInteger -> pprIntegerVal add_par i
+       LitNumNatural -> pprIntegerVal add_par i
+       LitNumInt     -> pprPrimInt i
+       LitNumInt64   -> pprPrimInt64 i
+       LitNumWord    -> pprPrimWord i
+       LitNumWord64  -> pprPrimWord64 i
 pprLiteral add_par (MachLabel l mb fod) = add_par (text "__label" <+> b <+> ppr fod)
     where b = case mb of
               Nothing -> pprHsString l

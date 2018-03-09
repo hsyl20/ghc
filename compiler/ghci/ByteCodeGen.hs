@@ -1524,20 +1524,21 @@ pushAtom _ _ (AnnLit lit) = do
 
      case lit of
         MachLabel _ _ _ -> code N
-        MachWord _    -> code N
-        MachInt _     -> code N
-        MachWord64 _  -> code L
-        MachInt64 _   -> code L
         MachFloat _   -> code F
         MachDouble _  -> code D
         MachChar _    -> code N
         MachNullAddr  -> code N
         MachStr _     -> code N
-        -- No LitInteger's or LitNatural's should be left by the time this is
-        -- called. CorePrep should have converted them all to a real core
-        -- representation.
-        LitInteger {} -> panic "pushAtom: LitInteger"
-        LitNatural {} -> panic "pushAtom: LitNatural"
+        LitNumber nt _ _ -> case nt of
+          LitNumInt     -> code N
+          LitNumWord    -> code N
+          LitNumInt64   -> code L
+          LitNumWord64  -> code L
+          -- No LitInteger's or LitNatural's should be left by the time this is
+          -- called. CorePrep should have converted them all to a real core
+          -- representation.
+          LitNumInteger -> panic "pushAtom: LitInteger"
+          LitNumNatural -> panic "pushAtom: LitNatural"
 
 pushAtom _ _ expr
    = pprPanic "ByteCodeGen.pushAtom"

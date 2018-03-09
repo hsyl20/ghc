@@ -203,7 +203,7 @@ import CoreSyn
 import DataCon
 import FastString (FastString, mkFastString)
 import Id
-import Literal (Literal (..), literalType)
+import Literal
 import MkCore (aBSENT_SUM_FIELD_ERROR_ID)
 import MkId (voidPrimId, voidArgId)
 import MonadUtils (mapAccumLM)
