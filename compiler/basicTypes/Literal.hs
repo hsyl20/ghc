@@ -102,6 +102,10 @@ data Literal
         -- First the primitive guys
     MachChar    Char            -- ^ @Char#@ - at least 31 bits. Create with 'mkMachChar'
 
+  | LitNumber !LitNumType !Integer Type
+      --  ^ Any numeric literal that can be
+      -- internally represented with an Integer
+
   | MachStr     ByteString      -- ^ A string-literal: stored and emitted
                                 -- UTF-8 encoded, we'll arrange to decode it
                                 -- at runtime.  Also emitted with a @'\0'@
@@ -125,9 +129,6 @@ data Literal
                 --    the label expects. Only applicable with
                 --    @stdcall@ labels. @Just x@ => @\<x\>@ will
                 --    be appended to label name when emitting assembly.
-
-  | LitNumber LitNumType Integer Type --  ^ Any numeric literal that can be
-                                      -- internally represented with an Integer.
   deriving Data
 
 -- | Numeric literal type
@@ -560,7 +561,7 @@ litIsDupable _      _                = True
 
 litFitsInChar :: Literal -> Bool
 litFitsInChar (LitNumber _ i _) = i >= toInteger (ord minBound)
-                                  && i <= toInteger (ord maxBound)
+                               && i <= toInteger (ord maxBound)
 litFitsInChar _                 = False
 
 litIsLifted :: Literal -> Bool
