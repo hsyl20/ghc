@@ -12,12 +12,6 @@ module Literal
         -- * Main data type
           Literal(..)           -- Exported to ParseIface
         , LitNumType(..)
-        , pattern LitInteger
-        , pattern LitNatural
-        , pattern MachInt
-        , pattern MachInt64
-        , pattern MachWord
-        , pattern MachWord64
 
         -- ** Creating Literals
         , mkMachInt, mkMachIntWrap, mkMachIntWrapC
@@ -27,11 +21,14 @@ module Literal
         , mkMachFloat, mkMachDouble
         , mkMachChar, mkMachString
         , mkLitInteger, mkLitNatural
+        , mkLitNumberWrap
 
         -- ** Operations on Literals
         , literalType
         , absentLiteralOf
         , pprLiteral
+        , litNumIsSigned
+        , wrapLitNumber
 
         -- ** Predicates on Literals and their contents
         , litIsDupable, litIsTrivial, litIsLifted
@@ -140,6 +137,16 @@ data LitNumType
   | LitNumWord    -- ^ @Word#@ - according to target machine
   | LitNumWord64  -- ^ @Word64#@ - exactly 64 bits
   deriving (Data,Enum,Eq,Ord)
+
+-- | Indicate if a numeric literal type supports negative numbers
+litNumIsSigned :: LitNumType -> Bool
+litNumIsSigned nt = case nt of
+  LitNumInteger -> True
+  LitNumNatural -> False
+  LitNumInt     -> True
+  LitNumInt64   -> True
+  LitNumWord    -> False
+  LitNumWord64  -> False
 
 pattern LitInteger, LitNatural :: Integer -> Type -> Literal
 pattern MachInt, MachInt64, MachWord, MachWord64 :: Integer -> Literal
@@ -292,6 +299,9 @@ wrapLitNumber dflags v@(LitNumber nt i t) = case nt of
   LitNumNatural -> v
 wrapLitNumber _ x = x
 
+-- | Create a numeric 'Literal'  of the given type
+mkLitNumberWrap :: DynFlags -> LitNumType -> Integer -> Type -> Literal
+mkLitNumberWrap dflags nt i t = wrapLitNumber dflags (LitNumber nt i t)
 
 -- | Creates a 'Literal' of type @Int#@
 mkMachInt :: DynFlags -> Integer -> Literal

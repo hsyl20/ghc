@@ -77,30 +77,31 @@ See also below where we look for @DictApps@ for \tr{plusInt}, etc.
 -}
 
 dsLit :: HsLit GhcRn -> DsM CoreExpr
-dsLit (HsStringPrim _ s) = return (Lit (MachStr s))
-dsLit (HsCharPrim   _ c) = return (Lit (MachChar c))
-dsLit (HsIntPrim    _ i) = return (Lit (MachInt i))
-dsLit (HsWordPrim   _ w) = return (Lit (MachWord w))
-dsLit (HsInt64Prim  _ i) = return (Lit (MachInt64 i))
-dsLit (HsWord64Prim _ w) = return (Lit (MachWord64 w))
-dsLit (HsFloatPrim  _ f) = return (Lit (MachFloat (fl_value f)))
-dsLit (HsDoublePrim _ d) = return (Lit (MachDouble (fl_value d)))
-dsLit (HsChar _ c)       = return (mkCharExpr c)
-dsLit (HsString _ str)   = mkStringExprFS str
-dsLit (HsInteger _ i _)  = mkIntegerExpr i
-dsLit (HsInt _ i)        = do dflags <- getDynFlags
-                              return (mkIntExpr dflags (il_value i))
-
-dsLit (HsRat _ (FL _ _ val) ty) = do
-  num   <- mkIntegerExpr (numerator val)
-  denom <- mkIntegerExpr (denominator val)
-  return (mkCoreConApps ratio_data_con [Type integer_ty, num, denom])
-  where
-    (ratio_data_con, integer_ty)
-        = case tcSplitTyConApp ty of
-                (tycon, [i_ty]) -> ASSERT(isIntegerTy i_ty && tycon `hasKey` ratioTyConKey)
-                                   (head (tyConDataCons tycon), i_ty)
-                x -> pprPanic "dsLit" (ppr x)
+dsLit l = do
+  dflags <- getDynFlags
+  case l of
+    HsStringPrim _ s -> return (Lit (MachStr s))
+    HsCharPrim   _ c -> return (Lit (MachChar c))
+    HsIntPrim    _ i -> return (Lit (mkMachInt dflags i))
+    HsWordPrim   _ w -> return (Lit (mkMachWord dflags w))
+    HsInt64Prim  _ i -> return (Lit (mkMachInt64 i))
+    HsWord64Prim _ w -> return (Lit (mkMachWord64 w))
+    HsFloatPrim  _ f -> return (Lit (MachFloat (fl_value f)))
+    HsDoublePrim _ d -> return (Lit (MachDouble (fl_value d)))
+    HsChar _ c       -> return (mkCharExpr c)
+    HsString _ str   -> mkStringExprFS str
+    HsInteger _ i _  -> mkIntegerExpr i
+    HsInt _ i        -> return (mkIntExpr dflags (il_value i))
+    HsRat _ (FL _ _ val) ty -> do
+      num   <- mkIntegerExpr (numerator val)
+      denom <- mkIntegerExpr (denominator val)
+      return (mkCoreConApps ratio_data_con [Type integer_ty, num, denom])
+      where
+        (ratio_data_con, integer_ty)
+            = case tcSplitTyConApp ty of
+                    (tycon, [i_ty]) -> ASSERT(isIntegerTy i_ty && tycon `hasKey` ratioTyConKey)
+                                       (head (tyConDataCons tycon), i_ty)
+                    x -> pprPanic "dsLit" (ppr x)
 
 dsLit (XLit x)  = pprPanic "dsLit" (ppr x)
 

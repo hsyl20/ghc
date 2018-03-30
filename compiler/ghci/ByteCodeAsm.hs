@@ -455,8 +455,8 @@ assembleI dflags i = case i of
       LitNumWord    -> int (fromIntegral i)
       LitNumInt64   -> int64 (fromIntegral i)
       LitNumWord64  -> int64 (fromIntegral i)
-      LitNumInteger -> panic "ByteCodeAsm.literal: LitInteger"
-      LitNumNatural -> panic "ByteCodeAsm.literal: LitNatural"
+      LitNumInteger -> panic "ByteCodeAsm.literal: LitNumInteger"
+      LitNumNatural -> panic "ByteCodeAsm.literal: LitNumNatural"
 
     litlabel fs = lit [BCONPtrLbl fs]
     addr (RemotePtr a) = words [fromIntegral a]

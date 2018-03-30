@@ -1367,13 +1367,13 @@ tcIfaceLit :: Literal -> IfL Literal
 -- Integer literals deserialise to (LitInteger i <error thunk>)
 -- so tcIfaceLit just fills in the type.
 -- See Note [Integer literals] in Literal
-tcIfaceLit (LitInteger i _)
+tcIfaceLit (LitNumber LitNumInteger i _)
   = do t <- tcIfaceTyConByName integerTyConName
        return (mkLitInteger i (mkTyConTy t))
 -- Natural literals deserialise to (LitNatural i <error thunk>)
 -- so tcIfaceLit just fills in the type.
 -- See Note [Natural literals] in Literal
-tcIfaceLit (LitNatural i _)
+tcIfaceLit (LitNumber LitNumNatural i _)
   = do t <- tcIfaceTyConByName naturalTyConName
        return (mkLitNatural i (mkTyConTy t))
 tcIfaceLit lit = return lit

@@ -1350,8 +1350,8 @@ hasCafRefs dflags this_mod (subst, cvt_integer, cvt_natural) arity expr
   -- Don't forget that mk_integer id might have Caf refs!
   -- We first need to convert the Integer into its final form, to
   -- see whether mkInteger is used. Same for LitNatural.
-  cafRefsL (LitInteger i _) = cafRefsE (cvt_integer i)
-  cafRefsL (LitNatural i _) = cafRefsE (cvt_natural i)
+  cafRefsL (LitNumber LitNumInteger i _) = cafRefsE (cvt_integer i)
+  cafRefsL (LitNumber LitNumNatural i _) = cafRefsE (cvt_natural i)
   cafRefsL _                = False
 
   cafRefsV :: Id -> Bool

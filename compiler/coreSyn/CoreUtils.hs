@@ -2481,8 +2481,8 @@ rhsIsStatic platform is_dynamic_name cvt_integer cvt_natural rhs = is_static Fal
                                               && is_static in_arg e
   is_static in_arg (Cast e _)             = is_static in_arg e
   is_static _      (Coercion {})          = True   -- Behaves just like a literal
-  is_static in_arg (Lit (LitInteger i _)) = is_static in_arg (cvt_integer i)
-  is_static in_arg (Lit (LitNatural i _)) = is_static in_arg (cvt_natural i)
+  is_static in_arg (Lit (LitNumber LitNumInteger i _)) = is_static in_arg (cvt_integer i)
+  is_static in_arg (Lit (LitNumber LitNumNatural i _)) = is_static in_arg (cvt_natural i)
   is_static _      (Lit (MachLabel {}))   = False
   is_static _      (Lit _)                = True
         -- A MachLabel (foreign import "&foo") in an argument
