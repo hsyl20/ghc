@@ -5,7 +5,8 @@
 \section[Literal]{@Literal@: Machine literals (unboxed, of course)}
 -}
 
-{-# LANGUAGE CPP, DeriveDataTypeable, PatternSynonyms #-}
+{-# LANGUAGE CPP, DeriveDataTypeable, TypeApplications,
+    AllowAmbiguousTypes, ScopedTypeVariables #-}
 
 module Literal
         (
@@ -21,14 +22,14 @@ module Literal
         , mkMachFloat, mkMachDouble
         , mkMachChar, mkMachString
         , mkLitInteger, mkLitNatural
-        , mkLitNumberWrap
+        , mkLitNumber, mkLitNumberWrap
 
         -- ** Operations on Literals
         , literalType
         , absentLiteralOf
         , pprLiteral
         , litNumIsSigned
-        , wrapLitNumber
+        , litNumCheckRange
 
         -- ** Predicates on Literals and their contents
         , litIsDupable, litIsTrivial, litIsLifted
@@ -39,6 +40,7 @@ module Literal
 
         -- ** Coercions
         , word2IntLit, int2WordLit
+        , narrowLit
         , narrow8IntLit, narrow16IntLit, narrow32IntLit
         , narrow8WordLit, narrow16WordLit, narrow32WordLit
         , char2IntLit, int2CharLit
@@ -147,20 +149,6 @@ litNumIsSigned nt = case nt of
   LitNumInt64   -> True
   LitNumWord    -> False
   LitNumWord64  -> False
-
-pattern LitInteger, LitNatural :: Integer -> Type -> Literal
-pattern MachInt, MachInt64, MachWord, MachWord64 :: Integer -> Literal
-
-pattern LitInteger i t = LitNumber LitNumInteger i t
-pattern LitNatural i t = LitNumber LitNumNatural i t
-pattern MachInt i     <- LitNumber LitNumInt     i _
-   where MachInt i = LitNumber LitNumInt i intPrimTy
-pattern MachInt64 i   <- LitNumber LitNumInt64   i _
-   where MachInt64 i = LitNumber LitNumInt64 i int64PrimTy
-pattern MachWord i    <- LitNumber LitNumWord    i _
-   where MachWord i = LitNumber LitNumWord i wordPrimTy
-pattern MachWord64 i  <- LitNumber LitNumWord64  i _
-   where MachWord64 i = LitNumber LitNumWord64 i word64PrimTy
 
 {-
 Note [Integer literals]
@@ -299,14 +287,30 @@ wrapLitNumber dflags v@(LitNumber nt i t) = case nt of
   LitNumNatural -> v
 wrapLitNumber _ x = x
 
--- | Create a numeric 'Literal'  of the given type
+-- | Create a numeric 'Literal' of the given type
 mkLitNumberWrap :: DynFlags -> LitNumType -> Integer -> Type -> Literal
 mkLitNumberWrap dflags nt i t = wrapLitNumber dflags (LitNumber nt i t)
+
+-- | Check that a given number is in the range of a numeric literal
+litNumCheckRange :: DynFlags -> LitNumType -> Integer -> Bool
+litNumCheckRange dflags nt i = case nt of
+     LitNumInt     -> inIntRange dflags i
+     LitNumWord    -> inWordRange dflags i
+     LitNumInt64   -> inInt64Range i
+     LitNumWord64  -> inWord64Range i
+     LitNumNatural -> i >= 0
+     LitNumInteger -> True
+
+-- | Create a numeric 'Literal' of the given type
+mkLitNumber :: DynFlags -> LitNumType -> Integer -> Type -> Literal
+mkLitNumber dflags nt i t =
+  ASSERT2(litNumCheckRange dflags nt i, integer i)
+  (LitNumber nt i t)
 
 -- | Creates a 'Literal' of type @Int#@
 mkMachInt :: DynFlags -> Integer -> Literal
 mkMachInt dflags x   = ASSERT2( inIntRange dflags x,  integer x )
-                       MachInt x
+                       (mkMachIntUnchecked x)
 
 wrapInt :: DynFlags -> Integer -> Integer
 wrapInt dflags i
@@ -319,7 +323,11 @@ wrapInt dflags i
 --   If the argument is out of the (target-dependent) range, it is wrapped.
 --   See Note [Word/Int underflow/overflow]
 mkMachIntWrap :: DynFlags -> Integer -> Literal
-mkMachIntWrap dflags i = wrapLitNumber dflags (MachInt i)
+mkMachIntWrap dflags i = wrapLitNumber dflags $ mkMachIntUnchecked i
+
+-- | Creates a 'Literal' of type @Int#@ without checking its range.
+mkMachIntUnchecked :: Integer -> Literal
+mkMachIntUnchecked i = LitNumber LitNumInt i intPrimTy
 
 -- | Creates a 'Literal' of type @Int#@, as well as a 'Bool'ean flag indicating
 --   overflow. That is, if the argument is out of the (target-dependent) range
@@ -333,7 +341,7 @@ mkMachIntWrapC dflags i = (MachInt i', i /= i')
 -- | Creates a 'Literal' of type @Word#@
 mkMachWord :: DynFlags -> Integer -> Literal
 mkMachWord dflags x   = ASSERT2( inWordRange dflags x, integer x )
-                        MachWord x
+                        (mkMachWordUnchecked x)
 
 wrapWord :: DynFlags -> Integer -> Integer
 wrapWord dflags i
@@ -346,7 +354,11 @@ wrapWord dflags i
 --   If the argument is out of the (target-dependent) range, it is wrapped.
 --   See Note [Word/Int underflow/overflow]
 mkMachWordWrap :: DynFlags -> Integer -> Literal
-mkMachWordWrap dflags i = wrapLitNumber dflags (MachWord i)
+mkMachWordWrap dflags i = wrapLitNumber dflags $ mkMachWordUnchecked i
+
+-- | Creates a 'Literal' of type @Word#@ without checking its range.
+mkMachWordUnchecked :: Integer -> Literal
+mkMachWordUnchecked i = LitNumber LitNumWord i wordPrimTy
 
 -- | Creates a 'Literal' of type @Word#@, as well as a 'Bool'ean flag indicating
 --   carry. That is, if the argument is out of the (target-dependent) range
@@ -359,23 +371,29 @@ mkMachWordWrapC dflags i = (MachWord i', i /= i')
 
 -- | Creates a 'Literal' of type @Int64#@
 mkMachInt64 :: Integer -> Literal
-mkMachInt64  x = ASSERT2( inInt64Range x, integer x )
-                 MachInt64 x
+mkMachInt64  x = ASSERT2( inInt64Range x, integer x ) (mkMachInt64Unchecked x)
 
 -- | Creates a 'Literal' of type @Int64#@.
 --   If the argument is out of the range, it is wrapped.
 mkMachInt64Wrap :: DynFlags -> Integer -> Literal
-mkMachInt64Wrap dflags i = wrapLitNumber dflags (MachInt64 i)
+mkMachInt64Wrap dflags i = wrapLitNumber dflags $ mkMachInt64Unchecked i
+
+-- | Creates a 'Literal' of type @Int64#@ without checking its range.
+mkMachInt64Unchecked :: Integer -> Literal
+mkMachInt64Unchecked i = LitNumber LitNumInt64 i int64PrimTy
 
 -- | Creates a 'Literal' of type @Word64#@
 mkMachWord64 :: Integer -> Literal
-mkMachWord64 x = ASSERT2( inWord64Range x, integer x )
-                 MachWord64 x
+mkMachWord64 x = ASSERT2( inWord64Range x, integer x ) (mkMachWord64Unchecked x)
 
 -- | Creates a 'Literal' of type @Word64#@.
 --   If the argument is out of the range, it is wrapped.
 mkMachWord64Wrap :: DynFlags -> Integer -> Literal
-mkMachWord64Wrap dflags i = wrapLitNumber dflags (MachWord64 i)
+mkMachWord64Wrap dflags i = wrapLitNumber dflags $ mkMachWord64Unchecked i
+
+-- | Creates a 'Literal' of type @Word64#@ without checking its range.
+mkMachWord64Unchecked :: Integer -> Literal
+mkMachWord64Unchecked i = LitNumber LitNumWord64 i word64PrimTy
 
 -- | Creates a 'Literal' of type @Float#@
 mkMachFloat :: Rational -> Literal
@@ -396,11 +414,11 @@ mkMachString :: String -> Literal
 mkMachString s = MachStr (fastStringToByteString $ mkFastString s)
 
 mkLitInteger :: Integer -> Type -> Literal
-mkLitInteger = LitInteger
+mkLitInteger x ty = LitNumber LitNumInteger x ty
 
 mkLitNatural :: Integer -> Type -> Literal
 mkLitNatural x ty = ASSERT2( inNaturalRange x,  integer x )
-                    LitNatural x ty
+                    (LitNumber LitNumNatural x ty)
 
 inIntRange, inWordRange :: DynFlags -> Integer -> Bool
 inIntRange  dflags x = x >= tARGET_MIN_INT dflags && x <= tARGET_MAX_INT dflags
@@ -469,43 +487,42 @@ narrow8IntLit, narrow16IntLit, narrow32IntLit,
   :: Literal -> Literal
 
 word2IntLit, int2WordLit :: DynFlags -> Literal -> Literal
-word2IntLit dflags (MachWord w)
-  | w > tARGET_MAX_INT dflags = MachInt (w - tARGET_MAX_WORD dflags - 1)
-  | otherwise                 = MachInt w
+word2IntLit dflags (LitNumber LitNumWord w _)
+  | w > tARGET_MAX_INT dflags = mkMachInt dflags (w - tARGET_MAX_WORD dflags - 1)
+  | otherwise                 = mkMachInt dflags w
 word2IntLit _ l = pprPanic "word2IntLit" (ppr l)
 
-int2WordLit dflags (MachInt i)
-  | i < 0     = MachWord (1 + tARGET_MAX_WORD dflags + i)      -- (-1)  --->  tARGET_MAX_WORD
-  | otherwise = MachWord i
+int2WordLit dflags (LitNumber LitNumInt i _)
+  | i < 0     = mkMachWord dflags (1 + tARGET_MAX_WORD dflags + i)      -- (-1)  --->  tARGET_MAX_WORD
+  | otherwise = mkMachWord dflags i
 int2WordLit _ l = pprPanic "int2WordLit" (ppr l)
 
-narrow8IntLit    (MachInt  i) = MachInt  (toInteger (fromInteger i :: Int8))
-narrow8IntLit    l            = pprPanic "narrow8IntLit" (ppr l)
-narrow16IntLit   (MachInt  i) = MachInt  (toInteger (fromInteger i :: Int16))
-narrow16IntLit   l            = pprPanic "narrow16IntLit" (ppr l)
-narrow32IntLit   (MachInt  i) = MachInt  (toInteger (fromInteger i :: Int32))
-narrow32IntLit   l            = pprPanic "narrow32IntLit" (ppr l)
-narrow8WordLit   (MachWord w) = MachWord (toInteger (fromInteger w :: Word8))
-narrow8WordLit   l            = pprPanic "narrow8WordLit" (ppr l)
-narrow16WordLit  (MachWord w) = MachWord (toInteger (fromInteger w :: Word16))
-narrow16WordLit  l            = pprPanic "narrow16WordLit" (ppr l)
-narrow32WordLit  (MachWord w) = MachWord (toInteger (fromInteger w :: Word32))
-narrow32WordLit  l            = pprPanic "narrow32WordLit" (ppr l)
+-- | Narrow a literal number (unchecked result range)
+narrowLit :: forall a. Integral a => Literal -> Literal
+narrowLit (LitNumber nt i t) = LitNumber nt (toInteger (fromInteger i :: a)) t
+narrowLit l                  = pprPanic "narrowLit" (ppr l)
 
-char2IntLit (MachChar c) = MachInt  (toInteger (ord c))
+narrow8IntLit   = narrowLit @Int8
+narrow16IntLit  = narrowLit @Int16
+narrow32IntLit  = narrowLit @Int32
+narrow8WordLit  = narrowLit @Word8
+narrow16WordLit = narrowLit @Word16
+narrow32WordLit = narrowLit @Word32
+
+char2IntLit (MachChar c) = mkMachIntUnchecked (toInteger (ord c))
 char2IntLit l            = pprPanic "char2IntLit" (ppr l)
-int2CharLit (MachInt  i) = MachChar (chr (fromInteger i))
-int2CharLit l            = pprPanic "int2CharLit" (ppr l)
+int2CharLit (LitNumber _ i _) = MachChar (chr (fromInteger i))
+int2CharLit l                 = pprPanic "int2CharLit" (ppr l)
 
-float2IntLit (MachFloat f) = MachInt   (truncate    f)
+float2IntLit (MachFloat f) = mkMachIntUnchecked (truncate f)
 float2IntLit l             = pprPanic "float2IntLit" (ppr l)
-int2FloatLit (MachInt   i) = MachFloat (fromInteger i)
-int2FloatLit l             = pprPanic "int2FloatLit" (ppr l)
+int2FloatLit (LitNumber _ i _) = MachFloat (fromInteger i)
+int2FloatLit l                 = pprPanic "int2FloatLit" (ppr l)
 
-double2IntLit (MachDouble f) = MachInt    (truncate    f)
+double2IntLit (MachDouble f) = mkMachIntUnchecked (truncate f)
 double2IntLit l              = pprPanic "double2IntLit" (ppr l)
-int2DoubleLit (MachInt    i) = MachDouble (fromInteger i)
-int2DoubleLit l              = pprPanic "int2DoubleLit" (ppr l)
+int2DoubleLit (LitNumber _ i _) = MachDouble (fromInteger i)
+int2DoubleLit l                 = pprPanic "int2DoubleLit" (ppr l)
 
 float2DoubleLit (MachFloat  f) = MachDouble f
 float2DoubleLit l              = pprPanic "float2DoubleLit" (ppr l)
@@ -556,17 +573,26 @@ nullAddrLit = MachNullAddr
 litIsTrivial :: Literal -> Bool
 --      c.f. CoreUtils.exprIsTrivial
 litIsTrivial (MachStr _)      = False
-litIsTrivial (LitInteger {})  = False
-litIsTrivial (LitNatural {})  = False
+litIsTrivial (LitNumber nt _ _) = case nt of
+  LitNumInteger -> False
+  LitNumNatural -> False
+  LitNumInt     -> True
+  LitNumInt64   -> True
+  LitNumWord    -> True
+  LitNumWord64  -> True
 litIsTrivial _                = True
 
 -- | True if code space does not go bad if we duplicate this literal
--- Currently we treat it just like 'litIsTrivial'
 litIsDupable :: DynFlags -> Literal -> Bool
 --      c.f. CoreUtils.exprIsDupable
 litIsDupable _      (MachStr _)      = False
-litIsDupable dflags (LitInteger i _) = inIntRange dflags i
-litIsDupable dflags (LitNatural i _) = inIntRange dflags i
+litIsDupable dflags (LitNumber nt i _) = case nt of
+  LitNumInteger -> inIntRange dflags i
+  LitNumNatural -> inIntRange dflags i
+  LitNumInt     -> True
+  LitNumInt64   -> True
+  LitNumWord    -> True
+  LitNumWord64  -> True
 litIsDupable _      _                = True
 
 litFitsInChar :: Literal -> Bool
@@ -575,8 +601,13 @@ litFitsInChar (LitNumber _ i _) = i >= toInteger (ord minBound)
 litFitsInChar _                 = False
 
 litIsLifted :: Literal -> Bool
-litIsLifted (LitInteger {}) = True
-litIsLifted (LitNatural {}) = True
+litIsLifted (LitNumber nt _ _) = case nt of
+  LitNumInteger -> True
+  LitNumNatural -> True
+  LitNumInt     -> False
+  LitNumInt64   -> False
+  LitNumWord    -> False
+  LitNumWord64  -> False
 litIsLifted _               = False
 
 {-
@@ -602,12 +633,13 @@ absentLiteralOf tc = lookupUFM absent_lits (tyConName tc)
 absent_lits :: UniqFM Literal
 absent_lits = listToUFM [ (addrPrimTyConKey,    MachNullAddr)
                         , (charPrimTyConKey,    MachChar 'x')
-                        , (intPrimTyConKey,     MachInt 0)
-                        , (int64PrimTyConKey,   MachInt64 0)
+                        , (intPrimTyConKey,     mkMachIntUnchecked 0)
+                        , (int64PrimTyConKey,   mkMachInt64Unchecked 0)
+                        , (wordPrimTyConKey,    mkMachWordUnchecked 0)
+                        , (word64PrimTyConKey,  mkMachWord64Unchecked 0)
                         , (floatPrimTyConKey,   MachFloat 0)
                         , (doublePrimTyConKey,  MachDouble 0)
-                        , (wordPrimTyConKey,    MachWord 0)
-                        , (word64PrimTyConKey,  MachWord64 0) ]
+                        ]
 
 {-
         Comparison

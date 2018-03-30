@@ -1467,7 +1467,7 @@ warning in this case.
 match_bitInteger :: RuleFun
 -- Just for GHC.Integer.Type.bitInteger :: Int# -> Integer
 match_bitInteger dflags id_unf fn [arg]
-  | Just (MachInt x) <- exprIsLiteral_maybe id_unf arg
+  | Just (LitNumber LitNumInt x _) <- exprIsLiteral_maybe id_unf arg
   , x >= 0
   , x <= (wordSizeInBits dflags - 1)
     -- Make sure x is small enough to yield a decently small iteger
@@ -1477,7 +1477,7 @@ match_bitInteger dflags id_unf fn [arg]
   , let x_int = fromIntegral x :: Int
   = case splitFunTy_maybe (idType fn) of
     Just (_, integerTy)
-      -> Just (Lit (LitInteger (bit x_int) integerTy))
+      -> Just (Lit (LitNumber LitNumInteger (bit x_int) integerTy))
     _ -> panic "match_IntToInteger_unop: Id has the wrong type"
 
 match_bitInteger _ _ _ _ = Nothing
@@ -1488,14 +1488,14 @@ match_Integer_convert :: Num a
                       => (DynFlags -> a -> Expr CoreBndr)
                       -> RuleFun
 match_Integer_convert convert dflags id_unf _ [xl]
-  | Just (LitInteger x _) <- exprIsLiteral_maybe id_unf xl
+  | Just (LitNumber LitNumInteger x _) <- exprIsLiteral_maybe id_unf xl
   = Just (convert dflags (fromInteger x))
 match_Integer_convert _ _ _ _ _ = Nothing
 
 match_Integer_unop :: (Integer -> Integer) -> RuleFun
 match_Integer_unop unop _ id_unf _ [xl]
-  | Just (LitInteger x i) <- exprIsLiteral_maybe id_unf xl
-  = Just (Lit (LitInteger (unop x) i))
+  | Just (LitNumber LitNumInteger x i) <- exprIsLiteral_maybe id_unf xl
+  = Just (Lit (LitNumber LitNumInteger (unop x) i))
 match_Integer_unop _ _ _ _ _ = Nothing
 
 match_IntToInteger_unop :: (Integer -> Integer) -> RuleFun
