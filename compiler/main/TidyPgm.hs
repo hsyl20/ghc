@@ -1096,9 +1096,11 @@ tidyTopBinds hsc_env this_mod unfold_env init_occ_env binds
        mkNaturalId <- lookupMkNaturalName dflags hsc_env
        integerSDataCon <- lookupIntegerSDataConName dflags hsc_env
        naturalSDataCon <- lookupNaturalSDataConName dflags hsc_env
-       let cvt_integer = cvtLitInteger dflags mkIntegerId integerSDataCon
-           cvt_natural = cvtLitNatural dflags mkNaturalId naturalSDataCon
-           result      = tidy cvt_integer cvt_natural init_env binds
+       let cvt_literal nt i = case nt of
+             LitNumInteger -> Just (cvtLitInteger dflags mkIntegerId integerSDataCon i)
+             LitNumNatural -> Just (cvtLitNatural dflags mkNaturalId naturalSDataCon i)
+             _             -> Nothing
+           result      = tidy cvt_literal init_env binds
        seqBinds (snd result) `seq` return result
        -- This seqBinds avoids a spike in space usage (see #13564)
   where
@@ -1106,37 +1108,36 @@ tidyTopBinds hsc_env this_mod unfold_env init_occ_env binds
 
     init_env = (init_occ_env, emptyVarEnv)
 
-    tidy _           _           env []     = (env, [])
-    tidy cvt_integer cvt_natural env (b:bs)
-        = let (env1, b')  = tidyTopBind dflags this_mod
-                                        cvt_integer cvt_natural unfold_env env b
-              (env2, bs') = tidy cvt_integer cvt_natural env1 bs
+    tidy _           env []     = (env, [])
+    tidy cvt_literal env (b:bs)
+        = let (env1, b')  = tidyTopBind dflags this_mod cvt_literal unfold_env
+                                        env b
+              (env2, bs') = tidy cvt_literal env1 bs
           in  (env2, b':bs')
 
 ------------------------
 tidyTopBind  :: DynFlags
              -> Module
-             -> (Integer -> CoreExpr)
-             -> (Integer -> CoreExpr)
+             -> (LitNumType -> Integer -> Maybe CoreExpr)
              -> UnfoldEnv
              -> TidyEnv
              -> CoreBind
              -> (TidyEnv, CoreBind)
 
-tidyTopBind dflags this_mod cvt_integer cvt_natural unfold_env
+tidyTopBind dflags this_mod cvt_literal unfold_env
             (occ_env,subst1) (NonRec bndr rhs)
   = (tidy_env2,  NonRec bndr' rhs')
   where
     Just (name',show_unfold) = lookupVarEnv unfold_env bndr
     caf_info      = hasCafRefs dflags this_mod
-                               (subst1, cvt_integer, cvt_natural)
+                               (subst1, cvt_literal)
                                (idArity bndr) rhs
     (bndr', rhs') = tidyTopPair dflags show_unfold tidy_env2 caf_info name'
                                 (bndr, rhs)
     subst2        = extendVarEnv subst1 bndr bndr'
     tidy_env2     = (occ_env, subst2)
 
-tidyTopBind dflags this_mod cvt_integer cvt_natural unfold_env
+tidyTopBind dflags this_mod cvt_literal unfold_env
             (occ_env, subst1) (Rec prs)
   = (tidy_env2, Rec prs')
   where
@@ -1155,7 +1156,7 @@ tidyTopBind dflags this_mod cvt_integer cvt_natural unfold_env
         -- the group may refer indirectly to a CAF (because then, they all do).
     caf_info
         | or [ mayHaveCafRefs (hasCafRefs dflags this_mod
-                                          (subst1, cvt_integer, cvt_natural)
+                                          (subst1, cvt_literal)
                                           (idArity bndr) rhs)
              | (bndr,rhs) <- prs ] = MayHaveCafRefs
         | otherwise                = NoCafRefs
@@ -1302,27 +1303,27 @@ after TidyPgm.  But CorePrep does some transformations that affect CAF-hood.
 So we have to *predict* the result here, which is revolting.
 
 In particular CorePrep expands Integer and Natural literals. So in the
-prediction code here we resort to applying the same expansion (cvt_integer and
-cvt_natural). Ugh!
+prediction code here we resort to applying the same expansion (cvt_literal).
+Ugh!
 -}
 
-type CafRefEnv = (VarEnv Id, Integer -> CoreExpr, Integer -> CoreExpr)
+type CafRefEnv = (VarEnv Id, LitNumType -> Integer -> Maybe CoreExpr)
   -- The env finds the Caf-ness of the Id
-  -- The Integer -> CoreExpr are the desugaring functions for Integer and
-  -- Natural literals
+  -- The LitNumType -> Integer -> CoreExpr is the desugaring functions for
+  -- Integer and Natural literals
   -- See Note [Disgusting computation of CafRefs]
 
 hasCafRefs :: DynFlags -> Module
            -> CafRefEnv -> Arity -> CoreExpr
            -> CafInfo
-hasCafRefs dflags this_mod (subst, cvt_integer, cvt_natural) arity expr
+hasCafRefs dflags this_mod (subst, cvt_literal) arity expr
   | is_caf || mentions_cafs = MayHaveCafRefs
   | otherwise               = NoCafRefs
  where
   mentions_cafs   = cafRefsE expr
   is_dynamic_name = isDllName dflags this_mod
   is_caf = not (arity > 0 || rhsIsStatic (targetPlatform dflags) is_dynamic_name
-                                         cvt_integer cvt_natural expr)
+                                         cvt_literal expr)
 
   -- NB. we pass in the arity of the expression, which is expected
   -- to be calculated by exprArity.  This is because exprArity
@@ -1350,8 +1351,9 @@ hasCafRefs dflags this_mod (subst, cvt_integer, cvt_natural) arity expr
   -- Don't forget that mk_integer id might have Caf refs!
   -- We first need to convert the Integer into its final form, to
   -- see whether mkInteger is used. Same for LitNatural.
-  cafRefsL (LitNumber LitNumInteger i _) = cafRefsE (cvt_integer i)
-  cafRefsL (LitNumber LitNumNatural i _) = cafRefsE (cvt_natural i)
+  cafRefsL (LitNumber nt i _) = case cvt_literal nt i of
+    Just e  -> cafRefsE e
+    Nothing -> False
   cafRefsL _                = False
 
   cafRefsV :: Id -> Bool
