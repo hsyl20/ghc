@@ -1787,7 +1787,7 @@ We don't want to get this!
       DEFAULT -> e1
       DEFAULT -> e2
 
-Instead, we deal with turning one branch into DEAFULT in SimplUtils
+Instead, we deal with turning one branch into DEFAULT in SimplUtils
 (add_default in mkCase3).
 
 Note [caseRules for dataToTag]
