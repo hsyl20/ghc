@@ -31,7 +31,7 @@ module PrelInfo (
 
         -- * Miscellaneous
         wiredInIds, ghcPrimIds,
-        primOpRules, builtinRules,
+        builtinRules,
 
         ghcPrimExports,
         primOpId,

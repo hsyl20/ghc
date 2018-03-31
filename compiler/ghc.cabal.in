@@ -399,6 +399,7 @@ Library
         PrelInfo
         PrelNames
         PrelRules
+        PrelNumLits
         PrimOp
         TysPrim
         TysWiredIn

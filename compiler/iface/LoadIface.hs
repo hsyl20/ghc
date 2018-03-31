@@ -975,16 +975,17 @@ readIface wanted_mod file_path
 *********************************************************
 -}
 
-initExternalPackageState :: ExternalPackageState
-initExternalPackageState
-  = EPS {
+initExternalPackageState :: DynFlags -> ExternalPackageState
+initExternalPackageState dflags
+  = let rules = builtinRules dflags
+    in EPS {
       eps_is_boot          = emptyUFM,
       eps_PIT              = emptyPackageIfaceTable,
       eps_free_holes       = emptyInstalledModuleEnv,
       eps_PTE              = emptyTypeEnv,
       eps_inst_env         = emptyInstEnv,
       eps_fam_inst_env     = emptyFamInstEnv,
-      eps_rule_base        = mkRuleBase builtinRules,
+      eps_rule_base        = mkRuleBase rules,
         -- Initialise the EPS rule pool with the built-in rules
       eps_mod_fam_inst_env
                            = emptyModuleEnv,
@@ -992,7 +993,8 @@ initExternalPackageState
       eps_ann_env          = emptyAnnEnv,
       eps_stats = EpsStats { n_ifaces_in = 0, n_decls_in = 0, n_decls_out = 0
                            , n_insts_in = 0, n_insts_out = 0
-                           , n_rules_in = length builtinRules, n_rules_out = 0 }
+                           , n_rules_in = length rules
+                           , n_rules_out = 0 }
     }
 
 {-

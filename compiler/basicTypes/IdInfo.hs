@@ -390,9 +390,6 @@ one could attach the to M.f the RULES for M.f that are defined in M.
 But we don't do that for instance declarations and so we just treat
 them all uniformly.
 
-The EXCEPTION is PrimOpIds, which do have rules in their IdInfo. That is
-jsut for convenience really.
-
 However, LocalIds may have non-empty RuleInfo.  We treat them
 differently because:
   a) they might be nested, in which case a global table won't work

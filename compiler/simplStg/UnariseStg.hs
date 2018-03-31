@@ -211,7 +211,7 @@ import Outputable
 import RepType
 import StgSyn
 import Type
-import TysPrim (intPrimTy,wordPrimTy,word64PrimTy)
+import TysPrim (intPrimTy)
 import TysWiredIn
 import UniqSupply
 import Util
@@ -478,7 +478,7 @@ unariseSumAlt rho _ (DEFAULT, _, e)
 unariseSumAlt rho args (DataAlt sumCon, bs, e)
   = do let rho' = mapSumIdBinders bs args rho
        e' <- unariseExpr rho' e
-       return ( LitAlt (LitNumber LitNumInt (fromIntegral (dataConTag sumCon)) intPrimTy), [], e' )
+       return ( LitAlt (mkLitIntUnchecked (fromIntegral (dataConTag sumCon))), [], e' )
 
 unariseSumAlt _ scrt alt
   = pprPanic "unariseSumAlt" (ppr scrt $$ ppr alt)
@@ -564,7 +564,7 @@ mkUbxSum dc ty_args args0
       tag = dataConTag dc
 
       layout'  = layoutUbxSum sum_slots (mapMaybe (typeSlotTy . stgArgType) args0)
-      tag_arg  = StgLitArg (LitNumber LitNumInt (fromIntegral tag) intPrimTy)
+      tag_arg  = StgLitArg (mkLitIntUnchecked (fromIntegral tag))
       arg_idxs = IM.fromList (zipEqual "mkUbxSum" layout' args0)
 
       mkTupArgs :: Int -> [SlotTy] -> IM.IntMap StgArg -> [StgArg]
@@ -578,9 +578,10 @@ mkUbxSum dc ty_args args0
 
       slotRubbishArg :: SlotTy -> StgArg
       slotRubbishArg PtrSlot    = StgVarArg aBSENT_SUM_FIELD_ERROR_ID
-                         -- See Note [aBSENT_SUM_FIELD_ERROR_ID] in MkCore
-      slotRubbishArg WordSlot   = StgLitArg (LitNumber LitNumWord 0 wordPrimTy)
-      slotRubbishArg Word64Slot = StgLitArg (LitNumber LitNumWord64 0 word64PrimTy)
+                                  -- See Note [aBSENT_SUM_FIELD_ERROR_ID]
+                                  -- in MkCore
+      slotRubbishArg WordSlot   = StgLitArg (mkLitWordUnchecked 0)
+      slotRubbishArg Word64Slot = StgLitArg (mkLitWord64Unchecked 0)
       slotRubbishArg FloatSlot  = StgLitArg (LitFloat 0)
       slotRubbishArg DoubleSlot = StgLitArg (LitDouble 0)
     in

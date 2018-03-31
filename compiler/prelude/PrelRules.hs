@@ -13,7 +13,6 @@ ToDo:
 -}
 
 {-# LANGUAGE CPP, RankNTypes, PatternSynonyms, ViewPatterns, RecordWildCards #-}
-{-# OPTIONS_GHC -optc-DNON_POSIX_SOURCE #-}
 
 module PrelRules
    ( primOpRules
@@ -27,7 +26,7 @@ where
 
 import GhcPrelude
 
-import {-# SOURCE #-} MkId ( mkPrimOpId, magicDictId )
+import MkId ( mkPrimOpId, magicDictId )
 
 import CoreSyn
 import MkCore
@@ -46,7 +45,8 @@ import CoreUnfold  ( exprIsConApp_maybe )
 import Type
 import OccName     ( occNameFS )
 import PrelNames
-import Maybes      ( orElse )
+import PrelNumLits
+import Maybes      ( orElse, catMaybes )
 import Name        ( Name, nameOccName )
 import Outputable
 import FastString
@@ -62,7 +62,6 @@ import Control.Monad
 import qualified Control.Monad.Fail as MonadFail
 import Data.Bits as Bits
 import qualified Data.ByteString as BS
-import Data.Int
 import Data.Ratio
 import Data.Word
 
@@ -90,25 +89,6 @@ primOpRules nm TagToEnumOp = mkPrimOpRule nm 2 [ tagToEnumRule ]
 primOpRules nm DataToTagOp = mkPrimOpRule nm 2 [ dataToTagRule ]
 
 -- Int operations
-primOpRules nm IntAddOp    = mkPrimOpRule nm 2 [ binaryLit (intOp2 (+))
-                                               , identityDynFlags zeroi
-                                               , numFoldingRules IntAddOp intPrimOps
-                                               ]
-primOpRules nm IntSubOp    = mkPrimOpRule nm 2 [ binaryLit (intOp2 (-))
-                                               , rightIdentityDynFlags zeroi
-                                               , equalArgs >> retLit zeroi
-                                               , numFoldingRules IntSubOp intPrimOps
-                                               ]
-primOpRules nm IntAddCOp   = mkPrimOpRule nm 2 [ binaryLit (intOpC2 (+))
-                                               , identityCDynFlags zeroi ]
-primOpRules nm IntSubCOp   = mkPrimOpRule nm 2 [ binaryLit (intOpC2 (-))
-                                               , rightIdentityCDynFlags zeroi
-                                               , equalArgs >> retLitNoC zeroi ]
-primOpRules nm IntMulOp    = mkPrimOpRule nm 2 [ binaryLit (intOp2 (*))
-                                               , zeroElem zeroi
-                                               , identityDynFlags onei
-                                               , numFoldingRules IntMulOp intPrimOps
-                                               ]
 primOpRules nm IntQuotOp   = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (intOp2 quot)
                                                , leftZero zeroi
                                                , rightIdentityDynFlags onei
@@ -121,19 +101,6 @@ primOpRules nm IntRemOp    = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (intO
                                                     retLit zeroi
                                                , equalArgs >> retLit zeroi
                                                , equalArgs >> retLit zeroi ]
-primOpRules nm AndIOp      = mkPrimOpRule nm 2 [ binaryLit (intOp2 (.&.))
-                                               , idempotent
-                                               , zeroElem zeroi ]
-primOpRules nm OrIOp       = mkPrimOpRule nm 2 [ binaryLit (intOp2 (.|.))
-                                               , idempotent
-                                               , identityDynFlags zeroi ]
-primOpRules nm XorIOp      = mkPrimOpRule nm 2 [ binaryLit (intOp2 xor)
-                                               , identityDynFlags zeroi
-                                               , equalArgs >> retLit zeroi ]
-primOpRules nm NotIOp      = mkPrimOpRule nm 1 [ unaryLit complementOp
-                                               , inversePrimOp NotIOp ]
-primOpRules nm IntNegOp    = mkPrimOpRule nm 1 [ unaryLit negOp
-                                               , inversePrimOp IntNegOp ]
 primOpRules nm ISllOp      = mkPrimOpRule nm 2 [ shiftRule (const Bits.shiftL)
                                                , rightIdentityDynFlags zeroi ]
 primOpRules nm ISraOp      = mkPrimOpRule nm 2 [ shiftRule (const Bits.shiftR)
@@ -142,24 +109,6 @@ primOpRules nm ISrlOp      = mkPrimOpRule nm 2 [ shiftRule shiftRightLogical
                                                , rightIdentityDynFlags zeroi ]
 
 -- Word operations
-primOpRules nm WordAddOp   = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (+))
-                                               , identityDynFlags zerow
-                                               , numFoldingRules WordAddOp wordPrimOps
-                                               ]
-primOpRules nm WordSubOp   = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (-))
-                                               , rightIdentityDynFlags zerow
-                                               , equalArgs >> retLit zerow
-                                               , numFoldingRules WordSubOp wordPrimOps
-                                               ]
-primOpRules nm WordAddCOp  = mkPrimOpRule nm 2 [ binaryLit (wordOpC2 (+))
-                                               , identityCDynFlags zerow ]
-primOpRules nm WordSubCOp  = mkPrimOpRule nm 2 [ binaryLit (wordOpC2 (-))
-                                               , rightIdentityCDynFlags zerow
-                                               , equalArgs >> retLitNoC zerow ]
-primOpRules nm WordMulOp   = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (*))
-                                               , identityDynFlags onew
-                                               , numFoldingRules WordMulOp wordPrimOps
-                                               ]
 primOpRules nm WordQuotOp  = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (wordOp2 quot)
                                                , rightIdentityDynFlags onew ]
 primOpRules nm WordRemOp   = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (wordOp2 rem)
@@ -169,25 +118,10 @@ primOpRules nm WordRemOp   = mkPrimOpRule nm 2 [ nonZeroLit 1 >> binaryLit (word
                                                     guard (l == onew dflags)
                                                     retLit zerow
                                                , equalArgs >> retLit zerow ]
-primOpRules nm AndOp       = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (.&.))
-                                               , idempotent
-                                               , zeroElem zerow ]
-primOpRules nm OrOp        = mkPrimOpRule nm 2 [ binaryLit (wordOp2 (.|.))
-                                               , idempotent
-                                               , identityDynFlags zerow ]
-primOpRules nm XorOp       = mkPrimOpRule nm 2 [ binaryLit (wordOp2 xor)
-                                               , identityDynFlags zerow
-                                               , equalArgs >> retLit zerow ]
-primOpRules nm NotOp       = mkPrimOpRule nm 1 [ unaryLit complementOp
-                                               , inversePrimOp NotOp ]
 primOpRules nm SllOp       = mkPrimOpRule nm 2 [ shiftRule (const Bits.shiftL) ]
 primOpRules nm SrlOp       = mkPrimOpRule nm 2 [ shiftRule shiftRightLogical ]
 
 -- coercions
-primOpRules nm Word2IntOp     = mkPrimOpRule nm 1 [ liftLitDynFlags word2IntLit
-                                                  , inversePrimOp Int2WordOp ]
-primOpRules nm Int2WordOp     = mkPrimOpRule nm 1 [ liftLitDynFlags int2WordLit
-                                                  , inversePrimOp Word2IntOp ]
 primOpRules nm Narrow8IntOp   = mkPrimOpRule nm 1 [ liftLit narrow8IntLit
                                                   , subsumedByPrimOp Narrow8IntOp
                                                   , Narrow8IntOp `subsumesPrimOp` Narrow16IntOp
@@ -258,15 +192,8 @@ primOpRules nm DoubleNegOp   = mkPrimOpRule nm 1 [ unaryLit negOp
 
 -- Relational operators
 
-primOpRules nm IntEqOp    = mkRelOpRule nm (==) [ litEq True ]
-primOpRules nm IntNeOp    = mkRelOpRule nm (/=) [ litEq False ]
 primOpRules nm CharEqOp   = mkRelOpRule nm (==) [ litEq True ]
 primOpRules nm CharNeOp   = mkRelOpRule nm (/=) [ litEq False ]
-
-primOpRules nm IntGtOp    = mkRelOpRule nm (>)  [ boundsCmp Gt ]
-primOpRules nm IntGeOp    = mkRelOpRule nm (>=) [ boundsCmp Ge ]
-primOpRules nm IntLeOp    = mkRelOpRule nm (<=) [ boundsCmp Le ]
-primOpRules nm IntLtOp    = mkRelOpRule nm (<)  [ boundsCmp Lt ]
 
 primOpRules nm CharGtOp   = mkRelOpRule nm (>)  [ boundsCmp Gt ]
 primOpRules nm CharGeOp   = mkRelOpRule nm (>=) [ boundsCmp Ge ]
@@ -286,13 +213,6 @@ primOpRules nm DoubleLeOp = mkFloatingRelOpRule nm (<=)
 primOpRules nm DoubleLtOp = mkFloatingRelOpRule nm (<)
 primOpRules nm DoubleEqOp = mkFloatingRelOpRule nm (==)
 primOpRules nm DoubleNeOp = mkFloatingRelOpRule nm (/=)
-
-primOpRules nm WordGtOp   = mkRelOpRule nm (>)  [ boundsCmp Gt ]
-primOpRules nm WordGeOp   = mkRelOpRule nm (>=) [ boundsCmp Ge ]
-primOpRules nm WordLeOp   = mkRelOpRule nm (<=) [ boundsCmp Le ]
-primOpRules nm WordLtOp   = mkRelOpRule nm (<)  [ boundsCmp Lt ]
-primOpRules nm WordEqOp   = mkRelOpRule nm (==) [ litEq True ]
-primOpRules nm WordNeOp   = mkRelOpRule nm (/=) [ litEq False ]
 
 primOpRules nm AddrAddOp  = mkPrimOpRule nm 2 [ rightIdentityDynFlags zeroi ]
 
@@ -402,11 +322,6 @@ negOp dflags (LitNumber nt i t)
    | litNumIsSigned nt = Just (Lit (mkLitNumberWrap dflags nt (-i) t))
 negOp _      _                = Nothing
 
-complementOp :: DynFlags -> Literal -> Maybe CoreExpr  -- Binary complement
-complementOp dflags (LitNumber nt i t) =
-   Just (Lit (mkLitNumberWrap dflags nt (complement i) t))
-complementOp _      _            = Nothing
-
 --------------------------
 intOp2 :: (Integral a, Integral b)
        => (a -> b -> Integer)
@@ -418,8 +333,8 @@ intOp2' :: (Integral a, Integral b)
         -> DynFlags -> Literal -> Literal -> Maybe CoreExpr
 intOp2' op dflags (LitNumber LitNumInt i1 _) (LitNumber LitNumInt i2 _) =
   let o = op dflags
-  in  intResult dflags (fromInteger i1 `o` fromInteger i2)
-intOp2' _  _      _            _            = Nothing  -- Could find LitLit
+  in  Just (Lit (mkLitIntWrap dflags (fromInteger i1 `o` fromInteger i2)))
+intOp2' _  _      _            _            = Nothing
 
 intOpC2 :: (Integral a, Integral b)
         => (a -> b -> Integer)
@@ -452,8 +367,8 @@ wordOp2 :: (Integral a, Integral b)
         => (a -> b -> Integer)
         -> DynFlags -> Literal -> Literal -> Maybe CoreExpr
 wordOp2 op dflags (LitNumber LitNumWord w1 _) (LitNumber LitNumWord w2 _)
-    = wordResult dflags (fromInteger w1 `op` fromInteger w2)
-wordOp2 _ _ _ _ = Nothing  -- Could find LitLit
+    = Just (Lit (mkLitWordWrap dflags (fromInteger w1 `op` fromInteger w2)))
+wordOp2 _ _ _ _ = Nothing
 
 wordOpC2 :: (Integral a, Integral b)
         => (a -> b -> Integer)
@@ -559,73 +474,23 @@ boundsCmp op = do
 data Comparison = Gt | Ge | Lt | Le
 
 mkRuleFn :: DynFlags -> Comparison -> CoreExpr -> CoreExpr -> Maybe CoreExpr
-mkRuleFn dflags Gt (Lit lit) _ | isMinBound dflags lit = Just $ falseValInt dflags
-mkRuleFn dflags Le (Lit lit) _ | isMinBound dflags lit = Just $ trueValInt  dflags
-mkRuleFn dflags Ge _ (Lit lit) | isMinBound dflags lit = Just $ trueValInt  dflags
-mkRuleFn dflags Lt _ (Lit lit) | isMinBound dflags lit = Just $ falseValInt dflags
-mkRuleFn dflags Ge (Lit lit) _ | isMaxBound dflags lit = Just $ trueValInt  dflags
-mkRuleFn dflags Lt (Lit lit) _ | isMaxBound dflags lit = Just $ falseValInt dflags
-mkRuleFn dflags Gt _ (Lit lit) | isMaxBound dflags lit = Just $ falseValInt dflags
-mkRuleFn dflags Le _ (Lit lit) | isMaxBound dflags lit = Just $ trueValInt  dflags
-mkRuleFn _ _ _ _                                       = Nothing
+mkRuleFn dflags Gt (Lit lit) _ | isMinBound lit = Just $ falseValInt dflags
+mkRuleFn dflags Le (Lit lit) _ | isMinBound lit = Just $ trueValInt  dflags
+mkRuleFn dflags Ge _ (Lit lit) | isMinBound lit = Just $ trueValInt  dflags
+mkRuleFn dflags Lt _ (Lit lit) | isMinBound lit = Just $ falseValInt dflags
+mkRuleFn dflags Ge (Lit lit) _ | isMaxBound lit = Just $ trueValInt  dflags
+mkRuleFn dflags Lt (Lit lit) _ | isMaxBound lit = Just $ falseValInt dflags
+mkRuleFn dflags Gt _ (Lit lit) | isMaxBound lit = Just $ falseValInt dflags
+mkRuleFn dflags Le _ (Lit lit) | isMaxBound lit = Just $ trueValInt  dflags
+mkRuleFn _ _ _ _                                = Nothing
 
-isMinBound :: DynFlags -> Literal -> Bool
-isMinBound _      (LitChar c)       = c == minBound
-isMinBound dflags (LitNumber nt i _) = case nt of
-   LitNumInt     -> i == tARGET_MIN_INT dflags
-   LitNumInt64   -> i == toInteger (minBound :: Int64)
-   LitNumWord    -> i == 0
-   LitNumWord64  -> i == 0
-   LitNumNatural -> i == 0
-   LitNumInteger -> False
-isMinBound _      _                  = False
+isMinBound :: Literal -> Bool
+isMinBound (LitChar c) = c == minBound
+isMinBound _           = False
 
-isMaxBound :: DynFlags -> Literal -> Bool
-isMaxBound _      (LitChar c)       = c == maxBound
-isMaxBound dflags (LitNumber nt i _) = case nt of
-   LitNumInt     -> i == tARGET_MAX_INT dflags
-   LitNumInt64   -> i == toInteger (maxBound :: Int64)
-   LitNumWord    -> i == tARGET_MAX_WORD dflags
-   LitNumWord64  -> i == toInteger (maxBound :: Word64)
-   LitNumNatural -> False
-   LitNumInteger -> False
-isMaxBound _      _                  = False
-
--- | Create an Int literal expression while ensuring the given Integer is in the
--- target Int range
-intResult :: DynFlags -> Integer -> Maybe CoreExpr
-intResult dflags result = Just (intResult' dflags result)
-
-intResult' :: DynFlags -> Integer -> CoreExpr
-intResult' dflags result = Lit (mkLitIntWrap dflags result)
-
--- | Create an unboxed pair of an Int literal expression, ensuring the given
--- Integer is in the target Int range and the corresponding overflow flag
--- (@0#@/@1#@) if it wasn't.
-intCResult :: DynFlags -> Integer -> Maybe CoreExpr
-intCResult dflags result = Just (mkPair [Lit lit, Lit c])
-  where
-    mkPair = mkCoreUbxTup [intPrimTy, intPrimTy]
-    (lit, b) = mkLitIntWrapC dflags result
-    c = if b then onei dflags else zeroi dflags
-
--- | Create a Word literal expression while ensuring the given Integer is in the
--- target Word range
-wordResult :: DynFlags -> Integer -> Maybe CoreExpr
-wordResult dflags result = Just (wordResult' dflags result)
-
-wordResult' :: DynFlags -> Integer -> CoreExpr
-wordResult' dflags result = Lit (mkLitWordWrap dflags result)
-
--- | Create an unboxed pair of a Word literal expression, ensuring the given
--- Integer is in the target Word range and the corresponding carry flag
--- (@0#@/@1#@) if it wasn't.
-wordCResult :: DynFlags -> Integer -> Maybe CoreExpr
-wordCResult dflags result = Just (mkPair [Lit lit, Lit c])
-  where
-    mkPair = mkCoreUbxTup [wordPrimTy, intPrimTy]
-    (lit, b) = mkLitWordWrapC dflags result
-    c = if b then onei dflags else zeroi dflags
+isMaxBound :: Literal -> Bool
+isMaxBound (LitChar c) = c == maxBound
+isMaxBound _           = False
 
 inversePrimOp :: PrimOp -> RuleM CoreExpr
 inversePrimOp primop = do
@@ -644,11 +509,6 @@ subsumedByPrimOp primop = do
   [e@(Var primop_id `App` _)] <- getArgs
   matchPrimOpId primop primop_id
   return e
-
-idempotent :: RuleM CoreExpr
-idempotent = do [e1, e2] <- getArgs
-                guard $ cheapEqExpr e1 e2
-                return e1
 
 {-
 Note [Guarding against silly shifts]
@@ -853,16 +713,6 @@ leftZero zero = do
   [Lit l1, _] <- getArgs
   guard $ l1 == zero dflags
   return $ Lit l1
-
-rightZero :: (DynFlags -> Literal) -> RuleM CoreExpr
-rightZero zero = do
-  dflags <- getDynFlags
-  [_, Lit l2] <- getArgs
-  guard $ l2 == zero dflags
-  return $ Lit l2
-
-zeroElem :: (DynFlags -> Literal) -> RuleM CoreExpr
-zeroElem lit = leftZero lit `mplus` rightZero lit
 
 equalArgs :: RuleM ()
 equalArgs = do
@@ -1141,9 +991,9 @@ rewriting so again we are fine.
 are explicit.)
 -}
 
-builtinRules :: [CoreRule]
+builtinRules :: DynFlags -> [CoreRule]
 -- Rules for non-primops that can't be expressed using a RULE pragma
-builtinRules
+builtinRules dflags
   = [BuiltinRule { ru_name = fsLit "AppendLitString",
                    ru_fn = unpackCStringFoldrName,
                    ru_nargs = 4, ru_try = match_append_lit },
@@ -1175,9 +1025,412 @@ builtinRules
      ]
  ++ builtinIntegerRules
  ++ builtinNaturalRules
+ ++ concatMap numericRules (builtinLitNumDescs dflags)
+ ++ catMaybes (fmap (uncurry3 convertRule) (litNumConvertNames dflags))
+ ++ convertInverse (litNumConvertNames dflags)
+ -- TODO: composing strictly narrowing conversions:
+ --   e.g. word16toWord8 . word32ToWord16 = word32ToWord8
+ -- TODO: composing strictly expanding conversions:
+ --   e.g. word16toWord32 . word8ToWord16 = word8ToWord32
 {-# NOINLINE builtinRules #-}
 -- there is no benefit to inlining these yet, despite this, GHC produces
 -- unfoldings for this regardless since the floated list entries look small.
+
+-- | Generate rules for the numeric literal type
+numericRules :: LitNumDesc -> [CoreRule]
+numericRules desc@LitNumDesc{..} = catMaybes
+   [ do
+       name <- litNumNameAdd
+       binaryEval "Numeric literal: add two literals" name (+)
+   , do
+       name <- litNumNameAdd
+       binaryIdentity "Numeric literal: add zero" name 0
+   , do
+       name <- litNumNameMul
+       binaryEval "Numeric literal: multiply two literals" name (*)
+   , do
+       name <- litNumNameMul
+       binaryIdentity "Numeric literal: multiply by one" name 1
+   , do
+       name <- litNumNameMul
+       binaryZero "Numeric literal: multiply by zero" name
+   , do
+       name <- litNumNameSub
+       binaryEval "Numeric literal: subtract two literals" name (-)
+   , do
+       nameSub <- litNumNameSub
+       binaryRightIdentity "Numeric literal: subtract zero" name 0
+   , do
+       name    <- litNumNameSub
+       nilpotent "Numeric: subtract two equal expressions" name
+   , do
+       name <- litNumNameAnd
+       binaryEval "Numeric literal: AND two literals" name (.&.)
+   , do
+       name <- litNumNameAnd
+       idempotent "Numeric: AND two equal expressions" name
+   , do
+       name <- litNumNameAnd
+       binaryZero "Numeric literal: AND by zero" name
+   , do
+       name <- litNumNameOr
+       binaryEval "Numeric literal: OR two literals" name (.|.)
+   , do
+       name <- litNumNameOr
+       idempotent "Numeric: OR two equal expressions" name
+   , do
+       name <- litNumNameOr
+       binaryIdentity "Numeric literal: OR by zero" name 0
+   , do
+       name <- litNumNameXor
+       binaryEval "Numeric literal: XOR two literals" name xor
+   , do
+       name <- litNumNameXor
+       binaryIdentity "Numeric literal: XOR by zero" name 0
+   , do
+       name    <- litNumNameXor
+       nilpotent "Numeric: XOR two equal expressions" name
+   , do
+       name <- litNumNameNot
+       unaryEval "Numeric literal: complement a literal" name complement
+   , do
+       name <- litNumNameNot
+       inverseLitNum "Numeric literal: complement . complement = id" name name
+   , do
+       name <- litNumNameNegate
+       unaryEval "Numeric literal: negate a literal" name negate
+   , do
+       name <- litNumNameNegate
+       inverseLitNum "Numeric literal: negate . negate = id" name name
+   , do
+       name <- litNumNameEq
+       binaryBoolEval "Numeric literal: compare (==) two literals" name (==)
+   , do
+       name <- litNumNameNe
+       binaryBoolEval "Numeric literal: compare (/=) two literals" name (/=)
+   , do
+       name <- litNumNameGt
+       binaryBoolEval "Numeric literal: compare (>) two literals" name (>)
+   , do
+       name <- litNumNameGe
+       binaryBoolEval "Numeric literal: compare (>=) two literals" name (>=)
+   , do
+       name <- litNumNameLt
+       binaryBoolEval "Numeric literal: compare (<) two literals" name (<)
+   , do
+       name <- litNumNameLe
+       binaryBoolEval "Numeric literal: compare (<=) two literals" name (<=)
+   , do
+       name <- litNumNameEq
+       binaryBoolEvalSame "Numeric literal: compare (==) two equal expressions" name (==)
+   , do
+       name <- litNumNameNe
+       binaryBoolEvalSame "Numeric literal: compare (/=) two equal expressions" name (/=)
+   , do
+       name <- litNumNameGt
+       binaryBoolEvalSame "Numeric literal: compare (>) two equal expressions" name (>)
+   , do
+       name <- litNumNameGe
+       binaryBoolEvalSame "Numeric literal: compare (>=) two equal expressions" name (>=)
+   , do
+       name <- litNumNameLt
+       binaryBoolEvalSame "Numeric literal: compare (<) two equal expressions" name (<)
+   , do
+       name <- litNumNameLe
+       binaryBoolEvalSame "Numeric literal: compare (<=) two equal expressions" name (<=)
+   , do
+       name <- litNumNameEq
+       binaryEqToCase "Numeric literal: convert (==) into case expression" name True
+   , do
+       name <- litNumNameNe
+       binaryEqToCase "Numeric literal: convert (/=) into case expression" name False
+   , do
+       name <- litNumNameGt
+       minB <- litNumMinBound
+       binaryCompareBound "Numeric literal: compare (>) min bound" name True False minB
+   , do
+       name <- litNumNameLe
+       minB <- litNumMinBound
+       binaryCompareBound "Numeric literal: compare (<=) min bound" name True True minB
+   , do
+       name <- litNumNameGe
+       minB <- litNumMinBound
+       binaryCompareBound "Numeric literal: compare (>=) with min bound" name False True minB
+   , do
+       name <- litNumNameLt
+       minB <- litNumMinBound
+       binaryCompareBound "Numeric literal: compare (<) with min bound" name False False minB
+   , do
+       name <- litNumNameGe
+       maxB <- litNumMaxBound
+       binaryCompareBound "Numeric literal: compare (>=) max bound" name True True maxB
+   , do
+       name <- litNumNameLt
+       maxB <- litNumMaxBound
+       binaryCompareBound "Numeric literal: compare (<) max bound" name True False maxB
+   , do
+       name <- litNumNameGt
+       maxB <- litNumMaxBound
+       binaryCompareBound "Numeric literal: compare (>) with max bound" name False False maxB
+   , do
+       name <- litNumNameLe
+       maxB <- litNumMaxBound
+       binaryCompareBound "Numeric literal: compare (<=) with max bound" name False True maxB
+   ]
+   where
+      -- evaluate a unary op applied to a literal
+      unaryEval :: String -> Name -> (Integer -> Integer) -> Maybe CoreRule
+      unaryEval str name f =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 1
+          , ru_try   = \_dflags env _id args -> case args of
+             [l] -> do
+               LitNumber nt i t <- exprIsLiteral_maybe env l
+               litNumMakeLit_maybe desc t (f i)
+             _ -> Nothing
+          }
+
+      -- evaluate a binary op applied to two literals
+      binaryEval :: String -> Name -> (Integer -> Integer -> Integer)
+                      -> Maybe CoreRule
+      binaryEval str name f =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \_dflags env _id args -> case args of
+             [l1,l2] -> do
+                LitNumber  nt1 i1  t1 <- exprIsLiteral_maybe env l1
+                LitNumber _nt2 i2 _t2 <- exprIsLiteral_maybe env l2
+                litNumMakeLit_maybe desc t1 (i1 `f` i2)
+             _ -> Nothing
+          }
+
+      -- evaluate a binary op applied to two literals and returning a boolean
+      binaryBoolEval :: String -> Name -> (Integer -> Integer -> Bool)
+                         -> Maybe CoreRule
+      binaryBoolEval str name cmp =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \dflags env _id args -> case args of
+             [l1,l2] -> do
+                LitNumber _nt1 i1 _t1 <- exprIsLiteral_maybe env l1
+                LitNumber _nt2 i2 _t2 <- exprIsLiteral_maybe env l2
+                Just $ if i1 `cmp` i2
+                   then trueValInt dflags
+                   else falseValInt dflags
+             _ -> Nothing
+          }
+
+      -- evaluate a binary op whose args are equal and returning a boolean
+      binaryBoolEvalSame :: String -> Name -> (Integer -> Integer -> Bool)
+                             -> Maybe CoreRule
+      binaryBoolEvalSame str name cmp =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \dflags _env _id args -> case args of
+             [l1,l2]
+               | l1 `cheapEqExpr` l2 ->
+                   -- x `cmp` x does not depend on x, so
+                   -- compute it for the arbitrary value '1'
+                   -- and use that result
+                   Just $ if 1 `cmp` 1
+                      then trueValInt dflags
+                      else falseValInt dflags
+             _ -> Nothing
+          }
+
+      -- evaluate a binary op comparing a literal to a bound (maxBound/minBound)
+      binaryCompareBound :: String -> Name -> Bool -> Bool -> Integer
+                              -> Maybe CoreRule
+      binaryCompareBound str name is_l1 ret_true v = do
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \dflags env _id args -> case args of
+             [l1,l2]
+               | Just (LitNumber _ i _) <- exprIsLiteral_maybe env
+                                             (if is_l1 then l1 else l2)
+               , i == v
+               -> Just (if ret_true then trueValInt dflags
+                                    else falseValInt dflags)
+             _ -> Nothing
+          }
+
+      -- transform an equality check into a case
+      -- See Note [The litEq rule: converting equality to case]
+      binaryEqToCase :: String -> Name -> Bool -> Maybe CoreRule
+      binaryEqToCase str name is_eq =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \dflags env _id ->
+               runRuleM (litEq is_eq) dflags env
+          }
+
+      -- if one arg is equal to "v" return the other one
+      binaryIdentity :: String -> Name -> Integer -> Maybe CoreRule
+      binaryIdentity str name v =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \_dflags env _id args -> case args of
+             [l1,l2]
+               | Just (LitNumber _ x _) <- exprIsLiteral_maybe env l1
+               , x == v
+               -> Just l2
+               | Just (LitNumber _ x _) <- exprIsLiteral_maybe env l2
+               , x == v
+               -> Just l1
+             _ -> Nothing
+          }
+
+      -- if right arg is equal to "v" return the other one
+      binaryRightIdentity :: String -> Name -> Integer -> Maybe CoreRule
+      binaryRightIdentity str name v =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \_dflags env _id args -> case args of
+             [l1,l2]
+               | Just (LitNumber _ x _) <- exprIsLiteral_maybe env l2
+               , x == v
+               -> Just l1
+             _ -> Nothing
+          }
+
+      -- if one arg is equal to 0, return 0
+      binaryZero :: String -> Name -> Maybe CoreRule
+      binaryZero str name =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \_dflags env _id args -> case args of
+             [l1,l2]
+               | Just (LitNumber _ 0 _) <- exprIsLiteral_maybe env l1 -> Just l1
+               | Just (LitNumber _ 0 _) <- exprIsLiteral_maybe env l2 -> Just l2
+             _ -> Nothing
+          }
+
+      -- if both args are equal, just return one arg
+      idempotent :: String -> Name -> Maybe CoreRule
+      idempotent str name =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \_dflags _env _id args -> case args of
+             [l1,l2] | l1 `cheapEqExpr` l2 -> Just l1
+             _                             -> Nothing
+          }
+
+      -- if both args are equal, return zero
+      nilpotent :: String -> Name -> Maybe CoreRule
+      nilpotent str name =
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 2
+          , ru_try   = \_dflags _env _id args -> case args of
+             [l1,l2] | l1 `cheapEqExpr` l2 -> Just (Lit (litNumMake (idType l1) 0))
+             _                             -> Nothing
+          }
+
+      inverseLitNum :: String -> Name -> Name -> Maybe CoreRule
+      inverseLitNum str name name2 = 
+        return $ BuiltinRule
+          { ru_name  = fsLit str
+          , ru_fn    = name
+          , ru_nargs = 1
+          , ru_try   = \_dflags _env _id args -> case args of
+             [Var l `App` e] | idName l == name2 -> Just e
+             _                                   -> Nothing
+          }
+
+-- | Generate rules for numeric literal type conversions
+convertRule :: Name -> LitNumDesc -> LitNumDesc -> Maybe CoreRule
+convertRule name _from to = do
+   return $ BuiltinRule
+     { ru_name  = fsLit "Numeric literal: convert"
+     , ru_fn    = name
+     , ru_nargs = 1
+     , ru_try   = \_dflags env id args -> case args of
+           [l] -> do
+             LitNumber _ x _  <- exprIsLiteral_maybe env l
+             (_from_ty,to_ty) <- splitFunTy_maybe (idType id)
+             litNumMakeLit_maybe to to_ty x
+           _   -> Nothing
+     }
+
+-- | Some conversions are invertible: e.g. word2int . int2word = id
+-- We generate them automatically for wrappable numeric literals defined over
+-- isomorphic ranges
+convertInverse :: [(Name,LitNumDesc,LitNumDesc)] -> [CoreRule]
+convertInverse descs =
+      [ makeRule n1 n2
+      | (n1,d1 ,d2)  <- validDescs
+      , (n2,d2',d1') <- validDescs
+      , sameBounds d1 d1'
+      , sameBounds d2 d2'
+      ]
+   where
+      validDescs = [ (n,d1,d2)
+                   | (n,d1,d2) <- descs
+                   , validBounds d1 d2
+                   ]
+      validBounds d1 d2
+         | litNumOverflowMode d1 == OverflowWrap
+         , litNumOverflowMode d2 == OverflowWrap
+         , Just mi1 <- litNumMinBound d1
+         , Just mi2 <- litNumMinBound d2
+         , Just ma1 <- litNumMaxBound d1
+         , Just ma2 <- litNumMaxBound d2 = ma1-mi1 == ma2-mi2
+         | otherwise = False
+      sameBounds d1 d2
+         | Just mi1 <- litNumMinBound d1
+         , Just mi2 <- litNumMinBound d2
+         , Just ma1 <- litNumMaxBound d1
+         , Just ma2 <- litNumMaxBound d2 = ma1 == ma2 && mi1 == mi2
+         | otherwise = False
+
+      makeRule name1 name2 = 
+        BuiltinRule
+          { ru_name  = fsLit "Numeric literal: invertible conversion"
+          , ru_fn    = name1
+          , ru_nargs = 1
+          , ru_try   = \_dflags _env _id args -> case args of
+             [Var l `App` e] | idName l == name2 -> Just e
+             _                                   -> Nothing
+          }
+
+-- | Try to create a valid literal (wrap or clamp as necessary)
+litNumMakeLit_maybe :: LitNumDesc -> Type -> Integer -> Maybe CoreExpr
+litNumMakeLit_maybe LitNumDesc{..} ty i = do
+   case (litNumOverflowMode, litNumMinBound, litNumMaxBound) of
+      (OverflowFail, mmi, mma)
+         | Just ma <- mma, i > ma -> Nothing
+         | Just mi <- mmi, i < mi -> Nothing
+         | otherwise              -> Just (Lit (litNumMake ty i))
+      (OverflowWrap, Just mi, Just ma)
+         | i > ma || i < mi -> Just (Lit (litNumMake ty (((i-mi) `mod` (ma-mi+1)) + mi)))
+         | otherwise        -> Just (Lit (litNumMake ty i))
+      (OverflowWrap, _mmi, _mma) -> Nothing
+      (OverflowClamp, mmi, mma)
+         | Just ma <- mma, i > ma -> Just (Lit (litNumMake ty ma))
+         | Just mi <- mmi, i < mi -> Just (Lit (litNumMake ty mi))
+         | otherwise              -> Just (Lit (litNumMake ty i ))
+
 
 builtinIntegerRules :: [CoreRule]
 builtinIntegerRules =
@@ -1189,18 +1442,8 @@ builtinIntegerRules =
   rule_convert        "integerToInt"        integerToIntName        mkIntLitInt,
   rule_convert        "integerToWord64"     integerToWord64Name     (\_ -> mkWord64LitWord64),
   rule_convert        "integerToInt64"      integerToInt64Name      (\_ -> mkInt64LitInt64),
-  rule_binop          "plusInteger"         plusIntegerName         (+),
-  rule_binop          "minusInteger"        minusIntegerName        (-),
-  rule_binop          "timesInteger"        timesIntegerName        (*),
-  rule_unop           "negateInteger"       negateIntegerName       negate,
-  rule_binop_Prim     "eqInteger#"          eqIntegerPrimName       (==),
-  rule_binop_Prim     "neqInteger#"         neqIntegerPrimName      (/=),
   rule_unop           "absInteger"          absIntegerName          abs,
   rule_unop           "signumInteger"       signumIntegerName       signum,
-  rule_binop_Prim     "leInteger#"          leIntegerPrimName       (<=),
-  rule_binop_Prim     "gtInteger#"          gtIntegerPrimName       (>),
-  rule_binop_Prim     "ltInteger#"          ltIntegerPrimName       (<),
-  rule_binop_Prim     "geInteger#"          geIntegerPrimName       (>=),
   rule_binop_Ordering "compareInteger"      compareIntegerName      compare,
   rule_encodeFloat    "encodeFloatInteger"  encodeFloatIntegerName  mkFloatLitFloat,
   rule_convert        "floatFromInteger"    floatFromIntegerName    (\_ -> mkFloatLitFloat),
@@ -1211,10 +1454,6 @@ builtinIntegerRules =
   rule_rationalTo     "rationalToDouble"    rationalToDoubleName    mkDoubleExpr,
   rule_binop          "gcdInteger"          gcdIntegerName          gcd,
   rule_binop          "lcmInteger"          lcmIntegerName          lcm,
-  rule_binop          "andInteger"          andIntegerName          (.&.),
-  rule_binop          "orInteger"           orIntegerName           (.|.),
-  rule_binop          "xorInteger"          xorIntegerName          xor,
-  rule_unop           "complementInteger"   complementIntegerName   complement,
   rule_Int_binop      "shiftLInteger"       shiftLIntegerName       shiftL,
   rule_Int_binop      "shiftRInteger"       shiftRIntegerName       shiftR,
   rule_bitInteger     "bitInteger"          bitIntegerName,
@@ -1269,9 +1508,6 @@ builtinIntegerRules =
           rule_Int_binop str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
                            ru_try = match_Integer_Int_binop op }
-          rule_binop_Prim str name op
-           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
-                           ru_try = match_Integer_binop_Prim op }
           rule_binop_Ordering str name op
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
                            ru_try = match_Integer_binop_Ordering op }
@@ -1293,20 +1529,11 @@ builtinIntegerRules =
 
 builtinNaturalRules :: [CoreRule]
 builtinNaturalRules =
- [rule_binop              "plusNatural"        plusNaturalName         (+)
- ,rule_partial_binop      "minusNatural"       minusNaturalName        (\a b -> if a >= b then Just (a - b) else Nothing)
- ,rule_binop              "timesNatural"       timesNaturalName        (*)
- ,rule_NaturalFromInteger "naturalFromInteger" naturalFromIntegerName
+ [rule_NaturalFromInteger "naturalFromInteger" naturalFromIntegerName
  ,rule_NaturalToInteger   "naturalToInteger"   naturalToIntegerName
  ,rule_WordToNatural      "wordToNatural"      wordToNaturalName
  ]
-    where rule_binop str name op
-           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
-                           ru_try = match_Natural_binop op }
-          rule_partial_binop str name op
-           = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 2,
-                           ru_try = match_Natural_partial_binop op }
-          rule_NaturalToInteger str name
+    where rule_NaturalToInteger str name
            = BuiltinRule { ru_name = fsLit str, ru_fn = name, ru_nargs = 1,
                            ru_try = match_NaturalToInteger }
           rule_NaturalFromInteger str name
@@ -1534,21 +1761,6 @@ match_Integer_binop binop _ id_unf _ [xl,yl]
   = Just (Lit (mkLitInteger (x `binop` y) i))
 match_Integer_binop _ _ _ _ _ = Nothing
 
-match_Natural_binop :: (Integer -> Integer -> Integer) -> RuleFun
-match_Natural_binop binop _ id_unf _ [xl,yl]
-  | Just (LitNumber LitNumNatural x i) <- exprIsLiteral_maybe id_unf xl
-  , Just (LitNumber LitNumNatural y _) <- exprIsLiteral_maybe id_unf yl
-  = Just (Lit (mkLitNatural (x `binop` y) i))
-match_Natural_binop _ _ _ _ _ = Nothing
-
-match_Natural_partial_binop :: (Integer -> Integer -> Maybe Integer) -> RuleFun
-match_Natural_partial_binop binop _ id_unf _ [xl,yl]
-  | Just (LitNumber LitNumNatural x i) <- exprIsLiteral_maybe id_unf xl
-  , Just (LitNumber LitNumNatural y _) <- exprIsLiteral_maybe id_unf yl
-  , Just z <- x `binop` y
-  = Just (Lit (mkLitNatural z i))
-match_Natural_partial_binop _ _ _ _ _ = Nothing
-
 -- This helper is used for the quotRem and divMod functions
 match_Integer_divop_both
    :: (Integer -> Integer -> (Integer, Integer)) -> RuleFun
@@ -1575,13 +1787,6 @@ match_Integer_Int_binop binop _ id_unf _ [xl,yl]
   , Just (LitNumber LitNumInt y _)     <- exprIsLiteral_maybe id_unf yl
   = Just (Lit (mkLitInteger (x `binop` fromIntegral y) i))
 match_Integer_Int_binop _ _ _ _ _ = Nothing
-
-match_Integer_binop_Prim :: (Integer -> Integer -> Bool) -> RuleFun
-match_Integer_binop_Prim binop dflags id_unf _ [xl, yl]
-  | Just (LitNumber LitNumInteger x _) <- exprIsLiteral_maybe id_unf xl
-  , Just (LitNumber LitNumInteger y _) <- exprIsLiteral_maybe id_unf yl
-  = Just (if x `binop` y then trueValInt dflags else falseValInt dflags)
-match_Integer_binop_Prim _ _ _ _ _ = Nothing
 
 match_Integer_binop_Ordering :: (Integer -> Integer -> Ordering) -> RuleFun
 match_Integer_binop_Ordering binop _ id_unf _ [xl, yl]

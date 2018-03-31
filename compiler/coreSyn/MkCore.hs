@@ -73,7 +73,7 @@ import IdInfo
 import Demand
 import Name      hiding ( varName )
 import Outputable
-import FastString hiding ( mkPtrString )
+import FastString
 import UniqSupply
 import BasicTypes
 import Util

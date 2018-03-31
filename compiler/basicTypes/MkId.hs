@@ -31,7 +31,7 @@ module MkId (
         proxyHashId, noinlineId, noinlineIdName,
 
         -- Re-export error Ids
-        module PrelRules
+        --module PrelRules
     ) where
 
 #include "HsVersions.h"
@@ -41,7 +41,6 @@ import GhcPrelude
 import Rules
 import TysPrim
 import TysWiredIn
-import PrelRules
 import Type
 import FamInstEnv
 import Coercion
@@ -72,8 +71,6 @@ import Outputable
 import FastString
 import ListSetOps
 import qualified GHC.LanguageExtensions as LangExt
-
-import Data.Maybe       ( maybeToList )
 
 {-
 ************************************************************************
@@ -1098,7 +1095,6 @@ mkPrimOpId prim_op
     id   = mkGlobalId (PrimOpId prim_op) name ty info
 
     info = noCafIdInfo
-           `setRuleInfo`           mkRuleInfo (maybeToList $ primOpRules name prim_op)
            `setArityInfo`          arity
            `setStrictnessInfo`     strict_sig
            `setInlinePragInfo`     neverInlinePragma

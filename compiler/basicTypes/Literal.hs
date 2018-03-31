@@ -11,17 +11,22 @@ module Literal
         (
         -- * Main data type
           Literal(..)           -- Exported to ParseIface
-        , LitNumType(..)
 
         -- ** Creating Literals
-        , mkLitInt, mkLitIntWrap, mkLitIntWrapC
-        , mkLitWord, mkLitWordWrap, mkLitWordWrapC
-        , mkLitInt64, mkLitInt64Wrap
-        , mkLitWord64, mkLitWord64Wrap
+        , mkLitInt, mkLitIntWrap, mkLitIntWrapC, mkLitIntUnchecked
+        , mkLitWord, mkLitWordWrap, mkLitWordWrapC, mkLitWordUnchecked
+        , mkLitInt64, mkLitInt64Wrap, mkLitInt64Unchecked
+        , mkLitWord64, mkLitWord64Wrap, mkLitWord64Unchecked
         , mkLitFloat, mkLitDouble
         , mkLitChar, mkLitString
         , mkLitInteger, mkLitNatural
         , mkLitNumber, mkLitNumberWrap
+
+        -- ** Numeric literals
+        , LitNumType(..)
+        , LitNumDesc (..)
+        , OverflowMode (..)
+        , wrapLitNumber
 
         -- ** Operations on Literals
         , literalType
@@ -64,6 +69,7 @@ import DynFlags
 import Platform
 import UniqFM
 import Util
+import Name
 
 import Data.ByteString (ByteString)
 import Data.Int
@@ -146,16 +152,6 @@ data LitNumType
   | LitNumWord64  -- ^ @Word64#@ - exactly 64 bits
   deriving (Data,Enum,Eq,Ord)
 
--- | Indicate if a numeric literal type supports negative numbers
-litNumIsSigned :: LitNumType -> Bool
-litNumIsSigned nt = case nt of
-  LitNumInteger -> True
-  LitNumNatural -> False
-  LitNumInt     -> True
-  LitNumInt64   -> True
-  LitNumWord    -> False
-  LitNumWord64  -> False
-
 {-
 Note [Integer literals]
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -233,10 +229,10 @@ instance Binary Literal where
                             LitNumWord64  -> word64PrimTy
                             -- See Note [Integer literals]
                             LitNumInteger ->
-                              panic "Evaluated the place holder for mkInteger"
+                              panic "Evaluated the placeholder for Integer type"
                             -- and Note [Natural literals]
                             LitNumNatural ->
-                              panic "Evaluated the place holder for mkNatural"
+                              panic "Evaluated the placeholder for Natural type"
                     return (LitNumber nt i t)
 
 instance Outputable Literal where
@@ -727,3 +723,57 @@ LitDouble      -1.0##
 LitInteger      -1                 (-1)
 LitLabel       "__label" ...      ("__label" ...)
 -}
+
+
+-- | Description of a numeric literal type
+data LitNumDesc = LitNumDesc
+  { litNumSigned       :: Bool               -- ^ Support negative numbers?
+  , litNumOverflowMode :: OverflowMode       -- ^ Overflow mode
+  , litNumMake         :: Type -> Integer -> Literal
+                                             -- ^ Create a literal (must be in
+                                             -- range)
+  , litNumBitsize      :: Maybe Word         -- ^ Size in bits (if fixed)
+  , litNumMinBound     :: Maybe Integer      -- ^ Min bound (if fixed)
+  , litNumMaxBound     :: Maybe Integer      -- ^ Max bound (if fixed)
+  , litNumNameAdd      :: Maybe Name         -- ^ Name of the Add operation
+  , litNumNameSub      :: Maybe Name         -- ^ Name of the Sub operation
+  , litNumNameNegate   :: Maybe Name         -- ^ Name of the Negate operation
+  , litNumNameMul      :: Maybe Name         -- ^ Name of the Mul operation
+  , litNumNameQuot     :: Maybe Name         -- ^ Name of the Quot operation
+  , litNumNameRem      :: Maybe Name         -- ^ Name of the Rem operation
+  , litNumNameQuotRem  :: Maybe Name         -- ^ Name of the QuotRem operation
+  , litNumNameAnd      :: Maybe Name         -- ^ Name of the And operation
+  , litNumNameOr       :: Maybe Name         -- ^ Name of the Or operation
+  , litNumNameXor      :: Maybe Name         -- ^ Name of the Xor operation
+  , litNumNameNot      :: Maybe Name         -- ^ Name of the Not operation
+  , litNumNameEq       :: Maybe Name         -- ^ Name of the Eq operation
+  , litNumNameNe       :: Maybe Name         -- ^ Name of the Ne operation
+  , litNumNameGt       :: Maybe Name         -- ^ Name of the Gt operation
+  , litNumNameGe       :: Maybe Name         -- ^ Name of the Ge operation
+  , litNumNameLt       :: Maybe Name         -- ^ Name of the Lt operation
+  , litNumNameLe       :: Maybe Name         -- ^ Name of the Le operation
+  -- TODO: add shifts
+  -- TODO: add abs
+  -- TODO: add conversion ops
+  -- TODO: merge with PrimOps when D2858 is merged
+  --, litNumAdd :: Maybe (CoreExpr -> CoreExpr -> CoreExpr)
+  --, litNumSub :: Maybe (CoreExpr -> CoreExpr -> CoreExpr)
+  --, litNumMul :: Maybe (CoreExpr -> CoreExpr -> CoreExpr)
+  }
+
+-- | How does a number overflows/underflows
+data OverflowMode
+   = OverflowFail  -- ^ Don't allow overflow/underflow
+   | OverflowWrap  -- ^ Wrap on overflow/underflow
+   | OverflowClamp -- ^ Clamp on overflow/underflow
+   deriving (Eq,Ord,Show)
+
+-- | Indicate if a numeric literal type supports negative numbers
+litNumIsSigned :: LitNumType -> Bool
+litNumIsSigned nt = case nt of
+  LitNumInteger -> True
+  LitNumNatural -> False
+  LitNumInt     -> True
+  LitNumInt64   -> True
+  LitNumWord    -> False
+  LitNumWord64  -> False
