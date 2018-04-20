@@ -5,8 +5,7 @@
 \section[Literal]{@Literal@: Machine literals (unboxed, of course)}
 -}
 
-{-# LANGUAGE CPP, DeriveDataTypeable, TypeApplications,
-    AllowAmbiguousTypes, ScopedTypeVariables #-}
+{-# LANGUAGE CPP, DeriveDataTypeable, ScopedTypeVariables #-}
 
 module Literal
         (
@@ -72,6 +71,7 @@ import Data.Word
 import Data.Char
 import Data.Maybe ( isJust )
 import Data.Data ( Data )
+import Data.Proxy
 import Numeric ( fromRat )
 
 {-
@@ -498,16 +498,16 @@ int2WordLit dflags (LitNumber LitNumInt i _)
 int2WordLit _ l = pprPanic "int2WordLit" (ppr l)
 
 -- | Narrow a literal number (unchecked result range)
-narrowLit :: forall a. Integral a => Literal -> Literal
-narrowLit (LitNumber nt i t) = LitNumber nt (toInteger (fromInteger i :: a)) t
-narrowLit l                  = pprPanic "narrowLit" (ppr l)
+narrowLit :: forall a. Integral a => Proxy a -> Literal -> Literal
+narrowLit _ (LitNumber nt i t) = LitNumber nt (toInteger (fromInteger i :: a)) t
+narrowLit _ l                  = pprPanic "narrowLit" (ppr l)
 
-narrow8IntLit   = narrowLit @Int8
-narrow16IntLit  = narrowLit @Int16
-narrow32IntLit  = narrowLit @Int32
-narrow8WordLit  = narrowLit @Word8
-narrow16WordLit = narrowLit @Word16
-narrow32WordLit = narrowLit @Word32
+narrow8IntLit   = narrowLit (Proxy :: Proxy Int8)
+narrow16IntLit  = narrowLit (Proxy :: Proxy Int16)
+narrow32IntLit  = narrowLit (Proxy :: Proxy Int32)
+narrow8WordLit  = narrowLit (Proxy :: Proxy Word8)
+narrow16WordLit = narrowLit (Proxy :: Proxy Word16)
+narrow32WordLit = narrowLit (Proxy :: Proxy Word32)
 
 char2IntLit (MachChar c) = mkMachIntUnchecked (toInteger (ord c))
 char2IntLit l            = pprPanic "char2IntLit" (ppr l)
