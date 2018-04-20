@@ -704,7 +704,7 @@ cvtLitNatural :: DynFlags -> Id -> Maybe DataCon -> Integer -> CoreExpr
 -- representation.
 -- See Note [Natural literals] in Literal
 cvtLitNatural dflags _ (Just sdatacon) i
-  | inWordRange dflags i -- Special case for small integers
+  | inWordRange dflags i -- Special case for small naturals
     = mkConApp sdatacon [Lit (mkMachWord dflags i)]
 
 cvtLitNatural dflags mk_natural _ i
@@ -713,7 +713,7 @@ cvtLitNatural dflags mk_natural _ i
         f 0 = []
         f x = let low  = x .&. mask
                   high = x `shiftR` bits
-              in mkConApp intDataCon [Lit (mkMachWord dflags low)] : f high
+              in mkConApp wordDataCon [Lit (mkMachWord dflags low)] : f high
         bits = 32
         mask = 2 ^ bits - 1
 
