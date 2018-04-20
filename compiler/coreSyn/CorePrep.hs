@@ -129,7 +129,7 @@ The goal of this pass is to prepare for code generation.
     (non-type) applications where we can, and make sure that we
     annotate according to scoping rules when floating.
 
-12. Collect cost centres (including cost centres in unfoldings) if we're in
+13. Collect cost centres (including cost centres in unfoldings) if we're in
     profiling mode. We have to do this here beucase we won't have unfoldings
     after this pass (see `zapUnfolding` and Note [Drop unfoldings and rules].
 
