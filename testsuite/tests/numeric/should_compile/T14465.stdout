@@ -8,7 +8,7 @@ ten :: Natural
 [GblId,
  Caf=NoCafRefs,
  Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
-         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 0 0}]
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 100 0}]
 ten = 10
 
 -- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
@@ -59,7 +59,7 @@ M.minusOne1 :: Natural
 [GblId,
  Caf=NoCafRefs,
  Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
-         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 0 0}]
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 100 0}]
 M.minusOne1 = 1
 
 -- RHS size: {terms: 6, types: 1, coercions: 0, joins: 0/0}
@@ -77,7 +77,7 @@ twoTimesTwo :: Natural
 [GblId,
  Caf=NoCafRefs,
  Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
-         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 0 0}]
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 100 0}]
 twoTimesTwo = 4
 
 -- RHS size: {terms: 4, types: 1, coercions: 0, joins: 0/0}
