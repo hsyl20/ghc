@@ -221,6 +221,7 @@ Library
         BlockId
         CLabel
         Cmm
+        CmmCoalesceOpt
         CmmBuildInfoTables
         CmmPipeline
         CmmCallConv

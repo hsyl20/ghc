@@ -341,6 +341,7 @@ data DumpFlag
    | Opt_D_dump_cmm_split
    | Opt_D_dump_cmm_info
    | Opt_D_dump_cmm_cps
+   | Opt_D_dump_cmm_coal
    -- end cmm subflags
    | Opt_D_dump_asm
    | Opt_D_dump_asm_native
@@ -3098,6 +3099,8 @@ dynamic_flags_deps = [
         (setDumpFlag Opt_D_dump_cmm_verbose)
   , make_ord_flag defGhcFlag "ddump-cmm-cfg"
         (setDumpFlag Opt_D_dump_cmm_cfg)
+  , make_ord_flag defGhcFlag "ddump-cmm-coal"
+        (setDumpFlag Opt_D_dump_cmm_coal)
   , make_ord_flag defGhcFlag "ddump-cmm-cbe"
         (setDumpFlag Opt_D_dump_cmm_cbe)
   , make_ord_flag defGhcFlag "ddump-cmm-switch"

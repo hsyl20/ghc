@@ -1106,8 +1106,8 @@ te_Expr :: CmmExpr -> TE ()
 te_Expr (CmmLit lit)            = te_Lit lit
 te_Expr (CmmLoad e _)           = te_Expr e
 te_Expr (CmmReg r)              = te_Reg r
-te_Expr (CmmMachOp _ es)        = mapM_ te_Expr es
 te_Expr (CmmRegOff r _)         = te_Reg r
+te_Expr (CmmMachOp _ es)        = mapM_ te_Expr es
 te_Expr (CmmStackSlot _ _)      = panic "te_Expr: CmmStackSlot not supported!"
 
 te_Reg :: CmmReg -> TE ()

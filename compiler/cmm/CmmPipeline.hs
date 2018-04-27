@@ -16,6 +16,7 @@ import CmmCommonBlockElim
 import CmmImplementSwitchPlans
 import CmmProcPoint
 import CmmContFlowOpt
+import CmmCoalesceOpt
 import CmmLayoutStack
 import CmmSink
 import Hoopl.Collections
@@ -136,7 +137,12 @@ cpsTop hsc_env proc =
                      else g
        g <- return (map removeUnreachableBlocksProc g)
             -- See Note [unreachable blocks]
-       dumps Opt_D_dump_cmm_cfg "Post control-flow optimisations" g
+       dumps Opt_D_dump_cmm_cfg "Post control-flow optimisations 2" g
+
+
+       ----------- Coalescing optimisations -----------------------------
+       g <- return (map (cmmCoalesce dflags) g)
+       dumps Opt_D_dump_cmm_coal "Post coalescing optimisations" g
 
        return (cafEnv, g)
 
