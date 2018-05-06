@@ -47,25 +47,29 @@ coalesce dflags block = go block Nothing
    emitStuff CoalesceState{..} = case coalSingleNode of
      Just e  -> e
      Nothing -> CmmUnsafeForeignCall
-                   (PrimTarget (MO_Memcpy 1)) -- alignment, de we know better?
-                   [] -- no result
-                   [ (cmmRegOffB dflags coalDstReg coalDstOff) 
-                   , (cmmRegOffB dflags coalSrcReg coalSrcOff)
-                   , (CmmLit (CmmInt (fromIntegral coalSize) (wordWidth dflags)))
-                   ]
+       (PrimTarget (MO_Memcpy 1)) -- alignment, de we know better?
+       [] -- no result
+       [ (cmmRegOffB coalDstReg coalDstOff)
+       , (cmmRegOffB coalSrcReg coalSrcOff)
+       , (CmmLit (CmmInt (fromIntegral coalSize) (wordWidth dflags)))
+       ]
 
    go :: [CmmNode O O] -> Maybe CoalesceState -> [CmmNode O O]
    go [] Nothing  = []
    go [] (Just s) = [emitStuff s]
-   go (x@(CmmStore u (CmmLoad v ty)):xs) s = case (u,v) of
-      (CmmRegOff dstReg dstOff, CmmRegOff srcReg srcOff) ->
-         tryUpdateState x xs dstReg dstOff srcReg srcOff ty s
-      (CmmReg dstReg          , CmmRegOff srcReg srcOff) ->
-         tryUpdateState x xs dstReg 0 srcReg srcOff ty s
-      (CmmRegOff dstReg dstOff, CmmReg srcReg) ->
-         tryUpdateState x xs dstReg dstOff srcReg 0 ty s
-      (CmmReg dstReg          , CmmReg srcReg) ->
-         tryUpdateState x xs dstReg 0 srcReg 0 ty s
+   go (x@(CmmStore u (CmmLoad v ty)):xs) s
+      | CmmRegOff dstReg dstOff  <- u
+      , CmmRegOff srcReg srcOff  <- v
+      = tryUpdateState x xs dstReg dstOff srcReg srcOff ty s
+      | CmmReg dstReg            <- u
+      , CmmRegOff srcReg srcOff  <- v
+      = tryUpdateState x xs dstReg 0 srcReg srcOff ty s
+      | CmmRegOff dstReg dstOff  <- u
+      , CmmReg srcReg            <- v
+      = tryUpdateState x xs dstReg dstOff srcReg 0 ty s
+      | CmmReg dstReg            <- u
+      , CmmReg srcReg            <- v
+      = tryUpdateState x xs dstReg 0 srcReg 0 ty s
 
    go (x:xs) (Just s) = emitStuff s : x : go xs Nothing
    go (x:xs) Nothing  = x : go xs Nothing
