@@ -312,13 +312,6 @@ mkMachInt :: DynFlags -> Integer -> Literal
 mkMachInt dflags x   = ASSERT2( inIntRange dflags x,  integer x )
                        (mkMachIntUnchecked x)
 
-wrapInt :: DynFlags -> Integer -> Integer
-wrapInt dflags i
- = case platformWordSize (targetPlatform dflags) of
-   4 -> toInteger (fromIntegral i :: Int32)
-   8 -> toInteger (fromIntegral i :: Int64)
-   w -> panic ("toIntRange: Unknown platformWordSize: " ++ show w)
-
 -- | Creates a 'Literal' of type @Int#@.
 --   If the argument is out of the (target-dependent) range, it is wrapped.
 --   See Note [Word/Int underflow/overflow]
@@ -334,21 +327,14 @@ mkMachIntUnchecked i = LitNumber LitNumInt i intPrimTy
 --   the argument is wrapped and the overflow flag will be set.
 --   See Note [Word/Int underflow/overflow]
 mkMachIntWrapC :: DynFlags -> Integer -> (Literal, Bool)
-mkMachIntWrapC dflags i = (MachInt i', i /= i')
+mkMachIntWrapC dflags i = (n, i /= i')
   where
-    MachInt i' = mkMachIntWrap dflags i
+    n@(LitNumber _ i' _) = mkMachIntWrap dflags i
 
 -- | Creates a 'Literal' of type @Word#@
 mkMachWord :: DynFlags -> Integer -> Literal
 mkMachWord dflags x   = ASSERT2( inWordRange dflags x, integer x )
                         (mkMachWordUnchecked x)
-
-wrapWord :: DynFlags -> Integer -> Integer
-wrapWord dflags i
- = case platformWordSize (targetPlatform dflags) of
-   4 -> toInteger (fromIntegral i :: Word32)
-   8 -> toInteger (fromIntegral i :: Word64)
-   w -> panic ("toWordRange: Unknown platformWordSize: " ++ show w)
 
 -- | Creates a 'Literal' of type @Word#@.
 --   If the argument is out of the (target-dependent) range, it is wrapped.
@@ -365,9 +351,9 @@ mkMachWordUnchecked i = LitNumber LitNumWord i wordPrimTy
 --   the argument is wrapped and the carry flag will be set.
 --   See Note [Word/Int underflow/overflow]
 mkMachWordWrapC :: DynFlags -> Integer -> (Literal, Bool)
-mkMachWordWrapC dflags i = (MachWord i', i /= i')
+mkMachWordWrapC dflags i = (n, i /= i')
   where
-    MachWord i' = mkMachWordWrap dflags i
+    n@(LitNumber _ i' _) = mkMachWordWrap dflags i
 
 -- | Creates a 'Literal' of type @Int64#@
 mkMachInt64 :: Integer -> Literal

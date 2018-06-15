@@ -92,6 +92,7 @@ dsLit l = do
     HsString _ str   -> mkStringExprFS str
     HsInteger _ i _  -> mkIntegerExpr i
     HsInt _ i        -> return (mkIntExpr dflags (il_value i))
+    XLit x           -> pprPanic "dsLit" (ppr x)
     HsRat _ (FL _ _ val) ty -> do
       num   <- mkIntegerExpr (numerator val)
       denom <- mkIntegerExpr (denominator val)
@@ -102,8 +103,6 @@ dsLit l = do
                     (tycon, [i_ty]) -> ASSERT(isIntegerTy i_ty && tycon `hasKey` ratioTyConKey)
                                        (head (tyConDataCons tycon), i_ty)
                     x -> pprPanic "dsLit" (ppr x)
-
-dsLit (XLit x)  = pprPanic "dsLit" (ppr x)
 
 dsOverLit :: HsOverLit GhcTc -> DsM CoreExpr
 dsOverLit lit = do { dflags <- getDynFlags

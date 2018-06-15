@@ -179,16 +179,8 @@ foo :: Int -> Int
          WorkFree=True, Expandable=True,
          Guidance=ALWAYS_IF(arity=1,unsat_ok=True,boring_ok=False)
          Tmpl= \ (n [Occ=Once!] :: Int) ->
-<<<<<<< HEAD
                  case n of n1 [Occ=Once] { GHC.Types.I# _ [Occ=Dead] ->
-                 Roman.foo_go (GHC.Base.Just @ Int n1) Roman.foo1
-||||||| merged common ancestors
-                 case n of n1 { GHC.Types.I# _ [Occ=Dead] ->
-                 Roman.foo_go (GHC.Base.Just @ Int n1) Roman.foo1
-=======
-                 case n of n1 { GHC.Types.I# _ [Occ=Dead] ->
                  Roman.foo_go (GHC.Maybe.Just @ Int n1) Roman.foo1
->>>>>>> Fix tests
                  }}]
 foo
   = \ (n :: Int) ->

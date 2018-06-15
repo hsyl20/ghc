@@ -411,7 +411,7 @@ intOp2' _  _      _            _            = Nothing  -- Could find LitLit
 intOpC2 :: (Integral a, Integral b)
         => (a -> b -> Integer)
         -> DynFlags -> Literal -> Literal -> Maybe CoreExpr
-intOpC2 op dflags (MachInt i1) (MachInt i2) = do
+intOpC2 op dflags (LitNumber LitNumInt i1 _) (LitNumber LitNumInt i2 _) = do
   intCResult dflags (fromInteger i1 `op` fromInteger i2)
 intOpC2 _  _      _            _            = Nothing  -- Could find LitLit
 
@@ -445,7 +445,7 @@ wordOp2 _ _ _ _ = Nothing  -- Could find LitLit
 wordOpC2 :: (Integral a, Integral b)
         => (a -> b -> Integer)
         -> DynFlags -> Literal -> Literal -> Maybe CoreExpr
-wordOpC2 op dflags (MachWord w1) (MachWord w2) =
+wordOpC2 op dflags (LitNumber LitNumWord w1 _) (LitNumber LitNumWord w2 _) =
   wordCResult dflags (fromInteger w1 `op` fromInteger w2)
 wordOpC2 _ _ _ _ = Nothing  -- Could find LitLit
 
