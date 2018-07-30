@@ -726,7 +726,9 @@ pprStgArg :: (OutputableBndr bndr, Outputable bdee, Ord bdee)
           => GenStgArg bndr bdee -> SDoc
 pprStgArg (StgVarArg var) = ppr var
 pprStgArg (StgLitArg con) = ppr con
-pprStgArg (StgContArg bndr body _) = ppr body
+pprStgArg (StgContArg bndr body _)
+  = parens $ sep [ char '\\' <+> pprBndr LambdaBind bndr <+> text "->"
+                 , pprStgExpr body ]
 
 pprStgExpr :: (OutputableBndr bndr, Outputable bdee, Ord bdee)
            => GenStgExpr bndr bdee -> SDoc

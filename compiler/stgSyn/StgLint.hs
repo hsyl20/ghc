@@ -88,8 +88,9 @@ lintStgTopBindings dflags unarised whodunnit binds
     lint_bind (StgTopStringLit v _) = return [v]
 
 lintStgArg :: StgArg -> LintM ()
-lintStgArg (StgLitArg _) = return ()
-lintStgArg (StgVarArg v) = lintStgVar v
+lintStgArg (StgLitArg _)   = return ()
+lintStgArg (StgVarArg v)   = lintStgVar v
+lintStgArg (StgContArg {}) = return ()
 
 lintStgVar :: Id -> LintM ()
 lintStgVar id = checkInScope id
@@ -282,6 +283,8 @@ checkPostUnariseBndr bndr = do
 checkPostUnariseConArg :: StgArg -> LintM ()
 checkPostUnariseConArg arg = case arg of
     StgLitArg _ ->
+      return ()
+    StgContArg {} ->
       return ()
     StgVarArg id -> do
       lf <- getLintFlags

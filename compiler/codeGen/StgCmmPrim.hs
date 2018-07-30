@@ -30,7 +30,7 @@ import StgCmmMonad
 import StgCmmUtils
 import StgCmmTicky
 import StgCmmHeap
-import StgCmmProf ( costCentreFrom )
+import StgCmmProf ( costCentreFrom, initUpdFrameProf )
 
 import DynFlags
 import Platform
@@ -50,7 +50,7 @@ import FastString
 import Outputable
 import Util
 
-import Data.Bits ((.&.), bit)
+import Data.Bits ((.&.), (.|.), bit)
 import Control.Monad (liftM, when, unless)
 
 ------------------------------------------------------------------------
@@ -2489,10 +2489,16 @@ emitCatchFrame handler body
          exc_blocked =
            CmmMachOp
              (mo_u_32ToWord dflags)
-             [CmmLoad (CmmRegOff currentTSOReg (oFFSET_StgTSO_flags dflags)) b32]
+             [CmmMachOp (mo_wordAnd dflags)
+               [ CmmLoad (CmmRegOff currentTSOReg (oFFSET_StgTSO_flags dflags)) b32
+               , CmmLit (CmmInt (fromIntegral
+                  (tSO_INTERRUPTIBLE dflags .|. tSO_BLOCKEX dflags)) W32)
+               ]
+             ]
        --
        emitStore frame (mkLblExpr mkCatchInfoLabel)
        emitStore (cmmOffset dflags frame off_exc_blocked) exc_blocked
        emitStore (cmmOffset dflags frame off_handler) handler
+       initUpdFrameProf frame
 
        withUpdFrameOff off_frame body

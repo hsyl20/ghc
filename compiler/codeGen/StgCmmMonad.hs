@@ -39,7 +39,7 @@ module StgCmmMonad (
         setTickyCtrLabel, getTickyCtrLabel,
         tickScope, getTickScope,
 
-        withUpdFrameOff, getUpdFrameOff, initUpdFrameOff,
+        withUpdFrameOff, withIncUpdFrameOff, getUpdFrameOff, initUpdFrameOff,
 
         HeapUsage(..), VirtualHpOffset,        initHpUsage,
         getHpUsage,  setHpUsage, heapHWM,
@@ -519,6 +519,11 @@ withUpdFrameOff :: UpdFrameOffset -> FCode a -> FCode a
 withUpdFrameOff size code
   = do  { info  <- getInfoDown
         ; withInfoDown code (info {cgd_updfr_off = size }) }
+
+withIncUpdFrameOff :: UpdFrameOffset -> FCode a -> FCode a
+withIncUpdFrameOff size code
+  = do  { info  <- getInfoDown
+        ; withInfoDown code (info {cgd_updfr_off = size + cgd_updfr_off info}) }
 
 getUpdFrameOff :: FCode UpdFrameOffset
 getUpdFrameOff
