@@ -550,11 +550,13 @@ isSimpleScrut _                _           = return False
 isSimpleOp :: StgOp -> [StgArg] -> FCode Bool
 -- True iff the op cannot block or allocate
 isSimpleOp (StgFCallOp (CCall (CCallSpec _ _ safe)) _) _ = return $! not (playSafe safe)
-isSimpleOp (StgPrimOp op) stg_args                  = do
-    arg_exprs <- getNonVoidArgAmodes stg_args
-    dflags <- getDynFlags
-    -- See Note [Inlining out-of-line primops and heap checks]
-    return $! isJust $ shouldInlinePrimOp dflags op arg_exprs
+isSimpleOp (StgPrimOp op) stg_args
+  | any stgIsContArg stg_args = return False
+  | otherwise = do
+      arg_exprs <- getNonVoidArgAmodes stg_args
+      dflags <- getDynFlags
+      -- See Note [Inlining out-of-line primops and heap checks]
+      return $! isJust $ shouldInlinePrimOp dflags op arg_exprs
 isSimpleOp (StgPrimCallOp _) _                           = return False
 
 -----------------

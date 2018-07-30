@@ -12,7 +12,7 @@ generation.
 {-# LANGUAGE CPP #-}
 
 module StgSyn (
-        GenStgArg(..),
+        GenStgArg(..), stgIsContArg,
 
         GenStgTopBinding(..), GenStgBinding(..), GenStgExpr(..), GenStgRhs(..),
         GenStgAlt, AltType(..),
@@ -104,9 +104,14 @@ data GenStgBinding bndr occ
 ************************************************************************
 -}
 
-data GenStgArg occ
+data GenStgArg bndr occ
   = StgVarArg  occ
   | StgLitArg  Literal
+  | StgContArg bndr (GenStgExpr bndr occ) Type
+
+stgIsContArg :: GenStgArg bndr occ -> Bool
+stgIsContArg StgContArg{} = True
+stgIsContArg _            = False
 
 -- | Does this constructor application refer to
 -- anything in a different *Windows* DLL?
@@ -148,7 +153,7 @@ isAddrRep _           = False
 stgArgType :: StgArg -> Type
 stgArgType (StgVarArg v)   = idType v
 stgArgType (StgLitArg lit) = literalType lit
-
+stgArgType (StgContArg _ _ ty) = ty
 
 -- | Strip ticks of a given type from an STG expression
 stripStgTicksTop :: (Tickish Id -> Bool) -> StgExpr -> ([Tickish Id], StgExpr)
@@ -196,8 +201,8 @@ There is no constructor for a lone variable; it would appear as
 
 data GenStgExpr bndr occ
   = StgApp
-        occ             -- function
-        [GenStgArg occ] -- arguments; may be empty
+        occ                  -- function
+        [GenStgArg bndr occ] -- arguments; may be empty
 
 {-
 ************************************************************************
@@ -215,11 +220,11 @@ primitives, and literals.
         -- StgConApp is vital for returning unboxed tuples or sums
         -- which can't be let-bound first
   | StgConApp   DataCon
-                [GenStgArg occ] -- Saturated
+                [GenStgArg bndr occ] -- Saturated
                 [Type]          -- See Note [Types in StgConApp] in UnariseStg
 
-  | StgOpApp    StgOp           -- Primitive op or foreign call
-                [GenStgArg occ] -- Saturated.
+  | StgOpApp    StgOp                -- Primitive op or foreign call
+                [GenStgArg bndr occ] -- Saturated.
                 Type            -- Result type
                                 -- We need to know this so that we can
                                 -- assign result registers
@@ -425,7 +430,7 @@ The second flavour of right-hand-side is for constructors (simple but important)
                          -- from static closure.
         DataCon          -- Constructor. Never an unboxed tuple or sum, as those
                          -- are not allocated.
-        [GenStgArg occ]  -- Args
+        [GenStgArg bndr occ]  -- Args
 
 stgRhsArity :: StgRhs -> Int
 stgRhsArity (StgRhsClosure _ _ _ _ bndrs _)
@@ -496,7 +501,7 @@ rhsHasCafRefs (StgRhsCon _ _ args)
 altHasCafRefs :: GenStgAlt bndr Id -> Bool
 altHasCafRefs (_, _, rhs) = exprHasCafRefs rhs
 
-stgArgHasCafRefs :: GenStgArg Id -> Bool
+stgArgHasCafRefs :: GenStgArg bndr Id -> Bool
 stgArgHasCafRefs (StgVarArg id)
   = stgIdHasCafRefs id
 stgArgHasCafRefs _
@@ -580,7 +585,7 @@ This happens to be the only one we use at the moment.
 
 type StgTopBinding = GenStgTopBinding Id Id
 type StgBinding  = GenStgBinding  Id Id
-type StgArg      = GenStgArg      Id
+type StgArg      = GenStgArg      Id Id
 type StgExpr     = GenStgExpr     Id Id
 type StgRhs      = GenStgRhs      Id Id
 type StgAlt      = GenStgAlt      Id Id
@@ -697,7 +702,8 @@ pprStgTopBindings :: [StgTopBinding] -> SDoc
 pprStgTopBindings binds
   = vcat $ intersperse blankLine (map pprGenStgTopBinding binds)
 
-instance (Outputable bdee) => Outputable (GenStgArg bdee) where
+instance (OutputableBndr bndr, Outputable bdee, Ord bdee)
+                => Outputable (GenStgArg bndr bdee) where
     ppr = pprStgArg
 
 instance (OutputableBndr bndr, Outputable bdee, Ord bdee)
@@ -716,9 +722,11 @@ instance (OutputableBndr bndr, Outputable bdee, Ord bdee)
                 => Outputable (GenStgRhs bndr bdee) where
     ppr rhs = pprStgRhs rhs
 
-pprStgArg :: (Outputable bdee) => GenStgArg bdee -> SDoc
+pprStgArg :: (OutputableBndr bndr, Outputable bdee, Ord bdee)
+          => GenStgArg bndr bdee -> SDoc
 pprStgArg (StgVarArg var) = ppr var
 pprStgArg (StgLitArg con) = ppr con
+pprStgArg (StgContArg bndr body _) = ppr body
 
 pprStgExpr :: (OutputableBndr bndr, Outputable bdee, Ord bdee)
            => GenStgExpr bndr bdee -> SDoc

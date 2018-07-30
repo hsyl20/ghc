@@ -636,6 +636,7 @@ coreToStgArgs (arg : args) = do         -- Non-type argument
     (stg_args, args_fvs, ticks) <- coreToStgArgs args
     (arg', arg_fvs) <- coreToStgExpr arg
     let
+        arg_ty = exprType arg
         fvs = args_fvs `unionFVInfo` arg_fvs
 
         (aticks, arg'') = stripStgTicksTop tickishFloatable arg'
@@ -643,7 +644,15 @@ coreToStgArgs (arg : args) = do         -- Non-type argument
                        StgApp v []        -> StgVarArg v
                        StgConApp con [] _ -> StgVarArg (dataConWorkId con)
                        StgLit lit         -> StgLitArg lit
-                       _                  -> pprPanic "coreToStgArgs" (ppr arg)
+                       StgLam bndrs body  ->
+                         let
+                           bndr = case toList bndrs of
+                             [x] -> x
+                             xs  ->
+                               -- TODO: more informative error message
+                               pprPanic "coreToStgArgs" (ppr arg'')
+                         in StgContArg bndr body arg_ty
+                       _  -> pprPanic "coreToStgArgs" (ppr arg'')
 
         -- WARNING: what if we have an argument like (v `cast` co)
         --          where 'co' changes the representation type?
@@ -655,7 +664,6 @@ coreToStgArgs (arg : args) = do         -- Non-type argument
         -- or foreign call.
         -- Wanted: a better solution than this hacky warning
     let
-        arg_ty = exprType arg
         stg_arg_ty = stgArgType stg_arg
         bad_args = (isUnliftedType arg_ty && not (isUnliftedType stg_arg_ty))
                 || (typePrimRep arg_ty /= typePrimRep stg_arg_ty)

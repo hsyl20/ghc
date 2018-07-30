@@ -21,6 +21,8 @@ module StgCmmPrim (
 
 import GhcPrelude hiding ((<*>))
 
+import {-# SOURCE #-} StgCmmExpr ( cgExpr )
+
 import StgCmmLayout
 import StgCmmForeign
 import StgCmmEnv
@@ -75,6 +77,15 @@ cgOpApp :: StgOp        -- The op
 cgOpApp (StgFCallOp fcall _) stg_args res_ty
   = cgForeignCall fcall stg_args res_ty
       -- Note [Foreign call results]
+
+cgOpApp (StgPrimOp CatchOp) (StgContArg _bndr body _ : handler : _) _res_ty = do
+  args' <- getNonVoidArgAmodes [handler]
+  let
+    handler_amode =
+      case args' of
+        [amode] -> amode
+        _       -> panic "CatchOp had void arg as handler"
+  emitCatchFrame handler_amode (cgExpr body)
 
 -- tagToEnum# is special: we need to pull the constructor
 -- out of the table, and perform an appropriate return.
@@ -2458,3 +2469,30 @@ emitCtzCall res x width = do
         [ res ]
         (MO_Ctz width)
         [ x ]
+
+-----------------------------------------------------------------------------
+-- Setting up catch frames
+
+emitCatchFrame :: CmmExpr -> FCode a -> FCode a
+emitCatchFrame handler body
+  = do
+       updfr  <- getUpdFrameOff
+       dflags <- getDynFlags
+       let
+         hdr       = fixedHdrSize dflags
+         off_frame = updfr + hdr + sIZEOF_StgCatchFrame_NoHdr dflags
+         frame     = CmmStackSlot Old off_frame
+
+         off_handler     = hdr + oFFSET_StgCatchFrame_handler dflags
+         off_exc_blocked = hdr + oFFSET_StgCatchFrame_exceptions_blocked dflags
+
+         exc_blocked =
+           CmmMachOp
+             (mo_u_32ToWord dflags)
+             [CmmLoad (CmmRegOff currentTSOReg (oFFSET_StgTSO_flags dflags)) b32]
+       --
+       emitStore frame (mkLblExpr mkCatchInfoLabel)
+       emitStore (cmmOffset dflags frame off_exc_blocked) exc_blocked
+       emitStore (cmmOffset dflags frame off_handler) handler
+
+       withUpdFrameOff off_frame body

@@ -41,6 +41,7 @@ module CLabel (
 
         mkSplitMarkerLabel,
         mkDirty_MUT_VAR_Label,
+        mkCatchInfoLabel,
         mkUpdInfoLabel,
         mkBHUpdInfoLabel,
         mkIndStaticInfoLabel,
@@ -484,7 +485,7 @@ mkBlockInfoTableLabel name c = IdLabel name c BlockInfoTable
                                -- See Note [Proc-point local block entry-point].
 
 -- Constructing Cmm Labels
-mkDirty_MUT_VAR_Label, mkSplitMarkerLabel, mkUpdInfoLabel,
+mkDirty_MUT_VAR_Label, mkSplitMarkerLabel, mkCatchInfoLabel, mkUpdInfoLabel,
     mkBHUpdInfoLabel, mkIndStaticInfoLabel, mkMainCapabilityLabel,
     mkMAP_FROZEN_CLEAN_infoLabel, mkMAP_FROZEN_DIRTY_infoLabel,
     mkMAP_DIRTY_infoLabel,
@@ -495,6 +496,7 @@ mkDirty_MUT_VAR_Label, mkSplitMarkerLabel, mkUpdInfoLabel,
     mkSMAP_DIRTY_infoLabel, mkBadAlignmentLabel :: CLabel
 mkDirty_MUT_VAR_Label           = mkForeignLabel (fsLit "dirty_MUT_VAR") Nothing ForeignLabelInExternalPackage IsFunction
 mkSplitMarkerLabel              = CmmLabel rtsUnitId (fsLit "__stg_split_marker")    CmmCode
+mkCatchInfoLabel                = CmmLabel rtsUnitId (fsLit "stg_catch_frame")       CmmInfo
 mkUpdInfoLabel                  = CmmLabel rtsUnitId (fsLit "stg_upd_frame")         CmmInfo
 mkBHUpdInfoLabel                = CmmLabel rtsUnitId (fsLit "stg_bh_upd_frame" )     CmmInfo
 mkIndStaticInfoLabel            = CmmLabel rtsUnitId (fsLit "stg_IND_STATIC")        CmmInfo
@@ -1390,4 +1392,3 @@ pprDynamicLinkerAsmLabel platform dllInfo lbl =
           SymbolPtr       -> text ".LC_" <> ppr lbl
           GotSymbolPtr    -> ppr lbl <> text "@got"
           GotSymbolOffset -> ppr lbl <> text "@gotoff"
-
