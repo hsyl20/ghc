@@ -17,7 +17,8 @@ module Linker ( getHValue, showLinkerState,
                 extendLoadedPkgs,
                 linkPackages, initDynLinker, linkModule,
                 linkCmdLineLibs,
-                uninitializedLinker
+                uninitializedLinker,
+                modifyPLS,linkDependencies
         ) where
 
 #include "HsVersions.h"

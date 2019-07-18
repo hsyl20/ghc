@@ -54,6 +54,7 @@ import UniqSupply
 import MonadUtils
 import Util
 import Outputable
+import Module
 
 import Data.ByteString (ByteString)
 import Data.Bits
@@ -67,9 +68,9 @@ mkEmptyContInfoTable info_lbl
                  , cit_srt  = Nothing
                  , cit_clo  = Nothing }
 
-cmmToRawCmm :: DynFlags -> Stream IO CmmGroup a
+cmmToRawCmm :: DynFlags -> Maybe Module -> Stream IO CmmGroup a
             -> IO (Stream IO RawCmmGroup a)
-cmmToRawCmm dflags cmms
+cmmToRawCmm dflags _ cmms
   = do { uniqs <- mkSplitUniqSupply 'i'
        ; let do_one :: UniqSupply -> [CmmDecl] -> IO (UniqSupply, [RawCmmDecl])
              do_one uniqs cmm =
