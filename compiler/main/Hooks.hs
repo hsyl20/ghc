@@ -4,6 +4,7 @@
 --     refer to *types*, rather than *code*
 
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE RankNTypes #-}
 module Hooks ( Hooks
              , emptyHooks
              , lookupHook
@@ -23,6 +24,9 @@ module Hooks ( Hooks
              , createIservProcessHook
              , stgCmmHook
              , cmmToRawCmmHook
+             , startIServHook
+             , iservCallHook
+             , stopIServHook
              ) where
 
 import GhcPrelude
@@ -52,7 +56,9 @@ import CostCentre
 import StgSyn
 import Stream
 import Cmm
+import GHCi.Message
 
+import Data.Binary
 import Data.Maybe
 
 {-
@@ -83,6 +89,9 @@ emptyHooks = Hooks
   , createIservProcessHook = Nothing
   , stgCmmHook             = Nothing
   , cmmToRawCmmHook        = Nothing
+  , startIServHook         = Nothing
+  , iservCallHook          = Nothing
+  , stopIServHook          = Nothing
   }
 
 data Hooks = Hooks
@@ -109,6 +118,9 @@ data Hooks = Hooks
             -> [StgTopBinding] -> HpcInfo -> Stream IO CmmGroup ())
   , cmmToRawCmmHook        :: Maybe (DynFlags -> Maybe Module -> Stream IO CmmGroup ()
             -> IO (Stream IO RawCmmGroup ()))
+  , startIServHook         :: Maybe (DynFlags -> IO IServ)
+  , iservCallHook          :: forall a . Binary a => Maybe (IServ -> Message a -> IO a)
+  , stopIServHook          :: Maybe (HscEnv -> IO ())
   }
 
 getHooked :: (Functor f, HasDynFlags f) => (Hooks -> Maybe a) -> a -> f a

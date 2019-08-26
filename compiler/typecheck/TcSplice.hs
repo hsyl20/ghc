@@ -1113,7 +1113,7 @@ getTHState i = do
     Just rhv -> return rhv
     Nothing -> do
       hsc_env <- env_top <$> getEnv
-      fhv <- liftIO $ mkFinalizedHValue hsc_env =<< iservCall i StartTH
+      fhv <- liftIO $ mkFinalizedHValue hsc_env =<< iservCall (hsc_dflags hsc_env) i StartTH
       writeTcRef (tcg_th_remote_state tcg) (Just fhv)
       return fhv
 
