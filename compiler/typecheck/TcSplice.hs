@@ -651,9 +651,9 @@ runRemoteModFinalizers (ThModFinalizers finRefs) = do
         Just fhv -> do
           liftIO $ withForeignRef fhv $ \st ->
             withForeignRefs finRefs $ \qrefs ->
-              writeIServ i (putMessage (RunModFinalizers st qrefs))
-          () <- runRemoteTH i []
-          readQResult i
+              writeIServ (hsc_dflags hsc_env) i (RunModFinalizers st qrefs)
+          () <- runRemoteTH (hsc_dflags hsc_env) i []
+          readQResult (hsc_dflags hsc_env) i
   else do
     qs <- liftIO (withForeignRefs finRefs $ mapM localRef)
     runQuasi $ sequence_ qs
@@ -1018,27 +1018,28 @@ runTH ty fhv = do
         liftIO $
           withForeignRef rstate $ \state_hv ->
           withForeignRef fhv $ \q_hv ->
-            writeIServ i (putMessage (RunTH state_hv q_hv ty (Just loc)))
-        runRemoteTH i []
-        bs <- readQResult i
+            writeIServ (hsc_dflags hsc_env) i (RunTH state_hv q_hv ty (Just loc))
+        runRemoteTH (hsc_dflags hsc_env) i []
+        bs <- readQResult (hsc_dflags hsc_env) i
         return $! runGet get (LB.fromStrict bs)
 
 
 -- | communicate with a remotely-running TH computation until it finishes.
 -- See Note [Remote Template Haskell] in libraries/ghci/GHCi/TH.hs.
 runRemoteTH
-  :: IServ
+  :: DynFlags
+  -> IServ
   -> [Messages]   --  saved from nested calls to qRecover
   -> TcM ()
-runRemoteTH iserv recovers = do
-  THMsg msg <- liftIO $ readIServ iserv getTHMessage
+runRemoteTH dflags iserv recovers = do
+  THMsg msg <- liftIO $ readIServ dflags iserv
   case msg of
     RunTHDone -> return ()
     StartRecover -> do -- Note [TH recover with -fexternal-interpreter]
       v <- getErrsVar
       msgs <- readTcRef v
       writeTcRef v emptyMessages
-      runRemoteTH iserv (msgs : recovers)
+      runRemoteTH dflags iserv (msgs : recovers)
     EndRecover caught_error -> do
       let (prev_msgs@(prev_warns,prev_errs), rest) = case recovers of
              [] -> panic "EndRecover"
@@ -1049,16 +1050,16 @@ runRemoteTH iserv recovers = do
       writeTcRef v $ if caught_error
         then prev_msgs
         else (prev_warns `unionBags` warn_msgs, prev_errs)
-      runRemoteTH iserv rest
+      runRemoteTH dflags iserv rest
     _other -> do
       r <- handleTHMessage msg
-      liftIO $ writeIServ iserv (put r)
-      runRemoteTH iserv recovers
+      liftIO $ writeIServ dflags iserv r
+      runRemoteTH dflags iserv recovers
 
 -- | Read a value of type QResult from the iserv
-readQResult :: Binary a => IServ -> TcM a
-readQResult i = do
-  qr <- liftIO $ readIServ i get
+readQResult :: (Binary a, Typeable a) => DynFlags -> IServ -> TcM a
+readQResult dflags i = do
+  qr <- liftIO $ readIServ dflags i
   case qr of
     QDone a -> return a
     QException str -> liftIO $ throwIO (ErrorCall str)

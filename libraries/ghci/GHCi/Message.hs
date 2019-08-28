@@ -40,7 +40,7 @@ import Data.ByteString (ByteString)
 import qualified Data.ByteString as B
 import qualified Data.ByteString.Lazy as LB
 import Data.Dynamic
-import Data.Typeable (TypeRep)
+import Data.Typeable (Typeable, TypeRep)
 import Data.IORef
 import Data.Map (Map)
 import GHC.Generics
@@ -254,7 +254,7 @@ data THMessage a where
 
 deriving instance Show (THMessage a)
 
-data THMsg = forall a . (Binary a, Show a) => THMsg (THMessage a)
+data THMsg = forall a . (Binary a, Show a, Typeable a) => THMsg (THMessage a)
 
 getTHMessage :: Get THMsg
 getTHMessage = do

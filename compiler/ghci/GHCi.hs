@@ -1,4 +1,6 @@
 {-# LANGUAGE RecordWildCards, ScopedTypeVariables, BangPatterns, CPP #-}
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE TypeApplications #-}
 
 --
 -- | Interacting with the interpreter, whether it is running on an
@@ -90,6 +92,9 @@ import System.Posix as Posix
 import System.Directory
 import System.Process
 import GHC.Conc (getNumProcessors, pseq, par)
+import qualified Language.Haskell.TH.Syntax as TH
+import GHC.LanguageExtensions.Type
+import Type.Reflection
 
 {- Note [Remote GHCi]
 
@@ -455,16 +460,80 @@ iservCall' _ iserv@IServ{..} msg =
     `catch` \(e :: SomeException) -> handleIServFailure iserv e
 
 -- | Read a value from the iserv process
-readIServ :: IServ -> Get a -> IO a
-readIServ iserv@IServ{..} get =
-  readPipe iservPipe get
-    `catch` \(e :: SomeException) -> handleIServFailure iserv e
+readIServ :: forall a. Typeable a => DynFlags -> IServ -> IO a
+readIServ dflags = lookupHook readIServHook readIServ' dflags dflags
+
+readIServ' :: forall a. Typeable a => DynFlags -> IServ -> IO a
+readIServ' _ iserv@IServ {..}
+  | Just HRefl <- eqTypeRep (typeRep @a) (typeRep @THMsg) =
+    readPipe iservPipe getTHMessage
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeRep @a) (typeRep @(QResult ByteString)) =
+    readPipe iservPipe get
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeRep @a) (typeRep @(QResult ())) =
+    readPipe iservPipe get
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | otherwise = handleIServFailure iserv $ toException $ userError $ "readIServ: unsupported type " ++ show (typeRep @a)
 
 -- | Send a value to the iserv process
-writeIServ :: IServ -> Put -> IO ()
-writeIServ iserv@IServ{..} put =
-  writePipe iservPipe put
-    `catch` \(e :: SomeException) -> handleIServFailure iserv e
+writeIServ :: Typeable a => DynFlags -> IServ -> a -> IO ()
+writeIServ dflags = lookupHook writeIServHook writeIServ' dflags dflags
+
+writeIServ' :: Typeable a => DynFlags -> IServ -> a -> IO ()
+writeIServ' _ iserv@IServ {..} a
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(Message (QResult ByteString))) =
+    writePipe iservPipe (putMessage a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(Message (QResult ()))) =
+    writePipe iservPipe (putMessage a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult TH.Name)) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult ())) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult (Maybe TH.Name))) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult TH.Info)) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult (Maybe TH.Fixity))) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult [TH.Dec])) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult [TH.Role])) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult [ByteString])) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult TH.ModuleInfo)) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult [TH.DecidedStrictness])) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult FilePath)) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult Bool)) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult [Extension])) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(THResult [Extension])) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | Just HRefl <- eqTypeRep (typeOf a) (typeRep @()) =
+    writePipe iservPipe (put a)
+      `catch` \(e :: SomeException) -> handleIServFailure iserv e
+  | otherwise = handleIServFailure iserv $ toException $ userError $ "writeIServ: unsupported type " ++ show (typeOf a)
 
 handleIServFailure :: IServ -> SomeException -> IO a
 handleIServFailure IServ{..} e = do

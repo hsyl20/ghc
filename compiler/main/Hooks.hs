@@ -26,6 +26,8 @@ module Hooks ( Hooks
              , cmmToRawCmmHook
              , startIServHook
              , iservCallHook
+             , readIServHook
+             , writeIServHook
              , stopIServHook
              ) where
 
@@ -60,6 +62,7 @@ import GHCi.Message
 
 import Data.Binary
 import Data.Maybe
+import Type.Reflection (Typeable)
 
 {-
 ************************************************************************
@@ -91,6 +94,8 @@ emptyHooks = Hooks
   , cmmToRawCmmHook        = Nothing
   , startIServHook         = Nothing
   , iservCallHook          = Nothing
+  , readIServHook          = Nothing
+  , writeIServHook         = Nothing
   , stopIServHook          = Nothing
   }
 
@@ -120,6 +125,8 @@ data Hooks = Hooks
             -> IO (Stream IO RawCmmGroup ()))
   , startIServHook         :: Maybe (DynFlags -> IO IServ)
   , iservCallHook          :: forall a . Binary a => Maybe (IServ -> Message a -> IO a)
+  , readIServHook          :: forall a . Typeable a => Maybe (DynFlags -> IServ -> IO a)
+  , writeIServHook         :: forall a . Typeable a => Maybe (DynFlags -> IServ -> a -> IO ())
   , stopIServHook          :: Maybe (HscEnv -> IO ())
   }
 
