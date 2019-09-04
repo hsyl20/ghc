@@ -175,7 +175,7 @@ iservCmd hsc_env@HscEnv{..} msg
  | gopt Opt_ExternalInterpreter hsc_dflags =
      withIServ hsc_env $ \iserv ->
        uninterruptibleMask_ $ do -- Note [uninterruptibleMask_]
-         iservCall hsc_dflags iserv msg
+         iservCall hsc_env iserv msg
  | otherwise = -- Just run it directly
 #if defined(GHCI)
    run msg
@@ -197,17 +197,17 @@ iservCmd hsc_env@HscEnv{..} msg
 withIServ
   :: (MonadIO m, ExceptionMonad m)
   => HscEnv -> (IServ -> m a) -> m a
-withIServ HscEnv{..} action =
+withIServ hsc_env@HscEnv{..} action =
   gmask $ \restore -> do
     m <- liftIO $ takeMVar hsc_iserv
       -- start the iserv process if we haven't done so yet
-    iserv <- maybe (liftIO $ startIServ hsc_dflags) return m
+    iserv <- maybe (liftIO $ startIServ hsc_env) return m
                `gonException` (liftIO $ putMVar hsc_iserv Nothing)
       -- free any ForeignHValues that have been garbage collected.
     let iserv' = iserv{ iservPendingFrees = [] }
     a <- (do
       liftIO $ when (not (null (iservPendingFrees iserv))) $
-        iservCall hsc_dflags iserv (FreeHValueRefs (iservPendingFrees iserv))
+        iservCall hsc_env iserv (FreeHValueRefs (iservPendingFrees iserv))
         -- run the inner action
       restore $ action iserv)
           `gonException` (liftIO $ putMVar hsc_iserv (Just iserv'))
@@ -374,7 +374,7 @@ lookupSymbol hsc_env@HscEnv{..} str
          Just p -> return (Just p)
          Nothing -> do
            m <- uninterruptibleMask_ $
-                    iservCall hsc_dflags iserv (LookupSymbol (unpackFS str))
+                    iservCall hsc_env iserv (LookupSymbol (unpackFS str))
            case m of
              Nothing -> return Nothing
              Just r -> do
@@ -451,19 +451,19 @@ findSystemLibrary hsc_env str = iservCmd hsc_env (FindSystemLibrary str)
 -- Raw calls and messages
 
 -- | Send a 'Message' and receive the response from the iserv process
-iservCall :: Binary a => DynFlags -> IServ -> Message a -> IO a
-iservCall dflags = lookupHook iservCallHook (iservCall' dflags) dflags
+iservCall :: Binary a => HscEnv -> IServ -> Message a -> IO a
+iservCall hsc_env = lookupHook iservCallHook iservCall' (hsc_dflags hsc_env) hsc_env
 
-iservCall' :: Binary a => DynFlags -> IServ -> Message a -> IO a
+iservCall' :: Binary a => HscEnv -> IServ -> Message a -> IO a
 iservCall' _ iserv@IServ{..} msg =
   remoteCall iservPipe msg
     `catch` \(e :: SomeException) -> handleIServFailure iserv e
 
 -- | Read a value from the iserv process
-readIServ :: forall a. Typeable a => DynFlags -> IServ -> IO a
-readIServ dflags = lookupHook readIServHook readIServ' dflags dflags
+readIServ :: forall a. Typeable a => HscEnv -> IServ -> IO a
+readIServ hsc_env = lookupHook readIServHook readIServ' (hsc_dflags hsc_env) hsc_env
 
-readIServ' :: forall a. Typeable a => DynFlags -> IServ -> IO a
+readIServ' :: forall a. Typeable a => HscEnv -> IServ -> IO a
 readIServ' _ iserv@IServ {..}
   | Just HRefl <- eqTypeRep (typeRep @a) (typeRep @THMsg) =
     readPipe iservPipe getTHMessage
@@ -477,10 +477,10 @@ readIServ' _ iserv@IServ {..}
   | otherwise = handleIServFailure iserv $ toException $ userError $ "readIServ: unsupported type " ++ show (typeRep @a)
 
 -- | Send a value to the iserv process
-writeIServ :: Typeable a => DynFlags -> IServ -> a -> IO ()
-writeIServ dflags = lookupHook writeIServHook writeIServ' dflags dflags
+writeIServ :: Typeable a => HscEnv -> IServ -> a -> IO ()
+writeIServ hsc_env = lookupHook writeIServHook writeIServ' (hsc_dflags hsc_env) hsc_env
 
-writeIServ' :: Typeable a => DynFlags -> IServ -> a -> IO ()
+writeIServ' :: Typeable a => HscEnv -> IServ -> a -> IO ()
 writeIServ' _ iserv@IServ {..} a
   | Just HRefl <- eqTypeRep (typeOf a) (typeRep @(Message (QResult ByteString))) =
     writePipe iservPipe (putMessage a)
@@ -549,13 +549,14 @@ handleIServFailure IServ{..} e = do
 -- -----------------------------------------------------------------------------
 -- Starting and stopping the iserv process
 
-startIServ :: DynFlags -> IO IServ
-startIServ dflags =
-  maybe (startIServ' dflags) ($ dflags) (startIServHook (hooks dflags))
+startIServ :: HscEnv -> IO IServ
+startIServ hsc_env =
+  maybe (startIServ' hsc_env) ($ hsc_env) (startIServHook (hooks (hsc_dflags hsc_env)))
 
-startIServ' :: DynFlags -> IO IServ
-startIServ' dflags = do
-  let flavour
+startIServ' :: HscEnv -> IO IServ
+startIServ' hsc_env = do
+  let dflags = hsc_dflags hsc_env
+      flavour
         | WayProf `elem` ways dflags = "-prof"
         | WayDyn `elem` ways dflags = "-dyn"
         | otherwise = ""
@@ -583,7 +584,7 @@ stopIServ hsc_env@HscEnv {..} =
   maybe (stopIServ' hsc_env) ($ hsc_env) (stopIServHook (hooks hsc_dflags))
 
 stopIServ' :: HscEnv -> IO ()
-stopIServ' HscEnv{..} =
+stopIServ' hsc_env@HscEnv{..} =
   gmask $ \_restore -> do
     m <- takeMVar hsc_iserv
     maybe (return ()) stop m
@@ -593,7 +594,7 @@ stopIServ' HscEnv{..} =
     ex <- getProcessExitCode (iservProcess iserv)
     if isJust ex
        then return ()
-       else iservCall hsc_dflags iserv Shutdown
+       else iservCall hsc_env iserv Shutdown
 
 runWithPipes :: (CreateProcess -> IO ProcessHandle)
              -> FilePath -> [String] -> IO (ProcessHandle, Handle, Handle)

@@ -123,10 +123,10 @@ data Hooks = Hooks
             -> [StgTopBinding] -> HpcInfo -> Stream IO CmmGroup ())
   , cmmToRawCmmHook        :: Maybe (DynFlags -> Maybe Module -> Stream IO CmmGroup ()
             -> IO (Stream IO RawCmmGroup ()))
-  , startIServHook         :: Maybe (DynFlags -> IO IServ)
-  , iservCallHook          :: forall a . Binary a => Maybe (IServ -> Message a -> IO a)
-  , readIServHook          :: forall a . Typeable a => Maybe (DynFlags -> IServ -> IO a)
-  , writeIServHook         :: forall a . Typeable a => Maybe (DynFlags -> IServ -> a -> IO ())
+  , startIServHook         :: Maybe (HscEnv -> IO IServ)
+  , iservCallHook          :: forall a . Binary a => Maybe (HscEnv -> IServ -> Message a -> IO a)
+  , readIServHook          :: forall a . Typeable a => Maybe (HscEnv -> IServ -> IO a)
+  , writeIServHook         :: forall a . Typeable a => Maybe (HscEnv -> IServ -> a -> IO ())
   , stopIServHook          :: Maybe (HscEnv -> IO ())
   }
 
