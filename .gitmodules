@@ -131,4 +131,4 @@
 	url = https://gitlab.haskell.org/ghc/arcanist-external-json-linter.git
 [submodule "hadrian"]
 	path = hadrian
-	url = https://gitlab.haskell.org/ghc/hadrian.git
+	url = https://github.com/hsyl20/hadrian.git
