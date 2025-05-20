@@ -1,2 +1,0 @@
-Module graph contains a cycle:
-  module ‘T20459A’ (./T20459A.hs) imports itself

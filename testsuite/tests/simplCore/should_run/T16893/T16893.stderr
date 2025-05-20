@@ -1,3 +1,0 @@
-T16893: Prelude.undefined
-CallStack (from HasCallStack):
-  undefined, called at ./Complex.hs:47:28 in main:Complex

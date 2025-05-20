@@ -1,3 +1,0 @@
-
-T18300.hs:9:23: error: [GHC-76037]
-    Not in scope: data constructor ‘LiftedRep’

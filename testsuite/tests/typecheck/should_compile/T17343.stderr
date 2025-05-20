@@ -1,3 +1,0 @@
-T17343: Prelude.undefined
-CallStack (from HasCallStack):
-  undefined, called at T17343.hs:4:11 in main:Main

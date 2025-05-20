@@ -1,3 +1,0 @@
-UnlGadt1: boom
-CallStack (from HasCallStack):
-  error, called at UnlGadt1.hs:19:13 in main:Main

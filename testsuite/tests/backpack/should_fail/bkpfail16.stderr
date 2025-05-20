@@ -1,4 +1,0 @@
-
-bkpfail16.out/p/p-1OqLaT7dAn947wScQQKCw5/../ShouldFail.hi:1:1: error: [GHC-93011]
-    • ‘Booly’ is exported by the hsig file, but not exported by the implementing module ‘Data.Bool’
-    • While checking that ‘Data.Bool’ implements signature ‘ShouldFail’ in ‘p[ShouldFail=Data.Bool]’.

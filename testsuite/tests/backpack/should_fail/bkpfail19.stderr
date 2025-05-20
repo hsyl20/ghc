@@ -1,5 +1,0 @@
-
-<no location info>: error: [GHC-12424]
-    • The hsig file (re)exports ‘Data.STRef.Lazy.newSTRef’
-      but the implementing module exports a different identifier ‘GHC.STRef.newSTRef’
-    • While checking that ‘Data.STRef’ implements signature ‘ShouldFail’ in ‘p[ShouldFail=Data.STRef]’.

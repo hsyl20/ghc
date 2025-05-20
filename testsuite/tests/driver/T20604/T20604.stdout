@@ -1,9 +1,0 @@
-A1
-A
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHSghc-prim-0.11.0-inplace-ghc9.8.2.so" 0ec7aef7e6b748297c8c9e7b7a9e5b72
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHSghc-bignum-1.3-inplace-ghc9.8.2.so" eb05ef56417895ce7f20b6f24c2967bd
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHSbase-4.19.1.0-inplace-ghc9.8.2.so" 5b06ed48dec1c158bfec783b307afb07
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHSghc-boot-th-9.8.2-inplace-ghc9.8.2.so" b8d58d7467d406d01da4dbdd2d34d349
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHSdeepseq-1.5.1.0-inplace-ghc9.8.2.so" f452329529a255fbdfa83026487637ec
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHSpretty-1.1.3.6-inplace-ghc9.8.2.so" 3fd74c77e0afd317b4fa0ec1860465ff
-addDependentFile "/mnt/data/exp/ghc/ghc-9.8/_build/stage1/lib/../lib/x86_64-linux-ghc-9.8.2/libHStemplate-haskell-2.21.0.0-inplace-ghc9.8.2.so" ba7ab3300a2eb5b92f75a171fa5bbc49
