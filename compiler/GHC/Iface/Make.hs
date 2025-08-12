@@ -21,6 +21,7 @@ where
 import GHC.Prelude
 
 import GHC.Hs
+import GHC.Builtin.Names
 
 import GHC.Stg.EnforceEpt.TagSig (StgCgInfos)
 import GHC.StgToCmm.Types (CmmCgInfos (..))
@@ -156,7 +157,9 @@ mkFullIface hsc_env partial_iface mb_stg_infos mb_cmm_infos stubs foreign_files 
     putDumpFileMaybe (hsc_logger hsc_env) Opt_D_dump_hi "FINAL INTERFACE" FormatText
       (pprModIface unit_state full_iface)
     final_iface <- shareIface (hsc_NC hsc_env) (flagsToIfCompression $ hsc_dflags hsc_env) full_iface
-    return final_iface
+    if mi_mod_info_module (get_mi_mod_info partial_iface) == gHC_PRIM
+      then return $ getGhcPrimIface hsc_env
+      else return $ final_iface
 
 -- | Compress an 'ModIface' and share as many values as possible, depending on the 'CompressionIFace' level.
 -- See Note [Sharing of ModIface].
